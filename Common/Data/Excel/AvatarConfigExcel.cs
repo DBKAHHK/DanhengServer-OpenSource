@@ -29,8 +29,6 @@ public class AvatarConfigExcel : ExcelResource
     [JsonConverter(typeof(StringEnumConverter))]
     public DamageTypeEnum DamageType { get; set; } = 0;
 
-    [JsonIgnore] public int RankUpItemId { get; set; }
-
     public override int GetId()
     {
         return AvatarID;
@@ -39,7 +37,6 @@ public class AvatarConfigExcel : ExcelResource
     public override void Loaded()
     {
         if (!GameData.AvatarConfigData.ContainsKey(AvatarID)) GameData.AvatarConfigData.Add(AvatarID, this);
-        RankUpItemId = AvatarID + 10000;
         JsonPath = null;
     }
 }

@@ -13,7 +13,7 @@ public class PacketInteractPropScRsp : BasePacket
         if (prop != null)
         {
             proto.PropState = (uint)prop.State;
-            proto.PropEntityId = (uint)prop.EntityID;
+            proto.PropEntityId = (uint)prop.EntityId;
         }
 
         SetData(proto);

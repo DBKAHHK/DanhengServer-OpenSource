@@ -375,7 +375,7 @@ public class RogueInstance : BaseRogueInstance
                     {
                         Id = (uint)avatar.BaseAvatarId,
                         AvatarType = AvatarType.AvatarFormalType,
-                        Level = (uint)(Player.AvatarManager!.GetAvatar(avatar.BaseAvatarId)?.Level ?? 0),
+                        Level = (uint)(Player.AvatarManager!.GetFormalAvatar(avatar.BaseAvatarId)?.Level ?? 0),
                         Slot = (uint)CurLineup!.BaseAvatars!.IndexOf(avatar)
                     })
                 },

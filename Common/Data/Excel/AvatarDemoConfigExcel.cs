@@ -43,18 +43,6 @@ public class AvatarDemoConfigExcel : ExcelResource
         GameData.AvatarDemoConfigData.Add(GetId(), this);
     }
 
-    public List<AvatarInfo> ToAvatarData(int uid)
-    {
-        List<AvatarInfo> instance = [];
-
-        foreach (var avatar in TrialAvatarList)
-        {
-            GameData.SpecialAvatarData.TryGetValue(GetId(), out var avatarConfig);
-            instance.Add(avatarConfig!.ToAvatarData(uid));
-        }
-
-        return instance;
-    }
 
     public class StageMonsterInfo(int ConfigId, int NpcMonsterId, int EventId)
     {

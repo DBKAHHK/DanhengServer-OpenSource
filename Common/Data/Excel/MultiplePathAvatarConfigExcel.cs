@@ -1,13 +1,18 @@
-﻿using EggLink.DanhengServer.Enums.Quest;
+﻿using EggLink.DanhengServer.Enums.Avatar;
+using EggLink.DanhengServer.Enums.Quest;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace EggLink.DanhengServer.Data.Excel;
 
 [ResourceEntity("MultiplePathAvatarConfig.json")]
 public class MultiplePathAvatarConfigExcel : ExcelResource
 {
-    public List<Condition>? UnlockConditions = new();
+    public List<Condition> UnlockConditions { get; set; } = [];
     public string ChangeConfigPath { get; set; } = "";
-    public string Gender { get; set; } = "";
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public GenderTypeEnum Gender { get; set; }
     public int AvatarID { get; set; }
     public int BaseAvatarID { get; set; }
 

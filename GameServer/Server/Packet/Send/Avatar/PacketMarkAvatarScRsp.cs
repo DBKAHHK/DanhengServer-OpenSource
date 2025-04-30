@@ -6,7 +6,7 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
 
 public class PacketMarkAvatarScRsp : BasePacket
 {
-    public PacketMarkAvatarScRsp(AvatarInfo avatar) : base(CmdIds.MarkAvatarScRsp)
+    public PacketMarkAvatarScRsp(FormalAvatarInfo avatar) : base(CmdIds.MarkAvatarScRsp)
     {
         var proto = new MarkAvatarScRsp
         {

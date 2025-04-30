@@ -143,28 +143,25 @@ public class GachaManager : BasePlayerManager
                 var type = GetType(item);
                 if (type == 1)
                 {
-                    var avatar = Player.AvatarManager?.GetAvatar(item);
+                    var avatar = Player.AvatarManager?.GetFormalAvatar(item);
                     if (avatar != null)
                     {
                         star += 40;
-                        var rankUpItemId = avatar.Excel?.RankUpItemId;
-                        if (rankUpItemId != null)
+                        var rankUpItemId = item + 10000;
+                        var rankUpItem = Player.InventoryManager!.GetItem(rankUpItemId);
+                        if (avatar.PathInfos[item].Rank + rankUpItem?.Count >= 6)
                         {
-                            var rankUpItem = Player.InventoryManager!.GetItem(rankUpItemId.Value);
-                            if (avatar.PathInfoes[item].Rank + rankUpItem?.Count >= 6)
+                            star += 60;
+                        }
+                        else
+                        {
+                            var dupeItem = new ItemList();
+                            dupeItem.ItemList_.Add(new Item
                             {
-                                star += 60;
-                            }
-                            else
-                            {
-                                var dupeItem = new ItemList();
-                                dupeItem.ItemList_.Add(new Item
-                                {
-                                    ItemId = (uint)rankUpItemId.Value,
-                                    Num = 1
-                                });
-                                gachaItem.TransferItemList = dupeItem;
-                            }
+                                ItemId = (uint)rankUpItemId,
+                                Num = 1
+                            });
+                            gachaItem.TransferItemList = dupeItem;
                         }
                     }
                 }
@@ -178,28 +175,25 @@ public class GachaManager : BasePlayerManager
                 var type = GetType(item);
                 if (type == 1)
                 {
-                    var avatar = Player.AvatarManager?.GetAvatar(item);
+                    var avatar = Player.AvatarManager?.GetFormalAvatar(item);
                     if (avatar != null)
                     {
                         star += 8;
-                        var rankUpItemId = avatar.Excel?.RankUpItemId;
-                        if (rankUpItemId != null)
+                        var rankUpItemId = item + 10000;
+                        var rankUpItem = Player.InventoryManager!.GetItem(rankUpItemId);
+                        if (avatar.PathInfos[item].Rank + rankUpItem?.Count >= 6)
                         {
-                            var rankUpItem = Player.InventoryManager!.GetItem(rankUpItemId.Value);
-                            if (avatar.PathInfoes[item].Rank + rankUpItem?.Count >= 6)
+                            star += 12;
+                        }
+                        else
+                        {
+                            var dupeItem = new ItemList();
+                            dupeItem.ItemList_.Add(new Item
                             {
-                                star += 12;
-                            }
-                            else
-                            {
-                                var dupeItem = new ItemList();
-                                dupeItem.ItemList_.Add(new Item
-                                {
-                                    ItemId = (uint)rankUpItemId.Value,
-                                    Num = 1
-                                });
-                                gachaItem.TransferItemList = dupeItem;
-                            }
+                                ItemId = (uint)rankUpItemId,
+                                Num = 1
+                            });
+                            gachaItem.TransferItemList = dupeItem;
                         }
                     }
                 }
@@ -215,7 +209,7 @@ public class GachaManager : BasePlayerManager
 
             ItemData? i;
             if (GameData.ItemConfigData[item].ItemMainType == ItemMainTypeEnum.AvatarCard &&
-                Player.AvatarManager!.GetAvatar(item) == null)
+                Player.AvatarManager!.GetFormalAvatar(item) == null)
             {
                 i = null;
                 await Player.AvatarManager!.AddAvatar(item, isGacha: true);

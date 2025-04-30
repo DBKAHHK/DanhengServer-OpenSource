@@ -25,7 +25,7 @@ public class PacketPlayerSyncScNotify : BasePacket
         SetData(proto);
     }
 
-    public PacketPlayerSyncScNotify(AvatarInfo avatar) : base(CmdIds.PlayerSyncScNotify)
+    public PacketPlayerSyncScNotify(BaseAvatarInfo avatar) : base(CmdIds.PlayerSyncScNotify)
     {
         var proto = new PlayerSyncScNotify
         {
@@ -33,13 +33,30 @@ public class PacketPlayerSyncScNotify : BasePacket
         };
         proto.AvatarSync.AvatarList.Add(avatar.ToProto());
 
-        if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatar.AvatarId))
-            proto.MultiPathAvatarInfoList.Add(avatar.ToAvatarPathProto());
+        if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatar.AvatarId) && avatar is FormalAvatarInfo formal)
+            proto.MultiPathAvatarInfoList.Add(formal.ToAvatarPathProto());
 
         SetData(proto);
     }
 
-    public PacketPlayerSyncScNotify(List<AvatarInfo> avatars) : base(CmdIds.PlayerSyncScNotify)
+    public PacketPlayerSyncScNotify(List<BaseAvatarInfo> avatars) : base(CmdIds.PlayerSyncScNotify)
+    {
+        var proto = new PlayerSyncScNotify
+        {
+            AvatarSync = new AvatarSync()
+        };
+
+        foreach (var avatar in avatars)
+        {
+            proto.AvatarSync.AvatarList.Add(avatar.ToProto());
+            if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatar.AvatarId) && avatar is FormalAvatarInfo formal)
+                proto.MultiPathAvatarInfoList.Add(formal.ToAvatarPathProto());
+        }
+
+        SetData(proto);
+    }
+
+    public PacketPlayerSyncScNotify(List<FormalAvatarInfo> avatars) : base(CmdIds.PlayerSyncScNotify)
     {
         var proto = new PlayerSyncScNotify
         {
@@ -56,15 +73,15 @@ public class PacketPlayerSyncScNotify : BasePacket
         SetData(proto);
     }
 
-    public PacketPlayerSyncScNotify(AvatarInfo avatar, ItemData item) : base(CmdIds.PlayerSyncScNotify)
+    public PacketPlayerSyncScNotify(BaseAvatarInfo avatar, ItemData item) : base(CmdIds.PlayerSyncScNotify)
     {
         var proto = new PlayerSyncScNotify();
         AddItemToProto(item, proto);
         proto.AvatarSync = new AvatarSync();
         proto.AvatarSync.AvatarList.Add(avatar.ToProto());
 
-        if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatar.AvatarId))
-            proto.MultiPathAvatarInfoList.Add(avatar.ToAvatarPathProto());
+        if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatar.AvatarId) && avatar is FormalAvatarInfo formal)
+            proto.MultiPathAvatarInfoList.Add(formal.ToAvatarPathProto());
 
         SetData(proto);
     }

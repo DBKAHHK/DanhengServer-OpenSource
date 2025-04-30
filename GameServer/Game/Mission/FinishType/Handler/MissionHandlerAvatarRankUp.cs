@@ -19,7 +19,7 @@ public class MissionHandlerAvatarRankUp : MissionFinishTypeHandler
     {
         foreach (var avatarId in excel.ParamIntList)
         {
-            var avatar = player.AvatarManager?.GetAvatar(avatarId);
+            var avatar = player.AvatarManager?.GetFormalAvatar(avatarId);
             if (avatar != null && avatar.GetPathInfo(avatarId)?.Rank > 0)
                 await player.QuestManager!.AddQuestProgress(quest.QuestID, 1);
         }

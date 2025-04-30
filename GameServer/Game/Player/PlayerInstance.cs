@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Player;
@@ -222,7 +223,7 @@ public class PlayerInstance(PlayerData data)
                         GameData.SpecialAvatarData.TryGetValue(avatar.BaseAvatarId, out var special);
                         if (special != null)
                         {
-                            avatar.SpecialAvatarId = special.GetId();
+                            avatar.SpecialAvatarId = special.SpecialAvatarID;
                             avatar.BaseAvatarId = special.AvatarID;
                         }
                         else
@@ -231,7 +232,7 @@ public class PlayerInstance(PlayerData data)
                                 out special);
                             if (special != null)
                             {
-                                avatar.SpecialAvatarId = special.GetId();
+                                avatar.SpecialAvatarId = special.SpecialAvatarID;
                                 avatar.BaseAvatarId = special.AvatarID;
                             }
                         }
@@ -240,19 +241,36 @@ public class PlayerInstance(PlayerData data)
 
             foreach (var avatar in LineupManager.GetCurLineup()!.BaseAvatars!)
             {
-                var avatarData = AvatarManager.GetAvatar(avatar.BaseAvatarId);
+                var avatarData = AvatarManager.GetFormalAvatar(avatar.BaseAvatarId);
                 if (avatarData is { CurrentHp: <= 0 })
                     // revive
                     avatarData.CurrentHp = 2000;
             }
         }
 
-        foreach (var avatar in AvatarManager?.AvatarData.Avatars ?? [])
-        foreach (var skill in avatar.GetSkillTree())
+        foreach (var avatar in AvatarManager?.AvatarData.FormalAvatars ?? [])
+        foreach (var path in avatar.PathInfos.Values)
+        foreach (var skill in path.SkillTree)
         {
             GameData.AvatarSkillTreeConfigData.TryGetValue(skill.Key * 10 + 1, out var config);
             if (config == null) continue;
-            avatar.GetSkillTree()[skill.Key] = Math.Min(skill.Value, config.MaxLevel); // limit skill level
+            path.SkillTree[skill.Key] = Math.Min(skill.Value, config.MaxLevel); // limit skill level
+        }
+
+        foreach (var info in LineupManager!.GetAllLineup().SelectMany(lineupInfo => lineupInfo.BaseAvatars ?? []))
+        {
+            if (info.SpecialAvatarId > 0 &&
+                GameData.SpecialAvatarData.TryGetValue(info.SpecialAvatarId, out var excel))
+            {
+                info.SpecialAvatarId = excel.SpecialAvatarID;
+                AvatarManager!.GetTrialAvatar(excel.SpecialAvatarID)?.CheckLevel(Data.WorldLevel);
+            }
+
+            if (info.SpecialAvatarId > 0 &&
+                GameData.SpecialAvatarData.TryGetValue(info.SpecialAvatarId * 10 + 0, out var e))
+            {
+                AvatarManager!.GetTrialAvatar(e.SpecialAvatarID)?.CheckLevel(Data.WorldLevel);
+            }
         }
 
         await LoadScene(Data.PlaneId, Data.FloorId, Data.EntryId, Data.Pos!, Data.Rot!, false);
@@ -315,21 +333,21 @@ public class PlayerInstance(PlayerData data)
             Data.CurBasicType = id;
             var avatar = AvatarManager!.GetHero()!;
             // Set avatar path
-            avatar.PathId = id;
-            avatar.ValidateHero();
+            avatar.AvatarId = id;
+            avatar.ValidateHero(Data.CurrentGender);
             avatar.SetCurSp(0, LineupManager!.GetCurLineup()!.IsExtraLineup());
             // Save new skill tree
-            avatar.GetSkillTree();
+            avatar.CheckPathSkillTree();
             await SendPacket(new PacketAvatarPathChangedNotify(8001, (MultiPathAvatarType)id));
             await SendPacket(new PacketPlayerSyncScNotify(AvatarManager!.GetHero()!));
         }
         else
         {
-            var avatar = AvatarManager!.GetAvatar(baseAvatarId)!;
-            avatar.PathId = (int)type;
+            var avatar = AvatarManager!.GetFormalAvatar(baseAvatarId)!;
+            avatar.AvatarId = (int)type;
             avatar.SetCurSp(0, LineupManager!.GetCurLineup()!.IsExtraLineup());
             // Save new skill tree
-            avatar.GetSkillTree();
+            avatar.CheckPathSkillTree();
             await SendPacket(new PacketAvatarPathChangedNotify((uint)avatar.AvatarId, (MultiPathAvatarType)type));
             await SendPacket(new PacketPlayerSyncScNotify(avatar));
         }
@@ -340,15 +358,15 @@ public class PlayerInstance(PlayerData data)
         PlayerUnlockData!.Skins.TryGetValue(avatarId, out var skins);
         if (skins != null && (skins.Contains(skinId) || skinId == 0))
         {
-            var avatar = AvatarManager!.GetAvatar(avatarId)!;
+            var avatar = AvatarManager!.GetFormalAvatar(avatarId)!;
             avatar.GetPathInfo(avatarId)!.Skin = skinId;
             await SendPacket(new PacketPlayerSyncScNotify(avatar));
         }
     }
 
-    public async ValueTask<AvatarInfo> MarkAvatar(int avatarId, bool isMarked, bool sendPacket = true)
+    public async ValueTask<FormalAvatarInfo> MarkAvatar(int avatarId, bool isMarked, bool sendPacket = true)
     {
-        var avatar = AvatarManager!.GetAvatar(avatarId)!;
+        var avatar = AvatarManager!.GetFormalAvatar(avatarId)!;
         avatar.IsMarked = isMarked;
         if (sendPacket) await SendPacket(new PacketPlayerSyncScNotify(avatar));
         return avatar;

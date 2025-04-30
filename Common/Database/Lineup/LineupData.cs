@@ -42,9 +42,19 @@ public class LineupInfo
     {
         var result = false;
         if (BaseAvatars != null && AvatarData != null)
+        {
             foreach (var avatar in BaseAvatars)
             {
-                var avatarInfo = AvatarData?.Avatars?.Find(item => item.GetBaseAvatarId() == avatar.BaseAvatarId);
+                BaseAvatarInfo? avatarInfo;
+                if (avatar.SpecialAvatarId > 0)
+                {
+                    avatarInfo = AvatarData?.TrialAvatars?.Find(item => item.SpecialAvatarId == avatar.SpecialAvatarId);
+                }
+                else
+                {
+                    avatarInfo = AvatarData?.FormalAvatars?.Find(item => item.BaseAvatarId == avatar.BaseAvatarId);
+                }
+
                 if (avatarInfo != null)
                 {
                     if (avatarInfo.GetCurHp(IsExtraLineup()) <= 0 && !allowRevive) continue;
@@ -55,6 +65,7 @@ public class LineupInfo
                     result = true;
                 }
             }
+        }
 
         return result;
     }
@@ -65,7 +76,16 @@ public class LineupInfo
         if (BaseAvatars != null && AvatarData != null)
             foreach (var avatar in BaseAvatars)
             {
-                var avatarInfo = AvatarData?.Avatars?.Find(item => item.GetAvatarId() == avatar.BaseAvatarId);
+                BaseAvatarInfo? avatarInfo;
+                if (avatar.SpecialAvatarId > 0)
+                {
+                    avatarInfo = AvatarData?.TrialAvatars?.Find(item => item.SpecialAvatarId == avatar.SpecialAvatarId);
+                }
+                else
+                {
+                    avatarInfo = AvatarData?.FormalAvatars?.Find(item => item.BaseAvatarId == avatar.BaseAvatarId);
+                }
+
                 if (avatarInfo != null)
                 {
                     if (avatarInfo.CurrentHp <= 0) continue;
@@ -84,7 +104,16 @@ public class LineupInfo
         if (BaseAvatars != null && AvatarData != null)
             foreach (var avatar in BaseAvatars)
             {
-                var avatarInfo = AvatarData?.Avatars?.Find(item => item.GetAvatarId() == avatar.BaseAvatarId);
+                BaseAvatarInfo? avatarInfo;
+                if (avatar.SpecialAvatarId > 0)
+                {
+                    avatarInfo = AvatarData?.TrialAvatars?.Find(item => item.SpecialAvatarId == avatar.SpecialAvatarId);
+                }
+                else
+                {
+                    avatarInfo = AvatarData?.FormalAvatars?.Find(item => item.BaseAvatarId == avatar.BaseAvatarId);
+                }
+
                 if (avatarInfo != null)
                 {
                     if (avatarInfo.CurrentHp <= 0) continue;
@@ -127,21 +156,19 @@ public class LineupInfo
                 {
                     var assistPlayer = DatabaseHelper.Instance?.GetInstance<AvatarData>(avatar.AssistUid);
                     if (assistPlayer != null)
-                        info.AvatarList.Add(assistPlayer?.Avatars
-                            ?.Find(item => item.GetAvatarId() == avatar.BaseAvatarId)
+                        info.AvatarList.Add(assistPlayer?.FormalAvatars
+                            ?.Find(item => item.BaseAvatarId == avatar.BaseAvatarId)
                             ?.ToLineupInfo(BaseAvatars.IndexOf(avatar), this,
                                 AvatarType.AvatarAssistType)); // assist avatar may not work
                 }
                 else if (avatar.SpecialAvatarId != 0) // special avatar
                 {
-                    var specialAvatar = GameData.SpecialAvatarData[avatar.SpecialAvatarId];
-                    if (specialAvatar != null)
-                        info.AvatarList.Add(specialAvatar.ToAvatarData(LineupData!.Uid)
-                            .ToLineupInfo(BaseAvatars.IndexOf(avatar), this, AvatarType.AvatarTrialType));
+                    info.AvatarList.Add(AvatarData?.TrialAvatars?.Find(item => item.SpecialAvatarId == avatar.SpecialAvatarId)
+                        ?.ToLineupInfo(BaseAvatars.IndexOf(avatar), this, AvatarType.AvatarTrialType));
                 }
                 else // normal avatar
                 {
-                    info.AvatarList.Add(AvatarData?.Avatars?.Find(item => item.AvatarId == avatar.BaseAvatarId)
+                    info.AvatarList.Add(AvatarData?.FormalAvatars?.Find(item => item.BaseAvatarId == avatar.BaseAvatarId)
                         ?.ToLineupInfo(BaseAvatars.IndexOf(avatar), this));
                 }
 
@@ -151,7 +178,7 @@ public class LineupInfo
             info.GameStoryLineId = (uint)storyId;
             BaseAvatars?.ForEach(item =>
             {
-                if (item.SpecialAvatarId != 0) info.StoryLineAvatarIdList.Add((uint)item.SpecialAvatarId / 10);
+                if (item.SpecialAvatarId != 0) info.StoryLineAvatarIdList.Add((uint)item.SpecialAvatarId);
             });
         }
 

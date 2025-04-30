@@ -13,7 +13,7 @@ public class PacketSyncEntityBuffChangeListScNotify : BasePacket
         var proto = new SyncEntityBuffChangeListScNotify();
         var change = new EntityBuffChangeInfo
         {
-            EntityId = (uint)entity.EntityID,
+            EntityId = (uint)entity.EntityId,
             BuffChangeInfo = buff.ToProto()
         };
         proto.EntityBuffChangeList.Add(change);
@@ -30,7 +30,7 @@ public class PacketSyncEntityBuffChangeListScNotify : BasePacket
         {
             var change = new EntityBuffChangeInfo
             {
-                EntityId = (uint)entity.EntityID,
+                EntityId = (uint)entity.EntityId,
                 RemoveBuffId = (uint)buff.BuffId
             };
             proto.EntityBuffChangeList.Add(change);

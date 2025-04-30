@@ -5,7 +5,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 
 public interface IGameEntity
 {
-    public int EntityID { get; set; }
+    public int EntityId { get; set; }
     public int GroupID { get; set; }
 
     public List<SceneBuff> BuffList { get; set; }

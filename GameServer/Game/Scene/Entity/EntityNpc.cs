@@ -12,7 +12,7 @@ public class EntityNpc(SceneInstance scene, GroupInfo group, NpcInfo npcInfo) : 
     public Position Rotation { get; set; } = npcInfo.ToRotationProto();
     public int NpcId { get; set; } = npcInfo.NPCID;
     public int InstId { get; set; } = npcInfo.ID;
-    public int EntityID { get; set; }
+    public int EntityId { get; set; }
     public int GroupID { get; set; } = group.Id;
     public List<SceneBuff> BuffList { get; set; } = [];
 
@@ -35,7 +35,7 @@ public class EntityNpc(SceneInstance scene, GroupInfo group, NpcInfo npcInfo) : 
 
         return new SceneEntityInfo
         {
-            EntityId = (uint)EntityID,
+            EntityId = (uint)EntityId,
             GroupId = (uint)GroupID,
             Motion = new MotionInfo
             {

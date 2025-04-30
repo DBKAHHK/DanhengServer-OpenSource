@@ -22,14 +22,14 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
             return (Retcode.RetRogueAreaInvalid, null);
 
         var baseAvatarIds = new List<int>();
-        foreach (var avatar in avatars.Select(id => Player.AvatarManager!.GetAvatar(id)))
+        foreach (var avatar in avatars.Select(id => Player.AvatarManager!.GetFormalAvatar(id)))
         {
             if (avatar == null)
                 return (Retcode.RetAvatarNotExist, null);
 
             avatar.SetCurHp(10000, true);
             avatar.SetCurSp(5000, true);
-            baseAvatarIds.Add(avatar.GetBaseAvatarId());
+            baseAvatarIds.Add(avatar.BaseAvatarId);
         }
 
         Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupTournRogue, baseAvatarIds);

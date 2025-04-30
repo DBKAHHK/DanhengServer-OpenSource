@@ -25,7 +25,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         var targetList = new List<EntityMonster>();
         var avatarList = new List<AvatarSceneInfo>();
         var propList = new List<EntityProp>();
-        Player.SceneInstance!.AvatarInfo.TryGetValue(attackEntity.EntityID, out var castAvatar);
+        Player.SceneInstance!.AvatarInfo.TryGetValue(attackEntity.EntityId, out var castAvatar);
 
         if (castAvatar != null)
         {
@@ -43,11 +43,11 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         else
         {
             var isAmbushed =
-                targetEntityList.Any(entity => Player.SceneInstance!.AvatarInfo.ContainsKey(entity.EntityID));
+                targetEntityList.Any(entity => Player.SceneInstance!.AvatarInfo.ContainsKey(entity.EntityId));
 
             if (!isAmbushed) return null;
 
-            var monsterEntity = Player.SceneInstance!.Entities[attackEntity.EntityID];
+            var monsterEntity = Player.SceneInstance!.Entities[attackEntity.EntityId];
             if (monsterEntity is EntityMonster monster) targetList.Add(monster);
         }
 
@@ -115,7 +115,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             {
                 var index = battleInstance.Lineup.BaseAvatars!.FindIndex(x =>
                     x.BaseAvatarId == castAvatar.AvatarInfo.AvatarId);
-                GameData.AvatarConfigData.TryGetValue(castAvatar.AvatarInfo.GetAvatarId(), out var avatarExcel);
+                GameData.AvatarConfigData.TryGetValue(castAvatar.AvatarInfo.AvatarId, out var avatarExcel);
                 if (avatarExcel != null)
                 {
                     mazeBuff = new MazeBuff((int)avatarExcel.DamageType, 1, index);
@@ -326,7 +326,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             // Update battle status
             foreach (var avatar in req.Stt.BattleAvatarList)
             {
-                var avatarInstance = Player.AvatarManager!.GetAvatar((int)avatar.Id);
+                var avatarInstance = Player.AvatarManager!.GetFormalAvatar((int)avatar.Id);
                 var prop = avatar.AvatarStatus;
                 var curHp = (int)Math.Max(Math.Round(prop.LeftHp / prop.MaxHp * 10000), minimumHp);
                 var curSp = (int)prop.LeftSp * 100;
@@ -335,8 +335,6 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
                     GameData.SpecialAvatarData.TryGetValue((int)(avatar.Id * 10 + Player.Data.WorldLevel),
                         out var specialAvatar);
                     if (specialAvatar == null) continue;
-                    specialAvatar.CurHp[Player.Uid] = curHp;
-                    specialAvatar.CurSp[Player.Uid] = curSp;
                     avatarInstance?.SetCurHp(curHp, lineup.LineupType != 0);
                     avatarInstance?.SetCurSp(curSp, lineup.LineupType != 0);
                 }

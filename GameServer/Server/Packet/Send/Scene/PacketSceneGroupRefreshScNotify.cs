@@ -28,7 +28,7 @@ public class PacketSceneGroupRefreshScNotify : BasePacket
             };
             group.RefreshEntity.Add(new SceneEntityRefreshInfo
             {
-                DeleteEntity = (uint)e.EntityID
+                DeleteEntity = (uint)e.EntityId
             });
 
             if (refreshInfo.TryGetValue(e.GroupID, out var value))

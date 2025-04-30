@@ -30,8 +30,8 @@ public class ChessRogueManager(PlayerInstance player) : BasePlayerManager(player
 
         foreach (var id in avatarIds)
         {
-            Player.AvatarManager!.GetAvatar((int)id)?.SetCurHp(10000, true);
-            Player.AvatarManager!.GetAvatar((int)id)?.SetCurSp(10000, true);
+            Player.AvatarManager!.GetFormalAvatar((int)id)?.SetCurHp(10000, true);
+            Player.AvatarManager!.GetFormalAvatar((int)id)?.SetCurSp(10000, true);
         }
 
         var difficultyLevel = difficultyIds.Select(x => GameData.RogueNousDifficultyLevelData[x]).ToList();

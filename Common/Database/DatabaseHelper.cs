@@ -282,6 +282,20 @@ public class DatabaseHelper
         }
     }
 
+    public static List<T>? GetAllInstanceFromMap<T>() where T : class, new()
+    {
+        try
+        {
+            var list = UidInstanceMap.Values.SelectMany(x => x).ToList();
+            return list.OfType<T>().Select(instance => instance).ToList();
+        }
+        catch (Exception e)
+        {
+            logger.Error("Unsupported type", e);
+            return null;
+        }
+    }
+
     public static void SaveInstance<T>(T instance) where T : class, new()
     {
         sqlSugarScope?.Insertable(instance).ExecuteCommand();

@@ -174,7 +174,7 @@ public class AbilityLevelTask(PlayerInstance player)
                             if (entity is EntityMonster { IsAlive: false })
                                 type = MonsterBattleType.DirectDieSkipBattle;
 
-                            battleInfos.Add(new HitMonsterInstance(entity.EntityID, type));
+                            battleInfos.Add(new HitMonsterInstance(entity.EntityId, type));
                         }
 
                         instance = await Player.BattleManager!.StartBattle(param.CasterEntity, param.TargetEntities,
@@ -211,7 +211,7 @@ public class AbilityLevelTask(PlayerInstance player)
 
                 foreach (var entity in target)
                     await entity.AddBuff(new SceneBuff(addMazeBuff.ID, 1,
-                        (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.GetBaseAvatarId() ?? 0,
+                        (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.BaseAvatarId ?? 0,
                         addMazeBuff.LifeTime.FixedValue.Value < -1 ? 20 : -1)
                     {
                         DynamicValues = dynamic
@@ -289,11 +289,11 @@ public class AbilityLevelTask(PlayerInstance player)
 
             var unit = new EntitySummonUnit
             {
-                EntityID = 0,
-                CreateAvatarEntityId = param.CasterEntity.EntityID,
-                AttachEntityId = excel.ConfigInfo?.AttachPoint == "Origin" ? param.CasterEntity.EntityID : 0,
+                EntityId = 0,
+                CreateAvatarEntityId = param.CasterEntity.EntityId,
+                AttachEntityId = excel.ConfigInfo?.AttachPoint == "Origin" ? param.CasterEntity.EntityId : 0,
                 SummonUnitId = excel.ID,
-                CreateAvatarId = (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.GetAvatarId() ?? 0,
+                CreateAvatarId = (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.AvatarId ?? 0,
                 LifeTimeMs = 20000,
                 TriggerList = excel.ConfigInfo?.TriggerConfig.CustomTriggers ?? [],
                 Motion = param.Request.TargetMotion

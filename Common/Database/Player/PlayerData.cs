@@ -1,8 +1,10 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Avatar;
+using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 using SqlSugar;
+using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
 
 namespace EggLink.DanhengServer.Database.Player;
 
@@ -81,12 +83,6 @@ public class PlayerData : BaseDatabaseDataHelper
 
         var instance = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid)!;
 
-        foreach (var avatar in instance.Avatars)
-        {
-            avatar.PlayerData = this;
-            avatar.Excel = GameData.AvatarConfigData[avatar.AvatarId];
-        }
-
         var info = new PlayerSimpleInfo
         {
             Nickname = Name,
@@ -103,7 +99,7 @@ public class PlayerData : BaseDatabaseDataHelper
 
         var pos = 0;
         foreach (var avatar in instance.AssistAvatars.Select(
-                     assist => instance.Avatars.Find(x => x.AvatarId == assist)!))
+                     assist => instance.FormalAvatars.Find(x => x.AvatarId == assist)!))
             info.AssistSimpleInfoList.Add(new AssistSimpleInfo
             {
                 AvatarId = (uint)avatar.AvatarId,
@@ -131,23 +127,19 @@ public class PlayerData : BaseDatabaseDataHelper
         };
 
         var avatarInfo = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid);
+        var inventoryInfo = DatabaseHelper.Instance!.GetInstance<InventoryData>(Uid);
 
-        if (avatarInfo == null) return info;
-        foreach (var avatar in avatarInfo.Avatars)
-        {
-            avatar.PlayerData = this;
-            avatar.Excel = GameData.AvatarConfigData[avatar.AvatarId];
-        }
+        if (avatarInfo == null || inventoryInfo == null) return info;
 
         var pos = 0;
         foreach (var avatar in avatarInfo.AssistAvatars.Select(assist =>
-                     avatarInfo.Avatars.Find(x => x.AvatarId == assist)!))
-            info.AssistAvatarList.Add(avatar.ToDetailProto(pos++));
+                     avatarInfo.FormalAvatars.Find(x => x.AvatarId == assist)!))
+            info.AssistAvatarList.Add(avatar.ToDetailProto(pos++, new PlayerDataCollection(this, inventoryInfo, new LineupInfo())));
 
         pos = 0;
         foreach (var avatar in avatarInfo.DisplayAvatars.Select(display =>
-                     avatarInfo.Avatars.Find(x => x.AvatarId == display)!))
-            info.DisplayAvatarList.Add(avatar.ToDetailProto(pos++));
+                     avatarInfo.FormalAvatars.Find(x => x.AvatarId == display)!))
+            info.DisplayAvatarList.Add(avatar.ToDetailProto(pos++, new PlayerDataCollection(this, inventoryInfo, new LineupInfo())));
 
         return info;
     }

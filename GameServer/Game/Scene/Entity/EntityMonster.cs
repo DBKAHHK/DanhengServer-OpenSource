@@ -36,7 +36,7 @@ public class EntityMonster(
 
     public int RogueMonsterId { get; set; } = 0;
     public int CustomLevel { get; set; } = 0;
-    public int EntityID { get; set; } = 0;
+    public int EntityId { get; set; } = 0;
     public int GroupID { get; set; } = GroupID;
 
     public async ValueTask AddBuff(SceneBuff buff)
@@ -75,7 +75,7 @@ public class EntityMonster(
     {
         var proto = new SceneEntityInfo
         {
-            EntityId = (uint)EntityID,
+            EntityId = (uint)EntityId,
             GroupId = (uint)GroupID,
             InstId = (uint)InstID,
             Motion = new MotionInfo

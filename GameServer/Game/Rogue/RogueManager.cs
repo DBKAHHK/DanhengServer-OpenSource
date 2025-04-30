@@ -66,8 +66,8 @@ public class RogueManager(PlayerInstance player) : BasePlayerManager(player)
 
         foreach (var id in baseAvatarIds)
         {
-            Player.AvatarManager!.GetAvatar(id)?.SetCurHp(10000, true);
-            Player.AvatarManager!.GetAvatar(id)?.SetCurSp(5000, true);
+            Player.AvatarManager!.GetFormalAvatar(id)?.SetCurHp(10000, true);
+            Player.AvatarManager!.GetFormalAvatar(id)?.SetCurSp(5000, true);
         }
 
         RogueInstance = new RogueInstance(area, aeon, Player);

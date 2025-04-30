@@ -36,29 +36,29 @@ public class CommandGiveall : ICommand
         {
             if (avatar.AvatarID > 2000 && avatar.AvatarID != 8001)
                 continue; // Hacky way to prevent giving random avatars
-            if (player.AvatarManager!.GetAvatar(avatar.AvatarID) == null)
+            if (player.AvatarManager!.GetFormalAvatar(avatar.AvatarID) == null)
             {
                 GameData.MultiplePathAvatarConfigData.TryGetValue(avatar.AvatarID, out var multiPathAvatar);
                 if (multiPathAvatar != null && avatar.AvatarID != multiPathAvatar.BaseAvatarID) continue;
                 // Normal avatar
                 await player.InventoryManager!.AddItem(avatar.AvatarID, 1, false, sync: false);
-                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Level = Math.Max(Math.Min(level, 80), 0);
-                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Promotion =
+                player.AvatarManager!.GetFormalAvatar(avatar.AvatarID)!.Level = Math.Max(Math.Min(level, 80), 0);
+                player.AvatarManager!.GetFormalAvatar(avatar.AvatarID)!.Promotion =
                     GameData.GetMinPromotionForLevel(Math.Max(Math.Min(level, 80), 0));
-                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.GetCurPathInfo().Rank =
+                player.AvatarManager!.GetFormalAvatar(avatar.AvatarID)!.GetCurPathInfo().Rank =
                     Math.Max(Math.Min(rank, 6), 0);
             }
             else
             {
-                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Level = Math.Max(Math.Min(level, 80), 0);
-                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.Promotion =
+                player.AvatarManager!.GetFormalAvatar(avatar.AvatarID)!.Level = Math.Max(Math.Min(level, 80), 0);
+                player.AvatarManager!.GetFormalAvatar(avatar.AvatarID)!.Promotion =
                     GameData.GetMinPromotionForLevel(Math.Max(Math.Min(level, 80), 0));
-                player.AvatarManager!.GetAvatar(avatar.AvatarID)!.GetCurPathInfo().Rank =
+                player.AvatarManager!.GetFormalAvatar(avatar.AvatarID)!.GetCurPathInfo().Rank =
                     Math.Max(Math.Min(rank, 6), 0);
             }
         }
 
-        await player.SendPacket(new PacketPlayerSyncScNotify(player.AvatarManager!.AvatarData.Avatars));
+        await player.SendPacket(new PacketPlayerSyncScNotify(player.AvatarManager!.AvatarData.FormalAvatars));
 
         await arg.SendMsg(I18NManager.Translate("Game.Command.GiveAll.GiveAllItems",
             I18NManager.Translate("Word.Avatar"), "1"));
@@ -303,24 +303,24 @@ public class CommandGiveall : ICommand
 
         foreach (var multiPathAvatar in GameData.MultiplePathAvatarConfigData.Values)
         {
-            if (player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID) == null)
+            if (player.AvatarManager!.GetFormalAvatar(multiPathAvatar.BaseAvatarID) == null)
             {
                 await player.InventoryManager!.AddItem(multiPathAvatar.BaseAvatarID, 1, false, sync: false);
-                player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID)!.Level = Math.Max(Math.Min(1, 80), 0);
-                player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID)!.Promotion =
+                player.AvatarManager!.GetFormalAvatar(multiPathAvatar.BaseAvatarID)!.Level = Math.Max(Math.Min(1, 80), 0);
+                player.AvatarManager!.GetFormalAvatar(multiPathAvatar.BaseAvatarID)!.Promotion =
                     GameData.GetMinPromotionForLevel(Math.Max(Math.Min(1, 80), 0));
-                player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID)!.GetCurPathInfo().Rank =
+                player.AvatarManager!.GetFormalAvatar(multiPathAvatar.BaseAvatarID)!.GetCurPathInfo().Rank =
                     Math.Max(Math.Min(0, 6), 0);
             }
 
-            var avatarData = player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID)!;
-            if (avatarData.PathInfoes.ContainsKey(multiPathAvatar.AvatarID)) continue;
+            var avatarData = player.AvatarManager!.GetFormalAvatar(multiPathAvatar.BaseAvatarID)!;
+            if (avatarData.PathInfos.ContainsKey(multiPathAvatar.AvatarID)) continue;
             if (multiPathAvatar.BaseAvatarID > 8000 && multiPathAvatar.AvatarID % 2 != 1) continue;
             await player.ChangeAvatarPathType(multiPathAvatar.BaseAvatarID,
                 (MultiPathAvatarTypeEnum)multiPathAvatar.AvatarID);
         }
 
-        await player.SendPacket(new PacketPlayerSyncScNotify(player.AvatarManager!.AvatarData.Avatars));
+        await player.SendPacket(new PacketPlayerSyncScNotify(player.AvatarManager!.AvatarData.FormalAvatars));
 
         await arg.SendMsg(I18NManager.Translate("Game.Command.GiveAll.GiveAllItems",
             I18NManager.Translate("Word.Avatar"),

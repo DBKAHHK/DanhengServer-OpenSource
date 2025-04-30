@@ -57,20 +57,17 @@ public class LineupManager : BasePlayerManager
         foreach (var avatar in lineup.BaseAvatars!)
         {
             var avatarType = AvatarType.AvatarFormalType;
-            AvatarInfo? avatarInfo = null;
+            BaseAvatarInfo? avatarInfo = null;
             if (avatar.SpecialAvatarId > 0)
             {
-                GameData.SpecialAvatarData.TryGetValue(avatar.SpecialAvatarId, out var specialAvatar);
-                if (specialAvatar == null) continue;
-                avatarType = AvatarType.AvatarTrialType;
-                avatarInfo = specialAvatar.ToAvatarData(Player.Uid);
+                avatarInfo = Player.AvatarManager!.GetFormalAvatar(avatar.SpecialAvatarId);
             }
             else if (avatar.AssistUid > 0)
             {
                 var avatarStorage = DatabaseHelper.Instance?.GetInstance<AvatarData>(avatar.AssistUid);
                 avatarType = AvatarType.AvatarAssistType;
                 if (avatarStorage == null) continue;
-                foreach (var avatarData in avatarStorage.Avatars.Where(avatarData =>
+                foreach (var avatarData in avatarStorage.FormalAvatars.Where(avatarData =>
                              avatarData.AvatarId == avatar.BaseAvatarId))
                 {
                     avatarInfo = avatarData;
@@ -79,7 +76,7 @@ public class LineupManager : BasePlayerManager
             }
             else
             {
-                avatarInfo = Player.AvatarManager!.GetAvatar(avatar.BaseAvatarId);
+                avatarInfo = Player.AvatarManager!.GetFormalAvatar(avatar.BaseAvatarId);
             }
 
             if (avatarInfo == null) continue;
@@ -164,7 +161,7 @@ public class LineupManager : BasePlayerManager
             GameData.SpecialAvatarData.TryGetValue(avatarId * 10 + worldLevel, out var specialAvatar);
             if (specialAvatar != null)
                 lineup.BaseAvatars!.Add(new LineupAvatarInfo
-                    { BaseAvatarId = specialAvatar.AvatarID, SpecialAvatarId = specialAvatar.GetId() });
+                    { BaseAvatarId = specialAvatar.AvatarID, SpecialAvatarId = specialAvatar.SpecialAvatarID });
             else
                 lineup.BaseAvatars!.Add(new LineupAvatarInfo { BaseAvatarId = avatarId });
         }
@@ -181,15 +178,15 @@ public class LineupManager : BasePlayerManager
         if (lineup == null)
         {
             var baseAvatarId = avatarId;
-            var specialAvatarId = avatarId * 10 + Player.Data.WorldLevel;
+            var specialAvatarId = avatarId * 10 + 0;
             GameData.SpecialAvatarData.TryGetValue(specialAvatarId, out var specialAvatar);
             if (specialAvatar != null)
             {
+                Player.AvatarManager!.GetTrialAvatar(avatarId)?.CheckLevel(Player.Data.WorldLevel);
                 baseAvatarId = specialAvatar.AvatarID;
             }
             else
             {
-                specialAvatarId = 0;
                 if (baseAvatarId > 8000) baseAvatarId = 8001;
             }
 
@@ -197,7 +194,7 @@ public class LineupManager : BasePlayerManager
             {
                 Name = "",
                 LineupType = 0,
-                BaseAvatars = [new LineupAvatarInfo { BaseAvatarId = baseAvatarId, SpecialAvatarId = specialAvatarId }],
+                BaseAvatars = [new LineupAvatarInfo { BaseAvatarId = baseAvatarId, SpecialAvatarId = specialAvatar?.SpecialAvatarID ?? 0 }],
                 LineupData = LineupData,
                 AvatarData = Player.AvatarManager!.AvatarData
             };
@@ -208,20 +205,20 @@ public class LineupManager : BasePlayerManager
             if (lineup.BaseAvatars!.Count >= 4) return;
 
             var baseAvatarId = avatarId;
-            var specialAvatarId = avatarId * 10 + Player.Data.WorldLevel;
+            var specialAvatarId = avatarId * 10 + 0;
             GameData.SpecialAvatarData.TryGetValue(specialAvatarId, out var specialAvatar);
             if (specialAvatar != null)
             {
+                Player.AvatarManager!.GetTrialAvatar(avatarId)?.CheckLevel(Player.Data.WorldLevel);
                 baseAvatarId = specialAvatar.AvatarID;
             }
             else
             {
-                specialAvatarId = 0;
                 if (baseAvatarId > 8000) baseAvatarId = 8001;
             }
 
             lineup.BaseAvatars?.Add(new LineupAvatarInfo
-                { BaseAvatarId = baseAvatarId, SpecialAvatarId = specialAvatarId });
+                { BaseAvatarId = baseAvatarId, SpecialAvatarId = specialAvatar?.SpecialAvatarID ?? 0 });
             LineupData.Lineups[lineupIndex] = lineup;
         }
 
@@ -243,6 +240,7 @@ public class LineupManager : BasePlayerManager
         LineupData.Lineups.TryGetValue(LineupData.GetCurLineupIndex(), out var lineup);
         GameData.SpecialAvatarData.TryGetValue(specialAvatarId, out var specialAvatar);
         if (specialAvatar == null) return;
+        Player.AvatarManager!.GetTrialAvatar(specialAvatar.SpecialAvatarID)?.CheckLevel(Player.Data.WorldLevel);
         if (lineup == null)
         {
             lineup = new LineupInfo
@@ -250,7 +248,7 @@ public class LineupManager : BasePlayerManager
                 Name = "",
                 LineupType = 0,
                 BaseAvatars =
-                    [new LineupAvatarInfo { BaseAvatarId = specialAvatar.AvatarID, SpecialAvatarId = specialAvatarId }],
+                    [new LineupAvatarInfo { BaseAvatarId = specialAvatar.AvatarID, SpecialAvatarId = specialAvatar.SpecialAvatarID }],
                 LineupData = LineupData,
                 AvatarData = Player.AvatarManager!.AvatarData
             };
@@ -260,7 +258,7 @@ public class LineupManager : BasePlayerManager
         {
             if (lineup.BaseAvatars!.Count >= 4) lineup.BaseAvatars!.RemoveAt(3); // remove last avatar
             lineup.BaseAvatars?.Add(new LineupAvatarInfo
-                { BaseAvatarId = specialAvatar.AvatarID, SpecialAvatarId = specialAvatarId });
+                { BaseAvatarId = specialAvatar.AvatarID, SpecialAvatarId = specialAvatar.SpecialAvatarID });
             LineupData.Lineups[LineupData.GetCurLineupIndex()] = lineup;
         }
 

@@ -14,17 +14,15 @@ public class PacketGetMultiPathAvatarInfoScRsp : BasePacket
         foreach (var multiPathAvatar in GameData.MultiplePathAvatarConfigData.Values)
             if (!proto.CurAvatarPath.ContainsKey((uint)multiPathAvatar.BaseAvatarID))
             {
-                var avatar = player.AvatarManager!.GetAvatar(multiPathAvatar.BaseAvatarID);
+                var avatar = player.AvatarManager!.GetFormalAvatar(multiPathAvatar.BaseAvatarID);
                 if (avatar != null)
                 {
-                    if (avatar.AvatarId == 8001) // only add main character
-                        proto.BasicTypeIdList.Add((uint)avatar.PathId);
-                    var pathId = avatar.PathId > 0 ? avatar.PathId : avatar.AvatarId;
-                    if (pathId == 8001)
-                        if (player.Data.CurrentGender != Gender.Man)
-                            pathId++;
-                    proto.CurAvatarPath.Add((uint)avatar.AvatarId, (MultiPathAvatarType)pathId);
-                    if (avatar.AvatarId == multiPathAvatar.BaseAvatarID)
+                    if (avatar.BaseAvatarId == 8001) // only add main character
+                        proto.BasicTypeIdList.Add((uint)avatar.AvatarId);
+                    var pathId = avatar.AvatarId;
+
+                    proto.CurAvatarPath.Add((uint)avatar.BaseAvatarId, (MultiPathAvatarType)pathId);
+                    if (avatar.BaseAvatarId == multiPathAvatar.BaseAvatarID)
                         proto.MultiPathAvatarInfoList.Add(avatar.ToAvatarPathProto());
                 }
             }

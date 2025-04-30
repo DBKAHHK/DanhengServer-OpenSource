@@ -41,14 +41,14 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
             var lineup = Player.LineupManager!.GetExtraLineup(ExtraLineupType.LineupChallenge)!;
 
             // Make sure this lineup has avatars set
-            if (lineup.AvatarData!.Avatars.Count == 0)
+            if (lineup.AvatarData!.FormalAvatars.Count == 0)
             {
                 await Player.SendPacket(new PacketStartChallengeScRsp((uint)Retcode.RetChallengeLineupEmpty));
                 return;
             }
 
             // Reset hp/sp
-            foreach (var avatar in lineup.AvatarData!.Avatars)
+            foreach (var avatar in lineup.AvatarData!.FormalAvatars)
             {
                 avatar.SetCurHp(10000, true);
                 avatar.SetCurSp(5000, true);
@@ -64,14 +64,14 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
             var lineup = Player.LineupManager!.GetExtraLineup(ExtraLineupType.LineupChallenge2)!;
 
             // Make sure this lineup has avatars set
-            if (lineup.AvatarData!.Avatars.Count == 0)
+            if (lineup.AvatarData!.FormalAvatars.Count == 0)
             {
                 await Player.SendPacket(new PacketStartChallengeScRsp((uint)Retcode.RetChallengeLineupEmpty));
                 return;
             }
 
             // Reset hp/sp
-            foreach (var avatar in lineup.AvatarData!.Avatars)
+            foreach (var avatar in lineup.AvatarData!.FormalAvatars)
             {
                 avatar.SetCurHp(10000, true);
                 avatar.SetCurSp(5000, true);

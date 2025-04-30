@@ -11,19 +11,9 @@ using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Avatar;
 
-public class AvatarManager : BasePlayerManager
+public class AvatarManager(PlayerInstance player) : BasePlayerManager(player)
 {
-    public AvatarManager(PlayerInstance player) : base(player)
-    {
-        AvatarData = DatabaseHelper.Instance!.GetInstanceOrCreateNew<AvatarData>(player.Uid);
-        foreach (var avatar in AvatarData.Avatars)
-        {
-            avatar.PlayerData = player.Data;
-            avatar.Excel = GameData.AvatarConfigData[avatar.AvatarId];
-        }
-    }
-
-    public AvatarData AvatarData { get; }
+    public AvatarData AvatarData { get; } = DatabaseHelper.Instance!.GetInstanceOrCreateNew<AvatarData>(player.Uid);
 
     public async ValueTask<AvatarConfigExcel?> AddAvatar(int avatarId, bool sync = true, bool notify = true,
         bool isGacha = false)
@@ -35,54 +25,80 @@ public class AvatarManager : BasePlayerManager
         if (multiPathAvatar != null && multiPathAvatar.BaseAvatarID != avatarId)
         {
             // Is path
-            foreach (var avatarData in AvatarData.Avatars)
+            foreach (var avatarData in AvatarData.FormalAvatars)
                 if (avatarData.AvatarId == multiPathAvatar.BaseAvatarID)
                 {
                     // Add path for the character
-                    avatarData.PathInfoes.Add(avatarId, new PathInfo(avatarId));
+                    avatarData.PathInfos.Add(avatarId, new PathInfo(avatarId));
                     break;
                 }
 
             return null;
         }
 
-        var avatar = new AvatarInfo(avatarExcel)
+        var avatar = new FormalAvatarInfo(multiPathAvatar?.BaseAvatarID ?? avatarId, avatarId, true)
         {
-            AvatarId = avatarId >= 8001 ? 8001 : avatarId,
             Level = 1,
             Timestamp = Extensions.GetUnixSec(),
             CurrentHp = 10000,
             CurrentSp = 0
         };
 
-        if (avatarId >= 8001)
-        {
-            if (GetHero() != null) return null; // Only one hero
-            avatar.PathId = avatarId;
-        }
-
-        avatar.PlayerData = Player.Data;
-        AvatarData.Avatars.Add(avatar);
+        AvatarData.FormalAvatars.Add(avatar);
 
         if (sync)
             await Player.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
-        if (notify) await Player.SendPacket(new PacketAddAvatarScNotify(avatar.GetBaseAvatarId(), isGacha));
+        if (notify) await Player.SendPacket(new PacketAddAvatarScNotify(avatar.BaseAvatarId, isGacha));
 
         return avatarExcel;
     }
 
-    public AvatarInfo? GetAvatar(int avatarId)
+    public FormalAvatarInfo? GetFormalAvatar(int avatarId)
     {
-        if (avatarId > 8000) avatarId = 8001;
-        if (GameData.MultiplePathAvatarConfigData.ContainsKey(avatarId))
-            avatarId = GameData.MultiplePathAvatarConfigData[avatarId].BaseAvatarID;
-        return AvatarData.Avatars.Find(avatar => avatar.AvatarId == avatarId);
+        GameData.MultiplePathAvatarConfigData.TryGetValue(avatarId, out var multiPathAvatar);
+        return AvatarData.FormalAvatars.Find(avatar => avatar.BaseAvatarId ==
+                                                       (multiPathAvatar?.BaseAvatarID ?? avatarId));
     }
 
-    public AvatarInfo? GetHero()
+    public SpecialAvatarInfo? GetTrialAvatar(int avatarId)
     {
-        return AvatarData.Avatars.Find(avatar => avatar.AvatarId == 8001);
+        var avatar = AvatarData.TrialAvatars.Find(avatar => avatar.SpecialAvatarId == avatarId);
+        if (avatar != null) return avatar;
+
+        if (!GameData.SpecialAvatarData.TryGetValue(avatarId * 10 + 0, out var excel)) return null;
+        avatar = new SpecialAvatarInfo
+        {
+            SpecialAvatarId = excel.SpecialAvatarID,
+            AvatarId = excel.AvatarID,
+            BaseAvatarId = excel.AvatarID,
+            Level = excel.Level,
+            Promotion = excel.Promotion,
+        };
+
+        avatar.PathInfos.Add(excel.AvatarID, new PathInfo(excel.AvatarID)
+        {
+            Rank = excel.Rank,
+            EquipData = new ItemData
+            {
+                ItemId = excel.EquipmentID,
+                Level = excel.EquipmentLevel,
+                Promotion = excel.EquipmentPromotion,
+                Rank = excel.EquipmentRank
+            }
+        });
+
+        if (!GameData.AvatarConfigData.TryGetValue(avatar.BaseAvatarId, out var avatarExcel)) return avatar;
+        foreach (var skill in avatarExcel.DefaultSkillTree)
+            avatar.GetCurPathInfo().SkillTree.Add(skill.PointID, skill.Level);
+
+        AvatarData.TrialAvatars.Add(avatar);
+        return avatar;
+    }
+
+    public FormalAvatarInfo? GetHero()
+    {
+        return AvatarData.FormalAvatars.Find(avatar => avatar.BaseAvatarId == 8001);
     }
 
     public async ValueTask ReforgeRelic(int uniqueId)

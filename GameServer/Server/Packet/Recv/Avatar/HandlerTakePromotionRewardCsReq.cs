@@ -12,7 +12,7 @@ public class HandlerTakePromotionRewardCsReq : Handler
     {
         var req = TakePromotionRewardCsReq.Parser.ParseFrom(data);
 
-        var avatar = connection.Player!.AvatarManager!.GetAvatar((int)req.BaseAvatarId);
+        var avatar = connection.Player!.AvatarManager!.GetFormalAvatar((int)req.BaseAvatarId);
         if (avatar == null) return;
         avatar.TakeReward((int)req.Promotion);
         await connection.Player!.InventoryManager!.AddItem(101, 1, false);

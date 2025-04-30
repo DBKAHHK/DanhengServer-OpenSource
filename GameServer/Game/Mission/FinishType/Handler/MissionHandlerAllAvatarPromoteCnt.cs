@@ -18,7 +18,7 @@ public class MissionHandlerAllAvatarPromoteCnt : MissionFinishTypeHandler
         FinishWayExcel excel, object? arg)
     {
         var promoteCount = 0;
-        foreach (var avatar in player.AvatarManager?.AvatarData.Avatars ?? []) promoteCount += avatar.Promotion;
+        foreach (var avatar in player.AvatarManager?.AvatarData.FormalAvatars ?? []) promoteCount += avatar.Promotion;
         await player.QuestManager!.UpdateQuestProgress(quest.QuestID, promoteCount);
     }
 }

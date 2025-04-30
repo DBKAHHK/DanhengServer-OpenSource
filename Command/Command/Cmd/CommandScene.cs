@@ -71,7 +71,7 @@ public class CommandScene : ICommand
         }
 
         await scene.RemoveEntity(entity);
-        await arg.SendMsg(I18NManager.Translate("Game.Command.Scene.EntityRemoved", entity.EntityID.ToString()));
+        await arg.SendMsg(I18NManager.Translate("Game.Command.Scene.EntityRemoved", entity.EntityId.ToString()));
     }
 
     [CommandMethod("0 unlockall")]

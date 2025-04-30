@@ -17,20 +17,9 @@ public class PacketGetAvatarDataScRsp : BasePacket
         player.PlayerUnlockData!.Skins.Values.ToList().ForEach(skin =>
             proto.SkinList.AddRange(skin.Select(x => (uint)x)));
 
-        player.AvatarManager?.AvatarData?.Avatars?.ForEach(avatar =>
+        player.AvatarManager?.AvatarData?.FormalAvatars?.ForEach(avatar =>
         {
-            GameData.MultiplePathAvatarConfigData.TryGetValue(avatar.AvatarId, out var multiPathAvatar);
-
-            if (multiPathAvatar == null)
-            {
-                // Normal avatar
-                proto.AvatarList.Add(avatar.ToProto());
-            }
-            else
-            {
-                // Multiple path avatar
-                if (avatar.AvatarId == multiPathAvatar.BaseAvatarID) proto.AvatarList.Add(avatar.ToProto());
-            }
+            proto.AvatarList.Add(avatar.ToProto());
         });
 
         SetData(proto);

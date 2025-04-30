@@ -161,12 +161,12 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                 break;
             case ItemMainTypeEnum.AvatarCard:
                 // add avatar
-                var avatar = Player.AvatarManager?.GetAvatar(itemId);
-                if (avatar is { Excel: not null })
+                var avatar = Player.AvatarManager?.GetFormalAvatar(itemId);
+                if (avatar != null)
                 {
-                    var rankUpItem = Player.InventoryManager!.GetItem(avatar.Excel.RankUpItemId);
-                    if ((avatar.PathInfoes[itemId].Rank + rankUpItem?.Count ?? 0) <= 5)
-                        itemData = await PutItem(avatar.Excel.RankUpItemId, 1);
+                    var rankUpItem = Player.InventoryManager!.GetItem(itemId + 10000);
+                    if ((avatar.PathInfos[itemId].Rank + rankUpItem?.Count ?? 0) <= 5)
+                        itemData = await PutItem(itemId + 10000, 1);
                 }
                 else
                 {
@@ -702,7 +702,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             if (baseAvatarId > 0)
             {
                 // single use
-                var avatar = Player.AvatarManager!.GetAvatar(baseAvatarId);
+                var avatar = Player.AvatarManager!.GetFormalAvatar(baseAvatarId);
                 if (avatar == null) return (Retcode.RetAvatarNotExist, null);
 
                 var extraLineup = Player.LineupManager!.GetCurLineup()?.IsExtraLineup() == true;
@@ -763,12 +763,12 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         //maze buff
         if (useConfig.MazeBuffID > 0)
             foreach (var info in Player.SceneInstance?.AvatarInfo.Values.ToList() ?? [])
-                if (baseAvatarId == 0 || info.AvatarInfo.GetBaseAvatarId() == baseAvatarId)
+                if (baseAvatarId == 0 || info.AvatarInfo.BaseAvatarId == baseAvatarId)
                     await info.AddBuff(new SceneBuff(useConfig.MazeBuffID, 1, info.AvatarInfo.AvatarId));
 
         if (useConfig.MazeBuffID2 > 0)
             foreach (var info in Player.SceneInstance?.AvatarInfo.Values.ToList() ?? [])
-                if (baseAvatarId == 0 || info.AvatarInfo.GetBaseAvatarId() == baseAvatarId)
+                if (baseAvatarId == 0 || info.AvatarInfo.BaseAvatarId == baseAvatarId)
                     await info.AddBuff(new SceneBuff(useConfig.MazeBuffID2, 1, info.AvatarInfo.AvatarId));
 
         // remove item
@@ -782,23 +782,23 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
     public async ValueTask EquipAvatar(int avatarId, int equipmentUniqueId)
     {
         var itemData = Data.EquipmentItems.Find(x => x.UniqueId == equipmentUniqueId);
-        var avatarData = Player.AvatarManager!.GetAvatar(avatarId);
+        var avatarData = Player.AvatarManager!.GetFormalAvatar(avatarId);
         if (itemData == null || avatarData == null) return;
-        var oldItem = Data.EquipmentItems.Find(x => x.UniqueId == avatarData.PathInfoes[avatarId].EquipId);
+        var oldItem = Data.EquipmentItems.Find(x => x.UniqueId == avatarData.PathInfos[avatarId].EquipId);
         if (itemData.EquipAvatar > 0) // already be dressed
         {
             var equipAvatarId = itemData.EquipAvatar;
-            var equipAvatar = Player.AvatarManager.GetAvatar(equipAvatarId);
+            var equipAvatar = Player.AvatarManager.GetFormalAvatar(equipAvatarId);
             if (equipAvatar != null && oldItem != null)
             {
                 // switch
-                equipAvatar.PathInfoes[equipAvatarId].EquipId = oldItem.UniqueId;
-                oldItem.EquipAvatar = equipAvatar.GetAvatarId();
+                equipAvatar.PathInfos[equipAvatarId].EquipId = oldItem.UniqueId;
+                oldItem.EquipAvatar = equipAvatar.AvatarId;
                 await Player.SendPacket(new PacketPlayerSyncScNotify(equipAvatar, oldItem));
             }
             else if (equipAvatar != null && oldItem == null)
             {
-                equipAvatar.PathInfoes[equipAvatarId].EquipId = 0;
+                equipAvatar.PathInfos[equipAvatarId].EquipId = 0;
                 await Player.SendPacket(new PacketPlayerSyncScNotify(equipAvatar));
             }
         }
@@ -811,33 +811,33 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             }
         }
 
-        itemData.EquipAvatar = avatarData.GetAvatarId();
-        avatarData.PathInfoes[avatarId].EquipId = itemData.UniqueId;
+        itemData.EquipAvatar = avatarData.AvatarId;
+        avatarData.PathInfos[avatarId].EquipId = itemData.UniqueId;
         await Player.SendPacket(new PacketPlayerSyncScNotify(avatarData, itemData));
     }
 
     public async ValueTask EquipRelic(int avatarId, int relicUniqueId, int slot)
     {
         var itemData = Data.RelicItems.Find(x => x.UniqueId == relicUniqueId);
-        var avatarData = Player.AvatarManager!.GetAvatar(avatarId);
+        var avatarData = Player.AvatarManager!.GetFormalAvatar(avatarId);
         if (itemData == null || avatarData == null) return;
-        avatarData.PathInfoes[avatarId].Relic.TryGetValue(slot, out var id);
+        avatarData.PathInfos[avatarId].Relic.TryGetValue(slot, out var id);
         var oldItem = Data.RelicItems.Find(x => x.UniqueId == id);
 
         if (itemData.EquipAvatar > 0) // already be dressed
         {
             var equipAvatarId = itemData.EquipAvatar;
-            var equipAvatar = Player.AvatarManager!.GetAvatar(equipAvatarId);
+            var equipAvatar = Player.AvatarManager!.GetFormalAvatar(equipAvatarId);
             if (equipAvatar != null && oldItem != null)
             {
                 // switch
-                equipAvatar.PathInfoes[equipAvatarId].Relic[slot] = oldItem.UniqueId;
-                oldItem.EquipAvatar = equipAvatar.GetAvatarId();
+                equipAvatar.PathInfos[equipAvatarId].Relic[slot] = oldItem.UniqueId;
+                oldItem.EquipAvatar = equipAvatar.AvatarId;
                 await Player.SendPacket(new PacketPlayerSyncScNotify(equipAvatar, oldItem));
             }
             else if (equipAvatar != null && oldItem == null)
             {
-                equipAvatar.PathInfoes[equipAvatarId].Relic[slot] = 0;
+                equipAvatar.PathInfos[equipAvatarId].Relic[slot] = 0;
                 await Player.SendPacket(new PacketPlayerSyncScNotify(equipAvatar));
             }
         }
@@ -850,18 +850,17 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             }
         }
 
-        itemData.EquipAvatar = avatarData.GetAvatarId();
-        avatarData.PathInfoes[avatarId].Relic[slot] = itemData.UniqueId;
+        itemData.EquipAvatar = avatarData.AvatarId;
+        avatarData.PathInfos[avatarId].Relic[slot] = itemData.UniqueId;
         // save
         await Player.SendPacket(new PacketPlayerSyncScNotify(avatarData, itemData));
     }
 
     public async ValueTask UnequipRelic(int avatarId, int slot)
     {
-        var avatarData = Player.AvatarManager!.GetAvatar(avatarId);
+        var avatarData = Player.AvatarManager!.GetFormalAvatar(avatarId);
         if (avatarData == null) return;
-        var pathInfo = avatarData.PathInfoes[avatarId];
-        if (pathInfo == null) return;
+        var pathInfo = avatarData.PathInfos[avatarId];
         pathInfo.Relic.TryGetValue(slot, out var uniqueId);
         var itemData = Data.RelicItems.Find(x => x.UniqueId == uniqueId);
         if (itemData == null) return;
@@ -872,10 +871,9 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
 
     public async ValueTask UnequipEquipment(int avatarId)
     {
-        var avatarData = Player.AvatarManager!.GetAvatar(avatarId);
+        var avatarData = Player.AvatarManager!.GetFormalAvatar(avatarId);
         if (avatarData == null) return;
-        var pathInfo = avatarData.PathInfoes[avatarId];
-        if (pathInfo == null) return;
+        var pathInfo = avatarData.PathInfos[avatarId];
         var itemData = Data.EquipmentItems.Find(x => x.UniqueId == pathInfo.EquipId);
         if (itemData == null) return;
         itemData.EquipAvatar = 0;
@@ -885,8 +883,11 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
 
     public async ValueTask<List<ItemData>> LevelUpAvatar(int baseAvatarId, ItemCostData item)
     {
-        var avatarData = Player.AvatarManager!.GetAvatar(baseAvatarId);
+        var avatarData = Player.AvatarManager!.GetFormalAvatar(baseAvatarId);
         if (avatarData == null) return [];
+        GameData.AvatarConfigData.TryGetValue(avatarData.AvatarId, out var avatarConfig);
+        if (avatarConfig == null) return [];
+
         GameData.AvatarPromotionConfigData.TryGetValue(avatarData.AvatarId * 10 + avatarData.Promotion,
             out var promotionConfig);
         if (promotionConfig == null) return [];
@@ -908,7 +909,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         var maxLevel = promotionConfig.MaxLevel;
         var curExp = avatarData.Exp;
         var curLevel = avatarData.Level;
-        var nextLevelExp = GameData.GetAvatarExpRequired(avatarData.Excel!.ExpGroup, avatarData.Level);
+        var nextLevelExp = GameData.GetAvatarExpRequired(avatarConfig.ExpGroup, avatarData.Level);
         do
         {
             int toGain;
@@ -923,7 +924,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             {
                 curExp = 0;
                 curLevel++;
-                nextLevelExp = GameData.GetAvatarExpRequired(avatarData.Excel!.ExpGroup, curLevel);
+                nextLevelExp = GameData.GetAvatarExpRequired(avatarConfig.ExpGroup, curLevel);
             }
         } while (exp > 0 && nextLevelExp > 0 && curLevel < maxLevel);
 
@@ -1077,9 +1078,12 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
     public async ValueTask<bool> PromoteAvatar(int avatarId)
     {
         // Get avatar
-        var avatarData = Player.AvatarManager!.GetAvatar(avatarId)!;
-        if (avatarData == null || avatarData.Excel == null ||
-            avatarData.Promotion >= avatarData.Excel.MaxPromotion) return false;
+        var avatarData = Player.AvatarManager!.GetFormalAvatar(avatarId);
+        if (avatarData == null) return false;
+
+        GameData.AvatarConfigData.TryGetValue(avatarId, out var avatarConfig);
+        if (avatarConfig == null ||
+            avatarData.Promotion >= avatarConfig.MaxPromotion) return false;
 
         // Get promotion data
         var promotion =
@@ -1087,7 +1091,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                 x.AvatarID == avatarId && x.Promotion == avatarData.Promotion)!;
 
         // Sanity check
-        if (promotion == null || avatarData.Level < promotion.MaxLevel ||
+        if (avatarData.Level < promotion.MaxLevel ||
             Player.Data.Level < promotion.PlayerLevelRequire ||
             Player.Data.WorldLevel < promotion.WorldLevelRequire) return false;
 
@@ -1096,7 +1100,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             await Player.InventoryManager!.RemoveItem(cost.ItemID, cost.ItemNum);
 
         // Promote
-        avatarData.Promotion = avatarData.Promotion + 1;
+        avatarData.Promotion += 1;
 
         // Send packets
         await Player.SendPacket(new PacketPlayerSyncScNotify(avatarData));
@@ -1252,7 +1256,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         var baseAvatarId = avatarId;
         GameData.MultiplePathAvatarConfigData.TryGetValue(baseAvatarId, out var avatar);
         if (avatar != null) baseAvatarId = avatar.BaseAvatarID;
-        var avatarData = Player.AvatarManager!.GetAvatar(baseAvatarId);
+        var avatarData = Player.AvatarManager!.GetFormalAvatar(baseAvatarId);
         if (avatarData == null) return;
         avatarData.GetCurPathInfo().Rank++;
         await Player.SendPacket(new PacketPlayerSyncScNotify(avatarData));

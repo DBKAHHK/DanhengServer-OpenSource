@@ -30,7 +30,7 @@ public class CommandLineup : ICommand
         }
 
         var player = arg.Target.Player!;
-        foreach (var avatar in player.LineupManager!.GetCurLineup()!.AvatarData!.Avatars) avatar.CurrentHp = 10000;
+        foreach (var avatar in player.LineupManager!.GetCurLineup()!.AvatarData!.FormalAvatars) avatar.CurrentHp = 10000;
         await player.SendPacket(new PacketSyncLineupNotify(player.LineupManager.GetCurLineup()!));
         await arg.SendMsg(I18NManager.Translate("Game.Command.Lineup.HealedAllAvatars"));
     }

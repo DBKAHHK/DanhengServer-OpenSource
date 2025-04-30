@@ -20,7 +20,7 @@ public class MissionHandlerChangeLineup : MissionFinishActionHandler
             {
                 GameData.AvatarConfigData.TryGetValue(avatarId, out var avatar);
                 if (avatar == null) continue;
-                var ava = Player.AvatarManager!.GetAvatar(avatarId);
+                var ava = Player.AvatarManager!.GetFormalAvatar(avatarId);
                 if (ava == null) await Player.AvatarManager!.AddAvatar(avatarId);
                 await Player.LineupManager!.AddAvatarToCurTeam(avatarId, count == avatarCount);
             }

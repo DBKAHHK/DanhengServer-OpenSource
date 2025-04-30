@@ -2,6 +2,7 @@
 using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Avatar;
+using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Activity.Loaders;
@@ -65,12 +66,12 @@ public class SceneInstance
 
         var playerGroupInfo = new SceneEntityGroupInfo(); // avatar group
         foreach (var avatar in AvatarInfo)
-            playerGroupInfo.EntityList.Add(avatar.Value.AvatarInfo.ToSceneEntityInfo(avatar.Value.AvatarType));
+            playerGroupInfo.EntityList.Add(avatar.Value.ToProto());
         if (playerGroupInfo.EntityList.Count > 0)
         {
             if (LeaderEntityId == 0)
             {
-                LeaderEntityId = AvatarInfo.Values.First().AvatarInfo.EntityId;
+                LeaderEntityId = AvatarInfo.Values.First().EntityId;
                 sceneInfo.LeaderEntityId = (uint)LeaderEntityId;
             }
             else
@@ -184,7 +185,7 @@ public class SceneInstance
         EntryId = entryId;
         LeaveEntryId = 0;
 
-        System.Threading.Tasks.Task.Run(async () => { await SyncLineup(true, true); }).Wait();
+        System.Threading.Tasks.Task.Run(async () => { await SyncLineup(true); }).Wait();
 
         GameData.GetFloorInfo(PlaneId, FloorId, out FloorInfo);
         if (FloorInfo == null) return;
@@ -237,65 +238,52 @@ public class SceneInstance
 
     #region Scene Actions
 
-    public async ValueTask SyncLineup(bool notSendPacket = false, bool forceSetEntityId = false)
+    public async ValueTask SyncLineup(bool notSendPacket = false)
     {
         var oldAvatarInfo = AvatarInfo.Values.ToList();
         AvatarInfo.Clear();
         var sendPacket = false;
         var addAvatar = new List<IGameEntity>();
         var removeAvatar = new List<IGameEntity>();
-        foreach (var avatar in Player.LineupManager?.GetAvatarsFromCurTeam() ?? [])
+        var avatars = Player.LineupManager?.GetAvatarsFromCurTeam() ?? [];
+        foreach (var sceneInfo in oldAvatarInfo)
         {
-            avatar.AvatarInfo.PlayerData = Player.Data;
-            if (forceSetEntityId && avatar.AvatarInfo.EntityId != 0)
+            if (avatars.FindIndex(x => x.AvatarInfo.BaseAvatarId == sceneInfo.AvatarInfo.BaseAvatarId) != -1)  // avatar still in team
             {
-                removeAvatar.Add(new AvatarSceneInfo(new AvatarInfo
-                {
-                    EntityId = avatar.AvatarInfo.EntityId
-                }, AvatarType.AvatarFormalType, Player));
-                avatar.AvatarInfo.EntityId = 0;
-                sendPacket = true;
+                AvatarInfo.Add(sceneInfo.EntityId, sceneInfo);
             }
-
-            var avatarInstance = oldAvatarInfo.Find(x => x.AvatarInfo.AvatarId == avatar.AvatarInfo.AvatarId);
-            if (avatarInstance == null)
+            else  // avatar leave
             {
-                if (avatar.AvatarInfo.EntityId == 0) avatar.AvatarInfo.EntityId = ++LastEntityId;
-                addAvatar.Add(avatar);
-                AvatarInfo.Add(avatar.AvatarInfo.EntityId, avatar);
+                removeAvatar.Add(sceneInfo);
                 sendPacket = true;
-            }
-            else
-            {
-                AvatarInfo.Add(avatarInstance.AvatarInfo.EntityId, avatarInstance);
             }
         }
 
-        foreach (var avatar in oldAvatarInfo.Where(avatar =>
-                     AvatarInfo.Values.ToList().FindIndex(x => x.AvatarInfo.AvatarId == avatar.AvatarInfo.AvatarId) ==
-                     -1))
+        foreach (var avatar in avatars)  // check team avatar
         {
-            removeAvatar.Add(new AvatarSceneInfo(new AvatarInfo
+            if (AvatarInfo.ContainsKey(avatar.AvatarInfo.BaseAvatarId)) continue; // avatar already in team
+            var avatarInfo = new AvatarSceneInfo(avatar.AvatarInfo, avatar.AvatarType, Player)
             {
-                EntityId = avatar.AvatarInfo.EntityId
-            }, AvatarType.AvatarFormalType, Player));
-            avatar.AvatarInfo.EntityId = 0;
+                // assign entity id
+                EntityId = ++LastEntityId
+            };
+
+            AvatarInfo.Add(avatarInfo.EntityId, avatarInfo);
+            addAvatar.Add(avatarInfo);
             sendPacket = true;
         }
 
         var leaderAvatarId = Player.LineupManager?.GetCurLineup()?.LeaderAvatarId;
-        var leaderAvatarSlot = Player.LineupManager?.GetCurLineup()?.BaseAvatars
-            ?.FindIndex(x => x.BaseAvatarId == leaderAvatarId);
-        if (leaderAvatarSlot == -1) leaderAvatarSlot = 0;
+        var leaderAvatar = AvatarInfo.Values.FirstOrDefault(x => x.AvatarInfo.BaseAvatarId == leaderAvatarId);
+        if (leaderAvatar == null) return;
         if (AvatarInfo.Count == 0) return;
-        var info = AvatarInfo.Values.ToList()[leaderAvatarSlot ?? 0];
-        LeaderEntityId = info.AvatarInfo.EntityId;
+        LeaderEntityId = leaderAvatar.EntityId;
         if (sendPacket && !notSendPacket)
             await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, addAvatar, removeAvatar));
 
-        foreach (var avatar in removeAvatar) Entities.Remove(avatar.EntityID);
+        foreach (var avatar in removeAvatar) Entities.Remove(avatar.EntityId);
 
-        foreach (var avatar in addAvatar) Entities.Add(avatar.EntityID, avatar);
+        foreach (var avatar in addAvatar) Entities.Add(avatar.EntityId, avatar);
     }
 
     public void SyncGroupInfo()
@@ -307,7 +295,7 @@ public class SceneInstance
     {
         foreach (var entity in Entities.Values.OfType<AvatarSceneInfo>())
         {
-            if (!GameData.AvatarConfigData.TryGetValue(entity.AvatarInfo.GetAvatarId(), out var excel)) continue;
+            if (!GameData.AvatarConfigData.TryGetValue(entity.AvatarInfo.AvatarId, out var excel)) continue;
             GameData.AdventureAbilityConfigListData.TryGetValue(excel.AdventurePlayerID, out var avatarAbility);
             if (avatarAbility == null) continue;
             foreach (var modifier in entity.Modifiers.ToArray())
@@ -334,17 +322,17 @@ public class SceneInstance
 
     public async ValueTask AddEntity(IGameEntity entity, bool sendPacket)
     {
-        if (entity.EntityID != 0) return;
-        entity.EntityID = ++LastEntityId;
+        if (entity.EntityId != 0) return;
+        entity.EntityId = ++LastEntityId;
 
-        Entities.Add(entity.EntityID, entity);
+        Entities.Add(entity.EntityId, entity);
         if (sendPacket) await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, entity));
     }
 
     public async ValueTask AddSummonUnitEntity(EntitySummonUnit entity)
     {
-        if (entity.EntityID != 0) return;
-        entity.EntityID = ++LastEntityId;
+        if (entity.EntityId != 0) return;
+        entity.EntityId = ++LastEntityId;
         // old
 
         foreach (var e in Entities.Values.Where(x => x is EntityMonster))
@@ -369,7 +357,7 @@ public class SceneInstance
 
     public async ValueTask RemoveEntity(IGameEntity monster, bool sendPacket)
     {
-        Entities.Remove(monster.EntityID);
+        Entities.Remove(monster.EntityId);
 
         if (sendPacket) await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, null, monster));
     }
@@ -396,7 +384,7 @@ public class SceneInstance
         if (trigger == null) return Retcode.RetSceneUseSkillFail;
 
         await Player.SendPacket(
-            new PacketRefreshTriggerByClientScNotify(triggerName, (uint)SummonUnit.EntityID, targetIds));
+            new PacketRefreshTriggerByClientScNotify(triggerName, (uint)SummonUnit.EntityId, targetIds));
         // check target
 
         List<IGameEntity> targetEnter = [];
@@ -498,14 +486,14 @@ public class SceneInstance
 
 public class AvatarSceneInfo : IGameEntity, IGameModifier
 {
-    public AvatarSceneInfo(AvatarInfo avatarInfo, AvatarType avatarType, PlayerInstance player)
+    public AvatarSceneInfo(BaseAvatarInfo avatarInfo, AvatarType avatarType, PlayerInstance player)
     {
         AvatarInfo = avatarInfo;
         AvatarType = avatarType;
         Player = player;
 
         // initialize enter ability
-        if (!GameData.AvatarConfigData.TryGetValue(avatarInfo.GetAvatarId(), out var excel)) return;
+        if (!GameData.AvatarConfigData.TryGetValue(avatarInfo.AvatarId, out var excel)) return;
         var configInfo = GameData.CharacterConfigInfoData.GetValueOrDefault(excel.AdventurePlayerID);
         GameData.AdventureAbilityConfigListData.TryGetValue(excel.AdventurePlayerID, out var avatarAbility);
         if (configInfo == null || avatarAbility == null) return;
@@ -522,17 +510,13 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
         }
     }
 
-    public AvatarInfo AvatarInfo;
+    public BaseAvatarInfo AvatarInfo;
     public AvatarType AvatarType;
     public PlayerInstance Player;
 
     public List<SceneBuff> BuffList { get; set; } = [];
 
-    public int EntityID
-    {
-        get => AvatarInfo.EntityId;
-        set => AvatarInfo.EntityId = value;
-    }
+    public int EntityId { get; set; }
 
     public int GroupID { get; set; } = 0;
 
@@ -584,8 +568,22 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
 
     public SceneEntityInfo ToProto()
     {
-        return AvatarInfo.ToSceneEntityInfo(AvatarType);
+        return new SceneEntityInfo
+        {
+            EntityId = (uint)EntityId,
+            Motion = new MotionInfo
+            {
+                Pos = Player.Data.Pos?.ToProto() ?? new Vector(),
+                Rot = Player.Data.Rot?.ToProto() ?? new Vector()
+            },
+            Actor = new SceneActorInfo
+            {
+                BaseAvatarId = (uint)AvatarInfo.BaseAvatarId,
+                AvatarType = AvatarType
+            }
+        };
     }
+
 
     public List<string> Modifiers { get; set; } = [];
 
@@ -594,7 +592,7 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
         if (Modifiers.Contains(modifierName)) return;
 
         GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
-        GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.GetAvatarId(), out var avatarAbility);
+        GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.AvatarId, out var avatarAbility);
         if (modifier == null || avatarAbility == null) return;
 
         await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnCreate, this, [],
@@ -615,7 +613,7 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
         if (!Modifiers.Contains(modifierName)) return;
 
         GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
-        GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.GetAvatarId(), out var avatarAbility);
+        GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.AvatarId, out var avatarAbility);
         if (modifier == null || avatarAbility == null) return;
 
         await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnDestroy, this, [],

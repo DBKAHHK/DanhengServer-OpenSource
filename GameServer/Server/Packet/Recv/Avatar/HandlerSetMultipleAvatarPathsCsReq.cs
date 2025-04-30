@@ -14,8 +14,8 @@ public class HandlerSetMultipleAvatarPathsCsReq : Handler
         foreach (var targetAvatarType in req.AvatarIdList)
         {
             var avatarId = (int)targetAvatarType;
-            var baseAvatarId = connection.Player!.AvatarManager!.GetAvatar(avatarId)!.GetBaseAvatarId();
-            if (avatarId % 2 == 0) avatarId--;
+            var baseAvatarId = connection.Player!.AvatarManager!.GetFormalAvatar(avatarId)!.BaseAvatarId;
+            if (baseAvatarId == 8001 && avatarId % 2 == 0) avatarId--;
             await connection.Player!.ChangeAvatarPathType(baseAvatarId, (MultiPathAvatarTypeEnum)avatarId);
         }
 

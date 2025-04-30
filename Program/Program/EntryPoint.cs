@@ -3,6 +3,7 @@ using EggLink.DanhengServer.Command.Command;
 using EggLink.DanhengServer.Configuration;
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
+using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.GameServer.Command;
@@ -280,6 +281,59 @@ public class EntryPoint
             await t.WaitAsync(new CancellationToken());
 
             Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItem", I18NManager.Translate("Word.Database")));
+        }
+
+        // check if the database is up to date
+        var updated = false;
+        foreach (var avatarData in DatabaseHelper.GetAllInstanceFromMap<AvatarData>()!)
+        {
+            if (avatarData.DatabaseVersion == "20250430") continue;
+
+            foreach (var avatar in avatarData.Avatars)
+            {
+                var formalAvatar = new FormalAvatarInfo
+                {
+                    BaseAvatarId = avatar.AvatarId,
+                    AvatarId = avatar.PathId == 0 ? avatar.AvatarId : avatar.PathId,
+                    CurrentHp = avatar.CurrentHp,
+                    CurrentSp = avatar.CurrentSp,
+                    Exp = avatar.Exp,
+                    ExtraLineupHp = avatar.ExtraLineupHp,
+                    ExtraLineupSp = avatar.ExtraLineupSp,
+                    IsMarked = avatar.IsMarked,
+                    Level = avatar.Level,
+                    Promotion = avatar.Promotion,
+                    PathInfos = []
+                };
+
+                foreach (var info in avatar.PathInfoes)
+                {
+                    formalAvatar.PathInfos.Add(info.Key, new PathInfo(info.Value.PathId)
+                    {
+                        PathId = info.Value.PathId,
+                        EquipId = info.Value.EquipId,
+                        Rank = info.Value.Rank,
+                        Relic = info.Value.Relic,
+                        Skin = info.Value.Skin,
+                        SkillTree = avatar.SkillTreeExtra.GetValueOrDefault(info.Value.PathId) ?? []
+                    });
+                }
+
+                avatarData.FormalAvatars.Add(formalAvatar);
+            }
+
+            avatarData.DatabaseVersion = "20250430";
+            updated = true;
+            DatabaseHelper.ToSaveUidList.Add(avatarData.Uid);
+        }
+
+        if (updated)
+        {
+            Logger.Info(I18NManager.Translate("Server.ServerInfo.UpdatedItem",
+                I18NManager.Translate("Word.Database")));
+
+            Console.ReadLine();
+            Environment.Exit(0);
         }
 
         if (args.Contains("--upgrade-database")) DatabaseHelper.UpgradeDatabase();

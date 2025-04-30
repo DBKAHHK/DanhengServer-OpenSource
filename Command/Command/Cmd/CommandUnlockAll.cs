@@ -36,7 +36,7 @@ public class CommandUnlockAll : ICommand
         {
             player.Data.CurrentGender = Gender.Woman;
             player.Data.CurBasicType = 8002;
-            player.AvatarManager!.GetHero()!.PathId = 8002;
+            player.AvatarManager!.GetHero()!.AvatarId = 8002;
         }
 
         await arg.SendMsg(I18NManager.Translate("Game.Command.UnlockAll.UnlockedAll",

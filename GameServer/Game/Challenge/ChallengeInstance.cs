@@ -175,13 +175,13 @@ public class ChallengeInstance
             foreach (var lineupAvatar in Player.LineupManager?.GetExtraLineup(ExtraLineupType.LineupChallenge)
                          ?.BaseAvatars ?? [])
             {
-                var avatar = Player.AvatarManager?.GetAvatar(lineupAvatar.BaseAvatarId);
+                var avatar = Player.AvatarManager?.GetFormalAvatar(lineupAvatar.BaseAvatarId);
                 if (avatar == null) continue;
-                proto.BossInfo.FirstLineup.Add((uint)avatar.GetAvatarId());
+                proto.BossInfo.FirstLineup.Add((uint)avatar.AvatarId);
                 var equip = Player.InventoryManager?.GetItem(0, avatar.GetCurPathInfo().EquipId,
                     ItemMainTypeEnum.Equipment);
                 if (equip != null)
-                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.GetAvatarId(),
+                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.AvatarId,
                         equip.ToChallengeEquipmentProto());
 
                 var relicProto = new ChallengeBossAvatarRelicInfo();
@@ -193,19 +193,19 @@ public class ChallengeInstance
                     relicProto.AvatarRelicSlotMap.Add((uint)relicUniqueId.Key, relic.ToChallengeRelicProto());
                 }
 
-                proto.BossInfo.ChallengeAvatarRelicMap.Add((uint)avatar.GetAvatarId(), relicProto);
+                proto.BossInfo.ChallengeAvatarRelicMap.Add((uint)avatar.AvatarId, relicProto);
             }
 
             foreach (var lineupAvatar in Player.LineupManager?.GetExtraLineup(ExtraLineupType.LineupChallenge2)
                          ?.BaseAvatars ?? [])
             {
-                var avatar = Player.AvatarManager?.GetAvatar(lineupAvatar.BaseAvatarId);
+                var avatar = Player.AvatarManager?.GetFormalAvatar(lineupAvatar.BaseAvatarId);
                 if (avatar == null) continue;
-                proto.BossInfo.SecondLineup.Add((uint)avatar.GetAvatarId());
+                proto.BossInfo.SecondLineup.Add((uint)avatar.AvatarId);
                 var equip = Player.InventoryManager?.GetItem(0, avatar.GetCurPathInfo().EquipId,
                     ItemMainTypeEnum.Equipment);
                 if (equip != null)
-                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.GetAvatarId(),
+                    proto.BossInfo.ChallengeAvatarEquipmentMap.Add((uint)avatar.AvatarId,
                         equip.ToChallengeEquipmentProto());
 
                 var relicProto = new ChallengeBossAvatarRelicInfo();
@@ -217,7 +217,7 @@ public class ChallengeInstance
                     relicProto.AvatarRelicSlotMap.Add((uint)relicUniqueId.Key, relic.ToChallengeRelicProto());
                 }
 
-                proto.BossInfo.ChallengeAvatarRelicMap.Add((uint)avatar.GetAvatarId(), relicProto);
+                proto.BossInfo.ChallengeAvatarRelicMap.Add((uint)avatar.AvatarId, relicProto);
             }
         }
 
@@ -286,7 +286,7 @@ public class ChallengeInstance
         {
             case BattleEndStatus.BattleEndWin:
                 // Check if any avatar in the lineup has died
-                foreach (var avatar in battle.Lineup.AvatarData!.Avatars)
+                foreach (var avatar in battle.Lineup.AvatarData!.FormalAvatars)
                     if (avatar.CurrentHp <= 0)
                         HasAvatarDied = true;
 

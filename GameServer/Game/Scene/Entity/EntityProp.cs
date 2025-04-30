@@ -20,7 +20,7 @@ public class EntityProp(SceneInstance scene, MazePropExcel excel, GroupInfo grou
     public PropInfo PropInfo { get; set; } = prop;
     public GroupInfo Group { get; set; } = group;
     public ScenePropTimelineData? PropTimelineData { get; set; }
-    public int EntityID { get; set; }
+    public int EntityId { get; set; }
     public List<SceneBuff> BuffList { get; set; } = [];
     public int GroupID { get; set; } = group.Id;
 
@@ -50,7 +50,7 @@ public class EntityProp(SceneInstance scene, MazePropExcel excel, GroupInfo grou
 
         return new SceneEntityInfo
         {
-            EntityId = (uint)EntityID,
+            EntityId = (uint)EntityId,
             GroupId = (uint)GroupID,
             Motion = new MotionInfo
             {

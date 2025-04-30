@@ -9,7 +9,7 @@ public class HandlerGetMultiPathAvatarInfoCsReq : Handler
     public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
     {
         // Hacky way to prevent exploding
-        connection.Player!.AvatarManager!.GetHero()!.ValidateHero();
+        connection.Player!.AvatarManager!.GetHero()!.ValidateHero(connection.Player!.Data.CurrentGender);
 
         await connection.SendPacket(new PacketGetMultiPathAvatarInfoScRsp(connection.Player!));
     }

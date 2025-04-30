@@ -4,6 +4,7 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Proto;
+using System.Numerics;
 
 namespace EggLink.DanhengServer.Command.Command.Cmd;
 
@@ -38,49 +39,61 @@ public class CommandAvatar : ICommand
         var player = arg.Target.Player!;
         if (avatarId == -1)
         {
-            player.AvatarManager!.AvatarData.Avatars.ForEach(avatar =>
+            foreach (var path in player.AvatarManager!.AvatarData.FormalAvatars.SelectMany(avatarInfo =>
+                         avatarInfo.PathInfos.Values))
             {
-                if (avatar.PathId > 0)
+                if (!GameData.AvatarConfigData.TryGetValue(path.PathId, out var pathExcel)) continue;
+                foreach (var talent in pathExcel.SkillTree)
                 {
-                    avatar.SkillTreeExtra.TryGetValue(avatar.PathId, out var hero);
-                    hero ??= [];
-                    var excel = GameData.AvatarConfigData[avatar.PathId];
-                    excel.SkillTree.ForEach(talent => { hero[talent.PointID] = Math.Min(level, talent.MaxLevel); });
+                    path.SkillTree[talent.PointID] = Math.Min(level, talent.MaxLevel);
                 }
-                else
-                {
-                    avatar.Excel?.SkillTree.ForEach(talent =>
-                    {
-                        avatar.SkillTree[talent.PointID] = Math.Min(level, talent.MaxLevel);
-                    });
-                }
-            });
+            }
+
             await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AllAvatarsLevelSet",
                 I18NManager.Translate("Word.Talent"), level.ToString()));
 
             // sync
-            await player.SendPacket(new PacketPlayerSyncScNotify(player.AvatarManager.AvatarData.Avatars));
+            await player.SendPacket(new PacketPlayerSyncScNotify(player.AvatarManager.AvatarData.FormalAvatars));
 
             return;
         }
 
-        var avatar = player.AvatarManager!.GetAvatar(avatarId);
+        if (GameData.MultiplePathAvatarConfigData.TryGetValue(avatarId, out var multiple))
+        {
+            avatarId = multiple.BaseAvatarID;
+        }
+
+        var avatar = player.AvatarManager!.GetFormalAvatar(avatarId);
         if (avatar == null)
         {
             await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AvatarNotFound"));
             return;
         }
 
-        avatar.Excel?.SkillTree.ForEach(talent =>
+        var avatarPathInfo = avatar.PathInfos.Values.FirstOrDefault(x => x.PathId == (multiple?.AvatarID ?? avatarId));
+        if (avatarPathInfo == null)
         {
-            avatar.SkillTree[talent.PointID] = Math.Min(level, talent.MaxLevel);
-        });
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AvatarNotFound"));
+            return;
+        }
+
+        GameData.AvatarConfigData.TryGetValue(avatarPathInfo.PathId, out var excel);
+        if (excel == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AvatarNotFound"));
+            return;
+        }
+
+        foreach (var talent in excel.SkillTree)
+        {
+            avatarPathInfo.SkillTree[talent.PointID] = Math.Min(level, talent.MaxLevel);
+        }
 
         // sync
         await player.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
         await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AvatarLevelSet",
-            avatar.Excel?.Name?.Replace("{NICKNAME}", player.Data.Name) ?? avatarId.ToString(),
+            excel.Name?.Replace("{NICKNAME}", player.Data.Name) ?? avatarId.ToString(),
             I18NManager.Translate("Word.Talent"), level.ToString()));
     }
 
@@ -129,33 +142,47 @@ public class CommandAvatar : ICommand
 
         if (id == -1)
         {
-            arg.Target.Player!.AvatarManager!.AvatarData.Avatars.ForEach(avatar =>
+            arg.Target.Player!.AvatarManager!.AvatarData.FormalAvatars.ForEach(avatar =>
             {
-                foreach (var path in avatar.PathInfoes.Values) path.Rank = Math.Min(rank, 6);
+                foreach (var path in avatar.PathInfos.Values) path.Rank = Math.Min(rank, 6);
             });
             await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AllAvatarsLevelSet",
                 I18NManager.Translate("Word.Rank"), rank.ToString()));
 
             // sync
             await arg.Target.SendPacket(
-                new PacketPlayerSyncScNotify(arg.Target.Player!.AvatarManager.AvatarData.Avatars));
+                new PacketPlayerSyncScNotify(arg.Target.Player!.AvatarManager.AvatarData.FormalAvatars));
         }
         else
         {
-            var avatar = arg.Target.Player!.AvatarManager!.GetAvatar(id);
+            if (GameData.MultiplePathAvatarConfigData.TryGetValue(id, out var multiple))
+            {
+                id = multiple.BaseAvatarID;
+            }
+
+            var avatar = arg.Target.Player!.AvatarManager!.GetFormalAvatar(id);
             if (avatar == null)
             {
                 await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AvatarNotFound"));
                 return;
             }
 
-            foreach (var path in avatar.PathInfoes.Values) path.Rank = Math.Min(rank, 6);
+            var avatarPathInfo = avatar.PathInfos.Values.FirstOrDefault(x => x.PathId == (multiple?.AvatarID ?? id));
+            if (avatarPathInfo == null)
+            {
+                await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AvatarNotFound"));
+                return;
+            }
+
+            avatarPathInfo.Rank = Math.Min(rank, 6);
 
             // sync
             await arg.Target.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
+            GameData.AvatarConfigData.TryGetValue(id, out var avatarExcel);
+
             await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AvatarLevelSet",
-                avatar.Excel?.Name?.Replace("{NICKNAME}", arg.Target.Player!.Data.Name) ?? id.ToString(),
+                avatarExcel?.Name?.Replace("{NICKNAME}", arg.Target.Player!.Data.Name) ?? id.ToString(),
                 I18NManager.Translate("Word.Rank"), rank.ToString()));
         }
     }
@@ -186,7 +213,7 @@ public class CommandAvatar : ICommand
 
         if (id == -1)
         {
-            arg.Target.Player!.AvatarManager!.AvatarData.Avatars.ForEach(avatar =>
+            arg.Target.Player!.AvatarManager!.AvatarData.FormalAvatars.ForEach(avatar =>
             {
                 avatar.Level = Math.Min(level, 80);
                 avatar.Promotion = GameData.GetMinPromotionForLevel(avatar.Level);
@@ -196,11 +223,11 @@ public class CommandAvatar : ICommand
 
             // sync
             await arg.Target.SendPacket(
-                new PacketPlayerSyncScNotify(arg.Target.Player!.AvatarManager.AvatarData.Avatars));
+                new PacketPlayerSyncScNotify(arg.Target.Player!.AvatarManager.AvatarData.FormalAvatars));
         }
         else
         {
-            var avatar = arg.Target.Player!.AvatarManager!.GetAvatar(id);
+            var avatar = arg.Target.Player!.AvatarManager!.GetFormalAvatar(id);
             if (avatar == null)
             {
                 await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AvatarNotFound"));
@@ -213,8 +240,9 @@ public class CommandAvatar : ICommand
             // sync
             await arg.Target.SendPacket(new PacketPlayerSyncScNotify(avatar));
 
+            GameData.AvatarConfigData.TryGetValue(id, out var avatarExcel);
             await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AvatarLevelSet",
-                avatar.Excel?.Name?.Replace("{NICKNAME}", arg.Target.Player!.Data.Name) ?? id.ToString(),
+                avatarExcel?.Name?.Replace("{NICKNAME}", arg.Target.Player!.Data.Name) ?? id.ToString(),
                 I18NManager.Translate("Word.Avatar"), level.ToString()));
         }
     }
@@ -237,7 +265,7 @@ public class CommandAvatar : ICommand
         var avatarId = arg.GetInt(0);
         var pathId = arg.GetInt(1);
 
-        var avatar = arg.Target.Player!.AvatarManager!.GetAvatar(avatarId);
+        var avatar = arg.Target.Player!.AvatarManager!.GetFormalAvatar(avatarId);
         if (avatar == null)
         {
             await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AvatarNotFound"));

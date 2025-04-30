@@ -58,7 +58,7 @@ public class ResourceManager
 
         // copy modifiers
         foreach (var value in GameData.AdventureAbilityConfigListData.Values)
-        foreach (var adventureModifierConfig in value.GlobalModifiers ?? [])
+        foreach (var adventureModifierConfig in value?.GlobalModifiers ?? [])
             GameData.AdventureModifierData.Add(adventureModifierConfig.Key, adventureModifierConfig.Value);
     }
 

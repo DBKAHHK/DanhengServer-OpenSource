@@ -117,7 +117,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
         value.BattleTargetList_.Add(battleTarget);
     }
 
-    public Dictionary<AvatarInfo, AvatarType> GetBattleAvatars()
+    public Dictionary<BaseAvatarInfo, AvatarType> GetBattleAvatars()
     {
         var excel = GameData.StageConfigData[StageId];
         List<int> list = [.. excel.TrialAvatarList];
@@ -142,26 +142,18 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
 
         if (list.Count > 0) // if list is not empty
         {
-            Dictionary<AvatarInfo, AvatarType> dict = [];
+            Dictionary<BaseAvatarInfo, AvatarType> dict = [];
             foreach (var avatar in list)
             {
-                GameData.SpecialAvatarData.TryGetValue(avatar * 10 + Player.Data.WorldLevel, out var specialAvatar);
+                var specialAvatar = Player.AvatarManager!.GetTrialAvatar(avatar);
                 if (specialAvatar != null)
                 {
-                    dict.Add(specialAvatar.ToAvatarData(Player.Uid), AvatarType.AvatarTrialType);
+                    dict.Add(specialAvatar, AvatarType.AvatarTrialType);
                 }
                 else
                 {
-                    GameData.SpecialAvatarData.TryGetValue(avatar * 10 + 0, out var raw);
-                    if (raw != null)
-                    {
-                        dict.Add(raw.ToAvatarData(Player.Uid), AvatarType.AvatarTrialType);
-                    }
-                    else
-                    {
-                        var avatarInfo = Player.AvatarManager!.GetAvatar(avatar);
-                        if (avatarInfo != null) dict.Add(avatarInfo, AvatarType.AvatarFormalType);
-                    }
+                    var avatarInfo = Player.AvatarManager!.GetFormalAvatar(avatar);
+                    if (avatarInfo != null) dict.Add(avatarInfo, AvatarType.AvatarFormalType);
                 }
             }
 
@@ -169,10 +161,10 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
         }
         else
         {
-            Dictionary<AvatarInfo, AvatarType> dict = [];
+            Dictionary<BaseAvatarInfo, AvatarType> dict = [];
             foreach (var avatar in Lineup.BaseAvatars!) // if list is empty, use scene lineup
             {
-                AvatarInfo? avatarInstance = null;
+                BaseAvatarInfo? avatarInstance = null;
                 var avatarType = AvatarType.AvatarFormalType;
 
                 if (avatar.AssistUid != 0)
@@ -180,22 +172,22 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
                     var player = DatabaseHelper.Instance!.GetInstance<AvatarData>(avatar.AssistUid);
                     if (player != null)
                     {
-                        avatarInstance = player.Avatars.Find(item => item.GetAvatarId() == avatar.BaseAvatarId);
+                        avatarInstance = player.FormalAvatars.Find(item => item.BaseAvatarId == avatar.BaseAvatarId);
                         avatarType = AvatarType.AvatarAssistType;
                     }
                 }
                 else if (avatar.SpecialAvatarId != 0)
                 {
-                    GameData.SpecialAvatarData.TryGetValue(avatar.SpecialAvatarId, out var specialAvatar);
+                    var specialAvatar = Player.AvatarManager!.GetTrialAvatar(avatar.SpecialAvatarId);
                     if (specialAvatar != null)
                     {
-                        avatarInstance = specialAvatar.ToAvatarData(Player.Uid);
+                        avatarInstance = specialAvatar;
                         avatarType = AvatarType.AvatarTrialType;
                     }
                 }
                 else
                 {
-                    avatarInstance = Player.AvatarManager!.GetAvatar(avatar.BaseAvatarId);
+                    avatarInstance = Player.AvatarManager!.GetFormalAvatar(avatar.BaseAvatarId);
                 }
 
                 if (avatarInstance == null) continue;
@@ -230,8 +222,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
 
         var avatars = GetBattleAvatars();
         foreach (var avatar in avatars)
-            proto.BattleAvatarList.Add(avatar.Key.ToBattleProto(Player.LineupManager!.GetCurLineup()!,
-                Player.InventoryManager!.Data, avatar.Value));
+            proto.BattleAvatarList.Add(avatar.Key.ToBattleProto(new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, Lineup), avatar.Value));
 
         System.Threading.Tasks.Task.Run(async () =>
         {
@@ -239,7 +230,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
 
             foreach (var avatar in AvatarInfo)
                 if (avatars.Keys.FirstOrDefault(x =>
-                        x.GetSpecialAvatarId() == avatar.AvatarInfo.GetSpecialAvatarId()) !=
+                        x.BaseAvatarId == avatar.AvatarInfo.BaseAvatarId) !=
                     null) // if avatar is in lineup
                     await avatar.ApplyBuff(this);
         }).Wait();

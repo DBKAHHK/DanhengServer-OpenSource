@@ -69,7 +69,7 @@ public class SceneSkillManager(PlayerInstance player) : BasePlayerManager(player
             return GameData.AdventureAbilityConfigListData.GetValueOrDefault(monster.MonsterData.ID);
 
         if (entity is AvatarSceneInfo avatar)
-            if (GameData.AvatarConfigData.TryGetValue(avatar.AvatarInfo.GetAvatarId(), out var excel))
+            if (GameData.AvatarConfigData.TryGetValue(avatar.AvatarInfo.AvatarId, out var excel))
                 return GameData.AdventureAbilityConfigListData.GetValueOrDefault(excel.AdventurePlayerID);
 
         return null;
