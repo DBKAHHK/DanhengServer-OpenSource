@@ -311,7 +311,33 @@ public class SceneInstance
                 if (config.OnAfterLocalPlayerUseSkill.Count > 0)
                 {
                     await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility,
-                        config.OnAfterLocalPlayerUseSkill, entity, [], req);
+                        config.OnAfterLocalPlayerUseSkill, entity, [], req, modifier);
+                }
+            }
+        }
+    }
+
+    public async ValueTask OnChangeLeader(int curBaseAvatarId)
+    {
+        foreach (var entity in Entities.Values.OfType<AvatarSceneInfo>())
+        {
+            if (!GameData.AvatarConfigData.TryGetValue(entity.AvatarInfo.AvatarId, out var excel)) continue;
+            if (curBaseAvatarId == entity.AvatarInfo.BaseAvatarId) continue;
+
+            // unstage modifier
+            GameData.AdventureAbilityConfigListData.TryGetValue(excel.AdventurePlayerID, out var avatarAbility);
+            if (avatarAbility == null) continue;
+            foreach (var modifier in entity.Modifiers.ToArray())
+            {
+                // get modifier info
+                if (!GameData.AdventureModifierData.TryGetValue(modifier, out var config)) continue;
+                if (config.OnUnstage.Count > 0)
+                {
+                    await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility,
+                        config.OnUnstage, entity, [], new SceneCastSkillCsReq
+                        {
+                            CastEntityId = (uint)entity.EntityId,
+                        }, modifier);
                 }
             }
         }
@@ -526,6 +552,7 @@ public class SceneInstance
 
         foreach (var unitValue in SummonUnit.Values)
         {
+            if (unitValue.LifeTimeMs == -1) continue;
             var endTime = unitValue.CreateTimeMs + unitValue.LifeTimeMs;
 
             if (endTime < Extensions.GetUnixMs()) await RemoveSummonUnitById(unitValue.SummonUnitId);
@@ -581,7 +608,6 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
             if (oldBuff.IsExpired())
             {
                 BuffList.Remove(oldBuff);
-                BuffList.Add(buff);
             }
             else
             {
@@ -641,6 +667,7 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
     public async ValueTask AddModifier(string modifierName)
     {
         if (Modifiers.Contains(modifierName)) return;
+        Modifiers.Add(modifierName);
 
         GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
         GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.AvatarId, out var avatarAbility);
@@ -655,23 +682,19 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
                     Rot = Player.Data.Rot?.ToProto() ?? new Vector()
                 }
             });
-
-        Modifiers.Add(modifierName);
     }
 
     public async ValueTask RemoveModifier(string modifierName)
     {
         if (!Modifiers.Contains(modifierName)) return;
 
+        Modifiers.Remove(modifierName);
         GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
         GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.AvatarId, out var avatarAbility);
         if (modifier == null || avatarAbility == null) return;
 
         await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnDestroy, this, [],
             new SceneCastSkillCsReq());
-
-        Modifiers.Remove(modifierName);
-        ;
     }
 
     public async ValueTask RemoveBuff(int buffId)
@@ -685,5 +708,21 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
         await Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, [buff]));
 
         await RemoveModifier(buffExcel.ModifierName);
+    }
+
+    public async ValueTask ClearAllBuff()
+    {
+        if (BuffList.Count == 0) return;
+        await Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, BuffList));
+
+        foreach (var sceneBuff in BuffList)
+        {
+            if (!GameData.MazeBuffData.TryGetValue(sceneBuff.BuffId * 10 + sceneBuff.BuffLevel, out var buffExcel))
+                continue;
+
+            await RemoveModifier(buffExcel.ModifierName);
+        }
+
+        BuffList.Clear();
     }
 }

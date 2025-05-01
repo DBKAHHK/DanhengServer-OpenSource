@@ -9,6 +9,7 @@ using EggLink.DanhengServer.GameServer.Game.RogueMagic;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Component;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
@@ -41,14 +42,14 @@ public class AbilityLevelTask(PlayerInstance player)
     #region Manage
 
     public async ValueTask<AbilityLevelResult> TriggerTasks(AdventureAbilityConfigListInfo abilities,
-        List<TaskConfigInfo> tasks, IGameEntity casterEntity, List<IGameEntity> targetEntities, SceneCastSkillCsReq req)
+        List<TaskConfigInfo> tasks, IGameEntity casterEntity, List<IGameEntity> targetEntities, SceneCastSkillCsReq req, string? modifierName = null)
     {
         BattleInstance? instance = null;
         List<HitMonsterInstance> battleInfos = [];
         foreach (var task in tasks)
             try
             {
-                var res = await TriggerTask(new AbilityLevelParam(abilities, task, casterEntity, targetEntities, req));
+                var res = await TriggerTask(new AbilityLevelParam(abilities, task, casterEntity, targetEntities, req, modifierName));
                 if (res.BattleInfos != null) battleInfos.AddRange(res.BattleInfos);
 
                 if (res.Instance != null) instance = res.Instance;
@@ -295,8 +296,8 @@ public class AbilityLevelTask(PlayerInstance player)
                 CreateAvatarEntityId = param.CasterEntity.EntityId,
                 AttachEntityId = excel.ConfigInfo?.AttachPoint == "Origin" ? param.CasterEntity.EntityId : 0,
                 SummonUnitId = excel.ID,
-                CreateAvatarId = (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.AvatarId ?? 0,
-                LifeTimeMs = 20000,
+                CreateAvatarId = (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.BaseAvatarId ?? 0,
+                LifeTimeMs = createSummonUnit.Duration.FixedValue.Value == -1 ? -1 : 20000,
                 TriggerList = excel.ConfigInfo?.TriggerConfig.CustomTriggers ?? [],
                 Motion = param.Request.TargetMotion
             };
@@ -309,7 +310,7 @@ public class AbilityLevelTask(PlayerInstance player)
 
     public async ValueTask<AbilityLevelResult> DestroySummonUnit(AbilityLevelParam param)
     {
-        if (param.Act is DestroySummonUnit destroySummonUnit) await Player.SceneInstance!.RemoveSummonUnitById(destroySummonUnit.SummonUnitID); // TODO
+        if (param.Act is DestroySummonUnit destroySummonUnit) await Player.SceneInstance!.RemoveSummonUnitById(destroySummonUnit.SummonUnit.SummonUnitID); // TODO
 
         return new AbilityLevelResult();
     }
@@ -335,6 +336,30 @@ public class AbilityLevelTask(PlayerInstance player)
             if (modifier == null) return new AbilityLevelResult();
 
             if (param.CasterEntity is IGameModifier mod) await mod.RemoveModifier(removeAdventureModifier.ModifierName);
+        }
+
+        return new AbilityLevelResult();
+    }
+
+    public async ValueTask<AbilityLevelResult> RemoveSelfModifier(AbilityLevelParam param)
+    {
+        if (param.ModifierName != null)
+        {
+            if (param.CasterEntity is IGameModifier mod) await mod.RemoveModifier(param.ModifierName);
+        }
+
+        return new AbilityLevelResult();
+    }
+
+    public async ValueTask<AbilityLevelResult> RefreshMazeBuffTime(AbilityLevelParam param)
+    {
+        if (param.Act is RefreshMazeBuffTime refreshMazeBuffTime)
+        {
+            // get buff
+            var buff = param.CasterEntity.BuffList.FirstOrDefault(x => x.BuffId == refreshMazeBuffTime.ID);
+            if (buff == null) return new AbilityLevelResult();
+            buff.Duration = refreshMazeBuffTime.LifeTime.GetValue();
+            await Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(param.CasterEntity, buff));
         }
 
         return new AbilityLevelResult();
@@ -472,4 +497,4 @@ public record AbilityLevelParam(
     TaskConfigInfo Act,
     IGameEntity CasterEntity,
     List<IGameEntity> TargetEntities,
-    SceneCastSkillCsReq Request);
+    SceneCastSkillCsReq Request, string? ModifierName);

@@ -28,6 +28,7 @@ public class HandlerChangeLineupLeaderCsReq : Handler
         var leaderAvatarId = lineup.BaseAvatars![(int)req.Slot].BaseAvatarId;
         lineup.LeaderAvatarId = leaderAvatarId;
         await player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.TeamLeaderChange);
+        await player.SceneInstance!.OnChangeLeader(leaderAvatarId);
 
         await connection.SendPacket(new PacketChangeLineupLeaderScRsp(req.Slot));
     }
