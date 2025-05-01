@@ -1,4 +1,7 @@
 ﻿using EggLink.DanhengServer.Data.Config.SummonUnit;
+using EggLink.DanhengServer.Enums.Avatar;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace EggLink.DanhengServer.Data.Excel;
 
@@ -7,6 +10,9 @@ public class SummonUnitDataExcel : ExcelResource
 {
     public int ID { get; set; }
     public string JsonPath { get; set; } = "";
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public SummonUnitUniqueGroupEnum UniqueGroup { get; set; }
     public bool DestroyOnEnterBattle { get; set; }
     public bool RemoveMazeBuffOnDestroy { get; set; }
 

@@ -29,7 +29,6 @@ public class EntityMonster(
     public List<SceneBuff> BuffList { get; set; } = [];
     public SceneBuff? TempBuff { get; set; }
     public bool IsAlive { get; private set; } = true;
-    public bool IsInSummonUnit { get; set; } = false;
 
     public int EventID { get; set; } = info.EventID;
     public int CustomStageID { get; set; } = 0;

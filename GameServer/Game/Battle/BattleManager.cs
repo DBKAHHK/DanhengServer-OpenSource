@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.RogueMagic;
@@ -197,7 +198,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         InvokeOnPlayerEnterBattle(Player, battleInstance);
 
         await Player.SendPacket(new PacketSceneEnterStageScRsp(battleInstance));
-        Player.SceneInstance?.ClearSummonUnit();
+        Player.SceneInstance?.OnEnterStage();
     }
 
     public async ValueTask<BattleInstance?> StartCocoonStage(int cocoonId, int wave, int worldLevel)
@@ -326,15 +327,13 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             // Update battle status
             foreach (var avatar in req.Stt.BattleAvatarList)
             {
-                var avatarInstance = Player.AvatarManager!.GetFormalAvatar((int)avatar.Id);
+                BaseAvatarInfo? avatarInstance = Player.AvatarManager!.GetFormalAvatar((int)avatar.Id);
                 var prop = avatar.AvatarStatus;
                 var curHp = (int)Math.Max(Math.Round(prop.LeftHp / prop.MaxHp * 10000), minimumHp);
                 var curSp = (int)prop.LeftSp * 100;
                 if (avatarInstance == null)
                 {
-                    GameData.SpecialAvatarData.TryGetValue((int)(avatar.Id * 10 + Player.Data.WorldLevel),
-                        out var specialAvatar);
-                    if (specialAvatar == null) continue;
+                    avatarInstance = Player.AvatarManager!.GetTrialAvatar((int)avatar.Id);
                     avatarInstance?.SetCurHp(curHp, lineup.LineupType != 0);
                     avatarInstance?.SetCurSp(curSp, lineup.LineupType != 0);
                 }

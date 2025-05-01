@@ -60,7 +60,8 @@ public class LineupManager : BasePlayerManager
             BaseAvatarInfo? avatarInfo = null;
             if (avatar.SpecialAvatarId > 0)
             {
-                avatarInfo = Player.AvatarManager!.GetFormalAvatar(avatar.SpecialAvatarId);
+                avatarInfo = Player.AvatarManager!.GetTrialAvatar(avatar.SpecialAvatarId);
+                avatarType = AvatarType.AvatarTrialType;
             }
             else if (avatar.AssistUid > 0)
             {
@@ -158,10 +159,13 @@ public class LineupManager : BasePlayerManager
 
         foreach (var avatarId in baseAvatarIds)
         {
-            GameData.SpecialAvatarData.TryGetValue(avatarId * 10 + worldLevel, out var specialAvatar);
-            if (specialAvatar != null)
+            var trial = Player.AvatarManager!.GetTrialAvatar(avatarId);
+            if (trial != null)
+            {
+                trial.CheckLevel(worldLevel);
                 lineup.BaseAvatars!.Add(new LineupAvatarInfo
-                    { BaseAvatarId = specialAvatar.AvatarID, SpecialAvatarId = specialAvatar.SpecialAvatarID });
+                    { BaseAvatarId = trial.BaseAvatarId, SpecialAvatarId = trial.SpecialAvatarId });
+            }
             else
                 lineup.BaseAvatars!.Add(new LineupAvatarInfo { BaseAvatarId = avatarId });
         }

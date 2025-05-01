@@ -287,6 +287,8 @@ public class AbilityLevelTask(PlayerInstance player)
             if (!GameData.SummonUnitDataData.TryGetValue(createSummonUnit.SummonUnitID, out var excel))
                 return new AbilityLevelResult();
 
+            if (excel.IsClient) return new AbilityLevelResult();
+
             var unit = new EntitySummonUnit
             {
                 EntityId = 0,
@@ -307,7 +309,7 @@ public class AbilityLevelTask(PlayerInstance player)
 
     public async ValueTask<AbilityLevelResult> DestroySummonUnit(AbilityLevelParam param)
     {
-        if (param.Act is CreateSummonUnit createSummonUnit) await Player.SceneInstance!.ClearSummonUnit(); // TODO
+        if (param.Act is DestroySummonUnit destroySummonUnit) await Player.SceneInstance!.RemoveSummonUnitById(destroySummonUnit.SummonUnitID); // TODO
 
         return new AbilityLevelResult();
     }
