@@ -174,7 +174,7 @@ public class SceneInstance
 
     public GameModeTypeEnum GameModeType;
 
-    public EntitySummonUnit? SummonUnit;
+    public Dictionary<SummonUnitUniqueGroupEnum, EntitySummonUnit> SummonUnit { get; set; } = [];
 
     public SceneInstance(PlayerInstance player, MazePlaneExcel excel, int floorId, int entryId)
     {
@@ -261,7 +261,7 @@ public class SceneInstance
 
         foreach (var avatar in avatars)  // check team avatar
         {
-            if (AvatarInfo.ContainsKey(avatar.AvatarInfo.BaseAvatarId)) continue; // avatar already in team
+            if (AvatarInfo.Any(x => x.Value.AvatarInfo.BaseAvatarId == avatar.AvatarInfo.BaseAvatarId)) continue; // avatar already in team
             var avatarInfo = new AvatarSceneInfo(avatar.AvatarInfo, avatar.AvatarType, Player)
             {
                 // assign entity id
@@ -273,17 +273,23 @@ public class SceneInstance
             sendPacket = true;
         }
 
-        var leaderAvatarId = Player.LineupManager?.GetCurLineup()?.LeaderAvatarId;
-        var leaderAvatar = AvatarInfo.Values.FirstOrDefault(x => x.AvatarInfo.BaseAvatarId == leaderAvatarId);
-        if (leaderAvatar == null) return;
-        if (AvatarInfo.Count == 0) return;
-        LeaderEntityId = leaderAvatar.EntityId;
-        if (sendPacket && !notSendPacket)
-            await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, addAvatar, removeAvatar));
-
         foreach (var avatar in removeAvatar) Entities.Remove(avatar.EntityId);
 
         foreach (var avatar in addAvatar) Entities.Add(avatar.EntityId, avatar);
+
+        if (AvatarInfo.Count == 0) return;
+        var leaderAvatarId = Player.LineupManager?.GetCurLineup()?.LeaderAvatarId;
+        var leaderAvatar = AvatarInfo.Values.FirstOrDefault(x => x.AvatarInfo.BaseAvatarId == leaderAvatarId);
+        if (leaderAvatar == null)
+        {
+            leaderAvatar = AvatarInfo.Values.First();
+
+            Player.LineupManager!.GetCurLineup()!.LeaderAvatarId = leaderAvatar.AvatarInfo.BaseAvatarId;
+        }
+
+        LeaderEntityId = leaderAvatar.EntityId;
+        if (sendPacket && !notSendPacket)
+            await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, addAvatar, removeAvatar));
     }
 
     public void SyncGroupInfo()
@@ -329,25 +335,34 @@ public class SceneInstance
         if (sendPacket) await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, entity));
     }
 
-    public async ValueTask AddSummonUnitEntity(EntitySummonUnit entity)
+    public async ValueTask<Retcode> AddSummonUnitEntity(EntitySummonUnit entity)
     {
-        if (entity.EntityId != 0) return;
+        if (entity.EntityId != 0) return Retcode.RetServerInternalError;
         entity.EntityId = ++LastEntityId;
-        // old
+        // get summon unit excel
+        if (!GameData.SummonUnitDataData.TryGetValue(entity.SummonUnitId, out var summonUnitExcel)) return Retcode.RetMonsterConfigNotExist;
 
-        foreach (var e in Entities.Values.Where(x => x is EntityMonster))
+        IGameEntity? removeEntity = null;
+        // get old summon unit
+        if (SummonUnit.TryGetValue(summonUnitExcel.UniqueGroup, out var oldSummonUnit))
         {
-            var monster = e as EntityMonster;
-            monster!.IsInSummonUnit = false;
-            List<SceneBuff> buffList = [.. monster.BuffList];
-            foreach (var sceneBuff in buffList)
-                if (sceneBuff.SummonUnitEntityId > 0)
-                    // clear old buff
-                    await monster.RemoveBuff(sceneBuff.BuffId);
+            // clear old summon unit
+            removeEntity = oldSummonUnit;
+            foreach (var e in Entities.Values.Where(x => x is EntityMonster))
+            {
+                var monster = e as EntityMonster;
+                List<SceneBuff> buffList = [.. monster!.BuffList];
+                foreach (var sceneBuff in buffList)
+                    if (sceneBuff.SummonUnitEntityId == oldSummonUnit.EntityId)
+                        // clear old buff
+                        await monster.RemoveBuff(sceneBuff.BuffId);
+            }
         }
 
-        await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, entity, SummonUnit));
-        SummonUnit = entity;
+        await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, entity, removeEntity));
+        SummonUnit[summonUnitExcel.UniqueGroup] = entity;
+
+        return Retcode.RetSucc;
     }
 
     public async ValueTask RemoveEntity(IGameEntity monster)
@@ -362,11 +377,11 @@ public class SceneInstance
         if (sendPacket) await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, null, monster));
     }
 
-    public List<T> GetEntitiesInGroup<T>(int groupID)
+    public List<T> GetEntitiesInGroup<T>(int groupId)
     {
         List<T> entities = [];
         foreach (var entity in Entities)
-            if (entity.Value.GroupID == groupID && entity.Value is T t)
+            if (entity.Value.GroupID == groupId && entity.Value is T t)
                 entities.Add(t);
         return entities;
     }
@@ -375,16 +390,17 @@ public class SceneInstance
 
     #region SummonUnit
 
-    public async ValueTask<Retcode> TriggerSummonUnit(string triggerName, List<uint> targetIds)
+    public async ValueTask<Retcode> TriggerSummonUnit(int entityId, string triggerName, List<uint> targetIds)
     {
-        if (SummonUnit == null) return Retcode.RetSceneEntityNotExist;
+        var summonUnit = SummonUnit.Values.FirstOrDefault(x => x.EntityId == entityId);
+        if (summonUnit == null) return Retcode.RetSceneEntityNotExist;
 
         // check trigger
-        var trigger = SummonUnit.TriggerList.Find(x => x.TriggerName == triggerName);
+        var trigger = summonUnit.TriggerList.Find(x => x.TriggerName == triggerName);
         if (trigger == null) return Retcode.RetSceneUseSkillFail;
 
         await Player.SendPacket(
-            new PacketRefreshTriggerByClientScNotify(triggerName, (uint)SummonUnit.EntityId, targetIds));
+            new PacketRefreshTriggerByClientScNotify(triggerName, (uint)summonUnit.EntityId, targetIds));
         // check target
 
         List<IGameEntity> targetEnter = [];
@@ -408,21 +424,28 @@ public class SceneInstance
             if (monster != null)
             {
                 if (!monster.IsAlive) continue;
+                if (summonUnit.CaughtEntityIds.Contains(monster.EntityId)) continue;
 
-                monster.IsInSummonUnit = true;
+                summonUnit.CaughtEntityIds.Add(monster.EntityId);
                 targetEnter.Add(monster);
             }
 
-            if (prop != null) targetEnter.Add(prop);
+            if (prop != null)
+            {
+                if (summonUnit.CaughtEntityIds.Contains(prop.EntityId)) continue;
+
+                summonUnit.CaughtEntityIds.Add(prop.EntityId);
+                targetEnter.Add(prop);
+            }
         }
 
         foreach (var gameEntity in Entities.Values)
         {
             if (gameEntity is not EntityMonster monster) continue;
 
-            if (monster.IsInSummonUnit && !targetEnter.Contains(monster))
+            if (summonUnit.CaughtEntityIds.Contains(monster.EntityId) && !targetEnter.Contains(monster))
             {
-                monster.IsInSummonUnit = false;
+                summonUnit.CaughtEntityIds.Remove(monster.EntityId);
                 targetExit.Add(monster);
             }
         }
@@ -432,7 +455,7 @@ public class SceneInstance
             // enter
             var config = trigger.OnTriggerEnter;
 
-            Player.TaskManager!.SummonUnitLevelTask.TriggerTasks(config, targetEnter, SummonUnit);
+            Player.TaskManager!.SummonUnitLevelTask.TriggerTasks(config, targetEnter, summonUnit);
         }
 
         if (targetExit.Count <= 0) return Retcode.RetSucc;
@@ -440,30 +463,55 @@ public class SceneInstance
             // enter
             var config = trigger.OnTriggerExit;
 
-            Player.TaskManager!.SummonUnitLevelTask.TriggerTasks(config, targetExit, SummonUnit);
+            Player.TaskManager!.SummonUnitLevelTask.TriggerTasks(config, targetExit, summonUnit);
         }
-
 
         return Retcode.RetSucc;
     }
 
-    public async ValueTask ClearSummonUnit()
+    public async ValueTask RemoveSummonUnitById(int summonUnitId)
     {
-        if (SummonUnit == null) return;
-        await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, null, SummonUnit));
+        var summonUnit = SummonUnit.FirstOrDefault(x => x.Value.SummonUnitId == summonUnitId);
+        if (summonUnit.Value == null) return;
 
-        SummonUnit = null;
+        await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, null, summonUnit.Value));
+
+        SummonUnit.Remove(summonUnit.Key);
 
         foreach (var entity in Entities.Values.Where(x => x is EntityMonster))
         {
             var monster = entity as EntityMonster;
-            monster!.IsInSummonUnit = false;
-            List<SceneBuff> buffList = [.. monster.BuffList];
+            List<SceneBuff> buffList = [.. monster!.BuffList];
             foreach (var sceneBuff in buffList)
-                if (sceneBuff.SummonUnitEntityId > 0)
+                if (sceneBuff.SummonUnitEntityId == summonUnit.Value.EntityId)
                     // clear old buff
                     await monster.RemoveBuff(sceneBuff.BuffId);
         }
+    }
+
+    public async ValueTask OnEnterStage()
+    {
+        List<IGameEntity> removeEntities = [];
+        foreach (var unit in SummonUnit.ToArray())
+        {
+            if (!GameData.SummonUnitDataData.TryGetValue(unit.Value.SummonUnitId, out var excel)) continue;
+            if (!excel.DestroyOnEnterBattle) continue;
+
+            foreach (var entity in Entities.Values.Where(x => x is EntityMonster))
+            {
+                var monster = entity as EntityMonster;
+                List<SceneBuff> buffList = [.. monster!.BuffList];
+                foreach (var sceneBuff in buffList)
+                    if (sceneBuff.SummonUnitEntityId == unit.Value.EntityId)
+                        // clear old buff
+                        await monster.RemoveBuff(sceneBuff.BuffId);
+            }
+
+            removeEntities.Add(unit.Value);
+            SummonUnit.Remove(unit.Key);
+        }
+
+        await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, [], removeEntities));
     }
 
     public async ValueTask OnHeartBeat()
@@ -475,10 +523,13 @@ public class SceneInstance
         foreach (var gameEntity in AvatarInfo.Values.Clone())
         foreach (var sceneBuff in gameEntity.BuffList.Clone().Where(sceneBuff => sceneBuff.IsExpired()))
             await gameEntity.RemoveBuff(sceneBuff.BuffId);
-        if (SummonUnit == null) return;
-        var endTime = SummonUnit.CreateTimeMs + SummonUnit.LifeTimeMs;
 
-        if (endTime < Extensions.GetUnixMs()) await ClearSummonUnit();
+        foreach (var unitValue in SummonUnit.Values)
+        {
+            var endTime = unitValue.CreateTimeMs + unitValue.LifeTimeMs;
+
+            if (endTime < Extensions.GetUnixMs()) await RemoveSummonUnitById(unitValue.SummonUnitId);
+        }
     }
 
     #endregion
