@@ -287,7 +287,7 @@ public class EntryPoint
         var updated = false;
         foreach (var avatarData in DatabaseHelper.GetAllInstanceFromMap<AvatarData>()!)
         {
-            if (avatarData.DatabaseVersion == "20250430") continue;
+            if (avatarData.DatabaseVersion == GameConstants.AvatarDbVersion) continue;
 
             foreach (var avatar in avatarData.Avatars)
             {
@@ -308,6 +308,8 @@ public class EntryPoint
 
                 foreach (var info in avatar.PathInfoes)
                 {
+                    if (info.Value.PathId == 0)
+                        info.Value.PathId = info.Key;
                     formalAvatar.PathInfos.Add(info.Key, new PathInfo(info.Value.PathId)
                     {
                         PathId = info.Value.PathId,

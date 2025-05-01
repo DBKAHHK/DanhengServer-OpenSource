@@ -164,6 +164,8 @@ public class PlayerInstance(PlayerData data)
         Uid = Data.Uid;
         ActivityManager = new ActivityManager(this);
         AvatarManager = new AvatarManager(this);
+        AvatarManager.AvatarData.DatabaseVersion = GameConstants.AvatarDbVersion;
+
         LineupManager = new LineupManager(this);
         InventoryManager = new InventoryManager(this);
         BattleManager = new BattleManager(this);
@@ -326,12 +328,13 @@ public class PlayerInstance(PlayerData data)
 
     public async ValueTask ChangeAvatarPathType(int baseAvatarId, MultiPathAvatarTypeEnum type)
     {
+        FormalAvatarInfo avatar;
         if (baseAvatarId == 8001)
         {
             var id = (int)((int)type + Data.CurrentGender - 1);
             if (Data.CurBasicType == id) return;
             Data.CurBasicType = id;
-            var avatar = AvatarManager!.GetHero()!;
+            avatar = AvatarManager!.GetHero()!;
             // Set avatar path
             avatar.AvatarId = id;
             avatar.ValidateHero(Data.CurrentGender);
@@ -343,13 +346,22 @@ public class PlayerInstance(PlayerData data)
         }
         else
         {
-            var avatar = AvatarManager!.GetFormalAvatar(baseAvatarId)!;
+            avatar = AvatarManager!.GetFormalAvatar(baseAvatarId)!;
             avatar.AvatarId = (int)type;
             avatar.SetCurSp(0, LineupManager!.GetCurLineup()!.IsExtraLineup());
             // Save new skill tree
             avatar.CheckPathSkillTree();
             await SendPacket(new PacketAvatarPathChangedNotify((uint)avatar.AvatarId, (MultiPathAvatarType)type));
             await SendPacket(new PacketPlayerSyncScNotify(avatar));
+        }
+
+        // check if avatar is in scene
+        if (SceneInstance != null)
+        {
+            var avatarScene = SceneInstance.AvatarInfo.Values.FirstOrDefault(x => x.AvatarInfo.BaseAvatarId == baseAvatarId);
+            if (avatarScene == null) return;
+
+            await avatarScene.ClearAllBuff();
         }
     }
 
