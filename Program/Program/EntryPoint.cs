@@ -309,8 +309,8 @@ public class EntryPoint
                 foreach (var info in avatar.PathInfoes)
                 {
                     if (info.Value.PathId == 0)
-                        info.Value.PathId = info.Key;
-                    formalAvatar.PathInfos.Add(info.Key, new PathInfo(info.Value.PathId)
+                        info.Value.PathId = avatar.AvatarId;
+                    formalAvatar.PathInfos.Add(info.Value.PathId, new PathInfo(info.Value.PathId)
                     {
                         PathId = info.Value.PathId,
                         EquipId = info.Value.EquipId,
