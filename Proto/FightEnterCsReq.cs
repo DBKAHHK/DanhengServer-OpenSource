@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static FightEnterCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVGaWdodEVudGVyQ3NSZXEucHJvdG8itQEKD0ZpZ2h0RW50ZXJDc1JlcRIL",
+            "ChVGaWdodEVudGVyQ3NSZXEucHJvdG8itwEKD0ZpZ2h0RW50ZXJDc1JlcRIL",
             "CgN1aWQYDyABKA0SEwoLSUNNRlBOUElKSkYYBSABKA0SEwoLRkdPSkxQQUVK",
-            "RUMYCyABKA0SEAoIcGxhdGZvcm0YAyABKA0SEwoLS1BLRE5NREFKR0wYCCAB",
-            "KAQSEwoLQU9LQ01NUEZHQkMYASABKAkSEwoLTUtJTklPRkdJQUcYBiABKA0S",
-            "GgoSY2xpZW50X3Jlc192ZXJzaW9uGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "RUMYCyABKA0SEAoIcGxhdGZvcm0YAyABKA0SFQoNZW50ZXJfcm9vbV9pZBgI",
+            "IAEoBBITCgtBT0tDTU1QRkdCQxgBIAEoCRITCgtNS0lOSU9GR0lBRxgGIAEo",
+            "DRIaChJjbGllbnRfcmVzX3ZlcnNpb24YDSABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightEnterCsReq), global::EggLink.DanhengServer.Proto.FightEnterCsReq.Parser, new[]{ "Uid", "ICMFPNPIJJF", "FGOJLPAEJEC", "Platform", "KPKDNMDAJGL", "AOKCMMPFGBC", "MKINIOFGIAG", "ClientResVersion" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightEnterCsReq), global::EggLink.DanhengServer.Proto.FightEnterCsReq.Parser, new[]{ "Uid", "ICMFPNPIJJF", "FGOJLPAEJEC", "Platform", "EnterRoomId", "AOKCMMPFGBC", "MKINIOFGIAG", "ClientResVersion" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,7 +79,7 @@ namespace EggLink.DanhengServer.Proto {
       iCMFPNPIJJF_ = other.iCMFPNPIJJF_;
       fGOJLPAEJEC_ = other.fGOJLPAEJEC_;
       platform_ = other.platform_;
-      kPKDNMDAJGL_ = other.kPKDNMDAJGL_;
+      enterRoomId_ = other.enterRoomId_;
       aOKCMMPFGBC_ = other.aOKCMMPFGBC_;
       mKINIOFGIAG_ = other.mKINIOFGIAG_;
       clientResVersion_ = other.clientResVersion_;
@@ -140,15 +140,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KPKDNMDAJGL" field.</summary>
-    public const int KPKDNMDAJGLFieldNumber = 8;
-    private ulong kPKDNMDAJGL_;
+    /// <summary>Field number for the "enter_room_id" field.</summary>
+    public const int EnterRoomIdFieldNumber = 8;
+    private ulong enterRoomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong KPKDNMDAJGL {
-      get { return kPKDNMDAJGL_; }
+    public ulong EnterRoomId {
+      get { return enterRoomId_; }
       set {
-        kPKDNMDAJGL_ = value;
+        enterRoomId_ = value;
       }
     }
 
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ICMFPNPIJJF != other.ICMFPNPIJJF) return false;
       if (FGOJLPAEJEC != other.FGOJLPAEJEC) return false;
       if (Platform != other.Platform) return false;
-      if (KPKDNMDAJGL != other.KPKDNMDAJGL) return false;
+      if (EnterRoomId != other.EnterRoomId) return false;
       if (AOKCMMPFGBC != other.AOKCMMPFGBC) return false;
       if (MKINIOFGIAG != other.MKINIOFGIAG) return false;
       if (ClientResVersion != other.ClientResVersion) return false;
@@ -222,7 +222,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ICMFPNPIJJF != 0) hash ^= ICMFPNPIJJF.GetHashCode();
       if (FGOJLPAEJEC != 0) hash ^= FGOJLPAEJEC.GetHashCode();
       if (Platform != 0) hash ^= Platform.GetHashCode();
-      if (KPKDNMDAJGL != 0UL) hash ^= KPKDNMDAJGL.GetHashCode();
+      if (EnterRoomId != 0UL) hash ^= EnterRoomId.GetHashCode();
       if (AOKCMMPFGBC.Length != 0) hash ^= AOKCMMPFGBC.GetHashCode();
       if (MKINIOFGIAG != 0) hash ^= MKINIOFGIAG.GetHashCode();
       if (ClientResVersion != 0) hash ^= ClientResVersion.GetHashCode();
@@ -260,9 +260,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(MKINIOFGIAG);
       }
-      if (KPKDNMDAJGL != 0UL) {
+      if (EnterRoomId != 0UL) {
         output.WriteRawTag(64);
-        output.WriteUInt64(KPKDNMDAJGL);
+        output.WriteUInt64(EnterRoomId);
       }
       if (FGOJLPAEJEC != 0) {
         output.WriteRawTag(88);
@@ -302,9 +302,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(MKINIOFGIAG);
       }
-      if (KPKDNMDAJGL != 0UL) {
+      if (EnterRoomId != 0UL) {
         output.WriteRawTag(64);
-        output.WriteUInt64(KPKDNMDAJGL);
+        output.WriteUInt64(EnterRoomId);
       }
       if (FGOJLPAEJEC != 0) {
         output.WriteRawTag(88);
@@ -340,8 +340,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Platform != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Platform);
       }
-      if (KPKDNMDAJGL != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(KPKDNMDAJGL);
+      if (EnterRoomId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(EnterRoomId);
       }
       if (AOKCMMPFGBC.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AOKCMMPFGBC);
@@ -376,8 +376,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Platform != 0) {
         Platform = other.Platform;
       }
-      if (other.KPKDNMDAJGL != 0UL) {
-        KPKDNMDAJGL = other.KPKDNMDAJGL;
+      if (other.EnterRoomId != 0UL) {
+        EnterRoomId = other.EnterRoomId;
       }
       if (other.AOKCMMPFGBC.Length != 0) {
         AOKCMMPFGBC = other.AOKCMMPFGBC;
@@ -420,7 +420,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            KPKDNMDAJGL = input.ReadUInt64();
+            EnterRoomId = input.ReadUInt64();
             break;
           }
           case 88: {
@@ -467,7 +467,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            KPKDNMDAJGL = input.ReadUInt64();
+            EnterRoomId = input.ReadUInt64();
             break;
           }
           case 88: {

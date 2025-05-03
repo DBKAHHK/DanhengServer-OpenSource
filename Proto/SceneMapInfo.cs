@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static SceneMapInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJTY2VuZU1hcEluZm8ucHJvdG8aEU5QQU9HS0ZLQUFFLnByb3RvGhNNYXpl",
-            "UHJvcFN0YXRlLnByb3RvGg9DaGVzdEluZm8ucHJvdG8aD01hemVHcm91cC5w",
+            "ChJTY2VuZU1hcEluZm8ucHJvdG8aD01hemVHcm91cC5wcm90bxoTTWF6ZVBy",
+            "b3BTdGF0ZS5wcm90bxoRTlBBT0dLRktBQUUucHJvdG8aD0NoZXN0SW5mby5w",
             "cm90byKzAwoMU2NlbmVNYXBJbmZvEhAKCGZsb29yX2lkGAogASgNEhAKCGVu",
             "dHJ5X2lkGAIgASgNEjsKEGZsb29yX3NhdmVkX2RhdGEYCyADKAsyIS5TY2Vu",
             "ZU1hcEluZm8uRmxvb3JTYXZlZERhdGFFbnRyeRIjCg9tYXplX2dyb3VwX2xp",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4AUIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NPAOGKFKAAEReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.NPAOGKFKAAEReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMapInfo), global::EggLink.DanhengServer.Proto.SceneMapInfo.Parser, new[]{ "FloorId", "EntryId", "FloorSavedData", "MazeGroupList", "DimensionId", "ChestList", "CurMapEntryId", "Retcode", "MazePropList", "LightenSectionList", "JMLDMOCNMHM", "UnlockTeleportList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

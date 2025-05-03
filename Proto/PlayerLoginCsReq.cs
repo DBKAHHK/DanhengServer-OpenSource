@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerLoginCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhFKR0ZLSUNEQ0ZMSi5wcm90bxoS",
-            "UGxhdGZvcm1UeXBlLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8iiQUKEFBs",
+            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8a",
+            "EUpHRktJQ0RDRkxKLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8iiQUKEFBs",
             "YXllckxvZ2luQ3NSZXESEwoLS0lCQk5CTkdJSkQYAyABKAkSEQoJc2lnbmF0",
             "dXJlGAEgASgJEiIKC0ZBRFBESUJLTkJJGA4gASgOMg0uTGFuZ3VhZ2VUeXBl",
             "EhQKC0tGREpFSUVPQkJOGOsOIAEoCRITCgtPQ0RBQ0pOTkpOShgPIAEoCRIU",
@@ -43,7 +43,7 @@ namespace EggLink.DanhengServer.Proto {
             "SEFQTklIQ0RPGDkgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JGFKICDCFLJReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.JGFKICDCFLJReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerLoginCsReq), global::EggLink.DanhengServer.Proto.PlayerLoginCsReq.Parser, new[]{ "KIBBNBNGIJD", "Signature", "FADPDIBKNBI", "KFDJEIEOBBN", "OCDACJNNJNJ", "IGNFBLGJIOJ", "GMALCPNOHBF", "BNIGPDOOILI", "MIOHKAOIDNK", "JMKHDHAIOIM", "OEENCFMCAHD", "HJDMJPEBPPM", "LoginRandom", "DMPMHCCFBKG", "AKCEJFCFBAN", "OEHJLODAHFN", "HAEHHCPOAPP", "OHPCKCNAEIK", "BPCKJKDENCB", "BNBOALIAPAE", "ClientVersion", "NHBHBALHJML", "Platform", "RogueGetInfo", "ClientResVersion", "MLNABEPINDB", "GEHAPNIHCDO" }, null, null, null, null)
           }));

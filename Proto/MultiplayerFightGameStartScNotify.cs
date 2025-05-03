@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static MultiplayerFightGameStartScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CidNdWx0aXBsYXllckZpZ2h0R2FtZVN0YXJ0U2NOb3RpZnkucHJvdG8aEVBQ",
-            "R0dLTURBT0VBLnByb3RvGhFDQkJESU9NSUZIRC5wcm90byJpCiFNdWx0aXBs",
-            "YXllckZpZ2h0R2FtZVN0YXJ0U2NOb3RpZnkSIQoLTElQSkRKUE1PS0IYAiAD",
-            "KAsyDC5DQkJESU9NSUZIRBIhCgtQRkZGSk5HTlBPTRgJIAEoCzIMLlBQR0dL",
-            "TURBT0VBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
-            "Mw=="));
+            "CidNdWx0aXBsYXllckZpZ2h0R2FtZVN0YXJ0U2NOb3RpZnkucHJvdG8aFkZp",
+            "Z2h0U2Vzc2lvbkluZm8ucHJvdG8aFExvYmJ5QmFzaWNJbmZvLnByb3RvIncK",
+            "IU11bHRpcGxheWVyRmlnaHRHYW1lU3RhcnRTY05vdGlmeRIpChBsb2JieV9i",
+            "YXNpY19pbmZvGAIgAygLMg8uTG9iYnlCYXNpY0luZm8SJwoMc2Vzc2lvbl9p",
+            "bmZvGAkgASgLMhEuRmlnaHRTZXNzaW9uSW5mb0IeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PPGGKMDAOEAReflection.Descriptor, global::EggLink.DanhengServer.Proto.CBBDIOMIFHDReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightSessionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyBasicInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MultiplayerFightGameStartScNotify), global::EggLink.DanhengServer.Proto.MultiplayerFightGameStartScNotify.Parser, new[]{ "LIPJDJPMOKB", "PFFFJNGNPOM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MultiplayerFightGameStartScNotify), global::EggLink.DanhengServer.Proto.MultiplayerFightGameStartScNotify.Parser, new[]{ "LobbyBasicInfo", "SessionInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MultiplayerFightGameStartScNotify(MultiplayerFightGameStartScNotify other) : this() {
-      lIPJDJPMOKB_ = other.lIPJDJPMOKB_.Clone();
-      pFFFJNGNPOM_ = other.pFFFJNGNPOM_ != null ? other.pFFFJNGNPOM_.Clone() : null;
+      lobbyBasicInfo_ = other.lobbyBasicInfo_.Clone();
+      sessionInfo_ = other.sessionInfo_ != null ? other.sessionInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,26 +86,26 @@ namespace EggLink.DanhengServer.Proto {
       return new MultiplayerFightGameStartScNotify(this);
     }
 
-    /// <summary>Field number for the "LIPJDJPMOKB" field.</summary>
-    public const int LIPJDJPMOKBFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.CBBDIOMIFHD> _repeated_lIPJDJPMOKB_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.CBBDIOMIFHD.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CBBDIOMIFHD> lIPJDJPMOKB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CBBDIOMIFHD>();
+    /// <summary>Field number for the "lobby_basic_info" field.</summary>
+    public const int LobbyBasicInfoFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> _repeated_lobbyBasicInfo_codec
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.LobbyBasicInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> lobbyBasicInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CBBDIOMIFHD> LIPJDJPMOKB {
-      get { return lIPJDJPMOKB_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> LobbyBasicInfo {
+      get { return lobbyBasicInfo_; }
     }
 
-    /// <summary>Field number for the "PFFFJNGNPOM" field.</summary>
-    public const int PFFFJNGNPOMFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.PPGGKMDAOEA pFFFJNGNPOM_;
+    /// <summary>Field number for the "session_info" field.</summary>
+    public const int SessionInfoFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.FightSessionInfo sessionInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PPGGKMDAOEA PFFFJNGNPOM {
-      get { return pFFFJNGNPOM_; }
+    public global::EggLink.DanhengServer.Proto.FightSessionInfo SessionInfo {
+      get { return sessionInfo_; }
       set {
-        pFFFJNGNPOM_ = value;
+        sessionInfo_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!lIPJDJPMOKB_.Equals(other.lIPJDJPMOKB_)) return false;
-      if (!object.Equals(PFFFJNGNPOM, other.PFFFJNGNPOM)) return false;
+      if(!lobbyBasicInfo_.Equals(other.lobbyBasicInfo_)) return false;
+      if (!object.Equals(SessionInfo, other.SessionInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= lIPJDJPMOKB_.GetHashCode();
-      if (pFFFJNGNPOM_ != null) hash ^= PFFFJNGNPOM.GetHashCode();
+      hash ^= lobbyBasicInfo_.GetHashCode();
+      if (sessionInfo_ != null) hash ^= SessionInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,10 +153,10 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      lIPJDJPMOKB_.WriteTo(output, _repeated_lIPJDJPMOKB_codec);
-      if (pFFFJNGNPOM_ != null) {
+      lobbyBasicInfo_.WriteTo(output, _repeated_lobbyBasicInfo_codec);
+      if (sessionInfo_ != null) {
         output.WriteRawTag(74);
-        output.WriteMessage(PFFFJNGNPOM);
+        output.WriteMessage(SessionInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -168,10 +168,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      lIPJDJPMOKB_.WriteTo(ref output, _repeated_lIPJDJPMOKB_codec);
-      if (pFFFJNGNPOM_ != null) {
+      lobbyBasicInfo_.WriteTo(ref output, _repeated_lobbyBasicInfo_codec);
+      if (sessionInfo_ != null) {
         output.WriteRawTag(74);
-        output.WriteMessage(PFFFJNGNPOM);
+        output.WriteMessage(SessionInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -183,9 +183,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += lIPJDJPMOKB_.CalculateSize(_repeated_lIPJDJPMOKB_codec);
-      if (pFFFJNGNPOM_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PFFFJNGNPOM);
+      size += lobbyBasicInfo_.CalculateSize(_repeated_lobbyBasicInfo_codec);
+      if (sessionInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SessionInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -199,12 +199,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      lIPJDJPMOKB_.Add(other.lIPJDJPMOKB_);
-      if (other.pFFFJNGNPOM_ != null) {
-        if (pFFFJNGNPOM_ == null) {
-          PFFFJNGNPOM = new global::EggLink.DanhengServer.Proto.PPGGKMDAOEA();
+      lobbyBasicInfo_.Add(other.lobbyBasicInfo_);
+      if (other.sessionInfo_ != null) {
+        if (sessionInfo_ == null) {
+          SessionInfo = new global::EggLink.DanhengServer.Proto.FightSessionInfo();
         }
-        PFFFJNGNPOM.MergeFrom(other.PFFFJNGNPOM);
+        SessionInfo.MergeFrom(other.SessionInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -222,14 +222,14 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 18: {
-            lIPJDJPMOKB_.AddEntriesFrom(input, _repeated_lIPJDJPMOKB_codec);
+            lobbyBasicInfo_.AddEntriesFrom(input, _repeated_lobbyBasicInfo_codec);
             break;
           }
           case 74: {
-            if (pFFFJNGNPOM_ == null) {
-              PFFFJNGNPOM = new global::EggLink.DanhengServer.Proto.PPGGKMDAOEA();
+            if (sessionInfo_ == null) {
+              SessionInfo = new global::EggLink.DanhengServer.Proto.FightSessionInfo();
             }
-            input.ReadMessage(PFFFJNGNPOM);
+            input.ReadMessage(SessionInfo);
             break;
           }
         }
@@ -248,14 +248,14 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 18: {
-            lIPJDJPMOKB_.AddEntriesFrom(ref input, _repeated_lIPJDJPMOKB_codec);
+            lobbyBasicInfo_.AddEntriesFrom(ref input, _repeated_lobbyBasicInfo_codec);
             break;
           }
           case 74: {
-            if (pFFFJNGNPOM_ == null) {
-              PFFFJNGNPOM = new global::EggLink.DanhengServer.Proto.PPGGKMDAOEA();
+            if (sessionInfo_ == null) {
+              SessionInfo = new global::EggLink.DanhengServer.Proto.FightSessionInfo();
             }
-            input.ReadMessage(PFFFJNGNPOM);
+            input.ReadMessage(SessionInfo);
             break;
           }
         }

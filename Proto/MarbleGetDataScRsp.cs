@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static MarbleGetDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhNYXJibGVHZXREYXRhU2NSc3AucHJvdG8idgoSTWFyYmxlR2V0RGF0YVNj",
-            "UnNwEhMKC0lPR0RLR0ZERlBDGAEgAygNEhMKC09KTlBHSUxKSUVOGAQgAygN",
-            "Eg8KB3JldGNvZGUYCCABKA0SEAoIc2NvcmVfaWQYCiABKAUSEwoLTVBCTVBG",
-            "RkdJQk8YDyADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
-            "cHJvdG8z"));
+            "ChhNYXJibGVHZXREYXRhU2NSc3AucHJvdG8iigEKEk1hcmJsZUdldERhdGFT",
+            "Y1JzcBITCgtJT0dES0dGREZQQxgBIAMoDRIjChttYXJibGVfZmluaXNoX2xl",
+            "dmVsX2lkX2xpc3QYBCADKA0SDwoHcmV0Y29kZRgIIAEoDRIQCghzY29yZV9p",
+            "ZBgKIAEoBRIXCg9vd25lZF9zZWFsX2xpc3QYDyADKA1CHqoCG0VnZ0xpbmsu",
+            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGetDataScRsp), global::EggLink.DanhengServer.Proto.MarbleGetDataScRsp.Parser, new[]{ "IOGDKGFDFPC", "OJNPGILJIEN", "Retcode", "ScoreId", "MPBMPFFGIBO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGetDataScRsp), global::EggLink.DanhengServer.Proto.MarbleGetDataScRsp.Parser, new[]{ "IOGDKGFDFPC", "MarbleFinishLevelIdList", "Retcode", "ScoreId", "OwnedSealList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarbleGetDataScRsp(MarbleGetDataScRsp other) : this() {
       iOGDKGFDFPC_ = other.iOGDKGFDFPC_.Clone();
-      oJNPGILJIEN_ = other.oJNPGILJIEN_.Clone();
+      marbleFinishLevelIdList_ = other.marbleFinishLevelIdList_.Clone();
       retcode_ = other.retcode_;
       scoreId_ = other.scoreId_;
-      mPBMPFFGIBO_ = other.mPBMPFFGIBO_.Clone();
+      ownedSealList_ = other.ownedSealList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -99,15 +99,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return iOGDKGFDFPC_; }
     }
 
-    /// <summary>Field number for the "OJNPGILJIEN" field.</summary>
-    public const int OJNPGILJIENFieldNumber = 4;
-    private static readonly pb::FieldCodec<uint> _repeated_oJNPGILJIEN_codec
+    /// <summary>Field number for the "marble_finish_level_id_list" field.</summary>
+    public const int MarbleFinishLevelIdListFieldNumber = 4;
+    private static readonly pb::FieldCodec<uint> _repeated_marbleFinishLevelIdList_codec
         = pb::FieldCodec.ForUInt32(34);
-    private readonly pbc::RepeatedField<uint> oJNPGILJIEN_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> marbleFinishLevelIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> OJNPGILJIEN {
-      get { return oJNPGILJIEN_; }
+    public pbc::RepeatedField<uint> MarbleFinishLevelIdList {
+      get { return marbleFinishLevelIdList_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -134,15 +134,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MPBMPFFGIBO" field.</summary>
-    public const int MPBMPFFGIBOFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_mPBMPFFGIBO_codec
+    /// <summary>Field number for the "owned_seal_list" field.</summary>
+    public const int OwnedSealListFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_ownedSealList_codec
         = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> mPBMPFFGIBO_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> ownedSealList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> MPBMPFFGIBO {
-      get { return mPBMPFFGIBO_; }
+    public pbc::RepeatedField<uint> OwnedSealList {
+      get { return ownedSealList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!iOGDKGFDFPC_.Equals(other.iOGDKGFDFPC_)) return false;
-      if(!oJNPGILJIEN_.Equals(other.oJNPGILJIEN_)) return false;
+      if(!marbleFinishLevelIdList_.Equals(other.marbleFinishLevelIdList_)) return false;
       if (Retcode != other.Retcode) return false;
       if (ScoreId != other.ScoreId) return false;
-      if(!mPBMPFFGIBO_.Equals(other.mPBMPFFGIBO_)) return false;
+      if(!ownedSealList_.Equals(other.ownedSealList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -173,10 +173,10 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= iOGDKGFDFPC_.GetHashCode();
-      hash ^= oJNPGILJIEN_.GetHashCode();
+      hash ^= marbleFinishLevelIdList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
-      hash ^= mPBMPFFGIBO_.GetHashCode();
+      hash ^= ownedSealList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -196,7 +196,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       iOGDKGFDFPC_.WriteTo(output, _repeated_iOGDKGFDFPC_codec);
-      oJNPGILJIEN_.WriteTo(output, _repeated_oJNPGILJIEN_codec);
+      marbleFinishLevelIdList_.WriteTo(output, _repeated_marbleFinishLevelIdList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(80);
         output.WriteInt32(ScoreId);
       }
-      mPBMPFFGIBO_.WriteTo(output, _repeated_mPBMPFFGIBO_codec);
+      ownedSealList_.WriteTo(output, _repeated_ownedSealList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       iOGDKGFDFPC_.WriteTo(ref output, _repeated_iOGDKGFDFPC_codec);
-      oJNPGILJIEN_.WriteTo(ref output, _repeated_oJNPGILJIEN_codec);
+      marbleFinishLevelIdList_.WriteTo(ref output, _repeated_marbleFinishLevelIdList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
@@ -226,7 +226,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(80);
         output.WriteInt32(ScoreId);
       }
-      mPBMPFFGIBO_.WriteTo(ref output, _repeated_mPBMPFFGIBO_codec);
+      ownedSealList_.WriteTo(ref output, _repeated_ownedSealList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -238,14 +238,14 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += iOGDKGFDFPC_.CalculateSize(_repeated_iOGDKGFDFPC_codec);
-      size += oJNPGILJIEN_.CalculateSize(_repeated_oJNPGILJIEN_codec);
+      size += marbleFinishLevelIdList_.CalculateSize(_repeated_marbleFinishLevelIdList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (ScoreId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ScoreId);
       }
-      size += mPBMPFFGIBO_.CalculateSize(_repeated_mPBMPFFGIBO_codec);
+      size += ownedSealList_.CalculateSize(_repeated_ownedSealList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -259,14 +259,14 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       iOGDKGFDFPC_.Add(other.iOGDKGFDFPC_);
-      oJNPGILJIEN_.Add(other.oJNPGILJIEN_);
+      marbleFinishLevelIdList_.Add(other.marbleFinishLevelIdList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
       if (other.ScoreId != 0) {
         ScoreId = other.ScoreId;
       }
-      mPBMPFFGIBO_.Add(other.mPBMPFFGIBO_);
+      ownedSealList_.Add(other.ownedSealList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -289,7 +289,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 34:
           case 32: {
-            oJNPGILJIEN_.AddEntriesFrom(input, _repeated_oJNPGILJIEN_codec);
+            marbleFinishLevelIdList_.AddEntriesFrom(input, _repeated_marbleFinishLevelIdList_codec);
             break;
           }
           case 64: {
@@ -302,7 +302,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 122:
           case 120: {
-            mPBMPFFGIBO_.AddEntriesFrom(input, _repeated_mPBMPFFGIBO_codec);
+            ownedSealList_.AddEntriesFrom(input, _repeated_ownedSealList_codec);
             break;
           }
         }
@@ -327,7 +327,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 34:
           case 32: {
-            oJNPGILJIEN_.AddEntriesFrom(ref input, _repeated_oJNPGILJIEN_codec);
+            marbleFinishLevelIdList_.AddEntriesFrom(ref input, _repeated_marbleFinishLevelIdList_codec);
             break;
           }
           case 64: {
@@ -340,7 +340,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 122:
           case 120: {
-            mPBMPFFGIBO_.AddEntriesFrom(ref input, _repeated_mPBMPFFGIBO_codec);
+            ownedSealList_.AddEntriesFrom(ref input, _repeated_ownedSealList_codec);
             break;
           }
         }

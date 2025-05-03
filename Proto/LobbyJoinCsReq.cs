@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static LobbyJoinCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRMb2JieUpvaW5Dc1JlcS5wcm90bxoRRVBFR0hDR0NNSFAucHJvdG8iRAoO",
-            "TG9iYnlKb2luQ3NSZXESDwoHcm9vbV9pZBgLIAEoBBIhCgtFSk9GQ05BRURI",
-            "SxgEIAEoCzIMLkVQRUdIQ0dDTUhQQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
-            "ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChRMb2JieUpvaW5Dc1JlcS5wcm90bxoTTG9iYnlHYW1lSW5mby5wcm90byJK",
+            "Cg5Mb2JieUpvaW5Dc1JlcRIPCgdyb29tX2lkGAsgASgEEicKD2xvYmJ5X2dh",
+            "bWVfaW5mbxgEIAEoCzIOLkxvYmJ5R2FtZUluZm9CHqoCG0VnZ0xpbmsuRGFu",
+            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EPEGHCGCMHPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LobbyGameInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LobbyJoinCsReq), global::EggLink.DanhengServer.Proto.LobbyJoinCsReq.Parser, new[]{ "RoomId", "EJOFCNAEDHK" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LobbyJoinCsReq), global::EggLink.DanhengServer.Proto.LobbyJoinCsReq.Parser, new[]{ "RoomId", "LobbyGameInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LobbyJoinCsReq(LobbyJoinCsReq other) : this() {
       roomId_ = other.roomId_;
-      eJOFCNAEDHK_ = other.eJOFCNAEDHK_ != null ? other.eJOFCNAEDHK_.Clone() : null;
+      lobbyGameInfo_ = other.lobbyGameInfo_ != null ? other.lobbyGameInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "EJOFCNAEDHK" field.</summary>
-    public const int EJOFCNAEDHKFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.EPEGHCGCMHP eJOFCNAEDHK_;
+    /// <summary>Field number for the "lobby_game_info" field.</summary>
+    public const int LobbyGameInfoFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.LobbyGameInfo lobbyGameInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.EPEGHCGCMHP EJOFCNAEDHK {
-      get { return eJOFCNAEDHK_; }
+    public global::EggLink.DanhengServer.Proto.LobbyGameInfo LobbyGameInfo {
+      get { return lobbyGameInfo_; }
       set {
-        eJOFCNAEDHK_ = value;
+        lobbyGameInfo_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (RoomId != other.RoomId) return false;
-      if (!object.Equals(EJOFCNAEDHK, other.EJOFCNAEDHK)) return false;
+      if (!object.Equals(LobbyGameInfo, other.LobbyGameInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (RoomId != 0UL) hash ^= RoomId.GetHashCode();
-      if (eJOFCNAEDHK_ != null) hash ^= EJOFCNAEDHK.GetHashCode();
+      if (lobbyGameInfo_ != null) hash ^= LobbyGameInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (eJOFCNAEDHK_ != null) {
+      if (lobbyGameInfo_ != null) {
         output.WriteRawTag(34);
-        output.WriteMessage(EJOFCNAEDHK);
+        output.WriteMessage(LobbyGameInfo);
       }
       if (RoomId != 0UL) {
         output.WriteRawTag(88);
@@ -170,9 +170,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (eJOFCNAEDHK_ != null) {
+      if (lobbyGameInfo_ != null) {
         output.WriteRawTag(34);
-        output.WriteMessage(EJOFCNAEDHK);
+        output.WriteMessage(LobbyGameInfo);
       }
       if (RoomId != 0UL) {
         output.WriteRawTag(88);
@@ -191,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (RoomId != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(RoomId);
       }
-      if (eJOFCNAEDHK_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EJOFCNAEDHK);
+      if (lobbyGameInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LobbyGameInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,11 +209,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.RoomId != 0UL) {
         RoomId = other.RoomId;
       }
-      if (other.eJOFCNAEDHK_ != null) {
-        if (eJOFCNAEDHK_ == null) {
-          EJOFCNAEDHK = new global::EggLink.DanhengServer.Proto.EPEGHCGCMHP();
+      if (other.lobbyGameInfo_ != null) {
+        if (lobbyGameInfo_ == null) {
+          LobbyGameInfo = new global::EggLink.DanhengServer.Proto.LobbyGameInfo();
         }
-        EJOFCNAEDHK.MergeFrom(other.EJOFCNAEDHK);
+        LobbyGameInfo.MergeFrom(other.LobbyGameInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,10 +231,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 34: {
-            if (eJOFCNAEDHK_ == null) {
-              EJOFCNAEDHK = new global::EggLink.DanhengServer.Proto.EPEGHCGCMHP();
+            if (lobbyGameInfo_ == null) {
+              LobbyGameInfo = new global::EggLink.DanhengServer.Proto.LobbyGameInfo();
             }
-            input.ReadMessage(EJOFCNAEDHK);
+            input.ReadMessage(LobbyGameInfo);
             break;
           }
           case 88: {
@@ -257,10 +257,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 34: {
-            if (eJOFCNAEDHK_ == null) {
-              EJOFCNAEDHK = new global::EggLink.DanhengServer.Proto.EPEGHCGCMHP();
+            if (lobbyGameInfo_ == null) {
+              LobbyGameInfo = new global::EggLink.DanhengServer.Proto.LobbyGameInfo();
             }
-            input.ReadMessage(EJOFCNAEDHK);
+            input.ReadMessage(LobbyGameInfo);
             break;
           }
           case 88: {

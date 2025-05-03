@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RotaterDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFSb3RhdGVyRGF0YS5wcm90byJJCgtSb3RhdGVyRGF0YRITCgtHTEhBR0pH",
-            "QUVIRRgEIAEoDRIQCghncm91cF9pZBgPIAEoDRITCgtMS0VGT0xDR0ZHRBgF",
-            "IAEoAkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFSb3RhdGVyRGF0YS5wcm90byJLCgtSb3RhdGVyRGF0YRITCgtHTEhBR0pH",
+            "QUVIRRgEIAEoDRIQCghncm91cF9pZBgPIAEoDRIVCg1zZWFsX3Bvc2l0aW9u",
+            "GAUgASgCQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RotaterData), global::EggLink.DanhengServer.Proto.RotaterData.Parser, new[]{ "GLHAGJGAEHE", "GroupId", "LKEFOLCGFGD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RotaterData), global::EggLink.DanhengServer.Proto.RotaterData.Parser, new[]{ "GLHAGJGAEHE", "GroupId", "SealPosition" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     public RotaterData(RotaterData other) : this() {
       gLHAGJGAEHE_ = other.gLHAGJGAEHE_;
       groupId_ = other.groupId_;
-      lKEFOLCGFGD_ = other.lKEFOLCGFGD_;
+      sealPosition_ = other.sealPosition_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -108,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LKEFOLCGFGD" field.</summary>
-    public const int LKEFOLCGFGDFieldNumber = 5;
-    private float lKEFOLCGFGD_;
+    /// <summary>Field number for the "seal_position" field.</summary>
+    public const int SealPositionFieldNumber = 5;
+    private float sealPosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float LKEFOLCGFGD {
-      get { return lKEFOLCGFGD_; }
+    public float SealPosition {
+      get { return sealPosition_; }
       set {
-        lKEFOLCGFGD_ = value;
+        sealPosition_ = value;
       }
     }
 
@@ -137,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (GLHAGJGAEHE != other.GLHAGJGAEHE) return false;
       if (GroupId != other.GroupId) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(LKEFOLCGFGD, other.LKEFOLCGFGD)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SealPosition, other.SealPosition)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (GLHAGJGAEHE != 0) hash ^= GLHAGJGAEHE.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
-      if (LKEFOLCGFGD != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(LKEFOLCGFGD);
+      if (SealPosition != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SealPosition);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -170,9 +171,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(GLHAGJGAEHE);
       }
-      if (LKEFOLCGFGD != 0F) {
+      if (SealPosition != 0F) {
         output.WriteRawTag(45);
-        output.WriteFloat(LKEFOLCGFGD);
+        output.WriteFloat(SealPosition);
       }
       if (GroupId != 0) {
         output.WriteRawTag(120);
@@ -192,9 +193,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(GLHAGJGAEHE);
       }
-      if (LKEFOLCGFGD != 0F) {
+      if (SealPosition != 0F) {
         output.WriteRawTag(45);
-        output.WriteFloat(LKEFOLCGFGD);
+        output.WriteFloat(SealPosition);
       }
       if (GroupId != 0) {
         output.WriteRawTag(120);
@@ -216,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
-      if (LKEFOLCGFGD != 0F) {
+      if (SealPosition != 0F) {
         size += 1 + 4;
       }
       if (_unknownFields != null) {
@@ -237,8 +238,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
       }
-      if (other.LKEFOLCGFGD != 0F) {
-        LKEFOLCGFGD = other.LKEFOLCGFGD;
+      if (other.SealPosition != 0F) {
+        SealPosition = other.SealPosition;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,7 +261,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 45: {
-            LKEFOLCGFGD = input.ReadFloat();
+            SealPosition = input.ReadFloat();
             break;
           }
           case 120: {
@@ -287,7 +288,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 45: {
-            LKEFOLCGFGD = input.ReadFloat();
+            SealPosition = input.ReadFloat();
             break;
           }
           case 120: {

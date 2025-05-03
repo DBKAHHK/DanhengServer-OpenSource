@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetAlleyInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHZXRBbGxleUluZm9TY1JzcC5wcm90bxoRQUdBREVNQUpJTUQucHJvdG8a",
-            "EUVDSk1KSktKR09QLnByb3RvGhFIRUhBT01JQU1HTC5wcm90bxoRTEFJRU1D",
-            "RkFDREsucHJvdG8ikwMKEUdldEFsbGV5SW5mb1NjUnNwEiEKC05KR0FNQ0NH",
+            "ChdHZXRBbGxleUluZm9TY1JzcC5wcm90bxoRTEFJRU1DRkFDREsucHJvdG8a",
+            "EUFHQURFTUFKSU1ELnByb3RvGhFIRUhBT01JQU1HTC5wcm90bxoRRUNKTUpK",
+            "S0pHT1AucHJvdG8ikwMKEUdldEFsbGV5SW5mb1NjUnNwEiEKC05KR0FNQ0NH",
             "QURDGAggASgLMgwuQUdBREVNQUpJTUQSDwoHcmV0Y29kZRgKIAEoDRIhCgtC",
             "SkNNUEhMUEtORhgGIAMoCzIMLkhFSEFPTUlBTUdMEhMKC0dFRk5ERUVJS0VG",
             "GAwgAygNEhMKC09FRFBPUENPSEdCGAsgAygNEhAKCGN1cl9mdW5kGAkgASgN",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "dWUYAiABKA06AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AGADEMAJIMDReflection.Descriptor, global::EggLink.DanhengServer.Proto.ECJMJJKJGOPReflection.Descriptor, global::EggLink.DanhengServer.Proto.HEHAOMIAMGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.LAIEMCFACDKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LAIEMCFACDKReflection.Descriptor, global::EggLink.DanhengServer.Proto.AGADEMAJIMDReflection.Descriptor, global::EggLink.DanhengServer.Proto.HEHAOMIAMGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.ECJMJJKJGOPReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAlleyInfoScRsp), global::EggLink.DanhengServer.Proto.GetAlleyInfoScRsp.Parser, new[]{ "NJGAMCCGADC", "Retcode", "BJCMPHLPKNF", "GEFNDEEIKEF", "OEDPOPCOHGB", "CurFund", "Level", "NOPODEIMFFB", "BOKOLCPKEJM", "GLBOEMJJAHD", "KLPNGFNMIPI", "NPLAKEOKEKB" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

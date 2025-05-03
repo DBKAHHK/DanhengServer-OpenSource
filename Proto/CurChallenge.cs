@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static CurChallengeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJDdXJDaGFsbGVuZ2UucHJvdG8aGkNoYWxsZW5nZUN1ckJ1ZmZJbmZvLnBy",
-            "b3RvGhVDaGFsbGVuZ2VTdGF0dXMucHJvdG8aFUV4dHJhTGluZXVwVHlwZS5w",
+            "ChJDdXJDaGFsbGVuZ2UucHJvdG8aFUV4dHJhTGluZXVwVHlwZS5wcm90bxoV",
+            "Q2hhbGxlbmdlU3RhdHVzLnByb3RvGhpDaGFsbGVuZ2VDdXJCdWZmSW5mby5w",
             "cm90bxoRS2lsbE1vbnN0ZXIucHJvdG8imgIKDEN1ckNoYWxsZW5nZRIrChFl",
             "eHRyYV9saW5ldXBfdHlwZRgIIAEoDjIQLkV4dHJhTGluZXVwVHlwZRIXCg9k",
             "ZWFkX2F2YXRhcl9udW0YAyABKA0SJwoRa2lsbF9tb25zdGVyX2xpc3QYCSAD",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "dGFnZV9pbmZvGA8gASgLMhUuQ2hhbGxlbmdlQ3VyQnVmZkluZm9CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeCurBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeCurBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CurChallenge), global::EggLink.DanhengServer.Proto.CurChallenge.Parser, new[]{ "ExtraLineupType", "DeadAvatarNum", "KillMonsterList", "Status", "RoundCount", "ChallengeId", "ScoreTwo", "ScoreId", "StageInfo" }, null, null, null, null)
           }));
