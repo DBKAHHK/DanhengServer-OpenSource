@@ -18,6 +18,13 @@ public static class GameData
 
     public static ActivityConfig ActivityConfig { get; set; } = new();
 
+    #region Marble
+
+    public static Dictionary<int, MarbleMatchInfoExcel> MarbleMatchInfoData { get; private set; } = [];
+    public static Dictionary<int, MarbleSealExcel> MarbleSealData { get; private set; } = [];
+
+    #endregion
+
     #endregion
 
     #region Banners

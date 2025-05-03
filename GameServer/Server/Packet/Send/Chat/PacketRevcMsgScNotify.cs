@@ -32,4 +32,18 @@ public class PacketRevcMsgScNotify : BasePacket
 
         SetData(proto);
     }
+
+    public PacketRevcMsgScNotify(uint toUid, uint fromUid, LobbyInviteInfo info) : base(CmdIds.RevcMsgScNotify)
+    {
+        var proto = new RevcMsgScNotify
+        {
+            ChatType = ChatType.Private,
+            SourceUid = fromUid,
+            TargetUid = toUid,
+            InviteInfo = info,
+            MessageType = MsgType.Invite
+        };
+
+        SetData(proto);
+    }
 }

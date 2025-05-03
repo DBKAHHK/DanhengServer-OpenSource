@@ -126,7 +126,7 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
             }
 
         // receive message
-        var recvPlayer = Listener.GetActiveConnection(recvUid)?.Player!;
+        var recvPlayer = Listener.GetActiveConnection(recvUid)?.Player;
         if (recvPlayer != null)
         {
             await recvPlayer.FriendManager!.ReceiveMessage(sendUid, recvUid, message, extraId);
@@ -145,6 +145,19 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
             history.MessageList.Add(data);
 
             DatabaseHelper.ToSaveUidList.Add(recvUid);
+        }
+    }
+
+    public async ValueTask SendInviteMessage(int sendUid, int recvUid, LobbyInviteInfo info)
+    {
+        var proto = new PacketRevcMsgScNotify((uint)recvUid, (uint)sendUid, info);
+        await Player.SendPacket(proto);
+        
+        // receive message
+        var recvPlayer = Listener.GetActiveConnection(recvUid)?.Player;
+        if (recvPlayer != null)
+        {
+            await recvPlayer.FriendManager!.ReceiveInviteMessage(sendUid, recvUid, info);
         }
     }
 
@@ -172,6 +185,13 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
             proto = new PacketRevcMsgScNotify((uint)recvUid, (uint)sendUid, message);
         else
             proto = new PacketRevcMsgScNotify((uint)recvUid, (uint)sendUid, (uint)(extraId ?? 0));
+
+        await Player.SendPacket(proto);
+    }
+
+    public async ValueTask ReceiveInviteMessage(int sendUid, int recvUid, LobbyInviteInfo info)
+    {
+        var proto = new PacketRevcMsgScNotify((uint)recvUid, (uint)sendUid, info);
 
         await Player.SendPacket(proto);
     }
