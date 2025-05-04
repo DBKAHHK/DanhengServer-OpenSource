@@ -24,32 +24,33 @@ namespace EggLink.DanhengServer.Proto {
     static MarbleGameSyncDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhNYXJibGVHYW1lU3luY0RhdGEucHJvdG8aF01hcmJsZUZhY3Rpb25UeXBl",
-            "LnByb3RvGhFGSVBQS0xDT0VHSi5wcm90bxoWTWFyYmxlU2VhbFZlY3Rvci5w",
-            "cm90bxoVTWFyYmxlRnJhbWVUeXBlLnByb3RvIrAGChJNYXJibGVHYW1lU3lu",
+            "ChhNYXJibGVHYW1lU3luY0RhdGEucHJvdG8aFU1hcmJsZUZyYW1lVHlwZS5w",
+            "cm90bxoRRklQUEtMQ09FR0oucHJvdG8aFk1hcmJsZVNlYWxWZWN0b3IucHJv",
+            "dG8aF01hcmJsZUZhY3Rpb25UeXBlLnByb3RvIscGChJNYXJibGVHYW1lU3lu",
             "Y0RhdGESKAoNc2VhbF9yb3RhdGlvbhgKIAEoCzIRLk1hcmJsZVNlYWxWZWN0",
             "b3ISGAoQY29sbGlkZV9vd25lcl9pZBgHIAEoDRIOCgZtYXhfaHAYDCABKAUS",
             "FgoNaGl0X2xlZnRfdGltZRi+ByABKAISFgoNc2VhbF9vbl9zdGFnZRjXDSAB",
             "KAgSKAoMY29sbGlkZV90eXBlGAYgASgOMhIuTWFyYmxlRmFjdGlvblR5cGUS",
             "CgoCaWQYASABKA0SFgoNaGl0X3RhcmdldF9pZBjeAyABKA0SGAoPaHBfY2hh",
-            "bmdlX3ZhbHVlGLgLIAEoBRIUCgtQTkxETE1OS0pNSxjzAyABKA0SFAoLSkxD",
-            "SUtCTE5FTkgY0gQgASgNEg8KB3RlY2hfaWQYNCABKA0SJgoLSUFBR0dNS0dP",
-            "REMYDSABKAsyES5NYXJibGVTZWFsVmVjdG9yEhcKDnBsYXllcl9iX3Njb3Jl",
-            "GI8OIAEoDRIZChFjb2xsaWRlX3RhcmdldF9pZBgFIAEoDRIkCgpmcmFtZV90",
-            "eXBlGA4gASgOMhAuTWFyYmxlRnJhbWVUeXBlEigKDW1vdmVfZGlzdGFuY2UY",
-            "AyABKAsyES5NYXJibGVTZWFsVmVjdG9yEhcKDnBsYXllcl9hX3Njb3JlGL4L",
-            "IAEoDRIiCgtDQ0xNRkFCREVOQRiCCCABKA4yDC5GSVBQS0xDT0VHShISCglz",
-            "ZWFsX3NpemUYwgogASgCEhAKB3RleHRfaWQY8gwgASgNEg4KBWxldmVsGP4N",
-            "IAEoDRIOCgZhdHRhY2sYCSABKAUSEAoIc2tpbGxfaWQYDyABKA0SFAoLTkJL",
-            "RUxDSElMR0cYxwsgASgIEhAKB2J1ZmZfaWQY8g8gASgNEgoKAmhwGAggASgF",
-            "EiYKC0ZETkRNSEpPSE1PGAQgASgLMhEuTWFyYmxlU2VhbFZlY3RvchIMCgR0",
-            "aW1lGAsgASgCEhwKE2lzX2VmZmVjdF9hdmFpbGFibGUYsQYgASgIEigKDXNl",
-            "YWxfcG9zaXRpb24YAiABKAsyES5NYXJibGVTZWFsVmVjdG9yQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "bmdlX3ZhbHVlGLgLIAEoBRIWCg1zZWFsX3NraWxsX2lkGPMDIAEoDRIUCgtK",
+            "TENJS0JMTkVOSBjSBCABKA0SDwoHdGVjaF9pZBg0IAEoDRI0Chljb2xsaXNp",
+            "b25fdGFyZ2V0X3ZlbG9jaXR5GA0gASgLMhEuTWFyYmxlU2VhbFZlY3RvchIX",
+            "Cg5wbGF5ZXJfYl9zY29yZRiPDiABKA0SGQoRY29sbGlkZV90YXJnZXRfaWQY",
+            "BSABKA0SJAoKZnJhbWVfdHlwZRgOIAEoDjIQLk1hcmJsZUZyYW1lVHlwZRIo",
+            "Cg1zZWFsX3ZlbG9jaXR5GAMgASgLMhEuTWFyYmxlU2VhbFZlY3RvchIXCg5w",
+            "bGF5ZXJfYV9zY29yZRi+CyABKA0SIgoLQ0NMTUZBQkRFTkEYggggASgOMgwu",
+            "RklQUEtMQ09FR0oSEgoJc2VhbF9zaXplGMIKIAEoAhIQCgd0ZXh0X2lkGPIM",
+            "IAEoDRIOCgVsZXZlbBj+DSABKA0SDgoGYXR0YWNrGAkgASgFEhAKCHNraWxs",
+            "X2lkGA8gASgNEhQKC05CS0VMQ0hJTEdHGMcLIAEoCBIQCgdidWZmX2lkGPIP",
+            "IAEoDRIKCgJocBgIIAEoBRItChJjb2xsaXNpb25fcG9zaXRpb24YBCABKAsy",
+            "ES5NYXJibGVTZWFsVmVjdG9yEgwKBHRpbWUYCyABKAISHAoTaXNfZWZmZWN0",
+            "X2F2YWlsYWJsZRixBiABKAgSKAoNc2VhbF9wb3NpdGlvbhgCIAEoCzIRLk1h",
+            "cmJsZVNlYWxWZWN0b3JCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleFactionTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.FIPPKLCOEGJReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleSealVectorReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleFrameTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleFrameTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.FIPPKLCOEGJReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleSealVectorReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleFactionTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGameSyncData), global::EggLink.DanhengServer.Proto.MarbleGameSyncData.Parser, new[]{ "SealRotation", "CollideOwnerId", "MaxHp", "HitLeftTime", "SealOnStage", "CollideType", "Id", "HitTargetId", "HpChangeValue", "PNLDLMNKJMK", "JLCIKBLNENH", "TechId", "IAAGGMKGODC", "PlayerBScore", "CollideTargetId", "FrameType", "MoveDistance", "PlayerAScore", "CCLMFABDENA", "SealSize", "TextId", "Level", "Attack", "SkillId", "NBKELCHILGG", "BuffId", "Hp", "FDNDMHJOHMO", "Time", "IsEffectAvailable", "SealPosition" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGameSyncData), global::EggLink.DanhengServer.Proto.MarbleGameSyncData.Parser, new[]{ "SealRotation", "CollideOwnerId", "MaxHp", "HitLeftTime", "SealOnStage", "CollideType", "Id", "HitTargetId", "HpChangeValue", "SealSkillId", "JLCIKBLNENH", "TechId", "CollisionTargetVelocity", "PlayerBScore", "CollideTargetId", "FrameType", "SealVelocity", "PlayerAScore", "CCLMFABDENA", "SealSize", "TextId", "Level", "Attack", "SkillId", "NBKELCHILGG", "BuffId", "Hp", "CollisionPosition", "Time", "IsEffectAvailable", "SealPosition" }, null, null, null, null)
           }));
     }
     #endregion
@@ -100,14 +101,14 @@ namespace EggLink.DanhengServer.Proto {
       id_ = other.id_;
       hitTargetId_ = other.hitTargetId_;
       hpChangeValue_ = other.hpChangeValue_;
-      pNLDLMNKJMK_ = other.pNLDLMNKJMK_;
+      sealSkillId_ = other.sealSkillId_;
       jLCIKBLNENH_ = other.jLCIKBLNENH_;
       techId_ = other.techId_;
-      iAAGGMKGODC_ = other.iAAGGMKGODC_ != null ? other.iAAGGMKGODC_.Clone() : null;
+      collisionTargetVelocity_ = other.collisionTargetVelocity_ != null ? other.collisionTargetVelocity_.Clone() : null;
       playerBScore_ = other.playerBScore_;
       collideTargetId_ = other.collideTargetId_;
       frameType_ = other.frameType_;
-      moveDistance_ = other.moveDistance_ != null ? other.moveDistance_.Clone() : null;
+      sealVelocity_ = other.sealVelocity_ != null ? other.sealVelocity_.Clone() : null;
       playerAScore_ = other.playerAScore_;
       cCLMFABDENA_ = other.cCLMFABDENA_;
       sealSize_ = other.sealSize_;
@@ -118,7 +119,7 @@ namespace EggLink.DanhengServer.Proto {
       nBKELCHILGG_ = other.nBKELCHILGG_;
       buffId_ = other.buffId_;
       hp_ = other.hp_;
-      fDNDMHJOHMO_ = other.fDNDMHJOHMO_ != null ? other.fDNDMHJOHMO_.Clone() : null;
+      collisionPosition_ = other.collisionPosition_ != null ? other.collisionPosition_.Clone() : null;
       time_ = other.time_;
       isEffectAvailable_ = other.isEffectAvailable_;
       sealPosition_ = other.sealPosition_ != null ? other.sealPosition_.Clone() : null;
@@ -239,15 +240,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PNLDLMNKJMK" field.</summary>
-    public const int PNLDLMNKJMKFieldNumber = 499;
-    private uint pNLDLMNKJMK_;
+    /// <summary>Field number for the "seal_skill_id" field.</summary>
+    public const int SealSkillIdFieldNumber = 499;
+    private uint sealSkillId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PNLDLMNKJMK {
-      get { return pNLDLMNKJMK_; }
+    public uint SealSkillId {
+      get { return sealSkillId_; }
       set {
-        pNLDLMNKJMK_ = value;
+        sealSkillId_ = value;
       }
     }
 
@@ -275,15 +276,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IAAGGMKGODC" field.</summary>
-    public const int IAAGGMKGODCFieldNumber = 13;
-    private global::EggLink.DanhengServer.Proto.MarbleSealVector iAAGGMKGODC_;
+    /// <summary>Field number for the "collision_target_velocity" field.</summary>
+    public const int CollisionTargetVelocityFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.MarbleSealVector collisionTargetVelocity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MarbleSealVector IAAGGMKGODC {
-      get { return iAAGGMKGODC_; }
+    public global::EggLink.DanhengServer.Proto.MarbleSealVector CollisionTargetVelocity {
+      get { return collisionTargetVelocity_; }
       set {
-        iAAGGMKGODC_ = value;
+        collisionTargetVelocity_ = value;
       }
     }
 
@@ -323,15 +324,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "move_distance" field.</summary>
-    public const int MoveDistanceFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.MarbleSealVector moveDistance_;
+    /// <summary>Field number for the "seal_velocity" field.</summary>
+    public const int SealVelocityFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.MarbleSealVector sealVelocity_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MarbleSealVector MoveDistance {
-      get { return moveDistance_; }
+    public global::EggLink.DanhengServer.Proto.MarbleSealVector SealVelocity {
+      get { return sealVelocity_; }
       set {
-        moveDistance_ = value;
+        sealVelocity_ = value;
       }
     }
 
@@ -455,15 +456,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "FDNDMHJOHMO" field.</summary>
-    public const int FDNDMHJOHMOFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.MarbleSealVector fDNDMHJOHMO_;
+    /// <summary>Field number for the "collision_position" field.</summary>
+    public const int CollisionPositionFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.MarbleSealVector collisionPosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MarbleSealVector FDNDMHJOHMO {
-      get { return fDNDMHJOHMO_; }
+    public global::EggLink.DanhengServer.Proto.MarbleSealVector CollisionPosition {
+      get { return collisionPosition_; }
       set {
-        fDNDMHJOHMO_ = value;
+        collisionPosition_ = value;
       }
     }
 
@@ -527,14 +528,14 @@ namespace EggLink.DanhengServer.Proto {
       if (Id != other.Id) return false;
       if (HitTargetId != other.HitTargetId) return false;
       if (HpChangeValue != other.HpChangeValue) return false;
-      if (PNLDLMNKJMK != other.PNLDLMNKJMK) return false;
+      if (SealSkillId != other.SealSkillId) return false;
       if (JLCIKBLNENH != other.JLCIKBLNENH) return false;
       if (TechId != other.TechId) return false;
-      if (!object.Equals(IAAGGMKGODC, other.IAAGGMKGODC)) return false;
+      if (!object.Equals(CollisionTargetVelocity, other.CollisionTargetVelocity)) return false;
       if (PlayerBScore != other.PlayerBScore) return false;
       if (CollideTargetId != other.CollideTargetId) return false;
       if (FrameType != other.FrameType) return false;
-      if (!object.Equals(MoveDistance, other.MoveDistance)) return false;
+      if (!object.Equals(SealVelocity, other.SealVelocity)) return false;
       if (PlayerAScore != other.PlayerAScore) return false;
       if (CCLMFABDENA != other.CCLMFABDENA) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SealSize, other.SealSize)) return false;
@@ -545,7 +546,7 @@ namespace EggLink.DanhengServer.Proto {
       if (NBKELCHILGG != other.NBKELCHILGG) return false;
       if (BuffId != other.BuffId) return false;
       if (Hp != other.Hp) return false;
-      if (!object.Equals(FDNDMHJOHMO, other.FDNDMHJOHMO)) return false;
+      if (!object.Equals(CollisionPosition, other.CollisionPosition)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Time, other.Time)) return false;
       if (IsEffectAvailable != other.IsEffectAvailable) return false;
       if (!object.Equals(SealPosition, other.SealPosition)) return false;
@@ -565,14 +566,14 @@ namespace EggLink.DanhengServer.Proto {
       if (Id != 0) hash ^= Id.GetHashCode();
       if (HitTargetId != 0) hash ^= HitTargetId.GetHashCode();
       if (HpChangeValue != 0) hash ^= HpChangeValue.GetHashCode();
-      if (PNLDLMNKJMK != 0) hash ^= PNLDLMNKJMK.GetHashCode();
+      if (SealSkillId != 0) hash ^= SealSkillId.GetHashCode();
       if (JLCIKBLNENH != 0) hash ^= JLCIKBLNENH.GetHashCode();
       if (TechId != 0) hash ^= TechId.GetHashCode();
-      if (iAAGGMKGODC_ != null) hash ^= IAAGGMKGODC.GetHashCode();
+      if (collisionTargetVelocity_ != null) hash ^= CollisionTargetVelocity.GetHashCode();
       if (PlayerBScore != 0) hash ^= PlayerBScore.GetHashCode();
       if (CollideTargetId != 0) hash ^= CollideTargetId.GetHashCode();
       if (FrameType != global::EggLink.DanhengServer.Proto.MarbleFrameType.None) hash ^= FrameType.GetHashCode();
-      if (moveDistance_ != null) hash ^= MoveDistance.GetHashCode();
+      if (sealVelocity_ != null) hash ^= SealVelocity.GetHashCode();
       if (PlayerAScore != 0) hash ^= PlayerAScore.GetHashCode();
       if (CCLMFABDENA != global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ.MarbleHpChangeTypeNone) hash ^= CCLMFABDENA.GetHashCode();
       if (SealSize != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SealSize);
@@ -583,7 +584,7 @@ namespace EggLink.DanhengServer.Proto {
       if (NBKELCHILGG != false) hash ^= NBKELCHILGG.GetHashCode();
       if (BuffId != 0) hash ^= BuffId.GetHashCode();
       if (Hp != 0) hash ^= Hp.GetHashCode();
-      if (fDNDMHJOHMO_ != null) hash ^= FDNDMHJOHMO.GetHashCode();
+      if (collisionPosition_ != null) hash ^= CollisionPosition.GetHashCode();
       if (Time != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Time);
       if (IsEffectAvailable != false) hash ^= IsEffectAvailable.GetHashCode();
       if (sealPosition_ != null) hash ^= SealPosition.GetHashCode();
@@ -613,13 +614,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(18);
         output.WriteMessage(SealPosition);
       }
-      if (moveDistance_ != null) {
+      if (sealVelocity_ != null) {
         output.WriteRawTag(26);
-        output.WriteMessage(MoveDistance);
+        output.WriteMessage(SealVelocity);
       }
-      if (fDNDMHJOHMO_ != null) {
+      if (collisionPosition_ != null) {
         output.WriteRawTag(34);
-        output.WriteMessage(FDNDMHJOHMO);
+        output.WriteMessage(CollisionPosition);
       }
       if (CollideTargetId != 0) {
         output.WriteRawTag(40);
@@ -653,9 +654,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteInt32(MaxHp);
       }
-      if (iAAGGMKGODC_ != null) {
+      if (collisionTargetVelocity_ != null) {
         output.WriteRawTag(106);
-        output.WriteMessage(IAAGGMKGODC);
+        output.WriteMessage(CollisionTargetVelocity);
       }
       if (FrameType != global::EggLink.DanhengServer.Proto.MarbleFrameType.None) {
         output.WriteRawTag(112);
@@ -673,9 +674,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(240, 29);
         output.WriteUInt32(HitTargetId);
       }
-      if (PNLDLMNKJMK != 0) {
+      if (SealSkillId != 0) {
         output.WriteRawTag(152, 31);
-        output.WriteUInt32(PNLDLMNKJMK);
+        output.WriteUInt32(SealSkillId);
       }
       if (JLCIKBLNENH != 0) {
         output.WriteRawTag(144, 37);
@@ -747,13 +748,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(18);
         output.WriteMessage(SealPosition);
       }
-      if (moveDistance_ != null) {
+      if (sealVelocity_ != null) {
         output.WriteRawTag(26);
-        output.WriteMessage(MoveDistance);
+        output.WriteMessage(SealVelocity);
       }
-      if (fDNDMHJOHMO_ != null) {
+      if (collisionPosition_ != null) {
         output.WriteRawTag(34);
-        output.WriteMessage(FDNDMHJOHMO);
+        output.WriteMessage(CollisionPosition);
       }
       if (CollideTargetId != 0) {
         output.WriteRawTag(40);
@@ -787,9 +788,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteInt32(MaxHp);
       }
-      if (iAAGGMKGODC_ != null) {
+      if (collisionTargetVelocity_ != null) {
         output.WriteRawTag(106);
-        output.WriteMessage(IAAGGMKGODC);
+        output.WriteMessage(CollisionTargetVelocity);
       }
       if (FrameType != global::EggLink.DanhengServer.Proto.MarbleFrameType.None) {
         output.WriteRawTag(112);
@@ -807,9 +808,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(240, 29);
         output.WriteUInt32(HitTargetId);
       }
-      if (PNLDLMNKJMK != 0) {
+      if (SealSkillId != 0) {
         output.WriteRawTag(152, 31);
-        output.WriteUInt32(PNLDLMNKJMK);
+        output.WriteUInt32(SealSkillId);
       }
       if (JLCIKBLNENH != 0) {
         output.WriteRawTag(144, 37);
@@ -900,8 +901,8 @@ namespace EggLink.DanhengServer.Proto {
       if (HpChangeValue != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(HpChangeValue);
       }
-      if (PNLDLMNKJMK != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(PNLDLMNKJMK);
+      if (SealSkillId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(SealSkillId);
       }
       if (JLCIKBLNENH != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(JLCIKBLNENH);
@@ -909,8 +910,8 @@ namespace EggLink.DanhengServer.Proto {
       if (TechId != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(TechId);
       }
-      if (iAAGGMKGODC_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IAAGGMKGODC);
+      if (collisionTargetVelocity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CollisionTargetVelocity);
       }
       if (PlayerBScore != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(PlayerBScore);
@@ -921,8 +922,8 @@ namespace EggLink.DanhengServer.Proto {
       if (FrameType != global::EggLink.DanhengServer.Proto.MarbleFrameType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FrameType);
       }
-      if (moveDistance_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MoveDistance);
+      if (sealVelocity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SealVelocity);
       }
       if (PlayerAScore != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(PlayerAScore);
@@ -954,8 +955,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Hp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Hp);
       }
-      if (fDNDMHJOHMO_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FDNDMHJOHMO);
+      if (collisionPosition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CollisionPosition);
       }
       if (Time != 0F) {
         size += 1 + 4;
@@ -1008,8 +1009,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.HpChangeValue != 0) {
         HpChangeValue = other.HpChangeValue;
       }
-      if (other.PNLDLMNKJMK != 0) {
-        PNLDLMNKJMK = other.PNLDLMNKJMK;
+      if (other.SealSkillId != 0) {
+        SealSkillId = other.SealSkillId;
       }
       if (other.JLCIKBLNENH != 0) {
         JLCIKBLNENH = other.JLCIKBLNENH;
@@ -1017,11 +1018,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.TechId != 0) {
         TechId = other.TechId;
       }
-      if (other.iAAGGMKGODC_ != null) {
-        if (iAAGGMKGODC_ == null) {
-          IAAGGMKGODC = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+      if (other.collisionTargetVelocity_ != null) {
+        if (collisionTargetVelocity_ == null) {
+          CollisionTargetVelocity = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
         }
-        IAAGGMKGODC.MergeFrom(other.IAAGGMKGODC);
+        CollisionTargetVelocity.MergeFrom(other.CollisionTargetVelocity);
       }
       if (other.PlayerBScore != 0) {
         PlayerBScore = other.PlayerBScore;
@@ -1032,11 +1033,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.FrameType != global::EggLink.DanhengServer.Proto.MarbleFrameType.None) {
         FrameType = other.FrameType;
       }
-      if (other.moveDistance_ != null) {
-        if (moveDistance_ == null) {
-          MoveDistance = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+      if (other.sealVelocity_ != null) {
+        if (sealVelocity_ == null) {
+          SealVelocity = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
         }
-        MoveDistance.MergeFrom(other.MoveDistance);
+        SealVelocity.MergeFrom(other.SealVelocity);
       }
       if (other.PlayerAScore != 0) {
         PlayerAScore = other.PlayerAScore;
@@ -1068,11 +1069,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Hp != 0) {
         Hp = other.Hp;
       }
-      if (other.fDNDMHJOHMO_ != null) {
-        if (fDNDMHJOHMO_ == null) {
-          FDNDMHJOHMO = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+      if (other.collisionPosition_ != null) {
+        if (collisionPosition_ == null) {
+          CollisionPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
         }
-        FDNDMHJOHMO.MergeFrom(other.FDNDMHJOHMO);
+        CollisionPosition.MergeFrom(other.CollisionPosition);
       }
       if (other.Time != 0F) {
         Time = other.Time;
@@ -1113,17 +1114,17 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 26: {
-            if (moveDistance_ == null) {
-              MoveDistance = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+            if (sealVelocity_ == null) {
+              SealVelocity = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
-            input.ReadMessage(MoveDistance);
+            input.ReadMessage(SealVelocity);
             break;
           }
           case 34: {
-            if (fDNDMHJOHMO_ == null) {
-              FDNDMHJOHMO = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+            if (collisionPosition_ == null) {
+              CollisionPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
-            input.ReadMessage(FDNDMHJOHMO);
+            input.ReadMessage(CollisionPosition);
             break;
           }
           case 40: {
@@ -1162,10 +1163,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 106: {
-            if (iAAGGMKGODC_ == null) {
-              IAAGGMKGODC = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+            if (collisionTargetVelocity_ == null) {
+              CollisionTargetVelocity = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
-            input.ReadMessage(IAAGGMKGODC);
+            input.ReadMessage(CollisionTargetVelocity);
             break;
           }
           case 112: {
@@ -1185,7 +1186,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 3992: {
-            PNLDLMNKJMK = input.ReadUInt32();
+            SealSkillId = input.ReadUInt32();
             break;
           }
           case 4752: {
@@ -1267,17 +1268,17 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 26: {
-            if (moveDistance_ == null) {
-              MoveDistance = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+            if (sealVelocity_ == null) {
+              SealVelocity = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
-            input.ReadMessage(MoveDistance);
+            input.ReadMessage(SealVelocity);
             break;
           }
           case 34: {
-            if (fDNDMHJOHMO_ == null) {
-              FDNDMHJOHMO = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+            if (collisionPosition_ == null) {
+              CollisionPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
-            input.ReadMessage(FDNDMHJOHMO);
+            input.ReadMessage(CollisionPosition);
             break;
           }
           case 40: {
@@ -1316,10 +1317,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 106: {
-            if (iAAGGMKGODC_ == null) {
-              IAAGGMKGODC = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+            if (collisionTargetVelocity_ == null) {
+              CollisionTargetVelocity = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
-            input.ReadMessage(IAAGGMKGODC);
+            input.ReadMessage(CollisionTargetVelocity);
             break;
           }
           case 112: {
@@ -1339,7 +1340,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 3992: {
-            PNLDLMNKJMK = input.ReadUInt32();
+            SealSkillId = input.ReadUInt32();
             break;
           }
           case 4752: {

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMagicGameLevelInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1Sb2d1ZU1hZ2ljR2FtZUxldmVsSW5mby5wcm90bxoZUm9ndWVNYWdpY0xh",
-            "eWVySW5mby5wcm90bxocUm9ndWVNYWdpY1NldHRsZVJlYXNvbi5wcm90bxob",
-            "Um9ndWVNYWdpY0xldmVsU3RhdHVzLnByb3RvIuIBChdSb2d1ZU1hZ2ljR2Ft",
+            "Ch1Sb2d1ZU1hZ2ljR2FtZUxldmVsSW5mby5wcm90bxobUm9ndWVNYWdpY0xl",
+            "dmVsU3RhdHVzLnByb3RvGhlSb2d1ZU1hZ2ljTGF5ZXJJbmZvLnByb3RvGhxS",
+            "b2d1ZU1hZ2ljU2V0dGxlUmVhc29uLnByb3RvIuIBChdSb2d1ZU1hZ2ljR2Ft",
             "ZUxldmVsSW5mbxImCgZzdGF0dXMYBCABKA4yFi5Sb2d1ZU1hZ2ljTGV2ZWxT",
             "dGF0dXMSFwoPY3VyX2xldmVsX2luZGV4GAYgASgNEhMKC0FDR0JFTEFJR0JP",
             "GAMgASgNEicKBnJlYXNvbhgIIAEoDjIXLlJvZ3VlTWFnaWNTZXR0bGVSZWFz",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "SW5mbxIZChFleHRyYV9yb3VuZF9saW1pdBgHIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicLayerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicSettleReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicLevelStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicLevelStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicLayerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicSettleReasonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicGameLevelInfo), global::EggLink.DanhengServer.Proto.RogueMagicGameLevelInfo.Parser, new[]{ "Status", "CurLevelIndex", "ACGBELAIGBO", "Reason", "LevelInfoList", "ExtraRoundLimit" }, null, null, null, null)
           }));

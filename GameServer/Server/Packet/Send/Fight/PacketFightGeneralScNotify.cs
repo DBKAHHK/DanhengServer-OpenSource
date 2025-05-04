@@ -26,6 +26,24 @@ public class PacketFightGeneralScNotify : BasePacket
         SetData(proto);
     }
 
+    public PacketFightGeneralScNotify(MarbleNetWorkMsgEnum msgType, MarbleNetWorkMsgEnum syncType, FightMarbleSealInfo sealInfo) : base(CmdIds.FightGeneralScNotify)
+    {
+        var proto = new FightGeneralScNotify
+        {
+            NetworkMsgType = (uint)msgType,
+            FightGeneralInfo = new FightGeneralServerInfo
+            {
+                FightGameInfo = { new FightGameInfo
+                {
+                    FightMarbleSealInfo = sealInfo,
+                    GameMessageType = (uint)syncType
+                } }
+            }
+        };
+
+        SetData(proto);
+    }
+
     public PacketFightGeneralScNotify(MarbleNetWorkMsgEnum msgType, List<MarbleGameBaseSyncData> sync) : base(CmdIds.FightGeneralScNotify)
     {
         var proto = new FightGeneralScNotify

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static MAOGFDKDCKMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFNQU9HRkRLRENLTS5wcm90bxoRSEJHSEFPUEJLSlAucHJvdG8aEUVPSkxO",
-            "R0RETE5OLnByb3RvGhFQUElGRktKRUpKQS5wcm90bxoUTWFyYmxlR2FtZUlu",
-            "Zm8ucHJvdG8i2gIKC01BT0dGREtEQ0tNEhsKBXBoYXNlGA4gASgOMgwuUFBJ",
+            "ChFNQU9HRkRLRENLTS5wcm90bxoRUFBJRkZLSkVKSkEucHJvdG8aFE1hcmJs",
+            "ZUdhbWVJbmZvLnByb3RvGhFIQkdIQU9QQktKUC5wcm90bxoRRU9KTE5HRERM",
+            "Tk4ucHJvdG8i2gIKC01BT0dGREtEQ0tNEhsKBXBoYXNlGA4gASgOMgwuUFBJ",
             "RkZLSkVKSkESEwoLSUVIRkhLTURBR0MYAyABKA0SIQoLT0xLTUNCSkZMRUoY",
             "CSADKAsyDC5IQkdIQU9QQktKUBIWCg5zZWFsX293bmVyX3VpZBgFIAEoDRIp",
             "ChBtYXJibGVfZ2FtZV9pbmZvGAIgASgLMg8uTWFyYmxlR2FtZUluZm8SIQoL",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "Tk4SEQoJY3VyX3JvdW5kGAcgASgNEhMKC0RQTEdDRUtKQUNLGA0gASgCQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HBGHAOPBKJPReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOJLNGDDLNNReflection.Descriptor, global::EggLink.DanhengServer.Proto.PPIFFKJEJJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PPIFFKJEJJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HBGHAOPBKJPReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOJLNGDDLNNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MAOGFDKDCKM), global::EggLink.DanhengServer.Proto.MAOGFDKDCKM.Parser, new[]{ "Phase", "IEHFHKMDAGC", "OLKMCBJFLEJ", "SealOwnerUid", "MarbleGameInfo", "DIBPGGOOGPK", "TeamBPlayer", "AllowedMoveSealList", "TeamAPlayer", "CurRound", "DPLGCEKJACK" }, null, null, null, null)
           }));

@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static SceneCastSkillCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTY2VuZUNhc3RTa2lsbENzUmVxLnByb3RvGhBNb3Rpb25JbmZvLnByb3Rv",
-            "GhNTa2lsbEV4dHJhVGFnLnByb3RvGhNEeW5hbWljVmFsdWVzLnByb3RvGh1B",
+            "ChlTY2VuZUNhc3RTa2lsbENzUmVxLnByb3RvGhNTa2lsbEV4dHJhVGFnLnBy",
+            "b3RvGhNEeW5hbWljVmFsdWVzLnByb3RvGhBNb3Rpb25JbmZvLnByb3RvGh1B",
             "c3Npc3RNb25zdGVyRW50aXR5SW5mby5wcm90byKOAwoTU2NlbmVDYXN0U2tp",
             "bGxDc1JlcRIiCg10YXJnZXRfbW90aW9uGA0gASgLMgsuTW90aW9uSW5mbxIl",
             "Ch1hc3Npc3RfbW9uc3Rlcl9lbnRpdHlfaWRfbGlzdBgMIAMoDRIdChVhdHRh",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "Z3MYDyADKA4yDi5Ta2lsbEV4dHJhVGFnQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, global::EggLink.DanhengServer.Proto.DynamicValuesReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, global::EggLink.DanhengServer.Proto.DynamicValuesReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq), global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq.Parser, new[]{ "TargetMotion", "AssistMonsterEntityIdList", "AttackedByEntityId", "SkillIndex", "HitTargetEntityIdList", "HCHDHLJCIJE", "DynamicValues", "AssistMonsterEntityInfo", "CastEntityId", "MazeAbilityStr", "SkillExtraTags" }, null, null, null, null)
           }));

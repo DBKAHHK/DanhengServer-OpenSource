@@ -12,9 +12,10 @@ public class MarbleGameSealInstance(int itemId, int sealId)
     public float Mass { get; set; }
     public float MaxSpeed { get; set; }
     public float Size { get; set; }
-    public bool OnStage { get; set; }
+    public bool OnStage { get; set; } = true;
     public MarbleSealVector Position { get; set; } = new();
     public MarbleSealVector Rotation { get; set; } = new();
+    public MarbleSealVector Velocity { get; set; } = new();
 
     public MarbleGameSealInstance Clone()
     {
@@ -28,7 +29,8 @@ public class MarbleGameSealInstance(int itemId, int sealId)
             MaxSpeed = MaxSpeed,
             OnStage = OnStage,
             Position = Position.Clone(),
-            Rotation = Rotation.Clone()
+            Rotation = Rotation.Clone(),
+            Velocity = Velocity.Clone()
         };
     }
 }

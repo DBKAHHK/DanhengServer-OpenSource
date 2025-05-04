@@ -1,10 +1,13 @@
-﻿using EggLink.DanhengServer.Enums.Fight;
+﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Enums.Fight;
 using EggLink.DanhengServer.GameServer.Game.Lobby;
+using EggLink.DanhengServer.GameServer.Game.MultiPlayer.MarbleGame.Physics;
 using EggLink.DanhengServer.GameServer.Game.MultiPlayer.MarbleGame.Seal;
 using EggLink.DanhengServer.GameServer.Game.MultiPlayer.MarbleGame.Sync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Fight;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
+using Microsoft.Xna.Framework;
 
 namespace EggLink.DanhengServer.GameServer.Game.MultiPlayer.MarbleGame;
 
@@ -66,6 +69,16 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
             case MarbleNetWorkMsgEnum.PerformanceFinish:
                 await PerformanceFinish(player);
                 break;
+            case MarbleNetWorkMsgEnum.Launch:
+                var req = MarbleGameLaunchInfo.Parser.ParseFrom(reqData);
+                await HandleLaunch((int)req.ItemId, new Vector2(req.SealTargetRotation.X, req.SealTargetRotation.Y));
+                break;
+            case MarbleNetWorkMsgEnum.Operation:
+                var operationReq = FightMarbleSealInfo.Parser.ParseFrom(reqData);
+                operationReq.SealOwnerUid = (uint)player.LobbyPlayer.Player.Uid;
+                await BroadCastToRoom(new PacketFightGeneralScNotify(MarbleNetWorkMsgEnum.SyncBatch,
+                    MarbleNetWorkMsgEnum.Operation, operationReq));
+                break;
             default:
                 break;
         }
@@ -110,6 +123,83 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
                 Players.OfType<MarbleGamePlayerInstance>().SelectMany(x => x.SealList.Values)
                     .Select(x => new MarbleGameSealSyncData(x, MarbleFrameType.RoundStart)).ToList())
         ]));
+    }
+
+    #endregion
+
+    #region Collision
+
+    public async ValueTask HandleLaunch(int itemId, Vector2 rotation)
+    {
+        var player = Players.OfType<MarbleGamePlayerInstance>().FirstOrDefault(x => x.SealList.ContainsKey(itemId));
+        if (player == null) return;
+        var seal = player.SealList[itemId];
+        if (!GameData.MarbleSealData.TryGetValue(seal.SealId, out var sealExcel)) return;
+
+        var speed = sealExcel.MaxSpeed * rotation;
+        var simulator = new PhysicsSimulator(
+            gravity: new Vector2(0, 0),
+            leftBound: -5.25f,
+            rightBound: 5.25f,
+            topBound: 3f,
+            bottomBound: -3f
+        );
+
+        seal.Velocity = new MarbleSealVector
+        {
+            X = speed.X,
+            Y = speed.Y
+        };
+
+        List<MarbleGameSealSyncData> syncData = [];
+
+        foreach (var sealInst in Players.OfType<MarbleGamePlayerInstance>().SelectMany(x => x.SealList.Values)
+                     .Where(x => x.OnStage))
+        {
+            simulator.AddBall(sealInst.Id, new Vector2(sealInst.Position.X, sealInst.Position.Y), sealInst.Mass,
+                sealInst.Size, new Vector2(sealInst.Velocity.X, sealInst.Velocity.Y));
+        }
+
+        syncData.AddRange(Players.OfType<MarbleGamePlayerInstance>().SelectMany(x => x.SealList.Values)
+            .Select(sealInst => new MarbleGameSealActionSyncData(sealInst, MarbleFrameType.ActionStart)));
+
+        simulator.Simulate(maxDuration: 20f);
+
+        foreach (var record in simulator.CollisionRecords)
+        {
+            syncData.Add(new MarbleGameSealCollisionSyncData(seal, record.ObjectAId, record.ObjectBId, record.Time, record.Position));
+        }
+
+        foreach (var body in simulator.World.BodyList)
+        {
+            if (body?.UserData is int id)
+            {
+                var sealInst = Players.OfType<MarbleGamePlayerInstance>().SelectMany(x => x.SealList.Values)
+                    .FirstOrDefault(x => x.Id == id);
+                if (sealInst == null) continue;
+
+                sealInst.Position = new MarbleSealVector
+                {
+                    X = body.Position.X,
+                    Y = body.Position.Y
+                };
+                sealInst.Rotation = new MarbleSealVector
+                {
+                    X = body.Rotation
+                };
+                sealInst.Velocity = new MarbleSealVector
+                {
+                    X = body.LinearVelocity.X,
+                    Y = body.LinearVelocity.Y
+                };
+            }
+        }
+
+        syncData.AddRange(Players.OfType<MarbleGamePlayerInstance>().SelectMany(x => x.SealList.Values)
+            .Select(sealInst => new MarbleGameSealActionSyncData(sealInst, MarbleFrameType.ActionEnd, simulator.CurrentTime)));
+
+        await BroadCastToRoom(new PacketFightGeneralScNotify(MarbleNetWorkMsgEnum.SyncBatch,
+            [new MarbleGameInfoLaunchingSyncData(MarbleNetWorkMsgEnum.SyncNotify, MarbleSyncType.SimulateStart, simulator.CurrentTime, itemId, syncData)]));
     }
 
     #endregion
