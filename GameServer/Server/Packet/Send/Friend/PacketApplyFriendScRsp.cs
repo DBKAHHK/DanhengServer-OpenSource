@@ -5,10 +5,11 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
 
 public class PacketApplyFriendScRsp : BasePacket
 {
-    public PacketApplyFriendScRsp(uint uid) : base(CmdIds.ApplyFriendScRsp)
+    public PacketApplyFriendScRsp(Retcode ret, uint uid) : base(CmdIds.ApplyFriendScRsp)
     {
         var proto = new ApplyFriendScRsp
         {
+            Retcode = (uint)ret,
             Uid = uid
         };
 

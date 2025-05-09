@@ -16,7 +16,10 @@ public class HandlerSetAssistAvatarCsReq : Handler
         foreach (var id in req.AvatarIdList)
         {
             if (id == 0) continue;
-            avatars.Add((int)id);
+
+            var avatarData = player.AvatarManager!.AvatarData.FormalAvatars.First(x =>
+                x.BaseAvatarId == (int)id);
+            if (avatarData != null) avatars.Add(avatarData.AvatarId);
         }
 
         await connection.SendPacket(new PacketSetAssistAvatarScRsp(req.AvatarIdList));

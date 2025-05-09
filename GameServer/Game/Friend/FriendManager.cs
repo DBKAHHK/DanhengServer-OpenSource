@@ -6,6 +6,7 @@ using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Chat;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
+using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
@@ -16,79 +17,109 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
     public FriendData FriendData { get; set; } =
         DatabaseHelper.Instance!.GetInstanceOrCreateNew<FriendData>(player.Uid);
 
-    public async ValueTask AddFriend(int targetUid)
+    public async ValueTask<Retcode> AddFriend(int targetUid)
     {
+        if (targetUid == Player.Uid) return Retcode.RetSucc; // Cannot add self
+        if (FriendData.FriendList.ContainsKey(targetUid)) return Retcode.RetFriendAlreadyIsFriend;
+        if (FriendData.BlackList.Contains(targetUid)) return Retcode.RetFriendInBlacklist;
+        if (FriendData.SendApplyList.Contains(targetUid)) return Retcode.RetSucc; // Already send apply
+
         var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
-        if (target == null) return;
-
-        if (FriendData.FriendList.Contains(targetUid)) // already friend
-            return;
-
-        if (FriendData.BlackList.Contains(targetUid)) // in black list
-            return;
-
-        if (FriendData.SendApplyList.Contains(targetUid)) // already send apply
-            return;
-
-        if (FriendData.ReceiveApplyList.Contains(targetUid)) // already receive apply
-            return;
+        if (target == null) return Retcode.RetFriendPlayerNotFound;
+        if (target.BlackList.Contains(Player.Uid)) return Retcode.RetFriendInTargetBlacklist;
+        if (target.ReceiveApplyList.Contains(targetUid)) return Retcode.RetSucc; // Already receive apply
 
         FriendData.SendApplyList.Add(targetUid);
         target.ReceiveApplyList.Add(Player.Uid);
 
         var targetPlayer = Listener.GetActiveConnection(targetUid);
         if (targetPlayer != null)
-        {
             await targetPlayer.SendPacket(new PacketSyncApplyFriendScNotify(Player.Data));
-            targetPlayer.Player!.FriendManager!.FriendData.ReceiveApplyList.Add(Player.Uid);
-        }
 
         DatabaseHelper.ToSaveUidList.Add(targetUid);
+        return Retcode.RetSucc;
     }
 
     public async ValueTask<PlayerData?> ConfirmAddFriend(int targetUid)
     {
-        var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
-        if (target == null) return null;
-
-        if (FriendData.FriendList.Contains(targetUid)) return null;
-
+        if (targetUid == Player.Uid) return null; // Cannot add self
+        if (FriendData.FriendList.ContainsKey(targetUid)) return null;
         if (FriendData.BlackList.Contains(targetUid)) return null;
 
-        if (!FriendData.ReceiveApplyList.Contains(targetUid)) return null;
+        var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
+        var targetData = PlayerData.GetPlayerByUid(targetUid);
+        if (target == null || targetData == null) return null;
+        if (target.FriendList.ContainsKey(Player.Uid)) return null;
+        if (target.BlackList.Contains(Player.Uid)) return null;
 
         FriendData.ReceiveApplyList.Remove(targetUid);
-        FriendData.FriendList.Add(targetUid);
-        target.FriendList.Add(Player.Uid);
+        FriendData.FriendList.Add(targetUid, new());
         target.SendApplyList.Remove(Player.Uid);
+        target.FriendList.Add(Player.Uid, new());
 
-        var targetData = PlayerData.GetPlayerByUid(targetUid)!;
         var targetPlayer = Listener.GetActiveConnection(targetUid);
         if (targetPlayer != null)
             await targetPlayer.SendPacket(new PacketSyncHandleFriendScNotify((uint)Player.Uid, true, Player.Data));
 
-        await Player.SendPacket(new PacketSyncHandleFriendScNotify((uint)targetData.Uid, true, targetData));
-
+        DatabaseHelper.ToSaveUidList.Add(targetUid);
         return targetData;
     }
 
-    public void RefuseAddFriend(int targetUid)
+    public async ValueTask RefuseAddFriend(int targetUid)
     {
         var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
         if (target == null) return;
-
-        if (!FriendData.ReceiveApplyList.Contains(targetUid)) return;
 
         FriendData.ReceiveApplyList.Remove(targetUid);
         target.SendApplyList.Remove(Player.Uid);
 
         var targetPlayer = Listener.GetActiveConnection(targetUid);
-        targetPlayer?.Player!.FriendManager!.FriendData.SendApplyList.Remove(Player.Uid);
+        if (targetPlayer != null)
+            await targetPlayer.SendPacket(new PacketSyncHandleFriendScNotify((uint)Player.Uid, false, Player.Data));
+
         DatabaseHelper.ToSaveUidList.Add(targetUid);
     }
 
-    public void RemoveFriend()
+    public async ValueTask<PlayerData?> AddBlackList(int targetUid)
     {
+        var blackInfo = GetFriendPlayerData([targetUid]).First();
+        var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
+        if (blackInfo == null || target == null) return null;
+
+        FriendData.FriendList.Remove(targetUid);
+        target.FriendList.Remove(Player.Uid);
+        if (!FriendData.BlackList.Contains(targetUid))
+            FriendData.BlackList.Add(targetUid);
+
+        var targetPlayer = Listener.GetActiveConnection(targetUid);
+        if (targetPlayer != null)
+            await targetPlayer.SendPacket(new PacketSyncAddBlacklistScNotify(Player.Uid));
+
+        DatabaseHelper.ToSaveUidList.Add(targetUid);
+        return blackInfo;
+    }
+
+    public void RemoveBlackList(int targetUid)
+    {
+        var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
+        if (target == null) return;
+        FriendData.BlackList.Remove(targetUid);
+    }
+
+    public async ValueTask<int?> RemoveFriend(int targetUid)
+    {
+        var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
+        if (target == null) return null;
+
+        FriendData.FriendList.Remove(targetUid);
+        target.FriendList.Remove(Player.Uid);
+
+        var targetPlayer = Listener.GetActiveConnection(targetUid);
+        if (targetPlayer != null)
+            await targetPlayer.SendPacket(new PacketSyncDeleteFriendScNotify(Player.Uid));
+
+        DatabaseHelper.ToSaveUidList.Add(targetUid);
+        return targetUid;
     }
 
     public async ValueTask SendMessage(int sendUid, int recvUid, string? message = null, int? extraId = null)
@@ -196,6 +227,16 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
         await Player.SendPacket(proto);
     }
 
+    public FriendDetailData? GetFriendDetailData(int uid)
+    {
+        if (uid == ConfigManager.Config.ServerOption.ServerProfile.Uid)
+            return new FriendDetailData { IsMark = true };
+
+        if (!FriendData.FriendList.TryGetValue(uid, out var friend)) return null;
+
+        return friend;
+    }
+
     public List<ChatMessageData> GetHistoryInfo(int uid)
     {
         if (!FriendData.ChatHistory.TryGetValue(uid, out var history)) return [];
@@ -217,16 +258,29 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
         return info;
     }
 
-    public List<PlayerData> GetFriendList()
+    public List<PlayerData> GetFriendPlayerData(List<int>? uids = null)
     {
-        List<PlayerData> list = [];
+        var list = new List<PlayerData>();
+        uids ??= [.. FriendData.FriendList.Keys];
 
-        foreach (var friend in FriendData.FriendList)
+        foreach (var friend in uids)
         {
             var player = PlayerData.GetPlayerByUid(friend);
-
             if (player != null) list.Add(player);
         }
+
+        var serverProfile = ConfigManager.Config.ServerOption.ServerProfile;
+        list.Add(new PlayerData
+        {
+            Uid = serverProfile.Uid,
+            HeadIcon = serverProfile.HeadIcon,
+            Signature = serverProfile.Signature,
+            Level = serverProfile.Level,
+            WorldLevel = 0,
+            Name = serverProfile.Name,
+            ChatBubble = serverProfile.ChatBubbleId,
+            PersonalCard = serverProfile.PersonalCardId
+        });
 
         return list;
     }
@@ -273,41 +327,51 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
         return list;
     }
 
+    public List<PlayerData> GetRandomFriend()
+    {
+        var list = new List<PlayerData>();
+
+        foreach (var kcp in DanhengListener.Connections.Values)
+        {
+            if (kcp.State != SessionStateEnum.ACTIVE) continue;
+            if (kcp is not Connection connection) continue;
+            if (connection.Player?.Uid == Player.Uid) continue;
+            var data = connection.Player?.Data;
+            if (data == null) continue;
+            list.Add(data);
+        }
+
+        return list.Take(20).ToList();
+    }
+
+    public void RemarkFriendName(int uid, string remarkName)
+    {
+        if (!FriendData.FriendList.TryGetValue(uid, out var friend)) return;
+        friend.RemarkName = remarkName;
+    }
+
+    public void MarkFriend(int uid, bool isMark)
+    {
+        if (!FriendData.FriendList.TryGetValue(uid, out var friend)) return;
+        friend.IsMark = isMark;
+    }
+
     public GetFriendListInfoScRsp ToProto()
     {
         var proto = new GetFriendListInfoScRsp();
 
-        var serverProfile = ConfigManager.Config.ServerOption.ServerProfile;
-
-        proto.FriendList.Add(new FriendSimpleInfo
-        {
-            PlayerInfo = new PlayerSimpleInfo
-            {
-                Uid = (uint)serverProfile.Uid,
-                HeadIcon = (uint)serverProfile.HeadIcon,
-                IsBanned = false,
-                Level = (uint)serverProfile.Level,
-                Nickname = serverProfile.Name,
-                ChatBubbleId = (uint)serverProfile.ChatBubbleId,
-                PersonalCard = (uint)serverProfile.PersonalCardId,
-                OnlineStatus = FriendOnlineStatus.Online,
-                Platform = PlatformType.Pc,
-                Signature = serverProfile.Signature
-            },
-            IsMarked = false,
-            RemarkName = ""
-        });
-
-        foreach (var player in GetFriendList())
+        foreach (var player in GetFriendPlayerData())
         {
             var status = Listener.GetActiveConnection(player.Uid) == null
                 ? FriendOnlineStatus.Offline
                 : FriendOnlineStatus.Online;
+            var friend = GetFriendDetailData(player.Uid) ?? new();
+
             proto.FriendList.Add(new FriendSimpleInfo
             {
                 PlayerInfo = player.ToSimpleProto(status),
-                IsMarked = false,
-                RemarkName = ""
+                IsMarked = friend.IsMark,
+                RemarkName = friend.RemarkName
             });
         }
 

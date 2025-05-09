@@ -11,8 +11,8 @@ public class HandlerApplyFriendCsReq : Handler
     {
         var req = ApplyFriendCsReq.Parser.ParseFrom(data);
 
-        await connection.Player!.FriendManager!.AddFriend((int)req.Uid);
+        var ret = await connection.Player!.FriendManager!.AddFriend((int)req.Uid);
 
-        await connection.SendPacket(new PacketApplyFriendScRsp(req.Uid));
+        await connection.SendPacket(new PacketApplyFriendScRsp(ret, req.Uid));
     }
 }

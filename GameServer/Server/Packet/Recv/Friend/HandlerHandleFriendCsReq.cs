@@ -16,7 +16,7 @@ public class HandlerHandleFriendCsReq : Handler
         if (req.IsAccept)
             playerData = await connection.Player!.FriendManager!.ConfirmAddFriend((int)req.Uid);
         else
-            connection.Player!.FriendManager!.RefuseAddFriend((int)req.Uid);
+            await connection.Player!.FriendManager!.RefuseAddFriend((int)req.Uid);
 
         if (playerData != null)
             await connection.SendPacket(new PacketHandleFriendScRsp(req.Uid, req.IsAccept, playerData));
