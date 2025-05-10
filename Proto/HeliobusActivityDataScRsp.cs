@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9IZWxpb2J1c0FjdGl2aXR5RGF0YVNjUnNwLnByb3RvGhFERUpBS1BPRVBL",
-            "Ti5wcm90bxoRSk1JSkpIS0lCTEIucHJvdG8aHUhlbGlvYnVzQ2hhbGxlbmdl",
-            "TGluZXVwLnByb3RvGhFHQkpLS0ZIUEZGTi5wcm90byKjAgoZSGVsaW9idXNB",
+            "Ti5wcm90bxodSGVsaW9idXNDaGFsbGVuZ2VMaW5ldXAucHJvdG8aEUpNSUpK",
+            "SEtJQkxCLnByb3RvGhFHQkpLS0ZIUEZGTi5wcm90byKjAgoZSGVsaW9idXNB",
             "Y3Rpdml0eURhdGFTY1JzcBIhCgtORkRCTUhQUEZJUBgPIAMoCzIMLkdCSktL",
             "RkhQRkZOEi0KC0dDTEpFTkdKSUNNGAEgAygLMhguSGVsaW9idXNDaGFsbGVu",
             "Z2VMaW5ldXASEwoLSUJIQUFFSkVFSEMYByABKA0SIAoKc2tpbGxfaW5mbxgG",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "Y29kZRgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DEJAKPOEPKNReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMIJJHKIBLBReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.GBJKKFHPFFNReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DEJAKPOEPKNReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMIJJHKIBLBReflection.Descriptor, global::EggLink.DanhengServer.Proto.GBJKKFHPFFNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp), global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp.Parser, new[]{ "NFDBMHPPFIP", "GCLJENGJICM", "IBHAAEJEEHC", "SkillInfo", "ChallengeList", "Level", "Phase", "IPHKDELMOIH", "EENJBPMNDOL", "Retcode" }, null, null, null, null)
           }));

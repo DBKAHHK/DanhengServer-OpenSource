@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMagicFinishInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpSb2d1ZU1hZ2ljRmluaXNoSW5mby5wcm90bxoRRkpKREtETkRGREoucHJv",
-            "dG8aF1JvZ3VlTWFnaWNDdXJJbmZvLnByb3RvGhFDQUNMQU5MT09MSy5wcm90",
-            "bxoQTGluZXVwSW5mby5wcm90byK2AQoUUm9ndWVNYWdpY0ZpbmlzaEluZm8S",
+            "ChpSb2d1ZU1hZ2ljRmluaXNoSW5mby5wcm90bxoRQ0FDTEFOTE9PTEsucHJv",
+            "dG8aF1JvZ3VlTWFnaWNDdXJJbmZvLnByb3RvGhBMaW5ldXBJbmZvLnByb3Rv",
+            "GhFGSkpES0ROREZESi5wcm90byK2AQoUUm9ndWVNYWdpY0ZpbmlzaEluZm8S",
             "IQoLR0NHTE5LRkRLS04YBiABKAsyDC5DQUNMQU5MT09MSxIwChRyb2d1ZV90",
             "b3Vybl9jdXJfaW5mbxgOIAEoCzISLlJvZ3VlTWFnaWNDdXJJbmZvEiYKEXJv",
             "Z3VlX2xpbmV1cF9pbmZvGAkgASgLMgsuTGluZXVwSW5mbxIhCgtCSkxFTUZN",
             "Q09ERBgLIAEoCzIMLkZKSkRLRE5ERkRKQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FJJDKDNDFDJReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicCurInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CACLANLOOLKReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CACLANLOOLKReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicCurInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FJJDKDNDFDJReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicFinishInfo), global::EggLink.DanhengServer.Proto.RogueMagicFinishInfo.Parser, new[]{ "GCGLNKFDKKN", "RogueTournCurInfo", "RogueLineupInfo", "BJLEMFMCODD" }, null, null, null, null)
           }));

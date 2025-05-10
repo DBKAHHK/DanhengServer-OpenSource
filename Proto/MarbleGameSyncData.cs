@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhNYXJibGVHYW1lU3luY0RhdGEucHJvdG8aFU1hcmJsZUZyYW1lVHlwZS5w",
-            "cm90bxoRRklQUEtMQ09FR0oucHJvdG8aFk1hcmJsZVNlYWxWZWN0b3IucHJv",
-            "dG8aF01hcmJsZUZhY3Rpb25UeXBlLnByb3RvIscGChJNYXJibGVHYW1lU3lu",
+            "cm90bxoWTWFyYmxlU2VhbFZlY3Rvci5wcm90bxoXTWFyYmxlRmFjdGlvblR5",
+            "cGUucHJvdG8aEUZJUFBLTENPRUdKLnByb3RvIscGChJNYXJibGVHYW1lU3lu",
             "Y0RhdGESKAoNc2VhbF9yb3RhdGlvbhgKIAEoCzIRLk1hcmJsZVNlYWxWZWN0",
             "b3ISGAoQY29sbGlkZV9vd25lcl9pZBgHIAEoDRIOCgZtYXhfaHAYDCABKAUS",
             "FgoNaGl0X2xlZnRfdGltZRi+ByABKAISFgoNc2VhbF9vbl9zdGFnZRjXDSAB",
@@ -48,7 +48,7 @@ namespace EggLink.DanhengServer.Proto {
             "cmJsZVNlYWxWZWN0b3JCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleFrameTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.FIPPKLCOEGJReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleSealVectorReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleFactionTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleFrameTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleSealVectorReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleFactionTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.FIPPKLCOEGJReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGameSyncData), global::EggLink.DanhengServer.Proto.MarbleGameSyncData.Parser, new[]{ "SealRotation", "CollideOwnerId", "MaxHp", "HitLeftTime", "SealOnStage", "CollideType", "Id", "HitTargetId", "HpChangeValue", "SealSkillId", "JLCIKBLNENH", "TechId", "CollisionTargetVelocity", "PlayerBScore", "CollideTargetId", "FrameType", "SealVelocity", "PlayerAScore", "CCLMFABDENA", "SealSize", "TextId", "Level", "Attack", "SkillId", "NBKELCHILGG", "BuffId", "Hp", "CollisionPosition", "Time", "IsEffectAvailable", "SealPosition" }, null, null, null, null)
           }));

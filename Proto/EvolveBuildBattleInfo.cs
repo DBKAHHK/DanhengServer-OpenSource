@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildBattleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtFdm9sdmVCdWlsZEJhdHRsZUluZm8ucHJvdG8aH0V2b2x2ZUJ1aWxkR2Vh",
-            "ckRhbWFnZUluZm8ucHJvdG8aEUJIR0JPT0pFT1BGLnByb3RvGhFQTU5ITUFN",
-            "SEdBSS5wcm90bxoRTUVPSUZJT0FFQ0YucHJvdG8aEUxHSUZFRE5LSE9OLnBy",
+            "ChtFdm9sdmVCdWlsZEJhdHRsZUluZm8ucHJvdG8aEVBNTkhNQU1IR0FJLnBy",
+            "b3RvGhFCSEdCT09KRU9QRi5wcm90bxoRTUVPSUZJT0FFQ0YucHJvdG8aEUxH",
+            "SUZFRE5LSE9OLnByb3RvGh9Fdm9sdmVCdWlsZEdlYXJEYW1hZ2VJbmZvLnBy",
             "b3RvIqIFChVFdm9sdmVCdWlsZEJhdHRsZUluZm8SFAoMY3VyX2xldmVsX2lk",
             "GAEgASgNEhIKCmN1cl9wZXJpb2QYAiABKA0SEAoIY3VyX2NvaW4YAyABKA0S",
             "JgoQd2VhcG9uX3Nsb3RfbGlzdBgEIAMoCzIMLk1FT0lGSU9BRUNGEikKE2Fj",
@@ -44,7 +44,7 @@ namespace EggLink.DanhengServer.Proto {
             "KAsyDC5QTU5ITUFNSEdBSRIgChhwZXJpb2RfZmlyc3RfcmFuZG9tX3NlZWQY",
             "FyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EvolveBuildGearDamageInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BHGBOOJEOPFReflection.Descriptor, global::EggLink.DanhengServer.Proto.PMNHMAMHGAIReflection.Descriptor, global::EggLink.DanhengServer.Proto.MEOIFIOAECFReflection.Descriptor, global::EggLink.DanhengServer.Proto.LGIFEDNKHONReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PMNHMAMHGAIReflection.Descriptor, global::EggLink.DanhengServer.Proto.BHGBOOJEOPFReflection.Descriptor, global::EggLink.DanhengServer.Proto.MEOIFIOAECFReflection.Descriptor, global::EggLink.DanhengServer.Proto.LGIFEDNKHONReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildGearDamageInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfo), global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfo.Parser, new[]{ "CurLevelId", "CurPeriod", "CurCoin", "WeaponSlotList", "AccessorySlotList", "BanGearList", "Collection", "AllowedGearList", "CurExp", "CurReroll", "CurTreasureMissCnt", "PeriodIdList", "CurGearLostCnt", "CurWave", "IsUnlockGearReroll", "IsUnlockGearBan", "CardList", "GearDamageList", "StatParams", "IsGiveup", "CurUnusedRoundCnt", "StatLogInfo", "PeriodFirstRandomSeed" }, null, null, null, null)
           }));

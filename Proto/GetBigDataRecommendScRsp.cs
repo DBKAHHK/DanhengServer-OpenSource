@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetBigDataRecommendScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5HZXRCaWdEYXRhUmVjb21tZW5kU2NSc3AucHJvdG8aGEVxdWlwbWVudFJl",
-            "Y29tbWVuZC5wcm90bxoaQmlnRGF0YVJlY29tbWVuZFR5cGUucHJvdG8aFFJl",
-            "bGljUmVjb21tZW5kLnByb3RvIv8BChhHZXRCaWdEYXRhUmVjb21tZW5kU2NS",
+            "Ch5HZXRCaWdEYXRhUmVjb21tZW5kU2NSc3AucHJvdG8aFFJlbGljUmVjb21t",
+            "ZW5kLnByb3RvGhpCaWdEYXRhUmVjb21tZW5kVHlwZS5wcm90bxoYRXF1aXBt",
+            "ZW50UmVjb21tZW5kLnByb3RvIv8BChhHZXRCaWdEYXRhUmVjb21tZW5kU2NS",
             "c3ASDwoHcmV0Y29kZRgLIAEoDRI2ChdiaWdfZGF0YV9yZWNvbW1lbmRfdHlw",
             "ZRgMIAEoDjIVLkJpZ0RhdGFSZWNvbW1lbmRUeXBlEhUKDWhhc19yZWNvbW1h",
             "bmQYCCABKAgSFAoMZXF1aXBfYXZhdGFyGAQgASgNEjIKE2VxdWlwbWVudF9y",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "SUxMRUhKQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EquipmentRecommendReflection.Descriptor, global::EggLink.DanhengServer.Proto.BigDataRecommendTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicRecommendReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicRecommendReflection.Descriptor, global::EggLink.DanhengServer.Proto.BigDataRecommendTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentRecommendReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBigDataRecommendScRsp), global::EggLink.DanhengServer.Proto.GetBigDataRecommendScRsp.Parser, new[]{ "Retcode", "BigDataRecommendType", "HasRecommand", "EquipAvatar", "EquipmentRecommend", "RelicRecommend" }, new[]{ "DPCNJILLEHJ" }, null, null, null)
           }));
