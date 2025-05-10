@@ -10,19 +10,24 @@ public class MarbleGameInfoSyncData(
     MarbleGameRoomInstance room,
     List<MarbleGameSealSyncData> syncDatas) : MarbleGameBaseSyncData(type)
 {
-    public override MarbleGameSyncInfo ToProto()
+    public override FightGameInfo ToProto()
     {
-        return new MarbleGameSyncInfo
+        return new FightGameInfo
         {
-            MarbleSyncType = syncType,
-            CurRound = (uint)room.CurRound,
-            AllowedMoveSealList =
+            GameMessageType = (uint)MessageType,
+            MarbleGameSyncInfo = new MarbleGameSyncInfo
             {
-                (room.Players[(int)room.CurMoveTeamType - 1] as MarbleGamePlayerInstance)!.AllowMoveSealList.Select(x =>
-                    (uint)x)
-            },
-            MarbleGameSyncData = { syncDatas.Select(x => x.ToProto()) },
-            FirstPlayerActionEnd = room.CurMoveTeamType == MarbleTeamType.TeamA
+                MarbleSyncType = syncType,
+                CurRound = (uint)room.CurRound,
+                AllowedMoveSealList =
+                {
+                    (room.Players[(int)room.CurMoveTeamType - 1] as MarbleGamePlayerInstance)!.AllowMoveSealList.Select(
+                        x =>
+                            (uint)x)
+                },
+                MarbleGameSyncData = { syncDatas.Select(x => x.ToProto()) },
+                FirstPlayerActionEnd = room.CurMoveTeamType == MarbleTeamType.TeamA
+            }
         };
     }
 }
@@ -32,17 +37,21 @@ public class MarbleGameInfoLaunchingSyncData(
     MarbleSyncType syncType,
     float time,
     int itemId,
-    List<MarbleGameSealSyncData> syncDatas) : MarbleGameBaseSyncData(type)
+    List<BaseMarbleGameSyncData> syncDatas) : MarbleGameBaseSyncData(type)
 {
-    public override MarbleGameSyncInfo ToProto()
+    public override FightGameInfo ToProto()
     {
-        return new MarbleGameSyncInfo
+        return new FightGameInfo
         {
-            Launching = true,
-            MarbleSyncType = syncType,
-            MoveTotalTime = time,
-            QueuePosition = (uint)itemId,
-            MarbleGameSyncData = { syncDatas.Select(x => x.ToProto()) }
+            GameMessageType = (uint)MessageType,
+            MarbleGameSyncInfo = new MarbleGameSyncInfo
+            {
+                Launching = true,
+                MarbleSyncType = syncType,
+                MoveTotalTime = time,
+                QueuePosition = (uint)itemId,
+                MarbleGameSyncData = { syncDatas.Select(x => x.ToProto()) }
+            }
         };
     }
 }

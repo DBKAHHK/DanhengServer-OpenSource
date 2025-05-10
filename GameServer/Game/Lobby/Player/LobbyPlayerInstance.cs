@@ -3,12 +3,13 @@ using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Game.Lobby.Player;
 
-public class LobbyPlayerInstance(PlayerInstance player, LobbyCharacterType characterType)
+public class LobbyPlayerInstance(PlayerInstance player, LobbyCharacterType characterType, LobbyRoomInstance lobby)
 {
     public PlayerInstance Player { get; } = player;
     public List<int> EquippedSealList { get; set; } = [];
     public LobbyCharacterType CharacterType { get; set; } = characterType;
     public LobbyCharacterStatus CharacterStatus { get; set; } = LobbyCharacterStatus.Idle;
+    public LobbyRoomInstance LobbyRoom { get; set; } = lobby;
 
     public LobbyBasicInfo ToProto()
     {

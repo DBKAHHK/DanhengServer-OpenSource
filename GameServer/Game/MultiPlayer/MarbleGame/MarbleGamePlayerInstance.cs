@@ -27,7 +27,7 @@ public class MarbleGamePlayerInstance : BaseGamePlayerInstance
             if (!GameData.MarbleSealData.TryGetValue(seal, out var marbleSeal)) continue;
 
             var posY = (index - 1) * 1.5f;
-            var posX = posXBaseValue * (Math.Abs(index - 1) * 0.5f + 2);
+            var posX = posXBaseValue * (Math.Abs(index - 1) * 1 + 3);
             var rotX = posXBaseValue * -1f;
             AllowMoveSealList.Add(CurItemId);
 

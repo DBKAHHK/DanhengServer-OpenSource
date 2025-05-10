@@ -18,7 +18,7 @@ public class DanhengConnection
     public static readonly ConcurrentBag<int> IgnoreLog =
     [
         CmdIds.PlayerHeartBeatCsReq, CmdIds.PlayerHeartBeatScRsp, CmdIds.SceneEntityMoveCsReq,
-        CmdIds.SceneEntityMoveScRsp, CmdIds.GetShopListCsReq, CmdIds.GetShopListScRsp
+        CmdIds.SceneEntityMoveScRsp, CmdIds.GetShopListCsReq, CmdIds.GetShopListScRsp, CmdIds.FightHeartBeatCsReq, CmdIds.FightHeartBeatScRsp
     ];
 
     protected readonly CancellationTokenSource CancelToken;

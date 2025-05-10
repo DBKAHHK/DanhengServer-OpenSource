@@ -26,7 +26,7 @@ public class LobbyRoomInstance(PlayerInstance owner, long roomId, FightGameMode 
 
     public async ValueTask AddPlayer(PlayerInstance player, List<int> sealList, LobbyCharacterType characterType)
     {
-        await AddPlayer(new LobbyPlayerInstance(player, characterType)
+        await AddPlayer(new LobbyPlayerInstance(player, characterType, this)
         {
             EquippedSealList = sealList
         });
@@ -102,6 +102,15 @@ public class LobbyRoomInstance(PlayerInstance owner, long roomId, FightGameMode 
         }
 
         await BroadCastToRoom(new PacketLobbySyncInfoScNotify(0, this, LobbyModifyType.FightStart));
+        return Retcode.RetSucc;
+    }
+
+    public async ValueTask<Retcode> EndFight(LobbyPlayerInstance player)
+    {
+        // alrdy check status in lobby start fight
+        IsInGame = false;
+        player.CharacterStatus = LobbyCharacterStatus.Idle;
+        await BroadCastToRoom(new PacketLobbySyncInfoScNotify(player.Player.Uid, this, LobbyModifyType.FightEnd));
         return Retcode.RetSucc;
     }
 

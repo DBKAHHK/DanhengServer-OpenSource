@@ -8,5 +8,6 @@ public enum MarblePlayerPhaseEnum
     PerformanceFinish = 3,
     Gaming = 4,
     Launching = 5,
-    UseTech = 6
+    SimulateFinish = 6,
+    UseTech = 7
 }

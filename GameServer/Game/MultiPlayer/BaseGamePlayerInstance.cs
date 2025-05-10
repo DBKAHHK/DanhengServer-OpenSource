@@ -8,6 +8,7 @@ public abstract class BaseGamePlayerInstance(LobbyPlayerInstance lobby)
 {
     public LobbyPlayerInstance LobbyPlayer { get; } = lobby;
     public bool EnterGame { get; set; }
+    public bool LeaveGame { get; set; }
     public Connection? Connection { get; set; }
 
     public async ValueTask SendPacket(BasePacket packet)

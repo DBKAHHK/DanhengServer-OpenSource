@@ -28,7 +28,7 @@ public class MultiPlayerGameServerManager
     {
         foreach (var room in Rooms.Values)
         {
-            if (room.Players.Any(x => x.LobbyPlayer.Player.Uid == uid))
+            if (room.Players.Any(x => !x.LeaveGame && x.LobbyPlayer.Player.Uid == uid))
             {
                 return room;
             }

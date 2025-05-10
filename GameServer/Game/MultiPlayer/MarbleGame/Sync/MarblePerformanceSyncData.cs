@@ -5,11 +5,15 @@ namespace EggLink.DanhengServer.GameServer.Game.MultiPlayer.MarbleGame.Sync;
 
 public class MarblePerformanceSyncData(MarbleNetWorkMsgEnum type) : MarbleGameBaseSyncData(type)
 {
-    public override MarbleGameSyncInfo ToProto()
+    public override FightGameInfo ToProto()
     {
-        return new MarbleGameSyncInfo
+        return new FightGameInfo
         {
-            MarbleSyncType = MarbleSyncType.Performance
+            GameMessageType = (uint)MessageType,
+            MarbleGameSyncInfo = new MarbleGameSyncInfo
+            {
+                MarbleSyncType = MarbleSyncType.Performance
+            }
         };
     }
 }

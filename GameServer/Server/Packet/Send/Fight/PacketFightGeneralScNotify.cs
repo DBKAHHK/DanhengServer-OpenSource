@@ -51,11 +51,7 @@ public class PacketFightGeneralScNotify : BasePacket
             NetworkMsgType = (uint)msgType,
             FightGeneralInfo = new FightGeneralServerInfo
             {
-                FightGameInfo = { sync.Select(x => new FightGameInfo
-                {
-                    GameMessageType = (uint)x.MessageType,
-                    MarbleGameSyncInfo = x.ToProto()
-                }) }
+                FightGameInfo = { sync.Select(x => x.ToProto()) }
             }
         };
 
