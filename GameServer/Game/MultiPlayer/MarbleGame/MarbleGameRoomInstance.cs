@@ -461,7 +461,7 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
         await BroadCastToRoom(new PacketFightGeneralScNotify(MarbleNetWorkMsgEnum.SyncBatch,
         [
             new MarbleGameInfoLaunchingSyncData(MarbleNetWorkMsgEnum.SyncNotify, MarbleSyncType.SimulateStart,
-                simulator.CurTime, itemId, syncData), ..winData
+                simulator.CurTime, itemId, this, syncData), ..winData
         ]));
 
         foreach (var p in Players.OfType<MarbleGamePlayerInstance>())

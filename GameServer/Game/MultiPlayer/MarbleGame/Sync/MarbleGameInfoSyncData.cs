@@ -19,6 +19,8 @@ public class MarbleGameInfoSyncData(
             {
                 MarbleSyncType = syncType,
                 CurRound = (uint)room.CurRound,
+                PlayerAGameScore = (uint)(room.Players[0] as MarbleGamePlayerInstance)!.Score,
+                PlayerBGameScore = (uint)(room.Players[1] as MarbleGamePlayerInstance)!.Score,
                 AllowedMoveSealList =
                 {
                     (room.Players[(int)room.CurMoveTeamType - 1] as MarbleGamePlayerInstance)!.AllowMoveSealList.Select(
@@ -37,6 +39,7 @@ public class MarbleGameInfoLaunchingSyncData(
     MarbleSyncType syncType,
     float time,
     int itemId,
+    MarbleGameRoomInstance room,
     List<BaseMarbleGameSyncData> syncDatas) : MarbleGameBaseSyncData(type)
 {
     public override FightGameInfo ToProto()
@@ -47,6 +50,8 @@ public class MarbleGameInfoLaunchingSyncData(
             MarbleGameSyncInfo = new MarbleGameSyncInfo
             {
                 Launching = true,
+                PlayerAGameScore = (uint)(room.Players[0] as MarbleGamePlayerInstance)!.Score,
+                PlayerBGameScore = (uint)(room.Players[1] as MarbleGamePlayerInstance)!.Score,
                 MarbleSyncType = syncType,
                 MoveTotalTime = time,
                 QueuePosition = (uint)itemId,
