@@ -38,6 +38,21 @@ public class MarbleGameHpChangeSyncData(MarbleGameSealInstance inst, MarbleFrame
     }
 }
 
+public class MarbleGameEffectSyncData(MarbleGameSealInstance inst, MarbleFrameType frameType, int skillId, float time = 0f) : MarbleGameSealSyncData(inst, frameType)
+{
+    public override MarbleGameSyncData ToProto()
+    {
+        return new MarbleGameSyncData
+        {
+            FrameType = FrameType,
+            Id = (uint)Instance.Id,
+            Time = time,
+            SealSkillId = (uint)skillId,
+            CollisionPosition = new MarbleSealVector()
+        };
+    }
+}
+
 public class MarbleGameSealSyncData(MarbleGameSealInstance inst, MarbleFrameType frameType) : BaseMarbleGameSyncData
 {
     public MarbleGameSealInstance Instance { get; set; } = inst.Clone();

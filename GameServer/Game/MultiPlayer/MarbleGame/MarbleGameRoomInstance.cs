@@ -283,7 +283,10 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
             Y = speed.Y
         };
 
-        List<BaseMarbleGameSyncData> syncData = [];
+        List<BaseMarbleGameSyncData> syncData =
+        [
+            new MarbleGameEffectSyncData(seal, MarbleFrameType.Effect, 101)
+        ];
 
         foreach (var sealInst in Players.OfType<MarbleGamePlayerInstance>().SelectMany(x => x.SealList.Values)
                      .Where(x => x.OnStage))
@@ -490,15 +493,14 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
         if (target.CurHp <= 0)
         {
             // die
+            target.CurHp = 0;
             // score
             if (Players.OfType<MarbleGamePlayerInstance>().All(x => x.Score < 6))
             {
                 attackerPlayer.Score++;
-            syncData.Add(new MarbleGameScoreSyncData((Players[0] as MarbleGamePlayerInstance)!.Score,
-                (Players[1] as MarbleGamePlayerInstance)!.Score, MarbleFrameType.TeamScore));
+                syncData.Add(new MarbleGameScoreSyncData((Players[0] as MarbleGamePlayerInstance)!.Score,
+                    (Players[1] as MarbleGamePlayerInstance)!.Score, MarbleFrameType.TeamScore));
             }
-
-            target.CurHp = 0;
         }
 
         return syncData;
@@ -538,6 +540,7 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
                 X = posXBaseValue * -1f,
             };
 
+            syncData.RemoveAll(x => x.ToProto().Id == seal.Id);
             syncData.Add(new MarbleGameSealActionSyncData(seal, MarbleFrameType.Revive, time));
         }
 
@@ -568,6 +571,7 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
                         Y = sealB.Position.Y + moveVec.Y
                     };
 
+                    syncData.RemoveAll(x => x.ToProto().Id == sealB.Id);
                     syncData.Add(new MarbleGameSealActionSyncData(sealB, MarbleFrameType.Revive, time));
                 }
             }
@@ -584,7 +588,7 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
         {
             LobbyBasicInfo = { ParentLobby.Players.Select(x => x.ToProto()) },
             CurActionTeamType = CurMoveTeamType,
-            LevelId = 101,
+            LevelId = 100,
             TeamAPlayer = (uint)Players[0].LobbyPlayer.Player.Uid,
             TeamBPlayer = (uint)Players[1].LobbyPlayer.Player.Uid,
             TeamARank = 1,
