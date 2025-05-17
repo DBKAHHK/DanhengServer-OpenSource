@@ -821,10 +821,11 @@ public class PlayerInstance(PlayerData data)
         Data.Pos = pos;
         Data.Rot = rot;
         var notSendMove = true;
-        SceneInstance instance = new(this, plane, floorId, entryId);
-        InvokeOnPlayerLoadScene(this, instance);
         if (planeId != Data.PlaneId || floorId != Data.FloorId || entryId != Data.EntryId)
         {
+            SceneInstance instance = new(this, plane, floorId, entryId);
+            InvokeOnPlayerLoadScene(this, instance);
+            SceneInstance = instance;
             Data.PlaneId = planeId;
             Data.FloorId = floorId;
             Data.EntryId = entryId;
@@ -835,14 +836,12 @@ public class PlayerInstance(PlayerData data)
             notSendMove = false;
         }
 
-        SceneInstance = instance;
-
         if (MissionManager != null)
             await MissionManager.OnPlayerChangeScene();
 
         Connection?.SendPacket(CmdIds.SyncServerSceneChangeNotify);
         if (sendPacket && notSendMove)
-            await SendPacket(new PacketEnterSceneByServerScNotify(instance));
+            await SendPacket(new PacketEnterSceneByServerScNotify(SceneInstance!));
         else if (sendPacket && !notSendMove) // send move packet
             await SendPacket(new PacketSceneEntityMoveScNotify(this));
 
