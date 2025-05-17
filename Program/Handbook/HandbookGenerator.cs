@@ -118,6 +118,11 @@ public static class HandbookGenerator
         builder.AppendLine("#RogueDiceSurface");
         builder.AppendLine();
         GenerateRogueDiceSurfaceDisplay(builder, textMap, fallbackTextMap);
+
+        builder.AppendLine();
+        builder.AppendLine("#RogueDialogue");
+        builder.AppendLine();
+        GenerateRogueDialogueDisplay(builder, textMap, fallbackTextMap);
 #endif
 
         builder.AppendLine();
@@ -240,7 +245,56 @@ public static class HandbookGenerator
             builder.AppendLine(display.SurfaceID + ": " + name + "\n" + "Desc: " + desc);
         }
     }
+
+    public static void GenerateRogueDialogueDisplay(StringBuilder builder, Dictionary<long, string> map,
+        Dictionary<long, string> fallback)
+    {
+        foreach (var npc in GameData.RogueNPCData.Values.Where(x => x.RogueNpcConfig != null))
+        {
+            builder.AppendLine("NpcId: " + npc.RogueNPCID);
+            foreach (var dialogue in npc.RogueNpcConfig?.DialogueList ?? [])
+            {
+                var eventNameHash =
+                    GameData.RogueTalkNameConfigData.GetValueOrDefault(dialogue.TalkNameID)?.Name.Hash ??
+                    -1;
+                var eventName = GetNameFromTextMap(eventNameHash, map, fallback);
+                builder.AppendLine($"  Progress: {dialogue.DialogueProgress} | {eventName}");
+                builder.AppendLine($"  Type: {npc.RogueNpcConfig!.DialogueType}");
+                builder.AppendLine("  Options: ");
+
+                foreach (var option in dialogue.OptionInfo?.OptionList ?? [])
+                {
+                    var display = GameData.RogueDialogueOptionDisplayData.GetValueOrDefault(option.DisplayID);
+                    if (display == null) continue;
+
+                    var optionName = GetNameFromTextMap(display.OptionTitle.Hash, map, fallback);
+                    var optionDesc = GetNameFromTextMap(display.OptionDesc.Hash, map, fallback);
+                    builder.AppendLine($"    Option: {option.OptionID} - {optionName}");
+                    builder.AppendLine($"      {optionDesc}".Replace("#2", option.DescValue.ToString())
+                        .Replace("#5", option.DescValue2.ToString()).Replace("#6", option.DescValue3.ToString())
+                        .Replace("#7", option.DescValue4.ToString()));
+                    if (option.DynamicMap.Count == 0) continue;
+
+                    builder.AppendLine("      Dynamic Value:");
+                    foreach (var value in option.DynamicMap)
+                    {
+                        var dynamic = GameData.RogueDialogueDynamicDisplayData.GetValueOrDefault(value.Value.DisplayID);
+                        if (dynamic == null) continue;
+                        var dynamicName = GetNameFromTextMap(dynamic.ContentText.Hash, map, fallback);
+                        builder.AppendLine($"        Dynamic Id: {value.Key} | {dynamicName}");
+                    }
+                }
+            }
+        }
+    }
 #endif
+
+    public static string GetNameFromTextMap(long key, Dictionary<long, string> map, Dictionary<long, string> fallback)
+    {
+        if (map.TryGetValue(key, out var value)) return value;
+        if (fallback.TryGetValue(key, out value)) return value;
+        return $"[{key}]";
+    }
 
     public static void WriteToFile(string lang, string content)
     {

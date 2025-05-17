@@ -268,6 +268,8 @@ public static class GameData
     public static Dictionary<int, BaseRogueBuffExcel> RogueBuffData { get; private set; } = [];
     public static Dictionary<int, BaseRogueBuffGroupExcel> RogueBuffGroupData { get; private set; } = [];
     public static Dictionary<int, RogueHandBookEventExcel> RogueHandBookEventData { get; private set; } = [];
+    public static Dictionary<int, RogueDialogueOptionDisplayExcel> RogueDialogueOptionDisplayData { get; private set; } = [];
+    public static Dictionary<int, RogueDialogueDynamicDisplayExcel> RogueDialogueDynamicDisplayData { get; private set; } = [];
     public static Dictionary<int, RogueHandbookMiracleExcel> RogueHandbookMiracleData { get; private set; } = [];
     public static Dictionary<int, RogueManagerExcel> RogueManagerData { get; private set; } = [];
     public static Dictionary<int, Dictionary<int, RogueMapExcel>> RogueMapData { get; private set; } = [];
@@ -280,6 +282,7 @@ public static class GameData
     public static Dictionary<int, RogueMonsterExcel> RogueMonsterData { get; private set; } = [];
     public static Dictionary<int, RogueMonsterGroupExcel> RogueMonsterGroupData { get; private set; } = [];
     public static Dictionary<int, RogueNPCExcel> RogueNPCData { get; private set; } = [];
+    public static Dictionary<int, RogueTalkNameConfigExcel> RogueTalkNameConfigData { get; private set; } = [];
     public static Dictionary<int, RogueRoomExcel> RogueRoomData { get; private set; } = [];
     public static Dictionary<int, RogueTalentExcel> RogueTalentData { get; private set; } = [];
 

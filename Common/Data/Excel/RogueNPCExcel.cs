@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Data.Config.Rogue;
+using Newtonsoft.Json;
 
 namespace EggLink.DanhengServer.Data.Excel;
 
@@ -8,7 +9,7 @@ public class RogueNPCExcel : ExcelResource
     public int RogueNPCID { get; set; }
     public string NPCJsonPath { get; set; } = string.Empty;
 
-    public RogueNPCConfigInfo? RogueNpcConfig { get; set; }
+    [JsonIgnore] public RogueNPCConfigInfo? RogueNpcConfig { get; set; }
 
     public override int GetId()
     {

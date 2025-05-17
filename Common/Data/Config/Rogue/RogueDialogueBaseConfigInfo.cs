@@ -10,8 +10,8 @@ public class RogueDialogueBaseConfigInfo
     public string OptionPath { get; set; } = string.Empty;
     public string DialoguePath { get; set; } = string.Empty;
 
-    public LevelGraphConfigInfo? DialogueInfo { get; set; }
-    public RogueDialogueEventConfigInfo? OptionInfo { get; set; }
+    [JsonIgnore] public LevelGraphConfigInfo? DialogueInfo { get; set; }
+    [JsonIgnore] public RogueDialogueEventConfigInfo? OptionInfo { get; set; }
 
     public void Loaded()
     {
