@@ -5,19 +5,27 @@ namespace EggLink.DanhengServer.Util;
 
 public class Logger(string moduleName)
 {
-    private static FileInfo? LogFile;
-    private static readonly object _lock = new();
-    private readonly string ModuleName = moduleName;
+    private static FileInfo? _logFile;
+    private static FileInfo? _debugLogFile;
+    private static readonly object Lock = new();
 
     public void Log(string message, LoggerLevel level)
     {
-        lock (_lock)
+        lock (Lock)
         {
             AnsiConsole.Write(new Markup($"[[[bold deepskyblue3_1]{DateTime.Now:HH:mm:ss}[/]]] " +
-                                         $"[[[gray]{ModuleName}[/]]] [[[{(ConsoleColor)level}]{level}[/]]] {message.Replace("[", "[[").Replace("]", "]]")}\n"));
+                                         $"[[[gray]{moduleName}[/]]] [[[{(ConsoleColor)level}]{level}[/]]] {message.Replace("[", "[[").Replace("]", "]]")}\n"));
 
-            var logMessage = $"[{DateTime.Now:HH:mm:ss}] [{ModuleName}] [{level}] {message}";
+            var logMessage = $"[{DateTime.Now:HH:mm:ss}] [{moduleName}] [{level}] {message}";
             PluginEventCommon.InvokeOnConsoleLog(logMessage);
+
+            if (level == LoggerLevel.DEBUG)
+            {
+                WriteToDebugFile(logMessage);
+                return;
+            }
+
+            WriteToDebugFile(logMessage);
             WriteToFile(logMessage);
         }
     }
@@ -74,15 +82,33 @@ public class Logger(string moduleName)
 
     public static void SetLogFile(FileInfo file)
     {
-        LogFile = file;
+        _logFile = file;
+    }
+
+    public static void SetDebugLogFile(FileInfo file)
+    {
+        _debugLogFile = file;
     }
 
     public static void WriteToFile(string message)
     {
         try
         {
-            if (LogFile == null) throw new Exception("LogFile is not set");
-            using var sw = LogFile.AppendText();
+            if (_logFile == null) throw new Exception("LogFile is not set");
+            using var sw = _logFile.AppendText();
+            sw.WriteLine(message);
+        }
+        catch
+        {
+        }
+    }
+
+    public static void WriteToDebugFile(string message)
+    {
+        try
+        {
+            if (_debugLogFile == null) throw new Exception("DebugLogFile is not set");
+            using var sw = _debugLogFile.AppendText();
             sw.WriteLine(message);
         }
         catch
@@ -103,8 +129,4 @@ public enum LoggerLevel
     ERROR = ConsoleColor.Red,
     FATAL = ConsoleColor.DarkRed,
     DEBUG = ConsoleColor.Blue
-}
-
-public class LoggerLevelHelper
-{
 }

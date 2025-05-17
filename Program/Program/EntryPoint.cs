@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.IO.Compression;
 using EggLink.DanhengServer.Command.Command;
 using EggLink.DanhengServer.Configuration;
 using EggLink.DanhengServer.Data;
@@ -50,18 +51,60 @@ public class EntryPoint
             Environment.Exit(0);
         };
         var time = DateTime.Now;
+
+        // pack the old log
+        var logDirectory = new DirectoryInfo(GetConfig().Path.LogPath);
+        if (logDirectory.Exists)
+        {
+            List<string> packed = [];
+            foreach (var oldFile in logDirectory.GetFiles().ToArray())
+            {
+                if (!oldFile.Name.EndsWith(".log")) continue;
+                if (oldFile.Name.EndsWith("-debug.log")) continue;
+                if (packed.Contains(oldFile.Name)) continue;
+
+                var fileName = oldFile.Name.Replace(".log", "");
+                var debugFileName = fileName + "-debug";
+                var oldDebugFile = logDirectory.GetFiles(debugFileName + ".log").FirstOrDefault();
+
+                if (oldFile.Exists)
+                {
+                    var zipFileName = fileName + ".zip";
+                    var zipFile = new FileInfo(GetConfig().Path.LogPath + $"/{zipFileName}");
+                    if (zipFile.Exists) zipFile.Delete();
+                    using (var zip = ZipFile.Open(zipFile.FullName, ZipArchiveMode.Create))
+                    {
+                        zip.CreateEntryFromFile(oldFile.FullName, oldFile.Name);
+                        if (oldDebugFile is { Exists: true })
+                            zip.CreateEntryFromFile(oldDebugFile.FullName, oldDebugFile.Name);
+                    }
+
+                    oldFile.Delete();
+                    oldDebugFile?.Delete();
+                    packed.Add(oldFile.Name);
+                    packed.Add(oldDebugFile?.Name ?? "");
+                }
+            }
+        }
+
         // Initialize the logfile
         var counter = 0;
         FileInfo file;
+        FileInfo zi;
         while (true)
         {
             file = new FileInfo(GetConfig().Path.LogPath + $"/{DateTime.Now:yyyy-MM-dd}-{++counter}.log");
+            zi = new FileInfo(GetConfig().Path.LogPath + $"/{DateTime.Now:yyyy-MM-dd}-{counter}.zip");
             if (file is not { Exists: false, Directory: not null }) continue;
+            if (zi is not { Exists: false, Directory: not null }) continue;
             file.Directory.Create();
             break;
         }
 
+        var debugFile = new FileInfo(GetConfig().Path.LogPath + $"/{DateTime.Now:yyyy-MM-dd}-{counter}-debug.log");
+
         Logger.SetLogFile(file);
+        Logger.SetDebugLogFile(debugFile);
         // Starting the server
         Logger.Info(I18NManager.Translate("Server.ServerInfo.StartingServer"));
 
