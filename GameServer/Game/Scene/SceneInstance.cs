@@ -174,7 +174,7 @@ public class SceneInstance
 
     public GameModeTypeEnum GameModeType;
 
-    public Dictionary<SummonUnitUniqueGroupEnum, EntitySummonUnit> SummonUnit { get; set; } = [];
+    public Dictionary<int, EntitySummonUnit> SummonUnit { get; set; } = [];
 
     public SceneInstance(PlayerInstance player, MazePlaneExcel excel, int floorId, int entryId)
     {
@@ -370,7 +370,8 @@ public class SceneInstance
 
         IGameEntity? removeEntity = null;
         // get old summon unit
-        if (SummonUnit.TryGetValue(summonUnitExcel.UniqueGroup, out var oldSummonUnit))
+        var summonUnitKey = summonUnitExcel.UniqueGroup == SummonUnitUniqueGroupEnum.None ? summonUnitExcel.ID : 1;
+        if (SummonUnit.TryGetValue(summonUnitKey, out var oldSummonUnit))
         {
             // clear old summon unit
             removeEntity = oldSummonUnit;
@@ -386,7 +387,7 @@ public class SceneInstance
         }
 
         await Player.SendPacket(new PacketSceneGroupRefreshScNotify(Player, entity, removeEntity));
-        SummonUnit[summonUnitExcel.UniqueGroup] = entity;
+        SummonUnit[summonUnitKey] = entity;
 
         return Retcode.RetSucc;
     }
