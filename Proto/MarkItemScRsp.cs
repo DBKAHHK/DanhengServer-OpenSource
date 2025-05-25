@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static MarkItemScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNNYXJrSXRlbVNjUnNwLnByb3RvIkYKDU1hcmtJdGVtU2NSc3ASDwoHaXRl",
-            "bV9pZBgGIAEoDRIPCgdyZXRjb2RlGAsgASgNEhMKC05BRUhQSEhER0VLGAIg",
-            "ASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChNNYXJrSXRlbVNjUnNwLnByb3RvIkYKDU1hcmtJdGVtU2NSc3ASEwoLTkFF",
+            "SFBISERHRUsYAiABKAgSDwoHcmV0Y29kZRgIIAEoDRIPCgdpdGVtX2lkGA4g",
+            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkItemScRsp), global::EggLink.DanhengServer.Proto.MarkItemScRsp.Parser, new[]{ "ItemId", "Retcode", "NAEHPHHDGEK" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkItemScRsp), global::EggLink.DanhengServer.Proto.MarkItemScRsp.Parser, new[]{ "NAEHPHHDGEK", "Retcode", "ItemId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarkItemScRsp(MarkItemScRsp other) : this() {
-      itemId_ = other.itemId_;
-      retcode_ = other.retcode_;
       nAEHPHHDGEK_ = other.nAEHPHHDGEK_;
+      retcode_ = other.retcode_;
+      itemId_ = other.itemId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,30 +82,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarkItemScRsp Clone() {
       return new MarkItemScRsp(this);
-    }
-
-    /// <summary>Field number for the "item_id" field.</summary>
-    public const int ItemIdFieldNumber = 6;
-    private uint itemId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ItemId {
-      get { return itemId_; }
-      set {
-        itemId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
     }
 
     /// <summary>Field number for the "NAEHPHHDGEK" field.</summary>
@@ -117,6 +93,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return nAEHPHHDGEK_; }
       set {
         nAEHPHHDGEK_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 8;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "item_id" field.</summary>
+    public const int ItemIdFieldNumber = 14;
+    private uint itemId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ItemId {
+      get { return itemId_; }
+      set {
+        itemId_ = value;
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ItemId != other.ItemId) return false;
-      if (Retcode != other.Retcode) return false;
       if (NAEHPHHDGEK != other.NAEHPHHDGEK) return false;
+      if (Retcode != other.Retcode) return false;
+      if (ItemId != other.ItemId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ItemId != 0) hash ^= ItemId.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (NAEHPHHDGEK != false) hash ^= NAEHPHHDGEK.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (ItemId != 0) hash ^= ItemId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteBool(NAEHPHHDGEK);
       }
-      if (ItemId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(ItemId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
+      }
+      if (ItemId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(ItemId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -192,13 +192,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteBool(NAEHPHHDGEK);
       }
-      if (ItemId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(ItemId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
+      }
+      if (ItemId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(ItemId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ItemId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
+      if (NAEHPHHDGEK != false) {
+        size += 1 + 1;
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (NAEHPHHDGEK != false) {
-        size += 1 + 1;
+      if (ItemId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ItemId != 0) {
-        ItemId = other.ItemId;
+      if (other.NAEHPHHDGEK != false) {
+        NAEHPHHDGEK = other.NAEHPHHDGEK;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.NAEHPHHDGEK != false) {
-        NAEHPHHDGEK = other.NAEHPHHDGEK;
+      if (other.ItemId != 0) {
+        ItemId = other.ItemId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -259,12 +259,12 @@ namespace EggLink.DanhengServer.Proto {
             NAEHPHHDGEK = input.ReadBool();
             break;
           }
-          case 48: {
-            ItemId = input.ReadUInt32();
+          case 64: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 112: {
+            ItemId = input.ReadUInt32();
             break;
           }
         }
@@ -286,12 +286,12 @@ namespace EggLink.DanhengServer.Proto {
             NAEHPHHDGEK = input.ReadBool();
             break;
           }
-          case 48: {
-            ItemId = input.ReadUInt32();
+          case 64: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 112: {
+            ItemId = input.ReadUInt32();
             break;
           }
         }

@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJNdWx0aXBsYXllckdldEZpZ2h0R2F0ZVNjUnNwLnByb3RvInQKHE11bHRp",
-            "cGxheWVyR2V0RmlnaHRHYXRlU2NSc3ASCgoCaXAYCyABKAkSEwoLQU9LQ01N",
-            "UEZHQkMYAyABKAkSFAoMZ2F0ZV9yb29tX2lkGAkgASgEEgwKBHBvcnQYDCAB",
-            "KA0SDwoHcmV0Y29kZRgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "cGxheWVyR2V0RmlnaHRHYXRlU2NSc3ASDAoEcG9ydBgOIAEoDRIUCgxnYXRl",
+            "X3Jvb21faWQYBiABKAQSEwoLQU9LQ01NUEZHQkMYASABKAkSCgoCaXAYCCAB",
+            "KAkSDwoHcmV0Y29kZRgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MultiplayerGetFightGateScRsp), global::EggLink.DanhengServer.Proto.MultiplayerGetFightGateScRsp.Parser, new[]{ "Ip", "AOKCMMPFGBC", "GateRoomId", "Port", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MultiplayerGetFightGateScRsp), global::EggLink.DanhengServer.Proto.MultiplayerGetFightGateScRsp.Parser, new[]{ "Port", "GateRoomId", "AOKCMMPFGBC", "Ip", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MultiplayerGetFightGateScRsp(MultiplayerGetFightGateScRsp other) : this() {
-      ip_ = other.ip_;
-      aOKCMMPFGBC_ = other.aOKCMMPFGBC_;
-      gateRoomId_ = other.gateRoomId_;
       port_ = other.port_;
+      gateRoomId_ = other.gateRoomId_;
+      aOKCMMPFGBC_ = other.aOKCMMPFGBC_;
+      ip_ = other.ip_;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -88,32 +88,20 @@ namespace EggLink.DanhengServer.Proto {
       return new MultiplayerGetFightGateScRsp(this);
     }
 
-    /// <summary>Field number for the "ip" field.</summary>
-    public const int IpFieldNumber = 11;
-    private string ip_ = "";
+    /// <summary>Field number for the "port" field.</summary>
+    public const int PortFieldNumber = 14;
+    private uint port_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Ip {
-      get { return ip_; }
+    public uint Port {
+      get { return port_; }
       set {
-        ip_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "AOKCMMPFGBC" field.</summary>
-    public const int AOKCMMPFGBCFieldNumber = 3;
-    private string aOKCMMPFGBC_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string AOKCMMPFGBC {
-      get { return aOKCMMPFGBC_; }
-      set {
-        aOKCMMPFGBC_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        port_ = value;
       }
     }
 
     /// <summary>Field number for the "gate_room_id" field.</summary>
-    public const int GateRoomIdFieldNumber = 9;
+    public const int GateRoomIdFieldNumber = 6;
     private ulong gateRoomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,15 +112,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "port" field.</summary>
-    public const int PortFieldNumber = 12;
-    private uint port_;
+    /// <summary>Field number for the "AOKCMMPFGBC" field.</summary>
+    public const int AOKCMMPFGBCFieldNumber = 1;
+    private string aOKCMMPFGBC_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Port {
-      get { return port_; }
+    public string AOKCMMPFGBC {
+      get { return aOKCMMPFGBC_; }
       set {
-        port_ = value;
+        aOKCMMPFGBC_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ip" field.</summary>
+    public const int IpFieldNumber = 8;
+    private string ip_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Ip {
+      get { return ip_; }
+      set {
+        ip_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -163,10 +163,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Ip != other.Ip) return false;
-      if (AOKCMMPFGBC != other.AOKCMMPFGBC) return false;
-      if (GateRoomId != other.GateRoomId) return false;
       if (Port != other.Port) return false;
+      if (GateRoomId != other.GateRoomId) return false;
+      if (AOKCMMPFGBC != other.AOKCMMPFGBC) return false;
+      if (Ip != other.Ip) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -175,10 +175,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Ip.Length != 0) hash ^= Ip.GetHashCode();
-      if (AOKCMMPFGBC.Length != 0) hash ^= AOKCMMPFGBC.GetHashCode();
-      if (GateRoomId != 0UL) hash ^= GateRoomId.GetHashCode();
       if (Port != 0) hash ^= Port.GetHashCode();
+      if (GateRoomId != 0UL) hash ^= GateRoomId.GetHashCode();
+      if (AOKCMMPFGBC.Length != 0) hash ^= AOKCMMPFGBC.GetHashCode();
+      if (Ip.Length != 0) hash ^= Ip.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -198,24 +198,24 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (AOKCMMPFGBC.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AOKCMMPFGBC);
+      }
       if (Retcode != 0) {
         output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
-      if (AOKCMMPFGBC.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(AOKCMMPFGBC);
-      }
       if (GateRoomId != 0UL) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt64(GateRoomId);
       }
       if (Ip.Length != 0) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(66);
         output.WriteString(Ip);
       }
       if (Port != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(Port);
       }
       if (_unknownFields != null) {
@@ -228,24 +228,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AOKCMMPFGBC.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AOKCMMPFGBC);
+      }
       if (Retcode != 0) {
         output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
-      if (AOKCMMPFGBC.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(AOKCMMPFGBC);
-      }
       if (GateRoomId != 0UL) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt64(GateRoomId);
       }
       if (Ip.Length != 0) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(66);
         output.WriteString(Ip);
       }
       if (Port != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(Port);
       }
       if (_unknownFields != null) {
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Ip.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Ip);
-      }
-      if (AOKCMMPFGBC.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(AOKCMMPFGBC);
+      if (Port != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Port);
       }
       if (GateRoomId != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(GateRoomId);
       }
-      if (Port != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Port);
+      if (AOKCMMPFGBC.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AOKCMMPFGBC);
+      }
+      if (Ip.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Ip);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -285,17 +285,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Ip.Length != 0) {
-        Ip = other.Ip;
-      }
-      if (other.AOKCMMPFGBC.Length != 0) {
-        AOKCMMPFGBC = other.AOKCMMPFGBC;
+      if (other.Port != 0) {
+        Port = other.Port;
       }
       if (other.GateRoomId != 0UL) {
         GateRoomId = other.GateRoomId;
       }
-      if (other.Port != 0) {
-        Port = other.Port;
+      if (other.AOKCMMPFGBC.Length != 0) {
+        AOKCMMPFGBC = other.AOKCMMPFGBC;
+      }
+      if (other.Ip.Length != 0) {
+        Ip = other.Ip;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -315,23 +315,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            AOKCMMPFGBC = input.ReadString();
+            break;
+          }
           case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 26: {
-            AOKCMMPFGBC = input.ReadString();
-            break;
-          }
-          case 72: {
+          case 48: {
             GateRoomId = input.ReadUInt64();
             break;
           }
-          case 90: {
+          case 66: {
             Ip = input.ReadString();
             break;
           }
-          case 96: {
+          case 112: {
             Port = input.ReadUInt32();
             break;
           }
@@ -350,23 +350,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            AOKCMMPFGBC = input.ReadString();
+            break;
+          }
           case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 26: {
-            AOKCMMPFGBC = input.ReadString();
-            break;
-          }
-          case 72: {
+          case 48: {
             GateRoomId = input.ReadUInt64();
             break;
           }
-          case 90: {
+          case 66: {
             Ip = input.ReadString();
             break;
           }
-          case 96: {
+          case 112: {
             Port = input.ReadUInt32();
             break;
           }

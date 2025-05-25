@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxUcmFpblBhcnR5VXNlQ2FyZENzUmVxLnByb3RvIi0KFlRyYWluUGFydHlV",
-            "c2VDYXJkQ3NSZXESEwoLRUVHSEhIS0NHSEIYASABKA1CHqoCG0VnZ0xpbmsu",
+            "c2VDYXJkQ3NSZXESEwoLRUVHSEhIS0NHSEIYCyABKA1CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "EEGHHHKCGHB" field.</summary>
-    public const int EEGHHHKCGHBFieldNumber = 1;
+    public const int EEGHHHKCGHBFieldNumber = 11;
     private uint eEGHHHKCGHB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EEGHHHKCGHB != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(88);
         output.WriteUInt32(EEGHHHKCGHB);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EEGHHHKCGHB != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(88);
         output.WriteUInt32(EEGHHHKCGHB);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 88: {
             EEGHHHKCGHB = input.ReadUInt32();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 88: {
             EEGHHHKCGHB = input.ReadUInt32();
             break;
           }

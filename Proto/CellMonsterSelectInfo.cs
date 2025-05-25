@@ -24,14 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static CellMonsterSelectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtDZWxsTW9uc3RlclNlbGVjdEluZm8ucHJvdG8iSAoVQ2VsbE1vbnN0ZXJT",
-            "ZWxlY3RJbmZvEhcKD3NlbGVjdF9kZWNheV9pZBgHIAMoDRIWCg5tYXplX2J1",
-            "ZmZfbGlzdBgNIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "ChtDZWxsTW9uc3RlclNlbGVjdEluZm8ucHJvdG8iMAoVQ2VsbE1vbnN0ZXJT",
+            "ZWxlY3RJbmZvEhcKD3NlbGVjdF9kZWNheV9pZBgGIAMoDUIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CellMonsterSelectInfo), global::EggLink.DanhengServer.Proto.CellMonsterSelectInfo.Parser, new[]{ "SelectDecayId", "MazeBuffList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CellMonsterSelectInfo), global::EggLink.DanhengServer.Proto.CellMonsterSelectInfo.Parser, new[]{ "SelectDecayId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +73,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CellMonsterSelectInfo(CellMonsterSelectInfo other) : this() {
       selectDecayId_ = other.selectDecayId_.Clone();
-      mazeBuffList_ = other.mazeBuffList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,25 +83,14 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_decay_id" field.</summary>
-    public const int SelectDecayIdFieldNumber = 7;
+    public const int SelectDecayIdFieldNumber = 6;
     private static readonly pb::FieldCodec<uint> _repeated_selectDecayId_codec
-        = pb::FieldCodec.ForUInt32(58);
+        = pb::FieldCodec.ForUInt32(50);
     private readonly pbc::RepeatedField<uint> selectDecayId_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> SelectDecayId {
       get { return selectDecayId_; }
-    }
-
-    /// <summary>Field number for the "maze_buff_list" field.</summary>
-    public const int MazeBuffListFieldNumber = 13;
-    private static readonly pb::FieldCodec<uint> _repeated_mazeBuffList_codec
-        = pb::FieldCodec.ForUInt32(106);
-    private readonly pbc::RepeatedField<uint> mazeBuffList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> MazeBuffList {
-      get { return mazeBuffList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,7 +109,6 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!selectDecayId_.Equals(other.selectDecayId_)) return false;
-      if(!mazeBuffList_.Equals(other.mazeBuffList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,7 +117,6 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= selectDecayId_.GetHashCode();
-      hash ^= mazeBuffList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,7 +136,6 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       selectDecayId_.WriteTo(output, _repeated_selectDecayId_codec);
-      mazeBuffList_.WriteTo(output, _repeated_mazeBuffList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -163,7 +147,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       selectDecayId_.WriteTo(ref output, _repeated_selectDecayId_codec);
-      mazeBuffList_.WriteTo(ref output, _repeated_mazeBuffList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -175,7 +158,6 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += selectDecayId_.CalculateSize(_repeated_selectDecayId_codec);
-      size += mazeBuffList_.CalculateSize(_repeated_mazeBuffList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -189,7 +171,6 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       selectDecayId_.Add(other.selectDecayId_);
-      mazeBuffList_.Add(other.mazeBuffList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -205,14 +186,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58:
-          case 56: {
+          case 50:
+          case 48: {
             selectDecayId_.AddEntriesFrom(input, _repeated_selectDecayId_codec);
-            break;
-          }
-          case 106:
-          case 104: {
-            mazeBuffList_.AddEntriesFrom(input, _repeated_mazeBuffList_codec);
             break;
           }
         }
@@ -230,14 +206,9 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58:
-          case 56: {
+          case 50:
+          case 48: {
             selectDecayId_.AddEntriesFrom(ref input, _repeated_selectDecayId_codec);
-            break;
-          }
-          case 106:
-          case 104: {
-            mazeBuffList_.AddEntriesFrom(ref input, _repeated_mazeBuffList_codec);
             break;
           }
         }

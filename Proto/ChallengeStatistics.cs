@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChlDaGFsbGVuZ2VTdGF0aXN0aWNzLnByb3RvGh1DaGFsbGVuZ2VTdGFnZVRl",
             "cnRpbmdnaS5wcm90byJbChNDaGFsbGVuZ2VTdGF0aXN0aWNzEhEKCXJlY29y",
-            "ZF9pZBgMIAEoDRIxCg9zdGFnZV90ZXJ0aW5nZ2kYCCABKAsyGC5DaGFsbGVu",
+            "ZF9pZBgGIAEoDRIxCg9zdGFnZV90ZXJ0aW5nZ2kYDCABKAsyGC5DaGFsbGVu",
             "Z2VTdGFnZVRlcnRpbmdnaUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "record_id" field.</summary>
-    public const int RecordIdFieldNumber = 12;
+    public const int RecordIdFieldNumber = 6;
     private uint recordId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stage_tertinggi" field.</summary>
-    public const int StageTertinggiFieldNumber = 8;
+    public const int StageTertinggiFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.ChallengeStageTertinggi stageTertinggi_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (stageTertinggi_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(StageTertinggi);
-      }
       if (RecordId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(48);
         output.WriteUInt32(RecordId);
+      }
+      if (stageTertinggi_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(StageTertinggi);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (stageTertinggi_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(StageTertinggi);
-      }
       if (RecordId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(48);
         output.WriteUInt32(RecordId);
+      }
+      if (stageTertinggi_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(StageTertinggi);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 48: {
+            RecordId = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             if (stageTertinggi_ == null) {
               StageTertinggi = new global::EggLink.DanhengServer.Proto.ChallengeStageTertinggi();
             }
             input.ReadMessage(StageTertinggi);
-            break;
-          }
-          case 96: {
-            RecordId = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 48: {
+            RecordId = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             if (stageTertinggi_ == null) {
               StageTertinggi = new global::EggLink.DanhengServer.Proto.ChallengeStageTertinggi();
             }
             input.ReadMessage(StageTertinggi);
-            break;
-          }
-          case 96: {
-            RecordId = input.ReadUInt32();
             break;
           }
         }

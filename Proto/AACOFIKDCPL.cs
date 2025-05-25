@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFBQUNPRklLRENQTC5wcm90byI0CgtBQUNPRklLRENQTBITCgtJRU5QRUxC",
-            "UEhEUBgFIAEoDRIQCghwcm9ncmVzcxgPIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "UEhEUBgHIAEoDRIQCghwcm9ncmVzcxgBIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IENPELBPHDP" field.</summary>
-    public const int IENPELBPHDPFieldNumber = 5;
+    public const int IENPELBPHDPFieldNumber = 7;
     private uint iENPELBPHDP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "progress" field.</summary>
-    public const int ProgressFieldNumber = 15;
+    public const int ProgressFieldNumber = 1;
     private uint progress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IENPELBPHDP != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(IENPELBPHDP);
-      }
       if (Progress != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(Progress);
+      }
+      if (IENPELBPHDP != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(IENPELBPHDP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IENPELBPHDP != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(IENPELBPHDP);
-      }
       if (Progress != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(Progress);
+      }
+      if (IENPELBPHDP != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(IENPELBPHDP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            IENPELBPHDP = input.ReadUInt32();
+          case 8: {
+            Progress = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Progress = input.ReadUInt32();
+          case 56: {
+            IENPELBPHDP = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            IENPELBPHDP = input.ReadUInt32();
+          case 8: {
+            Progress = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Progress = input.ReadUInt32();
+          case 56: {
+            IENPELBPHDP = input.ReadUInt32();
             break;
           }
         }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFIUENBSU1LSkRJSi5wcm90bxoRSUxNRUxGSkNDTUQucHJvdG8iMAoLSFBD",
-            "QUlNS0pESUoSIQoLSklMQUdHRE1BTEwYDiABKAsyDC5JTE1FTEZKQ0NNREIe",
+            "QUlNS0pESUoSIQoLSklMQUdHRE1BTEwYCSABKAsyDC5JTE1FTEZKQ0NNREIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ILMELFJCCMDReflection.Descriptor, },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JILAGGDMALL" field.</summary>
-    public const int JILAGGDMALLFieldNumber = 14;
+    public const int JILAGGDMALLFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.ILMELFJCCMD jILAGGDMALL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (jILAGGDMALL_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(74);
         output.WriteMessage(JILAGGDMALL);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (jILAGGDMALL_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(74);
         output.WriteMessage(JILAGGDMALL);
       }
       if (_unknownFields != null) {
@@ -200,7 +200,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
+          case 74: {
             if (jILAGGDMALL_ == null) {
               JILAGGDMALL = new global::EggLink.DanhengServer.Proto.ILMELFJCCMD();
             }
@@ -222,7 +222,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
+          case 74: {
             if (jILAGGDMALL_ == null) {
               JILAGGDMALL = new global::EggLink.DanhengServer.Proto.ILMELFJCCMD();
             }

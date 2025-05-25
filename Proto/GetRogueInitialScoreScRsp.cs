@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9HZXRSb2d1ZUluaXRpYWxTY29yZVNjUnNwLnByb3RvGhpSb2d1ZVNjb3Jl",
             "UmV3YXJkSW5mby5wcm90byJkChlHZXRSb2d1ZUluaXRpYWxTY29yZVNjUnNw",
-            "Eg8KB3JldGNvZGUYAyABKA0SNgoXcm9ndWVfc2NvcmVfcmV3YXJkX2luZm8Y",
-            "CiABKAsyFS5Sb2d1ZVNjb3JlUmV3YXJkSW5mb0IeqgIbRWdnTGluay5EYW5o",
+            "Eg8KB3JldGNvZGUYAiABKA0SNgoXcm9ndWVfc2NvcmVfcmV3YXJkX2luZm8Y",
+            "DSABKAsyFS5Sb2d1ZVNjb3JlUmV3YXJkSW5mb0IeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueScoreRewardInfoReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
+    public const int RetcodeFieldNumber = 2;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_score_reward_info" field.</summary>
-    public const int RogueScoreRewardInfoFieldNumber = 10;
+    public const int RogueScoreRewardInfoFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo rogueScoreRewardInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
       if (rogueScoreRewardInfo_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(106);
         output.WriteMessage(RogueScoreRewardInfo);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
       if (rogueScoreRewardInfo_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(106);
         output.WriteMessage(RogueScoreRewardInfo);
       }
       if (_unknownFields != null) {
@@ -231,11 +231,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 106: {
             if (rogueScoreRewardInfo_ == null) {
               RogueScoreRewardInfo = new global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo();
             }
@@ -257,11 +257,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 106: {
             if (rogueScoreRewardInfo_ == null) {
               RogueScoreRewardInfo = new global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo();
             }

@@ -25,18 +25,18 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFIQkdIQU9QQktKUC5wcm90bxoWTWFyYmxlU2VhbFZlY3Rvci5wcm90byK9",
-            "AgoLSEJHSEFPUEJLSlASFQoNc2VhbF9vbl9zdGFnZRgBIAEoCBIKCgJpZBgJ",
-            "IAEoDRINCgVsZXZlbBgEIAEoDRIPCgdidWZmX2lkGA8gASgNEhEKCWxhdW5j",
-            "aGluZxgCIAEoCBIKCgJocBgKIAEoBRITCgtKTENJS0JMTkVOSBgDIAEoDRIR",
-            "CglzZWFsX3NpemUYCCABKAISGwoTaXNfZWZmZWN0X2F2YWlsYWJsZRgFIAEo",
-            "CBITCgtCTU5FQ1BJT1BEThgOIAEoCBIoCg1zZWFsX3Bvc2l0aW9uGA0gASgL",
-            "MhEuTWFyYmxlU2VhbFZlY3RvchIOCgZhdHRhY2sYByABKAUSKAoNc2VhbF9y",
-            "b3RhdGlvbhgMIAEoCzIRLk1hcmJsZVNlYWxWZWN0b3ISDgoGbWF4X2hwGAYg",
-            "ASgFQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "AgoLSEJHSEFPUEJLSlASEQoJbGF1bmNoaW5nGA8gASgIEg8KB2J1ZmZfaWQY",
+            "AyABKA0SDQoFbGV2ZWwYBSABKA0SEQoJc2VhbF9zaXplGAggASgCEhMKC0pM",
+            "Q0lLQkxORU5IGA4gASgNEigKDXNlYWxfcm90YXRpb24YCyABKAsyES5NYXJi",
+            "bGVTZWFsVmVjdG9yEg4KBmF0dGFjaxgGIAEoBRIKCgJpZBgMIAEoDRITCgtC",
+            "TU5FQ1BJT1BEThgBIAEoCBIOCgZtYXhfaHAYBCABKAUSKAoNc2VhbF9wb3Np",
+            "dGlvbhgNIAEoCzIRLk1hcmJsZVNlYWxWZWN0b3ISCgoCaHAYCiABKAUSFQoN",
+            "c2VhbF9vbl9zdGFnZRgCIAEoCBIbChNpc19lZmZlY3RfYXZhaWxhYmxlGAcg",
+            "ASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleSealVectorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HBGHAOPBKJP), global::EggLink.DanhengServer.Proto.HBGHAOPBKJP.Parser, new[]{ "SealOnStage", "Id", "Level", "BuffId", "Launching", "Hp", "JLCIKBLNENH", "SealSize", "IsEffectAvailable", "BMNECPIOPDN", "SealPosition", "Attack", "SealRotation", "MaxHp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HBGHAOPBKJP), global::EggLink.DanhengServer.Proto.HBGHAOPBKJP.Parser, new[]{ "Launching", "BuffId", "Level", "SealSize", "JLCIKBLNENH", "SealRotation", "Attack", "Id", "BMNECPIOPDN", "MaxHp", "SealPosition", "Hp", "SealOnStage", "IsEffectAvailable" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,20 +78,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HBGHAOPBKJP(HBGHAOPBKJP other) : this() {
-      sealOnStage_ = other.sealOnStage_;
-      id_ = other.id_;
-      level_ = other.level_;
-      buffId_ = other.buffId_;
       launching_ = other.launching_;
-      hp_ = other.hp_;
-      jLCIKBLNENH_ = other.jLCIKBLNENH_;
+      buffId_ = other.buffId_;
+      level_ = other.level_;
       sealSize_ = other.sealSize_;
-      isEffectAvailable_ = other.isEffectAvailable_;
-      bMNECPIOPDN_ = other.bMNECPIOPDN_;
-      sealPosition_ = other.sealPosition_ != null ? other.sealPosition_.Clone() : null;
-      attack_ = other.attack_;
+      jLCIKBLNENH_ = other.jLCIKBLNENH_;
       sealRotation_ = other.sealRotation_ != null ? other.sealRotation_.Clone() : null;
+      attack_ = other.attack_;
+      id_ = other.id_;
+      bMNECPIOPDN_ = other.bMNECPIOPDN_;
       maxHp_ = other.maxHp_;
+      sealPosition_ = other.sealPosition_ != null ? other.sealPosition_.Clone() : null;
+      hp_ = other.hp_;
+      sealOnStage_ = other.sealOnStage_;
+      isEffectAvailable_ = other.isEffectAvailable_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -101,56 +101,8 @@ namespace EggLink.DanhengServer.Proto {
       return new HBGHAOPBKJP(this);
     }
 
-    /// <summary>Field number for the "seal_on_stage" field.</summary>
-    public const int SealOnStageFieldNumber = 1;
-    private bool sealOnStage_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool SealOnStage {
-      get { return sealOnStage_; }
-      set {
-        sealOnStage_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 9;
-    private uint id_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 4;
-    private uint level_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Level {
-      get { return level_; }
-      set {
-        level_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "buff_id" field.</summary>
-    public const int BuffIdFieldNumber = 15;
-    private uint buffId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BuffId {
-      get { return buffId_; }
-      set {
-        buffId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "launching" field.</summary>
-    public const int LaunchingFieldNumber = 2;
+    public const int LaunchingFieldNumber = 15;
     private bool launching_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -161,27 +113,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "hp" field.</summary>
-    public const int HpFieldNumber = 10;
-    private int hp_;
+    /// <summary>Field number for the "buff_id" field.</summary>
+    public const int BuffIdFieldNumber = 3;
+    private uint buffId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Hp {
-      get { return hp_; }
+    public uint BuffId {
+      get { return buffId_; }
       set {
-        hp_ = value;
+        buffId_ = value;
       }
     }
 
-    /// <summary>Field number for the "JLCIKBLNENH" field.</summary>
-    public const int JLCIKBLNENHFieldNumber = 3;
-    private uint jLCIKBLNENH_;
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 5;
+    private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint JLCIKBLNENH {
-      get { return jLCIKBLNENH_; }
+    public uint Level {
+      get { return level_; }
       set {
-        jLCIKBLNENH_ = value;
+        level_ = value;
       }
     }
 
@@ -197,20 +149,56 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "is_effect_available" field.</summary>
-    public const int IsEffectAvailableFieldNumber = 5;
-    private bool isEffectAvailable_;
+    /// <summary>Field number for the "JLCIKBLNENH" field.</summary>
+    public const int JLCIKBLNENHFieldNumber = 14;
+    private uint jLCIKBLNENH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsEffectAvailable {
-      get { return isEffectAvailable_; }
+    public uint JLCIKBLNENH {
+      get { return jLCIKBLNENH_; }
       set {
-        isEffectAvailable_ = value;
+        jLCIKBLNENH_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "seal_rotation" field.</summary>
+    public const int SealRotationFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.MarbleSealVector sealRotation_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MarbleSealVector SealRotation {
+      get { return sealRotation_; }
+      set {
+        sealRotation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "attack" field.</summary>
+    public const int AttackFieldNumber = 6;
+    private int attack_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Attack {
+      get { return attack_; }
+      set {
+        attack_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 12;
+    private uint id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Id {
+      get { return id_; }
+      set {
+        id_ = value;
       }
     }
 
     /// <summary>Field number for the "BMNECPIOPDN" field.</summary>
-    public const int BMNECPIOPDNFieldNumber = 14;
+    public const int BMNECPIOPDNFieldNumber = 1;
     private bool bMNECPIOPDN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -218,6 +206,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return bMNECPIOPDN_; }
       set {
         bMNECPIOPDN_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_hp" field.</summary>
+    public const int MaxHpFieldNumber = 4;
+    private int maxHp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxHp {
+      get { return maxHp_; }
+      set {
+        maxHp_ = value;
       }
     }
 
@@ -233,39 +233,39 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "attack" field.</summary>
-    public const int AttackFieldNumber = 7;
-    private int attack_;
+    /// <summary>Field number for the "hp" field.</summary>
+    public const int HpFieldNumber = 10;
+    private int hp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Attack {
-      get { return attack_; }
+    public int Hp {
+      get { return hp_; }
       set {
-        attack_ = value;
+        hp_ = value;
       }
     }
 
-    /// <summary>Field number for the "seal_rotation" field.</summary>
-    public const int SealRotationFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.MarbleSealVector sealRotation_;
+    /// <summary>Field number for the "seal_on_stage" field.</summary>
+    public const int SealOnStageFieldNumber = 2;
+    private bool sealOnStage_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MarbleSealVector SealRotation {
-      get { return sealRotation_; }
+    public bool SealOnStage {
+      get { return sealOnStage_; }
       set {
-        sealRotation_ = value;
+        sealOnStage_ = value;
       }
     }
 
-    /// <summary>Field number for the "max_hp" field.</summary>
-    public const int MaxHpFieldNumber = 6;
-    private int maxHp_;
+    /// <summary>Field number for the "is_effect_available" field.</summary>
+    public const int IsEffectAvailableFieldNumber = 7;
+    private bool isEffectAvailable_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int MaxHp {
-      get { return maxHp_; }
+    public bool IsEffectAvailable {
+      get { return isEffectAvailable_; }
       set {
-        maxHp_ = value;
+        isEffectAvailable_ = value;
       }
     }
 
@@ -284,20 +284,20 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SealOnStage != other.SealOnStage) return false;
-      if (Id != other.Id) return false;
-      if (Level != other.Level) return false;
-      if (BuffId != other.BuffId) return false;
       if (Launching != other.Launching) return false;
-      if (Hp != other.Hp) return false;
-      if (JLCIKBLNENH != other.JLCIKBLNENH) return false;
+      if (BuffId != other.BuffId) return false;
+      if (Level != other.Level) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SealSize, other.SealSize)) return false;
-      if (IsEffectAvailable != other.IsEffectAvailable) return false;
-      if (BMNECPIOPDN != other.BMNECPIOPDN) return false;
-      if (!object.Equals(SealPosition, other.SealPosition)) return false;
-      if (Attack != other.Attack) return false;
+      if (JLCIKBLNENH != other.JLCIKBLNENH) return false;
       if (!object.Equals(SealRotation, other.SealRotation)) return false;
+      if (Attack != other.Attack) return false;
+      if (Id != other.Id) return false;
+      if (BMNECPIOPDN != other.BMNECPIOPDN) return false;
       if (MaxHp != other.MaxHp) return false;
+      if (!object.Equals(SealPosition, other.SealPosition)) return false;
+      if (Hp != other.Hp) return false;
+      if (SealOnStage != other.SealOnStage) return false;
+      if (IsEffectAvailable != other.IsEffectAvailable) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -305,20 +305,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (SealOnStage != false) hash ^= SealOnStage.GetHashCode();
-      if (Id != 0) hash ^= Id.GetHashCode();
-      if (Level != 0) hash ^= Level.GetHashCode();
-      if (BuffId != 0) hash ^= BuffId.GetHashCode();
       if (Launching != false) hash ^= Launching.GetHashCode();
-      if (Hp != 0) hash ^= Hp.GetHashCode();
-      if (JLCIKBLNENH != 0) hash ^= JLCIKBLNENH.GetHashCode();
+      if (BuffId != 0) hash ^= BuffId.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
       if (SealSize != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SealSize);
-      if (IsEffectAvailable != false) hash ^= IsEffectAvailable.GetHashCode();
-      if (BMNECPIOPDN != false) hash ^= BMNECPIOPDN.GetHashCode();
-      if (sealPosition_ != null) hash ^= SealPosition.GetHashCode();
-      if (Attack != 0) hash ^= Attack.GetHashCode();
+      if (JLCIKBLNENH != 0) hash ^= JLCIKBLNENH.GetHashCode();
       if (sealRotation_ != null) hash ^= SealRotation.GetHashCode();
+      if (Attack != 0) hash ^= Attack.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (BMNECPIOPDN != false) hash ^= BMNECPIOPDN.GetHashCode();
       if (MaxHp != 0) hash ^= MaxHp.GetHashCode();
+      if (sealPosition_ != null) hash ^= SealPosition.GetHashCode();
+      if (Hp != 0) hash ^= Hp.GetHashCode();
+      if (SealOnStage != false) hash ^= SealOnStage.GetHashCode();
+      if (IsEffectAvailable != false) hash ^= IsEffectAvailable.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -337,61 +337,61 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SealOnStage != false) {
+      if (BMNECPIOPDN != false) {
         output.WriteRawTag(8);
+        output.WriteBool(BMNECPIOPDN);
+      }
+      if (SealOnStage != false) {
+        output.WriteRawTag(16);
         output.WriteBool(SealOnStage);
       }
-      if (Launching != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(Launching);
-      }
-      if (JLCIKBLNENH != 0) {
+      if (BuffId != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(JLCIKBLNENH);
-      }
-      if (Level != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Level);
-      }
-      if (IsEffectAvailable != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(IsEffectAvailable);
+        output.WriteUInt32(BuffId);
       }
       if (MaxHp != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteInt32(MaxHp);
       }
+      if (Level != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Level);
+      }
       if (Attack != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteInt32(Attack);
+      }
+      if (IsEffectAvailable != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsEffectAvailable);
       }
       if (SealSize != 0F) {
         output.WriteRawTag(69);
         output.WriteFloat(SealSize);
-      }
-      if (Id != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Id);
       }
       if (Hp != 0) {
         output.WriteRawTag(80);
         output.WriteInt32(Hp);
       }
       if (sealRotation_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(90);
         output.WriteMessage(SealRotation);
+      }
+      if (Id != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Id);
       }
       if (sealPosition_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(SealPosition);
       }
-      if (BMNECPIOPDN != false) {
+      if (JLCIKBLNENH != 0) {
         output.WriteRawTag(112);
-        output.WriteBool(BMNECPIOPDN);
+        output.WriteUInt32(JLCIKBLNENH);
       }
-      if (BuffId != 0) {
+      if (Launching != false) {
         output.WriteRawTag(120);
-        output.WriteUInt32(BuffId);
+        output.WriteBool(Launching);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -403,61 +403,61 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SealOnStage != false) {
+      if (BMNECPIOPDN != false) {
         output.WriteRawTag(8);
+        output.WriteBool(BMNECPIOPDN);
+      }
+      if (SealOnStage != false) {
+        output.WriteRawTag(16);
         output.WriteBool(SealOnStage);
       }
-      if (Launching != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(Launching);
-      }
-      if (JLCIKBLNENH != 0) {
+      if (BuffId != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(JLCIKBLNENH);
-      }
-      if (Level != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Level);
-      }
-      if (IsEffectAvailable != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(IsEffectAvailable);
+        output.WriteUInt32(BuffId);
       }
       if (MaxHp != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteInt32(MaxHp);
       }
+      if (Level != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Level);
+      }
       if (Attack != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteInt32(Attack);
+      }
+      if (IsEffectAvailable != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsEffectAvailable);
       }
       if (SealSize != 0F) {
         output.WriteRawTag(69);
         output.WriteFloat(SealSize);
-      }
-      if (Id != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Id);
       }
       if (Hp != 0) {
         output.WriteRawTag(80);
         output.WriteInt32(Hp);
       }
       if (sealRotation_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(90);
         output.WriteMessage(SealRotation);
+      }
+      if (Id != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Id);
       }
       if (sealPosition_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(SealPosition);
       }
-      if (BMNECPIOPDN != false) {
+      if (JLCIKBLNENH != 0) {
         output.WriteRawTag(112);
-        output.WriteBool(BMNECPIOPDN);
+        output.WriteUInt32(JLCIKBLNENH);
       }
-      if (BuffId != 0) {
+      if (Launching != false) {
         output.WriteRawTag(120);
-        output.WriteUInt32(BuffId);
+        output.WriteBool(Launching);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -469,47 +469,47 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (SealOnStage != false) {
+      if (Launching != false) {
         size += 1 + 1;
-      }
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
-      }
-      if (Level != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
       if (BuffId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffId);
       }
-      if (Launching != false) {
-        size += 1 + 1;
-      }
-      if (Hp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Hp);
-      }
-      if (JLCIKBLNENH != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JLCIKBLNENH);
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
       if (SealSize != 0F) {
         size += 1 + 4;
       }
-      if (IsEffectAvailable != false) {
-        size += 1 + 1;
-      }
-      if (BMNECPIOPDN != false) {
-        size += 1 + 1;
-      }
-      if (sealPosition_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SealPosition);
-      }
-      if (Attack != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Attack);
+      if (JLCIKBLNENH != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JLCIKBLNENH);
       }
       if (sealRotation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SealRotation);
       }
+      if (Attack != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Attack);
+      }
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      }
+      if (BMNECPIOPDN != false) {
+        size += 1 + 1;
+      }
       if (MaxHp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxHp);
+      }
+      if (sealPosition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SealPosition);
+      }
+      if (Hp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Hp);
+      }
+      if (SealOnStage != false) {
+        size += 1 + 1;
+      }
+      if (IsEffectAvailable != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -523,44 +523,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.SealOnStage != false) {
-        SealOnStage = other.SealOnStage;
-      }
-      if (other.Id != 0) {
-        Id = other.Id;
-      }
-      if (other.Level != 0) {
-        Level = other.Level;
+      if (other.Launching != false) {
+        Launching = other.Launching;
       }
       if (other.BuffId != 0) {
         BuffId = other.BuffId;
       }
-      if (other.Launching != false) {
-        Launching = other.Launching;
-      }
-      if (other.Hp != 0) {
-        Hp = other.Hp;
-      }
-      if (other.JLCIKBLNENH != 0) {
-        JLCIKBLNENH = other.JLCIKBLNENH;
+      if (other.Level != 0) {
+        Level = other.Level;
       }
       if (other.SealSize != 0F) {
         SealSize = other.SealSize;
       }
-      if (other.IsEffectAvailable != false) {
-        IsEffectAvailable = other.IsEffectAvailable;
-      }
-      if (other.BMNECPIOPDN != false) {
-        BMNECPIOPDN = other.BMNECPIOPDN;
-      }
-      if (other.sealPosition_ != null) {
-        if (sealPosition_ == null) {
-          SealPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
-        }
-        SealPosition.MergeFrom(other.SealPosition);
-      }
-      if (other.Attack != 0) {
-        Attack = other.Attack;
+      if (other.JLCIKBLNENH != 0) {
+        JLCIKBLNENH = other.JLCIKBLNENH;
       }
       if (other.sealRotation_ != null) {
         if (sealRotation_ == null) {
@@ -568,8 +544,32 @@ namespace EggLink.DanhengServer.Proto {
         }
         SealRotation.MergeFrom(other.SealRotation);
       }
+      if (other.Attack != 0) {
+        Attack = other.Attack;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
+      if (other.BMNECPIOPDN != false) {
+        BMNECPIOPDN = other.BMNECPIOPDN;
+      }
       if (other.MaxHp != 0) {
         MaxHp = other.MaxHp;
+      }
+      if (other.sealPosition_ != null) {
+        if (sealPosition_ == null) {
+          SealPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+        }
+        SealPosition.MergeFrom(other.SealPosition);
+      }
+      if (other.Hp != 0) {
+        Hp = other.Hp;
+      }
+      if (other.SealOnStage != false) {
+        SealOnStage = other.SealOnStage;
+      }
+      if (other.IsEffectAvailable != false) {
+        IsEffectAvailable = other.IsEffectAvailable;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -587,50 +587,50 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            SealOnStage = input.ReadBool();
+            BMNECPIOPDN = input.ReadBool();
             break;
           }
           case 16: {
-            Launching = input.ReadBool();
+            SealOnStage = input.ReadBool();
             break;
           }
           case 24: {
-            JLCIKBLNENH = input.ReadUInt32();
+            BuffId = input.ReadUInt32();
             break;
           }
           case 32: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            IsEffectAvailable = input.ReadBool();
-            break;
-          }
-          case 48: {
             MaxHp = input.ReadInt32();
             break;
           }
-          case 56: {
+          case 40: {
+            Level = input.ReadUInt32();
+            break;
+          }
+          case 48: {
             Attack = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            IsEffectAvailable = input.ReadBool();
             break;
           }
           case 69: {
             SealSize = input.ReadFloat();
             break;
           }
-          case 72: {
-            Id = input.ReadUInt32();
-            break;
-          }
           case 80: {
             Hp = input.ReadInt32();
             break;
           }
-          case 98: {
+          case 90: {
             if (sealRotation_ == null) {
               SealRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
             input.ReadMessage(SealRotation);
+            break;
+          }
+          case 96: {
+            Id = input.ReadUInt32();
             break;
           }
           case 106: {
@@ -641,11 +641,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            BMNECPIOPDN = input.ReadBool();
+            JLCIKBLNENH = input.ReadUInt32();
             break;
           }
           case 120: {
-            BuffId = input.ReadUInt32();
+            Launching = input.ReadBool();
             break;
           }
         }
@@ -664,50 +664,50 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            SealOnStage = input.ReadBool();
+            BMNECPIOPDN = input.ReadBool();
             break;
           }
           case 16: {
-            Launching = input.ReadBool();
+            SealOnStage = input.ReadBool();
             break;
           }
           case 24: {
-            JLCIKBLNENH = input.ReadUInt32();
+            BuffId = input.ReadUInt32();
             break;
           }
           case 32: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            IsEffectAvailable = input.ReadBool();
-            break;
-          }
-          case 48: {
             MaxHp = input.ReadInt32();
             break;
           }
-          case 56: {
+          case 40: {
+            Level = input.ReadUInt32();
+            break;
+          }
+          case 48: {
             Attack = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            IsEffectAvailable = input.ReadBool();
             break;
           }
           case 69: {
             SealSize = input.ReadFloat();
             break;
           }
-          case 72: {
-            Id = input.ReadUInt32();
-            break;
-          }
           case 80: {
             Hp = input.ReadInt32();
             break;
           }
-          case 98: {
+          case 90: {
             if (sealRotation_ == null) {
               SealRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
             input.ReadMessage(SealRotation);
+            break;
+          }
+          case 96: {
+            Id = input.ReadUInt32();
             break;
           }
           case 106: {
@@ -718,11 +718,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            BMNECPIOPDN = input.ReadBool();
+            JLCIKBLNENH = input.ReadUInt32();
             break;
           }
           case 120: {
-            BuffId = input.ReadUInt32();
+            Launching = input.ReadBool();
             break;
           }
         }

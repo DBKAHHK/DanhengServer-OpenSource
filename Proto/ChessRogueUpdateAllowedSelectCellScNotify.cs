@@ -27,7 +27,7 @@ namespace EggLink.DanhengServer.Proto {
             "Ci9DaGVzc1JvZ3VlVXBkYXRlQWxsb3dlZFNlbGVjdENlbGxTY05vdGlmeS5w",
             "cm90byJgCilDaGVzc1JvZ3VlVXBkYXRlQWxsb3dlZFNlbGVjdENlbGxTY05v",
             "dGlmeRIQCghib2FyZF9pZBgFIAEoDRIhChlhbGxvd19zZWxlY3RfY2VsbF9p",
-            "ZF9saXN0GAEgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "ZF9saXN0GAwgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "allow_select_cell_id_list" field.</summary>
-    public const int AllowSelectCellIdListFieldNumber = 1;
+    public const int AllowSelectCellIdListFieldNumber = 12;
     private static readonly pb::FieldCodec<uint> _repeated_allowSelectCellIdList_codec
-        = pb::FieldCodec.ForUInt32(10);
+        = pb::FieldCodec.ForUInt32(98);
     private readonly pbc::RepeatedField<uint> allowSelectCellIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      allowSelectCellIdList_.WriteTo(output, _repeated_allowSelectCellIdList_codec);
       if (BoardId != 0) {
         output.WriteRawTag(40);
         output.WriteUInt32(BoardId);
       }
+      allowSelectCellIdList_.WriteTo(output, _repeated_allowSelectCellIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      allowSelectCellIdList_.WriteTo(ref output, _repeated_allowSelectCellIdList_codec);
       if (BoardId != 0) {
         output.WriteRawTag(40);
         output.WriteUInt32(BoardId);
       }
+      allowSelectCellIdList_.WriteTo(ref output, _repeated_allowSelectCellIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,13 +217,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
-            allowSelectCellIdList_.AddEntriesFrom(input, _repeated_allowSelectCellIdList_codec);
-            break;
-          }
           case 40: {
             BoardId = input.ReadUInt32();
+            break;
+          }
+          case 98:
+          case 96: {
+            allowSelectCellIdList_.AddEntriesFrom(input, _repeated_allowSelectCellIdList_codec);
             break;
           }
         }
@@ -241,13 +241,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
-            allowSelectCellIdList_.AddEntriesFrom(ref input, _repeated_allowSelectCellIdList_codec);
-            break;
-          }
           case 40: {
             BoardId = input.ReadUInt32();
+            break;
+          }
+          case 98:
+          case 96: {
+            allowSelectCellIdList_.AddEntriesFrom(ref input, _repeated_allowSelectCellIdList_codec);
             break;
           }
         }

@@ -8,7 +8,7 @@ namespace EggLink.DanhengServer.Data.Excel;
 [ResourceEntity("RogueTournRoom.json")]
 public class RogueTournRoomExcel : ExcelResource
 {
-    public int RogueRoomID { get; set; }
+    public uint RogueRoomID { get; set; }
 
     [JsonConverter(typeof(StringEnumConverter))]
     public RogueTournRoomTypeEnum RogueRoomType { get; set; }
@@ -24,7 +24,7 @@ public class RogueTournRoomExcel : ExcelResource
 
     public override int GetId()
     {
-        return RogueRoomID;
+        return (int)RogueRoomID;
     }
 
     public override void Loaded()

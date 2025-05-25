@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpGaWdodEdlbmVyYWxTY05vdGlmeS5wcm90bxocRmlnaHRHZW5lcmFsU2Vy",
-            "dmVySW5mby5wcm90byJlChRGaWdodEdlbmVyYWxTY05vdGlmeRIYChBuZXR3",
-            "b3JrX21zZ190eXBlGAYgASgNEjMKEmZpZ2h0X2dlbmVyYWxfaW5mbxgJIAEo",
-            "CzIXLkZpZ2h0R2VuZXJhbFNlcnZlckluZm9CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "dmVySW5mby5wcm90byJlChRGaWdodEdlbmVyYWxTY05vdGlmeRIzChJmaWdo",
+            "dF9nZW5lcmFsX2luZm8YBiABKAsyFy5GaWdodEdlbmVyYWxTZXJ2ZXJJbmZv",
+            "EhgKEG5ldHdvcmtfbXNnX3R5cGUYDSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightGeneralServerInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightGeneralScNotify), global::EggLink.DanhengServer.Proto.FightGeneralScNotify.Parser, new[]{ "NetworkMsgType", "FightGeneralInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightGeneralScNotify), global::EggLink.DanhengServer.Proto.FightGeneralScNotify.Parser, new[]{ "FightGeneralInfo", "NetworkMsgType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FightGeneralScNotify(FightGeneralScNotify other) : this() {
-      networkMsgType_ = other.networkMsgType_;
       fightGeneralInfo_ = other.fightGeneralInfo_ != null ? other.fightGeneralInfo_.Clone() : null;
+      networkMsgType_ = other.networkMsgType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new FightGeneralScNotify(this);
     }
 
+    /// <summary>Field number for the "fight_general_info" field.</summary>
+    public const int FightGeneralInfoFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.FightGeneralServerInfo fightGeneralInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.FightGeneralServerInfo FightGeneralInfo {
+      get { return fightGeneralInfo_; }
+      set {
+        fightGeneralInfo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "network_msg_type" field.</summary>
-    public const int NetworkMsgTypeFieldNumber = 6;
+    public const int NetworkMsgTypeFieldNumber = 13;
     private uint networkMsgType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -94,21 +106,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return networkMsgType_; }
       set {
         networkMsgType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "fight_general_info" field.</summary>
-    public const int FightGeneralInfoFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.FightGeneralServerInfo fightGeneralInfo_;
-    /// <summary>
-    /// original type: bytes
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FightGeneralServerInfo FightGeneralInfo {
-      get { return fightGeneralInfo_; }
-      set {
-        fightGeneralInfo_ = value;
       }
     }
 
@@ -127,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NetworkMsgType != other.NetworkMsgType) return false;
       if (!object.Equals(FightGeneralInfo, other.FightGeneralInfo)) return false;
+      if (NetworkMsgType != other.NetworkMsgType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -136,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NetworkMsgType != 0) hash ^= NetworkMsgType.GetHashCode();
       if (fightGeneralInfo_ != null) hash ^= FightGeneralInfo.GetHashCode();
+      if (NetworkMsgType != 0) hash ^= NetworkMsgType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -156,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NetworkMsgType != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(NetworkMsgType);
-      }
       if (fightGeneralInfo_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(50);
         output.WriteMessage(FightGeneralInfo);
+      }
+      if (NetworkMsgType != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(NetworkMsgType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -174,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NetworkMsgType != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(NetworkMsgType);
-      }
       if (fightGeneralInfo_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(50);
         output.WriteMessage(FightGeneralInfo);
+      }
+      if (NetworkMsgType != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(NetworkMsgType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -192,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NetworkMsgType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NetworkMsgType);
-      }
       if (fightGeneralInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(FightGeneralInfo);
+      }
+      if (NetworkMsgType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NetworkMsgType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -210,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NetworkMsgType != 0) {
-        NetworkMsgType = other.NetworkMsgType;
-      }
       if (other.fightGeneralInfo_ != null) {
         if (fightGeneralInfo_ == null) {
           FightGeneralInfo = new global::EggLink.DanhengServer.Proto.FightGeneralServerInfo();
         }
         FightGeneralInfo.MergeFrom(other.FightGeneralInfo);
+      }
+      if (other.NetworkMsgType != 0) {
+        NetworkMsgType = other.NetworkMsgType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -234,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            NetworkMsgType = input.ReadUInt32();
-            break;
-          }
-          case 74: {
+          case 50: {
             if (fightGeneralInfo_ == null) {
               FightGeneralInfo = new global::EggLink.DanhengServer.Proto.FightGeneralServerInfo();
             }
             input.ReadMessage(FightGeneralInfo);
+            break;
+          }
+          case 104: {
+            NetworkMsgType = input.ReadUInt32();
             break;
           }
         }
@@ -260,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            NetworkMsgType = input.ReadUInt32();
-            break;
-          }
-          case 74: {
+          case 50: {
             if (fightGeneralInfo_ == null) {
               FightGeneralInfo = new global::EggLink.DanhengServer.Proto.FightGeneralServerInfo();
             }
             input.ReadMessage(FightGeneralInfo);
+            break;
+          }
+          case 104: {
+            NetworkMsgType = input.ReadUInt32();
             break;
           }
         }

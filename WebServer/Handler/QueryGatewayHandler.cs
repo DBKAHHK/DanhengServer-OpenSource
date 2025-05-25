@@ -31,7 +31,8 @@ internal partial class QueryGatewayHandler
             EnableWatermark = true,
             EnableAndroidMiddlePackage = true,
             NetworkDiagnostic = true,
-            CloseRedeemCode = true
+            CloseRedeemCode = true,
+            UseNewNetworking = true
         };
         if (ConfigManager.Config.GameServer.UsePacketEncryption)
             gateServer.ClientSecretKey = Convert.ToBase64String(Crypto.ClientSecretKey!.GetBytes());
@@ -53,6 +54,8 @@ internal partial class QueryGatewayHandler
         {
             if (urls.AssetBundleUrl != "")
                 gateServer.AssetBundleUrl = baseUrl + urls.AssetBundleUrl;
+            if (urls.ExAssetBundleUrl != "")
+                gateServer.ExAssetBundleUrl = baseUrl + urls.ExAssetBundleUrl;
             if (urls.ExResourceUrl != "")
                 gateServer.ExResourceUrl = baseUrl + urls.ExResourceUrl;
             if (urls.LuaUrl != "")

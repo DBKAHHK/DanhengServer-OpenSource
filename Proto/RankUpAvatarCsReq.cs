@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdSYW5rVXBBdmF0YXJDc1JlcS5wcm90bxoSSXRlbUNvc3REYXRhLnByb3Rv",
-            "IlYKEVJhbmtVcEF2YXRhckNzUmVxEiAKCWNvc3RfZGF0YRgBIAEoCzINLkl0",
-            "ZW1Db3N0RGF0YRIMCgRyYW5rGAMgASgNEhEKCWF2YXRhcl9pZBgJIAEoDUIe",
+            "IlYKEVJhbmtVcEF2YXRhckNzUmVxEgwKBHJhbmsYDiABKA0SEQoJYXZhdGFy",
+            "X2lkGAYgASgNEiAKCWNvc3RfZGF0YRgLIAEoCzINLkl0ZW1Db3N0RGF0YUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RankUpAvatarCsReq), global::EggLink.DanhengServer.Proto.RankUpAvatarCsReq.Parser, new[]{ "CostData", "Rank", "AvatarId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RankUpAvatarCsReq), global::EggLink.DanhengServer.Proto.RankUpAvatarCsReq.Parser, new[]{ "Rank", "AvatarId", "CostData" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RankUpAvatarCsReq(RankUpAvatarCsReq other) : this() {
-      costData_ = other.costData_ != null ? other.costData_.Clone() : null;
       rank_ = other.rank_;
       avatarId_ = other.avatarId_;
+      costData_ = other.costData_ != null ? other.costData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RankUpAvatarCsReq(this);
     }
 
-    /// <summary>Field number for the "cost_data" field.</summary>
-    public const int CostDataFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.ItemCostData costData_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemCostData CostData {
-      get { return costData_; }
-      set {
-        costData_ = value;
-      }
-    }
-
     /// <summary>Field number for the "rank" field.</summary>
-    public const int RankFieldNumber = 3;
+    public const int RankFieldNumber = 14;
     private uint rank_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 9;
+    public const int AvatarIdFieldNumber = 6;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return avatarId_; }
       set {
         avatarId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cost_data" field.</summary>
+    public const int CostDataFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.ItemCostData costData_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ItemCostData CostData {
+      get { return costData_; }
+      set {
+        costData_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(CostData, other.CostData)) return false;
       if (Rank != other.Rank) return false;
       if (AvatarId != other.AvatarId) return false;
+      if (!object.Equals(CostData, other.CostData)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (costData_ != null) hash ^= CostData.GetHashCode();
       if (Rank != 0) hash ^= Rank.GetHashCode();
       if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
+      if (costData_ != null) hash ^= CostData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (AvatarId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(AvatarId);
+      }
       if (costData_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(90);
         output.WriteMessage(CostData);
       }
       if (Rank != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(112);
         output.WriteUInt32(Rank);
-      }
-      if (AvatarId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AvatarId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(AvatarId);
+      }
       if (costData_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(90);
         output.WriteMessage(CostData);
       }
       if (Rank != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(112);
         output.WriteUInt32(Rank);
-      }
-      if (AvatarId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (costData_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CostData);
-      }
       if (Rank != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Rank);
       }
       if (AvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
+      }
+      if (costData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CostData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,17 +232,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.costData_ != null) {
-        if (costData_ == null) {
-          CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
-        }
-        CostData.MergeFrom(other.CostData);
-      }
       if (other.Rank != 0) {
         Rank = other.Rank;
       }
       if (other.AvatarId != 0) {
         AvatarId = other.AvatarId;
+      }
+      if (other.costData_ != null) {
+        if (costData_ == null) {
+          CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
+        }
+        CostData.MergeFrom(other.CostData);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -259,19 +259,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 48: {
+            AvatarId = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (costData_ == null) {
               CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(CostData);
             break;
           }
-          case 24: {
+          case 112: {
             Rank = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            AvatarId = input.ReadUInt32();
             break;
           }
         }
@@ -289,19 +289,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 48: {
+            AvatarId = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (costData_ == null) {
               CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(CostData);
             break;
           }
-          case 24: {
+          case 112: {
             Rank = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            AvatarId = input.ReadUInt32();
             break;
           }
         }

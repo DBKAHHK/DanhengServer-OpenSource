@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static MissionCustomValueReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhNaXNzaW9uQ3VzdG9tVmFsdWUucHJvdG8iOQoSTWlzc2lvbkN1c3RvbVZh",
-            "bHVlEhQKDGN1c3RvbV92YWx1ZRgLIAEoDRINCgVpbmRleBgJIAEoDUIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChhNaXNzaW9uQ3VzdG9tVmFsdWUucHJvdG8iTgoSTWlzc2lvbkN1c3RvbVZh",
+            "bHVlEg0KBWluZGV4GAMgASgNEhMKC0RGREVLQU5KQkxHGAggASgJEhQKDGN1",
+            "c3RvbV92YWx1ZRgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MissionCustomValue), global::EggLink.DanhengServer.Proto.MissionCustomValue.Parser, new[]{ "CustomValue", "Index" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MissionCustomValue), global::EggLink.DanhengServer.Proto.MissionCustomValue.Parser, new[]{ "Index", "DFDEKANJBLG", "CustomValue" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MissionCustomValue(MissionCustomValue other) : this() {
-      customValue_ = other.customValue_;
       index_ = other.index_;
+      dFDEKANJBLG_ = other.dFDEKANJBLG_;
+      customValue_ = other.customValue_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MissionCustomValue(this);
     }
 
-    /// <summary>Field number for the "custom_value" field.</summary>
-    public const int CustomValueFieldNumber = 11;
-    private uint customValue_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CustomValue {
-      get { return customValue_; }
-      set {
-        customValue_ = value;
-      }
-    }
-
     /// <summary>Field number for the "index" field.</summary>
-    public const int IndexFieldNumber = 9;
+    public const int IndexFieldNumber = 3;
     private uint index_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +94,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return index_; }
       set {
         index_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "DFDEKANJBLG" field.</summary>
+    public const int DFDEKANJBLGFieldNumber = 8;
+    private string dFDEKANJBLG_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DFDEKANJBLG {
+      get { return dFDEKANJBLG_; }
+      set {
+        dFDEKANJBLG_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "custom_value" field.</summary>
+    public const int CustomValueFieldNumber = 5;
+    private uint customValue_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CustomValue {
+      get { return customValue_; }
+      set {
+        customValue_ = value;
       }
     }
 
@@ -122,8 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CustomValue != other.CustomValue) return false;
       if (Index != other.Index) return false;
+      if (DFDEKANJBLG != other.DFDEKANJBLG) return false;
+      if (CustomValue != other.CustomValue) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CustomValue != 0) hash ^= CustomValue.GetHashCode();
       if (Index != 0) hash ^= Index.GetHashCode();
+      if (DFDEKANJBLG.Length != 0) hash ^= DFDEKANJBLG.GetHashCode();
+      if (CustomValue != 0) hash ^= CustomValue.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,12 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Index != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(24);
         output.WriteUInt32(Index);
       }
       if (CustomValue != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt32(CustomValue);
+      }
+      if (DFDEKANJBLG.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(DFDEKANJBLG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,12 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Index != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(24);
         output.WriteUInt32(Index);
       }
       if (CustomValue != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt32(CustomValue);
+      }
+      if (DFDEKANJBLG.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(DFDEKANJBLG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CustomValue != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CustomValue);
-      }
       if (Index != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Index);
+      }
+      if (DFDEKANJBLG.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DFDEKANJBLG);
+      }
+      if (CustomValue != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CustomValue);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CustomValue != 0) {
-        CustomValue = other.CustomValue;
-      }
       if (other.Index != 0) {
         Index = other.Index;
+      }
+      if (other.DFDEKANJBLG.Length != 0) {
+        DFDEKANJBLG = other.DFDEKANJBLG;
+      }
+      if (other.CustomValue != 0) {
+        CustomValue = other.CustomValue;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 24: {
             Index = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 40: {
             CustomValue = input.ReadUInt32();
+            break;
+          }
+          case 66: {
+            DFDEKANJBLG = input.ReadString();
             break;
           }
         }
@@ -249,12 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 24: {
             Index = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 40: {
             CustomValue = input.ReadUInt32();
+            break;
+          }
+          case 66: {
+            DFDEKANJBLG = input.ReadString();
             break;
           }
         }

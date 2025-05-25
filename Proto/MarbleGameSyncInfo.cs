@@ -24,25 +24,26 @@ namespace EggLink.DanhengServer.Proto {
     static MarbleGameSyncInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhNYXJibGVHYW1lU3luY0luZm8ucHJvdG8aGE1hcmJsZUdhbWVTeW5jRGF0",
-            "YS5wcm90bxoUTWFyYmxlU3luY1R5cGUucHJvdG8irAQKEk1hcmJsZUdhbWVT",
-            "eW5jSW5mbxIVCgxvcGVyYXRvcl91aWQYnAcgASgNEjIKFG1hcmJsZV9zZWFs",
-            "X2hpdF9kYXRhGPQIIAMoCzITLk1hcmJsZUdhbWVTeW5jRGF0YRIPCgd0ZWNo",
-            "X2lkGAIgASgNEhEKCWN1cl9yb3VuZBgHIAEoDRIQCghleHRyYV9pZBgPIAEo",
-            "DRIeChZhbGxvd2VkX21vdmVfc2VhbF9saXN0GAMgAygNEhQKC0lFUEdDTEdL",
-            "SEVHGKIKIAEoDRIXCg9tb3ZlX3RvdGFsX3RpbWUYCSABKAISGgoScGxheWVy",
-            "X2JfdGVjaF9saXN0GA0gAygNEhQKDGV4ZWN1dG9yX3VpZBgOIAEoDRIbChNw",
-            "bGF5ZXJfYl9nYW1lX3Njb3JlGAwgASgNEhYKDnF1ZXVlX3Bvc2l0aW9uGAgg",
-            "ASgNEhEKCWxhdW5jaGluZxgBIAEoCBIyChVtYXJibGVfZ2FtZV9zeW5jX2Rh",
-            "dGEYBCADKAsyEy5NYXJibGVHYW1lU3luY0RhdGESGgoScGxheWVyX2FfdGVj",
-            "aF9saXN0GAYgAygNEhsKE3BsYXllcl9hX2dhbWVfc2NvcmUYCyABKA0SHwoX",
-            "Zmlyc3RfcGxheWVyX2FjdGlvbl9lbmQYCiABKAgSEwoKd2lubmVyX3VpZBiY",
-            "CiABKA0SKQoQbWFyYmxlX3N5bmNfdHlwZRgFIAEoDjIPLk1hcmJsZVN5bmNU",
-            "eXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChhNYXJibGVHYW1lU3luY0luZm8ucHJvdG8aFE1hcmJsZVN5bmNUeXBlLnBy",
+            "b3RvGhhNYXJibGVHYW1lU3luY0RhdGEucHJvdG8iwQQKEk1hcmJsZUdhbWVT",
+            "eW5jSW5mbxIfChdmaXJzdF9wbGF5ZXJfYWN0aW9uX2VuZBgFIAEoCBIyChRt",
+            "YXJibGVfc2VhbF9oaXRfZGF0YRiZAiADKAsyEy5NYXJibGVHYW1lU3luY0Rh",
+            "dGESDwoHdGVjaF9pZBgJIAEoDRITCgp3aW5uZXJfdWlkGL8MIAEoDRIbChNw",
+            "bGF5ZXJfYV9nYW1lX3Njb3JlGAwgASgNEhoKEnBsYXllcl9iX3RlY2hfbGlz",
+            "dBgKIAMoDRIRCgljdXJfcm91bmQYByABKA0SGwoTcGxheWVyX2JfZ2FtZV9z",
+            "Y29yZRgDIAEoDRIUCgxleGVjdXRvcl91aWQYBiABKA0SFAoLSUVQR0NMR0tI",
+            "RUcY4Q4gASgNEhYKDnF1ZXVlX3Bvc2l0aW9uGA8gASgNEhoKEnBsYXllcl9h",
+            "X3RlY2hfbGlzdBgBIAMoDRIUCgtPTUtLUEdGSkhGRRj3DyABKAgSEAoIZXh0",
+            "cmFfaWQYCCABKA0SFwoPbW92ZV90b3RhbF90aW1lGAsgASgCEhQKDG9wZXJh",
+            "dG9yX3VpZBh0IAEoDRIRCglsYXVuY2hpbmcYAiABKAgSHgoWYWxsb3dlZF9t",
+            "b3ZlX3NlYWxfbGlzdBgNIAMoDRIyChVtYXJibGVfZ2FtZV9zeW5jX2RhdGEY",
+            "DiADKAsyEy5NYXJibGVHYW1lU3luY0RhdGESKQoQbWFyYmxlX3N5bmNfdHlw",
+            "ZRgEIAEoDjIPLk1hcmJsZVN5bmNUeXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleGameSyncDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleSyncTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleSyncTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameSyncDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGameSyncInfo), global::EggLink.DanhengServer.Proto.MarbleGameSyncInfo.Parser, new[]{ "OperatorUid", "MarbleSealHitData", "TechId", "CurRound", "ExtraId", "AllowedMoveSealList", "IEPGCLGKHEG", "MoveTotalTime", "PlayerBTechList", "ExecutorUid", "PlayerBGameScore", "QueuePosition", "Launching", "MarbleGameSyncData", "PlayerATechList", "PlayerAGameScore", "FirstPlayerActionEnd", "WinnerUid", "MarbleSyncType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGameSyncInfo), global::EggLink.DanhengServer.Proto.MarbleGameSyncInfo.Parser, new[]{ "FirstPlayerActionEnd", "MarbleSealHitData", "TechId", "WinnerUid", "PlayerAGameScore", "PlayerBTechList", "CurRound", "PlayerBGameScore", "ExecutorUid", "IEPGCLGKHEG", "QueuePosition", "PlayerATechList", "OMKKPGFJHFE", "ExtraId", "MoveTotalTime", "OperatorUid", "Launching", "AllowedMoveSealList", "MarbleGameSyncData", "MarbleSyncType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -84,24 +85,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarbleGameSyncInfo(MarbleGameSyncInfo other) : this() {
-      operatorUid_ = other.operatorUid_;
+      firstPlayerActionEnd_ = other.firstPlayerActionEnd_;
       marbleSealHitData_ = other.marbleSealHitData_.Clone();
       techId_ = other.techId_;
-      curRound_ = other.curRound_;
-      extraId_ = other.extraId_;
-      allowedMoveSealList_ = other.allowedMoveSealList_.Clone();
-      iEPGCLGKHEG_ = other.iEPGCLGKHEG_;
-      moveTotalTime_ = other.moveTotalTime_;
-      playerBTechList_ = other.playerBTechList_.Clone();
-      executorUid_ = other.executorUid_;
-      playerBGameScore_ = other.playerBGameScore_;
-      queuePosition_ = other.queuePosition_;
-      launching_ = other.launching_;
-      marbleGameSyncData_ = other.marbleGameSyncData_.Clone();
-      playerATechList_ = other.playerATechList_.Clone();
-      playerAGameScore_ = other.playerAGameScore_;
-      firstPlayerActionEnd_ = other.firstPlayerActionEnd_;
       winnerUid_ = other.winnerUid_;
+      playerAGameScore_ = other.playerAGameScore_;
+      playerBTechList_ = other.playerBTechList_.Clone();
+      curRound_ = other.curRound_;
+      playerBGameScore_ = other.playerBGameScore_;
+      executorUid_ = other.executorUid_;
+      iEPGCLGKHEG_ = other.iEPGCLGKHEG_;
+      queuePosition_ = other.queuePosition_;
+      playerATechList_ = other.playerATechList_.Clone();
+      oMKKPGFJHFE_ = other.oMKKPGFJHFE_;
+      extraId_ = other.extraId_;
+      moveTotalTime_ = other.moveTotalTime_;
+      operatorUid_ = other.operatorUid_;
+      launching_ = other.launching_;
+      allowedMoveSealList_ = other.allowedMoveSealList_.Clone();
+      marbleGameSyncData_ = other.marbleGameSyncData_.Clone();
       marbleSyncType_ = other.marbleSyncType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -112,22 +114,22 @@ namespace EggLink.DanhengServer.Proto {
       return new MarbleGameSyncInfo(this);
     }
 
-    /// <summary>Field number for the "operator_uid" field.</summary>
-    public const int OperatorUidFieldNumber = 924;
-    private uint operatorUid_;
+    /// <summary>Field number for the "first_player_action_end" field.</summary>
+    public const int FirstPlayerActionEndFieldNumber = 5;
+    private bool firstPlayerActionEnd_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OperatorUid {
-      get { return operatorUid_; }
+    public bool FirstPlayerActionEnd {
+      get { return firstPlayerActionEnd_; }
       set {
-        operatorUid_ = value;
+        firstPlayerActionEnd_ = value;
       }
     }
 
     /// <summary>Field number for the "marble_seal_hit_data" field.</summary>
-    public const int MarbleSealHitDataFieldNumber = 1140;
+    public const int MarbleSealHitDataFieldNumber = 281;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MarbleGameSyncData> _repeated_marbleSealHitData_codec
-        = pb::FieldCodec.ForMessage(9122, global::EggLink.DanhengServer.Proto.MarbleGameSyncData.Parser);
+        = pb::FieldCodec.ForMessage(2250, global::EggLink.DanhengServer.Proto.MarbleGameSyncData.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarbleGameSyncData> marbleSealHitData_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarbleGameSyncData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "tech_id" field.</summary>
-    public const int TechIdFieldNumber = 2;
+    public const int TechIdFieldNumber = 9;
     private uint techId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -145,6 +147,41 @@ namespace EggLink.DanhengServer.Proto {
       set {
         techId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "winner_uid" field.</summary>
+    public const int WinnerUidFieldNumber = 1599;
+    private uint winnerUid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint WinnerUid {
+      get { return winnerUid_; }
+      set {
+        winnerUid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "player_a_game_score" field.</summary>
+    public const int PlayerAGameScoreFieldNumber = 12;
+    private uint playerAGameScore_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PlayerAGameScore {
+      get { return playerAGameScore_; }
+      set {
+        playerAGameScore_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "player_b_tech_list" field.</summary>
+    public const int PlayerBTechListFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_playerBTechList_codec
+        = pb::FieldCodec.ForUInt32(82);
+    private readonly pbc::RepeatedField<uint> playerBTechList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> PlayerBTechList {
+      get { return playerBTechList_; }
     }
 
     /// <summary>Field number for the "cur_round" field.</summary>
@@ -159,78 +196,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "extra_id" field.</summary>
-    public const int ExtraIdFieldNumber = 15;
-    private uint extraId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ExtraId {
-      get { return extraId_; }
-      set {
-        extraId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "allowed_move_seal_list" field.</summary>
-    public const int AllowedMoveSealListFieldNumber = 3;
-    private static readonly pb::FieldCodec<uint> _repeated_allowedMoveSealList_codec
-        = pb::FieldCodec.ForUInt32(26);
-    private readonly pbc::RepeatedField<uint> allowedMoveSealList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AllowedMoveSealList {
-      get { return allowedMoveSealList_; }
-    }
-
-    /// <summary>Field number for the "IEPGCLGKHEG" field.</summary>
-    public const int IEPGCLGKHEGFieldNumber = 1314;
-    private uint iEPGCLGKHEG_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IEPGCLGKHEG {
-      get { return iEPGCLGKHEG_; }
-      set {
-        iEPGCLGKHEG_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "move_total_time" field.</summary>
-    public const int MoveTotalTimeFieldNumber = 9;
-    private float moveTotalTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float MoveTotalTime {
-      get { return moveTotalTime_; }
-      set {
-        moveTotalTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "player_b_tech_list" field.</summary>
-    public const int PlayerBTechListFieldNumber = 13;
-    private static readonly pb::FieldCodec<uint> _repeated_playerBTechList_codec
-        = pb::FieldCodec.ForUInt32(106);
-    private readonly pbc::RepeatedField<uint> playerBTechList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> PlayerBTechList {
-      get { return playerBTechList_; }
-    }
-
-    /// <summary>Field number for the "executor_uid" field.</summary>
-    public const int ExecutorUidFieldNumber = 14;
-    private uint executorUid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ExecutorUid {
-      get { return executorUid_; }
-      set {
-        executorUid_ = value;
-      }
-    }
-
     /// <summary>Field number for the "player_b_game_score" field.</summary>
-    public const int PlayerBGameScoreFieldNumber = 12;
+    public const int PlayerBGameScoreFieldNumber = 3;
     private uint playerBGameScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -241,8 +208,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "executor_uid" field.</summary>
+    public const int ExecutorUidFieldNumber = 6;
+    private uint executorUid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ExecutorUid {
+      get { return executorUid_; }
+      set {
+        executorUid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "IEPGCLGKHEG" field.</summary>
+    public const int IEPGCLGKHEGFieldNumber = 1889;
+    private uint iEPGCLGKHEG_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint IEPGCLGKHEG {
+      get { return iEPGCLGKHEG_; }
+      set {
+        iEPGCLGKHEG_ = value;
+      }
+    }
+
     /// <summary>Field number for the "queue_position" field.</summary>
-    public const int QueuePositionFieldNumber = 8;
+    public const int QueuePositionFieldNumber = 15;
     private uint queuePosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -253,8 +244,67 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "player_a_tech_list" field.</summary>
+    public const int PlayerATechListFieldNumber = 1;
+    private static readonly pb::FieldCodec<uint> _repeated_playerATechList_codec
+        = pb::FieldCodec.ForUInt32(10);
+    private readonly pbc::RepeatedField<uint> playerATechList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> PlayerATechList {
+      get { return playerATechList_; }
+    }
+
+    /// <summary>Field number for the "OMKKPGFJHFE" field.</summary>
+    public const int OMKKPGFJHFEFieldNumber = 2039;
+    private bool oMKKPGFJHFE_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool OMKKPGFJHFE {
+      get { return oMKKPGFJHFE_; }
+      set {
+        oMKKPGFJHFE_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "extra_id" field.</summary>
+    public const int ExtraIdFieldNumber = 8;
+    private uint extraId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ExtraId {
+      get { return extraId_; }
+      set {
+        extraId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "move_total_time" field.</summary>
+    public const int MoveTotalTimeFieldNumber = 11;
+    private float moveTotalTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float MoveTotalTime {
+      get { return moveTotalTime_; }
+      set {
+        moveTotalTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "operator_uid" field.</summary>
+    public const int OperatorUidFieldNumber = 116;
+    private uint operatorUid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint OperatorUid {
+      get { return operatorUid_; }
+      set {
+        operatorUid_ = value;
+      }
+    }
+
     /// <summary>Field number for the "launching" field.</summary>
-    public const int LaunchingFieldNumber = 1;
+    public const int LaunchingFieldNumber = 2;
     private bool launching_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -265,10 +315,21 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "allowed_move_seal_list" field.</summary>
+    public const int AllowedMoveSealListFieldNumber = 13;
+    private static readonly pb::FieldCodec<uint> _repeated_allowedMoveSealList_codec
+        = pb::FieldCodec.ForUInt32(106);
+    private readonly pbc::RepeatedField<uint> allowedMoveSealList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> AllowedMoveSealList {
+      get { return allowedMoveSealList_; }
+    }
+
     /// <summary>Field number for the "marble_game_sync_data" field.</summary>
-    public const int MarbleGameSyncDataFieldNumber = 4;
+    public const int MarbleGameSyncDataFieldNumber = 14;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MarbleGameSyncData> _repeated_marbleGameSyncData_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.MarbleGameSyncData.Parser);
+        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.MarbleGameSyncData.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarbleGameSyncData> marbleGameSyncData_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarbleGameSyncData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -276,55 +337,8 @@ namespace EggLink.DanhengServer.Proto {
       get { return marbleGameSyncData_; }
     }
 
-    /// <summary>Field number for the "player_a_tech_list" field.</summary>
-    public const int PlayerATechListFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_playerATechList_codec
-        = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> playerATechList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> PlayerATechList {
-      get { return playerATechList_; }
-    }
-
-    /// <summary>Field number for the "player_a_game_score" field.</summary>
-    public const int PlayerAGameScoreFieldNumber = 11;
-    private uint playerAGameScore_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PlayerAGameScore {
-      get { return playerAGameScore_; }
-      set {
-        playerAGameScore_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "first_player_action_end" field.</summary>
-    public const int FirstPlayerActionEndFieldNumber = 10;
-    private bool firstPlayerActionEnd_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool FirstPlayerActionEnd {
-      get { return firstPlayerActionEnd_; }
-      set {
-        firstPlayerActionEnd_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "winner_uid" field.</summary>
-    public const int WinnerUidFieldNumber = 1304;
-    private uint winnerUid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint WinnerUid {
-      get { return winnerUid_; }
-      set {
-        winnerUid_ = value;
-      }
-    }
-
     /// <summary>Field number for the "marble_sync_type" field.</summary>
-    public const int MarbleSyncTypeFieldNumber = 5;
+    public const int MarbleSyncTypeFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.MarbleSyncType marbleSyncType_ = global::EggLink.DanhengServer.Proto.MarbleSyncType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -350,24 +364,25 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (OperatorUid != other.OperatorUid) return false;
+      if (FirstPlayerActionEnd != other.FirstPlayerActionEnd) return false;
       if(!marbleSealHitData_.Equals(other.marbleSealHitData_)) return false;
       if (TechId != other.TechId) return false;
-      if (CurRound != other.CurRound) return false;
-      if (ExtraId != other.ExtraId) return false;
-      if(!allowedMoveSealList_.Equals(other.allowedMoveSealList_)) return false;
-      if (IEPGCLGKHEG != other.IEPGCLGKHEG) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MoveTotalTime, other.MoveTotalTime)) return false;
-      if(!playerBTechList_.Equals(other.playerBTechList_)) return false;
-      if (ExecutorUid != other.ExecutorUid) return false;
-      if (PlayerBGameScore != other.PlayerBGameScore) return false;
-      if (QueuePosition != other.QueuePosition) return false;
-      if (Launching != other.Launching) return false;
-      if(!marbleGameSyncData_.Equals(other.marbleGameSyncData_)) return false;
-      if(!playerATechList_.Equals(other.playerATechList_)) return false;
-      if (PlayerAGameScore != other.PlayerAGameScore) return false;
-      if (FirstPlayerActionEnd != other.FirstPlayerActionEnd) return false;
       if (WinnerUid != other.WinnerUid) return false;
+      if (PlayerAGameScore != other.PlayerAGameScore) return false;
+      if(!playerBTechList_.Equals(other.playerBTechList_)) return false;
+      if (CurRound != other.CurRound) return false;
+      if (PlayerBGameScore != other.PlayerBGameScore) return false;
+      if (ExecutorUid != other.ExecutorUid) return false;
+      if (IEPGCLGKHEG != other.IEPGCLGKHEG) return false;
+      if (QueuePosition != other.QueuePosition) return false;
+      if(!playerATechList_.Equals(other.playerATechList_)) return false;
+      if (OMKKPGFJHFE != other.OMKKPGFJHFE) return false;
+      if (ExtraId != other.ExtraId) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MoveTotalTime, other.MoveTotalTime)) return false;
+      if (OperatorUid != other.OperatorUid) return false;
+      if (Launching != other.Launching) return false;
+      if(!allowedMoveSealList_.Equals(other.allowedMoveSealList_)) return false;
+      if(!marbleGameSyncData_.Equals(other.marbleGameSyncData_)) return false;
       if (MarbleSyncType != other.MarbleSyncType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -376,24 +391,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (OperatorUid != 0) hash ^= OperatorUid.GetHashCode();
+      if (FirstPlayerActionEnd != false) hash ^= FirstPlayerActionEnd.GetHashCode();
       hash ^= marbleSealHitData_.GetHashCode();
       if (TechId != 0) hash ^= TechId.GetHashCode();
-      if (CurRound != 0) hash ^= CurRound.GetHashCode();
-      if (ExtraId != 0) hash ^= ExtraId.GetHashCode();
-      hash ^= allowedMoveSealList_.GetHashCode();
-      if (IEPGCLGKHEG != 0) hash ^= IEPGCLGKHEG.GetHashCode();
-      if (MoveTotalTime != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MoveTotalTime);
-      hash ^= playerBTechList_.GetHashCode();
-      if (ExecutorUid != 0) hash ^= ExecutorUid.GetHashCode();
-      if (PlayerBGameScore != 0) hash ^= PlayerBGameScore.GetHashCode();
-      if (QueuePosition != 0) hash ^= QueuePosition.GetHashCode();
-      if (Launching != false) hash ^= Launching.GetHashCode();
-      hash ^= marbleGameSyncData_.GetHashCode();
-      hash ^= playerATechList_.GetHashCode();
-      if (PlayerAGameScore != 0) hash ^= PlayerAGameScore.GetHashCode();
-      if (FirstPlayerActionEnd != false) hash ^= FirstPlayerActionEnd.GetHashCode();
       if (WinnerUid != 0) hash ^= WinnerUid.GetHashCode();
+      if (PlayerAGameScore != 0) hash ^= PlayerAGameScore.GetHashCode();
+      hash ^= playerBTechList_.GetHashCode();
+      if (CurRound != 0) hash ^= CurRound.GetHashCode();
+      if (PlayerBGameScore != 0) hash ^= PlayerBGameScore.GetHashCode();
+      if (ExecutorUid != 0) hash ^= ExecutorUid.GetHashCode();
+      if (IEPGCLGKHEG != 0) hash ^= IEPGCLGKHEG.GetHashCode();
+      if (QueuePosition != 0) hash ^= QueuePosition.GetHashCode();
+      hash ^= playerATechList_.GetHashCode();
+      if (OMKKPGFJHFE != false) hash ^= OMKKPGFJHFE.GetHashCode();
+      if (ExtraId != 0) hash ^= ExtraId.GetHashCode();
+      if (MoveTotalTime != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MoveTotalTime);
+      if (OperatorUid != 0) hash ^= OperatorUid.GetHashCode();
+      if (Launching != false) hash ^= Launching.GetHashCode();
+      hash ^= allowedMoveSealList_.GetHashCode();
+      hash ^= marbleGameSyncData_.GetHashCode();
       if (MarbleSyncType != global::EggLink.DanhengServer.Proto.MarbleSyncType.None) hash ^= MarbleSyncType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -413,66 +429,70 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      playerATechList_.WriteTo(output, _repeated_playerATechList_codec);
       if (Launching != false) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteBool(Launching);
       }
-      if (TechId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(TechId);
+      if (PlayerBGameScore != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(PlayerBGameScore);
       }
-      allowedMoveSealList_.WriteTo(output, _repeated_allowedMoveSealList_codec);
-      marbleGameSyncData_.WriteTo(output, _repeated_marbleGameSyncData_codec);
       if (MarbleSyncType != global::EggLink.DanhengServer.Proto.MarbleSyncType.None) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteEnum((int) MarbleSyncType);
       }
-      playerATechList_.WriteTo(output, _repeated_playerATechList_codec);
+      if (FirstPlayerActionEnd != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(FirstPlayerActionEnd);
+      }
+      if (ExecutorUid != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(ExecutorUid);
+      }
       if (CurRound != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(CurRound);
       }
-      if (QueuePosition != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(QueuePosition);
-      }
-      if (MoveTotalTime != 0F) {
-        output.WriteRawTag(77);
-        output.WriteFloat(MoveTotalTime);
-      }
-      if (FirstPlayerActionEnd != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(FirstPlayerActionEnd);
-      }
-      if (PlayerAGameScore != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(PlayerAGameScore);
-      }
-      if (PlayerBGameScore != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(PlayerBGameScore);
-      }
-      playerBTechList_.WriteTo(output, _repeated_playerBTechList_codec);
-      if (ExecutorUid != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(ExecutorUid);
-      }
       if (ExtraId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(64);
         output.WriteUInt32(ExtraId);
       }
+      if (TechId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(TechId);
+      }
+      playerBTechList_.WriteTo(output, _repeated_playerBTechList_codec);
+      if (MoveTotalTime != 0F) {
+        output.WriteRawTag(93);
+        output.WriteFloat(MoveTotalTime);
+      }
+      if (PlayerAGameScore != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(PlayerAGameScore);
+      }
+      allowedMoveSealList_.WriteTo(output, _repeated_allowedMoveSealList_codec);
+      marbleGameSyncData_.WriteTo(output, _repeated_marbleGameSyncData_codec);
+      if (QueuePosition != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(QueuePosition);
+      }
       if (OperatorUid != 0) {
-        output.WriteRawTag(224, 57);
+        output.WriteRawTag(160, 7);
         output.WriteUInt32(OperatorUid);
       }
       marbleSealHitData_.WriteTo(output, _repeated_marbleSealHitData_codec);
       if (WinnerUid != 0) {
-        output.WriteRawTag(192, 81);
+        output.WriteRawTag(248, 99);
         output.WriteUInt32(WinnerUid);
       }
       if (IEPGCLGKHEG != 0) {
-        output.WriteRawTag(144, 82);
+        output.WriteRawTag(136, 118);
         output.WriteUInt32(IEPGCLGKHEG);
+      }
+      if (OMKKPGFJHFE != false) {
+        output.WriteRawTag(184, 127);
+        output.WriteBool(OMKKPGFJHFE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -484,66 +504,70 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      playerATechList_.WriteTo(ref output, _repeated_playerATechList_codec);
       if (Launching != false) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteBool(Launching);
       }
-      if (TechId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(TechId);
+      if (PlayerBGameScore != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(PlayerBGameScore);
       }
-      allowedMoveSealList_.WriteTo(ref output, _repeated_allowedMoveSealList_codec);
-      marbleGameSyncData_.WriteTo(ref output, _repeated_marbleGameSyncData_codec);
       if (MarbleSyncType != global::EggLink.DanhengServer.Proto.MarbleSyncType.None) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteEnum((int) MarbleSyncType);
       }
-      playerATechList_.WriteTo(ref output, _repeated_playerATechList_codec);
+      if (FirstPlayerActionEnd != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(FirstPlayerActionEnd);
+      }
+      if (ExecutorUid != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(ExecutorUid);
+      }
       if (CurRound != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(CurRound);
       }
-      if (QueuePosition != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(QueuePosition);
-      }
-      if (MoveTotalTime != 0F) {
-        output.WriteRawTag(77);
-        output.WriteFloat(MoveTotalTime);
-      }
-      if (FirstPlayerActionEnd != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(FirstPlayerActionEnd);
-      }
-      if (PlayerAGameScore != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(PlayerAGameScore);
-      }
-      if (PlayerBGameScore != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(PlayerBGameScore);
-      }
-      playerBTechList_.WriteTo(ref output, _repeated_playerBTechList_codec);
-      if (ExecutorUid != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(ExecutorUid);
-      }
       if (ExtraId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(64);
         output.WriteUInt32(ExtraId);
       }
+      if (TechId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(TechId);
+      }
+      playerBTechList_.WriteTo(ref output, _repeated_playerBTechList_codec);
+      if (MoveTotalTime != 0F) {
+        output.WriteRawTag(93);
+        output.WriteFloat(MoveTotalTime);
+      }
+      if (PlayerAGameScore != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(PlayerAGameScore);
+      }
+      allowedMoveSealList_.WriteTo(ref output, _repeated_allowedMoveSealList_codec);
+      marbleGameSyncData_.WriteTo(ref output, _repeated_marbleGameSyncData_codec);
+      if (QueuePosition != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(QueuePosition);
+      }
       if (OperatorUid != 0) {
-        output.WriteRawTag(224, 57);
+        output.WriteRawTag(160, 7);
         output.WriteUInt32(OperatorUid);
       }
       marbleSealHitData_.WriteTo(ref output, _repeated_marbleSealHitData_codec);
       if (WinnerUid != 0) {
-        output.WriteRawTag(192, 81);
+        output.WriteRawTag(248, 99);
         output.WriteUInt32(WinnerUid);
       }
       if (IEPGCLGKHEG != 0) {
-        output.WriteRawTag(144, 82);
+        output.WriteRawTag(136, 118);
         output.WriteUInt32(IEPGCLGKHEG);
+      }
+      if (OMKKPGFJHFE != false) {
+        output.WriteRawTag(184, 127);
+        output.WriteBool(OMKKPGFJHFE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -555,50 +579,53 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (OperatorUid != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(OperatorUid);
+      if (FirstPlayerActionEnd != false) {
+        size += 1 + 1;
       }
       size += marbleSealHitData_.CalculateSize(_repeated_marbleSealHitData_codec);
       if (TechId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TechId);
       }
-      if (CurRound != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurRound);
+      if (WinnerUid != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(WinnerUid);
       }
-      if (ExtraId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExtraId);
-      }
-      size += allowedMoveSealList_.CalculateSize(_repeated_allowedMoveSealList_codec);
-      if (IEPGCLGKHEG != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(IEPGCLGKHEG);
-      }
-      if (MoveTotalTime != 0F) {
-        size += 1 + 4;
+      if (PlayerAGameScore != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerAGameScore);
       }
       size += playerBTechList_.CalculateSize(_repeated_playerBTechList_codec);
-      if (ExecutorUid != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExecutorUid);
+      if (CurRound != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurRound);
       }
       if (PlayerBGameScore != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerBGameScore);
       }
+      if (ExecutorUid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExecutorUid);
+      }
+      if (IEPGCLGKHEG != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(IEPGCLGKHEG);
+      }
       if (QueuePosition != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(QueuePosition);
+      }
+      size += playerATechList_.CalculateSize(_repeated_playerATechList_codec);
+      if (OMKKPGFJHFE != false) {
+        size += 2 + 1;
+      }
+      if (ExtraId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExtraId);
+      }
+      if (MoveTotalTime != 0F) {
+        size += 1 + 4;
+      }
+      if (OperatorUid != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(OperatorUid);
       }
       if (Launching != false) {
         size += 1 + 1;
       }
+      size += allowedMoveSealList_.CalculateSize(_repeated_allowedMoveSealList_codec);
       size += marbleGameSyncData_.CalculateSize(_repeated_marbleGameSyncData_codec);
-      size += playerATechList_.CalculateSize(_repeated_playerATechList_codec);
-      if (PlayerAGameScore != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerAGameScore);
-      }
-      if (FirstPlayerActionEnd != false) {
-        size += 1 + 1;
-      }
-      if (WinnerUid != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(WinnerUid);
-      }
       if (MarbleSyncType != global::EggLink.DanhengServer.Proto.MarbleSyncType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MarbleSyncType);
       }
@@ -614,50 +641,53 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.OperatorUid != 0) {
-        OperatorUid = other.OperatorUid;
+      if (other.FirstPlayerActionEnd != false) {
+        FirstPlayerActionEnd = other.FirstPlayerActionEnd;
       }
       marbleSealHitData_.Add(other.marbleSealHitData_);
       if (other.TechId != 0) {
         TechId = other.TechId;
       }
-      if (other.CurRound != 0) {
-        CurRound = other.CurRound;
+      if (other.WinnerUid != 0) {
+        WinnerUid = other.WinnerUid;
       }
-      if (other.ExtraId != 0) {
-        ExtraId = other.ExtraId;
-      }
-      allowedMoveSealList_.Add(other.allowedMoveSealList_);
-      if (other.IEPGCLGKHEG != 0) {
-        IEPGCLGKHEG = other.IEPGCLGKHEG;
-      }
-      if (other.MoveTotalTime != 0F) {
-        MoveTotalTime = other.MoveTotalTime;
+      if (other.PlayerAGameScore != 0) {
+        PlayerAGameScore = other.PlayerAGameScore;
       }
       playerBTechList_.Add(other.playerBTechList_);
-      if (other.ExecutorUid != 0) {
-        ExecutorUid = other.ExecutorUid;
+      if (other.CurRound != 0) {
+        CurRound = other.CurRound;
       }
       if (other.PlayerBGameScore != 0) {
         PlayerBGameScore = other.PlayerBGameScore;
       }
+      if (other.ExecutorUid != 0) {
+        ExecutorUid = other.ExecutorUid;
+      }
+      if (other.IEPGCLGKHEG != 0) {
+        IEPGCLGKHEG = other.IEPGCLGKHEG;
+      }
       if (other.QueuePosition != 0) {
         QueuePosition = other.QueuePosition;
+      }
+      playerATechList_.Add(other.playerATechList_);
+      if (other.OMKKPGFJHFE != false) {
+        OMKKPGFJHFE = other.OMKKPGFJHFE;
+      }
+      if (other.ExtraId != 0) {
+        ExtraId = other.ExtraId;
+      }
+      if (other.MoveTotalTime != 0F) {
+        MoveTotalTime = other.MoveTotalTime;
+      }
+      if (other.OperatorUid != 0) {
+        OperatorUid = other.OperatorUid;
       }
       if (other.Launching != false) {
         Launching = other.Launching;
       }
+      allowedMoveSealList_.Add(other.allowedMoveSealList_);
       marbleGameSyncData_.Add(other.marbleGameSyncData_);
-      playerATechList_.Add(other.playerATechList_);
-      if (other.PlayerAGameScore != 0) {
-        PlayerAGameScore = other.PlayerAGameScore;
-      }
-      if (other.FirstPlayerActionEnd != false) {
-        FirstPlayerActionEnd = other.FirstPlayerActionEnd;
-      }
-      if (other.WinnerUid != 0) {
-        WinnerUid = other.WinnerUid;
-      }
       if (other.MarbleSyncType != global::EggLink.DanhengServer.Proto.MarbleSyncType.None) {
         MarbleSyncType = other.MarbleSyncType;
       }
@@ -676,30 +706,29 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10:
           case 8: {
-            Launching = input.ReadBool();
+            playerATechList_.AddEntriesFrom(input, _repeated_playerATechList_codec);
             break;
           }
           case 16: {
-            TechId = input.ReadUInt32();
+            Launching = input.ReadBool();
             break;
           }
-          case 26:
           case 24: {
-            allowedMoveSealList_.AddEntriesFrom(input, _repeated_allowedMoveSealList_codec);
+            PlayerBGameScore = input.ReadUInt32();
             break;
           }
-          case 34: {
-            marbleGameSyncData_.AddEntriesFrom(input, _repeated_marbleGameSyncData_codec);
-            break;
-          }
-          case 40: {
+          case 32: {
             MarbleSyncType = (global::EggLink.DanhengServer.Proto.MarbleSyncType) input.ReadEnum();
             break;
           }
-          case 50:
+          case 40: {
+            FirstPlayerActionEnd = input.ReadBool();
+            break;
+          }
           case 48: {
-            playerATechList_.AddEntriesFrom(input, _repeated_playerATechList_codec);
+            ExecutorUid = input.ReadUInt32();
             break;
           }
           case 56: {
@@ -707,52 +736,57 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            QueuePosition = input.ReadUInt32();
+            ExtraId = input.ReadUInt32();
             break;
           }
-          case 77: {
+          case 72: {
+            TechId = input.ReadUInt32();
+            break;
+          }
+          case 82:
+          case 80: {
+            playerBTechList_.AddEntriesFrom(input, _repeated_playerBTechList_codec);
+            break;
+          }
+          case 93: {
             MoveTotalTime = input.ReadFloat();
             break;
           }
-          case 80: {
-            FirstPlayerActionEnd = input.ReadBool();
-            break;
-          }
-          case 88: {
-            PlayerAGameScore = input.ReadUInt32();
-            break;
-          }
           case 96: {
-            PlayerBGameScore = input.ReadUInt32();
+            PlayerAGameScore = input.ReadUInt32();
             break;
           }
           case 106:
           case 104: {
-            playerBTechList_.AddEntriesFrom(input, _repeated_playerBTechList_codec);
+            allowedMoveSealList_.AddEntriesFrom(input, _repeated_allowedMoveSealList_codec);
             break;
           }
-          case 112: {
-            ExecutorUid = input.ReadUInt32();
+          case 114: {
+            marbleGameSyncData_.AddEntriesFrom(input, _repeated_marbleGameSyncData_codec);
             break;
           }
           case 120: {
-            ExtraId = input.ReadUInt32();
+            QueuePosition = input.ReadUInt32();
             break;
           }
-          case 7392: {
+          case 928: {
             OperatorUid = input.ReadUInt32();
             break;
           }
-          case 9122: {
+          case 2250: {
             marbleSealHitData_.AddEntriesFrom(input, _repeated_marbleSealHitData_codec);
             break;
           }
-          case 10432: {
+          case 12792: {
             WinnerUid = input.ReadUInt32();
             break;
           }
-          case 10512: {
+          case 15112: {
             IEPGCLGKHEG = input.ReadUInt32();
+            break;
+          }
+          case 16312: {
+            OMKKPGFJHFE = input.ReadBool();
             break;
           }
         }
@@ -770,30 +804,29 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10:
           case 8: {
-            Launching = input.ReadBool();
+            playerATechList_.AddEntriesFrom(ref input, _repeated_playerATechList_codec);
             break;
           }
           case 16: {
-            TechId = input.ReadUInt32();
+            Launching = input.ReadBool();
             break;
           }
-          case 26:
           case 24: {
-            allowedMoveSealList_.AddEntriesFrom(ref input, _repeated_allowedMoveSealList_codec);
+            PlayerBGameScore = input.ReadUInt32();
             break;
           }
-          case 34: {
-            marbleGameSyncData_.AddEntriesFrom(ref input, _repeated_marbleGameSyncData_codec);
-            break;
-          }
-          case 40: {
+          case 32: {
             MarbleSyncType = (global::EggLink.DanhengServer.Proto.MarbleSyncType) input.ReadEnum();
             break;
           }
-          case 50:
+          case 40: {
+            FirstPlayerActionEnd = input.ReadBool();
+            break;
+          }
           case 48: {
-            playerATechList_.AddEntriesFrom(ref input, _repeated_playerATechList_codec);
+            ExecutorUid = input.ReadUInt32();
             break;
           }
           case 56: {
@@ -801,52 +834,57 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            QueuePosition = input.ReadUInt32();
+            ExtraId = input.ReadUInt32();
             break;
           }
-          case 77: {
+          case 72: {
+            TechId = input.ReadUInt32();
+            break;
+          }
+          case 82:
+          case 80: {
+            playerBTechList_.AddEntriesFrom(ref input, _repeated_playerBTechList_codec);
+            break;
+          }
+          case 93: {
             MoveTotalTime = input.ReadFloat();
             break;
           }
-          case 80: {
-            FirstPlayerActionEnd = input.ReadBool();
-            break;
-          }
-          case 88: {
-            PlayerAGameScore = input.ReadUInt32();
-            break;
-          }
           case 96: {
-            PlayerBGameScore = input.ReadUInt32();
+            PlayerAGameScore = input.ReadUInt32();
             break;
           }
           case 106:
           case 104: {
-            playerBTechList_.AddEntriesFrom(ref input, _repeated_playerBTechList_codec);
+            allowedMoveSealList_.AddEntriesFrom(ref input, _repeated_allowedMoveSealList_codec);
             break;
           }
-          case 112: {
-            ExecutorUid = input.ReadUInt32();
+          case 114: {
+            marbleGameSyncData_.AddEntriesFrom(ref input, _repeated_marbleGameSyncData_codec);
             break;
           }
           case 120: {
-            ExtraId = input.ReadUInt32();
+            QueuePosition = input.ReadUInt32();
             break;
           }
-          case 7392: {
+          case 928: {
             OperatorUid = input.ReadUInt32();
             break;
           }
-          case 9122: {
+          case 2250: {
             marbleSealHitData_.AddEntriesFrom(ref input, _repeated_marbleSealHitData_codec);
             break;
           }
-          case 10432: {
+          case 12792: {
             WinnerUid = input.ReadUInt32();
             break;
           }
-          case 10512: {
+          case 15112: {
             IEPGCLGKHEG = input.ReadUInt32();
+            break;
+          }
+          case 16312: {
+            OMKKPGFJHFE = input.ReadBool();
             break;
           }
         }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRFcmFGbGlwcGVyRGF0YS5wcm90byI+Cg5FcmFGbGlwcGVyRGF0YRIdChVl",
-            "cmFfZmxpcHBlcl9yZWdpb25faWQYASABKA0SDQoFc3RhdGUYByABKA1CHqoC",
+            "cmFfZmxpcHBlcl9yZWdpb25faWQYDiABKA0SDQoFc3RhdGUYAyABKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "era_flipper_region_id" field.</summary>
-    public const int EraFlipperRegionIdFieldNumber = 1;
+    public const int EraFlipperRegionIdFieldNumber = 14;
     private uint eraFlipperRegionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "state" field.</summary>
-    public const int StateFieldNumber = 7;
+    public const int StateFieldNumber = 3;
     private uint state_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EraFlipperRegionId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(EraFlipperRegionId);
-      }
       if (State != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteUInt32(State);
+      }
+      if (EraFlipperRegionId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(EraFlipperRegionId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EraFlipperRegionId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(EraFlipperRegionId);
-      }
       if (State != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteUInt32(State);
+      }
+      if (EraFlipperRegionId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(EraFlipperRegionId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            EraFlipperRegionId = input.ReadUInt32();
+          case 24: {
+            State = input.ReadUInt32();
             break;
           }
-          case 56: {
-            State = input.ReadUInt32();
+          case 112: {
+            EraFlipperRegionId = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            EraFlipperRegionId = input.ReadUInt32();
+          case 24: {
+            State = input.ReadUInt32();
             break;
           }
-          case 56: {
-            State = input.ReadUInt32();
+          case 112: {
+            EraFlipperRegionId = input.ReadUInt32();
             break;
           }
         }

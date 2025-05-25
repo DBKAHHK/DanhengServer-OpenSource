@@ -1,6 +1,6 @@
 ﻿namespace EggLink.DanhengServer.Data.Excel;
 
-[ResourceEntity("AvatarPromotionConfig.json")]
+[ResourceEntity("AvatarPromotionConfig.json,AvatarPromotionConfigLD.json", true)]
 public class AvatarPromotionConfigExcel : ExcelResource
 {
     public int AvatarID { get; set; }
@@ -17,7 +17,7 @@ public class AvatarPromotionConfigExcel : ExcelResource
 
     public override void Loaded()
     {
-        GameData.AvatarPromotionConfigData.Add(GetId(), this);
+        GameData.AvatarPromotionConfigData.TryAdd(GetId(), this);
     }
 
     public class ItemParam

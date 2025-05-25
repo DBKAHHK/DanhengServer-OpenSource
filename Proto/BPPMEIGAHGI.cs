@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFCUFBNRUlHQUhHSS5wcm90bxoRTU1PSUJBQ0JQS0EucHJvdG8iXQoLQlBQ",
-            "TUVJR0FIR0kSJAoOZ2lmdF9kYXRhX2xpc3QYCSADKAsyDC5NTU9JQkFDQlBL",
-            "QRITCgtJT01HRElLRUxJQRgFIAEoDRITCgtQRE1ES0FQQ09KTRgLIAEoDUIe",
+            "TUVJR0FIR0kSJAoOZ2lmdF9kYXRhX2xpc3QYDyADKAsyDC5NTU9JQkFDQlBL",
+            "QRITCgtJT01HRElLRUxJQRgDIAEoDRITCgtQRE1ES0FQQ09KTRgKIAEoDUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MMOIBACBPKAReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gift_data_list" field.</summary>
-    public const int GiftDataListFieldNumber = 9;
+    public const int GiftDataListFieldNumber = 15;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MMOIBACBPKA> _repeated_giftDataList_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.MMOIBACBPKA.Parser);
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.MMOIBACBPKA.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MMOIBACBPKA> giftDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MMOIBACBPKA>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IOMGDIKELIA" field.</summary>
-    public const int IOMGDIKELIAFieldNumber = 5;
+    public const int IOMGDIKELIAFieldNumber = 3;
     private uint iOMGDIKELIA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PDMDKAPCOJM" field.</summary>
-    public const int PDMDKAPCOJMFieldNumber = 11;
+    public const int PDMDKAPCOJMFieldNumber = 10;
     private uint pDMDKAPCOJM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,14 +167,14 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IOMGDIKELIA != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(IOMGDIKELIA);
       }
-      giftDataList_.WriteTo(output, _repeated_giftDataList_codec);
       if (PDMDKAPCOJM != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(80);
         output.WriteUInt32(PDMDKAPCOJM);
       }
+      giftDataList_.WriteTo(output, _repeated_giftDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,14 +186,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IOMGDIKELIA != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(IOMGDIKELIA);
       }
-      giftDataList_.WriteTo(ref output, _repeated_giftDataList_codec);
       if (PDMDKAPCOJM != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(80);
         output.WriteUInt32(PDMDKAPCOJM);
       }
+      giftDataList_.WriteTo(ref output, _repeated_giftDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -245,16 +245,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 24: {
             IOMGDIKELIA = input.ReadUInt32();
             break;
           }
-          case 74: {
-            giftDataList_.AddEntriesFrom(input, _repeated_giftDataList_codec);
+          case 80: {
+            PDMDKAPCOJM = input.ReadUInt32();
             break;
           }
-          case 88: {
-            PDMDKAPCOJM = input.ReadUInt32();
+          case 122: {
+            giftDataList_.AddEntriesFrom(input, _repeated_giftDataList_codec);
             break;
           }
         }
@@ -272,16 +272,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 24: {
             IOMGDIKELIA = input.ReadUInt32();
             break;
           }
-          case 74: {
-            giftDataList_.AddEntriesFrom(ref input, _repeated_giftDataList_codec);
+          case 80: {
+            PDMDKAPCOJM = input.ReadUInt32();
             break;
           }
-          case 88: {
-            PDMDKAPCOJM = input.ReadUInt32();
+          case 122: {
+            giftDataList_.AddEntriesFrom(ref input, _repeated_giftDataList_codec);
             break;
           }
         }

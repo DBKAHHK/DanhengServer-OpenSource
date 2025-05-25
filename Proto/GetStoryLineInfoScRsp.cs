@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHZXRTdG9yeUxpbmVJbmZvU2NSc3AucHJvdG8iiAEKFUdldFN0b3J5TGlu",
-            "ZUluZm9TY1JzcBIPCgdyZXRjb2RlGA0gASgNEhwKFHRyaWFsX2F2YXRhcl9p",
-            "ZF9saXN0GAIgAygNEiUKHXVuZmluaXNoZWRfc3RvcnlfbGluZV9pZF9saXN0",
-            "GAsgAygNEhkKEWN1cl9zdG9yeV9saW5lX2lkGAEgASgNQh6qAhtFZ2dMaW5r",
+            "ZUluZm9TY1JzcBIPCgdyZXRjb2RlGAkgASgNEhwKFHRyaWFsX2F2YXRhcl9p",
+            "ZF9saXN0GAEgAygNEiUKHXVuZmluaXNoZWRfc3RvcnlfbGluZV9pZF9saXN0",
+            "GAogAygNEhkKEWN1cl9zdG9yeV9saW5lX2lkGAwgASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,9 +100,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "trial_avatar_id_list" field.</summary>
-    public const int TrialAvatarIdListFieldNumber = 2;
+    public const int TrialAvatarIdListFieldNumber = 1;
     private static readonly pb::FieldCodec<uint> _repeated_trialAvatarIdList_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(10);
     private readonly pbc::RepeatedField<uint> trialAvatarIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,9 +111,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "unfinished_story_line_id_list" field.</summary>
-    public const int UnfinishedStoryLineIdListFieldNumber = 11;
+    public const int UnfinishedStoryLineIdListFieldNumber = 10;
     private static readonly pb::FieldCodec<uint> _repeated_unfinishedStoryLineIdList_codec
-        = pb::FieldCodec.ForUInt32(90);
+        = pb::FieldCodec.ForUInt32(82);
     private readonly pbc::RepeatedField<uint> unfinishedStoryLineIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_story_line_id" field.</summary>
-    public const int CurStoryLineIdFieldNumber = 1;
+    public const int CurStoryLineIdFieldNumber = 12;
     private uint curStoryLineId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -181,15 +181,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CurStoryLineId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(CurStoryLineId);
-      }
       trialAvatarIdList_.WriteTo(output, _repeated_trialAvatarIdList_codec);
-      unfinishedStoryLineIdList_.WriteTo(output, _repeated_unfinishedStoryLineIdList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
+      }
+      unfinishedStoryLineIdList_.WriteTo(output, _repeated_unfinishedStoryLineIdList_codec);
+      if (CurStoryLineId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(CurStoryLineId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -201,15 +201,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CurStoryLineId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(CurStoryLineId);
-      }
       trialAvatarIdList_.WriteTo(ref output, _repeated_trialAvatarIdList_codec);
-      unfinishedStoryLineIdList_.WriteTo(ref output, _repeated_unfinishedStoryLineIdList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
+      }
+      unfinishedStoryLineIdList_.WriteTo(ref output, _repeated_unfinishedStoryLineIdList_codec);
+      if (CurStoryLineId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(CurStoryLineId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -264,22 +264,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10:
           case 8: {
-            CurStoryLineId = input.ReadUInt32();
-            break;
-          }
-          case 18:
-          case 16: {
             trialAvatarIdList_.AddEntriesFrom(input, _repeated_trialAvatarIdList_codec);
             break;
           }
-          case 90:
-          case 88: {
+          case 72: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 82:
+          case 80: {
             unfinishedStoryLineIdList_.AddEntriesFrom(input, _repeated_unfinishedStoryLineIdList_codec);
             break;
           }
-          case 104: {
-            Retcode = input.ReadUInt32();
+          case 96: {
+            CurStoryLineId = input.ReadUInt32();
             break;
           }
         }
@@ -297,22 +297,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10:
           case 8: {
-            CurStoryLineId = input.ReadUInt32();
-            break;
-          }
-          case 18:
-          case 16: {
             trialAvatarIdList_.AddEntriesFrom(ref input, _repeated_trialAvatarIdList_codec);
             break;
           }
-          case 90:
-          case 88: {
+          case 72: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 82:
+          case 80: {
             unfinishedStoryLineIdList_.AddEntriesFrom(ref input, _repeated_unfinishedStoryLineIdList_codec);
             break;
           }
-          case 104: {
-            Retcode = input.ReadUInt32();
+          case 96: {
+            CurStoryLineId = input.ReadUInt32();
             break;
           }
         }

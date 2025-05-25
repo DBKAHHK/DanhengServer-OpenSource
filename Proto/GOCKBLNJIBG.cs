@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFHT0NLQkxOSklCRy5wcm90byJJCgtHT0NLQkxOSklCRxIQCghza2lsbF9p",
-            "ZBgCIAEoDRITCgtKR01JUE1EUFBJShgHIAEoDRITCgtza2lsbF9sZXZlbBgM",
+            "ZBgJIAEoDRITCgtKR01JUE1EUFBJShgCIAEoDRITCgtza2lsbF9sZXZlbBgI",
             "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "skill_id" field.</summary>
-    public const int SkillIdFieldNumber = 2;
+    public const int SkillIdFieldNumber = 9;
     private uint skillId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JGMIPMDPPIJ" field.</summary>
-    public const int JGMIPMDPPIJFieldNumber = 7;
+    public const int JGMIPMDPPIJFieldNumber = 2;
     private uint jGMIPMDPPIJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "skill_level" field.</summary>
-    public const int SkillLevelFieldNumber = 12;
+    public const int SkillLevelFieldNumber = 8;
     private uint skillLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SkillId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(SkillId);
-      }
       if (JGMIPMDPPIJ != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteUInt32(JGMIPMDPPIJ);
       }
       if (SkillLevel != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(SkillLevel);
+      }
+      if (SkillId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(SkillId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SkillId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(SkillId);
-      }
       if (JGMIPMDPPIJ != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteUInt32(JGMIPMDPPIJ);
       }
       if (SkillLevel != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(SkillLevel);
+      }
+      if (SkillId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(SkillId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            SkillId = input.ReadUInt32();
-            break;
-          }
-          case 56: {
             JGMIPMDPPIJ = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 64: {
             SkillLevel = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            SkillId = input.ReadUInt32();
             break;
           }
         }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            SkillId = input.ReadUInt32();
-            break;
-          }
-          case 56: {
             JGMIPMDPPIJ = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 64: {
             SkillLevel = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            SkillId = input.ReadUInt32();
             break;
           }
         }

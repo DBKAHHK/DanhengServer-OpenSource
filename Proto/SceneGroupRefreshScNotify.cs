@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9TY2VuZUdyb3VwUmVmcmVzaFNjTm90aWZ5LnByb3RvGhZHcm91cFJlZnJl",
             "c2hJbmZvLnByb3RvInIKGVNjZW5lR3JvdXBSZWZyZXNoU2NOb3RpZnkSFAoM",
-            "ZGltZW5zaW9uX2lkGAMgASgNEi0KEmdyb3VwX3JlZnJlc2hfbGlzdBgOIAMo",
+            "ZGltZW5zaW9uX2lkGAMgASgNEi0KEmdyb3VwX3JlZnJlc2hfbGlzdBgCIAMo",
             "CzIRLkdyb3VwUmVmcmVzaEluZm8SEAoIZmxvb3JfaWQYCCABKA1CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -99,9 +99,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_refresh_list" field.</summary>
-    public const int GroupRefreshListFieldNumber = 14;
+    public const int GroupRefreshListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GroupRefreshInfo> _repeated_groupRefreshList_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.GroupRefreshInfo.Parser);
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.GroupRefreshInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GroupRefreshInfo> groupRefreshList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GroupRefreshInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,6 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      groupRefreshList_.WriteTo(output, _repeated_groupRefreshList_codec);
       if (DimensionId != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(DimensionId);
@@ -175,7 +176,6 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteUInt32(FloorId);
       }
-      groupRefreshList_.WriteTo(output, _repeated_groupRefreshList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,6 +186,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      groupRefreshList_.WriteTo(ref output, _repeated_groupRefreshList_codec);
       if (DimensionId != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(DimensionId);
@@ -194,7 +195,6 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteUInt32(FloorId);
       }
-      groupRefreshList_.WriteTo(ref output, _repeated_groupRefreshList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 18: {
+            groupRefreshList_.AddEntriesFrom(input, _repeated_groupRefreshList_codec);
+            break;
+          }
           case 24: {
             DimensionId = input.ReadUInt32();
             break;
           }
           case 64: {
             FloorId = input.ReadUInt32();
-            break;
-          }
-          case 114: {
-            groupRefreshList_.AddEntriesFrom(input, _repeated_groupRefreshList_codec);
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 18: {
+            groupRefreshList_.AddEntriesFrom(ref input, _repeated_groupRefreshList_codec);
+            break;
+          }
           case 24: {
             DimensionId = input.ReadUInt32();
             break;
           }
           case 64: {
             FloorId = input.ReadUInt32();
-            break;
-          }
-          case 114: {
-            groupRefreshList_.AddEntriesFrom(ref input, _repeated_groupRefreshList_codec);
             break;
           }
         }

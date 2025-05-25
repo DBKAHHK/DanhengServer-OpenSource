@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxDYW5jZWxDYWNoZU5vdGlmeUNzUmVxLnByb3RvGhVDYW5jZWxDYWNoZVR5",
             "cGUucHJvdG8iYgoWQ2FuY2VsQ2FjaGVOb3RpZnlDc1JlcRITCgtLQ0xKTUNB",
-            "S09KRhgDIAMoCRITCgtkYWlseV9pbmRleBgCIAMoDRIeCgR0eXBlGA4gASgO",
+            "S09KRhgIIAMoCRITCgtkYWlseV9pbmRleBgFIAMoDRIeCgR0eXBlGAMgASgO",
             "MhAuQ2FuY2VsQ2FjaGVUeXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -87,9 +87,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KCLJMCAKOJF" field.</summary>
-    public const int KCLJMCAKOJFFieldNumber = 3;
+    public const int KCLJMCAKOJFFieldNumber = 8;
     private static readonly pb::FieldCodec<string> _repeated_kCLJMCAKOJF_codec
-        = pb::FieldCodec.ForString(26);
+        = pb::FieldCodec.ForString(66);
     private readonly pbc::RepeatedField<string> kCLJMCAKOJF_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "daily_index" field.</summary>
-    public const int DailyIndexFieldNumber = 2;
+    public const int DailyIndexFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_dailyIndex_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(42);
     private readonly pbc::RepeatedField<uint> dailyIndex_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 14;
+    public const int TypeFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.CancelCacheType type_ = global::EggLink.DanhengServer.Proto.CancelCacheType.CacheNotifyTypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,12 +166,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      dailyIndex_.WriteTo(output, _repeated_dailyIndex_codec);
-      kCLJMCAKOJF_.WriteTo(output, _repeated_kCLJMCAKOJF_codec);
       if (Type != global::EggLink.DanhengServer.Proto.CancelCacheType.CacheNotifyTypeNone) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
+      dailyIndex_.WriteTo(output, _repeated_dailyIndex_codec);
+      kCLJMCAKOJF_.WriteTo(output, _repeated_kCLJMCAKOJF_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -182,12 +182,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      dailyIndex_.WriteTo(ref output, _repeated_dailyIndex_codec);
-      kCLJMCAKOJF_.WriteTo(ref output, _repeated_kCLJMCAKOJF_codec);
       if (Type != global::EggLink.DanhengServer.Proto.CancelCacheType.CacheNotifyTypeNone) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
+      dailyIndex_.WriteTo(ref output, _repeated_dailyIndex_codec);
+      kCLJMCAKOJF_.WriteTo(ref output, _repeated_kCLJMCAKOJF_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -235,17 +235,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
+          case 24: {
+            Type = (global::EggLink.DanhengServer.Proto.CancelCacheType) input.ReadEnum();
+            break;
+          }
+          case 42:
+          case 40: {
             dailyIndex_.AddEntriesFrom(input, _repeated_dailyIndex_codec);
             break;
           }
-          case 26: {
+          case 66: {
             kCLJMCAKOJF_.AddEntriesFrom(input, _repeated_kCLJMCAKOJF_codec);
-            break;
-          }
-          case 112: {
-            Type = (global::EggLink.DanhengServer.Proto.CancelCacheType) input.ReadEnum();
             break;
           }
         }
@@ -263,17 +263,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
+          case 24: {
+            Type = (global::EggLink.DanhengServer.Proto.CancelCacheType) input.ReadEnum();
+            break;
+          }
+          case 42:
+          case 40: {
             dailyIndex_.AddEntriesFrom(ref input, _repeated_dailyIndex_codec);
             break;
           }
-          case 26: {
+          case 66: {
             kCLJMCAKOJF_.AddEntriesFrom(ref input, _repeated_kCLJMCAKOJF_codec);
-            break;
-          }
-          case 112: {
-            Type = (global::EggLink.DanhengServer.Proto.CancelCacheType) input.ReadEnum();
             break;
           }
         }

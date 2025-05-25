@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiZSb2d1ZUNvbW1vbkJ1ZmZSZWZvcmdlU2VsZWN0SW5mby5wcm90bxoVUm9n",
             "dWVDb21tb25CdWZmLnByb3RvImIKIFJvZ3VlQ29tbW9uQnVmZlJlZm9yZ2VT",
-            "ZWxlY3RJbmZvEiYKDHNlbGVjdF9idWZmcxgLIAMoCzIQLlJvZ3VlQ29tbW9u",
-            "QnVmZhIWCg5zZWxlY3RfaGludF9pZBgBIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "ZWxlY3RJbmZvEiYKDHNlbGVjdF9idWZmcxgJIAMoCzIQLlJvZ3VlQ29tbW9u",
+            "QnVmZhIWCg5zZWxlY3RfaGludF9pZBgOIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_buffs" field.</summary>
-    public const int SelectBuffsFieldNumber = 11;
+    public const int SelectBuffsFieldNumber = 9;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCommonBuff> _repeated_selectBuffs_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.RogueCommonBuff.Parser);
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.RogueCommonBuff.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonBuff> selectBuffs_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonBuff>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 1;
+    public const int SelectHintIdFieldNumber = 14;
     private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      selectBuffs_.WriteTo(output, _repeated_selectBuffs_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(112);
         output.WriteUInt32(SelectHintId);
       }
-      selectBuffs_.WriteTo(output, _repeated_selectBuffs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      selectBuffs_.WriteTo(ref output, _repeated_selectBuffs_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(112);
         output.WriteUInt32(SelectHintId);
       }
-      selectBuffs_.WriteTo(ref output, _repeated_selectBuffs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            SelectHintId = input.ReadUInt32();
+          case 74: {
+            selectBuffs_.AddEntriesFrom(input, _repeated_selectBuffs_codec);
             break;
           }
-          case 90: {
-            selectBuffs_.AddEntriesFrom(input, _repeated_selectBuffs_codec);
+          case 112: {
+            SelectHintId = input.ReadUInt32();
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            SelectHintId = input.ReadUInt32();
+          case 74: {
+            selectBuffs_.AddEntriesFrom(ref input, _repeated_selectBuffs_codec);
             break;
           }
-          case 90: {
-            selectBuffs_.AddEntriesFrom(ref input, _repeated_selectBuffs_codec);
+          case 112: {
+            SelectHintId = input.ReadUInt32();
             break;
           }
         }

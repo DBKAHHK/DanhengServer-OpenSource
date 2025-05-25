@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1VbmxvY2tQaG9uZUNhc2VTY05vdGlmeS5wcm90byItChdVbmxvY2tQaG9u",
-            "ZUNhc2VTY05vdGlmeRISCgpwaG9uZV9jYXNlGAggASgNQh6qAhtFZ2dMaW5r",
+            "ZUNhc2VTY05vdGlmeRISCgpwaG9uZV9jYXNlGAogASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "phone_case" field.</summary>
-    public const int PhoneCaseFieldNumber = 8;
+    public const int PhoneCaseFieldNumber = 10;
     private uint phoneCase_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PhoneCase != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteUInt32(PhoneCase);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PhoneCase != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteUInt32(PhoneCase);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 80: {
             PhoneCase = input.ReadUInt32();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 80: {
             PhoneCase = input.ReadUInt32();
             break;
           }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPQUlOS0pMUENESy5wcm90bxoRUFBGQ0pIRUtPTEcucHJvdG8iNwoLT0FJ",
-            "TktKTFBDREsSKAoSb3B0aW9uX3Jlc3VsdF9pbmZvGAsgAygLMgwuUFBGQ0pI",
+            "TktKTFBDREsSKAoSb3B0aW9uX3Jlc3VsdF9pbmZvGAYgAygLMgwuUFBGQ0pI",
             "RUtPTEdCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PPFCJHEKOLGReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "option_result_info" field.</summary>
-    public const int OptionResultInfoFieldNumber = 11;
+    public const int OptionResultInfoFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PPFCJHEKOLG> _repeated_optionResultInfo_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.PPFCJHEKOLG.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.PPFCJHEKOLG.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPFCJHEKOLG> optionResultInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPFCJHEKOLG>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 50: {
             optionResultInfo_.AddEntriesFrom(input, _repeated_optionResultInfo_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 50: {
             optionResultInfo_.AddEntriesFrom(ref input, _repeated_optionResultInfo_codec);
             break;
           }

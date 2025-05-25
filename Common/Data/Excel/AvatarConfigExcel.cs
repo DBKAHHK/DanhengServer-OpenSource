@@ -5,7 +5,7 @@ using Newtonsoft.Json.Converters;
 
 namespace EggLink.DanhengServer.Data.Excel;
 
-[ResourceEntity("AvatarConfig.json,AvatarConfigTrial.json", true)]
+[ResourceEntity("AvatarConfig.json,AvatarConfigTrial.json,AvatarConfigLD.json", true)]
 public class AvatarConfigExcel : ExcelResource
 {
     [JsonIgnore] public List<AvatarSkillTreeConfigExcel> DefaultSkillTree = [];

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5UYWtlbkNoYWxsZW5nZVJld2FyZEluZm8ucHJvdG8aDkl0ZW1MaXN0LnBy",
-            "b3RvIkkKGFRha2VuQ2hhbGxlbmdlUmV3YXJkSW5mbxIZCgZyZXdhcmQYDCAB",
-            "KAsyCS5JdGVtTGlzdBISCgpzdGFyX2NvdW50GA0gASgNQh6qAhtFZ2dMaW5r",
+            "b3RvIkkKGFRha2VuQ2hhbGxlbmdlUmV3YXJkSW5mbxIZCgZyZXdhcmQYCiAB",
+            "KAsyCS5JdGVtTGlzdBISCgpzdGFyX2NvdW50GAsgASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 12;
+    public const int RewardFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "star_count" field.</summary>
-    public const int StarCountFieldNumber = 13;
+    public const int StarCountFieldNumber = 11;
     private uint starCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (reward_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(82);
         output.WriteMessage(Reward);
       }
       if (StarCount != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(StarCount);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (reward_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(82);
         output.WriteMessage(Reward);
       }
       if (StarCount != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(StarCount);
       }
       if (_unknownFields != null) {
@@ -230,14 +230,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98: {
+          case 82: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 104: {
+          case 88: {
             StarCount = input.ReadUInt32();
             break;
           }
@@ -256,14 +256,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98: {
+          case 82: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 104: {
+          case 88: {
             StarCount = input.ReadUInt32();
             break;
           }

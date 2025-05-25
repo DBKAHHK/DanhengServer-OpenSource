@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg5IYW5kSW5mby5wcm90bxoQTW90aW9uSW5mby5wcm90byJ+CghIYW5kSW5m",
-            "bxITCgtNSk5OQkxDRENCShgPIAEoDBITCgtHRkpJSUFCQU5MTRgHIAEoDRIg",
-            "CgtoYW5kX21vdGlvbhgMIAEoCzILLk1vdGlvbkluZm8SEwoLTUNCSU9ITUlN",
-            "R04YAyABKA0SEQoJY29uZmlnX2lkGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bxITCgtNQ0JJT0hNSU1HThgGIAEoDRIRCgljb25maWdfaWQYByABKA0SIAoL",
+            "aGFuZF9tb3Rpb24YASABKAsyCy5Nb3Rpb25JbmZvEhMKC01KTk5CTENEQ0JK",
+            "GAkgASgMEhMKC0dGSklJQUJBTkxNGAwgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HandInfo), global::EggLink.DanhengServer.Proto.HandInfo.Parser, new[]{ "MJNNBLCDCBJ", "GFJIIABANLM", "HandMotion", "MCBIOHMIMGN", "ConfigId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HandInfo), global::EggLink.DanhengServer.Proto.HandInfo.Parser, new[]{ "MCBIOHMIMGN", "ConfigId", "HandMotion", "MJNNBLCDCBJ", "GFJIIABANLM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +74,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HandInfo(HandInfo other) : this() {
-      mJNNBLCDCBJ_ = other.mJNNBLCDCBJ_;
-      gFJIIABANLM_ = other.gFJIIABANLM_;
-      handMotion_ = other.handMotion_ != null ? other.handMotion_.Clone() : null;
       mCBIOHMIMGN_ = other.mCBIOHMIMGN_;
       configId_ = other.configId_;
+      handMotion_ = other.handMotion_ != null ? other.handMotion_.Clone() : null;
+      mJNNBLCDCBJ_ = other.mJNNBLCDCBJ_;
+      gFJIIABANLM_ = other.gFJIIABANLM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,44 +88,8 @@ namespace EggLink.DanhengServer.Proto {
       return new HandInfo(this);
     }
 
-    /// <summary>Field number for the "MJNNBLCDCBJ" field.</summary>
-    public const int MJNNBLCDCBJFieldNumber = 15;
-    private pb::ByteString mJNNBLCDCBJ_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString MJNNBLCDCBJ {
-      get { return mJNNBLCDCBJ_; }
-      set {
-        mJNNBLCDCBJ_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "GFJIIABANLM" field.</summary>
-    public const int GFJIIABANLMFieldNumber = 7;
-    private uint gFJIIABANLM_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GFJIIABANLM {
-      get { return gFJIIABANLM_; }
-      set {
-        gFJIIABANLM_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "hand_motion" field.</summary>
-    public const int HandMotionFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.MotionInfo handMotion_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MotionInfo HandMotion {
-      get { return handMotion_; }
-      set {
-        handMotion_ = value;
-      }
-    }
-
     /// <summary>Field number for the "MCBIOHMIMGN" field.</summary>
-    public const int MCBIOHMIMGNFieldNumber = 3;
+    public const int MCBIOHMIMGNFieldNumber = 6;
     private uint mCBIOHMIMGN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +101,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "config_id" field.</summary>
-    public const int ConfigIdFieldNumber = 11;
+    public const int ConfigIdFieldNumber = 7;
     private uint configId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -145,6 +109,42 @@ namespace EggLink.DanhengServer.Proto {
       get { return configId_; }
       set {
         configId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hand_motion" field.</summary>
+    public const int HandMotionFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.MotionInfo handMotion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MotionInfo HandMotion {
+      get { return handMotion_; }
+      set {
+        handMotion_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "MJNNBLCDCBJ" field.</summary>
+    public const int MJNNBLCDCBJFieldNumber = 9;
+    private pb::ByteString mJNNBLCDCBJ_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString MJNNBLCDCBJ {
+      get { return mJNNBLCDCBJ_; }
+      set {
+        mJNNBLCDCBJ_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "GFJIIABANLM" field.</summary>
+    public const int GFJIIABANLMFieldNumber = 12;
+    private uint gFJIIABANLM_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GFJIIABANLM {
+      get { return gFJIIABANLM_; }
+      set {
+        gFJIIABANLM_ = value;
       }
     }
 
@@ -163,11 +163,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MJNNBLCDCBJ != other.MJNNBLCDCBJ) return false;
-      if (GFJIIABANLM != other.GFJIIABANLM) return false;
-      if (!object.Equals(HandMotion, other.HandMotion)) return false;
       if (MCBIOHMIMGN != other.MCBIOHMIMGN) return false;
       if (ConfigId != other.ConfigId) return false;
+      if (!object.Equals(HandMotion, other.HandMotion)) return false;
+      if (MJNNBLCDCBJ != other.MJNNBLCDCBJ) return false;
+      if (GFJIIABANLM != other.GFJIIABANLM) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -175,11 +175,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MJNNBLCDCBJ.Length != 0) hash ^= MJNNBLCDCBJ.GetHashCode();
-      if (GFJIIABANLM != 0) hash ^= GFJIIABANLM.GetHashCode();
-      if (handMotion_ != null) hash ^= HandMotion.GetHashCode();
       if (MCBIOHMIMGN != 0) hash ^= MCBIOHMIMGN.GetHashCode();
       if (ConfigId != 0) hash ^= ConfigId.GetHashCode();
+      if (handMotion_ != null) hash ^= HandMotion.GetHashCode();
+      if (MJNNBLCDCBJ.Length != 0) hash ^= MJNNBLCDCBJ.GetHashCode();
+      if (GFJIIABANLM != 0) hash ^= GFJIIABANLM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -198,25 +198,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MCBIOHMIMGN != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MCBIOHMIMGN);
-      }
-      if (GFJIIABANLM != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(GFJIIABANLM);
-      }
-      if (ConfigId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(ConfigId);
-      }
       if (handMotion_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(10);
         output.WriteMessage(HandMotion);
       }
+      if (MCBIOHMIMGN != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(MCBIOHMIMGN);
+      }
+      if (ConfigId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ConfigId);
+      }
       if (MJNNBLCDCBJ.Length != 0) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(74);
         output.WriteBytes(MJNNBLCDCBJ);
+      }
+      if (GFJIIABANLM != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(GFJIIABANLM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -228,25 +228,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MCBIOHMIMGN != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MCBIOHMIMGN);
-      }
-      if (GFJIIABANLM != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(GFJIIABANLM);
-      }
-      if (ConfigId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(ConfigId);
-      }
       if (handMotion_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(10);
         output.WriteMessage(HandMotion);
       }
+      if (MCBIOHMIMGN != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(MCBIOHMIMGN);
+      }
+      if (ConfigId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ConfigId);
+      }
       if (MJNNBLCDCBJ.Length != 0) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(74);
         output.WriteBytes(MJNNBLCDCBJ);
+      }
+      if (GFJIIABANLM != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(GFJIIABANLM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -258,20 +258,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MJNNBLCDCBJ.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(MJNNBLCDCBJ);
-      }
-      if (GFJIIABANLM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GFJIIABANLM);
-      }
-      if (handMotion_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HandMotion);
-      }
       if (MCBIOHMIMGN != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MCBIOHMIMGN);
       }
       if (ConfigId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ConfigId);
+      }
+      if (handMotion_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HandMotion);
+      }
+      if (MJNNBLCDCBJ.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(MJNNBLCDCBJ);
+      }
+      if (GFJIIABANLM != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GFJIIABANLM);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -285,11 +285,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MJNNBLCDCBJ.Length != 0) {
-        MJNNBLCDCBJ = other.MJNNBLCDCBJ;
+      if (other.MCBIOHMIMGN != 0) {
+        MCBIOHMIMGN = other.MCBIOHMIMGN;
       }
-      if (other.GFJIIABANLM != 0) {
-        GFJIIABANLM = other.GFJIIABANLM;
+      if (other.ConfigId != 0) {
+        ConfigId = other.ConfigId;
       }
       if (other.handMotion_ != null) {
         if (handMotion_ == null) {
@@ -297,11 +297,11 @@ namespace EggLink.DanhengServer.Proto {
         }
         HandMotion.MergeFrom(other.HandMotion);
       }
-      if (other.MCBIOHMIMGN != 0) {
-        MCBIOHMIMGN = other.MCBIOHMIMGN;
+      if (other.MJNNBLCDCBJ.Length != 0) {
+        MJNNBLCDCBJ = other.MJNNBLCDCBJ;
       }
-      if (other.ConfigId != 0) {
-        ConfigId = other.ConfigId;
+      if (other.GFJIIABANLM != 0) {
+        GFJIIABANLM = other.GFJIIABANLM;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -318,27 +318,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            MCBIOHMIMGN = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            GFJIIABANLM = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            ConfigId = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 10: {
             if (handMotion_ == null) {
               HandMotion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(HandMotion);
             break;
           }
-          case 122: {
+          case 48: {
+            MCBIOHMIMGN = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            ConfigId = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             MJNNBLCDCBJ = input.ReadBytes();
+            break;
+          }
+          case 96: {
+            GFJIIABANLM = input.ReadUInt32();
             break;
           }
         }
@@ -356,27 +356,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            MCBIOHMIMGN = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            GFJIIABANLM = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            ConfigId = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 10: {
             if (handMotion_ == null) {
               HandMotion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(HandMotion);
             break;
           }
-          case 122: {
+          case 48: {
+            MCBIOHMIMGN = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            ConfigId = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             MJNNBLCDCBJ = input.ReadBytes();
+            break;
+          }
+          case 96: {
+            GFJIIABANLM = input.ReadUInt32();
             break;
           }
         }

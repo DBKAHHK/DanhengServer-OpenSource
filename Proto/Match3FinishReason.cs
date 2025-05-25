@@ -24,12 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static Match3FinishReasonReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhNYXRjaDNGaW5pc2hSZWFzb24ucHJvdG8quAEKEk1hdGNoM0ZpbmlzaFJl",
+            "ChhNYXRjaDNGaW5pc2hSZWFzb24ucHJvdG8qkwIKEk1hdGNoM0ZpbmlzaFJl",
             "YXNvbhIgChxNQVRDSDNfRklOSVNIX1JFQVNPTl9ERUZBVUxUEAASHgoaTUFU",
             "Q0gzX0ZJTklTSF9SRUFTT05fTEVBVkUQARIcChhNQVRDSDNfRklOSVNIX1JF",
             "QVNPTl9ESUUQAhIgChxNQVRDSDNfRklOSVNIX1JFQVNPTl9HQU1FRU5EEAMS",
-            "IAocTUFUQ0gzX0ZJTklTSF9SRUFTT05fS0lDS09VVBAEQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "IAocTUFUQ0gzX0ZJTklTSF9SRUFTT05fS0lDS09VVBAEEhwKGE1BVENIM19G",
+            "SU5JU0hfUkVBU09OX1dJThAFEh0KGU1BVENIM19GSU5JU0hfUkVBU09OX0xP",
+            "U0UQBhIcChhNQVRDSDNfRklOSVNIX1JFQVNPTl9USUUQB0IeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.Match3FinishReason), }, null, null));
@@ -44,6 +46,9 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("MATCH3_FINISH_REASON_DIE")] Die = 2,
     [pbr::OriginalName("MATCH3_FINISH_REASON_GAMEEND")] Gameend = 3,
     [pbr::OriginalName("MATCH3_FINISH_REASON_KICKOUT")] Kickout = 4,
+    [pbr::OriginalName("MATCH3_FINISH_REASON_WIN")] Win = 5,
+    [pbr::OriginalName("MATCH3_FINISH_REASON_LOSE")] Lose = 6,
+    [pbr::OriginalName("MATCH3_FINISH_REASON_TIE")] Tie = 7,
   }
 
   #endregion

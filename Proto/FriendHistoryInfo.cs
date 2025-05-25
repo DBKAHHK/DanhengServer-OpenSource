@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdGcmllbmRIaXN0b3J5SW5mby5wcm90byJBChFGcmllbmRIaXN0b3J5SW5m",
-            "bxIUCgxjb250YWN0X3NpZGUYCSABKA0SFgoObGFzdF9zZW5kX3RpbWUYByAB",
+            "bxIUCgxjb250YWN0X3NpZGUYBCABKA0SFgoObGFzdF9zZW5kX3RpbWUYCyAB",
             "KANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "contact_side" field.</summary>
-    public const int ContactSideFieldNumber = 9;
+    public const int ContactSideFieldNumber = 4;
     private uint contactSide_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "last_send_time" field.</summary>
-    public const int LastSendTimeFieldNumber = 7;
+    public const int LastSendTimeFieldNumber = 11;
     private long lastSendTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LastSendTime != 0L) {
-        output.WriteRawTag(56);
-        output.WriteInt64(LastSendTime);
-      }
       if (ContactSide != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(ContactSide);
+      }
+      if (LastSendTime != 0L) {
+        output.WriteRawTag(88);
+        output.WriteInt64(LastSendTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LastSendTime != 0L) {
-        output.WriteRawTag(56);
-        output.WriteInt64(LastSendTime);
-      }
       if (ContactSide != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(ContactSide);
+      }
+      if (LastSendTime != 0L) {
+        output.WriteRawTag(88);
+        output.WriteInt64(LastSendTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            LastSendTime = input.ReadInt64();
+          case 32: {
+            ContactSide = input.ReadUInt32();
             break;
           }
-          case 72: {
-            ContactSide = input.ReadUInt32();
+          case 88: {
+            LastSendTime = input.ReadInt64();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            LastSendTime = input.ReadInt64();
+          case 32: {
+            ContactSide = input.ReadUInt32();
             break;
           }
-          case 72: {
-            ContactSide = input.ReadUInt32();
+          case 88: {
+            LastSendTime = input.ReadInt64();
             break;
           }
         }

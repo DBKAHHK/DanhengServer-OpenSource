@@ -24,19 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournLevelInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlSb2d1ZVRvdXJuTGV2ZWxJbmZvLnByb3RvGhtSb2d1ZVRvdXJuTGV2ZWxT",
-            "dGF0dXMucHJvdG8aHFJvZ3VlVG91cm5TZXR0bGVSZWFzb24ucHJvdG8aFVJv",
-            "Z3VlVG91cm5MZXZlbC5wcm90byLUAQoTUm9ndWVUb3VybkxldmVsSW5mbxIX",
-            "Cg9jdXJfbGV2ZWxfaW5kZXgYCyABKA0SEwoLTEdCT0hESUNGUEsYDCABKAgS",
-            "KQoPbGV2ZWxfaW5mb19saXN0GA8gAygLMhAuUm9ndWVUb3VybkxldmVsEhMK",
-            "C0VKT0lKR0NMQ0pPGAQgASgIEicKBnJlYXNvbhgNIAEoDjIXLlJvZ3VlVG91",
-            "cm5TZXR0bGVSZWFzb24SJgoGc3RhdHVzGAcgASgOMhYuUm9ndWVUb3Vybkxl",
-            "dmVsU3RhdHVzQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "ChlSb2d1ZVRvdXJuTGV2ZWxJbmZvLnByb3RvGhVSb2d1ZVRvdXJuTGV2ZWwu",
+            "cHJvdG8aG1JvZ3VlVG91cm5MZXZlbFN0YXR1cy5wcm90bxocUm9ndWVUb3Vy",
+            "blNldHRsZVJlYXNvbi5wcm90byLUAQoTUm9ndWVUb3VybkxldmVsSW5mbxIT",
+            "CgtFSk9JSkdDTENKTxgCIAEoCBITCgtMR0JPSERJQ0ZQSxgNIAEoCBIXCg9j",
+            "dXJfbGV2ZWxfaW5kZXgYDCABKA0SJgoGc3RhdHVzGAYgASgOMhYuUm9ndWVU",
+            "b3VybkxldmVsU3RhdHVzEicKBnJlYXNvbhgPIAEoDjIXLlJvZ3VlVG91cm5T",
+            "ZXR0bGVSZWFzb24SKQoPbGV2ZWxfaW5mb19saXN0GAkgAygLMhAuUm9ndWVU",
+            "b3VybkxldmVsQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournLevelStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSettleReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLevelReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournLevelReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLevelStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSettleReasonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournLevelInfo), global::EggLink.DanhengServer.Proto.RogueTournLevelInfo.Parser, new[]{ "CurLevelIndex", "LGBOHDICFPK", "LevelInfoList", "EJOIJGCLCJO", "Reason", "Status" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournLevelInfo), global::EggLink.DanhengServer.Proto.RogueTournLevelInfo.Parser, new[]{ "EJOIJGCLCJO", "LGBOHDICFPK", "CurLevelIndex", "Status", "Reason", "LevelInfoList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,12 +78,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournLevelInfo(RogueTournLevelInfo other) : this() {
-      curLevelIndex_ = other.curLevelIndex_;
-      lGBOHDICFPK_ = other.lGBOHDICFPK_;
-      levelInfoList_ = other.levelInfoList_.Clone();
       eJOIJGCLCJO_ = other.eJOIJGCLCJO_;
-      reason_ = other.reason_;
+      lGBOHDICFPK_ = other.lGBOHDICFPK_;
+      curLevelIndex_ = other.curLevelIndex_;
       status_ = other.status_;
+      reason_ = other.reason_;
+      levelInfoList_ = other.levelInfoList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -93,43 +93,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournLevelInfo(this);
     }
 
-    /// <summary>Field number for the "cur_level_index" field.</summary>
-    public const int CurLevelIndexFieldNumber = 11;
-    private uint curLevelIndex_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurLevelIndex {
-      get { return curLevelIndex_; }
-      set {
-        curLevelIndex_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "LGBOHDICFPK" field.</summary>
-    public const int LGBOHDICFPKFieldNumber = 12;
-    private bool lGBOHDICFPK_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool LGBOHDICFPK {
-      get { return lGBOHDICFPK_; }
-      set {
-        lGBOHDICFPK_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "level_info_list" field.</summary>
-    public const int LevelInfoListFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueTournLevel> _repeated_levelInfoList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.RogueTournLevel.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournLevel> levelInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournLevel>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournLevel> LevelInfoList {
-      get { return levelInfoList_; }
-    }
-
     /// <summary>Field number for the "EJOIJGCLCJO" field.</summary>
-    public const int EJOIJGCLCJOFieldNumber = 4;
+    public const int EJOIJGCLCJOFieldNumber = 2;
     private bool eJOIJGCLCJO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -140,8 +105,44 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "LGBOHDICFPK" field.</summary>
+    public const int LGBOHDICFPKFieldNumber = 13;
+    private bool lGBOHDICFPK_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool LGBOHDICFPK {
+      get { return lGBOHDICFPK_; }
+      set {
+        lGBOHDICFPK_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cur_level_index" field.</summary>
+    public const int CurLevelIndexFieldNumber = 12;
+    private uint curLevelIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CurLevelIndex {
+      get { return curLevelIndex_; }
+      set {
+        curLevelIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.RogueTournLevelStatus status_ = global::EggLink.DanhengServer.Proto.RogueTournLevelStatus.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueTournLevelStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
     /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 13;
+    public const int ReasonFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.RogueTournSettleReason reason_ = global::EggLink.DanhengServer.Proto.RogueTournSettleReason.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,16 +153,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.RogueTournLevelStatus status_ = global::EggLink.DanhengServer.Proto.RogueTournLevelStatus.None;
+    /// <summary>Field number for the "level_info_list" field.</summary>
+    public const int LevelInfoListFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueTournLevel> _repeated_levelInfoList_codec
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.RogueTournLevel.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournLevel> levelInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournLevel>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournLevelStatus Status {
-      get { return status_; }
-      set {
-        status_ = value;
-      }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournLevel> LevelInfoList {
+      get { return levelInfoList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -179,12 +179,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CurLevelIndex != other.CurLevelIndex) return false;
-      if (LGBOHDICFPK != other.LGBOHDICFPK) return false;
-      if(!levelInfoList_.Equals(other.levelInfoList_)) return false;
       if (EJOIJGCLCJO != other.EJOIJGCLCJO) return false;
-      if (Reason != other.Reason) return false;
+      if (LGBOHDICFPK != other.LGBOHDICFPK) return false;
+      if (CurLevelIndex != other.CurLevelIndex) return false;
       if (Status != other.Status) return false;
+      if (Reason != other.Reason) return false;
+      if(!levelInfoList_.Equals(other.levelInfoList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -192,12 +192,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CurLevelIndex != 0) hash ^= CurLevelIndex.GetHashCode();
-      if (LGBOHDICFPK != false) hash ^= LGBOHDICFPK.GetHashCode();
-      hash ^= levelInfoList_.GetHashCode();
       if (EJOIJGCLCJO != false) hash ^= EJOIJGCLCJO.GetHashCode();
-      if (Reason != global::EggLink.DanhengServer.Proto.RogueTournSettleReason.None) hash ^= Reason.GetHashCode();
+      if (LGBOHDICFPK != false) hash ^= LGBOHDICFPK.GetHashCode();
+      if (CurLevelIndex != 0) hash ^= CurLevelIndex.GetHashCode();
       if (Status != global::EggLink.DanhengServer.Proto.RogueTournLevelStatus.None) hash ^= Status.GetHashCode();
+      if (Reason != global::EggLink.DanhengServer.Proto.RogueTournSettleReason.None) hash ^= Reason.GetHashCode();
+      hash ^= levelInfoList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -217,26 +217,26 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EJOIJGCLCJO != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteBool(EJOIJGCLCJO);
       }
       if (Status != global::EggLink.DanhengServer.Proto.RogueTournLevelStatus.None) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteEnum((int) Status);
       }
+      levelInfoList_.WriteTo(output, _repeated_levelInfoList_codec);
       if (CurLevelIndex != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(96);
         output.WriteUInt32(CurLevelIndex);
       }
       if (LGBOHDICFPK != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteBool(LGBOHDICFPK);
       }
       if (Reason != global::EggLink.DanhengServer.Proto.RogueTournSettleReason.None) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteEnum((int) Reason);
       }
-      levelInfoList_.WriteTo(output, _repeated_levelInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -248,26 +248,26 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EJOIJGCLCJO != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteBool(EJOIJGCLCJO);
       }
       if (Status != global::EggLink.DanhengServer.Proto.RogueTournLevelStatus.None) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteEnum((int) Status);
       }
+      levelInfoList_.WriteTo(ref output, _repeated_levelInfoList_codec);
       if (CurLevelIndex != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(96);
         output.WriteUInt32(CurLevelIndex);
       }
       if (LGBOHDICFPK != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteBool(LGBOHDICFPK);
       }
       if (Reason != global::EggLink.DanhengServer.Proto.RogueTournSettleReason.None) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteEnum((int) Reason);
       }
-      levelInfoList_.WriteTo(ref output, _repeated_levelInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -278,22 +278,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CurLevelIndex != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurLevelIndex);
+      if (EJOIJGCLCJO != false) {
+        size += 1 + 1;
       }
       if (LGBOHDICFPK != false) {
         size += 1 + 1;
       }
-      size += levelInfoList_.CalculateSize(_repeated_levelInfoList_codec);
-      if (EJOIJGCLCJO != false) {
-        size += 1 + 1;
-      }
-      if (Reason != global::EggLink.DanhengServer.Proto.RogueTournSettleReason.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
+      if (CurLevelIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurLevelIndex);
       }
       if (Status != global::EggLink.DanhengServer.Proto.RogueTournLevelStatus.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
+      if (Reason != global::EggLink.DanhengServer.Proto.RogueTournSettleReason.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
+      }
+      size += levelInfoList_.CalculateSize(_repeated_levelInfoList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -306,22 +306,22 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CurLevelIndex != 0) {
-        CurLevelIndex = other.CurLevelIndex;
+      if (other.EJOIJGCLCJO != false) {
+        EJOIJGCLCJO = other.EJOIJGCLCJO;
       }
       if (other.LGBOHDICFPK != false) {
         LGBOHDICFPK = other.LGBOHDICFPK;
       }
-      levelInfoList_.Add(other.levelInfoList_);
-      if (other.EJOIJGCLCJO != false) {
-        EJOIJGCLCJO = other.EJOIJGCLCJO;
-      }
-      if (other.Reason != global::EggLink.DanhengServer.Proto.RogueTournSettleReason.None) {
-        Reason = other.Reason;
+      if (other.CurLevelIndex != 0) {
+        CurLevelIndex = other.CurLevelIndex;
       }
       if (other.Status != global::EggLink.DanhengServer.Proto.RogueTournLevelStatus.None) {
         Status = other.Status;
       }
+      if (other.Reason != global::EggLink.DanhengServer.Proto.RogueTournSettleReason.None) {
+        Reason = other.Reason;
+      }
+      levelInfoList_.Add(other.levelInfoList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -337,28 +337,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 16: {
             EJOIJGCLCJO = input.ReadBool();
             break;
           }
-          case 56: {
+          case 48: {
             Status = (global::EggLink.DanhengServer.Proto.RogueTournLevelStatus) input.ReadEnum();
             break;
           }
-          case 88: {
-            CurLevelIndex = input.ReadUInt32();
+          case 74: {
+            levelInfoList_.AddEntriesFrom(input, _repeated_levelInfoList_codec);
             break;
           }
           case 96: {
-            LGBOHDICFPK = input.ReadBool();
+            CurLevelIndex = input.ReadUInt32();
             break;
           }
           case 104: {
-            Reason = (global::EggLink.DanhengServer.Proto.RogueTournSettleReason) input.ReadEnum();
+            LGBOHDICFPK = input.ReadBool();
             break;
           }
-          case 122: {
-            levelInfoList_.AddEntriesFrom(input, _repeated_levelInfoList_codec);
+          case 120: {
+            Reason = (global::EggLink.DanhengServer.Proto.RogueTournSettleReason) input.ReadEnum();
             break;
           }
         }
@@ -376,28 +376,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 16: {
             EJOIJGCLCJO = input.ReadBool();
             break;
           }
-          case 56: {
+          case 48: {
             Status = (global::EggLink.DanhengServer.Proto.RogueTournLevelStatus) input.ReadEnum();
             break;
           }
-          case 88: {
-            CurLevelIndex = input.ReadUInt32();
+          case 74: {
+            levelInfoList_.AddEntriesFrom(ref input, _repeated_levelInfoList_codec);
             break;
           }
           case 96: {
-            LGBOHDICFPK = input.ReadBool();
+            CurLevelIndex = input.ReadUInt32();
             break;
           }
           case 104: {
-            Reason = (global::EggLink.DanhengServer.Proto.RogueTournSettleReason) input.ReadEnum();
+            LGBOHDICFPK = input.ReadBool();
             break;
           }
-          case 122: {
-            levelInfoList_.AddEntriesFrom(ref input, _repeated_levelInfoList_codec);
+          case 120: {
+            Reason = (global::EggLink.DanhengServer.Proto.RogueTournSettleReason) input.ReadEnum();
             break;
           }
         }

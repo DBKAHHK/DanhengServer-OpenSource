@@ -27,7 +27,7 @@ namespace EggLink.DanhengServer.Proto {
             "CilTeW5jUm9ndWVDb21tb25EaWFsb2d1ZURhdGFTY05vdGlmeS5wcm90bxoh",
             "Um9ndWVDb21tb25EaWFsb2d1ZURhdGFJbmZvLnByb3RvIl8KI1N5bmNSb2d1",
             "ZUNvbW1vbkRpYWxvZ3VlRGF0YVNjTm90aWZ5EjgKEmRpYWxvZ3VlX2RhdGFf",
-            "bGlzdBgCIAMoCzIcLlJvZ3VlQ29tbW9uRGlhbG9ndWVEYXRhSW5mb0IeqgIb",
+            "bGlzdBgEIAMoCzIcLlJvZ3VlQ29tbW9uRGlhbG9ndWVEYXRhSW5mb0IeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfoReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "dialogue_data_list" field.</summary>
-    public const int DialogueDataListFieldNumber = 2;
+    public const int DialogueDataListFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo> _repeated_dialogueDataList_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo> dialogueDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 34: {
             dialogueDataList_.AddEntriesFrom(input, _repeated_dialogueDataList_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 34: {
             dialogueDataList_.AddEntriesFrom(ref input, _repeated_dialogueDataList_codec);
             break;
           }

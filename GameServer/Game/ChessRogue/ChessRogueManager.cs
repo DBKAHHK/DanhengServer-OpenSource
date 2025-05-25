@@ -215,8 +215,6 @@ public class ChessRogueManager(PlayerInstance player) : BasePlayerManager(player
             }
         };
 
-        foreach (var area in GameData.RogueDLCAreaData.Keys) proto.ExploredAreaIdList.Add((uint)area);
-
 
         return proto;
     }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFKQUxMQVBQQ1BGRS5wcm90byIzCgtKQUxMQVBQQ1BGRRIPCgd0ZWNoX2lk",
-            "GAggASgNEhMKC0ZIT0tGRE1GTktHGAsgASgIQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "GAQgASgNEhMKC0ZIT0tGRE1GTktHGAkgASgIQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "tech_id" field.</summary>
-    public const int TechIdFieldNumber = 8;
+    public const int TechIdFieldNumber = 4;
     private uint techId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FHOKFDMFNKG" field.</summary>
-    public const int FHOKFDMFNKGFieldNumber = 11;
+    public const int FHOKFDMFNKGFieldNumber = 9;
     private bool fHOKFDMFNKG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (TechId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(32);
         output.WriteUInt32(TechId);
       }
       if (FHOKFDMFNKG != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteBool(FHOKFDMFNKG);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TechId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(32);
         output.WriteUInt32(TechId);
       }
       if (FHOKFDMFNKG != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteBool(FHOKFDMFNKG);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 32: {
             TechId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 72: {
             FHOKFDMFNKG = input.ReadBool();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 32: {
             TechId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 72: {
             FHOKFDMFNKG = input.ReadBool();
             break;
           }

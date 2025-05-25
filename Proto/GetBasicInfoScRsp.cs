@@ -25,18 +25,18 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdHZXRCYXNpY0luZm9TY1JzcC5wcm90bxoXUGxheWVyU2V0dGluZ0luZm8u",
-            "cHJvdG8inwIKEUdldEJhc2ljSW5mb1NjUnNwEhUKDWlzX2dlbmRlcl9zZXQY",
-            "CCABKAgSGQoRbmV4dF9yZWNvdmVyX3RpbWUYDiABKAMSDgoGZ2VuZGVyGAog",
-            "ASgNEg8KB3JldGNvZGUYBiABKA0SIgoad2Vla19jb2Nvb25fZmluaXNoZWRf",
-            "Y291bnQYDyABKA0SHgoWbGFzdF9zZXRfbmlja25hbWVfdGltZRgLIAEoAxIW",
-            "Cg5leGNoYW5nZV90aW1lcxgCIAEoDRIvChNwbGF5ZXJfc2V0dGluZ19pbmZv",
-            "GAMgASgLMhIuUGxheWVyU2V0dGluZ0luZm8SGQoRZ2FtZXBsYXlfYmlydGhk",
-            "YXkYByABKA0SDwoHY3VyX2RheRgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "cHJvdG8inwIKEUdldEJhc2ljSW5mb1NjUnNwEi8KE3BsYXllcl9zZXR0aW5n",
+            "X2luZm8YDCABKAsyEi5QbGF5ZXJTZXR0aW5nSW5mbxIeChZsYXN0X3NldF9u",
+            "aWNrbmFtZV90aW1lGAUgASgDEhkKEW5leHRfcmVjb3Zlcl90aW1lGAogASgD",
+            "EiIKGndlZWtfY29jb29uX2ZpbmlzaGVkX2NvdW50GA8gASgNEg4KBmdlbmRl",
+            "chgIIAEoDRIVCg1pc19nZW5kZXJfc2V0GAQgASgIEhYKDmV4Y2hhbmdlX3Rp",
+            "bWVzGA0gASgNEg8KB3JldGNvZGUYAyABKA0SDwoHY3VyX2RheRgCIAEoDRIZ",
+            "ChFnYW1lcGxheV9iaXJ0aGRheRgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerSettingInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBasicInfoScRsp), global::EggLink.DanhengServer.Proto.GetBasicInfoScRsp.Parser, new[]{ "IsGenderSet", "NextRecoverTime", "Gender", "Retcode", "WeekCocoonFinishedCount", "LastSetNicknameTime", "ExchangeTimes", "PlayerSettingInfo", "GameplayBirthday", "CurDay" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBasicInfoScRsp), global::EggLink.DanhengServer.Proto.GetBasicInfoScRsp.Parser, new[]{ "PlayerSettingInfo", "LastSetNicknameTime", "NextRecoverTime", "WeekCocoonFinishedCount", "Gender", "IsGenderSet", "ExchangeTimes", "Retcode", "CurDay", "GameplayBirthday" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,16 +78,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBasicInfoScRsp(GetBasicInfoScRsp other) : this() {
-      isGenderSet_ = other.isGenderSet_;
-      nextRecoverTime_ = other.nextRecoverTime_;
-      gender_ = other.gender_;
-      retcode_ = other.retcode_;
-      weekCocoonFinishedCount_ = other.weekCocoonFinishedCount_;
-      lastSetNicknameTime_ = other.lastSetNicknameTime_;
-      exchangeTimes_ = other.exchangeTimes_;
       playerSettingInfo_ = other.playerSettingInfo_ != null ? other.playerSettingInfo_.Clone() : null;
-      gameplayBirthday_ = other.gameplayBirthday_;
+      lastSetNicknameTime_ = other.lastSetNicknameTime_;
+      nextRecoverTime_ = other.nextRecoverTime_;
+      weekCocoonFinishedCount_ = other.weekCocoonFinishedCount_;
+      gender_ = other.gender_;
+      isGenderSet_ = other.isGenderSet_;
+      exchangeTimes_ = other.exchangeTimes_;
+      retcode_ = other.retcode_;
       curDay_ = other.curDay_;
+      gameplayBirthday_ = other.gameplayBirthday_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -97,20 +97,32 @@ namespace EggLink.DanhengServer.Proto {
       return new GetBasicInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "is_gender_set" field.</summary>
-    public const int IsGenderSetFieldNumber = 8;
-    private bool isGenderSet_;
+    /// <summary>Field number for the "player_setting_info" field.</summary>
+    public const int PlayerSettingInfoFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.PlayerSettingInfo playerSettingInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsGenderSet {
-      get { return isGenderSet_; }
+    public global::EggLink.DanhengServer.Proto.PlayerSettingInfo PlayerSettingInfo {
+      get { return playerSettingInfo_; }
       set {
-        isGenderSet_ = value;
+        playerSettingInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_set_nickname_time" field.</summary>
+    public const int LastSetNicknameTimeFieldNumber = 5;
+    private long lastSetNicknameTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long LastSetNicknameTime {
+      get { return lastSetNicknameTime_; }
+      set {
+        lastSetNicknameTime_ = value;
       }
     }
 
     /// <summary>Field number for the "next_recover_time" field.</summary>
-    public const int NextRecoverTimeFieldNumber = 14;
+    public const int NextRecoverTimeFieldNumber = 10;
     private long nextRecoverTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,30 +130,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return nextRecoverTime_; }
       set {
         nextRecoverTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "gender" field.</summary>
-    public const int GenderFieldNumber = 10;
-    private uint gender_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Gender {
-      get { return gender_; }
-      set {
-        gender_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
       }
     }
 
@@ -157,20 +145,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "last_set_nickname_time" field.</summary>
-    public const int LastSetNicknameTimeFieldNumber = 11;
-    private long lastSetNicknameTime_;
+    /// <summary>Field number for the "gender" field.</summary>
+    public const int GenderFieldNumber = 8;
+    private uint gender_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long LastSetNicknameTime {
-      get { return lastSetNicknameTime_; }
+    public uint Gender {
+      get { return gender_; }
       set {
-        lastSetNicknameTime_ = value;
+        gender_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_gender_set" field.</summary>
+    public const int IsGenderSetFieldNumber = 4;
+    private bool isGenderSet_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsGenderSet {
+      get { return isGenderSet_; }
+      set {
+        isGenderSet_ = value;
       }
     }
 
     /// <summary>Field number for the "exchange_times" field.</summary>
-    public const int ExchangeTimesFieldNumber = 2;
+    public const int ExchangeTimesFieldNumber = 13;
     private uint exchangeTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -181,32 +181,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "player_setting_info" field.</summary>
-    public const int PlayerSettingInfoFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.PlayerSettingInfo playerSettingInfo_;
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 3;
+    private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlayerSettingInfo PlayerSettingInfo {
-      get { return playerSettingInfo_; }
+    public uint Retcode {
+      get { return retcode_; }
       set {
-        playerSettingInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "gameplay_birthday" field.</summary>
-    public const int GameplayBirthdayFieldNumber = 7;
-    private uint gameplayBirthday_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GameplayBirthday {
-      get { return gameplayBirthday_; }
-      set {
-        gameplayBirthday_ = value;
+        retcode_ = value;
       }
     }
 
     /// <summary>Field number for the "cur_day" field.</summary>
-    public const int CurDayFieldNumber = 9;
+    public const int CurDayFieldNumber = 2;
     private uint curDay_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -214,6 +202,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return curDay_; }
       set {
         curDay_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gameplay_birthday" field.</summary>
+    public const int GameplayBirthdayFieldNumber = 1;
+    private uint gameplayBirthday_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GameplayBirthday {
+      get { return gameplayBirthday_; }
+      set {
+        gameplayBirthday_ = value;
       }
     }
 
@@ -232,16 +232,16 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsGenderSet != other.IsGenderSet) return false;
-      if (NextRecoverTime != other.NextRecoverTime) return false;
-      if (Gender != other.Gender) return false;
-      if (Retcode != other.Retcode) return false;
-      if (WeekCocoonFinishedCount != other.WeekCocoonFinishedCount) return false;
-      if (LastSetNicknameTime != other.LastSetNicknameTime) return false;
-      if (ExchangeTimes != other.ExchangeTimes) return false;
       if (!object.Equals(PlayerSettingInfo, other.PlayerSettingInfo)) return false;
-      if (GameplayBirthday != other.GameplayBirthday) return false;
+      if (LastSetNicknameTime != other.LastSetNicknameTime) return false;
+      if (NextRecoverTime != other.NextRecoverTime) return false;
+      if (WeekCocoonFinishedCount != other.WeekCocoonFinishedCount) return false;
+      if (Gender != other.Gender) return false;
+      if (IsGenderSet != other.IsGenderSet) return false;
+      if (ExchangeTimes != other.ExchangeTimes) return false;
+      if (Retcode != other.Retcode) return false;
       if (CurDay != other.CurDay) return false;
+      if (GameplayBirthday != other.GameplayBirthday) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -249,16 +249,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsGenderSet != false) hash ^= IsGenderSet.GetHashCode();
-      if (NextRecoverTime != 0L) hash ^= NextRecoverTime.GetHashCode();
-      if (Gender != 0) hash ^= Gender.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (WeekCocoonFinishedCount != 0) hash ^= WeekCocoonFinishedCount.GetHashCode();
-      if (LastSetNicknameTime != 0L) hash ^= LastSetNicknameTime.GetHashCode();
-      if (ExchangeTimes != 0) hash ^= ExchangeTimes.GetHashCode();
       if (playerSettingInfo_ != null) hash ^= PlayerSettingInfo.GetHashCode();
-      if (GameplayBirthday != 0) hash ^= GameplayBirthday.GetHashCode();
+      if (LastSetNicknameTime != 0L) hash ^= LastSetNicknameTime.GetHashCode();
+      if (NextRecoverTime != 0L) hash ^= NextRecoverTime.GetHashCode();
+      if (WeekCocoonFinishedCount != 0) hash ^= WeekCocoonFinishedCount.GetHashCode();
+      if (Gender != 0) hash ^= Gender.GetHashCode();
+      if (IsGenderSet != false) hash ^= IsGenderSet.GetHashCode();
+      if (ExchangeTimes != 0) hash ^= ExchangeTimes.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (CurDay != 0) hash ^= CurDay.GetHashCode();
+      if (GameplayBirthday != 0) hash ^= GameplayBirthday.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -277,41 +277,41 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ExchangeTimes != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(ExchangeTimes);
-      }
-      if (playerSettingInfo_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(PlayerSettingInfo);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Retcode);
-      }
       if (GameplayBirthday != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteUInt32(GameplayBirthday);
       }
-      if (IsGenderSet != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(IsGenderSet);
-      }
       if (CurDay != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteUInt32(CurDay);
       }
-      if (Gender != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Gender);
+      if (Retcode != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Retcode);
+      }
+      if (IsGenderSet != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsGenderSet);
       }
       if (LastSetNicknameTime != 0L) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteInt64(LastSetNicknameTime);
       }
+      if (Gender != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Gender);
+      }
       if (NextRecoverTime != 0L) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteInt64(NextRecoverTime);
+      }
+      if (playerSettingInfo_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(PlayerSettingInfo);
+      }
+      if (ExchangeTimes != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(ExchangeTimes);
       }
       if (WeekCocoonFinishedCount != 0) {
         output.WriteRawTag(120);
@@ -327,41 +327,41 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ExchangeTimes != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(ExchangeTimes);
-      }
-      if (playerSettingInfo_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(PlayerSettingInfo);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Retcode);
-      }
       if (GameplayBirthday != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteUInt32(GameplayBirthday);
       }
-      if (IsGenderSet != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(IsGenderSet);
-      }
       if (CurDay != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteUInt32(CurDay);
       }
-      if (Gender != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Gender);
+      if (Retcode != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Retcode);
+      }
+      if (IsGenderSet != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsGenderSet);
       }
       if (LastSetNicknameTime != 0L) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteInt64(LastSetNicknameTime);
       }
+      if (Gender != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Gender);
+      }
       if (NextRecoverTime != 0L) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteInt64(NextRecoverTime);
+      }
+      if (playerSettingInfo_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(PlayerSettingInfo);
+      }
+      if (ExchangeTimes != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(ExchangeTimes);
       }
       if (WeekCocoonFinishedCount != 0) {
         output.WriteRawTag(120);
@@ -377,35 +377,35 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsGenderSet != false) {
-        size += 1 + 1;
-      }
-      if (NextRecoverTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(NextRecoverTime);
-      }
-      if (Gender != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Gender);
-      }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      if (WeekCocoonFinishedCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WeekCocoonFinishedCount);
+      if (playerSettingInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerSettingInfo);
       }
       if (LastSetNicknameTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastSetNicknameTime);
       }
+      if (NextRecoverTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(NextRecoverTime);
+      }
+      if (WeekCocoonFinishedCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WeekCocoonFinishedCount);
+      }
+      if (Gender != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Gender);
+      }
+      if (IsGenderSet != false) {
+        size += 1 + 1;
+      }
       if (ExchangeTimes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExchangeTimes);
       }
-      if (playerSettingInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerSettingInfo);
-      }
-      if (GameplayBirthday != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameplayBirthday);
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (CurDay != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurDay);
+      }
+      if (GameplayBirthday != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameplayBirthday);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -419,38 +419,38 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsGenderSet != false) {
-        IsGenderSet = other.IsGenderSet;
-      }
-      if (other.NextRecoverTime != 0L) {
-        NextRecoverTime = other.NextRecoverTime;
-      }
-      if (other.Gender != 0) {
-        Gender = other.Gender;
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
-      if (other.WeekCocoonFinishedCount != 0) {
-        WeekCocoonFinishedCount = other.WeekCocoonFinishedCount;
-      }
-      if (other.LastSetNicknameTime != 0L) {
-        LastSetNicknameTime = other.LastSetNicknameTime;
-      }
-      if (other.ExchangeTimes != 0) {
-        ExchangeTimes = other.ExchangeTimes;
-      }
       if (other.playerSettingInfo_ != null) {
         if (playerSettingInfo_ == null) {
           PlayerSettingInfo = new global::EggLink.DanhengServer.Proto.PlayerSettingInfo();
         }
         PlayerSettingInfo.MergeFrom(other.PlayerSettingInfo);
       }
-      if (other.GameplayBirthday != 0) {
-        GameplayBirthday = other.GameplayBirthday;
+      if (other.LastSetNicknameTime != 0L) {
+        LastSetNicknameTime = other.LastSetNicknameTime;
+      }
+      if (other.NextRecoverTime != 0L) {
+        NextRecoverTime = other.NextRecoverTime;
+      }
+      if (other.WeekCocoonFinishedCount != 0) {
+        WeekCocoonFinishedCount = other.WeekCocoonFinishedCount;
+      }
+      if (other.Gender != 0) {
+        Gender = other.Gender;
+      }
+      if (other.IsGenderSet != false) {
+        IsGenderSet = other.IsGenderSet;
+      }
+      if (other.ExchangeTimes != 0) {
+        ExchangeTimes = other.ExchangeTimes;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       if (other.CurDay != 0) {
         CurDay = other.CurDay;
+      }
+      if (other.GameplayBirthday != 0) {
+        GameplayBirthday = other.GameplayBirthday;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -467,43 +467,43 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            ExchangeTimes = input.ReadUInt32();
+          case 8: {
+            GameplayBirthday = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 16: {
+            CurDay = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            IsGenderSet = input.ReadBool();
+            break;
+          }
+          case 40: {
+            LastSetNicknameTime = input.ReadInt64();
+            break;
+          }
+          case 64: {
+            Gender = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            NextRecoverTime = input.ReadInt64();
+            break;
+          }
+          case 98: {
             if (playerSettingInfo_ == null) {
               PlayerSettingInfo = new global::EggLink.DanhengServer.Proto.PlayerSettingInfo();
             }
             input.ReadMessage(PlayerSettingInfo);
             break;
           }
-          case 48: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            GameplayBirthday = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            IsGenderSet = input.ReadBool();
-            break;
-          }
-          case 72: {
-            CurDay = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            Gender = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            LastSetNicknameTime = input.ReadInt64();
-            break;
-          }
-          case 112: {
-            NextRecoverTime = input.ReadInt64();
+          case 104: {
+            ExchangeTimes = input.ReadUInt32();
             break;
           }
           case 120: {
@@ -525,43 +525,43 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            ExchangeTimes = input.ReadUInt32();
+          case 8: {
+            GameplayBirthday = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 16: {
+            CurDay = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            IsGenderSet = input.ReadBool();
+            break;
+          }
+          case 40: {
+            LastSetNicknameTime = input.ReadInt64();
+            break;
+          }
+          case 64: {
+            Gender = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            NextRecoverTime = input.ReadInt64();
+            break;
+          }
+          case 98: {
             if (playerSettingInfo_ == null) {
               PlayerSettingInfo = new global::EggLink.DanhengServer.Proto.PlayerSettingInfo();
             }
             input.ReadMessage(PlayerSettingInfo);
             break;
           }
-          case 48: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            GameplayBirthday = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            IsGenderSet = input.ReadBool();
-            break;
-          }
-          case 72: {
-            CurDay = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            Gender = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            LastSetNicknameTime = input.ReadInt64();
-            break;
-          }
-          case 112: {
-            NextRecoverTime = input.ReadInt64();
+          case 104: {
+            ExchangeTimes = input.ReadUInt32();
             break;
           }
           case 120: {

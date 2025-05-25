@@ -24,12 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static CLFACBCGIFLReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFDTEZBQ0JDR0lGTC5wcm90byINCgtDTEZBQ0JDR0lGTEIeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFDTEZBQ0JDR0lGTC5wcm90byI3CgtDTEZBQ0JDR0lGTBITCgtJTkNBR05M",
+            "REpNThgOIAEoDRITCgtLTEZDTk9BR0dQQxgMIAEoDUIeqgIbRWdnTGluay5E",
+            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CLFACBCGIFL), global::EggLink.DanhengServer.Proto.CLFACBCGIFL.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CLFACBCGIFL), global::EggLink.DanhengServer.Proto.CLFACBCGIFL.Parser, new[]{ "INCAGNLDJMN", "KLFCNOAGGPC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -71,6 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CLFACBCGIFL(CLFACBCGIFL other) : this() {
+      iNCAGNLDJMN_ = other.iNCAGNLDJMN_;
+      kLFCNOAGGPC_ = other.kLFCNOAGGPC_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -78,6 +81,30 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CLFACBCGIFL Clone() {
       return new CLFACBCGIFL(this);
+    }
+
+    /// <summary>Field number for the "INCAGNLDJMN" field.</summary>
+    public const int INCAGNLDJMNFieldNumber = 14;
+    private uint iNCAGNLDJMN_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint INCAGNLDJMN {
+      get { return iNCAGNLDJMN_; }
+      set {
+        iNCAGNLDJMN_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "KLFCNOAGGPC" field.</summary>
+    public const int KLFCNOAGGPCFieldNumber = 12;
+    private uint kLFCNOAGGPC_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint KLFCNOAGGPC {
+      get { return kLFCNOAGGPC_; }
+      set {
+        kLFCNOAGGPC_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -95,6 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (INCAGNLDJMN != other.INCAGNLDJMN) return false;
+      if (KLFCNOAGGPC != other.KLFCNOAGGPC) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -102,6 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (INCAGNLDJMN != 0) hash ^= INCAGNLDJMN.GetHashCode();
+      if (KLFCNOAGGPC != 0) hash ^= KLFCNOAGGPC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -120,6 +151,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (KLFCNOAGGPC != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(KLFCNOAGGPC);
+      }
+      if (INCAGNLDJMN != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(INCAGNLDJMN);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -130,6 +169,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (KLFCNOAGGPC != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(KLFCNOAGGPC);
+      }
+      if (INCAGNLDJMN != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(INCAGNLDJMN);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -140,6 +187,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (INCAGNLDJMN != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INCAGNLDJMN);
+      }
+      if (KLFCNOAGGPC != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KLFCNOAGGPC);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -151,6 +204,12 @@ namespace EggLink.DanhengServer.Proto {
     public void MergeFrom(CLFACBCGIFL other) {
       if (other == null) {
         return;
+      }
+      if (other.INCAGNLDJMN != 0) {
+        INCAGNLDJMN = other.INCAGNLDJMN;
+      }
+      if (other.KLFCNOAGGPC != 0) {
+        KLFCNOAGGPC = other.KLFCNOAGGPC;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -167,6 +226,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 96: {
+            KLFCNOAGGPC = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            INCAGNLDJMN = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -182,6 +249,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 96: {
+            KLFCNOAGGPC = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            INCAGNLDJMN = input.ReadUInt32();
+            break;
+          }
         }
       }
     }

@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static AIDFBBIAPEPReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFBSURGQkJJQVBFUC5wcm90byJGCgtBSURGQkJJQVBFUBITCgtNSUxLRUFD",
-            "RkxQTxgBIAEoDRINCgVsZXZlbBgDIAEoDRITCgtQQUdDQU1BR0ZMQhgMIAEo",
+            "ChFBSURGQkJJQVBFUC5wcm90byJGCgtBSURGQkJJQVBFUBITCgtQQUdDQU1B",
+            "R0ZMQhgEIAEoDRITCgtNSUxLRUFDRkxQTxgHIAEoDRINCgVsZXZlbBgOIAEo",
             "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AIDFBBIAPEP), global::EggLink.DanhengServer.Proto.AIDFBBIAPEP.Parser, new[]{ "MILKEACFLPO", "Level", "PAGCAMAGFLB" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AIDFBBIAPEP), global::EggLink.DanhengServer.Proto.AIDFBBIAPEP.Parser, new[]{ "PAGCAMAGFLB", "MILKEACFLPO", "Level" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AIDFBBIAPEP(AIDFBBIAPEP other) : this() {
+      pAGCAMAGFLB_ = other.pAGCAMAGFLB_;
       mILKEACFLPO_ = other.mILKEACFLPO_;
       level_ = other.level_;
-      pAGCAMAGFLB_ = other.pAGCAMAGFLB_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new AIDFBBIAPEP(this);
     }
 
+    /// <summary>Field number for the "PAGCAMAGFLB" field.</summary>
+    public const int PAGCAMAGFLBFieldNumber = 4;
+    private uint pAGCAMAGFLB_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PAGCAMAGFLB {
+      get { return pAGCAMAGFLB_; }
+      set {
+        pAGCAMAGFLB_ = value;
+      }
+    }
+
     /// <summary>Field number for the "MILKEACFLPO" field.</summary>
-    public const int MILKEACFLPOFieldNumber = 1;
+    public const int MILKEACFLPOFieldNumber = 7;
     private uint mILKEACFLPO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 3;
+    public const int LevelFieldNumber = 14;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,18 +117,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return level_; }
       set {
         level_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "PAGCAMAGFLB" field.</summary>
-    public const int PAGCAMAGFLBFieldNumber = 12;
-    private uint pAGCAMAGFLB_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PAGCAMAGFLB {
-      get { return pAGCAMAGFLB_; }
-      set {
-        pAGCAMAGFLB_ = value;
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (PAGCAMAGFLB != other.PAGCAMAGFLB) return false;
       if (MILKEACFLPO != other.MILKEACFLPO) return false;
       if (Level != other.Level) return false;
-      if (PAGCAMAGFLB != other.PAGCAMAGFLB) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (PAGCAMAGFLB != 0) hash ^= PAGCAMAGFLB.GetHashCode();
       if (MILKEACFLPO != 0) hash ^= MILKEACFLPO.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
-      if (PAGCAMAGFLB != 0) hash ^= PAGCAMAGFLB.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (PAGCAMAGFLB != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(PAGCAMAGFLB);
+      }
       if (MILKEACFLPO != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(MILKEACFLPO);
       }
       if (Level != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(112);
         output.WriteUInt32(Level);
-      }
-      if (PAGCAMAGFLB != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(PAGCAMAGFLB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PAGCAMAGFLB != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(PAGCAMAGFLB);
+      }
       if (MILKEACFLPO != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(MILKEACFLPO);
       }
       if (Level != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(112);
         output.WriteUInt32(Level);
-      }
-      if (PAGCAMAGFLB != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(PAGCAMAGFLB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (PAGCAMAGFLB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PAGCAMAGFLB);
+      }
       if (MILKEACFLPO != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MILKEACFLPO);
       }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
-      }
-      if (PAGCAMAGFLB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PAGCAMAGFLB);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.PAGCAMAGFLB != 0) {
+        PAGCAMAGFLB = other.PAGCAMAGFLB;
+      }
       if (other.MILKEACFLPO != 0) {
         MILKEACFLPO = other.MILKEACFLPO;
       }
       if (other.Level != 0) {
         Level = other.Level;
-      }
-      if (other.PAGCAMAGFLB != 0) {
-        PAGCAMAGFLB = other.PAGCAMAGFLB;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 32: {
+            PAGCAMAGFLB = input.ReadUInt32();
+            break;
+          }
+          case 56: {
             MILKEACFLPO = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 112: {
             Level = input.ReadUInt32();
-            break;
-          }
-          case 96: {
-            PAGCAMAGFLB = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 32: {
+            PAGCAMAGFLB = input.ReadUInt32();
+            break;
+          }
+          case 56: {
             MILKEACFLPO = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 112: {
             Level = input.ReadUInt32();
-            break;
-          }
-          case 96: {
-            PAGCAMAGFLB = input.ReadUInt32();
             break;
           }
         }

@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static CCNANLCODDFReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFDQ05BTkxDT0RERi5wcm90bxoRT0lERkZMRUVBTEwucHJvdG8aEUhNQkFO",
-            "Q0tHQklJLnByb3RvIk8KC0NDTkFOTENPRERGEhwKBnNvdXJjZRgNIAEoCzIM",
-            "Lk9JREZGTEVFQUxMEiIKDHJvZ3VlX2FjdGlvbhgEIAEoCzIMLkhNQkFOQ0tH",
+            "ChFDQ05BTkxDT0RERi5wcm90bxoRSE1CQU5DS0dCSUkucHJvdG8aEU9JREZG",
+            "TEVFQUxMLnByb3RvIk8KC0NDTkFOTENPRERGEhwKBnNvdXJjZRgJIAEoCzIM",
+            "Lk9JREZGTEVFQUxMEiIKDHJvZ3VlX2FjdGlvbhgHIAEoCzIMLkhNQkFOQ0tH",
             "QklJQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OIDFFLEEALLReflection.Descriptor, global::EggLink.DanhengServer.Proto.HMBANCKGBIIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HMBANCKGBIIReflection.Descriptor, global::EggLink.DanhengServer.Proto.OIDFFLEEALLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CCNANLCODDF), global::EggLink.DanhengServer.Proto.CCNANLCODDF.Parser, new[]{ "Source", "RogueAction" }, null, null, null, null)
           }));
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "source" field.</summary>
-    public const int SourceFieldNumber = 13;
+    public const int SourceFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.OIDFFLEEALL source_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_action" field.</summary>
-    public const int RogueActionFieldNumber = 4;
+    public const int RogueActionFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.HMBANCKGBII rogueAction_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (rogueAction_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(58);
         output.WriteMessage(RogueAction);
       }
       if (source_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(74);
         output.WriteMessage(Source);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rogueAction_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(58);
         output.WriteMessage(RogueAction);
       }
       if (source_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(74);
         output.WriteMessage(Source);
       }
       if (_unknownFields != null) {
@@ -233,14 +233,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 58: {
             if (rogueAction_ == null) {
               RogueAction = new global::EggLink.DanhengServer.Proto.HMBANCKGBII();
             }
             input.ReadMessage(RogueAction);
             break;
           }
-          case 106: {
+          case 74: {
             if (source_ == null) {
               Source = new global::EggLink.DanhengServer.Proto.OIDFFLEEALL();
             }
@@ -262,14 +262,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 58: {
             if (rogueAction_ == null) {
               RogueAction = new global::EggLink.DanhengServer.Proto.HMBANCKGBII();
             }
             input.ReadMessage(RogueAction);
             break;
           }
-          case 106: {
+          case 74: {
             if (source_ == null) {
               Source = new global::EggLink.DanhengServer.Proto.OIDFFLEEALL();
             }

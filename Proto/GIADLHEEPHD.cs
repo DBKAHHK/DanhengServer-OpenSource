@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFHSUFETEhFRVBIRC5wcm90byI8CgtHSUFETEhFRVBIRBITCgtGSEhHRFBD",
-            "RUNFRRgJIAEoDRIYChBoYXNfdGFrZW5fcmV3YXJkGA0gASgIQh6qAhtFZ2dM",
+            "RUNFRRgLIAEoDRIYChBoYXNfdGFrZW5fcmV3YXJkGA4gASgIQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FHHGDPCECEE" field.</summary>
-    public const int FHHGDPCECEEFieldNumber = 9;
+    public const int FHHGDPCECEEFieldNumber = 11;
     private uint fHHGDPCECEE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "has_taken_reward" field.</summary>
-    public const int HasTakenRewardFieldNumber = 13;
+    public const int HasTakenRewardFieldNumber = 14;
     private bool hasTakenReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (FHHGDPCECEE != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(FHHGDPCECEE);
       }
       if (HasTakenReward != false) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteBool(HasTakenReward);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FHHGDPCECEE != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(FHHGDPCECEE);
       }
       if (HasTakenReward != false) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteBool(HasTakenReward);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 88: {
             FHHGDPCECEE = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 112: {
             HasTakenReward = input.ReadBool();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 88: {
             FHHGDPCECEE = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 112: {
             HasTakenReward = input.ReadBool();
             break;
           }

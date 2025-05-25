@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBHZXRQbGF0Zm9ybVBsYXllckluZm9Dc1JlcS5wcm90bxoSUGxhdGZvcm1U",
             "eXBlLnByb3RvIlIKGkdldFBsYXRmb3JtUGxheWVySW5mb0NzUmVxEhMKC0RO",
-            "RU5MQ0hKRUtHGAwgAygJEh8KCHBsYXRmb3JtGAcgASgOMg0uUGxhdGZvcm1U",
+            "RU5MQ0hKRUtHGAwgAygJEh8KCHBsYXRmb3JtGAsgASgOMg0uUGxhdGZvcm1U",
             "eXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, },
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "platform" field.</summary>
-    public const int PlatformFieldNumber = 7;
+    public const int PlatformFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.PlatformType platform_ = global::EggLink.DanhengServer.Proto.PlatformType.Editor;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Platform);
       }
       dNENLCHJEKG_.WriteTo(output, _repeated_dNENLCHJEKG_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Platform != global::EggLink.DanhengServer.Proto.PlatformType.Editor) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Platform);
       }
       dNENLCHJEKG_.WriteTo(ref output, _repeated_dNENLCHJEKG_codec);
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
+          case 88: {
             Platform = (global::EggLink.DanhengServer.Proto.PlatformType) input.ReadEnum();
             break;
           }
@@ -239,7 +239,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
+          case 88: {
             Platform = (global::EggLink.DanhengServer.Proto.PlatformType) input.ReadEnum();
             break;
           }

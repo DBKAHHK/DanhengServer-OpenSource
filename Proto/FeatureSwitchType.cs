@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static FeatureSwitchTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byqTEAoRRmVhdHVyZVN3aXRjaFR5",
+            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byrEFAoRRmVhdHVyZVN3aXRjaFR5",
             "cGUSFwoTRkVBVFVSRV9TV0lUQ0hfTk9ORRAAEhcKE0ZFQVRVUkVfU1dJVENI",
             "X1NIT1AQARIeChpGRUFUVVJFX1NXSVRDSF9MSU5FVVBfTkFNRRACEiAKHEZF",
             "QVRVUkVfU1dJVENIX1JFQ0hBUkdFX1NIT1AQAxIbChdGRUFUVVJFX1NXSVRD",
@@ -70,8 +70,20 @@ namespace EggLink.DanhengServer.Proto {
             "CitGRUFUVVJFX1NXSVRDSF9QUkVfQVZBVEFSX1NFVF9HUk9XVEhfVEFSR0VU",
             "EDgSKwonRkVBVFVSRV9TV0lUQ0hfSU1QT1JUX1JFTElDX0ZJTFRFUl9QTEFO",
             "EDoSJAogRkVBVFVSRV9TV0lUQ0hfR0FDSEFfREVDSURFX0lURU0QOxIcChhG",
-            "RUFUVVJFX1NXSVRDSF9JVEVNX1NZTkMQPEIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "RUFUVVJFX1NXSVRDSF9JVEVNX1NZTkMQPBIjCh9GRUFUVVJFX1NXSVRDSF9S",
+            "RUNIQVJHRV9CRU5FRklUED0SIAocRkVBVFVSRV9TV0lUQ0hfUkVDSEFSR0Vf",
+            "R0lGVBA+EjMKL0ZFQVRVUkVfU1dJVENIX1JPR1VFX1RPVVJOX0JVSUxEX1JF",
+            "Rl9TSEFSRV9DT0RFED8SJQohRkVBVFVSRV9TV0lUQ0hfR0FDSEFfQVZBVEFS",
+            "X1RPQVNUEEASOgo2RkVBVFVSRV9TV0lUQ0hfUk9HVUVfVE9VUk5fQlVJTERf",
+            "UkVGX1NIQVJFX0NPREVfUkVOQU1FEEESJgoiRkVBVFVSRV9TV0lUQ0hfUkVM",
+            "SUNfU01BUlRfRElTQ0FSRBBCEiMKH0ZFQVRVUkVfU1dJVENIX1BMQU5FVEZF",
+            "U19TT0NJQUwQQxIgChxGRUFUVVJFX1NXSVRDSF9SRUxJQ19SRUZPUkdFEEQS",
+            "IAocRkVBVFVSRV9TV0lUQ0hfUkVMSUNfQ09NUE9TRRBFEiIKHkZFQVRVUkVf",
+            "U1dJVENIX1JFTElDX0RFQ09NUE9TRRBGEiUKIUZFQVRVUkVfU1dJVENIX1JP",
+            "R1VFX1RPVVJOX0NPQ09PThBHEh8KG0ZFQVRVUkVfU1dJVENIX0lURU1fQ09N",
+            "UE9TRRBIEi4KKkZFQVRVUkVfU1dJVENIX0dST1dfTUFURVJJQUxfQVVUT19D",
+            "T01QTEVURRBJEiMKH0ZFQVRVUkVfU1dJVENIX1NLSVBfUEVSRk9STUFOQ0UQ",
+            "SkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.FeatureSwitchType), }, null, null));
@@ -140,6 +152,20 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("FEATURE_SWITCH_IMPORT_RELIC_FILTER_PLAN")] FeatureSwitchImportRelicFilterPlan = 58,
     [pbr::OriginalName("FEATURE_SWITCH_GACHA_DECIDE_ITEM")] FeatureSwitchGachaDecideItem = 59,
     [pbr::OriginalName("FEATURE_SWITCH_ITEM_SYNC")] FeatureSwitchItemSync = 60,
+    [pbr::OriginalName("FEATURE_SWITCH_RECHARGE_BENEFIT")] FeatureSwitchRechargeBenefit = 61,
+    [pbr::OriginalName("FEATURE_SWITCH_RECHARGE_GIFT")] FeatureSwitchRechargeGift = 62,
+    [pbr::OriginalName("FEATURE_SWITCH_ROGUE_TOURN_BUILD_REF_SHARE_CODE")] FeatureSwitchRogueTournBuildRefShareCode = 63,
+    [pbr::OriginalName("FEATURE_SWITCH_GACHA_AVATAR_TOAST")] FeatureSwitchGachaAvatarToast = 64,
+    [pbr::OriginalName("FEATURE_SWITCH_ROGUE_TOURN_BUILD_REF_SHARE_CODE_RENAME")] FeatureSwitchRogueTournBuildRefShareCodeRename = 65,
+    [pbr::OriginalName("FEATURE_SWITCH_RELIC_SMART_DISCARD")] FeatureSwitchRelicSmartDiscard = 66,
+    [pbr::OriginalName("FEATURE_SWITCH_PLANETFES_SOCIAL")] FeatureSwitchPlanetfesSocial = 67,
+    [pbr::OriginalName("FEATURE_SWITCH_RELIC_REFORGE")] FeatureSwitchRelicReforge = 68,
+    [pbr::OriginalName("FEATURE_SWITCH_RELIC_COMPOSE")] FeatureSwitchRelicCompose = 69,
+    [pbr::OriginalName("FEATURE_SWITCH_RELIC_DECOMPOSE")] FeatureSwitchRelicDecompose = 70,
+    [pbr::OriginalName("FEATURE_SWITCH_ROGUE_TOURN_COCOON")] FeatureSwitchRogueTournCocoon = 71,
+    [pbr::OriginalName("FEATURE_SWITCH_ITEM_COMPOSE")] FeatureSwitchItemCompose = 72,
+    [pbr::OriginalName("FEATURE_SWITCH_GROW_MATERIAL_AUTO_COMPLETE")] FeatureSwitchGrowMaterialAutoComplete = 73,
+    [pbr::OriginalName("FEATURE_SWITCH_SKIP_PERFORMANCE")] FeatureSwitchSkipPerformance = 74,
   }
 
   #endregion

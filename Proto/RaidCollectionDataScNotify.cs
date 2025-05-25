@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBSYWlkQ29sbGVjdGlvbkRhdGFTY05vdGlmeS5wcm90bxoRQUNPTkxGSkVK",
             "T0sucHJvdG8iQwoaUmFpZENvbGxlY3Rpb25EYXRhU2NOb3RpZnkSJQoPY29s",
-            "bGVjdGlvbl9pbmZvGA4gASgLMgwuQUNPTkxGSkVKT0tCHqoCG0VnZ0xpbmsu",
+            "bGVjdGlvbl9pbmZvGAYgASgLMgwuQUNPTkxGSkVKT0tCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ACONLFJEJOKReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "collection_info" field.</summary>
-    public const int CollectionInfoFieldNumber = 14;
+    public const int CollectionInfoFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.ACONLFJEJOK collectionInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (collectionInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(50);
         output.WriteMessage(CollectionInfo);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (collectionInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(50);
         output.WriteMessage(CollectionInfo);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
+          case 50: {
             if (collectionInfo_ == null) {
               CollectionInfo = new global::EggLink.DanhengServer.Proto.ACONLFJEJOK();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
+          case 50: {
             if (collectionInfo_ == null) {
               CollectionInfo = new global::EggLink.DanhengServer.Proto.ACONLFJEJOK();
             }

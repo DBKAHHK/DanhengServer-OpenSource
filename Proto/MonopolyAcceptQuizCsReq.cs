@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1Nb25vcG9seUFjY2VwdFF1aXpDc1JlcS5wcm90bxoRTktBQ0lNRU9BUEQu",
             "cHJvdG8iPAoXTW9ub3BvbHlBY2NlcHRRdWl6Q3NSZXESIQoLTkRHR0FDUElD",
-            "QkYYAyADKAsyDC5OS0FDSU1FT0FQREIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "QkYYByADKAsyDC5OS0FDSU1FT0FQREIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NKACIMEOAPDReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NDGGACPICBF" field.</summary>
-    public const int NDGGACPICBFFieldNumber = 3;
+    public const int NDGGACPICBFFieldNumber = 7;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.NKACIMEOAPD> _repeated_nDGGACPICBF_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.NKACIMEOAPD.Parser);
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.NKACIMEOAPD.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NKACIMEOAPD> nDGGACPICBF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NKACIMEOAPD>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 58: {
             nDGGACPICBF_.AddEntriesFrom(input, _repeated_nDGGACPICBF_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 58: {
             nDGGACPICBF_.AddEntriesFrom(ref input, _repeated_nDGGACPICBF_codec);
             break;
           }

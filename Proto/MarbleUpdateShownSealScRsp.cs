@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBNYXJibGVVcGRhdGVTaG93blNlYWxTY1JzcC5wcm90byJHChpNYXJibGVV",
-            "cGRhdGVTaG93blNlYWxTY1JzcBIYChB1cGRhdGVfc2VhbF9saXN0GAogAygN",
-            "Eg8KB3JldGNvZGUYASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cGRhdGVTaG93blNlYWxTY1JzcBIPCgdyZXRjb2RlGA4gASgNEhgKEHVwZGF0",
+            "ZV9zZWFsX2xpc3QYDSADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleUpdateShownSealScRsp), global::EggLink.DanhengServer.Proto.MarbleUpdateShownSealScRsp.Parser, new[]{ "UpdateSealList", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleUpdateShownSealScRsp), global::EggLink.DanhengServer.Proto.MarbleUpdateShownSealScRsp.Parser, new[]{ "Retcode", "UpdateSealList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarbleUpdateShownSealScRsp(MarbleUpdateShownSealScRsp other) : this() {
-      updateSealList_ = other.updateSealList_.Clone();
       retcode_ = other.retcode_;
+      updateSealList_ = other.updateSealList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,19 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MarbleUpdateShownSealScRsp(this);
     }
 
-    /// <summary>Field number for the "update_seal_list" field.</summary>
-    public const int UpdateSealListFieldNumber = 10;
-    private static readonly pb::FieldCodec<uint> _repeated_updateSealList_codec
-        = pb::FieldCodec.ForUInt32(82);
-    private readonly pbc::RepeatedField<uint> updateSealList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> UpdateSealList {
-      get { return updateSealList_; }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +94,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
+    }
+
+    /// <summary>Field number for the "update_seal_list" field.</summary>
+    public const int UpdateSealListFieldNumber = 13;
+    private static readonly pb::FieldCodec<uint> _repeated_updateSealList_codec
+        = pb::FieldCodec.ForUInt32(106);
+    private readonly pbc::RepeatedField<uint> updateSealList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> UpdateSealList {
+      get { return updateSealList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!updateSealList_.Equals(other.updateSealList_)) return false;
       if (Retcode != other.Retcode) return false;
+      if(!updateSealList_.Equals(other.updateSealList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= updateSealList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= updateSealList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      updateSealList_.WriteTo(output, _repeated_updateSealList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
-      updateSealList_.WriteTo(output, _repeated_updateSealList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      updateSealList_.WriteTo(ref output, _repeated_updateSealList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
-      updateSealList_.WriteTo(ref output, _repeated_updateSealList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += updateSealList_.CalculateSize(_repeated_updateSealList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
+      size += updateSealList_.CalculateSize(_repeated_updateSealList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      updateSealList_.Add(other.updateSealList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      updateSealList_.Add(other.updateSealList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
+          case 106:
+          case 104: {
+            updateSealList_.AddEntriesFrom(input, _repeated_updateSealList_codec);
             break;
           }
-          case 82:
-          case 80: {
-            updateSealList_.AddEntriesFrom(input, _repeated_updateSealList_codec);
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
+          case 106:
+          case 104: {
+            updateSealList_.AddEntriesFrom(ref input, _repeated_updateSealList_codec);
             break;
           }
-          case 82:
-          case 80: {
-            updateSealList_.AddEntriesFrom(ref input, _repeated_updateSealList_codec);
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

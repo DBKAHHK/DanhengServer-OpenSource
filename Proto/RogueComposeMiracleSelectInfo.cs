@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNSb2d1ZUNvbXBvc2VNaXJhY2xlU2VsZWN0SW5mby5wcm90byJMCh1Sb2d1",
-            "ZUNvbXBvc2VNaXJhY2xlU2VsZWN0SW5mbxITCgtKTEhGT0pPRE9LRxgJIAMo",
-            "DRIWCg5zZWxlY3RfaGludF9pZBgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "ZUNvbXBvc2VNaXJhY2xlU2VsZWN0SW5mbxITCgtKTEhGT0pPRE9LRxgOIAMo",
+            "DRIWCg5zZWxlY3RfaGludF9pZBgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JLHFOJODOKG" field.</summary>
-    public const int JLHFOJODOKGFieldNumber = 9;
+    public const int JLHFOJODOKGFieldNumber = 14;
     private static readonly pb::FieldCodec<uint> _repeated_jLHFOJODOKG_codec
-        = pb::FieldCodec.ForUInt32(74);
+        = pb::FieldCodec.ForUInt32(114);
     private readonly pbc::RepeatedField<uint> jLHFOJODOKG_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 12;
+    public const int SelectHintIdFieldNumber = 5;
     private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      jLHFOJODOKG_.WriteTo(output, _repeated_jLHFOJODOKG_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteUInt32(SelectHintId);
       }
+      jLHFOJODOKG_.WriteTo(output, _repeated_jLHFOJODOKG_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      jLHFOJODOKG_.WriteTo(ref output, _repeated_jLHFOJODOKG_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteUInt32(SelectHintId);
       }
+      jLHFOJODOKG_.WriteTo(ref output, _repeated_jLHFOJODOKG_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74:
-          case 72: {
-            jLHFOJODOKG_.AddEntriesFrom(input, _repeated_jLHFOJODOKG_codec);
+          case 40: {
+            SelectHintId = input.ReadUInt32();
             break;
           }
-          case 96: {
-            SelectHintId = input.ReadUInt32();
+          case 114:
+          case 112: {
+            jLHFOJODOKG_.AddEntriesFrom(input, _repeated_jLHFOJODOKG_codec);
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74:
-          case 72: {
-            jLHFOJODOKG_.AddEntriesFrom(ref input, _repeated_jLHFOJODOKG_codec);
+          case 40: {
+            SelectHintId = input.ReadUInt32();
             break;
           }
-          case 96: {
-            SelectHintId = input.ReadUInt32();
+          case 114:
+          case 112: {
+            jLHFOJODOKG_.AddEntriesFrom(ref input, _repeated_jLHFOJODOKG_codec);
             break;
           }
         }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBFbnRlckVyYUZsaXBwZXJSZWdpb25TY1JzcC5wcm90byJMChpFbnRlckVy",
-            "YUZsaXBwZXJSZWdpb25TY1JzcBIPCgdyZXRjb2RlGAggASgNEh0KFWVyYV9m",
-            "bGlwcGVyX3JlZ2lvbl9pZBgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "YUZsaXBwZXJSZWdpb25TY1JzcBIPCgdyZXRjb2RlGAwgASgNEh0KFWVyYV9m",
+            "bGlwcGVyX3JlZ2lvbl9pZBgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "era_flipper_region_id" field.</summary>
-    public const int EraFlipperRegionIdFieldNumber = 12;
+    public const int EraFlipperRegionIdFieldNumber = 6;
     private uint eraFlipperRegionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
-      }
       if (EraFlipperRegionId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(48);
         output.WriteUInt32(EraFlipperRegionId);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
-      }
       if (EraFlipperRegionId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(48);
         output.WriteUInt32(EraFlipperRegionId);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            Retcode = input.ReadUInt32();
+          case 48: {
+            EraFlipperRegionId = input.ReadUInt32();
             break;
           }
           case 96: {
-            EraFlipperRegionId = input.ReadUInt32();
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            Retcode = input.ReadUInt32();
+          case 48: {
+            EraFlipperRegionId = input.ReadUInt32();
             break;
           }
           case 96: {
-            EraFlipperRegionId = input.ReadUInt32();
+            Retcode = input.ReadUInt32();
             break;
           }
         }

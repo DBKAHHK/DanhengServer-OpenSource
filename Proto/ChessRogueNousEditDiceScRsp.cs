@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFDaGVzc1JvZ3VlTm91c0VkaXREaWNlU2NSc3AucHJvdG8aFENoZXNzUm9n",
-            "dWVEaWNlLnByb3RvIlgKG0NoZXNzUm9ndWVOb3VzRWRpdERpY2VTY1JzcBIP",
-            "CgdyZXRjb2RlGA0gASgNEigKD3F1ZXJ5X2RpY2VfaW5mbxgOIAEoCzIPLkNo",
-            "ZXNzUm9ndWVEaWNlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "dWVEaWNlLnByb3RvIlgKG0NoZXNzUm9ndWVOb3VzRWRpdERpY2VTY1JzcBIo",
+            "Cg9xdWVyeV9kaWNlX2luZm8YDyABKAsyDy5DaGVzc1JvZ3VlRGljZRIPCgdy",
+            "ZXRjb2RlGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueDiceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueNousEditDiceScRsp), global::EggLink.DanhengServer.Proto.ChessRogueNousEditDiceScRsp.Parser, new[]{ "Retcode", "QueryDiceInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueNousEditDiceScRsp), global::EggLink.DanhengServer.Proto.ChessRogueNousEditDiceScRsp.Parser, new[]{ "QueryDiceInfo", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueNousEditDiceScRsp(ChessRogueNousEditDiceScRsp other) : this() {
-      retcode_ = other.retcode_;
       queryDiceInfo_ = other.queryDiceInfo_ != null ? other.queryDiceInfo_.Clone() : null;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueNousEditDiceScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "query_dice_info" field.</summary>
-    public const int QueryDiceInfoFieldNumber = 14;
+    public const int QueryDiceInfoFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.ChessRogueDice queryDiceInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return queryDiceInfo_; }
       set {
         queryDiceInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 6;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if (!object.Equals(QueryDiceInfo, other.QueryDiceInfo)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (queryDiceInfo_ != null) hash ^= QueryDiceInfo.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       if (queryDiceInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(122);
         output.WriteMessage(QueryDiceInfo);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       if (queryDiceInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(122);
         output.WriteMessage(QueryDiceInfo);
       }
       if (_unknownFields != null) {
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (queryDiceInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryDiceInfo);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.queryDiceInfo_ != null) {
         if (queryDiceInfo_ == null) {
           QueryDiceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueDice();
         }
         QueryDiceInfo.MergeFrom(other.QueryDiceInfo);
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,11 +231,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 104: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 122: {
             if (queryDiceInfo_ == null) {
               QueryDiceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueDice();
             }
@@ -257,11 +257,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 104: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 122: {
             if (queryDiceInfo_ == null) {
               QueryDiceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueDice();
             }

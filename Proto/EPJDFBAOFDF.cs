@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFFUEpERkJBT0ZERi5wcm90byI0CgtFUEpERkJBT0ZERhITCgtJSkZJSEdD",
-            "S05IRxgJIAEoDRIQCghwcm9ncmVzcxgIIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "S05IRxgIIAEoDRIQCghwcm9ncmVzcxgFIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IJFIHGCKNHG" field.</summary>
-    public const int IJFIHGCKNHGFieldNumber = 9;
+    public const int IJFIHGCKNHGFieldNumber = 8;
     private uint iJFIHGCKNHG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "progress" field.</summary>
-    public const int ProgressFieldNumber = 8;
+    public const int ProgressFieldNumber = 5;
     private uint progress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Progress != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(40);
         output.WriteUInt32(Progress);
       }
       if (IJFIHGCKNHG != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(IJFIHGCKNHG);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Progress != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(40);
         output.WriteUInt32(Progress);
       }
       if (IJFIHGCKNHG != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(IJFIHGCKNHG);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 40: {
             Progress = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 64: {
             IJFIHGCKNHG = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 40: {
             Progress = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 64: {
             IJFIHGCKNHG = input.ReadUInt32();
             break;
           }

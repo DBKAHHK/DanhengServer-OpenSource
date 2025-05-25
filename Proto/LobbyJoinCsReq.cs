@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRMb2JieUpvaW5Dc1JlcS5wcm90bxoTTG9iYnlHYW1lSW5mby5wcm90byJK",
-            "Cg5Mb2JieUpvaW5Dc1JlcRIPCgdyb29tX2lkGAsgASgEEicKD2xvYmJ5X2dh",
-            "bWVfaW5mbxgEIAEoCzIOLkxvYmJ5R2FtZUluZm9CHqoCG0VnZ0xpbmsuRGFu",
+            "Cg5Mb2JieUpvaW5Dc1JlcRIPCgdyb29tX2lkGAUgASgEEicKD2xvYmJ5X2dh",
+            "bWVfaW5mbxgJIAEoCzIOLkxvYmJ5R2FtZUluZm9CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LobbyGameInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "room_id" field.</summary>
-    public const int RoomIdFieldNumber = 11;
+    public const int RoomIdFieldNumber = 5;
     private ulong roomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "lobby_game_info" field.</summary>
-    public const int LobbyGameInfoFieldNumber = 4;
+    public const int LobbyGameInfoFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.LobbyGameInfo lobbyGameInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (lobbyGameInfo_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(LobbyGameInfo);
-      }
       if (RoomId != 0UL) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt64(RoomId);
+      }
+      if (lobbyGameInfo_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(LobbyGameInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (lobbyGameInfo_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(LobbyGameInfo);
-      }
       if (RoomId != 0UL) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt64(RoomId);
+      }
+      if (lobbyGameInfo_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(LobbyGameInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 40: {
+            RoomId = input.ReadUInt64();
+            break;
+          }
+          case 74: {
             if (lobbyGameInfo_ == null) {
               LobbyGameInfo = new global::EggLink.DanhengServer.Proto.LobbyGameInfo();
             }
             input.ReadMessage(LobbyGameInfo);
-            break;
-          }
-          case 88: {
-            RoomId = input.ReadUInt64();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 40: {
+            RoomId = input.ReadUInt64();
+            break;
+          }
+          case 74: {
             if (lobbyGameInfo_ == null) {
               LobbyGameInfo = new global::EggLink.DanhengServer.Proto.LobbyGameInfo();
             }
             input.ReadMessage(LobbyGameInfo);
-            break;
-          }
-          case 88: {
-            RoomId = input.ReadUInt64();
             break;
           }
         }

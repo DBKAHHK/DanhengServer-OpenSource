@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static NLLJBBCJIAMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFOTExKQkJDSklBTS5wcm90byI1CgtOTExKQkJDSklBTRITCgtPRE9HRkhF",
-            "TkpFUBgBIAMoDRIRCglzY3JpcHRfaWQYByABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "ChFOTExKQkJDSklBTS5wcm90byI1CgtOTExKQkJDSklBTRIRCglzY3JpcHRf",
+            "aWQYCSABKA0SEwoLT0RPR0ZIRU5KRVAYAiADKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NLLJBBCJIAM), global::EggLink.DanhengServer.Proto.NLLJBBCJIAM.Parser, new[]{ "ODOGFHENJEP", "ScriptId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NLLJBBCJIAM), global::EggLink.DanhengServer.Proto.NLLJBBCJIAM.Parser, new[]{ "ScriptId", "ODOGFHENJEP" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NLLJBBCJIAM(NLLJBBCJIAM other) : this() {
-      oDOGFHENJEP_ = other.oDOGFHENJEP_.Clone();
       scriptId_ = other.scriptId_;
+      oDOGFHENJEP_ = other.oDOGFHENJEP_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,19 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new NLLJBBCJIAM(this);
     }
 
-    /// <summary>Field number for the "ODOGFHENJEP" field.</summary>
-    public const int ODOGFHENJEPFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_oDOGFHENJEP_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> oDOGFHENJEP_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> ODOGFHENJEP {
-      get { return oDOGFHENJEP_; }
-    }
-
     /// <summary>Field number for the "script_id" field.</summary>
-    public const int ScriptIdFieldNumber = 7;
+    public const int ScriptIdFieldNumber = 9;
     private uint scriptId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +93,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         scriptId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "ODOGFHENJEP" field.</summary>
+    public const int ODOGFHENJEPFieldNumber = 2;
+    private static readonly pb::FieldCodec<uint> _repeated_oDOGFHENJEP_codec
+        = pb::FieldCodec.ForUInt32(18);
+    private readonly pbc::RepeatedField<uint> oDOGFHENJEP_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> ODOGFHENJEP {
+      get { return oDOGFHENJEP_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -121,8 +121,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!oDOGFHENJEP_.Equals(other.oDOGFHENJEP_)) return false;
       if (ScriptId != other.ScriptId) return false;
+      if(!oDOGFHENJEP_.Equals(other.oDOGFHENJEP_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -130,8 +130,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= oDOGFHENJEP_.GetHashCode();
       if (ScriptId != 0) hash ^= ScriptId.GetHashCode();
+      hash ^= oDOGFHENJEP_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       oDOGFHENJEP_.WriteTo(output, _repeated_oDOGFHENJEP_codec);
       if (ScriptId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(ScriptId);
       }
       if (_unknownFields != null) {
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       oDOGFHENJEP_.WriteTo(ref output, _repeated_oDOGFHENJEP_codec);
       if (ScriptId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(ScriptId);
       }
       if (_unknownFields != null) {
@@ -180,10 +180,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += oDOGFHENJEP_.CalculateSize(_repeated_oDOGFHENJEP_codec);
       if (ScriptId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScriptId);
       }
+      size += oDOGFHENJEP_.CalculateSize(_repeated_oDOGFHENJEP_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -196,10 +196,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      oDOGFHENJEP_.Add(other.oDOGFHENJEP_);
       if (other.ScriptId != 0) {
         ScriptId = other.ScriptId;
       }
+      oDOGFHENJEP_.Add(other.oDOGFHENJEP_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -215,12 +215,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
+          case 18:
+          case 16: {
             oDOGFHENJEP_.AddEntriesFrom(input, _repeated_oDOGFHENJEP_codec);
             break;
           }
-          case 56: {
+          case 72: {
             ScriptId = input.ReadUInt32();
             break;
           }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
+          case 18:
+          case 16: {
             oDOGFHENJEP_.AddEntriesFrom(ref input, _repeated_oDOGFHENJEP_codec);
             break;
           }
-          case 56: {
+          case 72: {
             ScriptId = input.ReadUInt32();
             break;
           }

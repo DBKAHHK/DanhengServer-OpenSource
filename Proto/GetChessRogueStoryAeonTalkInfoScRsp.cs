@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CilHZXRDaGVzc1JvZ3VlU3RvcnlBZW9uVGFsa0luZm9TY1JzcC5wcm90byLQ",
-            "AQojR2V0Q2hlc3NSb2d1ZVN0b3J5QWVvblRhbGtJbmZvU2NSc3ASSgoLS0pD",
-            "Qk5FSU5ESEwYBCADKAsyNS5HZXRDaGVzc1JvZ3VlU3RvcnlBZW9uVGFsa0lu",
-            "Zm9TY1JzcC5LSkNCTkVJTkRITEVudHJ5EhgKEHRhbGtfZGlhbG9ndWVfaWQY",
-            "AyABKA0SDwoHcmV0Y29kZRgCIAEoDRoyChBLSkNCTkVJTkRITEVudHJ5EgsK",
+            "AQojR2V0Q2hlc3NSb2d1ZVN0b3J5QWVvblRhbGtJbmZvU2NSc3ASDwoHcmV0",
+            "Y29kZRgKIAEoDRIYChB0YWxrX2RpYWxvZ3VlX2lkGA8gASgNEkoKC0tKQ0JO",
+            "RUlOREhMGAIgAygLMjUuR2V0Q2hlc3NSb2d1ZVN0b3J5QWVvblRhbGtJbmZv",
+            "U2NSc3AuS0pDQk5FSU5ESExFbnRyeRoyChBLSkNCTkVJTkRITEVudHJ5EgsK",
             "A2tleRgBIAEoDRINCgV2YWx1ZRgCIAEoDToCOAFCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChessRogueStoryAeonTalkInfoScRsp), global::EggLink.DanhengServer.Proto.GetChessRogueStoryAeonTalkInfoScRsp.Parser, new[]{ "KJCBNEINDHL", "TalkDialogueId", "Retcode" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChessRogueStoryAeonTalkInfoScRsp), global::EggLink.DanhengServer.Proto.GetChessRogueStoryAeonTalkInfoScRsp.Parser, new[]{ "Retcode", "TalkDialogueId", "KJCBNEINDHL" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -76,9 +76,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetChessRogueStoryAeonTalkInfoScRsp(GetChessRogueStoryAeonTalkInfoScRsp other) : this() {
-      kJCBNEINDHL_ = other.kJCBNEINDHL_.Clone();
-      talkDialogueId_ = other.talkDialogueId_;
       retcode_ = other.retcode_;
+      talkDialogueId_ = other.talkDialogueId_;
+      kJCBNEINDHL_ = other.kJCBNEINDHL_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,19 +88,20 @@ namespace EggLink.DanhengServer.Proto {
       return new GetChessRogueStoryAeonTalkInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "KJCBNEINDHL" field.</summary>
-    public const int KJCBNEINDHLFieldNumber = 4;
-    private static readonly pbc::MapField<uint, uint>.Codec _map_kJCBNEINDHL_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 34);
-    private readonly pbc::MapField<uint, uint> kJCBNEINDHL_ = new pbc::MapField<uint, uint>();
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 10;
+    private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, uint> KJCBNEINDHL {
-      get { return kJCBNEINDHL_; }
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
     }
 
     /// <summary>Field number for the "talk_dialogue_id" field.</summary>
-    public const int TalkDialogueIdFieldNumber = 3;
+    public const int TalkDialogueIdFieldNumber = 15;
     private uint talkDialogueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,16 +112,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 2;
-    private uint retcode_;
+    /// <summary>Field number for the "KJCBNEINDHL" field.</summary>
+    public const int KJCBNEINDHLFieldNumber = 2;
+    private static readonly pbc::MapField<uint, uint>.Codec _map_kJCBNEINDHL_codec
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 18);
+    private readonly pbc::MapField<uint, uint> kJCBNEINDHL_ = new pbc::MapField<uint, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
+    public pbc::MapField<uint, uint> KJCBNEINDHL {
+      get { return kJCBNEINDHL_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -138,9 +138,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!KJCBNEINDHL.Equals(other.KJCBNEINDHL)) return false;
-      if (TalkDialogueId != other.TalkDialogueId) return false;
       if (Retcode != other.Retcode) return false;
+      if (TalkDialogueId != other.TalkDialogueId) return false;
+      if (!KJCBNEINDHL.Equals(other.KJCBNEINDHL)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,9 +148,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= KJCBNEINDHL.GetHashCode();
-      if (TalkDialogueId != 0) hash ^= TalkDialogueId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (TalkDialogueId != 0) hash ^= TalkDialogueId.GetHashCode();
+      hash ^= KJCBNEINDHL.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -169,15 +169,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      kJCBNEINDHL_.WriteTo(output, _map_kJCBNEINDHL_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
       if (TalkDialogueId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(120);
         output.WriteUInt32(TalkDialogueId);
       }
-      kJCBNEINDHL_.WriteTo(output, _map_kJCBNEINDHL_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -188,15 +188,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      kJCBNEINDHL_.WriteTo(ref output, _map_kJCBNEINDHL_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
       if (TalkDialogueId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(120);
         output.WriteUInt32(TalkDialogueId);
       }
-      kJCBNEINDHL_.WriteTo(ref output, _map_kJCBNEINDHL_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -207,13 +207,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += kJCBNEINDHL_.CalculateSize(_map_kJCBNEINDHL_codec);
-      if (TalkDialogueId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TalkDialogueId);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
+      if (TalkDialogueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TalkDialogueId);
+      }
+      size += kJCBNEINDHL_.CalculateSize(_map_kJCBNEINDHL_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -226,13 +226,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      kJCBNEINDHL_.MergeFrom(other.kJCBNEINDHL_);
-      if (other.TalkDialogueId != 0) {
-        TalkDialogueId = other.TalkDialogueId;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      if (other.TalkDialogueId != 0) {
+        TalkDialogueId = other.TalkDialogueId;
+      }
+      kJCBNEINDHL_.MergeFrom(other.kJCBNEINDHL_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -248,16 +248,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 18: {
+            kJCBNEINDHL_.AddEntriesFrom(input, _map_kJCBNEINDHL_codec);
+            break;
+          }
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 120: {
             TalkDialogueId = input.ReadUInt32();
-            break;
-          }
-          case 34: {
-            kJCBNEINDHL_.AddEntriesFrom(input, _map_kJCBNEINDHL_codec);
             break;
           }
         }
@@ -275,16 +275,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 18: {
+            kJCBNEINDHL_.AddEntriesFrom(ref input, _map_kJCBNEINDHL_codec);
+            break;
+          }
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 120: {
             TalkDialogueId = input.ReadUInt32();
-            break;
-          }
-          case 34: {
-            kJCBNEINDHL_.AddEntriesFrom(ref input, _map_kJCBNEINDHL_codec);
             break;
           }
         }

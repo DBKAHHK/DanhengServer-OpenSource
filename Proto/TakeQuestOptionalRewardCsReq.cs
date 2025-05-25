@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJUYWtlUXVlc3RPcHRpb25hbFJld2FyZENzUmVxLnByb3RvIkwKHFRha2VR",
-            "dWVzdE9wdGlvbmFsUmV3YXJkQ3NSZXESEAoIcXVlc3RfaWQYAyABKA0SGgoS",
-            "b3B0aW9uYWxfcmV3YXJkX2lkGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "dWVzdE9wdGlvbmFsUmV3YXJkQ3NSZXESGgoSb3B0aW9uYWxfcmV3YXJkX2lk",
+            "GA4gASgNEhAKCHF1ZXN0X2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeQuestOptionalRewardCsReq), global::EggLink.DanhengServer.Proto.TakeQuestOptionalRewardCsReq.Parser, new[]{ "QuestId", "OptionalRewardId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeQuestOptionalRewardCsReq), global::EggLink.DanhengServer.Proto.TakeQuestOptionalRewardCsReq.Parser, new[]{ "OptionalRewardId", "QuestId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeQuestOptionalRewardCsReq(TakeQuestOptionalRewardCsReq other) : this() {
-      questId_ = other.questId_;
       optionalRewardId_ = other.optionalRewardId_;
+      questId_ = other.questId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeQuestOptionalRewardCsReq(this);
     }
 
-    /// <summary>Field number for the "quest_id" field.</summary>
-    public const int QuestIdFieldNumber = 3;
-    private uint questId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint QuestId {
-      get { return questId_; }
-      set {
-        questId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "optional_reward_id" field.</summary>
-    public const int OptionalRewardIdFieldNumber = 10;
+    public const int OptionalRewardIdFieldNumber = 14;
     private uint optionalRewardId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return optionalRewardId_; }
       set {
         optionalRewardId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "quest_id" field.</summary>
+    public const int QuestIdFieldNumber = 13;
+    private uint questId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint QuestId {
+      get { return questId_; }
+      set {
+        questId_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (QuestId != other.QuestId) return false;
       if (OptionalRewardId != other.OptionalRewardId) return false;
+      if (QuestId != other.QuestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (QuestId != 0) hash ^= QuestId.GetHashCode();
       if (OptionalRewardId != 0) hash ^= OptionalRewardId.GetHashCode();
+      if (QuestId != 0) hash ^= QuestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (QuestId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(104);
         output.WriteUInt32(QuestId);
       }
       if (OptionalRewardId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(112);
         output.WriteUInt32(OptionalRewardId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (QuestId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(104);
         output.WriteUInt32(QuestId);
       }
       if (OptionalRewardId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(112);
         output.WriteUInt32(OptionalRewardId);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (QuestId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(QuestId);
-      }
       if (OptionalRewardId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OptionalRewardId);
+      }
+      if (QuestId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(QuestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.QuestId != 0) {
-        QuestId = other.QuestId;
-      }
       if (other.OptionalRewardId != 0) {
         OptionalRewardId = other.OptionalRewardId;
+      }
+      if (other.QuestId != 0) {
+        QuestId = other.QuestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 104: {
             QuestId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 112: {
             OptionalRewardId = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 104: {
             QuestId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 112: {
             OptionalRewardId = input.ReadUInt32();
             break;
           }

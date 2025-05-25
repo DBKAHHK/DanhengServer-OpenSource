@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5IZWxpb2J1c0VudGVyQmF0dGxlQ3NSZXEucHJvdG8iVgoYSGVsaW9idXNF",
-            "bnRlckJhdHRsZUNzUmVxEhAKCHNraWxsX2lkGAkgASgNEhYKDmF2YXRhcl9p",
-            "ZF9saXN0GAogAygNEhAKCGV2ZW50X2lkGAsgASgNQh6qAhtFZ2dMaW5rLkRh",
+            "bnRlckJhdHRsZUNzUmVxEhYKDmF2YXRhcl9pZF9saXN0GAggAygNEhAKCHNr",
+            "aWxsX2lkGAYgASgNEhAKCGV2ZW50X2lkGAsgASgNQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusEnterBattleCsReq), global::EggLink.DanhengServer.Proto.HeliobusEnterBattleCsReq.Parser, new[]{ "SkillId", "AvatarIdList", "EventId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusEnterBattleCsReq), global::EggLink.DanhengServer.Proto.HeliobusEnterBattleCsReq.Parser, new[]{ "AvatarIdList", "SkillId", "EventId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HeliobusEnterBattleCsReq(HeliobusEnterBattleCsReq other) : this() {
-      skillId_ = other.skillId_;
       avatarIdList_ = other.avatarIdList_.Clone();
+      skillId_ = other.skillId_;
       eventId_ = other.eventId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,8 +85,19 @@ namespace EggLink.DanhengServer.Proto {
       return new HeliobusEnterBattleCsReq(this);
     }
 
+    /// <summary>Field number for the "avatar_id_list" field.</summary>
+    public const int AvatarIdListFieldNumber = 8;
+    private static readonly pb::FieldCodec<uint> _repeated_avatarIdList_codec
+        = pb::FieldCodec.ForUInt32(66);
+    private readonly pbc::RepeatedField<uint> avatarIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> AvatarIdList {
+      get { return avatarIdList_; }
+    }
+
     /// <summary>Field number for the "skill_id" field.</summary>
-    public const int SkillIdFieldNumber = 9;
+    public const int SkillIdFieldNumber = 6;
     private uint skillId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,17 +106,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         skillId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "avatar_id_list" field.</summary>
-    public const int AvatarIdListFieldNumber = 10;
-    private static readonly pb::FieldCodec<uint> _repeated_avatarIdList_codec
-        = pb::FieldCodec.ForUInt32(82);
-    private readonly pbc::RepeatedField<uint> avatarIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AvatarIdList {
-      get { return avatarIdList_; }
     }
 
     /// <summary>Field number for the "event_id" field.</summary>
@@ -135,8 +135,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SkillId != other.SkillId) return false;
       if(!avatarIdList_.Equals(other.avatarIdList_)) return false;
+      if (SkillId != other.SkillId) return false;
       if (EventId != other.EventId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -145,8 +145,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (SkillId != 0) hash ^= SkillId.GetHashCode();
       hash ^= avatarIdList_.GetHashCode();
+      if (SkillId != 0) hash ^= SkillId.GetHashCode();
       if (EventId != 0) hash ^= EventId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (SkillId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt32(SkillId);
       }
       avatarIdList_.WriteTo(output, _repeated_avatarIdList_codec);
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SkillId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt32(SkillId);
       }
       avatarIdList_.WriteTo(ref output, _repeated_avatarIdList_codec);
@@ -204,10 +204,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += avatarIdList_.CalculateSize(_repeated_avatarIdList_codec);
       if (SkillId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SkillId);
       }
-      size += avatarIdList_.CalculateSize(_repeated_avatarIdList_codec);
       if (EventId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EventId);
       }
@@ -223,10 +223,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      avatarIdList_.Add(other.avatarIdList_);
       if (other.SkillId != 0) {
         SkillId = other.SkillId;
       }
-      avatarIdList_.Add(other.avatarIdList_);
       if (other.EventId != 0) {
         EventId = other.EventId;
       }
@@ -245,12 +245,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 48: {
             SkillId = input.ReadUInt32();
             break;
           }
-          case 82:
-          case 80: {
+          case 66:
+          case 64: {
             avatarIdList_.AddEntriesFrom(input, _repeated_avatarIdList_codec);
             break;
           }
@@ -273,12 +273,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 48: {
             SkillId = input.ReadUInt32();
             break;
           }
-          case 82:
-          case 80: {
+          case 66:
+          case 64: {
             avatarIdList_.AddEntriesFrom(ref input, _repeated_avatarIdList_codec);
             break;
           }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5NdWx0aXBsZURyb3BJbmZvU2NOb3RpZnkucHJvdG8aEUVDQ05OT05LRkNB",
             "LnByb3RvIj0KGE11bHRpcGxlRHJvcEluZm9TY05vdGlmeRIhCgtMSkNQRE1O",
-            "S0pJRhgDIAMoCzIMLkVDQ05OT05LRkNBQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "S0pJRhgFIAMoCzIMLkVDQ05OT05LRkNBQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ECCNNONKFCAReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LJCPDMNKJIF" field.</summary>
-    public const int LJCPDMNKJIFFieldNumber = 3;
+    public const int LJCPDMNKJIFFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ECCNNONKFCA> _repeated_lJCPDMNKJIF_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.ECCNNONKFCA.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.ECCNNONKFCA.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ECCNNONKFCA> lJCPDMNKJIF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ECCNNONKFCA>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 42: {
             lJCPDMNKJIF_.AddEntriesFrom(input, _repeated_lJCPDMNKJIF_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 42: {
             lJCPDMNKJIF_.AddEntriesFrom(ref input, _repeated_lJCPDMNKJIF_codec);
             break;
           }

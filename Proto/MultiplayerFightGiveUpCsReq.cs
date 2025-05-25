@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFNdWx0aXBsYXllckZpZ2h0R2l2ZVVwQ3NSZXEucHJvdG8iMwobTXVsdGlw",
-            "bGF5ZXJGaWdodEdpdmVVcENzUmVxEhQKDGdhdGVfcm9vbV9pZBgDIAEoBEIe",
+            "bGF5ZXJGaWdodEdpdmVVcENzUmVxEhQKDGdhdGVfcm9vbV9pZBgHIAEoBEIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gate_room_id" field.</summary>
-    public const int GateRoomIdFieldNumber = 3;
+    public const int GateRoomIdFieldNumber = 7;
     private ulong gateRoomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (GateRoomId != 0UL) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt64(GateRoomId);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (GateRoomId != 0UL) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt64(GateRoomId);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 56: {
             GateRoomId = input.ReadUInt64();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 56: {
             GateRoomId = input.ReadUInt64();
             break;
           }

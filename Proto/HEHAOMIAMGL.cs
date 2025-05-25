@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFIRUhBT01JQU1HTC5wcm90bxoVQWxsZXlFdmVudFN0YXRlLnByb3RvIlUK",
-            "C0hFSEFPTUlBTUdMEh8KBXN0YXRlGAEgASgOMhAuQWxsZXlFdmVudFN0YXRl",
-            "EhAKCGV2ZW50X2lkGAQgASgNEhMKC05JTkdCTkJNS09QGAogASgNQh6qAhtF",
+            "C0hFSEFPTUlBTUdMEhMKC05JTkdCTkJNS09QGAMgASgNEhAKCGV2ZW50X2lk",
+            "GAIgASgNEh8KBXN0YXRlGAYgASgOMhAuQWxsZXlFdmVudFN0YXRlQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AlleyEventStateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HEHAOMIAMGL), global::EggLink.DanhengServer.Proto.HEHAOMIAMGL.Parser, new[]{ "State", "EventId", "NINGBNBMKOP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HEHAOMIAMGL), global::EggLink.DanhengServer.Proto.HEHAOMIAMGL.Parser, new[]{ "NINGBNBMKOP", "EventId", "State" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HEHAOMIAMGL(HEHAOMIAMGL other) : this() {
-      state_ = other.state_;
-      eventId_ = other.eventId_;
       nINGBNBMKOP_ = other.nINGBNBMKOP_;
+      eventId_ = other.eventId_;
+      state_ = other.state_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new HEHAOMIAMGL(this);
     }
 
-    /// <summary>Field number for the "state" field.</summary>
-    public const int StateFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.AlleyEventState state_ = global::EggLink.DanhengServer.Proto.AlleyEventState.AlleyStateNone;
+    /// <summary>Field number for the "NINGBNBMKOP" field.</summary>
+    public const int NINGBNBMKOPFieldNumber = 3;
+    private uint nINGBNBMKOP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.AlleyEventState State {
-      get { return state_; }
+    public uint NINGBNBMKOP {
+      get { return nINGBNBMKOP_; }
       set {
-        state_ = value;
+        nINGBNBMKOP_ = value;
       }
     }
 
     /// <summary>Field number for the "event_id" field.</summary>
-    public const int EventIdFieldNumber = 4;
+    public const int EventIdFieldNumber = 2;
     private uint eventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NINGBNBMKOP" field.</summary>
-    public const int NINGBNBMKOPFieldNumber = 10;
-    private uint nINGBNBMKOP_;
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.AlleyEventState state_ = global::EggLink.DanhengServer.Proto.AlleyEventState.AlleyStateNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NINGBNBMKOP {
-      get { return nINGBNBMKOP_; }
+    public global::EggLink.DanhengServer.Proto.AlleyEventState State {
+      get { return state_; }
       set {
-        nINGBNBMKOP_ = value;
+        state_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (State != other.State) return false;
-      if (EventId != other.EventId) return false;
       if (NINGBNBMKOP != other.NINGBNBMKOP) return false;
+      if (EventId != other.EventId) return false;
+      if (State != other.State) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (State != global::EggLink.DanhengServer.Proto.AlleyEventState.AlleyStateNone) hash ^= State.GetHashCode();
-      if (EventId != 0) hash ^= EventId.GetHashCode();
       if (NINGBNBMKOP != 0) hash ^= NINGBNBMKOP.GetHashCode();
+      if (EventId != 0) hash ^= EventId.GetHashCode();
+      if (State != global::EggLink.DanhengServer.Proto.AlleyEventState.AlleyStateNone) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (State != global::EggLink.DanhengServer.Proto.AlleyEventState.AlleyStateNone) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) State);
-      }
       if (EventId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(EventId);
       }
       if (NINGBNBMKOP != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(NINGBNBMKOP);
+      }
+      if (State != global::EggLink.DanhengServer.Proto.AlleyEventState.AlleyStateNone) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) State);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (State != global::EggLink.DanhengServer.Proto.AlleyEventState.AlleyStateNone) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) State);
-      }
       if (EventId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(EventId);
       }
       if (NINGBNBMKOP != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(NINGBNBMKOP);
+      }
+      if (State != global::EggLink.DanhengServer.Proto.AlleyEventState.AlleyStateNone) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) State);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (State != global::EggLink.DanhengServer.Proto.AlleyEventState.AlleyStateNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      if (NINGBNBMKOP != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NINGBNBMKOP);
       }
       if (EventId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EventId);
       }
-      if (NINGBNBMKOP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NINGBNBMKOP);
+      if (State != global::EggLink.DanhengServer.Proto.AlleyEventState.AlleyStateNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.State != global::EggLink.DanhengServer.Proto.AlleyEventState.AlleyStateNone) {
-        State = other.State;
+      if (other.NINGBNBMKOP != 0) {
+        NINGBNBMKOP = other.NINGBNBMKOP;
       }
       if (other.EventId != 0) {
         EventId = other.EventId;
       }
-      if (other.NINGBNBMKOP != 0) {
-        NINGBNBMKOP = other.NINGBNBMKOP;
+      if (other.State != global::EggLink.DanhengServer.Proto.AlleyEventState.AlleyStateNone) {
+        State = other.State;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            State = (global::EggLink.DanhengServer.Proto.AlleyEventState) input.ReadEnum();
-            break;
-          }
-          case 32: {
+          case 16: {
             EventId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 24: {
             NINGBNBMKOP = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            State = (global::EggLink.DanhengServer.Proto.AlleyEventState) input.ReadEnum();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            State = (global::EggLink.DanhengServer.Proto.AlleyEventState) input.ReadEnum();
-            break;
-          }
-          case 32: {
+          case 16: {
             EventId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 24: {
             NINGBNBMKOP = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            State = (global::EggLink.DanhengServer.Proto.AlleyEventState) input.ReadEnum();
             break;
           }
         }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxHZXRVbmxvY2tUZWxlcG9ydFNjUnNwLnByb3RvIkcKFkdldFVubG9ja1Rl",
-            "bGVwb3J0U2NSc3ASHAoUdW5sb2NrX3RlbGVwb3J0X2xpc3QYAyADKA0SDwoH",
-            "cmV0Y29kZRgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "bGVwb3J0U2NSc3ASHAoUdW5sb2NrX3RlbGVwb3J0X2xpc3QYBSADKA0SDwoH",
+            "cmV0Y29kZRgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "unlock_teleport_list" field.</summary>
-    public const int UnlockTeleportListFieldNumber = 3;
+    public const int UnlockTeleportListFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_unlockTeleportList_codec
-        = pb::FieldCodec.ForUInt32(26);
+        = pb::FieldCodec.ForUInt32(42);
     private readonly pbc::RepeatedField<uint> unlockTeleportList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       unlockTeleportList_.WriteTo(output, _repeated_unlockTeleportList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       unlockTeleportList_.WriteTo(ref output, _repeated_unlockTeleportList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26:
-          case 24: {
+          case 42:
+          case 40: {
             unlockTeleportList_.AddEntriesFrom(input, _repeated_unlockTeleportList_codec);
             break;
           }
-          case 72: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26:
-          case 24: {
+          case 42:
+          case 40: {
             unlockTeleportList_.AddEntriesFrom(ref input, _repeated_unlockTeleportList_codec);
             break;
           }
-          case 72: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }

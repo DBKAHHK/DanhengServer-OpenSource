@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJUYWtlQ2hhbGxlbmdlUmFpZFJld2FyZFNjUnNwLnByb3RvGg5JdGVtTGlz",
             "dC5wcm90byJdChxUYWtlQ2hhbGxlbmdlUmFpZFJld2FyZFNjUnNwEhEKCXJl",
-            "d2FyZF9pZBgBIAEoDRIZCgZyZXdhcmQYAiABKAsyCS5JdGVtTGlzdBIPCgdy",
-            "ZXRjb2RlGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "d2FyZF9pZBgHIAEoDRIZCgZyZXdhcmQYCiABKAsyCS5JdGVtTGlzdBIPCgdy",
+            "ZXRjb2RlGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reward_id" field.</summary>
-    public const int RewardIdFieldNumber = 1;
+    public const int RewardIdFieldNumber = 7;
     private uint rewardId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 2;
+    public const int RewardFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 15;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,15 +169,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (RewardId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(RewardId);
       }
       if (reward_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(82);
         output.WriteMessage(Reward);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -191,15 +191,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (RewardId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(RewardId);
       }
       if (reward_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(82);
         output.WriteMessage(Reward);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -260,18 +260,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 56: {
             RewardId = input.ReadUInt32();
             break;
           }
-          case 18: {
+          case 82: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 120: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -290,18 +290,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 56: {
             RewardId = input.ReadUInt32();
             break;
           }
-          case 18: {
+          case 82: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 120: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }

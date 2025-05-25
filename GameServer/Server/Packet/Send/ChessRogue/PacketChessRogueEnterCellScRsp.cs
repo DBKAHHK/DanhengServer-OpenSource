@@ -11,7 +11,6 @@ public class PacketChessRogueEnterCellScRsp : BasePacket
         var proto = new ChessRogueEnterCellScRsp
         {
             CellId = cellId,
-            RogueCurrentInfo = rogue.ToCurrentProto(),
             StageInfo = rogue.ToStageProto(),
             Info = rogue.ToRogueGameInfo()
         };

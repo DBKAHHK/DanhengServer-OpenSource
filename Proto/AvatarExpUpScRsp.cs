@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZBdmF0YXJFeHBVcFNjUnNwLnByb3RvGg5QaWxlSXRlbS5wcm90byJIChBB",
-            "dmF0YXJFeHBVcFNjUnNwEiMKEHJldHVybl9pdGVtX2xpc3QYCyADKAsyCS5Q",
-            "aWxlSXRlbRIPCgdyZXRjb2RlGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "dmF0YXJFeHBVcFNjUnNwEiMKEHJldHVybl9pdGVtX2xpc3QYCCADKAsyCS5Q",
+            "aWxlSXRlbRIPCgdyZXRjb2RlGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PileItemReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "return_item_list" field.</summary>
-    public const int ReturnItemListFieldNumber = 11;
+    public const int ReturnItemListFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PileItem> _repeated_returnItemList_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.PileItem.Parser);
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.PileItem.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PileItem> returnItemList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PileItem>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       returnItemList_.WriteTo(output, _repeated_returnItemList_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       returnItemList_.WriteTo(ref output, _repeated_returnItemList_codec);
@@ -216,11 +216,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 66: {
             returnItemList_.AddEntriesFrom(input, _repeated_returnItemList_codec);
             break;
           }
@@ -239,11 +239,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 66: {
             returnItemList_.AddEntriesFrom(ref input, _repeated_returnItemList_codec);
             break;
           }

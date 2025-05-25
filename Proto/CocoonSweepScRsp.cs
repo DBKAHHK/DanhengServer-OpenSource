@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZDb2Nvb25Td2VlcFNjUnNwLnByb3RvGg5JdGVtTGlzdC5wcm90byJ7ChBD",
-            "b2Nvb25Td2VlcFNjUnNwEhEKCWNvY29vbl9pZBgDIAEoDRIlChJtdWx0aXBs",
-            "ZV9kcm9wX2RhdGEYDCABKAsyCS5JdGVtTGlzdBIcCglkcm9wX2RhdGEYBiAB",
-            "KAsyCS5JdGVtTGlzdBIPCgdyZXRjb2RlGAQgASgNQh6qAhtFZ2dMaW5rLkRh",
+            "b2Nvb25Td2VlcFNjUnNwEiUKEm11bHRpcGxlX2Ryb3BfZGF0YRgNIAEoCzIJ",
+            "Lkl0ZW1MaXN0EhwKCWRyb3BfZGF0YRgBIAEoCzIJLkl0ZW1MaXN0Eg8KB3Jl",
+            "dGNvZGUYCiABKA0SEQoJY29jb29uX2lkGAwgASgNQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CocoonSweepScRsp), global::EggLink.DanhengServer.Proto.CocoonSweepScRsp.Parser, new[]{ "CocoonId", "MultipleDropData", "DropData", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CocoonSweepScRsp), global::EggLink.DanhengServer.Proto.CocoonSweepScRsp.Parser, new[]{ "MultipleDropData", "DropData", "Retcode", "CocoonId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CocoonSweepScRsp(CocoonSweepScRsp other) : this() {
-      cocoonId_ = other.cocoonId_;
       multipleDropData_ = other.multipleDropData_ != null ? other.multipleDropData_.Clone() : null;
       dropData_ = other.dropData_ != null ? other.dropData_.Clone() : null;
       retcode_ = other.retcode_;
+      cocoonId_ = other.cocoonId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,20 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new CocoonSweepScRsp(this);
     }
 
-    /// <summary>Field number for the "cocoon_id" field.</summary>
-    public const int CocoonIdFieldNumber = 3;
-    private uint cocoonId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CocoonId {
-      get { return cocoonId_; }
-      set {
-        cocoonId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "multiple_drop_data" field.</summary>
-    public const int MultipleDropDataFieldNumber = 12;
+    public const int MultipleDropDataFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.ItemList multipleDropData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "drop_data" field.</summary>
-    public const int DropDataFieldNumber = 6;
+    public const int DropDataFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.ItemList dropData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
+    public const int RetcodeFieldNumber = 10;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -132,6 +120,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cocoon_id" field.</summary>
+    public const int CocoonIdFieldNumber = 12;
+    private uint cocoonId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CocoonId {
+      get { return cocoonId_; }
+      set {
+        cocoonId_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CocoonId != other.CocoonId) return false;
       if (!object.Equals(MultipleDropData, other.MultipleDropData)) return false;
       if (!object.Equals(DropData, other.DropData)) return false;
       if (Retcode != other.Retcode) return false;
+      if (CocoonId != other.CocoonId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CocoonId != 0) hash ^= CocoonId.GetHashCode();
       if (multipleDropData_ != null) hash ^= MultipleDropData.GetHashCode();
       if (dropData_ != null) hash ^= DropData.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (CocoonId != 0) hash ^= CocoonId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,20 +183,20 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CocoonId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(CocoonId);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Retcode);
-      }
       if (dropData_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(10);
         output.WriteMessage(DropData);
       }
+      if (Retcode != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Retcode);
+      }
+      if (CocoonId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(CocoonId);
+      }
       if (multipleDropData_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(106);
         output.WriteMessage(MultipleDropData);
       }
       if (_unknownFields != null) {
@@ -209,20 +209,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CocoonId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(CocoonId);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Retcode);
-      }
       if (dropData_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(10);
         output.WriteMessage(DropData);
       }
+      if (Retcode != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Retcode);
+      }
+      if (CocoonId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(CocoonId);
+      }
       if (multipleDropData_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(106);
         output.WriteMessage(MultipleDropData);
       }
       if (_unknownFields != null) {
@@ -235,9 +235,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CocoonId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CocoonId);
-      }
       if (multipleDropData_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MultipleDropData);
       }
@@ -246,6 +243,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (CocoonId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CocoonId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,9 +258,6 @@ namespace EggLink.DanhengServer.Proto {
     public void MergeFrom(CocoonSweepScRsp other) {
       if (other == null) {
         return;
-      }
-      if (other.CocoonId != 0) {
-        CocoonId = other.CocoonId;
       }
       if (other.multipleDropData_ != null) {
         if (multipleDropData_ == null) {
@@ -277,6 +274,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      if (other.CocoonId != 0) {
+        CocoonId = other.CocoonId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -292,22 +292,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            CocoonId = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 50: {
+          case 10: {
             if (dropData_ == null) {
               DropData = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(DropData);
             break;
           }
-          case 98: {
+          case 80: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            CocoonId = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (multipleDropData_ == null) {
               MultipleDropData = new global::EggLink.DanhengServer.Proto.ItemList();
             }
@@ -329,22 +329,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            CocoonId = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 50: {
+          case 10: {
             if (dropData_ == null) {
               DropData = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(DropData);
             break;
           }
-          case 98: {
+          case 80: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            CocoonId = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (multipleDropData_ == null) {
               MultipleDropData = new global::EggLink.DanhengServer.Proto.ItemList();
             }

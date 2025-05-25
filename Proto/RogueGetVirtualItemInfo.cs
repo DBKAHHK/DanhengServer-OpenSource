@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1Sb2d1ZUdldFZpcnR1YWxJdGVtSW5mby5wcm90byJDChdSb2d1ZUdldFZp",
             "cnR1YWxJdGVtSW5mbxITCgtCSUxFT09QSEpFRhgMIAEoDRITCgtJRkVIQklN",
-            "RU1FQxgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "RU1FQxgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IFEHBIMEMEC" field.</summary>
-    public const int IFEHBIMEMECFieldNumber = 13;
+    public const int IFEHBIMEMECFieldNumber = 4;
     private uint iFEHBIMEMEC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (IFEHBIMEMEC != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(IFEHBIMEMEC);
+      }
       if (BILEOOPHJEF != 0) {
         output.WriteRawTag(96);
         output.WriteUInt32(BILEOOPHJEF);
-      }
-      if (IFEHBIMEMEC != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(IFEHBIMEMEC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (IFEHBIMEMEC != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(IFEHBIMEMEC);
+      }
       if (BILEOOPHJEF != 0) {
         output.WriteRawTag(96);
         output.WriteUInt32(BILEOOPHJEF);
-      }
-      if (IFEHBIMEMEC != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(IFEHBIMEMEC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
-            BILEOOPHJEF = input.ReadUInt32();
+          case 32: {
+            IFEHBIMEMEC = input.ReadUInt32();
             break;
           }
-          case 104: {
-            IFEHBIMEMEC = input.ReadUInt32();
+          case 96: {
+            BILEOOPHJEF = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
-            BILEOOPHJEF = input.ReadUInt32();
+          case 32: {
+            IFEHBIMEMEC = input.ReadUInt32();
             break;
           }
-          case 104: {
-            IFEHBIMEMEC = input.ReadUInt32();
+          case 96: {
+            BILEOOPHJEF = input.ReadUInt32();
             break;
           }
         }

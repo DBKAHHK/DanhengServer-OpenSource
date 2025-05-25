@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxHZXROcGNUYWtlblJld2FyZFNjUnNwLnByb3RvIlIKFkdldE5wY1Rha2Vu",
-            "UmV3YXJkU2NSc3ASDwoHcmV0Y29kZRgEIAEoDRIXCg90YWxrX2V2ZW50X2xp",
-            "c3QYDyADKA0SDgoGbnBjX2lkGAggASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "UmV3YXJkU2NSc3ASDwoHcmV0Y29kZRgLIAEoDRIXCg90YWxrX2V2ZW50X2xp",
+            "c3QYCCADKA0SDgoGbnBjX2lkGAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "talk_event_list" field.</summary>
-    public const int TalkEventListFieldNumber = 15;
+    public const int TalkEventListFieldNumber = 8;
     private static readonly pb::FieldCodec<uint> _repeated_talkEventList_codec
-        = pb::FieldCodec.ForUInt32(122);
+        = pb::FieldCodec.ForUInt32(66);
     private readonly pbc::RepeatedField<uint> talkEventList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "npc_id" field.</summary>
-    public const int NpcIdFieldNumber = 8;
+    public const int NpcIdFieldNumber = 2;
     private uint npcId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,15 +166,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Retcode);
-      }
       if (NpcId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(16);
         output.WriteUInt32(NpcId);
       }
       talkEventList_.WriteTo(output, _repeated_talkEventList_codec);
+      if (Retcode != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Retcode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -185,15 +185,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Retcode);
-      }
       if (NpcId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(16);
         output.WriteUInt32(NpcId);
       }
       talkEventList_.WriteTo(ref output, _repeated_talkEventList_codec);
+      if (Retcode != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Retcode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 64: {
+          case 16: {
             NpcId = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
+          case 66:
+          case 64: {
             talkEventList_.AddEntriesFrom(input, _repeated_talkEventList_codec);
+            break;
+          }
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 64: {
+          case 16: {
             NpcId = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
+          case 66:
+          case 64: {
             talkEventList_.AddEntriesFrom(ref input, _repeated_talkEventList_codec);
+            break;
+          }
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

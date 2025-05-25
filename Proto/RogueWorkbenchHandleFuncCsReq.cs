@@ -27,7 +27,7 @@ namespace EggLink.DanhengServer.Proto {
             "CiNSb2d1ZVdvcmtiZW5jaEhhbmRsZUZ1bmNDc1JlcS5wcm90bxofUm9ndWVX",
             "b3JrYmVuY2hDb250ZW50SW5mby5wcm90byJ/Ch1Sb2d1ZVdvcmtiZW5jaEhh",
             "bmRsZUZ1bmNDc1JlcRIPCgdmdW5jX2lkGAcgASgNEhYKDnByb3BfZW50aXR5",
-            "X2lkGAMgASgNEjUKEXdvcmtiZW5jaF9jb250ZW50GAogASgLMhouUm9ndWVX",
+            "X2lkGA8gASgNEjUKEXdvcmtiZW5jaF9jb250ZW50GA4gASgLMhouUm9ndWVX",
             "b3JrYmVuY2hDb250ZW50SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "prop_entity_id" field.</summary>
-    public const int PropEntityIdFieldNumber = 3;
+    public const int PropEntityIdFieldNumber = 15;
     private uint propEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "workbench_content" field.</summary>
-    public const int WorkbenchContentFieldNumber = 10;
+    public const int WorkbenchContentFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.RogueWorkbenchContentInfo workbenchContent_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,17 +169,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PropEntityId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(PropEntityId);
-      }
       if (FuncId != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(FuncId);
       }
       if (workbenchContent_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(114);
         output.WriteMessage(WorkbenchContent);
+      }
+      if (PropEntityId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(PropEntityId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -191,17 +191,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PropEntityId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(PropEntityId);
-      }
       if (FuncId != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(FuncId);
       }
       if (workbenchContent_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(114);
         output.WriteMessage(WorkbenchContent);
+      }
+      if (PropEntityId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(PropEntityId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -261,19 +261,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            PropEntityId = input.ReadUInt32();
-            break;
-          }
           case 56: {
             FuncId = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 114: {
             if (workbenchContent_ == null) {
               WorkbenchContent = new global::EggLink.DanhengServer.Proto.RogueWorkbenchContentInfo();
             }
             input.ReadMessage(WorkbenchContent);
+            break;
+          }
+          case 120: {
+            PropEntityId = input.ReadUInt32();
             break;
           }
         }
@@ -291,19 +291,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            PropEntityId = input.ReadUInt32();
-            break;
-          }
           case 56: {
             FuncId = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 114: {
             if (workbenchContent_ == null) {
               WorkbenchContent = new global::EggLink.DanhengServer.Proto.RogueWorkbenchContentInfo();
             }
             input.ReadMessage(WorkbenchContent);
+            break;
+          }
+          case 120: {
+            PropEntityId = input.ReadUInt32();
             break;
           }
         }

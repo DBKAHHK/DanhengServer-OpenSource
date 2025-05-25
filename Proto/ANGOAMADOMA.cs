@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFBTkdPQU1BRE9NQS5wcm90bxoaUm9ndWVUb3VybkZpbmlzaEluZm8ucHJv",
-            "dG8ifgoLQU5HT0FNQURPTUESEwoLSkJMT0tMQ1BBRk4YCiABKA0SEwoLSUpI",
-            "TE9KRUZDUE0YDSABKA0SEwoLT0ZHQkpDQ0NJS0UYCSABKA0SMAoRdG91cm5f",
-            "ZmluaXNoX2luZm8YBCABKAsyFS5Sb2d1ZVRvdXJuRmluaXNoSW5mb0IeqgIb",
+            "dG8ifgoLQU5HT0FNQURPTUESMAoRdG91cm5fZmluaXNoX2luZm8YDCABKAsy",
+            "FS5Sb2d1ZVRvdXJuRmluaXNoSW5mbxITCgtJSkhMT0pFRkNQTRgBIAEoDRIT",
+            "CgtPRkdCSkNDQ0lLRRgCIAEoDRITCgtKQkxPS0xDUEFGThgOIAEoDUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournFinishInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ANGOAMADOMA), global::EggLink.DanhengServer.Proto.ANGOAMADOMA.Parser, new[]{ "JBLOKLCPAFN", "IJHLOJEFCPM", "OFGBJCCCIKE", "TournFinishInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ANGOAMADOMA), global::EggLink.DanhengServer.Proto.ANGOAMADOMA.Parser, new[]{ "TournFinishInfo", "IJHLOJEFCPM", "OFGBJCCCIKE", "JBLOKLCPAFN" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ANGOAMADOMA(ANGOAMADOMA other) : this() {
-      jBLOKLCPAFN_ = other.jBLOKLCPAFN_;
+      tournFinishInfo_ = other.tournFinishInfo_ != null ? other.tournFinishInfo_.Clone() : null;
       iJHLOJEFCPM_ = other.iJHLOJEFCPM_;
       oFGBJCCCIKE_ = other.oFGBJCCCIKE_;
-      tournFinishInfo_ = other.tournFinishInfo_ != null ? other.tournFinishInfo_.Clone() : null;
+      jBLOKLCPAFN_ = other.jBLOKLCPAFN_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,20 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new ANGOAMADOMA(this);
     }
 
-    /// <summary>Field number for the "JBLOKLCPAFN" field.</summary>
-    public const int JBLOKLCPAFNFieldNumber = 10;
-    private uint jBLOKLCPAFN_;
+    /// <summary>Field number for the "tourn_finish_info" field.</summary>
+    public const int TournFinishInfoFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.RogueTournFinishInfo tournFinishInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint JBLOKLCPAFN {
-      get { return jBLOKLCPAFN_; }
+    public global::EggLink.DanhengServer.Proto.RogueTournFinishInfo TournFinishInfo {
+      get { return tournFinishInfo_; }
       set {
-        jBLOKLCPAFN_ = value;
+        tournFinishInfo_ = value;
       }
     }
 
     /// <summary>Field number for the "IJHLOJEFCPM" field.</summary>
-    public const int IJHLOJEFCPMFieldNumber = 13;
+    public const int IJHLOJEFCPMFieldNumber = 1;
     private uint iJHLOJEFCPM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "OFGBJCCCIKE" field.</summary>
-    public const int OFGBJCCCIKEFieldNumber = 9;
+    public const int OFGBJCCCIKEFieldNumber = 2;
     private uint oFGBJCCCIKE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,15 +123,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "tourn_finish_info" field.</summary>
-    public const int TournFinishInfoFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.RogueTournFinishInfo tournFinishInfo_;
+    /// <summary>Field number for the "JBLOKLCPAFN" field.</summary>
+    public const int JBLOKLCPAFNFieldNumber = 14;
+    private uint jBLOKLCPAFN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournFinishInfo TournFinishInfo {
-      get { return tournFinishInfo_; }
+    public uint JBLOKLCPAFN {
+      get { return jBLOKLCPAFN_; }
       set {
-        tournFinishInfo_ = value;
+        jBLOKLCPAFN_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (JBLOKLCPAFN != other.JBLOKLCPAFN) return false;
+      if (!object.Equals(TournFinishInfo, other.TournFinishInfo)) return false;
       if (IJHLOJEFCPM != other.IJHLOJEFCPM) return false;
       if (OFGBJCCCIKE != other.OFGBJCCCIKE) return false;
-      if (!object.Equals(TournFinishInfo, other.TournFinishInfo)) return false;
+      if (JBLOKLCPAFN != other.JBLOKLCPAFN) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (JBLOKLCPAFN != 0) hash ^= JBLOKLCPAFN.GetHashCode();
+      if (tournFinishInfo_ != null) hash ^= TournFinishInfo.GetHashCode();
       if (IJHLOJEFCPM != 0) hash ^= IJHLOJEFCPM.GetHashCode();
       if (OFGBJCCCIKE != 0) hash ^= OFGBJCCCIKE.GetHashCode();
-      if (tournFinishInfo_ != null) hash ^= TournFinishInfo.GetHashCode();
+      if (JBLOKLCPAFN != 0) hash ^= JBLOKLCPAFN.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (tournFinishInfo_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(TournFinishInfo);
+      if (IJHLOJEFCPM != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(IJHLOJEFCPM);
       }
       if (OFGBJCCCIKE != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteUInt32(OFGBJCCCIKE);
       }
-      if (JBLOKLCPAFN != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(JBLOKLCPAFN);
+      if (tournFinishInfo_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(TournFinishInfo);
       }
-      if (IJHLOJEFCPM != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(IJHLOJEFCPM);
+      if (JBLOKLCPAFN != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(JBLOKLCPAFN);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (tournFinishInfo_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(TournFinishInfo);
+      if (IJHLOJEFCPM != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(IJHLOJEFCPM);
       }
       if (OFGBJCCCIKE != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteUInt32(OFGBJCCCIKE);
       }
-      if (JBLOKLCPAFN != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(JBLOKLCPAFN);
+      if (tournFinishInfo_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(TournFinishInfo);
       }
-      if (IJHLOJEFCPM != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(IJHLOJEFCPM);
+      if (JBLOKLCPAFN != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(JBLOKLCPAFN);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (JBLOKLCPAFN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JBLOKLCPAFN);
+      if (tournFinishInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TournFinishInfo);
       }
       if (IJHLOJEFCPM != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IJHLOJEFCPM);
@@ -244,8 +244,8 @@ namespace EggLink.DanhengServer.Proto {
       if (OFGBJCCCIKE != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OFGBJCCCIKE);
       }
-      if (tournFinishInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TournFinishInfo);
+      if (JBLOKLCPAFN != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JBLOKLCPAFN);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,8 +259,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.JBLOKLCPAFN != 0) {
-        JBLOKLCPAFN = other.JBLOKLCPAFN;
+      if (other.tournFinishInfo_ != null) {
+        if (tournFinishInfo_ == null) {
+          TournFinishInfo = new global::EggLink.DanhengServer.Proto.RogueTournFinishInfo();
+        }
+        TournFinishInfo.MergeFrom(other.TournFinishInfo);
       }
       if (other.IJHLOJEFCPM != 0) {
         IJHLOJEFCPM = other.IJHLOJEFCPM;
@@ -268,11 +271,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.OFGBJCCCIKE != 0) {
         OFGBJCCCIKE = other.OFGBJCCCIKE;
       }
-      if (other.tournFinishInfo_ != null) {
-        if (tournFinishInfo_ == null) {
-          TournFinishInfo = new global::EggLink.DanhengServer.Proto.RogueTournFinishInfo();
-        }
-        TournFinishInfo.MergeFrom(other.TournFinishInfo);
+      if (other.JBLOKLCPAFN != 0) {
+        JBLOKLCPAFN = other.JBLOKLCPAFN;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -289,23 +289,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 8: {
+            IJHLOJEFCPM = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            OFGBJCCCIKE = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             if (tournFinishInfo_ == null) {
               TournFinishInfo = new global::EggLink.DanhengServer.Proto.RogueTournFinishInfo();
             }
             input.ReadMessage(TournFinishInfo);
             break;
           }
-          case 72: {
-            OFGBJCCCIKE = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 112: {
             JBLOKLCPAFN = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            IJHLOJEFCPM = input.ReadUInt32();
             break;
           }
         }
@@ -323,23 +323,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 8: {
+            IJHLOJEFCPM = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            OFGBJCCCIKE = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             if (tournFinishInfo_ == null) {
               TournFinishInfo = new global::EggLink.DanhengServer.Proto.RogueTournFinishInfo();
             }
             input.ReadMessage(TournFinishInfo);
             break;
           }
-          case 72: {
-            OFGBJCCCIKE = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 112: {
             JBLOKLCPAFN = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            IJHLOJEFCPM = input.ReadUInt32();
             break;
           }
         }

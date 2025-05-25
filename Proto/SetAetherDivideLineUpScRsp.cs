@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBTZXRBZXRoZXJEaXZpZGVMaW5lVXBTY1JzcC5wcm90bxocQWV0aGVyRGl2",
             "aWRlTGluZXVwSW5mby5wcm90byJWChpTZXRBZXRoZXJEaXZpZGVMaW5lVXBT",
-            "Y1JzcBInCgZsaW5ldXAYBCABKAsyFy5BZXRoZXJEaXZpZGVMaW5ldXBJbmZv",
-            "Eg8KB3JldGNvZGUYASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "Y1JzcBInCgZsaW5ldXAYDSABKAsyFy5BZXRoZXJEaXZpZGVMaW5ldXBJbmZv",
+            "Eg8KB3JldGNvZGUYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AetherDivideLineupInfoReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "lineup" field.</summary>
-    public const int LineupFieldNumber = 4;
+    public const int LineupFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.AetherDivideLineupInfo lineup_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
       if (lineup_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(106);
         output.WriteMessage(Lineup);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
       if (lineup_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(106);
         output.WriteMessage(Lineup);
       }
       if (_unknownFields != null) {
@@ -231,11 +231,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 34: {
+          case 106: {
             if (lineup_ == null) {
               Lineup = new global::EggLink.DanhengServer.Proto.AetherDivideLineupInfo();
             }
@@ -257,11 +257,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 34: {
+          case 106: {
             if (lineup_ == null) {
               Lineup = new global::EggLink.DanhengServer.Proto.AetherDivideLineupInfo();
             }

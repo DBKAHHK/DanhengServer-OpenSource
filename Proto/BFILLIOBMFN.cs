@@ -24,11 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static BFILLIOBMFNReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFCRklMTElPQk1GTi5wcm90byqgAQoLQkZJTExJT0JNRk4SDwoLRVZFTlRf",
-            "QkVHSU4QABIPCgtFVkVOVF9CUkVBSxABEg4KCkVWRU5UX0ZBTEwQAhIRCg1F",
-            "VkVOVF9SRUZSRVNIEAMSFAoQRVZFTlRfQklSRF9TS0lMTBAEEg0KCUVWRU5U",
-            "X0VOVhAFEhEKDUVWRU5UX1NIVUZGTEUQBhIUChBFVkVOVF9TRVRUTEVfVEFH",
-            "EAdCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChFCRklMTElPQk1GTi5wcm90byp7CgtCRklMTElPQk1GThIPCgtFVkVOVF9C",
+            "RUdJThAAEg8KC0VWRU5UX0JSRUFLEAESDgoKRVZFTlRfRkFMTBACEhEKDUVW",
+            "RU5UX1JFRlJFU0gQAxIUChBFVkVOVF9CSVJEX1NLSUxMEAQSEQoNRVZFTlRf",
+            "U0hVRkZMRRAFQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.BFILLIOBMFN), }, null, null));
@@ -43,9 +43,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("EVENT_FALL")] EventFall = 2,
     [pbr::OriginalName("EVENT_REFRESH")] EventRefresh = 3,
     [pbr::OriginalName("EVENT_BIRD_SKILL")] EventBirdSkill = 4,
-    [pbr::OriginalName("EVENT_ENV")] EventEnv = 5,
-    [pbr::OriginalName("EVENT_SHUFFLE")] EventShuffle = 6,
-    [pbr::OriginalName("EVENT_SETTLE_TAG")] EventSettleTag = 7,
+    [pbr::OriginalName("EVENT_SHUFFLE")] EventShuffle = 5,
   }
 
   #endregion

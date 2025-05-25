@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFCdXlCdWZmSW5mby5wcm90bxoNQnV5QnVmZi5wcm90byIqCgtCdXlCdWZm",
-            "SW5mbxIbCglidWZmX2xpc3QYBiADKAsyCC5CdXlCdWZmQh6qAhtFZ2dMaW5r",
+            "SW5mbxIbCglidWZmX2xpc3QYDiADKAsyCC5CdXlCdWZmQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BuyBuffReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff_list" field.</summary>
-    public const int BuffListFieldNumber = 6;
+    public const int BuffListFieldNumber = 14;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BuyBuff> _repeated_buffList_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.BuyBuff.Parser);
+        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.BuyBuff.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuyBuff> buffList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuyBuff>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 114: {
             buffList_.AddEntriesFrom(input, _repeated_buffList_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 114: {
             buffList_.AddEntriesFrom(ref input, _repeated_buffList_codec);
             break;
           }

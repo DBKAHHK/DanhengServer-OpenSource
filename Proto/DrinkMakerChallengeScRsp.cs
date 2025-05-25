@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5Ecmlua01ha2VyQ2hhbGxlbmdlU2NSc3AucHJvdG8aDkl0ZW1MaXN0LnBy",
-            "b3RvIm0KGERyaW5rTWFrZXJDaGFsbGVuZ2VTY1JzcBIZCgZyZXdhcmQYBSAB",
-            "KAsyCS5JdGVtTGlzdBIPCgdyZXRjb2RlGA8gASgNEg8KB2lzX3N1Y2MYBCAB",
-            "KAgSFAoMY2hhbGxlbmdlX2lkGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "b3RvIm0KGERyaW5rTWFrZXJDaGFsbGVuZ2VTY1JzcBIPCgdyZXRjb2RlGA8g",
+            "ASgNEhkKBnJld2FyZBgNIAEoCzIJLkl0ZW1MaXN0Eg8KB2lzX3N1Y2MYBCAB",
+            "KAgSFAoMY2hhbGxlbmdlX2lkGAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DrinkMakerChallengeScRsp), global::EggLink.DanhengServer.Proto.DrinkMakerChallengeScRsp.Parser, new[]{ "Reward", "Retcode", "IsSucc", "ChallengeId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DrinkMakerChallengeScRsp), global::EggLink.DanhengServer.Proto.DrinkMakerChallengeScRsp.Parser, new[]{ "Retcode", "Reward", "IsSucc", "ChallengeId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DrinkMakerChallengeScRsp(DrinkMakerChallengeScRsp other) : this() {
-      reward_ = other.reward_ != null ? other.reward_.Clone() : null;
       retcode_ = other.retcode_;
+      reward_ = other.reward_ != null ? other.reward_.Clone() : null;
       isSucc_ = other.isSucc_;
       challengeId_ = other.challengeId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -87,18 +87,6 @@ namespace EggLink.DanhengServer.Proto {
       return new DrinkMakerChallengeScRsp(this);
     }
 
-    /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.ItemList reward_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemList Reward {
-      get { return reward_; }
-      set {
-        reward_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
     public const int RetcodeFieldNumber = 15;
     private uint retcode_;
@@ -108,6 +96,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reward" field.</summary>
+    public const int RewardFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.ItemList reward_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ItemList Reward {
+      get { return reward_; }
+      set {
+        reward_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 10;
+    public const int ChallengeIdFieldNumber = 7;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,8 +150,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Reward, other.Reward)) return false;
       if (Retcode != other.Retcode) return false;
+      if (!object.Equals(Reward, other.Reward)) return false;
       if (IsSucc != other.IsSucc) return false;
       if (ChallengeId != other.ChallengeId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -161,8 +161,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (reward_ != null) hash ^= Reward.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (reward_ != null) hash ^= Reward.GetHashCode();
       if (IsSucc != false) hash ^= IsSucc.GetHashCode();
       if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
       if (_unknownFields != null) {
@@ -187,13 +187,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteBool(IsSucc);
       }
-      if (reward_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Reward);
-      }
       if (ChallengeId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(ChallengeId);
+      }
+      if (reward_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(Reward);
       }
       if (Retcode != 0) {
         output.WriteRawTag(120);
@@ -213,13 +213,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteBool(IsSucc);
       }
-      if (reward_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Reward);
-      }
       if (ChallengeId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(ChallengeId);
+      }
+      if (reward_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(Reward);
       }
       if (Retcode != 0) {
         output.WriteRawTag(120);
@@ -235,11 +235,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (reward_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (reward_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
       }
       if (IsSucc != false) {
         size += 1 + 1;
@@ -259,14 +259,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.reward_ != null) {
         if (reward_ == null) {
           Reward = new global::EggLink.DanhengServer.Proto.ItemList();
         }
         Reward.MergeFrom(other.Reward);
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
       }
       if (other.IsSucc != false) {
         IsSucc = other.IsSucc;
@@ -293,15 +293,15 @@ namespace EggLink.DanhengServer.Proto {
             IsSucc = input.ReadBool();
             break;
           }
-          case 42: {
+          case 56: {
+            ChallengeId = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
-            break;
-          }
-          case 80: {
-            ChallengeId = input.ReadUInt32();
             break;
           }
           case 120: {
@@ -327,15 +327,15 @@ namespace EggLink.DanhengServer.Proto {
             IsSucc = input.ReadBool();
             break;
           }
-          case 42: {
+          case 56: {
+            ChallengeId = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
-            break;
-          }
-          case 80: {
-            ChallengeId = input.ReadUInt32();
             break;
           }
           case 120: {

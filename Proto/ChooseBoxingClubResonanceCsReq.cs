@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRDaG9vc2VCb3hpbmdDbHViUmVzb25hbmNlQ3NSZXEucHJvdG8iSwoeQ2hv",
-            "b3NlQm94aW5nQ2x1YlJlc29uYW5jZUNzUmVxEhQKDGNoYWxsZW5nZV9pZBgK",
-            "IAEoDRITCgtMTEZPRlBOREFGRxgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "b3NlQm94aW5nQ2x1YlJlc29uYW5jZUNzUmVxEhQKDGNoYWxsZW5nZV9pZBgF",
+            "IAEoDRITCgtMTEZPRlBOREFGRxgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 10;
+    public const int ChallengeIdFieldNumber = 5;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LLFOFPNDAFG" field.</summary>
-    public const int LLFOFPNDAFGFieldNumber = 13;
+    public const int LLFOFPNDAFGFieldNumber = 3;
     private uint lLFOFPNDAFG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ChallengeId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(ChallengeId);
-      }
       if (LLFOFPNDAFG != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(24);
         output.WriteUInt32(LLFOFPNDAFG);
+      }
+      if (ChallengeId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ChallengeId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(ChallengeId);
-      }
       if (LLFOFPNDAFG != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(24);
         output.WriteUInt32(LLFOFPNDAFG);
+      }
+      if (ChallengeId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
-            ChallengeId = input.ReadUInt32();
+          case 24: {
+            LLFOFPNDAFG = input.ReadUInt32();
             break;
           }
-          case 104: {
-            LLFOFPNDAFG = input.ReadUInt32();
+          case 40: {
+            ChallengeId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
-            ChallengeId = input.ReadUInt32();
+          case 24: {
+            LLFOFPNDAFG = input.ReadUInt32();
             break;
           }
-          case 104: {
-            LLFOFPNDAFG = input.ReadUInt32();
+          case 40: {
+            ChallengeId = input.ReadUInt32();
             break;
           }
         }

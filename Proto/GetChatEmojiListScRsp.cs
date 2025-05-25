@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHZXRDaGF0RW1vamlMaXN0U2NSc3AucHJvdG8iQQoVR2V0Q2hhdEVtb2pp",
-            "TGlzdFNjUnNwEhcKD2NoYXRfZW1vamlfbGlzdBgDIAMoDRIPCgdyZXRjb2Rl",
-            "GAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "TGlzdFNjUnNwEg8KB3JldGNvZGUYCSABKA0SFwoPY2hhdF9lbW9qaV9saXN0",
+            "GAUgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChatEmojiListScRsp), global::EggLink.DanhengServer.Proto.GetChatEmojiListScRsp.Parser, new[]{ "ChatEmojiList", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChatEmojiListScRsp), global::EggLink.DanhengServer.Proto.GetChatEmojiListScRsp.Parser, new[]{ "Retcode", "ChatEmojiList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetChatEmojiListScRsp(GetChatEmojiListScRsp other) : this() {
-      chatEmojiList_ = other.chatEmojiList_.Clone();
       retcode_ = other.retcode_;
+      chatEmojiList_ = other.chatEmojiList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,19 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetChatEmojiListScRsp(this);
     }
 
-    /// <summary>Field number for the "chat_emoji_list" field.</summary>
-    public const int ChatEmojiListFieldNumber = 3;
-    private static readonly pb::FieldCodec<uint> _repeated_chatEmojiList_codec
-        = pb::FieldCodec.ForUInt32(26);
-    private readonly pbc::RepeatedField<uint> chatEmojiList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> ChatEmojiList {
-      get { return chatEmojiList_; }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +94,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
+    }
+
+    /// <summary>Field number for the "chat_emoji_list" field.</summary>
+    public const int ChatEmojiListFieldNumber = 5;
+    private static readonly pb::FieldCodec<uint> _repeated_chatEmojiList_codec
+        = pb::FieldCodec.ForUInt32(42);
+    private readonly pbc::RepeatedField<uint> chatEmojiList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> ChatEmojiList {
+      get { return chatEmojiList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!chatEmojiList_.Equals(other.chatEmojiList_)) return false;
       if (Retcode != other.Retcode) return false;
+      if(!chatEmojiList_.Equals(other.chatEmojiList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= chatEmojiList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= chatEmojiList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       chatEmojiList_.WriteTo(output, _repeated_chatEmojiList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       chatEmojiList_.WriteTo(ref output, _repeated_chatEmojiList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += chatEmojiList_.CalculateSize(_repeated_chatEmojiList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
+      size += chatEmojiList_.CalculateSize(_repeated_chatEmojiList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      chatEmojiList_.Add(other.chatEmojiList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      chatEmojiList_.Add(other.chatEmojiList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26:
-          case 24: {
+          case 42:
+          case 40: {
             chatEmojiList_.AddEntriesFrom(input, _repeated_chatEmojiList_codec);
             break;
           }
-          case 56: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26:
-          case 24: {
+          case 42:
+          case 40: {
             chatEmojiList_.AddEntriesFrom(ref input, _repeated_chatEmojiList_codec);
             break;
           }
-          case 56: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }

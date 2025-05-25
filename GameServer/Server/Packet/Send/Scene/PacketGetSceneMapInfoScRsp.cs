@@ -66,6 +66,7 @@ public class PacketGetSceneMapInfoScRsp : BasePacket
                 {
                     GroupId = (uint)groupInfo.Id
                 };
+
                 mazeMap.MazeGroupList.Add(mazeGroup);
             }
 
@@ -80,6 +81,14 @@ public class PacketGetSceneMapInfoScRsp : BasePacket
                     ConfigId = (uint)prop.ID,
                     State = (uint)PropStateEnum.CheckPointEnable
                 };
+                var mazeGroupExtra = new MazePropStateExtra
+                {
+                    GroupId = (uint)prop.AnchorGroupID,
+                    ConfigId = (uint)prop.ID,
+                    State = (uint)PropStateEnum.CheckPointEnable
+                };
+
+                mazeMap.MazePropExtraList.Add(mazeGroupExtra);
                 mazeMap.MazePropList.Add(mazeProp);
             }
 

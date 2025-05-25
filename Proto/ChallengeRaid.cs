@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static ChallengeRaidReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNDaGFsbGVuZ2VSYWlkLnByb3RvIjMKDUNoYWxsZW5nZVJhaWQSEQoJbWF4",
-            "X3Njb3JlGAIgASgNEg8KB3JhaWRfaWQYBCABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "ChNDaGFsbGVuZ2VSYWlkLnByb3RvIjMKDUNoYWxsZW5nZVJhaWQSDwoHcmFp",
+            "ZF9pZBgDIAEoDRIRCgltYXhfc2NvcmUYCSABKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeRaid), global::EggLink.DanhengServer.Proto.ChallengeRaid.Parser, new[]{ "MaxScore", "RaidId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeRaid), global::EggLink.DanhengServer.Proto.ChallengeRaid.Parser, new[]{ "RaidId", "MaxScore" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeRaid(ChallengeRaid other) : this() {
-      maxScore_ = other.maxScore_;
       raidId_ = other.raidId_;
+      maxScore_ = other.maxScore_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChallengeRaid(this);
     }
 
-    /// <summary>Field number for the "max_score" field.</summary>
-    public const int MaxScoreFieldNumber = 2;
-    private uint maxScore_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MaxScore {
-      get { return maxScore_; }
-      set {
-        maxScore_ = value;
-      }
-    }
-
     /// <summary>Field number for the "raid_id" field.</summary>
-    public const int RaidIdFieldNumber = 4;
+    public const int RaidIdFieldNumber = 3;
     private uint raidId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return raidId_; }
       set {
         raidId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_score" field.</summary>
+    public const int MaxScoreFieldNumber = 9;
+    private uint maxScore_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MaxScore {
+      get { return maxScore_; }
+      set {
+        maxScore_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MaxScore != other.MaxScore) return false;
       if (RaidId != other.RaidId) return false;
+      if (MaxScore != other.MaxScore) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MaxScore != 0) hash ^= MaxScore.GetHashCode();
       if (RaidId != 0) hash ^= RaidId.GetHashCode();
+      if (MaxScore != 0) hash ^= MaxScore.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MaxScore != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(MaxScore);
-      }
       if (RaidId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(RaidId);
+      }
+      if (MaxScore != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(MaxScore);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MaxScore != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(MaxScore);
-      }
       if (RaidId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(RaidId);
+      }
+      if (MaxScore != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(MaxScore);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MaxScore != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxScore);
-      }
       if (RaidId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RaidId);
+      }
+      if (MaxScore != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxScore);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MaxScore != 0) {
-        MaxScore = other.MaxScore;
-      }
       if (other.RaidId != 0) {
         RaidId = other.RaidId;
+      }
+      if (other.MaxScore != 0) {
+        MaxScore = other.MaxScore;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            MaxScore = input.ReadUInt32();
+          case 24: {
+            RaidId = input.ReadUInt32();
             break;
           }
-          case 32: {
-            RaidId = input.ReadUInt32();
+          case 72: {
+            MaxScore = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            MaxScore = input.ReadUInt32();
+          case 24: {
+            RaidId = input.ReadUInt32();
             break;
           }
-          case 32: {
-            RaidId = input.ReadUInt32();
+          case 72: {
+            MaxScore = input.ReadUInt32();
             break;
           }
         }

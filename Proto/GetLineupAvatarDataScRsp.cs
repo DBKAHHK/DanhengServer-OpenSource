@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5HZXRMaW5ldXBBdmF0YXJEYXRhU2NSc3AucHJvdG8aFkxpbmV1cEF2YXRh",
             "ckRhdGEucHJvdG8iWAoYR2V0TGluZXVwQXZhdGFyRGF0YVNjUnNwEg8KB3Jl",
-            "dGNvZGUYAiABKA0SKwoQYXZhdGFyX2RhdGFfbGlzdBgFIAMoCzIRLkxpbmV1",
+            "dGNvZGUYAiABKA0SKwoQYXZhdGFyX2RhdGFfbGlzdBgDIAMoCzIRLkxpbmV1",
             "cEF2YXRhckRhdGFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_data_list" field.</summary>
-    public const int AvatarDataListFieldNumber = 5;
+    public const int AvatarDataListFieldNumber = 3;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LineupAvatarData> _repeated_avatarDataList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.LineupAvatarData.Parser);
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.LineupAvatarData.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LineupAvatarData> avatarDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LineupAvatarData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -221,7 +221,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 26: {
             avatarDataList_.AddEntriesFrom(input, _repeated_avatarDataList_codec);
             break;
           }
@@ -244,7 +244,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 26: {
             avatarDataList_.AddEntriesFrom(ref input, _repeated_avatarDataList_codec);
             break;
           }

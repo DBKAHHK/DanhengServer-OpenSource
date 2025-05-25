@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static ChangeStoryLineActionReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtDaGFuZ2VTdG9yeUxpbmVBY3Rpb24ucHJvdG8qpQEKFUNoYW5nZVN0b3J5",
+            "ChtDaGFuZ2VTdG9yeUxpbmVBY3Rpb24ucHJvdG8qxQEKFUNoYW5nZVN0b3J5",
             "TGluZUFjdGlvbhIeChpDaGFuZ2VTdG9yeUxpbmVBY3Rpb25fTm9uZRAAEiYK",
             "IkNoYW5nZVN0b3J5TGluZUFjdGlvbl9GaW5pc2hBY3Rpb24QARIgChxDaGFu",
             "Z2VTdG9yeUxpbmVBY3Rpb25fQ2xpZW50EAISIgoeQ2hhbmdlU3RvcnlMaW5l",
-            "QWN0aW9uX0N1c3RvbU9QEANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
-            "cm90b2IGcHJvdG8z"));
+            "QWN0aW9uX0N1c3RvbU9QEAMSHgoaQ2hhbmdlU3RvcnlMaW5lQWN0aW9uX1Jh",
+            "aWQQBEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.ChangeStoryLineAction), }, null, null));
@@ -43,6 +43,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("ChangeStoryLineAction_FinishAction")] FinishAction = 1,
     [pbr::OriginalName("ChangeStoryLineAction_Client")] Client = 2,
     [pbr::OriginalName("ChangeStoryLineAction_CustomOP")] CustomOp = 3,
+    [pbr::OriginalName("ChangeStoryLineAction_Raid")] Raid = 4,
   }
 
   #endregion

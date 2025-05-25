@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPSEROQ0hGR0ZNQS5wcm90byJdCgtPSEROQ0hGR0ZNQRIQCghwYW5lbF9p",
-            "ZBgJIAEoDRISCgpkdXJhYmlsaXR5GAwgASgNEhMKC0JKRkJHTEJKQk5OGAUg",
-            "ASgNEhMKC0xDTE1IRUdER0dCGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZBgKIAEoDRISCgpkdXJhYmlsaXR5GAMgASgNEhMKC0JKRkJHTEJKQk5OGAEg",
+            "ASgNEhMKC0xDTE1IRUdER0dCGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "panel_id" field.</summary>
-    public const int PanelIdFieldNumber = 9;
+    public const int PanelIdFieldNumber = 10;
     private uint panelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "durability" field.</summary>
-    public const int DurabilityFieldNumber = 12;
+    public const int DurabilityFieldNumber = 3;
     private uint durability_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BJFBGLBJBNN" field.</summary>
-    public const int BJFBGLBJBNNFieldNumber = 5;
+    public const int BJFBGLBJBNNFieldNumber = 1;
     private uint bJFBGLBJBNN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LCLMHEGDGGB" field.</summary>
-    public const int LCLMHEGDGGBFieldNumber = 15;
+    public const int LCLMHEGDGGBFieldNumber = 5;
     private uint lCLMHEGDGGB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -183,20 +183,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (BJFBGLBJBNN != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(8);
         output.WriteUInt32(BJFBGLBJBNN);
       }
-      if (PanelId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(PanelId);
-      }
       if (Durability != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(Durability);
       }
       if (LCLMHEGDGGB != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(40);
         output.WriteUInt32(LCLMHEGDGGB);
+      }
+      if (PanelId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(PanelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,20 +209,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BJFBGLBJBNN != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(8);
         output.WriteUInt32(BJFBGLBJBNN);
       }
-      if (PanelId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(PanelId);
-      }
       if (Durability != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(Durability);
       }
       if (LCLMHEGDGGB != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(40);
         output.WriteUInt32(LCLMHEGDGGB);
+      }
+      if (PanelId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(PanelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 8: {
             BJFBGLBJBNN = input.ReadUInt32();
             break;
           }
-          case 72: {
-            PanelId = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 24: {
             Durability = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 40: {
             LCLMHEGDGGB = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            PanelId = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 8: {
             BJFBGLBJBNN = input.ReadUInt32();
             break;
           }
-          case 72: {
-            PanelId = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 24: {
             Durability = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 40: {
             LCLMHEGDGGB = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            PanelId = input.ReadUInt32();
             break;
           }
         }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1TeW5jUm9ndWVTdGF0dXNTY05vdGlmeS5wcm90bxoRUm9ndWVTdGF0dXMu",
             "cHJvdG8iTAoXU3luY1JvZ3VlU3RhdHVzU2NOb3RpZnkSEwoLSklFTkhIQUhG",
-            "R0kYASABKAgSHAoGc3RhdHVzGAQgASgOMgwuUm9ndWVTdGF0dXNCHqoCG0Vn",
+            "R0kYASABKAgSHAoGc3RhdHVzGAsgASgOMgwuUm9ndWVTdGF0dXNCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueStatusReflection.Descriptor, },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 4;
+    public const int StatusFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.RogueStatus status_ = global::EggLink.DanhengServer.Proto.RogueStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteBool(JIENHHAHFGI);
       }
       if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteBool(JIENHHAHFGI);
       }
       if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             JIENHHAHFGI = input.ReadBool();
             break;
           }
-          case 32: {
+          case 88: {
             Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             JIENHHAHFGI = input.ReadBool();
             break;
           }
-          case 32: {
+          case 88: {
             Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
             break;
           }

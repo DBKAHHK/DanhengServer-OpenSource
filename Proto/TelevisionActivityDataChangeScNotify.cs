@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CipUZWxldmlzaW9uQWN0aXZpdHlEYXRhQ2hhbmdlU2NOb3RpZnkucHJvdG8a",
             "HFRlbGV2aXNpb25BY3Rpdml0eURhdGEucHJvdG8iVAokVGVsZXZpc2lvbkFj",
-            "dGl2aXR5RGF0YUNoYW5nZVNjTm90aWZ5EiwKC0tBREdNSEhHS01QGA0gAygL",
+            "dGl2aXR5RGF0YUNoYW5nZVNjTm90aWZ5EiwKC0tBREdNSEhHS01QGAYgAygL",
             "MhcuVGVsZXZpc2lvbkFjdGl2aXR5RGF0YUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KADGMHHGKMP" field.</summary>
-    public const int KADGMHHGKMPFieldNumber = 13;
+    public const int KADGMHHGKMPFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TelevisionActivityData> _repeated_kADGMHHGKMP_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.TelevisionActivityData.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.TelevisionActivityData.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TelevisionActivityData> kADGMHHGKMP_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TelevisionActivityData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 50: {
             kADGMHHGKMP_.AddEntriesFrom(input, _repeated_kADGMHHGKMP_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 50: {
             kADGMHHGKMP_.AddEntriesFrom(ref input, _repeated_kADGMHHGKMP_codec);
             break;
           }

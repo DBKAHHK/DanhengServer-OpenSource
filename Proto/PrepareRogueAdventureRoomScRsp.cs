@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiRQcmVwYXJlUm9ndWVBZHZlbnR1cmVSb29tU2NSc3AucHJvdG8aF0FkdmVu",
             "dHVyZVJvb21JbmZvLnByb3RvImIKHlByZXBhcmVSb2d1ZUFkdmVudHVyZVJv",
-            "b21TY1JzcBIPCgdyZXRjb2RlGA0gASgNEi8KE2FkdmVudHVyZV9yb29tX2lu",
-            "Zm8YCCABKAsyEi5BZHZlbnR1cmVSb29tSW5mb0IeqgIbRWdnTGluay5EYW5o",
+            "b21TY1JzcBIPCgdyZXRjb2RlGA8gASgNEi8KE2FkdmVudHVyZV9yb29tX2lu",
+            "Zm8YDSABKAsyEi5BZHZlbnR1cmVSb29tSW5mb0IeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AdventureRoomInfoReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 15;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "adventure_room_info" field.</summary>
-    public const int AdventureRoomInfoFieldNumber = 8;
+    public const int AdventureRoomInfoFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.AdventureRoomInfo adventureRoomInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (adventureRoomInfo_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(106);
         output.WriteMessage(AdventureRoomInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (adventureRoomInfo_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(106);
         output.WriteMessage(AdventureRoomInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 106: {
             if (adventureRoomInfo_ == null) {
               AdventureRoomInfo = new global::EggLink.DanhengServer.Proto.AdventureRoomInfo();
             }
             input.ReadMessage(AdventureRoomInfo);
             break;
           }
-          case 104: {
+          case 120: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -257,14 +257,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 106: {
             if (adventureRoomInfo_ == null) {
               AdventureRoomInfo = new global::EggLink.DanhengServer.Proto.AdventureRoomInfo();
             }
             input.ReadMessage(AdventureRoomInfo);
             break;
           }
-          case 104: {
+          case 120: {
             Retcode = input.ReadUInt32();
             break;
           }

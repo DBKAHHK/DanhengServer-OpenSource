@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPRURET0lKTEdGRy5wcm90bxoRTENNSkZFSE1DTkYucHJvdG8ibwoLT0VE",
-            "RE9JSkxHRkcSFQoLRkZCRkNDTE9ES0sYByABKA1IABIVCgtLQUNFTEtHQ05F",
-            "SRgEIAEoDUgAEiMKC0ZBT01GTU1MTUhEGAsgASgLMgwuTENNSkZFSE1DTkZI",
+            "RE9JSkxHRkcSFQoLRkZCRkNDTE9ES0sYBSABKA1IABIVCgtLQUNFTEtHQ05F",
+            "SRgPIAEoDUgAEiMKC0ZBT01GTU1MTUhEGAMgASgLMgwuTENNSkZFSE1DTkZI",
             "AEINCgtFRU9ERExPSE5FREIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FFBFCCLODKK" field.</summary>
-    public const int FFBFCCLODKKFieldNumber = 7;
+    public const int FFBFCCLODKKFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint FFBFCCLODKK {
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KACELKGCNEI" field.</summary>
-    public const int KACELKGCNEIFieldNumber = 4;
+    public const int KACELKGCNEIFieldNumber = 15;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint KACELKGCNEI {
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FAOMFMMLMHD" field.</summary>
-    public const int FAOMFMMLMHDFieldNumber = 11;
+    public const int FAOMFMMLMHDFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.LCMJFEHMCNF FAOMFMMLMHD {
@@ -163,9 +163,9 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "EEODDLOHNED" oneof.</summary>
     public enum EEODDLOHNEDOneofCase {
       None = 0,
-      FFBFCCLODKK = 7,
-      KACELKGCNEI = 4,
-      FAOMFMMLMHD = 11,
+      FFBFCCLODKK = 5,
+      KACELKGCNEI = 15,
+      FAOMFMMLMHD = 3,
     }
     private EEODDLOHNEDOneofCase eEODDLOHNEDCase_ = EEODDLOHNEDOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -229,17 +229,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HasKACELKGCNEI) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(KACELKGCNEI);
+      if (eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FAOMFMMLMHD) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FAOMFMMLMHD);
       }
       if (HasFFBFCCLODKK) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteUInt32(FFBFCCLODKK);
       }
-      if (eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FAOMFMMLMHD) {
-        output.WriteRawTag(90);
-        output.WriteMessage(FAOMFMMLMHD);
+      if (HasKACELKGCNEI) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(KACELKGCNEI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -251,17 +251,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasKACELKGCNEI) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(KACELKGCNEI);
+      if (eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FAOMFMMLMHD) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FAOMFMMLMHD);
       }
       if (HasFFBFCCLODKK) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteUInt32(FFBFCCLODKK);
       }
-      if (eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FAOMFMMLMHD) {
-        output.WriteRawTag(90);
-        output.WriteMessage(FAOMFMMLMHD);
+      if (HasKACELKGCNEI) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(KACELKGCNEI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -324,21 +324,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            KACELKGCNEI = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            FFBFCCLODKK = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 26: {
             global::EggLink.DanhengServer.Proto.LCMJFEHMCNF subBuilder = new global::EggLink.DanhengServer.Proto.LCMJFEHMCNF();
             if (eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FAOMFMMLMHD) {
               subBuilder.MergeFrom(FAOMFMMLMHD);
             }
             input.ReadMessage(subBuilder);
             FAOMFMMLMHD = subBuilder;
+            break;
+          }
+          case 40: {
+            FFBFCCLODKK = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            KACELKGCNEI = input.ReadUInt32();
             break;
           }
         }
@@ -356,21 +356,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            KACELKGCNEI = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            FFBFCCLODKK = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 26: {
             global::EggLink.DanhengServer.Proto.LCMJFEHMCNF subBuilder = new global::EggLink.DanhengServer.Proto.LCMJFEHMCNF();
             if (eEODDLOHNEDCase_ == EEODDLOHNEDOneofCase.FAOMFMMLMHD) {
               subBuilder.MergeFrom(FAOMFMMLMHD);
             }
             input.ReadMessage(subBuilder);
             FAOMFMMLMHD = subBuilder;
+            break;
+          }
+          case 40: {
+            FFBFCCLODKK = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            KACELKGCNEI = input.ReadUInt32();
             break;
           }
         }

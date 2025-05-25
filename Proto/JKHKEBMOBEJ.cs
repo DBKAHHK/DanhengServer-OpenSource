@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFKS0hLRUJNT0JFSi5wcm90bxoXUm9ndWVNYWdpY1NjZXB0ZXIucHJvdG8i",
-            "NgoLSktIS0VCTU9CRUoSJwoLSkJKR0dOQkpLREoYCSABKAsyEi5Sb2d1ZU1h",
+            "NgoLSktIS0VCTU9CRUoSJwoLSkJKR0dOQkpLREoYCCABKAsyEi5Sb2d1ZU1h",
             "Z2ljU2NlcHRlckIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JBJGGNBJKDJ" field.</summary>
-    public const int JBJGGNBJKDJFieldNumber = 9;
+    public const int JBJGGNBJKDJFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.RogueMagicScepter jBJGGNBJKDJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (jBJGGNBJKDJ_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(66);
         output.WriteMessage(JBJGGNBJKDJ);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (jBJGGNBJKDJ_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(66);
         output.WriteMessage(JBJGGNBJKDJ);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
+          case 66: {
             if (jBJGGNBJKDJ_ == null) {
               JBJGGNBJKDJ = new global::EggLink.DanhengServer.Proto.RogueMagicScepter();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
+          case 66: {
             if (jBJGGNBJKDJ_ == null) {
               JBJGGNBJKDJ = new global::EggLink.DanhengServer.Proto.RogueMagicScepter();
             }

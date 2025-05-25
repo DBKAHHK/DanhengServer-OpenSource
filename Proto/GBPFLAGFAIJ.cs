@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFHQlBGTEFHRkFJSi5wcm90bxobUm9ndWVFeGhpYml0aW9uU3RhdHVzLnBy",
-            "b3RvIkoKC0dCUEZMQUdGQUlKEiYKBnN0YXR1cxgFIAEoDjIWLlJvZ3VlRXho",
-            "aWJpdGlvblN0YXR1cxITCgtLQkRGQkdJTk5CShgMIAEoDUIeqgIbRWdnTGlu",
+            "b3RvIkoKC0dCUEZMQUdGQUlKEiYKBnN0YXR1cxgPIAEoDjIWLlJvZ3VlRXho",
+            "aWJpdGlvblN0YXR1cxITCgtLQkRGQkdJTk5CShgIIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueExhibitionStatusReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 5;
+    public const int StatusFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.RogueExhibitionStatus status_ = global::EggLink.DanhengServer.Proto.RogueExhibitionStatus.RogueExhibitionNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KBDFBGINNBJ" field.</summary>
-    public const int KBDFBGINNBJFieldNumber = 12;
+    public const int KBDFBGINNBJFieldNumber = 8;
     private uint kBDFBGINNBJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Status != global::EggLink.DanhengServer.Proto.RogueExhibitionStatus.RogueExhibitionNone) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) Status);
-      }
       if (KBDFBGINNBJ != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(KBDFBGINNBJ);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.RogueExhibitionStatus.RogueExhibitionNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Status != global::EggLink.DanhengServer.Proto.RogueExhibitionStatus.RogueExhibitionNone) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) Status);
-      }
       if (KBDFBGINNBJ != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(KBDFBGINNBJ);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.RogueExhibitionStatus.RogueExhibitionNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueExhibitionStatus) input.ReadEnum();
+          case 64: {
+            KBDFBGINNBJ = input.ReadUInt32();
             break;
           }
-          case 96: {
-            KBDFBGINNBJ = input.ReadUInt32();
+          case 120: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueExhibitionStatus) input.ReadEnum();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueExhibitionStatus) input.ReadEnum();
+          case 64: {
+            KBDFBGINNBJ = input.ReadUInt32();
             break;
           }
-          case 96: {
-            KBDFBGINNBJ = input.ReadUInt32();
+          case 120: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueExhibitionStatus) input.ReadEnum();
             break;
           }
         }

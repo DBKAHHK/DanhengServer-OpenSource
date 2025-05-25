@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFFREtHT01ORUhPSC5wcm90bxoRQkNNT0tGSEpNUE0ucHJvdG8iMAoLRURL",
-            "R09NTkVIT0gSIQoLRkpPQUZGTExFT0sYDSADKAsyDC5CQ01PS0ZISk1QTUIe",
+            "R09NTkVIT0gSIQoLRkpPQUZGTExFT0sYCyADKAsyDC5CQ01PS0ZISk1QTUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BCMOKFHJMPMReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FJOAFFLLEOK" field.</summary>
-    public const int FJOAFFLLEOKFieldNumber = 13;
+    public const int FJOAFFLLEOKFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BCMOKFHJMPM> _repeated_fJOAFFLLEOK_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.BCMOKFHJMPM.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.BCMOKFHJMPM.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BCMOKFHJMPM> fJOAFFLLEOK_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BCMOKFHJMPM>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 90: {
             fJOAFFLLEOK_.AddEntriesFrom(input, _repeated_fJOAFFLLEOK_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 90: {
             fJOAFFLLEOK_.AddEntriesFrom(ref input, _repeated_fJOAFFLLEOK_codec);
             break;
           }

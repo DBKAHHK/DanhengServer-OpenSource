@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdTZXJ2ZXJMb2dTZXR0aW5ncy5wcm90bxoUU2VydmVyTG9nTGV2ZWwucHJv",
-            "dG8aElNlcnZlckxvZ1RhZy5wcm90byJiChFTZXJ2ZXJMb2dTZXR0aW5ncxIl",
-            "Cgxub3RpZnlfbGV2ZWwYDSABKA4yDy5TZXJ2ZXJMb2dMZXZlbBImCg9ub3Rp",
-            "ZnlfdGFnX2xpc3QYCCADKA4yDS5TZXJ2ZXJMb2dUYWdCHqoCG0VnZ0xpbmsu",
+            "dG8aElNlcnZlckxvZ1RhZy5wcm90byJiChFTZXJ2ZXJMb2dTZXR0aW5ncxIm",
+            "Cg9ub3RpZnlfdGFnX2xpc3QYASADKA4yDS5TZXJ2ZXJMb2dUYWcSJQoMbm90",
+            "aWZ5X2xldmVsGA0gASgOMg8uU2VydmVyTG9nTGV2ZWxCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ServerLogLevelReflection.Descriptor, global::EggLink.DanhengServer.Proto.ServerLogTagReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerLogSettings), global::EggLink.DanhengServer.Proto.ServerLogSettings.Parser, new[]{ "NotifyLevel", "NotifyTagList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerLogSettings), global::EggLink.DanhengServer.Proto.ServerLogSettings.Parser, new[]{ "NotifyTagList", "NotifyLevel" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServerLogSettings(ServerLogSettings other) : this() {
-      notifyLevel_ = other.notifyLevel_;
       notifyTagList_ = other.notifyTagList_.Clone();
+      notifyLevel_ = other.notifyLevel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,6 +83,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServerLogSettings Clone() {
       return new ServerLogSettings(this);
+    }
+
+    /// <summary>Field number for the "notify_tag_list" field.</summary>
+    public const int NotifyTagListFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ServerLogTag> _repeated_notifyTagList_codec
+        = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::EggLink.DanhengServer.Proto.ServerLogTag) x);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerLogTag> notifyTagList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerLogTag>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerLogTag> NotifyTagList {
+      get { return notifyTagList_; }
     }
 
     /// <summary>Field number for the "notify_level" field.</summary>
@@ -95,17 +106,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         notifyLevel_ = value;
       }
-    }
-
-    /// <summary>Field number for the "notify_tag_list" field.</summary>
-    public const int NotifyTagListFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ServerLogTag> _repeated_notifyTagList_codec
-        = pb::FieldCodec.ForEnum(66, x => (int) x, x => (global::EggLink.DanhengServer.Proto.ServerLogTag) x);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerLogTag> notifyTagList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerLogTag>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerLogTag> NotifyTagList {
-      get { return notifyTagList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NotifyLevel != other.NotifyLevel) return false;
       if(!notifyTagList_.Equals(other.notifyTagList_)) return false;
+      if (NotifyLevel != other.NotifyLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NotifyLevel != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) hash ^= NotifyLevel.GetHashCode();
       hash ^= notifyTagList_.GetHashCode();
+      if (NotifyLevel != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) hash ^= NotifyLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,10 +182,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += notifyTagList_.CalculateSize(_repeated_notifyTagList_codec);
       if (NotifyLevel != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NotifyLevel);
       }
-      size += notifyTagList_.CalculateSize(_repeated_notifyTagList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -198,10 +198,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      notifyTagList_.Add(other.notifyTagList_);
       if (other.NotifyLevel != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) {
         NotifyLevel = other.NotifyLevel;
       }
-      notifyTagList_.Add(other.notifyTagList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -217,8 +217,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66:
-          case 64: {
+          case 10:
+          case 8: {
             notifyTagList_.AddEntriesFrom(input, _repeated_notifyTagList_codec);
             break;
           }
@@ -241,8 +241,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66:
-          case 64: {
+          case 10:
+          case 8: {
             notifyTagList_.AddEntriesFrom(ref input, _repeated_notifyTagList_codec);
             break;
           }

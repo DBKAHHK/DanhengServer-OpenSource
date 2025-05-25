@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHZXRTZWNyZXRLZXlJbmZvQ3NSZXEucHJvdG8iKwoVR2V0U2VjcmV0S2V5",
-            "SW5mb0NzUmVxEhIKCnNlY3JldF9yZXEYCiABKAxCHqoCG0VnZ0xpbmsuRGFu",
+            "SW5mb0NzUmVxEhIKCnNlY3JldF9yZXEYBCABKAxCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "secret_req" field.</summary>
-    public const int SecretReqFieldNumber = 10;
+    public const int SecretReqFieldNumber = 4;
     private pb::ByteString secretReq_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (SecretReq.Length != 0) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(34);
         output.WriteBytes(SecretReq);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SecretReq.Length != 0) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(34);
         output.WriteBytes(SecretReq);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 34: {
             SecretReq = input.ReadBytes();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 34: {
             SecretReq = input.ReadBytes();
             break;
           }

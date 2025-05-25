@@ -24,17 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static LobbyGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNMb2JieUdhbWVJbmZvLnByb3RvGhVMb2JieU1hcmJsZUluZm8ucHJvdG8a",
-            "FExvYmJ5TWFyY2hJbmZvLnByb3RvIqYBCg1Mb2JieUdhbWVJbmZvEhMKC0JI",
-            "R0dIRkpNTUJNGAEgAygJEhMKC0ZNT1BCRktOTE5JGAIgASgIEiwKEGxvYmJ5",
-            "X21hcmNoX2luZm8Y6QcgASgLMg8uTG9iYnlNYXJjaEluZm9IABIuChFsb2Ji",
-            "eV9tYXJibGVfaW5mbxjqByABKAsyEC5Mb2JieU1hcmJsZUluZm9IAEINCgtQ",
-            "TkFLS0ZOSk1NTUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "ChNMb2JieUdhbWVJbmZvLnByb3RvGhRMb2JieU1hcmNoSW5mby5wcm90bxoR",
+            "RkRISkJJTVBLRUsucHJvdG8aFUxvYmJ5TWFyYmxlSW5mby5wcm90byLMAQoN",
+            "TG9iYnlHYW1lSW5mbxITCgtCSEdHSEZKTU1CTRgBIAMoCRITCgtGTU9QQkZL",
+            "TkxOSRgCIAEoCBIsChBsb2JieV9tYXJjaF9pbmZvGOkHIAEoCzIPLkxvYmJ5",
+            "TWFyY2hJbmZvSAASLgoRbG9iYnlfbWFyYmxlX2luZm8Y6gcgASgLMhAuTG9i",
+            "YnlNYXJibGVJbmZvSAASJAoLTUlOS0tFSklPTkUY6wcgASgLMgwuRkRISkJJ",
+            "TVBLRUtIAEINCgtQTkFLS0ZOSk1NTUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LobbyMarbleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyMarchInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LobbyMarchInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FDHJBIMPKEKReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyMarbleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LobbyGameInfo), global::EggLink.DanhengServer.Proto.LobbyGameInfo.Parser, new[]{ "BHGGHFJMMBM", "FMOPBFKNLNI", "LobbyMarchInfo", "LobbyMarbleInfo" }, new[]{ "PNAKKFNJMMM" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LobbyGameInfo), global::EggLink.DanhengServer.Proto.LobbyGameInfo.Parser, new[]{ "BHGGHFJMMBM", "FMOPBFKNLNI", "LobbyMarchInfo", "LobbyMarbleInfo", "MINKKEJIONE" }, new[]{ "PNAKKFNJMMM" }, null, null, null)
           }));
     }
     #endregion
@@ -84,6 +85,9 @@ namespace EggLink.DanhengServer.Proto {
           break;
         case PNAKKFNJMMMOneofCase.LobbyMarbleInfo:
           LobbyMarbleInfo = other.LobbyMarbleInfo.Clone();
+          break;
+        case PNAKKFNJMMMOneofCase.MINKKEJIONE:
+          MINKKEJIONE = other.MINKKEJIONE.Clone();
           break;
       }
 
@@ -143,12 +147,25 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "MINKKEJIONE" field.</summary>
+    public const int MINKKEJIONEFieldNumber = 1003;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.FDHJBIMPKEK MINKKEJIONE {
+      get { return pNAKKFNJMMMCase_ == PNAKKFNJMMMOneofCase.MINKKEJIONE ? (global::EggLink.DanhengServer.Proto.FDHJBIMPKEK) pNAKKFNJMMM_ : null; }
+      set {
+        pNAKKFNJMMM_ = value;
+        pNAKKFNJMMMCase_ = value == null ? PNAKKFNJMMMOneofCase.None : PNAKKFNJMMMOneofCase.MINKKEJIONE;
+      }
+    }
+
     private object pNAKKFNJMMM_;
     /// <summary>Enum of possible cases for the "PNAKKFNJMMM" oneof.</summary>
     public enum PNAKKFNJMMMOneofCase {
       None = 0,
       LobbyMarchInfo = 1001,
       LobbyMarbleInfo = 1002,
+      MINKKEJIONE = 1003,
     }
     private PNAKKFNJMMMOneofCase pNAKKFNJMMMCase_ = PNAKKFNJMMMOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -183,6 +200,7 @@ namespace EggLink.DanhengServer.Proto {
       if (FMOPBFKNLNI != other.FMOPBFKNLNI) return false;
       if (!object.Equals(LobbyMarchInfo, other.LobbyMarchInfo)) return false;
       if (!object.Equals(LobbyMarbleInfo, other.LobbyMarbleInfo)) return false;
+      if (!object.Equals(MINKKEJIONE, other.MINKKEJIONE)) return false;
       if (PNAKKFNJMMMCase != other.PNAKKFNJMMMCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -195,6 +213,7 @@ namespace EggLink.DanhengServer.Proto {
       if (FMOPBFKNLNI != false) hash ^= FMOPBFKNLNI.GetHashCode();
       if (pNAKKFNJMMMCase_ == PNAKKFNJMMMOneofCase.LobbyMarchInfo) hash ^= LobbyMarchInfo.GetHashCode();
       if (pNAKKFNJMMMCase_ == PNAKKFNJMMMOneofCase.LobbyMarbleInfo) hash ^= LobbyMarbleInfo.GetHashCode();
+      if (pNAKKFNJMMMCase_ == PNAKKFNJMMMOneofCase.MINKKEJIONE) hash ^= MINKKEJIONE.GetHashCode();
       hash ^= (int) pNAKKFNJMMMCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -227,6 +246,10 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(210, 62);
         output.WriteMessage(LobbyMarbleInfo);
       }
+      if (pNAKKFNJMMMCase_ == PNAKKFNJMMMOneofCase.MINKKEJIONE) {
+        output.WriteRawTag(218, 62);
+        output.WriteMessage(MINKKEJIONE);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -250,6 +273,10 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(210, 62);
         output.WriteMessage(LobbyMarbleInfo);
       }
+      if (pNAKKFNJMMMCase_ == PNAKKFNJMMMOneofCase.MINKKEJIONE) {
+        output.WriteRawTag(218, 62);
+        output.WriteMessage(MINKKEJIONE);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -269,6 +296,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (pNAKKFNJMMMCase_ == PNAKKFNJMMMOneofCase.LobbyMarbleInfo) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(LobbyMarbleInfo);
+      }
+      if (pNAKKFNJMMMCase_ == PNAKKFNJMMMOneofCase.MINKKEJIONE) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MINKKEJIONE);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -298,6 +328,12 @@ namespace EggLink.DanhengServer.Proto {
             LobbyMarbleInfo = new global::EggLink.DanhengServer.Proto.LobbyMarbleInfo();
           }
           LobbyMarbleInfo.MergeFrom(other.LobbyMarbleInfo);
+          break;
+        case PNAKKFNJMMMOneofCase.MINKKEJIONE:
+          if (MINKKEJIONE == null) {
+            MINKKEJIONE = new global::EggLink.DanhengServer.Proto.FDHJBIMPKEK();
+          }
+          MINKKEJIONE.MergeFrom(other.MINKKEJIONE);
           break;
       }
 
@@ -342,6 +378,15 @@ namespace EggLink.DanhengServer.Proto {
             LobbyMarbleInfo = subBuilder;
             break;
           }
+          case 8026: {
+            global::EggLink.DanhengServer.Proto.FDHJBIMPKEK subBuilder = new global::EggLink.DanhengServer.Proto.FDHJBIMPKEK();
+            if (pNAKKFNJMMMCase_ == PNAKKFNJMMMOneofCase.MINKKEJIONE) {
+              subBuilder.MergeFrom(MINKKEJIONE);
+            }
+            input.ReadMessage(subBuilder);
+            MINKKEJIONE = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -381,6 +426,15 @@ namespace EggLink.DanhengServer.Proto {
             }
             input.ReadMessage(subBuilder);
             LobbyMarbleInfo = subBuilder;
+            break;
+          }
+          case 8026: {
+            global::EggLink.DanhengServer.Proto.FDHJBIMPKEK subBuilder = new global::EggLink.DanhengServer.Proto.FDHJBIMPKEK();
+            if (pNAKKFNJMMMCase_ == PNAKKFNJMMMOneofCase.MINKKEJIONE) {
+              subBuilder.MergeFrom(MINKKEJIONE);
+            }
+            input.ReadMessage(subBuilder);
+            MINKKEJIONE = subBuilder;
             break;
           }
         }

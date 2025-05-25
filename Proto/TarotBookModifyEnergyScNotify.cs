@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNUYXJvdEJvb2tNb2RpZnlFbmVyZ3lTY05vdGlmeS5wcm90byJMCh1UYXJv",
-            "dEJvb2tNb2RpZnlFbmVyZ3lTY05vdGlmeRITCgtlbmVyZ3lfaW5mbxgMIAEo",
-            "DRIWCg5zdWJfbWlzc2lvbl9pZBgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "dEJvb2tNb2RpZnlFbmVyZ3lTY05vdGlmeRIWCg5zdWJfbWlzc2lvbl9pZBgC",
+            "IAEoDRITCgtlbmVyZ3lfaW5mbxgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TarotBookModifyEnergyScNotify), global::EggLink.DanhengServer.Proto.TarotBookModifyEnergyScNotify.Parser, new[]{ "EnergyInfo", "SubMissionId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TarotBookModifyEnergyScNotify), global::EggLink.DanhengServer.Proto.TarotBookModifyEnergyScNotify.Parser, new[]{ "SubMissionId", "EnergyInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TarotBookModifyEnergyScNotify(TarotBookModifyEnergyScNotify other) : this() {
-      energyInfo_ = other.energyInfo_;
       subMissionId_ = other.subMissionId_;
+      energyInfo_ = other.energyInfo_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TarotBookModifyEnergyScNotify(this);
     }
 
-    /// <summary>Field number for the "energy_info" field.</summary>
-    public const int EnergyInfoFieldNumber = 12;
-    private uint energyInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EnergyInfo {
-      get { return energyInfo_; }
-      set {
-        energyInfo_ = value;
-      }
-    }
-
     /// <summary>Field number for the "sub_mission_id" field.</summary>
-    public const int SubMissionIdFieldNumber = 15;
+    public const int SubMissionIdFieldNumber = 2;
     private uint subMissionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return subMissionId_; }
       set {
         subMissionId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "energy_info" field.</summary>
+    public const int EnergyInfoFieldNumber = 7;
+    private uint energyInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint EnergyInfo {
+      get { return energyInfo_; }
+      set {
+        energyInfo_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (EnergyInfo != other.EnergyInfo) return false;
       if (SubMissionId != other.SubMissionId) return false;
+      if (EnergyInfo != other.EnergyInfo) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (EnergyInfo != 0) hash ^= EnergyInfo.GetHashCode();
       if (SubMissionId != 0) hash ^= SubMissionId.GetHashCode();
+      if (EnergyInfo != 0) hash ^= EnergyInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EnergyInfo != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(EnergyInfo);
-      }
       if (SubMissionId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(16);
         output.WriteUInt32(SubMissionId);
+      }
+      if (EnergyInfo != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(EnergyInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EnergyInfo != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(EnergyInfo);
-      }
       if (SubMissionId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(16);
         output.WriteUInt32(SubMissionId);
+      }
+      if (EnergyInfo != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(EnergyInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (EnergyInfo != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EnergyInfo);
-      }
       if (SubMissionId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SubMissionId);
+      }
+      if (EnergyInfo != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EnergyInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.EnergyInfo != 0) {
-        EnergyInfo = other.EnergyInfo;
-      }
       if (other.SubMissionId != 0) {
         SubMissionId = other.SubMissionId;
+      }
+      if (other.EnergyInfo != 0) {
+        EnergyInfo = other.EnergyInfo;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
-            EnergyInfo = input.ReadUInt32();
+          case 16: {
+            SubMissionId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            SubMissionId = input.ReadUInt32();
+          case 56: {
+            EnergyInfo = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
-            EnergyInfo = input.ReadUInt32();
+          case 16: {
+            SubMissionId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            SubMissionId = input.ReadUInt32();
+          case 56: {
+            EnergyInfo = input.ReadUInt32();
             break;
           }
         }

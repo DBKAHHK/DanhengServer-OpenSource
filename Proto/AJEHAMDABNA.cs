@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static AJEHAMDABNAReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFBSkVIQU1EQUJOQS5wcm90byIyCgtBSkVIQU1EQUJOQRITCgtPTURERktN",
-            "QUFQRRgHIAEoDRIOCgZpc193aW4YBiABKAhCHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "ChFBSkVIQU1EQUJOQS5wcm90byIyCgtBSkVIQU1EQUJOQRIOCgZpc193aW4Y",
+            "DyABKAgSEwoLT01EREZLTUFBUEUYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AJEHAMDABNA), global::EggLink.DanhengServer.Proto.AJEHAMDABNA.Parser, new[]{ "OMDDFKMAAPE", "IsWin" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AJEHAMDABNA), global::EggLink.DanhengServer.Proto.AJEHAMDABNA.Parser, new[]{ "IsWin", "OMDDFKMAAPE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AJEHAMDABNA(AJEHAMDABNA other) : this() {
-      oMDDFKMAAPE_ = other.oMDDFKMAAPE_;
       isWin_ = other.isWin_;
+      oMDDFKMAAPE_ = other.oMDDFKMAAPE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new AJEHAMDABNA(this);
     }
 
-    /// <summary>Field number for the "OMDDFKMAAPE" field.</summary>
-    public const int OMDDFKMAAPEFieldNumber = 7;
-    private uint oMDDFKMAAPE_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OMDDFKMAAPE {
-      get { return oMDDFKMAAPE_; }
-      set {
-        oMDDFKMAAPE_ = value;
-      }
-    }
-
     /// <summary>Field number for the "is_win" field.</summary>
-    public const int IsWinFieldNumber = 6;
+    public const int IsWinFieldNumber = 15;
     private bool isWin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return isWin_; }
       set {
         isWin_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OMDDFKMAAPE" field.</summary>
+    public const int OMDDFKMAAPEFieldNumber = 9;
+    private uint oMDDFKMAAPE_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint OMDDFKMAAPE {
+      get { return oMDDFKMAAPE_; }
+      set {
+        oMDDFKMAAPE_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (OMDDFKMAAPE != other.OMDDFKMAAPE) return false;
       if (IsWin != other.IsWin) return false;
+      if (OMDDFKMAAPE != other.OMDDFKMAAPE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (OMDDFKMAAPE != 0) hash ^= OMDDFKMAAPE.GetHashCode();
       if (IsWin != false) hash ^= IsWin.GetHashCode();
+      if (OMDDFKMAAPE != 0) hash ^= OMDDFKMAAPE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsWin != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsWin);
-      }
       if (OMDDFKMAAPE != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(OMDDFKMAAPE);
+      }
+      if (IsWin != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(IsWin);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsWin != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsWin);
-      }
       if (OMDDFKMAAPE != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(OMDDFKMAAPE);
+      }
+      if (IsWin != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(IsWin);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (OMDDFKMAAPE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OMDDFKMAAPE);
-      }
       if (IsWin != false) {
         size += 1 + 1;
+      }
+      if (OMDDFKMAAPE != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OMDDFKMAAPE);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.OMDDFKMAAPE != 0) {
-        OMDDFKMAAPE = other.OMDDFKMAAPE;
-      }
       if (other.IsWin != false) {
         IsWin = other.IsWin;
+      }
+      if (other.OMDDFKMAAPE != 0) {
+        OMDDFKMAAPE = other.OMDDFKMAAPE;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            IsWin = input.ReadBool();
+          case 72: {
+            OMDDFKMAAPE = input.ReadUInt32();
             break;
           }
-          case 56: {
-            OMDDFKMAAPE = input.ReadUInt32();
+          case 120: {
+            IsWin = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            IsWin = input.ReadBool();
+          case 72: {
+            OMDDFKMAAPE = input.ReadUInt32();
             break;
           }
-          case 56: {
-            OMDDFKMAAPE = input.ReadUInt32();
+          case 120: {
+            IsWin = input.ReadBool();
             break;
           }
         }

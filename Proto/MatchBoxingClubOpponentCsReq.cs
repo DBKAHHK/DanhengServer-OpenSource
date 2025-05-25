@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJNYXRjaEJveGluZ0NsdWJPcHBvbmVudENzUmVxLnByb3RvGhFHTkVJQkJQ",
             "T0FBQi5wcm90byJsChxNYXRjaEJveGluZ0NsdWJPcHBvbmVudENzUmVxEiEK",
-            "C01ETEFDSERLTVBIGAkgAygLMgwuR05FSUJCUE9BQUISFAoMY2hhbGxlbmdl",
-            "X2lkGAogASgNEhMKC2F2YXRhcl9saXN0GAMgAygNQh6qAhtFZ2dMaW5rLkRh",
+            "C01ETEFDSERLTVBIGAEgAygLMgwuR05FSUJCUE9BQUISFAoMY2hhbGxlbmdl",
+            "X2lkGAsgASgNEhMKC2F2YXRhcl9saXN0GAYgAygNQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GNEIBBPOAABReflection.Descriptor, },
@@ -87,9 +87,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MDLACHDKMPH" field.</summary>
-    public const int MDLACHDKMPHFieldNumber = 9;
+    public const int MDLACHDKMPHFieldNumber = 1;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GNEIBBPOAAB> _repeated_mDLACHDKMPH_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.GNEIBBPOAAB.Parser);
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.GNEIBBPOAAB.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GNEIBBPOAAB> mDLACHDKMPH_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GNEIBBPOAAB>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 10;
+    public const int ChallengeIdFieldNumber = 11;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,9 +110,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_list" field.</summary>
-    public const int AvatarListFieldNumber = 3;
+    public const int AvatarListFieldNumber = 6;
     private static readonly pb::FieldCodec<uint> _repeated_avatarList_codec
-        = pb::FieldCodec.ForUInt32(26);
+        = pb::FieldCodec.ForUInt32(50);
     private readonly pbc::RepeatedField<uint> avatarList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,10 +166,10 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      avatarList_.WriteTo(output, _repeated_avatarList_codec);
       mDLACHDKMPH_.WriteTo(output, _repeated_mDLACHDKMPH_codec);
+      avatarList_.WriteTo(output, _repeated_avatarList_codec);
       if (ChallengeId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(88);
         output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
@@ -182,10 +182,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       mDLACHDKMPH_.WriteTo(ref output, _repeated_mDLACHDKMPH_codec);
+      avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       if (ChallengeId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(88);
         output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
@@ -235,16 +235,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26:
-          case 24: {
-            avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
-            break;
-          }
-          case 74: {
+          case 10: {
             mDLACHDKMPH_.AddEntriesFrom(input, _repeated_mDLACHDKMPH_codec);
             break;
           }
-          case 80: {
+          case 50:
+          case 48: {
+            avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
+            break;
+          }
+          case 88: {
             ChallengeId = input.ReadUInt32();
             break;
           }
@@ -263,16 +263,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26:
-          case 24: {
-            avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
-            break;
-          }
-          case 74: {
+          case 10: {
             mDLACHDKMPH_.AddEntriesFrom(ref input, _repeated_mDLACHDKMPH_codec);
             break;
           }
-          case 80: {
+          case 50:
+          case 48: {
+            avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
+            break;
+          }
+          case 88: {
             ChallengeId = input.ReadUInt32();
             break;
           }

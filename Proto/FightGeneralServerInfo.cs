@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxGaWdodEdlbmVyYWxTZXJ2ZXJJbmZvLnByb3RvGhNGaWdodEdhbWVJbmZv",
             "LnByb3RvIkEKFkZpZ2h0R2VuZXJhbFNlcnZlckluZm8SJwoPZmlnaHRfZ2Ft",
-            "ZV9pbmZvGAogAygLMg4uRmlnaHRHYW1lSW5mb0IeqgIbRWdnTGluay5EYW5o",
+            "ZV9pbmZvGAUgAygLMg4uRmlnaHRHYW1lSW5mb0IeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightGameInfoReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "fight_game_info" field.</summary>
-    public const int FightGameInfoFieldNumber = 10;
+    public const int FightGameInfoFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FightGameInfo> _repeated_fightGameInfo_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.FightGameInfo.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.FightGameInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FightGameInfo> fightGameInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FightGameInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 42: {
             fightGameInfo_.AddEntriesFrom(input, _repeated_fightGameInfo_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 42: {
             fightGameInfo_.AddEntriesFrom(ref input, _repeated_fightGameInfo_codec);
             break;
           }

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static ItemListReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5JdGVtTGlzdC5wcm90bxoKSXRlbS5wcm90byIlCghJdGVtTGlzdBIZCgpp",
-            "dGVtX2xpc3RfGAcgAygLMgUuSXRlbUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "Cg5JdGVtTGlzdC5wcm90bxoKSXRlbS5wcm90byIkCghJdGVtTGlzdBIYCglp",
+            "dGVtX2xpc3QYByADKAsyBS5JdGVtQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -82,7 +82,7 @@ namespace EggLink.DanhengServer.Proto {
       return new ItemList(this);
     }
 
-    /// <summary>Field number for the "item_list_" field.</summary>
+    /// <summary>Field number for the "item_list" field.</summary>
     public const int ItemList_FieldNumber = 7;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Item> _repeated_itemList_codec
         = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.Item.Parser);

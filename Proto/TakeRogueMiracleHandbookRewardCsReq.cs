@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CilUYWtlUm9ndWVNaXJhY2xlSGFuZGJvb2tSZXdhcmRDc1JlcS5wcm90byJE",
             "CiNUYWtlUm9ndWVNaXJhY2xlSGFuZGJvb2tSZXdhcmRDc1JlcRIdChVoYW5k",
-            "Ym9va19taXJhY2xlX2xpc3QYDyADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "Ym9va19taXJhY2xlX2xpc3QYBiADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "handbook_miracle_list" field.</summary>
-    public const int HandbookMiracleListFieldNumber = 15;
+    public const int HandbookMiracleListFieldNumber = 6;
     private static readonly pb::FieldCodec<uint> _repeated_handbookMiracleList_codec
-        = pb::FieldCodec.ForUInt32(122);
+        = pb::FieldCodec.ForUInt32(50);
     private readonly pbc::RepeatedField<uint> handbookMiracleList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 122:
-          case 120: {
+          case 50:
+          case 48: {
             handbookMiracleList_.AddEntriesFrom(input, _repeated_handbookMiracleList_codec);
             break;
           }
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 122:
-          case 120: {
+          case 50:
+          case 48: {
             handbookMiracleList_.AddEntriesFrom(ref input, _repeated_handbookMiracleList_codec);
             break;
           }

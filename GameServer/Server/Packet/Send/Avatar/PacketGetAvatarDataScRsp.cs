@@ -22,6 +22,21 @@ public class PacketGetAvatarDataScRsp : BasePacket
             proto.AvatarList.Add(avatar.ToProto());
         });
 
+        foreach (var baseAvatarId in GameData.MultiplePathAvatarConfigData.Values.Select(x => x.BaseAvatarID)
+                     .ToHashSet())
+        {
+            var avatar = player.AvatarManager?.GetFormalAvatar(baseAvatarId);
+            if (avatar == null) continue;
+
+            proto.CurAvatarPath.Add((uint)avatar.BaseAvatarId, (MultiPathAvatarType)avatar.AvatarId);
+            proto.MultiPathAvatarInfoList.AddRange(avatar.ToAvatarPathProto());
+
+            if (baseAvatarId == 8001)
+            {
+                proto.BasicTypeIdList.Add((uint)avatar.AvatarId);
+            }
+        }
+
         SetData(proto);
     }
 }

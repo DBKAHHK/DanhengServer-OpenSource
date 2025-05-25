@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static GetRogueShopFormulaInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJHZXRSb2d1ZVNob3BGb3JtdWxhSW5mb1NjUnNwLnByb3RvGhJJdGVtQ29z",
-            "dERhdGEucHJvdG8aFEJ1eUZvcm11bGFJbmZvLnByb3RvIqoBChxHZXRSb2d1",
-            "ZVNob3BGb3JtdWxhSW5mb1NjUnNwEisKEnJvZ3VlX2Zvcm11bGFfaW5mbxgO",
-            "IAEoCzIPLkJ1eUZvcm11bGFJbmZvEhMKC0FFRkhLQU5CRk5DGAwgASgFEg8K",
-            "B3JldGNvZGUYCCABKA0SIgoLSUhKSENDRk1JRkQYDSABKAsyDS5JdGVtQ29z",
+            "CiJHZXRSb2d1ZVNob3BGb3JtdWxhSW5mb1NjUnNwLnByb3RvGhRCdXlGb3Jt",
+            "dWxhSW5mby5wcm90bxoSSXRlbUNvc3REYXRhLnByb3RvIqoBChxHZXRSb2d1",
+            "ZVNob3BGb3JtdWxhSW5mb1NjUnNwEisKEnJvZ3VlX2Zvcm11bGFfaW5mbxgI",
+            "IAEoCzIPLkJ1eUZvcm11bGFJbmZvEg8KB3JldGNvZGUYDyABKA0SEwoLQUVG",
+            "SEtBTkJGTkMYBiABKAUSIgoLSUhKSENDRk1JRkQYASABKAsyDS5JdGVtQ29z",
             "dERhdGESEwoLRUZPSk9DRkdJREoYByABKAVCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.BuyFormulaInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BuyFormulaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueShopFormulaInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueShopFormulaInfoScRsp.Parser, new[]{ "RogueFormulaInfo", "AEFHKANBFNC", "Retcode", "IHJHCCFMIFD", "EFOJOCFGIDJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueShopFormulaInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueShopFormulaInfoScRsp.Parser, new[]{ "RogueFormulaInfo", "Retcode", "AEFHKANBFNC", "IHJHCCFMIFD", "EFOJOCFGIDJ" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,8 +77,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRogueShopFormulaInfoScRsp(GetRogueShopFormulaInfoScRsp other) : this() {
       rogueFormulaInfo_ = other.rogueFormulaInfo_ != null ? other.rogueFormulaInfo_.Clone() : null;
-      aEFHKANBFNC_ = other.aEFHKANBFNC_;
       retcode_ = other.retcode_;
+      aEFHKANBFNC_ = other.aEFHKANBFNC_;
       iHJHCCFMIFD_ = other.iHJHCCFMIFD_ != null ? other.iHJHCCFMIFD_.Clone() : null;
       eFOJOCFGIDJ_ = other.eFOJOCFGIDJ_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -91,7 +91,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_formula_info" field.</summary>
-    public const int RogueFormulaInfoFieldNumber = 14;
+    public const int RogueFormulaInfoFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.BuyFormulaInfo rogueFormulaInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -102,20 +102,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AEFHKANBFNC" field.</summary>
-    public const int AEFHKANBFNCFieldNumber = 12;
-    private int aEFHKANBFNC_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int AEFHKANBFNC {
-      get { return aEFHKANBFNC_; }
-      set {
-        aEFHKANBFNC_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 15;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,8 +114,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "AEFHKANBFNC" field.</summary>
+    public const int AEFHKANBFNCFieldNumber = 6;
+    private int aEFHKANBFNC_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int AEFHKANBFNC {
+      get { return aEFHKANBFNC_; }
+      set {
+        aEFHKANBFNC_ = value;
+      }
+    }
+
     /// <summary>Field number for the "IHJHCCFMIFD" field.</summary>
-    public const int IHJHCCFMIFDFieldNumber = 13;
+    public const int IHJHCCFMIFDFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.ItemCostData iHJHCCFMIFD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,8 +166,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(RogueFormulaInfo, other.RogueFormulaInfo)) return false;
-      if (AEFHKANBFNC != other.AEFHKANBFNC) return false;
       if (Retcode != other.Retcode) return false;
+      if (AEFHKANBFNC != other.AEFHKANBFNC) return false;
       if (!object.Equals(IHJHCCFMIFD, other.IHJHCCFMIFD)) return false;
       if (EFOJOCFGIDJ != other.EFOJOCFGIDJ) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -178,8 +178,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (rogueFormulaInfo_ != null) hash ^= RogueFormulaInfo.GetHashCode();
-      if (AEFHKANBFNC != 0) hash ^= AEFHKANBFNC.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (AEFHKANBFNC != 0) hash ^= AEFHKANBFNC.GetHashCode();
       if (iHJHCCFMIFD_ != null) hash ^= IHJHCCFMIFD.GetHashCode();
       if (EFOJOCFGIDJ != 0) hash ^= EFOJOCFGIDJ.GetHashCode();
       if (_unknownFields != null) {
@@ -200,25 +200,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (iHJHCCFMIFD_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(IHJHCCFMIFD);
+      }
+      if (AEFHKANBFNC != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(AEFHKANBFNC);
+      }
       if (EFOJOCFGIDJ != 0) {
         output.WriteRawTag(56);
         output.WriteInt32(EFOJOCFGIDJ);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
-      }
-      if (AEFHKANBFNC != 0) {
-        output.WriteRawTag(96);
-        output.WriteInt32(AEFHKANBFNC);
-      }
-      if (iHJHCCFMIFD_ != null) {
-        output.WriteRawTag(106);
-        output.WriteMessage(IHJHCCFMIFD);
-      }
       if (rogueFormulaInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(66);
         output.WriteMessage(RogueFormulaInfo);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -230,25 +230,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (iHJHCCFMIFD_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(IHJHCCFMIFD);
+      }
+      if (AEFHKANBFNC != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(AEFHKANBFNC);
+      }
       if (EFOJOCFGIDJ != 0) {
         output.WriteRawTag(56);
         output.WriteInt32(EFOJOCFGIDJ);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
-      }
-      if (AEFHKANBFNC != 0) {
-        output.WriteRawTag(96);
-        output.WriteInt32(AEFHKANBFNC);
-      }
-      if (iHJHCCFMIFD_ != null) {
-        output.WriteRawTag(106);
-        output.WriteMessage(IHJHCCFMIFD);
-      }
       if (rogueFormulaInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(66);
         output.WriteMessage(RogueFormulaInfo);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -263,11 +263,11 @@ namespace EggLink.DanhengServer.Proto {
       if (rogueFormulaInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueFormulaInfo);
       }
-      if (AEFHKANBFNC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AEFHKANBFNC);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (AEFHKANBFNC != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AEFHKANBFNC);
       }
       if (iHJHCCFMIFD_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(IHJHCCFMIFD);
@@ -293,11 +293,11 @@ namespace EggLink.DanhengServer.Proto {
         }
         RogueFormulaInfo.MergeFrom(other.RogueFormulaInfo);
       }
-      if (other.AEFHKANBFNC != 0) {
-        AEFHKANBFNC = other.AEFHKANBFNC;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
+      }
+      if (other.AEFHKANBFNC != 0) {
+        AEFHKANBFNC = other.AEFHKANBFNC;
       }
       if (other.iHJHCCFMIFD_ != null) {
         if (iHJHCCFMIFD_ == null) {
@@ -323,30 +323,30 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            EFOJOCFGIDJ = input.ReadInt32();
-            break;
-          }
-          case 64: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 96: {
-            AEFHKANBFNC = input.ReadInt32();
-            break;
-          }
-          case 106: {
+          case 10: {
             if (iHJHCCFMIFD_ == null) {
               IHJHCCFMIFD = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(IHJHCCFMIFD);
             break;
           }
-          case 114: {
+          case 48: {
+            AEFHKANBFNC = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            EFOJOCFGIDJ = input.ReadInt32();
+            break;
+          }
+          case 66: {
             if (rogueFormulaInfo_ == null) {
               RogueFormulaInfo = new global::EggLink.DanhengServer.Proto.BuyFormulaInfo();
             }
             input.ReadMessage(RogueFormulaInfo);
+            break;
+          }
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -364,30 +364,30 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            EFOJOCFGIDJ = input.ReadInt32();
-            break;
-          }
-          case 64: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 96: {
-            AEFHKANBFNC = input.ReadInt32();
-            break;
-          }
-          case 106: {
+          case 10: {
             if (iHJHCCFMIFD_ == null) {
               IHJHCCFMIFD = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(IHJHCCFMIFD);
             break;
           }
-          case 114: {
+          case 48: {
+            AEFHKANBFNC = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            EFOJOCFGIDJ = input.ReadInt32();
+            break;
+          }
+          case 66: {
             if (rogueFormulaInfo_ == null) {
               RogueFormulaInfo = new global::EggLink.DanhengServer.Proto.BuyFormulaInfo();
             }
             input.ReadMessage(RogueFormulaInfo);
+            break;
+          }
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

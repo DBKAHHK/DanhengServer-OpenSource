@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFLTUhJQk5HQUZFTy5wcm90bxoRQU9HSUlNS0NKREoucHJvdG8iPwoLS01I",
-            "SUJOR0FGRU8SMAoacm9ndWVfbWFnaWNfdW5pdF9pbmZvX2xpc3QYDiADKAsy",
+            "SUJOR0FGRU8SMAoacm9ndWVfbWFnaWNfdW5pdF9pbmZvX2xpc3QYAiADKAsy",
             "DC5BT0dJSU1LQ0pESkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_magic_unit_info_list" field.</summary>
-    public const int RogueMagicUnitInfoListFieldNumber = 14;
+    public const int RogueMagicUnitInfoListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AOGIIMKCJDJ> _repeated_rogueMagicUnitInfoList_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.AOGIIMKCJDJ.Parser);
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.AOGIIMKCJDJ.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AOGIIMKCJDJ> rogueMagicUnitInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AOGIIMKCJDJ>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
+          case 18: {
             rogueMagicUnitInfoList_.AddEntriesFrom(input, _repeated_rogueMagicUnitInfoList_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
+          case 18: {
             rogueMagicUnitInfoList_.AddEntriesFrom(ref input, _repeated_rogueMagicUnitInfoList_codec);
             break;
           }

@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBHZXRNaXNzaW9uTWVzc2FnZUluZm9TY1JzcC5wcm90byKkAQoaR2V0TWlz",
-            "c2lvbk1lc3NhZ2VJbmZvU2NSc3ASQQoLQVBPTERMR1BLT1AYBCADKAsyLC5H",
+            "c2lvbk1lc3NhZ2VJbmZvU2NSc3ASQQoLQVBPTERMR1BLT1AYASADKAsyLC5H",
             "ZXRNaXNzaW9uTWVzc2FnZUluZm9TY1JzcC5BUE9MRExHUEtPUEVudHJ5Eg8K",
-            "B3JldGNvZGUYCyABKA0aMgoQQVBPTERMR1BLT1BFbnRyeRILCgNrZXkYASAB",
+            "B3JldGNvZGUYCCABKA0aMgoQQVBPTERMR1BLT1BFbnRyeRILCgNrZXkYASAB",
             "KA0SDQoFdmFsdWUYAiABKA06AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -87,9 +87,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "APOLDLGPKOP" field.</summary>
-    public const int APOLDLGPKOPFieldNumber = 4;
+    public const int APOLDLGPKOPFieldNumber = 1;
     private static readonly pbc::MapField<uint, uint>.Codec _map_aPOLDLGPKOP_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 34);
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 10);
     private readonly pbc::MapField<uint, uint> aPOLDLGPKOP_ = new pbc::MapField<uint, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -155,7 +155,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       aPOLDLGPKOP_.WriteTo(output, _map_aPOLDLGPKOP_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       aPOLDLGPKOP_.WriteTo(ref output, _map_aPOLDLGPKOP_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -218,11 +218,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 10: {
             aPOLDLGPKOP_.AddEntriesFrom(input, _map_aPOLDLGPKOP_codec);
             break;
           }
-          case 88: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -241,11 +241,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 10: {
             aPOLDLGPKOP_.AddEntriesFrom(ref input, _map_aPOLDLGPKOP_codec);
             break;
           }
-          case 88: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }

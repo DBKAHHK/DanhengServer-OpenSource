@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static ChallengeBuffInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdDaGFsbGVuZ2VCdWZmSW5mby5wcm90bxobQ2hhbGxlbmdlQm9zc0J1ZmZJ",
-            "bmZvLnByb3RvGhxDaGFsbGVuZ2VTdG9yeUJ1ZmZJbmZvLnByb3RvIn4KEUNo",
-            "YWxsZW5nZUJ1ZmZJbmZvEi0KCnN0b3J5X2luZm8YAiABKAsyFy5DaGFsbGVu",
-            "Z2VTdG9yeUJ1ZmZJbmZvSAASKwoJYm9zc19pbmZvGAEgASgLMhYuQ2hhbGxl",
+            "ChdDaGFsbGVuZ2VCdWZmSW5mby5wcm90bxocQ2hhbGxlbmdlU3RvcnlCdWZm",
+            "SW5mby5wcm90bxobQ2hhbGxlbmdlQm9zc0J1ZmZJbmZvLnByb3RvIn4KEUNo",
+            "YWxsZW5nZUJ1ZmZJbmZvEi0KCnN0b3J5X2luZm8YDiABKAsyFy5DaGFsbGVu",
+            "Z2VTdG9yeUJ1ZmZJbmZvSAASKwoJYm9zc19pbmZvGAsgASgLMhYuQ2hhbGxl",
             "bmdlQm9zc0J1ZmZJbmZvSABCDQoLQkNNRUtMTkFFQkVCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeBossBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossBuffInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeBuffInfo), global::EggLink.DanhengServer.Proto.ChallengeBuffInfo.Parser, new[]{ "StoryInfo", "BossInfo" }, new[]{ "BCMEKLNAEBE" }, null, null, null)
           }));
@@ -94,7 +94,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "story_info" field.</summary>
-    public const int StoryInfoFieldNumber = 2;
+    public const int StoryInfoFieldNumber = 14;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfo StoryInfo {
@@ -106,7 +106,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "boss_info" field.</summary>
-    public const int BossInfoFieldNumber = 1;
+    public const int BossInfoFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ChallengeBossBuffInfo BossInfo {
@@ -121,8 +121,8 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "BCMEKLNAEBE" oneof.</summary>
     public enum BCMEKLNAEBEOneofCase {
       None = 0,
-      StoryInfo = 2,
-      BossInfo = 1,
+      StoryInfo = 14,
+      BossInfo = 11,
     }
     private BCMEKLNAEBEOneofCase bCMEKLNAEBECase_ = BCMEKLNAEBEOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -185,11 +185,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (bCMEKLNAEBECase_ == BCMEKLNAEBEOneofCase.BossInfo) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(90);
         output.WriteMessage(BossInfo);
       }
       if (bCMEKLNAEBECase_ == BCMEKLNAEBEOneofCase.StoryInfo) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(114);
         output.WriteMessage(StoryInfo);
       }
       if (_unknownFields != null) {
@@ -203,11 +203,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (bCMEKLNAEBECase_ == BCMEKLNAEBEOneofCase.BossInfo) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(90);
         output.WriteMessage(BossInfo);
       }
       if (bCMEKLNAEBECase_ == BCMEKLNAEBEOneofCase.StoryInfo) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(114);
         output.WriteMessage(StoryInfo);
       }
       if (_unknownFields != null) {
@@ -268,7 +268,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 90: {
             global::EggLink.DanhengServer.Proto.ChallengeBossBuffInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeBossBuffInfo();
             if (bCMEKLNAEBECase_ == BCMEKLNAEBEOneofCase.BossInfo) {
               subBuilder.MergeFrom(BossInfo);
@@ -277,7 +277,7 @@ namespace EggLink.DanhengServer.Proto {
             BossInfo = subBuilder;
             break;
           }
-          case 18: {
+          case 114: {
             global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfo();
             if (bCMEKLNAEBECase_ == BCMEKLNAEBEOneofCase.StoryInfo) {
               subBuilder.MergeFrom(StoryInfo);
@@ -301,7 +301,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 90: {
             global::EggLink.DanhengServer.Proto.ChallengeBossBuffInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeBossBuffInfo();
             if (bCMEKLNAEBECase_ == BCMEKLNAEBEOneofCase.BossInfo) {
               subBuilder.MergeFrom(BossInfo);
@@ -310,7 +310,7 @@ namespace EggLink.DanhengServer.Proto {
             BossInfo = subBuilder;
             break;
           }
-          case 18: {
+          case 114: {
             global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfo subBuilder = new global::EggLink.DanhengServer.Proto.ChallengeStoryBuffInfo();
             if (bCMEKLNAEBECase_ == BCMEKLNAEBEOneofCase.StoryInfo) {
               subBuilder.MergeFrom(StoryInfo);

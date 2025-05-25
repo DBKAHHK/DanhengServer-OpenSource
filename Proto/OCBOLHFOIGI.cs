@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPQ0JPTEhGT0lHSS5wcm90bxoRTEVFSEpHTkJHTksucHJvdG8iMAoLT0NC",
-            "T0xIRk9JR0kSIQoLRk1ES0hBRE1DT0MYASADKAsyDC5MRUVISkdOQkdOS0Ie",
+            "T0xIRk9JR0kSIQoLRk1ES0hBRE1DT0MYCyADKAsyDC5MRUVISkdOQkdOS0Ie",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LEEHJGNBGNKReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FMDKHADMCOC" field.</summary>
-    public const int FMDKHADMCOCFieldNumber = 1;
+    public const int FMDKHADMCOCFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LEEHJGNBGNK> _repeated_fMDKHADMCOC_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.LEEHJGNBGNK.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.LEEHJGNBGNK.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LEEHJGNBGNK> fMDKHADMCOC_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LEEHJGNBGNK>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 90: {
             fMDKHADMCOC_.AddEntriesFrom(input, _repeated_fMDKHADMCOC_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 90: {
             fMDKHADMCOC_.AddEntriesFrom(ref input, _repeated_fMDKHADMCOC_codec);
             break;
           }

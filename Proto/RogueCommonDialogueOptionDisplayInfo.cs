@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CipSb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uRGlzcGxheUluZm8ucHJvdG8i",
             "XgokUm9ndWVDb21tb25EaWFsb2d1ZU9wdGlvbkRpc3BsYXlJbmZvEhkKEWRp",
-            "c3BsYXlfaW50X3ZhbHVlGAkgASgFEhsKE2Rpc3BsYXlfZmxvYXRfdmFsdWUY",
-            "AiABKAJCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "c3BsYXlfaW50X3ZhbHVlGAQgASgFEhsKE2Rpc3BsYXlfZmxvYXRfdmFsdWUY",
+            "CSABKAJCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "display_int_value" field.</summary>
-    public const int DisplayIntValueFieldNumber = 9;
+    public const int DisplayIntValueFieldNumber = 4;
     private int displayIntValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "display_float_value" field.</summary>
-    public const int DisplayFloatValueFieldNumber = 2;
+    public const int DisplayFloatValueFieldNumber = 9;
     private float displayFloatValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DisplayFloatValue != 0F) {
-        output.WriteRawTag(21);
-        output.WriteFloat(DisplayFloatValue);
-      }
       if (DisplayIntValue != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteInt32(DisplayIntValue);
+      }
+      if (DisplayFloatValue != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(DisplayFloatValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DisplayFloatValue != 0F) {
-        output.WriteRawTag(21);
-        output.WriteFloat(DisplayFloatValue);
-      }
       if (DisplayIntValue != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteInt32(DisplayIntValue);
+      }
+      if (DisplayFloatValue != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(DisplayFloatValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 21: {
-            DisplayFloatValue = input.ReadFloat();
+          case 32: {
+            DisplayIntValue = input.ReadInt32();
             break;
           }
-          case 72: {
-            DisplayIntValue = input.ReadInt32();
+          case 77: {
+            DisplayFloatValue = input.ReadFloat();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 21: {
-            DisplayFloatValue = input.ReadFloat();
+          case 32: {
+            DisplayIntValue = input.ReadInt32();
             break;
           }
-          case 72: {
-            DisplayIntValue = input.ReadInt32();
+          case 77: {
+            DisplayFloatValue = input.ReadFloat();
             break;
           }
         }

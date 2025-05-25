@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFETExKTUlBR0hERC5wcm90bxoRS05PS0lMRktPSEkucHJvdG8iMAoLRExM",
-            "Sk1JQUdIREQSIQoLRkpIR0NLRU5PUEYYAyADKAsyDC5LTk9LSUxGS09ISUIe",
+            "Sk1JQUdIREQSIQoLRkpIR0NLRU5PUEYYASADKAsyDC5LTk9LSUxGS09ISUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KNOKILFKOHIReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FJHGCKENOPF" field.</summary>
-    public const int FJHGCKENOPFFieldNumber = 3;
+    public const int FJHGCKENOPFFieldNumber = 1;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KNOKILFKOHI> _repeated_fJHGCKENOPF_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.KNOKILFKOHI.Parser);
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.KNOKILFKOHI.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KNOKILFKOHI> fJHGCKENOPF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KNOKILFKOHI>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 10: {
             fJHGCKENOPF_.AddEntriesFrom(input, _repeated_fJHGCKENOPF_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 10: {
             fJHGCKENOPF_.AddEntriesFrom(ref input, _repeated_fJHGCKENOPF_codec);
             break;
           }

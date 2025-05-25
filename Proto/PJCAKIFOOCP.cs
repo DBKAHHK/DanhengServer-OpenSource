@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQSkNBS0lGT09DUC5wcm90bxoRREpJQUVNQU5HQ0cucHJvdG8iRQoLUEpD",
-            "QUtJRk9PQ1ASEwoLRUNEQU1CSUlGQ0kYAiADKA0SIQoLSkZNQUhNT0ZKUEkY",
-            "AyABKAsyDC5ESklBRU1BTkdDR0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "QUtJRk9PQ1ASEwoLRUNEQU1CSUlGQ0kYCiADKA0SIQoLSkZNQUhNT0ZKUEkY",
+            "BSABKAsyDC5ESklBRU1BTkdDR0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DJIAEMANGCGReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ECDAMBIIFCI" field.</summary>
-    public const int ECDAMBIIFCIFieldNumber = 2;
+    public const int ECDAMBIIFCIFieldNumber = 10;
     private static readonly pb::FieldCodec<uint> _repeated_eCDAMBIIFCI_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(82);
     private readonly pbc::RepeatedField<uint> eCDAMBIIFCI_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JFMAHMOFJPI" field.</summary>
-    public const int JFMAHMOFJPIFieldNumber = 3;
+    public const int JFMAHMOFJPIFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.DJIAEMANGCG jFMAHMOFJPI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      eCDAMBIIFCI_.WriteTo(output, _repeated_eCDAMBIIFCI_codec);
       if (jFMAHMOFJPI_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(42);
         output.WriteMessage(JFMAHMOFJPI);
       }
+      eCDAMBIIFCI_.WriteTo(output, _repeated_eCDAMBIIFCI_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      eCDAMBIIFCI_.WriteTo(ref output, _repeated_eCDAMBIIFCI_codec);
       if (jFMAHMOFJPI_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(42);
         output.WriteMessage(JFMAHMOFJPI);
       }
+      eCDAMBIIFCI_.WriteTo(ref output, _repeated_eCDAMBIIFCI_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -219,16 +219,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
-            eCDAMBIIFCI_.AddEntriesFrom(input, _repeated_eCDAMBIIFCI_codec);
-            break;
-          }
-          case 26: {
+          case 42: {
             if (jFMAHMOFJPI_ == null) {
               JFMAHMOFJPI = new global::EggLink.DanhengServer.Proto.DJIAEMANGCG();
             }
             input.ReadMessage(JFMAHMOFJPI);
+            break;
+          }
+          case 82:
+          case 80: {
+            eCDAMBIIFCI_.AddEntriesFrom(input, _repeated_eCDAMBIIFCI_codec);
             break;
           }
         }
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
-            eCDAMBIIFCI_.AddEntriesFrom(ref input, _repeated_eCDAMBIIFCI_codec);
-            break;
-          }
-          case 26: {
+          case 42: {
             if (jFMAHMOFJPI_ == null) {
               JFMAHMOFJPI = new global::EggLink.DanhengServer.Proto.DJIAEMANGCG();
             }
             input.ReadMessage(JFMAHMOFJPI);
+            break;
+          }
+          case 82:
+          case 80: {
+            eCDAMBIIFCI_.AddEntriesFrom(ref input, _repeated_eCDAMBIIFCI_codec);
             break;
           }
         }

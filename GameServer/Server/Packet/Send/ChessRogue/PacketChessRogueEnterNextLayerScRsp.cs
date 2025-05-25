@@ -11,8 +11,7 @@ public class PacketChessRogueEnterNextLayerScRsp : BasePacket
         var proto = new ChessRogueEnterNextLayerScRsp
         {
             StageInfo = rogue.ToStageProto(),
-            RogueGameInfo = rogue.ToRogueGameInfo(),
-            RogueCurrentInfo = rogue.ToCurrentProto()
+            RogueGameInfo = rogue.ToRogueGameInfo()
         };
 
         SetData(proto);

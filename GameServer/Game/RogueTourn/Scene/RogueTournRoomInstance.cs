@@ -8,7 +8,7 @@ namespace EggLink.DanhengServer.GameServer.Game.RogueTourn.Scene;
 
 public class RogueTournRoomInstance(int roomIndex, RogueTournLevelInstance levelInstance)
 {
-    public int RoomId { get; set; }
+    public uint RoomId { get; set; }
     public int RoomIndex { get; set; } = roomIndex;
     public RogueTournRoomStatus Status { get; set; } = RogueTournRoomStatus.None;
     public RogueTournLevelInstance LevelInstance { get; set; } = levelInstance;
@@ -20,7 +20,7 @@ public class RogueTournRoomInstance(int roomIndex, RogueTournLevelInstance level
     {
         return new RogueTournRoomList
         {
-            RoomId = (uint)RoomId,
+            RoomId = RoomId,
             RoomIndex = (uint)RoomIndex,
             Status = Status
         };

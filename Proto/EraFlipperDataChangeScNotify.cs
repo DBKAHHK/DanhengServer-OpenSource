@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJFcmFGbGlwcGVyRGF0YUNoYW5nZVNjTm90aWZ5LnByb3RvGhhFcmFGbGlw",
             "cGVyRGF0YUxpc3QucHJvdG8iUwocRXJhRmxpcHBlckRhdGFDaGFuZ2VTY05v",
-            "dGlmeRIQCghmbG9vcl9pZBgPIAEoDRIhCgRkYXRhGAogASgLMhMuRXJhRmxp",
+            "dGlmeRIQCghmbG9vcl9pZBgEIAEoDRIhCgRkYXRhGAEgASgLMhMuRXJhRmxp",
             "cHBlckRhdGFMaXN0Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "floor_id" field.</summary>
-    public const int FloorIdFieldNumber = 15;
+    public const int FloorIdFieldNumber = 4;
     private uint floorId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 10;
+    public const int DataFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.EraFlipperDataList data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (data_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(10);
         output.WriteMessage(Data);
       }
       if (FloorId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(32);
         output.WriteUInt32(FloorId);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (data_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(10);
         output.WriteMessage(Data);
       }
       if (FloorId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(32);
         output.WriteUInt32(FloorId);
       }
       if (_unknownFields != null) {
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 10: {
             if (data_ == null) {
               Data = new global::EggLink.DanhengServer.Proto.EraFlipperDataList();
             }
             input.ReadMessage(Data);
             break;
           }
-          case 120: {
+          case 32: {
             FloorId = input.ReadUInt32();
             break;
           }
@@ -257,14 +257,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 10: {
             if (data_ == null) {
               Data = new global::EggLink.DanhengServer.Proto.EraFlipperDataList();
             }
             input.ReadMessage(Data);
             break;
           }
-          case 120: {
+          case 32: {
             FloorId = input.ReadUInt32();
             break;
           }

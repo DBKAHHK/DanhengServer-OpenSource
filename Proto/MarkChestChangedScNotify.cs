@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5NYXJrQ2hlc3RDaGFuZ2VkU2NOb3RpZnkucHJvdG8aF01hcmtDaGVzdEZ1",
             "bmNJbmZvLnByb3RvIkwKGE1hcmtDaGVzdENoYW5nZWRTY05vdGlmeRIwChRt",
-            "YXJrX2NoZXN0X2Z1bmNfaW5mbxgMIAMoCzISLk1hcmtDaGVzdEZ1bmNJbmZv",
+            "YXJrX2NoZXN0X2Z1bmNfaW5mbxgGIAMoCzISLk1hcmtDaGVzdEZ1bmNJbmZv",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarkChestFuncInfoReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "mark_chest_func_info" field.</summary>
-    public const int MarkChestFuncInfoFieldNumber = 12;
+    public const int MarkChestFuncInfoFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo> _repeated_markChestFuncInfo_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.MarkChestFuncInfo.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.MarkChestFuncInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo> markChestFuncInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MarkChestFuncInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98: {
+          case 50: {
             markChestFuncInfo_.AddEntriesFrom(input, _repeated_markChestFuncInfo_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98: {
+          case 50: {
             markChestFuncInfo_.AddEntriesFrom(ref input, _repeated_markChestFuncInfo_codec);
             break;
           }

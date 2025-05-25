@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdTZXJ2ZXJMb2dTY05vdGlmeS5wcm90bxoUU2VydmVyTG9nTGV2ZWwucHJv",
-            "dG8aElNlcnZlckxvZ1RhZy5wcm90byJ5ChFTZXJ2ZXJMb2dTY05vdGlmeRIe",
-            "CgVsZXZlbBgDIAEoDjIPLlNlcnZlckxvZ0xldmVsEhMKC0hLTElHQ0hISUVH",
-            "GAEgASgJEhoKA3RhZxgOIAEoDjINLlNlcnZlckxvZ1RhZxITCgtMQ1BMTEdO",
-            "Sk5BShgJIAEoCUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "dG8aElNlcnZlckxvZ1RhZy5wcm90byJ5ChFTZXJ2ZXJMb2dTY05vdGlmeRIT",
+            "CgtMQ1BMTEdOSk5BShgBIAEoCRITCgtIS0xJR0NISElFRxgGIAEoCRIeCgVs",
+            "ZXZlbBgCIAEoDjIPLlNlcnZlckxvZ0xldmVsEhoKA3RhZxgFIAEoDjINLlNl",
+            "cnZlckxvZ1RhZ0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ServerLogLevelReflection.Descriptor, global::EggLink.DanhengServer.Proto.ServerLogTagReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerLogScNotify), global::EggLink.DanhengServer.Proto.ServerLogScNotify.Parser, new[]{ "Level", "HKLIGCHHIEG", "Tag", "LCPLLGNJNAJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerLogScNotify), global::EggLink.DanhengServer.Proto.ServerLogScNotify.Parser, new[]{ "LCPLLGNJNAJ", "HKLIGCHHIEG", "Level", "Tag" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServerLogScNotify(ServerLogScNotify other) : this() {
-      level_ = other.level_;
-      hKLIGCHHIEG_ = other.hKLIGCHHIEG_;
-      tag_ = other.tag_;
       lCPLLGNJNAJ_ = other.lCPLLGNJNAJ_;
+      hKLIGCHHIEG_ = other.hKLIGCHHIEG_;
+      level_ = other.level_;
+      tag_ = other.tag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,20 +88,20 @@ namespace EggLink.DanhengServer.Proto {
       return new ServerLogScNotify(this);
     }
 
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.ServerLogLevel level_ = global::EggLink.DanhengServer.Proto.ServerLogLevel.None;
+    /// <summary>Field number for the "LCPLLGNJNAJ" field.</summary>
+    public const int LCPLLGNJNAJFieldNumber = 1;
+    private string lCPLLGNJNAJ_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ServerLogLevel Level {
-      get { return level_; }
+    public string LCPLLGNJNAJ {
+      get { return lCPLLGNJNAJ_; }
       set {
-        level_ = value;
+        lCPLLGNJNAJ_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "HKLIGCHHIEG" field.</summary>
-    public const int HKLIGCHHIEGFieldNumber = 1;
+    public const int HKLIGCHHIEGFieldNumber = 6;
     private string hKLIGCHHIEG_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,8 +112,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.ServerLogLevel level_ = global::EggLink.DanhengServer.Proto.ServerLogLevel.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ServerLogLevel Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
     /// <summary>Field number for the "tag" field.</summary>
-    public const int TagFieldNumber = 14;
+    public const int TagFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.ServerLogTag tag_ = global::EggLink.DanhengServer.Proto.ServerLogTag.Default;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -121,18 +133,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return tag_; }
       set {
         tag_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "LCPLLGNJNAJ" field.</summary>
-    public const int LCPLLGNJNAJFieldNumber = 9;
-    private string lCPLLGNJNAJ_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string LCPLLGNJNAJ {
-      get { return lCPLLGNJNAJ_; }
-      set {
-        lCPLLGNJNAJ_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -151,10 +151,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Level != other.Level) return false;
-      if (HKLIGCHHIEG != other.HKLIGCHHIEG) return false;
-      if (Tag != other.Tag) return false;
       if (LCPLLGNJNAJ != other.LCPLLGNJNAJ) return false;
+      if (HKLIGCHHIEG != other.HKLIGCHHIEG) return false;
+      if (Level != other.Level) return false;
+      if (Tag != other.Tag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,10 +162,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Level != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) hash ^= Level.GetHashCode();
-      if (HKLIGCHHIEG.Length != 0) hash ^= HKLIGCHHIEG.GetHashCode();
-      if (Tag != global::EggLink.DanhengServer.Proto.ServerLogTag.Default) hash ^= Tag.GetHashCode();
       if (LCPLLGNJNAJ.Length != 0) hash ^= LCPLLGNJNAJ.GetHashCode();
+      if (HKLIGCHHIEG.Length != 0) hash ^= HKLIGCHHIEG.GetHashCode();
+      if (Level != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) hash ^= Level.GetHashCode();
+      if (Tag != global::EggLink.DanhengServer.Proto.ServerLogTag.Default) hash ^= Tag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,21 +184,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HKLIGCHHIEG.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(HKLIGCHHIEG);
-      }
-      if (Level != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) Level);
-      }
       if (LCPLLGNJNAJ.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(10);
         output.WriteString(LCPLLGNJNAJ);
       }
+      if (Level != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Level);
+      }
       if (Tag != global::EggLink.DanhengServer.Proto.ServerLogTag.Default) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(40);
         output.WriteEnum((int) Tag);
+      }
+      if (HKLIGCHHIEG.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(HKLIGCHHIEG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -210,21 +210,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HKLIGCHHIEG.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(HKLIGCHHIEG);
-      }
-      if (Level != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) Level);
-      }
       if (LCPLLGNJNAJ.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(10);
         output.WriteString(LCPLLGNJNAJ);
       }
+      if (Level != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Level);
+      }
       if (Tag != global::EggLink.DanhengServer.Proto.ServerLogTag.Default) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(40);
         output.WriteEnum((int) Tag);
+      }
+      if (HKLIGCHHIEG.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(HKLIGCHHIEG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -236,17 +236,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Level != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
+      if (LCPLLGNJNAJ.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LCPLLGNJNAJ);
       }
       if (HKLIGCHHIEG.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(HKLIGCHHIEG);
       }
+      if (Level != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
+      }
       if (Tag != global::EggLink.DanhengServer.Proto.ServerLogTag.Default) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Tag);
-      }
-      if (LCPLLGNJNAJ.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(LCPLLGNJNAJ);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -260,17 +260,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Level != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) {
-        Level = other.Level;
+      if (other.LCPLLGNJNAJ.Length != 0) {
+        LCPLLGNJNAJ = other.LCPLLGNJNAJ;
       }
       if (other.HKLIGCHHIEG.Length != 0) {
         HKLIGCHHIEG = other.HKLIGCHHIEG;
       }
+      if (other.Level != global::EggLink.DanhengServer.Proto.ServerLogLevel.None) {
+        Level = other.Level;
+      }
       if (other.Tag != global::EggLink.DanhengServer.Proto.ServerLogTag.Default) {
         Tag = other.Tag;
-      }
-      if (other.LCPLLGNJNAJ.Length != 0) {
-        LCPLLGNJNAJ = other.LCPLLGNJNAJ;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -288,19 +288,19 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            HKLIGCHHIEG = input.ReadString();
-            break;
-          }
-          case 24: {
-            Level = (global::EggLink.DanhengServer.Proto.ServerLogLevel) input.ReadEnum();
-            break;
-          }
-          case 74: {
             LCPLLGNJNAJ = input.ReadString();
             break;
           }
-          case 112: {
+          case 16: {
+            Level = (global::EggLink.DanhengServer.Proto.ServerLogLevel) input.ReadEnum();
+            break;
+          }
+          case 40: {
             Tag = (global::EggLink.DanhengServer.Proto.ServerLogTag) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            HKLIGCHHIEG = input.ReadString();
             break;
           }
         }
@@ -319,19 +319,19 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            HKLIGCHHIEG = input.ReadString();
-            break;
-          }
-          case 24: {
-            Level = (global::EggLink.DanhengServer.Proto.ServerLogLevel) input.ReadEnum();
-            break;
-          }
-          case 74: {
             LCPLLGNJNAJ = input.ReadString();
             break;
           }
-          case 112: {
+          case 16: {
+            Level = (global::EggLink.DanhengServer.Proto.ServerLogLevel) input.ReadEnum();
+            break;
+          }
+          case 40: {
             Tag = (global::EggLink.DanhengServer.Proto.ServerLogTag) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            HKLIGCHHIEG = input.ReadString();
             break;
           }
         }

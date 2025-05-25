@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CihTeW5jUm9ndWVBZHZlbnR1cmVSb29tSW5mb1NjTm90aWZ5LnByb3RvGhdB",
             "ZHZlbnR1cmVSb29tSW5mby5wcm90byJVCiJTeW5jUm9ndWVBZHZlbnR1cmVS",
-            "b29tSW5mb1NjTm90aWZ5Ei8KE2FkdmVudHVyZV9yb29tX2luZm8YDCABKAsy",
+            "b29tSW5mb1NjTm90aWZ5Ei8KE2FkdmVudHVyZV9yb29tX2luZm8YBSABKAsy",
             "Ei5BZHZlbnR1cmVSb29tSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "adventure_room_info" field.</summary>
-    public const int AdventureRoomInfoFieldNumber = 12;
+    public const int AdventureRoomInfoFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.AdventureRoomInfo adventureRoomInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (adventureRoomInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(42);
         output.WriteMessage(AdventureRoomInfo);
       }
       if (_unknownFields != null) {
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (adventureRoomInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(42);
         output.WriteMessage(AdventureRoomInfo);
       }
       if (_unknownFields != null) {
@@ -202,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98: {
+          case 42: {
             if (adventureRoomInfo_ == null) {
               AdventureRoomInfo = new global::EggLink.DanhengServer.Proto.AdventureRoomInfo();
             }
@@ -224,7 +224,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98: {
+          case 42: {
             if (adventureRoomInfo_ == null) {
               AdventureRoomInfo = new global::EggLink.DanhengServer.Proto.AdventureRoomInfo();
             }

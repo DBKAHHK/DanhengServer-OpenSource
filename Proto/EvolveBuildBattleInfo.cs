@@ -24,29 +24,33 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildBattleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtFdm9sdmVCdWlsZEJhdHRsZUluZm8ucHJvdG8aEVBNTkhNQU1IR0FJLnBy",
-            "b3RvGhFCSEdCT09KRU9QRi5wcm90bxoRTUVPSUZJT0FFQ0YucHJvdG8aEUxH",
-            "SUZFRE5LSE9OLnByb3RvGh9Fdm9sdmVCdWlsZEdlYXJEYW1hZ2VJbmZvLnBy",
-            "b3RvIqIFChVFdm9sdmVCdWlsZEJhdHRsZUluZm8SFAoMY3VyX2xldmVsX2lk",
-            "GAEgASgNEhIKCmN1cl9wZXJpb2QYAiABKA0SEAoIY3VyX2NvaW4YAyABKA0S",
-            "JgoQd2VhcG9uX3Nsb3RfbGlzdBgEIAMoCzIMLk1FT0lGSU9BRUNGEikKE2Fj",
-            "Y2Vzc29yeV9zbG90X2xpc3QYBSADKAsyDC5NRU9JRklPQUVDRhIVCg1iYW5f",
-            "Z2Vhcl9saXN0GAYgAygNEiAKCmNvbGxlY3Rpb24YByABKAsyDC5MR0lGRURO",
-            "S0hPThIZChFhbGxvd2VkX2dlYXJfbGlzdBgIIAMoDRIPCgdjdXJfZXhwGAkg",
-            "ASgNEhIKCmN1cl9yZXJvbGwYCiABKA0SHQoVY3VyX3RyZWFzdXJlX21pc3Nf",
-            "Y250GAsgASgNEhYKDnBlcmlvZF9pZF9saXN0GAwgAygNEhkKEWN1cl9nZWFy",
-            "X2xvc3RfY250GA0gASgNEhAKCGN1cl93YXZlGA4gASgNEh0KFWlzX3VubG9j",
-            "a19nZWFyX3Jlcm9sbBgPIAEoCBIaChJpc191bmxvY2tfZ2Vhcl9iYW4YECAB",
-            "KAgSHwoJY2FyZF9saXN0GBEgAygLMgwuQkhHQk9PSkVPUEYSNAoQZ2Vhcl9k",
-            "YW1hZ2VfbGlzdBgSIAMoCzIaLkV2b2x2ZUJ1aWxkR2VhckRhbWFnZUluZm8S",
-            "EwoLc3RhdF9wYXJhbXMYEyADKA0SEQoJaXNfZ2l2ZXVwGBQgASgIEhwKFGN1",
-            "cl91bnVzZWRfcm91bmRfY250GBUgASgNEiMKDXN0YXRfbG9nX2luZm8YFiAB",
-            "KAsyDC5QTU5ITUFNSEdBSRIgChhwZXJpb2RfZmlyc3RfcmFuZG9tX3NlZWQY",
-            "FyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChtFdm9sdmVCdWlsZEJhdHRsZUluZm8ucHJvdG8aEUVHREFKSEpQTEdJLnBy",
+            "b3RvGhFNRU9JRklPQUVDRi5wcm90bxofRXZvbHZlQnVpbGRHZWFyRGFtYWdl",
+            "SW5mby5wcm90bxoRUE1OSE1BTUhHQUkucHJvdG8aGUV2b2x2ZUJ1aWxkQ2Fy",
+            "ZEluZm8ucHJvdG8aEUxHSUZFRE5LSE9OLnByb3RvIpoGChVFdm9sdmVCdWls",
+            "ZEJhdHRsZUluZm8SFAoMY3VyX2xldmVsX2lkGAEgASgNEhIKCmN1cl9wZXJp",
+            "b2QYAiABKA0SEAoIY3VyX2NvaW4YAyABKA0SJgoQd2VhcG9uX3Nsb3RfbGlz",
+            "dBgEIAMoCzIMLk1FT0lGSU9BRUNGEikKE2FjY2Vzc29yeV9zbG90X2xpc3QY",
+            "BSADKAsyDC5NRU9JRklPQUVDRhIVCg1iYW5fZ2Vhcl9saXN0GAYgAygNEiAK",
+            "CmNvbGxlY3Rpb24YByABKAsyDC5MR0lGRUROS0hPThIZChFhbGxvd2VkX2dl",
+            "YXJfbGlzdBgIIAMoDRIPCgdjdXJfZXhwGAkgASgNEhIKCmN1cl9yZXJvbGwY",
+            "CiABKA0SHQoVY3VyX3RyZWFzdXJlX21pc3NfY250GAsgASgNEhYKDnBlcmlv",
+            "ZF9pZF9saXN0GAwgAygNEhkKEWN1cl9nZWFyX2xvc3RfY250GA0gASgNEhAK",
+            "CGN1cl93YXZlGA4gASgNEh0KFWlzX3VubG9ja19nZWFyX3Jlcm9sbBgPIAEo",
+            "CBIaChJpc191bmxvY2tfZ2Vhcl9iYW4YECABKAgSJwoJY2FyZF9saXN0GBEg",
+            "AygLMhQuRXZvbHZlQnVpbGRDYXJkSW5mbxI0ChBnZWFyX2RhbWFnZV9saXN0",
+            "GBIgAygLMhouRXZvbHZlQnVpbGRHZWFyRGFtYWdlSW5mbxITCgtzdGF0X3Bh",
+            "cmFtcxgTIAMoDRIRCglpc19naXZldXAYFCABKAgSHAoUY3VyX3VudXNlZF9y",
+            "b3VuZF9jbnQYFSABKA0SIwoNc3RhdF9sb2dfaW5mbxgWIAEoCzIMLlBNTkhN",
+            "QU1IR0FJEiAKGHBlcmlvZF9maXJzdF9yYW5kb21fc2VlZBgXIAEoDRIXCg9j",
+            "dXJfY2FyZF9yZXJvbGwYGCABKA0SGQoRYWxsb3dlZF9jYXJkX2xpc3QYGSAD",
+            "KA0SHwoJZnVuY19saXN0GBogAygLMgwuRUdEQUpISlBMR0kSGQoRZmluaXNo",
+            "ZWRfc3RvcnlfaWQYGyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PMNHMAMHGAIReflection.Descriptor, global::EggLink.DanhengServer.Proto.BHGBOOJEOPFReflection.Descriptor, global::EggLink.DanhengServer.Proto.MEOIFIOAECFReflection.Descriptor, global::EggLink.DanhengServer.Proto.LGIFEDNKHONReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildGearDamageInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EGDAJHJPLGIReflection.Descriptor, global::EggLink.DanhengServer.Proto.MEOIFIOAECFReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildGearDamageInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PMNHMAMHGAIReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildCardInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LGIFEDNKHONReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfo), global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfo.Parser, new[]{ "CurLevelId", "CurPeriod", "CurCoin", "WeaponSlotList", "AccessorySlotList", "BanGearList", "Collection", "AllowedGearList", "CurExp", "CurReroll", "CurTreasureMissCnt", "PeriodIdList", "CurGearLostCnt", "CurWave", "IsUnlockGearReroll", "IsUnlockGearBan", "CardList", "GearDamageList", "StatParams", "IsGiveup", "CurUnusedRoundCnt", "StatLogInfo", "PeriodFirstRandomSeed" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfo), global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfo.Parser, new[]{ "CurLevelId", "CurPeriod", "CurCoin", "WeaponSlotList", "AccessorySlotList", "BanGearList", "Collection", "AllowedGearList", "CurExp", "CurReroll", "CurTreasureMissCnt", "PeriodIdList", "CurGearLostCnt", "CurWave", "IsUnlockGearReroll", "IsUnlockGearBan", "CardList", "GearDamageList", "StatParams", "IsGiveup", "CurUnusedRoundCnt", "StatLogInfo", "PeriodFirstRandomSeed", "CurCardReroll", "AllowedCardList", "FuncList", "FinishedStoryId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -111,6 +115,10 @@ namespace EggLink.DanhengServer.Proto {
       curUnusedRoundCnt_ = other.curUnusedRoundCnt_;
       statLogInfo_ = other.statLogInfo_ != null ? other.statLogInfo_.Clone() : null;
       periodFirstRandomSeed_ = other.periodFirstRandomSeed_;
+      curCardReroll_ = other.curCardReroll_;
+      allowedCardList_ = other.allowedCardList_.Clone();
+      funcList_ = other.funcList_.Clone();
+      finishedStoryId_ = other.finishedStoryId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -309,12 +317,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "card_list" field.</summary>
     public const int CardListFieldNumber = 17;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BHGBOOJEOPF> _repeated_cardList_codec
-        = pb::FieldCodec.ForMessage(138, global::EggLink.DanhengServer.Proto.BHGBOOJEOPF.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BHGBOOJEOPF> cardList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BHGBOOJEOPF>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EvolveBuildCardInfo> _repeated_cardList_codec
+        = pb::FieldCodec.ForMessage(138, global::EggLink.DanhengServer.Proto.EvolveBuildCardInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EvolveBuildCardInfo> cardList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EvolveBuildCardInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BHGBOOJEOPF> CardList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EvolveBuildCardInfo> CardList {
       get { return cardList_; }
     }
 
@@ -388,6 +396,52 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "cur_card_reroll" field.</summary>
+    public const int CurCardRerollFieldNumber = 24;
+    private uint curCardReroll_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CurCardReroll {
+      get { return curCardReroll_; }
+      set {
+        curCardReroll_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "allowed_card_list" field.</summary>
+    public const int AllowedCardListFieldNumber = 25;
+    private static readonly pb::FieldCodec<uint> _repeated_allowedCardList_codec
+        = pb::FieldCodec.ForUInt32(202);
+    private readonly pbc::RepeatedField<uint> allowedCardList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> AllowedCardList {
+      get { return allowedCardList_; }
+    }
+
+    /// <summary>Field number for the "func_list" field.</summary>
+    public const int FuncListFieldNumber = 26;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EGDAJHJPLGI> _repeated_funcList_codec
+        = pb::FieldCodec.ForMessage(210, global::EggLink.DanhengServer.Proto.EGDAJHJPLGI.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EGDAJHJPLGI> funcList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EGDAJHJPLGI>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EGDAJHJPLGI> FuncList {
+      get { return funcList_; }
+    }
+
+    /// <summary>Field number for the "finished_story_id" field.</summary>
+    public const int FinishedStoryIdFieldNumber = 27;
+    private uint finishedStoryId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FinishedStoryId {
+      get { return finishedStoryId_; }
+      set {
+        finishedStoryId_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -426,6 +480,10 @@ namespace EggLink.DanhengServer.Proto {
       if (CurUnusedRoundCnt != other.CurUnusedRoundCnt) return false;
       if (!object.Equals(StatLogInfo, other.StatLogInfo)) return false;
       if (PeriodFirstRandomSeed != other.PeriodFirstRandomSeed) return false;
+      if (CurCardReroll != other.CurCardReroll) return false;
+      if(!allowedCardList_.Equals(other.allowedCardList_)) return false;
+      if(!funcList_.Equals(other.funcList_)) return false;
+      if (FinishedStoryId != other.FinishedStoryId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -456,6 +514,10 @@ namespace EggLink.DanhengServer.Proto {
       if (CurUnusedRoundCnt != 0) hash ^= CurUnusedRoundCnt.GetHashCode();
       if (statLogInfo_ != null) hash ^= StatLogInfo.GetHashCode();
       if (PeriodFirstRandomSeed != 0) hash ^= PeriodFirstRandomSeed.GetHashCode();
+      if (CurCardReroll != 0) hash ^= CurCardReroll.GetHashCode();
+      hash ^= allowedCardList_.GetHashCode();
+      hash ^= funcList_.GetHashCode();
+      if (FinishedStoryId != 0) hash ^= FinishedStoryId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -542,6 +604,16 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(184, 1);
         output.WriteUInt32(PeriodFirstRandomSeed);
       }
+      if (CurCardReroll != 0) {
+        output.WriteRawTag(192, 1);
+        output.WriteUInt32(CurCardReroll);
+      }
+      allowedCardList_.WriteTo(output, _repeated_allowedCardList_codec);
+      funcList_.WriteTo(output, _repeated_funcList_codec);
+      if (FinishedStoryId != 0) {
+        output.WriteRawTag(216, 1);
+        output.WriteUInt32(FinishedStoryId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -620,6 +692,16 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(184, 1);
         output.WriteUInt32(PeriodFirstRandomSeed);
       }
+      if (CurCardReroll != 0) {
+        output.WriteRawTag(192, 1);
+        output.WriteUInt32(CurCardReroll);
+      }
+      allowedCardList_.WriteTo(ref output, _repeated_allowedCardList_codec);
+      funcList_.WriteTo(ref output, _repeated_funcList_codec);
+      if (FinishedStoryId != 0) {
+        output.WriteRawTag(216, 1);
+        output.WriteUInt32(FinishedStoryId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -682,6 +764,14 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (PeriodFirstRandomSeed != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(PeriodFirstRandomSeed);
+      }
+      if (CurCardReroll != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(CurCardReroll);
+      }
+      size += allowedCardList_.CalculateSize(_repeated_allowedCardList_codec);
+      size += funcList_.CalculateSize(_repeated_funcList_codec);
+      if (FinishedStoryId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(FinishedStoryId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -753,6 +843,14 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.PeriodFirstRandomSeed != 0) {
         PeriodFirstRandomSeed = other.PeriodFirstRandomSeed;
+      }
+      if (other.CurCardReroll != 0) {
+        CurCardReroll = other.CurCardReroll;
+      }
+      allowedCardList_.Add(other.allowedCardList_);
+      funcList_.Add(other.funcList_);
+      if (other.FinishedStoryId != 0) {
+        FinishedStoryId = other.FinishedStoryId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -871,6 +969,23 @@ namespace EggLink.DanhengServer.Proto {
             PeriodFirstRandomSeed = input.ReadUInt32();
             break;
           }
+          case 192: {
+            CurCardReroll = input.ReadUInt32();
+            break;
+          }
+          case 202:
+          case 200: {
+            allowedCardList_.AddEntriesFrom(input, _repeated_allowedCardList_codec);
+            break;
+          }
+          case 210: {
+            funcList_.AddEntriesFrom(input, _repeated_funcList_codec);
+            break;
+          }
+          case 216: {
+            FinishedStoryId = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -986,6 +1101,23 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 184: {
             PeriodFirstRandomSeed = input.ReadUInt32();
+            break;
+          }
+          case 192: {
+            CurCardReroll = input.ReadUInt32();
+            break;
+          }
+          case 202:
+          case 200: {
+            allowedCardList_.AddEntriesFrom(ref input, _repeated_allowedCardList_codec);
+            break;
+          }
+          case 210: {
+            funcList_.AddEntriesFrom(ref input, _repeated_funcList_codec);
+            break;
+          }
+          case 216: {
+            FinishedStoryId = input.ReadUInt32();
             break;
           }
         }

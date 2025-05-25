@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhQcm9wQ2hlc3NSb2d1ZUluZm8ucHJvdG8iQgoSUHJvcENoZXNzUm9ndWVJ",
-            "bmZvEhMKC0FLQ0dIQkZHQkNDGAcgASgIEhcKD2VudGVyX25leHRfY2VsbBgE",
+            "bmZvEhMKC0FLQ0dIQkZHQkNDGAsgASgIEhcKD2VudGVyX25leHRfY2VsbBgE",
             "IAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "AKCGHBFGBCC" field.</summary>
-    public const int AKCGHBFGBCCFieldNumber = 7;
+    public const int AKCGHBFGBCCFieldNumber = 11;
     private bool aKCGHBFGBCC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteBool(EnterNextCell);
       }
       if (AKCGHBFGBCC != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteBool(AKCGHBFGBCC);
       }
       if (_unknownFields != null) {
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteBool(EnterNextCell);
       }
       if (AKCGHBFGBCC != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteBool(AKCGHBFGBCC);
       }
       if (_unknownFields != null) {
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             EnterNextCell = input.ReadBool();
             break;
           }
-          case 56: {
+          case 88: {
             AKCGHBFGBCC = input.ReadBool();
             break;
           }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
             EnterNextCell = input.ReadBool();
             break;
           }
-          case 56: {
+          case 88: {
             AKCGHBFGBCC = input.ReadBool();
             break;
           }

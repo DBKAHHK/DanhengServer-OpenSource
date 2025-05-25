@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlFbnRpdHlCaW5kUHJvcENzUmVxLnByb3RvGhBNb3Rpb25JbmZvLnByb3Rv",
-            "IkcKE0VudGl0eUJpbmRQcm9wQ3NSZXESEwoLTUpKTVBJRkxNS0YYCiABKAgS",
+            "IkcKE0VudGl0eUJpbmRQcm9wQ3NSZXESEwoLTUpKTVBJRkxNS0YYBCABKAgS",
             "GwoGbW90aW9uGA8gASgLMgsuTW90aW9uSW5mb0IeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MJJMPIFLMKF" field.</summary>
-    public const int MJJMPIFLMKFFieldNumber = 10;
+    public const int MJJMPIFLMKFFieldNumber = 4;
     private bool mJJMPIFLMKF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MJJMPIFLMKF != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(32);
         output.WriteBool(MJJMPIFLMKF);
       }
       if (motion_ != null) {
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MJJMPIFLMKF != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(32);
         output.WriteBool(MJJMPIFLMKF);
       }
       if (motion_ != null) {
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
+          case 32: {
             MJJMPIFLMKF = input.ReadBool();
             break;
           }
@@ -256,7 +256,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
+          case 32: {
             MJJMPIFLMKF = input.ReadBool();
             break;
           }

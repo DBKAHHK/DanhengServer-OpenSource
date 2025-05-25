@@ -24,20 +24,20 @@ namespace EggLink.DanhengServer.Proto {
     static JNFELCKIOCMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFKTkZFTENLSU9DTS5wcm90bxoRUm9ndWVTdGF0dXMucHJvdG8aFENoZXNz",
-            "Um9ndWVCdWZmLnByb3RvGhdDaGVzc1JvZ3VlTWlyYWNsZS5wcm90byKbAgoL",
-            "Sk5GRUxDS0lPQ00SGwoTYmFzZV9hdmF0YXJfaWRfbGlzdBgPIAMoDRIOCgZt",
-            "YXBfaWQYBiABKA0SEwoLS0pHSU1IRktHQk4YBSABKA0SHAoUdHJpYWxfYXZh",
-            "dGFyX2lkX2xpc3QYAiADKA0SEwoLRkZLUEVHTkJIT0QYCiABKA0SLgoVY2hl",
-            "c3Nfcm9ndWVfYnVmZl9pbmZvGAwgASgLMg8uQ2hlc3NSb2d1ZUJ1ZmYSHAoG",
-            "c3RhdHVzGAQgASgOMgwuUm9ndWVTdGF0dXMSNAoYY2hlc3Nfcm9ndWVfbWly",
-            "YWNsZV9pbmZvGA4gASgLMhIuQ2hlc3NSb2d1ZU1pcmFjbGUSEwoLR01QSUlB",
-            "RUdHRUsYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "ChFKTkZFTENLSU9DTS5wcm90bxoUQ2hlc3NSb2d1ZUJ1ZmYucHJvdG8aEVJv",
+            "Z3VlU3RhdHVzLnByb3RvGhdDaGVzc1JvZ3VlTWlyYWNsZS5wcm90byKbAgoL",
+            "Sk5GRUxDS0lPQ00SHAoUdHJpYWxfYXZhdGFyX2lkX2xpc3QYBiADKA0SEwoL",
+            "RkZLUEVHTkJIT0QYBSABKA0SDgoGbWFwX2lkGA4gASgNEjQKGGNoZXNzX3Jv",
+            "Z3VlX21pcmFjbGVfaW5mbxgHIAEoCzISLkNoZXNzUm9ndWVNaXJhY2xlEhMK",
+            "C0tKR0lNSEZLR0JOGAogASgNEhwKBnN0YXR1cxgPIAEoDjIMLlJvZ3VlU3Rh",
+            "dHVzEhsKE2Jhc2VfYXZhdGFyX2lkX2xpc3QYCyADKA0SEwoLR01QSUlBRUdH",
+            "RUsYASABKA0SLgoVY2hlc3Nfcm9ndWVfYnVmZl9pbmZvGAQgASgLMg8uQ2hl",
+            "c3NSb2d1ZUJ1ZmZCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueMiracleReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueMiracleReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JNFELCKIOCM), global::EggLink.DanhengServer.Proto.JNFELCKIOCM.Parser, new[]{ "BaseAvatarIdList", "MapId", "KJGIMHFKGBN", "TrialAvatarIdList", "FFKPEGNBHOD", "ChessRogueBuffInfo", "Status", "ChessRogueMiracleInfo", "GMPIIAEGGEK" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JNFELCKIOCM), global::EggLink.DanhengServer.Proto.JNFELCKIOCM.Parser, new[]{ "TrialAvatarIdList", "FFKPEGNBHOD", "MapId", "ChessRogueMiracleInfo", "KJGIMHFKGBN", "Status", "BaseAvatarIdList", "GMPIIAEGGEK", "ChessRogueBuffInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,15 +79,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JNFELCKIOCM(JNFELCKIOCM other) : this() {
-      baseAvatarIdList_ = other.baseAvatarIdList_.Clone();
-      mapId_ = other.mapId_;
-      kJGIMHFKGBN_ = other.kJGIMHFKGBN_;
       trialAvatarIdList_ = other.trialAvatarIdList_.Clone();
       fFKPEGNBHOD_ = other.fFKPEGNBHOD_;
-      chessRogueBuffInfo_ = other.chessRogueBuffInfo_ != null ? other.chessRogueBuffInfo_.Clone() : null;
-      status_ = other.status_;
+      mapId_ = other.mapId_;
       chessRogueMiracleInfo_ = other.chessRogueMiracleInfo_ != null ? other.chessRogueMiracleInfo_.Clone() : null;
+      kJGIMHFKGBN_ = other.kJGIMHFKGBN_;
+      status_ = other.status_;
+      baseAvatarIdList_ = other.baseAvatarIdList_.Clone();
       gMPIIAEGGEK_ = other.gMPIIAEGGEK_;
+      chessRogueBuffInfo_ = other.chessRogueBuffInfo_ != null ? other.chessRogueBuffInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -97,45 +97,10 @@ namespace EggLink.DanhengServer.Proto {
       return new JNFELCKIOCM(this);
     }
 
-    /// <summary>Field number for the "base_avatar_id_list" field.</summary>
-    public const int BaseAvatarIdListFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_baseAvatarIdList_codec
-        = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> baseAvatarIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> BaseAvatarIdList {
-      get { return baseAvatarIdList_; }
-    }
-
-    /// <summary>Field number for the "map_id" field.</summary>
-    public const int MapIdFieldNumber = 6;
-    private uint mapId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MapId {
-      get { return mapId_; }
-      set {
-        mapId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "KJGIMHFKGBN" field.</summary>
-    public const int KJGIMHFKGBNFieldNumber = 5;
-    private uint kJGIMHFKGBN_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KJGIMHFKGBN {
-      get { return kJGIMHFKGBN_; }
-      set {
-        kJGIMHFKGBN_ = value;
-      }
-    }
-
     /// <summary>Field number for the "trial_avatar_id_list" field.</summary>
-    public const int TrialAvatarIdListFieldNumber = 2;
+    public const int TrialAvatarIdListFieldNumber = 6;
     private static readonly pb::FieldCodec<uint> _repeated_trialAvatarIdList_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(50);
     private readonly pbc::RepeatedField<uint> trialAvatarIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -144,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FFKPEGNBHOD" field.</summary>
-    public const int FFKPEGNBHODFieldNumber = 10;
+    public const int FFKPEGNBHODFieldNumber = 5;
     private uint fFKPEGNBHOD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -155,32 +120,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "chess_rogue_buff_info" field.</summary>
-    public const int ChessRogueBuffInfoFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.ChessRogueBuff chessRogueBuffInfo_;
+    /// <summary>Field number for the "map_id" field.</summary>
+    public const int MapIdFieldNumber = 14;
+    private uint mapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChessRogueBuff ChessRogueBuffInfo {
-      get { return chessRogueBuffInfo_; }
+    public uint MapId {
+      get { return mapId_; }
       set {
-        chessRogueBuffInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.RogueStatus status_ = global::EggLink.DanhengServer.Proto.RogueStatus.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueStatus Status {
-      get { return status_; }
-      set {
-        status_ = value;
+        mapId_ = value;
       }
     }
 
     /// <summary>Field number for the "chess_rogue_miracle_info" field.</summary>
-    public const int ChessRogueMiracleInfoFieldNumber = 14;
+    public const int ChessRogueMiracleInfoFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.ChessRogueMiracle chessRogueMiracleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -191,8 +144,43 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "KJGIMHFKGBN" field.</summary>
+    public const int KJGIMHFKGBNFieldNumber = 10;
+    private uint kJGIMHFKGBN_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint KJGIMHFKGBN {
+      get { return kJGIMHFKGBN_; }
+      set {
+        kJGIMHFKGBN_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.RogueStatus status_ = global::EggLink.DanhengServer.Proto.RogueStatus.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "base_avatar_id_list" field.</summary>
+    public const int BaseAvatarIdListFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_baseAvatarIdList_codec
+        = pb::FieldCodec.ForUInt32(90);
+    private readonly pbc::RepeatedField<uint> baseAvatarIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> BaseAvatarIdList {
+      get { return baseAvatarIdList_; }
+    }
+
     /// <summary>Field number for the "GMPIIAEGGEK" field.</summary>
-    public const int GMPIIAEGGEKFieldNumber = 8;
+    public const int GMPIIAEGGEKFieldNumber = 1;
     private uint gMPIIAEGGEK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -200,6 +188,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return gMPIIAEGGEK_; }
       set {
         gMPIIAEGGEK_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "chess_rogue_buff_info" field.</summary>
+    public const int ChessRogueBuffInfoFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.ChessRogueBuff chessRogueBuffInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ChessRogueBuff ChessRogueBuffInfo {
+      get { return chessRogueBuffInfo_; }
+      set {
+        chessRogueBuffInfo_ = value;
       }
     }
 
@@ -218,15 +218,15 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!baseAvatarIdList_.Equals(other.baseAvatarIdList_)) return false;
-      if (MapId != other.MapId) return false;
-      if (KJGIMHFKGBN != other.KJGIMHFKGBN) return false;
       if(!trialAvatarIdList_.Equals(other.trialAvatarIdList_)) return false;
       if (FFKPEGNBHOD != other.FFKPEGNBHOD) return false;
-      if (!object.Equals(ChessRogueBuffInfo, other.ChessRogueBuffInfo)) return false;
-      if (Status != other.Status) return false;
+      if (MapId != other.MapId) return false;
       if (!object.Equals(ChessRogueMiracleInfo, other.ChessRogueMiracleInfo)) return false;
+      if (KJGIMHFKGBN != other.KJGIMHFKGBN) return false;
+      if (Status != other.Status) return false;
+      if(!baseAvatarIdList_.Equals(other.baseAvatarIdList_)) return false;
       if (GMPIIAEGGEK != other.GMPIIAEGGEK) return false;
+      if (!object.Equals(ChessRogueBuffInfo, other.ChessRogueBuffInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -234,15 +234,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= baseAvatarIdList_.GetHashCode();
-      if (MapId != 0) hash ^= MapId.GetHashCode();
-      if (KJGIMHFKGBN != 0) hash ^= KJGIMHFKGBN.GetHashCode();
       hash ^= trialAvatarIdList_.GetHashCode();
       if (FFKPEGNBHOD != 0) hash ^= FFKPEGNBHOD.GetHashCode();
-      if (chessRogueBuffInfo_ != null) hash ^= ChessRogueBuffInfo.GetHashCode();
-      if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) hash ^= Status.GetHashCode();
+      if (MapId != 0) hash ^= MapId.GetHashCode();
       if (chessRogueMiracleInfo_ != null) hash ^= ChessRogueMiracleInfo.GetHashCode();
+      if (KJGIMHFKGBN != 0) hash ^= KJGIMHFKGBN.GetHashCode();
+      if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) hash ^= Status.GetHashCode();
+      hash ^= baseAvatarIdList_.GetHashCode();
       if (GMPIIAEGGEK != 0) hash ^= GMPIIAEGGEK.GetHashCode();
+      if (chessRogueBuffInfo_ != null) hash ^= ChessRogueBuffInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -261,36 +261,36 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      trialAvatarIdList_.WriteTo(output, _repeated_trialAvatarIdList_codec);
-      if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) Status);
-      }
-      if (KJGIMHFKGBN != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(KJGIMHFKGBN);
-      }
-      if (MapId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(MapId);
-      }
       if (GMPIIAEGGEK != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteUInt32(GMPIIAEGGEK);
       }
-      if (FFKPEGNBHOD != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(FFKPEGNBHOD);
-      }
       if (chessRogueBuffInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(34);
         output.WriteMessage(ChessRogueBuffInfo);
       }
+      if (FFKPEGNBHOD != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(FFKPEGNBHOD);
+      }
+      trialAvatarIdList_.WriteTo(output, _repeated_trialAvatarIdList_codec);
       if (chessRogueMiracleInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(58);
         output.WriteMessage(ChessRogueMiracleInfo);
       }
+      if (KJGIMHFKGBN != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(KJGIMHFKGBN);
+      }
       baseAvatarIdList_.WriteTo(output, _repeated_baseAvatarIdList_codec);
+      if (MapId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(MapId);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Status);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -301,36 +301,36 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      trialAvatarIdList_.WriteTo(ref output, _repeated_trialAvatarIdList_codec);
-      if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) Status);
-      }
-      if (KJGIMHFKGBN != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(KJGIMHFKGBN);
-      }
-      if (MapId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(MapId);
-      }
       if (GMPIIAEGGEK != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteUInt32(GMPIIAEGGEK);
       }
-      if (FFKPEGNBHOD != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(FFKPEGNBHOD);
-      }
       if (chessRogueBuffInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(34);
         output.WriteMessage(ChessRogueBuffInfo);
       }
+      if (FFKPEGNBHOD != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(FFKPEGNBHOD);
+      }
+      trialAvatarIdList_.WriteTo(ref output, _repeated_trialAvatarIdList_codec);
       if (chessRogueMiracleInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(58);
         output.WriteMessage(ChessRogueMiracleInfo);
       }
+      if (KJGIMHFKGBN != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(KJGIMHFKGBN);
+      }
       baseAvatarIdList_.WriteTo(ref output, _repeated_baseAvatarIdList_codec);
+      if (MapId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(MapId);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Status);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -341,28 +341,28 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += baseAvatarIdList_.CalculateSize(_repeated_baseAvatarIdList_codec);
-      if (MapId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapId);
-      }
-      if (KJGIMHFKGBN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KJGIMHFKGBN);
-      }
       size += trialAvatarIdList_.CalculateSize(_repeated_trialAvatarIdList_codec);
       if (FFKPEGNBHOD != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FFKPEGNBHOD);
       }
-      if (chessRogueBuffInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChessRogueBuffInfo);
-      }
-      if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      if (MapId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapId);
       }
       if (chessRogueMiracleInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChessRogueMiracleInfo);
       }
+      if (KJGIMHFKGBN != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KJGIMHFKGBN);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      size += baseAvatarIdList_.CalculateSize(_repeated_baseAvatarIdList_codec);
       if (GMPIIAEGGEK != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GMPIIAEGGEK);
+      }
+      if (chessRogueBuffInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChessRogueBuffInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -376,25 +376,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      baseAvatarIdList_.Add(other.baseAvatarIdList_);
-      if (other.MapId != 0) {
-        MapId = other.MapId;
-      }
-      if (other.KJGIMHFKGBN != 0) {
-        KJGIMHFKGBN = other.KJGIMHFKGBN;
-      }
       trialAvatarIdList_.Add(other.trialAvatarIdList_);
       if (other.FFKPEGNBHOD != 0) {
         FFKPEGNBHOD = other.FFKPEGNBHOD;
       }
-      if (other.chessRogueBuffInfo_ != null) {
-        if (chessRogueBuffInfo_ == null) {
-          ChessRogueBuffInfo = new global::EggLink.DanhengServer.Proto.ChessRogueBuff();
-        }
-        ChessRogueBuffInfo.MergeFrom(other.ChessRogueBuffInfo);
-      }
-      if (other.Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        Status = other.Status;
+      if (other.MapId != 0) {
+        MapId = other.MapId;
       }
       if (other.chessRogueMiracleInfo_ != null) {
         if (chessRogueMiracleInfo_ == null) {
@@ -402,8 +389,21 @@ namespace EggLink.DanhengServer.Proto {
         }
         ChessRogueMiracleInfo.MergeFrom(other.ChessRogueMiracleInfo);
       }
+      if (other.KJGIMHFKGBN != 0) {
+        KJGIMHFKGBN = other.KJGIMHFKGBN;
+      }
+      if (other.Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
+        Status = other.Status;
+      }
+      baseAvatarIdList_.Add(other.baseAvatarIdList_);
       if (other.GMPIIAEGGEK != 0) {
         GMPIIAEGGEK = other.GMPIIAEGGEK;
+      }
+      if (other.chessRogueBuffInfo_ != null) {
+        if (chessRogueBuffInfo_ == null) {
+          ChessRogueBuffInfo = new global::EggLink.DanhengServer.Proto.ChessRogueBuff();
+        }
+        ChessRogueBuffInfo.MergeFrom(other.ChessRogueBuffInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -420,48 +420,48 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
-            trialAvatarIdList_.AddEntriesFrom(input, _repeated_trialAvatarIdList_codec);
-            break;
-          }
-          case 32: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
-            break;
-          }
-          case 40: {
-            KJGIMHFKGBN = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            MapId = input.ReadUInt32();
-            break;
-          }
-          case 64: {
+          case 8: {
             GMPIIAEGGEK = input.ReadUInt32();
             break;
           }
-          case 80: {
-            FFKPEGNBHOD = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 34: {
             if (chessRogueBuffInfo_ == null) {
               ChessRogueBuffInfo = new global::EggLink.DanhengServer.Proto.ChessRogueBuff();
             }
             input.ReadMessage(ChessRogueBuffInfo);
             break;
           }
-          case 114: {
+          case 40: {
+            FFKPEGNBHOD = input.ReadUInt32();
+            break;
+          }
+          case 50:
+          case 48: {
+            trialAvatarIdList_.AddEntriesFrom(input, _repeated_trialAvatarIdList_codec);
+            break;
+          }
+          case 58: {
             if (chessRogueMiracleInfo_ == null) {
               ChessRogueMiracleInfo = new global::EggLink.DanhengServer.Proto.ChessRogueMiracle();
             }
             input.ReadMessage(ChessRogueMiracleInfo);
             break;
           }
-          case 122:
-          case 120: {
+          case 80: {
+            KJGIMHFKGBN = input.ReadUInt32();
+            break;
+          }
+          case 90:
+          case 88: {
             baseAvatarIdList_.AddEntriesFrom(input, _repeated_baseAvatarIdList_codec);
+            break;
+          }
+          case 112: {
+            MapId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
             break;
           }
         }
@@ -479,48 +479,48 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
-            trialAvatarIdList_.AddEntriesFrom(ref input, _repeated_trialAvatarIdList_codec);
-            break;
-          }
-          case 32: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
-            break;
-          }
-          case 40: {
-            KJGIMHFKGBN = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            MapId = input.ReadUInt32();
-            break;
-          }
-          case 64: {
+          case 8: {
             GMPIIAEGGEK = input.ReadUInt32();
             break;
           }
-          case 80: {
-            FFKPEGNBHOD = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 34: {
             if (chessRogueBuffInfo_ == null) {
               ChessRogueBuffInfo = new global::EggLink.DanhengServer.Proto.ChessRogueBuff();
             }
             input.ReadMessage(ChessRogueBuffInfo);
             break;
           }
-          case 114: {
+          case 40: {
+            FFKPEGNBHOD = input.ReadUInt32();
+            break;
+          }
+          case 50:
+          case 48: {
+            trialAvatarIdList_.AddEntriesFrom(ref input, _repeated_trialAvatarIdList_codec);
+            break;
+          }
+          case 58: {
             if (chessRogueMiracleInfo_ == null) {
               ChessRogueMiracleInfo = new global::EggLink.DanhengServer.Proto.ChessRogueMiracle();
             }
             input.ReadMessage(ChessRogueMiracleInfo);
             break;
           }
-          case 122:
-          case 120: {
+          case 80: {
+            KJGIMHFKGBN = input.ReadUInt32();
+            break;
+          }
+          case 90:
+          case 88: {
             baseAvatarIdList_.AddEntriesFrom(ref input, _repeated_baseAvatarIdList_codec);
+            break;
+          }
+          case 112: {
+            MapId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
             break;
           }
         }

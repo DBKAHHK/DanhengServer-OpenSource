@@ -26,9 +26,9 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1TZXRSb2d1ZUV4aGliaXRpb25Dc1JlcS5wcm90bxoqUm9ndWVDb2xsZWN0",
             "aW9uRXhoaWJpdGlvbk9wZXJhdGVUeXBlLnByb3RvIn8KF1NldFJvZ3VlRXho",
-            "aWJpdGlvbkNzUmVxEhMKC0hFRVBPRU9MSUxPGAsgAygNEjoKC0FORUtQSU5M",
-            "S0ZKGA4gAygOMiUuUm9ndWVDb2xsZWN0aW9uRXhoaWJpdGlvbk9wZXJhdGVU",
-            "eXBlEhMKC0xESUZCSkRHRkZFGAYgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "aWJpdGlvbkNzUmVxEhMKC0hFRVBPRU9MSUxPGAcgAygNEjoKC0FORUtQSU5M",
+            "S0ZKGAggAygOMiUuUm9ndWVDb2xsZWN0aW9uRXhoaWJpdGlvbk9wZXJhdGVU",
+            "eXBlEhMKC0xESUZCSkRHRkZFGAogAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCollectionExhibitionOperateTypeReflection.Descriptor, },
@@ -88,9 +88,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HEEPOEOLILO" field.</summary>
-    public const int HEEPOEOLILOFieldNumber = 11;
+    public const int HEEPOEOLILOFieldNumber = 7;
     private static readonly pb::FieldCodec<uint> _repeated_hEEPOEOLILO_codec
-        = pb::FieldCodec.ForUInt32(90);
+        = pb::FieldCodec.ForUInt32(58);
     private readonly pbc::RepeatedField<uint> hEEPOEOLILO_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,9 +99,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ANEKPINLKFJ" field.</summary>
-    public const int ANEKPINLKFJFieldNumber = 14;
+    public const int ANEKPINLKFJFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCollectionExhibitionOperateType> _repeated_aNEKPINLKFJ_codec
-        = pb::FieldCodec.ForEnum(114, x => (int) x, x => (global::EggLink.DanhengServer.Proto.RogueCollectionExhibitionOperateType) x);
+        = pb::FieldCodec.ForEnum(66, x => (int) x, x => (global::EggLink.DanhengServer.Proto.RogueCollectionExhibitionOperateType) x);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCollectionExhibitionOperateType> aNEKPINLKFJ_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCollectionExhibitionOperateType>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,9 +110,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LDIFBJDGFFE" field.</summary>
-    public const int LDIFBJDGFFEFieldNumber = 6;
+    public const int LDIFBJDGFFEFieldNumber = 10;
     private static readonly pb::FieldCodec<uint> _repeated_lDIFBJDGFFE_codec
-        = pb::FieldCodec.ForUInt32(50);
+        = pb::FieldCodec.ForUInt32(82);
     private readonly pbc::RepeatedField<uint> lDIFBJDGFFE_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,9 +166,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      lDIFBJDGFFE_.WriteTo(output, _repeated_lDIFBJDGFFE_codec);
       hEEPOEOLILO_.WriteTo(output, _repeated_hEEPOEOLILO_codec);
       aNEKPINLKFJ_.WriteTo(output, _repeated_aNEKPINLKFJ_codec);
+      lDIFBJDGFFE_.WriteTo(output, _repeated_lDIFBJDGFFE_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -179,9 +179,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      lDIFBJDGFFE_.WriteTo(ref output, _repeated_lDIFBJDGFFE_codec);
       hEEPOEOLILO_.WriteTo(ref output, _repeated_hEEPOEOLILO_codec);
       aNEKPINLKFJ_.WriteTo(ref output, _repeated_aNEKPINLKFJ_codec);
+      lDIFBJDGFFE_.WriteTo(ref output, _repeated_lDIFBJDGFFE_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -225,19 +225,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50:
-          case 48: {
-            lDIFBJDGFFE_.AddEntriesFrom(input, _repeated_lDIFBJDGFFE_codec);
-            break;
-          }
-          case 90:
-          case 88: {
+          case 58:
+          case 56: {
             hEEPOEOLILO_.AddEntriesFrom(input, _repeated_hEEPOEOLILO_codec);
             break;
           }
-          case 114:
-          case 112: {
+          case 66:
+          case 64: {
             aNEKPINLKFJ_.AddEntriesFrom(input, _repeated_aNEKPINLKFJ_codec);
+            break;
+          }
+          case 82:
+          case 80: {
+            lDIFBJDGFFE_.AddEntriesFrom(input, _repeated_lDIFBJDGFFE_codec);
             break;
           }
         }
@@ -255,19 +255,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50:
-          case 48: {
-            lDIFBJDGFFE_.AddEntriesFrom(ref input, _repeated_lDIFBJDGFFE_codec);
-            break;
-          }
-          case 90:
-          case 88: {
+          case 58:
+          case 56: {
             hEEPOEOLILO_.AddEntriesFrom(ref input, _repeated_hEEPOEOLILO_codec);
             break;
           }
-          case 114:
-          case 112: {
+          case 66:
+          case 64: {
             aNEKPINLKFJ_.AddEntriesFrom(ref input, _repeated_aNEKPINLKFJ_codec);
+            break;
+          }
+          case 82:
+          case 80: {
+            lDIFBJDGFFE_.AddEntriesFrom(ref input, _repeated_lDIFBJDGFFE_codec);
             break;
           }
         }

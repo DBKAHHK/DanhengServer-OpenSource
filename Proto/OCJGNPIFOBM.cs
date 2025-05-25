@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPQ0pHTlBJRk9CTS5wcm90byJJCgtPQ0pHTlBJRk9CTRITCgtHRkZCREFO",
-            "REhNSxgDIAEoDRINCgVsZXZlbBgKIAEoDRIWCg5xdWV1ZV9wb3NpdGlvbhgN",
+            "REhNSxgFIAEoDRINCgVsZXZlbBgOIAEoDRIWCg5xdWV1ZV9wb3NpdGlvbhgL",
             "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GFFBDANDHMK" field.</summary>
-    public const int GFFBDANDHMKFieldNumber = 3;
+    public const int GFFBDANDHMKFieldNumber = 5;
     private uint gFFBDANDHMK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 10;
+    public const int LevelFieldNumber = 14;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "queue_position" field.</summary>
-    public const int QueuePositionFieldNumber = 13;
+    public const int QueuePositionFieldNumber = 11;
     private uint queuePosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (GFFBDANDHMK != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(40);
         output.WriteUInt32(GFFBDANDHMK);
       }
-      if (Level != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Level);
-      }
       if (QueuePosition != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(QueuePosition);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (GFFBDANDHMK != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(40);
         output.WriteUInt32(GFFBDANDHMK);
       }
-      if (Level != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Level);
-      }
       if (QueuePosition != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(QueuePosition);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 40: {
             GFFBDANDHMK = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Level = input.ReadUInt32();
+          case 88: {
+            QueuePosition = input.ReadUInt32();
             break;
           }
-          case 104: {
-            QueuePosition = input.ReadUInt32();
+          case 112: {
+            Level = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 40: {
             GFFBDANDHMK = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Level = input.ReadUInt32();
+          case 88: {
+            QueuePosition = input.ReadUInt32();
             break;
           }
-          case 104: {
-            QueuePosition = input.ReadUInt32();
+          case 112: {
+            Level = input.ReadUInt32();
             break;
           }
         }

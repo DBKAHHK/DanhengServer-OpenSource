@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5SZWxpY1JlZm9yZ2VDb25maXJtQ3NSZXEucHJvdG8iRgoYUmVsaWNSZWZv",
-            "cmdlQ29uZmlybUNzUmVxEhEKCWlzX2NhbmNlbBgIIAEoCBIXCg9yZWxpY191",
-            "bmlxdWVfaWQYByABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "cmdlQ29uZmlybUNzUmVxEhcKD3JlbGljX3VuaXF1ZV9pZBgIIAEoDRIRCglp",
+            "c19jYW5jZWwYByABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RelicReforgeConfirmCsReq), global::EggLink.DanhengServer.Proto.RelicReforgeConfirmCsReq.Parser, new[]{ "IsCancel", "RelicUniqueId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RelicReforgeConfirmCsReq), global::EggLink.DanhengServer.Proto.RelicReforgeConfirmCsReq.Parser, new[]{ "RelicUniqueId", "IsCancel" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RelicReforgeConfirmCsReq(RelicReforgeConfirmCsReq other) : this() {
-      isCancel_ = other.isCancel_;
       relicUniqueId_ = other.relicUniqueId_;
+      isCancel_ = other.isCancel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RelicReforgeConfirmCsReq(this);
     }
 
-    /// <summary>Field number for the "is_cancel" field.</summary>
-    public const int IsCancelFieldNumber = 8;
-    private bool isCancel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsCancel {
-      get { return isCancel_; }
-      set {
-        isCancel_ = value;
-      }
-    }
-
     /// <summary>Field number for the "relic_unique_id" field.</summary>
-    public const int RelicUniqueIdFieldNumber = 7;
+    public const int RelicUniqueIdFieldNumber = 8;
     private uint relicUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return relicUniqueId_; }
       set {
         relicUniqueId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_cancel" field.</summary>
+    public const int IsCancelFieldNumber = 7;
+    private bool isCancel_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsCancel {
+      get { return isCancel_; }
+      set {
+        isCancel_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsCancel != other.IsCancel) return false;
       if (RelicUniqueId != other.RelicUniqueId) return false;
+      if (IsCancel != other.IsCancel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsCancel != false) hash ^= IsCancel.GetHashCode();
       if (RelicUniqueId != 0) hash ^= RelicUniqueId.GetHashCode();
+      if (IsCancel != false) hash ^= IsCancel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RelicUniqueId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(RelicUniqueId);
-      }
       if (IsCancel != false) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(56);
         output.WriteBool(IsCancel);
+      }
+      if (RelicUniqueId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(RelicUniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RelicUniqueId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(RelicUniqueId);
-      }
       if (IsCancel != false) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(56);
         output.WriteBool(IsCancel);
+      }
+      if (RelicUniqueId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(RelicUniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsCancel != false) {
-        size += 1 + 1;
-      }
       if (RelicUniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RelicUniqueId);
+      }
+      if (IsCancel != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsCancel != false) {
-        IsCancel = other.IsCancel;
-      }
       if (other.RelicUniqueId != 0) {
         RelicUniqueId = other.RelicUniqueId;
+      }
+      if (other.IsCancel != false) {
+        IsCancel = other.IsCancel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -228,11 +228,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 56: {
-            RelicUniqueId = input.ReadUInt32();
+            IsCancel = input.ReadBool();
             break;
           }
           case 64: {
-            IsCancel = input.ReadBool();
+            RelicUniqueId = input.ReadUInt32();
             break;
           }
         }
@@ -251,11 +251,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 56: {
-            RelicUniqueId = input.ReadUInt32();
+            IsCancel = input.ReadBool();
             break;
           }
           case 64: {
-            IsCancel = input.ReadBool();
+            RelicUniqueId = input.ReadUInt32();
             break;
           }
         }

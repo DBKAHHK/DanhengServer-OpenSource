@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChhDb250ZW50UGFja2FnZUluZm8ucHJvdG8aGkNvbnRlbnRQYWNrYWdlU3Rh",
             "dHVzLnByb3RvIk8KEkNvbnRlbnRQYWNrYWdlSW5mbxISCgpjb250ZW50X2lk",
-            "GAggASgNEiUKBnN0YXR1cxgGIAEoDjIVLkNvbnRlbnRQYWNrYWdlU3RhdHVz",
+            "GA8gASgNEiUKBnN0YXR1cxgKIAEoDjIVLkNvbnRlbnRQYWNrYWdlU3RhdHVz",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ContentPackageStatusReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "content_id" field.</summary>
-    public const int ContentIdFieldNumber = 8;
+    public const int ContentIdFieldNumber = 15;
     private uint contentId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 6;
+    public const int StatusFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.ContentPackageStatus status_ = global::EggLink.DanhengServer.Proto.ContentPackageStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Status != global::EggLink.DanhengServer.Proto.ContentPackageStatus.None) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(80);
         output.WriteEnum((int) Status);
       }
       if (ContentId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(120);
         output.WriteUInt32(ContentId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Status != global::EggLink.DanhengServer.Proto.ContentPackageStatus.None) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(80);
         output.WriteEnum((int) Status);
       }
       if (ContentId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(120);
         output.WriteUInt32(ContentId);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 80: {
             Status = (global::EggLink.DanhengServer.Proto.ContentPackageStatus) input.ReadEnum();
             break;
           }
-          case 64: {
+          case 120: {
             ContentId = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 80: {
             Status = (global::EggLink.DanhengServer.Proto.ContentPackageStatus) input.ReadEnum();
             break;
           }
-          case 64: {
+          case 120: {
             ContentId = input.ReadUInt32();
             break;
           }

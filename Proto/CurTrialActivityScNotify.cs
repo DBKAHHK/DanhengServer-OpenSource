@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5DdXJUcmlhbEFjdGl2aXR5U2NOb3RpZnkucHJvdG8aGVRyaWFsQWN0aXZp",
             "dHlTdGF0dXMucHJvdG8iWwoYQ3VyVHJpYWxBY3Rpdml0eVNjTm90aWZ5EhkK",
-            "EWFjdGl2aXR5X3N0YWdlX2lkGAYgASgNEiQKBnN0YXR1cxgJIAEoDjIULlRy",
+            "EWFjdGl2aXR5X3N0YWdlX2lkGA8gASgNEiQKBnN0YXR1cxgFIAEoDjIULlRy",
             "aWFsQWN0aXZpdHlTdGF0dXNCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "activity_stage_id" field.</summary>
-    public const int ActivityStageIdFieldNumber = 6;
+    public const int ActivityStageIdFieldNumber = 15;
     private uint activityStageId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 9;
+    public const int StatusFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.TrialActivityStatus status_ = global::EggLink.DanhengServer.Proto.TrialActivityStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ActivityStageId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(ActivityStageId);
-      }
       if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteEnum((int) Status);
+      }
+      if (ActivityStageId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(ActivityStageId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ActivityStageId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(ActivityStageId);
-      }
       if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteEnum((int) Status);
+      }
+      if (ActivityStageId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(ActivityStageId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -228,12 +228,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            ActivityStageId = input.ReadUInt32();
+          case 40: {
+            Status = (global::EggLink.DanhengServer.Proto.TrialActivityStatus) input.ReadEnum();
             break;
           }
-          case 72: {
-            Status = (global::EggLink.DanhengServer.Proto.TrialActivityStatus) input.ReadEnum();
+          case 120: {
+            ActivityStageId = input.ReadUInt32();
             break;
           }
         }
@@ -251,12 +251,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            ActivityStageId = input.ReadUInt32();
+          case 40: {
+            Status = (global::EggLink.DanhengServer.Proto.TrialActivityStatus) input.ReadEnum();
             break;
           }
-          case 72: {
-            Status = (global::EggLink.DanhengServer.Proto.TrialActivityStatus) input.ReadEnum();
+          case 120: {
+            ActivityStageId = input.ReadUInt32();
             break;
           }
         }

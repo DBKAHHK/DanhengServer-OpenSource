@@ -9,7 +9,6 @@ public class PacketSetGachaDecideItemScRsp : BasePacket
     {
         var proto = new SetGachaDecideItemScRsp
         {
-            GachaId = gachaId,
             DecideItemInfo = new DecideItemInfo
             {
                 DecideItemOrder = { order },
@@ -17,5 +16,7 @@ public class PacketSetGachaDecideItemScRsp : BasePacket
                 JIGONEALCPC = { 11 }
             }
         };
+
+        SetData(proto);
     }
 }

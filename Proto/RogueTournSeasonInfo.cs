@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpSb2d1ZVRvdXJuU2Vhc29uSW5mby5wcm90byJDChRSb2d1ZVRvdXJuU2Vh",
-            "c29uSW5mbxIUCgxzdWJfdG91cm5faWQYBSABKA0SFQoNbWFpbl90b3Vybl9p",
-            "ZBgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "c29uSW5mbxIUCgxzdWJfdG91cm5faWQYDSABKA0SFQoNbWFpbl90b3Vybl9p",
+            "ZBgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "sub_tourn_id" field.</summary>
-    public const int SubTournIdFieldNumber = 5;
+    public const int SubTournIdFieldNumber = 13;
     private uint subTournId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "main_tourn_id" field.</summary>
-    public const int MainTournIdFieldNumber = 7;
+    public const int MainTournIdFieldNumber = 2;
     private uint mainTournId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SubTournId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SubTournId);
-      }
       if (MainTournId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteUInt32(MainTournId);
+      }
+      if (SubTournId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(SubTournId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SubTournId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SubTournId);
-      }
       if (MainTournId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteUInt32(MainTournId);
+      }
+      if (SubTournId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(SubTournId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            SubTournId = input.ReadUInt32();
+          case 16: {
+            MainTournId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            MainTournId = input.ReadUInt32();
+          case 104: {
+            SubTournId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            SubTournId = input.ReadUInt32();
+          case 16: {
+            MainTournId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            MainTournId = input.ReadUInt32();
+          case 104: {
+            SubTournId = input.ReadUInt32();
             break;
           }
         }

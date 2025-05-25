@@ -2,7 +2,7 @@
 
 namespace EggLink.DanhengServer.Data.Excel;
 
-[ResourceEntity("MazeBuff.json,AvatarMazeBuff.json", true)]
+[ResourceEntity("MazeBuff.json,AvatarMazeBuff.json,AvatarMazeBuffLD.json", true)]
 public class MazeBuffExcel : ExcelResource
 {
     public int ID { get; set; }

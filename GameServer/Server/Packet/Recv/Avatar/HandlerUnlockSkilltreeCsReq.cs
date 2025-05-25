@@ -14,7 +14,7 @@ public class HandlerUnlockSkilltreeCsReq : Handler
     {
         var req = UnlockSkilltreeCsReq.Parser.ParseFrom(data);
         var player = connection.Player!;
-        GameData.AvatarSkillTreeConfigData.TryGetValue((int)(req.PointId * 10 + req.Level), out var config);
+        GameData.AvatarSkillTreeConfigData.TryGetValue((int)(req.PointId * 100 + req.Level), out var config);
         if (config == null)
         {
             await connection.SendPacket(new PacketUnlockSkilltreeScRsp(Retcode.RetSkilltreeConfigNotExist));

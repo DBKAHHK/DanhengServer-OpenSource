@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhTZXRQbGF5ZXJJbmZvQ3NSZXEucHJvdG8aDEdlbmRlci5wcm90byJSChJT",
-            "ZXRQbGF5ZXJJbmZvQ3NSZXESEQoJaXNfbW9kaWZ5GAcgASgIEhcKBmdlbmRl",
-            "chgCIAEoDjIHLkdlbmRlchIQCghuaWNrbmFtZRgFIAEoCUIeqgIbRWdnTGlu",
+            "ZXRQbGF5ZXJJbmZvQ3NSZXESEQoJaXNfbW9kaWZ5GAIgASgIEhcKBmdlbmRl",
+            "chgGIAEoDjIHLkdlbmRlchIQCghuaWNrbmFtZRgEIAEoCUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GenderReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_modify" field.</summary>
-    public const int IsModifyFieldNumber = 7;
+    public const int IsModifyFieldNumber = 2;
     private bool isModify_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gender" field.</summary>
-    public const int GenderFieldNumber = 2;
+    public const int GenderFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.Gender gender_ = global::EggLink.DanhengServer.Proto.Gender.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "nickname" field.</summary>
-    public const int NicknameFieldNumber = 5;
+    public const int NicknameFieldNumber = 4;
     private string nickname_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Gender != global::EggLink.DanhengServer.Proto.Gender.None) {
+      if (IsModify != false) {
         output.WriteRawTag(16);
-        output.WriteEnum((int) Gender);
+        output.WriteBool(IsModify);
       }
       if (Nickname.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteString(Nickname);
       }
-      if (IsModify != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(IsModify);
+      if (Gender != global::EggLink.DanhengServer.Proto.Gender.None) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Gender);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Gender != global::EggLink.DanhengServer.Proto.Gender.None) {
+      if (IsModify != false) {
         output.WriteRawTag(16);
-        output.WriteEnum((int) Gender);
+        output.WriteBool(IsModify);
       }
       if (Nickname.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(34);
         output.WriteString(Nickname);
       }
-      if (IsModify != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(IsModify);
+      if (Gender != global::EggLink.DanhengServer.Proto.Gender.None) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Gender);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            Gender = (global::EggLink.DanhengServer.Proto.Gender) input.ReadEnum();
+            IsModify = input.ReadBool();
             break;
           }
-          case 42: {
+          case 34: {
             Nickname = input.ReadString();
             break;
           }
-          case 56: {
-            IsModify = input.ReadBool();
+          case 48: {
+            Gender = (global::EggLink.DanhengServer.Proto.Gender) input.ReadEnum();
             break;
           }
         }
@@ -284,15 +284,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            Gender = (global::EggLink.DanhengServer.Proto.Gender) input.ReadEnum();
+            IsModify = input.ReadBool();
             break;
           }
-          case 42: {
+          case 34: {
             Nickname = input.ReadString();
             break;
           }
-          case 56: {
-            IsModify = input.ReadBool();
+          case 48: {
+            Gender = (global::EggLink.DanhengServer.Proto.Gender) input.ReadEnum();
             break;
           }
         }

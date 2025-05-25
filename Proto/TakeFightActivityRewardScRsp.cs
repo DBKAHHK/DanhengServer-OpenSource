@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJUYWtlRmlnaHRBY3Rpdml0eVJld2FyZFNjUnNwLnByb3RvGg5JdGVtTGlz",
-            "dC5wcm90byJxChxUYWtlRmlnaHRBY3Rpdml0eVJld2FyZFNjUnNwEg8KB3Jl",
-            "dGNvZGUYAyABKA0SEwoLTkVERklCT05MS0IYByABKA0SGQoGcmV3YXJkGA8g",
-            "ASgLMgkuSXRlbUxpc3QSEAoIZ3JvdXBfaWQYDSABKA1CHqoCG0VnZ0xpbmsu",
+            "dC5wcm90byJxChxUYWtlRmlnaHRBY3Rpdml0eVJld2FyZFNjUnNwEhMKC05F",
+            "REZJQk9OTEtCGAggASgNEg8KB3JldGNvZGUYBiABKA0SGQoGcmV3YXJkGAIg",
+            "ASgLMgkuSXRlbUxpc3QSEAoIZ3JvdXBfaWQYBSABKA1CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeFightActivityRewardScRsp), global::EggLink.DanhengServer.Proto.TakeFightActivityRewardScRsp.Parser, new[]{ "Retcode", "NEDFIBONLKB", "Reward", "GroupId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeFightActivityRewardScRsp), global::EggLink.DanhengServer.Proto.TakeFightActivityRewardScRsp.Parser, new[]{ "NEDFIBONLKB", "Retcode", "Reward", "GroupId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeFightActivityRewardScRsp(TakeFightActivityRewardScRsp other) : this() {
-      retcode_ = other.retcode_;
       nEDFIBONLKB_ = other.nEDFIBONLKB_;
+      retcode_ = other.retcode_;
       reward_ = other.reward_ != null ? other.reward_.Clone() : null;
       groupId_ = other.groupId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -87,20 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeFightActivityRewardScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "NEDFIBONLKB" field.</summary>
-    public const int NEDFIBONLKBFieldNumber = 7;
+    public const int NEDFIBONLKBFieldNumber = 8;
     private uint nEDFIBONLKB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,8 +99,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 6;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 15;
+    public const int RewardFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 13;
+    public const int GroupIdFieldNumber = 5;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,8 +150,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if (NEDFIBONLKB != other.NEDFIBONLKB) return false;
+      if (Retcode != other.Retcode) return false;
       if (!object.Equals(Reward, other.Reward)) return false;
       if (GroupId != other.GroupId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -161,8 +161,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (NEDFIBONLKB != 0) hash ^= NEDFIBONLKB.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (reward_ != null) hash ^= Reward.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (_unknownFields != null) {
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (reward_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Reward);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(GroupId);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       if (NEDFIBONLKB != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteUInt32(NEDFIBONLKB);
-      }
-      if (GroupId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(GroupId);
-      }
-      if (reward_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(Reward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (reward_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Reward);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(GroupId);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       if (NEDFIBONLKB != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteUInt32(NEDFIBONLKB);
-      }
-      if (GroupId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(GroupId);
-      }
-      if (reward_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(Reward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,11 +235,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (NEDFIBONLKB != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NEDFIBONLKB);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (reward_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
@@ -259,11 +259,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.NEDFIBONLKB != 0) {
         NEDFIBONLKB = other.NEDFIBONLKB;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       if (other.reward_ != null) {
         if (reward_ == null) {
@@ -289,23 +289,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            NEDFIBONLKB = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            GroupId = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 18: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
+            break;
+          }
+          case 40: {
+            GroupId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            NEDFIBONLKB = input.ReadUInt32();
             break;
           }
         }
@@ -323,23 +323,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            NEDFIBONLKB = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            GroupId = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 18: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
+            break;
+          }
+          case 40: {
+            GroupId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            NEDFIBONLKB = input.ReadUInt32();
             break;
           }
         }

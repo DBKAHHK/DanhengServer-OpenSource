@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CihUcmF2ZWxCcm9jaHVyZVVwZGF0ZVBhc3RlclBvc1NjUnNwLnByb3RvGhFL",
             "Q0hKSENMSk9DSy5wcm90byJYCiJUcmF2ZWxCcm9jaHVyZVVwZGF0ZVBhc3Rl",
-            "clBvc1NjUnNwEiEKC0NBR0dMS0xJSU1GGAsgASgLMgwuS0NISkhDTEpPQ0sS",
-            "DwoHcmV0Y29kZRgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "clBvc1NjUnNwEiEKC0NBR0dMS0xJSU1GGAIgASgLMgwuS0NISkhDTEpPQ0sS",
+            "DwoHcmV0Y29kZRgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KCHJHCLJOCKReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CAGGLKLIIMF" field.</summary>
-    public const int CAGGLKLIIMFFieldNumber = 11;
+    public const int CAGGLKLIIMFFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.KCHJHCLJOCK cAGGLKLIIMF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Retcode);
-      }
       if (cAGGLKLIIMF_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(18);
         output.WriteMessage(CAGGLKLIIMF);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Retcode);
-      }
       if (cAGGLKLIIMF_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(18);
         output.WriteMessage(CAGGLKLIIMF);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 18: {
             if (cAGGLKLIIMF_ == null) {
               CAGGLKLIIMF = new global::EggLink.DanhengServer.Proto.KCHJHCLJOCK();
             }
             input.ReadMessage(CAGGLKLIIMF);
+            break;
+          }
+          case 64: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 18: {
             if (cAGGLKLIIMF_ == null) {
               CAGGLKLIIMF = new global::EggLink.DanhengServer.Proto.KCHJHCLJOCK();
             }
             input.ReadMessage(CAGGLKLIIMF);
+            break;
+          }
+          case 64: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

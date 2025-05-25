@@ -666,5 +666,15 @@ public enum MissionFinishTypeEnum
     RogueTournFinishWithActivatedFormulaCount = 330009,
     RogueTournFinishWithShopSoldOut = 330010,
     RogueTournFinishWithBattleNum = 330011,
-    RogueTournFinishWithMiracleCount = 330012
+    RogueTournFinishWithMiracleCount = 330012,
+    MatchThreeV2FinishSomeSpecificLevels = 340001,
+    MatchThreeV2FinishStarTargetNum = 340002,
+    MatchThreeV2BattleItemLevelUpCnt = 340003,
+    MatchThreeV2BattleItemLevelNum = 340004,
+    MatchThreeV2UseItemCount = 340005,
+    MatchThreeV2SoloTurnStepCount = 340006,
+    MatchThreeV2PvpBirdScore = 340007,
+    FateLevelPassArea = 340010,
+    FateLevelPassDifficulty = 340011,
+    FateSystemExp = 340012
 }

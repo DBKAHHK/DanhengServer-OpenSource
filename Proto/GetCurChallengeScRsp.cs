@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChpHZXRDdXJDaGFsbGVuZ2VTY1JzcC5wcm90bxoSQ3VyQ2hhbGxlbmdlLnBy",
             "b3RvGhBMaW5ldXBJbmZvLnByb3RvIm8KFEdldEN1ckNoYWxsZW5nZVNjUnNw",
-            "Eg8KB3JldGNvZGUYBSABKA0SIAoLbGluZXVwX2xpc3QYCCADKAsyCy5MaW5l",
-            "dXBJbmZvEiQKDWN1cl9jaGFsbGVuZ2UYBCABKAsyDS5DdXJDaGFsbGVuZ2VC",
+            "EiAKC2xpbmV1cF9saXN0GAwgAygLMgsuTGluZXVwSW5mbxIPCgdyZXRjb2Rl",
+            "GA0gASgNEiQKDWN1cl9jaGFsbGVuZ2UYCyABKAsyDS5DdXJDaGFsbGVuZ2VC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CurChallengeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetCurChallengeScRsp), global::EggLink.DanhengServer.Proto.GetCurChallengeScRsp.Parser, new[]{ "Retcode", "LineupList", "CurChallenge" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetCurChallengeScRsp), global::EggLink.DanhengServer.Proto.GetCurChallengeScRsp.Parser, new[]{ "LineupList", "Retcode", "CurChallenge" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCurChallengeScRsp(GetCurChallengeScRsp other) : this() {
-      retcode_ = other.retcode_;
       lineupList_ = other.lineupList_.Clone();
+      retcode_ = other.retcode_;
       curChallenge_ = other.curChallenge_ != null ? other.curChallenge_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,8 +86,19 @@ namespace EggLink.DanhengServer.Proto {
       return new GetCurChallengeScRsp(this);
     }
 
+    /// <summary>Field number for the "lineup_list" field.</summary>
+    public const int LineupListFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LineupInfo> _repeated_lineupList_codec
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.LineupInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LineupInfo> lineupList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LineupInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LineupInfo> LineupList {
+      get { return lineupList_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 13;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,19 +109,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "lineup_list" field.</summary>
-    public const int LineupListFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LineupInfo> _repeated_lineupList_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.LineupInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LineupInfo> lineupList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LineupInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LineupInfo> LineupList {
-      get { return lineupList_; }
-    }
-
     /// <summary>Field number for the "cur_challenge" field.</summary>
-    public const int CurChallengeFieldNumber = 4;
+    public const int CurChallengeFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.CurChallenge curChallenge_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if(!lineupList_.Equals(other.lineupList_)) return false;
+      if (Retcode != other.Retcode) return false;
       if (!object.Equals(CurChallenge, other.CurChallenge)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= lineupList_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (curChallenge_ != null) hash ^= CurChallenge.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -168,14 +168,14 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (curChallenge_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(90);
         output.WriteMessage(CurChallenge);
       }
+      lineupList_.WriteTo(output, _repeated_lineupList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      lineupList_.WriteTo(output, _repeated_lineupList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -187,14 +187,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (curChallenge_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(90);
         output.WriteMessage(CurChallenge);
       }
+      lineupList_.WriteTo(ref output, _repeated_lineupList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      lineupList_.WriteTo(ref output, _repeated_lineupList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,10 +205,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += lineupList_.CalculateSize(_repeated_lineupList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += lineupList_.CalculateSize(_repeated_lineupList_codec);
       if (curChallenge_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CurChallenge);
       }
@@ -224,10 +224,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      lineupList_.Add(other.lineupList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      lineupList_.Add(other.lineupList_);
       if (other.curChallenge_ != null) {
         if (curChallenge_ == null) {
           CurChallenge = new global::EggLink.DanhengServer.Proto.CurChallenge();
@@ -249,19 +249,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 90: {
             if (curChallenge_ == null) {
               CurChallenge = new global::EggLink.DanhengServer.Proto.CurChallenge();
             }
             input.ReadMessage(CurChallenge);
             break;
           }
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 98: {
+            lineupList_.AddEntriesFrom(input, _repeated_lineupList_codec);
             break;
           }
-          case 66: {
-            lineupList_.AddEntriesFrom(input, _repeated_lineupList_codec);
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -279,19 +279,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 90: {
             if (curChallenge_ == null) {
               CurChallenge = new global::EggLink.DanhengServer.Proto.CurChallenge();
             }
             input.ReadMessage(CurChallenge);
             break;
           }
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 98: {
+            lineupList_.AddEntriesFrom(ref input, _repeated_lineupList_codec);
             break;
           }
-          case 66: {
-            lineupList_.AddEntriesFrom(ref input, _repeated_lineupList_codec);
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

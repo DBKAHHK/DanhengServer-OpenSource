@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJTY2VuZU5wY0luZm8ucHJvdG8aEk5wY0V4dHJhSW5mby5wcm90byJBCgxT",
-            "Y2VuZU5wY0luZm8SIQoKZXh0cmFfaW5mbxgOIAEoCzINLk5wY0V4dHJhSW5m",
-            "bxIOCgZucGNfaWQYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "Y2VuZU5wY0luZm8SIQoKZXh0cmFfaW5mbxgGIAEoCzINLk5wY0V4dHJhSW5m",
+            "bxIOCgZucGNfaWQYDCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NpcExtraInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "extra_info" field.</summary>
-    public const int ExtraInfoFieldNumber = 14;
+    public const int ExtraInfoFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.NpcExtraInfo extraInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "npc_id" field.</summary>
-    public const int NpcIdFieldNumber = 10;
+    public const int NpcIdFieldNumber = 12;
     private uint npcId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NpcId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(NpcId);
-      }
       if (extraInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(50);
         output.WriteMessage(ExtraInfo);
+      }
+      if (NpcId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(NpcId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NpcId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(NpcId);
-      }
       if (extraInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(50);
         output.WriteMessage(ExtraInfo);
+      }
+      if (NpcId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(NpcId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
-            NpcId = input.ReadUInt32();
-            break;
-          }
-          case 114: {
+          case 50: {
             if (extraInfo_ == null) {
               ExtraInfo = new global::EggLink.DanhengServer.Proto.NpcExtraInfo();
             }
             input.ReadMessage(ExtraInfo);
+            break;
+          }
+          case 96: {
+            NpcId = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
-            NpcId = input.ReadUInt32();
-            break;
-          }
-          case 114: {
+          case 50: {
             if (extraInfo_ == null) {
               ExtraInfo = new global::EggLink.DanhengServer.Proto.NpcExtraInfo();
             }
             input.ReadMessage(ExtraInfo);
+            break;
+          }
+          case 96: {
+            NpcId = input.ReadUInt32();
             break;
           }
         }

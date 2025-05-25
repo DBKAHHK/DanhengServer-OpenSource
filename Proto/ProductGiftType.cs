@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static ProductGiftTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVQcm9kdWN0R2lmdFR5cGUucHJvdG8qmgQKD1Byb2R1Y3RHaWZ0VHlwZRIV",
+            "ChVQcm9kdWN0R2lmdFR5cGUucHJvdG8qggYKD1Byb2R1Y3RHaWZ0VHlwZRIV",
             "ChFQUk9EVUNUX0dJRlRfTk9ORRAAEhUKEVBST0RVQ1RfR0lGVF9DT0lOEAES",
             "GwoXUFJPRFVDVF9HSUZUX01PTlRIX0NBUkQQAhIWChJQUk9EVUNUX0dJRlRf",
             "QlBfNjgQAxIXChNQUk9EVUNUX0dJRlRfQlBfMTI4EAQSIQodUFJPRFVDVF9H",
@@ -36,8 +36,13 @@ namespace EggLink.DanhengServer.Proto {
             "EiIKHlBST0RVQ1RfR0lGVF9QU19QT0lOVF9DQVJEXzA1MBAMEiIKHlBST0RV",
             "Q1RfR0lGVF9QU19QT0lOVF9DQVJEXzEwMBANEhkKFVBST0RVQ1RfR0lGVF9Q",
             "U05fUExVUxAOEhkKFVBST0RVQ1RfR0lGVF9TSU5HTEVfNhAPEh8KG1BST0RV",
-            "Q1RfR0lGVF9EQUlMWV9MT0dJTl8zMBAQQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
-            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Q1RfR0lGVF9EQUlMWV9MT0dJTl8zMBAQEiAKHFBST0RVQ1RfR0lGVF9BUFBM",
+            "RV9HSUZUX0NBUkQQERImCiJQUk9EVUNUX0dJRlRfRlRDX1VQX0dBQ0hBX1RJ",
+            "Q0tFVF8xEBISJwojUFJPRFVDVF9HSUZUX0ZUQ19VUF9HQUNIQV9USUNLRVRf",
+            "MTAQExIqCiZQUk9EVUNUX0dJRlRfRlRDX05PUk1BTF9HQUNIQV9USUNLRVRf",
+            "MRAUEisKJ1BST0RVQ1RfR0lGVF9GVENfTk9STUFMX0dBQ0hBX1RJQ0tFVF8x",
+            "MBAVEhoKFlBST0RVQ1RfR0lGVF9USUNLRVRfMTAQFkIeqgIbRWdnTGluay5E",
+            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.ProductGiftType), }, null, null));
@@ -64,6 +69,12 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("PRODUCT_GIFT_PSN_PLUS")] ProductGiftPsnPlus = 14,
     [pbr::OriginalName("PRODUCT_GIFT_SINGLE_6")] ProductGiftSingle6 = 15,
     [pbr::OriginalName("PRODUCT_GIFT_DAILY_LOGIN_30")] ProductGiftDailyLogin30 = 16,
+    [pbr::OriginalName("PRODUCT_GIFT_APPLE_GIFT_CARD")] ProductGiftAppleGiftCard = 17,
+    [pbr::OriginalName("PRODUCT_GIFT_FTC_UP_GACHA_TICKET_1")] ProductGiftFtcUpGachaTicket1 = 18,
+    [pbr::OriginalName("PRODUCT_GIFT_FTC_UP_GACHA_TICKET_10")] ProductGiftFtcUpGachaTicket10 = 19,
+    [pbr::OriginalName("PRODUCT_GIFT_FTC_NORMAL_GACHA_TICKET_1")] ProductGiftFtcNormalGachaTicket1 = 20,
+    [pbr::OriginalName("PRODUCT_GIFT_FTC_NORMAL_GACHA_TICKET_10")] ProductGiftFtcNormalGachaTicket10 = 21,
+    [pbr::OriginalName("PRODUCT_GIFT_TICKET_10")] ProductGiftTicket10 = 22,
   }
 
   #endregion

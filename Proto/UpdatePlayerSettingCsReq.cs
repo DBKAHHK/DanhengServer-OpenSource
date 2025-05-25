@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5VcGRhdGVQbGF5ZXJTZXR0aW5nQ3NSZXEucHJvdG8aGVVwZGF0ZVBsYXll",
             "clNldHRpbmcucHJvdG8iSAoYVXBkYXRlUGxheWVyU2V0dGluZ0NzUmVxEiwK",
-            "DnBsYXllcl9zZXR0aW5nGAUgASgLMhQuVXBkYXRlUGxheWVyU2V0dGluZ0Ie",
+            "DnBsYXllcl9zZXR0aW5nGAEgASgLMhQuVXBkYXRlUGxheWVyU2V0dGluZ0Ie",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.UpdatePlayerSettingReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "player_setting" field.</summary>
-    public const int PlayerSettingFieldNumber = 5;
+    public const int PlayerSettingFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.UpdatePlayerSetting playerSetting_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (playerSetting_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(10);
         output.WriteMessage(PlayerSetting);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (playerSetting_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(10);
         output.WriteMessage(PlayerSetting);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 10: {
             if (playerSetting_ == null) {
               PlayerSetting = new global::EggLink.DanhengServer.Proto.UpdatePlayerSetting();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 10: {
             if (playerSetting_ == null) {
               PlayerSetting = new global::EggLink.DanhengServer.Proto.UpdatePlayerSetting();
             }

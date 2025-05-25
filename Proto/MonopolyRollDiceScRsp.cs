@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtNb25vcG9seVJvbGxEaWNlU2NSc3AucHJvdG8iPQoVTW9ub3BvbHlSb2xs",
-            "RGljZVNjUnNwEhMKC0JMSElBQkJLR1BCGAUgASgNEg8KB3JldGNvZGUYCyAB",
+            "RGljZVNjUnNwEhMKC0JMSElBQkJLR1BCGAUgASgNEg8KB3JldGNvZGUYDiAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(BLHIABBKGPB);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(BLHIABBKGPB);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             BLHIABBKGPB = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
             BLHIABBKGPB = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }

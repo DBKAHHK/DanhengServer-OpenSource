@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1SYWlkQ29sbGVjdGlvbkRhdGFTY1JzcC5wcm90bxoRQUNPTkxGSkVKT0su",
             "cHJvdG8iUAoXUmFpZENvbGxlY3Rpb25EYXRhU2NSc3ASJAoOY2hhbGxlbmdl",
-            "X2xpc3QYDSADKAsyDC5BQ09OTEZKRUpPSxIPCgdyZXRjb2RlGAcgASgNQh6q",
+            "X2xpc3QYBSADKAsyDC5BQ09OTEZKRUpPSxIPCgdyZXRjb2RlGAsgASgNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ACONLFJEJOKReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_list" field.</summary>
-    public const int ChallengeListFieldNumber = 13;
+    public const int ChallengeListFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ACONLFJEJOK> _repeated_challengeList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.ACONLFJEJOK.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.ACONLFJEJOK.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ACONLFJEJOK> challengeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ACONLFJEJOK>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      challengeList_.WriteTo(output, _repeated_challengeList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
-      challengeList_.WriteTo(output, _repeated_challengeList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      challengeList_.WriteTo(ref output, _repeated_challengeList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
-      challengeList_.WriteTo(ref output, _repeated_challengeList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 42: {
+            challengeList_.AddEntriesFrom(input, _repeated_challengeList_codec);
             break;
           }
-          case 106: {
-            challengeList_.AddEntriesFrom(input, _repeated_challengeList_codec);
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 42: {
+            challengeList_.AddEntriesFrom(ref input, _repeated_challengeList_codec);
             break;
           }
-          case 106: {
-            challengeList_.AddEntriesFrom(ref input, _repeated_challengeList_codec);
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

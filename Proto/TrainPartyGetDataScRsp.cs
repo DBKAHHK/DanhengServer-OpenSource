@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxUcmFpblBhcnR5R2V0RGF0YVNjUnNwLnByb3RvGhRUcmFpblBhcnR5RGF0",
-            "YS5wcm90byJUChZUcmFpblBhcnR5R2V0RGF0YVNjUnNwEikKEHRyYWluX3Bh",
-            "cnR5X2RhdGEYBiABKAsyDy5UcmFpblBhcnR5RGF0YRIPCgdyZXRjb2RlGAcg",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "YS5wcm90byJUChZUcmFpblBhcnR5R2V0RGF0YVNjUnNwEg8KB3JldGNvZGUY",
+            "AyABKA0SKQoQdHJhaW5fcGFydHlfZGF0YRgMIAEoCzIPLlRyYWluUGFydHlE",
+            "YXRhQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrainPartyDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGetDataScRsp), global::EggLink.DanhengServer.Proto.TrainPartyGetDataScRsp.Parser, new[]{ "TrainPartyData", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyGetDataScRsp), global::EggLink.DanhengServer.Proto.TrainPartyGetDataScRsp.Parser, new[]{ "Retcode", "TrainPartyData" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyGetDataScRsp(TrainPartyGetDataScRsp other) : this() {
-      trainPartyData_ = other.trainPartyData_ != null ? other.trainPartyData_.Clone() : null;
       retcode_ = other.retcode_;
+      trainPartyData_ = other.trainPartyData_ != null ? other.trainPartyData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TrainPartyGetDataScRsp(this);
     }
 
-    /// <summary>Field number for the "train_party_data" field.</summary>
-    public const int TrainPartyDataFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.TrainPartyData trainPartyData_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.TrainPartyData TrainPartyData {
-      get { return trainPartyData_; }
-      set {
-        trainPartyData_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "train_party_data" field.</summary>
+    public const int TrainPartyDataFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.TrainPartyData trainPartyData_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.TrainPartyData TrainPartyData {
+      get { return trainPartyData_; }
+      set {
+        trainPartyData_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(TrainPartyData, other.TrainPartyData)) return false;
       if (Retcode != other.Retcode) return false;
+      if (!object.Equals(TrainPartyData, other.TrainPartyData)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (trainPartyData_ != null) hash ^= TrainPartyData.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (trainPartyData_ != null) hash ^= TrainPartyData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (trainPartyData_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(TrainPartyData);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
+      }
+      if (trainPartyData_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(TrainPartyData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (trainPartyData_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(TrainPartyData);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
+      }
+      if (trainPartyData_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(TrainPartyData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (trainPartyData_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrainPartyData);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (trainPartyData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrainPartyData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.trainPartyData_ != null) {
         if (trainPartyData_ == null) {
           TrainPartyData = new global::EggLink.DanhengServer.Proto.TrainPartyData();
         }
         TrainPartyData.MergeFrom(other.TrainPartyData);
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             if (trainPartyData_ == null) {
               TrainPartyData = new global::EggLink.DanhengServer.Proto.TrainPartyData();
             }
             input.ReadMessage(TrainPartyData);
-            break;
-          }
-          case 56: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             if (trainPartyData_ == null) {
               TrainPartyData = new global::EggLink.DanhengServer.Proto.TrainPartyData();
             }
             input.ReadMessage(TrainPartyData);
-            break;
-          }
-          case 56: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFLS0FHTk1FTUtPRy5wcm90bxocUm9ndWVNYWdpY0dhbWVVbml0SW5mby5w",
-            "cm90byJaCgtLS0FHTk1FTUtPRxIzChJzZWxlY3RfbWFnaWNfdW5pdHMYDCAD",
+            "cm90byJaCgtLS0FHTk1FTUtPRxIzChJzZWxlY3RfbWFnaWNfdW5pdHMYBiAD",
             "KAsyFy5Sb2d1ZU1hZ2ljR2FtZVVuaXRJbmZvEhYKDnNlbGVjdF9oaW50X2lk",
-            "GAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "GAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfoReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_magic_units" field.</summary>
-    public const int SelectMagicUnitsFieldNumber = 12;
+    public const int SelectMagicUnitsFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo> _repeated_selectMagicUnits_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo> selectMagicUnits_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 7;
+    public const int SelectHintIdFieldNumber = 10;
     private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      selectMagicUnits_.WriteTo(output, _repeated_selectMagicUnits_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(80);
         output.WriteUInt32(SelectHintId);
       }
-      selectMagicUnits_.WriteTo(output, _repeated_selectMagicUnits_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      selectMagicUnits_.WriteTo(ref output, _repeated_selectMagicUnits_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(80);
         output.WriteUInt32(SelectHintId);
       }
-      selectMagicUnits_.WriteTo(ref output, _repeated_selectMagicUnits_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            SelectHintId = input.ReadUInt32();
+          case 50: {
+            selectMagicUnits_.AddEntriesFrom(input, _repeated_selectMagicUnits_codec);
             break;
           }
-          case 98: {
-            selectMagicUnits_.AddEntriesFrom(input, _repeated_selectMagicUnits_codec);
+          case 80: {
+            SelectHintId = input.ReadUInt32();
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            SelectHintId = input.ReadUInt32();
+          case 50: {
+            selectMagicUnits_.AddEntriesFrom(ref input, _repeated_selectMagicUnits_codec);
             break;
           }
-          case 98: {
-            selectMagicUnits_.AddEntriesFrom(ref input, _repeated_selectMagicUnits_codec);
+          case 80: {
+            SelectHintId = input.ReadUInt32();
             break;
           }
         }

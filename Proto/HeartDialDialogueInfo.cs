@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtIZWFydERpYWxEaWFsb2d1ZUluZm8ucHJvdG8iQQoVSGVhcnREaWFsRGlh",
-            "bG9ndWVJbmZvEhMKC0ZCS0VLQ0dFTEJFGAYgASgIEhMKC2RpYWxvZ3VlX2lk",
-            "GAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "bG9ndWVJbmZvEhMKC0ZCS0VLQ0dFTEJFGAwgASgIEhMKC2RpYWxvZ3VlX2lk",
+            "GA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FBKEKCGELBE" field.</summary>
-    public const int FBKEKCGELBEFieldNumber = 6;
+    public const int FBKEKCGELBEFieldNumber = 12;
     private bool fBKEKCGELBE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "dialogue_id" field.</summary>
-    public const int DialogueIdFieldNumber = 7;
+    public const int DialogueIdFieldNumber = 14;
     private uint dialogueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (FBKEKCGELBE != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(96);
         output.WriteBool(FBKEKCGELBE);
       }
       if (DialogueId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(112);
         output.WriteUInt32(DialogueId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FBKEKCGELBE != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(96);
         output.WriteBool(FBKEKCGELBE);
       }
       if (DialogueId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(112);
         output.WriteUInt32(DialogueId);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 96: {
             FBKEKCGELBE = input.ReadBool();
             break;
           }
-          case 56: {
+          case 112: {
             DialogueId = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 96: {
             FBKEKCGELBE = input.ReadBool();
             break;
           }
-          case 56: {
+          case 112: {
             DialogueId = input.ReadUInt32();
             break;
           }

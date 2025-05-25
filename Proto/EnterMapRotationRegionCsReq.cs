@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFFbnRlck1hcFJvdGF0aW9uUmVnaW9uQ3NSZXEucHJvdG8aEE1vdGlvbklu",
             "Zm8ucHJvdG8ibgobRW50ZXJNYXBSb3RhdGlvblJlZ2lvbkNzUmVxEhsKBm1v",
-            "dGlvbhgNIAEoCzILLk1vdGlvbkluZm8SEwoLTkZMQk9OREpBSUUYBSABKA0S",
-            "HQoVZXJhX2ZsaXBwZXJfcmVnaW9uX2lkGA8gASgNQh6qAhtFZ2dMaW5rLkRh",
+            "dGlvbhgEIAEoCzILLk1vdGlvbkluZm8SEwoLTkZMQk9OREpBSUUYAyABKA0S",
+            "HQoVZXJhX2ZsaXBwZXJfcmVnaW9uX2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "motion" field.</summary>
-    public const int MotionFieldNumber = 13;
+    public const int MotionFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.MotionInfo motion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NFLBONDJAIE" field.</summary>
-    public const int NFLBONDJAIEFieldNumber = 5;
+    public const int NFLBONDJAIEFieldNumber = 3;
     private uint nFLBONDJAIE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "era_flipper_region_id" field.</summary>
-    public const int EraFlipperRegionIdFieldNumber = 15;
+    public const int EraFlipperRegionIdFieldNumber = 13;
     private uint eraFlipperRegionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,15 +169,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (NFLBONDJAIE != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(NFLBONDJAIE);
       }
       if (motion_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(34);
         output.WriteMessage(Motion);
       }
       if (EraFlipperRegionId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(104);
         output.WriteUInt32(EraFlipperRegionId);
       }
       if (_unknownFields != null) {
@@ -191,15 +191,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (NFLBONDJAIE != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(NFLBONDJAIE);
       }
       if (motion_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(34);
         output.WriteMessage(Motion);
       }
       if (EraFlipperRegionId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(104);
         output.WriteUInt32(EraFlipperRegionId);
       }
       if (_unknownFields != null) {
@@ -260,18 +260,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 24: {
             NFLBONDJAIE = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 34: {
             if (motion_ == null) {
               Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(Motion);
             break;
           }
-          case 120: {
+          case 104: {
             EraFlipperRegionId = input.ReadUInt32();
             break;
           }
@@ -290,18 +290,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 24: {
             NFLBONDJAIE = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 34: {
             if (motion_ == null) {
               Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(Motion);
             break;
           }
-          case 120: {
+          case 104: {
             EraFlipperRegionId = input.ReadUInt32();
             break;
           }

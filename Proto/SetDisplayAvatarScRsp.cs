@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtTZXREaXNwbGF5QXZhdGFyU2NSc3AucHJvdG8aF0Rpc3BsYXlBdmF0YXJE",
-            "YXRhLnByb3RvIlkKFVNldERpc3BsYXlBdmF0YXJTY1JzcBIPCgdyZXRjb2Rl",
-            "GAQgASgNEi8KE2Rpc3BsYXlfYXZhdGFyX2xpc3QYAiADKAsyEi5EaXNwbGF5",
-            "QXZhdGFyRGF0YUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "YXRhLnByb3RvIlkKFVNldERpc3BsYXlBdmF0YXJTY1JzcBIvChNkaXNwbGF5",
+            "X2F2YXRhcl9saXN0GAYgAygLMhIuRGlzcGxheUF2YXRhckRhdGESDwoHcmV0",
+            "Y29kZRgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayAvatarDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetDisplayAvatarScRsp), global::EggLink.DanhengServer.Proto.SetDisplayAvatarScRsp.Parser, new[]{ "Retcode", "DisplayAvatarList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetDisplayAvatarScRsp), global::EggLink.DanhengServer.Proto.SetDisplayAvatarScRsp.Parser, new[]{ "DisplayAvatarList", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetDisplayAvatarScRsp(SetDisplayAvatarScRsp other) : this() {
-      retcode_ = other.retcode_;
       displayAvatarList_ = other.displayAvatarList_.Clone();
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +85,19 @@ namespace EggLink.DanhengServer.Proto {
       return new SetDisplayAvatarScRsp(this);
     }
 
+    /// <summary>Field number for the "display_avatar_list" field.</summary>
+    public const int DisplayAvatarListFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarData> _repeated_displayAvatarList_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.DisplayAvatarData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarData> displayAvatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarData>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarData> DisplayAvatarList {
+      get { return displayAvatarList_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
+    public const int RetcodeFieldNumber = 10;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,17 +106,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "display_avatar_list" field.</summary>
-    public const int DisplayAvatarListFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarData> _repeated_displayAvatarList_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.DisplayAvatarData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarData> displayAvatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarData>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarData> DisplayAvatarList {
-      get { return displayAvatarList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if(!displayAvatarList_.Equals(other.displayAvatarList_)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= displayAvatarList_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,7 +154,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       displayAvatarList_.WriteTo(output, _repeated_displayAvatarList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       displayAvatarList_.WriteTo(ref output, _repeated_displayAvatarList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -182,10 +182,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += displayAvatarList_.CalculateSize(_repeated_displayAvatarList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += displayAvatarList_.CalculateSize(_repeated_displayAvatarList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -198,10 +198,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      displayAvatarList_.Add(other.displayAvatarList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      displayAvatarList_.Add(other.displayAvatarList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 50: {
             displayAvatarList_.AddEntriesFrom(input, _repeated_displayAvatarList_codec);
             break;
           }
-          case 32: {
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 50: {
             displayAvatarList_.AddEntriesFrom(ref input, _repeated_displayAvatarList_codec);
             break;
           }
-          case 32: {
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }

@@ -11,7 +11,6 @@ public class PacketChessRogueStartScRsp : BasePacket
         var proto = new ChessRogueStartScRsp
         {
             StageInfo = player.ChessRogueManager!.RogueInstance!.ToStageProto(),
-            RogueCurrentInfo = player.ChessRogueManager!.RogueInstance!.ToCurrentProto(),
             Info = player.ChessRogueManager!.RogueInstance!.ToRogueGameInfo()
         };
 

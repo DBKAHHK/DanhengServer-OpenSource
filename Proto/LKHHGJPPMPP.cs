@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFMS0hIR0pQUE1QUC5wcm90byI1CgtMS0hIR0pQUE1QUBIRCglhdmF0YXJf",
-            "aWQYCSABKA0SEwoLYXZhdGFyX3R5cGUYDiABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "aWQYCSABKA0SEwoLYXZhdGFyX3R5cGUYDyABKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_type" field.</summary>
-    public const int AvatarTypeFieldNumber = 14;
+    public const int AvatarTypeFieldNumber = 15;
     private uint avatarType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(AvatarId);
       }
       if (AvatarType != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteUInt32(AvatarType);
       }
       if (_unknownFields != null) {
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(AvatarId);
       }
       if (AvatarType != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteUInt32(AvatarType);
       }
       if (_unknownFields != null) {
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             AvatarId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 120: {
             AvatarType = input.ReadUInt32();
             break;
           }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
             AvatarId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 120: {
             AvatarType = input.ReadUInt32();
             break;
           }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVTd29yZFRyYWluaW5nVW5sb2NrU3luY1NjTm90aWZ5LnByb3RvGhFIREZL",
             "UEVFQkdFTi5wcm90byJZCh9Td29yZFRyYWluaW5nVW5sb2NrU3luY1NjTm90",
-            "aWZ5EhMKC09OSUxGRkVOQU1PGA8gAygNEiEKC05DS0NNR0NCRUhLGAIgAygL",
+            "aWZ5EhMKC09OSUxGRkVOQU1PGAogAygNEiEKC05DS0NNR0NCRUhLGAggAygL",
             "MgwuSERGS1BFRUJHRU5CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ONILFFENAMO" field.</summary>
-    public const int ONILFFENAMOFieldNumber = 15;
+    public const int ONILFFENAMOFieldNumber = 10;
     private static readonly pb::FieldCodec<uint> _repeated_oNILFFENAMO_codec
-        = pb::FieldCodec.ForUInt32(122);
+        = pb::FieldCodec.ForUInt32(82);
     private readonly pbc::RepeatedField<uint> oNILFFENAMO_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NCKCMGCBEHK" field.</summary>
-    public const int NCKCMGCBEHKFieldNumber = 2;
+    public const int NCKCMGCBEHKFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HDFKPEEBGEN> _repeated_nCKCMGCBEHK_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.HDFKPEEBGEN.Parser);
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.HDFKPEEBGEN.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HDFKPEEBGEN> nCKCMGCBEHK_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HDFKPEEBGEN>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -206,12 +206,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 66: {
             nCKCMGCBEHK_.AddEntriesFrom(input, _repeated_nCKCMGCBEHK_codec);
             break;
           }
-          case 122:
-          case 120: {
+          case 82:
+          case 80: {
             oNILFFENAMO_.AddEntriesFrom(input, _repeated_oNILFFENAMO_codec);
             break;
           }
@@ -230,12 +230,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 66: {
             nCKCMGCBEHK_.AddEntriesFrom(ref input, _repeated_nCKCMGCBEHK_codec);
             break;
           }
-          case 122:
-          case 120: {
+          case 82:
+          case 80: {
             oNILFFENAMO_.AddEntriesFrom(ref input, _repeated_oNILFFENAMO_codec);
             break;
           }

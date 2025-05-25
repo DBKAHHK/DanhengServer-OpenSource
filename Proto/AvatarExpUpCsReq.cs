@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZBdmF0YXJFeHBVcENzUmVxLnByb3RvGhJJdGVtQ29zdERhdGEucHJvdG8i",
-            "TAoQQXZhdGFyRXhwVXBDc1JlcRIWCg5iYXNlX2F2YXRhcl9pZBgMIAEoDRIg",
-            "CglpdGVtX2Nvc3QYCyABKAsyDS5JdGVtQ29zdERhdGFCHqoCG0VnZ0xpbmsu",
+            "TAoQQXZhdGFyRXhwVXBDc1JlcRIWCg5iYXNlX2F2YXRhcl9pZBgJIAEoDRIg",
+            "CglpdGVtX2Nvc3QYCiABKAsyDS5JdGVtQ29zdERhdGFCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "base_avatar_id" field.</summary>
-    public const int BaseAvatarIdFieldNumber = 12;
+    public const int BaseAvatarIdFieldNumber = 9;
     private uint baseAvatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_cost" field.</summary>
-    public const int ItemCostFieldNumber = 11;
+    public const int ItemCostFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.ItemCostData itemCost_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (itemCost_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(ItemCost);
-      }
       if (BaseAvatarId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(BaseAvatarId);
+      }
+      if (itemCost_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(ItemCost);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (itemCost_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(ItemCost);
-      }
       if (BaseAvatarId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(BaseAvatarId);
+      }
+      if (itemCost_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(ItemCost);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 72: {
+            BaseAvatarId = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             if (itemCost_ == null) {
               ItemCost = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(ItemCost);
-            break;
-          }
-          case 96: {
-            BaseAvatarId = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 72: {
+            BaseAvatarId = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             if (itemCost_ == null) {
               ItemCost = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(ItemCost);
-            break;
-          }
-          case 96: {
-            BaseAvatarId = input.ReadUInt32();
             break;
           }
         }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChtQbGF5ZXJLaWNrT3V0U2NOb3RpZnkucHJvdG8aDktpY2tUeXBlLnByb3Rv",
             "Gg9CbGFja0luZm8ucHJvdG8iVQoVUGxheWVyS2lja091dFNjTm90aWZ5EhwK",
-            "CWtpY2tfdHlwZRgOIAEoDjIJLktpY2tUeXBlEh4KCmJsYWNrX2luZm8YDSAB",
+            "CWtpY2tfdHlwZRgHIAEoDjIJLktpY2tUeXBlEh4KCmJsYWNrX2luZm8YDSAB",
             "KAsyCi5CbGFja0luZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "kick_type" field.</summary>
-    public const int KickTypeFieldNumber = 14;
+    public const int KickTypeFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.KickType kickType_ = global::EggLink.DanhengServer.Proto.KickType.KickSqueezed;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) KickType);
+      }
       if (blackInfo_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(BlackInfo);
-      }
-      if (KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) {
-        output.WriteRawTag(112);
-        output.WriteEnum((int) KickType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) KickType);
+      }
       if (blackInfo_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(BlackInfo);
-      }
-      if (KickType != global::EggLink.DanhengServer.Proto.KickType.KickSqueezed) {
-        output.WriteRawTag(112);
-        output.WriteEnum((int) KickType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 56: {
+            KickType = (global::EggLink.DanhengServer.Proto.KickType) input.ReadEnum();
+            break;
+          }
           case 106: {
             if (blackInfo_ == null) {
               BlackInfo = new global::EggLink.DanhengServer.Proto.BlackInfo();
             }
             input.ReadMessage(BlackInfo);
-            break;
-          }
-          case 112: {
-            KickType = (global::EggLink.DanhengServer.Proto.KickType) input.ReadEnum();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 56: {
+            KickType = (global::EggLink.DanhengServer.Proto.KickType) input.ReadEnum();
+            break;
+          }
           case 106: {
             if (blackInfo_ == null) {
               BlackInfo = new global::EggLink.DanhengServer.Proto.BlackInfo();
             }
             input.ReadMessage(BlackInfo);
-            break;
-          }
-          case 112: {
-            KickType = (global::EggLink.DanhengServer.Proto.KickType) input.ReadEnum();
             break;
           }
         }

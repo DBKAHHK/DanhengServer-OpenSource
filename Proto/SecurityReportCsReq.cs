@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlTZWN1cml0eVJlcG9ydENzUmVxLnByb3RvIioKE1NlY3VyaXR5UmVwb3J0",
-            "Q3NSZXESEwoLREdETE5JRUZDUEYYDiABKAlCHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "Q3NSZXESEwoLREdETE5JRUZDUEYYDyABKAlCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DGDLNIEFCPF" field.</summary>
-    public const int DGDLNIEFCPFFieldNumber = 14;
+    public const int DGDLNIEFCPFFieldNumber = 15;
     private string dGDLNIEFCPF_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (DGDLNIEFCPF.Length != 0) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(122);
         output.WriteString(DGDLNIEFCPF);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DGDLNIEFCPF.Length != 0) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(122);
         output.WriteString(DGDLNIEFCPF);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
+          case 122: {
             DGDLNIEFCPF = input.ReadString();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
+          case 122: {
             DGDLNIEFCPF = input.ReadString();
             break;
           }

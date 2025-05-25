@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5CdXlSb2d1ZVNob3BGb3JtdWxhU2NSc3AucHJvdG8aFEJ1eUZvcm11bGFJ",
-            "bmZvLnByb3RvIlgKGEJ1eVJvZ3VlU2hvcEZvcm11bGFTY1JzcBIPCgdyZXRj",
-            "b2RlGAsgASgNEisKEnJvZ3VlX2Zvcm11bGFfaW5mbxgKIAEoCzIPLkJ1eUZv",
-            "cm11bGFJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "bmZvLnByb3RvIlgKGEJ1eVJvZ3VlU2hvcEZvcm11bGFTY1JzcBIrChJyb2d1",
+            "ZV9mb3JtdWxhX2luZm8YCSABKAsyDy5CdXlGb3JtdWxhSW5mbxIPCgdyZXRj",
+            "b2RlGAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BuyFormulaInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BuyRogueShopFormulaScRsp), global::EggLink.DanhengServer.Proto.BuyRogueShopFormulaScRsp.Parser, new[]{ "Retcode", "RogueFormulaInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BuyRogueShopFormulaScRsp), global::EggLink.DanhengServer.Proto.BuyRogueShopFormulaScRsp.Parser, new[]{ "RogueFormulaInfo", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuyRogueShopFormulaScRsp(BuyRogueShopFormulaScRsp other) : this() {
-      retcode_ = other.retcode_;
       rogueFormulaInfo_ = other.rogueFormulaInfo_ != null ? other.rogueFormulaInfo_.Clone() : null;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new BuyRogueShopFormulaScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "rogue_formula_info" field.</summary>
-    public const int RogueFormulaInfoFieldNumber = 10;
+    public const int RogueFormulaInfoFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.BuyFormulaInfo rogueFormulaInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return rogueFormulaInfo_; }
       set {
         rogueFormulaInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 2;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if (!object.Equals(RogueFormulaInfo, other.RogueFormulaInfo)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (rogueFormulaInfo_ != null) hash ^= RogueFormulaInfo.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (rogueFormulaInfo_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(RogueFormulaInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
+      }
+      if (rogueFormulaInfo_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(RogueFormulaInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (rogueFormulaInfo_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(RogueFormulaInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
+      }
+      if (rogueFormulaInfo_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(RogueFormulaInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (rogueFormulaInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueFormulaInfo);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.rogueFormulaInfo_ != null) {
         if (rogueFormulaInfo_ == null) {
           RogueFormulaInfo = new global::EggLink.DanhengServer.Proto.BuyFormulaInfo();
         }
         RogueFormulaInfo.MergeFrom(other.RogueFormulaInfo);
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 16: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             if (rogueFormulaInfo_ == null) {
               RogueFormulaInfo = new global::EggLink.DanhengServer.Proto.BuyFormulaInfo();
             }
             input.ReadMessage(RogueFormulaInfo);
-            break;
-          }
-          case 88: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 16: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             if (rogueFormulaInfo_ == null) {
               RogueFormulaInfo = new global::EggLink.DanhengServer.Proto.BuyFormulaInfo();
             }
             input.ReadMessage(RogueFormulaInfo);
-            break;
-          }
-          case 88: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

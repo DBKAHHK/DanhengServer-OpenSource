@@ -254,7 +254,7 @@ public class PlayerInstance(PlayerData data)
         foreach (var path in avatar.PathInfos.Values)
         foreach (var skill in path.SkillTree)
         {
-            GameData.AvatarSkillTreeConfigData.TryGetValue(skill.Key * 10 + 1, out var config);
+            GameData.AvatarSkillTreeConfigData.TryGetValue(skill.Key * 100 + 1, out var config);
             if (config == null) continue;
             path.SkillTree[skill.Key] = Math.Min(skill.Value, config.MaxLevel); // limit skill level
         }
@@ -821,7 +821,7 @@ public class PlayerInstance(PlayerData data)
         Data.Pos = pos;
         Data.Rot = rot;
         var notSendMove = true;
-        if (planeId != Data.PlaneId || floorId != Data.FloorId || entryId != Data.EntryId)
+        if (planeId != Data.PlaneId || floorId != Data.FloorId || entryId != Data.EntryId || SceneInstance == null)
         {
             SceneInstance instance = new(this, plane, floorId, entryId);
             InvokeOnPlayerLoadScene(this, instance);

@@ -96,15 +96,6 @@ public class RogueEventParam
             Confirm = OverrideSelected ?? IsSelected
         };
     }
-
-    public NpcDialogueEventParam ToNpcProto()
-    {
-        return new NpcDialogueEventParam
-        {
-            RogueDialogueEventId = (uint)OptionId,
-            ArgId = (uint)ArgId
-        };
-    }
 }
 
 public class RogueEventResultInfo

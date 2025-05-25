@@ -25,14 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1TZXRHYWNoYURlY2lkZUl0ZW1TY1JzcC5wcm90bxoURGVjaWRlSXRlbUlu",
-            "Zm8ucHJvdG8iZwoXU2V0R2FjaGFEZWNpZGVJdGVtU2NSc3ASDwoHcmV0Y29k",
-            "ZRgOIAEoDRIpChBkZWNpZGVfaXRlbV9pbmZvGAIgASgLMg8uRGVjaWRlSXRl",
-            "bUluZm8SEAoIZ2FjaGFfaWQYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
-            "cnZlci5Qcm90b2IGcHJvdG8z"));
+            "Zm8ucHJvdG8iVQoXU2V0R2FjaGFEZWNpZGVJdGVtU2NSc3ASDwoHcmV0Y29k",
+            "ZRgDIAEoDRIpChBkZWNpZGVfaXRlbV9pbmZvGAEgASgLMg8uRGVjaWRlSXRl",
+            "bUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DecideItemInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetGachaDecideItemScRsp), global::EggLink.DanhengServer.Proto.SetGachaDecideItemScRsp.Parser, new[]{ "Retcode", "DecideItemInfo", "GachaId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetGachaDecideItemScRsp), global::EggLink.DanhengServer.Proto.SetGachaDecideItemScRsp.Parser, new[]{ "Retcode", "DecideItemInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +75,6 @@ namespace EggLink.DanhengServer.Proto {
     public SetGachaDecideItemScRsp(SetGachaDecideItemScRsp other) : this() {
       retcode_ = other.retcode_;
       decideItemInfo_ = other.decideItemInfo_ != null ? other.decideItemInfo_.Clone() : null;
-      gachaId_ = other.gachaId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "decide_item_info" field.</summary>
-    public const int DecideItemInfoFieldNumber = 2;
+    public const int DecideItemInfoFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.DecideItemInfo decideItemInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -107,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return decideItemInfo_; }
       set {
         decideItemInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "gacha_id" field.</summary>
-    public const int GachaIdFieldNumber = 9;
-    private uint gachaId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GachaId {
-      get { return gachaId_; }
-      set {
-        gachaId_ = value;
       }
     }
 
@@ -139,7 +125,6 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (Retcode != other.Retcode) return false;
       if (!object.Equals(DecideItemInfo, other.DecideItemInfo)) return false;
-      if (GachaId != other.GachaId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -149,7 +134,6 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (decideItemInfo_ != null) hash ^= DecideItemInfo.GetHashCode();
-      if (GachaId != 0) hash ^= GachaId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -169,15 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (decideItemInfo_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(DecideItemInfo);
       }
-      if (GachaId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(GachaId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -191,15 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (decideItemInfo_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(DecideItemInfo);
       }
-      if (GachaId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(GachaId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -217,9 +193,6 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (decideItemInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DecideItemInfo);
-      }
-      if (GachaId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -242,9 +215,6 @@ namespace EggLink.DanhengServer.Proto {
         }
         DecideItemInfo.MergeFrom(other.DecideItemInfo);
       }
-      if (other.GachaId != 0) {
-        GachaId = other.GachaId;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -260,18 +230,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 10: {
             if (decideItemInfo_ == null) {
               DecideItemInfo = new global::EggLink.DanhengServer.Proto.DecideItemInfo();
             }
             input.ReadMessage(DecideItemInfo);
             break;
           }
-          case 72: {
-            GachaId = input.ReadUInt32();
-            break;
-          }
-          case 112: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -290,18 +256,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 10: {
             if (decideItemInfo_ == null) {
               DecideItemInfo = new global::EggLink.DanhengServer.Proto.DecideItemInfo();
             }
             input.ReadMessage(DecideItemInfo);
             break;
           }
-          case 72: {
-            GachaId = input.ReadUInt32();
-            break;
-          }
-          case 112: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }

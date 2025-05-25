@@ -24,15 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static PlatformTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJQbGF0Zm9ybVR5cGUucHJvdG8qrgIKDFBsYXRmb3JtVHlwZRIKCgZFRElU",
+            "ChJQbGF0Zm9ybVR5cGUucHJvdG8q3gIKDFBsYXRmb3JtVHlwZRIKCgZFRElU",
             "T1IQABIHCgNJT1MQARILCgdBTkRST0lEEAISBgoCUEMQAxIHCgNXRUIQBBIH",
             "CgNXQVAQBRIHCgNQUzQQBhIMCghOSU5URU5ETxAHEhEKDUNMT1VEX0FORFJP",
             "SUQQCBIMCghDTE9VRF9QQxAJEg0KCUNMT1VEX0lPUxAKEgcKA1BTNRALEgcK",
             "A01BQxAMEg0KCUNMT1VEX01BQxANEhUKEUNMT1VEX1dFQl9BTkRST0lEEBQS",
             "EQoNQ0xPVURfV0VCX0lPUxAVEhAKDENMT1VEX1dFQl9QQxAWEhEKDUNMT1VE",
             "X1dFQl9NQUMQFxITCg9DTE9VRF9XRUJfVE9VQ0gQGBIWChJDTE9VRF9XRUJf",
-            "S0VZQk9BUkQQGUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "S0VZQk9BUkQQGRIUChBDTE9VRF9ET1VZSU5fSU9TEBsSGAoUQ0xPVURfRE9V",
+            "WUlOX0FORFJPSUQQHEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.PlatformType), }, null, null));
@@ -62,6 +63,8 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("CLOUD_WEB_MAC")] CloudWebMac = 23,
     [pbr::OriginalName("CLOUD_WEB_TOUCH")] CloudWebTouch = 24,
     [pbr::OriginalName("CLOUD_WEB_KEYBOARD")] CloudWebKeyboard = 25,
+    [pbr::OriginalName("CLOUD_DOUYIN_IOS")] CloudDouyinIos = 27,
+    [pbr::OriginalName("CLOUD_DOUYIN_ANDROID")] CloudDouyinAndroid = 28,
   }
 
   #endregion

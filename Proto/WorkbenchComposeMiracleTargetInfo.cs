@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidXb3JrYmVuY2hDb21wb3NlTWlyYWNsZVRhcmdldEluZm8ucHJvdG8iSwoh",
             "V29ya2JlbmNoQ29tcG9zZU1pcmFjbGVUYXJnZXRJbmZvEiYKHnRhcmdldF9j",
-            "b21wb3NlX21pcmFjbGVfaWRfbGlzdBgEIAMoDUIeqgIbRWdnTGluay5EYW5o",
+            "b21wb3NlX21pcmFjbGVfaWRfbGlzdBgBIAMoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "target_compose_miracle_id_list" field.</summary>
-    public const int TargetComposeMiracleIdListFieldNumber = 4;
+    public const int TargetComposeMiracleIdListFieldNumber = 1;
     private static readonly pb::FieldCodec<uint> _repeated_targetComposeMiracleIdList_codec
-        = pb::FieldCodec.ForUInt32(34);
+        = pb::FieldCodec.ForUInt32(10);
     private readonly pbc::RepeatedField<uint> targetComposeMiracleIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34:
-          case 32: {
+          case 10:
+          case 8: {
             targetComposeMiracleIdList_.AddEntriesFrom(input, _repeated_targetComposeMiracleIdList_codec);
             break;
           }
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34:
-          case 32: {
+          case 10:
+          case 8: {
             targetComposeMiracleIdList_.AddEntriesFrom(ref input, _repeated_targetComposeMiracleIdList_codec);
             break;
           }

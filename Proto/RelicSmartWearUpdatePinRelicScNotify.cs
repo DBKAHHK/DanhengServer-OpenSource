@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CipSZWxpY1NtYXJ0V2VhclVwZGF0ZVBpblJlbGljU2NOb3RpZnkucHJvdG8i",
             "VAokUmVsaWNTbWFydFdlYXJVcGRhdGVQaW5SZWxpY1NjTm90aWZ5EhkKEXBp",
-            "bl9yZWxpY19pZF9saXN0GAwgAygNEhEKCWF2YXRhcl9pZBgPIAEoDUIeqgIb",
+            "bl9yZWxpY19pZF9saXN0GA8gAygNEhEKCWF2YXRhcl9pZBgBIAEoDUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pin_relic_id_list" field.</summary>
-    public const int PinRelicIdListFieldNumber = 12;
+    public const int PinRelicIdListFieldNumber = 15;
     private static readonly pb::FieldCodec<uint> _repeated_pinRelicIdList_codec
-        = pb::FieldCodec.ForUInt32(98);
+        = pb::FieldCodec.ForUInt32(122);
     private readonly pbc::RepeatedField<uint> pinRelicIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 15;
+    public const int AvatarIdFieldNumber = 1;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      pinRelicIdList_.WriteTo(output, _repeated_pinRelicIdList_codec);
       if (AvatarId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(AvatarId);
       }
+      pinRelicIdList_.WriteTo(output, _repeated_pinRelicIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      pinRelicIdList_.WriteTo(ref output, _repeated_pinRelicIdList_codec);
       if (AvatarId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(AvatarId);
       }
+      pinRelicIdList_.WriteTo(ref output, _repeated_pinRelicIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98:
-          case 96: {
-            pinRelicIdList_.AddEntriesFrom(input, _repeated_pinRelicIdList_codec);
+          case 8: {
+            AvatarId = input.ReadUInt32();
             break;
           }
+          case 122:
           case 120: {
-            AvatarId = input.ReadUInt32();
+            pinRelicIdList_.AddEntriesFrom(input, _repeated_pinRelicIdList_codec);
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98:
-          case 96: {
-            pinRelicIdList_.AddEntriesFrom(ref input, _repeated_pinRelicIdList_codec);
+          case 8: {
+            AvatarId = input.ReadUInt32();
             break;
           }
+          case 122:
           case 120: {
-            AvatarId = input.ReadUInt32();
+            pinRelicIdList_.AddEntriesFrom(ref input, _repeated_pinRelicIdList_codec);
             break;
           }
         }

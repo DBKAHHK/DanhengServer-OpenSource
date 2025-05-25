@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static EnterSceneCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVFbnRlclNjZW5lQ3NSZXEucHJvdG8ifgoPRW50ZXJTY2VuZUNzUmVxEhMK",
-            "C3RlbGVwb3J0X2lkGAIgASgNEhoKEmdhbWVfc3RvcnlfbGluZV9pZBgMIAEo",
-            "DRISCgpjb250ZW50X2lkGAYgASgNEhAKCGVudHJ5X2lkGAEgASgNEhQKDGlz",
-            "X2Nsb3NlX21hcBgOIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "ChVFbnRlclNjZW5lQ3NSZXEucHJvdG8ifgoPRW50ZXJTY2VuZUNzUmVxEhoK",
+            "EmdhbWVfc3RvcnlfbGluZV9pZBgLIAEoDRIUCgxpc19jbG9zZV9tYXAYBiAB",
+            "KAgSEAoIZW50cnlfaWQYBSABKA0SEwoLdGVsZXBvcnRfaWQYDyABKA0SEgoK",
+            "Y29udGVudF9pZBgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterSceneCsReq), global::EggLink.DanhengServer.Proto.EnterSceneCsReq.Parser, new[]{ "TeleportId", "GameStoryLineId", "ContentId", "EntryId", "IsCloseMap" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterSceneCsReq), global::EggLink.DanhengServer.Proto.EnterSceneCsReq.Parser, new[]{ "GameStoryLineId", "IsCloseMap", "EntryId", "TeleportId", "ContentId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +74,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnterSceneCsReq(EnterSceneCsReq other) : this() {
-      teleportId_ = other.teleportId_;
       gameStoryLineId_ = other.gameStoryLineId_;
-      contentId_ = other.contentId_;
-      entryId_ = other.entryId_;
       isCloseMap_ = other.isCloseMap_;
+      entryId_ = other.entryId_;
+      teleportId_ = other.teleportId_;
+      contentId_ = other.contentId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,20 +88,8 @@ namespace EggLink.DanhengServer.Proto {
       return new EnterSceneCsReq(this);
     }
 
-    /// <summary>Field number for the "teleport_id" field.</summary>
-    public const int TeleportIdFieldNumber = 2;
-    private uint teleportId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TeleportId {
-      get { return teleportId_; }
-      set {
-        teleportId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "game_story_line_id" field.</summary>
-    public const int GameStoryLineIdFieldNumber = 12;
+    public const int GameStoryLineIdFieldNumber = 11;
     private uint gameStoryLineId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,20 +100,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "content_id" field.</summary>
-    public const int ContentIdFieldNumber = 6;
-    private uint contentId_;
+    /// <summary>Field number for the "is_close_map" field.</summary>
+    public const int IsCloseMapFieldNumber = 6;
+    private bool isCloseMap_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ContentId {
-      get { return contentId_; }
+    public bool IsCloseMap {
+      get { return isCloseMap_; }
       set {
-        contentId_ = value;
+        isCloseMap_ = value;
       }
     }
 
     /// <summary>Field number for the "entry_id" field.</summary>
-    public const int EntryIdFieldNumber = 1;
+    public const int EntryIdFieldNumber = 5;
     private uint entryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,15 +124,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "is_close_map" field.</summary>
-    public const int IsCloseMapFieldNumber = 14;
-    private bool isCloseMap_;
+    /// <summary>Field number for the "teleport_id" field.</summary>
+    public const int TeleportIdFieldNumber = 15;
+    private uint teleportId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsCloseMap {
-      get { return isCloseMap_; }
+    public uint TeleportId {
+      get { return teleportId_; }
       set {
-        isCloseMap_ = value;
+        teleportId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "content_id" field.</summary>
+    public const int ContentIdFieldNumber = 13;
+    private uint contentId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ContentId {
+      get { return contentId_; }
+      set {
+        contentId_ = value;
       }
     }
 
@@ -163,11 +163,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TeleportId != other.TeleportId) return false;
       if (GameStoryLineId != other.GameStoryLineId) return false;
-      if (ContentId != other.ContentId) return false;
-      if (EntryId != other.EntryId) return false;
       if (IsCloseMap != other.IsCloseMap) return false;
+      if (EntryId != other.EntryId) return false;
+      if (TeleportId != other.TeleportId) return false;
+      if (ContentId != other.ContentId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -175,11 +175,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TeleportId != 0) hash ^= TeleportId.GetHashCode();
       if (GameStoryLineId != 0) hash ^= GameStoryLineId.GetHashCode();
-      if (ContentId != 0) hash ^= ContentId.GetHashCode();
-      if (EntryId != 0) hash ^= EntryId.GetHashCode();
       if (IsCloseMap != false) hash ^= IsCloseMap.GetHashCode();
+      if (EntryId != 0) hash ^= EntryId.GetHashCode();
+      if (TeleportId != 0) hash ^= TeleportId.GetHashCode();
+      if (ContentId != 0) hash ^= ContentId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,24 +199,24 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EntryId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(40);
         output.WriteUInt32(EntryId);
       }
-      if (TeleportId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(TeleportId);
-      }
-      if (ContentId != 0) {
+      if (IsCloseMap != false) {
         output.WriteRawTag(48);
-        output.WriteUInt32(ContentId);
+        output.WriteBool(IsCloseMap);
       }
       if (GameStoryLineId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteUInt32(GameStoryLineId);
       }
-      if (IsCloseMap != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(IsCloseMap);
+      if (ContentId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(ContentId);
+      }
+      if (TeleportId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(TeleportId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -229,24 +229,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EntryId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(40);
         output.WriteUInt32(EntryId);
       }
-      if (TeleportId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(TeleportId);
-      }
-      if (ContentId != 0) {
+      if (IsCloseMap != false) {
         output.WriteRawTag(48);
-        output.WriteUInt32(ContentId);
+        output.WriteBool(IsCloseMap);
       }
       if (GameStoryLineId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteUInt32(GameStoryLineId);
       }
-      if (IsCloseMap != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(IsCloseMap);
+      if (ContentId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(ContentId);
+      }
+      if (TeleportId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(TeleportId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -258,20 +258,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TeleportId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TeleportId);
-      }
       if (GameStoryLineId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameStoryLineId);
       }
-      if (ContentId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ContentId);
+      if (IsCloseMap != false) {
+        size += 1 + 1;
       }
       if (EntryId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EntryId);
       }
-      if (IsCloseMap != false) {
-        size += 1 + 1;
+      if (TeleportId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TeleportId);
+      }
+      if (ContentId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ContentId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.TeleportId != 0) {
-        TeleportId = other.TeleportId;
-      }
       if (other.GameStoryLineId != 0) {
         GameStoryLineId = other.GameStoryLineId;
       }
-      if (other.ContentId != 0) {
-        ContentId = other.ContentId;
+      if (other.IsCloseMap != false) {
+        IsCloseMap = other.IsCloseMap;
       }
       if (other.EntryId != 0) {
         EntryId = other.EntryId;
       }
-      if (other.IsCloseMap != false) {
-        IsCloseMap = other.IsCloseMap;
+      if (other.TeleportId != 0) {
+        TeleportId = other.TeleportId;
+      }
+      if (other.ContentId != 0) {
+        ContentId = other.ContentId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -315,24 +315,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 40: {
             EntryId = input.ReadUInt32();
             break;
           }
-          case 16: {
-            TeleportId = input.ReadUInt32();
-            break;
-          }
           case 48: {
-            ContentId = input.ReadUInt32();
+            IsCloseMap = input.ReadBool();
             break;
           }
-          case 96: {
+          case 88: {
             GameStoryLineId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            IsCloseMap = input.ReadBool();
+          case 104: {
+            ContentId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            TeleportId = input.ReadUInt32();
             break;
           }
         }
@@ -350,24 +350,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 40: {
             EntryId = input.ReadUInt32();
             break;
           }
-          case 16: {
-            TeleportId = input.ReadUInt32();
-            break;
-          }
           case 48: {
-            ContentId = input.ReadUInt32();
+            IsCloseMap = input.ReadBool();
             break;
           }
-          case 96: {
+          case 88: {
             GameStoryLineId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            IsCloseMap = input.ReadBool();
+          case 104: {
+            ContentId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            TeleportId = input.ReadUInt32();
             break;
           }
         }

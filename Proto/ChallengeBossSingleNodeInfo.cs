@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFDaGFsbGVuZ2VCb3NzU2luZ2xlTm9kZUluZm8ucHJvdG8iZgobQ2hhbGxl",
-            "bmdlQm9zc1NpbmdsZU5vZGVJbmZvEhMKC01FRUxHTkROT01OGAggASgIEg8K",
-            "B2J1ZmZfaWQYAyABKA0SDgoGaXNfd2luGAwgASgIEhEKCW1heF9zY29yZRgB",
+            "bmdlQm9zc1NpbmdsZU5vZGVJbmZvEg4KBmlzX3dpbhgJIAEoCBITCgtNRUVM",
+            "R05ETk9NThgBIAEoCBIPCgdidWZmX2lkGAcgASgNEhEKCW1heF9zY29yZRgC",
             "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo), global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo.Parser, new[]{ "MEELGNDNOMN", "BuffId", "IsWin", "MaxScore" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo), global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfo.Parser, new[]{ "IsWin", "MEELGNDNOMN", "BuffId", "MaxScore" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeBossSingleNodeInfo(ChallengeBossSingleNodeInfo other) : this() {
+      isWin_ = other.isWin_;
       mEELGNDNOMN_ = other.mEELGNDNOMN_;
       buffId_ = other.buffId_;
-      isWin_ = other.isWin_;
       maxScore_ = other.maxScore_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,8 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new ChallengeBossSingleNodeInfo(this);
     }
 
+    /// <summary>Field number for the "is_win" field.</summary>
+    public const int IsWinFieldNumber = 9;
+    private bool isWin_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsWin {
+      get { return isWin_; }
+      set {
+        isWin_ = value;
+      }
+    }
+
     /// <summary>Field number for the "MEELGNDNOMN" field.</summary>
-    public const int MEELGNDNOMNFieldNumber = 8;
+    public const int MEELGNDNOMNFieldNumber = 1;
     private bool mEELGNDNOMN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff_id" field.</summary>
-    public const int BuffIdFieldNumber = 3;
+    public const int BuffIdFieldNumber = 7;
     private uint buffId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,20 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "is_win" field.</summary>
-    public const int IsWinFieldNumber = 12;
-    private bool isWin_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsWin {
-      get { return isWin_; }
-      set {
-        isWin_ = value;
-      }
-    }
-
     /// <summary>Field number for the "max_score" field.</summary>
-    public const int MaxScoreFieldNumber = 1;
+    public const int MaxScoreFieldNumber = 2;
     private uint maxScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -149,9 +149,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (IsWin != other.IsWin) return false;
       if (MEELGNDNOMN != other.MEELGNDNOMN) return false;
       if (BuffId != other.BuffId) return false;
-      if (IsWin != other.IsWin) return false;
       if (MaxScore != other.MaxScore) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -160,9 +160,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (IsWin != false) hash ^= IsWin.GetHashCode();
       if (MEELGNDNOMN != false) hash ^= MEELGNDNOMN.GetHashCode();
       if (BuffId != 0) hash ^= BuffId.GetHashCode();
-      if (IsWin != false) hash ^= IsWin.GetHashCode();
       if (MaxScore != 0) hash ^= MaxScore.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -182,20 +182,20 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MaxScore != 0) {
+      if (MEELGNDNOMN != false) {
         output.WriteRawTag(8);
+        output.WriteBool(MEELGNDNOMN);
+      }
+      if (MaxScore != 0) {
+        output.WriteRawTag(16);
         output.WriteUInt32(MaxScore);
       }
       if (BuffId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(BuffId);
       }
-      if (MEELGNDNOMN != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(MEELGNDNOMN);
-      }
       if (IsWin != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteBool(IsWin);
       }
       if (_unknownFields != null) {
@@ -208,20 +208,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MaxScore != 0) {
+      if (MEELGNDNOMN != false) {
         output.WriteRawTag(8);
+        output.WriteBool(MEELGNDNOMN);
+      }
+      if (MaxScore != 0) {
+        output.WriteRawTag(16);
         output.WriteUInt32(MaxScore);
       }
       if (BuffId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(BuffId);
       }
-      if (MEELGNDNOMN != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(MEELGNDNOMN);
-      }
       if (IsWin != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteBool(IsWin);
       }
       if (_unknownFields != null) {
@@ -234,14 +234,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (IsWin != false) {
+        size += 1 + 1;
+      }
       if (MEELGNDNOMN != false) {
         size += 1 + 1;
       }
       if (BuffId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffId);
-      }
-      if (IsWin != false) {
-        size += 1 + 1;
       }
       if (MaxScore != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxScore);
@@ -258,14 +258,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.IsWin != false) {
+        IsWin = other.IsWin;
+      }
       if (other.MEELGNDNOMN != false) {
         MEELGNDNOMN = other.MEELGNDNOMN;
       }
       if (other.BuffId != 0) {
         BuffId = other.BuffId;
-      }
-      if (other.IsWin != false) {
-        IsWin = other.IsWin;
       }
       if (other.MaxScore != 0) {
         MaxScore = other.MaxScore;
@@ -286,18 +286,18 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            MaxScore = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            BuffId = input.ReadUInt32();
-            break;
-          }
-          case 64: {
             MEELGNDNOMN = input.ReadBool();
             break;
           }
-          case 96: {
+          case 16: {
+            MaxScore = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            BuffId = input.ReadUInt32();
+            break;
+          }
+          case 72: {
             IsWin = input.ReadBool();
             break;
           }
@@ -317,18 +317,18 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            MaxScore = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            BuffId = input.ReadUInt32();
-            break;
-          }
-          case 64: {
             MEELGNDNOMN = input.ReadBool();
             break;
           }
-          case 96: {
+          case 16: {
+            MaxScore = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            BuffId = input.ReadUInt32();
+            break;
+          }
+          case 72: {
             IsWin = input.ReadBool();
             break;
           }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiZDaGVzc1JvZ3VlU2tpcFRlYWNoaW5nTGV2ZWxTY1JzcC5wcm90bxoOSXRl",
             "bUxpc3QucHJvdG8iWAogQ2hlc3NSb2d1ZVNraXBUZWFjaGluZ0xldmVsU2NS",
-            "c3ASDwoHcmV0Y29kZRgIIAEoDRIjChBza2lwX3Jld2FyZF9saXN0GAUgASgL",
+            "c3ASDwoHcmV0Y29kZRgOIAEoDRIjChBza2lwX3Jld2FyZF9saXN0GAggASgL",
             "MgkuSXRlbUxpc3RCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "skip_reward_list" field.</summary>
-    public const int SkipRewardListFieldNumber = 5;
+    public const int SkipRewardListFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.ItemList skipRewardList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (skipRewardList_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(66);
         output.WriteMessage(SkipRewardList);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (skipRewardList_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(66);
         output.WriteMessage(SkipRewardList);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 66: {
             if (skipRewardList_ == null) {
               SkipRewardList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(SkipRewardList);
             break;
           }
-          case 64: {
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -257,14 +257,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 66: {
             if (skipRewardList_ == null) {
               SkipRewardList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(SkipRewardList);
             break;
           }
-          case 64: {
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }

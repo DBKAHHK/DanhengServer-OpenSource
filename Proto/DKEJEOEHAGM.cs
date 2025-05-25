@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFES0VKRU9FSEFHTS5wcm90bxoRRU9BRUdBRUZQRkgucHJvdG8iMAoLREtF",
-            "SkVPRUhBR00SIQoLYXZhdGFyX2xpc3QYDSADKAsyDC5FT0FFR0FFRlBGSEIe",
+            "SkVPRUhBR00SIQoLYXZhdGFyX2xpc3QYCCADKAsyDC5FT0FFR0FFRlBGSEIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EOAEGAEFPFHReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_list" field.</summary>
-    public const int AvatarListFieldNumber = 13;
+    public const int AvatarListFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EOAEGAEFPFH> _repeated_avatarList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.EOAEGAEFPFH.Parser);
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.EOAEGAEFPFH.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EOAEGAEFPFH> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EOAEGAEFPFH>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 66: {
             avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 66: {
             avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
             break;
           }

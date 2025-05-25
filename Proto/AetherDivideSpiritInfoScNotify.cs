@@ -27,13 +27,13 @@ namespace EggLink.DanhengServer.Proto {
             "CiRBZXRoZXJEaXZpZGVTcGlyaXRJbmZvU2NOb3RpZnkucHJvdG8aHEFldGhl",
             "ckRpdmlkZVNwaXJpdEluZm8ucHJvdG8ikQEKHkFldGhlckRpdmlkZVNwaXJp",
             "dEluZm9TY05vdGlmeRIsCgtNR0VHSU1CQkFKQhgMIAMoCzIXLkFldGhlckRp",
-            "dmlkZVNwaXJpdEluZm8SLAoLYWV0aGVyX2luZm8YASABKAsyFy5BZXRoZXJE",
-            "aXZpZGVTcGlyaXRJbmZvEhMKC0pESExNSEpCT0pNGAMgASgNQh6qAhtFZ2dM",
+            "dmlkZVNwaXJpdEluZm8SEwoLSkRITE1ISkJPSk0YCyABKA0SLAoLYWV0aGVy",
+            "X2luZm8YByABKAsyFy5BZXRoZXJEaXZpZGVTcGlyaXRJbmZvQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfoScNotify), global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfoScNotify.Parser, new[]{ "MGEGIMBBAJB", "AetherInfo", "JDHLMHJBOJM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfoScNotify), global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfoScNotify.Parser, new[]{ "MGEGIMBBAJB", "JDHLMHJBOJM", "AetherInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,8 +76,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AetherDivideSpiritInfoScNotify(AetherDivideSpiritInfoScNotify other) : this() {
       mGEGIMBBAJB_ = other.mGEGIMBBAJB_.Clone();
-      aetherInfo_ = other.aetherInfo_ != null ? other.aetherInfo_.Clone() : null;
       jDHLMHJBOJM_ = other.jDHLMHJBOJM_;
+      aetherInfo_ = other.aetherInfo_ != null ? other.aetherInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -98,20 +98,8 @@ namespace EggLink.DanhengServer.Proto {
       get { return mGEGIMBBAJB_; }
     }
 
-    /// <summary>Field number for the "aether_info" field.</summary>
-    public const int AetherInfoFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo aetherInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo AetherInfo {
-      get { return aetherInfo_; }
-      set {
-        aetherInfo_ = value;
-      }
-    }
-
     /// <summary>Field number for the "JDHLMHJBOJM" field.</summary>
-    public const int JDHLMHJBOJMFieldNumber = 3;
+    public const int JDHLMHJBOJMFieldNumber = 11;
     private uint jDHLMHJBOJM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,6 +107,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return jDHLMHJBOJM_; }
       set {
         jDHLMHJBOJM_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "aether_info" field.</summary>
+    public const int AetherInfoFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo aetherInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo AetherInfo {
+      get { return aetherInfo_; }
+      set {
+        aetherInfo_ = value;
       }
     }
 
@@ -138,8 +138,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!mGEGIMBBAJB_.Equals(other.mGEGIMBBAJB_)) return false;
-      if (!object.Equals(AetherInfo, other.AetherInfo)) return false;
       if (JDHLMHJBOJM != other.JDHLMHJBOJM) return false;
+      if (!object.Equals(AetherInfo, other.AetherInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,8 +148,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= mGEGIMBBAJB_.GetHashCode();
-      if (aetherInfo_ != null) hash ^= AetherInfo.GetHashCode();
       if (JDHLMHJBOJM != 0) hash ^= JDHLMHJBOJM.GetHashCode();
+      if (aetherInfo_ != null) hash ^= AetherInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -169,11 +169,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (aetherInfo_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(58);
         output.WriteMessage(AetherInfo);
       }
       if (JDHLMHJBOJM != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(88);
         output.WriteUInt32(JDHLMHJBOJM);
       }
       mGEGIMBBAJB_.WriteTo(output, _repeated_mGEGIMBBAJB_codec);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (aetherInfo_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(58);
         output.WriteMessage(AetherInfo);
       }
       if (JDHLMHJBOJM != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(88);
         output.WriteUInt32(JDHLMHJBOJM);
       }
       mGEGIMBBAJB_.WriteTo(ref output, _repeated_mGEGIMBBAJB_codec);
@@ -207,11 +207,11 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += mGEGIMBBAJB_.CalculateSize(_repeated_mGEGIMBBAJB_codec);
-      if (aetherInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AetherInfo);
-      }
       if (JDHLMHJBOJM != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JDHLMHJBOJM);
+      }
+      if (aetherInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AetherInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -226,14 +226,14 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       mGEGIMBBAJB_.Add(other.mGEGIMBBAJB_);
+      if (other.JDHLMHJBOJM != 0) {
+        JDHLMHJBOJM = other.JDHLMHJBOJM;
+      }
       if (other.aetherInfo_ != null) {
         if (aetherInfo_ == null) {
           AetherInfo = new global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo();
         }
         AetherInfo.MergeFrom(other.AetherInfo);
-      }
-      if (other.JDHLMHJBOJM != 0) {
-        JDHLMHJBOJM = other.JDHLMHJBOJM;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -250,14 +250,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 58: {
             if (aetherInfo_ == null) {
               AetherInfo = new global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo();
             }
             input.ReadMessage(AetherInfo);
             break;
           }
-          case 24: {
+          case 88: {
             JDHLMHJBOJM = input.ReadUInt32();
             break;
           }
@@ -280,14 +280,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 58: {
             if (aetherInfo_ == null) {
               AetherInfo = new global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfo();
             }
             input.ReadMessage(AetherInfo);
             break;
           }
-          case 24: {
+          case 88: {
             JDHLMHJBOJM = input.ReadUInt32();
             break;
           }

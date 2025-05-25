@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxEb0dhY2hhSW5Sb2xsU2hvcENzUmVxLnByb3RvIlkKFkRvR2FjaGFJblJv",
-            "bGxTaG9wQ3NSZXESFAoMZ2FjaGFfcmFuZG9tGAsgASgNEhQKDHJvbGxfc2hv",
-            "cF9pZBgCIAEoDRITCgtnYWNoYV9jb3VudBgBIAEoDUIeqgIbRWdnTGluay5E",
+            "bGxTaG9wQ3NSZXESFAoMZ2FjaGFfcmFuZG9tGAwgASgNEhQKDHJvbGxfc2hv",
+            "cF9pZBgFIAEoDRITCgtnYWNoYV9jb3VudBgIIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gacha_random" field.</summary>
-    public const int GachaRandomFieldNumber = 11;
+    public const int GachaRandomFieldNumber = 12;
     private uint gachaRandom_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "roll_shop_id" field.</summary>
-    public const int RollShopIdFieldNumber = 2;
+    public const int RollShopIdFieldNumber = 5;
     private uint rollShopId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gacha_count" field.</summary>
-    public const int GachaCountFieldNumber = 1;
+    public const int GachaCountFieldNumber = 8;
     private uint gachaCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GachaCount != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(GachaCount);
-      }
       if (RollShopId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(RollShopId);
       }
+      if (GachaCount != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(GachaCount);
+      }
       if (GachaRandom != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(96);
         output.WriteUInt32(GachaRandom);
       }
       if (_unknownFields != null) {
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GachaCount != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(GachaCount);
-      }
       if (RollShopId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(RollShopId);
       }
+      if (GachaCount != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(GachaCount);
+      }
       if (GachaRandom != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(96);
         output.WriteUInt32(GachaRandom);
       }
       if (_unknownFields != null) {
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            GachaCount = input.ReadUInt32();
-            break;
-          }
-          case 16: {
+          case 40: {
             RollShopId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 64: {
+            GachaCount = input.ReadUInt32();
+            break;
+          }
+          case 96: {
             GachaRandom = input.ReadUInt32();
             break;
           }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            GachaCount = input.ReadUInt32();
-            break;
-          }
-          case 16: {
+          case 40: {
             RollShopId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 64: {
+            GachaCount = input.ReadUInt32();
+            break;
+          }
+          case 96: {
             GachaRandom = input.ReadUInt32();
             break;
           }

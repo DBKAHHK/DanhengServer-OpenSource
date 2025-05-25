@@ -127,16 +127,7 @@ public class BannerConfig
         {
             info.BeginTime = BeginTime;
             info.EndTime = EndTime;
-            info.DecideItemInfo = new DecideItemInfo();
         }
-
-        if (GachaType == GachaTypeEnum.AvatarUp)
-            info.DecideItemInfo = new DecideItemInfo
-            {
-                DecideItemOrder = { decideOrder.Select(x => (uint)x) },
-                CHDOIBFEHLP = 1,
-                JIGONEALCPC = { 11 }
-            };
 
         if (GachaId == 1001)
         {

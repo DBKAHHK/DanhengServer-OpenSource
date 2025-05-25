@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFESVBNRk9NR0NHTC5wcm90byI3CgtESVBNRk9NR0NHTBITCgtGQUhJSERK",
-            "Rk9ITRgCIAEoDRITCgtDRklCUE1LQUlOTxgOIAEoDUIeqgIbRWdnTGluay5E",
+            "Rk9ITRgCIAEoDRITCgtDRklCUE1LQUlOTxgKIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CFIBPMKAINO" field.</summary>
-    public const int CFIBPMKAINOFieldNumber = 14;
+    public const int CFIBPMKAINOFieldNumber = 10;
     private uint cFIBPMKAINO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(FAHIHDJFOHM);
       }
       if (CFIBPMKAINO != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteUInt32(CFIBPMKAINO);
       }
       if (_unknownFields != null) {
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(FAHIHDJFOHM);
       }
       if (CFIBPMKAINO != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteUInt32(CFIBPMKAINO);
       }
       if (_unknownFields != null) {
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             FAHIHDJFOHM = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 80: {
             CFIBPMKAINO = input.ReadUInt32();
             break;
           }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
             FAHIHDJFOHM = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 80: {
             CFIBPMKAINO = input.ReadUInt32();
             break;
           }

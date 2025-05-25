@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5Sb2d1ZU1hZ2ljVW5pdFNlbGVjdEluZm8ucHJvdG8aGFJvZ3VlTWFnaWNH",
-            "YW1lVW5pdC5wcm90byK3AQoYUm9ndWVNYWdpY1VuaXRTZWxlY3RJbmZvEhMK",
-            "C0lHQ0hCUEFLQkNCGAcgASgNEigKC0ZHREpBTUhPS0lGGAkgASgLMhMuUm9n",
-            "dWVNYWdpY0dhbWVVbml0Ei8KEnNlbGVjdF9tYWdpY191bml0cxgOIAMoCzIT",
-            "LlJvZ3VlTWFnaWNHYW1lVW5pdBIWCg5zZWxlY3RfaGludF9pZBgDIAEoDRIT",
-            "CgtDS0tFS01KTUFCQxgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "YW1lVW5pdC5wcm90byK/AQoYUm9ndWVNYWdpY1VuaXRTZWxlY3RJbmZvEhYK",
+            "DnNvdXJjZV9oaW50X2lkGAEgASgNEhgKEHNvdXJjZV9jdXJfY291bnQYCSAB",
+            "KA0SLwoSc2VsZWN0X21hZ2ljX3VuaXRzGAQgAygLMhMuUm9ndWVNYWdpY0dh",
+            "bWVVbml0EhYKDnNlbGVjdF9oaW50X2lkGAwgASgNEigKC0ZHREpBTUhPS0lG",
+            "GAggASgLMhMuUm9ndWVNYWdpY0dhbWVVbml0Qh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicGameUnitReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicUnitSelectInfo), global::EggLink.DanhengServer.Proto.RogueMagicUnitSelectInfo.Parser, new[]{ "IGCHBPAKBCB", "FGDJAMHOKIF", "SelectMagicUnits", "SelectHintId", "CKKEKMJMABC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicUnitSelectInfo), global::EggLink.DanhengServer.Proto.RogueMagicUnitSelectInfo.Parser, new[]{ "SourceHintId", "SourceCurCount", "SelectMagicUnits", "SelectHintId", "FGDJAMHOKIF" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,11 +76,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicUnitSelectInfo(RogueMagicUnitSelectInfo other) : this() {
-      iGCHBPAKBCB_ = other.iGCHBPAKBCB_;
-      fGDJAMHOKIF_ = other.fGDJAMHOKIF_ != null ? other.fGDJAMHOKIF_.Clone() : null;
+      sourceHintId_ = other.sourceHintId_;
+      sourceCurCount_ = other.sourceCurCount_;
       selectMagicUnits_ = other.selectMagicUnits_.Clone();
       selectHintId_ = other.selectHintId_;
-      cKKEKMJMABC_ = other.cKKEKMJMABC_;
+      fGDJAMHOKIF_ = other.fGDJAMHOKIF_ != null ? other.fGDJAMHOKIF_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,34 +90,34 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueMagicUnitSelectInfo(this);
     }
 
-    /// <summary>Field number for the "IGCHBPAKBCB" field.</summary>
-    public const int IGCHBPAKBCBFieldNumber = 7;
-    private uint iGCHBPAKBCB_;
+    /// <summary>Field number for the "source_hint_id" field.</summary>
+    public const int SourceHintIdFieldNumber = 1;
+    private uint sourceHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IGCHBPAKBCB {
-      get { return iGCHBPAKBCB_; }
+    public uint SourceHintId {
+      get { return sourceHintId_; }
       set {
-        iGCHBPAKBCB_ = value;
+        sourceHintId_ = value;
       }
     }
 
-    /// <summary>Field number for the "FGDJAMHOKIF" field.</summary>
-    public const int FGDJAMHOKIFFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.RogueMagicGameUnit fGDJAMHOKIF_;
+    /// <summary>Field number for the "source_cur_count" field.</summary>
+    public const int SourceCurCountFieldNumber = 9;
+    private uint sourceCurCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueMagicGameUnit FGDJAMHOKIF {
-      get { return fGDJAMHOKIF_; }
+    public uint SourceCurCount {
+      get { return sourceCurCount_; }
       set {
-        fGDJAMHOKIF_ = value;
+        sourceCurCount_ = value;
       }
     }
 
     /// <summary>Field number for the "select_magic_units" field.</summary>
-    public const int SelectMagicUnitsFieldNumber = 14;
+    public const int SelectMagicUnitsFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicGameUnit> _repeated_selectMagicUnits_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.RogueMagicGameUnit.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.RogueMagicGameUnit.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicGameUnit> selectMagicUnits_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicGameUnit>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,7 +126,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 3;
+    public const int SelectHintIdFieldNumber = 12;
     private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,15 +137,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CKKEKMJMABC" field.</summary>
-    public const int CKKEKMJMABCFieldNumber = 8;
-    private uint cKKEKMJMABC_;
+    /// <summary>Field number for the "FGDJAMHOKIF" field.</summary>
+    public const int FGDJAMHOKIFFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.RogueMagicGameUnit fGDJAMHOKIF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CKKEKMJMABC {
-      get { return cKKEKMJMABC_; }
+    public global::EggLink.DanhengServer.Proto.RogueMagicGameUnit FGDJAMHOKIF {
+      get { return fGDJAMHOKIF_; }
       set {
-        cKKEKMJMABC_ = value;
+        fGDJAMHOKIF_ = value;
       }
     }
 
@@ -164,11 +164,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IGCHBPAKBCB != other.IGCHBPAKBCB) return false;
-      if (!object.Equals(FGDJAMHOKIF, other.FGDJAMHOKIF)) return false;
+      if (SourceHintId != other.SourceHintId) return false;
+      if (SourceCurCount != other.SourceCurCount) return false;
       if(!selectMagicUnits_.Equals(other.selectMagicUnits_)) return false;
       if (SelectHintId != other.SelectHintId) return false;
-      if (CKKEKMJMABC != other.CKKEKMJMABC) return false;
+      if (!object.Equals(FGDJAMHOKIF, other.FGDJAMHOKIF)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,11 +176,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IGCHBPAKBCB != 0) hash ^= IGCHBPAKBCB.GetHashCode();
-      if (fGDJAMHOKIF_ != null) hash ^= FGDJAMHOKIF.GetHashCode();
+      if (SourceHintId != 0) hash ^= SourceHintId.GetHashCode();
+      if (SourceCurCount != 0) hash ^= SourceCurCount.GetHashCode();
       hash ^= selectMagicUnits_.GetHashCode();
       if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
-      if (CKKEKMJMABC != 0) hash ^= CKKEKMJMABC.GetHashCode();
+      if (fGDJAMHOKIF_ != null) hash ^= FGDJAMHOKIF.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,23 +199,23 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SelectHintId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(SelectHintId);
-      }
-      if (IGCHBPAKBCB != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(IGCHBPAKBCB);
-      }
-      if (CKKEKMJMABC != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(CKKEKMJMABC);
-      }
-      if (fGDJAMHOKIF_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(FGDJAMHOKIF);
+      if (SourceHintId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(SourceHintId);
       }
       selectMagicUnits_.WriteTo(output, _repeated_selectMagicUnits_codec);
+      if (fGDJAMHOKIF_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(FGDJAMHOKIF);
+      }
+      if (SourceCurCount != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(SourceCurCount);
+      }
+      if (SelectHintId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(SelectHintId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -226,23 +226,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SelectHintId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(SelectHintId);
-      }
-      if (IGCHBPAKBCB != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(IGCHBPAKBCB);
-      }
-      if (CKKEKMJMABC != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(CKKEKMJMABC);
-      }
-      if (fGDJAMHOKIF_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(FGDJAMHOKIF);
+      if (SourceHintId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(SourceHintId);
       }
       selectMagicUnits_.WriteTo(ref output, _repeated_selectMagicUnits_codec);
+      if (fGDJAMHOKIF_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(FGDJAMHOKIF);
+      }
+      if (SourceCurCount != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(SourceCurCount);
+      }
+      if (SelectHintId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(SelectHintId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -253,18 +253,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IGCHBPAKBCB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IGCHBPAKBCB);
+      if (SourceHintId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SourceHintId);
       }
-      if (fGDJAMHOKIF_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FGDJAMHOKIF);
+      if (SourceCurCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SourceCurCount);
       }
       size += selectMagicUnits_.CalculateSize(_repeated_selectMagicUnits_codec);
       if (SelectHintId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectHintId);
       }
-      if (CKKEKMJMABC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CKKEKMJMABC);
+      if (fGDJAMHOKIF_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FGDJAMHOKIF);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -278,21 +278,21 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IGCHBPAKBCB != 0) {
-        IGCHBPAKBCB = other.IGCHBPAKBCB;
+      if (other.SourceHintId != 0) {
+        SourceHintId = other.SourceHintId;
+      }
+      if (other.SourceCurCount != 0) {
+        SourceCurCount = other.SourceCurCount;
+      }
+      selectMagicUnits_.Add(other.selectMagicUnits_);
+      if (other.SelectHintId != 0) {
+        SelectHintId = other.SelectHintId;
       }
       if (other.fGDJAMHOKIF_ != null) {
         if (fGDJAMHOKIF_ == null) {
           FGDJAMHOKIF = new global::EggLink.DanhengServer.Proto.RogueMagicGameUnit();
         }
         FGDJAMHOKIF.MergeFrom(other.FGDJAMHOKIF);
-      }
-      selectMagicUnits_.Add(other.selectMagicUnits_);
-      if (other.SelectHintId != 0) {
-        SelectHintId = other.SelectHintId;
-      }
-      if (other.CKKEKMJMABC != 0) {
-        CKKEKMJMABC = other.CKKEKMJMABC;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -309,27 +309,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            SelectHintId = input.ReadUInt32();
+          case 8: {
+            SourceHintId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            IGCHBPAKBCB = input.ReadUInt32();
+          case 34: {
+            selectMagicUnits_.AddEntriesFrom(input, _repeated_selectMagicUnits_codec);
             break;
           }
-          case 64: {
-            CKKEKMJMABC = input.ReadUInt32();
-            break;
-          }
-          case 74: {
+          case 66: {
             if (fGDJAMHOKIF_ == null) {
               FGDJAMHOKIF = new global::EggLink.DanhengServer.Proto.RogueMagicGameUnit();
             }
             input.ReadMessage(FGDJAMHOKIF);
             break;
           }
-          case 114: {
-            selectMagicUnits_.AddEntriesFrom(input, _repeated_selectMagicUnits_codec);
+          case 72: {
+            SourceCurCount = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            SelectHintId = input.ReadUInt32();
             break;
           }
         }
@@ -347,27 +347,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            SelectHintId = input.ReadUInt32();
+          case 8: {
+            SourceHintId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            IGCHBPAKBCB = input.ReadUInt32();
+          case 34: {
+            selectMagicUnits_.AddEntriesFrom(ref input, _repeated_selectMagicUnits_codec);
             break;
           }
-          case 64: {
-            CKKEKMJMABC = input.ReadUInt32();
-            break;
-          }
-          case 74: {
+          case 66: {
             if (fGDJAMHOKIF_ == null) {
               FGDJAMHOKIF = new global::EggLink.DanhengServer.Proto.RogueMagicGameUnit();
             }
             input.ReadMessage(FGDJAMHOKIF);
             break;
           }
-          case 114: {
-            selectMagicUnits_.AddEntriesFrom(ref input, _repeated_selectMagicUnits_codec);
+          case 72: {
+            SourceCurCount = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            SelectHintId = input.ReadUInt32();
             break;
           }
         }

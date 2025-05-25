@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFJTk5OSUNGT0xJSS5wcm90byI4CgtJTk5OSUNGT0xJSRIUCgxnYWNoYV9y",
-            "YW5kb20YBCABKA0SEwoLSkNOT0RBTUZGRkMYCyABKAhCHqoCG0VnZ0xpbmsu",
+            "YW5kb20YDyABKA0SEwoLSkNOT0RBTUZGRkMYCyABKAhCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gacha_random" field.</summary>
-    public const int GachaRandomFieldNumber = 4;
+    public const int GachaRandomFieldNumber = 15;
     private uint gachaRandom_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GachaRandom != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(GachaRandom);
-      }
       if (JCNODAMFFFC != false) {
         output.WriteRawTag(88);
         output.WriteBool(JCNODAMFFFC);
+      }
+      if (GachaRandom != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(GachaRandom);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GachaRandom != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(GachaRandom);
-      }
       if (JCNODAMFFFC != false) {
         output.WriteRawTag(88);
         output.WriteBool(JCNODAMFFFC);
+      }
+      if (GachaRandom != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(GachaRandom);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            GachaRandom = input.ReadUInt32();
-            break;
-          }
           case 88: {
             JCNODAMFFFC = input.ReadBool();
+            break;
+          }
+          case 120: {
+            GachaRandom = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            GachaRandom = input.ReadUInt32();
-            break;
-          }
           case 88: {
             JCNODAMFFFC = input.ReadBool();
+            break;
+          }
+          case 120: {
+            GachaRandom = input.ReadUInt32();
             break;
           }
         }

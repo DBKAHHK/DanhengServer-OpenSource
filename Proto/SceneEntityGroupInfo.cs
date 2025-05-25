@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpTY2VuZUVudGl0eUdyb3VwSW5mby5wcm90bxoVU2NlbmVFbnRpdHlJbmZv",
-            "LnByb3RvIs8BChRTY2VuZUVudGl0eUdyb3VwSW5mbxI7CgtIRUpBTU9PSkJD",
-            "ShgKIAMoCzImLlNjZW5lRW50aXR5R3JvdXBJbmZvLkhFSkFNT09KQkNKRW50",
-            "cnkSJQoLZW50aXR5X2xpc3QYAiADKAsyEC5TY2VuZUVudGl0eUluZm8SEAoI",
-            "Z3JvdXBfaWQYByABKA0SDQoFc3RhdGUYDiABKA0aMgoQSEVKQU1PT0pCQ0pF",
+            "LnByb3RvIs8BChRTY2VuZUVudGl0eUdyb3VwSW5mbxIlCgtlbnRpdHlfbGlz",
+            "dBgHIAMoCzIQLlNjZW5lRW50aXR5SW5mbxI7CgtIRUpBTU9PSkJDShgBIAMo",
+            "CzImLlNjZW5lRW50aXR5R3JvdXBJbmZvLkhFSkFNT09KQkNKRW50cnkSEAoI",
+            "Z3JvdXBfaWQYDSABKA0SDQoFc3RhdGUYBCABKA0aMgoQSEVKQU1PT0pCQ0pF",
             "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAU6AjgBQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo), global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo.Parser, new[]{ "HEJAMOOJBCJ", "EntityList", "GroupId", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo), global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo.Parser, new[]{ "EntityList", "HEJAMOOJBCJ", "GroupId", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -76,8 +76,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneEntityGroupInfo(SceneEntityGroupInfo other) : this() {
-      hEJAMOOJBCJ_ = other.hEJAMOOJBCJ_.Clone();
       entityList_ = other.entityList_.Clone();
+      hEJAMOOJBCJ_ = other.hEJAMOOJBCJ_.Clone();
       groupId_ = other.groupId_;
       state_ = other.state_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -89,21 +89,10 @@ namespace EggLink.DanhengServer.Proto {
       return new SceneEntityGroupInfo(this);
     }
 
-    /// <summary>Field number for the "HEJAMOOJBCJ" field.</summary>
-    public const int HEJAMOOJBCJFieldNumber = 10;
-    private static readonly pbc::MapField<string, int>.Codec _map_hEJAMOOJBCJ_codec
-        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 82);
-    private readonly pbc::MapField<string, int> hEJAMOOJBCJ_ = new pbc::MapField<string, int>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, int> HEJAMOOJBCJ {
-      get { return hEJAMOOJBCJ_; }
-    }
-
     /// <summary>Field number for the "entity_list" field.</summary>
-    public const int EntityListFieldNumber = 2;
+    public const int EntityListFieldNumber = 7;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SceneEntityInfo> _repeated_entityList_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.SceneEntityInfo.Parser);
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.SceneEntityInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityInfo> entityList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SceneEntityInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,8 +100,19 @@ namespace EggLink.DanhengServer.Proto {
       get { return entityList_; }
     }
 
+    /// <summary>Field number for the "HEJAMOOJBCJ" field.</summary>
+    public const int HEJAMOOJBCJFieldNumber = 1;
+    private static readonly pbc::MapField<string, int>.Codec _map_hEJAMOOJBCJ_codec
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 10);
+    private readonly pbc::MapField<string, int> hEJAMOOJBCJ_ = new pbc::MapField<string, int>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, int> HEJAMOOJBCJ {
+      get { return hEJAMOOJBCJ_; }
+    }
+
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 7;
+    public const int GroupIdFieldNumber = 13;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "state" field.</summary>
-    public const int StateFieldNumber = 14;
+    public const int StateFieldNumber = 4;
     private uint state_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,8 +150,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!HEJAMOOJBCJ.Equals(other.HEJAMOOJBCJ)) return false;
       if(!entityList_.Equals(other.entityList_)) return false;
+      if (!HEJAMOOJBCJ.Equals(other.HEJAMOOJBCJ)) return false;
       if (GroupId != other.GroupId) return false;
       if (State != other.State) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -161,8 +161,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= HEJAMOOJBCJ.GetHashCode();
       hash ^= entityList_.GetHashCode();
+      hash ^= HEJAMOOJBCJ.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (State != 0) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
@@ -183,15 +183,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      entityList_.WriteTo(output, _repeated_entityList_codec);
-      if (GroupId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(GroupId);
-      }
       hEJAMOOJBCJ_.WriteTo(output, _map_hEJAMOOJBCJ_codec);
       if (State != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteUInt32(State);
+      }
+      entityList_.WriteTo(output, _repeated_entityList_codec);
+      if (GroupId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -203,15 +203,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      entityList_.WriteTo(ref output, _repeated_entityList_codec);
-      if (GroupId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(GroupId);
-      }
       hEJAMOOJBCJ_.WriteTo(ref output, _map_hEJAMOOJBCJ_codec);
       if (State != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteUInt32(State);
+      }
+      entityList_.WriteTo(ref output, _repeated_entityList_codec);
+      if (GroupId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -223,8 +223,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += hEJAMOOJBCJ_.CalculateSize(_map_hEJAMOOJBCJ_codec);
       size += entityList_.CalculateSize(_repeated_entityList_codec);
+      size += hEJAMOOJBCJ_.CalculateSize(_map_hEJAMOOJBCJ_codec);
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
@@ -243,8 +243,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      hEJAMOOJBCJ_.MergeFrom(other.hEJAMOOJBCJ_);
       entityList_.Add(other.entityList_);
+      hEJAMOOJBCJ_.MergeFrom(other.hEJAMOOJBCJ_);
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
       }
@@ -266,20 +266,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            entityList_.AddEntriesFrom(input, _repeated_entityList_codec);
-            break;
-          }
-          case 56: {
-            GroupId = input.ReadUInt32();
-            break;
-          }
-          case 82: {
+          case 10: {
             hEJAMOOJBCJ_.AddEntriesFrom(input, _map_hEJAMOOJBCJ_codec);
             break;
           }
-          case 112: {
+          case 32: {
             State = input.ReadUInt32();
+            break;
+          }
+          case 58: {
+            entityList_.AddEntriesFrom(input, _repeated_entityList_codec);
+            break;
+          }
+          case 104: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }
@@ -297,20 +297,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            entityList_.AddEntriesFrom(ref input, _repeated_entityList_codec);
-            break;
-          }
-          case 56: {
-            GroupId = input.ReadUInt32();
-            break;
-          }
-          case 82: {
+          case 10: {
             hEJAMOOJBCJ_.AddEntriesFrom(ref input, _map_hEJAMOOJBCJ_codec);
             break;
           }
-          case 112: {
+          case 32: {
             State = input.ReadUInt32();
+            break;
+          }
+          case 58: {
+            entityList_.AddEntriesFrom(ref input, _repeated_entityList_codec);
+            break;
+          }
+          case 104: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFBRE9MRU9GRUdPSy5wcm90byIyCgtBRE9MRU9GRUdPSxITCgtQT0lJQUlB",
-            "S0lMRhgGIAEoDRIOCgZtYXBfaWQYDyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "S0lMRhgMIAEoDRIOCgZtYXBfaWQYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "POIIAIAKILF" field.</summary>
-    public const int POIIAIAKILFFieldNumber = 6;
+    public const int POIIAIAKILFFieldNumber = 12;
     private uint pOIIAIAKILF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "map_id" field.</summary>
-    public const int MapIdFieldNumber = 15;
+    public const int MapIdFieldNumber = 6;
     private uint mapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (POIIAIAKILF != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(POIIAIAKILF);
-      }
       if (MapId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteUInt32(MapId);
+      }
+      if (POIIAIAKILF != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(POIIAIAKILF);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (POIIAIAKILF != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(POIIAIAKILF);
-      }
       if (MapId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteUInt32(MapId);
+      }
+      if (POIIAIAKILF != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(POIIAIAKILF);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 48: {
-            POIIAIAKILF = input.ReadUInt32();
+            MapId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            MapId = input.ReadUInt32();
+          case 96: {
+            POIIAIAKILF = input.ReadUInt32();
             break;
           }
         }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 48: {
-            POIIAIAKILF = input.ReadUInt32();
+            MapId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            MapId = input.ReadUInt32();
+          case 96: {
+            POIIAIAKILF = input.ReadUInt32();
             break;
           }
         }

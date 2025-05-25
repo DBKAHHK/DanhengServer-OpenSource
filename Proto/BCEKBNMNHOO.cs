@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFCQ0VLQk5NTkhPTy5wcm90byJiCgtCQ0VLQk5NTkhPTxIXCg9pc190YWtl",
-            "bl9yZXdhcmQYBiABKAgSEwoLQ0JORkZFTURCS0YYDiABKAgSEwoLUEVIT0ZC",
-            "QkROSUMYCCABKA0SEAoIcGFuZWxfaWQYDCABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "bl9yZXdhcmQYCiABKAgSEAoIcGFuZWxfaWQYDSABKA0SEwoLUEVIT0ZCQkRO",
+            "SUMYCSABKA0SEwoLQ0JORkZFTURCS0YYAyABKAhCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BCEKBNMNHOO), global::EggLink.DanhengServer.Proto.BCEKBNMNHOO.Parser, new[]{ "IsTakenReward", "CBNFFEMDBKF", "PEHOFBBDNIC", "PanelId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BCEKBNMNHOO), global::EggLink.DanhengServer.Proto.BCEKBNMNHOO.Parser, new[]{ "IsTakenReward", "PanelId", "PEHOFBBDNIC", "CBNFFEMDBKF" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BCEKBNMNHOO(BCEKBNMNHOO other) : this() {
       isTakenReward_ = other.isTakenReward_;
-      cBNFFEMDBKF_ = other.cBNFFEMDBKF_;
-      pEHOFBBDNIC_ = other.pEHOFBBDNIC_;
       panelId_ = other.panelId_;
+      pEHOFBBDNIC_ = other.pEHOFBBDNIC_;
+      cBNFFEMDBKF_ = other.cBNFFEMDBKF_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_taken_reward" field.</summary>
-    public const int IsTakenRewardFieldNumber = 6;
+    public const int IsTakenRewardFieldNumber = 10;
     private bool isTakenReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,20 +98,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CBNFFEMDBKF" field.</summary>
-    public const int CBNFFEMDBKFFieldNumber = 14;
-    private bool cBNFFEMDBKF_;
+    /// <summary>Field number for the "panel_id" field.</summary>
+    public const int PanelIdFieldNumber = 13;
+    private uint panelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool CBNFFEMDBKF {
-      get { return cBNFFEMDBKF_; }
+    public uint PanelId {
+      get { return panelId_; }
       set {
-        cBNFFEMDBKF_ = value;
+        panelId_ = value;
       }
     }
 
     /// <summary>Field number for the "PEHOFBBDNIC" field.</summary>
-    public const int PEHOFBBDNICFieldNumber = 8;
+    public const int PEHOFBBDNICFieldNumber = 9;
     private uint pEHOFBBDNIC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,15 +122,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "panel_id" field.</summary>
-    public const int PanelIdFieldNumber = 12;
-    private uint panelId_;
+    /// <summary>Field number for the "CBNFFEMDBKF" field.</summary>
+    public const int CBNFFEMDBKFFieldNumber = 3;
+    private bool cBNFFEMDBKF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PanelId {
-      get { return panelId_; }
+    public bool CBNFFEMDBKF {
+      get { return cBNFFEMDBKF_; }
       set {
-        panelId_ = value;
+        cBNFFEMDBKF_ = value;
       }
     }
 
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (IsTakenReward != other.IsTakenReward) return false;
-      if (CBNFFEMDBKF != other.CBNFFEMDBKF) return false;
-      if (PEHOFBBDNIC != other.PEHOFBBDNIC) return false;
       if (PanelId != other.PanelId) return false;
+      if (PEHOFBBDNIC != other.PEHOFBBDNIC) return false;
+      if (CBNFFEMDBKF != other.CBNFFEMDBKF) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,9 +161,9 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (IsTakenReward != false) hash ^= IsTakenReward.GetHashCode();
-      if (CBNFFEMDBKF != false) hash ^= CBNFFEMDBKF.GetHashCode();
-      if (PEHOFBBDNIC != 0) hash ^= PEHOFBBDNIC.GetHashCode();
       if (PanelId != 0) hash ^= PanelId.GetHashCode();
+      if (PEHOFBBDNIC != 0) hash ^= PEHOFBBDNIC.GetHashCode();
+      if (CBNFFEMDBKF != false) hash ^= CBNFFEMDBKF.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsTakenReward != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsTakenReward);
+      if (CBNFFEMDBKF != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(CBNFFEMDBKF);
       }
       if (PEHOFBBDNIC != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(PEHOFBBDNIC);
       }
-      if (PanelId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(PanelId);
+      if (IsTakenReward != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(IsTakenReward);
       }
-      if (CBNFFEMDBKF != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(CBNFFEMDBKF);
+      if (PanelId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(PanelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsTakenReward != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsTakenReward);
+      if (CBNFFEMDBKF != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(CBNFFEMDBKF);
       }
       if (PEHOFBBDNIC != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(PEHOFBBDNIC);
       }
-      if (PanelId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(PanelId);
+      if (IsTakenReward != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(IsTakenReward);
       }
-      if (CBNFFEMDBKF != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(CBNFFEMDBKF);
+      if (PanelId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(PanelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -237,14 +237,14 @@ namespace EggLink.DanhengServer.Proto {
       if (IsTakenReward != false) {
         size += 1 + 1;
       }
-      if (CBNFFEMDBKF != false) {
-        size += 1 + 1;
+      if (PanelId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
       }
       if (PEHOFBBDNIC != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PEHOFBBDNIC);
       }
-      if (PanelId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
+      if (CBNFFEMDBKF != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -261,14 +261,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IsTakenReward != false) {
         IsTakenReward = other.IsTakenReward;
       }
-      if (other.CBNFFEMDBKF != false) {
-        CBNFFEMDBKF = other.CBNFFEMDBKF;
+      if (other.PanelId != 0) {
+        PanelId = other.PanelId;
       }
       if (other.PEHOFBBDNIC != 0) {
         PEHOFBBDNIC = other.PEHOFBBDNIC;
       }
-      if (other.PanelId != 0) {
-        PanelId = other.PanelId;
+      if (other.CBNFFEMDBKF != false) {
+        CBNFFEMDBKF = other.CBNFFEMDBKF;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            IsTakenReward = input.ReadBool();
+          case 24: {
+            CBNFFEMDBKF = input.ReadBool();
             break;
           }
-          case 64: {
+          case 72: {
             PEHOFBBDNIC = input.ReadUInt32();
             break;
           }
-          case 96: {
-            PanelId = input.ReadUInt32();
+          case 80: {
+            IsTakenReward = input.ReadBool();
             break;
           }
-          case 112: {
-            CBNFFEMDBKF = input.ReadBool();
+          case 104: {
+            PanelId = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            IsTakenReward = input.ReadBool();
+          case 24: {
+            CBNFFEMDBKF = input.ReadBool();
             break;
           }
-          case 64: {
+          case 72: {
             PEHOFBBDNIC = input.ReadUInt32();
             break;
           }
-          case 96: {
-            PanelId = input.ReadUInt32();
+          case 80: {
+            IsTakenReward = input.ReadBool();
             break;
           }
-          case 112: {
-            CBNFFEMDBKF = input.ReadBool();
+          case 104: {
+            PanelId = input.ReadUInt32();
             break;
           }
         }

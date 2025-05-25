@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRSYWlkVGFyZ2V0SW5mby5wcm90bxoWUmFpZFRhcmdldFN0YXR1cy5wcm90",
-            "byJpCg5SYWlkVGFyZ2V0SW5mbxItChJyYWlkX3RhcmdldF9zdGF0dXMYBSAB",
-            "KA4yES5SYWlkVGFyZ2V0U3RhdHVzEhMKC0hGQUxKSUhLRUNOGAEgASgNEhMK",
-            "C0RMUFBEUEJKSUlNGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "byJpCg5SYWlkVGFyZ2V0SW5mbxItChJyYWlkX3RhcmdldF9zdGF0dXMYDSAB",
+            "KA4yES5SYWlkVGFyZ2V0U3RhdHVzEhMKC0hGQUxKSUhLRUNOGAsgASgNEhMK",
+            "C0RMUFBEUEJKSUlNGAMgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RaidTargetStatusReflection.Descriptor, },
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "raid_target_status" field.</summary>
-    public const int RaidTargetStatusFieldNumber = 5;
+    public const int RaidTargetStatusFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.RaidTargetStatus raidTargetStatus_ = global::EggLink.DanhengServer.Proto.RaidTargetStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HFALJIHKECN" field.</summary>
-    public const int HFALJIHKECNFieldNumber = 1;
+    public const int HFALJIHKECNFieldNumber = 11;
     private uint hFALJIHKECN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DLPPDPBJIIM" field.</summary>
-    public const int DLPPDPBJIIMFieldNumber = 6;
+    public const int DLPPDPBJIIMFieldNumber = 3;
     private uint dLPPDPBJIIM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (DLPPDPBJIIM != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(DLPPDPBJIIM);
+      }
       if (HFALJIHKECN != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(88);
         output.WriteUInt32(HFALJIHKECN);
       }
       if (RaidTargetStatus != global::EggLink.DanhengServer.Proto.RaidTargetStatus.None) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(104);
         output.WriteEnum((int) RaidTargetStatus);
-      }
-      if (DLPPDPBJIIM != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(DLPPDPBJIIM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DLPPDPBJIIM != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(DLPPDPBJIIM);
+      }
       if (HFALJIHKECN != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(88);
         output.WriteUInt32(HFALJIHKECN);
       }
       if (RaidTargetStatus != global::EggLink.DanhengServer.Proto.RaidTargetStatus.None) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(104);
         output.WriteEnum((int) RaidTargetStatus);
-      }
-      if (DLPPDPBJIIM != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(DLPPDPBJIIM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -257,16 +257,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 24: {
+            DLPPDPBJIIM = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             HFALJIHKECN = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 104: {
             RaidTargetStatus = (global::EggLink.DanhengServer.Proto.RaidTargetStatus) input.ReadEnum();
-            break;
-          }
-          case 48: {
-            DLPPDPBJIIM = input.ReadUInt32();
             break;
           }
         }
@@ -284,16 +284,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 24: {
+            DLPPDPBJIIM = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             HFALJIHKECN = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 104: {
             RaidTargetStatus = (global::EggLink.DanhengServer.Proto.RaidTargetStatus) input.ReadEnum();
-            break;
-          }
-          case 48: {
-            DLPPDPBJIIM = input.ReadUInt32();
             break;
           }
         }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFBSk5BSklORkpJQy5wcm90byI2CgtBSk5BSklORkpJQxIOCgZpc193aW4Y",
-            "BSABKAgSFwoPYmF0dGxlX2V2ZW50X2lkGAwgASgNQh6qAhtFZ2dMaW5rLkRh",
+            "DCABKAgSFwoPYmF0dGxlX2V2ZW50X2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_win" field.</summary>
-    public const int IsWinFieldNumber = 5;
+    public const int IsWinFieldNumber = 12;
     private bool isWin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "battle_event_id" field.</summary>
-    public const int BattleEventIdFieldNumber = 12;
+    public const int BattleEventIdFieldNumber = 13;
     private uint battleEventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsWin != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(96);
         output.WriteBool(IsWin);
       }
       if (BattleEventId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteUInt32(BattleEventId);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsWin != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(96);
         output.WriteBool(IsWin);
       }
       if (BattleEventId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteUInt32(BattleEventId);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 96: {
             IsWin = input.ReadBool();
             break;
           }
-          case 96: {
+          case 104: {
             BattleEventId = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 96: {
             IsWin = input.ReadBool();
             break;
           }
-          case 96: {
+          case 104: {
             BattleEventId = input.ReadUInt32();
             break;
           }

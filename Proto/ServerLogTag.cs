@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static ServerLogTagReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJTZXJ2ZXJMb2dUYWcucHJvdG8q2QEKDFNlcnZlckxvZ1RhZxIaChZTRVJW",
+            "ChJTZXJ2ZXJMb2dUYWcucHJvdG8q8gEKDFNlcnZlckxvZ1RhZxIaChZTRVJW",
             "RVJfTE9HX1RBR19ERUZBVUxUEAASGAoUU0VSVkVSX0xPR19UQUdfUk9HVUUQ",
-            "ARIYChRTRVJWRVJfTE9HX1RBR19TQ0VORRADEhkKFVNFUlZFUl9MT0dfVEFH",
-            "X0JBVFRMRRAEEh8KG1NFUlZFUl9MT0dfVEFHX0NQUF9HQU1FQ09SRRAFEh4K",
-            "GlNFUlZFUl9MT0dfVEFHX0xFVkVMX0dSQVBIEAYSHQoZU0VSVkVSX0xPR19U",
-            "QUdfUExBTkVUX0ZFUxAHQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
-            "dG9iBnByb3RvMw=="));
+            "ARIXChNTRVJWRVJfTE9HX1RBR19GQVRFEAISGAoUU0VSVkVSX0xPR19UQUdf",
+            "U0NFTkUQAxIZChVTRVJWRVJfTE9HX1RBR19CQVRUTEUQBBIfChtTRVJWRVJf",
+            "TE9HX1RBR19DUFBfR0FNRUNPUkUQBRIeChpTRVJWRVJfTE9HX1RBR19MRVZF",
+            "TF9HUkFQSBAGEh0KGVNFUlZFUl9MT0dfVEFHX1BMQU5FVF9GRVMQB0IeqgIb",
+            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.ServerLogTag), }, null, null));
@@ -42,6 +42,7 @@ namespace EggLink.DanhengServer.Proto {
   public enum ServerLogTag {
     [pbr::OriginalName("SERVER_LOG_TAG_DEFAULT")] Default = 0,
     [pbr::OriginalName("SERVER_LOG_TAG_ROGUE")] Rogue = 1,
+    [pbr::OriginalName("SERVER_LOG_TAG_FATE")] Fate = 2,
     [pbr::OriginalName("SERVER_LOG_TAG_SCENE")] Scene = 3,
     [pbr::OriginalName("SERVER_LOG_TAG_BATTLE")] Battle = 4,
     [pbr::OriginalName("SERVER_LOG_TAG_CPP_GAMECORE")] CppGamecore = 5,

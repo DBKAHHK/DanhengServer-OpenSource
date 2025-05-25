@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static EACOFHBFMLBReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFFQUNPRkhCRk1MQi5wcm90byJPCgtFQUNPRkhCRk1MQhINCgVsZXZlbBgL",
-            "IAEoDRITCgtKR01JUE1EUFBJShgPIAEoDRILCgNleHAYByABKA0SDwoHYWVv",
-            "bl9pZBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "ChFFQUNPRkhCRk1MQi5wcm90byJPCgtFQUNPRkhCRk1MQhITCgtKR01JUE1E",
+            "UFBJShgLIAEoDRINCgVsZXZlbBgFIAEoDRILCgNleHAYDCABKA0SDwoHYWVv",
+            "bl9pZBgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EACOFHBFMLB), global::EggLink.DanhengServer.Proto.EACOFHBFMLB.Parser, new[]{ "Level", "JGMIPMDPPIJ", "Exp", "AeonId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EACOFHBFMLB), global::EggLink.DanhengServer.Proto.EACOFHBFMLB.Parser, new[]{ "JGMIPMDPPIJ", "Level", "Exp", "AeonId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EACOFHBFMLB(EACOFHBFMLB other) : this() {
-      level_ = other.level_;
       jGMIPMDPPIJ_ = other.jGMIPMDPPIJ_;
+      level_ = other.level_;
       exp_ = other.exp_;
       aeonId_ = other.aeonId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new EACOFHBFMLB(this);
     }
 
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 11;
-    private uint level_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Level {
-      get { return level_; }
-      set {
-        level_ = value;
-      }
-    }
-
     /// <summary>Field number for the "JGMIPMDPPIJ" field.</summary>
-    public const int JGMIPMDPPIJFieldNumber = 15;
+    public const int JGMIPMDPPIJFieldNumber = 11;
     private uint jGMIPMDPPIJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,8 +98,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 5;
+    private uint level_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
     /// <summary>Field number for the "exp" field.</summary>
-    public const int ExpFieldNumber = 7;
+    public const int ExpFieldNumber = 12;
     private uint exp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "aeon_id" field.</summary>
-    public const int AeonIdFieldNumber = 9;
+    public const int AeonIdFieldNumber = 6;
     private uint aeonId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -149,8 +149,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Level != other.Level) return false;
       if (JGMIPMDPPIJ != other.JGMIPMDPPIJ) return false;
+      if (Level != other.Level) return false;
       if (Exp != other.Exp) return false;
       if (AeonId != other.AeonId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -160,8 +160,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Level != 0) hash ^= Level.GetHashCode();
       if (JGMIPMDPPIJ != 0) hash ^= JGMIPMDPPIJ.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
       if (Exp != 0) hash ^= Exp.GetHashCode();
       if (AeonId != 0) hash ^= AeonId.GetHashCode();
       if (_unknownFields != null) {
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Exp != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Exp);
-      }
-      if (AeonId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(AeonId);
-      }
       if (Level != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt32(Level);
       }
+      if (AeonId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(AeonId);
+      }
       if (JGMIPMDPPIJ != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(JGMIPMDPPIJ);
+      }
+      if (Exp != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Exp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Exp != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Exp);
-      }
-      if (AeonId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(AeonId);
-      }
       if (Level != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt32(Level);
       }
+      if (AeonId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(AeonId);
+      }
       if (JGMIPMDPPIJ != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(JGMIPMDPPIJ);
+      }
+      if (Exp != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Exp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,11 +234,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Level != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
-      }
       if (JGMIPMDPPIJ != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JGMIPMDPPIJ);
+      }
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
       if (Exp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Exp);
@@ -258,11 +258,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Level != 0) {
-        Level = other.Level;
-      }
       if (other.JGMIPMDPPIJ != 0) {
         JGMIPMDPPIJ = other.JGMIPMDPPIJ;
+      }
+      if (other.Level != 0) {
+        Level = other.Level;
       }
       if (other.Exp != 0) {
         Exp = other.Exp;
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            Exp = input.ReadUInt32();
+          case 40: {
+            Level = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 48: {
             AeonId = input.ReadUInt32();
             break;
           }
           case 88: {
-            Level = input.ReadUInt32();
+            JGMIPMDPPIJ = input.ReadUInt32();
             break;
           }
-          case 120: {
-            JGMIPMDPPIJ = input.ReadUInt32();
+          case 96: {
+            Exp = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            Exp = input.ReadUInt32();
+          case 40: {
+            Level = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 48: {
             AeonId = input.ReadUInt32();
             break;
           }
           case 88: {
-            Level = input.ReadUInt32();
+            JGMIPMDPPIJ = input.ReadUInt32();
             break;
           }
-          case 120: {
-            JGMIPMDPPIJ = input.ReadUInt32();
+          case 96: {
+            Exp = input.ReadUInt32();
             break;
           }
         }

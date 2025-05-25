@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJHZXRUcmFpblZpc2l0b3JSZWdpc3RlckNzUmVxLnByb3RvGiFUcmFpblZp",
             "c2l0b3JSZWdpc3RlckdldFR5cGUucHJvdG8iSgocR2V0VHJhaW5WaXNpdG9y",
-            "UmVnaXN0ZXJDc1JlcRIqCgR0eXBlGAYgASgOMhwuVHJhaW5WaXNpdG9yUmVn",
+            "UmVnaXN0ZXJDc1JlcRIqCgR0eXBlGAwgASgOMhwuVHJhaW5WaXNpdG9yUmVn",
             "aXN0ZXJHZXRUeXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 6;
+    public const int TypeFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.TrainVisitorRegisterGetType type_ = global::EggLink.DanhengServer.Proto.TrainVisitorRegisterGetType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Type != global::EggLink.DanhengServer.Proto.TrainVisitorRegisterGetType.None) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(96);
         output.WriteEnum((int) Type);
       }
       if (_unknownFields != null) {
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Type != global::EggLink.DanhengServer.Proto.TrainVisitorRegisterGetType.None) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(96);
         output.WriteEnum((int) Type);
       }
       if (_unknownFields != null) {
@@ -199,7 +199,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 96: {
             Type = (global::EggLink.DanhengServer.Proto.TrainVisitorRegisterGetType) input.ReadEnum();
             break;
           }
@@ -218,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 96: {
             Type = (global::EggLink.DanhengServer.Proto.TrainVisitorRegisterGetType) input.ReadEnum();
             break;
           }

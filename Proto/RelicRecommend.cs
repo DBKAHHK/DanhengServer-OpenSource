@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChRSZWxpY1JlY29tbWVuZC5wcm90bxoYUmVsaWNSZWNvbW1lbmRJbmZvLnBy",
             "b3RvIkMKDlJlbGljUmVjb21tZW5kEjEKFHJlY29tbWVuZF9yZWxpY19saXN0",
-            "GAMgAygLMhMuUmVsaWNSZWNvbW1lbmRJbmZvQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "GAIgAygLMhMuUmVsaWNSZWNvbW1lbmRJbmZvQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicRecommendInfoReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "recommend_relic_list" field.</summary>
-    public const int RecommendRelicListFieldNumber = 3;
+    public const int RecommendRelicListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RelicRecommendInfo> _repeated_recommendRelicList_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.RelicRecommendInfo.Parser);
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.RelicRecommendInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicRecommendInfo> recommendRelicList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicRecommendInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 18: {
             recommendRelicList_.AddEntriesFrom(input, _repeated_recommendRelicList_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 18: {
             recommendRelicList_.AddEntriesFrom(ref input, _repeated_recommendRelicList_codec);
             break;
           }

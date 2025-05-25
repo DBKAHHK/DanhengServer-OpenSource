@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CihNb25vcG9seVF1aXpEdXJhdGlvbkNoYW5nZVNjTm90aWZ5LnByb3RvGhFP",
             "T0NLQUxORkhOUC5wcm90byJHCiJNb25vcG9seVF1aXpEdXJhdGlvbkNoYW5n",
-            "ZVNjTm90aWZ5EiEKC0xFQURNTkVJTURQGAsgAygLMgwuT09DS0FMTkZITlBC",
+            "ZVNjTm90aWZ5EiEKC0xFQURNTkVJTURQGAwgAygLMgwuT09DS0FMTkZITlBC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OOCKALNFHNPReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LEADMNEIMDP" field.</summary>
-    public const int LEADMNEIMDPFieldNumber = 11;
+    public const int LEADMNEIMDPFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OOCKALNFHNP> _repeated_lEADMNEIMDP_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.OOCKALNFHNP.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.OOCKALNFHNP.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OOCKALNFHNP> lEADMNEIMDP_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OOCKALNFHNP>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 98: {
             lEADMNEIMDP_.AddEntriesFrom(input, _repeated_lEADMNEIMDP_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 98: {
             lEADMNEIMDP_.AddEntriesFrom(ref input, _repeated_lEADMNEIMDP_codec);
             break;
           }

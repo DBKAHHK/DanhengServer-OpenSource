@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdEYWlseUFjdGl2aXR5SW5mby5wcm90byJhChFEYWlseUFjdGl2aXR5SW5m",
-            "bxITCgtJSU1KQ0xCT1BOQxgHIAEoDRITCgt3b3JsZF9sZXZlbBgKIAEoDRIT",
-            "CgtOT1BNRU5JQUZKTRgMIAEoCBINCgVsZXZlbBgJIAEoDUIeqgIbRWdnTGlu",
+            "bxITCgtJSU1KQ0xCT1BOQxgNIAEoDRINCgVsZXZlbBgOIAEoDRITCgtOT1BN",
+            "RU5JQUZKTRgCIAEoCBITCgt3b3JsZF9sZXZlbBgLIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DailyActivityInfo), global::EggLink.DanhengServer.Proto.DailyActivityInfo.Parser, new[]{ "IIMJCLBOPNC", "WorldLevel", "NOPMENIAFJM", "Level" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DailyActivityInfo), global::EggLink.DanhengServer.Proto.DailyActivityInfo.Parser, new[]{ "IIMJCLBOPNC", "Level", "NOPMENIAFJM", "WorldLevel" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DailyActivityInfo(DailyActivityInfo other) : this() {
       iIMJCLBOPNC_ = other.iIMJCLBOPNC_;
-      worldLevel_ = other.worldLevel_;
-      nOPMENIAFJM_ = other.nOPMENIAFJM_;
       level_ = other.level_;
+      nOPMENIAFJM_ = other.nOPMENIAFJM_;
+      worldLevel_ = other.worldLevel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IIMJCLBOPNC" field.</summary>
-    public const int IIMJCLBOPNCFieldNumber = 7;
+    public const int IIMJCLBOPNCFieldNumber = 13;
     private uint iIMJCLBOPNC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,20 +98,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 10;
-    private uint worldLevel_;
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 14;
+    private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint WorldLevel {
-      get { return worldLevel_; }
+    public uint Level {
+      get { return level_; }
       set {
-        worldLevel_ = value;
+        level_ = value;
       }
     }
 
     /// <summary>Field number for the "NOPMENIAFJM" field.</summary>
-    public const int NOPMENIAFJMFieldNumber = 12;
+    public const int NOPMENIAFJMFieldNumber = 2;
     private bool nOPMENIAFJM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,15 +122,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 9;
-    private uint level_;
+    /// <summary>Field number for the "world_level" field.</summary>
+    public const int WorldLevelFieldNumber = 11;
+    private uint worldLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Level {
-      get { return level_; }
+    public uint WorldLevel {
+      get { return worldLevel_; }
       set {
-        level_ = value;
+        worldLevel_ = value;
       }
     }
 
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (IIMJCLBOPNC != other.IIMJCLBOPNC) return false;
-      if (WorldLevel != other.WorldLevel) return false;
-      if (NOPMENIAFJM != other.NOPMENIAFJM) return false;
       if (Level != other.Level) return false;
+      if (NOPMENIAFJM != other.NOPMENIAFJM) return false;
+      if (WorldLevel != other.WorldLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,9 +161,9 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (IIMJCLBOPNC != 0) hash ^= IIMJCLBOPNC.GetHashCode();
-      if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
-      if (NOPMENIAFJM != false) hash ^= NOPMENIAFJM.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
+      if (NOPMENIAFJM != false) hash ^= NOPMENIAFJM.GetHashCode();
+      if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (NOPMENIAFJM != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(NOPMENIAFJM);
+      }
+      if (WorldLevel != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(WorldLevel);
+      }
       if (IIMJCLBOPNC != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(104);
         output.WriteUInt32(IIMJCLBOPNC);
       }
       if (Level != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteUInt32(Level);
-      }
-      if (WorldLevel != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(WorldLevel);
-      }
-      if (NOPMENIAFJM != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(NOPMENIAFJM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NOPMENIAFJM != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(NOPMENIAFJM);
+      }
+      if (WorldLevel != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(WorldLevel);
+      }
       if (IIMJCLBOPNC != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(104);
         output.WriteUInt32(IIMJCLBOPNC);
       }
       if (Level != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteUInt32(Level);
-      }
-      if (WorldLevel != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(WorldLevel);
-      }
-      if (NOPMENIAFJM != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(NOPMENIAFJM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -237,14 +237,14 @@ namespace EggLink.DanhengServer.Proto {
       if (IIMJCLBOPNC != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IIMJCLBOPNC);
       }
-      if (WorldLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
       if (NOPMENIAFJM != false) {
         size += 1 + 1;
       }
-      if (Level != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      if (WorldLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -261,14 +261,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IIMJCLBOPNC != 0) {
         IIMJCLBOPNC = other.IIMJCLBOPNC;
       }
-      if (other.WorldLevel != 0) {
-        WorldLevel = other.WorldLevel;
+      if (other.Level != 0) {
+        Level = other.Level;
       }
       if (other.NOPMENIAFJM != false) {
         NOPMENIAFJM = other.NOPMENIAFJM;
       }
-      if (other.Level != 0) {
-        Level = other.Level;
+      if (other.WorldLevel != 0) {
+        WorldLevel = other.WorldLevel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            IIMJCLBOPNC = input.ReadUInt32();
+          case 16: {
+            NOPMENIAFJM = input.ReadBool();
             break;
           }
-          case 72: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 88: {
             WorldLevel = input.ReadUInt32();
             break;
           }
-          case 96: {
-            NOPMENIAFJM = input.ReadBool();
+          case 104: {
+            IIMJCLBOPNC = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            Level = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            IIMJCLBOPNC = input.ReadUInt32();
+          case 16: {
+            NOPMENIAFJM = input.ReadBool();
             break;
           }
-          case 72: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 88: {
             WorldLevel = input.ReadUInt32();
             break;
           }
-          case 96: {
-            NOPMENIAFJM = input.ReadBool();
+          case 104: {
+            IIMJCLBOPNC = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            Level = input.ReadUInt32();
             break;
           }
         }

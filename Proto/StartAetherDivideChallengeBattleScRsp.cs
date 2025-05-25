@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CitTdGFydEFldGhlckRpdmlkZUNoYWxsZW5nZUJhdHRsZVNjUnNwLnByb3Rv",
             "GhxBZXRoZXJEaXZpZGVCYXR0bGVJbmZvLnByb3RvImYKJVN0YXJ0QWV0aGVy",
-            "RGl2aWRlQ2hhbGxlbmdlQmF0dGxlU2NSc3ASLAoLYmF0dGxlX2luZm8YBiAB",
-            "KAsyFy5BZXRoZXJEaXZpZGVCYXR0bGVJbmZvEg8KB3JldGNvZGUYDCABKA1C",
+            "RGl2aWRlQ2hhbGxlbmdlQmF0dGxlU2NSc3ASLAoLYmF0dGxlX2luZm8YCyAB",
+            "KAsyFy5BZXRoZXJEaXZpZGVCYXR0bGVJbmZvEg8KB3JldGNvZGUYASABKA1C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AetherDivideBattleInfoReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "battle_info" field.</summary>
-    public const int BattleInfoFieldNumber = 6;
+    public const int BattleInfoFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.AetherDivideBattleInfo battleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 1;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (battleInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(BattleInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
+      }
+      if (battleInfo_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(BattleInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (battleInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(BattleInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
+      }
+      if (battleInfo_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(BattleInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 8: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (battleInfo_ == null) {
               BattleInfo = new global::EggLink.DanhengServer.Proto.AetherDivideBattleInfo();
             }
             input.ReadMessage(BattleInfo);
-            break;
-          }
-          case 96: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 8: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (battleInfo_ == null) {
               BattleInfo = new global::EggLink.DanhengServer.Proto.AetherDivideBattleInfo();
             }
             input.ReadMessage(BattleInfo);
-            break;
-          }
-          case 96: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

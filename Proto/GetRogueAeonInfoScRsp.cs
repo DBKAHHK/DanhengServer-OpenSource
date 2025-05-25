@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHZXRSb2d1ZUFlb25JbmZvU2NSc3AucHJvdG8aEUVBQ09GSEJGTUxCLnBy",
-            "b3RvIksKFUdldFJvZ3VlQWVvbkluZm9TY1JzcBIhCgtCRUxPRk1GSEZESxgO",
-            "IAMoCzIMLkVBQ09GSEJGTUxCEg8KB3JldGNvZGUYAyABKA1CHqoCG0VnZ0xp",
+            "b3RvIksKFUdldFJvZ3VlQWVvbkluZm9TY1JzcBIhCgtCRUxPRk1GSEZESxgH",
+            "IAMoCzIMLkVBQ09GSEJGTUxCEg8KB3JldGNvZGUYDSABKA1CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EACOFHBFMLBReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BELOFMFHFDK" field.</summary>
-    public const int BELOFMFHFDKFieldNumber = 14;
+    public const int BELOFMFHFDKFieldNumber = 7;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EACOFHBFMLB> _repeated_bELOFMFHFDK_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.EACOFHBFMLB.Parser);
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.EACOFHBFMLB.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EACOFHBFMLB> bELOFMFHFDK_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EACOFHBFMLB>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
+    public const int RetcodeFieldNumber = 13;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      bELOFMFHFDK_.WriteTo(output, _repeated_bELOFMFHFDK_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      bELOFMFHFDK_.WriteTo(output, _repeated_bELOFMFHFDK_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      bELOFMFHFDK_.WriteTo(ref output, _repeated_bELOFMFHFDK_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      bELOFMFHFDK_.WriteTo(ref output, _repeated_bELOFMFHFDK_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
+          case 58: {
+            bELOFMFHFDK_.AddEntriesFrom(input, _repeated_bELOFMFHFDK_codec);
             break;
           }
-          case 114: {
-            bELOFMFHFDK_.AddEntriesFrom(input, _repeated_bELOFMFHFDK_codec);
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
+          case 58: {
+            bELOFMFHFDK_.AddEntriesFrom(ref input, _repeated_bELOFMFHFDK_codec);
             break;
           }
-          case 114: {
-            bELOFMFHFDK_.AddEntriesFrom(ref input, _repeated_bELOFMFHFDK_codec);
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

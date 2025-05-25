@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJNb25vcG9seVRha2VQaGFzZVJld2FyZFNjUnNwLnByb3RvGg5JdGVtTGlz",
-            "dC5wcm90byJkChxNb25vcG9seVRha2VQaGFzZVJld2FyZFNjUnNwEg8KB3Jl",
-            "dGNvZGUYDiABKA0SEwoLTEpCR0pIUEtLSkoYASADKA0SHgoLcmV3YXJkX2xp",
-            "c3QYCCABKAsyCS5JdGVtTGlzdEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "dC5wcm90byJkChxNb25vcG9seVRha2VQaGFzZVJld2FyZFNjUnNwEhMKC0xK",
+            "QkdKSFBLS0pKGAUgAygNEg8KB3JldGNvZGUYBiABKA0SHgoLcmV3YXJkX2xp",
+            "c3QYDyABKAsyCS5JdGVtTGlzdEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyTakePhaseRewardScRsp), global::EggLink.DanhengServer.Proto.MonopolyTakePhaseRewardScRsp.Parser, new[]{ "Retcode", "LJBGJHPKKJJ", "RewardList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyTakePhaseRewardScRsp), global::EggLink.DanhengServer.Proto.MonopolyTakePhaseRewardScRsp.Parser, new[]{ "LJBGJHPKKJJ", "Retcode", "RewardList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MonopolyTakePhaseRewardScRsp(MonopolyTakePhaseRewardScRsp other) : this() {
-      retcode_ = other.retcode_;
       lJBGJHPKKJJ_ = other.lJBGJHPKKJJ_.Clone();
+      retcode_ = other.retcode_;
       rewardList_ = other.rewardList_ != null ? other.rewardList_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,8 +86,19 @@ namespace EggLink.DanhengServer.Proto {
       return new MonopolyTakePhaseRewardScRsp(this);
     }
 
+    /// <summary>Field number for the "LJBGJHPKKJJ" field.</summary>
+    public const int LJBGJHPKKJJFieldNumber = 5;
+    private static readonly pb::FieldCodec<uint> _repeated_lJBGJHPKKJJ_codec
+        = pb::FieldCodec.ForUInt32(42);
+    private readonly pbc::RepeatedField<uint> lJBGJHPKKJJ_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> LJBGJHPKKJJ {
+      get { return lJBGJHPKKJJ_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,19 +109,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LJBGJHPKKJJ" field.</summary>
-    public const int LJBGJHPKKJJFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_lJBGJHPKKJJ_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> lJBGJHPKKJJ_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> LJBGJHPKKJJ {
-      get { return lJBGJHPKKJJ_; }
-    }
-
     /// <summary>Field number for the "reward_list" field.</summary>
-    public const int RewardListFieldNumber = 8;
+    public const int RewardListFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.ItemList rewardList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if(!lJBGJHPKKJJ_.Equals(other.lJBGJHPKKJJ_)) return false;
+      if (Retcode != other.Retcode) return false;
       if (!object.Equals(RewardList, other.RewardList)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= lJBGJHPKKJJ_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (rewardList_ != null) hash ^= RewardList.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -168,13 +168,13 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       lJBGJHPKKJJ_.WriteTo(output, _repeated_lJBGJHPKKJJ_codec);
-      if (rewardList_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(RewardList);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (rewardList_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(RewardList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -187,13 +187,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       lJBGJHPKKJJ_.WriteTo(ref output, _repeated_lJBGJHPKKJJ_codec);
-      if (rewardList_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(RewardList);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (rewardList_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(RewardList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -205,10 +205,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += lJBGJHPKKJJ_.CalculateSize(_repeated_lJBGJHPKKJJ_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += lJBGJHPKKJJ_.CalculateSize(_repeated_lJBGJHPKKJJ_codec);
       if (rewardList_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RewardList);
       }
@@ -224,10 +224,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      lJBGJHPKKJJ_.Add(other.lJBGJHPKKJJ_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      lJBGJHPKKJJ_.Add(other.lJBGJHPKKJJ_);
       if (other.rewardList_ != null) {
         if (rewardList_ == null) {
           RewardList = new global::EggLink.DanhengServer.Proto.ItemList();
@@ -249,20 +249,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
+          case 42:
+          case 40: {
             lJBGJHPKKJJ_.AddEntriesFrom(input, _repeated_lJBGJHPKKJJ_codec);
             break;
           }
-          case 66: {
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             if (rewardList_ == null) {
               RewardList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(RewardList);
-            break;
-          }
-          case 112: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -280,20 +280,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
+          case 42:
+          case 40: {
             lJBGJHPKKJJ_.AddEntriesFrom(ref input, _repeated_lJBGJHPKKJJ_codec);
             break;
           }
-          case 66: {
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             if (rewardList_ == null) {
               RewardList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(RewardList);
-            break;
-          }
-          case 112: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ci9Sb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uQmF0dGxlUmVzdWx0SW5mby5w",
             "cm90byJECilSb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uQmF0dGxlUmVzdWx0",
-            "SW5mbxIXCg9iYXR0bGVfZXZlbnRfaWQYCSABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "SW5mbxIXCg9iYXR0bGVfZXZlbnRfaWQYDSABKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "battle_event_id" field.</summary>
-    public const int BattleEventIdFieldNumber = 9;
+    public const int BattleEventIdFieldNumber = 13;
     private uint battleEventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (BattleEventId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(104);
         output.WriteUInt32(BattleEventId);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BattleEventId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(104);
         output.WriteUInt32(BattleEventId);
       }
       if (_unknownFields != null) {
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 104: {
             BattleEventId = input.ReadUInt32();
             break;
           }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 104: {
             BattleEventId = input.ReadUInt32();
             break;
           }

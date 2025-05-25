@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxDaGFsbGVuZ2VCb3NzUmVsaWNJbmZvLnByb3RvGhBSZWxpY0FmZml4LnBy",
-            "b3RvIoMBChZDaGFsbGVuZ2VCb3NzUmVsaWNJbmZvEgsKA3RpZBgMIAEoDRIV",
-            "Cg1tYWluX2FmZml4X2lkGAYgASgNEhEKCXVuaXF1ZV9pZBgOIAEoDRIjCg5z",
-            "dWJfYWZmaXhfbGlzdBgCIAMoCzILLlJlbGljQWZmaXgSDQoFbGV2ZWwYByAB",
+            "b3RvIoMBChZDaGFsbGVuZ2VCb3NzUmVsaWNJbmZvEhEKCXVuaXF1ZV9pZBgF",
+            "IAEoDRIjCg5zdWJfYWZmaXhfbGlzdBgEIAMoCzILLlJlbGljQWZmaXgSDQoF",
+            "bGV2ZWwYCCABKA0SCwoDdGlkGAEgASgNEhUKDW1haW5fYWZmaXhfaWQYDyAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicAffixReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeBossRelicInfo), global::EggLink.DanhengServer.Proto.ChallengeBossRelicInfo.Parser, new[]{ "Tid", "MainAffixId", "UniqueId", "SubAffixList", "Level" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeBossRelicInfo), global::EggLink.DanhengServer.Proto.ChallengeBossRelicInfo.Parser, new[]{ "UniqueId", "SubAffixList", "Level", "Tid", "MainAffixId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +74,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeBossRelicInfo(ChallengeBossRelicInfo other) : this() {
-      tid_ = other.tid_;
-      mainAffixId_ = other.mainAffixId_;
       uniqueId_ = other.uniqueId_;
       subAffixList_ = other.subAffixList_.Clone();
       level_ = other.level_;
+      tid_ = other.tid_;
+      mainAffixId_ = other.mainAffixId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,32 +88,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChallengeBossRelicInfo(this);
     }
 
-    /// <summary>Field number for the "tid" field.</summary>
-    public const int TidFieldNumber = 12;
-    private uint tid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Tid {
-      get { return tid_; }
-      set {
-        tid_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "main_affix_id" field.</summary>
-    public const int MainAffixIdFieldNumber = 6;
-    private uint mainAffixId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MainAffixId {
-      get { return mainAffixId_; }
-      set {
-        mainAffixId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "unique_id" field.</summary>
-    public const int UniqueIdFieldNumber = 14;
+    public const int UniqueIdFieldNumber = 5;
     private uint uniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -125,9 +101,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "sub_affix_list" field.</summary>
-    public const int SubAffixListFieldNumber = 2;
+    public const int SubAffixListFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RelicAffix> _repeated_subAffixList_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.RelicAffix.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.RelicAffix.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix> subAffixList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RelicAffix>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 7;
+    public const int LevelFieldNumber = 8;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -144,6 +120,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return level_; }
       set {
         level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tid" field.</summary>
+    public const int TidFieldNumber = 1;
+    private uint tid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Tid {
+      get { return tid_; }
+      set {
+        tid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "main_affix_id" field.</summary>
+    public const int MainAffixIdFieldNumber = 15;
+    private uint mainAffixId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MainAffixId {
+      get { return mainAffixId_; }
+      set {
+        mainAffixId_ = value;
       }
     }
 
@@ -162,11 +162,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Tid != other.Tid) return false;
-      if (MainAffixId != other.MainAffixId) return false;
       if (UniqueId != other.UniqueId) return false;
       if(!subAffixList_.Equals(other.subAffixList_)) return false;
       if (Level != other.Level) return false;
+      if (Tid != other.Tid) return false;
+      if (MainAffixId != other.MainAffixId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -174,11 +174,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Tid != 0) hash ^= Tid.GetHashCode();
-      if (MainAffixId != 0) hash ^= MainAffixId.GetHashCode();
       if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
       hash ^= subAffixList_.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
+      if (Tid != 0) hash ^= Tid.GetHashCode();
+      if (MainAffixId != 0) hash ^= MainAffixId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -197,22 +197,22 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      subAffixList_.WriteTo(output, _repeated_subAffixList_codec);
-      if (MainAffixId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(MainAffixId);
-      }
-      if (Level != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Level);
-      }
       if (Tid != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(8);
         output.WriteUInt32(Tid);
       }
+      subAffixList_.WriteTo(output, _repeated_subAffixList_codec);
       if (UniqueId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(40);
         output.WriteUInt32(UniqueId);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Level);
+      }
+      if (MainAffixId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(MainAffixId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -224,22 +224,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      subAffixList_.WriteTo(ref output, _repeated_subAffixList_codec);
-      if (MainAffixId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(MainAffixId);
-      }
-      if (Level != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Level);
-      }
       if (Tid != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(8);
         output.WriteUInt32(Tid);
       }
+      subAffixList_.WriteTo(ref output, _repeated_subAffixList_codec);
       if (UniqueId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(40);
         output.WriteUInt32(UniqueId);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Level);
+      }
+      if (MainAffixId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(MainAffixId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -251,18 +251,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Tid != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Tid);
-      }
-      if (MainAffixId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MainAffixId);
-      }
       if (UniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
       }
       size += subAffixList_.CalculateSize(_repeated_subAffixList_codec);
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      }
+      if (Tid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Tid);
+      }
+      if (MainAffixId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MainAffixId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -276,18 +276,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Tid != 0) {
-        Tid = other.Tid;
-      }
-      if (other.MainAffixId != 0) {
-        MainAffixId = other.MainAffixId;
-      }
       if (other.UniqueId != 0) {
         UniqueId = other.UniqueId;
       }
       subAffixList_.Add(other.subAffixList_);
       if (other.Level != 0) {
         Level = other.Level;
+      }
+      if (other.Tid != 0) {
+        Tid = other.Tid;
+      }
+      if (other.MainAffixId != 0) {
+        MainAffixId = other.MainAffixId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -304,24 +304,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            subAffixList_.AddEntriesFrom(input, _repeated_subAffixList_codec);
-            break;
-          }
-          case 48: {
-            MainAffixId = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 8: {
             Tid = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 34: {
+            subAffixList_.AddEntriesFrom(input, _repeated_subAffixList_codec);
+            break;
+          }
+          case 40: {
             UniqueId = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            Level = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            MainAffixId = input.ReadUInt32();
             break;
           }
         }
@@ -339,24 +339,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            subAffixList_.AddEntriesFrom(ref input, _repeated_subAffixList_codec);
-            break;
-          }
-          case 48: {
-            MainAffixId = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 8: {
             Tid = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 34: {
+            subAffixList_.AddEntriesFrom(ref input, _repeated_subAffixList_codec);
+            break;
+          }
+          case 40: {
             UniqueId = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            Level = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            MainAffixId = input.ReadUInt32();
             break;
           }
         }

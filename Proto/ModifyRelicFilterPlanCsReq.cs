@@ -27,8 +27,8 @@ namespace EggLink.DanhengServer.Proto {
             "CiBNb2RpZnlSZWxpY0ZpbHRlclBsYW5Dc1JlcS5wcm90bxodUmVsaWNGaWx0",
             "ZXJQbGFuU2V0dGluZ3MucHJvdG8aGVJlbGljRmlsdGVyUGxhbkljb24ucHJv",
             "dG8ipQEKGk1vZGlmeVJlbGljRmlsdGVyUGxhbkNzUmVxEhIKCnNsb3RfaW5k",
-            "ZXgYCiABKA0SDgoEbmFtZRgCIAEoCUgAEiQKBGljb24YCSABKAsyFC5SZWxp",
-            "Y0ZpbHRlclBsYW5JY29uSAASLAoIc2V0dGluZ3MYDyABKAsyGC5SZWxpY0Zp",
+            "ZXgYDCABKA0SDgoEbmFtZRgLIAEoCUgAEiQKBGljb24YDyABKAsyFC5SZWxp",
+            "Y0ZpbHRlclBsYW5JY29uSAASLAoIc2V0dGluZ3MYDiABKAsyGC5SZWxpY0Zp",
             "bHRlclBsYW5TZXR0aW5nc0gAQg8KDUluZm9PbmVvZkNhc2VCHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "slot_index" field.</summary>
-    public const int SlotIndexFieldNumber = 10;
+    public const int SlotIndexFieldNumber = 12;
     private uint slotIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 2;
+    public const int NameFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "icon" field.</summary>
-    public const int IconFieldNumber = 9;
+    public const int IconFieldNumber = 15;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon Icon {
@@ -149,7 +149,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "settings" field.</summary>
-    public const int SettingsFieldNumber = 15;
+    public const int SettingsFieldNumber = 14;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings Settings {
@@ -164,9 +164,9 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "InfoOneofCase" oneof.</summary>
     public enum InfoOneofCaseOneofCase {
       None = 0,
-      Name = 2,
-      Icon = 9,
-      Settings = 15,
+      Name = 11,
+      Icon = 15,
+      Settings = 14,
     }
     private InfoOneofCaseOneofCase infoOneofCaseCase_ = InfoOneofCaseOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -233,20 +233,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (HasName) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(90);
         output.WriteString(Name);
       }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.Icon) {
-        output.WriteRawTag(74);
-        output.WriteMessage(Icon);
-      }
       if (SlotIndex != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(SlotIndex);
       }
       if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.Settings) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(114);
         output.WriteMessage(Settings);
+      }
+      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.Icon) {
+        output.WriteRawTag(122);
+        output.WriteMessage(Icon);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -259,20 +259,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (HasName) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(90);
         output.WriteString(Name);
       }
-      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.Icon) {
-        output.WriteRawTag(74);
-        output.WriteMessage(Icon);
-      }
       if (SlotIndex != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(SlotIndex);
       }
       if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.Settings) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(114);
         output.WriteMessage(Settings);
+      }
+      if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.Icon) {
+        output.WriteRawTag(122);
+        output.WriteMessage(Icon);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -344,30 +344,30 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 90: {
             Name = input.ReadString();
             break;
           }
-          case 74: {
-            global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon subBuilder = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.Icon) {
-              subBuilder.MergeFrom(Icon);
-            }
-            input.ReadMessage(subBuilder);
-            Icon = subBuilder;
-            break;
-          }
-          case 80: {
+          case 96: {
             SlotIndex = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 114: {
             global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings subBuilder = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
             if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.Settings) {
               subBuilder.MergeFrom(Settings);
             }
             input.ReadMessage(subBuilder);
             Settings = subBuilder;
+            break;
+          }
+          case 122: {
+            global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon subBuilder = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
+            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.Icon) {
+              subBuilder.MergeFrom(Icon);
+            }
+            input.ReadMessage(subBuilder);
+            Icon = subBuilder;
             break;
           }
         }
@@ -385,30 +385,30 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 90: {
             Name = input.ReadString();
             break;
           }
-          case 74: {
-            global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon subBuilder = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
-            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.Icon) {
-              subBuilder.MergeFrom(Icon);
-            }
-            input.ReadMessage(subBuilder);
-            Icon = subBuilder;
-            break;
-          }
-          case 80: {
+          case 96: {
             SlotIndex = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 114: {
             global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings subBuilder = new global::EggLink.DanhengServer.Proto.RelicFilterPlanSettings();
             if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.Settings) {
               subBuilder.MergeFrom(Settings);
             }
             input.ReadMessage(subBuilder);
             Settings = subBuilder;
+            break;
+          }
+          case 122: {
+            global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon subBuilder = new global::EggLink.DanhengServer.Proto.RelicFilterPlanIcon();
+            if (infoOneofCaseCase_ == InfoOneofCaseOneofCase.Icon) {
+              subBuilder.MergeFrom(Icon);
+            }
+            input.ReadMessage(subBuilder);
+            Icon = subBuilder;
             break;
           }
         }

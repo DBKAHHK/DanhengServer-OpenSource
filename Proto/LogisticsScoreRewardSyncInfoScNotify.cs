@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CipMb2dpc3RpY3NTY29yZVJld2FyZFN5bmNJbmZvU2NOb3RpZnkucHJvdG8a",
             "FExvZ2lzdGljc1Njb3JlLnByb3RvIkwKJExvZ2lzdGljc1Njb3JlUmV3YXJk",
-            "U3luY0luZm9TY05vdGlmeRIkCgtGTUpQTEhPSEJBQhgGIAMoCzIPLkxvZ2lz",
+            "U3luY0luZm9TY05vdGlmeRIkCgtGTUpQTEhPSEJBQhgLIAMoCzIPLkxvZ2lz",
             "dGljc1Njb3JlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FMJPLHOHBAB" field.</summary>
-    public const int FMJPLHOHBABFieldNumber = 6;
+    public const int FMJPLHOHBABFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LogisticsScore> _repeated_fMJPLHOHBAB_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.LogisticsScore.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.LogisticsScore.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LogisticsScore> fMJPLHOHBAB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LogisticsScore>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 90: {
             fMJPLHOHBAB_.AddEntriesFrom(input, _repeated_fMJPLHOHBAB_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 90: {
             fMJPLHOHBAB_.AddEntriesFrom(ref input, _repeated_fMJPLHOHBAB_codec);
             break;
           }

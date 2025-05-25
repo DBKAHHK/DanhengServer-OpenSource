@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhDb250ZW50UGFja2FnZURhdGEucHJvdG8aGENvbnRlbnRQYWNrYWdlSW5m",
-            "by5wcm90byJfChJDb250ZW50UGFja2FnZURhdGESFgoOY3VyX2NvbnRlbnRf",
-            "aWQYDiABKA0SMQoUY29udGVudF9wYWNrYWdlX2xpc3QYDSADKAsyEy5Db250",
-            "ZW50UGFja2FnZUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "by5wcm90byJfChJDb250ZW50UGFja2FnZURhdGESMQoUY29udGVudF9wYWNr",
+            "YWdlX2xpc3QYCyADKAsyEy5Db250ZW50UGFja2FnZUluZm8SFgoOY3VyX2Nv",
+            "bnRlbnRfaWQYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ContentPackageInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ContentPackageData), global::EggLink.DanhengServer.Proto.ContentPackageData.Parser, new[]{ "CurContentId", "ContentPackageList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ContentPackageData), global::EggLink.DanhengServer.Proto.ContentPackageData.Parser, new[]{ "ContentPackageList", "CurContentId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContentPackageData(ContentPackageData other) : this() {
-      curContentId_ = other.curContentId_;
       contentPackageList_ = other.contentPackageList_.Clone();
+      curContentId_ = other.curContentId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +85,19 @@ namespace EggLink.DanhengServer.Proto {
       return new ContentPackageData(this);
     }
 
+    /// <summary>Field number for the "content_package_list" field.</summary>
+    public const int ContentPackageListFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ContentPackageInfo> _repeated_contentPackageList_codec
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.ContentPackageInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ContentPackageInfo> contentPackageList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ContentPackageInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ContentPackageInfo> ContentPackageList {
+      get { return contentPackageList_; }
+    }
+
     /// <summary>Field number for the "cur_content_id" field.</summary>
-    public const int CurContentIdFieldNumber = 14;
+    public const int CurContentIdFieldNumber = 9;
     private uint curContentId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,17 +106,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         curContentId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "content_package_list" field.</summary>
-    public const int ContentPackageListFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ContentPackageInfo> _repeated_contentPackageList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.ContentPackageInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ContentPackageInfo> contentPackageList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ContentPackageInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ContentPackageInfo> ContentPackageList {
-      get { return contentPackageList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CurContentId != other.CurContentId) return false;
       if(!contentPackageList_.Equals(other.contentPackageList_)) return false;
+      if (CurContentId != other.CurContentId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CurContentId != 0) hash ^= CurContentId.GetHashCode();
       hash ^= contentPackageList_.GetHashCode();
+      if (CurContentId != 0) hash ^= CurContentId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      contentPackageList_.WriteTo(output, _repeated_contentPackageList_codec);
       if (CurContentId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(72);
         output.WriteUInt32(CurContentId);
       }
+      contentPackageList_.WriteTo(output, _repeated_contentPackageList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      contentPackageList_.WriteTo(ref output, _repeated_contentPackageList_codec);
       if (CurContentId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(72);
         output.WriteUInt32(CurContentId);
       }
+      contentPackageList_.WriteTo(ref output, _repeated_contentPackageList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -182,10 +182,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += contentPackageList_.CalculateSize(_repeated_contentPackageList_codec);
       if (CurContentId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurContentId);
       }
-      size += contentPackageList_.CalculateSize(_repeated_contentPackageList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -198,10 +198,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      contentPackageList_.Add(other.contentPackageList_);
       if (other.CurContentId != 0) {
         CurContentId = other.CurContentId;
       }
-      contentPackageList_.Add(other.contentPackageList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
-            contentPackageList_.AddEntriesFrom(input, _repeated_contentPackageList_codec);
+          case 72: {
+            CurContentId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            CurContentId = input.ReadUInt32();
+          case 90: {
+            contentPackageList_.AddEntriesFrom(input, _repeated_contentPackageList_codec);
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
-            contentPackageList_.AddEntriesFrom(ref input, _repeated_contentPackageList_codec);
+          case 72: {
+            CurContentId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            CurContentId = input.ReadUInt32();
+          case 90: {
+            contentPackageList_.AddEntriesFrom(ref input, _repeated_contentPackageList_codec);
             break;
           }
         }

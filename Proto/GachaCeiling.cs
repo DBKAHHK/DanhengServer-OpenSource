@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJHYWNoYUNlaWxpbmcucHJvdG8aGEdhY2hhQ2VpbGluZ0F2YXRhci5wcm90",
-            "byJhCgxHYWNoYUNlaWxpbmcSEwoLY2VpbGluZ19udW0YCSABKA0SEgoKaXNf",
-            "Y2xhaW1lZBgDIAEoCBIoCgthdmF0YXJfbGlzdBgPIAMoCzITLkdhY2hhQ2Vp",
-            "bGluZ0F2YXRhckIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "byJhCgxHYWNoYUNlaWxpbmcSEwoLY2VpbGluZ19udW0YDiABKA0SKAoLYXZh",
+            "dGFyX2xpc3QYBSADKAsyEy5HYWNoYUNlaWxpbmdBdmF0YXISEgoKaXNfY2xh",
+            "aW1lZBgBIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GachaCeilingAvatarReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GachaCeiling), global::EggLink.DanhengServer.Proto.GachaCeiling.Parser, new[]{ "CeilingNum", "IsClaimed", "AvatarList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GachaCeiling), global::EggLink.DanhengServer.Proto.GachaCeiling.Parser, new[]{ "CeilingNum", "AvatarList", "IsClaimed" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GachaCeiling(GachaCeiling other) : this() {
       ceilingNum_ = other.ceilingNum_;
-      isClaimed_ = other.isClaimed_;
       avatarList_ = other.avatarList_.Clone();
+      isClaimed_ = other.isClaimed_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ceiling_num" field.</summary>
-    public const int CeilingNumFieldNumber = 9;
+    public const int CeilingNumFieldNumber = 14;
     private uint ceilingNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,8 +98,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "avatar_list" field.</summary>
+    public const int AvatarListFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GachaCeilingAvatar> _repeated_avatarList_codec
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.GachaCeilingAvatar.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GachaCeilingAvatar> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GachaCeilingAvatar>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GachaCeilingAvatar> AvatarList {
+      get { return avatarList_; }
+    }
+
     /// <summary>Field number for the "is_claimed" field.</summary>
-    public const int IsClaimedFieldNumber = 3;
+    public const int IsClaimedFieldNumber = 1;
     private bool isClaimed_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,17 +119,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         isClaimed_ = value;
       }
-    }
-
-    /// <summary>Field number for the "avatar_list" field.</summary>
-    public const int AvatarListFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GachaCeilingAvatar> _repeated_avatarList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.GachaCeilingAvatar.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GachaCeilingAvatar> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GachaCeilingAvatar>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GachaCeilingAvatar> AvatarList {
-      get { return avatarList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (CeilingNum != other.CeilingNum) return false;
-      if (IsClaimed != other.IsClaimed) return false;
       if(!avatarList_.Equals(other.avatarList_)) return false;
+      if (IsClaimed != other.IsClaimed) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (CeilingNum != 0) hash ^= CeilingNum.GetHashCode();
-      if (IsClaimed != false) hash ^= IsClaimed.GetHashCode();
       hash ^= avatarList_.GetHashCode();
+      if (IsClaimed != false) hash ^= IsClaimed.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,14 +168,14 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsClaimed != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteBool(IsClaimed);
       }
+      avatarList_.WriteTo(output, _repeated_avatarList_codec);
       if (CeilingNum != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteUInt32(CeilingNum);
       }
-      avatarList_.WriteTo(output, _repeated_avatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -187,14 +187,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsClaimed != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteBool(IsClaimed);
       }
+      avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       if (CeilingNum != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteUInt32(CeilingNum);
       }
-      avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -208,10 +208,10 @@ namespace EggLink.DanhengServer.Proto {
       if (CeilingNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CeilingNum);
       }
+      size += avatarList_.CalculateSize(_repeated_avatarList_codec);
       if (IsClaimed != false) {
         size += 1 + 1;
       }
-      size += avatarList_.CalculateSize(_repeated_avatarList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -227,10 +227,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other.CeilingNum != 0) {
         CeilingNum = other.CeilingNum;
       }
+      avatarList_.Add(other.avatarList_);
       if (other.IsClaimed != false) {
         IsClaimed = other.IsClaimed;
       }
-      avatarList_.Add(other.avatarList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 8: {
             IsClaimed = input.ReadBool();
             break;
           }
-          case 72: {
-            CeilingNum = input.ReadUInt32();
+          case 42: {
+            avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
             break;
           }
-          case 122: {
-            avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
+          case 112: {
+            CeilingNum = input.ReadUInt32();
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 8: {
             IsClaimed = input.ReadBool();
             break;
           }
-          case 72: {
-            CeilingNum = input.ReadUInt32();
+          case 42: {
+            avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
             break;
           }
-          case 122: {
-            avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
+          case 112: {
+            CeilingNum = input.ReadUInt32();
             break;
           }
         }

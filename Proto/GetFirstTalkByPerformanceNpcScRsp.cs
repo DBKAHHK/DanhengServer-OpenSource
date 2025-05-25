@@ -27,7 +27,7 @@ namespace EggLink.DanhengServer.Proto {
             "CidHZXRGaXJzdFRhbGtCeVBlcmZvcm1hbmNlTnBjU2NSc3AucHJvdG8aIE5w",
             "Y01lZXRCeVBlcmZvcm1hbmNlU3RhdHVzLnByb3RvIm8KIUdldEZpcnN0VGFs",
             "a0J5UGVyZm9ybWFuY2VOcGNTY1JzcBIPCgdyZXRjb2RlGAUgASgNEjkKFG5w",
-            "Y19tZWV0X3N0YXR1c19saXN0GAcgAygLMhsuTnBjTWVldEJ5UGVyZm9ybWFu",
+            "Y19tZWV0X3N0YXR1c19saXN0GA0gAygLMhsuTnBjTWVldEJ5UGVyZm9ybWFu",
             "Y2VTdGF0dXNCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -99,9 +99,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "npc_meet_status_list" field.</summary>
-    public const int NpcMeetStatusListFieldNumber = 7;
+    public const int NpcMeetStatusListFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus> _repeated_npcMeetStatusList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus> npcMeetStatusList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -222,7 +222,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 106: {
             npcMeetStatusList_.AddEntriesFrom(input, _repeated_npcMeetStatusList_codec);
             break;
           }
@@ -245,7 +245,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 106: {
             npcMeetStatusList_.AddEntriesFrom(ref input, _repeated_npcMeetStatusList_codec);
             break;
           }

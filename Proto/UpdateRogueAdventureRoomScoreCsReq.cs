@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CihVcGRhdGVSb2d1ZUFkdmVudHVyZVJvb21TY29yZUNzUmVxLnByb3RvIkkK",
             "IlVwZGF0ZVJvZ3VlQWR2ZW50dXJlUm9vbVNjb3JlQ3NSZXESEAoIc2NvcmVf",
-            "aWQYDCABKA0SEQoJY3VyX3JvdW5kGAMgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "aWQYDiABKA0SEQoJY3VyX3JvdW5kGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 12;
+    public const int ScoreIdFieldNumber = 14;
     private uint scoreId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_round" field.</summary>
-    public const int CurRoundFieldNumber = 3;
+    public const int CurRoundFieldNumber = 9;
     private uint curRound_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (CurRound != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteUInt32(CurRound);
       }
       if (ScoreId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CurRound != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteUInt32(CurRound);
       }
       if (ScoreId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 72: {
             CurRound = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 112: {
             ScoreId = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 72: {
             CurRound = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 112: {
             ScoreId = input.ReadUInt32();
             break;
           }

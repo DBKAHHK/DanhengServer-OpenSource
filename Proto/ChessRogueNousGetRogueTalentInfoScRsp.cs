@@ -26,9 +26,9 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CitDaGVzc1JvZ3VlTm91c0dldFJvZ3VlVGFsZW50SW5mb1NjUnNwLnByb3Rv",
             "GhlSb2d1ZVRhbGVudEluZm9MaXN0LnByb3RvIn0KJUNoZXNzUm9ndWVOb3Vz",
-            "R2V0Um9ndWVUYWxlbnRJbmZvU2NSc3ASDwoHcmV0Y29kZRgGIAEoDRIuChB0",
-            "YWxlbnRfaW5mb19saXN0GA0gASgLMhQuUm9ndWVUYWxlbnRJbmZvTGlzdBIT",
-            "CgtQT0ZNSkJMTUJKSRgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "R2V0Um9ndWVUYWxlbnRJbmZvU2NSc3ASDwoHcmV0Y29kZRgCIAEoDRIuChB0",
+            "YWxlbnRfaW5mb19saXN0GA8gASgLMhQuUm9ndWVUYWxlbnRJbmZvTGlzdBIT",
+            "CgtQT0ZNSkJMTUJKSRgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTalentInfoListReflection.Descriptor, },
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 2;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "talent_info_list" field.</summary>
-    public const int TalentInfoListFieldNumber = 13;
+    public const int TalentInfoListFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.RogueTalentInfoList talentInfoList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "POFMJBLMBJI" field.</summary>
-    public const int POFMJBLMBJIFieldNumber = 8;
+    public const int POFMJBLMBJIFieldNumber = 12;
     private uint pOFMJBLMBJI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -170,15 +170,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
       if (POFMJBLMBJI != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(96);
         output.WriteUInt32(POFMJBLMBJI);
       }
       if (talentInfoList_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(122);
         output.WriteMessage(TalentInfoList);
       }
       if (_unknownFields != null) {
@@ -192,15 +192,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
       if (POFMJBLMBJI != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(96);
         output.WriteUInt32(POFMJBLMBJI);
       }
       if (talentInfoList_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(122);
         output.WriteMessage(TalentInfoList);
       }
       if (_unknownFields != null) {
@@ -261,15 +261,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 96: {
             POFMJBLMBJI = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 122: {
             if (talentInfoList_ == null) {
               TalentInfoList = new global::EggLink.DanhengServer.Proto.RogueTalentInfoList();
             }
@@ -291,15 +291,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 96: {
             POFMJBLMBJI = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 122: {
             if (talentInfoList_ == null) {
               TalentInfoList = new global::EggLink.DanhengServer.Proto.RogueTalentInfoList();
             }

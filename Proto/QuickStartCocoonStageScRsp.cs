@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBRdWlja1N0YXJ0Q29jb29uU3RhZ2VTY1JzcC5wcm90bxoVU2NlbmVCYXR0",
-            "bGVJbmZvLnByb3RvInUKGlF1aWNrU3RhcnRDb2Nvb25TdGFnZVNjUnNwEiUK",
-            "C2JhdHRsZV9pbmZvGA0gASgLMhAuU2NlbmVCYXR0bGVJbmZvEgwKBHdhdmUY",
-            "ByABKA0SDwoHcmV0Y29kZRgKIAEoDRIRCgljb2Nvb25faWQYDyABKA1CHqoC",
+            "bGVJbmZvLnByb3RvInUKGlF1aWNrU3RhcnRDb2Nvb25TdGFnZVNjUnNwEgwK",
+            "BHdhdmUYBSABKA0SEQoJY29jb29uX2lkGAIgASgNEg8KB3JldGNvZGUYAyAB",
+            "KA0SJQoLYmF0dGxlX2luZm8YByABKAsyEC5TY2VuZUJhdHRsZUluZm9CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneBattleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QuickStartCocoonStageScRsp), global::EggLink.DanhengServer.Proto.QuickStartCocoonStageScRsp.Parser, new[]{ "BattleInfo", "Wave", "Retcode", "CocoonId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QuickStartCocoonStageScRsp), global::EggLink.DanhengServer.Proto.QuickStartCocoonStageScRsp.Parser, new[]{ "Wave", "CocoonId", "Retcode", "BattleInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuickStartCocoonStageScRsp(QuickStartCocoonStageScRsp other) : this() {
-      battleInfo_ = other.battleInfo_ != null ? other.battleInfo_.Clone() : null;
       wave_ = other.wave_;
-      retcode_ = other.retcode_;
       cocoonId_ = other.cocoonId_;
+      retcode_ = other.retcode_;
+      battleInfo_ = other.battleInfo_ != null ? other.battleInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,20 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new QuickStartCocoonStageScRsp(this);
     }
 
-    /// <summary>Field number for the "battle_info" field.</summary>
-    public const int BattleInfoFieldNumber = 13;
-    private global::EggLink.DanhengServer.Proto.SceneBattleInfo battleInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.SceneBattleInfo BattleInfo {
-      get { return battleInfo_; }
-      set {
-        battleInfo_ = value;
-      }
-    }
-
     /// <summary>Field number for the "wave" field.</summary>
-    public const int WaveFieldNumber = 7;
+    public const int WaveFieldNumber = 5;
     private uint wave_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,8 +99,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "cocoon_id" field.</summary>
+    public const int CocoonIdFieldNumber = 2;
+    private uint cocoonId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CocoonId {
+      get { return cocoonId_; }
+      set {
+        cocoonId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,15 +123,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "cocoon_id" field.</summary>
-    public const int CocoonIdFieldNumber = 15;
-    private uint cocoonId_;
+    /// <summary>Field number for the "battle_info" field.</summary>
+    public const int BattleInfoFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.SceneBattleInfo battleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CocoonId {
-      get { return cocoonId_; }
+    public global::EggLink.DanhengServer.Proto.SceneBattleInfo BattleInfo {
+      get { return battleInfo_; }
       set {
-        cocoonId_ = value;
+        battleInfo_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(BattleInfo, other.BattleInfo)) return false;
       if (Wave != other.Wave) return false;
-      if (Retcode != other.Retcode) return false;
       if (CocoonId != other.CocoonId) return false;
+      if (Retcode != other.Retcode) return false;
+      if (!object.Equals(BattleInfo, other.BattleInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (battleInfo_ != null) hash ^= BattleInfo.GetHashCode();
       if (Wave != 0) hash ^= Wave.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (CocoonId != 0) hash ^= CocoonId.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (battleInfo_ != null) hash ^= BattleInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Wave != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Wave);
+      if (CocoonId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(CocoonId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      if (battleInfo_ != null) {
-        output.WriteRawTag(106);
-        output.WriteMessage(BattleInfo);
+      if (Wave != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Wave);
       }
-      if (CocoonId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(CocoonId);
+      if (battleInfo_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(BattleInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Wave != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Wave);
+      if (CocoonId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(CocoonId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      if (battleInfo_ != null) {
-        output.WriteRawTag(106);
-        output.WriteMessage(BattleInfo);
+      if (Wave != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Wave);
       }
-      if (CocoonId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(CocoonId);
+      if (battleInfo_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(BattleInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,17 +235,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (battleInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BattleInfo);
-      }
       if (Wave != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Wave);
+      }
+      if (CocoonId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CocoonId);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (CocoonId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CocoonId);
+      if (battleInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BattleInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,20 +259,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Wave != 0) {
+        Wave = other.Wave;
+      }
+      if (other.CocoonId != 0) {
+        CocoonId = other.CocoonId;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.battleInfo_ != null) {
         if (battleInfo_ == null) {
           BattleInfo = new global::EggLink.DanhengServer.Proto.SceneBattleInfo();
         }
         BattleInfo.MergeFrom(other.BattleInfo);
-      }
-      if (other.Wave != 0) {
-        Wave = other.Wave;
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
-      if (other.CocoonId != 0) {
-        CocoonId = other.CocoonId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -289,23 +289,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            Wave = input.ReadUInt32();
+          case 16: {
+            CocoonId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 40: {
+            Wave = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             if (battleInfo_ == null) {
               BattleInfo = new global::EggLink.DanhengServer.Proto.SceneBattleInfo();
             }
             input.ReadMessage(BattleInfo);
-            break;
-          }
-          case 120: {
-            CocoonId = input.ReadUInt32();
             break;
           }
         }
@@ -323,23 +323,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            Wave = input.ReadUInt32();
+          case 16: {
+            CocoonId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 40: {
+            Wave = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             if (battleInfo_ == null) {
               BattleInfo = new global::EggLink.DanhengServer.Proto.SceneBattleInfo();
             }
             input.ReadMessage(BattleInfo);
-            break;
-          }
-          case 120: {
-            CocoonId = input.ReadUInt32();
             break;
           }
         }

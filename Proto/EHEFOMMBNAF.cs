@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChFFSEVGT01NQk5BRi5wcm90bxocUm9ndWVGb3JtdWxhU2VsZWN0SW5mby5w",
             "cm90byJJCgtFSEVGT01NQk5BRhI6Chlyb2d1ZV9mb3JtdWxhX3NlbGVjdF9p",
-            "bmZvGAEgASgLMhcuUm9ndWVGb3JtdWxhU2VsZWN0SW5mb0IeqgIbRWdnTGlu",
+            "bmZvGAUgASgLMhcuUm9ndWVGb3JtdWxhU2VsZWN0SW5mb0IeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueFormulaSelectInfoReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_formula_select_info" field.</summary>
-    public const int RogueFormulaSelectInfoFieldNumber = 1;
+    public const int RogueFormulaSelectInfoFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.RogueFormulaSelectInfo rogueFormulaSelectInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (rogueFormulaSelectInfo_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(42);
         output.WriteMessage(RogueFormulaSelectInfo);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rogueFormulaSelectInfo_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(42);
         output.WriteMessage(RogueFormulaSelectInfo);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 42: {
             if (rogueFormulaSelectInfo_ == null) {
               RogueFormulaSelectInfo = new global::EggLink.DanhengServer.Proto.RogueFormulaSelectInfo();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 42: {
             if (rogueFormulaSelectInfo_ == null) {
               RogueFormulaSelectInfo = new global::EggLink.DanhengServer.Proto.RogueFormulaSelectInfo();
             }

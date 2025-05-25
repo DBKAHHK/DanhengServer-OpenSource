@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static BenefitItemConfigReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdCZW5lZml0SXRlbUNvbmZpZy5wcm90bxoXQmVuZWZpdFJld2FyZEl0ZW0u",
-            "cHJvdG8aEkx1Y2t5S29pSW5mby5wcm90byLEAQoRQmVuZWZpdEl0ZW1Db25m",
-            "aWcSMwoXcm9ndWVfc2NvcmVfcmV3YXJkX2luZm8YCyADKAsyEi5CZW5lZml0",
-            "UmV3YXJkSXRlbRIlCg5sdWNreV9rb2lfbGlzdBgFIAMoCzINLkx1Y2t5S29p",
-            "SW5mbxIQCghlbmRfdGltZRgPIAEoBBISCgpiZWdpbl90aW1lGAEgASgEEhgK",
-            "EHJldmVhbF9udW1fbGltaXQYDSABKA0SEwoLcmV2ZWFsX3RpbWUYAyABKARC",
+            "ChdCZW5lZml0SXRlbUNvbmZpZy5wcm90bxoSTHVja3lLb2lJbmZvLnByb3Rv",
+            "GhdCZW5lZml0UmV3YXJkSXRlbS5wcm90byLEAQoRQmVuZWZpdEl0ZW1Db25m",
+            "aWcSMwoXcm9ndWVfc2NvcmVfcmV3YXJkX2luZm8YASADKAsyEi5CZW5lZml0",
+            "UmV3YXJkSXRlbRITCgtyZXZlYWxfdGltZRgLIAEoBBIYChByZXZlYWxfbnVt",
+            "X2xpbWl0GA0gASgNEhAKCGVuZF90aW1lGAggASgEEhIKCmJlZ2luX3RpbWUY",
+            "DyABKAQSJQoObHVja3lfa29pX2xpc3QYDiADKAsyDS5MdWNreUtvaUluZm9C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BenefitRewardItemReflection.Descriptor, global::EggLink.DanhengServer.Proto.LuckyKoiInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LuckyKoiInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BenefitRewardItemReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BenefitItemConfig), global::EggLink.DanhengServer.Proto.BenefitItemConfig.Parser, new[]{ "RogueScoreRewardInfo", "LuckyKoiList", "EndTime", "BeginTime", "RevealNumLimit", "RevealTime" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BenefitItemConfig), global::EggLink.DanhengServer.Proto.BenefitItemConfig.Parser, new[]{ "RogueScoreRewardInfo", "RevealTime", "RevealNumLimit", "EndTime", "BeginTime", "LuckyKoiList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,11 +77,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BenefitItemConfig(BenefitItemConfig other) : this() {
       rogueScoreRewardInfo_ = other.rogueScoreRewardInfo_.Clone();
-      luckyKoiList_ = other.luckyKoiList_.Clone();
+      revealTime_ = other.revealTime_;
+      revealNumLimit_ = other.revealNumLimit_;
       endTime_ = other.endTime_;
       beginTime_ = other.beginTime_;
-      revealNumLimit_ = other.revealNumLimit_;
-      revealTime_ = other.revealTime_;
+      luckyKoiList_ = other.luckyKoiList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -92,9 +92,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_score_reward_info" field.</summary>
-    public const int RogueScoreRewardInfoFieldNumber = 11;
+    public const int RogueScoreRewardInfoFieldNumber = 1;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BenefitRewardItem> _repeated_rogueScoreRewardInfo_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.BenefitRewardItem.Parser);
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.BenefitRewardItem.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BenefitRewardItem> rogueScoreRewardInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BenefitRewardItem>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -102,38 +102,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return rogueScoreRewardInfo_; }
     }
 
-    /// <summary>Field number for the "lucky_koi_list" field.</summary>
-    public const int LuckyKoiListFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LuckyKoiInfo> _repeated_luckyKoiList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.LuckyKoiInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LuckyKoiInfo> luckyKoiList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LuckyKoiInfo>();
+    /// <summary>Field number for the "reveal_time" field.</summary>
+    public const int RevealTimeFieldNumber = 11;
+    private ulong revealTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LuckyKoiInfo> LuckyKoiList {
-      get { return luckyKoiList_; }
-    }
-
-    /// <summary>Field number for the "end_time" field.</summary>
-    public const int EndTimeFieldNumber = 15;
-    private ulong endTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong EndTime {
-      get { return endTime_; }
+    public ulong RevealTime {
+      get { return revealTime_; }
       set {
-        endTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "begin_time" field.</summary>
-    public const int BeginTimeFieldNumber = 1;
-    private ulong beginTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong BeginTime {
-      get { return beginTime_; }
-      set {
-        beginTime_ = value;
+        revealTime_ = value;
       }
     }
 
@@ -149,16 +126,39 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "reveal_time" field.</summary>
-    public const int RevealTimeFieldNumber = 3;
-    private ulong revealTime_;
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 8;
+    private ulong endTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong RevealTime {
-      get { return revealTime_; }
+    public ulong EndTime {
+      get { return endTime_; }
       set {
-        revealTime_ = value;
+        endTime_ = value;
       }
+    }
+
+    /// <summary>Field number for the "begin_time" field.</summary>
+    public const int BeginTimeFieldNumber = 15;
+    private ulong beginTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong BeginTime {
+      get { return beginTime_; }
+      set {
+        beginTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "lucky_koi_list" field.</summary>
+    public const int LuckyKoiListFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LuckyKoiInfo> _repeated_luckyKoiList_codec
+        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.LuckyKoiInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LuckyKoiInfo> luckyKoiList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LuckyKoiInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LuckyKoiInfo> LuckyKoiList {
+      get { return luckyKoiList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -177,11 +177,11 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!rogueScoreRewardInfo_.Equals(other.rogueScoreRewardInfo_)) return false;
-      if(!luckyKoiList_.Equals(other.luckyKoiList_)) return false;
+      if (RevealTime != other.RevealTime) return false;
+      if (RevealNumLimit != other.RevealNumLimit) return false;
       if (EndTime != other.EndTime) return false;
       if (BeginTime != other.BeginTime) return false;
-      if (RevealNumLimit != other.RevealNumLimit) return false;
-      if (RevealTime != other.RevealTime) return false;
+      if(!luckyKoiList_.Equals(other.luckyKoiList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -190,11 +190,11 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= rogueScoreRewardInfo_.GetHashCode();
-      hash ^= luckyKoiList_.GetHashCode();
+      if (RevealTime != 0UL) hash ^= RevealTime.GetHashCode();
+      if (RevealNumLimit != 0) hash ^= RevealNumLimit.GetHashCode();
       if (EndTime != 0UL) hash ^= EndTime.GetHashCode();
       if (BeginTime != 0UL) hash ^= BeginTime.GetHashCode();
-      if (RevealNumLimit != 0) hash ^= RevealNumLimit.GetHashCode();
-      if (RevealTime != 0UL) hash ^= RevealTime.GetHashCode();
+      hash ^= luckyKoiList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -213,23 +213,23 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BeginTime != 0UL) {
-        output.WriteRawTag(8);
-        output.WriteUInt64(BeginTime);
+      rogueScoreRewardInfo_.WriteTo(output, _repeated_rogueScoreRewardInfo_codec);
+      if (EndTime != 0UL) {
+        output.WriteRawTag(64);
+        output.WriteUInt64(EndTime);
       }
       if (RevealTime != 0UL) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(88);
         output.WriteUInt64(RevealTime);
       }
-      luckyKoiList_.WriteTo(output, _repeated_luckyKoiList_codec);
-      rogueScoreRewardInfo_.WriteTo(output, _repeated_rogueScoreRewardInfo_codec);
       if (RevealNumLimit != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(RevealNumLimit);
       }
-      if (EndTime != 0UL) {
+      luckyKoiList_.WriteTo(output, _repeated_luckyKoiList_codec);
+      if (BeginTime != 0UL) {
         output.WriteRawTag(120);
-        output.WriteUInt64(EndTime);
+        output.WriteUInt64(BeginTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -241,23 +241,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BeginTime != 0UL) {
-        output.WriteRawTag(8);
-        output.WriteUInt64(BeginTime);
+      rogueScoreRewardInfo_.WriteTo(ref output, _repeated_rogueScoreRewardInfo_codec);
+      if (EndTime != 0UL) {
+        output.WriteRawTag(64);
+        output.WriteUInt64(EndTime);
       }
       if (RevealTime != 0UL) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(88);
         output.WriteUInt64(RevealTime);
       }
-      luckyKoiList_.WriteTo(ref output, _repeated_luckyKoiList_codec);
-      rogueScoreRewardInfo_.WriteTo(ref output, _repeated_rogueScoreRewardInfo_codec);
       if (RevealNumLimit != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(RevealNumLimit);
       }
-      if (EndTime != 0UL) {
+      luckyKoiList_.WriteTo(ref output, _repeated_luckyKoiList_codec);
+      if (BeginTime != 0UL) {
         output.WriteRawTag(120);
-        output.WriteUInt64(EndTime);
+        output.WriteUInt64(BeginTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -270,19 +270,19 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += rogueScoreRewardInfo_.CalculateSize(_repeated_rogueScoreRewardInfo_codec);
-      size += luckyKoiList_.CalculateSize(_repeated_luckyKoiList_codec);
+      if (RevealTime != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(RevealTime);
+      }
+      if (RevealNumLimit != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RevealNumLimit);
+      }
       if (EndTime != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(EndTime);
       }
       if (BeginTime != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(BeginTime);
       }
-      if (RevealNumLimit != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RevealNumLimit);
-      }
-      if (RevealTime != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(RevealTime);
-      }
+      size += luckyKoiList_.CalculateSize(_repeated_luckyKoiList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -296,19 +296,19 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       rogueScoreRewardInfo_.Add(other.rogueScoreRewardInfo_);
-      luckyKoiList_.Add(other.luckyKoiList_);
+      if (other.RevealTime != 0UL) {
+        RevealTime = other.RevealTime;
+      }
+      if (other.RevealNumLimit != 0) {
+        RevealNumLimit = other.RevealNumLimit;
+      }
       if (other.EndTime != 0UL) {
         EndTime = other.EndTime;
       }
       if (other.BeginTime != 0UL) {
         BeginTime = other.BeginTime;
       }
-      if (other.RevealNumLimit != 0) {
-        RevealNumLimit = other.RevealNumLimit;
-      }
-      if (other.RevealTime != 0UL) {
-        RevealTime = other.RevealTime;
-      }
+      luckyKoiList_.Add(other.luckyKoiList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -324,28 +324,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            BeginTime = input.ReadUInt64();
-            break;
-          }
-          case 24: {
-            RevealTime = input.ReadUInt64();
-            break;
-          }
-          case 42: {
-            luckyKoiList_.AddEntriesFrom(input, _repeated_luckyKoiList_codec);
-            break;
-          }
-          case 90: {
+          case 10: {
             rogueScoreRewardInfo_.AddEntriesFrom(input, _repeated_rogueScoreRewardInfo_codec);
+            break;
+          }
+          case 64: {
+            EndTime = input.ReadUInt64();
+            break;
+          }
+          case 88: {
+            RevealTime = input.ReadUInt64();
             break;
           }
           case 104: {
             RevealNumLimit = input.ReadUInt32();
             break;
           }
+          case 114: {
+            luckyKoiList_.AddEntriesFrom(input, _repeated_luckyKoiList_codec);
+            break;
+          }
           case 120: {
-            EndTime = input.ReadUInt64();
+            BeginTime = input.ReadUInt64();
             break;
           }
         }
@@ -363,28 +363,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            BeginTime = input.ReadUInt64();
-            break;
-          }
-          case 24: {
-            RevealTime = input.ReadUInt64();
-            break;
-          }
-          case 42: {
-            luckyKoiList_.AddEntriesFrom(ref input, _repeated_luckyKoiList_codec);
-            break;
-          }
-          case 90: {
+          case 10: {
             rogueScoreRewardInfo_.AddEntriesFrom(ref input, _repeated_rogueScoreRewardInfo_codec);
+            break;
+          }
+          case 64: {
+            EndTime = input.ReadUInt64();
+            break;
+          }
+          case 88: {
+            RevealTime = input.ReadUInt64();
             break;
           }
           case 104: {
             RevealNumLimit = input.ReadUInt32();
             break;
           }
+          case 114: {
+            luckyKoiList_.AddEntriesFrom(ref input, _repeated_luckyKoiList_codec);
+            break;
+          }
           case 120: {
-            EndTime = input.ReadUInt64();
+            BeginTime = input.ReadUInt64();
             break;
           }
         }

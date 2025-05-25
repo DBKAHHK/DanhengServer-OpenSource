@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFNS0pBTE1LTVBHTC5wcm90bxoRT0ZOR1BMSktMT0oucHJvdG8iMAoLTUtK",
-            "QUxNS01QR0wSIQoLQkZETUdJTkJPSUIYDiADKAsyDC5PRk5HUExKS0xPSkIe",
+            "QUxNS01QR0wSIQoLQkZETUdJTkJPSUIYAiADKAsyDC5PRk5HUExKS0xPSkIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OFNGPLJKLOJReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BFDMGINBOIB" field.</summary>
-    public const int BFDMGINBOIBFieldNumber = 14;
+    public const int BFDMGINBOIBFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OFNGPLJKLOJ> _repeated_bFDMGINBOIB_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.OFNGPLJKLOJ.Parser);
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.OFNGPLJKLOJ.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OFNGPLJKLOJ> bFDMGINBOIB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OFNGPLJKLOJ>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
+          case 18: {
             bFDMGINBOIB_.AddEntriesFrom(input, _repeated_bFDMGINBOIB_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
+          case 18: {
             bFDMGINBOIB_.AddEntriesFrom(ref input, _repeated_bFDMGINBOIB_codec);
             break;
           }

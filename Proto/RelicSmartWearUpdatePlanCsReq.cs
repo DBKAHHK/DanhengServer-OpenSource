@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNSZWxpY1NtYXJ0V2VhclVwZGF0ZVBsYW5Dc1JlcS5wcm90bxoYUmVsaWNT",
             "bWFydFdlYXJQbGFuLnByb3RvIkgKHVJlbGljU21hcnRXZWFyVXBkYXRlUGxh",
-            "bkNzUmVxEicKCnJlbGljX3BsYW4YCSABKAsyEy5SZWxpY1NtYXJ0V2VhclBs",
+            "bkNzUmVxEicKCnJlbGljX3BsYW4YDCABKAsyEy5SZWxpY1NtYXJ0V2VhclBs",
             "YW5CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicSmartWearPlanReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "relic_plan" field.</summary>
-    public const int RelicPlanFieldNumber = 9;
+    public const int RelicPlanFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.RelicSmartWearPlan relicPlan_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (relicPlan_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(98);
         output.WriteMessage(RelicPlan);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (relicPlan_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(98);
         output.WriteMessage(RelicPlan);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
+          case 98: {
             if (relicPlan_ == null) {
               RelicPlan = new global::EggLink.DanhengServer.Proto.RelicSmartWearPlan();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
+          case 98: {
             if (relicPlan_ == null) {
               RelicPlan = new global::EggLink.DanhengServer.Proto.RelicSmartWearPlan();
             }

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RotaterDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFSb3RhdGVyRGF0YS5wcm90byJLCgtSb3RhdGVyRGF0YRITCgtHTEhBR0pH",
-            "QUVIRRgEIAEoDRIQCghncm91cF9pZBgPIAEoDRIVCg1zZWFsX3Bvc2l0aW9u",
-            "GAUgASgCQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "ChFSb3RhdGVyRGF0YS5wcm90byJLCgtSb3RhdGVyRGF0YRIVCg1zZWFsX3Bv",
+            "c2l0aW9uGA8gASgCEhAKCGdyb3VwX2lkGAUgASgNEhMKC0dMSEFHSkdBRUhF",
+            "GAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RotaterData), global::EggLink.DanhengServer.Proto.RotaterData.Parser, new[]{ "GLHAGJGAEHE", "GroupId", "SealPosition" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RotaterData), global::EggLink.DanhengServer.Proto.RotaterData.Parser, new[]{ "SealPosition", "GroupId", "GLHAGJGAEHE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RotaterData(RotaterData other) : this() {
-      gLHAGJGAEHE_ = other.gLHAGJGAEHE_;
-      groupId_ = other.groupId_;
       sealPosition_ = other.sealPosition_;
+      groupId_ = other.groupId_;
+      gLHAGJGAEHE_ = other.gLHAGJGAEHE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new RotaterData(this);
     }
 
-    /// <summary>Field number for the "GLHAGJGAEHE" field.</summary>
-    public const int GLHAGJGAEHEFieldNumber = 4;
-    private uint gLHAGJGAEHE_;
+    /// <summary>Field number for the "seal_position" field.</summary>
+    public const int SealPositionFieldNumber = 15;
+    private float sealPosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GLHAGJGAEHE {
-      get { return gLHAGJGAEHE_; }
+    public float SealPosition {
+      get { return sealPosition_; }
       set {
-        gLHAGJGAEHE_ = value;
+        sealPosition_ = value;
       }
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 15;
+    public const int GroupIdFieldNumber = 5;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "seal_position" field.</summary>
-    public const int SealPositionFieldNumber = 5;
-    private float sealPosition_;
+    /// <summary>Field number for the "GLHAGJGAEHE" field.</summary>
+    public const int GLHAGJGAEHEFieldNumber = 7;
+    private uint gLHAGJGAEHE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float SealPosition {
-      get { return sealPosition_; }
+    public uint GLHAGJGAEHE {
+      get { return gLHAGJGAEHE_; }
       set {
-        sealPosition_ = value;
+        gLHAGJGAEHE_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GLHAGJGAEHE != other.GLHAGJGAEHE) return false;
-      if (GroupId != other.GroupId) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SealPosition, other.SealPosition)) return false;
+      if (GroupId != other.GroupId) return false;
+      if (GLHAGJGAEHE != other.GLHAGJGAEHE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GLHAGJGAEHE != 0) hash ^= GLHAGJGAEHE.GetHashCode();
-      if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (SealPosition != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SealPosition);
+      if (GroupId != 0) hash ^= GroupId.GetHashCode();
+      if (GLHAGJGAEHE != 0) hash ^= GLHAGJGAEHE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (GroupId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(GroupId);
+      }
       if (GLHAGJGAEHE != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteUInt32(GLHAGJGAEHE);
       }
       if (SealPosition != 0F) {
-        output.WriteRawTag(45);
+        output.WriteRawTag(125);
         output.WriteFloat(SealPosition);
-      }
-      if (GroupId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GroupId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(GroupId);
+      }
       if (GLHAGJGAEHE != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteUInt32(GLHAGJGAEHE);
       }
       if (SealPosition != 0F) {
-        output.WriteRawTag(45);
+        output.WriteRawTag(125);
         output.WriteFloat(SealPosition);
-      }
-      if (GroupId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GLHAGJGAEHE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GLHAGJGAEHE);
+      if (SealPosition != 0F) {
+        size += 1 + 4;
       }
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
-      if (SealPosition != 0F) {
-        size += 1 + 4;
+      if (GLHAGJGAEHE != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GLHAGJGAEHE);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GLHAGJGAEHE != 0) {
-        GLHAGJGAEHE = other.GLHAGJGAEHE;
+      if (other.SealPosition != 0F) {
+        SealPosition = other.SealPosition;
       }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
       }
-      if (other.SealPosition != 0F) {
-        SealPosition = other.SealPosition;
+      if (other.GLHAGJGAEHE != 0) {
+        GLHAGJGAEHE = other.GLHAGJGAEHE;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 40: {
+            GroupId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
             GLHAGJGAEHE = input.ReadUInt32();
             break;
           }
-          case 45: {
+          case 125: {
             SealPosition = input.ReadFloat();
-            break;
-          }
-          case 120: {
-            GroupId = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 40: {
+            GroupId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
             GLHAGJGAEHE = input.ReadUInt32();
             break;
           }
-          case 45: {
+          case 125: {
             SealPosition = input.ReadFloat();
-            break;
-          }
-          case 120: {
-            GroupId = input.ReadUInt32();
             break;
           }
         }

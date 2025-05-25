@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBBbGxleVNoaXBVc2VkQ291bnRTY05vdGlmeS5wcm90byKTAQoaQWxsZXlT",
-            "aGlwVXNlZENvdW50U2NOb3RpZnkSQQoLTlBMQUtFT0tFS0IYBiADKAsyLC5B",
+            "aGlwVXNlZENvdW50U2NOb3RpZnkSQQoLTlBMQUtFT0tFS0IYBCADKAsyLC5B",
             "bGxleVNoaXBVc2VkQ291bnRTY05vdGlmeS5OUExBS0VPS0VLQkVudHJ5GjIK",
             "EE5QTEFLRU9LRUtCRW50cnkSCwoDa2V5GAEgASgNEg0KBXZhbHVlGAIgASgN",
             "OgI4AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NPLAKEOKEKB" field.</summary>
-    public const int NPLAKEOKEKBFieldNumber = 6;
+    public const int NPLAKEOKEKBFieldNumber = 4;
     private static readonly pbc::MapField<uint, uint>.Codec _map_nPLAKEOKEKB_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 50);
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 34);
     private readonly pbc::MapField<uint, uint> nPLAKEOKEKB_ = new pbc::MapField<uint, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 34: {
             nPLAKEOKEKB_.AddEntriesFrom(input, _map_nPLAKEOKEKB_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 34: {
             nPLAKEOKEKB_.AddEntriesFrom(ref input, _map_nPLAKEOKEKB_codec);
             break;
           }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5Td2l0Y2hIYW5kUmVzZXRHYW1lQ3NSZXEucHJvdG8aDkhhbmRJbmZvLnBy",
             "b3RvIjoKGFN3aXRjaEhhbmRSZXNldEdhbWVDc1JlcRIeCgtEUEpOQ0JCT0hL",
-            "RRgOIAEoCzIJLkhhbmRJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "RRgCIAEoCzIJLkhhbmRJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HandInfoReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DPJNCBBOHKE" field.</summary>
-    public const int DPJNCBBOHKEFieldNumber = 14;
+    public const int DPJNCBBOHKEFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.HandInfo dPJNCBBOHKE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (dPJNCBBOHKE_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(18);
         output.WriteMessage(DPJNCBBOHKE);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (dPJNCBBOHKE_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(18);
         output.WriteMessage(DPJNCBBOHKE);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
+          case 18: {
             if (dPJNCBBOHKE_ == null) {
               DPJNCBBOHKE = new global::EggLink.DanhengServer.Proto.HandInfo();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
+          case 18: {
             if (dPJNCBBOHKE_ == null) {
               DPJNCBBOHKE = new global::EggLink.DanhengServer.Proto.HandInfo();
             }

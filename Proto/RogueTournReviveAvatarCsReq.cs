@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFSb2d1ZVRvdXJuUmV2aXZlQXZhdGFyQ3NSZXEucHJvdG8iXQobUm9ndWVU",
             "b3VyblJldml2ZUF2YXRhckNzUmVxEiEKGWludGVyYWN0ZWRfcHJvcF9lbnRp",
-            "dHlfaWQYBiABKA0SGwoTYmFzZV9hdmF0YXJfaWRfbGlzdBgEIAMoDUIeqgIb",
+            "dHlfaWQYByABKA0SGwoTYmFzZV9hdmF0YXJfaWRfbGlzdBgNIAMoDUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "interacted_prop_entity_id" field.</summary>
-    public const int InteractedPropEntityIdFieldNumber = 6;
+    public const int InteractedPropEntityIdFieldNumber = 7;
     private uint interactedPropEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "base_avatar_id_list" field.</summary>
-    public const int BaseAvatarIdListFieldNumber = 4;
+    public const int BaseAvatarIdListFieldNumber = 13;
     private static readonly pb::FieldCodec<uint> _repeated_baseAvatarIdList_codec
-        = pb::FieldCodec.ForUInt32(34);
+        = pb::FieldCodec.ForUInt32(106);
     private readonly pbc::RepeatedField<uint> baseAvatarIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      baseAvatarIdList_.WriteTo(output, _repeated_baseAvatarIdList_codec);
       if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteUInt32(InteractedPropEntityId);
       }
+      baseAvatarIdList_.WriteTo(output, _repeated_baseAvatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      baseAvatarIdList_.WriteTo(ref output, _repeated_baseAvatarIdList_codec);
       if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteUInt32(InteractedPropEntityId);
       }
+      baseAvatarIdList_.WriteTo(ref output, _repeated_baseAvatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34:
-          case 32: {
-            baseAvatarIdList_.AddEntriesFrom(input, _repeated_baseAvatarIdList_codec);
+          case 56: {
+            InteractedPropEntityId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            InteractedPropEntityId = input.ReadUInt32();
+          case 106:
+          case 104: {
+            baseAvatarIdList_.AddEntriesFrom(input, _repeated_baseAvatarIdList_codec);
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34:
-          case 32: {
-            baseAvatarIdList_.AddEntriesFrom(ref input, _repeated_baseAvatarIdList_codec);
+          case 56: {
+            InteractedPropEntityId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            InteractedPropEntityId = input.ReadUInt32();
+          case 106:
+          case 104: {
+            baseAvatarIdList_.AddEntriesFrom(ref input, _repeated_baseAvatarIdList_codec);
             break;
           }
         }

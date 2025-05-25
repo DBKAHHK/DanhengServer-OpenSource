@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFMT0dOS0VLSEJBSS5wcm90byI8CgtMT0dOS0VLSEJBSRITCgtBSkJFUEFI",
-            "Q0dJSxgBIAEoDRIYChBoYXNfdGFrZW5fcmV3YXJkGAYgASgIQh6qAhtFZ2dM",
+            "Q0dJSxgMIAEoDRIYChBoYXNfdGFrZW5fcmV3YXJkGA4gASgIQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "AJBEPAHCGIK" field.</summary>
-    public const int AJBEPAHCGIKFieldNumber = 1;
+    public const int AJBEPAHCGIKFieldNumber = 12;
     private uint aJBEPAHCGIK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "has_taken_reward" field.</summary>
-    public const int HasTakenRewardFieldNumber = 6;
+    public const int HasTakenRewardFieldNumber = 14;
     private bool hasTakenReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (AJBEPAHCGIK != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(96);
         output.WriteUInt32(AJBEPAHCGIK);
       }
       if (HasTakenReward != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(112);
         output.WriteBool(HasTakenReward);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AJBEPAHCGIK != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(96);
         output.WriteUInt32(AJBEPAHCGIK);
       }
       if (HasTakenReward != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(112);
         output.WriteBool(HasTakenReward);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 96: {
             AJBEPAHCGIK = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 112: {
             HasTakenReward = input.ReadBool();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 96: {
             AJBEPAHCGIK = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 112: {
             HasTakenReward = input.ReadBool();
             break;
           }

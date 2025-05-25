@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBTdW1tb25QdW5rTG9yZE1vbnN0ZXJTY1JzcC5wcm90bxoRS0FPQUhLQU9I",
             "RkkucHJvdG8iUAoaU3VtbW9uUHVua0xvcmRNb25zdGVyU2NSc3ASDwoHcmV0",
-            "Y29kZRgDIAEoDRIhCgtEUE1LQU1NSU9MQhgGIAEoCzIMLktBT0FIS0FPSEZJ",
+            "Y29kZRgDIAEoDRIhCgtEUE1LQU1NSU9MQhgOIAEoCzIMLktBT0FIS0FPSEZJ",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KAOAHKAOHFIReflection.Descriptor, },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DPMKAMMIOLB" field.</summary>
-    public const int DPMKAMMIOLBFieldNumber = 6;
+    public const int DPMKAMMIOLBFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.KAOAHKAOHFI dPMKAMMIOLB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (dPMKAMMIOLB_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(114);
         output.WriteMessage(DPMKAMMIOLB);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (dPMKAMMIOLB_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(114);
         output.WriteMessage(DPMKAMMIOLB);
       }
       if (_unknownFields != null) {
@@ -234,7 +234,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 114: {
             if (dPMKAMMIOLB_ == null) {
               DPMKAMMIOLB = new global::EggLink.DanhengServer.Proto.KAOAHKAOHFI();
             }
@@ -260,7 +260,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 114: {
             if (dPMKAMMIOLB_ == null) {
               DPMKAMMIOLB = new global::EggLink.DanhengServer.Proto.KAOAHKAOHFI();
             }

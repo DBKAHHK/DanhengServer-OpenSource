@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5HZXRQbGF5ZXJSZXBsYXlJbmZvU2NSc3AucHJvdG8aEFJlcGxheUluZm8u",
             "cHJvdG8iTQoYR2V0UGxheWVyUmVwbGF5SW5mb1NjUnNwEiAKC0tHQ0ZFQUxB",
-            "TktPGAYgAygLMgsuUmVwbGF5SW5mbxIPCgdyZXRjb2RlGAUgASgNQh6qAhtF",
+            "TktPGAcgAygLMgsuUmVwbGF5SW5mbxIPCgdyZXRjb2RlGAwgASgNQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ReplayInfoReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KGCFEALANKO" field.</summary>
-    public const int KGCFEALANKOFieldNumber = 6;
+    public const int KGCFEALANKOFieldNumber = 7;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ReplayInfo> _repeated_kGCFEALANKO_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.ReplayInfo.Parser);
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.ReplayInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ReplayInfo> kGCFEALANKO_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ReplayInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      kGCFEALANKO_.WriteTo(output, _repeated_kGCFEALANKO_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
-      kGCFEALANKO_.WriteTo(output, _repeated_kGCFEALANKO_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      kGCFEALANKO_.WriteTo(ref output, _repeated_kGCFEALANKO_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
-      kGCFEALANKO_.WriteTo(ref output, _repeated_kGCFEALANKO_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 58: {
+            kGCFEALANKO_.AddEntriesFrom(input, _repeated_kGCFEALANKO_codec);
             break;
           }
-          case 50: {
-            kGCFEALANKO_.AddEntriesFrom(input, _repeated_kGCFEALANKO_codec);
+          case 96: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 58: {
+            kGCFEALANKO_.AddEntriesFrom(ref input, _repeated_kGCFEALANKO_codec);
             break;
           }
-          case 50: {
-            kGCFEALANKO_.AddEntriesFrom(ref input, _repeated_kGCFEALANKO_codec);
+          case 96: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

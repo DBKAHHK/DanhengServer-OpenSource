@@ -34,6 +34,7 @@ public enum ItemSubTypeEnum
     FightFestSkill = 607,
     TrainPartyDiyMaterial = 608,
     PlanetFesItem = 609,
+    MatchThreeV2 = 611,
     Mission = 701,
     RelicSetShowOnly = 801,
     RelicRarityShowOnly = 802,

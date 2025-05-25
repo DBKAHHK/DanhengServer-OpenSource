@@ -24,16 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static IBFFAJOHKMOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFJQkZGQUpPSEtNTy5wcm90byK3AQoLSUJGRkFKT0hLTU8SEQoJYXZhdGFy",
+            "ChFJQkZGQUpPSEtNTy5wcm90byLSAQoLSUJGRkFKT0hLTU8SEQoJYXZhdGFy",
             "X2lkGAEgASgNEhMKC0xFSUNLUERJRk9HGAIgAygNEg4KBnNvdXJjZRgDIAEo",
             "DRIOCgZkYW1hZ2UYBCABKAESEwoLRElLS0hQRktBUEYYBSADKA0SEwoLRU9P",
             "RklNRUdNRkIYBiABKAUSEwoLQktKRUFNUE5BTksYByABKAESEwoLQkxGSEtH",
-            "UE1OREsYCCABKA0SDAoEd2F2ZRgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "UE1OREsYCCABKA0SDAoEd2F2ZRgJIAEoDRIZChFhdmF0YXJfZW5oYW5jZV9p",
+            "ZBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IBFFAJOHKMO), global::EggLink.DanhengServer.Proto.IBFFAJOHKMO.Parser, new[]{ "AvatarId", "LEICKPDIFOG", "Source", "Damage", "DIKKHPFKAPF", "EOOFIMEGMFB", "BKJEAMPNANK", "BLFHKGPMNDK", "Wave" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IBFFAJOHKMO), global::EggLink.DanhengServer.Proto.IBFFAJOHKMO.Parser, new[]{ "AvatarId", "LEICKPDIFOG", "Source", "Damage", "DIKKHPFKAPF", "EOOFIMEGMFB", "BKJEAMPNANK", "BLFHKGPMNDK", "Wave", "AvatarEnhanceId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -84,6 +85,7 @@ namespace EggLink.DanhengServer.Proto {
       bKJEAMPNANK_ = other.bKJEAMPNANK_;
       bLFHKGPMNDK_ = other.bLFHKGPMNDK_;
       wave_ = other.wave_;
+      avatarEnhanceId_ = other.avatarEnhanceId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -199,6 +201,18 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "avatar_enhance_id" field.</summary>
+    public const int AvatarEnhanceIdFieldNumber = 10;
+    private uint avatarEnhanceId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AvatarEnhanceId {
+      get { return avatarEnhanceId_; }
+      set {
+        avatarEnhanceId_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -223,6 +237,7 @@ namespace EggLink.DanhengServer.Proto {
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(BKJEAMPNANK, other.BKJEAMPNANK)) return false;
       if (BLFHKGPMNDK != other.BLFHKGPMNDK) return false;
       if (Wave != other.Wave) return false;
+      if (AvatarEnhanceId != other.AvatarEnhanceId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -239,6 +254,7 @@ namespace EggLink.DanhengServer.Proto {
       if (BKJEAMPNANK != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BKJEAMPNANK);
       if (BLFHKGPMNDK != 0) hash ^= BLFHKGPMNDK.GetHashCode();
       if (Wave != 0) hash ^= Wave.GetHashCode();
+      if (AvatarEnhanceId != 0) hash ^= AvatarEnhanceId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -287,6 +303,10 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(Wave);
       }
+      if (AvatarEnhanceId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(AvatarEnhanceId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -327,6 +347,10 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(Wave);
       }
+      if (AvatarEnhanceId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(AvatarEnhanceId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -359,6 +383,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (Wave != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Wave);
+      }
+      if (AvatarEnhanceId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarEnhanceId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -394,6 +421,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.Wave != 0) {
         Wave = other.Wave;
+      }
+      if (other.AvatarEnhanceId != 0) {
+        AvatarEnhanceId = other.AvatarEnhanceId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -448,6 +478,10 @@ namespace EggLink.DanhengServer.Proto {
             Wave = input.ReadUInt32();
             break;
           }
+          case 80: {
+            AvatarEnhanceId = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -499,6 +533,10 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 72: {
             Wave = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            AvatarEnhanceId = input.ReadUInt32();
             break;
           }
         }

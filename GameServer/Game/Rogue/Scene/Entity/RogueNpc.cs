@@ -37,9 +37,6 @@ public class RogueNpc(SceneInstance scene, GroupInfo group, NpcInfo npcInfo) : E
             }
         };
 
-        foreach (var param in RogueEvent.Options)
-            proto.Npc.ExtraInfo.RogueGameInfo.DialogueEventParamList.Add(param.ToNpcProto());
-
         return proto;
     }
 }

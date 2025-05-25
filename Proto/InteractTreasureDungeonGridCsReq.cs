@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZJbnRlcmFjdFRyZWFzdXJlRHVuZ2VvbkdyaWRDc1JlcS5wcm90byJjCiBJ",
-            "bnRlcmFjdFRyZWFzdXJlRHVuZ2VvbkdyaWRDc1JlcRITCgtIRk5ITENGTkhL",
-            "RBgKIAEoDRIVCg1kaXNwbGF5X3ZhbHVlGAYgASgNEhMKC05MTURFTU9IQk9P",
+            "bnRlcmFjdFRyZWFzdXJlRHVuZ2VvbkdyaWRDc1JlcRIVCg1kaXNwbGF5X3Zh",
+            "bHVlGAcgASgNEhMKC0hGTkhMQ0ZOSEtEGAUgASgNEhMKC05MTURFTU9IQk9P",
             "GAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.InteractTreasureDungeonGridCsReq), global::EggLink.DanhengServer.Proto.InteractTreasureDungeonGridCsReq.Parser, new[]{ "HFNHLCFNHKD", "DisplayValue", "NLMDEMOHBOO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.InteractTreasureDungeonGridCsReq), global::EggLink.DanhengServer.Proto.InteractTreasureDungeonGridCsReq.Parser, new[]{ "DisplayValue", "HFNHLCFNHKD", "NLMDEMOHBOO" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InteractTreasureDungeonGridCsReq(InteractTreasureDungeonGridCsReq other) : this() {
-      hFNHLCFNHKD_ = other.hFNHLCFNHKD_;
       displayValue_ = other.displayValue_;
+      hFNHLCFNHKD_ = other.hFNHLCFNHKD_;
       nLMDEMOHBOO_ = other.nLMDEMOHBOO_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new InteractTreasureDungeonGridCsReq(this);
     }
 
-    /// <summary>Field number for the "HFNHLCFNHKD" field.</summary>
-    public const int HFNHLCFNHKDFieldNumber = 10;
-    private uint hFNHLCFNHKD_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HFNHLCFNHKD {
-      get { return hFNHLCFNHKD_; }
-      set {
-        hFNHLCFNHKD_ = value;
-      }
-    }
-
     /// <summary>Field number for the "display_value" field.</summary>
-    public const int DisplayValueFieldNumber = 6;
+    public const int DisplayValueFieldNumber = 7;
     private uint displayValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -107,6 +95,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return displayValue_; }
       set {
         displayValue_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "HFNHLCFNHKD" field.</summary>
+    public const int HFNHLCFNHKDFieldNumber = 5;
+    private uint hFNHLCFNHKD_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint HFNHLCFNHKD {
+      get { return hFNHLCFNHKD_; }
+      set {
+        hFNHLCFNHKD_ = value;
       }
     }
 
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (HFNHLCFNHKD != other.HFNHLCFNHKD) return false;
       if (DisplayValue != other.DisplayValue) return false;
+      if (HFNHLCFNHKD != other.HFNHLCFNHKD) return false;
       if (NLMDEMOHBOO != other.NLMDEMOHBOO) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HFNHLCFNHKD != 0) hash ^= HFNHLCFNHKD.GetHashCode();
       if (DisplayValue != 0) hash ^= DisplayValue.GetHashCode();
+      if (HFNHLCFNHKD != 0) hash ^= HFNHLCFNHKD.GetHashCode();
       if (NLMDEMOHBOO != 0) hash ^= NLMDEMOHBOO.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -172,13 +172,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(NLMDEMOHBOO);
       }
-      if (DisplayValue != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(DisplayValue);
-      }
       if (HFNHLCFNHKD != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteUInt32(HFNHLCFNHKD);
+      }
+      if (DisplayValue != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(DisplayValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -194,13 +194,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(NLMDEMOHBOO);
       }
-      if (DisplayValue != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(DisplayValue);
-      }
       if (HFNHLCFNHKD != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteUInt32(HFNHLCFNHKD);
+      }
+      if (DisplayValue != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(DisplayValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,11 +212,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HFNHLCFNHKD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HFNHLCFNHKD);
-      }
       if (DisplayValue != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DisplayValue);
+      }
+      if (HFNHLCFNHKD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HFNHLCFNHKD);
       }
       if (NLMDEMOHBOO != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NLMDEMOHBOO);
@@ -233,11 +233,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.HFNHLCFNHKD != 0) {
-        HFNHLCFNHKD = other.HFNHLCFNHKD;
-      }
       if (other.DisplayValue != 0) {
         DisplayValue = other.DisplayValue;
+      }
+      if (other.HFNHLCFNHKD != 0) {
+        HFNHLCFNHKD = other.HFNHLCFNHKD;
       }
       if (other.NLMDEMOHBOO != 0) {
         NLMDEMOHBOO = other.NLMDEMOHBOO;
@@ -261,12 +261,12 @@ namespace EggLink.DanhengServer.Proto {
             NLMDEMOHBOO = input.ReadUInt32();
             break;
           }
-          case 48: {
-            DisplayValue = input.ReadUInt32();
+          case 40: {
+            HFNHLCFNHKD = input.ReadUInt32();
             break;
           }
-          case 80: {
-            HFNHLCFNHKD = input.ReadUInt32();
+          case 56: {
+            DisplayValue = input.ReadUInt32();
             break;
           }
         }
@@ -288,12 +288,12 @@ namespace EggLink.DanhengServer.Proto {
             NLMDEMOHBOO = input.ReadUInt32();
             break;
           }
-          case 48: {
-            DisplayValue = input.ReadUInt32();
+          case 40: {
+            HFNHLCFNHKD = input.ReadUInt32();
             break;
           }
-          case 80: {
-            HFNHLCFNHKD = input.ReadUInt32();
+          case 56: {
+            DisplayValue = input.ReadUInt32();
             break;
           }
         }

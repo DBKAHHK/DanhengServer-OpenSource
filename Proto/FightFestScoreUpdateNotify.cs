@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBGaWdodEZlc3RTY29yZVVwZGF0ZU5vdGlmeS5wcm90byJDChpGaWdodEZl",
-            "c3RTY29yZVVwZGF0ZU5vdGlmeRIQCghzY29yZV9pZBgDIAEoDRITCgtHTlBL",
-            "UExKTEFCTRgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "c3RTY29yZVVwZGF0ZU5vdGlmeRIQCghzY29yZV9pZBgIIAEoDRITCgtHTlBL",
+            "UExKTEFCTRgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 3;
+    public const int ScoreIdFieldNumber = 8;
     private uint scoreId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GNPKPLJLABM" field.</summary>
-    public const int GNPKPLJLABMFieldNumber = 10;
+    public const int GNPKPLJLABMFieldNumber = 3;
     private uint gNPKPLJLABM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ScoreId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(ScoreId);
-      }
       if (GNPKPLJLABM != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(GNPKPLJLABM);
+      }
+      if (ScoreId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ScoreId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(ScoreId);
-      }
       if (GNPKPLJLABM != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(GNPKPLJLABM);
+      }
+      if (ScoreId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -228,11 +228,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 24: {
-            ScoreId = input.ReadUInt32();
+            GNPKPLJLABM = input.ReadUInt32();
             break;
           }
-          case 80: {
-            GNPKPLJLABM = input.ReadUInt32();
+          case 64: {
+            ScoreId = input.ReadUInt32();
             break;
           }
         }
@@ -251,11 +251,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 24: {
-            ScoreId = input.ReadUInt32();
+            GNPKPLJLABM = input.ReadUInt32();
             break;
           }
-          case 80: {
-            GNPKPLJLABM = input.ReadUInt32();
+          case 64: {
+            ScoreId = input.ReadUInt32();
             break;
           }
         }

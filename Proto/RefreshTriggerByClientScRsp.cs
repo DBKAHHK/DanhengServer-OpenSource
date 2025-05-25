@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFSZWZyZXNoVHJpZ2dlckJ5Q2xpZW50U2NSc3AucHJvdG8ieAobUmVmcmVz",
-            "aFRyaWdnZXJCeUNsaWVudFNjUnNwEhcKD3JlZnJlc2hfdHJpZ2dlchgJIAEo",
-            "CBIUCgx0cmlnZ2VyX25hbWUYBiABKAkSGQoRdHJpZ2dlcl9lbnRpdHlfaWQY",
-            "DCABKA0SDwoHcmV0Y29kZRgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "aFRyaWdnZXJCeUNsaWVudFNjUnNwEhkKEXRyaWdnZXJfZW50aXR5X2lkGAwg",
+            "ASgNEhcKD3JlZnJlc2hfdHJpZ2dlchgHIAEoCBIUCgx0cmlnZ2VyX25hbWUY",
+            "BiABKAkSDwoHcmV0Y29kZRgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RefreshTriggerByClientScRsp), global::EggLink.DanhengServer.Proto.RefreshTriggerByClientScRsp.Parser, new[]{ "RefreshTrigger", "TriggerName", "TriggerEntityId", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RefreshTriggerByClientScRsp), global::EggLink.DanhengServer.Proto.RefreshTriggerByClientScRsp.Parser, new[]{ "TriggerEntityId", "RefreshTrigger", "TriggerName", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RefreshTriggerByClientScRsp(RefreshTriggerByClientScRsp other) : this() {
+      triggerEntityId_ = other.triggerEntityId_;
       refreshTrigger_ = other.refreshTrigger_;
       triggerName_ = other.triggerName_;
-      triggerEntityId_ = other.triggerEntityId_;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,8 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new RefreshTriggerByClientScRsp(this);
     }
 
+    /// <summary>Field number for the "trigger_entity_id" field.</summary>
+    public const int TriggerEntityIdFieldNumber = 12;
+    private uint triggerEntityId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TriggerEntityId {
+      get { return triggerEntityId_; }
+      set {
+        triggerEntityId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "refresh_trigger" field.</summary>
-    public const int RefreshTriggerFieldNumber = 9;
+    public const int RefreshTriggerFieldNumber = 7;
     private bool refreshTrigger_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,20 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "trigger_entity_id" field.</summary>
-    public const int TriggerEntityIdFieldNumber = 12;
-    private uint triggerEntityId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TriggerEntityId {
-      get { return triggerEntityId_; }
-      set {
-        triggerEntityId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (TriggerEntityId != other.TriggerEntityId) return false;
       if (RefreshTrigger != other.RefreshTrigger) return false;
       if (TriggerName != other.TriggerName) return false;
-      if (TriggerEntityId != other.TriggerEntityId) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -161,9 +161,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (TriggerEntityId != 0) hash ^= TriggerEntityId.GetHashCode();
       if (RefreshTrigger != false) hash ^= RefreshTrigger.GetHashCode();
       if (TriggerName.Length != 0) hash ^= TriggerName.GetHashCode();
-      if (TriggerEntityId != 0) hash ^= TriggerEntityId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -183,17 +183,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Retcode);
-      }
       if (TriggerName.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(TriggerName);
       }
       if (RefreshTrigger != false) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteBool(RefreshTrigger);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Retcode);
       }
       if (TriggerEntityId != 0) {
         output.WriteRawTag(96);
@@ -209,17 +209,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Retcode);
-      }
       if (TriggerName.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(TriggerName);
       }
       if (RefreshTrigger != false) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteBool(RefreshTrigger);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Retcode);
       }
       if (TriggerEntityId != 0) {
         output.WriteRawTag(96);
@@ -235,14 +235,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (TriggerEntityId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TriggerEntityId);
+      }
       if (RefreshTrigger != false) {
         size += 1 + 1;
       }
       if (TriggerName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TriggerName);
-      }
-      if (TriggerEntityId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TriggerEntityId);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -259,14 +259,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.TriggerEntityId != 0) {
+        TriggerEntityId = other.TriggerEntityId;
+      }
       if (other.RefreshTrigger != false) {
         RefreshTrigger = other.RefreshTrigger;
       }
       if (other.TriggerName.Length != 0) {
         TriggerName = other.TriggerName;
-      }
-      if (other.TriggerEntityId != 0) {
-        TriggerEntityId = other.TriggerEntityId;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -286,16 +286,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
           case 50: {
             TriggerName = input.ReadString();
             break;
           }
-          case 72: {
+          case 56: {
             RefreshTrigger = input.ReadBool();
+            break;
+          }
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
           case 96: {
@@ -317,16 +317,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
           case 50: {
             TriggerName = input.ReadString();
             break;
           }
-          case 72: {
+          case 56: {
             RefreshTrigger = input.ReadBool();
+            break;
+          }
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
           case 96: {

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFTeW5jUm9ndWVFeHBsb3JlV2luU2NOb3RpZnkucHJvdG8iNQobU3luY1Jv",
-            "Z3VlRXhwbG9yZVdpblNjTm90aWZ5EhYKDmlzX2V4cGxvcmVfd2luGAUgASgI",
+            "Z3VlRXhwbG9yZVdpblNjTm90aWZ5EhYKDmlzX2V4cGxvcmVfd2luGAMgASgI",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_explore_win" field.</summary>
-    public const int IsExploreWinFieldNumber = 5;
+    public const int IsExploreWinFieldNumber = 3;
     private bool isExploreWin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsExploreWin != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteBool(IsExploreWin);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsExploreWin != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteBool(IsExploreWin);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 24: {
             IsExploreWin = input.ReadBool();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 24: {
             IsExploreWin = input.ReadBool();
             break;
           }

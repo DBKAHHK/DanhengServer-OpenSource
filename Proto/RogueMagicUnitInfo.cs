@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChhSb2d1ZU1hZ2ljVW5pdEluZm8ucHJvdG8iRQoSUm9ndWVNYWdpY1VuaXRJ",
             "bmZvEhUKDW1hZ2ljX3VuaXRfaWQYCSABKA0SGAoQbWFnaWNfdW5pdF9sZXZl",
-            "bBgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bBgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "magic_unit_level" field.</summary>
-    public const int MagicUnitLevelFieldNumber = 3;
+    public const int MagicUnitLevelFieldNumber = 15;
     private uint magicUnitLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MagicUnitLevel != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MagicUnitLevel);
-      }
       if (MagicUnitId != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(MagicUnitId);
+      }
+      if (MagicUnitLevel != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(MagicUnitLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MagicUnitLevel != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MagicUnitLevel);
-      }
       if (MagicUnitId != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(MagicUnitId);
+      }
+      if (MagicUnitLevel != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(MagicUnitLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            MagicUnitLevel = input.ReadUInt32();
-            break;
-          }
           case 72: {
             MagicUnitId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            MagicUnitLevel = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            MagicUnitLevel = input.ReadUInt32();
-            break;
-          }
           case 72: {
             MagicUnitId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            MagicUnitLevel = input.ReadUInt32();
             break;
           }
         }

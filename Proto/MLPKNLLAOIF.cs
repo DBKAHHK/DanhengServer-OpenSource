@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFNTFBLTkxMQU9JRi5wcm90byJMCgtNTFBLTkxMQU9JRhITCgtFRUdDQkJI",
-            "T1BIRxgFIAEoBRITCgtKUE5GQkZLSFBHRBgDIAEoDRITCgtDRkNMT0dGSlBC",
-            "RBgOIAEoBUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "T1BIRxgJIAEoBRITCgtKUE5GQkZLSFBHRBgBIAEoDRITCgtDRkNMT0dGSlBC",
+            "RBgEIAEoBUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "EEGCBBHOPHG" field.</summary>
-    public const int EEGCBBHOPHGFieldNumber = 5;
+    public const int EEGCBBHOPHGFieldNumber = 9;
     private int eEGCBBHOPHG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JPNFBFKHPGD" field.</summary>
-    public const int JPNFBFKHPGDFieldNumber = 3;
+    public const int JPNFBFKHPGDFieldNumber = 1;
     private uint jPNFBFKHPGD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CFCLOGFJPBD" field.</summary>
-    public const int CFCLOGFJPBDFieldNumber = 14;
+    public const int CFCLOGFJPBDFieldNumber = 4;
     private int cFCLOGFJPBD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (JPNFBFKHPGD != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(JPNFBFKHPGD);
       }
-      if (EEGCBBHOPHG != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(EEGCBBHOPHG);
-      }
       if (CFCLOGFJPBD != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteInt32(CFCLOGFJPBD);
+      }
+      if (EEGCBBHOPHG != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(EEGCBBHOPHG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (JPNFBFKHPGD != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(JPNFBFKHPGD);
       }
-      if (EEGCBBHOPHG != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(EEGCBBHOPHG);
-      }
       if (CFCLOGFJPBD != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteInt32(CFCLOGFJPBD);
+      }
+      if (EEGCBBHOPHG != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(EEGCBBHOPHG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 8: {
             JPNFBFKHPGD = input.ReadUInt32();
             break;
           }
-          case 40: {
-            EEGCBBHOPHG = input.ReadInt32();
+          case 32: {
+            CFCLOGFJPBD = input.ReadInt32();
             break;
           }
-          case 112: {
-            CFCLOGFJPBD = input.ReadInt32();
+          case 72: {
+            EEGCBBHOPHG = input.ReadInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 8: {
             JPNFBFKHPGD = input.ReadUInt32();
             break;
           }
-          case 40: {
-            EEGCBBHOPHG = input.ReadInt32();
+          case 32: {
+            CFCLOGFJPBD = input.ReadInt32();
             break;
           }
-          case 112: {
-            CFCLOGFJPBD = input.ReadInt32();
+          case 72: {
+            EEGCBBHOPHG = input.ReadInt32();
             break;
           }
         }

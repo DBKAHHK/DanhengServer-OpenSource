@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1UYWtlTWFpbEF0dGFjaG1lbnRTY1JzcC5wcm90bxoeQ2xpZW50TWFpbEF0",
             "dGFjaG1lbnRJdGVtLnByb3RvGg5JdGVtTGlzdC5wcm90byKXAQoXVGFrZU1h",
-            "aWxBdHRhY2htZW50U2NSc3ASHQoKYXR0YWNobWVudBgMIAEoCzIJLkl0ZW1M",
-            "aXN0EhkKEXN1Y2NfbWFpbF9pZF9saXN0GAkgAygNEjEKDmZhaWxfbWFpbF9s",
-            "aXN0GAEgAygLMhkuQ2xpZW50TWFpbEF0dGFjaG1lbnRJdGVtEg8KB3JldGNv",
-            "ZGUYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "aWxBdHRhY2htZW50U2NSc3ASHQoKYXR0YWNobWVudBgFIAEoCzIJLkl0ZW1M",
+            "aXN0EjEKDmZhaWxfbWFpbF9saXN0GAIgAygLMhkuQ2xpZW50TWFpbEF0dGFj",
+            "aG1lbnRJdGVtEhkKEXN1Y2NfbWFpbF9pZF9saXN0GA4gAygNEg8KB3JldGNv",
+            "ZGUYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ClientMailAttachmentItemReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeMailAttachmentScRsp), global::EggLink.DanhengServer.Proto.TakeMailAttachmentScRsp.Parser, new[]{ "Attachment", "SuccMailIdList", "FailMailList", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeMailAttachmentScRsp), global::EggLink.DanhengServer.Proto.TakeMailAttachmentScRsp.Parser, new[]{ "Attachment", "FailMailList", "SuccMailIdList", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,8 +77,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeMailAttachmentScRsp(TakeMailAttachmentScRsp other) : this() {
       attachment_ = other.attachment_ != null ? other.attachment_.Clone() : null;
-      succMailIdList_ = other.succMailIdList_.Clone();
       failMailList_ = other.failMailList_.Clone();
+      succMailIdList_ = other.succMailIdList_.Clone();
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -90,7 +90,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "attachment" field.</summary>
-    public const int AttachmentFieldNumber = 12;
+    public const int AttachmentFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.ItemList attachment_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -101,21 +101,10 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "succ_mail_id_list" field.</summary>
-    public const int SuccMailIdListFieldNumber = 9;
-    private static readonly pb::FieldCodec<uint> _repeated_succMailIdList_codec
-        = pb::FieldCodec.ForUInt32(74);
-    private readonly pbc::RepeatedField<uint> succMailIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> SuccMailIdList {
-      get { return succMailIdList_; }
-    }
-
     /// <summary>Field number for the "fail_mail_list" field.</summary>
-    public const int FailMailListFieldNumber = 1;
+    public const int FailMailListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ClientMailAttachmentItem> _repeated_failMailList_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.ClientMailAttachmentItem.Parser);
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.ClientMailAttachmentItem.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ClientMailAttachmentItem> failMailList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ClientMailAttachmentItem>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,8 +112,19 @@ namespace EggLink.DanhengServer.Proto {
       get { return failMailList_; }
     }
 
+    /// <summary>Field number for the "succ_mail_id_list" field.</summary>
+    public const int SuccMailIdListFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_succMailIdList_codec
+        = pb::FieldCodec.ForUInt32(114);
+    private readonly pbc::RepeatedField<uint> succMailIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> SuccMailIdList {
+      get { return succMailIdList_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,8 +151,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(Attachment, other.Attachment)) return false;
-      if(!succMailIdList_.Equals(other.succMailIdList_)) return false;
       if(!failMailList_.Equals(other.failMailList_)) return false;
+      if(!succMailIdList_.Equals(other.succMailIdList_)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -162,8 +162,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (attachment_ != null) hash ^= Attachment.GetHashCode();
-      hash ^= succMailIdList_.GetHashCode();
       hash ^= failMailList_.GetHashCode();
+      hash ^= succMailIdList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -184,15 +184,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       failMailList_.WriteTo(output, _repeated_failMailList_codec);
+      if (attachment_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Attachment);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
       succMailIdList_.WriteTo(output, _repeated_succMailIdList_codec);
-      if (attachment_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(Attachment);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -204,15 +204,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       failMailList_.WriteTo(ref output, _repeated_failMailList_codec);
+      if (attachment_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Attachment);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
       succMailIdList_.WriteTo(ref output, _repeated_succMailIdList_codec);
-      if (attachment_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(Attachment);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -226,8 +226,8 @@ namespace EggLink.DanhengServer.Proto {
       if (attachment_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Attachment);
       }
-      size += succMailIdList_.CalculateSize(_repeated_succMailIdList_codec);
       size += failMailList_.CalculateSize(_repeated_failMailList_codec);
+      size += succMailIdList_.CalculateSize(_repeated_succMailIdList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -249,8 +249,8 @@ namespace EggLink.DanhengServer.Proto {
         }
         Attachment.MergeFrom(other.Attachment);
       }
-      succMailIdList_.Add(other.succMailIdList_);
       failMailList_.Add(other.failMailList_);
+      succMailIdList_.Add(other.succMailIdList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -269,24 +269,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 18: {
             failMailList_.AddEntriesFrom(input, _repeated_failMailList_codec);
             break;
           }
-          case 48: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 74:
-          case 72: {
-            succMailIdList_.AddEntriesFrom(input, _repeated_succMailIdList_codec);
-            break;
-          }
-          case 98: {
+          case 42: {
             if (attachment_ == null) {
               Attachment = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Attachment);
+            break;
+          }
+          case 64: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 114:
+          case 112: {
+            succMailIdList_.AddEntriesFrom(input, _repeated_succMailIdList_codec);
             break;
           }
         }
@@ -304,24 +304,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 18: {
             failMailList_.AddEntriesFrom(ref input, _repeated_failMailList_codec);
             break;
           }
-          case 48: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 74:
-          case 72: {
-            succMailIdList_.AddEntriesFrom(ref input, _repeated_succMailIdList_codec);
-            break;
-          }
-          case 98: {
+          case 42: {
             if (attachment_ == null) {
               Attachment = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Attachment);
+            break;
+          }
+          case 64: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 114:
+          case 112: {
+            succMailIdList_.AddEntriesFrom(ref input, _repeated_succMailIdList_codec);
             break;
           }
         }

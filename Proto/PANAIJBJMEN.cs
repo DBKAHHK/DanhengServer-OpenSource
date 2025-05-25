@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQQU5BSUpCSk1FTi5wcm90byI1CgtQQU5BSUpCSk1FThITCgtCRUxFT0RB",
-            "SUlOQhgMIAEoDRIRCglpc19maW5pc2gYBiABKAhCHqoCG0VnZ0xpbmsuRGFu",
+            "SUlOQhgPIAEoDRIRCglpc19maW5pc2gYAyABKAhCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BELEODAIINB" field.</summary>
-    public const int BELEODAIINBFieldNumber = 12;
+    public const int BELEODAIINBFieldNumber = 15;
     private uint bELEODAIINB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_finish" field.</summary>
-    public const int IsFinishFieldNumber = 6;
+    public const int IsFinishFieldNumber = 3;
     private bool isFinish_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsFinish != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(24);
         output.WriteBool(IsFinish);
       }
       if (BELEODAIINB != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteUInt32(BELEODAIINB);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsFinish != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(24);
         output.WriteBool(IsFinish);
       }
       if (BELEODAIINB != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteUInt32(BELEODAIINB);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 24: {
             IsFinish = input.ReadBool();
             break;
           }
-          case 96: {
+          case 120: {
             BELEODAIINB = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 24: {
             IsFinish = input.ReadBool();
             break;
           }
-          case 96: {
+          case 120: {
             BELEODAIINB = input.ReadUInt32();
             break;
           }

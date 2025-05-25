@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFVcGRhdGVGbG9vclNhdmVkVmFsdWVOb3RpZnkucHJvdG8izQEKG1VwZGF0",
-            "ZUZsb29yU2F2ZWRWYWx1ZU5vdGlmeRJBCgtzYXZlZF92YWx1ZRgIIAMoCzIs",
+            "ZUZsb29yU2F2ZWRWYWx1ZU5vdGlmeRJBCgtzYXZlZF92YWx1ZRgFIAMoCzIs",
             "LlVwZGF0ZUZsb29yU2F2ZWRWYWx1ZU5vdGlmeS5TYXZlZFZhbHVlRW50cnkS",
-            "EAoIcGxhbmVfaWQYDSABKA0SFAoMZGltZW5zaW9uX2lkGAUgASgNEhAKCGZs",
-            "b29yX2lkGAIgASgNGjEKD1NhdmVkVmFsdWVFbnRyeRILCgNrZXkYASABKAkS",
+            "EAoIcGxhbmVfaWQYDCABKA0SEAoIZmxvb3JfaWQYBiABKA0SFAoMZGltZW5z",
+            "aW9uX2lkGAcgASgNGjEKD1NhdmVkVmFsdWVFbnRyeRILCgNrZXkYASABKAkS",
             "DQoFdmFsdWUYAiABKAU6AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateFloorSavedValueNotify), global::EggLink.DanhengServer.Proto.UpdateFloorSavedValueNotify.Parser, new[]{ "SavedValue", "PlaneId", "DimensionId", "FloorId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateFloorSavedValueNotify), global::EggLink.DanhengServer.Proto.UpdateFloorSavedValueNotify.Parser, new[]{ "SavedValue", "PlaneId", "FloorId", "DimensionId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -78,8 +78,8 @@ namespace EggLink.DanhengServer.Proto {
     public UpdateFloorSavedValueNotify(UpdateFloorSavedValueNotify other) : this() {
       savedValue_ = other.savedValue_.Clone();
       planeId_ = other.planeId_;
-      dimensionId_ = other.dimensionId_;
       floorId_ = other.floorId_;
+      dimensionId_ = other.dimensionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,9 +90,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "saved_value" field.</summary>
-    public const int SavedValueFieldNumber = 8;
+    public const int SavedValueFieldNumber = 5;
     private static readonly pbc::MapField<string, int>.Codec _map_savedValue_codec
-        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 66);
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 42);
     private readonly pbc::MapField<string, int> savedValue_ = new pbc::MapField<string, int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -101,7 +101,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "plane_id" field.</summary>
-    public const int PlaneIdFieldNumber = 13;
+    public const int PlaneIdFieldNumber = 12;
     private uint planeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,20 +112,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "dimension_id" field.</summary>
-    public const int DimensionIdFieldNumber = 5;
-    private uint dimensionId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DimensionId {
-      get { return dimensionId_; }
-      set {
-        dimensionId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "floor_id" field.</summary>
-    public const int FloorIdFieldNumber = 2;
+    public const int FloorIdFieldNumber = 6;
     private uint floorId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -133,6 +121,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return floorId_; }
       set {
         floorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dimension_id" field.</summary>
+    public const int DimensionIdFieldNumber = 7;
+    private uint dimensionId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DimensionId {
+      get { return dimensionId_; }
+      set {
+        dimensionId_ = value;
       }
     }
 
@@ -153,8 +153,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (!SavedValue.Equals(other.SavedValue)) return false;
       if (PlaneId != other.PlaneId) return false;
-      if (DimensionId != other.DimensionId) return false;
       if (FloorId != other.FloorId) return false;
+      if (DimensionId != other.DimensionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       hash ^= SavedValue.GetHashCode();
       if (PlaneId != 0) hash ^= PlaneId.GetHashCode();
-      if (DimensionId != 0) hash ^= DimensionId.GetHashCode();
       if (FloorId != 0) hash ^= FloorId.GetHashCode();
+      if (DimensionId != 0) hash ^= DimensionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,17 +184,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      savedValue_.WriteTo(output, _map_savedValue_codec);
       if (FloorId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(48);
         output.WriteUInt32(FloorId);
       }
       if (DimensionId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(56);
         output.WriteUInt32(DimensionId);
       }
-      savedValue_.WriteTo(output, _map_savedValue_codec);
       if (PlaneId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(PlaneId);
       }
       if (_unknownFields != null) {
@@ -207,17 +207,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      savedValue_.WriteTo(ref output, _map_savedValue_codec);
       if (FloorId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(48);
         output.WriteUInt32(FloorId);
       }
       if (DimensionId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(56);
         output.WriteUInt32(DimensionId);
       }
-      savedValue_.WriteTo(ref output, _map_savedValue_codec);
       if (PlaneId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(PlaneId);
       }
       if (_unknownFields != null) {
@@ -234,11 +234,11 @@ namespace EggLink.DanhengServer.Proto {
       if (PlaneId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlaneId);
       }
-      if (DimensionId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DimensionId);
-      }
       if (FloorId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FloorId);
+      }
+      if (DimensionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DimensionId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -256,11 +256,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.PlaneId != 0) {
         PlaneId = other.PlaneId;
       }
-      if (other.DimensionId != 0) {
-        DimensionId = other.DimensionId;
-      }
       if (other.FloorId != 0) {
         FloorId = other.FloorId;
+      }
+      if (other.DimensionId != 0) {
+        DimensionId = other.DimensionId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -277,19 +277,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            FloorId = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            DimensionId = input.ReadUInt32();
-            break;
-          }
-          case 66: {
+          case 42: {
             savedValue_.AddEntriesFrom(input, _map_savedValue_codec);
             break;
           }
-          case 104: {
+          case 48: {
+            FloorId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            DimensionId = input.ReadUInt32();
+            break;
+          }
+          case 96: {
             PlaneId = input.ReadUInt32();
             break;
           }
@@ -308,19 +308,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            FloorId = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            DimensionId = input.ReadUInt32();
-            break;
-          }
-          case 66: {
+          case 42: {
             savedValue_.AddEntriesFrom(ref input, _map_savedValue_codec);
             break;
           }
-          case 104: {
+          case 48: {
+            FloorId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            DimensionId = input.ReadUInt32();
+            break;
+          }
+          case 96: {
             PlaneId = input.ReadUInt32();
             break;
           }

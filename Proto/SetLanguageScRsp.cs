@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZTZXRMYW5ndWFnZVNjUnNwLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8i",
-            "RwoQU2V0TGFuZ3VhZ2VTY1JzcBIiCgtGQURQRElCS05CSRgPIAEoDjINLkxh",
-            "bmd1YWdlVHlwZRIPCgdyZXRjb2RlGAQgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "RwoQU2V0TGFuZ3VhZ2VTY1JzcBIPCgdyZXRjb2RlGAIgASgNEiIKC0ZBRFBE",
+            "SUJLTkJJGAkgASgOMg0uTGFuZ3VhZ2VUeXBlQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetLanguageScRsp), global::EggLink.DanhengServer.Proto.SetLanguageScRsp.Parser, new[]{ "FADPDIBKNBI", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetLanguageScRsp), global::EggLink.DanhengServer.Proto.SetLanguageScRsp.Parser, new[]{ "Retcode", "FADPDIBKNBI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetLanguageScRsp(SetLanguageScRsp other) : this() {
-      fADPDIBKNBI_ = other.fADPDIBKNBI_;
       retcode_ = other.retcode_;
+      fADPDIBKNBI_ = other.fADPDIBKNBI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new SetLanguageScRsp(this);
     }
 
-    /// <summary>Field number for the "FADPDIBKNBI" field.</summary>
-    public const int FADPDIBKNBIFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.LanguageType fADPDIBKNBI_ = global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LanguageType FADPDIBKNBI {
-      get { return fADPDIBKNBI_; }
-      set {
-        fADPDIBKNBI_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
+    public const int RetcodeFieldNumber = 2;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "FADPDIBKNBI" field.</summary>
+    public const int FADPDIBKNBIFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.LanguageType fADPDIBKNBI_ = global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.LanguageType FADPDIBKNBI {
+      get { return fADPDIBKNBI_; }
+      set {
+        fADPDIBKNBI_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FADPDIBKNBI != other.FADPDIBKNBI) return false;
       if (Retcode != other.Retcode) return false;
+      if (FADPDIBKNBI != other.FADPDIBKNBI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FADPDIBKNBI != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) hash ^= FADPDIBKNBI.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (FADPDIBKNBI != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) hash ^= FADPDIBKNBI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
       if (FADPDIBKNBI != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(72);
         output.WriteEnum((int) FADPDIBKNBI);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
       if (FADPDIBKNBI != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(72);
         output.WriteEnum((int) FADPDIBKNBI);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FADPDIBKNBI != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FADPDIBKNBI);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (FADPDIBKNBI != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FADPDIBKNBI);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FADPDIBKNBI != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
-        FADPDIBKNBI = other.FADPDIBKNBI;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
+      }
+      if (other.FADPDIBKNBI != global::EggLink.DanhengServer.Proto.LanguageType.LanguageNone) {
+        FADPDIBKNBI = other.FADPDIBKNBI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 72: {
             FADPDIBKNBI = (global::EggLink.DanhengServer.Proto.LanguageType) input.ReadEnum();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 72: {
             FADPDIBKNBI = (global::EggLink.DanhengServer.Proto.LanguageType) input.ReadEnum();
             break;
           }

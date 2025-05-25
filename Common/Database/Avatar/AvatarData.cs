@@ -177,6 +177,11 @@ public class FormalAvatarInfo : BaseAvatarInfo
             if (HasTakenReward(i))
                 proto.HasTakenPromotionRewardList.Add((uint)i);
 
+        if (GameData.MultiplePathAvatarConfigData.ContainsKey(AvatarId))
+        {
+            proto.AvatarPathId = (uint)AvatarId;
+        }
+
         return proto;
     }
 
@@ -213,7 +218,8 @@ public class FormalAvatarInfo : BaseAvatarInfo
                 CurSp = (uint)GetCurSp(collection.LineupInfo.LineupType != 0),
                 MaxSp = 10000
             },
-            WorldLevel = (uint)collection.PlayerData.WorldLevel
+            WorldLevel = (uint)collection.PlayerData.WorldLevel,
+            AvatarEnhanceId = (uint)GetCurPathInfo().EnhanceId
         };
 
         foreach (var skill in GetCurPathInfo().SkillTree)
@@ -283,6 +289,11 @@ public class FormalAvatarInfo : BaseAvatarInfo
                 PathEquipmentId = (uint)pathInfo.EquipId,
                 DressedSkinId = (uint)pathInfo.Skin
             };
+
+            if (GameData.MultiplePathAvatarConfigData.ContainsKey(AvatarId))
+            {
+                proto.AvatarPathId = (uint)AvatarId;
+            }
 
             foreach (var skill in pathInfo.SkillTree)
                 proto.MultiPathSkillTree.Add(new AvatarSkillTree
@@ -535,6 +546,7 @@ public class PathInfo(int pathId)
     public Dictionary<int, int> Relic { get; set; } = [];
     public ItemData? EquipData { get; set; } // for special avatar
     public Dictionary<int, int> SkillTree { get; set; } = [];
+    public int EnhanceId { get; set; }
 }
 
 public record PlayerDataCollection(PlayerData PlayerData, InventoryData InventoryData, LineupInfo LineupInfo);

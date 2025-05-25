@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChpSb2d1ZVRvdXJuTGluZXVwSW5mby5wcm90bxoSSXRlbUNvc3REYXRhLnBy",
             "b3RvIlgKFFJvZ3VlVG91cm5MaW5ldXBJbmZvEigKEXJvZ3VlX3Jldml2ZV9j",
-            "b3N0GA8gASgLMg0uSXRlbUNvc3REYXRhEhYKDmF2YXRhcl9pZF9saXN0GAQg",
+            "b3N0GAYgASgLMg0uSXRlbUNvc3REYXRhEhYKDmF2YXRhcl9pZF9saXN0GAsg",
             "AygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_revive_cost" field.</summary>
-    public const int RogueReviveCostFieldNumber = 15;
+    public const int RogueReviveCostFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.ItemCostData rogueReviveCost_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_id_list" field.</summary>
-    public const int AvatarIdListFieldNumber = 4;
+    public const int AvatarIdListFieldNumber = 11;
     private static readonly pb::FieldCodec<uint> _repeated_avatarIdList_codec
-        = pb::FieldCodec.ForUInt32(34);
+        = pb::FieldCodec.ForUInt32(90);
     private readonly pbc::RepeatedField<uint> avatarIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      avatarIdList_.WriteTo(output, _repeated_avatarIdList_codec);
       if (rogueReviveCost_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(50);
         output.WriteMessage(RogueReviveCost);
       }
+      avatarIdList_.WriteTo(output, _repeated_avatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      avatarIdList_.WriteTo(ref output, _repeated_avatarIdList_codec);
       if (rogueReviveCost_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(50);
         output.WriteMessage(RogueReviveCost);
       }
+      avatarIdList_.WriteTo(ref output, _repeated_avatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -219,16 +219,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34:
-          case 32: {
-            avatarIdList_.AddEntriesFrom(input, _repeated_avatarIdList_codec);
-            break;
-          }
-          case 122: {
+          case 50: {
             if (rogueReviveCost_ == null) {
               RogueReviveCost = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(RogueReviveCost);
+            break;
+          }
+          case 90:
+          case 88: {
+            avatarIdList_.AddEntriesFrom(input, _repeated_avatarIdList_codec);
             break;
           }
         }
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34:
-          case 32: {
-            avatarIdList_.AddEntriesFrom(ref input, _repeated_avatarIdList_codec);
-            break;
-          }
-          case 122: {
+          case 50: {
             if (rogueReviveCost_ == null) {
               RogueReviveCost = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(RogueReviveCost);
+            break;
+          }
+          case 90:
+          case 88: {
+            avatarIdList_.AddEntriesFrom(ref input, _repeated_avatarIdList_codec);
             break;
           }
         }

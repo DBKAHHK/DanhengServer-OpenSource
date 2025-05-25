@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJVcGRhdGVTZXJ2ZXJMb2dTZXR0aW5nc0NzUmVxLnByb3RvGhdTZXJ2ZXJM",
             "b2dTZXR0aW5ncy5wcm90byJEChxVcGRhdGVTZXJ2ZXJMb2dTZXR0aW5nc0Nz",
-            "UmVxEiQKCHNldHRpbmdzGAUgASgLMhIuU2VydmVyTG9nU2V0dGluZ3NCHqoC",
+            "UmVxEiQKCHNldHRpbmdzGAcgASgLMhIuU2VydmVyTG9nU2V0dGluZ3NCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ServerLogSettingsReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "settings" field.</summary>
-    public const int SettingsFieldNumber = 5;
+    public const int SettingsFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.ServerLogSettings settings_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (settings_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(58);
         output.WriteMessage(Settings);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (settings_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(58);
         output.WriteMessage(Settings);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 58: {
             if (settings_ == null) {
               Settings = new global::EggLink.DanhengServer.Proto.ServerLogSettings();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 58: {
             if (settings_ == null) {
               Settings = new global::EggLink.DanhengServer.Proto.ServerLogSettings();
             }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRHaXZlVXBCb3hpbmdDbHViQ2hhbGxlbmdlQ3NSZXEucHJvdG8iSwoeR2l2",
-            "ZVVwQm94aW5nQ2x1YkNoYWxsZW5nZUNzUmVxEhQKDGNoYWxsZW5nZV9pZBgI",
-            "IAEoDRITCgtQQ1BERkpIREpDQxgGIAEoCEIeqgIbRWdnTGluay5EYW5oZW5n",
+            "ZVVwQm94aW5nQ2x1YkNoYWxsZW5nZUNzUmVxEhQKDGNoYWxsZW5nZV9pZBgM",
+            "IAEoDRITCgtQQ1BERkpIREpDQxgBIAEoCEIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 8;
+    public const int ChallengeIdFieldNumber = 12;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PCPDFJHDJCC" field.</summary>
-    public const int PCPDFJHDJCCFieldNumber = 6;
+    public const int PCPDFJHDJCCFieldNumber = 1;
     private bool pCPDFJHDJCC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PCPDFJHDJCC != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(8);
         output.WriteBool(PCPDFJHDJCC);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(96);
         output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PCPDFJHDJCC != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(8);
         output.WriteBool(PCPDFJHDJCC);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(96);
         output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 8: {
             PCPDFJHDJCC = input.ReadBool();
             break;
           }
-          case 64: {
+          case 96: {
             ChallengeId = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 8: {
             PCPDFJHDJCC = input.ReadBool();
             break;
           }
-          case 64: {
+          case 96: {
             ChallengeId = input.ReadUInt32();
             break;
           }

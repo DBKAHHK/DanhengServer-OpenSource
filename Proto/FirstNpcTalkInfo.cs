@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZGaXJzdE5wY1RhbGtJbmZvLnByb3RvIjMKEEZpcnN0TnBjVGFsa0luZm8S",
-            "DgoGbnBjX2lkGAMgASgNEg8KB2lzX21lZXQYCyABKAhCHqoCG0VnZ0xpbmsu",
+            "DgoGbnBjX2lkGAUgASgNEg8KB2lzX21lZXQYASABKAhCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "npc_id" field.</summary>
-    public const int NpcIdFieldNumber = 3;
+    public const int NpcIdFieldNumber = 5;
     private uint npcId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_meet" field.</summary>
-    public const int IsMeetFieldNumber = 11;
+    public const int IsMeetFieldNumber = 1;
     private bool isMeet_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NpcId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(NpcId);
-      }
       if (IsMeet != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteBool(IsMeet);
+      }
+      if (NpcId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(NpcId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NpcId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(NpcId);
-      }
       if (IsMeet != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteBool(IsMeet);
+      }
+      if (NpcId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(NpcId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            NpcId = input.ReadUInt32();
+          case 8: {
+            IsMeet = input.ReadBool();
             break;
           }
-          case 88: {
-            IsMeet = input.ReadBool();
+          case 40: {
+            NpcId = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            NpcId = input.ReadUInt32();
+          case 8: {
+            IsMeet = input.ReadBool();
             break;
           }
-          case 88: {
-            IsMeet = input.ReadBool();
+          case 40: {
+            NpcId = input.ReadUInt32();
             break;
           }
         }

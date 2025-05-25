@@ -33,7 +33,6 @@ public class CommandHero : ICommand
         var player = arg.Target!.Player!;
         player.Data.CurrentGender = gender;
         await player.ChangeAvatarPathType(8001, MultiPathAvatarTypeEnum.Warrior);
-        await player.SendPacket(new PacketGetMultiPathAvatarInfoScRsp(player));
 
         await arg.SendMsg(I18NManager.Translate("Game.Command.Hero.GenderChanged"));
     }

@@ -6,7 +6,7 @@ namespace EggLink.DanhengServer.Database.Friend;
 public class FriendData : BaseDatabaseDataHelper
 {
 
-    [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
+    [SugarColumn(IsJson = true, ColumnDataType = "TEXT", DefaultValue = "{}")]
     public Dictionary<int, FriendDetailData> FriendList { get; set; } = [];
 
     [SugarColumn(IsJson = true)] public List<int> BlackList { get; set; } = [];

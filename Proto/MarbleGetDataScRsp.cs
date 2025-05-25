@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhNYXJibGVHZXREYXRhU2NSc3AucHJvdG8iigEKEk1hcmJsZUdldERhdGFT",
-            "Y1JzcBITCgtJT0dES0dGREZQQxgBIAMoDRIjChttYXJibGVfZmluaXNoX2xl",
-            "dmVsX2lkX2xpc3QYBCADKA0SDwoHcmV0Y29kZRgIIAEoDRIQCghzY29yZV9p",
-            "ZBgKIAEoBRIXCg9vd25lZF9zZWFsX2xpc3QYDyADKA1CHqoCG0VnZ0xpbmsu",
+            "Y1JzcBIPCgdyZXRjb2RlGA4gASgNEhcKD293bmVkX3NlYWxfbGlzdBgLIAMo",
+            "DRIjChttYXJibGVfZmluaXNoX2xldmVsX2lkX2xpc3QYDyADKA0SEwoLSU9H",
+            "REtHRkRGUEMYCiADKA0SEAoIc2NvcmVfaWQYDCABKAVCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGetDataScRsp), global::EggLink.DanhengServer.Proto.MarbleGetDataScRsp.Parser, new[]{ "IOGDKGFDFPC", "MarbleFinishLevelIdList", "Retcode", "ScoreId", "OwnedSealList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGetDataScRsp), global::EggLink.DanhengServer.Proto.MarbleGetDataScRsp.Parser, new[]{ "Retcode", "OwnedSealList", "MarbleFinishLevelIdList", "IOGDKGFDFPC", "ScoreId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +74,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarbleGetDataScRsp(MarbleGetDataScRsp other) : this() {
-      iOGDKGFDFPC_ = other.iOGDKGFDFPC_.Clone();
-      marbleFinishLevelIdList_ = other.marbleFinishLevelIdList_.Clone();
       retcode_ = other.retcode_;
-      scoreId_ = other.scoreId_;
       ownedSealList_ = other.ownedSealList_.Clone();
+      marbleFinishLevelIdList_ = other.marbleFinishLevelIdList_.Clone();
+      iOGDKGFDFPC_ = other.iOGDKGFDFPC_.Clone();
+      scoreId_ = other.scoreId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,30 +88,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MarbleGetDataScRsp(this);
     }
 
-    /// <summary>Field number for the "IOGDKGFDFPC" field.</summary>
-    public const int IOGDKGFDFPCFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_iOGDKGFDFPC_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> iOGDKGFDFPC_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> IOGDKGFDFPC {
-      get { return iOGDKGFDFPC_; }
-    }
-
-    /// <summary>Field number for the "marble_finish_level_id_list" field.</summary>
-    public const int MarbleFinishLevelIdListFieldNumber = 4;
-    private static readonly pb::FieldCodec<uint> _repeated_marbleFinishLevelIdList_codec
-        = pb::FieldCodec.ForUInt32(34);
-    private readonly pbc::RepeatedField<uint> marbleFinishLevelIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> MarbleFinishLevelIdList {
-      get { return marbleFinishLevelIdList_; }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,8 +100,41 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "owned_seal_list" field.</summary>
+    public const int OwnedSealListFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_ownedSealList_codec
+        = pb::FieldCodec.ForUInt32(90);
+    private readonly pbc::RepeatedField<uint> ownedSealList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> OwnedSealList {
+      get { return ownedSealList_; }
+    }
+
+    /// <summary>Field number for the "marble_finish_level_id_list" field.</summary>
+    public const int MarbleFinishLevelIdListFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_marbleFinishLevelIdList_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> marbleFinishLevelIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> MarbleFinishLevelIdList {
+      get { return marbleFinishLevelIdList_; }
+    }
+
+    /// <summary>Field number for the "IOGDKGFDFPC" field.</summary>
+    public const int IOGDKGFDFPCFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_iOGDKGFDFPC_codec
+        = pb::FieldCodec.ForUInt32(82);
+    private readonly pbc::RepeatedField<uint> iOGDKGFDFPC_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> IOGDKGFDFPC {
+      get { return iOGDKGFDFPC_; }
+    }
+
     /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 10;
+    public const int ScoreIdFieldNumber = 12;
     private int scoreId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -132,17 +143,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         scoreId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "owned_seal_list" field.</summary>
-    public const int OwnedSealListFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_ownedSealList_codec
-        = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> ownedSealList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> OwnedSealList {
-      get { return ownedSealList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -160,11 +160,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!iOGDKGFDFPC_.Equals(other.iOGDKGFDFPC_)) return false;
-      if(!marbleFinishLevelIdList_.Equals(other.marbleFinishLevelIdList_)) return false;
       if (Retcode != other.Retcode) return false;
-      if (ScoreId != other.ScoreId) return false;
       if(!ownedSealList_.Equals(other.ownedSealList_)) return false;
+      if(!marbleFinishLevelIdList_.Equals(other.marbleFinishLevelIdList_)) return false;
+      if(!iOGDKGFDFPC_.Equals(other.iOGDKGFDFPC_)) return false;
+      if (ScoreId != other.ScoreId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= iOGDKGFDFPC_.GetHashCode();
-      hash ^= marbleFinishLevelIdList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
       hash ^= ownedSealList_.GetHashCode();
+      hash ^= marbleFinishLevelIdList_.GetHashCode();
+      hash ^= iOGDKGFDFPC_.GetHashCode();
+      if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -196,16 +196,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       iOGDKGFDFPC_.WriteTo(output, _repeated_iOGDKGFDFPC_codec);
-      marbleFinishLevelIdList_.WriteTo(output, _repeated_marbleFinishLevelIdList_codec);
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
-      }
+      ownedSealList_.WriteTo(output, _repeated_ownedSealList_codec);
       if (ScoreId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteInt32(ScoreId);
       }
-      ownedSealList_.WriteTo(output, _repeated_ownedSealList_codec);
+      if (Retcode != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Retcode);
+      }
+      marbleFinishLevelIdList_.WriteTo(output, _repeated_marbleFinishLevelIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -217,16 +217,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       iOGDKGFDFPC_.WriteTo(ref output, _repeated_iOGDKGFDFPC_codec);
-      marbleFinishLevelIdList_.WriteTo(ref output, _repeated_marbleFinishLevelIdList_codec);
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
-      }
+      ownedSealList_.WriteTo(ref output, _repeated_ownedSealList_codec);
       if (ScoreId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteInt32(ScoreId);
       }
-      ownedSealList_.WriteTo(ref output, _repeated_ownedSealList_codec);
+      if (Retcode != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Retcode);
+      }
+      marbleFinishLevelIdList_.WriteTo(ref output, _repeated_marbleFinishLevelIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -237,15 +237,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += iOGDKGFDFPC_.CalculateSize(_repeated_iOGDKGFDFPC_codec);
-      size += marbleFinishLevelIdList_.CalculateSize(_repeated_marbleFinishLevelIdList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
+      size += ownedSealList_.CalculateSize(_repeated_ownedSealList_codec);
+      size += marbleFinishLevelIdList_.CalculateSize(_repeated_marbleFinishLevelIdList_codec);
+      size += iOGDKGFDFPC_.CalculateSize(_repeated_iOGDKGFDFPC_codec);
       if (ScoreId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ScoreId);
       }
-      size += ownedSealList_.CalculateSize(_repeated_ownedSealList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -258,15 +258,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      iOGDKGFDFPC_.Add(other.iOGDKGFDFPC_);
-      marbleFinishLevelIdList_.Add(other.marbleFinishLevelIdList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      ownedSealList_.Add(other.ownedSealList_);
+      marbleFinishLevelIdList_.Add(other.marbleFinishLevelIdList_);
+      iOGDKGFDFPC_.Add(other.iOGDKGFDFPC_);
       if (other.ScoreId != 0) {
         ScoreId = other.ScoreId;
       }
-      ownedSealList_.Add(other.ownedSealList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -282,27 +282,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
+          case 82:
+          case 80: {
             iOGDKGFDFPC_.AddEntriesFrom(input, _repeated_iOGDKGFDFPC_codec);
             break;
           }
-          case 34:
-          case 32: {
-            marbleFinishLevelIdList_.AddEntriesFrom(input, _repeated_marbleFinishLevelIdList_codec);
+          case 90:
+          case 88: {
+            ownedSealList_.AddEntriesFrom(input, _repeated_ownedSealList_codec);
             break;
           }
-          case 64: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 96: {
             ScoreId = input.ReadInt32();
+            break;
+          }
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
           case 122:
           case 120: {
-            ownedSealList_.AddEntriesFrom(input, _repeated_ownedSealList_codec);
+            marbleFinishLevelIdList_.AddEntriesFrom(input, _repeated_marbleFinishLevelIdList_codec);
             break;
           }
         }
@@ -320,27 +320,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
+          case 82:
+          case 80: {
             iOGDKGFDFPC_.AddEntriesFrom(ref input, _repeated_iOGDKGFDFPC_codec);
             break;
           }
-          case 34:
-          case 32: {
-            marbleFinishLevelIdList_.AddEntriesFrom(ref input, _repeated_marbleFinishLevelIdList_codec);
+          case 90:
+          case 88: {
+            ownedSealList_.AddEntriesFrom(ref input, _repeated_ownedSealList_codec);
             break;
           }
-          case 64: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 96: {
             ScoreId = input.ReadInt32();
+            break;
+          }
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
           case 122:
           case 120: {
-            ownedSealList_.AddEntriesFrom(ref input, _repeated_ownedSealList_codec);
+            marbleFinishLevelIdList_.AddEntriesFrom(ref input, _repeated_marbleFinishLevelIdList_codec);
             break;
           }
         }

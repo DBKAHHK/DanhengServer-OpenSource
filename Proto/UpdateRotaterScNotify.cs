@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChtVcGRhdGVSb3RhdGVyU2NOb3RpZnkucHJvdG8aEVJvdGF0ZXJEYXRhLnBy",
             "b3RvIkAKFVVwZGF0ZVJvdGF0ZXJTY05vdGlmeRInChFyb3RhdGVyX2RhdGFf",
-            "bGlzdBgJIAMoCzIMLlJvdGF0ZXJEYXRhQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "bGlzdBgLIAMoCzIMLlJvdGF0ZXJEYXRhQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rotater_data_list" field.</summary>
-    public const int RotaterDataListFieldNumber = 9;
+    public const int RotaterDataListFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RotaterData> _repeated_rotaterDataList_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.RotaterData.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.RotaterData.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RotaterData> rotaterDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RotaterData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
+          case 90: {
             rotaterDataList_.AddEntriesFrom(input, _repeated_rotaterDataList_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
+          case 90: {
             rotaterDataList_.AddEntriesFrom(ref input, _repeated_rotaterDataList_codec);
             break;
           }

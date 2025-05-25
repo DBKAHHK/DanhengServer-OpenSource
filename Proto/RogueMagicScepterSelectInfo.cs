@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFSb2d1ZU1hZ2ljU2NlcHRlclNlbGVjdEluZm8ucHJvdG8aF1JvZ3VlTWFn",
             "aWNTY2VwdGVyLnByb3RvImIKG1JvZ3VlTWFnaWNTY2VwdGVyU2VsZWN0SW5m",
-            "bxIWCg5zZWxlY3RfaGludF9pZBgCIAEoDRIrCg9zZWxlY3Rfc2NlcHRlcnMY",
-            "DCADKAsyEi5Sb2d1ZU1hZ2ljU2NlcHRlckIeqgIbRWdnTGluay5EYW5oZW5n",
+            "bxIWCg5zZWxlY3RfaGludF9pZBgKIAEoDRIrCg9zZWxlY3Rfc2NlcHRlcnMY",
+            "CyADKAsyEi5Sb2d1ZU1hZ2ljU2NlcHRlckIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicScepterReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 2;
+    public const int SelectHintIdFieldNumber = 10;
     private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_scepters" field.</summary>
-    public const int SelectSceptersFieldNumber = 12;
+    public const int SelectSceptersFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicScepter> _repeated_selectScepters_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.RogueMagicScepter.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.RogueMagicScepter.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicScepter> selectScepters_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicScepter>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (SelectHintId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(80);
         output.WriteUInt32(SelectHintId);
       }
       selectScepters_.WriteTo(output, _repeated_selectScepters_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SelectHintId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(80);
         output.WriteUInt32(SelectHintId);
       }
       selectScepters_.WriteTo(ref output, _repeated_selectScepters_codec);
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 80: {
             SelectHintId = input.ReadUInt32();
             break;
           }
-          case 98: {
+          case 90: {
             selectScepters_.AddEntriesFrom(input, _repeated_selectScepters_codec);
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 80: {
             SelectHintId = input.ReadUInt32();
             break;
           }
-          case 98: {
+          case 90: {
             selectScepters_.AddEntriesFrom(ref input, _repeated_selectScepters_codec);
             break;
           }

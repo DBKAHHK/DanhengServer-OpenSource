@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFDRUVOTEFMUERNSy5wcm90byJHCgtDRUVOTEFMUERNSxIQCghsZXZlbF9p",
-            "ZBgCIAEoDRIRCgltYXhfc2NvcmUYDiABKA0SEwoLQ0VBRE1EQU1ITU8YBiAB",
+            "ZBgPIAEoDRIRCgltYXhfc2NvcmUYAiABKA0SEwoLQ0VBRE1EQU1ITU8YAyAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level_id" field.</summary>
-    public const int LevelIdFieldNumber = 2;
+    public const int LevelIdFieldNumber = 15;
     private uint levelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "max_score" field.</summary>
-    public const int MaxScoreFieldNumber = 14;
+    public const int MaxScoreFieldNumber = 2;
     private uint maxScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CEADMDAMHMO" field.</summary>
-    public const int CEADMDAMHMOFieldNumber = 6;
+    public const int CEADMDAMHMOFieldNumber = 3;
     private uint cEADMDAMHMO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LevelId != 0) {
+      if (MaxScore != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(LevelId);
+        output.WriteUInt32(MaxScore);
       }
       if (CEADMDAMHMO != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(24);
         output.WriteUInt32(CEADMDAMHMO);
       }
-      if (MaxScore != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(MaxScore);
+      if (LevelId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(LevelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LevelId != 0) {
+      if (MaxScore != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(LevelId);
+        output.WriteUInt32(MaxScore);
       }
       if (CEADMDAMHMO != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(24);
         output.WriteUInt32(CEADMDAMHMO);
       }
-      if (MaxScore != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(MaxScore);
+      if (LevelId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(LevelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            LevelId = input.ReadUInt32();
+            MaxScore = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 24: {
             CEADMDAMHMO = input.ReadUInt32();
             break;
           }
-          case 112: {
-            MaxScore = input.ReadUInt32();
+          case 120: {
+            LevelId = input.ReadUInt32();
             break;
           }
         }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            LevelId = input.ReadUInt32();
+            MaxScore = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 24: {
             CEADMDAMHMO = input.ReadUInt32();
             break;
           }
-          case 112: {
-            MaxScore = input.ReadUInt32();
+          case 120: {
+            LevelId = input.ReadUInt32();
             break;
           }
         }

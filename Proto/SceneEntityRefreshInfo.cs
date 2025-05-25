@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxTY2VuZUVudGl0eVJlZnJlc2hJbmZvLnByb3RvGhVTY2VuZUVudGl0eUlu",
             "Zm8ucHJvdG8ifwoWU2NlbmVFbnRpdHlSZWZyZXNoSW5mbxImCgphZGRfZW50",
-            "aXR5GAsgASgLMhAuU2NlbmVFbnRpdHlJbmZvSAASFwoNZGVsZXRlX2VudGl0",
-            "eRgDIAEoDUgAEhUKC01ISE9BQUhER0FPGAwgASgNSABCDQoLRUVPQkNQRUpF",
+            "aXR5GAYgASgLMhAuU2NlbmVFbnRpdHlJbmZvSAASFwoNZGVsZXRlX2VudGl0",
+            "eRgEIAEoDUgAEhUKC01ISE9BQUhER0FPGAwgASgNSABCDQoLRUVPQkNQRUpF",
             "Sk5CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, },
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "add_entity" field.</summary>
-    public const int AddEntityFieldNumber = 11;
+    public const int AddEntityFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.SceneEntityInfo AddEntity {
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "delete_entity" field.</summary>
-    public const int DeleteEntityFieldNumber = 3;
+    public const int DeleteEntityFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint DeleteEntity {
@@ -163,8 +163,8 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "EEOBCPEJEJN" oneof.</summary>
     public enum EEOBCPEJEJNOneofCase {
       None = 0,
-      AddEntity = 11,
-      DeleteEntity = 3,
+      AddEntity = 6,
+      DeleteEntity = 4,
       MHHOAAHDGAO = 12,
     }
     private EEOBCPEJEJNOneofCase eEOBCPEJEJNCase_ = EEOBCPEJEJNOneofCase.None;
@@ -230,11 +230,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (HasDeleteEntity) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt32(DeleteEntity);
       }
       if (eEOBCPEJEJNCase_ == EEOBCPEJEJNOneofCase.AddEntity) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(50);
         output.WriteMessage(AddEntity);
       }
       if (HasMHHOAAHDGAO) {
@@ -252,11 +252,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (HasDeleteEntity) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt32(DeleteEntity);
       }
       if (eEOBCPEJEJNCase_ == EEOBCPEJEJNOneofCase.AddEntity) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(50);
         output.WriteMessage(AddEntity);
       }
       if (HasMHHOAAHDGAO) {
@@ -324,11 +324,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 32: {
             DeleteEntity = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 50: {
             global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
             if (eEOBCPEJEJNCase_ == EEOBCPEJEJNOneofCase.AddEntity) {
               subBuilder.MergeFrom(AddEntity);
@@ -356,11 +356,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 32: {
             DeleteEntity = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 50: {
             global::EggLink.DanhengServer.Proto.SceneEntityInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneEntityInfo();
             if (eEOBCPEJEJNCase_ == EEOBCPEJEJNOneofCase.AddEntity) {
               subBuilder.MergeFrom(AddEntity);

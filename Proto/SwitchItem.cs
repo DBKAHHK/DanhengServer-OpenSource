@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChBTd2l0Y2hJdGVtLnByb3RvIjYKClN3aXRjaEl0ZW0SEwoLZGFpbHlfaW5k",
-            "ZXgYBiABKA0SEwoLRUlORkJHS0VOREgYBCABKAhCHqoCG0VnZ0xpbmsuRGFu",
+            "ZXgYBiABKA0SEwoLRUlORkJHS0VOREgYByABKAhCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "EINFBGKENDH" field.</summary>
-    public const int EINFBGKENDHFieldNumber = 4;
+    public const int EINFBGKENDHFieldNumber = 7;
     private bool eINFBGKENDH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EINFBGKENDH != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(EINFBGKENDH);
-      }
       if (DailyIndex != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(DailyIndex);
+      }
+      if (EINFBGKENDH != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(EINFBGKENDH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EINFBGKENDH != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(EINFBGKENDH);
-      }
       if (DailyIndex != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(DailyIndex);
+      }
+      if (EINFBGKENDH != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(EINFBGKENDH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            EINFBGKENDH = input.ReadBool();
-            break;
-          }
           case 48: {
             DailyIndex = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            EINFBGKENDH = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            EINFBGKENDH = input.ReadBool();
-            break;
-          }
           case 48: {
             DailyIndex = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            EINFBGKENDH = input.ReadBool();
             break;
           }
         }

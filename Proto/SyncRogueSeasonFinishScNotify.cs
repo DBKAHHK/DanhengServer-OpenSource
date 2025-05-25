@@ -25,18 +25,18 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNTeW5jUm9ndWVTZWFzb25GaW5pc2hTY05vdGlmeS5wcm90bxoVUm9ndWVG",
-            "aW5pc2hJbmZvLnByb3RvGhpSb2d1ZVNjb3JlUmV3YXJkSW5mby5wcm90bxoQ",
-            "TGluZXVwSW5mby5wcm90bxoPU2NlbmVJbmZvLnByb3RvItEBCh1TeW5jUm9n",
-            "dWVTZWFzb25GaW5pc2hTY05vdGlmeRITCgtOSU9MREZGRkVMThgDIAEoCBIZ",
-            "CgVzY2VuZRgEIAEoCzIKLlNjZW5lSW5mbxI2Chdyb2d1ZV9zY29yZV9yZXdh",
-            "cmRfaW5mbxgMIAEoCzIVLlJvZ3VlU2NvcmVSZXdhcmRJbmZvEhsKBmxpbmV1",
-            "cBgPIAEoCzILLkxpbmV1cEluZm8SKwoRcm9ndWVfZmluaXNoX2luZm8YASAB",
+            "aW5pc2hJbmZvLnByb3RvGg9TY2VuZUluZm8ucHJvdG8aGlJvZ3VlU2NvcmVS",
+            "ZXdhcmRJbmZvLnByb3RvGhBMaW5ldXBJbmZvLnByb3RvItEBCh1TeW5jUm9n",
+            "dWVTZWFzb25GaW5pc2hTY05vdGlmeRIZCgVzY2VuZRgOIAEoCzIKLlNjZW5l",
+            "SW5mbxI2Chdyb2d1ZV9zY29yZV9yZXdhcmRfaW5mbxgHIAEoCzIVLlJvZ3Vl",
+            "U2NvcmVSZXdhcmRJbmZvEhMKC05JT0xERkZGRUxOGA0gASgIEhsKBmxpbmV1",
+            "cBgFIAEoCzILLkxpbmV1cEluZm8SKwoRcm9ndWVfZmluaXNoX2luZm8YCiAB",
             "KAsyEC5Sb2d1ZUZpbmlzaEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueScoreRewardInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueScoreRewardInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueSeasonFinishScNotify), global::EggLink.DanhengServer.Proto.SyncRogueSeasonFinishScNotify.Parser, new[]{ "NIOLDFFFELN", "Scene", "RogueScoreRewardInfo", "Lineup", "RogueFinishInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueSeasonFinishScNotify), global::EggLink.DanhengServer.Proto.SyncRogueSeasonFinishScNotify.Parser, new[]{ "Scene", "RogueScoreRewardInfo", "NIOLDFFFELN", "Lineup", "RogueFinishInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,9 +78,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncRogueSeasonFinishScNotify(SyncRogueSeasonFinishScNotify other) : this() {
-      nIOLDFFFELN_ = other.nIOLDFFFELN_;
       scene_ = other.scene_ != null ? other.scene_.Clone() : null;
       rogueScoreRewardInfo_ = other.rogueScoreRewardInfo_ != null ? other.rogueScoreRewardInfo_.Clone() : null;
+      nIOLDFFFELN_ = other.nIOLDFFFELN_;
       lineup_ = other.lineup_ != null ? other.lineup_.Clone() : null;
       rogueFinishInfo_ = other.rogueFinishInfo_ != null ? other.rogueFinishInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -92,20 +92,8 @@ namespace EggLink.DanhengServer.Proto {
       return new SyncRogueSeasonFinishScNotify(this);
     }
 
-    /// <summary>Field number for the "NIOLDFFFELN" field.</summary>
-    public const int NIOLDFFFELNFieldNumber = 3;
-    private bool nIOLDFFFELN_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool NIOLDFFFELN {
-      get { return nIOLDFFFELN_; }
-      set {
-        nIOLDFFFELN_ = value;
-      }
-    }
-
     /// <summary>Field number for the "scene" field.</summary>
-    public const int SceneFieldNumber = 4;
+    public const int SceneFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.SceneInfo scene_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -117,7 +105,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_score_reward_info" field.</summary>
-    public const int RogueScoreRewardInfoFieldNumber = 12;
+    public const int RogueScoreRewardInfoFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo rogueScoreRewardInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -128,8 +116,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "NIOLDFFFELN" field.</summary>
+    public const int NIOLDFFFELNFieldNumber = 13;
+    private bool nIOLDFFFELN_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool NIOLDFFFELN {
+      get { return nIOLDFFFELN_; }
+      set {
+        nIOLDFFFELN_ = value;
+      }
+    }
+
     /// <summary>Field number for the "lineup" field.</summary>
-    public const int LineupFieldNumber = 15;
+    public const int LineupFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.LineupInfo lineup_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -141,7 +141,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_finish_info" field.</summary>
-    public const int RogueFinishInfoFieldNumber = 1;
+    public const int RogueFinishInfoFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.RogueFinishInfo rogueFinishInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,9 +167,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NIOLDFFFELN != other.NIOLDFFFELN) return false;
       if (!object.Equals(Scene, other.Scene)) return false;
       if (!object.Equals(RogueScoreRewardInfo, other.RogueScoreRewardInfo)) return false;
+      if (NIOLDFFFELN != other.NIOLDFFFELN) return false;
       if (!object.Equals(Lineup, other.Lineup)) return false;
       if (!object.Equals(RogueFinishInfo, other.RogueFinishInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -179,9 +179,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NIOLDFFFELN != false) hash ^= NIOLDFFFELN.GetHashCode();
       if (scene_ != null) hash ^= Scene.GetHashCode();
       if (rogueScoreRewardInfo_ != null) hash ^= RogueScoreRewardInfo.GetHashCode();
+      if (NIOLDFFFELN != false) hash ^= NIOLDFFFELN.GetHashCode();
       if (lineup_ != null) hash ^= Lineup.GetHashCode();
       if (rogueFinishInfo_ != null) hash ^= RogueFinishInfo.GetHashCode();
       if (_unknownFields != null) {
@@ -202,25 +202,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (lineup_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Lineup);
+      }
+      if (rogueScoreRewardInfo_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(RogueScoreRewardInfo);
+      }
       if (rogueFinishInfo_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(82);
         output.WriteMessage(RogueFinishInfo);
       }
       if (NIOLDFFFELN != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(104);
         output.WriteBool(NIOLDFFFELN);
       }
       if (scene_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(114);
         output.WriteMessage(Scene);
-      }
-      if (rogueScoreRewardInfo_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(RogueScoreRewardInfo);
-      }
-      if (lineup_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(Lineup);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -232,25 +232,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (lineup_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Lineup);
+      }
+      if (rogueScoreRewardInfo_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(RogueScoreRewardInfo);
+      }
       if (rogueFinishInfo_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(82);
         output.WriteMessage(RogueFinishInfo);
       }
       if (NIOLDFFFELN != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(104);
         output.WriteBool(NIOLDFFFELN);
       }
       if (scene_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(114);
         output.WriteMessage(Scene);
-      }
-      if (rogueScoreRewardInfo_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(RogueScoreRewardInfo);
-      }
-      if (lineup_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(Lineup);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -262,14 +262,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NIOLDFFFELN != false) {
-        size += 1 + 1;
-      }
       if (scene_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Scene);
       }
       if (rogueScoreRewardInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueScoreRewardInfo);
+      }
+      if (NIOLDFFFELN != false) {
+        size += 1 + 1;
       }
       if (lineup_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Lineup);
@@ -289,9 +289,6 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NIOLDFFFELN != false) {
-        NIOLDFFFELN = other.NIOLDFFFELN;
-      }
       if (other.scene_ != null) {
         if (scene_ == null) {
           Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
@@ -303,6 +300,9 @@ namespace EggLink.DanhengServer.Proto {
           RogueScoreRewardInfo = new global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo();
         }
         RogueScoreRewardInfo.MergeFrom(other.RogueScoreRewardInfo);
+      }
+      if (other.NIOLDFFFELN != false) {
+        NIOLDFFFELN = other.NIOLDFFFELN;
       }
       if (other.lineup_ != null) {
         if (lineup_ == null) {
@@ -331,36 +331,36 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (rogueFinishInfo_ == null) {
-              RogueFinishInfo = new global::EggLink.DanhengServer.Proto.RogueFinishInfo();
+          case 42: {
+            if (lineup_ == null) {
+              Lineup = new global::EggLink.DanhengServer.Proto.LineupInfo();
             }
-            input.ReadMessage(RogueFinishInfo);
+            input.ReadMessage(Lineup);
             break;
           }
-          case 24: {
-            NIOLDFFFELN = input.ReadBool();
-            break;
-          }
-          case 34: {
-            if (scene_ == null) {
-              Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
-            }
-            input.ReadMessage(Scene);
-            break;
-          }
-          case 98: {
+          case 58: {
             if (rogueScoreRewardInfo_ == null) {
               RogueScoreRewardInfo = new global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo();
             }
             input.ReadMessage(RogueScoreRewardInfo);
             break;
           }
-          case 122: {
-            if (lineup_ == null) {
-              Lineup = new global::EggLink.DanhengServer.Proto.LineupInfo();
+          case 82: {
+            if (rogueFinishInfo_ == null) {
+              RogueFinishInfo = new global::EggLink.DanhengServer.Proto.RogueFinishInfo();
             }
-            input.ReadMessage(Lineup);
+            input.ReadMessage(RogueFinishInfo);
+            break;
+          }
+          case 104: {
+            NIOLDFFFELN = input.ReadBool();
+            break;
+          }
+          case 114: {
+            if (scene_ == null) {
+              Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
+            }
+            input.ReadMessage(Scene);
             break;
           }
         }
@@ -378,36 +378,36 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            if (rogueFinishInfo_ == null) {
-              RogueFinishInfo = new global::EggLink.DanhengServer.Proto.RogueFinishInfo();
+          case 42: {
+            if (lineup_ == null) {
+              Lineup = new global::EggLink.DanhengServer.Proto.LineupInfo();
             }
-            input.ReadMessage(RogueFinishInfo);
+            input.ReadMessage(Lineup);
             break;
           }
-          case 24: {
-            NIOLDFFFELN = input.ReadBool();
-            break;
-          }
-          case 34: {
-            if (scene_ == null) {
-              Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
-            }
-            input.ReadMessage(Scene);
-            break;
-          }
-          case 98: {
+          case 58: {
             if (rogueScoreRewardInfo_ == null) {
               RogueScoreRewardInfo = new global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo();
             }
             input.ReadMessage(RogueScoreRewardInfo);
             break;
           }
-          case 122: {
-            if (lineup_ == null) {
-              Lineup = new global::EggLink.DanhengServer.Proto.LineupInfo();
+          case 82: {
+            if (rogueFinishInfo_ == null) {
+              RogueFinishInfo = new global::EggLink.DanhengServer.Proto.RogueFinishInfo();
             }
-            input.ReadMessage(Lineup);
+            input.ReadMessage(RogueFinishInfo);
+            break;
+          }
+          case 104: {
+            NIOLDFFFELN = input.ReadBool();
+            break;
+          }
+          case 114: {
+            if (scene_ == null) {
+              Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
+            }
+            input.ReadMessage(Scene);
             break;
           }
         }

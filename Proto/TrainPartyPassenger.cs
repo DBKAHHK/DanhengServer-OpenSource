@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlUcmFpblBhcnR5UGFzc2VuZ2VyLnByb3RvImgKE1RyYWluUGFydHlQYXNz",
-            "ZW5nZXISEQoJcmVjb3JkX2lkGAMgASgNEhQKDHBhc3Nlbmdlcl9pZBgNIAEo",
-            "DRITCgtDSU5NTENLQkhJTRgFIAEoCBITCgtQQ0xNTkJJTEFQSBgCIAMoDUIe",
+            "ZW5nZXISEwoLQ0lOTUxDS0JISU0YDCABKAgSEwoLUENMTU5CSUxBUEgYBiAD",
+            "KA0SEQoJcmVjb3JkX2lkGAogASgNEhQKDHBhc3Nlbmdlcl9pZBgLIAEoDUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyPassenger), global::EggLink.DanhengServer.Proto.TrainPartyPassenger.Parser, new[]{ "RecordId", "PassengerId", "CINMLCKBHIM", "PCLMNBILAPH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyPassenger), global::EggLink.DanhengServer.Proto.TrainPartyPassenger.Parser, new[]{ "CINMLCKBHIM", "PCLMNBILAPH", "RecordId", "PassengerId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrainPartyPassenger(TrainPartyPassenger other) : this() {
-      recordId_ = other.recordId_;
-      passengerId_ = other.passengerId_;
       cINMLCKBHIM_ = other.cINMLCKBHIM_;
       pCLMNBILAPH_ = other.pCLMNBILAPH_.Clone();
+      recordId_ = other.recordId_;
+      passengerId_ = other.passengerId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,32 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new TrainPartyPassenger(this);
     }
 
-    /// <summary>Field number for the "record_id" field.</summary>
-    public const int RecordIdFieldNumber = 3;
-    private uint recordId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RecordId {
-      get { return recordId_; }
-      set {
-        recordId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "passenger_id" field.</summary>
-    public const int PassengerIdFieldNumber = 13;
-    private uint passengerId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PassengerId {
-      get { return passengerId_; }
-      set {
-        passengerId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "CINMLCKBHIM" field.</summary>
-    public const int CINMLCKBHIMFieldNumber = 5;
+    public const int CINMLCKBHIMFieldNumber = 12;
     private bool cINMLCKBHIM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,14 +99,38 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PCLMNBILAPH" field.</summary>
-    public const int PCLMNBILAPHFieldNumber = 2;
+    public const int PCLMNBILAPHFieldNumber = 6;
     private static readonly pb::FieldCodec<uint> _repeated_pCLMNBILAPH_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(50);
     private readonly pbc::RepeatedField<uint> pCLMNBILAPH_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> PCLMNBILAPH {
       get { return pCLMNBILAPH_; }
+    }
+
+    /// <summary>Field number for the "record_id" field.</summary>
+    public const int RecordIdFieldNumber = 10;
+    private uint recordId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RecordId {
+      get { return recordId_; }
+      set {
+        recordId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "passenger_id" field.</summary>
+    public const int PassengerIdFieldNumber = 11;
+    private uint passengerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PassengerId {
+      get { return passengerId_; }
+      set {
+        passengerId_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -148,10 +148,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (RecordId != other.RecordId) return false;
-      if (PassengerId != other.PassengerId) return false;
       if (CINMLCKBHIM != other.CINMLCKBHIM) return false;
       if(!pCLMNBILAPH_.Equals(other.pCLMNBILAPH_)) return false;
+      if (RecordId != other.RecordId) return false;
+      if (PassengerId != other.PassengerId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -159,10 +159,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (RecordId != 0) hash ^= RecordId.GetHashCode();
-      if (PassengerId != 0) hash ^= PassengerId.GetHashCode();
       if (CINMLCKBHIM != false) hash ^= CINMLCKBHIM.GetHashCode();
       hash ^= pCLMNBILAPH_.GetHashCode();
+      if (RecordId != 0) hash ^= RecordId.GetHashCode();
+      if (PassengerId != 0) hash ^= PassengerId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,16 +183,16 @@ namespace EggLink.DanhengServer.Proto {
     #else
       pCLMNBILAPH_.WriteTo(output, _repeated_pCLMNBILAPH_codec);
       if (RecordId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(80);
         output.WriteUInt32(RecordId);
       }
-      if (CINMLCKBHIM != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(CINMLCKBHIM);
-      }
       if (PassengerId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(PassengerId);
+      }
+      if (CINMLCKBHIM != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(CINMLCKBHIM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -206,16 +206,16 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       pCLMNBILAPH_.WriteTo(ref output, _repeated_pCLMNBILAPH_codec);
       if (RecordId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(80);
         output.WriteUInt32(RecordId);
       }
-      if (CINMLCKBHIM != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(CINMLCKBHIM);
-      }
       if (PassengerId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(PassengerId);
+      }
+      if (CINMLCKBHIM != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(CINMLCKBHIM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,16 +227,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (CINMLCKBHIM != false) {
+        size += 1 + 1;
+      }
+      size += pCLMNBILAPH_.CalculateSize(_repeated_pCLMNBILAPH_codec);
       if (RecordId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RecordId);
       }
       if (PassengerId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PassengerId);
       }
-      if (CINMLCKBHIM != false) {
-        size += 1 + 1;
-      }
-      size += pCLMNBILAPH_.CalculateSize(_repeated_pCLMNBILAPH_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -249,16 +249,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.CINMLCKBHIM != false) {
+        CINMLCKBHIM = other.CINMLCKBHIM;
+      }
+      pCLMNBILAPH_.Add(other.pCLMNBILAPH_);
       if (other.RecordId != 0) {
         RecordId = other.RecordId;
       }
       if (other.PassengerId != 0) {
         PassengerId = other.PassengerId;
       }
-      if (other.CINMLCKBHIM != false) {
-        CINMLCKBHIM = other.CINMLCKBHIM;
-      }
-      pCLMNBILAPH_.Add(other.pCLMNBILAPH_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -274,21 +274,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
+          case 50:
+          case 48: {
             pCLMNBILAPH_.AddEntriesFrom(input, _repeated_pCLMNBILAPH_codec);
             break;
           }
-          case 24: {
+          case 80: {
             RecordId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            CINMLCKBHIM = input.ReadBool();
+          case 88: {
+            PassengerId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            PassengerId = input.ReadUInt32();
+          case 96: {
+            CINMLCKBHIM = input.ReadBool();
             break;
           }
         }
@@ -306,21 +306,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
+          case 50:
+          case 48: {
             pCLMNBILAPH_.AddEntriesFrom(ref input, _repeated_pCLMNBILAPH_codec);
             break;
           }
-          case 24: {
+          case 80: {
             RecordId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            CINMLCKBHIM = input.ReadBool();
+          case 88: {
+            PassengerId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            PassengerId = input.ReadUInt32();
+          case 96: {
+            CINMLCKBHIM = input.ReadBool();
             break;
           }
         }

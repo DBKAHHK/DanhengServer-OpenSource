@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhTZXRBdmF0YXJQYXRoU2NSc3AucHJvdG8aGU11bHRpUGF0aEF2YXRhclR5",
-            "cGUucHJvdG8iTgoSU2V0QXZhdGFyUGF0aFNjUnNwEicKCWF2YXRhcl9pZBgC",
-            "IAEoDjIULk11bHRpUGF0aEF2YXRhclR5cGUSDwoHcmV0Y29kZRgIIAEoDUIe",
+            "cGUucHJvdG8iTgoSU2V0QXZhdGFyUGF0aFNjUnNwEg8KB3JldGNvZGUYCSAB",
+            "KA0SJwoJYXZhdGFyX2lkGAIgASgOMhQuTXVsdGlQYXRoQXZhdGFyVHlwZUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetAvatarPathScRsp), global::EggLink.DanhengServer.Proto.SetAvatarPathScRsp.Parser, new[]{ "AvatarId", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetAvatarPathScRsp), global::EggLink.DanhengServer.Proto.SetAvatarPathScRsp.Parser, new[]{ "Retcode", "AvatarId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetAvatarPathScRsp(SetAvatarPathScRsp other) : this() {
-      avatarId_ = other.avatarId_;
       retcode_ = other.retcode_;
+      avatarId_ = other.avatarId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,6 +82,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetAvatarPathScRsp Clone() {
       return new SetAvatarPathScRsp(this);
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 9;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
     }
 
     /// <summary>Field number for the "avatar_id" field.</summary>
@@ -93,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return avatarId_; }
       set {
         avatarId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (AvatarId != other.AvatarId) return false;
       if (Retcode != other.Retcode) return false;
+      if (AvatarId != other.AvatarId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (AvatarId != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) hash ^= AvatarId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (AvatarId != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) hash ^= AvatarId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteEnum((int) AvatarId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteEnum((int) AvatarId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (AvatarId != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AvatarId);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (AvatarId != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AvatarId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.AvatarId != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
-        AvatarId = other.AvatarId;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
+      }
+      if (other.AvatarId != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
+        AvatarId = other.AvatarId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             AvatarId = (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) input.ReadEnum();
             break;
           }
-          case 64: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             AvatarId = (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) input.ReadEnum();
             break;
           }
-          case 64: {
+          case 72: {
             Retcode = input.ReadUInt32();
             break;
           }

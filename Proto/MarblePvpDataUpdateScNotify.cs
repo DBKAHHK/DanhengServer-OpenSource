@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFNYXJibGVQdnBEYXRhVXBkYXRlU2NOb3RpZnkucHJvdG8iLwobTWFyYmxl",
-            "UHZwRGF0YVVwZGF0ZVNjTm90aWZ5EhAKCHNjb3JlX2lkGAwgASgFQh6qAhtF",
+            "UHZwRGF0YVVwZGF0ZVNjTm90aWZ5EhAKCHNjb3JlX2lkGA0gASgFQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 12;
+    public const int ScoreIdFieldNumber = 13;
     private int scoreId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ScoreId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteInt32(ScoreId);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ScoreId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteInt32(ScoreId);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
+          case 104: {
             ScoreId = input.ReadInt32();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
+          case 104: {
             ScoreId = input.ReadInt32();
             break;
           }

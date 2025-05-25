@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJSb2d1ZVRvdXJuQ29uZmlybVNldHRsZUNzUmVxLnByb3RvIlAKHFJvZ3Vl",
-            "VG91cm5Db25maXJtU2V0dGxlQ3NSZXESDwoHYXJlYV9pZBgCIAEoDRIMCgRu",
-            "YW1lGAEgASgJEhEKCW1heF90aW1lcxgPIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "VG91cm5Db25maXJtU2V0dGxlQ3NSZXESDAoEbmFtZRgOIAEoCRIPCgdhcmVh",
+            "X2lkGAsgASgNEhEKCW1heF90aW1lcxgPIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournConfirmSettleCsReq), global::EggLink.DanhengServer.Proto.RogueTournConfirmSettleCsReq.Parser, new[]{ "AreaId", "Name", "MaxTimes" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournConfirmSettleCsReq), global::EggLink.DanhengServer.Proto.RogueTournConfirmSettleCsReq.Parser, new[]{ "Name", "AreaId", "MaxTimes" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournConfirmSettleCsReq(RogueTournConfirmSettleCsReq other) : this() {
-      areaId_ = other.areaId_;
       name_ = other.name_;
+      areaId_ = other.areaId_;
       maxTimes_ = other.maxTimes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournConfirmSettleCsReq(this);
     }
 
-    /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 2;
-    private uint areaId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AreaId {
-      get { return areaId_; }
-      set {
-        areaId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
+    public const int NameFieldNumber = 14;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "area_id" field.</summary>
+    public const int AreaIdFieldNumber = 11;
+    private uint areaId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AreaId {
+      get { return areaId_; }
+      set {
+        areaId_ = value;
       }
     }
 
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (AreaId != other.AreaId) return false;
       if (Name != other.Name) return false;
+      if (AreaId != other.AreaId) return false;
       if (MaxTimes != other.MaxTimes) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (AreaId != 0) hash ^= AreaId.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (AreaId != 0) hash ^= AreaId.GetHashCode();
       if (MaxTimes != 0) hash ^= MaxTimes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,13 +167,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
       if (AreaId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(88);
         output.WriteUInt32(AreaId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Name);
       }
       if (MaxTimes != 0) {
         output.WriteRawTag(120);
@@ -189,13 +189,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
       if (AreaId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(88);
         output.WriteUInt32(AreaId);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Name);
       }
       if (MaxTimes != 0) {
         output.WriteRawTag(120);
@@ -211,11 +211,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (AreaId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
-      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (AreaId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
       }
       if (MaxTimes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxTimes);
@@ -232,11 +232,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.AreaId != 0) {
-        AreaId = other.AreaId;
-      }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.AreaId != 0) {
+        AreaId = other.AreaId;
       }
       if (other.MaxTimes != 0) {
         MaxTimes = other.MaxTimes;
@@ -256,12 +256,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Name = input.ReadString();
+          case 88: {
+            AreaId = input.ReadUInt32();
             break;
           }
-          case 16: {
-            AreaId = input.ReadUInt32();
+          case 114: {
+            Name = input.ReadString();
             break;
           }
           case 120: {
@@ -283,12 +283,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            Name = input.ReadString();
+          case 88: {
+            AreaId = input.ReadUInt32();
             break;
           }
-          case 16: {
-            AreaId = input.ReadUInt32();
+          case 114: {
+            Name = input.ReadString();
             break;
           }
           case 120: {

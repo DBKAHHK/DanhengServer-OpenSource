@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhLZXl3b3JkVW5sb2NrVmFsdWUucHJvdG8ilAEKEktleXdvcmRVbmxvY2tW",
-            "YWx1ZRJFChJrZXl3b3JkX3VubG9ja19tYXAYDiADKAsyKS5LZXl3b3JkVW5s",
+            "YWx1ZRJFChJrZXl3b3JkX3VubG9ja19tYXAYAyADKAsyKS5LZXl3b3JkVW5s",
             "b2NrVmFsdWUuS2V5d29yZFVubG9ja01hcEVudHJ5GjcKFUtleXdvcmRVbmxv",
             "Y2tNYXBFbnRyeRILCgNrZXkYASABKA0SDQoFdmFsdWUYAiABKAg6AjgBQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "keyword_unlock_map" field.</summary>
-    public const int KeywordUnlockMapFieldNumber = 14;
+    public const int KeywordUnlockMapFieldNumber = 3;
     private static readonly pbc::MapField<uint, bool>.Codec _map_keywordUnlockMap_codec
-        = new pbc::MapField<uint, bool>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForBool(16, false), 114);
+        = new pbc::MapField<uint, bool>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForBool(16, false), 26);
     private readonly pbc::MapField<uint, bool> keywordUnlockMap_ = new pbc::MapField<uint, bool>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
+          case 26: {
             keywordUnlockMap_.AddEntriesFrom(input, _map_keywordUnlockMap_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
+          case 26: {
             keywordUnlockMap_.AddEntriesFrom(ref input, _map_keywordUnlockMap_codec);
             break;
           }

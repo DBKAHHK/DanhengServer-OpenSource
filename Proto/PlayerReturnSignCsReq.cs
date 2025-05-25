@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtQbGF5ZXJSZXR1cm5TaWduQ3NSZXEucHJvdG8iQQoVUGxheWVyUmV0dXJu",
-            "U2lnbkNzUmVxEhMKC05NS0xFR09NRVBKGAsgAygNEhMKC09QRUVESklISk9Q",
-            "GAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "U2lnbkNzUmVxEhMKC05NS0xFR09NRVBKGAIgAygNEhMKC09QRUVESklISk9Q",
+            "GA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NMKLEGOMEPJ" field.</summary>
-    public const int NMKLEGOMEPJFieldNumber = 11;
+    public const int NMKLEGOMEPJFieldNumber = 2;
     private static readonly pb::FieldCodec<uint> _repeated_nMKLEGOMEPJ_codec
-        = pb::FieldCodec.ForUInt32(90);
+        = pb::FieldCodec.ForUInt32(18);
     private readonly pbc::RepeatedField<uint> nMKLEGOMEPJ_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "OPEEDJIHJOP" field.</summary>
-    public const int OPEEDJIHJOPFieldNumber = 6;
+    public const int OPEEDJIHJOPFieldNumber = 14;
     private uint oPEEDJIHJOP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      nMKLEGOMEPJ_.WriteTo(output, _repeated_nMKLEGOMEPJ_codec);
       if (OPEEDJIHJOP != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(112);
         output.WriteUInt32(OPEEDJIHJOP);
       }
-      nMKLEGOMEPJ_.WriteTo(output, _repeated_nMKLEGOMEPJ_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      nMKLEGOMEPJ_.WriteTo(ref output, _repeated_nMKLEGOMEPJ_codec);
       if (OPEEDJIHJOP != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(112);
         output.WriteUInt32(OPEEDJIHJOP);
       }
-      nMKLEGOMEPJ_.WriteTo(ref output, _repeated_nMKLEGOMEPJ_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            OPEEDJIHJOP = input.ReadUInt32();
+          case 18:
+          case 16: {
+            nMKLEGOMEPJ_.AddEntriesFrom(input, _repeated_nMKLEGOMEPJ_codec);
             break;
           }
-          case 90:
-          case 88: {
-            nMKLEGOMEPJ_.AddEntriesFrom(input, _repeated_nMKLEGOMEPJ_codec);
+          case 112: {
+            OPEEDJIHJOP = input.ReadUInt32();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            OPEEDJIHJOP = input.ReadUInt32();
+          case 18:
+          case 16: {
+            nMKLEGOMEPJ_.AddEntriesFrom(ref input, _repeated_nMKLEGOMEPJ_codec);
             break;
           }
-          case 90:
-          case 88: {
-            nMKLEGOMEPJ_.AddEntriesFrom(ref input, _repeated_nMKLEGOMEPJ_codec);
+          case 112: {
+            OPEEDJIHJOP = input.ReadUInt32();
             break;
           }
         }

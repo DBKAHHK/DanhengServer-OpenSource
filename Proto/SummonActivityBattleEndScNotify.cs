@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVTdW1tb25BY3Rpdml0eUJhdHRsZUVuZFNjTm90aWZ5LnByb3RvImkKH1N1",
-            "bW1vbkFjdGl2aXR5QmF0dGxlRW5kU2NOb3RpZnkSEQoJY3VyX3JvdW5kGAgg",
-            "ASgNEhMKC05FREZJQk9OTEtCGAEgASgNEgwKBHN0YXIYCiABKA0SEAoIZ3Jv",
-            "dXBfaWQYBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "bW1vbkFjdGl2aXR5QmF0dGxlRW5kU2NOb3RpZnkSEQoJY3VyX3JvdW5kGA4g",
+            "ASgNEhMKC05FREZJQk9OTEtCGAwgASgNEhAKCGdyb3VwX2lkGAMgASgNEgwK",
+            "BHN0YXIYBCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SummonActivityBattleEndScNotify), global::EggLink.DanhengServer.Proto.SummonActivityBattleEndScNotify.Parser, new[]{ "CurRound", "NEDFIBONLKB", "Star", "GroupId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SummonActivityBattleEndScNotify), global::EggLink.DanhengServer.Proto.SummonActivityBattleEndScNotify.Parser, new[]{ "CurRound", "NEDFIBONLKB", "GroupId", "Star" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,8 +76,8 @@ namespace EggLink.DanhengServer.Proto {
     public SummonActivityBattleEndScNotify(SummonActivityBattleEndScNotify other) : this() {
       curRound_ = other.curRound_;
       nEDFIBONLKB_ = other.nEDFIBONLKB_;
-      star_ = other.star_;
       groupId_ = other.groupId_;
+      star_ = other.star_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_round" field.</summary>
-    public const int CurRoundFieldNumber = 8;
+    public const int CurRoundFieldNumber = 14;
     private uint curRound_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NEDFIBONLKB" field.</summary>
-    public const int NEDFIBONLKBFieldNumber = 1;
+    public const int NEDFIBONLKBFieldNumber = 12;
     private uint nEDFIBONLKB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,20 +111,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "star" field.</summary>
-    public const int StarFieldNumber = 10;
-    private uint star_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Star {
-      get { return star_; }
-      set {
-        star_ = value;
-      }
-    }
-
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 5;
+    public const int GroupIdFieldNumber = 3;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -132,6 +120,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return groupId_; }
       set {
         groupId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "star" field.</summary>
+    public const int StarFieldNumber = 4;
+    private uint star_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Star {
+      get { return star_; }
+      set {
+        star_ = value;
       }
     }
 
@@ -152,8 +152,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (CurRound != other.CurRound) return false;
       if (NEDFIBONLKB != other.NEDFIBONLKB) return false;
-      if (Star != other.Star) return false;
       if (GroupId != other.GroupId) return false;
+      if (Star != other.Star) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -163,8 +163,8 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (CurRound != 0) hash ^= CurRound.GetHashCode();
       if (NEDFIBONLKB != 0) hash ^= NEDFIBONLKB.GetHashCode();
-      if (Star != 0) hash ^= Star.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
+      if (Star != 0) hash ^= Star.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NEDFIBONLKB != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(NEDFIBONLKB);
-      }
       if (GroupId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(GroupId);
       }
-      if (CurRound != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(CurRound);
-      }
       if (Star != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(32);
         output.WriteUInt32(Star);
+      }
+      if (NEDFIBONLKB != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(NEDFIBONLKB);
+      }
+      if (CurRound != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(CurRound);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NEDFIBONLKB != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(NEDFIBONLKB);
-      }
       if (GroupId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(GroupId);
       }
-      if (CurRound != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(CurRound);
-      }
       if (Star != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(32);
         output.WriteUInt32(Star);
+      }
+      if (NEDFIBONLKB != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(NEDFIBONLKB);
+      }
+      if (CurRound != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(CurRound);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -241,11 +241,11 @@ namespace EggLink.DanhengServer.Proto {
       if (NEDFIBONLKB != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NEDFIBONLKB);
       }
-      if (Star != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Star);
-      }
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
+      }
+      if (Star != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Star);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -265,11 +265,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.NEDFIBONLKB != 0) {
         NEDFIBONLKB = other.NEDFIBONLKB;
       }
-      if (other.Star != 0) {
-        Star = other.Star;
-      }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
+      }
+      if (other.Star != 0) {
+        Star = other.Star;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -286,20 +286,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            NEDFIBONLKB = input.ReadUInt32();
-            break;
-          }
-          case 40: {
+          case 24: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            CurRound = input.ReadUInt32();
+          case 32: {
+            Star = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Star = input.ReadUInt32();
+          case 96: {
+            NEDFIBONLKB = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            CurRound = input.ReadUInt32();
             break;
           }
         }
@@ -317,20 +317,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            NEDFIBONLKB = input.ReadUInt32();
-            break;
-          }
-          case 40: {
+          case 24: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            CurRound = input.ReadUInt32();
+          case 32: {
+            Star = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Star = input.ReadUInt32();
+          case 96: {
+            NEDFIBONLKB = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            CurRound = input.ReadUInt32();
             break;
           }
         }

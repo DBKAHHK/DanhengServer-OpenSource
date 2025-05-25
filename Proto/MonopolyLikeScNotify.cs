@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpNb25vcG9seUxpa2VTY05vdGlmeS5wcm90byJAChRNb25vcG9seUxpa2VT",
-            "Y05vdGlmeRITCgtPRklPREpOTEJFQRgBIAMoDRITCgtIRElMQkRJUEdITxgM",
+            "Y05vdGlmeRITCgtPRklPREpOTEJFQRgBIAMoDRITCgtIRElMQkRJUEdITxgF",
             "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -95,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HDILBDIPGHO" field.</summary>
-    public const int HDILBDIPGHOFieldNumber = 12;
+    public const int HDILBDIPGHOFieldNumber = 5;
     private uint hDILBDIPGHO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       oFIODJNLBEA_.WriteTo(output, _repeated_oFIODJNLBEA_codec);
       if (HDILBDIPGHO != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteUInt32(HDILBDIPGHO);
       }
       if (_unknownFields != null) {
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       oFIODJNLBEA_.WriteTo(ref output, _repeated_oFIODJNLBEA_codec);
       if (HDILBDIPGHO != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteUInt32(HDILBDIPGHO);
       }
       if (_unknownFields != null) {
@@ -220,7 +220,7 @@ namespace EggLink.DanhengServer.Proto {
             oFIODJNLBEA_.AddEntriesFrom(input, _repeated_oFIODJNLBEA_codec);
             break;
           }
-          case 96: {
+          case 40: {
             HDILBDIPGHO = input.ReadUInt32();
             break;
           }
@@ -244,7 +244,7 @@ namespace EggLink.DanhengServer.Proto {
             oFIODJNLBEA_.AddEntriesFrom(ref input, _repeated_oFIODJNLBEA_codec);
             break;
           }
-          case 96: {
+          case 40: {
             HDILBDIPGHO = input.ReadUInt32();
             break;
           }

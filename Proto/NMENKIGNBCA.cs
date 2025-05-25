@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChFOTUVOS0lHTkJDQS5wcm90bxoRRE1KTEtJRkVNTU4ucHJvdG8iRQoLTk1F",
             "TktJR05CQ0ESIQoLSUZOTUJOR0lGUEgYBSABKAsyDC5ETUpMS0lGRU1NThIT",
-            "CgtFRU5KQlBNTkRPTBgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "CgtFRU5KQlBNTkRPTBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DMJLKIFEMMNReflection.Descriptor, },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "EENJBPMNDOL" field.</summary>
-    public const int EENJBPMNDOLFieldNumber = 13;
+    public const int EENJBPMNDOLFieldNumber = 10;
     private uint eENJBPMNDOL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(IFNMBNGIFPH);
       }
       if (EENJBPMNDOL != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteUInt32(EENJBPMNDOL);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(IFNMBNGIFPH);
       }
       if (EENJBPMNDOL != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteUInt32(EENJBPMNDOL);
       }
       if (_unknownFields != null) {
@@ -237,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(IFNMBNGIFPH);
             break;
           }
-          case 104: {
+          case 80: {
             EENJBPMNDOL = input.ReadUInt32();
             break;
           }
@@ -263,7 +263,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(IFNMBNGIFPH);
             break;
           }
-          case 104: {
+          case 80: {
             EENJBPMNDOL = input.ReadUInt32();
             break;
           }

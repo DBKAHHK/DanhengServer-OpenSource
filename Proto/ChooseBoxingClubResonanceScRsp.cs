@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiRDaG9vc2VCb3hpbmdDbHViUmVzb25hbmNlU2NSc3AucHJvdG8aEUZDSUhJ",
             "SkxPTUdBLnByb3RvIlIKHkNob29zZUJveGluZ0NsdWJSZXNvbmFuY2VTY1Jz",
-            "cBIPCgdyZXRjb2RlGAEgASgNEh8KCWNoYWxsZW5nZRgGIAEoCzIMLkZDSUhJ",
+            "cBIPCgdyZXRjb2RlGAEgASgNEh8KCWNoYWxsZW5nZRgHIAEoCzIMLkZDSUhJ",
             "SkxPTUdBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge" field.</summary>
-    public const int ChallengeFieldNumber = 6;
+    public const int ChallengeFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.FCIHIJLOMGA challenge_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (challenge_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(58);
         output.WriteMessage(Challenge);
       }
       if (_unknownFields != null) {
@@ -176,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (challenge_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(58);
         output.WriteMessage(Challenge);
       }
       if (_unknownFields != null) {
@@ -235,7 +235,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 58: {
             if (challenge_ == null) {
               Challenge = new global::EggLink.DanhengServer.Proto.FCIHIJLOMGA();
             }
@@ -261,7 +261,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 58: {
             if (challenge_ == null) {
               Challenge = new global::EggLink.DanhengServer.Proto.FCIHIJLOMGA();
             }

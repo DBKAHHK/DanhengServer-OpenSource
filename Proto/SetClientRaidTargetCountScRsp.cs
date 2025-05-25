@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNTZXRDbGllbnRSYWlkVGFyZ2V0Q291bnRTY1JzcC5wcm90byJXCh1TZXRD",
-            "bGllbnRSYWlkVGFyZ2V0Q291bnRTY1JzcBITCgtETU1QUEtNSlBNTRgJIAEo",
-            "DRIQCghwcm9ncmVzcxgHIAEoDRIPCgdyZXRjb2RlGAQgASgNQh6qAhtFZ2dM",
+            "bGllbnRSYWlkVGFyZ2V0Q291bnRTY1JzcBITCgtETU1QUEtNSlBNTRgIIAEo",
+            "DRIQCghwcm9ncmVzcxgPIAEoDRIPCgdyZXRjb2RlGAMgASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DMMPPKMJPMM" field.</summary>
-    public const int DMMPPKMJPMMFieldNumber = 9;
+    public const int DMMPPKMJPMMFieldNumber = 8;
     private uint dMMPPKMJPMM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "progress" field.</summary>
-    public const int ProgressFieldNumber = 7;
+    public const int ProgressFieldNumber = 15;
     private uint progress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
+    public const int RetcodeFieldNumber = 3;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      if (Progress != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Progress);
-      }
       if (DMMPPKMJPMM != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(DMMPPKMJPMM);
+      }
+      if (Progress != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Progress);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      if (Progress != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Progress);
-      }
       if (DMMPPKMJPMM != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(DMMPPKMJPMM);
+      }
+      if (Progress != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Progress);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Progress = input.ReadUInt32();
+          case 64: {
+            DMMPPKMJPMM = input.ReadUInt32();
             break;
           }
-          case 72: {
-            DMMPPKMJPMM = input.ReadUInt32();
+          case 120: {
+            Progress = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 56: {
-            Progress = input.ReadUInt32();
+          case 64: {
+            DMMPPKMJPMM = input.ReadUInt32();
             break;
           }
-          case 72: {
-            DMMPPKMJPMM = input.ReadUInt32();
+          case 120: {
+            Progress = input.ReadUInt32();
             break;
           }
         }

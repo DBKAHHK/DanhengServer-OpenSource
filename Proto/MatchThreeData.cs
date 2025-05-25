@@ -26,19 +26,19 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChRNYXRjaFRocmVlRGF0YS5wcm90bxoYTWF0Y2hUaHJlZUJpcmRJbmZvLnBy",
             "b3RvGiJNYXRjaFRocmVlRmluaXNoZWRMZXZlbEluZm9zLnByb3RvIs4CCg5N",
-            "YXRjaFRocmVlRGF0YRI1CgtJTEJIRExNTE1DSxgLIAMoCzIgLk1hdGNoVGhy",
-            "ZWVEYXRhLklMQkhETE1MTUNLRW50cnkSLgoRYmlyZF9yZWNvcmRfaW5mb3MY",
-            "AyADKAsyEy5NYXRjaFRocmVlQmlyZEluZm8SNgoPZmluaXNoZWRfbGV2ZWxz",
-            "GA8gAygLMh0uTWF0Y2hUaHJlZUZpbmlzaGVkTGV2ZWxJbmZvcxI1CgtCRUdN",
-            "RklBUEhMTRgBIAMoCzIgLk1hdGNoVGhyZWVEYXRhLkJFR01GSUFQSExNRW50",
-            "cnkaMgoQSUxCSERMTUxNQ0tFbnRyeRILCgNrZXkYASABKA0SDQoFdmFsdWUY",
+            "YXRjaFRocmVlRGF0YRIuChFiaXJkX3JlY29yZF9pbmZvcxgGIAMoCzITLk1h",
+            "dGNoVGhyZWVCaXJkSW5mbxI1CgtJTEJIRExNTE1DSxgPIAMoCzIgLk1hdGNo",
+            "VGhyZWVEYXRhLklMQkhETE1MTUNLRW50cnkSNQoLQkVHTUZJQVBITE0YCCAD",
+            "KAsyIC5NYXRjaFRocmVlRGF0YS5CRUdNRklBUEhMTUVudHJ5EjYKD2Zpbmlz",
+            "aGVkX2xldmVscxgDIAMoCzIdLk1hdGNoVGhyZWVGaW5pc2hlZExldmVsSW5m",
+            "b3MaMgoQSUxCSERMTUxNQ0tFbnRyeRILCgNrZXkYASABKA0SDQoFdmFsdWUY",
             "AiABKA06AjgBGjIKEEJFR01GSUFQSExNRW50cnkSCwoDa2V5GAEgASgNEg0K",
             "BXZhbHVlGAIgASgNOgI4AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MatchThreeBirdInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MatchThreeFinishedLevelInfosReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeData), global::EggLink.DanhengServer.Proto.MatchThreeData.Parser, new[]{ "ILBHDLMLMCK", "BirdRecordInfos", "FinishedLevels", "BEGMFIAPHLM" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeData), global::EggLink.DanhengServer.Proto.MatchThreeData.Parser, new[]{ "BirdRecordInfos", "ILBHDLMLMCK", "BEGMFIAPHLM", "FinishedLevels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -80,10 +80,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MatchThreeData(MatchThreeData other) : this() {
-      iLBHDLMLMCK_ = other.iLBHDLMLMCK_.Clone();
       birdRecordInfos_ = other.birdRecordInfos_.Clone();
-      finishedLevels_ = other.finishedLevels_.Clone();
+      iLBHDLMLMCK_ = other.iLBHDLMLMCK_.Clone();
       bEGMFIAPHLM_ = other.bEGMFIAPHLM_.Clone();
+      finishedLevels_ = other.finishedLevels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -93,21 +93,10 @@ namespace EggLink.DanhengServer.Proto {
       return new MatchThreeData(this);
     }
 
-    /// <summary>Field number for the "ILBHDLMLMCK" field.</summary>
-    public const int ILBHDLMLMCKFieldNumber = 11;
-    private static readonly pbc::MapField<uint, uint>.Codec _map_iLBHDLMLMCK_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 90);
-    private readonly pbc::MapField<uint, uint> iLBHDLMLMCK_ = new pbc::MapField<uint, uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, uint> ILBHDLMLMCK {
-      get { return iLBHDLMLMCK_; }
-    }
-
     /// <summary>Field number for the "bird_record_infos" field.</summary>
-    public const int BirdRecordInfosFieldNumber = 3;
+    public const int BirdRecordInfosFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MatchThreeBirdInfo> _repeated_birdRecordInfos_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.MatchThreeBirdInfo.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.MatchThreeBirdInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MatchThreeBirdInfo> birdRecordInfos_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MatchThreeBirdInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -115,26 +104,37 @@ namespace EggLink.DanhengServer.Proto {
       get { return birdRecordInfos_; }
     }
 
-    /// <summary>Field number for the "finished_levels" field.</summary>
-    public const int FinishedLevelsFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MatchThreeFinishedLevelInfos> _repeated_finishedLevels_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.MatchThreeFinishedLevelInfos.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MatchThreeFinishedLevelInfos> finishedLevels_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MatchThreeFinishedLevelInfos>();
+    /// <summary>Field number for the "ILBHDLMLMCK" field.</summary>
+    public const int ILBHDLMLMCKFieldNumber = 15;
+    private static readonly pbc::MapField<uint, uint>.Codec _map_iLBHDLMLMCK_codec
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 122);
+    private readonly pbc::MapField<uint, uint> iLBHDLMLMCK_ = new pbc::MapField<uint, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MatchThreeFinishedLevelInfos> FinishedLevels {
-      get { return finishedLevels_; }
+    public pbc::MapField<uint, uint> ILBHDLMLMCK {
+      get { return iLBHDLMLMCK_; }
     }
 
     /// <summary>Field number for the "BEGMFIAPHLM" field.</summary>
-    public const int BEGMFIAPHLMFieldNumber = 1;
+    public const int BEGMFIAPHLMFieldNumber = 8;
     private static readonly pbc::MapField<uint, uint>.Codec _map_bEGMFIAPHLM_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 10);
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 66);
     private readonly pbc::MapField<uint, uint> bEGMFIAPHLM_ = new pbc::MapField<uint, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<uint, uint> BEGMFIAPHLM {
       get { return bEGMFIAPHLM_; }
+    }
+
+    /// <summary>Field number for the "finished_levels" field.</summary>
+    public const int FinishedLevelsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MatchThreeFinishedLevelInfos> _repeated_finishedLevels_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.MatchThreeFinishedLevelInfos.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MatchThreeFinishedLevelInfos> finishedLevels_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MatchThreeFinishedLevelInfos>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MatchThreeFinishedLevelInfos> FinishedLevels {
+      get { return finishedLevels_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -152,10 +152,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!ILBHDLMLMCK.Equals(other.ILBHDLMLMCK)) return false;
       if(!birdRecordInfos_.Equals(other.birdRecordInfos_)) return false;
-      if(!finishedLevels_.Equals(other.finishedLevels_)) return false;
+      if (!ILBHDLMLMCK.Equals(other.ILBHDLMLMCK)) return false;
       if (!BEGMFIAPHLM.Equals(other.BEGMFIAPHLM)) return false;
+      if(!finishedLevels_.Equals(other.finishedLevels_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -163,10 +163,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= ILBHDLMLMCK.GetHashCode();
       hash ^= birdRecordInfos_.GetHashCode();
-      hash ^= finishedLevels_.GetHashCode();
+      hash ^= ILBHDLMLMCK.GetHashCode();
       hash ^= BEGMFIAPHLM.GetHashCode();
+      hash ^= finishedLevels_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -185,10 +185,10 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      bEGMFIAPHLM_.WriteTo(output, _map_bEGMFIAPHLM_codec);
-      birdRecordInfos_.WriteTo(output, _repeated_birdRecordInfos_codec);
-      iLBHDLMLMCK_.WriteTo(output, _map_iLBHDLMLMCK_codec);
       finishedLevels_.WriteTo(output, _repeated_finishedLevels_codec);
+      birdRecordInfos_.WriteTo(output, _repeated_birdRecordInfos_codec);
+      bEGMFIAPHLM_.WriteTo(output, _map_bEGMFIAPHLM_codec);
+      iLBHDLMLMCK_.WriteTo(output, _map_iLBHDLMLMCK_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -199,10 +199,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      bEGMFIAPHLM_.WriteTo(ref output, _map_bEGMFIAPHLM_codec);
-      birdRecordInfos_.WriteTo(ref output, _repeated_birdRecordInfos_codec);
-      iLBHDLMLMCK_.WriteTo(ref output, _map_iLBHDLMLMCK_codec);
       finishedLevels_.WriteTo(ref output, _repeated_finishedLevels_codec);
+      birdRecordInfos_.WriteTo(ref output, _repeated_birdRecordInfos_codec);
+      bEGMFIAPHLM_.WriteTo(ref output, _map_bEGMFIAPHLM_codec);
+      iLBHDLMLMCK_.WriteTo(ref output, _map_iLBHDLMLMCK_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -213,10 +213,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += iLBHDLMLMCK_.CalculateSize(_map_iLBHDLMLMCK_codec);
       size += birdRecordInfos_.CalculateSize(_repeated_birdRecordInfos_codec);
-      size += finishedLevels_.CalculateSize(_repeated_finishedLevels_codec);
+      size += iLBHDLMLMCK_.CalculateSize(_map_iLBHDLMLMCK_codec);
       size += bEGMFIAPHLM_.CalculateSize(_map_bEGMFIAPHLM_codec);
+      size += finishedLevels_.CalculateSize(_repeated_finishedLevels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -229,10 +229,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      iLBHDLMLMCK_.MergeFrom(other.iLBHDLMLMCK_);
       birdRecordInfos_.Add(other.birdRecordInfos_);
-      finishedLevels_.Add(other.finishedLevels_);
+      iLBHDLMLMCK_.MergeFrom(other.iLBHDLMLMCK_);
       bEGMFIAPHLM_.MergeFrom(other.bEGMFIAPHLM_);
+      finishedLevels_.Add(other.finishedLevels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -248,20 +248,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            bEGMFIAPHLM_.AddEntriesFrom(input, _map_bEGMFIAPHLM_codec);
+          case 26: {
+            finishedLevels_.AddEntriesFrom(input, _repeated_finishedLevels_codec);
             break;
           }
-          case 26: {
+          case 50: {
             birdRecordInfos_.AddEntriesFrom(input, _repeated_birdRecordInfos_codec);
             break;
           }
-          case 90: {
-            iLBHDLMLMCK_.AddEntriesFrom(input, _map_iLBHDLMLMCK_codec);
+          case 66: {
+            bEGMFIAPHLM_.AddEntriesFrom(input, _map_bEGMFIAPHLM_codec);
             break;
           }
           case 122: {
-            finishedLevels_.AddEntriesFrom(input, _repeated_finishedLevels_codec);
+            iLBHDLMLMCK_.AddEntriesFrom(input, _map_iLBHDLMLMCK_codec);
             break;
           }
         }
@@ -279,20 +279,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            bEGMFIAPHLM_.AddEntriesFrom(ref input, _map_bEGMFIAPHLM_codec);
+          case 26: {
+            finishedLevels_.AddEntriesFrom(ref input, _repeated_finishedLevels_codec);
             break;
           }
-          case 26: {
+          case 50: {
             birdRecordInfos_.AddEntriesFrom(ref input, _repeated_birdRecordInfos_codec);
             break;
           }
-          case 90: {
-            iLBHDLMLMCK_.AddEntriesFrom(ref input, _map_iLBHDLMLMCK_codec);
+          case 66: {
+            bEGMFIAPHLM_.AddEntriesFrom(ref input, _map_bEGMFIAPHLM_codec);
             break;
           }
           case 122: {
-            finishedLevels_.AddEntriesFrom(ref input, _repeated_finishedLevels_codec);
+            iLBHDLMLMCK_.AddEntriesFrom(ref input, _map_iLBHDLMLMCK_codec);
             break;
           }
         }

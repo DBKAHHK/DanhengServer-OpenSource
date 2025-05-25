@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZBc3Npc3RTaW1wbGVJbmZvLnByb3RvIloKEEFzc2lzdFNpbXBsZUluZm8S",
-            "DQoFbGV2ZWwYDiABKA0SEQoJYXZhdGFyX2lkGAsgASgNEhcKD2RyZXNzZWRf",
-            "c2tpbl9pZBgGIAEoDRILCgNwb3MYDCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "EQoJYXZhdGFyX2lkGAwgASgNEgsKA3BvcxgDIAEoDRINCgVsZXZlbBgEIAEo",
+            "DRIXCg9kcmVzc2VkX3NraW5faWQYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AssistSimpleInfo), global::EggLink.DanhengServer.Proto.AssistSimpleInfo.Parser, new[]{ "Level", "AvatarId", "DressedSkinId", "Pos" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AssistSimpleInfo), global::EggLink.DanhengServer.Proto.AssistSimpleInfo.Parser, new[]{ "AvatarId", "Pos", "Level", "DressedSkinId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AssistSimpleInfo(AssistSimpleInfo other) : this() {
-      level_ = other.level_;
       avatarId_ = other.avatarId_;
-      dressedSkinId_ = other.dressedSkinId_;
       pos_ = other.pos_;
+      level_ = other.level_;
+      dressedSkinId_ = other.dressedSkinId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new AssistSimpleInfo(this);
     }
 
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 14;
-    private uint level_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Level {
-      get { return level_; }
-      set {
-        level_ = value;
-      }
-    }
-
     /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 11;
+    public const int AvatarIdFieldNumber = 12;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,20 +98,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "dressed_skin_id" field.</summary>
-    public const int DressedSkinIdFieldNumber = 6;
-    private uint dressedSkinId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DressedSkinId {
-      get { return dressedSkinId_; }
-      set {
-        dressedSkinId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "pos" field.</summary>
-    public const int PosFieldNumber = 12;
+    public const int PosFieldNumber = 3;
     private uint pos_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +107,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return pos_; }
       set {
         pos_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 4;
+    private uint level_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dressed_skin_id" field.</summary>
+    public const int DressedSkinIdFieldNumber = 10;
+    private uint dressedSkinId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DressedSkinId {
+      get { return dressedSkinId_; }
+      set {
+        dressedSkinId_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Level != other.Level) return false;
       if (AvatarId != other.AvatarId) return false;
-      if (DressedSkinId != other.DressedSkinId) return false;
       if (Pos != other.Pos) return false;
+      if (Level != other.Level) return false;
+      if (DressedSkinId != other.DressedSkinId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Level != 0) hash ^= Level.GetHashCode();
       if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
-      if (DressedSkinId != 0) hash ^= DressedSkinId.GetHashCode();
       if (Pos != 0) hash ^= Pos.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
+      if (DressedSkinId != 0) hash ^= DressedSkinId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DressedSkinId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(DressedSkinId);
-      }
-      if (AvatarId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(AvatarId);
-      }
       if (Pos != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(Pos);
       }
       if (Level != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteUInt32(Level);
+      }
+      if (DressedSkinId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(DressedSkinId);
+      }
+      if (AvatarId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DressedSkinId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(DressedSkinId);
-      }
-      if (AvatarId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(AvatarId);
-      }
       if (Pos != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(Pos);
       }
       if (Level != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteUInt32(Level);
+      }
+      if (DressedSkinId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(DressedSkinId);
+      }
+      if (AvatarId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Level != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
-      }
       if (AvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
       }
-      if (DressedSkinId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressedSkinId);
-      }
       if (Pos != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pos);
+      }
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      }
+      if (DressedSkinId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressedSkinId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Level != 0) {
-        Level = other.Level;
-      }
       if (other.AvatarId != 0) {
         AvatarId = other.AvatarId;
       }
-      if (other.DressedSkinId != 0) {
-        DressedSkinId = other.DressedSkinId;
-      }
       if (other.Pos != 0) {
         Pos = other.Pos;
+      }
+      if (other.Level != 0) {
+        Level = other.Level;
+      }
+      if (other.DressedSkinId != 0) {
+        DressedSkinId = other.DressedSkinId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            DressedSkinId = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            AvatarId = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 24: {
             Pos = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 32: {
             Level = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            DressedSkinId = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            AvatarId = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            DressedSkinId = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            AvatarId = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 24: {
             Pos = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 32: {
             Level = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            DressedSkinId = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            AvatarId = input.ReadUInt32();
             break;
           }
         }

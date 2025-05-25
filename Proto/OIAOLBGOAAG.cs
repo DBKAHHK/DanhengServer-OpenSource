@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChFPSUFPTEJHT0FBRy5wcm90bxogUm9ndWVTeW5jQ29udGV4dEJvYXJkRXZl",
             "bnQucHJvdG8aEUNGRUxMQ1BNT05ILnByb3RvImIKC09JQU9MQkdPQUFHEjAK",
-            "C05PQUVETk5JQkFGGAsgASgLMhsuUm9ndWVTeW5jQ29udGV4dEJvYXJkRXZl",
-            "bnQSIQoLSEhQSExFR0NMRE0YBSABKAsyDC5DRkVMTENQTU9OSEIeqgIbRWdn",
+            "C05PQUVETk5JQkFGGAQgASgLMhsuUm9ndWVTeW5jQ29udGV4dEJvYXJkRXZl",
+            "bnQSIQoLSEhQSExFR0NMRE0YDSABKAsyDC5DRkVMTENQTU9OSEIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueSyncContextBoardEventReflection.Descriptor, global::EggLink.DanhengServer.Proto.CFELLCPMONHReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NOAEDNNIBAF" field.</summary>
-    public const int NOAEDNNIBAFFieldNumber = 11;
+    public const int NOAEDNNIBAFFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.RogueSyncContextBoardEvent nOAEDNNIBAF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HHPHLEGCLDM" field.</summary>
-    public const int HHPHLEGCLDMFieldNumber = 5;
+    public const int HHPHLEGCLDMFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.CFELLCPMONH hHPHLEGCLDM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (hHPHLEGCLDM_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(HHPHLEGCLDM);
-      }
       if (nOAEDNNIBAF_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(34);
         output.WriteMessage(NOAEDNNIBAF);
+      }
+      if (hHPHLEGCLDM_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(HHPHLEGCLDM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (hHPHLEGCLDM_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(HHPHLEGCLDM);
-      }
       if (nOAEDNNIBAF_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(34);
         output.WriteMessage(NOAEDNNIBAF);
+      }
+      if (hHPHLEGCLDM_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(HHPHLEGCLDM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,18 +234,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
-            if (hHPHLEGCLDM_ == null) {
-              HHPHLEGCLDM = new global::EggLink.DanhengServer.Proto.CFELLCPMONH();
-            }
-            input.ReadMessage(HHPHLEGCLDM);
-            break;
-          }
-          case 90: {
+          case 34: {
             if (nOAEDNNIBAF_ == null) {
               NOAEDNNIBAF = new global::EggLink.DanhengServer.Proto.RogueSyncContextBoardEvent();
             }
             input.ReadMessage(NOAEDNNIBAF);
+            break;
+          }
+          case 106: {
+            if (hHPHLEGCLDM_ == null) {
+              HHPHLEGCLDM = new global::EggLink.DanhengServer.Proto.CFELLCPMONH();
+            }
+            input.ReadMessage(HHPHLEGCLDM);
             break;
           }
         }
@@ -263,18 +263,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
-            if (hHPHLEGCLDM_ == null) {
-              HHPHLEGCLDM = new global::EggLink.DanhengServer.Proto.CFELLCPMONH();
-            }
-            input.ReadMessage(HHPHLEGCLDM);
-            break;
-          }
-          case 90: {
+          case 34: {
             if (nOAEDNNIBAF_ == null) {
               NOAEDNNIBAF = new global::EggLink.DanhengServer.Proto.RogueSyncContextBoardEvent();
             }
             input.ReadMessage(NOAEDNNIBAF);
+            break;
+          }
+          case 106: {
+            if (hHPHLEGCLDM_ == null) {
+              HHPHLEGCLDM = new global::EggLink.DanhengServer.Proto.CFELLCPMONH();
+            }
+            input.ReadMessage(HHPHLEGCLDM);
             break;
           }
         }

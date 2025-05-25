@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxBZXRoZXJEaXZpZGVMaW5ldXBJbmZvLnByb3RvIkIKFkFldGhlckRpdmlk",
-            "ZUxpbmV1cEluZm8SDAoEc2xvdBgDIAEoDRIaChJhZXRoZXJfYXZhdGFyX2xp",
-            "c3QYASADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "ZUxpbmV1cEluZm8SGgoSYWV0aGVyX2F2YXRhcl9saXN0GAEgAygNEgwKBHNs",
+            "b3QYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AetherDivideLineupInfo), global::EggLink.DanhengServer.Proto.AetherDivideLineupInfo.Parser, new[]{ "Slot", "AetherAvatarList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AetherDivideLineupInfo), global::EggLink.DanhengServer.Proto.AetherDivideLineupInfo.Parser, new[]{ "AetherAvatarList", "Slot" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AetherDivideLineupInfo(AetherDivideLineupInfo other) : this() {
-      slot_ = other.slot_;
       aetherAvatarList_ = other.aetherAvatarList_.Clone();
+      slot_ = other.slot_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,18 +82,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AetherDivideLineupInfo Clone() {
       return new AetherDivideLineupInfo(this);
-    }
-
-    /// <summary>Field number for the "slot" field.</summary>
-    public const int SlotFieldNumber = 3;
-    private uint slot_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Slot {
-      get { return slot_; }
-      set {
-        slot_ = value;
-      }
     }
 
     /// <summary>Field number for the "aether_avatar_list" field.</summary>
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> AetherAvatarList {
       get { return aetherAvatarList_; }
+    }
+
+    /// <summary>Field number for the "slot" field.</summary>
+    public const int SlotFieldNumber = 14;
+    private uint slot_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Slot {
+      get { return slot_; }
+      set {
+        slot_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Slot != other.Slot) return false;
       if(!aetherAvatarList_.Equals(other.aetherAvatarList_)) return false;
+      if (Slot != other.Slot) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Slot != 0) hash ^= Slot.GetHashCode();
       hash ^= aetherAvatarList_.GetHashCode();
+      if (Slot != 0) hash ^= Slot.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       aetherAvatarList_.WriteTo(output, _repeated_aetherAvatarList_codec);
       if (Slot != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(112);
         output.WriteUInt32(Slot);
       }
       if (_unknownFields != null) {
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       aetherAvatarList_.WriteTo(ref output, _repeated_aetherAvatarList_codec);
       if (Slot != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(112);
         output.WriteUInt32(Slot);
       }
       if (_unknownFields != null) {
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += aetherAvatarList_.CalculateSize(_repeated_aetherAvatarList_codec);
       if (Slot != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Slot);
       }
-      size += aetherAvatarList_.CalculateSize(_repeated_aetherAvatarList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      aetherAvatarList_.Add(other.aetherAvatarList_);
       if (other.Slot != 0) {
         Slot = other.Slot;
       }
-      aetherAvatarList_.Add(other.aetherAvatarList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -221,7 +221,7 @@ namespace EggLink.DanhengServer.Proto {
             aetherAvatarList_.AddEntriesFrom(input, _repeated_aetherAvatarList_codec);
             break;
           }
-          case 24: {
+          case 112: {
             Slot = input.ReadUInt32();
             break;
           }
@@ -245,7 +245,7 @@ namespace EggLink.DanhengServer.Proto {
             aetherAvatarList_.AddEntriesFrom(ref input, _repeated_aetherAvatarList_codec);
             break;
           }
-          case 24: {
+          case 112: {
             Slot = input.ReadUInt32();
             break;
           }

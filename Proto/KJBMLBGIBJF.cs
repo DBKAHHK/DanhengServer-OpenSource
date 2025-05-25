@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFLSkJNTEJHSUJKRi5wcm90byI3CgtLSkJNTEJHSUJKRhITCgtPQ0NNTklE",
-            "RUJCShgKIAMoDRITCgtKSUhDSElMRkpQSRgHIAMoDUIeqgIbRWdnTGluay5E",
+            "RUJCShgNIAMoDRITCgtKSUhDSElMRkpQSRgPIAMoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "OCCMNIDEBBJ" field.</summary>
-    public const int OCCMNIDEBBJFieldNumber = 10;
+    public const int OCCMNIDEBBJFieldNumber = 13;
     private static readonly pb::FieldCodec<uint> _repeated_oCCMNIDEBBJ_codec
-        = pb::FieldCodec.ForUInt32(82);
+        = pb::FieldCodec.ForUInt32(106);
     private readonly pbc::RepeatedField<uint> oCCMNIDEBBJ_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,9 +95,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JIHCHILFJPI" field.</summary>
-    public const int JIHCHILFJPIFieldNumber = 7;
+    public const int JIHCHILFJPIFieldNumber = 15;
     private static readonly pb::FieldCodec<uint> _repeated_jIHCHILFJPI_codec
-        = pb::FieldCodec.ForUInt32(58);
+        = pb::FieldCodec.ForUInt32(122);
     private readonly pbc::RepeatedField<uint> jIHCHILFJPI_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -149,8 +149,8 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      jIHCHILFJPI_.WriteTo(output, _repeated_jIHCHILFJPI_codec);
       oCCMNIDEBBJ_.WriteTo(output, _repeated_oCCMNIDEBBJ_codec);
+      jIHCHILFJPI_.WriteTo(output, _repeated_jIHCHILFJPI_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -161,8 +161,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      jIHCHILFJPI_.WriteTo(ref output, _repeated_jIHCHILFJPI_codec);
       oCCMNIDEBBJ_.WriteTo(ref output, _repeated_oCCMNIDEBBJ_codec);
+      jIHCHILFJPI_.WriteTo(ref output, _repeated_jIHCHILFJPI_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -204,14 +204,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58:
-          case 56: {
-            jIHCHILFJPI_.AddEntriesFrom(input, _repeated_jIHCHILFJPI_codec);
+          case 106:
+          case 104: {
+            oCCMNIDEBBJ_.AddEntriesFrom(input, _repeated_oCCMNIDEBBJ_codec);
             break;
           }
-          case 82:
-          case 80: {
-            oCCMNIDEBBJ_.AddEntriesFrom(input, _repeated_oCCMNIDEBBJ_codec);
+          case 122:
+          case 120: {
+            jIHCHILFJPI_.AddEntriesFrom(input, _repeated_jIHCHILFJPI_codec);
             break;
           }
         }
@@ -229,14 +229,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58:
-          case 56: {
-            jIHCHILFJPI_.AddEntriesFrom(ref input, _repeated_jIHCHILFJPI_codec);
+          case 106:
+          case 104: {
+            oCCMNIDEBBJ_.AddEntriesFrom(ref input, _repeated_oCCMNIDEBBJ_codec);
             break;
           }
-          case 82:
-          case 80: {
-            oCCMNIDEBBJ_.AddEntriesFrom(ref input, _repeated_oCCMNIDEBBJ_codec);
+          case 122:
+          case 120: {
+            jIHCHILFJPI_.AddEntriesFrom(ref input, _repeated_jIHCHILFJPI_codec);
             break;
           }
         }

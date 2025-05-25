@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlGaWdodE1hcmJsZVNlYWxJbmZvLnByb3RvGhZNYXJibGVTZWFsVmVjdG9y",
-            "LnByb3RvIm8KE0ZpZ2h0TWFyYmxlU2VhbEluZm8SLwoUc2VhbF90YXJnZXRf",
-            "cm90YXRpb24YBSABKAsyES5NYXJibGVTZWFsVmVjdG9yEhYKDnNlYWxfb3du",
-            "ZXJfdWlkGAkgASgNEg8KB2l0ZW1faWQYCiABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "LnByb3RvIm8KE0ZpZ2h0TWFyYmxlU2VhbEluZm8SDwoHaXRlbV9pZBgMIAEo",
+            "DRIvChRzZWFsX3RhcmdldF9yb3RhdGlvbhgFIAEoCzIRLk1hcmJsZVNlYWxW",
+            "ZWN0b3ISFgoOc2VhbF9vd25lcl91aWQYDiABKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleSealVectorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightMarbleSealInfo), global::EggLink.DanhengServer.Proto.FightMarbleSealInfo.Parser, new[]{ "SealTargetRotation", "SealOwnerUid", "ItemId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightMarbleSealInfo), global::EggLink.DanhengServer.Proto.FightMarbleSealInfo.Parser, new[]{ "ItemId", "SealTargetRotation", "SealOwnerUid" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FightMarbleSealInfo(FightMarbleSealInfo other) : this() {
+      itemId_ = other.itemId_;
       sealTargetRotation_ = other.sealTargetRotation_ != null ? other.sealTargetRotation_.Clone() : null;
       sealOwnerUid_ = other.sealOwnerUid_;
-      itemId_ = other.itemId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,6 +84,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FightMarbleSealInfo Clone() {
       return new FightMarbleSealInfo(this);
+    }
+
+    /// <summary>Field number for the "item_id" field.</summary>
+    public const int ItemIdFieldNumber = 12;
+    private uint itemId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ItemId {
+      get { return itemId_; }
+      set {
+        itemId_ = value;
+      }
     }
 
     /// <summary>Field number for the "seal_target_rotation" field.</summary>
@@ -99,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "seal_owner_uid" field.</summary>
-    public const int SealOwnerUidFieldNumber = 9;
+    public const int SealOwnerUidFieldNumber = 14;
     private uint sealOwnerUid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -107,18 +119,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return sealOwnerUid_; }
       set {
         sealOwnerUid_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "item_id" field.</summary>
-    public const int ItemIdFieldNumber = 10;
-    private uint itemId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ItemId {
-      get { return itemId_; }
-      set {
-        itemId_ = value;
       }
     }
 
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ItemId != other.ItemId) return false;
       if (!object.Equals(SealTargetRotation, other.SealTargetRotation)) return false;
       if (SealOwnerUid != other.SealOwnerUid) return false;
-      if (ItemId != other.ItemId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (ItemId != 0) hash ^= ItemId.GetHashCode();
       if (sealTargetRotation_ != null) hash ^= SealTargetRotation.GetHashCode();
       if (SealOwnerUid != 0) hash ^= SealOwnerUid.GetHashCode();
-      if (ItemId != 0) hash ^= ItemId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -172,13 +172,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(42);
         output.WriteMessage(SealTargetRotation);
       }
-      if (SealOwnerUid != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(SealOwnerUid);
-      }
       if (ItemId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(ItemId);
+      }
+      if (SealOwnerUid != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(SealOwnerUid);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -194,13 +194,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(42);
         output.WriteMessage(SealTargetRotation);
       }
-      if (SealOwnerUid != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(SealOwnerUid);
-      }
       if (ItemId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(ItemId);
+      }
+      if (SealOwnerUid != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(SealOwnerUid);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (ItemId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
+      }
       if (sealTargetRotation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SealTargetRotation);
       }
       if (SealOwnerUid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SealOwnerUid);
-      }
-      if (ItemId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,6 +233,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.ItemId != 0) {
+        ItemId = other.ItemId;
+      }
       if (other.sealTargetRotation_ != null) {
         if (sealTargetRotation_ == null) {
           SealTargetRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
@@ -241,9 +244,6 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.SealOwnerUid != 0) {
         SealOwnerUid = other.SealOwnerUid;
-      }
-      if (other.ItemId != 0) {
-        ItemId = other.ItemId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -267,12 +267,12 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(SealTargetRotation);
             break;
           }
-          case 72: {
-            SealOwnerUid = input.ReadUInt32();
+          case 96: {
+            ItemId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            ItemId = input.ReadUInt32();
+          case 112: {
+            SealOwnerUid = input.ReadUInt32();
             break;
           }
         }
@@ -297,12 +297,12 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(SealTargetRotation);
             break;
           }
-          case 72: {
-            SealOwnerUid = input.ReadUInt32();
+          case 96: {
+            ItemId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            ItemId = input.ReadUInt32();
+          case 112: {
+            SealOwnerUid = input.ReadUInt32();
             break;
           }
         }

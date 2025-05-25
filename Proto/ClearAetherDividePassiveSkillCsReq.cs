@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CihDbGVhckFldGhlckRpdmlkZVBhc3NpdmVTa2lsbENzUmVxLnByb3RvIkwK",
-            "IkNsZWFyQWV0aGVyRGl2aWRlUGFzc2l2ZVNraWxsQ3NSZXESDAoEc2xvdBgI",
-            "IAEoDRIYChBhZXRoZXJfYXZhdGFyX2lkGAYgASgNQh6qAhtFZ2dMaW5rLkRh",
+            "IkNsZWFyQWV0aGVyRGl2aWRlUGFzc2l2ZVNraWxsQ3NSZXESGAoQYWV0aGVy",
+            "X2F2YXRhcl9pZBgNIAEoDRIMCgRzbG90GAUgASgNQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClearAetherDividePassiveSkillCsReq), global::EggLink.DanhengServer.Proto.ClearAetherDividePassiveSkillCsReq.Parser, new[]{ "Slot", "AetherAvatarId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClearAetherDividePassiveSkillCsReq), global::EggLink.DanhengServer.Proto.ClearAetherDividePassiveSkillCsReq.Parser, new[]{ "AetherAvatarId", "Slot" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClearAetherDividePassiveSkillCsReq(ClearAetherDividePassiveSkillCsReq other) : this() {
-      slot_ = other.slot_;
       aetherAvatarId_ = other.aetherAvatarId_;
+      slot_ = other.slot_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ClearAetherDividePassiveSkillCsReq(this);
     }
 
-    /// <summary>Field number for the "slot" field.</summary>
-    public const int SlotFieldNumber = 8;
-    private uint slot_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Slot {
-      get { return slot_; }
-      set {
-        slot_ = value;
-      }
-    }
-
     /// <summary>Field number for the "aether_avatar_id" field.</summary>
-    public const int AetherAvatarIdFieldNumber = 6;
+    public const int AetherAvatarIdFieldNumber = 13;
     private uint aetherAvatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return aetherAvatarId_; }
       set {
         aetherAvatarId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "slot" field.</summary>
+    public const int SlotFieldNumber = 5;
+    private uint slot_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Slot {
+      get { return slot_; }
+      set {
+        slot_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Slot != other.Slot) return false;
       if (AetherAvatarId != other.AetherAvatarId) return false;
+      if (Slot != other.Slot) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Slot != 0) hash ^= Slot.GetHashCode();
       if (AetherAvatarId != 0) hash ^= AetherAvatarId.GetHashCode();
+      if (Slot != 0) hash ^= Slot.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AetherAvatarId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(AetherAvatarId);
-      }
       if (Slot != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(40);
         output.WriteUInt32(Slot);
+      }
+      if (AetherAvatarId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(AetherAvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AetherAvatarId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(AetherAvatarId);
-      }
       if (Slot != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(40);
         output.WriteUInt32(Slot);
+      }
+      if (AetherAvatarId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(AetherAvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Slot != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Slot);
-      }
       if (AetherAvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AetherAvatarId);
+      }
+      if (Slot != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Slot);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Slot != 0) {
-        Slot = other.Slot;
-      }
       if (other.AetherAvatarId != 0) {
         AetherAvatarId = other.AetherAvatarId;
+      }
+      if (other.Slot != 0) {
+        Slot = other.Slot;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            AetherAvatarId = input.ReadUInt32();
+          case 40: {
+            Slot = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Slot = input.ReadUInt32();
+          case 104: {
+            AetherAvatarId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            AetherAvatarId = input.ReadUInt32();
+          case 40: {
+            Slot = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Slot = input.ReadUInt32();
+          case 104: {
+            AetherAvatarId = input.ReadUInt32();
             break;
           }
         }

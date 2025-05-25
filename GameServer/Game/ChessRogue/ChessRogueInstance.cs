@@ -537,18 +537,6 @@ public class ChessRogueInstance : BaseRogueInstance
 
     #region Serialization
 
-    public ChessRogueCurrentInfo ToCurrentProto()
-    {
-        var proto = new ChessRogueCurrentInfo
-        {
-            RogueSubMode = (uint)RogueSubMode
-        };
-
-        proto.RogueCurrentGameInfo.AddRange(ToGameInfo());
-
-        return proto;
-    }
-
     public ChessRogueInfo ToStageProto()
     {
         var playerInfo = new ChessRogueInfo

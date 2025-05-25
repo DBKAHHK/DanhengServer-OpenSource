@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static LAILNIGFPOOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFMQUlMTklHRlBPTy5wcm90byJQCgtMQUlMTklHRlBPTxITCgtLSEdQRkhC",
-            "T0VMRRgKIAEoBBITCgtBRUxQRkVCR05PSxgGIAEoCBIXCg9pc190YWtlbl9y",
-            "ZXdhcmQYAiABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "ChFMQUlMTklHRlBPTy5wcm90byJQCgtMQUlMTklHRlBPTxIXCg9pc190YWtl",
+            "bl9yZXdhcmQYAiABKAgSEwoLQUVMUEZFQkdOT0sYBiABKAgSEwoLS0hHUEZI",
+            "Qk9FTEUYByABKARCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LAILNIGFPOO), global::EggLink.DanhengServer.Proto.LAILNIGFPOO.Parser, new[]{ "KHGPFHBOELE", "AELPFEBGNOK", "IsTakenReward" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LAILNIGFPOO), global::EggLink.DanhengServer.Proto.LAILNIGFPOO.Parser, new[]{ "IsTakenReward", "AELPFEBGNOK", "KHGPFHBOELE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LAILNIGFPOO(LAILNIGFPOO other) : this() {
-      kHGPFHBOELE_ = other.kHGPFHBOELE_;
-      aELPFEBGNOK_ = other.aELPFEBGNOK_;
       isTakenReward_ = other.isTakenReward_;
+      aELPFEBGNOK_ = other.aELPFEBGNOK_;
+      kHGPFHBOELE_ = other.kHGPFHBOELE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new LAILNIGFPOO(this);
     }
 
-    /// <summary>Field number for the "KHGPFHBOELE" field.</summary>
-    public const int KHGPFHBOELEFieldNumber = 10;
-    private ulong kHGPFHBOELE_;
+    /// <summary>Field number for the "is_taken_reward" field.</summary>
+    public const int IsTakenRewardFieldNumber = 2;
+    private bool isTakenReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong KHGPFHBOELE {
-      get { return kHGPFHBOELE_; }
+    public bool IsTakenReward {
+      get { return isTakenReward_; }
       set {
-        kHGPFHBOELE_ = value;
+        isTakenReward_ = value;
       }
     }
 
@@ -109,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "is_taken_reward" field.</summary>
-    public const int IsTakenRewardFieldNumber = 2;
-    private bool isTakenReward_;
+    /// <summary>Field number for the "KHGPFHBOELE" field.</summary>
+    public const int KHGPFHBOELEFieldNumber = 7;
+    private ulong kHGPFHBOELE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsTakenReward {
-      get { return isTakenReward_; }
+    public ulong KHGPFHBOELE {
+      get { return kHGPFHBOELE_; }
       set {
-        isTakenReward_ = value;
+        kHGPFHBOELE_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (KHGPFHBOELE != other.KHGPFHBOELE) return false;
-      if (AELPFEBGNOK != other.AELPFEBGNOK) return false;
       if (IsTakenReward != other.IsTakenReward) return false;
+      if (AELPFEBGNOK != other.AELPFEBGNOK) return false;
+      if (KHGPFHBOELE != other.KHGPFHBOELE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (KHGPFHBOELE != 0UL) hash ^= KHGPFHBOELE.GetHashCode();
-      if (AELPFEBGNOK != false) hash ^= AELPFEBGNOK.GetHashCode();
       if (IsTakenReward != false) hash ^= IsTakenReward.GetHashCode();
+      if (AELPFEBGNOK != false) hash ^= AELPFEBGNOK.GetHashCode();
+      if (KHGPFHBOELE != 0UL) hash ^= KHGPFHBOELE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -176,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteBool(AELPFEBGNOK);
       }
       if (KHGPFHBOELE != 0UL) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt64(KHGPFHBOELE);
       }
       if (_unknownFields != null) {
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteBool(AELPFEBGNOK);
       }
       if (KHGPFHBOELE != 0UL) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt64(KHGPFHBOELE);
       }
       if (_unknownFields != null) {
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (KHGPFHBOELE != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(KHGPFHBOELE);
+      if (IsTakenReward != false) {
+        size += 1 + 1;
       }
       if (AELPFEBGNOK != false) {
         size += 1 + 1;
       }
-      if (IsTakenReward != false) {
-        size += 1 + 1;
+      if (KHGPFHBOELE != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(KHGPFHBOELE);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.KHGPFHBOELE != 0UL) {
-        KHGPFHBOELE = other.KHGPFHBOELE;
+      if (other.IsTakenReward != false) {
+        IsTakenReward = other.IsTakenReward;
       }
       if (other.AELPFEBGNOK != false) {
         AELPFEBGNOK = other.AELPFEBGNOK;
       }
-      if (other.IsTakenReward != false) {
-        IsTakenReward = other.IsTakenReward;
+      if (other.KHGPFHBOELE != 0UL) {
+        KHGPFHBOELE = other.KHGPFHBOELE;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -264,7 +264,7 @@ namespace EggLink.DanhengServer.Proto {
             AELPFEBGNOK = input.ReadBool();
             break;
           }
-          case 80: {
+          case 56: {
             KHGPFHBOELE = input.ReadUInt64();
             break;
           }
@@ -291,7 +291,7 @@ namespace EggLink.DanhengServer.Proto {
             AELPFEBGNOK = input.ReadBool();
             break;
           }
-          case 80: {
+          case 56: {
             KHGPFHBOELE = input.ReadUInt64();
             break;
           }

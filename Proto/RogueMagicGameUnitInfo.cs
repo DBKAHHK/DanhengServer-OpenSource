@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxSb2d1ZU1hZ2ljR2FtZVVuaXRJbmZvLnByb3RvGhhSb2d1ZU1hZ2ljR2Ft",
-            "ZVVuaXQucHJvdG8iWQoWUm9ndWVNYWdpY0dhbWVVbml0SW5mbxIsCg9nYW1l",
-            "X21hZ2ljX3VuaXQYBiABKAsyEy5Sb2d1ZU1hZ2ljR2FtZVVuaXQSEQoJdW5p",
-            "cXVlX2lkGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "ZVVuaXQucHJvdG8iWQoWUm9ndWVNYWdpY0dhbWVVbml0SW5mbxIRCgl1bmlx",
+            "dWVfaWQYDSABKA0SLAoPZ2FtZV9tYWdpY191bml0GAQgASgLMhMuUm9ndWVN",
+            "YWdpY0dhbWVVbml0Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicGameUnitReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo), global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo.Parser, new[]{ "GameMagicUnit", "UniqueId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo), global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo.Parser, new[]{ "UniqueId", "GameMagicUnit" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicGameUnitInfo(RogueMagicGameUnitInfo other) : this() {
-      gameMagicUnit_ = other.gameMagicUnit_ != null ? other.gameMagicUnit_.Clone() : null;
       uniqueId_ = other.uniqueId_;
+      gameMagicUnit_ = other.gameMagicUnit_ != null ? other.gameMagicUnit_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueMagicGameUnitInfo(this);
     }
 
-    /// <summary>Field number for the "game_magic_unit" field.</summary>
-    public const int GameMagicUnitFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.RogueMagicGameUnit gameMagicUnit_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueMagicGameUnit GameMagicUnit {
-      get { return gameMagicUnit_; }
-      set {
-        gameMagicUnit_ = value;
-      }
-    }
-
     /// <summary>Field number for the "unique_id" field.</summary>
-    public const int UniqueIdFieldNumber = 11;
+    public const int UniqueIdFieldNumber = 13;
     private uint uniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return uniqueId_; }
       set {
         uniqueId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "game_magic_unit" field.</summary>
+    public const int GameMagicUnitFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.RogueMagicGameUnit gameMagicUnit_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueMagicGameUnit GameMagicUnit {
+      get { return gameMagicUnit_; }
+      set {
+        gameMagicUnit_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(GameMagicUnit, other.GameMagicUnit)) return false;
       if (UniqueId != other.UniqueId) return false;
+      if (!object.Equals(GameMagicUnit, other.GameMagicUnit)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (gameMagicUnit_ != null) hash ^= GameMagicUnit.GetHashCode();
       if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
+      if (gameMagicUnit_ != null) hash ^= GameMagicUnit.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (gameMagicUnit_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(34);
         output.WriteMessage(GameMagicUnit);
       }
       if (UniqueId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(104);
         output.WriteUInt32(UniqueId);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (gameMagicUnit_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(34);
         output.WriteMessage(GameMagicUnit);
       }
       if (UniqueId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(104);
         output.WriteUInt32(UniqueId);
       }
       if (_unknownFields != null) {
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (gameMagicUnit_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameMagicUnit);
-      }
       if (UniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
+      }
+      if (gameMagicUnit_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GameMagicUnit);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.UniqueId != 0) {
+        UniqueId = other.UniqueId;
+      }
       if (other.gameMagicUnit_ != null) {
         if (gameMagicUnit_ == null) {
           GameMagicUnit = new global::EggLink.DanhengServer.Proto.RogueMagicGameUnit();
         }
         GameMagicUnit.MergeFrom(other.GameMagicUnit);
-      }
-      if (other.UniqueId != 0) {
-        UniqueId = other.UniqueId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 34: {
             if (gameMagicUnit_ == null) {
               GameMagicUnit = new global::EggLink.DanhengServer.Proto.RogueMagicGameUnit();
             }
             input.ReadMessage(GameMagicUnit);
             break;
           }
-          case 88: {
+          case 104: {
             UniqueId = input.ReadUInt32();
             break;
           }
@@ -257,14 +257,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 34: {
             if (gameMagicUnit_ == null) {
               GameMagicUnit = new global::EggLink.DanhengServer.Proto.RogueMagicGameUnit();
             }
             input.ReadMessage(GameMagicUnit);
             break;
           }
-          case 88: {
+          case 104: {
             UniqueId = input.ReadUInt32();
             break;
           }

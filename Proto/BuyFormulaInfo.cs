@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRCdXlGb3JtdWxhSW5mby5wcm90bxoQQnV5Rm9ybXVsYS5wcm90byI4Cg5C",
-            "dXlGb3JtdWxhSW5mbxImChFnYW1lX2Zvcm11bGFfaW5mbxgIIAMoCzILLkJ1",
+            "dXlGb3JtdWxhSW5mbxImChFnYW1lX2Zvcm11bGFfaW5mbxgKIAMoCzILLkJ1",
             "eUZvcm11bGFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "game_formula_info" field.</summary>
-    public const int GameFormulaInfoFieldNumber = 8;
+    public const int GameFormulaInfoFieldNumber = 10;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BuyFormula> _repeated_gameFormulaInfo_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.BuyFormula.Parser);
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.BuyFormula.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuyFormula> gameFormulaInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuyFormula>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 82: {
             gameFormulaInfo_.AddEntriesFrom(input, _repeated_gameFormulaInfo_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 82: {
             gameFormulaInfo_.AddEntriesFrom(ref input, _repeated_gameFormulaInfo_codec);
             break;
           }

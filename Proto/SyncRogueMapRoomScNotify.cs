@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5TeW5jUm9ndWVNYXBSb29tU2NOb3RpZnkucHJvdG8aD1JvZ3VlUm9vbS5w",
-            "cm90byJIChhTeW5jUm9ndWVNYXBSb29tU2NOb3RpZnkSDgoGbWFwX2lkGAEg",
-            "ASgNEhwKCGN1cl9yb29tGAggASgLMgouUm9ndWVSb29tQh6qAhtFZ2dMaW5r",
+            "cm90byJIChhTeW5jUm9ndWVNYXBSb29tU2NOb3RpZnkSHAoIY3VyX3Jvb20Y",
+            "ASABKAsyCi5Sb2d1ZVJvb20SDgoGbWFwX2lkGAggASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueRoomReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueMapRoomScNotify), global::EggLink.DanhengServer.Proto.SyncRogueMapRoomScNotify.Parser, new[]{ "MapId", "CurRoom" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueMapRoomScNotify), global::EggLink.DanhengServer.Proto.SyncRogueMapRoomScNotify.Parser, new[]{ "CurRoom", "MapId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncRogueMapRoomScNotify(SyncRogueMapRoomScNotify other) : this() {
-      mapId_ = other.mapId_;
       curRoom_ = other.curRoom_ != null ? other.curRoom_.Clone() : null;
+      mapId_ = other.mapId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new SyncRogueMapRoomScNotify(this);
     }
 
-    /// <summary>Field number for the "map_id" field.</summary>
-    public const int MapIdFieldNumber = 1;
-    private uint mapId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MapId {
-      get { return mapId_; }
-      set {
-        mapId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "cur_room" field.</summary>
-    public const int CurRoomFieldNumber = 8;
+    public const int CurRoomFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.RogueRoom curRoom_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return curRoom_; }
       set {
         curRoom_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "map_id" field.</summary>
+    public const int MapIdFieldNumber = 8;
+    private uint mapId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MapId {
+      get { return mapId_; }
+      set {
+        mapId_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MapId != other.MapId) return false;
       if (!object.Equals(CurRoom, other.CurRoom)) return false;
+      if (MapId != other.MapId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MapId != 0) hash ^= MapId.GetHashCode();
       if (curRoom_ != null) hash ^= CurRoom.GetHashCode();
+      if (MapId != 0) hash ^= MapId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MapId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(MapId);
-      }
       if (curRoom_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(10);
         output.WriteMessage(CurRoom);
+      }
+      if (MapId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MapId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MapId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(MapId);
-      }
       if (curRoom_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(10);
         output.WriteMessage(CurRoom);
+      }
+      if (MapId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MapId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MapId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapId);
-      }
       if (curRoom_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CurRoom);
+      }
+      if (MapId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MapId != 0) {
-        MapId = other.MapId;
-      }
       if (other.curRoom_ != null) {
         if (curRoom_ == null) {
           CurRoom = new global::EggLink.DanhengServer.Proto.RogueRoom();
         }
         CurRoom.MergeFrom(other.CurRoom);
+      }
+      if (other.MapId != 0) {
+        MapId = other.MapId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            MapId = input.ReadUInt32();
-            break;
-          }
-          case 66: {
+          case 10: {
             if (curRoom_ == null) {
               CurRoom = new global::EggLink.DanhengServer.Proto.RogueRoom();
             }
             input.ReadMessage(CurRoom);
+            break;
+          }
+          case 64: {
+            MapId = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            MapId = input.ReadUInt32();
-            break;
-          }
-          case 66: {
+          case 10: {
             if (curRoom_ == null) {
               CurRoom = new global::EggLink.DanhengServer.Proto.RogueRoom();
             }
             input.ReadMessage(CurRoom);
+            break;
+          }
+          case 64: {
+            MapId = input.ReadUInt32();
             break;
           }
         }

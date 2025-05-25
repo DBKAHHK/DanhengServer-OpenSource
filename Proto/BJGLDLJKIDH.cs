@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFCSkdMRExKS0lESC5wcm90bxoSQ2F0ZUdvcnlUeXBlLnByb3RvIkAKC0JK",
-            "R0xETEpLSURIEg0KBWxldmVsGAIgASgNEiIKC0pMTE5NR0JFTkFGGAwgASgO",
+            "R0xETEpLSURIEg0KBWxldmVsGAUgASgNEiIKC0pMTE5NR0JFTkFGGAggASgO",
             "Mg0uQ2F0ZUdvcnlUeXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 2;
+    public const int LevelFieldNumber = 5;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JLLNMGBENAF" field.</summary>
-    public const int JLLNMGBENAFFieldNumber = 12;
+    public const int JLLNMGBENAFFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.CateGoryType jLLNMGBENAF_ = global::EggLink.DanhengServer.Proto.CateGoryType.TrainPartyMtCategoryNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Level != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(Level);
       }
       if (JLLNMGBENAF != global::EggLink.DanhengServer.Proto.CateGoryType.TrainPartyMtCategoryNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteEnum((int) JLLNMGBENAF);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Level != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(Level);
       }
       if (JLLNMGBENAF != global::EggLink.DanhengServer.Proto.CateGoryType.TrainPartyMtCategoryNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteEnum((int) JLLNMGBENAF);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 40: {
             Level = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 64: {
             JLLNMGBENAF = (global::EggLink.DanhengServer.Proto.CateGoryType) input.ReadEnum();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 40: {
             Level = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 64: {
             JLLNMGBENAF = (global::EggLink.DanhengServer.Proto.CateGoryType) input.ReadEnum();
             break;
           }

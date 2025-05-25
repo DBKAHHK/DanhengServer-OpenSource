@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChtSb2d1ZU1hZ2ljU2NlcHRlckluZm8ucHJvdG8aF1JvZ3VlTWFnaWNTY2Vw",
             "dGVyLnByb3RvIj8KFVJvZ3VlTWFnaWNTY2VwdGVySW5mbxImCgptYWdpY19p",
-            "dGVtGAsgASgLMhIuUm9ndWVNYWdpY1NjZXB0ZXJCHqoCG0VnZ0xpbmsuRGFu",
+            "dGVtGAEgASgLMhIuUm9ndWVNYWdpY1NjZXB0ZXJCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicScepterReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "magic_item" field.</summary>
-    public const int MagicItemFieldNumber = 11;
+    public const int MagicItemFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.RogueMagicScepter magicItem_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (magicItem_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(10);
         output.WriteMessage(MagicItem);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (magicItem_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(10);
         output.WriteMessage(MagicItem);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 10: {
             if (magicItem_ == null) {
               MagicItem = new global::EggLink.DanhengServer.Proto.RogueMagicScepter();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 10: {
             if (magicItem_ == null) {
               MagicItem = new global::EggLink.DanhengServer.Proto.RogueMagicScepter();
             }

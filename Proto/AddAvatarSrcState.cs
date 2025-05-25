@@ -24,10 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static AddAvatarSrcStateReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdBZGRBdmF0YXJTcmNTdGF0ZS5wcm90bypgChFBZGRBdmF0YXJTcmNTdGF0",
+            "ChdBZGRBdmF0YXJTcmNTdGF0ZS5wcm90byp9ChFBZGRBdmF0YXJTcmNTdGF0",
             "ZRIXChNBRERfQVZBVEFSX1NSQ19OT05FEAASGAoUQUREX0FWQVRBUl9TUkNf",
-            "R0FDSEEQARIYChRBRERfQVZBVEFSX1NSQ19ST0dVRRACQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "R0FDSEEQARIYChRBRERfQVZBVEFSX1NSQ19ST0dVRRACEhsKF0FERF9BVkFU",
+            "QVJfU1JDX0RFTElWRVJZEANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.AddAvatarSrcState), }, null, null));
@@ -40,6 +41,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("ADD_AVATAR_SRC_NONE")] AddAvatarSrcNone = 0,
     [pbr::OriginalName("ADD_AVATAR_SRC_GACHA")] AddAvatarSrcGacha = 1,
     [pbr::OriginalName("ADD_AVATAR_SRC_ROGUE")] AddAvatarSrcRogue = 2,
+    [pbr::OriginalName("ADD_AVATAR_SRC_DELIVERY")] AddAvatarSrcDelivery = 3,
   }
 
   #endregion

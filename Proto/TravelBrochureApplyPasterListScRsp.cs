@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CihUcmF2ZWxCcm9jaHVyZUFwcGx5UGFzdGVyTGlzdFNjUnNwLnByb3RvGhFL",
             "Q0hKSENMSk9DSy5wcm90byJYCiJUcmF2ZWxCcm9jaHVyZUFwcGx5UGFzdGVy",
-            "TGlzdFNjUnNwEg8KB3JldGNvZGUYCCABKA0SIQoLQ0FHR0xLTElJTUYYDyAB",
+            "TGlzdFNjUnNwEg8KB3JldGNvZGUYCCABKA0SIQoLQ0FHR0xLTElJTUYYDSAB",
             "KAsyDC5LQ0hKSENMSk9DS0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CAGGLKLIIMF" field.</summary>
-    public const int CAGGLKLIIMFFieldNumber = 15;
+    public const int CAGGLKLIIMFFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.KCHJHCLJOCK cAGGLKLIIMF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (cAGGLKLIIMF_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(106);
         output.WriteMessage(CAGGLKLIIMF);
       }
       if (_unknownFields != null) {
@@ -176,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (cAGGLKLIIMF_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(106);
         output.WriteMessage(CAGGLKLIIMF);
       }
       if (_unknownFields != null) {
@@ -235,7 +235,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 106: {
             if (cAGGLKLIIMF_ == null) {
               CAGGLKLIIMF = new global::EggLink.DanhengServer.Proto.KCHJHCLJOCK();
             }
@@ -261,7 +261,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 106: {
             if (cAGGLKLIIMF_ == null) {
               CAGGLKLIIMF = new global::EggLink.DanhengServer.Proto.KCHJHCLJOCK();
             }

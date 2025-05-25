@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CjhDaGVzc1JvZ3VlVXBkYXRlRGljZVBhc3NpdmVBY2N1bXVsYXRlVmFsdWVT",
             "Y05vdGlmeS5wcm90byJLCjJDaGVzc1JvZ3VlVXBkYXRlRGljZVBhc3NpdmVB",
-            "Y2N1bXVsYXRlVmFsdWVTY05vdGlmeRIVCg1wYXNzaXZlX3ZhbHVlGAMgASgF",
+            "Y2N1bXVsYXRlVmFsdWVTY05vdGlmeRIVCg1wYXNzaXZlX3ZhbHVlGAkgASgF",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "passive_value" field.</summary>
-    public const int PassiveValueFieldNumber = 3;
+    public const int PassiveValueFieldNumber = 9;
     private int passiveValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PassiveValue != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteInt32(PassiveValue);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PassiveValue != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteInt32(PassiveValue);
       }
       if (_unknownFields != null) {
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 72: {
             PassiveValue = input.ReadInt32();
             break;
           }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 72: {
             PassiveValue = input.ReadInt32();
             break;
           }

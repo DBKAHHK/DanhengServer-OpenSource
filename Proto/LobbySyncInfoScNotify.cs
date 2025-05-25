@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static LobbySyncInfoScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtMb2JieVN5bmNJbmZvU2NOb3RpZnkucHJvdG8aFExvYmJ5QmFzaWNJbmZv",
-            "LnByb3RvGhVMb2JieU1vZGlmeVR5cGUucHJvdG8ibwoVTG9iYnlTeW5jSW5m",
-            "b1NjTm90aWZ5EgsKA3VpZBgBIAEoDRIpChBsb2JieV9iYXNpY19pbmZvGAsg",
-            "AygLMg8uTG9iYnlCYXNpY0luZm8SHgoEdHlwZRgJIAEoDjIQLkxvYmJ5TW9k",
+            "ChtMb2JieVN5bmNJbmZvU2NOb3RpZnkucHJvdG8aFUxvYmJ5TW9kaWZ5VHlw",
+            "ZS5wcm90bxoUTG9iYnlCYXNpY0luZm8ucHJvdG8ibwoVTG9iYnlTeW5jSW5m",
+            "b1NjTm90aWZ5EikKEGxvYmJ5X2Jhc2ljX2luZm8YBCADKAsyDy5Mb2JieUJh",
+            "c2ljSW5mbxILCgN1aWQYCCABKA0SHgoEdHlwZRgLIAEoDjIQLkxvYmJ5TW9k",
             "aWZ5VHlwZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LobbyBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyModifyTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LobbyModifyTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyBasicInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LobbySyncInfoScNotify), global::EggLink.DanhengServer.Proto.LobbySyncInfoScNotify.Parser, new[]{ "Uid", "LobbyBasicInfo", "Type" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LobbySyncInfoScNotify), global::EggLink.DanhengServer.Proto.LobbySyncInfoScNotify.Parser, new[]{ "LobbyBasicInfo", "Uid", "Type" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LobbySyncInfoScNotify(LobbySyncInfoScNotify other) : this() {
-      uid_ = other.uid_;
       lobbyBasicInfo_ = other.lobbyBasicInfo_.Clone();
+      uid_ = other.uid_;
       type_ = other.type_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,8 +87,19 @@ namespace EggLink.DanhengServer.Proto {
       return new LobbySyncInfoScNotify(this);
     }
 
+    /// <summary>Field number for the "lobby_basic_info" field.</summary>
+    public const int LobbyBasicInfoFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> _repeated_lobbyBasicInfo_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.LobbyBasicInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> lobbyBasicInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> LobbyBasicInfo {
+      get { return lobbyBasicInfo_; }
+    }
+
     /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 1;
+    public const int UidFieldNumber = 8;
     private uint uid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,19 +110,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "lobby_basic_info" field.</summary>
-    public const int LobbyBasicInfoFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> _repeated_lobbyBasicInfo_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.LobbyBasicInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> lobbyBasicInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> LobbyBasicInfo {
-      get { return lobbyBasicInfo_; }
-    }
-
     /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 9;
+    public const int TypeFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.LobbyModifyType type_ = global::EggLink.DanhengServer.Proto.LobbyModifyType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Uid != other.Uid) return false;
       if(!lobbyBasicInfo_.Equals(other.lobbyBasicInfo_)) return false;
+      if (Uid != other.Uid) return false;
       if (Type != other.Type) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Uid != 0) hash ^= Uid.GetHashCode();
       hash ^= lobbyBasicInfo_.GetHashCode();
+      if (Uid != 0) hash ^= Uid.GetHashCode();
       if (Type != global::EggLink.DanhengServer.Proto.LobbyModifyType.None) hash ^= Type.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -168,15 +168,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      lobbyBasicInfo_.WriteTo(output, _repeated_lobbyBasicInfo_codec);
       if (Uid != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(64);
         output.WriteUInt32(Uid);
       }
       if (Type != global::EggLink.DanhengServer.Proto.LobbyModifyType.None) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Type);
       }
-      lobbyBasicInfo_.WriteTo(output, _repeated_lobbyBasicInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -187,15 +187,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      lobbyBasicInfo_.WriteTo(ref output, _repeated_lobbyBasicInfo_codec);
       if (Uid != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(64);
         output.WriteUInt32(Uid);
       }
       if (Type != global::EggLink.DanhengServer.Proto.LobbyModifyType.None) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Type);
       }
-      lobbyBasicInfo_.WriteTo(ref output, _repeated_lobbyBasicInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -206,10 +206,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += lobbyBasicInfo_.CalculateSize(_repeated_lobbyBasicInfo_codec);
       if (Uid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
       }
-      size += lobbyBasicInfo_.CalculateSize(_repeated_lobbyBasicInfo_codec);
       if (Type != global::EggLink.DanhengServer.Proto.LobbyModifyType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
@@ -225,10 +225,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      lobbyBasicInfo_.Add(other.lobbyBasicInfo_);
       if (other.Uid != 0) {
         Uid = other.Uid;
       }
-      lobbyBasicInfo_.Add(other.lobbyBasicInfo_);
       if (other.Type != global::EggLink.DanhengServer.Proto.LobbyModifyType.None) {
         Type = other.Type;
       }
@@ -247,16 +247,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 34: {
+            lobbyBasicInfo_.AddEntriesFrom(input, _repeated_lobbyBasicInfo_codec);
+            break;
+          }
+          case 64: {
             Uid = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 88: {
             Type = (global::EggLink.DanhengServer.Proto.LobbyModifyType) input.ReadEnum();
-            break;
-          }
-          case 90: {
-            lobbyBasicInfo_.AddEntriesFrom(input, _repeated_lobbyBasicInfo_codec);
             break;
           }
         }
@@ -274,16 +274,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 34: {
+            lobbyBasicInfo_.AddEntriesFrom(ref input, _repeated_lobbyBasicInfo_codec);
+            break;
+          }
+          case 64: {
             Uid = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 88: {
             Type = (global::EggLink.DanhengServer.Proto.LobbyModifyType) input.ReadEnum();
-            break;
-          }
-          case 90: {
-            lobbyBasicInfo_.AddEntriesFrom(ref input, _repeated_lobbyBasicInfo_codec);
             break;
           }
         }

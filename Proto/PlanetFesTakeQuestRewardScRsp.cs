@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNQbGFuZXRGZXNUYWtlUXVlc3RSZXdhcmRTY1JzcC5wcm90bxoRREpJQUVN",
             "QU5HQ0cucHJvdG8iZQodUGxhbmV0RmVzVGFrZVF1ZXN0UmV3YXJkU2NSc3AS",
-            "DwoHcmV0Y29kZRgBIAEoDRIhCgtETkZGS0FCRk9FRhgPIAEoCzIMLkRKSUFF",
-            "TUFOR0NHEhAKCHF1ZXN0X2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "IQoLRE5GRktBQkZPRUYYBCABKAsyDC5ESklBRU1BTkdDRxIQCghxdWVzdF9p",
+            "ZBgMIAEoDRIPCgdyZXRjb2RlGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DJIAEMANGCGReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlanetFesTakeQuestRewardScRsp), global::EggLink.DanhengServer.Proto.PlanetFesTakeQuestRewardScRsp.Parser, new[]{ "Retcode", "DNFFKABFOEF", "QuestId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlanetFesTakeQuestRewardScRsp), global::EggLink.DanhengServer.Proto.PlanetFesTakeQuestRewardScRsp.Parser, new[]{ "DNFFKABFOEF", "QuestId", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlanetFesTakeQuestRewardScRsp(PlanetFesTakeQuestRewardScRsp other) : this() {
-      retcode_ = other.retcode_;
       dNFFKABFOEF_ = other.dNFFKABFOEF_ != null ? other.dNFFKABFOEF_.Clone() : null;
       questId_ = other.questId_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new PlanetFesTakeQuestRewardScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "DNFFKABFOEF" field.</summary>
-    public const int DNFFKABFOEFFieldNumber = 15;
+    public const int DNFFKABFOEFFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.DJIAEMANGCG dNFFKABFOEF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "quest_id" field.</summary>
-    public const int QuestIdFieldNumber = 13;
+    public const int QuestIdFieldNumber = 12;
     private uint questId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,6 +107,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return questId_; }
       set {
         questId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 14;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if (!object.Equals(DNFFKABFOEF, other.DNFFKABFOEF)) return false;
       if (QuestId != other.QuestId) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (dNFFKABFOEF_ != null) hash ^= DNFFKABFOEF.GetHashCode();
       if (QuestId != 0) hash ^= QuestId.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Retcode);
+      if (dNFFKABFOEF_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DNFFKABFOEF);
       }
       if (QuestId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(QuestId);
       }
-      if (dNFFKABFOEF_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(DNFFKABFOEF);
+      if (Retcode != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Retcode);
+      if (dNFFKABFOEF_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DNFFKABFOEF);
       }
       if (QuestId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(QuestId);
       }
-      if (dNFFKABFOEF_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(DNFFKABFOEF);
+      if (Retcode != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (dNFFKABFOEF_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DNFFKABFOEF);
       }
       if (QuestId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(QuestId);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,9 +233,6 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.dNFFKABFOEF_ != null) {
         if (dNFFKABFOEF_ == null) {
           DNFFKABFOEF = new global::EggLink.DanhengServer.Proto.DJIAEMANGCG();
@@ -244,6 +241,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.QuestId != 0) {
         QuestId = other.QuestId;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,19 +260,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            QuestId = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 34: {
             if (dNFFKABFOEF_ == null) {
               DNFFKABFOEF = new global::EggLink.DanhengServer.Proto.DJIAEMANGCG();
             }
             input.ReadMessage(DNFFKABFOEF);
+            break;
+          }
+          case 96: {
+            QuestId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -290,19 +290,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            QuestId = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 34: {
             if (dNFFKABFOEF_ == null) {
               DNFFKABFOEF = new global::EggLink.DanhengServer.Proto.DJIAEMANGCG();
             }
             input.ReadMessage(DNFFKABFOEF);
+            break;
+          }
+          case 96: {
+            QuestId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFOTEJNQ0dDQUVJTy5wcm90byJFCgtOTEJNQ0dDQUVJTxITCgtQSUxERUZL",
-            "UEtMRRgDIAMoDRITCgtBRkxFQUpJSE5FQhgKIAEoDRIMCgR0eXBlGAUgASgN",
+            "UEtMRRgFIAMoDRITCgtBRkxFQUpJSE5FQhgNIAEoDRIMCgR0eXBlGA8gASgN",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PILDEFKPKLE" field.</summary>
-    public const int PILDEFKPKLEFieldNumber = 3;
+    public const int PILDEFKPKLEFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_pILDEFKPKLE_codec
-        = pb::FieldCodec.ForUInt32(26);
+        = pb::FieldCodec.ForUInt32(42);
     private readonly pbc::RepeatedField<uint> pILDEFKPKLE_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "AFLEAJIHNEB" field.</summary>
-    public const int AFLEAJIHNEBFieldNumber = 10;
+    public const int AFLEAJIHNEBFieldNumber = 13;
     private uint aFLEAJIHNEB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 5;
+    public const int TypeFieldNumber = 15;
     private uint type_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,13 +166,13 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       pILDEFKPKLE_.WriteTo(output, _repeated_pILDEFKPKLE_codec);
-      if (Type != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(Type);
-      }
       if (AFLEAJIHNEB != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(104);
         output.WriteUInt32(AFLEAJIHNEB);
+      }
+      if (Type != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Type);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -185,13 +185,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       pILDEFKPKLE_.WriteTo(ref output, _repeated_pILDEFKPKLE_codec);
-      if (Type != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(Type);
-      }
       if (AFLEAJIHNEB != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(104);
         output.WriteUInt32(AFLEAJIHNEB);
+      }
+      if (Type != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Type);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -244,17 +244,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26:
-          case 24: {
+          case 42:
+          case 40: {
             pILDEFKPKLE_.AddEntriesFrom(input, _repeated_pILDEFKPKLE_codec);
             break;
           }
-          case 40: {
-            Type = input.ReadUInt32();
+          case 104: {
+            AFLEAJIHNEB = input.ReadUInt32();
             break;
           }
-          case 80: {
-            AFLEAJIHNEB = input.ReadUInt32();
+          case 120: {
+            Type = input.ReadUInt32();
             break;
           }
         }
@@ -272,17 +272,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26:
-          case 24: {
+          case 42:
+          case 40: {
             pILDEFKPKLE_.AddEntriesFrom(ref input, _repeated_pILDEFKPKLE_codec);
             break;
           }
-          case 40: {
-            Type = input.ReadUInt32();
+          case 104: {
+            AFLEAJIHNEB = input.ReadUInt32();
             break;
           }
-          case 80: {
-            AFLEAJIHNEB = input.ReadUInt32();
+          case 120: {
+            Type = input.ReadUInt32();
             break;
           }
         }

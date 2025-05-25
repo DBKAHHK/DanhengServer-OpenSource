@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRTY2VuZUFjdG9ySW5mby5wcm90bxoQQXZhdGFyVHlwZS5wcm90byJqCg5T",
-            "Y2VuZUFjdG9ySW5mbxIRCgltYXBfbGF5ZXIYBCABKA0SFgoOYmFzZV9hdmF0",
-            "YXJfaWQYDCABKA0SIAoLYXZhdGFyX3R5cGUYDiABKA4yCy5BdmF0YXJUeXBl",
+            "Y2VuZUFjdG9ySW5mbxIgCgthdmF0YXJfdHlwZRgMIAEoDjILLkF2YXRhclR5",
+            "cGUSEQoJbWFwX2xheWVyGAIgASgNEhYKDmJhc2VfYXZhdGFyX2lkGAggASgN",
             "EgsKA3VpZBgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneActorInfo), global::EggLink.DanhengServer.Proto.SceneActorInfo.Parser, new[]{ "MapLayer", "BaseAvatarId", "AvatarType", "Uid" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneActorInfo), global::EggLink.DanhengServer.Proto.SceneActorInfo.Parser, new[]{ "AvatarType", "MapLayer", "BaseAvatarId", "Uid" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneActorInfo(SceneActorInfo other) : this() {
+      avatarType_ = other.avatarType_;
       mapLayer_ = other.mapLayer_;
       baseAvatarId_ = other.baseAvatarId_;
-      avatarType_ = other.avatarType_;
       uid_ = other.uid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,8 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new SceneActorInfo(this);
     }
 
+    /// <summary>Field number for the "avatar_type" field.</summary>
+    public const int AvatarTypeFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.AvatarType avatarType_ = global::EggLink.DanhengServer.Proto.AvatarType.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.AvatarType AvatarType {
+      get { return avatarType_; }
+      set {
+        avatarType_ = value;
+      }
+    }
+
     /// <summary>Field number for the "map_layer" field.</summary>
-    public const int MapLayerFieldNumber = 4;
+    public const int MapLayerFieldNumber = 2;
     private uint mapLayer_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "base_avatar_id" field.</summary>
-    public const int BaseAvatarIdFieldNumber = 12;
+    public const int BaseAvatarIdFieldNumber = 8;
     private uint baseAvatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,18 +120,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return baseAvatarId_; }
       set {
         baseAvatarId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "avatar_type" field.</summary>
-    public const int AvatarTypeFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.AvatarType avatarType_ = global::EggLink.DanhengServer.Proto.AvatarType.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.AvatarType AvatarType {
-      get { return avatarType_; }
-      set {
-        avatarType_ = value;
       }
     }
 
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (AvatarType != other.AvatarType) return false;
       if (MapLayer != other.MapLayer) return false;
       if (BaseAvatarId != other.BaseAvatarId) return false;
-      if (AvatarType != other.AvatarType) return false;
       if (Uid != other.Uid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -161,9 +161,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (AvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) hash ^= AvatarType.GetHashCode();
       if (MapLayer != 0) hash ^= MapLayer.GetHashCode();
       if (BaseAvatarId != 0) hash ^= BaseAvatarId.GetHashCode();
-      if (AvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) hash ^= AvatarType.GetHashCode();
       if (Uid != 0) hash ^= Uid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -184,7 +184,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MapLayer != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(MapLayer);
       }
       if (Uid != 0) {
@@ -192,11 +192,11 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Uid);
       }
       if (BaseAvatarId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(BaseAvatarId);
       }
       if (AvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(96);
         output.WriteEnum((int) AvatarType);
       }
       if (_unknownFields != null) {
@@ -210,7 +210,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MapLayer != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteUInt32(MapLayer);
       }
       if (Uid != 0) {
@@ -218,11 +218,11 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Uid);
       }
       if (BaseAvatarId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(BaseAvatarId);
       }
       if (AvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(96);
         output.WriteEnum((int) AvatarType);
       }
       if (_unknownFields != null) {
@@ -235,14 +235,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (AvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AvatarType);
+      }
       if (MapLayer != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapLayer);
       }
       if (BaseAvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BaseAvatarId);
-      }
-      if (AvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AvatarType);
       }
       if (Uid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
@@ -259,14 +259,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.AvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
+        AvatarType = other.AvatarType;
+      }
       if (other.MapLayer != 0) {
         MapLayer = other.MapLayer;
       }
       if (other.BaseAvatarId != 0) {
         BaseAvatarId = other.BaseAvatarId;
-      }
-      if (other.AvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
-        AvatarType = other.AvatarType;
       }
       if (other.Uid != 0) {
         Uid = other.Uid;
@@ -286,7 +286,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 16: {
             MapLayer = input.ReadUInt32();
             break;
           }
@@ -294,11 +294,11 @@ namespace EggLink.DanhengServer.Proto {
             Uid = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 64: {
             BaseAvatarId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 96: {
             AvatarType = (global::EggLink.DanhengServer.Proto.AvatarType) input.ReadEnum();
             break;
           }
@@ -317,7 +317,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 16: {
             MapLayer = input.ReadUInt32();
             break;
           }
@@ -325,11 +325,11 @@ namespace EggLink.DanhengServer.Proto {
             Uid = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 64: {
             BaseAvatarId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 96: {
             AvatarType = (global::EggLink.DanhengServer.Proto.AvatarType) input.ReadEnum();
             break;
           }
