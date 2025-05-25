@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhFKR0ZLSUNEQ0ZMSi5wcm90bxoS",
-            "UGxhdGZvcm1UeXBlLnByb3RvGhFPQ0NITkVGSEdORS5wcm90bxoSTGFuZ3Vh",
-            "Z2VUeXBlLnByb3RvIq4FChBQbGF5ZXJMb2dpbkNzUmVxEhMKC0JOSUdQRE9P",
+            "TGFuZ3VhZ2VUeXBlLnByb3RvGhFPQ0NITkVGSEdORS5wcm90bxoSUGxhdGZv",
+            "cm1UeXBlLnByb3RvIq4FChBQbGF5ZXJMb2dpbkNzUmVxEhMKC0JOSUdQRE9P",
             "SUxJGAggASgJEhQKC0lHTkZCTEdKSU9KGMkFIAEoCRIUCgxsb2dpbl9yYW5k",
             "b20YBSABKAQSFAoLTUxOQUJFUElOREIYoAEgASgNEhQKC0dNQUxDUE5PSEJG",
             "GLoKIAEoCRIRCglzaWduYXR1cmUYDSABKAkSEwoLSk1LSERIQUlPSU0YBCAB",
@@ -44,7 +44,7 @@ namespace EggLink.DanhengServer.Proto {
             "ChJjbGllbnRfcmVzX3ZlcnNpb24YDCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JGFKICDCFLJReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.OCCHNEFHGNEReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JGFKICDCFLJReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.OCCHNEFHGNEReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerLoginCsReq), global::EggLink.DanhengServer.Proto.PlayerLoginCsReq.Parser, new[]{ "BNIGPDOOILI", "IGNFBLGJIOJ", "LoginRandom", "MLNABEPINDB", "GMALCPNOHBF", "Signature", "JMKHDHAIOIM", "DMPMHCCFBKG", "RogueGetInfo", "AKCEJFCFBAN", "HAEHHCPOAPP", "OEHJLODAHFN", "FADPDIBKNBI", "PKLICGMEIMB", "ClientVersion", "KIBBNBNGIJD", "OEENCFMCAHD", "HJDMJPEBPPM", "KFDJEIEOBBN", "MIOHKAOIDNK", "NHBHBALHJML", "OHPCKCNAEIK", "GEHAPNIHCDO", "Platform", "BPCKJKDENCB", "OCDACJNNJNJ", "BNBOALIAPAE", "ClientResVersion" }, null, null, null, null)
           }));

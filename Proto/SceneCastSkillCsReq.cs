@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlTY2VuZUNhc3RTa2lsbENzUmVxLnByb3RvGh1Bc3Npc3RNb25zdGVyRW50",
-            "aXR5SW5mby5wcm90bxoQTW90aW9uSW5mby5wcm90bxoTRHluYW1pY1ZhbHVl",
-            "cy5wcm90bxoTU2tpbGxFeHRyYVRhZy5wcm90byKOAwoTU2NlbmVDYXN0U2tp",
+            "aXR5SW5mby5wcm90bxoTU2tpbGxFeHRyYVRhZy5wcm90bxoTRHluYW1pY1Zh",
+            "bHVlcy5wcm90bxoQTW90aW9uSW5mby5wcm90byKOAwoTU2NlbmVDYXN0U2tp",
             "bGxDc1JlcRITCgtza2lsbF9pbmRleBgDIAEoDRIiCg10YXJnZXRfbW90aW9u",
             "GAQgASgLMgsuTW90aW9uSW5mbxIdChVhdHRhY2tlZF9ieV9lbnRpdHlfaWQY",
             "CSABKA0SIQoZaGl0X3RhcmdldF9lbnRpdHlfaWRfbGlzdBgBIAMoDRIYChBt",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "dGVyX2VudGl0eV9pZF9saXN0GA4gAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DynamicValuesReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillExtraTagReflection.Descriptor, global::EggLink.DanhengServer.Proto.DynamicValuesReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq), global::EggLink.DanhengServer.Proto.SceneCastSkillCsReq.Parser, new[]{ "SkillIndex", "TargetMotion", "AttackedByEntityId", "HitTargetEntityIdList", "MazeAbilityStr", "SkillExtraTags", "AssistMonsterEntityInfo", "DynamicValues", "CastEntityId", "HCHDHLJCIJE", "AssistMonsterEntityIdList" }, null, null, null, null)
           }));

@@ -154,7 +154,8 @@ public class FormalAvatarInfo : BaseAvatarInfo
             Rank = (uint)GetCurPathInfo().Rank,
             FirstMetTimeStamp = (ulong)Timestamp,
             IsMarked = IsMarked,
-            DressedSkinId = (uint)GetCurPathInfo().Skin
+            DressedSkinId = (uint)GetCurPathInfo().Skin,
+            CurEnhanceId = (uint)GetCurPathInfo().EnhanceId
         };
 
         foreach (var item in GetCurPathInfo().Relic)
@@ -176,11 +177,6 @@ public class FormalAvatarInfo : BaseAvatarInfo
         for (var i = 0; i < Promotion; i++)
             if (HasTakenReward(i))
                 proto.HasTakenPromotionRewardList.Add((uint)i);
-
-        if (GameData.MultiplePathAvatarConfigData.ContainsKey(AvatarId))
-        {
-            proto.AvatarPathId = (uint)AvatarId;
-        }
 
         return proto;
     }
@@ -287,13 +283,9 @@ public class FormalAvatarInfo : BaseAvatarInfo
                 AvatarId = (MultiPathAvatarType)pathInfo.PathId,
                 Rank = (uint)pathInfo.Rank,
                 PathEquipmentId = (uint)pathInfo.EquipId,
-                DressedSkinId = (uint)pathInfo.Skin
+                DressedSkinId = (uint)pathInfo.Skin,
+                CurEnhanceId = (uint)GetCurPathInfo().EnhanceId
             };
-
-            if (GameData.MultiplePathAvatarConfigData.ContainsKey(AvatarId))
-            {
-                proto.AvatarPathId = (uint)AvatarId;
-            }
 
             foreach (var skill in pathInfo.SkillTree)
                 proto.MultiPathSkillTree.Add(new AvatarSkillTree

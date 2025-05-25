@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static AdventureRoomInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdBZHZlbnR1cmVSb29tSW5mby5wcm90bxorUm9ndWVBZHZlbnR1cmVSb29t",
-            "R2FtZXBsYXlXb2xmR3VuSW5mby5wcm90bxoeUm9ndWVBZHZlbnR1cmVSb29t",
-            "U3RhdHVzLnByb3RvItEBChFBZHZlbnR1cmVSb29tSW5mbxI6CgpxdWVyeV9p",
+            "ChdBZHZlbnR1cmVSb29tSW5mby5wcm90bxoeUm9ndWVBZHZlbnR1cmVSb29t",
+            "U3RhdHVzLnByb3RvGitSb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZH",
+            "dW5JbmZvLnByb3RvItEBChFBZHZlbnR1cmVSb29tSW5mbxI6CgpxdWVyeV9p",
             "bmZvGAUgASgLMiYuUm9ndWVBZHZlbnR1cmVSb29tR2FtZXBsYXlXb2xmR3Vu",
             "SW5mbxILCgNzdXMYCyABKAESKQoGc3RhdHVzGA4gASgOMhkuUm9ndWVBZHZl",
             "bnR1cmVSb29tU3RhdHVzEhoKEmNhdWdodF9tb25zdGVyX251bRgEIAEoDRIQ",
             "CghzY29yZV9pZBgKIAEoDRIaChJyZW1haW5fbW9uc3Rlcl9udW0YCCABKA1C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AdventureRoomInfo), global::EggLink.DanhengServer.Proto.AdventureRoomInfo.Parser, new[]{ "QueryInfo", "Sus", "Status", "CaughtMonsterNum", "ScoreId", "RemainMonsterNum" }, null, null, null, null)
           }));

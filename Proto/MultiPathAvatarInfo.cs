@@ -24,19 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static MultiPathAvatarInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlNdWx0aVBhdGhBdmF0YXJJbmZvLnByb3RvGhlNdWx0aVBhdGhBdmF0YXJU",
-            "eXBlLnByb3RvGhBFcXVpcFJlbGljLnByb3RvGhVBdmF0YXJTa2lsbFRyZWUu",
+            "ChlNdWx0aVBhdGhBdmF0YXJJbmZvLnByb3RvGhVBdmF0YXJTa2lsbFRyZWUu",
+            "cHJvdG8aEEVxdWlwUmVsaWMucHJvdG8aGU11bHRpUGF0aEF2YXRhclR5cGUu",
             "cHJvdG8ihQIKE011bHRpUGF0aEF2YXRhckluZm8SFwoPZHJlc3NlZF9za2lu",
             "X2lkGA4gASgNEi8KFW11bHRpX3BhdGhfc2tpbGxfdHJlZRgMIAMoCzIQLkF2",
             "YXRhclNraWxsVHJlZRIlChBlcXVpcF9yZWxpY19saXN0GAUgAygLMgsuRXF1",
-            "aXBSZWxpYxIWCg5hdmF0YXJfcGF0aF9pZBgPIAEoDRIMCgRyYW5rGAIgASgN",
+            "aXBSZWxpYxIWCg5jdXJfZW5oYW5jZV9pZBgPIAEoDRIMCgRyYW5rGAIgASgN",
             "EhMKC0tETUNMS0pMSlBQGAggASgEEhkKEXBhdGhfZXF1aXBtZW50X2lkGAQg",
             "ASgNEicKCWF2YXRhcl9pZBgJIAEoDjIULk11bHRpUGF0aEF2YXRhclR5cGVC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipRelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipRelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo), global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo.Parser, new[]{ "DressedSkinId", "MultiPathSkillTree", "EquipRelicList", "AvatarPathId", "Rank", "KDMCLKJLJPP", "PathEquipmentId", "AvatarId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo), global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo.Parser, new[]{ "DressedSkinId", "MultiPathSkillTree", "EquipRelicList", "CurEnhanceId", "Rank", "KDMCLKJLJPP", "PathEquipmentId", "AvatarId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -81,7 +81,7 @@ namespace EggLink.DanhengServer.Proto {
       dressedSkinId_ = other.dressedSkinId_;
       multiPathSkillTree_ = other.multiPathSkillTree_.Clone();
       equipRelicList_ = other.equipRelicList_.Clone();
-      avatarPathId_ = other.avatarPathId_;
+      curEnhanceId_ = other.curEnhanceId_;
       rank_ = other.rank_;
       kDMCLKJLJPP_ = other.kDMCLKJLJPP_;
       pathEquipmentId_ = other.pathEquipmentId_;
@@ -129,15 +129,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return equipRelicList_; }
     }
 
-    /// <summary>Field number for the "avatar_path_id" field.</summary>
-    public const int AvatarPathIdFieldNumber = 15;
-    private uint avatarPathId_;
+    /// <summary>Field number for the "cur_enhance_id" field.</summary>
+    public const int CurEnhanceIdFieldNumber = 15;
+    private uint curEnhanceId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AvatarPathId {
-      get { return avatarPathId_; }
+    public uint CurEnhanceId {
+      get { return curEnhanceId_; }
       set {
-        avatarPathId_ = value;
+        curEnhanceId_ = value;
       }
     }
 
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
       if (DressedSkinId != other.DressedSkinId) return false;
       if(!multiPathSkillTree_.Equals(other.multiPathSkillTree_)) return false;
       if(!equipRelicList_.Equals(other.equipRelicList_)) return false;
-      if (AvatarPathId != other.AvatarPathId) return false;
+      if (CurEnhanceId != other.CurEnhanceId) return false;
       if (Rank != other.Rank) return false;
       if (KDMCLKJLJPP != other.KDMCLKJLJPP) return false;
       if (PathEquipmentId != other.PathEquipmentId) return false;
@@ -222,7 +222,7 @@ namespace EggLink.DanhengServer.Proto {
       if (DressedSkinId != 0) hash ^= DressedSkinId.GetHashCode();
       hash ^= multiPathSkillTree_.GetHashCode();
       hash ^= equipRelicList_.GetHashCode();
-      if (AvatarPathId != 0) hash ^= AvatarPathId.GetHashCode();
+      if (CurEnhanceId != 0) hash ^= CurEnhanceId.GetHashCode();
       if (Rank != 0) hash ^= Rank.GetHashCode();
       if (KDMCLKJLJPP != 0UL) hash ^= KDMCLKJLJPP.GetHashCode();
       if (PathEquipmentId != 0) hash ^= PathEquipmentId.GetHashCode();
@@ -267,9 +267,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(112);
         output.WriteUInt32(DressedSkinId);
       }
-      if (AvatarPathId != 0) {
+      if (CurEnhanceId != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(AvatarPathId);
+        output.WriteUInt32(CurEnhanceId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -303,9 +303,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(112);
         output.WriteUInt32(DressedSkinId);
       }
-      if (AvatarPathId != 0) {
+      if (CurEnhanceId != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(AvatarPathId);
+        output.WriteUInt32(CurEnhanceId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -322,8 +322,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       size += multiPathSkillTree_.CalculateSize(_repeated_multiPathSkillTree_codec);
       size += equipRelicList_.CalculateSize(_repeated_equipRelicList_codec);
-      if (AvatarPathId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarPathId);
+      if (CurEnhanceId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurEnhanceId);
       }
       if (Rank != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Rank);
@@ -354,8 +354,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       multiPathSkillTree_.Add(other.multiPathSkillTree_);
       equipRelicList_.Add(other.equipRelicList_);
-      if (other.AvatarPathId != 0) {
-        AvatarPathId = other.AvatarPathId;
+      if (other.CurEnhanceId != 0) {
+        CurEnhanceId = other.CurEnhanceId;
       }
       if (other.Rank != 0) {
         Rank = other.Rank;
@@ -413,7 +413,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 120: {
-            AvatarPathId = input.ReadUInt32();
+            CurEnhanceId = input.ReadUInt32();
             break;
           }
         }
@@ -460,7 +460,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 120: {
-            AvatarPathId = input.ReadUInt32();
+            CurEnhanceId = input.ReadUInt32();
             break;
           }
         }

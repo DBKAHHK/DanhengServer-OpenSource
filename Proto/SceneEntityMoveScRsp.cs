@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static SceneEntityMoveScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpTY2VuZUVudGl0eU1vdmVTY1JzcC5wcm90bxoSRW50aXR5TW90aW9uLnBy",
-            "b3RvGhhDbGllbnREb3dubG9hZERhdGEucHJvdG8ifgoUU2NlbmVFbnRpdHlN",
+            "ChpTY2VuZUVudGl0eU1vdmVTY1JzcC5wcm90bxoYQ2xpZW50RG93bmxvYWRE",
+            "YXRhLnByb3RvGhJFbnRpdHlNb3Rpb24ucHJvdG8ifgoUU2NlbmVFbnRpdHlN",
             "b3ZlU2NSc3ASKgoNZG93bmxvYWRfZGF0YRgCIAEoCzITLkNsaWVudERvd25s",
             "b2FkRGF0YRIPCgdyZXRjb2RlGAQgASgNEikKEmVudGl0eV9tb3Rpb25fbGlz",
             "dBgBIAMoCzINLkVudGl0eU1vdGlvbkIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EntityMotionReflection.Descriptor, global::EggLink.DanhengServer.Proto.ClientDownloadDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ClientDownloadDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.EntityMotionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityMoveScRsp), global::EggLink.DanhengServer.Proto.SceneEntityMoveScRsp.Parser, new[]{ "DownloadData", "Retcode", "EntityMotionList" }, null, null, null, null)
           }));

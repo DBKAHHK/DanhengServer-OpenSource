@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static CurChallengeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJDdXJDaGFsbGVuZ2UucHJvdG8aFUNoYWxsZW5nZVN0YXR1cy5wcm90bxoa",
-            "Q2hhbGxlbmdlQ3VyQnVmZkluZm8ucHJvdG8aEUtpbGxNb25zdGVyLnByb3Rv",
-            "GhVFeHRyYUxpbmV1cFR5cGUucHJvdG8imgIKDEN1ckNoYWxsZW5nZRIQCghz",
+            "ChJDdXJDaGFsbGVuZ2UucHJvdG8aFUV4dHJhTGluZXVwVHlwZS5wcm90bxoa",
+            "Q2hhbGxlbmdlQ3VyQnVmZkluZm8ucHJvdG8aFUNoYWxsZW5nZVN0YXR1cy5w",
+            "cm90bxoRS2lsbE1vbnN0ZXIucHJvdG8imgIKDEN1ckNoYWxsZW5nZRIQCghz",
             "Y29yZV9pZBgIIAEoDRIpCgpzdGFnZV9pbmZvGAkgASgLMhUuQ2hhbGxlbmdl",
             "Q3VyQnVmZkluZm8SEQoJc2NvcmVfdHdvGAEgASgNEhcKD2RlYWRfYXZhdGFy",
             "X251bRgHIAEoDRIrChFleHRyYV9saW5ldXBfdHlwZRgCIAEoDjIQLkV4dHJh",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "EWtpbGxfbW9uc3Rlcl9saXN0GAwgAygLMgwuS2lsbE1vbnN0ZXJCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeCurBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeCurBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CurChallenge), global::EggLink.DanhengServer.Proto.CurChallenge.Parser, new[]{ "ScoreId", "StageInfo", "ScoreTwo", "DeadAvatarNum", "ExtraLineupType", "ChallengeId", "RoundCount", "Status", "KillMonsterList" }, null, null, null, null)
           }));

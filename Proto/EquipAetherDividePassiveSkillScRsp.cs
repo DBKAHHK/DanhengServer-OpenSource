@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static EquipAetherDividePassiveSkillScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CihFcXVpcEFldGhlckRpdmlkZVBhc3NpdmVTa2lsbFNjUnNwLnByb3RvGhVB",
-            "ZXRoZXJTa2lsbEluZm8ucHJvdG8aHEFldGhlckRpdmlkZVNwaXJpdEluZm8u",
+            "CihFcXVpcEFldGhlckRpdmlkZVBhc3NpdmVTa2lsbFNjUnNwLnByb3RvGhxB",
+            "ZXRoZXJEaXZpZGVTcGlyaXRJbmZvLnByb3RvGhVBZXRoZXJTa2lsbEluZm8u",
             "cHJvdG8ikAEKIkVxdWlwQWV0aGVyRGl2aWRlUGFzc2l2ZVNraWxsU2NSc3AS",
             "LAoLYWV0aGVyX2luZm8YDyABKAsyFy5BZXRoZXJEaXZpZGVTcGlyaXRJbmZv",
             "Eg8KB3JldGNvZGUYBiABKA0SKwoRYWV0aGVyX3NraWxsX2luZm8YCiABKAsy",
             "EC5BZXRoZXJTa2lsbEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AetherSkillInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AetherSkillInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EquipAetherDividePassiveSkillScRsp), global::EggLink.DanhengServer.Proto.EquipAetherDividePassiveSkillScRsp.Parser, new[]{ "AetherInfo", "Retcode", "AetherSkillInfo" }, null, null, null, null)
           }));

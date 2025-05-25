@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRSb2d1ZVRvdXJuSW5mby5wcm90bxoURXh0cmFTY29yZUluZm8ucHJvdG8a",
-            "HFJvZ3VlVG91cm5TZWFzb25UYWxlbnQucHJvdG8aGlJvZ3VlVG91cm5TZWFz",
-            "b25JbmZvLnByb3RvGhdSb2d1ZVRvdXJuRXhwSW5mby5wcm90bxojUm9ndWVU",
-            "b3VyblBlcm1hbmVudFRhbGVudEluZm8ucHJvdG8aGFJvZ3VlVG91cm5BcmVh",
-            "SW5mby5wcm90bxoeUm9ndWVUb3VybkRpZmZpY3VsdHlJbmZvLnByb3RvGhFL",
-            "Q0xDSEpNTlBHTC5wcm90bxoYUm9ndWVUb3VyblNhdmVMaXN0LnByb3RvGhxS",
-            "b2d1ZVRvdXJuSGFuZGJvb2tJbmZvLnByb3RvIo4ECg5Sb2d1ZVRvdXJuSW5m",
+            "ChRSb2d1ZVRvdXJuSW5mby5wcm90bxocUm9ndWVUb3VybkhhbmRib29rSW5m",
+            "by5wcm90bxoYUm9ndWVUb3VyblNhdmVMaXN0LnByb3RvGhRFeHRyYVNjb3Jl",
+            "SW5mby5wcm90bxoaUm9ndWVUb3VyblNlYXNvbkluZm8ucHJvdG8aI1JvZ3Vl",
+            "VG91cm5QZXJtYW5lbnRUYWxlbnRJbmZvLnByb3RvGhFLQ0xDSEpNTlBHTC5w",
+            "cm90bxoXUm9ndWVUb3VybkV4cEluZm8ucHJvdG8aHFJvZ3VlVG91cm5TZWFz",
+            "b25UYWxlbnQucHJvdG8aHlJvZ3VlVG91cm5EaWZmaWN1bHR5SW5mby5wcm90",
+            "bxoYUm9ndWVUb3VybkFyZWFJbmZvLnByb3RvIo4ECg5Sb2d1ZVRvdXJuSW5m",
             "bxI+Chtyb2d1ZV90b3Vybl9kaWZmaWN1bHR5X2luZm8YASADKAsyGS5Sb2d1",
             "ZVRvdXJuRGlmZmljdWx0eUluZm8SMgoVcm9ndWVfdG91cm5fc2F2ZV9saXN0",
             "GAggAygLMhMuUm9ndWVUb3VyblNhdmVMaXN0EjYKDnBlcm1hbmVudF9pbmZv",
@@ -45,7 +45,7 @@ namespace EggLink.DanhengServer.Proto {
             "Dy5FeHRyYVNjb3JlSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExtraScoreInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSeasonTalentReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSeasonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournExpInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournAreaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournDifficultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KCLCHJMNPGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSaveListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournHandbookInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournHandbookInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSaveListReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraScoreInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSeasonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournPermanentTalentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KCLCHJMNPGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournExpInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournSeasonTalentReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournDifficultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournAreaInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournInfo), global::EggLink.DanhengServer.Proto.RogueTournInfo.Parser, new[]{ "RogueTournDifficultyInfo", "RogueTournSaveList", "PermanentInfo", "RogueTournExpInfo", "RogueSeasonInfo", "LKCEFCLJCBM", "RogueTournHandbook", "SeasonTalentInfo", "RogueTournAreaInfo", "ExtraScoreInfo" }, null, null, null, null)
           }));

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueCellReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRDaGVzc1JvZ3VlQ2VsbC5wcm90bxofQ2hlc3NSb2d1ZUJvYXJkQ2VsbFN0",
-            "YXR1cy5wcm90bxoVQ2VsbEFkdmFuY2VJbmZvLnByb3RvGh9DaGVzc1JvZ3Vl",
-            "Q2VsbFNwZWNpYWxUeXBlLnByb3RvIqACCg5DaGVzc1JvZ3VlQ2VsbBIwCgxz",
+            "ChRDaGVzc1JvZ3VlQ2VsbC5wcm90bxofQ2hlc3NSb2d1ZUNlbGxTcGVjaWFs",
+            "VHlwZS5wcm90bxoVQ2VsbEFkdmFuY2VJbmZvLnByb3RvGh9DaGVzc1JvZ3Vl",
+            "Qm9hcmRDZWxsU3RhdHVzLnByb3RvIqACCg5DaGVzc1JvZ3VlQ2VsbBIwCgxz",
             "cGVjaWFsX3R5cGUYBiABKA4yGi5DaGVzc1JvZ3VlQ2VsbFNwZWNpYWxUeXBl",
             "Eg0KBXBvc194GAsgASgNEgoKAmlkGAUgASgNEiQKCnN0YWdlX2luZm8YByAB",
             "KAsyEC5DZWxsQWR2YW5jZUluZm8SLwoLY2VsbF9zdGF0dXMYAyABKA4yGi5D",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "eRgBIAEoDRIRCgltYXJrX3R5cGUYDCABKA0SDgoGdW5sb2NrGAkgASgIQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellAdvanceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueCellSpecialTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellAdvanceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueCell), global::EggLink.DanhengServer.Proto.ChessRogueCell.Parser, new[]{ "SpecialType", "PosX", "Id", "StageInfo", "CellStatus", "IsUnlocked", "RoomId", "BlockType", "PosY", "MarkType", "Unlock" }, null, null, null, null)
           }));

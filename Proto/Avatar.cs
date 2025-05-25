@@ -24,20 +24,20 @@ namespace EggLink.DanhengServer.Proto {
     static AvatarReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgxBdmF0YXIucHJvdG8aEEVxdWlwUmVsaWMucHJvdG8aFUF2YXRhclNraWxs",
-            "VHJlZS5wcm90byLWAgoGQXZhdGFyEhsKE2VxdWlwbWVudF91bmlxdWVfaWQY",
+            "CgxBdmF0YXIucHJvdG8aFUF2YXRhclNraWxsVHJlZS5wcm90bxoQRXF1aXBS",
+            "ZWxpYy5wcm90byLWAgoGQXZhdGFyEhsKE2VxdWlwbWVudF91bmlxdWVfaWQY",
             "DSABKA0SKAoOc2tpbGx0cmVlX2xpc3QYCiADKAsyEC5BdmF0YXJTa2lsbFRy",
-            "ZWUSDAoEcmFuaxgDIAEoDRIRCglwcm9tb3Rpb24YASABKA0SFgoOYXZhdGFy",
-            "X3BhdGhfaWQYDCABKA0SCwoDZXhwGAkgASgNEhYKDmJhc2VfYXZhdGFyX2lk",
+            "ZWUSDAoEcmFuaxgDIAEoDRIRCglwcm9tb3Rpb24YASABKA0SFgoOY3VyX2Vu",
+            "aGFuY2VfaWQYDCABKA0SCwoDZXhwGAkgASgNEhYKDmJhc2VfYXZhdGFyX2lk",
             "GAcgASgNEhwKFGZpcnN0X21ldF90aW1lX3N0YW1wGAUgASgEEiUKEGVxdWlw",
             "X3JlbGljX2xpc3QYAiADKAsyCy5FcXVpcFJlbGljEg0KBWxldmVsGA8gASgN",
             "EhcKD2RyZXNzZWRfc2tpbl9pZBgGIAEoDRIRCglpc19tYXJrZWQYCCABKAgS",
             "JwofaGFzX3Rha2VuX3Byb21vdGlvbl9yZXdhcmRfbGlzdBgLIAMoDUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EquipRelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipRelicReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Avatar), global::EggLink.DanhengServer.Proto.Avatar.Parser, new[]{ "EquipmentUniqueId", "SkilltreeList", "Rank", "Promotion", "AvatarPathId", "Exp", "BaseAvatarId", "FirstMetTimeStamp", "EquipRelicList", "Level", "DressedSkinId", "IsMarked", "HasTakenPromotionRewardList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Avatar), global::EggLink.DanhengServer.Proto.Avatar.Parser, new[]{ "EquipmentUniqueId", "SkilltreeList", "Rank", "Promotion", "CurEnhanceId", "Exp", "BaseAvatarId", "FirstMetTimeStamp", "EquipRelicList", "Level", "DressedSkinId", "IsMarked", "HasTakenPromotionRewardList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       skilltreeList_ = other.skilltreeList_.Clone();
       rank_ = other.rank_;
       promotion_ = other.promotion_;
-      avatarPathId_ = other.avatarPathId_;
+      curEnhanceId_ = other.curEnhanceId_;
       exp_ = other.exp_;
       baseAvatarId_ = other.baseAvatarId_;
       firstMetTimeStamp_ = other.firstMetTimeStamp_;
@@ -148,15 +148,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "avatar_path_id" field.</summary>
-    public const int AvatarPathIdFieldNumber = 12;
-    private uint avatarPathId_;
+    /// <summary>Field number for the "cur_enhance_id" field.</summary>
+    public const int CurEnhanceIdFieldNumber = 12;
+    private uint curEnhanceId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AvatarPathId {
-      get { return avatarPathId_; }
+    public uint CurEnhanceId {
+      get { return curEnhanceId_; }
       set {
-        avatarPathId_ = value;
+        curEnhanceId_ = value;
       }
     }
 
@@ -273,7 +273,7 @@ namespace EggLink.DanhengServer.Proto {
       if(!skilltreeList_.Equals(other.skilltreeList_)) return false;
       if (Rank != other.Rank) return false;
       if (Promotion != other.Promotion) return false;
-      if (AvatarPathId != other.AvatarPathId) return false;
+      if (CurEnhanceId != other.CurEnhanceId) return false;
       if (Exp != other.Exp) return false;
       if (BaseAvatarId != other.BaseAvatarId) return false;
       if (FirstMetTimeStamp != other.FirstMetTimeStamp) return false;
@@ -293,7 +293,7 @@ namespace EggLink.DanhengServer.Proto {
       hash ^= skilltreeList_.GetHashCode();
       if (Rank != 0) hash ^= Rank.GetHashCode();
       if (Promotion != 0) hash ^= Promotion.GetHashCode();
-      if (AvatarPathId != 0) hash ^= AvatarPathId.GetHashCode();
+      if (CurEnhanceId != 0) hash ^= CurEnhanceId.GetHashCode();
       if (Exp != 0) hash ^= Exp.GetHashCode();
       if (BaseAvatarId != 0) hash ^= BaseAvatarId.GetHashCode();
       if (FirstMetTimeStamp != 0UL) hash ^= FirstMetTimeStamp.GetHashCode();
@@ -351,9 +351,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       skilltreeList_.WriteTo(output, _repeated_skilltreeList_codec);
       hasTakenPromotionRewardList_.WriteTo(output, _repeated_hasTakenPromotionRewardList_codec);
-      if (AvatarPathId != 0) {
+      if (CurEnhanceId != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(AvatarPathId);
+        output.WriteUInt32(CurEnhanceId);
       }
       if (EquipmentUniqueId != 0) {
         output.WriteRawTag(104);
@@ -404,9 +404,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       skilltreeList_.WriteTo(ref output, _repeated_skilltreeList_codec);
       hasTakenPromotionRewardList_.WriteTo(ref output, _repeated_hasTakenPromotionRewardList_codec);
-      if (AvatarPathId != 0) {
+      if (CurEnhanceId != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(AvatarPathId);
+        output.WriteUInt32(CurEnhanceId);
       }
       if (EquipmentUniqueId != 0) {
         output.WriteRawTag(104);
@@ -436,8 +436,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Promotion != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Promotion);
       }
-      if (AvatarPathId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarPathId);
+      if (CurEnhanceId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurEnhanceId);
       }
       if (Exp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Exp);
@@ -481,8 +481,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Promotion != 0) {
         Promotion = other.Promotion;
       }
-      if (other.AvatarPathId != 0) {
-        AvatarPathId = other.AvatarPathId;
+      if (other.CurEnhanceId != 0) {
+        CurEnhanceId = other.CurEnhanceId;
       }
       if (other.Exp != 0) {
         Exp = other.Exp;
@@ -561,7 +561,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 96: {
-            AvatarPathId = input.ReadUInt32();
+            CurEnhanceId = input.ReadUInt32();
             break;
           }
           case 104: {
@@ -629,7 +629,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 96: {
-            AvatarPathId = input.ReadUInt32();
+            CurEnhanceId = input.ReadUInt32();
             break;
           }
           case 104: {

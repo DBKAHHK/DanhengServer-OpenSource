@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static WorkbenchFuncInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdXb3JrYmVuY2hGdW5jSW5mby5wcm90bxojV29ya2JlbmNoUmVmb3JnZUhl",
-            "eEF2YXRhckZ1bmMucHJvdG8aJVdvcmtiZW5jaFJlZm9yZ2VGb3JtdWxhRnVu",
-            "Y0luZm8ucHJvdG8aEUtNSElCTkdBRkVPLnByb3RvGiJXb3JrYmVuY2hSZWZv",
-            "cmdlQnVmZkZ1bmNJbmZvLnByb3RvGhFLSENCR05MTlBFTC5wcm90bxohV29y",
-            "a2JlbmNoQ29tcG9zZU1pcmFjbGVGdW5jLnByb3RvGhFMRkdHUE5HS0JDSC5w",
-            "cm90bxoRRE1LUEZHRUJJTEgucHJvdG8aIldvcmtiZW5jaEVuaGFuY2VCdWZm",
-            "RnVuY0luZm8ucHJvdG8aEURITUZDSURKQkZELnByb3RvIpkEChFXb3JrYmVu",
+            "ChdXb3JrYmVuY2hGdW5jSW5mby5wcm90bxoiV29ya2JlbmNoRW5oYW5jZUJ1",
+            "ZmZGdW5jSW5mby5wcm90bxojV29ya2JlbmNoUmVmb3JnZUhleEF2YXRhckZ1",
+            "bmMucHJvdG8aIVdvcmtiZW5jaENvbXBvc2VNaXJhY2xlRnVuYy5wcm90bxoR",
+            "REhNRkNJREpCRkQucHJvdG8aEUxGR0dQTkdLQkNILnByb3RvGiVXb3JrYmVu",
+            "Y2hSZWZvcmdlRm9ybXVsYUZ1bmNJbmZvLnByb3RvGhFLTUhJQk5HQUZFTy5w",
+            "cm90bxoRS0hDQkdOTE5QRUwucHJvdG8aEURNS1BGR0VCSUxILnByb3RvGiJX",
+            "b3JrYmVuY2hSZWZvcmdlQnVmZkZ1bmNJbmZvLnByb3RvIpkEChFXb3JrYmVu",
             "Y2hGdW5jSW5mbxI6ChFyZWZvcmdlX2J1ZmZfZnVuYxgGIAEoCzIdLldvcmti",
             "ZW5jaFJlZm9yZ2VCdWZmRnVuY0luZm9IABJAChRyZWZvcmdlX2Zvcm11bGFf",
             "ZnVuYxgJIAEoCzIgLldvcmtiZW5jaFJlZm9yZ2VGb3JtdWxhRnVuY0luZm9I",
@@ -45,7 +45,7 @@ namespace EggLink.DanhengServer.Proto {
             "KAsyDC5ESE1GQ0lESkJGREgAQg0KC0RCQ0hOTkNNSkVDQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarFuncReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaFuncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KMHIBNGAFEOReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffFuncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KHCBGNLNPELReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleFuncReflection.Descriptor, global::EggLink.DanhengServer.Proto.LFGGPNGKBCHReflection.Descriptor, global::EggLink.DanhengServer.Proto.DMKPFGEBILHReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffFuncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DHMFCIDJBFDReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffFuncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarFuncReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleFuncReflection.Descriptor, global::EggLink.DanhengServer.Proto.DHMFCIDJBFDReflection.Descriptor, global::EggLink.DanhengServer.Proto.LFGGPNGKBCHReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaFuncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KMHIBNGAFEOReflection.Descriptor, global::EggLink.DanhengServer.Proto.KHCBGNLNPELReflection.Descriptor, global::EggLink.DanhengServer.Proto.DMKPFGEBILHReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffFuncInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo), global::EggLink.DanhengServer.Proto.WorkbenchFuncInfo.Parser, new[]{ "ReforgeBuffFunc", "ReforgeFormulaFunc", "EnhanceBuffFunc", "ComposeMiracleFunc", "ReforgeHexAvatarFunc", "MagicItem", "GameMagicUnit", "CEAJNLIOFHF", "PGPAAPOPDOC", "PMKEHGBPCNG" }, new[]{ "DBCHNNCMJEC" }, null, null, null)
           }));

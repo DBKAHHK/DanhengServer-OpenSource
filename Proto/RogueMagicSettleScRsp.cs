@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMagicSettleScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtSb2d1ZU1hZ2ljU2V0dGxlU2NSc3AucHJvdG8aGlJvZ3VlTWFnaWNGaW5p",
-            "c2hJbmZvLnByb3RvGg5JdGVtTGlzdC5wcm90bxocUm9ndWVNYWdpY0N1clNj",
-            "ZW5lSW5mby5wcm90bxoRSENKR1BNREdCSk8ucHJvdG8i2gEKFVJvZ3VlTWFn",
+            "ChtSb2d1ZU1hZ2ljU2V0dGxlU2NSc3AucHJvdG8aHFJvZ3VlTWFnaWNDdXJT",
+            "Y2VuZUluZm8ucHJvdG8aEUhDSkdQTURHQkpPLnByb3RvGhpSb2d1ZU1hZ2lj",
+            "RmluaXNoSW5mby5wcm90bxoOSXRlbUxpc3QucHJvdG8i2gEKFVJvZ3VlTWFn",
             "aWNTZXR0bGVTY1JzcBI7Chpyb2d1ZV90b3Vybl9jdXJfc2NlbmVfaW5mbxgG",
             "IAEoCzIXLlJvZ3VlTWFnaWNDdXJTY2VuZUluZm8SIQoLTUdDRk9HTEtNQ0gY",
             "DSABKAsyDC5IQ0pHUE1ER0JKTxIwChF0b3Vybl9maW5pc2hfaW5mbxgMIAEo",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "MgkuSXRlbUxpc3QSDwoHcmV0Y29kZRgFIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicCurSceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HCJGPMDGBJOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicCurSceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HCJGPMDGBJOReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicSettleScRsp), global::EggLink.DanhengServer.Proto.RogueMagicSettleScRsp.Parser, new[]{ "RogueTournCurSceneInfo", "MGCFOGLKMCH", "TournFinishInfo", "GFONFDBFBNA", "Retcode" }, null, null, null, null)
           }));
