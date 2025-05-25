@@ -12,6 +12,8 @@ using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using System.Threading;
+using EggLink.DanhengServer.Enums.Avatar;
 
 namespace EggLink.DanhengServer.GameServer.Game.Task.AvatarTask;
 
@@ -365,8 +367,39 @@ public class AbilityLevelTask(PlayerInstance player)
         return new AbilityLevelResult();
     }
 
+    public async ValueTask<AbilityLevelResult> AdvModifyMaxMazeMP(AbilityLevelParam param)
+    {
+        if (param.Act is AdvModifyMaxMazeMP advModifyMaxMazeMp)
+        {
+            switch (advModifyMaxMazeMp.ModifyFunction)
+            {
+                case PropertyModifyFunctionEnum.Add:
+                    Player.LineupManager!.LineupData.ExtraMpCount += advModifyMaxMazeMp.ModifyValue.GetValue();
+                    break;
+                case PropertyModifyFunctionEnum.Set:
+                    Player.LineupManager!.LineupData.ExtraMpCount = advModifyMaxMazeMp.ModifyValue.GetValue() - 5;
+                    break;
+            }
+        }
+
+        return new AbilityLevelResult();
+    }
+
     public async ValueTask AdventureSetAttackTargetMonsterDie(AbilityLevelParam param)
     {
+        var avatar = param.CasterEntity as AvatarSceneInfo;
+        if (GameData.AvatarConfigData.TryGetValue(avatar?.AvatarInfo.AvatarId ?? 0, out var excel))
+        {
+            var adventurePlayerExcel = GameData.AdventurePlayerData.GetValueOrDefault(excel.AdventurePlayerID);
+            if (adventurePlayerExcel != null && adventurePlayerExcel.MazeSkillIdList.Count > param.Request.SkillIndex)
+            {
+                var skill = GameData.MazeSkillData.GetValueOrDefault(
+                    adventurePlayerExcel.MazeSkillIdList[(int)param.Request.SkillIndex]);
+
+                await Player.LineupManager!.CostMp(skill?.MPCost ?? 1, param.Request.CastEntityId);
+            }
+        }
+
         foreach (var targetEntity in param.TargetEntities)
         {
             if (targetEntity is not EntityMonster monster) continue;
@@ -375,7 +408,6 @@ public class AbilityLevelTask(PlayerInstance player)
             {
                 await monster.Kill();
 
-                await monster.Scene.Player.LineupManager!.CostMp(1, param.Request.CastEntityId);
                 var instance = monster.Scene.Player.RogueManager!.GetRogueInstance();
                 switch (instance)
                 {

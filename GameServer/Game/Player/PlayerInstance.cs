@@ -823,9 +823,13 @@ public class PlayerInstance(PlayerData data)
         var notSendMove = true;
         if (planeId != Data.PlaneId || floorId != Data.FloorId || entryId != Data.EntryId || SceneInstance == null)
         {
+            if (SceneInstance != null)
+                await SceneInstance.OnDestroy();
             SceneInstance instance = new(this, plane, floorId, entryId);
             InvokeOnPlayerLoadScene(this, instance);
             SceneInstance = instance;
+
+            await instance.SyncLineup(true);
             Data.PlaneId = planeId;
             Data.FloorId = floorId;
             Data.EntryId = entryId;

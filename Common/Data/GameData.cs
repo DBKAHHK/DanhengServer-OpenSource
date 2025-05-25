@@ -55,6 +55,7 @@ public static class GameData
     public static Dictionary<int, AvatarPromotionConfigExcel> AvatarPromotionConfigData { get; private set; } = [];
     public static Dictionary<int, AvatarExpItemConfigExcel> AvatarExpItemConfigData { get; private set; } = [];
     public static Dictionary<int, AvatarSkillTreeConfigExcel> AvatarSkillTreeConfigData { get; private set; } = [];
+    public static Dictionary<int, MazeSkillExcel> MazeSkillData { get; private set; } = [];
     public static Dictionary<int, AvatarSkinExcel> AvatarSkinData { get; private set; } = [];
     public static Dictionary<int, AvatarDemoConfigExcel> AvatarDemoConfigData { get; private set; } = [];
     public static Dictionary<int, ExpTypeExcel> ExpTypeData { get; } = [];
@@ -65,7 +66,7 @@ public static class GameData
     public static Dictionary<int, AdventurePlayerExcel> AdventurePlayerData { get; private set; } = [];
     public static Dictionary<int, SummonUnitDataExcel> SummonUnitDataData { get; private set; } = [];
     public static Dictionary<int, DecideAvatarOrderExcel> DecideAvatarOrderData { get; private set; } = [];
-    public static Dictionary<int, CharacterConfigInfo> CharacterConfigInfoData { get; private set; } = [];
+    public static ConcurrentDictionary<int, CharacterConfigInfo> CharacterConfigInfoData { get; private set; } = [];
 
     #endregion
 

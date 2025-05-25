@@ -12,7 +12,7 @@ public class LineupData : BaseDatabaseDataHelper
 {
     public int CurLineup { get; set; } // index of current lineup
     public int CurExtraLineup { get; set; } = -1; // index of current extra lineup
-
+    [SugarColumn(IsIgnore = true)] public int ExtraMpCount { get; set; }
     [SugarColumn(IsJson = true)] public Dictionary<int, LineupInfo> Lineups { get; set; } = []; // 9 * 4
 
     public int GetCurLineupIndex()
@@ -132,10 +132,11 @@ public class LineupInfo
 
     public Proto.LineupInfo ToProto()
     {
+        Mp = Math.Max(5 + (LineupData?.ExtraMpCount ?? 0), Mp);
         Proto.LineupInfo info = new()
         {
             Name = Name,
-            MaxMp = 5,
+            MaxMp = (uint)(5 + (LineupData?.ExtraMpCount ?? 0)),
             Mp = (uint)Mp,
             ExtraLineupType = (ExtraLineupType)(LineupType == (int)ExtraLineupType.LineupHeliobus
                 ? (int)ExtraLineupType.LineupNone

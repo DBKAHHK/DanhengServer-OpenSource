@@ -458,6 +458,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
     {
         // calculate drops
         List<ItemData> items = [];
+        List<ItemData> resItems = [];
         GameData.MappingInfoData.TryGetValue(mappingId * 10 + worldLevel, out var mapping);
         if (mapping != null)
         {
@@ -494,10 +495,12 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
             {
                 var i = (await Player.InventoryManager!.AddItem(item.ItemId, item.Count, false))!;
                 i.Count = item.Count; // return the all thing
+
+                resItems.Add(i);
             }
         }
 
-        return items;
+        return resItems;
     }
 
     public async ValueTask<(int, ItemData?)> HandleRelic(

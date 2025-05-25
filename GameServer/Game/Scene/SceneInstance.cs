@@ -185,8 +185,6 @@ public class SceneInstance
         EntryId = entryId;
         LeaveEntryId = 0;
 
-        System.Threading.Tasks.Task.Run(async () => { await SyncLineup(true); }).Wait();
-
         GameData.GetFloorInfo(PlaneId, FloorId, out FloorInfo);
         if (FloorInfo == null) return;
 
@@ -273,7 +271,15 @@ public class SceneInstance
             sendPacket = true;
         }
 
-        foreach (var avatar in removeAvatar) Entities.Remove(avatar.EntityId);
+        foreach (var avatar in removeAvatar)
+        {
+            Entities.Remove(avatar.EntityId);
+
+            if (avatar is AvatarSceneInfo info)
+            {
+                await info.OnDestroyInstance();
+            }
+        }
 
         foreach (var avatar in addAvatar) Entities.Add(avatar.EntityId, avatar);
 
@@ -340,6 +346,14 @@ public class SceneInstance
                         }, modifier);
                 }
             }
+        }
+    }
+
+    public async ValueTask OnDestroy()
+    {
+        foreach (var value in AvatarInfo.Values)
+        {
+            await value.OnDestroyInstance();
         }
     }
 
@@ -725,5 +739,21 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
         }
 
         BuffList.Clear();
+    }
+
+    public async ValueTask OnDestroyInstance()
+    {
+        foreach (var modifier in Modifiers.ToArray())
+        {
+            await RemoveModifier(modifier);
+        }
+
+        foreach (var monsterInfo in Player.SceneInstance!.Entities.OfType<EntityMonster>().ToArray())
+        {
+            foreach (var buff in monsterInfo.BuffList.Where(x => x.OwnerAvatarId == AvatarInfo.BaseAvatarId).ToArray())
+            {
+                await monsterInfo.RemoveBuff(buff.BuffId);
+            }
+        }
     }
 }

@@ -262,8 +262,9 @@ public class CommandManager
                 sender.SendMsg(I18NManager.Translate("Game.Command.Notice.CommandNotFound"));
             }
         }
-        catch
+        catch (Exception e)
         {
+            Logger.Error(I18NManager.Translate("Game.Command.Notice.InternalError"), e);
             sender.SendMsg(I18NManager.Translate("Game.Command.Notice.InternalError"));
         }
     }

@@ -14,8 +14,8 @@ public class HandlerMusicRhythmDataCsReq : Handler
         await connection.SendPacket(CmdIds.MusicRhythmMaxDifficultyLevelsUnlockNotify);
 
         // Unknwon fields
-        await connection.SendPacket(new PacketMusicRhythmUnlockSongNotify());
-        await connection.SendPacket(new PacketMusicRhythmUnlockSongSfxScNotify());
-        await connection.SendPacket(new PacketMusicRhythmUnlockTrackScNotify());
+        //await connection.SendPacket(new PacketMusicRhythmUnlockSongNotify());
+        //await connection.SendPacket(new PacketMusicRhythmUnlockSongSfxScNotify());
+        //await connection.SendPacket(new PacketMusicRhythmUnlockTrackScNotify());
     }
 }

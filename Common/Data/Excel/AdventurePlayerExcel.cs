@@ -5,6 +5,7 @@ public class AdventurePlayerExcel : ExcelResource
 {
     public int ID { get; set; }
     public int AvatarID { get; set; }
+    public List<int> MazeSkillIdList { get; set; } = [];
     public string PlayerJsonPath { get; set; } = "";
 
     public override int GetId()

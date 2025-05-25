@@ -812,7 +812,7 @@ public class ResourceManager
                 var info = JsonConvert.DeserializeObject<CharacterConfigInfo>(text);
                 if (info == null) return;
 
-                GameData.CharacterConfigInfoData.Add(excel.ID, info);
+                GameData.CharacterConfigInfoData.TryAdd(excel.ID, info);
                 count++;
             }
             catch (Exception ex)

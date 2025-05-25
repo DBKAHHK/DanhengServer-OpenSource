@@ -48,12 +48,17 @@ public class LineupManager : BasePlayerManager
         return lineup;
     }
 
-    public List<AvatarSceneInfo> GetAvatarsFromTeam(int index)
+    public int GetMaxMp()
+    {
+        return 5 + LineupData.ExtraMpCount;
+    }
+
+    public List<AvatarLineupData> GetAvatarsFromTeam(int index)
     {
         var lineup = GetLineup(index);
         if (lineup == null) return [];
 
-        var avatarList = new List<AvatarSceneInfo>();
+        var avatarList = new List<AvatarLineupData>();
         foreach (var avatar in lineup.BaseAvatars!)
         {
             var avatarType = AvatarType.AvatarFormalType;
@@ -81,13 +86,13 @@ public class LineupManager : BasePlayerManager
             }
 
             if (avatarInfo == null) continue;
-            avatarList.Add(new AvatarSceneInfo(avatarInfo, avatarType, Player));
+            avatarList.Add(new AvatarLineupData(avatarInfo, avatarType));
         }
 
         return avatarList;
     }
 
-    public List<AvatarSceneInfo> GetAvatarsFromCurTeam()
+    public List<AvatarLineupData> GetAvatarsFromCurTeam()
     {
         return GetAvatarsFromTeam(LineupData.GetCurLineupIndex());
     }
@@ -359,7 +364,7 @@ public class LineupManager : BasePlayerManager
     {
         var curLineup = GetCurLineup()!;
         curLineup.Mp -= count;
-        curLineup.Mp = Math.Min(Math.Max(0, curLineup.Mp), 5);
+        curLineup.Mp = Math.Min(Math.Max(0, curLineup.Mp), GetMaxMp());
 
         await Player.SendPacket(new PacketSceneCastSkillMpUpdateScNotify(castEntityId, curLineup.Mp));
     }
@@ -369,7 +374,7 @@ public class LineupManager : BasePlayerManager
     {
         var curLineup = GetCurLineup()!;
         curLineup.Mp += count;
-        curLineup.Mp = Math.Min(Math.Max(0, curLineup.Mp), 5);
+        curLineup.Mp = Math.Min(Math.Max(0, curLineup.Mp), GetMaxMp());
         if (sendPacket)
             await Player.SendPacket(
                 new PacketSyncLineupNotify(GetCurLineup()!, reason));
@@ -377,3 +382,5 @@ public class LineupManager : BasePlayerManager
 
     #endregion
 }
+
+public record AvatarLineupData(BaseAvatarInfo AvatarInfo, AvatarType AvatarType);
