@@ -15,11 +15,12 @@ public class PacketSetAvatarEnhancedIdScRsp : BasePacket
         SetData(proto);
     }
 
-    public PacketSetAvatarEnhancedIdScRsp(int avatarId) : base(CmdIds.SetAvatarEnhancedIdScRsp)
+    public PacketSetAvatarEnhancedIdScRsp(uint avatarId, int enhanceId) : base(CmdIds.SetAvatarEnhancedIdScRsp)
     {
         var proto = new SetAvatarEnhancedIdScRsp
         {
-            AvatarPathId = (uint)avatarId
+            CurEnhanceId = (uint)enhanceId,
+            SetTargetAvatarId = avatarId
         };
 
         SetData(proto);
