@@ -17,7 +17,8 @@ public class PacketMultiplayerGetFightGateScRsp : BasePacket
         SetData(proto);
     }
 
-    public PacketMultiplayerGetFightGateScRsp(BaseMultiPlayerGameRoomInstance room) : base(CmdIds.MultiplayerGetFightGateScRsp)
+    public PacketMultiplayerGetFightGateScRsp(BaseMultiPlayerGameRoomInstance room) : base(
+        CmdIds.MultiplayerGetFightGateScRsp)
     {
         var proto = new MultiplayerGetFightGateScRsp
         {

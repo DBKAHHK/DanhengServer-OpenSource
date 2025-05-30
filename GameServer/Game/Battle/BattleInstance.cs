@@ -222,7 +222,8 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
 
         var avatars = GetBattleAvatars();
         foreach (var avatar in avatars)
-            proto.BattleAvatarList.Add(avatar.Key.ToBattleProto(new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, Lineup), avatar.Value));
+            proto.BattleAvatarList.Add(avatar.Key.ToBattleProto(
+                new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, Lineup), avatar.Value));
 
         System.Threading.Tasks.Task.Run(async () =>
         {

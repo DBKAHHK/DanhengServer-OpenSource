@@ -16,12 +16,6 @@ namespace EggLink.DanhengServer.GameServer.Game.MultiPlayer.MarbleGame;
 
 public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
 {
-    public MarbleTeamType CurMoveTeamType { get; set; }
-    public MarbleTeamType FirstMoveTeamType { get; set; }
-    public int CurRound { get; set; }
-    public int TurnCount { get; set; }
-    public long WaitingOperationEndTime { get; set; }
-
     public MarbleGameRoomInstance(long roomId, LobbyRoomInstance parentLobby) : base(roomId, parentLobby)
     {
         // random move team type
@@ -29,10 +23,33 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
         FirstMoveTeamType = CurMoveTeamType;
         // set player
         foreach (var player in parentLobby.Players)
-        {
             Players.Add(new MarbleGamePlayerInstance(player, (MarbleTeamType)(parentLobby.Players.IndexOf(
                 player) + 1)));
-        }
+    }
+
+    public MarbleTeamType CurMoveTeamType { get; set; }
+    public MarbleTeamType FirstMoveTeamType { get; set; }
+    public int CurRound { get; set; }
+    public int TurnCount { get; set; }
+    public long WaitingOperationEndTime { get; set; }
+
+    public MarbleGameInfo ToProto()
+    {
+        return new MarbleGameInfo
+        {
+            LobbyBasicInfo = { ParentLobby.Players.Select(x => x.ToProto()) },
+            CurActionTeamType = CurMoveTeamType,
+            LevelId = 100,
+            TeamAPlayer = (uint)Players[0].LobbyPlayer.Player.Uid,
+            TeamBPlayer = (uint)Players[1].LobbyPlayer.Player.Uid,
+            TeamARank = 1,
+            TeamBRank = 1,
+            TeamASealList = { (Players[0] as MarbleGamePlayerInstance)!.SealList.Select(x => (uint)x.Value.SealId) },
+            TeamBSealList = { (Players[1] as MarbleGamePlayerInstance)!.SealList.Select(x => (uint)x.Value.SealId) },
+            PlayerAScore = (uint)(Players[0] as MarbleGamePlayerInstance)!.Score,
+            PlayerBScore = (uint)(Players[1] as MarbleGamePlayerInstance)!.Score,
+            ControlByServer = true
+        };
     }
 
 
@@ -40,18 +57,12 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
 
     public async ValueTask BroadCastToRoom(BasePacket packet)
     {
-        foreach (var player in Players)
-        {
-            await player.SendPacket(packet);
-        }
+        foreach (var player in Players) await player.SendPacket(packet);
     }
 
     public async ValueTask BroadCastToRoomPlayer(BasePacket packet)
     {
-        foreach (var player in Players.Where(x => !x.LeaveGame))
-        {
-            await player.LobbyPlayer.Player.SendPacket(packet);
-        }
+        foreach (var player in Players.Where(x => !x.LeaveGame)) await player.LobbyPlayer.Player.SendPacket(packet);
     }
 
     public async ValueTask EnterGame(int uid)
@@ -60,27 +71,20 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
         if (player == null) return;
         player.EnterGame = true;
 
-        if (player is MarbleGamePlayerInstance marblePlayer)
-        {
-            marblePlayer.Phase = MarblePlayerPhaseEnum.EnterGame;
-        }
+        if (player is MarbleGamePlayerInstance marblePlayer) marblePlayer.Phase = MarblePlayerPhaseEnum.EnterGame;
 
         if (Players.All(x => x.EnterGame))
-        {
             // send basic info
             await BroadCastToRoom(new PacketFightGeneralScNotify(MarbleNetWorkMsgEnum.SyncBatch,
                 MarbleNetWorkMsgEnum.GameStart, this));
-        }
     }
 
     public async ValueTask OnPlayerHeartBeat()
     {
         var curTime = Extensions.GetUnixMs();
         if (WaitingOperationEndTime > 0 && curTime >= WaitingOperationEndTime)
-        {
             // timeout
             await SwitchTurn();
-        }
     }
 
     public List<MarbleGameBaseSyncData> CheckPlayerWin()
@@ -91,9 +95,7 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
         List<MarbleGameBaseSyncData> syncData = [];
         // win
         foreach (var player in Players.OfType<MarbleGamePlayerInstance>())
-        {
             syncData.Add(new MarbleGameFinishSyncData(player, player == winPlayer));
-        }
 
         return syncData;
     }
@@ -148,32 +150,29 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
     public async ValueTask LoadFinish(MarbleGamePlayerInstance player)
     {
         player.Phase = MarblePlayerPhaseEnum.LoadFinish;
-        if (Players.OfType<MarbleGamePlayerInstance>().ToList().Where(x => !x.LeaveGame).All(x => x.Phase == MarblePlayerPhaseEnum.LoadFinish))
-        {
+        if (Players.OfType<MarbleGamePlayerInstance>().ToList().Where(x => !x.LeaveGame)
+            .All(x => x.Phase == MarblePlayerPhaseEnum.LoadFinish))
             // next phase (performance)
             await BroadCastToRoom(new PacketFightGeneralScNotify(MarbleNetWorkMsgEnum.SyncBatch,
                 [new MarblePerformanceSyncData(MarbleNetWorkMsgEnum.SyncNotify)]));
-        }
     }
 
     public async ValueTask PerformanceFinish(MarbleGamePlayerInstance player)
     {
         player.Phase = MarblePlayerPhaseEnum.PerformanceFinish;
-        if (Players.OfType<MarbleGamePlayerInstance>().ToList().Where(x => !x.LeaveGame).All(x => x.Phase == MarblePlayerPhaseEnum.PerformanceFinish))
-        {
+        if (Players.OfType<MarbleGamePlayerInstance>().ToList().Where(x => !x.LeaveGame)
+            .All(x => x.Phase == MarblePlayerPhaseEnum.PerformanceFinish))
             // next phase (round start)
             await RoundStart();
-        }
     }
 
     public async ValueTask HandleSimulateFinish(MarbleGamePlayerInstance player)
     {
         player.Phase = MarblePlayerPhaseEnum.SimulateFinish;
-        if (Players.OfType<MarbleGamePlayerInstance>().ToList().Where(x => !x.LeaveGame).All(x => x.Phase == MarblePlayerPhaseEnum.SimulateFinish))
-        {
+        if (Players.OfType<MarbleGamePlayerInstance>().ToList().Where(x => !x.LeaveGame)
+            .All(x => x.Phase == MarblePlayerPhaseEnum.SimulateFinish))
             // switch turn
             await SwitchTurn();
-        }
     }
 
     #endregion
@@ -185,10 +184,7 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
         CurRound++;
         TurnCount = 0;
         CurMoveTeamType = FirstMoveTeamType;
-        foreach (var player in Players.OfType<MarbleGamePlayerInstance>())
-        {
-            player.ChangeRound();
-        }
+        foreach (var player in Players.OfType<MarbleGamePlayerInstance>()) player.ChangeRound();
 
         await BroadCastToRoom(new PacketFightGeneralScNotify(MarbleNetWorkMsgEnum.SyncBatch,
         [
@@ -214,10 +210,7 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
 
         CurMoveTeamType = CurMoveTeamType == MarbleTeamType.TeamA ? MarbleTeamType.TeamB : MarbleTeamType.TeamA;
 
-        foreach (var player in Players.OfType<MarbleGamePlayerInstance>())
-        {
-            player.Phase = MarblePlayerPhaseEnum.Gaming;
-        }
+        foreach (var player in Players.OfType<MarbleGamePlayerInstance>()) player.Phase = MarblePlayerPhaseEnum.Gaming;
 
         await BroadCastToRoom(new PacketFightGeneralScNotify(MarbleNetWorkMsgEnum.SyncBatch,
         [
@@ -234,10 +227,7 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
     {
         FirstMoveTeamType = FirstMoveTeamType == MarbleTeamType.TeamA ? MarbleTeamType.TeamB : MarbleTeamType.TeamA;
 
-        foreach (var player in Players.OfType<MarbleGamePlayerInstance>())
-        {
-            player.Phase = MarblePlayerPhaseEnum.Gaming;
-        }
+        foreach (var player in Players.OfType<MarbleGamePlayerInstance>()) player.Phase = MarblePlayerPhaseEnum.Gaming;
 
         await BroadCastToRoom(new PacketFightGeneralScNotify(MarbleNetWorkMsgEnum.SyncBatch,
         [
@@ -268,10 +258,10 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
 
         var speed = sealExcel.MaxSpeed * rotation;
         var simulator = new CollisionSimulator(
-            leftBound: -5.25f,
-            rightBound: 5.25f,
-            topBound: 3f,
-            bottomBound: -3f
+            -5.25f,
+            5.25f,
+            3f,
+            -3f
         )
         {
             LaunchTeam = itemId / 100
@@ -290,10 +280,9 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
 
         foreach (var sealInst in Players.OfType<MarbleGamePlayerInstance>().SelectMany(x => x.SealList.Values)
                      .Where(x => x.OnStage))
-        {
             simulator.AddBall(sealInst.Id, new Vector2(sealInst.Position.X, sealInst.Position.Y), sealInst.Mass,
-                sealInst.Size, new Vector2(sealInst.Velocity.X, sealInst.Velocity.Y), hp:sealInst.CurHp, atk:sealInst.Attack);
-        }
+                sealInst.Size, new Vector2(sealInst.Velocity.X, sealInst.Velocity.Y), hp: sealInst.CurHp,
+                atk: sealInst.Attack);
 
         syncData.AddRange(Players.OfType<MarbleGamePlayerInstance>().SelectMany(x => x.SealList.Values)
             .Select(sealInst => new MarbleGameSealActionSyncData(sealInst, MarbleFrameType.ActionStart)));
@@ -301,8 +290,7 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
         syncData.Add(new MarbleGameSealLaunchStopSyncData(seal, MarbleFrameType.Launch));
         simulator.Simulate();
 
-        foreach (var recordRaw in simulator.Records)  // process record
-        {
+        foreach (var recordRaw in simulator.Records) // process record
             switch (recordRaw)
             {
                 case CollisionRecord record:
@@ -339,13 +327,11 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
                     {
                         var velocityBNormal = Vector2.Normalize(record.BallB.Velocity);
                         if (record.BallB.Velocity != Vector2.Zero)
-                        {
                             sealInstB.Rotation = new MarbleSealVector
                             {
                                 X = velocityBNormal.X,
                                 Y = velocityBNormal.Y
                             };
-                        }
 
                         sealInstB.Velocity = new MarbleSealVector
                         {
@@ -360,24 +346,20 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
                         };
 
                         if (sealInstB.Id / 100 != sealInst.Id / 100)
-                        {
                             // different teams
                             // do damage to b
                             syncData.AddRange(sealInst.Id / 100 == itemId / 100
                                 ? DoDamage(sealInst, sealInstB, record.Time)
                                 // do damage to a
                                 : DoDamage(sealInstB, sealInst, record.Time));
-                        }
                     }
 
                     syncData.Add(new MarbleGameSealCollisionSyncData(sealInst, record.BallA.Id, record.BallB?.Id ?? 1,
                         record.Time, record.CollisionPos, sealInstB?.Velocity));
                     if (sealInstB != null)
-                    {
                         syncData.Add(new MarbleGameSealCollisionSyncData(sealInstB, record.BallA.Id,
                             record.BallB?.Id ?? 1,
                             record.Time, record.CollisionPos, sealInst.Velocity));
-                    }
 
                     break;
                 }
@@ -433,7 +415,6 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
                     break;
                 }
             }
-        }
 
         foreach (var ball in simulator.Balls)
         {
@@ -464,21 +445,17 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
         await BroadCastToRoom(new PacketFightGeneralScNotify(MarbleNetWorkMsgEnum.SyncBatch,
         [
             new MarbleGameInfoLaunchingSyncData(MarbleNetWorkMsgEnum.SyncNotify, MarbleSyncType.SimulateStart,
-                simulator.CurTime, itemId, this, syncData), ..winData
+                simulator.CurTime, itemId, this, syncData),
+            ..winData
         ]));
 
-        foreach (var p in Players.OfType<MarbleGamePlayerInstance>())
-        {
-            p.Phase = MarblePlayerPhaseEnum.Launching;
-        }
+        foreach (var p in Players.OfType<MarbleGamePlayerInstance>()) p.Phase = MarblePlayerPhaseEnum.Launching;
 
-        if (winData.Count > 0)
-        {
-            await EndGame();
-        }
+        if (winData.Count > 0) await EndGame();
     }
 
-    public List<BaseMarbleGameSyncData> DoDamage(MarbleGameSealInstance attacker, MarbleGameSealInstance target, float time)
+    public List<BaseMarbleGameSyncData> DoDamage(MarbleGameSealInstance attacker, MarbleGameSealInstance target,
+        float time)
     {
         List<BaseMarbleGameSyncData> syncData = [];
         var attackerPlayer = Players.OfType<MarbleGamePlayerInstance>().FirstOrDefault(x =>
@@ -537,7 +514,7 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
 
             seal.Rotation = new MarbleSealVector
             {
-                X = posXBaseValue * -1f,
+                X = posXBaseValue * -1f
             };
 
             syncData.RemoveAll(x => x.ToProto().Id == seal.Id);
@@ -550,30 +527,28 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
             // detect collision with seals
             anyMove = false;
             for (var i = 0; i < seals.Count; i++)
+            for (var j = i + 1; j < seals.Count; j++)
             {
-                for (var j = i + 1; j < seals.Count; j++)
+                var sealA = seals[i];
+                var sealB = seals[j];
+
+                var sealAPos = new Vector2(sealA.Position.X, sealA.Position.Y);
+                var sealBPos = new Vector2(sealB.Position.X, sealB.Position.Y);
+                if (!(Vector2.Distance(sealBPos, sealAPos) <= sealA.Size + sealB.Size)) continue;
+
+                anyMove = true;
+                // move sealB away
+                var normalVec = Vector2.Normalize(sealBPos - sealAPos);
+                var moveDistance = sealA.Size + sealB.Size - Vector2.Distance(sealBPos, sealAPos) + 0.1f;
+                var moveVec = normalVec * moveDistance;
+                sealB.Position = new MarbleSealVector
                 {
-                    var sealA = seals[i];
-                    var sealB = seals[j];
+                    X = sealB.Position.X + moveVec.X,
+                    Y = sealB.Position.Y + moveVec.Y
+                };
 
-                    var sealAPos = new Vector2(sealA.Position.X, sealA.Position.Y);
-                    var sealBPos = new Vector2(sealB.Position.X, sealB.Position.Y);
-                    if (!(Vector2.Distance(sealBPos, sealAPos) <= sealA.Size + sealB.Size)) continue;
-
-                    anyMove = true;
-                    // move sealB away
-                    var normalVec = Vector2.Normalize(sealBPos - sealAPos);
-                    var moveDistance = sealA.Size + sealB.Size - Vector2.Distance(sealBPos, sealAPos) + 0.1f;
-                    var moveVec = normalVec * moveDistance;
-                    sealB.Position = new MarbleSealVector
-                    {
-                        X = sealB.Position.X + moveVec.X,
-                        Y = sealB.Position.Y + moveVec.Y
-                    };
-
-                    syncData.RemoveAll(x => x.ToProto().Id == sealB.Id);
-                    syncData.Add(new MarbleGameSealActionSyncData(sealB, MarbleFrameType.Revive, time));
-                }
+                syncData.RemoveAll(x => x.ToProto().Id == sealB.Id);
+                syncData.Add(new MarbleGameSealActionSyncData(sealB, MarbleFrameType.Revive, time));
             }
         } while (anyMove);
 
@@ -581,23 +556,4 @@ public class MarbleGameRoomInstance : BaseMultiPlayerGameRoomInstance
     }
 
     #endregion
-
-    public MarbleGameInfo ToProto()
-    {
-        return new MarbleGameInfo
-        {
-            LobbyBasicInfo = { ParentLobby.Players.Select(x => x.ToProto()) },
-            CurActionTeamType = CurMoveTeamType,
-            LevelId = 100,
-            TeamAPlayer = (uint)Players[0].LobbyPlayer.Player.Uid,
-            TeamBPlayer = (uint)Players[1].LobbyPlayer.Player.Uid,
-            TeamARank = 1,
-            TeamBRank = 1,
-            TeamASealList = { (Players[0] as MarbleGamePlayerInstance)!.SealList.Select(x => (uint)x.Value.SealId) },
-            TeamBSealList = { (Players[1] as MarbleGamePlayerInstance)!.SealList.Select(x => (uint)x.Value.SealId) },
-            PlayerAScore = (uint)(Players[0] as MarbleGamePlayerInstance)!.Score,
-            PlayerBScore = (uint)(Players[1] as MarbleGamePlayerInstance)!.Score,
-            ControlByServer = true
-        };
-    }
 }

@@ -1,5 +1,4 @@
 ﻿using System.Text.Json.Serialization;
-using EggLink.DanhengServer.Database.Avatar;
 
 namespace EggLink.DanhengServer.Data.Excel;
 

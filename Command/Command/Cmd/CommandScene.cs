@@ -187,7 +187,9 @@ public class CommandScene : ICommand
                 curDistance = distance;
             }
         }
+
         if (nearest != null)
-            await arg.SendMsg($"Nearest Prop {nearest.EntityId}: PropId {nearest.PropInfo.ID}, GroupId {nearest.GroupID}, State {nearest.State}");
+            await arg.SendMsg(
+                $"Nearest Prop {nearest.EntityId}: PropId {nearest.PropInfo.ID}, GroupId {nearest.GroupID}, State {nearest.State}");
     }
 }

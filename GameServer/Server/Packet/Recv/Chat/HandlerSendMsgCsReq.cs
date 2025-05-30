@@ -19,6 +19,7 @@ public class HandlerSendMsgCsReq : Handler
             await connection.Player!.FriendManager!.SendMessage(connection.Player!.Uid, (int)req.TargetList[0], null,
                 (int)req.ExtraId);
         else if (req.MessageType == MsgType.Invite)
-            await connection.Player!.FriendManager!.SendInviteMessage(connection.Player!.Uid, (int)req.TargetList[0],  req.InviteInfo);
+            await connection.Player!.FriendManager!.SendInviteMessage(connection.Player!.Uid, (int)req.TargetList[0],
+                req.InviteInfo);
     }
 }

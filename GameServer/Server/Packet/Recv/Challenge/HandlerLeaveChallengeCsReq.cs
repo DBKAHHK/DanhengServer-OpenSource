@@ -30,7 +30,8 @@ public class HandlerLeaveChallengeCsReq : Handler
             // Leave scene
             await player.LineupManager.SetCurLineup(0);
             // Heal avatars (temproary solution)
-            foreach (var avatar in player.LineupManager.GetCurLineup()!.AvatarData!.FormalAvatars) avatar.CurrentHp = 10000;
+            foreach (var avatar in player.LineupManager.GetCurLineup()!.AvatarData!.FormalAvatars)
+                avatar.CurrentHp = 10000;
 
             var leaveEntryId = GameConstants.CHALLENGE_ENTRANCE;
             if (player.SceneInstance.LeaveEntryId != 0) leaveEntryId = player.SceneInstance.LeaveEntryId;

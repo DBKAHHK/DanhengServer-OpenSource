@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Proto;
@@ -43,18 +42,13 @@ public class LineupInfo
     {
         var result = false;
         if (BaseAvatars != null && AvatarData != null)
-        {
             foreach (var avatar in BaseAvatars)
             {
                 BaseAvatarInfo? avatarInfo;
                 if (avatar.SpecialAvatarId > 0)
-                {
                     avatarInfo = AvatarData?.TrialAvatars?.Find(item => item.SpecialAvatarId == avatar.SpecialAvatarId);
-                }
                 else
-                {
                     avatarInfo = AvatarData?.FormalAvatars?.Find(item => item.BaseAvatarId == avatar.BaseAvatarId);
-                }
 
                 if (avatarInfo != null)
                 {
@@ -66,7 +60,6 @@ public class LineupInfo
                     result = true;
                 }
             }
-        }
 
         return result;
     }
@@ -79,13 +72,9 @@ public class LineupInfo
             {
                 BaseAvatarInfo? avatarInfo;
                 if (avatar.SpecialAvatarId > 0)
-                {
                     avatarInfo = AvatarData?.TrialAvatars?.Find(item => item.SpecialAvatarId == avatar.SpecialAvatarId);
-                }
                 else
-                {
                     avatarInfo = AvatarData?.FormalAvatars?.Find(item => item.BaseAvatarId == avatar.BaseAvatarId);
-                }
 
                 if (avatarInfo != null)
                 {
@@ -107,13 +96,9 @@ public class LineupInfo
             {
                 BaseAvatarInfo? avatarInfo;
                 if (avatar.SpecialAvatarId > 0)
-                {
                     avatarInfo = AvatarData?.TrialAvatars?.Find(item => item.SpecialAvatarId == avatar.SpecialAvatarId);
-                }
                 else
-                {
                     avatarInfo = AvatarData?.FormalAvatars?.Find(item => item.BaseAvatarId == avatar.BaseAvatarId);
-                }
 
                 if (avatarInfo != null)
                 {
@@ -165,12 +150,14 @@ public class LineupInfo
                 }
                 else if (avatar.SpecialAvatarId != 0) // special avatar
                 {
-                    info.AvatarList.Add(AvatarData?.TrialAvatars?.Find(item => item.SpecialAvatarId == avatar.SpecialAvatarId)
+                    info.AvatarList.Add(AvatarData?.TrialAvatars
+                        ?.Find(item => item.SpecialAvatarId == avatar.SpecialAvatarId)
                         ?.ToLineupInfo(BaseAvatars.IndexOf(avatar), this, AvatarType.AvatarTrialType));
                 }
                 else // normal avatar
                 {
-                    info.AvatarList.Add(AvatarData?.FormalAvatars?.Find(item => item.BaseAvatarId == avatar.BaseAvatarId)
+                    info.AvatarList.Add(AvatarData?.FormalAvatars
+                        ?.Find(item => item.BaseAvatarId == avatar.BaseAvatarId)
                         ?.ToLineupInfo(BaseAvatars.IndexOf(avatar), this));
                 }
 

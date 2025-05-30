@@ -26,7 +26,6 @@ public class EntityMonster(
     public SceneInstance Scene { get; set; } = scene;
     public NPCMonsterDataExcel MonsterData { get; set; } = excel;
     public MonsterInfo Info { get; set; } = info;
-    public List<SceneBuff> BuffList { get; set; } = [];
     public SceneBuff? TempBuff { get; set; }
     public bool IsAlive { get; private set; } = true;
 
@@ -35,6 +34,7 @@ public class EntityMonster(
 
     public int RogueMonsterId { get; set; } = 0;
     public int CustomLevel { get; set; } = 0;
+    public List<SceneBuff> BuffList { get; set; } = [];
     public int EntityId { get; set; } = 0;
     public int GroupID { get; set; } = GroupID;
 

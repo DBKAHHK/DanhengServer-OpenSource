@@ -13,6 +13,7 @@ public class MultiplePathAvatarConfigExcel : ExcelResource
 
     [JsonConverter(typeof(StringEnumConverter))]
     public GenderTypeEnum Gender { get; set; }
+
     public int AvatarID { get; set; }
     public int BaseAvatarID { get; set; }
 

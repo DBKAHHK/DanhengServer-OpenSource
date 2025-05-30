@@ -11,10 +11,7 @@ public class HandlerFightHeartBeatCsReq : Handler
     {
         var req = FightHeartBeatCsReq.Parser.ParseFrom(data);
 
-        if (connection.MarbleRoom != null)
-        {
-            await connection.MarbleRoom.OnPlayerHeartBeat();
-        }
+        if (connection.MarbleRoom != null) await connection.MarbleRoom.OnPlayerHeartBeat();
 
         await connection.SendPacket(new PacketFightHeartBeatScRsp(req.ClientTimeMs));
     }

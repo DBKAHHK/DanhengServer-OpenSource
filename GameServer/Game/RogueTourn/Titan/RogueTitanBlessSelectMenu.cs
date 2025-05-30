@@ -27,11 +27,13 @@ public class RogueTitanBlessSelectMenu(RogueTournInstance rogue)
             // random 2 types
             var night = GameData.RogueTournTitanBlessData.Values.Where(x =>
                 GameData.RogueTournTitanTypeData.GetValueOrDefault(x.TitanType)?.RogueTitanCategory ==
-                RogueTitanCategoryEnum.Night && x.TitanBlessLevel == 1 && !rogue.RogueTitanBlessInstance.BlessTypeExcel.Contains(x)).ToList().RandomElement();
+                RogueTitanCategoryEnum.Night && x.TitanBlessLevel == 1 &&
+                !rogue.RogueTitanBlessInstance.BlessTypeExcel.Contains(x)).ToList().RandomElement();
 
             var day = GameData.RogueTournTitanBlessData.Values.Where(x =>
                 GameData.RogueTournTitanTypeData.GetValueOrDefault(x.TitanType)?.RogueTitanCategory ==
-                RogueTitanCategoryEnum.Day && x.TitanBlessLevel == 1 && !rogue.RogueTitanBlessInstance.BlessTypeExcel.Contains(x)).ToList().RandomElement();
+                RogueTitanCategoryEnum.Day && x.TitanBlessLevel == 1 &&
+                !rogue.RogueTitanBlessInstance.BlessTypeExcel.Contains(x)).ToList().RandomElement();
 
             list.Add(day);
             list.Add(night);

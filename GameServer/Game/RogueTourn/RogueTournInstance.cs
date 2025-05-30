@@ -191,7 +191,8 @@ public class RogueTournInstance : BaseRogueInstance
                     {
                         RogueTitanBlessInstance.BlessTypeExcel.Add(bless);
                         TitanType =
-                            GameData.RogueTournTitanTypeData.GetValueOrDefault(bless.TitanType)?.RogueTitanType ?? RogueTitanTypeEnum.None;
+                            GameData.RogueTournTitanTypeData.GetValueOrDefault(bless.TitanType)?.RogueTitanType ??
+                            RogueTitanTypeEnum.None;
                     }
                     else
                     {

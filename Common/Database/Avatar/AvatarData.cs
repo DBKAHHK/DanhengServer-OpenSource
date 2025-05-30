@@ -2,11 +2,9 @@
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Player;
-using EggLink.DanhengServer.Proto;
-using Newtonsoft.Json;
-using SqlSugar;
-using System.IO;
 using EggLink.DanhengServer.Enums.Avatar;
+using EggLink.DanhengServer.Proto;
+using SqlSugar;
 using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
 
 namespace EggLink.DanhengServer.Database.Avatar;
@@ -28,7 +26,7 @@ public class AvatarData : BaseDatabaseDataHelper
 public abstract class BaseAvatarInfo
 {
     public int BaseAvatarId { get; set; }
-    public int AvatarId { get; set; }  // special avatar id / base avatar id
+    public int AvatarId { get; set; } // special avatar id / base avatar id
     public int Promotion { get; set; }
     public int Level { get; set; }
     public int CurrentHp { get; set; } = 10000;
@@ -80,7 +78,8 @@ public abstract class BaseAvatarInfo
     public abstract BattleAvatar ToBattleProto(PlayerDataCollection collection,
         AvatarType avatarType = AvatarType.AvatarFormalType);
 
-    public abstract LineupAvatar ToLineupInfo(int slot, LineupInfo info, AvatarType avatarType = AvatarType.AvatarFormalType);
+    public abstract LineupAvatar ToLineupInfo(int slot, LineupInfo info,
+        AvatarType avatarType = AvatarType.AvatarFormalType);
 
     public abstract Proto.Avatar ToProto();
 }
@@ -97,10 +96,7 @@ public class FormalAvatarInfo : BaseAvatarInfo
         // TODO add skills
         BaseAvatarId = baseAvatarId;
         AvatarId = avatarId;
-        if (addSkills)
-        {
-            CheckPathSkillTree();
-        }
+        if (addSkills) CheckPathSkillTree();
     }
 
     public int Exp { get; set; }
@@ -181,7 +177,8 @@ public class FormalAvatarInfo : BaseAvatarInfo
         return proto;
     }
 
-    public override LineupAvatar ToLineupInfo(int slot, LineupInfo info, AvatarType avatarType = AvatarType.AvatarFormalType)
+    public override LineupAvatar ToLineupInfo(int slot, LineupInfo info,
+        AvatarType avatarType = AvatarType.AvatarFormalType)
     {
         return new LineupAvatar
         {
@@ -352,9 +349,8 @@ public class SpecialAvatarInfo : BaseAvatarInfo
     public void CheckLevel(int worldLevel)
     {
         if (!GameData.SpecialAvatarData.TryGetValue(AvatarId * 10 + worldLevel, out var specialAvatar))
-        {
-            if (!GameData.SpecialAvatarData.TryGetValue(AvatarId * 10 + 1, out specialAvatar)) return;
-        }
+            if (!GameData.SpecialAvatarData.TryGetValue(AvatarId * 10 + 1, out specialAvatar))
+                return;
 
         Level = specialAvatar.Level;
         Promotion = specialAvatar.Promotion;
@@ -398,7 +394,8 @@ public class SpecialAvatarInfo : BaseAvatarInfo
         return proto;
     }
 
-    public override LineupAvatar ToLineupInfo(int slot, LineupInfo info, AvatarType avatarType = AvatarType.AvatarFormalType)
+    public override LineupAvatar ToLineupInfo(int slot, LineupInfo info,
+        AvatarType avatarType = AvatarType.AvatarFormalType)
     {
         return new LineupAvatar
         {

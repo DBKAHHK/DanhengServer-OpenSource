@@ -6,7 +6,7 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
 public class PacketSetFriendRemarkNameScRsp : BasePacket
 {
     public PacketSetFriendRemarkNameScRsp(uint uid, string remarkName)
-    : base(CmdIds.SetFriendRemarkNameScRsp)
+        : base(CmdIds.SetFriendRemarkNameScRsp)
     {
         var proto = new SetFriendRemarkNameScRsp
         {

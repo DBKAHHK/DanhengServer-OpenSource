@@ -2,7 +2,15 @@
 
 namespace EggLink.DanhengServer.GameServer.Game.MultiPlayer.MarbleGame.Physics;
 
-public class Ball(int id, Vector2 position, float mass, float radius, Vector2? velocity = null, bool isStatic = false, int hp = 100, int atk = 0)
+public class Ball(
+    int id,
+    Vector2 position,
+    float mass,
+    float radius,
+    Vector2? velocity = null,
+    bool isStatic = false,
+    int hp = 100,
+    int atk = 0)
 {
     public int Id { get; } = id;
     public Vector2 Position { get; set; } = position;

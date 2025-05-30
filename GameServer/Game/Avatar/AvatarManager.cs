@@ -73,7 +73,7 @@ public class AvatarManager(PlayerInstance player) : BasePlayerManager(player)
             AvatarId = excel.AvatarID,
             BaseAvatarId = excel.AvatarID,
             Level = excel.Level,
-            Promotion = excel.Promotion,
+            Promotion = excel.Promotion
         };
 
         avatar.PathInfos.Add(excel.AvatarID, new PathInfo(excel.AvatarID)

@@ -17,10 +17,7 @@ public class PacketGetAvatarDataScRsp : BasePacket
         player.PlayerUnlockData!.Skins.Values.ToList().ForEach(skin =>
             proto.SkinList.AddRange(skin.Select(x => (uint)x)));
 
-        player.AvatarManager?.AvatarData?.FormalAvatars?.ForEach(avatar =>
-        {
-            proto.AvatarList.Add(avatar.ToProto());
-        });
+        player.AvatarManager?.AvatarData?.FormalAvatars?.ForEach(avatar => { proto.AvatarList.Add(avatar.ToProto()); });
 
         foreach (var baseAvatarId in GameData.MultiplePathAvatarConfigData.Values.Select(x => x.BaseAvatarID)
                      .ToHashSet())
@@ -31,10 +28,7 @@ public class PacketGetAvatarDataScRsp : BasePacket
             proto.CurAvatarPath.Add((uint)avatar.BaseAvatarId, (MultiPathAvatarType)avatar.AvatarId);
             proto.MultiPathAvatarInfoList.AddRange(avatar.ToAvatarPathProto());
 
-            if (baseAvatarId == 8001)
-            {
-                proto.BasicTypeIdList.Add((uint)avatar.AvatarId);
-            }
+            if (baseAvatarId == 8001) proto.BasicTypeIdList.Add((uint)avatar.AvatarId);
         }
 
         SetData(proto);

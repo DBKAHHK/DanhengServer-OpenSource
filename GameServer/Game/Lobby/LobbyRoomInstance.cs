@@ -18,10 +18,7 @@ public class LobbyRoomInstance(PlayerInstance owner, long roomId, FightGameMode 
 
     public async ValueTask BroadCastToRoom(BasePacket packet)
     {
-        foreach (var player in Players)
-        {
-            await player.Player.SendPacket(packet);
-        }
+        foreach (var player in Players) await player.Player.SendPacket(packet);
     }
 
     public async ValueTask AddPlayer(PlayerInstance player, List<int> sealList, LobbyCharacterType characterType)
@@ -46,10 +43,8 @@ public class LobbyRoomInstance(PlayerInstance owner, long roomId, FightGameMode 
 
         await BroadCastToRoom(new PacketLobbySyncInfoScNotify(uid, this, LobbyModifyType.QuitLobby));
         if (Players.Count == 0)
-        {
             // remove from manager
             ServerUtils.LobbyServerManager.RemoveLobbyRoom(RoomId);
-        }
     }
 
     public async ValueTask<Retcode> LobbyStartFight()
@@ -60,7 +55,7 @@ public class LobbyRoomInstance(PlayerInstance owner, long roomId, FightGameMode 
 
         if (Players.Count(x => x.CharacterType != LobbyCharacterType.LobbyCharacterWatcher) != 2)
             return Retcode.RetLobbyRoomPalyerNotReady;
-        
+
         if (Players.Any(x =>
                 x.CharacterType == LobbyCharacterType.LobbyCharacterMember &&
                 x.CharacterStatus != LobbyCharacterStatus.Ready)) return Retcode.RetLobbyRoomPalyerNotReady;
@@ -73,12 +68,10 @@ public class LobbyRoomInstance(PlayerInstance owner, long roomId, FightGameMode 
         if (leader == null) return Retcode.RetLobbyRoomPalyerFighting;
 
         // start fight
-        foreach (var instance in Players)
-        {
-            instance.CharacterStatus = LobbyCharacterStatus.LobbyStartFight;
-        }
+        foreach (var instance in Players) instance.CharacterStatus = LobbyCharacterStatus.LobbyStartFight;
 
-        await BroadCastToRoom(new PacketLobbySyncInfoScNotify(leader.Player.Uid, this, LobbyModifyType.LobbyStartFight));
+        await BroadCastToRoom(new PacketLobbySyncInfoScNotify(leader.Player.Uid, this,
+            LobbyModifyType.LobbyStartFight));
         return Retcode.RetSucc;
     }
 
@@ -96,10 +89,7 @@ public class LobbyRoomInstance(PlayerInstance owner, long roomId, FightGameMode 
         await BroadCastToRoom(new PacketMultiplayerFightGameStartScNotify(fightRoom));
 
         // start fight
-        foreach (var instance in Players)
-        {
-            instance.CharacterStatus = LobbyCharacterStatus.Fighting;
-        }
+        foreach (var instance in Players) instance.CharacterStatus = LobbyCharacterStatus.Fighting;
 
         await BroadCastToRoom(new PacketLobbySyncInfoScNotify(0, this, LobbyModifyType.FightStart));
         return Retcode.RetSucc;

@@ -12,7 +12,8 @@ public class HandlerRefreshTriggerByClientCsReq : Handler
         var req = RefreshTriggerByClientCsReq.Parser.ParseFrom(data);
 
         var player = connection.Player!;
-        var ret = await player.SceneInstance!.TriggerSummonUnit((int)req.TriggerEntityId, req.TriggerName, req.TriggerTargetIdList.ToList());
+        var ret = await player.SceneInstance!.TriggerSummonUnit((int)req.TriggerEntityId, req.TriggerName,
+            req.TriggerTargetIdList.ToList());
 
         await connection.SendPacket(new PacketRefreshTriggerByClientScRsp(ret, req.TriggerName, req.TriggerEntityId));
     }

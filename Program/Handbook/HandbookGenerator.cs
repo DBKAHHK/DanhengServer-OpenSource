@@ -230,6 +230,18 @@ public static class HandbookGenerator
         }
     }
 
+    public static string GetNameFromTextMap(long key, Dictionary<long, string> map, Dictionary<long, string> fallback)
+    {
+        if (map.TryGetValue(key, out var value)) return value;
+        if (fallback.TryGetValue(key, out value)) return value;
+        return $"[{key}]";
+    }
+
+    public static void WriteToFile(string lang, string content)
+    {
+        File.WriteAllText($"GM Handbook/GM Handbook {lang}.txt", content);
+    }
+
 #if DEBUG
     public static void GenerateRogueDiceSurfaceDisplay(StringBuilder builder, Dictionary<long, string> map,
         Dictionary<long, string> fallback)
@@ -288,16 +300,4 @@ public static class HandbookGenerator
         }
     }
 #endif
-
-    public static string GetNameFromTextMap(long key, Dictionary<long, string> map, Dictionary<long, string> fallback)
-    {
-        if (map.TryGetValue(key, out var value)) return value;
-        if (fallback.TryGetValue(key, out value)) return value;
-        return $"[{key}]";
-    }
-
-    public static void WriteToFile(string lang, string content)
-    {
-        File.WriteAllText($"GM Handbook/GM Handbook {lang}.txt", content);
-    }
 }

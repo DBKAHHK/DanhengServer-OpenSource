@@ -27,12 +27,8 @@ public class MultiPlayerGameServerManager
     public BaseMultiPlayerGameRoomInstance? GetPlayerJoinedRoom(int uid)
     {
         foreach (var room in Rooms.Values)
-        {
             if (room.Players.Any(x => !x.LeaveGame && x.LobbyPlayer.Player.Uid == uid))
-            {
                 return room;
-            }
-        }
 
         return null;
     }

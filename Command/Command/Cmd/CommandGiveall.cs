@@ -306,7 +306,8 @@ public class CommandGiveall : ICommand
             if (player.AvatarManager!.GetFormalAvatar(multiPathAvatar.BaseAvatarID) == null)
             {
                 await player.InventoryManager!.AddItem(multiPathAvatar.BaseAvatarID, 1, false, sync: false);
-                player.AvatarManager!.GetFormalAvatar(multiPathAvatar.BaseAvatarID)!.Level = Math.Max(Math.Min(1, 80), 0);
+                player.AvatarManager!.GetFormalAvatar(multiPathAvatar.BaseAvatarID)!.Level =
+                    Math.Max(Math.Min(1, 80), 0);
                 player.AvatarManager!.GetFormalAvatar(multiPathAvatar.BaseAvatarID)!.Promotion =
                     GameData.GetMinPromotionForLevel(Math.Max(Math.Min(1, 80), 0));
                 player.AvatarManager!.GetFormalAvatar(multiPathAvatar.BaseAvatarID)!.GetCurPathInfo().Rank =

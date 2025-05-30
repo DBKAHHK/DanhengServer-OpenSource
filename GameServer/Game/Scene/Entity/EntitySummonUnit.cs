@@ -16,10 +16,10 @@ public class EntitySummonUnit : IGameEntity
     public MotionInfo Motion { get; set; } = new();
 
     public List<UnitCustomTriggerConfigInfo> TriggerList { get; set; } = [];
+    public HashSet<int> CaughtEntityIds { get; set; } = [];
     public int EntityId { get; set; }
     public int GroupID { get; set; } = 0;
     public List<SceneBuff> BuffList { get; set; } = [];
-    public HashSet<int> CaughtEntityIds { get; set; } = [];
 
     public async ValueTask AddBuff(SceneBuff buff)
     {

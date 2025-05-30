@@ -4,7 +4,6 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Proto;
-using System.Numerics;
 
 namespace EggLink.DanhengServer.Command.Command.Cmd;
 
@@ -44,9 +43,7 @@ public class CommandAvatar : ICommand
             {
                 if (!GameData.AvatarConfigData.TryGetValue(path.Key, out var pathExcel)) continue;
                 foreach (var talent in pathExcel.SkillTree)
-                {
                     path.Value.SkillTree[talent.PointID] = Math.Min(level, talent.MaxLevel);
-                }
             }
 
             await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AllAvatarsLevelSet",
@@ -59,9 +56,7 @@ public class CommandAvatar : ICommand
         }
 
         if (GameData.MultiplePathAvatarConfigData.TryGetValue(avatarId, out var multiple))
-        {
             avatarId = multiple.BaseAvatarID;
-        }
 
         var avatar = player.AvatarManager!.GetFormalAvatar(avatarId);
         if (avatar == null)
@@ -85,9 +80,7 @@ public class CommandAvatar : ICommand
         }
 
         foreach (var talent in excel.SkillTree)
-        {
             avatarPathInfo.Value.SkillTree[talent.PointID] = Math.Min(level, talent.MaxLevel);
-        }
 
         // sync
         await player.SendPacket(new PacketPlayerSyncScNotify(avatar));
@@ -155,10 +148,7 @@ public class CommandAvatar : ICommand
         }
         else
         {
-            if (GameData.MultiplePathAvatarConfigData.TryGetValue(id, out var multiple))
-            {
-                id = multiple.BaseAvatarID;
-            }
+            if (GameData.MultiplePathAvatarConfigData.TryGetValue(id, out var multiple)) id = multiple.BaseAvatarID;
 
             var avatar = arg.Target.Player!.AvatarManager!.GetFormalAvatar(id);
             if (avatar == null)

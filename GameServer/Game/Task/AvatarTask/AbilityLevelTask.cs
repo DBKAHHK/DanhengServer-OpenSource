@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Config.Task;
+using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Enums.RogueMagic;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Battle;
@@ -12,8 +13,6 @@ using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
-using System.Threading;
-using EggLink.DanhengServer.Enums.Avatar;
 
 namespace EggLink.DanhengServer.GameServer.Game.Task.AvatarTask;
 
@@ -27,14 +26,12 @@ public class AbilityLevelTask(PlayerInstance player)
         List<IGameEntity> targetEntities)
     {
         if (selector is TargetAlias target)
-        {
             return target.Alias switch
             {
                 "Caster" or "ModifierOwnerEntity" => [casterEntity],
                 "ParamEntity" or "AllEnemy" or "AbilityTargetEntity" => targetEntities,
-                _ => targetEntities,
+                _ => targetEntities
             };
-        }
 
         return [];
     }
@@ -44,14 +41,16 @@ public class AbilityLevelTask(PlayerInstance player)
     #region Manage
 
     public async ValueTask<AbilityLevelResult> TriggerTasks(AdventureAbilityConfigListInfo abilities,
-        List<TaskConfigInfo> tasks, IGameEntity casterEntity, List<IGameEntity> targetEntities, SceneCastSkillCsReq req, string? modifierName = null)
+        List<TaskConfigInfo> tasks, IGameEntity casterEntity, List<IGameEntity> targetEntities, SceneCastSkillCsReq req,
+        string? modifierName = null)
     {
         BattleInstance? instance = null;
         List<HitMonsterInstance> battleInfos = [];
         foreach (var task in tasks)
             try
             {
-                var res = await TriggerTask(new AbilityLevelParam(abilities, task, casterEntity, targetEntities, req, modifierName));
+                var res = await TriggerTask(new AbilityLevelParam(abilities, task, casterEntity, targetEntities, req,
+                    modifierName));
                 if (res.BattleInfos != null) battleInfos.AddRange(res.BattleInfos);
 
                 if (res.Instance != null) instance = res.Instance;
@@ -104,10 +103,7 @@ public class AbilityLevelTask(PlayerInstance player)
             if (method != null)
             {
                 var resp = method.Invoke(this, [param with { Act = predicateTaskList.Predicate }]);
-                if (resp is not bool res)
-                {
-                    return new AbilityLevelResult(instance, battleInfos);
-                }
+                if (resp is not bool res) return new AbilityLevelResult(instance, battleInfos);
 
                 res = predicateTaskList.Predicate.Inverse ? !res : res;
                 if (res)
@@ -206,9 +202,7 @@ public class AbilityLevelTask(PlayerInstance player)
 
                 Dictionary<string, float> dynamic = [];
                 foreach (var dynamicValue in addMazeBuff.DynamicValues)
-                {
                     dynamic.Add(dynamicValue.Key, dynamicValue.Value.GetValue());
-                }
 
                 if (resp is not List<IGameEntity> target) return new AbilityLevelResult(instance, battleInfos);
 
@@ -312,7 +306,8 @@ public class AbilityLevelTask(PlayerInstance player)
 
     public async ValueTask<AbilityLevelResult> DestroySummonUnit(AbilityLevelParam param)
     {
-        if (param.Act is DestroySummonUnit destroySummonUnit) await Player.SceneInstance!.RemoveSummonUnitById(destroySummonUnit.SummonUnit.SummonUnitID); // TODO
+        if (param.Act is DestroySummonUnit destroySummonUnit)
+            await Player.SceneInstance!.RemoveSummonUnitById(destroySummonUnit.SummonUnit.SummonUnitID); // TODO
 
         return new AbilityLevelResult();
     }
@@ -346,9 +341,8 @@ public class AbilityLevelTask(PlayerInstance player)
     public async ValueTask<AbilityLevelResult> RemoveSelfModifier(AbilityLevelParam param)
     {
         if (param.ModifierName != null)
-        {
-            if (param.CasterEntity is IGameModifier mod) await mod.RemoveModifier(param.ModifierName);
-        }
+            if (param.CasterEntity is IGameModifier mod)
+                await mod.RemoveModifier(param.ModifierName);
 
         return new AbilityLevelResult();
     }
@@ -370,7 +364,6 @@ public class AbilityLevelTask(PlayerInstance player)
     public async ValueTask<AbilityLevelResult> AdvModifyMaxMazeMP(AbilityLevelParam param)
     {
         if (param.Act is AdvModifyMaxMazeMP advModifyMaxMazeMp)
-        {
             switch (advModifyMaxMazeMp.ModifyFunction)
             {
                 case PropertyModifyFunctionEnum.Add:
@@ -380,7 +373,6 @@ public class AbilityLevelTask(PlayerInstance player)
                     Player.LineupManager!.LineupData.ExtraMpCount = advModifyMaxMazeMp.ModifyValue.GetValue() - 5;
                     break;
             }
-        }
 
         return new AbilityLevelResult();
     }
@@ -479,9 +471,7 @@ public class AbilityLevelTask(PlayerInstance player)
     public bool AdventureByPlayerCurrentSkillType(AbilityLevelParam param)
     {
         if (param.Act is AdventureByPlayerCurrentSkillType byPlayerCurrentSkillType)
-        {
             return param.Request.SkillIndex == (uint)byPlayerCurrentSkillType.SkillType;
-        }
 
         return false;
     }
@@ -489,9 +479,7 @@ public class AbilityLevelTask(PlayerInstance player)
     public bool ByCompareCarryMazebuff(AbilityLevelParam param)
     {
         if (param.Act is ByCompareCarryMazebuff byCompareCarryMazebuff)
-        {
             return param.CasterEntity.BuffList.Any(x => x.BuffId == byCompareCarryMazebuff.BuffID);
-        }
 
         return false;
     }
@@ -529,4 +517,5 @@ public record AbilityLevelParam(
     TaskConfigInfo Act,
     IGameEntity CasterEntity,
     List<IGameEntity> TargetEntities,
-    SceneCastSkillCsReq Request, string? ModifierName);
+    SceneCastSkillCsReq Request,
+    string? ModifierName);

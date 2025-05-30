@@ -2,10 +2,15 @@
 
 namespace EggLink.DanhengServer.GameServer.Game.MultiPlayer.MarbleGame.Physics;
 
-public class CollisionSimulator(float leftBound, float rightBound, float topBound, float bottomBound, float deceleration = 15f)
+public class CollisionSimulator(
+    float leftBound,
+    float rightBound,
+    float topBound,
+    float bottomBound,
+    float deceleration = 15f)
 {
-    public float Deceleration = deceleration;
     public const float StepTime = 0.001f;
+    public float Deceleration = deceleration;
     public List<Ball> Balls { get; } = [];
     public int LaunchTeam { get; set; } = 0;
     public List<object> Records { get; } = [];
@@ -15,7 +20,8 @@ public class CollisionSimulator(float leftBound, float rightBound, float topBoun
     private float TopBound { get; } = topBound;
     private float BottomBound { get; } = bottomBound;
 
-    public void AddBall(int id, Vector2 position, float mass, float radius, Vector2? velocity = null, bool isStatic = false, int hp = 100, int atk = 0)
+    public void AddBall(int id, Vector2 position, float mass, float radius, Vector2? velocity = null,
+        bool isStatic = false, int hp = 100, int atk = 0)
     {
         Balls.Add(new Ball(id, position, mass, radius, velocity, isStatic, hp, atk));
     }
@@ -33,6 +39,7 @@ public class CollisionSimulator(float leftBound, float rightBound, float topBoun
                     ball.Velocity = Vector2.Zero;
                     Records.Add(new StopRecord(CurTime, ball.GetSnapshot()));
                 }
+
                 continue;
             }
 
@@ -79,19 +86,14 @@ public class CollisionSimulator(float leftBound, float rightBound, float topBoun
     public void CheckBallCollision()
     {
         for (var i = 0; i < Balls.Count; i++)
+        for (var j = i + 1; j < Balls.Count; j++)
         {
-            for (var j = i + 1; j < Balls.Count; j++)
-            {
-                var ballA = Balls[i];
-                var ballB = Balls[j];
-                if (ballA.IsStatic || ballB.IsStatic) continue;  // skip static balls
+            var ballA = Balls[i];
+            var ballB = Balls[j];
+            if (ballA.IsStatic || ballB.IsStatic) continue; // skip static balls
 
-                var distance = Vector2.Distance(ballA.Position, ballB.Position);
-                if (distance <= ballA.Radius + ballB.Radius)
-                {
-                    HandleBallCollision(ballA, ballB);
-                }
-            }
+            var distance = Vector2.Distance(ballA.Position, ballB.Position);
+            if (distance <= ballA.Radius + ballB.Radius) HandleBallCollision(ballA, ballB);
         }
     }
 
@@ -170,12 +172,13 @@ public class CollisionSimulator(float leftBound, float rightBound, float topBoun
         while (!AllObjectStopped())
         {
             AdvanceTime(StepTime);
-            foreach (var ball in Balls.Where(x => x.StageInitialVelocity != Vector2.Zero && x.Velocity.Length() > 0.01f))
+            foreach (var ball in Balls.Where(x =>
+                         x.StageInitialVelocity != Vector2.Zero && x.Velocity.Length() > 0.01f))
             {
                 var speed = ball.Velocity.Length();
                 if (ball.StageInitialVelocity.Length() / 2 > speed)
                 {
-                    ball.StageInitialVelocity = Vector2.Zero;  // avoid infinite loop
+                    ball.StageInitialVelocity = Vector2.Zero; // avoid infinite loop
                     Records.Add(new ChangeSpeedRecord(CurTime, ball.GetSnapshot()));
                 }
             }

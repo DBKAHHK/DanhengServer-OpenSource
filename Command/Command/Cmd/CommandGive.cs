@@ -1,6 +1,4 @@
 ﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.GameServer.Game.Avatar;
-using EggLink.DanhengServer.GameServer.Game.Lineup;
 using EggLink.DanhengServer.Internationalization;
 
 namespace EggLink.DanhengServer.Command.Command.Cmd;

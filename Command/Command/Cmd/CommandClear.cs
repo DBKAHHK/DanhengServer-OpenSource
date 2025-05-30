@@ -14,7 +14,8 @@ public class CommandClear : ICommand
             return;
         }
 
-        var removeList = arg.Target.Player!.InventoryManager!.Data.EquipmentItems.Where(x => x.EquipAvatar == 0).ToList();
+        var removeList = arg.Target.Player!.InventoryManager!.Data.EquipmentItems.Where(x => x.EquipAvatar == 0)
+            .ToList();
 
         await arg.Target.Player!.InventoryManager!.RemoveItems(removeList.Select(x => (x.ItemId, x.Count, x.UniqueId))
             .ToList());

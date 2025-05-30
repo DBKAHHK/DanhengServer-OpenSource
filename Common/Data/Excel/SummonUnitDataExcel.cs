@@ -13,6 +13,7 @@ public class SummonUnitDataExcel : ExcelResource
 
     [JsonConverter(typeof(StringEnumConverter))]
     public SummonUnitUniqueGroupEnum UniqueGroup { get; set; }
+
     public bool DestroyOnEnterBattle { get; set; }
     public bool RemoveMazeBuffOnDestroy { get; set; }
 

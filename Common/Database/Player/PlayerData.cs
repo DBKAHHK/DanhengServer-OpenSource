@@ -131,7 +131,7 @@ public class PlayerData : BaseDatabaseDataHelper
         }
 
         foreach (var avatar in instance.AssistAvatars.Select(
-            assist => instance.FormalAvatars.Find(x => x.AvatarId == assist)!))
+                     assist => instance.FormalAvatars.Find(x => x.AvatarId == assist)!))
             if (avatar != null)
                 info.AssistSimpleInfoList.Add(new AssistSimpleInfo
                 {
@@ -184,17 +184,17 @@ public class PlayerData : BaseDatabaseDataHelper
 
         var pos = 0;
         foreach (var avatar in avatarInfo.AssistAvatars.Select(assist =>
-            avatarInfo.FormalAvatars.Find(x => x.AvatarId == assist)))
+                     avatarInfo.FormalAvatars.Find(x => x.AvatarId == assist)))
             if (avatar != null)
                 info.AssistAvatarList.Add(avatar.ToDetailProto(pos++,
-                    new PlayerDataCollection(this, inventoryInfo, new())));
+                    new PlayerDataCollection(this, inventoryInfo, new LineupInfo())));
 
         pos = 0;
         foreach (var avatar in avatarInfo.DisplayAvatars.Select(display =>
-            avatarInfo.FormalAvatars.Find(x => x.AvatarId == display)))
+                     avatarInfo.FormalAvatars.Find(x => x.AvatarId == display)))
             if (avatar != null)
                 info.DisplayAvatarList.Add(avatar.ToDetailProto(pos++,
-                    new PlayerDataCollection(this, inventoryInfo, new())));
+                    new PlayerDataCollection(this, inventoryInfo, new LineupInfo())));
 
         return info;
     }

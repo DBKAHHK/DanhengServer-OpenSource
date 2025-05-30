@@ -7,7 +7,7 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Match;
 public class HandlerGetCrossInfoCsReq : Handler
 {
     public override async Task OnHandle(Connection connection, byte[] header, byte[] data)
-    { 
+    {
         await connection.SendPacket(new PacketGetCrossInfoScRsp());
     }
 }

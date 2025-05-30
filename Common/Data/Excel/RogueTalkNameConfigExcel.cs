@@ -5,7 +5,7 @@ public class RogueTalkNameConfigExcel : ExcelResource
 {
     public int TalkNameID { get; set; }
     public HashName Name { get; set; } = new();
-    
+
     public override int GetId()
     {
         return TalkNameID;

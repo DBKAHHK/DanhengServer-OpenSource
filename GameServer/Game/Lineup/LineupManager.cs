@@ -3,7 +3,6 @@ using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Lineup;
 using EggLink.DanhengServer.GameServer.Game.Player;
-using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
@@ -172,7 +171,9 @@ public class LineupManager : BasePlayerManager
                     { BaseAvatarId = trial.BaseAvatarId, SpecialAvatarId = trial.SpecialAvatarId });
             }
             else
+            {
                 lineup.BaseAvatars!.Add(new LineupAvatarInfo { BaseAvatarId = avatarId });
+            }
         }
 
         LineupData.Lineups.Add(index, lineup);
@@ -203,7 +204,11 @@ public class LineupManager : BasePlayerManager
             {
                 Name = "",
                 LineupType = 0,
-                BaseAvatars = [new LineupAvatarInfo { BaseAvatarId = baseAvatarId, SpecialAvatarId = specialAvatar?.SpecialAvatarID ?? 0 }],
+                BaseAvatars =
+                [
+                    new LineupAvatarInfo
+                        { BaseAvatarId = baseAvatarId, SpecialAvatarId = specialAvatar?.SpecialAvatarID ?? 0 }
+                ],
                 LineupData = LineupData,
                 AvatarData = Player.AvatarManager!.AvatarData
             };
@@ -257,7 +262,10 @@ public class LineupManager : BasePlayerManager
                 Name = "",
                 LineupType = 0,
                 BaseAvatars =
-                    [new LineupAvatarInfo { BaseAvatarId = specialAvatar.AvatarID, SpecialAvatarId = specialAvatar.SpecialAvatarID }],
+                [
+                    new LineupAvatarInfo
+                        { BaseAvatarId = specialAvatar.AvatarID, SpecialAvatarId = specialAvatar.SpecialAvatarID }
+                ],
                 LineupData = LineupData,
                 AvatarData = Player.AvatarManager!.AvatarData
             };

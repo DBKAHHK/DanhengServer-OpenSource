@@ -8,5 +8,6 @@ public class AdvModifyMaxMazeMP : TaskConfigInfo
 {
     [JsonConverter(typeof(StringEnumConverter))]
     public PropertyModifyFunctionEnum ModifyFunction { get; set; }
+
     public DynamicFloat ModifyValue { get; set; }
 }

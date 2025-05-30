@@ -1,8 +1,4 @@
-﻿using EggLink.DanhengServer.Database;
-using EggLink.DanhengServer.Database.Avatar;
-using EggLink.DanhengServer.Database.Inventory;
-using EggLink.DanhengServer.Database.Player;
-using EggLink.DanhengServer.Enums.Avatar;
+﻿using EggLink.DanhengServer.Enums.Avatar;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 

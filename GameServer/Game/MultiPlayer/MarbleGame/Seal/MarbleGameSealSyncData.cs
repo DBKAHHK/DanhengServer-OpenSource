@@ -8,7 +8,8 @@ public abstract class BaseMarbleGameSyncData
     public abstract MarbleGameSyncData ToProto();
 }
 
-public class MarbleGameScoreSyncData(int playerAScore, int playerBScore, MarbleFrameType frameType) : BaseMarbleGameSyncData
+public class MarbleGameScoreSyncData(int playerAScore, int playerBScore, MarbleFrameType frameType)
+    : BaseMarbleGameSyncData
 {
     public override MarbleGameSyncData ToProto()
     {
@@ -21,7 +22,11 @@ public class MarbleGameScoreSyncData(int playerAScore, int playerBScore, MarbleF
     }
 }
 
-public class MarbleGameHpChangeSyncData(MarbleGameSealInstance inst, MarbleFrameType frameType, int changeValue, float time = 0f) : MarbleGameSealSyncData(inst, frameType)
+public class MarbleGameHpChangeSyncData(
+    MarbleGameSealInstance inst,
+    MarbleFrameType frameType,
+    int changeValue,
+    float time = 0f) : MarbleGameSealSyncData(inst, frameType)
 {
     public override MarbleGameSyncData ToProto()
     {
@@ -38,7 +43,11 @@ public class MarbleGameHpChangeSyncData(MarbleGameSealInstance inst, MarbleFrame
     }
 }
 
-public class MarbleGameEffectSyncData(MarbleGameSealInstance inst, MarbleFrameType frameType, int skillId, float time = 0f) : MarbleGameSealSyncData(inst, frameType)
+public class MarbleGameEffectSyncData(
+    MarbleGameSealInstance inst,
+    MarbleFrameType frameType,
+    int skillId,
+    float time = 0f) : MarbleGameSealSyncData(inst, frameType)
 {
     public override MarbleGameSyncData ToProto()
     {
@@ -75,7 +84,8 @@ public class MarbleGameSealSyncData(MarbleGameSealInstance inst, MarbleFrameType
     }
 }
 
-public class MarbleGameSealActionSyncData(MarbleGameSealInstance inst, MarbleFrameType frameType, float time = 0) : MarbleGameSealSyncData(inst, frameType)
+public class MarbleGameSealActionSyncData(MarbleGameSealInstance inst, MarbleFrameType frameType, float time = 0)
+    : MarbleGameSealSyncData(inst, frameType)
 {
     public override MarbleGameSyncData ToProto()
     {
@@ -95,8 +105,8 @@ public class MarbleGameSealActionSyncData(MarbleGameSealInstance inst, MarbleFra
     }
 }
 
-
-public class MarbleGameSealLaunchStopSyncData(MarbleGameSealInstance inst, MarbleFrameType frameType, float time = 0) : MarbleGameSealSyncData(inst, frameType)
+public class MarbleGameSealLaunchStopSyncData(MarbleGameSealInstance inst, MarbleFrameType frameType, float time = 0)
+    : MarbleGameSealSyncData(inst, frameType)
 {
     public override MarbleGameSyncData ToProto()
     {
@@ -115,7 +125,13 @@ public class MarbleGameSealLaunchStopSyncData(MarbleGameSealInstance inst, Marbl
     }
 }
 
-public class MarbleGameSealCollisionSyncData(MarbleGameSealInstance inst, int collideOwnerId, int collideTargetId, float time, Vector2 collidePos, MarbleSealVector? targetVelocity) : MarbleGameSealSyncData(inst, MarbleFrameType.Collide)
+public class MarbleGameSealCollisionSyncData(
+    MarbleGameSealInstance inst,
+    int collideOwnerId,
+    int collideTargetId,
+    float time,
+    Vector2 collidePos,
+    MarbleSealVector? targetVelocity) : MarbleGameSealSyncData(inst, MarbleFrameType.Collide)
 {
     public override MarbleGameSyncData ToProto()
     {
@@ -128,7 +144,8 @@ public class MarbleGameSealCollisionSyncData(MarbleGameSealInstance inst, int co
             SealPosition = Instance.Position,
             SealRotation = Instance.Rotation,
             FrameType = MarbleFrameType.Collide,
-            CollideType = collideTargetId == 1 ? MarbleFactionType.Field : collideTargetId / 100 == collideOwnerId / 100 ? MarbleFactionType.Ally : MarbleFactionType.Enemy,
+            CollideType = collideTargetId == 1 ? MarbleFactionType.Field :
+                collideTargetId / 100 == collideOwnerId / 100 ? MarbleFactionType.Ally : MarbleFactionType.Enemy,
             CollideOwnerId = (uint)collideOwnerId,
             CollideTargetId = (uint)collideTargetId,
             CollisionPosition = new MarbleSealVector

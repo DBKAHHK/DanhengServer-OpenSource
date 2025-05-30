@@ -55,10 +55,7 @@ public class SceneSkillManager(PlayerInstance player) : BasePlayerManager(player
             attackEntity, targetEntities, req);
 
         // check if avatar execute
-        if (attackEntity is AvatarSceneInfo)
-        {
-            await Player.SceneInstance!.OnUseSkill(req);
-        }
+        if (attackEntity is AvatarSceneInfo) await Player.SceneInstance!.OnUseSkill(req);
 
         return new SkillResultData(Retcode.RetSucc, res.Instance, res.BattleInfos);
     }

@@ -53,9 +53,9 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
         if (target.BlackList.Contains(Player.Uid)) return null;
 
         FriendData.ReceiveApplyList.Remove(targetUid);
-        FriendData.FriendDetailList.Add(targetUid, new());
+        FriendData.FriendDetailList.Add(targetUid, new FriendDetailData());
         target.SendApplyList.Remove(Player.Uid);
-        target.FriendDetailList.Add(Player.Uid, new());
+        target.FriendDetailList.Add(Player.Uid, new FriendDetailData());
 
         var targetPlayer = Listener.GetActiveConnection(targetUid);
         if (targetPlayer != null)
@@ -183,13 +183,10 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
     {
         var proto = new PacketRevcMsgScNotify((uint)recvUid, (uint)sendUid, info);
         await Player.SendPacket(proto);
-        
+
         // receive message
         var recvPlayer = Listener.GetActiveConnection(recvUid)?.Player;
-        if (recvPlayer != null)
-        {
-            await recvPlayer.FriendManager!.ReceiveInviteMessage(sendUid, recvUid, info);
-        }
+        if (recvPlayer != null) await recvPlayer.FriendManager!.ReceiveInviteMessage(sendUid, recvUid, info);
     }
 
     public async ValueTask ReceiveMessage(int sendUid, int recvUid, string? message = null, int? extraId = null)
@@ -365,7 +362,7 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
             var status = Listener.GetActiveConnection(player.Uid) == null
                 ? FriendOnlineStatus.Offline
                 : FriendOnlineStatus.Online;
-            var friend = GetFriendDetailData(player.Uid) ?? new();
+            var friend = GetFriendDetailData(player.Uid) ?? new FriendDetailData();
 
             proto.FriendList.Add(new FriendSimpleInfo
             {

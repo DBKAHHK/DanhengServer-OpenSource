@@ -1,6 +1,6 @@
 namespace EggLink.DanhengServer.Data.Excel;
 
-[ResourceEntity("MazeSkill.json,MazeSkillLD.json",isMultifile:true)]
+[ResourceEntity("MazeSkill.json,MazeSkillLD.json", true)]
 public class MazeSkillExcel : ExcelResource
 {
     public int MazeSkillId { get; set; }

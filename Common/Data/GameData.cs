@@ -14,19 +14,6 @@ namespace EggLink.DanhengServer.Data;
 
 public static class GameData
 {
-    #region Activity
-
-    public static ActivityConfig ActivityConfig { get; set; } = new();
-
-    #region Marble
-
-    public static Dictionary<int, MarbleMatchInfoExcel> MarbleMatchInfoData { get; private set; } = [];
-    public static Dictionary<int, MarbleSealExcel> MarbleSealData { get; private set; } = [];
-
-    #endregion
-
-    #endregion
-
     #region Banners
 
     public static BannersConfig BannersConfig { get; set; } = new();
@@ -42,6 +29,19 @@ public static class GameData
     #region Pam
 
     public static Dictionary<int, PamSkinConfigExcel> PamSkinConfigData { get; private set; } = [];
+
+    #endregion
+
+    #region Activity
+
+    public static ActivityConfig ActivityConfig { get; set; } = new();
+
+    #region Marble
+
+    public static Dictionary<int, MarbleMatchInfoExcel> MarbleMatchInfoData { get; private set; } = [];
+    public static Dictionary<int, MarbleSealExcel> MarbleSealData { get; private set; } = [];
+
+    #endregion
 
     #endregion
 
@@ -269,8 +269,16 @@ public static class GameData
     public static Dictionary<int, BaseRogueBuffExcel> RogueBuffData { get; private set; } = [];
     public static Dictionary<int, BaseRogueBuffGroupExcel> RogueBuffGroupData { get; private set; } = [];
     public static Dictionary<int, RogueHandBookEventExcel> RogueHandBookEventData { get; private set; } = [];
-    public static Dictionary<int, RogueDialogueOptionDisplayExcel> RogueDialogueOptionDisplayData { get; private set; } = [];
-    public static Dictionary<int, RogueDialogueDynamicDisplayExcel> RogueDialogueDynamicDisplayData { get; private set; } = [];
+
+    public static Dictionary<int, RogueDialogueOptionDisplayExcel>
+        RogueDialogueOptionDisplayData { get; private set; } = [];
+
+    public static Dictionary<int, RogueDialogueDynamicDisplayExcel> RogueDialogueDynamicDisplayData
+    {
+        get;
+        private set;
+    } = [];
+
     public static Dictionary<int, RogueHandbookMiracleExcel> RogueHandbookMiracleData { get; private set; } = [];
     public static Dictionary<int, RogueManagerExcel> RogueManagerData { get; private set; } = [];
     public static Dictionary<int, Dictionary<int, RogueMapExcel>> RogueMapData { get; private set; } = [];

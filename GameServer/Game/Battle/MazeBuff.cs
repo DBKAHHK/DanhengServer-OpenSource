@@ -10,9 +10,7 @@ public class MazeBuff(int buffID, int buffLevel, int owner)
         Duration = buff.Duration;
         OwnerAvatarId = buff.OwnerAvatarId;
         foreach (var buffDynamicValue in buff.DynamicValues)
-        {
             DynamicValues.Add(buffDynamicValue.Key, buffDynamicValue.Value);
-        }
     }
 
     public int BuffID { get; } = buffID;

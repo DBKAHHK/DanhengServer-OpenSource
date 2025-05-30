@@ -8,13 +8,6 @@ namespace EggLink.DanhengServer.GameServer.Game.MultiPlayer.MarbleGame;
 
 public class MarbleGamePlayerInstance : BaseGamePlayerInstance
 {
-    public Dictionary<int, MarbleGameSealInstance> SealList { get; set; } = [];
-    public MarbleTeamType TeamType { get; set; }
-    public MarblePlayerPhaseEnum Phase { get; set; } = MarblePlayerPhaseEnum.NotEnter;
-    public int CurItemId { get; set; }
-    public int Score { get; set; }
-    public HashSet<int> AllowMoveSealList { get; set; } = [];
-
     public MarbleGamePlayerInstance(LobbyPlayerInstance lobby, MarbleTeamType type) : base(lobby)
     {
         TeamType = type;
@@ -54,11 +47,15 @@ public class MarbleGamePlayerInstance : BaseGamePlayerInstance
         }
     }
 
+    public Dictionary<int, MarbleGameSealInstance> SealList { get; set; } = [];
+    public MarbleTeamType TeamType { get; set; }
+    public MarblePlayerPhaseEnum Phase { get; set; } = MarblePlayerPhaseEnum.NotEnter;
+    public int CurItemId { get; set; }
+    public int Score { get; set; }
+    public HashSet<int> AllowMoveSealList { get; set; } = [];
+
     public void ChangeRound()
     {
-        foreach (var instance in SealList.Values)
-        {
-            AllowMoveSealList.Add(instance.Id); 
-        }
+        foreach (var instance in SealList.Values) AllowMoveSealList.Add(instance.Id);
     }
 }

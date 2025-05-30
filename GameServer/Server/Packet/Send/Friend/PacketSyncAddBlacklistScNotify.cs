@@ -6,7 +6,7 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
 public class PacketSyncAddBlacklistScNotify : BasePacket
 {
     public PacketSyncAddBlacklistScNotify(int uid)
-    : base(CmdIds.SyncAddBlacklistScNotify)
+        : base(CmdIds.SyncAddBlacklistScNotify)
     {
         var proto = new SyncAddBlacklistScNotify
         {

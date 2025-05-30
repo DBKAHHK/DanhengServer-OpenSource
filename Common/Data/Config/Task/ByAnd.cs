@@ -5,6 +5,7 @@ namespace EggLink.DanhengServer.Data.Config.Task;
 public class ByAnd : PredicateConfigInfo
 {
     public List<PredicateConfigInfo> PredicateList { get; set; } = [];
+
     public new static PredicateConfigInfo LoadFromJsonObject(JObject obj)
     {
         var info = new ByAnd

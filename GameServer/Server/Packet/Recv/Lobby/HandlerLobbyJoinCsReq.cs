@@ -32,7 +32,8 @@ public class HandlerLobbyJoinCsReq : Handler
             return;
         }
 
-        await room.AddPlayer(connection.Player!, req.LobbyGameInfo.LobbyMarbleInfo.LobbySealList.Select(x => (int)x).ToList(),
+        await room.AddPlayer(connection.Player!,
+            req.LobbyGameInfo.LobbyMarbleInfo.LobbySealList.Select(x => (int)x).ToList(),
             LobbyCharacterType.LobbyCharacterMember);
 
         await connection.SendPacket(new PacketLobbyJoinScRsp(room));

@@ -1,5 +1,4 @@
 ﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Player;
@@ -270,9 +269,7 @@ public class PlayerInstance(PlayerData data)
 
             if (info.SpecialAvatarId > 0 &&
                 GameData.SpecialAvatarData.TryGetValue(info.SpecialAvatarId * 10 + 0, out var e))
-            {
                 AvatarManager!.GetTrialAvatar(e.SpecialAvatarID)?.CheckLevel(Data.WorldLevel);
-            }
         }
 
         await LoadScene(Data.PlaneId, Data.FloorId, Data.EntryId, Data.Pos!, Data.Rot!, false);
@@ -358,7 +355,8 @@ public class PlayerInstance(PlayerData data)
         // check if avatar is in scene
         if (SceneInstance != null)
         {
-            var avatarScene = SceneInstance.AvatarInfo.Values.FirstOrDefault(x => x.AvatarInfo.BaseAvatarId == baseAvatarId);
+            var avatarScene =
+                SceneInstance.AvatarInfo.Values.FirstOrDefault(x => x.AvatarInfo.BaseAvatarId == baseAvatarId);
             if (avatarScene == null) return;
 
             await avatarScene.ClearAllBuff();

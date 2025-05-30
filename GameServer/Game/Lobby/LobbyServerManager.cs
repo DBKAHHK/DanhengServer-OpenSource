@@ -1,19 +1,19 @@
 ﻿using EggLink.DanhengServer.GameServer.Game.Player;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lobby;
 using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Game.Lobby;
 
 /// <summary>
-/// Server Manager:
-/// a manager would be only initialized when the server is started
+///     Server Manager:
+///     a manager would be only initialized when the server is started
 /// </summary>
 public class LobbyServerManager
 {
     public long CurLobbyRoomId { get; set; }
     public Dictionary<long, LobbyRoomInstance> LobbyRoomInstances { get; set; } = [];
 
-    public async ValueTask<LobbyRoomInstance> CreateLobbyRoom(PlayerInstance ownerPlayer, int lobbyMode, List<int> sealList)
+    public async ValueTask<LobbyRoomInstance> CreateLobbyRoom(PlayerInstance ownerPlayer, int lobbyMode,
+        List<int> sealList)
     {
         var roomId = ++CurLobbyRoomId;
         var room = new LobbyRoomInstance(ownerPlayer, roomId, FightGameMode.Marble, lobbyMode);
@@ -31,12 +31,9 @@ public class LobbyServerManager
     public LobbyRoomInstance? GetPlayerJoinedRoom(int uid)
     {
         foreach (var room in LobbyRoomInstances.Values)
-        {
             if (room.Players.Any(x => x.Player.Uid == uid))
-            {
                 return room;
-            }
-        }
+
         return null;
     }
 }

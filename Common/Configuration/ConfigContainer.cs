@@ -108,7 +108,9 @@ public class ServerProfile
     public int HeadIcon { get; set; } = 200105;
     public int ChatBubbleId { get; set; } = 220001;
     public int PersonalCardId { get; set; } = 253001;
-    public List<ServerAssistInfo> AssistInfo { get; set; } = [
+
+    public List<ServerAssistInfo> AssistInfo { get; set; } =
+    [
         new() { AvatarId = 1213, Level = 80 }
     ];
 }

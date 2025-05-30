@@ -1,11 +1,9 @@
-﻿using EggLink.DanhengServer.GameServer.Game.MultiPlayer;
+﻿using EggLink.DanhengServer.GameServer.Game.MultiPlayer.MarbleGame;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Fight;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Util.Security;
 using EggLink.DanhengServer.Util;
-using System.Security.Cryptography;
-using EggLink.DanhengServer.GameServer.Game.MultiPlayer.MarbleGame;
+using EggLink.DanhengServer.Util.Security;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Fight;
 
@@ -54,9 +52,7 @@ public class HandlerFightEnterCsReq : Handler
         await connection.SendPacket(new PacketFightEnterScRsp(connection.ClientSecretKeySeed));
 
         if (ConfigManager.Config.GameServer.UsePacketEncryption)
-        {
             connection.XorKey = Crypto.GenerateXorKey(connection.ClientSecretKeySeed);
-        }
 
         await marbleGame.EnterGame(player.LobbyPlayer.Player.Uid);
     }

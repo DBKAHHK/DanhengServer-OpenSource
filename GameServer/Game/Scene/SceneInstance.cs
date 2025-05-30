@@ -2,7 +2,6 @@
 using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Avatar;
-using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Activity.Loaders;
@@ -69,18 +68,12 @@ public class SceneInstance
             playerGroupInfo.EntityList.Add(avatar.Value.ToProto());
         if (playerGroupInfo.EntityList.Count > 0)
         {
-            if (LeaderEntityId == 0)
-            {
-                LeaderEntityId = AvatarInfo.Values.First().EntityId;
-            }
+            if (LeaderEntityId == 0) LeaderEntityId = AvatarInfo.Values.First().EntityId;
 
             sceneInfo.LeaderEntityId = (uint)LeaderEntityId;
         }
 
-        foreach (var summonUnit in SummonUnit.Values)
-        {
-            playerGroupInfo.EntityList.Add(summonUnit.ToProto());
-        }
+        foreach (var summonUnit in SummonUnit.Values) playerGroupInfo.EntityList.Add(summonUnit.ToProto());
 
         sceneInfo.EntityGroupList.Add(playerGroupInfo);
 
@@ -247,21 +240,21 @@ public class SceneInstance
         var removeAvatar = new List<IGameEntity>();
         var avatars = Player.LineupManager?.GetAvatarsFromCurTeam() ?? [];
         foreach (var sceneInfo in oldAvatarInfo)
-        {
-            if (avatars.FindIndex(x => x.AvatarInfo.BaseAvatarId == sceneInfo.AvatarInfo.BaseAvatarId) != -1)  // avatar still in team
+            if (avatars.FindIndex(x => x.AvatarInfo.BaseAvatarId == sceneInfo.AvatarInfo.BaseAvatarId) !=
+                -1) // avatar still in team
             {
                 AvatarInfo.Add(sceneInfo.EntityId, sceneInfo);
             }
-            else  // avatar leave
+            else // avatar leave
             {
                 removeAvatar.Add(sceneInfo);
                 sendPacket = true;
             }
-        }
 
-        foreach (var avatar in avatars)  // check team avatar
+        foreach (var avatar in avatars) // check team avatar
         {
-            if (AvatarInfo.Any(x => x.Value.AvatarInfo.BaseAvatarId == avatar.AvatarInfo.BaseAvatarId)) continue; // avatar already in team
+            if (AvatarInfo.Any(x => x.Value.AvatarInfo.BaseAvatarId == avatar.AvatarInfo.BaseAvatarId))
+                continue; // avatar already in team
             var avatarInfo = new AvatarSceneInfo(avatar.AvatarInfo, avatar.AvatarType, Player)
             {
                 // assign entity id
@@ -277,10 +270,7 @@ public class SceneInstance
         {
             Entities.Remove(avatar.EntityId);
 
-            if (avatar is AvatarSceneInfo info)
-            {
-                await info.OnDestroyInstance();
-            }
+            if (avatar is AvatarSceneInfo info) await info.OnDestroyInstance();
         }
 
         foreach (var avatar in addAvatar) Entities.Add(avatar.EntityId, avatar);
@@ -317,10 +307,8 @@ public class SceneInstance
                 // get modifier info
                 if (!GameData.AdventureModifierData.TryGetValue(modifier, out var config)) continue;
                 if (config.OnAfterLocalPlayerUseSkill.Count > 0)
-                {
                     await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility,
                         config.OnAfterLocalPlayerUseSkill, entity, [], req, modifier);
-                }
             }
         }
     }
@@ -340,23 +328,18 @@ public class SceneInstance
                 // get modifier info
                 if (!GameData.AdventureModifierData.TryGetValue(modifier, out var config)) continue;
                 if (config.OnUnstage.Count > 0)
-                {
                     await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility,
                         config.OnUnstage, entity, [], new SceneCastSkillCsReq
                         {
-                            CastEntityId = (uint)entity.EntityId,
+                            CastEntityId = (uint)entity.EntityId
                         }, modifier);
-                }
             }
         }
     }
 
     public async ValueTask OnDestroy()
     {
-        foreach (var value in AvatarInfo.Values)
-        {
-            await value.OnDestroyInstance();
-        }
+        foreach (var value in AvatarInfo.Values) await value.OnDestroyInstance();
     }
 
     #endregion
@@ -382,7 +365,8 @@ public class SceneInstance
         if (entity.EntityId != 0) return Retcode.RetServerInternalError;
         entity.EntityId = ++LastEntityId;
         // get summon unit excel
-        if (!GameData.SummonUnitDataData.TryGetValue(entity.SummonUnitId, out var summonUnitExcel)) return Retcode.RetMonsterConfigNotExist;
+        if (!GameData.SummonUnitDataData.TryGetValue(entity.SummonUnitId, out var summonUnitExcel))
+            return Retcode.RetMonsterConfigNotExist;
 
         IGameEntity? removeEntity = null;
         // get old summon unit
@@ -581,6 +565,10 @@ public class SceneInstance
 
 public class AvatarSceneInfo : IGameEntity, IGameModifier
 {
+    public BaseAvatarInfo AvatarInfo;
+    public AvatarType AvatarType;
+    public PlayerInstance Player;
+
     public AvatarSceneInfo(BaseAvatarInfo avatarInfo, AvatarType avatarType, PlayerInstance player)
     {
         AvatarInfo = avatarInfo;
@@ -604,10 +592,6 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
                 new SceneCastSkillCsReq());
         }
     }
-
-    public BaseAvatarInfo AvatarInfo;
-    public AvatarType AvatarType;
-    public PlayerInstance Player;
 
     public List<SceneBuff> BuffList { get; set; } = [];
 
@@ -745,17 +729,10 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
 
     public async ValueTask OnDestroyInstance()
     {
-        foreach (var modifier in Modifiers.ToArray())
-        {
-            await RemoveModifier(modifier);
-        }
+        foreach (var modifier in Modifiers.ToArray()) await RemoveModifier(modifier);
 
         foreach (var monsterInfo in Player.SceneInstance!.Entities.OfType<EntityMonster>().ToArray())
-        {
-            foreach (var buff in monsterInfo.BuffList.Where(x => x.OwnerAvatarId == AvatarInfo.BaseAvatarId).ToArray())
-            {
-                await monsterInfo.RemoveBuff(buff.BuffId);
-            }
-        }
+        foreach (var buff in monsterInfo.BuffList.Where(x => x.OwnerAvatarId == AvatarInfo.BaseAvatarId).ToArray())
+            await monsterInfo.RemoveBuff(buff.BuffId);
     }
 }

@@ -6,7 +6,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Multiplayer;
 
 public class PacketMultiplayerFightGameStartScNotify : BasePacket
 {
-    public PacketMultiplayerFightGameStartScNotify(BaseMultiPlayerGameRoomInstance room) : base(CmdIds.MultiplayerFightGameStartScNotify)
+    public PacketMultiplayerFightGameStartScNotify(BaseMultiPlayerGameRoomInstance room) : base(
+        CmdIds.MultiplayerFightGameStartScNotify)
     {
         var proto = new MultiplayerFightGameStartScNotify
         {

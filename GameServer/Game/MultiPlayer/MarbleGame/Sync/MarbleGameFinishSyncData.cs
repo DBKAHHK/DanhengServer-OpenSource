@@ -3,7 +3,8 @@ using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Game.MultiPlayer.MarbleGame.Sync;
 
-public class MarbleGameFinishSyncData(MarbleGamePlayerInstance player, bool isWin) : MarbleGameBaseSyncData(MarbleNetWorkMsgEnum.GameFinish)
+public class MarbleGameFinishSyncData(MarbleGamePlayerInstance player, bool isWin)
+    : MarbleGameBaseSyncData(MarbleNetWorkMsgEnum.GameFinish)
 {
     public override FightGameInfo ToProto()
     {

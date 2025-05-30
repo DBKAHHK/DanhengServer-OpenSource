@@ -1,5 +1,4 @@
-﻿using EggLink.DanhengServer.GameServer.Game.Lobby;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lobby;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lobby;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
