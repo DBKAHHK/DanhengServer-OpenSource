@@ -83,7 +83,7 @@ public class PacketGetSceneMapInfoScRsp : BasePacket
                 mazeMap.MazePropList.Add(mazeProp);
             }
 
-            if (ConfigManager.Config.ServerOption.EnableMission)
+            if (!ConfigManager.Config.ServerOption.AutoLightSection)
             {
                 player.SceneData!.UnlockSectionIdList.TryGetValue(mapData.FloorID, out var sections);
                 foreach (var section in sections ?? []) mazeMap.LightenSectionList.Add((uint)section);

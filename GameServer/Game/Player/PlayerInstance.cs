@@ -821,7 +821,7 @@ public class PlayerInstance(PlayerData data)
         Data.Pos = pos;
         Data.Rot = rot;
         var notSendMove = true;
-        if (planeId != Data.PlaneId || floorId != Data.FloorId || entryId != Data.EntryId)
+        if (planeId != Data.PlaneId || floorId != Data.FloorId || entryId != Data.EntryId || !mapTp)
         {
             SceneInstance instance = new(this, plane, floorId, entryId);
             InvokeOnPlayerLoadScene(this, instance);
