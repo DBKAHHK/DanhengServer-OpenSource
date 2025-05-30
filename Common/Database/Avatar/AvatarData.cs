@@ -124,12 +124,11 @@ public class FormalAvatarInfo : BaseAvatarInfo
     {
         if (!GameData.AvatarConfigData.TryGetValue(AvatarId, out var excel)) return;
         if (PathInfos.ContainsKey(AvatarId)) return;
-        if (excel.DefaultSkillTree.Count == 0) return;
+        if (excel.DefaultSkillTree[0].Count == 0) return;
 
         // create path info
         var path = new PathInfo(AvatarId);
-        foreach (var skill in excel.DefaultSkillTree)
-            path.SkillTree.Add(skill.PointID, skill.Level);
+        path.GetSkillTree();
 
         PathInfos.Add(AvatarId, path);
     }
@@ -163,7 +162,7 @@ public class FormalAvatarInfo : BaseAvatarInfo
 
         if (GetCurPathInfo().EquipId != 0) proto.EquipmentUniqueId = (uint)GetCurPathInfo().EquipId;
 
-        foreach (var skill in GetCurPathInfo().SkillTree)
+        foreach (var skill in GetCurPathInfo().GetSkillTree())
             proto.SkilltreeList.Add(new AvatarSkillTree
             {
                 PointId = (uint)skill.Key,
@@ -215,7 +214,7 @@ public class FormalAvatarInfo : BaseAvatarInfo
             AvatarEnhanceId = (uint)GetCurPathInfo().EnhanceId
         };
 
-        foreach (var skill in GetCurPathInfo().SkillTree)
+        foreach (var skill in GetCurPathInfo().GetSkillTree())
             proto.SkilltreeList.Add(new AvatarSkillTree
             {
                 PointId = (uint)skill.Key,
@@ -245,7 +244,7 @@ public class FormalAvatarInfo : BaseAvatarInfo
 
         if (GetCurPathInfo().EquipId != 0)
         {
-            var item = collection.InventoryData.EquipmentItems?.Find(item => item.UniqueId == GetCurPathInfo().EquipId);
+            var item = collection.InventoryData.EquipmentItems.Find(item => item.UniqueId == GetCurPathInfo().EquipId);
             if (item != null)
                 proto.EquipmentList.Add(new BattleEquipment
                 {
@@ -284,7 +283,7 @@ public class FormalAvatarInfo : BaseAvatarInfo
                 CurEnhanceId = (uint)GetCurPathInfo().EnhanceId
             };
 
-            foreach (var skill in pathInfo.SkillTree)
+            foreach (var skill in pathInfo.GetSkillTree())
                 proto.MultiPathSkillTree.Add(new AvatarSkillTree
                 {
                     PointId = (uint)skill.Key,
@@ -330,7 +329,7 @@ public class FormalAvatarInfo : BaseAvatarInfo
             proto.Equipment = equip.ToDisplayEquipmentProto();
         }
 
-        foreach (var skill in GetCurPathInfo().SkillTree)
+        foreach (var skill in GetCurPathInfo().GetSkillTree())
             proto.SkilltreeList.Add(new AvatarSkillTree
             {
                 PointId = (uint)skill.Key,
@@ -384,7 +383,7 @@ public class SpecialAvatarInfo : BaseAvatarInfo
 
         if (GetCurPathInfo().EquipId != 0) proto.EquipmentUniqueId = (uint)GetCurPathInfo().EquipId;
 
-        foreach (var skill in GetCurPathInfo().SkillTree)
+        foreach (var skill in GetCurPathInfo().GetSkillTree())
             proto.SkilltreeList.Add(new AvatarSkillTree
             {
                 PointId = (uint)skill.Key,
@@ -431,7 +430,7 @@ public class SpecialAvatarInfo : BaseAvatarInfo
             WorldLevel = (uint)collection.PlayerData.WorldLevel
         };
 
-        foreach (var skill in GetCurPathInfo().SkillTree)
+        foreach (var skill in GetCurPathInfo().GetSkillTree())
             proto.SkilltreeList.Add(new AvatarSkillTree
             {
                 PointId = (uint)skill.Key,
@@ -461,7 +460,7 @@ public class SpecialAvatarInfo : BaseAvatarInfo
 
         if (GetCurPathInfo().EquipId != 0)
         {
-            var item = collection.InventoryData.EquipmentItems?.Find(item => item.UniqueId == GetCurPathInfo().EquipId);
+            var item = collection.InventoryData.EquipmentItems.Find(item => item.UniqueId == GetCurPathInfo().EquipId);
             if (item != null)
                 proto.EquipmentList.Add(new BattleEquipment
                 {
@@ -488,23 +487,6 @@ public class SpecialAvatarInfo : BaseAvatarInfo
 
 public class OldAvatarInfo
 {
-    public OldAvatarInfo()
-    {
-        // only for db
-    }
-
-    public OldAvatarInfo(AvatarConfigExcel excel)
-    {
-        SkillTree = [];
-        if (AvatarId == 8001)
-        {
-        }
-        else
-        {
-            excel.DefaultSkillTree.ForEach(skill => { SkillTree.Add(skill.PointID, skill.Level); });
-        }
-    }
-
     public int AvatarId { get; set; }
 
     public int PathId { get; set; }
@@ -534,8 +516,38 @@ public class PathInfo(int pathId)
     public int EquipId { get; set; } = 0;
     public Dictionary<int, int> Relic { get; set; } = [];
     public ItemData? EquipData { get; set; } // for special avatar
-    public Dictionary<int, int> SkillTree { get; set; } = [];
     public int EnhanceId { get; set; }
+    public Dictionary<int, EnhanceInfo> EnhanceInfos { get; set; } = [];
+
+    public Dictionary<int, int> GetSkillTree()
+    {
+        if (EnhanceInfos.TryGetValue(EnhanceId, out var enhance))
+        {
+            return enhance.SkillTree;
+        }
+
+        EnhanceInfos[EnhanceId] = new EnhanceInfo(EnhanceId);
+        
+        // create default skill tree
+        var avatarExcel = GameData.AvatarConfigData.GetValueOrDefault(PathId);
+        if (avatarExcel == null) return [];
+
+        var skills = avatarExcel.DefaultSkillTree.GetValueOrDefault(EnhanceId);
+        if (skills == null) return [];
+
+        foreach (var skill in skills)
+        {
+            EnhanceInfos[EnhanceId].SkillTree.Add(skill.PointID, skill.Level);
+        }
+
+        return EnhanceInfos[EnhanceId].SkillTree;
+    }
+}
+
+public class EnhanceInfo(int enhanceId)
+{
+    public int EnhanceId { get; set; } = enhanceId;
+    public Dictionary<int, int> SkillTree { get; set; } = [];
 }
 
 public record PlayerDataCollection(PlayerData PlayerData, InventoryData InventoryData, LineupInfo LineupInfo);

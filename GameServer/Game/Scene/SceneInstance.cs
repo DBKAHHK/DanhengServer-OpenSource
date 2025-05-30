@@ -84,19 +84,47 @@ public class SceneInstance
         {
             if (entity.Value.GroupId == 0) continue;
             if (groups.FindIndex(x => x.GroupId == entity.Value.GroupId) == -1)
+            {
+                var property = FloorInfo?.Groups.GetValueOrDefault(entity.Value.GroupId)?.GroupPropertyMap ?? [];
+
+                Dictionary<string, int> resProperty = [];
+                var savedProp = Player.SceneData!.GroupPropertyData.GetValueOrDefault(FloorId, [])
+                    .GetValueOrDefault(entity.Value.GroupId, []);
+
+                foreach (var info in property.Values.Where(x => x.Side != GroupPropertySideEnum.ClientOnly))
+                {
+                    resProperty.Add(info.Name, savedProp.GetValueOrDefault(info.Name, info.DefaultValue));
+                }
+
                 groups.Add(new SceneEntityGroupInfo
                 {
-                    GroupId = (uint)entity.Value.GroupId
+                    GroupId = (uint)entity.Value.GroupId,
+                    GroupPropertyMap = { resProperty }
                 });
+            }
             groups[groups.FindIndex(x => x.GroupId == entity.Value.GroupId)].EntityList.Add(entity.Value.ToProto());
         }
 
         foreach (var groupId in Groups) // Add for empty group
             if (groups.FindIndex(x => x.GroupId == groupId) == -1)
+            {
+                var property = FloorInfo?.Groups.GetValueOrDefault(groupId)?.GroupPropertyMap ?? [];
+
+                Dictionary<string, int> resProperty = [];
+                var savedProp = Player.SceneData!.GroupPropertyData.GetValueOrDefault(FloorId, [])
+                    .GetValueOrDefault(groupId, []);
+
+                foreach (var info in property.Values.Where(x => x.Side != GroupPropertySideEnum.ClientOnly))
+                {
+                    resProperty.Add(info.Name, savedProp.GetValueOrDefault(info.Name, info.DefaultValue));
+                }
+
                 groups.Add(new SceneEntityGroupInfo
                 {
-                    GroupId = (uint)groupId
+                    GroupId = (uint)groupId,
+                    GroupPropertyMap = { resProperty }
                 });
+            }
 
         foreach (var group in groups) sceneInfo.EntityGroupList.Add(group);
 
@@ -148,26 +176,27 @@ public class SceneInstance
 
     #region Data
 
-    public PlayerInstance Player;
-    public MazePlaneExcel Excel;
-    public FloorInfo? FloorInfo;
-    public int FloorId;
-    public int PlaneId;
-    public int EntryId;
+    public PlayerInstance Player { get; set; }
+    public MazePlaneExcel Excel { get; set; }
+    public FloorInfo? FloorInfo { get; set; }
+    public int FloorId { get; set; }
+    public int PlaneId { get; set; }
+    public int EntryId { get; set; }
 
-    public int LeaveEntryId;
-    public int LastEntityId;
-    public bool IsLoaded = false;
+    public int LeaveEntryId { get; set; }
+    public int LastEntityId { get; set; }
+    public bool IsLoaded { get; set; } = false;
 
-    public Dictionary<int, AvatarSceneInfo> AvatarInfo = [];
-    public int LeaderEntityId;
-    public Dictionary<int, BaseGameEntity> Entities = [];
-    public List<int> Groups = [];
-    public List<EntityProp> HealingSprings = [];
+    public Dictionary<int, AvatarSceneInfo> AvatarInfo { get; set; } = [];
+    public int LeaderEntityId { get; set; }
+    public Dictionary<int, BaseGameEntity> Entities { get; set; } = [];
+    public List<int> Groups { get; set; } = [];
+    public List<EntityProp> HealingSprings { get; set; } = [];
 
-    public SceneEntityLoader? EntityLoader;
+    public SceneEntityLoader? EntityLoader { get; set; }
 
-    public GameModeTypeEnum GameModeType;
+    public GameModeTypeEnum GameModeType { get; set; }
+    public List<BaseSceneComponent> Components { get; set; } = [];
 
     public Dictionary<int, EntitySummonUnit> SummonUnit { get; set; } = [];
 
@@ -180,7 +209,8 @@ public class SceneInstance
         EntryId = entryId;
         LeaveEntryId = 0;
 
-        GameData.GetFloorInfo(PlaneId, FloorId, out FloorInfo);
+        GameData.GetFloorInfo(PlaneId, FloorId, out var floor);
+        FloorInfo = floor;
         if (FloorInfo == null) return;
 
         GameModeType = (GameModeTypeEnum)excel.PlaneType;
@@ -215,16 +245,28 @@ public class SceneInstance
                 EntityLoader = new TrialActivityEntityLoader(this, Player);
                 break;
             default:
-                if (Player.StoryLineManager?.StoryLineData.CurStoryLineId != 0)
-                    EntityLoader = new StoryLineEntityLoader(this);
-                else
-                    EntityLoader = new SceneEntityLoader(this);
+                EntityLoader = Player.StoryLineManager?.StoryLineData.CurStoryLineId != 0 ? new StoryLineEntityLoader(this) : new SceneEntityLoader(this);
                 break;
+        }
+
+        foreach (var module in floor.LevelFeatureModules.ToHashSet())
+        {
+            switch (module)
+            {
+                case LevelFeatureTypeEnum.EraFlipper:
+                    Components.Add(new EraFlipperSceneComponent(this));
+                    break;
+                case LevelFeatureTypeEnum.RotatableRegion:
+                    Components.Add(new RotatableRegionSceneComponent(this));
+                    break;
+            }
         }
 
         System.Threading.Tasks.Task.Run(async () => { await EntityLoader.LoadEntity(); }).Wait();
 
         Player.TaskManager?.SceneTaskTrigger.TriggerFloor(PlaneId, FloorId);
+
+        _ = InitializeComponents();
     }
 
     #endregion
@@ -340,6 +382,23 @@ public class SceneInstance
     public async ValueTask OnDestroy()
     {
         foreach (var value in AvatarInfo.Values) await value.OnDestroyInstance();
+    }
+
+    #endregion
+
+    #region Components
+
+    public async ValueTask InitializeComponents()
+    {
+        foreach (var component in Components)
+        {
+            await component.Initialize();
+        }
+    }
+
+    public T? GetComponent<T>() where T : BaseSceneComponent
+    {
+        return Components.FirstOrDefault(x => x is T) as T;
     }
 
     #endregion
@@ -565,9 +624,9 @@ public class SceneInstance
 
 public class AvatarSceneInfo : BaseGameEntity, IGameModifier
 {
-    public BaseAvatarInfo AvatarInfo;
-    public AvatarType AvatarType;
-    public PlayerInstance Player;
+    public BaseAvatarInfo AvatarInfo { get; set; }
+    public AvatarType AvatarType { get; set; }
+    public PlayerInstance Player { get; set; }
 
     public AvatarSceneInfo(BaseAvatarInfo avatarInfo, AvatarType avatarType, PlayerInstance player)
     {

@@ -42,8 +42,8 @@ public class CommandAvatar : ICommand
                          avatarInfo.PathInfos))
             {
                 if (!GameData.AvatarConfigData.TryGetValue(path.Key, out var pathExcel)) continue;
-                foreach (var talent in pathExcel.SkillTree)
-                    path.Value.SkillTree[talent.PointID] = Math.Min(level, talent.MaxLevel);
+                foreach (var talent in pathExcel.SkillTree.GetValueOrDefault(path.Value.EnhanceId, []))
+                    path.Value.GetSkillTree()[talent.PointID] = Math.Min(level, talent.MaxLevel);
             }
 
             await arg.SendMsg(I18NManager.Translate("Game.Command.Avatar.AllAvatarsLevelSet",
@@ -79,8 +79,8 @@ public class CommandAvatar : ICommand
             return;
         }
 
-        foreach (var talent in excel.SkillTree)
-            avatarPathInfo.Value.SkillTree[talent.PointID] = Math.Min(level, talent.MaxLevel);
+        foreach (var talent in excel.SkillTree.GetValueOrDefault(avatarPathInfo.Value.EnhanceId, []))
+            avatarPathInfo.Value.GetSkillTree()[talent.PointID] = Math.Min(level, talent.MaxLevel);
 
         // sync
         await player.SendPacket(new PacketPlayerSyncScNotify(avatar));

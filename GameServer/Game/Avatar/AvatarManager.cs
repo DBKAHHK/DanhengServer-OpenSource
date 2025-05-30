@@ -61,12 +61,19 @@ public class AvatarManager(PlayerInstance player) : BasePlayerManager(player)
                                                        (multiPathAvatar?.BaseAvatarID ?? avatarId));
     }
 
-    public SpecialAvatarInfo? GetTrialAvatar(int avatarId)
+    public SpecialAvatarInfo? GetTrialAvatar(int avatarId, bool refresh = false)
     {
         var avatar = AvatarData.TrialAvatars.Find(avatar => avatar.SpecialAvatarId == avatarId);
-        if (avatar != null) return avatar;
+        if (avatar != null)
+        {
+            if (refresh)
+                AvatarData.TrialAvatars.Remove(avatar);
+            else
+                return avatar;
+        }
 
         if (!GameData.SpecialAvatarData.TryGetValue(avatarId * 10 + 0, out var excel)) return null;
+
         avatar = new SpecialAvatarInfo
         {
             SpecialAvatarId = excel.SpecialAvatarID,
@@ -88,10 +95,8 @@ public class AvatarManager(PlayerInstance player) : BasePlayerManager(player)
             }
         });
 
-        if (!GameData.AvatarConfigData.TryGetValue(avatar.BaseAvatarId, out var avatarExcel)) return avatar;
-        foreach (var skill in avatarExcel.DefaultSkillTree)
-            avatar.GetCurPathInfo().SkillTree.Add(skill.PointID, skill.Level);
-
+        if (!GameData.AvatarConfigData.TryGetValue(avatar.BaseAvatarId, out _)) return avatar;
+        avatar.GetCurPathInfo().GetSkillTree();
         AvatarData.TrialAvatars.Add(avatar);
         return avatar;
     }

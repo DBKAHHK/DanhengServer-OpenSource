@@ -360,7 +360,15 @@ public class EntryPoint
                         Rank = info.Value.Rank,
                         Relic = info.Value.Relic,
                         Skin = info.Value.Skin,
-                        SkillTree = avatar.SkillTreeExtra.GetValueOrDefault(info.Value.PathId) ?? []
+                        EnhanceInfos =
+                        {
+                            {
+                                0, new EnhanceInfo(0)
+                                {
+                                    SkillTree = avatar.SkillTreeExtra.GetValueOrDefault(info.Value.PathId) ?? []
+                                }
+                            }
+                        }
                     });
                 }
 

@@ -17,11 +17,14 @@ public class AvatarSkillTreeConfigExcel : ExcelResource
 
     public override void AfterAllDone()
     {
-        if (EnhancedID == 1) return;
         GameData.AvatarConfigData.TryGetValue(AvatarID, out var excel);
-        if (excel != null && DefaultUnlock && excel.DefaultSkillTree.All(x => x.PointID != PointID))
-            excel.DefaultSkillTree.Add(this);
-        if (excel != null && excel.SkillTree.All(x => x.PointID != PointID)) excel.SkillTree.Add(this);
         GameData.AvatarSkillTreeConfigData.TryAdd(GetId(), this);
+        if (excel == null) return;
+
+        excel.DefaultSkillTree.TryAdd(EnhancedID, []);
+        excel.SkillTree.TryAdd(EnhancedID, []);
+        if (DefaultUnlock && excel.DefaultSkillTree[EnhancedID].All(x => x.PointID != PointID))
+            excel.DefaultSkillTree[EnhancedID].Add(this);
+        if (excel.SkillTree[EnhancedID].All(x => x.PointID != PointID)) excel.SkillTree[EnhancedID].Add(this);
     }
 }

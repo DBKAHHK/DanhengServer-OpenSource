@@ -1,4 +1,5 @@
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -22,5 +23,6 @@ public class HandlerSetAvatarEnhancedIdCsReq : Handler
 
         path.EnhanceId = (int)req.AvatarEnhanceId;
         await connection.Player.SendPacket(new PacketSetAvatarEnhancedIdScRsp(req.AvatarId, path.EnhanceId));
+        await connection.Player.SendPacket(new PacketPlayerSyncScNotify(avatar));
     }
 }

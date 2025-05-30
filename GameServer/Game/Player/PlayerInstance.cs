@@ -251,11 +251,11 @@ public class PlayerInstance(PlayerData data)
 
         foreach (var avatar in AvatarManager?.AvatarData.FormalAvatars ?? [])
         foreach (var path in avatar.PathInfos.Values)
-        foreach (var skill in path.SkillTree)
+        foreach (var skill in path.GetSkillTree())
         {
             GameData.AvatarSkillTreeConfigData.TryGetValue(skill.Key * 100 + 1, out var config);
             if (config == null) continue;
-            path.SkillTree[skill.Key] = Math.Min(skill.Value, config.MaxLevel); // limit skill level
+            path.GetSkillTree()[skill.Key] = Math.Min(skill.Value, config.MaxLevel); // limit skill level
         }
 
         foreach (var info in LineupManager!.GetAllLineup().SelectMany(lineupInfo => lineupInfo.BaseAvatars ?? []))

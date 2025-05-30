@@ -8,11 +8,9 @@ namespace EggLink.DanhengServer.Data.Excel;
 [ResourceEntity("AvatarConfig.json,AvatarConfigTrial.json,AvatarConfigLD.json", true)]
 public class AvatarConfigExcel : ExcelResource
 {
-    [JsonIgnore] public List<AvatarSkillTreeConfigExcel> DefaultSkillTree = [];
-
-    [JsonIgnore] public string? Name;
-
-    [JsonIgnore] public List<AvatarSkillTreeConfigExcel> SkillTree = [];
+    [JsonIgnore] public Dictionary<int, List<AvatarSkillTreeConfigExcel>> DefaultSkillTree { get; set; } = [];
+    [JsonIgnore] public string? Name { get; set; }
+    [JsonIgnore] public Dictionary<int, List<AvatarSkillTreeConfigExcel>> SkillTree { get; set; } = [];
 
     public int AvatarID { get; set; } = 0;
     public int AdventurePlayerID { get; set; }
