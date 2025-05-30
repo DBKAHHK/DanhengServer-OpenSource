@@ -72,12 +72,14 @@ public class SceneInstance
             if (LeaderEntityId == 0)
             {
                 LeaderEntityId = AvatarInfo.Values.First().EntityId;
-                sceneInfo.LeaderEntityId = (uint)LeaderEntityId;
             }
-            else
-            {
-                sceneInfo.LeaderEntityId = (uint)LeaderEntityId;
-            }
+
+            sceneInfo.LeaderEntityId = (uint)LeaderEntityId;
+        }
+
+        foreach (var summonUnit in SummonUnit.Values)
+        {
+            playerGroupInfo.EntityList.Add(summonUnit.ToProto());
         }
 
         sceneInfo.EntityGroupList.Add(playerGroupInfo);
