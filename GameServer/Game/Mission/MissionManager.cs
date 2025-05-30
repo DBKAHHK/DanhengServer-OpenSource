@@ -150,7 +150,7 @@ public class MissionManager : BasePlayerManager
         foreach (var subMission in mission.SubMissionIds)
         {
             Data.SetSubMissionStatus(subMission, MissionPhaseEnum.None);
-            await SetMissionProgress(subMission, 0);
+            await SetMissionProgress(subMission, 0, false);
             sync.MissionList.Add(new Proto.Mission
             {
                 Id = (uint)subMission,
@@ -536,7 +536,7 @@ public class MissionManager : BasePlayerManager
         await Player.SendPacket(new PacketPlayerSyncScNotify(sync));
     }
 
-    public async ValueTask SetMissionProgress(int missionId, int progress)
+    public async ValueTask SetMissionProgress(int missionId, int progress, bool sendPacket = true)
     {
         if (!ConfigManager.Config.ServerOption.EnableMission) return;
 
@@ -553,7 +553,8 @@ public class MissionManager : BasePlayerManager
             Progress = (uint)progress
         });
 
-        await Player.SendPacket(new PacketPlayerSyncScNotify(sync));
+        if (sendPacket)
+            await Player.SendPacket(new PacketPlayerSyncScNotify(sync));
     }
 
     #endregion

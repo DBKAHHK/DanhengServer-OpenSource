@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using EggLink.DanhengServer.Util;
+using Newtonsoft.Json;
 using SqlSugar;
 
 namespace EggLink.DanhengServer.Database;
@@ -11,7 +12,8 @@ public class CustomSerializeService : ISerializeService
     {
         _jsonSettings = new JsonSerializerSettings
         {
-            DefaultValueHandling = DefaultValueHandling.Ignore // ignore default values
+            DefaultValueHandling = DefaultValueHandling.Ignore, // ignore default values
+            ObjectCreationHandling = ObjectCreationHandling.Replace
         };
     }
 
@@ -22,7 +24,25 @@ public class CustomSerializeService : ISerializeService
 
     public T DeserializeObject<T>(string value)
     {
-        return JsonConvert.DeserializeObject<T>(value)!;
+        try
+        {
+            var clazz = JsonConvert.DeserializeObject<T>(value)!;
+            return clazz;
+        }
+        catch
+        {
+            // try to create empty instance
+            try
+            {
+                Logger.GetByClassName().Warn("Error occured when load database, resetting the mistake value");
+                var inst = Activator.CreateInstance<T>();
+                return inst;
+            }
+            catch
+            {
+                return default!;
+            }
+        }
     }
 
     public string SugarSerializeObject(object value)

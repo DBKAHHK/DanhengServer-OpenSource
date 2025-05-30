@@ -133,7 +133,7 @@ public class SceneInstance
         Player.MissionManager!.OnLoadScene(sceneInfo);
 
         // unlock section
-        if (ConfigManager.Config.ServerOption.EnableMission)
+        if (!ConfigManager.Config.ServerOption.AutoLightSection)
         {
             Player.SceneData!.UnlockSectionIdList.TryGetValue(FloorId, out var unlockSectionList);
             if (unlockSectionList != null)

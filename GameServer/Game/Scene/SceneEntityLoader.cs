@@ -252,7 +252,7 @@ public class SceneEntityLoader(SceneInstance scene)
         if (info.IsClientOnly || info.IsDelete || !info.LoadOnInitial) return null;
 
         GameData.MazePropData.TryGetValue(info.PropID, out var excel);
-        if (excel == null) return null;
+            if (excel == null) return null;
 
         var prop = new EntityProp(Scene, excel, group, info);
 
@@ -294,12 +294,14 @@ public class SceneEntityLoader(SceneInstance scene)
         {
             if (prop.PropInfo.MappingInfoID != 2220) return prop;
             await prop.SetState(PropStateEnum.Open);
-            await Scene.AddEntity(prop, sendPacket);
         }
-        else
+        
+        if (prop.PropInfo.PropID == 104006)
         {
-            await Scene.AddEntity(prop, sendPacket);
+            await prop.SetState(PropStateEnum.Open);
         }
+
+        await Scene.AddEntity(prop, sendPacket);
 
         return prop;
     }
