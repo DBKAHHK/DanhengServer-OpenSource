@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static FateStartScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRGYXRlU3RhcnRTY1JzcC5wcm90bxoRSERIQVBBTExMTUsucHJvdG8iQwoO",
-            "RmF0ZVN0YXJ0U2NSc3ASIAoKbGV2ZWxfaW5mbxgMIAEoCzIMLkhESEFQQUxM",
-            "TE1LEg8KB3JldGNvZGUYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "ChRGYXRlU3RhcnRTY1JzcC5wcm90bxoTRmF0ZUxldmVsSW5mby5wcm90byJF",
+            "Cg5GYXRlU3RhcnRTY1JzcBIiCgpsZXZlbF9pbmZvGAwgASgLMg4uRmF0ZUxl",
+            "dmVsSW5mbxIPCgdyZXRjb2RlGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HDHAPALLLMKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FateLevelInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FateStartScRsp), global::EggLink.DanhengServer.Proto.FateStartScRsp.Parser, new[]{ "LevelInfo", "Retcode" }, null, null, null, null)
           }));
@@ -86,10 +86,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "level_info" field.</summary>
     public const int LevelInfoFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.HDHAPALLLMK levelInfo_;
+    private global::EggLink.DanhengServer.Proto.FateLevelInfo levelInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HDHAPALLLMK LevelInfo {
+    public global::EggLink.DanhengServer.Proto.FateLevelInfo LevelInfo {
       get { return levelInfo_; }
       set {
         levelInfo_ = value;
@@ -208,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.levelInfo_ != null) {
         if (levelInfo_ == null) {
-          LevelInfo = new global::EggLink.DanhengServer.Proto.HDHAPALLLMK();
+          LevelInfo = new global::EggLink.DanhengServer.Proto.FateLevelInfo();
         }
         LevelInfo.MergeFrom(other.LevelInfo);
       }
@@ -236,7 +236,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 98: {
             if (levelInfo_ == null) {
-              LevelInfo = new global::EggLink.DanhengServer.Proto.HDHAPALLLMK();
+              LevelInfo = new global::EggLink.DanhengServer.Proto.FateLevelInfo();
             }
             input.ReadMessage(LevelInfo);
             break;
@@ -262,7 +262,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 98: {
             if (levelInfo_ == null) {
-              LevelInfo = new global::EggLink.DanhengServer.Proto.HDHAPALLLMK();
+              LevelInfo = new global::EggLink.DanhengServer.Proto.FateLevelInfo();
             }
             input.ReadMessage(LevelInfo);
             break;

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhDaGVzc1JvZ3VlQXJlYUluZm8ucHJvdG8aEUtLQ0tHRU9KRktFLnByb3Rv",
-            "Gh9DaGVzc1JvZ3VlQm9hcmRDZWxsU3RhdHVzLnByb3RvGh9DaGVzc1JvZ3Vl",
-            "SGlzdG9yeUNlbGxJbmZvLnByb3RvGg5DZWxsSW5mby5wcm90byL9AQoSQ2hl",
+            "Gg5DZWxsSW5mby5wcm90bxofQ2hlc3NSb2d1ZUhpc3RvcnlDZWxsSW5mby5w",
+            "cm90bxofQ2hlc3NSb2d1ZUJvYXJkQ2VsbFN0YXR1cy5wcm90byL9AQoSQ2hl",
             "c3NSb2d1ZUFyZWFJbmZvEg4KBmN1cl9pZBgEIAEoDRIwCgxoaXN0b3J5X2Nl",
             "bGwYBiADKAsyGi5DaGVzc1JvZ3VlSGlzdG9yeUNlbGxJbmZvEjAKDGxheWVy",
             "X3N0YXR1cxgFIAEoDjIaLkNoZXNzUm9ndWVCb2FyZENlbGxTdGF0dXMSFAoM",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "SEpHGA8gASgLMgwuS0tDS0dFT0pGS0VCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KKCKGEOJFKEReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KKCKGEOJFKEReflection.Descriptor, global::EggLink.DanhengServer.Proto.CellInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueHistoryCellInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBoardCellStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo), global::EggLink.DanhengServer.Proto.ChessRogueAreaInfo.Parser, new[]{ "CurId", "HistoryCell", "LayerStatus", "CurBoardId", "AllowSelectCellIdList", "Cell", "CFEKAOLKHJG" }, null, null, null, null)
           }));

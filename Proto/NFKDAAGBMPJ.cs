@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static NFKDAAGBMPJReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFORktEQUFHQk1QSi5wcm90bxoRTUFBT0xLR0xMQkkucHJvdG8aEU1HUE9D",
-            "SkZNS1BNLnByb3RvIosBCgtORktEQUFHQk1QShIcCgZzdGF0dXMYCiABKA4y",
-            "DC5NR1BPQ0pGTUtQTRIKCgJocBgPIAEoBRIRCglhdmF0YXJfaWQYCSABKA0S",
-            "IQoLTUhHREdHTklKQ0cYBCADKAsyDC5NQUFPTEtHTExCSRIMCgRyYW5rGA0g",
-            "ASgNEg4KBm1heF9ocBgLIAEoBUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "ChFORktEQUFHQk1QSi5wcm90bxoRTUFBT0xLR0xMQkkucHJvdG8aFkZhdGVN",
+            "YXN0ZXJTdGF0dXMucHJvdG8ikAEKC05GS0RBQUdCTVBKEiEKBnN0YXR1cxgK",
+            "IAEoDjIRLkZhdGVNYXN0ZXJTdGF0dXMSCgoCaHAYDyABKAUSEQoJYXZhdGFy",
+            "X2lkGAkgASgNEiEKC01IR0RHR05JSkNHGAQgAygLMgwuTUFBT0xLR0xMQkkS",
+            "DAoEcmFuaxgNIAEoDRIOCgZtYXhfaHAYCyABKAVCHqoCG0VnZ0xpbmsuRGFu",
+            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MAAOLKGLLBIReflection.Descriptor, global::EggLink.DanhengServer.Proto.MGPOCJFMKPMReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MAAOLKGLLBIReflection.Descriptor, global::EggLink.DanhengServer.Proto.FateMasterStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ), global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ.Parser, new[]{ "Status", "Hp", "AvatarId", "MHGDGGNIJCG", "Rank", "MaxHp" }, null, null, null, null)
           }));
@@ -92,10 +92,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.MGPOCJFMKPM status_ = global::EggLink.DanhengServer.Proto.MGPOCJFMKPM.FateMasterStatusTypeNone;
+    private global::EggLink.DanhengServer.Proto.FateMasterStatus status_ = global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MGPOCJFMKPM Status {
+    public global::EggLink.DanhengServer.Proto.FateMasterStatus Status {
       get { return status_; }
       set {
         status_ = value;
@@ -189,7 +189,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Status != global::EggLink.DanhengServer.Proto.MGPOCJFMKPM.FateMasterStatusTypeNone) hash ^= Status.GetHashCode();
+      if (Status != global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone) hash ^= Status.GetHashCode();
       if (Hp != 0) hash ^= Hp.GetHashCode();
       if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
       hash ^= mHGDGGNIJCG_.GetHashCode();
@@ -218,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(AvatarId);
       }
-      if (Status != global::EggLink.DanhengServer.Proto.MGPOCJFMKPM.FateMasterStatusTypeNone) {
+      if (Status != global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone) {
         output.WriteRawTag(80);
         output.WriteEnum((int) Status);
       }
@@ -249,7 +249,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(AvatarId);
       }
-      if (Status != global::EggLink.DanhengServer.Proto.MGPOCJFMKPM.FateMasterStatusTypeNone) {
+      if (Status != global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone) {
         output.WriteRawTag(80);
         output.WriteEnum((int) Status);
       }
@@ -275,7 +275,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Status != global::EggLink.DanhengServer.Proto.MGPOCJFMKPM.FateMasterStatusTypeNone) {
+      if (Status != global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (Hp != 0) {
@@ -303,7 +303,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Status != global::EggLink.DanhengServer.Proto.MGPOCJFMKPM.FateMasterStatusTypeNone) {
+      if (other.Status != global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone) {
         Status = other.Status;
       }
       if (other.Hp != 0) {
@@ -343,7 +343,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            Status = (global::EggLink.DanhengServer.Proto.MGPOCJFMKPM) input.ReadEnum();
+            Status = (global::EggLink.DanhengServer.Proto.FateMasterStatus) input.ReadEnum();
             break;
           }
           case 88: {
@@ -382,7 +382,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            Status = (global::EggLink.DanhengServer.Proto.MGPOCJFMKPM) input.ReadEnum();
+            Status = (global::EggLink.DanhengServer.Proto.FateMasterStatus) input.ReadEnum();
             break;
           }
           case 88: {

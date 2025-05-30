@@ -24,11 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static CIFDFLDEOKCReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFDSUZERkxERU9LQy5wcm90bxoRR0hIRE1FTUxLUE8ucHJvdG8iMAoLQ0lG",
-            "REZMREVPS0MSIQoLUEpHQkZLTkpQTk8YASABKA4yDC5HSEhETUVNTEtQT0Ie",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFDSUZERkxERU9LQy5wcm90bxoVRmF0ZUxldmVsU3RhdHVzLnByb3RvIjQK",
+            "C0NJRkRGTERFT0tDEiUKC1BKR0JGS05KUE5PGAEgASgOMhAuRmF0ZUxldmVs",
+            "U3RhdHVzQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GHHDMEMLKPOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FateLevelStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CIFDFLDEOKC), global::EggLink.DanhengServer.Proto.CIFDFLDEOKC.Parser, new[]{ "PJGBFKNJPNO" }, null, null, null, null)
           }));
@@ -84,10 +85,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "PJGBFKNJPNO" field.</summary>
     public const int PJGBFKNJPNOFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.GHHDMEMLKPO pJGBFKNJPNO_ = global::EggLink.DanhengServer.Proto.GHHDMEMLKPO.FateLevelStatusTypeNone;
+    private global::EggLink.DanhengServer.Proto.FateLevelStatus pJGBFKNJPNO_ = global::EggLink.DanhengServer.Proto.FateLevelStatus.TypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GHHDMEMLKPO PJGBFKNJPNO {
+    public global::EggLink.DanhengServer.Proto.FateLevelStatus PJGBFKNJPNO {
       get { return pJGBFKNJPNO_; }
       set {
         pJGBFKNJPNO_ = value;
@@ -117,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.GHHDMEMLKPO.FateLevelStatusTypeNone) hash ^= PJGBFKNJPNO.GetHashCode();
+      if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.FateLevelStatus.TypeNone) hash ^= PJGBFKNJPNO.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.GHHDMEMLKPO.FateLevelStatusTypeNone) {
+      if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.FateLevelStatus.TypeNone) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PJGBFKNJPNO);
       }
@@ -150,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.GHHDMEMLKPO.FateLevelStatusTypeNone) {
+      if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.FateLevelStatus.TypeNone) {
         output.WriteRawTag(8);
         output.WriteEnum((int) PJGBFKNJPNO);
       }
@@ -164,7 +165,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.GHHDMEMLKPO.FateLevelStatusTypeNone) {
+      if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.FateLevelStatus.TypeNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PJGBFKNJPNO);
       }
       if (_unknownFields != null) {
@@ -179,7 +180,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.GHHDMEMLKPO.FateLevelStatusTypeNone) {
+      if (other.PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.FateLevelStatus.TypeNone) {
         PJGBFKNJPNO = other.PJGBFKNJPNO;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -198,7 +199,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            PJGBFKNJPNO = (global::EggLink.DanhengServer.Proto.GHHDMEMLKPO) input.ReadEnum();
+            PJGBFKNJPNO = (global::EggLink.DanhengServer.Proto.FateLevelStatus) input.ReadEnum();
             break;
           }
         }
@@ -217,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            PJGBFKNJPNO = (global::EggLink.DanhengServer.Proto.GHHDMEMLKPO) input.ReadEnum();
+            PJGBFKNJPNO = (global::EggLink.DanhengServer.Proto.FateLevelStatus) input.ReadEnum();
             break;
           }
         }

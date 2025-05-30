@@ -25,16 +25,17 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpTY2VuZUVudGl0eUdyb3VwSW5mby5wcm90bxoVU2NlbmVFbnRpdHlJbmZv",
-            "LnByb3RvIs8BChRTY2VuZUVudGl0eUdyb3VwSW5mbxIlCgtlbnRpdHlfbGlz",
-            "dBgHIAMoCzIQLlNjZW5lRW50aXR5SW5mbxI7CgtIRUpBTU9PSkJDShgBIAMo",
-            "CzImLlNjZW5lRW50aXR5R3JvdXBJbmZvLkhFSkFNT09KQkNKRW50cnkSEAoI",
-            "Z3JvdXBfaWQYDSABKA0SDQoFc3RhdGUYBCABKA0aMgoQSEVKQU1PT0pCQ0pF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAU6AjgBQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "LnByb3RvIuABChRTY2VuZUVudGl0eUdyb3VwSW5mbxIlCgtlbnRpdHlfbGlz",
+            "dBgHIAMoCzIQLlNjZW5lRW50aXR5SW5mbxJHChJncm91cF9wcm9wZXJ0eV9t",
+            "YXAYASADKAsyKy5TY2VuZUVudGl0eUdyb3VwSW5mby5Hcm91cFByb3BlcnR5",
+            "TWFwRW50cnkSEAoIZ3JvdXBfaWQYDSABKA0SDQoFc3RhdGUYBCABKA0aNwoV",
+            "R3JvdXBQcm9wZXJ0eU1hcEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoBToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo), global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo.Parser, new[]{ "EntityList", "HEJAMOOJBCJ", "GroupId", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo), global::EggLink.DanhengServer.Proto.SceneEntityGroupInfo.Parser, new[]{ "EntityList", "GroupPropertyMap", "GroupId", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -77,7 +78,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneEntityGroupInfo(SceneEntityGroupInfo other) : this() {
       entityList_ = other.entityList_.Clone();
-      hEJAMOOJBCJ_ = other.hEJAMOOJBCJ_.Clone();
+      groupPropertyMap_ = other.groupPropertyMap_.Clone();
       groupId_ = other.groupId_;
       state_ = other.state_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -100,15 +101,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return entityList_; }
     }
 
-    /// <summary>Field number for the "HEJAMOOJBCJ" field.</summary>
-    public const int HEJAMOOJBCJFieldNumber = 1;
-    private static readonly pbc::MapField<string, int>.Codec _map_hEJAMOOJBCJ_codec
+    /// <summary>Field number for the "group_property_map" field.</summary>
+    public const int GroupPropertyMapFieldNumber = 1;
+    private static readonly pbc::MapField<string, int>.Codec _map_groupPropertyMap_codec
         = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 10);
-    private readonly pbc::MapField<string, int> hEJAMOOJBCJ_ = new pbc::MapField<string, int>();
+    private readonly pbc::MapField<string, int> groupPropertyMap_ = new pbc::MapField<string, int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, int> HEJAMOOJBCJ {
-      get { return hEJAMOOJBCJ_; }
+    public pbc::MapField<string, int> GroupPropertyMap {
+      get { return groupPropertyMap_; }
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
@@ -151,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!entityList_.Equals(other.entityList_)) return false;
-      if (!HEJAMOOJBCJ.Equals(other.HEJAMOOJBCJ)) return false;
+      if (!GroupPropertyMap.Equals(other.GroupPropertyMap)) return false;
       if (GroupId != other.GroupId) return false;
       if (State != other.State) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -162,7 +163,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= entityList_.GetHashCode();
-      hash ^= HEJAMOOJBCJ.GetHashCode();
+      hash ^= GroupPropertyMap.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (State != 0) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
@@ -183,7 +184,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      hEJAMOOJBCJ_.WriteTo(output, _map_hEJAMOOJBCJ_codec);
+      groupPropertyMap_.WriteTo(output, _map_groupPropertyMap_codec);
       if (State != 0) {
         output.WriteRawTag(32);
         output.WriteUInt32(State);
@@ -203,7 +204,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      hEJAMOOJBCJ_.WriteTo(ref output, _map_hEJAMOOJBCJ_codec);
+      groupPropertyMap_.WriteTo(ref output, _map_groupPropertyMap_codec);
       if (State != 0) {
         output.WriteRawTag(32);
         output.WriteUInt32(State);
@@ -224,7 +225,7 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += entityList_.CalculateSize(_repeated_entityList_codec);
-      size += hEJAMOOJBCJ_.CalculateSize(_map_hEJAMOOJBCJ_codec);
+      size += groupPropertyMap_.CalculateSize(_map_groupPropertyMap_codec);
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
@@ -244,7 +245,7 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       entityList_.Add(other.entityList_);
-      hEJAMOOJBCJ_.MergeFrom(other.hEJAMOOJBCJ_);
+      groupPropertyMap_.MergeFrom(other.groupPropertyMap_);
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
       }
@@ -267,7 +268,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            hEJAMOOJBCJ_.AddEntriesFrom(input, _map_hEJAMOOJBCJ_codec);
+            groupPropertyMap_.AddEntriesFrom(input, _map_groupPropertyMap_codec);
             break;
           }
           case 32: {
@@ -298,7 +299,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            hEJAMOOJBCJ_.AddEntriesFrom(ref input, _map_hEJAMOOJBCJ_codec);
+            groupPropertyMap_.AddEntriesFrom(ref input, _map_groupPropertyMap_codec);
             break;
           }
           case 32: {

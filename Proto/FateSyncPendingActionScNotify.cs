@@ -24,12 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static FateSyncPendingActionScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNGYXRlU3luY1BlbmRpbmdBY3Rpb25TY05vdGlmeS5wcm90bxoRS0FESU5N",
-            "S0NKQkgucHJvdG8iRQodRmF0ZVN5bmNQZW5kaW5nQWN0aW9uU2NOb3RpZnkS",
-            "JAoOcGVuZGluZ19hY3Rpb24YAyABKAsyDC5LQURJTk1LQ0pCSEIeqgIbRWdn",
-            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CiNGYXRlU3luY1BlbmRpbmdBY3Rpb25TY05vdGlmeS5wcm90bxobRmF0ZVBl",
+            "bmRpbmdBY3Rpb25JbmZvLnByb3RvIk8KHUZhdGVTeW5jUGVuZGluZ0FjdGlv",
+            "blNjTm90aWZ5Ei4KDnBlbmRpbmdfYWN0aW9uGAMgASgLMhYuRmF0ZVBlbmRp",
+            "bmdBY3Rpb25JbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KADINMKCJBHReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FatePendingActionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FateSyncPendingActionScNotify), global::EggLink.DanhengServer.Proto.FateSyncPendingActionScNotify.Parser, new[]{ "PendingAction" }, null, null, null, null)
           }));
@@ -85,10 +86,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "pending_action" field.</summary>
     public const int PendingActionFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.KADINMKCJBH pendingAction_;
+    private global::EggLink.DanhengServer.Proto.FatePendingActionInfo pendingAction_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KADINMKCJBH PendingAction {
+    public global::EggLink.DanhengServer.Proto.FatePendingActionInfo PendingAction {
       get { return pendingAction_; }
       set {
         pendingAction_ = value;
@@ -182,7 +183,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.pendingAction_ != null) {
         if (pendingAction_ == null) {
-          PendingAction = new global::EggLink.DanhengServer.Proto.KADINMKCJBH();
+          PendingAction = new global::EggLink.DanhengServer.Proto.FatePendingActionInfo();
         }
         PendingAction.MergeFrom(other.PendingAction);
       }
@@ -203,7 +204,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 26: {
             if (pendingAction_ == null) {
-              PendingAction = new global::EggLink.DanhengServer.Proto.KADINMKCJBH();
+              PendingAction = new global::EggLink.DanhengServer.Proto.FatePendingActionInfo();
             }
             input.ReadMessage(PendingAction);
             break;
@@ -225,7 +226,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 26: {
             if (pendingAction_ == null) {
-              PendingAction = new global::EggLink.DanhengServer.Proto.KADINMKCJBH();
+              PendingAction = new global::EggLink.DanhengServer.Proto.FatePendingActionInfo();
             }
             input.ReadMessage(PendingAction);
             break;

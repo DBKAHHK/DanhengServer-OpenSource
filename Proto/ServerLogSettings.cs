@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static ServerLogSettingsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdTZXJ2ZXJMb2dTZXR0aW5ncy5wcm90bxoUU2VydmVyTG9nTGV2ZWwucHJv",
-            "dG8aElNlcnZlckxvZ1RhZy5wcm90byJiChFTZXJ2ZXJMb2dTZXR0aW5ncxIm",
+            "ChdTZXJ2ZXJMb2dTZXR0aW5ncy5wcm90bxoSU2VydmVyTG9nVGFnLnByb3Rv",
+            "GhRTZXJ2ZXJMb2dMZXZlbC5wcm90byJiChFTZXJ2ZXJMb2dTZXR0aW5ncxIm",
             "Cg9ub3RpZnlfdGFnX2xpc3QYASADKA4yDS5TZXJ2ZXJMb2dUYWcSJQoMbm90",
             "aWZ5X2xldmVsGA0gASgOMg8uU2VydmVyTG9nTGV2ZWxCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ServerLogLevelReflection.Descriptor, global::EggLink.DanhengServer.Proto.ServerLogTagReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ServerLogTagReflection.Descriptor, global::EggLink.DanhengServer.Proto.ServerLogLevelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerLogSettings), global::EggLink.DanhengServer.Proto.ServerLogSettings.Parser, new[]{ "NotifyTagList", "NotifyLevel" }, null, null, null, null)
           }));

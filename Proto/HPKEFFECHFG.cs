@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static HPKEFFECHFGReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFIUEtFRkZFQ0hGRy5wcm90bxoRTERPQkJJQUJEREwucHJvdG8aEURMQkZB",
-            "SE9BR1BILnByb3RvIoEBCgtIUEtFRkZFQ0hGRxIaCgR0eXBlGAEgASgOMgwu",
-            "RExCRkFIT0FHUEgSEQoJY29uZmlnX2lkGAIgASgNEhEKCXVuaXF1ZV9pZBgD",
-            "IAEoDRINCgVsZXZlbBgEIAEoDRIhCgtzd2l0Y2hfbGlzdBgFIAMoCzIMLkxE",
-            "T0JCSUFCRERMQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
-            "b3RvMw=="));
+            "ChFIUEtFRkZFQ0hGRy5wcm90bxoURmF0ZVNvdXJjZVR5cGUucHJvdG8aEUxE",
+            "T0JCSUFCRERMLnByb3RvIoQBCgtIUEtFRkZFQ0hGRxIdCgR0eXBlGAEgASgO",
+            "Mg8uRmF0ZVNvdXJjZVR5cGUSEQoJY29uZmlnX2lkGAIgASgNEhEKCXVuaXF1",
+            "ZV9pZBgDIAEoDRINCgVsZXZlbBgEIAEoDRIhCgtzd2l0Y2hfbGlzdBgFIAMo",
+            "CzIMLkxET0JCSUFCRERMQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LDOBBIABDDLReflection.Descriptor, global::EggLink.DanhengServer.Proto.DLBFAHOAGPHReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FateSourceTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LDOBBIABDDLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HPKEFFECHFG), global::EggLink.DanhengServer.Proto.HPKEFFECHFG.Parser, new[]{ "Type", "ConfigId", "UniqueId", "Level", "SwitchList" }, null, null, null, null)
           }));
@@ -91,10 +91,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.DLBFAHOAGPH type_ = global::EggLink.DanhengServer.Proto.DLBFAHOAGPH.FateSourceTypeNone;
+    private global::EggLink.DanhengServer.Proto.FateSourceType type_ = global::EggLink.DanhengServer.Proto.FateSourceType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.DLBFAHOAGPH Type {
+    public global::EggLink.DanhengServer.Proto.FateSourceType Type {
       get { return type_; }
       set {
         type_ = value;
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::EggLink.DanhengServer.Proto.DLBFAHOAGPH.FateSourceTypeNone) hash ^= Type.GetHashCode();
+      if (Type != global::EggLink.DanhengServer.Proto.FateSourceType.None) hash ^= Type.GetHashCode();
       if (ConfigId != 0) hash ^= ConfigId.GetHashCode();
       if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Type != global::EggLink.DanhengServer.Proto.DLBFAHOAGPH.FateSourceTypeNone) {
+      if (Type != global::EggLink.DanhengServer.Proto.FateSourceType.None) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -225,7 +225,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Type != global::EggLink.DanhengServer.Proto.DLBFAHOAGPH.FateSourceTypeNone) {
+      if (Type != global::EggLink.DanhengServer.Proto.FateSourceType.None) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -252,7 +252,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::EggLink.DanhengServer.Proto.DLBFAHOAGPH.FateSourceTypeNone) {
+      if (Type != global::EggLink.DanhengServer.Proto.FateSourceType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (ConfigId != 0) {
@@ -277,7 +277,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Type != global::EggLink.DanhengServer.Proto.DLBFAHOAGPH.FateSourceTypeNone) {
+      if (other.Type != global::EggLink.DanhengServer.Proto.FateSourceType.None) {
         Type = other.Type;
       }
       if (other.ConfigId != 0) {
@@ -306,7 +306,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Type = (global::EggLink.DanhengServer.Proto.DLBFAHOAGPH) input.ReadEnum();
+            Type = (global::EggLink.DanhengServer.Proto.FateSourceType) input.ReadEnum();
             break;
           }
           case 16: {
@@ -341,7 +341,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Type = (global::EggLink.DanhengServer.Proto.DLBFAHOAGPH) input.ReadEnum();
+            Type = (global::EggLink.DanhengServer.Proto.FateSourceType) input.ReadEnum();
             break;
           }
           case 16: {

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9NdXNldW1JbmZvQ2hhbmdlZFNjTm90aWZ5LnByb3RvGhFPTEtNTEZFRUZD",
-            "Si5wcm90bxoRSk1FQU9DUEZFT0wucHJvdG8aEUpOQkNQTkNOT0hPLnByb3Rv",
-            "GhFET0xHRk5MSEVBRS5wcm90byLRAgoZTXVzZXVtSW5mb0NoYW5nZWRTY05v",
+            "Si5wcm90bxoRRE9MR0ZOTEhFQUUucHJvdG8aEUpNRUFPQ1BGRU9MLnByb3Rv",
+            "GhFKTkJDUE5DTk9ITy5wcm90byLRAgoZTXVzZXVtSW5mb0NoYW5nZWRTY05v",
             "dGlmeRITCgtIUE5NUERPQ0pNQRgCIAEoDRITCgtFSk5LTUtGRkNDTBgMIAEo",
             "DRITCgtFSktHSEJFTU9PQhgKIAEoDRINCgVsZXZlbBgOIAEoDRITCgtLTkRK",
             "QVBOUEFQSxgLIAMoDRIQCghjdXJfZnVuZBgEIAEoDRITCgtKQkpMRFBQREJC",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "CglhcmVhX2xpc3QYCCADKAsyDC5KTUVBT0NQRkVPTBILCgNleHAYASABKA1C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OLKMLFEEFCJReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMEAOCPFEOLReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNBCPNCNOHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.DOLGFNLHEAEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OLKMLFEEFCJReflection.Descriptor, global::EggLink.DanhengServer.Proto.DOLGFNLHEAEReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMEAOCPFEOLReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNBCPNCNOHOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MuseumInfoChangedScNotify), global::EggLink.DanhengServer.Proto.MuseumInfoChangedScNotify.Parser, new[]{ "HPNMPDOCJMA", "EJNKMKFFCCL", "EJKGHBEMOOB", "Level", "KNDJAPNPAPK", "CurFund", "JBJLDPPDBBC", "JPIBMBBKGND", "KNDMDPEFADC", "BOJMNAFDJKH", "EKKOLCCCNNK", "AreaList", "Exp" }, null, null, null, null)
           }));

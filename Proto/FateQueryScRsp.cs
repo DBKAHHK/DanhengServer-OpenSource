@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static FateQueryScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRGYXRlUXVlcnlTY1JzcC5wcm90bxoRSERIQVBBTExMTUsucHJvdG8aEU1H",
-            "Q0VIQ01QQUhFLnByb3RvImkKDkZhdGVRdWVyeVNjUnNwEiAKCmxldmVsX2lu",
-            "Zm8YBCABKAsyDC5IREhBUEFMTExNSxIPCgdyZXRjb2RlGAkgASgNEiQKDnJv",
-            "Z3VlX2dldF9pbmZvGAogASgLMgwuTUdDRUhDTVBBSEVCHqoCG0VnZ0xpbmsu",
-            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChRGYXRlUXVlcnlTY1JzcC5wcm90bxoTRmF0ZUxldmVsSW5mby5wcm90bxoR",
+            "TUdDRUhDTVBBSEUucHJvdG8iawoORmF0ZVF1ZXJ5U2NSc3ASIgoKbGV2ZWxf",
+            "aW5mbxgEIAEoCzIOLkZhdGVMZXZlbEluZm8SDwoHcmV0Y29kZRgJIAEoDRIk",
+            "Cg5yb2d1ZV9nZXRfaW5mbxgKIAEoCzIMLk1HQ0VIQ01QQUhFQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HDHAPALLLMKReflection.Descriptor, global::EggLink.DanhengServer.Proto.MGCEHCMPAHEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FateLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MGCEHCMPAHEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FateQueryScRsp), global::EggLink.DanhengServer.Proto.FateQueryScRsp.Parser, new[]{ "LevelInfo", "Retcode", "RogueGetInfo" }, null, null, null, null)
           }));
@@ -88,10 +88,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "level_info" field.</summary>
     public const int LevelInfoFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.HDHAPALLLMK levelInfo_;
+    private global::EggLink.DanhengServer.Proto.FateLevelInfo levelInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HDHAPALLLMK LevelInfo {
+    public global::EggLink.DanhengServer.Proto.FateLevelInfo LevelInfo {
       get { return levelInfo_; }
       set {
         levelInfo_ = value;
@@ -235,7 +235,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.levelInfo_ != null) {
         if (levelInfo_ == null) {
-          LevelInfo = new global::EggLink.DanhengServer.Proto.HDHAPALLLMK();
+          LevelInfo = new global::EggLink.DanhengServer.Proto.FateLevelInfo();
         }
         LevelInfo.MergeFrom(other.LevelInfo);
       }
@@ -265,7 +265,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 34: {
             if (levelInfo_ == null) {
-              LevelInfo = new global::EggLink.DanhengServer.Proto.HDHAPALLLMK();
+              LevelInfo = new global::EggLink.DanhengServer.Proto.FateLevelInfo();
             }
             input.ReadMessage(LevelInfo);
             break;
@@ -298,7 +298,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 34: {
             if (levelInfo_ == null) {
-              LevelInfo = new global::EggLink.DanhengServer.Proto.HDHAPALLLMK();
+              LevelInfo = new global::EggLink.DanhengServer.Proto.FateLevelInfo();
             }
             input.ReadMessage(LevelInfo);
             break;
