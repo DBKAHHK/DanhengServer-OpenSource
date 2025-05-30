@@ -14,4 +14,14 @@ public class PacketEnterEraFlipperRegionScRsp : BasePacket
 
         SetData(proto);
     }
+
+    public PacketEnterEraFlipperRegionScRsp(Retcode code) : base(CmdIds.EnterEraFlipperRegionScRsp)
+    {
+        var proto = new EnterEraFlipperRegionScRsp
+        {
+            Retcode = (uint)code
+        };
+
+        SetData(proto);
+    }
 }

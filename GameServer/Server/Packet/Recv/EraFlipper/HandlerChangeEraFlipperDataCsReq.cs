@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Enums.Mission;
+using EggLink.DanhengServer.GameServer.Game.Scene.Component;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.EraFlipper;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Kcp;
@@ -13,9 +14,14 @@ public class HandlerChangeEraFlipperDataCsReq : Handler
     {
         var req = ChangeEraFlipperDataCsReq.Parser.ParseFrom(data);
 
-        var floorId = connection.Player!.SceneInstance!.FloorId;
+        var component = connection.Player!.SceneInstance!.GetComponent<EraFlipperSceneComponent>();
+        if (component == null)
+        {
+            await connection.SendPacket(new PacketChangeEraFlipperDataScRsp(Retcode.RetAdventureMapNotExist));
+            return;
+        }
 
-        if (connection.Player.SceneInstance.FloorInfo?.FloorSavedValue.Find(x => x.Name == "FSV_FlashBackCount") !=
+        if (connection.Player!.SceneInstance!.FloorInfo?.FloorSavedValue.Find(x => x.Name == "FSV_FlashBackCount") !=
             null)
         {
             // should save
@@ -38,6 +44,7 @@ public class HandlerChangeEraFlipperDataCsReq : Handler
             connection.Player.MissionManager?.HandleFinishType(MissionFinishTypeEnum.FloorSavedValue);
         }
 
+        component.ChangeEraFlipperStates(req.Data.EraFlipperDataList_.ToList());
         await connection.SendPacket(new PacketChangeEraFlipperDataScRsp(req));
         //await connection.SendPacket(new PacketEraFlipperDataChangeScNotify(req, floorId));
     }

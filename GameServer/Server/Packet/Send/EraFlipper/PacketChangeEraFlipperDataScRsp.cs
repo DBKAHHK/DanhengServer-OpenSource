@@ -14,4 +14,14 @@ public class PacketChangeEraFlipperDataScRsp : BasePacket
 
         SetData(proto);
     }
+
+    public PacketChangeEraFlipperDataScRsp(Retcode code) : base(CmdIds.ChangeEraFlipperDataScRsp)
+    {
+        var proto = new ChangeEraFlipperDataScRsp
+        {
+            Retcode = (uint)code
+        };
+
+        SetData(proto);
+    }
 }
