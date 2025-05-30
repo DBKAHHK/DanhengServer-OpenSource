@@ -30,12 +30,36 @@ public class SceneData : BaseDatabaseDataHelper
     [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
     public Dictionary<int, List<SceneMarkedChestData>> MarkedChestData { get; set; } =
         []; // Dictionary<FuncId, List<ScenePropTimelineData>>
+
+    [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
+    public Dictionary<int, Dictionary<int, Dictionary<string, int>>> GroupPropertyData { get; set; } =
+        []; // Dictionary<FloorId, Dictionary<GroupId, Dictionary<Key, Value>>>
+
+    [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
+    public SceneEraFlipperData EraFlipperData { get; set; } = new();
+
+    [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
+    public SceneRotatableRegionData RotatableRegionData { get; set; } = new();
 }
 
 public class ScenePropData
 {
     public int PropId { get; set; }
     public PropStateEnum State { get; set; }
+}
+
+public class SceneEraFlipperData
+{
+    public int CurRegionId { get; set; }
+    public Dictionary<int, int> RegionState { get; set; } = []; // Dictionary<RegionId, State>
+}
+
+public class SceneRotatableRegionData
+{
+    public int CurRegionId { get; set; }
+    public int Energy { get; set; }
+    public int MaxEnergy { get; set; }
+    public int RotateValue { get; set; }
 }
 
 public class ScenePropTimelineData
