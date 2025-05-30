@@ -12,8 +12,8 @@ public class SceneSkillManager(PlayerInstance player) : BasePlayerManager(player
     public async ValueTask<SkillResultData> OnCast(SceneCastSkillCsReq req)
     {
         // get entities
-        List<IGameEntity> targetEntities = []; // enemy
-        IGameEntity? attackEntity; // caster
+        List<BaseGameEntity> targetEntities = []; // enemy
+        BaseGameEntity? attackEntity; // caster
         List<int> addEntityIds = [];
         foreach (var id in req.AssistMonsterEntityIdList)
             if (Player.SceneInstance!.Entities.TryGetValue((int)id, out var v))
@@ -60,7 +60,7 @@ public class SceneSkillManager(PlayerInstance player) : BasePlayerManager(player
         return new SkillResultData(Retcode.RetSucc, res.Instance, res.BattleInfos);
     }
 
-    private AdventureAbilityConfigListInfo? GetAbilityConfig(IGameEntity entity)
+    private AdventureAbilityConfigListInfo? GetAbilityConfig(BaseGameEntity entity)
     {
         if (entity is EntityMonster monster)
             return GameData.AdventureAbilityConfigListData.GetValueOrDefault(monster.MonsterData.ID);

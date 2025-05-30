@@ -1,11 +1,10 @@
 ﻿using EggLink.DanhengServer.Data.Config.SummonUnit;
-using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 
-public class EntitySummonUnit : IGameEntity
+public class EntitySummonUnit : BaseGameEntity
 {
     public int CreateAvatarEntityId { get; set; } = 0;
     public int AttachEntityId { get; set; } = 0;
@@ -17,26 +16,15 @@ public class EntitySummonUnit : IGameEntity
 
     public List<UnitCustomTriggerConfigInfo> TriggerList { get; set; } = [];
     public HashSet<int> CaughtEntityIds { get; set; } = [];
-    public int EntityId { get; set; }
-    public int GroupID { get; set; } = 0;
-    public List<SceneBuff> BuffList { get; set; } = [];
+    public override int EntityId { get; set; }
+    public override int GroupId { get; set; } = 0;
 
-    public async ValueTask AddBuff(SceneBuff buff)
-    {
-        await ValueTask.CompletedTask;
-    }
-
-    public async ValueTask ApplyBuff(BattleInstance instance)
-    {
-        await ValueTask.CompletedTask;
-    }
-
-    public SceneEntityInfo ToProto()
+    public override SceneEntityInfo ToProto()
     {
         return new SceneEntityInfo
         {
             EntityId = (uint)EntityId,
-            GroupId = (uint)GroupID,
+            GroupId = (uint)GroupId,
             Motion = Motion,
             SummonUnit = new SceneSummonUnitInfo
             {

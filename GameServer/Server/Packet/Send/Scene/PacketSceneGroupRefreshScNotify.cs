@@ -8,8 +8,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 
 public class PacketSceneGroupRefreshScNotify : BasePacket
 {
-    public PacketSceneGroupRefreshScNotify(PlayerInstance player, List<IGameEntity>? addEntity = null,
-        List<IGameEntity>? removeEntity = null)
+    public PacketSceneGroupRefreshScNotify(PlayerInstance player, List<BaseGameEntity>? addEntity = null,
+        List<BaseGameEntity>? removeEntity = null)
         : base(CmdIds.SceneGroupRefreshScNotify)
     {
         var proto = new SceneGroupRefreshScNotify
@@ -23,7 +23,7 @@ public class PacketSceneGroupRefreshScNotify : BasePacket
         {
             var group = new GroupRefreshInfo
             {
-                GroupId = (uint)e.GroupID,
+                GroupId = (uint)e.GroupId,
                 RefreshType = SceneGroupRefreshType.Loaded
             };
             group.RefreshEntity.Add(new SceneEntityRefreshInfo
@@ -31,17 +31,17 @@ public class PacketSceneGroupRefreshScNotify : BasePacket
                 DeleteEntity = (uint)e.EntityId
             });
 
-            if (refreshInfo.TryGetValue(e.GroupID, out var value))
+            if (refreshInfo.TryGetValue(e.GroupId, out var value))
                 value.RefreshEntity.AddRange(group.RefreshEntity);
             else
-                refreshInfo[e.GroupID] = group;
+                refreshInfo[e.GroupId] = group;
         }
 
         foreach (var e in addEntity ?? [])
         {
             var group = new GroupRefreshInfo
             {
-                GroupId = (uint)e.GroupID,
+                GroupId = (uint)e.GroupId,
                 RefreshType = SceneGroupRefreshType.Loaded
             };
             group.RefreshEntity.Add(new SceneEntityRefreshInfo
@@ -49,10 +49,10 @@ public class PacketSceneGroupRefreshScNotify : BasePacket
                 AddEntity = e.ToProto()
             });
 
-            if (refreshInfo.TryGetValue(e.GroupID, out var value))
+            if (refreshInfo.TryGetValue(e.GroupId, out var value))
                 value.RefreshEntity.AddRange(group.RefreshEntity);
             else
-                refreshInfo[e.GroupID] = group;
+                refreshInfo[e.GroupId] = group;
         }
 
         proto.GroupRefreshList.AddRange(refreshInfo.Values);
@@ -60,8 +60,8 @@ public class PacketSceneGroupRefreshScNotify : BasePacket
         SetData(proto);
     }
 
-    public PacketSceneGroupRefreshScNotify(PlayerInstance player, IGameEntity? addEntity = null,
-        IGameEntity? removeEntity = null) :
+    public PacketSceneGroupRefreshScNotify(PlayerInstance player, BaseGameEntity? addEntity = null,
+        BaseGameEntity? removeEntity = null) :
         this(player, addEntity == null ? [] : [addEntity], removeEntity == null ? [] : [removeEntity])
     {
     }

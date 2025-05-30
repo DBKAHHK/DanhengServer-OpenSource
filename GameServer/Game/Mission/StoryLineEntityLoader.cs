@@ -41,7 +41,7 @@ public class StoryLineEntityLoader(SceneInstance scene) : SceneEntityLoader(scen
         Scene.IsLoaded = true;
     }
 
-    public override async ValueTask<List<IGameEntity>?> LoadGroup(GroupInfo info, bool forceLoad = false)
+    public override async ValueTask<List<BaseGameEntity>?> LoadGroup(GroupInfo info, bool forceLoad = false)
     {
         if (!LoadGroups.Contains(info.Id)) return null;
         return await base.LoadGroup(info, forceLoad);

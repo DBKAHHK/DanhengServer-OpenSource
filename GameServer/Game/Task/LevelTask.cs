@@ -23,7 +23,7 @@ public class LevelTask(PlayerInstance player)
         {
             if (fetch.FetchType != TargetFetchAdvPropFetchTypeEnum.SinglePropByPropID) return null;
             foreach (var entity in Player.SceneInstance?.Entities.Values.ToList() ?? [])
-                if (entity is EntityProp prop && prop.GroupID == fetch.SinglePropID.GroupID.GetValue() &&
+                if (entity is EntityProp prop && prop.GroupId == fetch.SinglePropID.GroupID.GetValue() &&
                     prop.InstId == fetch.SinglePropID.ID.GetValue())
                     return prop;
         }
@@ -72,7 +72,7 @@ public class LevelTask(PlayerInstance player)
     {
         if (act is DestroyProp destroyProp)
             foreach (var entity in Player.SceneInstance!.Entities.Values)
-                if (entity is EntityProp prop && prop.GroupID == destroyProp.GroupID.GetValue() &&
+                if (entity is EntityProp prop && prop.GroupId == destroyProp.GroupID.GetValue() &&
                     prop.InstId == destroyProp.ID.GetValue())
                     await Player.SceneInstance.RemoveEntity(entity);
     }
@@ -86,7 +86,7 @@ public class LevelTask(PlayerInstance player)
                         out var list))
                     foreach (var id in list)
                     foreach (var entity in Player.SceneInstance?.Entities.Values.ToList() ?? [])
-                        if (entity is EntityProp prop && prop.GroupID == groupInfo.Key && prop.InstId == id)
+                        if (entity is EntityProp prop && prop.GroupId == groupInfo.Key && prop.InstId == id)
                             await prop.SetState(PropStateEnum.Closed);
 
             await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.PropState);
@@ -147,7 +147,7 @@ public class LevelTask(PlayerInstance player)
     {
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.PropState)
             foreach (var entity in Player.SceneInstance!.Entities.Values)
-                if (entity is EntityProp prop && prop.GroupID == subMission.SubMissionInfo.ParamInt1 &&
+                if (entity is EntityProp prop && prop.GroupId == subMission.SubMissionInfo.ParamInt1 &&
                     prop.InstId == subMission.SubMissionInfo.ParamInt2)
                     try
                     {
@@ -163,7 +163,7 @@ public class LevelTask(PlayerInstance player)
                             // Elevator
                             foreach (var id in prop.PropInfo.UnlockControllerID)
                             foreach (var entity2 in Player.SceneInstance!.Entities.Values)
-                                if (entity2 is EntityProp prop2 && prop2.GroupID == id.Key &&
+                                if (entity2 is EntityProp prop2 && prop2.GroupId == id.Key &&
                                     id.Value.Contains(prop2.InstId))
                                     await prop2.SetState(PropStateEnum.Closed);
                         }
@@ -268,7 +268,7 @@ public class LevelTask(PlayerInstance player)
     {
         if (group != null)
             foreach (var entity in Player.SceneInstance?.Entities.Values.ToList() ?? [])
-                if (entity is EntityProp prop && prop.GroupID == group.Id)
+                if (entity is EntityProp prop && prop.GroupId == group.Id)
                     if (prop.Excel.PropStateList.Contains(PropStateEnum.Open))
                         await prop.SetState(PropStateEnum.Open);
     }
@@ -278,7 +278,7 @@ public class LevelTask(PlayerInstance player)
     {
         if (group != null)
             foreach (var entity in Player.SceneInstance?.Entities.Values.ToList() ?? [])
-                if (entity is EntityProp prop && prop.GroupID == group.Id)
+                if (entity is EntityProp prop && prop.GroupId == group.Id)
                     if (prop.Excel.PropStateList.Contains(PropStateEnum.Open) &&
                         (prop.State == PropStateEnum.Closed || prop.State == PropStateEnum.Locked))
                         await prop.SetState(PropStateEnum.Open);
@@ -289,7 +289,7 @@ public class LevelTask(PlayerInstance player)
         if (act is TriggerEntityEvent triggerEntityEvent)
             if (group != null)
                 foreach (var entity in Player.SceneInstance?.Entities.Values.ToList() ?? [])
-                    if (entity is EntityProp prop && prop.GroupID == group.Id &&
+                    if (entity is EntityProp prop && prop.GroupId == group.Id &&
                         prop.InstId == triggerEntityEvent.InstanceID.GetValue())
                         if (prop.Excel.PropStateList.Contains(PropStateEnum.Closed))
                             await prop.SetState(PropStateEnum.Closed);

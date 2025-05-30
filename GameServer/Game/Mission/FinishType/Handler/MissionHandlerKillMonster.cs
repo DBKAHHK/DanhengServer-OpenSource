@@ -12,7 +12,7 @@ public class MissionHandlerKillMonster : MissionFinishTypeHandler
     public override async ValueTask HandleMissionFinishType(PlayerInstance player, SubMissionInfo info, object? arg)
     {
         if (arg is not EntityMonster monster) return;
-        if (monster.InstID == info.ParamInt2)
+        if (monster.InstId == info.ParamInt2)
             if (!monster.IsAlive)
                 await player.MissionManager!.FinishSubMission(info.ID);
     }

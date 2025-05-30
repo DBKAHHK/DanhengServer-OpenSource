@@ -15,30 +15,29 @@ public class EntityMonster(
     SceneInstance scene,
     Position pos,
     Position rot,
-    int GroupID,
-    int InstID,
+    int groupId,
+    int instId,
     NPCMonsterDataExcel excel,
-    MonsterInfo info) : IGameEntity, IGameModifier
+    MonsterInfo info) : BaseGameEntity, IGameModifier
 {
     public Position Position { get; set; } = pos;
     public Position Rotation { get; set; } = rot;
-    public int InstID { get; set; } = InstID;
+    public int InstId { get; set; } = instId;
     public SceneInstance Scene { get; set; } = scene;
     public NPCMonsterDataExcel MonsterData { get; set; } = excel;
     public MonsterInfo Info { get; set; } = info;
     public SceneBuff? TempBuff { get; set; }
     public bool IsAlive { get; private set; } = true;
 
-    public int EventID { get; set; } = info.EventID;
-    public int CustomStageID { get; set; } = 0;
+    public int EventId { get; set; } = info.EventID;
+    public int CustomStageId { get; set; } = 0;
 
     public int RogueMonsterId { get; set; } = 0;
     public int CustomLevel { get; set; } = 0;
-    public List<SceneBuff> BuffList { get; set; } = [];
-    public int EntityId { get; set; } = 0;
-    public int GroupID { get; set; } = GroupID;
+    public override int EntityId { get; set; } = 0;
+    public override int GroupId { get; set; } = groupId;
 
-    public async ValueTask AddBuff(SceneBuff buff)
+    public override async ValueTask AddBuff(SceneBuff buff)
     {
         if (!GameData.MazeBuffData.TryGetValue(buff.BuffId * 10 + buff.BuffLevel, out var buffExcel)) return;
 
@@ -49,7 +48,7 @@ public class EntityMonster(
         await Scene.Player.SendPacket(new PacketSyncEntityBuffChangeListScNotify(this, buff));
     }
 
-    public async ValueTask ApplyBuff(BattleInstance instance)
+    public override async ValueTask ApplyBuff(BattleInstance instance)
     {
         if (TempBuff != null)
         {
@@ -70,13 +69,13 @@ public class EntityMonster(
         BuffList.Clear();
     }
 
-    public SceneEntityInfo ToProto()
+    public override SceneEntityInfo ToProto()
     {
         var proto = new SceneEntityInfo
         {
             EntityId = (uint)EntityId,
-            GroupId = (uint)GroupID,
-            InstId = (uint)InstID,
+            GroupId = (uint)GroupId,
+            InstId = (uint)InstId,
             Motion = new MotionInfo
             {
                 Pos = Position.ToProto(),
@@ -84,7 +83,7 @@ public class EntityMonster(
             },
             NpcMonster = new SceneNpcMonsterInfo
             {
-                EventId = (uint)EventID,
+                EventId = (uint)EventId,
                 MonsterId = (uint)MonsterData.ID,
                 WorldLevel = (uint)Scene.Player.Data.WorldLevel
             }
@@ -148,7 +147,7 @@ public class EntityMonster(
 
     public int GetStageId()
     {
-        if (CustomStageID > 0) return CustomStageID;
+        if (CustomStageId > 0) return CustomStageId;
         return Info.EventID;
     }
 

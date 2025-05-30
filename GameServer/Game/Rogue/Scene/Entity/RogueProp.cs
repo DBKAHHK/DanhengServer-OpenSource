@@ -15,10 +15,10 @@ public class RogueProp(SceneInstance scene, MazePropExcel excel, GroupInfo group
     {
     }
 
-    public int NextRoomID { get; set; }
-    public int NextSiteID { get; set; }
+    public int NextRoomId { get; set; }
+    public int NextSiteId { get; set; }
     public int ChestCanUseTimes { get; set; }
-    public int CustomPropID { get; set; }
+    public int CustomPropId { get; set; }
 
     public bool IsChessRogue { get; set; } = false;
     public bool IsLastRoom { get; set; } = false;
@@ -34,13 +34,13 @@ public class RogueProp(SceneInstance scene, MazePropExcel excel, GroupInfo group
     {
         var proto = base.ToProto();
 
-        if (NextRoomID != 0 || NextSiteID != 0 || ChestCanUseTimes != 0) // do not set if all are 0
+        if (NextRoomId != 0 || NextSiteId != 0 || ChestCanUseTimes != 0) // do not set if all are 0
             proto.Prop.ExtraInfo = new PropExtraInfo
             {
                 RogueInfo = new PropRogueInfo
                 {
-                    RoomId = (uint)NextRoomID,
-                    SiteId = (uint)NextSiteID
+                    RoomId = (uint)NextRoomId,
+                    SiteId = (uint)NextSiteId
                 }
             };
 
@@ -73,7 +73,7 @@ public class RogueProp(SceneInstance scene, MazePropExcel excel, GroupInfo group
                 }
             };
 
-        if (CustomPropID != 0) proto.Prop.PropId = (uint)CustomPropID;
+        if (CustomPropId != 0) proto.Prop.PropId = (uint)CustomPropId;
 
         return proto;
     }

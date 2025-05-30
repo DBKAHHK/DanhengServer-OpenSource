@@ -14,7 +14,7 @@ public class HandlerRogueWorkbenchGetInfoCsReq : Handler
         var req = RogueWorkbenchGetInfoCsReq.Parser.ParseFrom(data);
         var player = connection.Player!;
 
-        IGameEntity? entity = null;
+        BaseGameEntity? entity = null;
         player.SceneInstance?.Entities.TryGetValue((int)req.PropEntityId, out entity);
         if (entity is not RogueWorkbenchProp prop)
         {

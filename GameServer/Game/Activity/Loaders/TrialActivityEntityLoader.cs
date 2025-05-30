@@ -68,8 +68,8 @@ public class TrialActivityEntityLoader(SceneInstance scene, PlayerInstance playe
         // Create monster from group monster info
         var entity = new EntityMonster(Scene, info.ToPositionProto(), info.ToRotationProto(), group.Id, info.ID,
             npcMonsterExcel, info);
-        entity.EventID = stageMonsterInfo.EventId;
-        entity.CustomStageID = stageMonsterInfo.EventId;
+        entity.EventId = stageMonsterInfo.EventId;
+        entity.CustomStageId = stageMonsterInfo.EventId;
         await Scene.AddEntity(entity, sendPacket);
 
         return entity;

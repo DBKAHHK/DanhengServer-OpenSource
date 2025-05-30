@@ -35,9 +35,9 @@ public class RogueEntityLoader(SceneInstance scene, PlayerInstance player) : Sce
         Scene.IsLoaded = true;
     }
 
-    public override async ValueTask<List<IGameEntity>?> LoadGroup(GroupInfo info, bool forceLoad = false)
+    public override async ValueTask<List<BaseGameEntity>?> LoadGroup(GroupInfo info, bool forceLoad = false)
     {
-        var entityList = new List<IGameEntity>();
+        var entityList = new List<BaseGameEntity>();
         foreach (var npc in info.NPCList)
             try
             {
@@ -113,8 +113,8 @@ public class RogueEntityLoader(SceneInstance scene, PlayerInstance player) : Sce
             EntityMonster entity =
                 new(Scene, info.ToPositionProto(), info.ToRotationProto(), group.Id, info.ID, excel, info)
                 {
-                    EventID = rogueMonster.EventID,
-                    CustomStageID = rogueMonster.EventID
+                    EventId = rogueMonster.EventID,
+                    CustomStageId = rogueMonster.EventID
                 };
 
             await Scene.AddEntity(entity, sendPacket);
@@ -144,17 +144,17 @@ public class RogueEntityLoader(SceneInstance scene, PlayerInstance player) : Sce
             if (nextSiteIds.Count == 0)
             {
                 // exit
-                prop.CustomPropID = 1000;
+                prop.CustomPropId = 1000;
             }
             else
             {
                 index = Math.Min(index, nextSiteIds.Count - 1); // Sanity check
                 var nextRoom = Player.RogueManager?.RogueInstance?.RogueRooms[nextSiteIds[index]];
-                prop.NextSiteID = nextSiteIds[index];
-                prop.NextRoomID = nextRoom!.Excel?.RogueRoomID ?? 0;
-                NextRoomIds.Add(prop.NextRoomID);
+                prop.NextSiteId = nextSiteIds[index];
+                prop.NextRoomId = nextRoom!.Excel?.RogueRoomID ?? 0;
+                NextRoomIds.Add(prop.NextRoomId);
 
-                prop.CustomPropID = nextRoom!.Excel!.RogueRoomType switch // door style
+                prop.CustomPropId = nextRoom!.Excel!.RogueRoomType switch // door style
                 {
                     3 => 1022,
                     8 => 1022,

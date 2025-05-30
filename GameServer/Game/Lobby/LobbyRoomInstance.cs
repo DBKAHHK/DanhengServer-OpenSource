@@ -10,6 +10,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Lobby;
 
 public class LobbyRoomInstance(PlayerInstance owner, long roomId, FightGameMode gameMode, int lobbyMode)
 {
+    public PlayerInstance Owner { get; } = owner;
     public long RoomId { get; set; } = roomId;
     public FightGameMode GameMode { get; set; } = gameMode;
     public List<LobbyPlayerInstance> Players { get; set; } = [];

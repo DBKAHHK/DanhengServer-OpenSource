@@ -41,9 +41,9 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
         Scene.IsLoaded = true;
     }
 
-    public override async ValueTask<List<IGameEntity>?> LoadGroup(GroupInfo info, bool forceLoad = false)
+    public override async ValueTask<List<BaseGameEntity>?> LoadGroup(GroupInfo info, bool forceLoad = false)
     {
-        var entityList = new List<IGameEntity>();
+        var entityList = new List<BaseGameEntity>();
         foreach (var npc in info.NPCList)
             try
             {
@@ -165,8 +165,8 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
         EntityMonster entity =
             new(Scene, info.ToPositionProto(), info.ToRotationProto(), group.Id, info.ID, excel, info)
             {
-                EventID = rogueMonster.EventID,
-                CustomStageID = rogueMonster.EventID,
+                EventId = rogueMonster.EventID,
+                CustomStageId = rogueMonster.EventID,
                 RogueMonsterId = rogueMonster.RogueMonsterID
             };
 
@@ -197,7 +197,7 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
             {
                 // exit
                 if (prop.InstId != 300002) return null; // not center door
-                prop.CustomPropID = 1053;
+                prop.CustomPropId = 1053;
             }
             else
             {
@@ -226,7 +226,7 @@ public class RogueMagicEntityLoader(SceneInstance scene, PlayerInstance player) 
                         ExistTypes.Add(nextRoom);
                     }
 
-                    prop.CustomPropID = nextRoom switch // door style
+                    prop.CustomPropId = nextRoom switch // door style
                     {
                         RogueMagicRoomTypeEnum.Event => 1055,
                         RogueMagicRoomTypeEnum.Wealth => 1055,

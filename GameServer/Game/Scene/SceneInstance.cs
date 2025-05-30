@@ -82,13 +82,13 @@ public class SceneInstance
         // add entities to groups
         foreach (var entity in Entities)
         {
-            if (entity.Value.GroupID == 0) continue;
-            if (groups.FindIndex(x => x.GroupId == entity.Value.GroupID) == -1)
+            if (entity.Value.GroupId == 0) continue;
+            if (groups.FindIndex(x => x.GroupId == entity.Value.GroupId) == -1)
                 groups.Add(new SceneEntityGroupInfo
                 {
-                    GroupId = (uint)entity.Value.GroupID
+                    GroupId = (uint)entity.Value.GroupId
                 });
-            groups[groups.FindIndex(x => x.GroupId == entity.Value.GroupID)].EntityList.Add(entity.Value.ToProto());
+            groups[groups.FindIndex(x => x.GroupId == entity.Value.GroupId)].EntityList.Add(entity.Value.ToProto());
         }
 
         foreach (var groupId in Groups) // Add for empty group
@@ -161,7 +161,7 @@ public class SceneInstance
 
     public Dictionary<int, AvatarSceneInfo> AvatarInfo = [];
     public int LeaderEntityId;
-    public Dictionary<int, IGameEntity> Entities = [];
+    public Dictionary<int, BaseGameEntity> Entities = [];
     public List<int> Groups = [];
     public List<EntityProp> HealingSprings = [];
 
@@ -236,8 +236,8 @@ public class SceneInstance
         var oldAvatarInfo = AvatarInfo.Values.ToList();
         AvatarInfo.Clear();
         var sendPacket = false;
-        var addAvatar = new List<IGameEntity>();
-        var removeAvatar = new List<IGameEntity>();
+        var addAvatar = new List<BaseGameEntity>();
+        var removeAvatar = new List<BaseGameEntity>();
         var avatars = Player.LineupManager?.GetAvatarsFromCurTeam() ?? [];
         foreach (var sceneInfo in oldAvatarInfo)
             if (avatars.FindIndex(x => x.AvatarInfo.BaseAvatarId == sceneInfo.AvatarInfo.BaseAvatarId) !=
@@ -346,12 +346,12 @@ public class SceneInstance
 
     #region Entity Management
 
-    public async ValueTask AddEntity(IGameEntity entity)
+    public async ValueTask AddEntity(BaseGameEntity entity)
     {
         await AddEntity(entity, IsLoaded);
     }
 
-    public async ValueTask AddEntity(IGameEntity entity, bool sendPacket)
+    public async ValueTask AddEntity(BaseGameEntity entity, bool sendPacket)
     {
         if (entity.EntityId != 0) return;
         entity.EntityId = ++LastEntityId;
@@ -368,7 +368,7 @@ public class SceneInstance
         if (!GameData.SummonUnitDataData.TryGetValue(entity.SummonUnitId, out var summonUnitExcel))
             return Retcode.RetMonsterConfigNotExist;
 
-        IGameEntity? removeEntity = null;
+        BaseGameEntity? removeEntity = null;
         // get old summon unit
         var summonUnitKey = summonUnitExcel.UniqueGroup == SummonUnitUniqueGroupEnum.None ? summonUnitExcel.ID : 1;
         if (SummonUnit.TryGetValue(summonUnitKey, out var oldSummonUnit))
@@ -392,12 +392,12 @@ public class SceneInstance
         return Retcode.RetSucc;
     }
 
-    public async ValueTask RemoveEntity(IGameEntity monster)
+    public async ValueTask RemoveEntity(BaseGameEntity monster)
     {
         await RemoveEntity(monster, IsLoaded);
     }
 
-    public async ValueTask RemoveEntity(IGameEntity monster, bool sendPacket)
+    public async ValueTask RemoveEntity(BaseGameEntity monster, bool sendPacket)
     {
         Entities.Remove(monster.EntityId);
 
@@ -408,7 +408,7 @@ public class SceneInstance
     {
         List<T> entities = [];
         foreach (var entity in Entities)
-            if (entity.Value.GroupID == groupId && entity.Value is T t)
+            if (entity.Value.GroupId == groupId && entity.Value is T t)
                 entities.Add(t);
         return entities;
     }
@@ -430,8 +430,8 @@ public class SceneInstance
             new PacketRefreshTriggerByClientScNotify(triggerName, (uint)summonUnit.EntityId, targetIds));
         // check target
 
-        List<IGameEntity> targetEnter = [];
-        List<IGameEntity> targetExit = [];
+        List<BaseGameEntity> targetEnter = [];
+        List<BaseGameEntity> targetExit = [];
         foreach (var targetId in targetIds)
         {
             if (!Entities.TryGetValue((int)targetId, out var entity)) continue;
@@ -518,7 +518,7 @@ public class SceneInstance
 
     public async ValueTask OnEnterStage()
     {
-        List<IGameEntity> removeEntities = [];
+        List<BaseGameEntity> removeEntities = [];
         foreach (var unit in SummonUnit.ToArray())
         {
             if (!GameData.SummonUnitDataData.TryGetValue(unit.Value.SummonUnitId, out var excel)) continue;
@@ -563,7 +563,7 @@ public class SceneInstance
     #endregion
 }
 
-public class AvatarSceneInfo : IGameEntity, IGameModifier
+public class AvatarSceneInfo : BaseGameEntity, IGameModifier
 {
     public BaseAvatarInfo AvatarInfo;
     public AvatarType AvatarType;
@@ -593,13 +593,11 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
         }
     }
 
-    public List<SceneBuff> BuffList { get; set; } = [];
+    public override int EntityId { get; set; }
 
-    public int EntityId { get; set; }
+    public override int GroupId { get; set; } = 0;
 
-    public int GroupID { get; set; } = 0;
-
-    public async ValueTask AddBuff(SceneBuff buff)
+    public override async ValueTask AddBuff(SceneBuff buff)
     {
         if (!GameData.MazeBuffData.TryGetValue(buff.BuffId * 10 + buff.BuffLevel, out var buffExcel)) return;
 
@@ -626,7 +624,7 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
         await AddModifier(buffExcel.ModifierName);
     }
 
-    public async ValueTask ApplyBuff(BattleInstance instance)
+    public override async ValueTask ApplyBuff(BattleInstance instance)
     {
         if (BuffList.Count == 0) return;
         foreach (var buff in BuffList.Where(buff => !buff.IsExpired())) instance.Buffs.Add(new MazeBuff(buff));
@@ -644,7 +642,7 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
         BuffList.Clear();
     }
 
-    public SceneEntityInfo ToProto()
+    public override SceneEntityInfo ToProto()
     {
         return new SceneEntityInfo
         {
@@ -661,7 +659,6 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
             }
         };
     }
-
 
     public List<string> Modifiers { get; set; } = [];
 
@@ -731,7 +728,7 @@ public class AvatarSceneInfo : IGameEntity, IGameModifier
     {
         foreach (var modifier in Modifiers.ToArray()) await RemoveModifier(modifier);
 
-        foreach (var monsterInfo in Player.SceneInstance!.Entities.OfType<EntityMonster>().ToArray())
+        foreach (var monsterInfo in Player.SceneInstance!.Entities.Values.OfType<EntityMonster>().ToArray())
         foreach (var buff in monsterInfo.BuffList.Where(x => x.OwnerAvatarId == AvatarInfo.BaseAvatarId).ToArray())
             await monsterInfo.RemoveBuff(buff.BuffId);
     }

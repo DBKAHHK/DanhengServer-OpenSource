@@ -35,11 +35,11 @@ public class SceneEntityLoader(SceneInstance scene)
     {
         var refreshed = false;
         var oldGroupId = new List<int>();
-        foreach (var entity in Scene.Entities.Values.Where(entity => !oldGroupId.Contains(entity.GroupID)))
-            oldGroupId.Add(entity.GroupID);
+        foreach (var entity in Scene.Entities.Values.Where(entity => !oldGroupId.Contains(entity.GroupId)))
+            oldGroupId.Add(entity.GroupId);
 
-        var removeList = new List<IGameEntity>();
-        var addList = new List<IGameEntity>();
+        var removeList = new List<BaseGameEntity>();
+        var addList = new List<BaseGameEntity>();
 
         foreach (var group in Scene.FloorInfo!.Groups.Values
                      .Where(group => group.LoadSide != GroupLoadSideEnum.Client)
@@ -54,7 +54,7 @@ public class SceneEntityLoader(SceneInstance scene)
                     group.UnloadCondition.IsTrue(Scene.Player.MissionManager!.Data,
                         false)) // condition: Unload Condition  anyone of the conditions is true then unload
                 {
-                    foreach (var entity in Scene.Entities.Values.Where(entity => entity.GroupID == group.Id))
+                    foreach (var entity in Scene.Entities.Values.Where(entity => entity.GroupId == group.Id))
                     {
                         await Scene.RemoveEntity(entity, false);
                         removeList.Add(entity);
@@ -67,7 +67,7 @@ public class SceneEntityLoader(SceneInstance scene)
                          Scene.Player.MissionManager!.GetMainMissionStatus(group.OwnerMainMissionID) !=
                          MissionPhaseEnum.Accept) // condition: Owner Main Mission ID
                 {
-                    foreach (var entity in Scene.Entities.Values.Where(entity => entity.GroupID == group.Id))
+                    foreach (var entity in Scene.Entities.Values.Where(entity => entity.GroupId == group.Id))
                     {
                         await Scene.RemoveEntity(entity, false);
                         removeList.Add(entity);
@@ -88,7 +88,7 @@ public class SceneEntityLoader(SceneInstance scene)
             await Scene.Player.SendPacket(new PacketSceneGroupRefreshScNotify(Scene.Player, addList, removeList));
     }
 
-    public virtual async ValueTask<List<IGameEntity>?> LoadGroup(GroupInfo info, bool forceLoad = false)
+    public virtual async ValueTask<List<BaseGameEntity>?> LoadGroup(GroupInfo info, bool forceLoad = false)
     {
         if (!LoadGroups.Contains(info.Id)) return null; // check if group should be loaded in this dimension
         var missionData = Scene.Player.MissionManager!.Data; // get mission data
@@ -146,14 +146,14 @@ public class SceneEntityLoader(SceneInstance scene)
         //     !forceLoad) // condition: Saved Value Condition
         //     return null;
 
-        if (Scene.Entities.Values.ToList().FindIndex(x => x.GroupID == info.Id) !=
+        if (Scene.Entities.Values.ToList().FindIndex(x => x.GroupId == info.Id) !=
             -1) // check if group is already loaded
             return null;
 
         // load
         Scene.Groups.Add(info.Id); // add group to loaded groups
 
-        var entityList = new List<IGameEntity>();
+        var entityList = new List<BaseGameEntity>();
         foreach (var npc in info.NPCList)
             try
             {
@@ -187,7 +187,7 @@ public class SceneEntityLoader(SceneInstance scene)
         return entityList;
     }
 
-    public virtual async ValueTask<List<IGameEntity>?> LoadGroup(int groupId, bool sendPacket = true)
+    public virtual async ValueTask<List<BaseGameEntity>?> LoadGroup(int groupId, bool sendPacket = true)
     {
         var group = Scene.FloorInfo?.Groups.TryGetValue(groupId, out var v1) == true ? v1 : null;
         if (group == null) return null;
@@ -204,11 +204,11 @@ public class SceneEntityLoader(SceneInstance scene)
         var group = Scene.FloorInfo?.Groups.TryGetValue(groupId, out var v1) == true ? v1 : null;
         if (group == null) return;
 
-        var removeList = new List<IGameEntity>();
+        var removeList = new List<BaseGameEntity>();
         var refreshed = false;
 
         foreach (var entity in Scene.Entities.Values)
-            if (entity.GroupID == group.Id)
+            if (entity.GroupId == group.Id)
             {
                 await Scene.RemoveEntity(entity, false);
                 removeList.Add(entity);

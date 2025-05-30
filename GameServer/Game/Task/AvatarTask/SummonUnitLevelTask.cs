@@ -10,7 +10,7 @@ public class SummonUnitLevelTask
 {
     #region Task Condition
 
-    public bool ByIsContainAdventureModifier(TaskConfigInfo act, List<IGameEntity> targetEntities,
+    public bool ByIsContainAdventureModifier(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
         EntitySummonUnit? summonUnit)
     {
         return true;
@@ -20,12 +20,12 @@ public class SummonUnitLevelTask
 
     #region Manage
 
-    public void TriggerTasks(List<TaskConfigInfo> tasks, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
+    public void TriggerTasks(List<TaskConfigInfo> tasks, List<BaseGameEntity> targetEntities, EntitySummonUnit? summonUnit)
     {
         foreach (var task in tasks) TriggerTask(task, targetEntities, summonUnit);
     }
 
-    public void TriggerTask(TaskConfigInfo act, List<IGameEntity> targetEntities, EntitySummonUnit? summonUnit)
+    public void TriggerTask(TaskConfigInfo act, List<BaseGameEntity> targetEntities, EntitySummonUnit? summonUnit)
     {
         try
         {
@@ -43,7 +43,7 @@ public class SummonUnitLevelTask
 
     #region Task
 
-    public async ValueTask PredicateTaskList(TaskConfigInfo act, List<IGameEntity> targetEntities,
+    public async ValueTask PredicateTaskList(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
         EntitySummonUnit? summonUnit)
     {
         if (act is PredicateTaskList predicateTaskList)
@@ -67,7 +67,7 @@ public class SummonUnitLevelTask
         await ValueTask.CompletedTask;
     }
 
-    public async ValueTask AddMazeBuff(TaskConfigInfo act, List<IGameEntity> targetEntities,
+    public async ValueTask AddMazeBuff(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
         EntitySummonUnit? summonUnit)
     {
         if (act is not AddMazeBuff addMazeBuff) return;
@@ -88,7 +88,7 @@ public class SummonUnitLevelTask
         }
     }
 
-    public async ValueTask RemoveMazeBuff(TaskConfigInfo act, List<IGameEntity> targetEntities,
+    public async ValueTask RemoveMazeBuff(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
         EntitySummonUnit? summonUnit)
     {
         if (act is not RemoveMazeBuff removeMazeBuff) return;
@@ -101,7 +101,7 @@ public class SummonUnitLevelTask
         }
     }
 
-    public async ValueTask RefreshMazeBuffTime(TaskConfigInfo act, List<IGameEntity> targetEntities,
+    public async ValueTask RefreshMazeBuffTime(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
         EntitySummonUnit? summonUnit)
     {
         if (act is not RefreshMazeBuffTime refreshMazeBuffTime) return;
@@ -120,7 +120,7 @@ public class SummonUnitLevelTask
         }
     }
 
-    public async ValueTask TriggerHitProp(TaskConfigInfo act, List<IGameEntity> targetEntities,
+    public async ValueTask TriggerHitProp(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
         EntitySummonUnit? summonUnit)
     {
         foreach (var targetEntity in targetEntities)

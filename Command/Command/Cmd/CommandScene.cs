@@ -19,8 +19,8 @@ public class CommandScene : ICommand
         var scene = arg.Target!.Player!.SceneInstance!;
         var loadedGroup = new List<int>();
         foreach (var group in scene.Entities)
-            if (!loadedGroup.Contains(group.Value.GroupID))
-                loadedGroup.Add(group.Value.GroupID);
+            if (!loadedGroup.Contains(group.Value.GroupId))
+                loadedGroup.Add(group.Value.GroupId);
         await arg.SendMsg(I18NManager.Translate("Game.Command.Scene.LoadedGroups", string.Join(", ", loadedGroup)));
     }
 
@@ -190,6 +190,6 @@ public class CommandScene : ICommand
 
         if (nearest != null)
             await arg.SendMsg(
-                $"Nearest Prop {nearest.EntityId}: PropId {nearest.PropInfo.ID}, GroupId {nearest.GroupID}, State {nearest.State}");
+                $"Nearest Prop {nearest.EntityId}: PropId {nearest.PropInfo.ID}, GroupId {nearest.GroupId}, State {nearest.State}");
     }
 }

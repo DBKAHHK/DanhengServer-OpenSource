@@ -494,7 +494,7 @@ public class PlayerInstance(PlayerData data)
         var oldState = prop.State;
         await prop.SetState(config.TargetState);
         var newState = prop.State;
-        await SendPacket(new PacketGroupStateChangeScNotify(Data.EntryId, prop.GroupID, prop.State));
+        await SendPacket(new PacketGroupStateChangeScNotify(Data.EntryId, prop.GroupId, prop.State));
 
         switch (prop.Excel.PropType)
         {
@@ -510,7 +510,7 @@ public class PlayerInstance(PlayerData data)
                     foreach (var markedChest in SceneData!.MarkedChestData.Values)
                     {
                         var chest = markedChest.Find(x =>
-                            x.FloorId == SceneInstance.FloorId && x.GroupId == prop.GroupID &&
+                            x.FloorId == SceneInstance.FloorId && x.GroupId == prop.GroupId &&
                             x.ConfigId == prop.PropInfo.ID);
 
                         if (chest == null) continue;
@@ -531,7 +531,7 @@ public class PlayerInstance(PlayerData data)
                 {
                     case PropStateEnum.Closed:
                     {
-                        foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID))
+                        foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupId))
                             if (p.Excel.PropType == PropTypeEnum.PROP_TREASURE_CHEST)
                             {
                                 await p.SetState(PropStateEnum.ChestClosed);
@@ -549,7 +549,7 @@ public class PlayerInstance(PlayerData data)
                     }
                     case PropStateEnum.Open:
                     {
-                        foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID).Where(p =>
+                        foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupId).Where(p =>
                                      p.Excel.PropType is not PropTypeEnum.PROP_TREASURE_CHEST &&
                                      p.Excel.PropType != prop.Excel.PropType))
                             await p.SetState(PropStateEnum.Open);
@@ -561,7 +561,7 @@ public class PlayerInstance(PlayerData data)
                 break;
             case PropTypeEnum.PROP_MAZE_PUZZLE:
                 if (newState is PropStateEnum.Closed or PropStateEnum.Open)
-                    foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID))
+                    foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupId))
                     {
                         if (p.Excel.PropType == PropTypeEnum.PROP_TREASURE_CHEST)
                         {
@@ -583,7 +583,7 @@ public class PlayerInstance(PlayerData data)
             case PropTypeEnum.PROP_ORDINARY:
                 if (prop.PropInfo.CommonConsole)
                     // set group
-                    foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID))
+                    foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupId))
                     {
                         await p.SetState(newState);
 
@@ -592,12 +592,12 @@ public class PlayerInstance(PlayerData data)
 
                 if (prop.PropInfo.Name.Contains("Piece"))
                 {
-                    var pieceDone = SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID)
+                    var pieceDone = SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupId)
                         .Where(p => p.PropInfo.Name.Contains("Piece")).All(p => p.State == PropStateEnum.Closed);
 
                     if (pieceDone)
                         // set JigsawSir to open
-                        foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupID)
+                        foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupId)
                                      .Where(p => p.PropInfo.Name.Contains("JigsawSir") &&
                                                  p.State != PropStateEnum.Closed))
                             await p.SetState(PropStateEnum.TriggerEnable);
@@ -679,10 +679,10 @@ public class PlayerInstance(PlayerData data)
             SceneData.PropTimelineData[Data.FloorId] = floorData;
         }
 
-        if (!floorData.ContainsKey(prop.GroupID))
-            floorData[prop.GroupID] = new Dictionary<int, ScenePropTimelineData>();
+        if (!floorData.ContainsKey(prop.GroupId))
+            floorData[prop.GroupId] = new Dictionary<int, ScenePropTimelineData>();
 
-        floorData[prop.GroupID][prop.PropInfo.ID] = data;
+        floorData[prop.GroupId][prop.PropInfo.ID] = data;
 
         prop.PropTimelineData = data;
 

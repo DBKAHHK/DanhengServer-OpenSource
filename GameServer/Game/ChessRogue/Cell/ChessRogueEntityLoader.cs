@@ -96,8 +96,8 @@ public class ChessRogueEntityLoader(SceneInstance scene) : SceneEntityLoader(sce
         EntityMonster entity =
             new(Scene, info.ToPositionProto(), info.ToRotationProto(), group.Id, info.ID, excel, info)
             {
-                EventID = rogueMonster.EventID,
-                CustomStageID = rogueMonster.EventID
+                EventId = rogueMonster.EventID,
+                CustomStageId = rogueMonster.EventID
             };
 
         await Scene.AddEntity(entity, sendPacket);

@@ -7,7 +7,7 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 
 public class PacketSyncEntityBuffChangeListScNotify : BasePacket
 {
-    public PacketSyncEntityBuffChangeListScNotify(IGameEntity entity, SceneBuff buff) : base(
+    public PacketSyncEntityBuffChangeListScNotify(BaseGameEntity entity, SceneBuff buff) : base(
         CmdIds.SyncEntityBuffChangeListScNotify)
     {
         var proto = new SyncEntityBuffChangeListScNotify();
@@ -21,7 +21,7 @@ public class PacketSyncEntityBuffChangeListScNotify : BasePacket
         SetData(proto);
     }
 
-    public PacketSyncEntityBuffChangeListScNotify(IGameEntity entity, List<SceneBuff> buffs) : base(
+    public PacketSyncEntityBuffChangeListScNotify(BaseGameEntity entity, List<SceneBuff> buffs) : base(
         CmdIds.SyncEntityBuffChangeListScNotify)
     {
         var proto = new SyncEntityBuffChangeListScNotify();

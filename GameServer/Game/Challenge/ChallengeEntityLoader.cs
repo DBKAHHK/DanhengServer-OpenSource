@@ -76,8 +76,8 @@ public class ChallengeEntityLoader(SceneInstance scene, PlayerInstance player) :
         var entity = new EntityMonster(Scene, info.ToPositionProto(), info.ToRotationProto(), group.Id, info.ID,
             npcMonsterExcel, info)
         {
-            EventID = challengeMonsterInfo.EventId,
-            CustomStageID = challengeMonsterInfo.EventId
+            EventId = challengeMonsterInfo.EventId,
+            CustomStageId = challengeMonsterInfo.EventId
         };
         await Scene.AddEntity(entity, sendPacket);
 

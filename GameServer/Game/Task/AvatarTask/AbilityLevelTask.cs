@@ -22,8 +22,8 @@ public class AbilityLevelTask(PlayerInstance player)
 
     #region Selector
 
-    public List<IGameEntity> TargetAlias(TargetEvaluator selector, IGameEntity casterEntity,
-        List<IGameEntity> targetEntities)
+    public List<BaseGameEntity> TargetAlias(TargetEvaluator selector, BaseGameEntity casterEntity,
+        List<BaseGameEntity> targetEntities)
     {
         if (selector is TargetAlias target)
             return target.Alias switch
@@ -41,7 +41,7 @@ public class AbilityLevelTask(PlayerInstance player)
     #region Manage
 
     public async ValueTask<AbilityLevelResult> TriggerTasks(AdventureAbilityConfigListInfo abilities,
-        List<TaskConfigInfo> tasks, IGameEntity casterEntity, List<IGameEntity> targetEntities, SceneCastSkillCsReq req,
+        List<TaskConfigInfo> tasks, BaseGameEntity casterEntity, List<BaseGameEntity> targetEntities, SceneCastSkillCsReq req,
         string? modifierName = null)
     {
         BattleInstance? instance = null;
@@ -151,7 +151,7 @@ public class AbilityLevelTask(PlayerInstance player)
             {
                 var resp = method.Invoke(this,
                     [adventureTriggerAttack.AttackTargetType, param.CasterEntity, param.TargetEntities]);
-                if (resp is List<IGameEntity> target)
+                if (resp is List<BaseGameEntity> target)
                 {
                     foreach (var task in adventureTriggerAttack.OnAttack)
                     {
@@ -204,7 +204,7 @@ public class AbilityLevelTask(PlayerInstance player)
                 foreach (var dynamicValue in addMazeBuff.DynamicValues)
                     dynamic.Add(dynamicValue.Key, dynamicValue.Value.GetValue());
 
-                if (resp is not List<IGameEntity> target) return new AbilityLevelResult(instance, battleInfos);
+                if (resp is not List<BaseGameEntity> target) return new AbilityLevelResult(instance, battleInfos);
 
                 foreach (var entity in target)
                     await entity.AddBuff(new SceneBuff(addMazeBuff.ID, 1,
@@ -363,6 +363,8 @@ public class AbilityLevelTask(PlayerInstance player)
 
     public async ValueTask<AbilityLevelResult> AdvModifyMaxMazeMP(AbilityLevelParam param)
     {
+        await ValueTask.CompletedTask;
+
         if (param.Act is AdvModifyMaxMazeMP advModifyMaxMazeMp)
             switch (advModifyMaxMazeMp.ModifyFunction)
             {
@@ -445,7 +447,7 @@ public class AbilityLevelTask(PlayerInstance player)
                 var resp = method.Invoke(this,
                     [byIsContain.TargetType, param.CasterEntity, param.TargetEntities]);
 
-                if (resp is List<IGameEntity> target)
+                if (resp is List<BaseGameEntity> target)
                     foreach (var entity in target)
                     {
                         if (entity is not IGameModifier modifier) continue;
@@ -515,7 +517,7 @@ public record AbilityLevelResult(BattleInstance? Instance = null, List<HitMonste
 public record AbilityLevelParam(
     AdventureAbilityConfigListInfo AdventureAbility,
     TaskConfigInfo Act,
-    IGameEntity CasterEntity,
-    List<IGameEntity> TargetEntities,
+    BaseGameEntity CasterEntity,
+    List<BaseGameEntity> TargetEntities,
     SceneCastSkillCsReq Request,
     string? ModifierName);

@@ -2,14 +2,13 @@
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Scene;
 using EggLink.DanhengServer.Enums.Scene;
-using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 
-public class EntityProp(SceneInstance scene, MazePropExcel excel, GroupInfo group, PropInfo prop) : IGameEntity
+public class EntityProp(SceneInstance scene, MazePropExcel excel, GroupInfo group, PropInfo prop) : BaseGameEntity
 {
     public Position Position { get; set; } = prop.ToPositionProto();
     public Position Rotation { get; set; } = prop.ToRotationProto();
@@ -20,21 +19,10 @@ public class EntityProp(SceneInstance scene, MazePropExcel excel, GroupInfo grou
     public PropInfo PropInfo { get; set; } = prop;
     public GroupInfo Group { get; set; } = group;
     public ScenePropTimelineData? PropTimelineData { get; set; }
-    public int EntityId { get; set; }
-    public List<SceneBuff> BuffList { get; set; } = [];
-    public int GroupID { get; set; } = group.Id;
+    public override int EntityId { get; set; }
+    public override int GroupId { get; set; } = group.Id;
 
-    public async ValueTask AddBuff(SceneBuff buff)
-    {
-        await System.Threading.Tasks.Task.CompletedTask;
-    }
-
-    public async ValueTask ApplyBuff(BattleInstance instance)
-    {
-        await System.Threading.Tasks.Task.CompletedTask;
-    }
-
-    public virtual SceneEntityInfo ToProto()
+    public override SceneEntityInfo ToProto()
     {
         var prop = new ScenePropInfo
         {
@@ -51,7 +39,7 @@ public class EntityProp(SceneInstance scene, MazePropExcel excel, GroupInfo grou
         return new SceneEntityInfo
         {
             EntityId = (uint)EntityId,
-            GroupId = (uint)GroupID,
+            GroupId = (uint)GroupId,
             Motion = new MotionInfo
             {
                 Pos = Position.ToProto(),
