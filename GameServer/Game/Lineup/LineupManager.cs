@@ -2,6 +2,7 @@
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Lineup;
+using EggLink.DanhengServer.Enums.Avatar;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
@@ -135,7 +136,7 @@ public class LineupManager : BasePlayerManager
         return true;
     }
 
-    public void SetExtraLineup(ExtraLineupType type, List<int> baseAvatarIds)
+    public void SetExtraLineup(ExtraLineupType type, List<int> baseAvatarIds, bool refresh = false)
     {
         if (type == ExtraLineupType.LineupNone)
         {
@@ -163,9 +164,17 @@ public class LineupManager : BasePlayerManager
 
         foreach (var avatarId in baseAvatarIds)
         {
-            var trial = Player.AvatarManager!.GetTrialAvatar(avatarId);
+            var trial = Player.AvatarManager!.GetTrialAvatar(avatarId, refresh);
             if (trial != null)
             {
+                if (GameData.MultiplePathAvatarConfigData.TryGetValue(trial.AvatarId, out var pathExcel) && pathExcel.Gender != GenderTypeEnum.GENDER_NONE)
+                {
+                    if (pathExcel.Gender != (GenderTypeEnum)Player.Data.CurrentGender)
+                    {
+                        continue;
+                    }
+                }
+
                 trial.CheckLevel(worldLevel);
                 lineup.BaseAvatars!.Add(new LineupAvatarInfo
                     { BaseAvatarId = trial.BaseAvatarId, SpecialAvatarId = trial.SpecialAvatarId });

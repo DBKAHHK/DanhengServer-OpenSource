@@ -24,7 +24,7 @@ public class TrialActivityInstance : BaseActivityInstance
         if (excel != null)
         {
             Data.CurTrialStageId = stageId;
-            player.LineupManager.SetExtraLineup(ExtraLineupType.LineupStageTrial, excel.TrialAvatarList.ToList());
+            player.LineupManager.SetExtraLineup(ExtraLineupType.LineupStageTrial, excel.TrialAvatarList.ToList(), true);
             await player.EnterScene(excel.MapEntranceID, 0, true);
         }
 
