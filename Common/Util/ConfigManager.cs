@@ -44,7 +44,10 @@ public static class ConfigManager
         using (var reader = new StreamReader(stream))
         {
             var json = reader.ReadToEnd();
-            Config = JsonConvert.DeserializeObject<ConfigContainer>(json)!;
+            Config = JsonConvert.DeserializeObject<ConfigContainer>(json, new JsonSerializerSettings
+            {
+                ObjectCreationHandling = ObjectCreationHandling.Replace
+            })!;
         }
 
         SaveData(Config, ConfigFilePath);

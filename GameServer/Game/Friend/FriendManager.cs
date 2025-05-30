@@ -20,7 +20,7 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
     public async ValueTask<Retcode> AddFriend(int targetUid)
     {
         if (targetUid == Player.Uid) return Retcode.RetSucc; // Cannot add self
-        if (FriendData.FriendList.ContainsKey(targetUid)) return Retcode.RetFriendAlreadyIsFriend;
+        if (FriendData.FriendDetailList.ContainsKey(targetUid)) return Retcode.RetFriendAlreadyIsFriend;
         if (FriendData.BlackList.Contains(targetUid)) return Retcode.RetFriendInBlacklist;
         if (FriendData.SendApplyList.Contains(targetUid)) return Retcode.RetSucc; // Already send apply
 
@@ -43,19 +43,19 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
     public async ValueTask<PlayerData?> ConfirmAddFriend(int targetUid)
     {
         if (targetUid == Player.Uid) return null; // Cannot add self
-        if (FriendData.FriendList.ContainsKey(targetUid)) return null;
+        if (FriendData.FriendDetailList.ContainsKey(targetUid)) return null;
         if (FriendData.BlackList.Contains(targetUid)) return null;
 
         var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
         var targetData = PlayerData.GetPlayerByUid(targetUid);
         if (target == null || targetData == null) return null;
-        if (target.FriendList.ContainsKey(Player.Uid)) return null;
+        if (target.FriendDetailList.ContainsKey(Player.Uid)) return null;
         if (target.BlackList.Contains(Player.Uid)) return null;
 
         FriendData.ReceiveApplyList.Remove(targetUid);
-        FriendData.FriendList.Add(targetUid, new());
+        FriendData.FriendDetailList.Add(targetUid, new());
         target.SendApplyList.Remove(Player.Uid);
-        target.FriendList.Add(Player.Uid, new());
+        target.FriendDetailList.Add(Player.Uid, new());
 
         var targetPlayer = Listener.GetActiveConnection(targetUid);
         if (targetPlayer != null)
@@ -86,8 +86,8 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
         var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
         if (blackInfo == null || target == null) return null;
 
-        FriendData.FriendList.Remove(targetUid);
-        target.FriendList.Remove(Player.Uid);
+        FriendData.FriendDetailList.Remove(targetUid);
+        target.FriendDetailList.Remove(Player.Uid);
         if (!FriendData.BlackList.Contains(targetUid))
             FriendData.BlackList.Add(targetUid);
 
@@ -111,8 +111,8 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
         var target = DatabaseHelper.Instance!.GetInstance<FriendData>(targetUid);
         if (target == null) return null;
 
-        FriendData.FriendList.Remove(targetUid);
-        target.FriendList.Remove(Player.Uid);
+        FriendData.FriendDetailList.Remove(targetUid);
+        target.FriendDetailList.Remove(Player.Uid);
 
         var targetPlayer = Listener.GetActiveConnection(targetUid);
         if (targetPlayer != null)
@@ -232,7 +232,7 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
         if (uid == ConfigManager.Config.ServerOption.ServerProfile.Uid)
             return new FriendDetailData { IsMark = true };
 
-        if (!FriendData.FriendList.TryGetValue(uid, out var friend)) return null;
+        if (!FriendData.FriendDetailList.TryGetValue(uid, out var friend)) return null;
 
         return friend;
     }
@@ -261,7 +261,7 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
     public List<PlayerData> GetFriendPlayerData(List<int>? uids = null)
     {
         var list = new List<PlayerData>();
-        uids ??= [.. FriendData.FriendList.Keys];
+        uids ??= [.. FriendData.FriendDetailList.Keys];
 
         foreach (var friend in uids)
         {
@@ -346,13 +346,13 @@ public class FriendManager(PlayerInstance player) : BasePlayerManager(player)
 
     public void RemarkFriendName(int uid, string remarkName)
     {
-        if (!FriendData.FriendList.TryGetValue(uid, out var friend)) return;
+        if (!FriendData.FriendDetailList.TryGetValue(uid, out var friend)) return;
         friend.RemarkName = remarkName;
     }
 
     public void MarkFriend(int uid, bool isMark)
     {
-        if (!FriendData.FriendList.TryGetValue(uid, out var friend)) return;
+        if (!FriendData.FriendDetailList.TryGetValue(uid, out var friend)) return;
         friend.IsMark = isMark;
     }
 

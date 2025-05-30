@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Data;
+﻿using System.ComponentModel;
+using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Proto;
@@ -27,7 +28,7 @@ public class LineupInfo
     public int LineupType { get; set; }
     public int LeaderAvatarId { get; set; }
     public List<LineupAvatarInfo>? BaseAvatars { get; set; }
-    public int Mp { get; set; } = 5;
+    [DefaultValue(5)] public int Mp { get; set; } = 5;
 
     [JsonIgnore] public LineupData? LineupData { get; set; }
 
