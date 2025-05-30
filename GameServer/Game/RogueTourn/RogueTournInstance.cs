@@ -157,7 +157,7 @@ public class RogueTournInstance : BaseRogueInstance
 
     #region Titan
 
-    public RogueTitanCategoryEnum TitanCategory { get; set; } = RogueTitanCategoryEnum.None;
+    public RogueTitanTypeEnum TitanType { get; set; } = RogueTitanTypeEnum.None;
     public RogueTitanBlessInstance RogueTitanBlessInstance { get; set; } = new();
 
     public async ValueTask RollTitanBless(int amount, bool selectType)
@@ -190,9 +190,8 @@ public class RogueTournInstance : BaseRogueInstance
                     if (action.RogueTitanBlessSelectMenu.TypeSelect)
                     {
                         RogueTitanBlessInstance.BlessTypeExcel.Add(bless);
-                        TitanCategory =
-                            GameData.RogueTournTitanTypeData.GetValueOrDefault(bless.TitanType)?.RogueTitanCategory ??
-                            RogueTitanCategoryEnum.Day;
+                        TitanType =
+                            GameData.RogueTournTitanTypeData.GetValueOrDefault(bless.TitanType)?.RogueTitanType ?? RogueTitanTypeEnum.None;
                     }
                     else
                     {
@@ -410,7 +409,7 @@ public class RogueTournInstance : BaseRogueInstance
             {
                 ENNPJGLCBEM = new FKOCBOOCDNL
                 {
-                    POIIAIAKILF = (uint)TitanCategory
+                    POIIAIAKILF = (uint)TitanType
                 }
             }
         };

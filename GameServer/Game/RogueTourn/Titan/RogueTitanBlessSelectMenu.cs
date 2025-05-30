@@ -16,8 +16,8 @@ public class RogueTitanBlessSelectMenu(RogueTournInstance rogue)
     public void RollTitanBless(int count = 3, bool typeSelect = false)
     {
         var list = GameData.RogueTournTitanBlessData.Values.Where(x =>
-                GameData.RogueTournTitanTypeData.GetValueOrDefault(x.TitanType)?.RogueTitanCategory ==
-                rogue.TitanCategory)
+                x.TitanType == rogue.TitanType && x.TitanBlessLevel ==
+                (rogue.RogueTitanBlessInstance.EnhanceBlessList.Count(j => j.TitanType == rogue.TitanType) < 2 ? 2 : 3))
             .ToList();
 
         if (typeSelect)
@@ -25,45 +25,16 @@ public class RogueTitanBlessSelectMenu(RogueTournInstance rogue)
             list = [];
             TypeSelect = true;
             // random 2 types
-            if (rogue.TitanCategory != RogueTitanCategoryEnum.Night)
-            {
-                var night = GameData.RogueTournTitanBlessData.Values.Where(x =>
-                    GameData.RogueTournTitanTypeData.GetValueOrDefault(x.TitanType)?.RogueTitanCategory ==
-                    RogueTitanCategoryEnum.Night && x.TitanBlessLevel == 1).ToList().RandomElement();
-                list.Add(night);
-            }
-            else if (rogue.TitanCategory == RogueTitanCategoryEnum.Day)
-            {
-                var bless = rogue.RogueTitanBlessInstance.BlessTypeExcel.LastOrDefault(x =>
-                    GameData.RogueTournTitanTypeData.GetValueOrDefault(x.TitanType)?.RogueTitanCategory ==
-                    RogueTitanCategoryEnum.Day);
-                if (bless != null)
-                {
-                    var targetBless = GameData.RogueTournTitanBlessData.Values.FirstOrDefault(x =>
-                        x.TitanType == bless.TitanType && x.TitanBlessLevel == bless.TitanBlessLevel + 1);
-                    if (targetBless != null) list.Add(targetBless);
-                }
-            }
+            var night = GameData.RogueTournTitanBlessData.Values.Where(x =>
+                GameData.RogueTournTitanTypeData.GetValueOrDefault(x.TitanType)?.RogueTitanCategory ==
+                RogueTitanCategoryEnum.Night && x.TitanBlessLevel == 1 && !rogue.RogueTitanBlessInstance.BlessTypeExcel.Contains(x)).ToList().RandomElement();
 
-            if (rogue.TitanCategory != RogueTitanCategoryEnum.Day)
-            {
-                var day = GameData.RogueTournTitanBlessData.Values.Where(x =>
-                    GameData.RogueTournTitanTypeData.GetValueOrDefault(x.TitanType)?.RogueTitanCategory ==
-                    RogueTitanCategoryEnum.Day && x.TitanBlessLevel == 1).ToList().RandomElement();
-                list.Add(day);
-            }
-            else if (rogue.TitanCategory == RogueTitanCategoryEnum.Night)
-            {
-                var bless = rogue.RogueTitanBlessInstance.BlessTypeExcel.LastOrDefault(x =>
-                    GameData.RogueTournTitanTypeData.GetValueOrDefault(x.TitanType)?.RogueTitanCategory ==
-                    RogueTitanCategoryEnum.Night);
-                if (bless != null)
-                {
-                    var targetBless = GameData.RogueTournTitanBlessData.Values.FirstOrDefault(x =>
-                        x.TitanType == bless.TitanType && x.TitanBlessLevel == bless.TitanBlessLevel + 1);
-                    if (targetBless != null) list.Add(targetBless);
-                }
-            }
+            var day = GameData.RogueTournTitanBlessData.Values.Where(x =>
+                GameData.RogueTournTitanTypeData.GetValueOrDefault(x.TitanType)?.RogueTitanCategory ==
+                RogueTitanCategoryEnum.Day && x.TitanBlessLevel == 1 && !rogue.RogueTitanBlessInstance.BlessTypeExcel.Contains(x)).ToList().RandomElement();
+
+            list.Add(day);
+            list.Add(night);
         }
 
         if (list.Count == 0) return;
