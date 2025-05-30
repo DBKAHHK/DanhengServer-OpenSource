@@ -164,4 +164,30 @@ public class CommandScene : ICommand
         await arg.SendMsg(I18NManager.Translate("Game.Command.Scene.CurrentScene", player.Data.EntryId.ToString(),
             player.Data.PlaneId.ToString(), player.Data.FloorId.ToString()));
     }
+
+    [CommandMethod("0 near")]
+    public async ValueTask GetNearestProp(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        var player = arg.Target!.Player!;
+
+        var curDistance = 0L;
+        EntityProp? nearest = null;
+        foreach (var entityProp in player.SceneInstance!.Entities.Values.OfType<EntityProp>())
+        {
+            var distance = entityProp.Position.GetFast2dDist(player.Data.Pos!);
+            if (distance < curDistance)
+            {
+                nearest = entityProp;
+                curDistance = distance;
+            }
+        }
+        if (nearest != null)
+            await arg.SendMsg($"Nearest Prop {nearest.EntityId}: PropId {nearest.PropInfo.ID}, GroupId {nearest.GroupID}, State {nearest.State}");
+    }
 }
