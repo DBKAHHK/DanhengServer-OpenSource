@@ -36,6 +36,7 @@ public class GroupInfo
     public List<MonsterInfo> MonsterList { get; set; } = [];
     public List<PropInfo> PropList { get; set; } = [];
     public List<NpcInfo> NPCList { get; set; } = [];
+    public Dictionary<int, GroupPropertyConfigInfo> GroupPropertyMap { get; set; } = [];
 
     [JsonIgnore] public LevelGraphConfigInfo? LevelGraphConfig { get; set; }
 
@@ -193,4 +194,17 @@ public class LevelGroupSystemUnlockCondition
 
     [JsonConverter(typeof(StringEnumConverter))]
     public OperationEnum Operation { get; set; }
+}
+
+public class GroupPropertyConfigInfo
+{
+    public int ID { get; set; }
+    public string Name { get; set; } = "";
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public GroupPropertySideEnum Side { get; set; }
+
+    public short DefaultValue { get; set; }
+    public short MaxValue { get; set; }
+    public short MinValue { get; set; }
 }
