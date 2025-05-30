@@ -35,8 +35,7 @@ public class StoryLineManager : BasePlayerManager
     {
         if (StoryLineData.CurStoryLineId != 0) await FinishStoryLine(entryId, anchorGroupId, anchorId, false);
         GameData.StoryLineData.TryGetValue(storyLineId, out var storyExcel);
-        GameData.StroyLineTrialAvatarDataData.TryGetValue(storyLineId, out var storyAvatarExcel);
-        if (storyExcel == null || storyAvatarExcel == null) return;
+        if (storyExcel == null) return;
         StoryLineData.RunningStoryLines.TryGetValue(storyLineId, out var lineInfo);
         StoryLineData.OldEntryId = Player.Data.EntryId;
         StoryLineData.OldFloorId = Player.Data.FloorId;
@@ -46,9 +45,6 @@ public class StoryLineManager : BasePlayerManager
 
         var avatarList = Player.LineupManager!.GetCurLineup()!.BaseAvatars!
             .Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId / 10 : x.BaseAvatarId).ToList();
-
-        for (var i = 0; i < storyAvatarExcel.InitTrialAvatarList.Count; i++)
-            avatarList[i] = storyAvatarExcel.InitTrialAvatarList[i]; // replace the avatar with the special avatar
 
         Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, avatarList);
 
