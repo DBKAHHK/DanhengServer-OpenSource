@@ -1,8 +1,6 @@
-﻿using EggLink.DanhengServer.Database.Player;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
-using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Friend;
 
@@ -13,32 +11,13 @@ public class HandlerGetPlayerDetailInfoCsReq : Handler
     {
         var req = GetPlayerDetailInfoCsReq.Parser.ParseFrom(data);
 
-        var playerData = PlayerData.GetPlayerByUid(req.Uid);
-
+        var playerData = connection.Player!.FriendManager!.GetFriendPlayerData([(int)req.Uid]).First();
         if (playerData == null)
         {
-            var serverProfile = ConfigManager.Config.ServerOption.ServerProfile;
-            if (req.Uid == serverProfile.Uid)
-            {
-                playerData = new PlayerData
-                {
-                    Uid = serverProfile.Uid,
-                    HeadIcon = serverProfile.HeadIcon,
-                    Signature = serverProfile.Signature,
-                    Level = serverProfile.Level,
-                    WorldLevel = 0,
-                    Name = serverProfile.Name,
-                    ChatBubble = serverProfile.ChatBubbleId,
-                    PersonalCard = serverProfile.PersonalCardId
-                };
-            }
-            else
-            {
-                await connection.SendPacket(new PacketGetPlayerDetailInfoScRsp());
-                return;
-            }
+            await connection.SendPacket(new PacketGetPlayerDetailInfoScRsp());
+            return;
         }
 
-        await connection.SendPacket(new PacketGetPlayerDetailInfoScRsp(playerData));
+        await connection.SendPacket(new PacketGetPlayerDetailInfoScRsp(playerData.ToDetailProto()));
     }
 }

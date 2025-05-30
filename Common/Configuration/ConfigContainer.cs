@@ -101,15 +101,23 @@ public class ServerAnnounce
 
 public class ServerProfile
 {
-    public string Name { get; set; } = "Server";
-    public int Uid { get; set; } = 80;
+    public string Name { get; set; } = "StopWuyu";
+    public int Uid { get; set; } = 5201314;
     public string Signature { get; set; } = "Type /help for a list of commands";
-    public int Level { get; set; } = 1;
+    public int Level { get; set; } = 70;
     public int HeadIcon { get; set; } = 200105;
     public int ChatBubbleId { get; set; } = 220001;
     public int PersonalCardId { get; set; } = 253001;
-    public int DisplayAvatarId { get; set; } = 1001;
-    public int DisplayAvatarLevel { get; set; } = 1;
+    public List<ServerAssistInfo> AssistInfo { get; set; } = [
+        new() { AvatarId = 1213, Level = 80 }
+    ];
+}
+
+public class ServerAssistInfo
+{
+    public int AvatarId { get; set; }
+    public int Level { get; set; }
+    public int SkinId { get; set; }
 }
 
 public class MuipServerConfig

@@ -5,7 +5,9 @@ namespace EggLink.DanhengServer.Database.Friend;
 [SugarTable("Friend")]
 public class FriendData : BaseDatabaseDataHelper
 {
-    [SugarColumn(IsJson = true)] public List<int> FriendList { get; set; } = [];
+
+    [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
+    public Dictionary<int, FriendDetailData> FriendList { get; set; } = [];
 
     [SugarColumn(IsJson = true)] public List<int> BlackList { get; set; } = [];
 
@@ -15,6 +17,12 @@ public class FriendData : BaseDatabaseDataHelper
 
     [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
     public Dictionary<int, FriendChatHistory> ChatHistory { get; set; } = []; // key: friend uid
+}
+
+public class FriendDetailData
+{
+    public bool IsMark { get; set; }
+    public string RemarkName { get; set; } = "";
 }
 
 public class FriendChatHistory

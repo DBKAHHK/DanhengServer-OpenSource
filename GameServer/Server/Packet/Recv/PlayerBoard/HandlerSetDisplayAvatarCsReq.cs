@@ -13,10 +13,13 @@ public class HandlerSetDisplayAvatarCsReq : Handler
         var player = connection.Player!;
         var avatars = player.AvatarManager!.AvatarData!.DisplayAvatars;
         avatars.Clear();
-        foreach (var id in req.DisplayAvatarList)
+        foreach (var avatar in req.DisplayAvatarList)
         {
-            if (id.AvatarId == 0) continue;
-            avatars.Add((int)id.AvatarId);
+            if (avatar.AvatarId == 0) continue;
+
+            var avatarData = player.AvatarManager!.AvatarData.FormalAvatars.First(x =>
+                x.BaseAvatarId == (int)avatar.AvatarId);
+            if (avatarData != null) avatars.Add(avatarData.AvatarId);
         }
 
         await connection.SendPacket(new PacketSetDisplayAvatarScRsp(req.DisplayAvatarList));

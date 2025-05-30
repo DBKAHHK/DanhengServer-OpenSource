@@ -93,8 +93,6 @@ public class PlayerData : BaseDatabaseDataHelper
         if (!GameData.ChatBubbleConfigData.ContainsKey(ChatBubble)) // to avoid npe
             ChatBubble = 220000;
 
-        var instance = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid)!;
-
         var info = new PlayerSimpleInfo
         {
             Nickname = Name,
@@ -110,14 +108,38 @@ public class PlayerData : BaseDatabaseDataHelper
         };
 
         var pos = 0;
-        foreach (var avatar in instance.AssistAvatars.Select(
-                     assist => instance.FormalAvatars.Find(x => x.AvatarId == assist)!))
-            info.AssistSimpleInfoList.Add(new AssistSimpleInfo
+        var instance = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid)!;
+        if (instance == null)
+        {
+            // Handle server profile
+            var serverProfile = ConfigManager.Config.ServerOption.ServerProfile;
+            if (Uid == serverProfile.Uid)
             {
-                AvatarId = (uint)avatar.AvatarId,
-                Level = (uint)avatar.Level,
-                Pos = (uint)pos++
-            });
+                info.OnlineStatus = FriendOnlineStatus.Online;
+                info.AssistSimpleInfoList.AddRange(
+                    serverProfile.AssistInfo.Select((x, index) =>
+                        new AssistSimpleInfo
+                        {
+                            AvatarId = (uint)x.AvatarId,
+                            Level = (uint)x.Level,
+                            DressedSkinId = (uint)x.SkinId,
+                            Pos = (uint)index
+                        }));
+            }
+
+            return info;
+        }
+
+        foreach (var avatar in instance.AssistAvatars.Select(
+            assist => instance.FormalAvatars.Find(x => x.AvatarId == assist)!))
+            if (avatar != null)
+                info.AssistSimpleInfoList.Add(new AssistSimpleInfo
+                {
+                    AvatarId = (uint)avatar.AvatarId,
+                    Level = (uint)avatar.Level,
+                    DressedSkinId = (uint)avatar.GetCurPathInfo().Skin,
+                    Pos = (uint)pos++
+                });
 
         return info;
     }
@@ -135,6 +157,7 @@ public class PlayerData : BaseDatabaseDataHelper
             Platform = PlatformType.Pc,
             Uid = (uint)Uid,
             WorldLevel = (uint)WorldLevel,
+            EMOBIJBDKEI = true, // ShowDisplayAvatar
             RecordInfo = new PlayerRecordInfo(),
             PrivacySettings = new PrivacySettings()
         };
@@ -142,25 +165,36 @@ public class PlayerData : BaseDatabaseDataHelper
         var avatarInfo = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid);
         var inventoryInfo = DatabaseHelper.Instance!.GetInstance<InventoryData>(Uid);
 
-        if (avatarInfo == null || inventoryInfo == null) return info;
+        if (avatarInfo == null || inventoryInfo == null)
+        {
+            // Handle server profile
+            var serverProfile = ConfigManager.Config.ServerOption.ServerProfile;
+            if (Uid == serverProfile.Uid)
+                info.AssistAvatarList.AddRange(
+                    serverProfile.AssistInfo.Select((x, index) =>
+                        new DisplayAvatarDetailInfo
+                        {
+                            AvatarId = (uint)x.AvatarId,
+                            Level = (uint)x.Level,
+                            DressedSkinId = (uint)x.SkinId,
+                            Pos = (uint)index
+                        }));
+            return info;
+        }
 
         var pos = 0;
-        foreach (var avatarId in avatarInfo.AssistAvatars)
-        {
-            var avatar = avatarInfo.FormalAvatars.Find(x => x.AvatarId == avatarId);
+        foreach (var avatar in avatarInfo.AssistAvatars.Select(assist =>
+            avatarInfo.FormalAvatars.Find(x => x.AvatarId == assist)))
             if (avatar != null)
                 info.AssistAvatarList.Add(avatar.ToDetailProto(pos++,
-                    new PlayerDataCollection(this, inventoryInfo, new LineupInfo())));
-        }
+                    new PlayerDataCollection(this, inventoryInfo, new())));
 
         pos = 0;
         foreach (var avatar in avatarInfo.DisplayAvatars.Select(display =>
-                     avatarInfo.FormalAvatars.Find(x => x.AvatarId == display)))
-        {
+            avatarInfo.FormalAvatars.Find(x => x.AvatarId == display)))
             if (avatar != null)
                 info.DisplayAvatarList.Add(avatar.ToDetailProto(pos++,
-                    new PlayerDataCollection(this, inventoryInfo, new LineupInfo())));
-        }
+                    new PlayerDataCollection(this, inventoryInfo, new())));
 
         return info;
     }

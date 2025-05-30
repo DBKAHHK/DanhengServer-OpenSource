@@ -28,8 +28,6 @@ public class PacketHandleFriendScRsp : BasePacket
             IsAccept = isAccept,
             FriendInfo = new FriendSimpleInfo
             {
-                IsMarked = false,
-                RemarkName = "",
                 PlayerInfo = playerData.ToSimpleProto(status)
             }
         };

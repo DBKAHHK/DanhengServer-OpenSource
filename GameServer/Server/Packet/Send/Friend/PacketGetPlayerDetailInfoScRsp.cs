@@ -1,16 +1,15 @@
-﻿using EggLink.DanhengServer.Database.Player;
-using EggLink.DanhengServer.Kcp;
+﻿using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
 
 public class PacketGetPlayerDetailInfoScRsp : BasePacket
 {
-    public PacketGetPlayerDetailInfoScRsp(PlayerData data) : base(CmdIds.GetPlayerDetailInfoScRsp)
+    public PacketGetPlayerDetailInfoScRsp(PlayerDetailInfo info) : base(CmdIds.GetPlayerDetailInfoScRsp)
     {
         var proto = new GetPlayerDetailInfoScRsp
         {
-            DetailInfo = data.ToDetailProto()
+            DetailInfo = info
         };
 
         SetData(proto);
