@@ -40,6 +40,9 @@ public class SceneData : BaseDatabaseDataHelper
 
     [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
     public SceneRotatableRegionData RotatableRegionData { get; set; } = new();
+
+    [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
+    public Dictionary<int, int> FloorTargetPuzzleGroupData { get; set; } = new();
 }
 
 public class ScenePropData

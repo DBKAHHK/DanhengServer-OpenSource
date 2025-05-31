@@ -1,6 +1,10 @@
-﻿using EggLink.DanhengServer.Enums.Scene;
+﻿using System.Numerics;
+using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Internationalization;
+using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.Command.Command.Cmd;
 
@@ -88,6 +92,55 @@ public class CommandScene : ICommand
             if (entity is EntityProp prop)
                 if (prop.Excel.PropStateList.Contains(PropStateEnum.Open))
                     await prop.SetState(PropStateEnum.Open);
+        await arg.SendMsg(I18NManager.Translate("Game.Command.Scene.AllPropsUnlocked"));
+    }
+
+    [CommandMethod("0 unlockallgroup")]
+    public async ValueTask UnlockAllGroup(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        var scene = arg.Target!.Player!.SceneInstance!;
+        foreach (var groupId in scene.Groups)
+        {
+            await scene.UpdateGroupProperty(groupId, "Lock", 0);
+        }
+
+        foreach (var groupId in scene.Groups)
+        {
+            await scene.UpdateGroupProperty(groupId, "PlateArrived", 2);
+        }
+
+        if (arg.Target.Player.SceneInstance!.FloorId == 20431001)
+        {
+            // TODO temporary solution
+            var savedValueName = "FSV_EnvLight";
+            var savedValue = 5;
+
+            // update floor saved data
+            if (arg.Target.Player.SceneData!.FloorSavedData.TryGetValue(arg.Target.Player.SceneInstance!.FloorId,
+                    out var savedData))
+            {
+                savedData[savedValueName] = savedValue;
+            }
+            else
+            {
+                arg.Target.Player.SceneData!.FloorSavedData[arg.Target.Player.SceneInstance!.FloorId] =
+                    new Dictionary<string, int>
+                    {
+                        { savedValueName, savedValue }
+                    };
+            }
+
+            // send packet to client
+            await arg.Target.Player.SendPacket(
+                new PacketUpdateFloorSavedValueNotify(savedValueName, savedValue, arg.Target.Player));
+        }
+
         await arg.SendMsg(I18NManager.Translate("Game.Command.Scene.AllPropsUnlocked"));
     }
 
@@ -191,5 +244,34 @@ public class CommandScene : ICommand
         if (nearest != null)
             await arg.SendMsg(
                 $"Nearest Prop {nearest.EntityId}: PropId {nearest.PropInfo.ID}, GroupId {nearest.GroupId}, State {nearest.State}");
+    }
+
+    [CommandMethod("0 forward")]
+    public async ValueTask Teleport(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        if (arg.BasicArgs.Count == 0)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
+            return;
+        }
+
+        var distance = arg.GetInt(0);
+        var player = arg.Target!.Player!;
+
+        var posVec = new Vector3(player.Data.Pos!.X, player.Data.Pos!.Y, player.Data.Pos!.Z);
+        var rotVec = new Vector3(player.Data.Rot!.X, player.Data.Rot!.Y, player.Data.Rot!.Z);
+        var normalizedVector = Vector3.Normalize(rotVec);
+
+        posVec += normalizedVector * distance;
+
+        // set pos
+        await player.MoveTo(new Position((int)posVec.X, (int)posVec.Y, (int)posVec.Z));
+        await arg.SendMsg("Teleported!");
     }
 }

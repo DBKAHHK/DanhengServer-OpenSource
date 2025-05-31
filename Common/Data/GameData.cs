@@ -167,6 +167,7 @@ public static class GameData
     public static Dictionary<int, MusicRhythmTrackExcel> MusicRhythmTrackData { get; private set; } = [];
 
     public static Dictionary<string, AdventureModifierConfig> AdventureModifierData { get; set; } = [];
+    public static SceneRainbowGroupPropertyConfig SceneRainbowGroupPropertyData { get; set; } = new();
 
     #endregion
 

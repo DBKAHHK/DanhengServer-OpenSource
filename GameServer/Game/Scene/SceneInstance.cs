@@ -18,6 +18,7 @@ using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using System.Management;
 
 namespace EggLink.DanhengServer.GameServer.Game.Scene;
 
@@ -262,6 +263,11 @@ public class SceneInstance
             }
         }
 
+        if (GameData.SceneRainbowGroupPropertyData.FloorProperty.ContainsKey(FloorId))
+        {
+            Components.Add(new RainbowSceneComponent(this));
+        }
+
         System.Threading.Tasks.Task.Run(async () => { await EntityLoader.LoadEntity(); }).Wait();
 
         Player.TaskManager?.SceneTaskTrigger.TriggerFloor(PlaneId, FloorId);
@@ -271,7 +277,68 @@ public class SceneInstance
 
     #endregion
 
+    #region Event
+
+    public delegate ValueTask GroupPropertyUpdateArg(GroupPropertyRefreshData data);
+    public event GroupPropertyUpdateArg? GroupPropertyUpdated;
+
+    #endregion
+
     #region Scene Actions
+
+    public async ValueTask<GroupPropertyRefreshData> UpdateGroupProperty(int groupId, string name, int value, bool callEvent = true)
+    {
+        // save
+        if (!Player.SceneData!.GroupPropertyData.TryGetValue(FloorId, out var groupData))
+        {
+            groupData = [];
+            Player.SceneData.GroupPropertyData[FloorId] = groupData;
+        }
+
+        var property = FloorInfo?.Groups.GetValueOrDefault(groupId)?.GroupPropertyMap.Values
+            .FirstOrDefault(x => x.Name == name);
+        if (property == null) return new GroupPropertyRefreshData(groupId, name, 0, value);
+
+        if (!groupData.TryGetValue(groupId, out var propertyData))
+        {
+            propertyData = [];
+            groupData[groupId] = propertyData;
+        }
+
+        var oldValue = propertyData.GetValueOrDefault(name, property.DefaultValue);
+        propertyData[name] = value;
+        // notify
+        var res = new GroupPropertyRefreshData(groupId, name, oldValue, value);
+        await Player.SendPacket(
+            new PacketSceneGroupRefreshScNotify(this, [res]));
+
+        if (callEvent && GroupPropertyUpdated != null) await GroupPropertyUpdated(res);
+
+        return res;
+    }
+
+    public int GetGroupProperty(int groupId, string name)
+    {
+        if (!Player.SceneData!.GroupPropertyData.TryGetValue(FloorId, out var groupData))
+        {
+            groupData = [];
+            Player.SceneData.GroupPropertyData[FloorId] = groupData;
+        }
+
+        if (!groupData.TryGetValue(groupId, out var propertyData))
+        {
+            propertyData = [];
+            groupData[groupId] = propertyData;
+        }
+
+        var property = FloorInfo?.Groups.GetValueOrDefault(groupId)?.GroupPropertyMap.Values
+            .FirstOrDefault(x => x.Name == name);
+
+        if (property == null) return 0; // default value
+
+        var oldValue = propertyData.GetValueOrDefault(name, property.DefaultValue);
+        return oldValue;
+    }
 
     public async ValueTask SyncLineup(bool notSendPacket = false)
     {

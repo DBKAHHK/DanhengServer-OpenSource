@@ -66,6 +66,11 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
                 Player.LineupManager!.GetCurLineup()!.Heal(2000, false);
                 await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
             }
+            else if (prop.PropInfo.Name == "SpeedDestruct")
+            {
+                var avatar = Player.SceneInstance!.AvatarInfo.Values.ToList().RandomElement();
+                await avatar.AddBuff(new SceneBuff(2041101, 1, -1, 15));
+            }
             else
             {
                 Player.InventoryManager!.HandlePlaneEvent(prop.PropInfo.EventID);

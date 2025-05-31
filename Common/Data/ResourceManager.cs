@@ -46,6 +46,8 @@ public class ResourceManager
         GameData.RogueMapGenData = LoadCustomFile<Dictionary<int, List<int>>>("Rogue Map", "RogueMapGen") ?? [];
         GameData.RogueMiracleGroupData =
             LoadCustomFile<Dictionary<int, List<int>>>("Rogue Miracle Group", "RogueMiracleGroup") ?? [];
+        GameData.SceneRainbowGroupPropertyData =
+            LoadCustomFile<SceneRainbowGroupPropertyConfig>("Scene Rainbow Group Property", "SceneRainbowGroupProperty") ?? new SceneRainbowGroupPropertyConfig();
         GameData.RogueMiracleEffectData =
             LoadCustomFile<RogueMiracleEffectConfig>("Rogue Miracle Effect", "RogueMiracleEffectGen") ??
             new RogueMiracleEffectConfig();
@@ -393,6 +395,10 @@ public class ResourceManager
                 break;
             case VideoKeysConfig a:
                 Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", a.TotalCount.ToString(),
+                    filetype));
+                break;
+            case SceneRainbowGroupPropertyConfig c:
+                Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", c.FloorProperty.Count.ToString(),
                     filetype));
                 break;
             default:
