@@ -6,11 +6,11 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishAction.Handler;
 [MissionFinishAction(FinishActionTypeEnum.MoveToAnchor)]
 public class MissionHandlerMoveToAnchor : MissionFinishActionHandler
 {
-    public override async ValueTask OnHandle(List<int> Params, List<string> ParamString, PlayerInstance Player)
+    public override async ValueTask OnHandle(List<int> @params, List<string> paramString, PlayerInstance player)
     {
-        var entryId = Params[0];
-        var anchorGroup = Params[1];
-        var anchorId = Params[2];
-        await Player.EnterSceneByEntranceId(entryId, anchorGroup, anchorId, true);
+        var entryId = @params[0];
+        var anchorGroup = @params[1];
+        var anchorId = @params[2];
+        await player.EnterSceneByEntranceId(entryId, anchorGroup, anchorId, true);
     }
 }

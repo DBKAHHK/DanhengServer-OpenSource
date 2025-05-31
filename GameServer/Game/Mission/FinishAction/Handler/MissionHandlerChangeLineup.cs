@@ -7,36 +7,36 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishAction.Handler;
 [MissionFinishAction(FinishActionTypeEnum.ChangeLineup)]
 public class MissionHandlerChangeLineup : MissionFinishActionHandler
 {
-    public override async ValueTask OnHandle(List<int> Params, List<string> ParamString, PlayerInstance Player)
+    public override async ValueTask OnHandle(List<int> @params, List<string> paramString, PlayerInstance player)
     {
-        Player.LineupManager!.GetCurLineup()!.BaseAvatars!.Clear();
+        player.LineupManager!.GetCurLineup()!.BaseAvatars!.Clear();
         var count = 0;
-        var avatarCount = Params.Count(value => value != 0) - 1;
-        foreach (var avatarId in Params)
+        var avatarCount = @params.Count(value => value != 0) - 1;
+        foreach (var avatarId in @params)
         {
             if (count++ >= 4) break;
-            GameData.SpecialAvatarData.TryGetValue(avatarId * 10 + Player.Data.WorldLevel, out var specialAvatar);
+            GameData.SpecialAvatarData.TryGetValue(avatarId * 10 + player.Data.WorldLevel, out var specialAvatar);
             if (specialAvatar == null)
             {
                 GameData.AvatarConfigData.TryGetValue(avatarId, out var avatar);
                 if (avatar == null) continue;
-                var ava = Player.AvatarManager!.GetFormalAvatar(avatarId);
-                if (ava == null) await Player.AvatarManager!.AddAvatar(avatarId);
-                await Player.LineupManager!.AddAvatarToCurTeam(avatarId, count == avatarCount);
+                var ava = player.AvatarManager!.GetFormalAvatar(avatarId);
+                if (ava == null) await player.AvatarManager!.AddAvatar(avatarId);
+                await player.LineupManager!.AddAvatarToCurTeam(avatarId, count == avatarCount);
             }
             else
             {
-                await Player.LineupManager!.AddSpecialAvatarToCurTeam(avatarId * 10 + Player.Data.WorldLevel,
+                await player.LineupManager!.AddSpecialAvatarToCurTeam(avatarId * 10 + player.Data.WorldLevel,
                     count == avatarCount);
             }
         }
 
-        GameData.SpecialAvatarData.TryGetValue(Params[4] * 10 + Player.Data.WorldLevel, out var leaderAvatar);
+        GameData.SpecialAvatarData.TryGetValue(@params[4] * 10 + player.Data.WorldLevel, out var leaderAvatar);
         if (leaderAvatar == null)
-            Player.LineupManager!.GetCurLineup()!.LeaderAvatarId = Params[4];
+            player.LineupManager!.GetCurLineup()!.LeaderAvatarId = @params[4];
         else
-            Player.LineupManager!.GetCurLineup()!.LeaderAvatarId = leaderAvatar.AvatarID;
+            player.LineupManager!.GetCurLineup()!.LeaderAvatarId = leaderAvatar.AvatarID;
 
-        await Player.SceneInstance!.SyncLineup();
+        await player.SceneInstance!.SyncLineup();
     }
 }

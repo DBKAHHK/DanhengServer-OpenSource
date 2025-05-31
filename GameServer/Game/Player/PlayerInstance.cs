@@ -590,6 +590,16 @@ public class PlayerInstance(PlayerData data)
                         await MissionManager!.OnPlayerInteractWithProp();
                     }
 
+                if (prop.Excel.ID == 104039)
+                {
+                    foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupId))
+                    {
+                        await p.SetState(newState);
+                    }
+
+                    await MissionManager!.OnPlayerInteractWithProp();
+                }
+
                 if (prop.PropInfo.Name.Contains("Piece"))
                 {
                     var pieceDone = SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupId)

@@ -7,21 +7,21 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishAction.Handler;
 [MissionFinishAction(FinishActionTypeEnum.SetFloorSavedValue)]
 public class MissionHandlerSetFloorSavedValue : MissionFinishActionHandler
 {
-    public override async ValueTask OnHandle(List<int> Params, List<string> ParamString, PlayerInstance Player)
+    public override async ValueTask OnHandle(List<int> @params, List<string> paramString, PlayerInstance player)
     {
-        _ = int.TryParse(ParamString[0], out var plane);
-        _ = int.TryParse(ParamString[1], out var floor);
-        Player.SceneData!.FloorSavedData.TryGetValue(floor, out var value);
+        _ = int.TryParse(paramString[0], out var plane);
+        _ = int.TryParse(paramString[1], out var floor);
+        player.SceneData!.FloorSavedData.TryGetValue(floor, out var value);
         if (value == null)
         {
             value = [];
-            Player.SceneData.FloorSavedData[floor] = value;
+            player.SceneData.FloorSavedData[floor] = value;
         }
 
-        value[ParamString[2]] = int.Parse(ParamString[3]); // ParamString[2] is the key
-        await Player.SendPacket(
-            new PacketUpdateFloorSavedValueNotify(ParamString[2], int.Parse(ParamString[3]), Player));
+        value[paramString[2]] = int.Parse(paramString[3]); // ParamString[2] is the key
+        await player.SendPacket(
+            new PacketUpdateFloorSavedValueNotify(paramString[2], int.Parse(paramString[3]), player));
 
-        Player.TaskManager?.SceneTaskTrigger.TriggerFloor(plane, floor);
+        player.TaskManager?.SceneTaskTrigger.TriggerFloor(plane, floor);
     }
 }

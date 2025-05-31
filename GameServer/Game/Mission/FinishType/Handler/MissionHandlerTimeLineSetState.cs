@@ -39,6 +39,6 @@ public class MissionHandlerTimeLineSetState : MissionFinishTypeHandler
         // compare
         if (Encoding.UTF8.GetString(Convert.FromBase64String(data.ByteValue)) != value) return;
 
-        await player.MissionManager!.FinishSubMission(excel.ID);
+        await player.QuestManager!.AddQuestProgress(excel.ID, 1);
     }
 }

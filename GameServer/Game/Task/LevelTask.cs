@@ -201,9 +201,19 @@ public class LevelTask(PlayerInstance player)
         }
     }
 
+    public async ValueTask StoryLineReplaceTrialPlayer(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    {
+        if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.StoryLineAddTrialAvatar)
+        {
+            var ids = Player.LineupManager!.GetCurLineup()?.BaseAvatars?.ToList() ?? [];
+            ids.ForEach(async void (x) => await Player.LineupManager!.RemoveAvatarFromCurTeam(x.BaseAvatarId, false));
+            await Player.LineupManager!.AddAvatarToCurTeam(subMission.SubMissionInfo.ParamInt1);
+        }
+    }
+
     public async ValueTask ReplaceVirtualTeam(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
     {
-        if (!(Player.LineupManager!.GetCurLineup()?.IsExtraLineup() == true)) return;
+        if (Player.LineupManager!.GetCurLineup()?.IsExtraLineup() != true) return;
 
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatar)
         {

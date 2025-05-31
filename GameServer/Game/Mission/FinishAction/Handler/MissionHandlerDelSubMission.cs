@@ -6,14 +6,14 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishAction.Handler;
 [MissionFinishAction(FinishActionTypeEnum.delSubMission)]
 public class MissionHandlerDelSubMission : MissionFinishActionHandler
 {
-    public override async ValueTask OnHandle(List<int> Params, List<string> ParamString, PlayerInstance Player)
+    public override async ValueTask OnHandle(List<int> @params, List<string> paramString, PlayerInstance player)
     {
-        if (Params.Count < 1) return;
+        if (@params.Count < 1) return;
 
-        foreach (var subMissionId in Params)
+        foreach (var subMissionId in @params)
         {
-            await Player.MissionManager!.AcceptSubMission(subMissionId);
-            await Player.MissionManager!.FinishSubMission(subMissionId);
+            await player.MissionManager!.AcceptSubMission(subMissionId);
+            await player.MissionManager!.FinishSubMission(subMissionId);
         }
     }
 }

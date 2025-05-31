@@ -6,15 +6,15 @@ namespace EggLink.DanhengServer.GameServer.Game.Mission.FinishAction.Handler;
 [MissionFinishAction(FinishActionTypeEnum.addRecoverMissionItem)]
 public class MissionHandlerAddRecoverMissionItem : MissionFinishActionHandler
 {
-    public override async ValueTask OnHandle(List<int> Params, List<string> ParamString, PlayerInstance Player)
+    public override async ValueTask OnHandle(List<int> @params, List<string> paramString, PlayerInstance player)
     {
-        if (Params.Count < 2) return;
+        if (@params.Count < 2) return;
 
-        for (var i = 0; i < Params.Count; i += 2)
+        for (var i = 0; i < @params.Count; i += 2)
         {
-            var itemId = Params[i];
-            var count = Params[i + 1];
-            await Player.InventoryManager!.AddItem(itemId, count);
+            var itemId = @params[i];
+            var count = @params[i + 1];
+            await player.InventoryManager!.AddItem(itemId, count);
         }
     }
 }
