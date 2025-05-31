@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpFdm9sdmVCdWlsZExldmVsSW5mby5wcm90bxobRXZvbHZlQnVpbGRCYXR0",
-            "bGVJbmZvLnByb3RvGhdFdm9sdmVCdWlsZEF2YXRhci5wcm90bxoRS0xOSVBO",
-            "SkNOTUoucHJvdG8aEkJhdHRsZVRhcmdldC5wcm90byL2AQoURXZvbHZlQnVp",
+            "bGVJbmZvLnByb3RvGhFLTE5JUE5KQ05NSi5wcm90bxoXRXZvbHZlQnVpbGRB",
+            "dmF0YXIucHJvdG8aEkJhdHRsZVRhcmdldC5wcm90byL2AQoURXZvbHZlQnVp",
             "bGRMZXZlbEluZm8SFAoMY3VyX2dhbWVfZXhwGAIgASgNEikKEmJhdHRsZV90",
             "YXJnZXRfbGlzdBgJIAMoCzINLkJhdHRsZVRhcmdldBIcCgZzZWFzb24YDSAB",
             "KA4yDC5LTE5JUE5KQ05NShIRCglyb3VuZF9jbnQYCCABKA0SKwoLYmF0dGxl",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "dWlsZEF2YXRhckIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.KLNIPNJCNMJReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleTargetReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EvolveBuildBattleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KLNIPNJCNMJReflection.Descriptor, global::EggLink.DanhengServer.Proto.EvolveBuildAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleTargetReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfo), global::EggLink.DanhengServer.Proto.EvolveBuildLevelInfo.Parser, new[]{ "CurGameExp", "BattleTargetList", "Season", "RoundCnt", "BattleInfo", "PeriodIdList", "AvatarList" }, null, null, null, null)
           }));

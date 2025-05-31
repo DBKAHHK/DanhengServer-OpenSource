@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static RogueHandbookReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNSb2d1ZUhhbmRib29rLnByb3RvGhtSb2d1ZUhhbmRib29rTWF6ZUJ1ZmYu",
-            "cHJvdG8aEUtOSUpIR05KSUpNLnByb3RvGhFHSUFETEhFRVBIRC5wcm90bxoR",
-            "TE9HTktFS0hCQUkucHJvdG8ipAEKDVJvZ3VlSGFuZGJvb2sSIgoMbWlyYWNs",
+            "ChNSb2d1ZUhhbmRib29rLnByb3RvGhFMT0dOS0VLSEJBSS5wcm90bxoRR0lB",
+            "RExIRUVQSEQucHJvdG8aG1JvZ3VlSGFuZGJvb2tNYXplQnVmZi5wcm90bxoR",
+            "S05JSkhHTkpJSk0ucHJvdG8ipAEKDVJvZ3VlSGFuZGJvb2sSIgoMbWlyYWNs",
             "ZV9saXN0GA8gAygLMgwuR0lBRExIRUVQSEQSIQoLQkVMT0ZNRkhGREsYBiAD",
             "KAsyDC5LTklKSEdOSklKTRIhCgtCSkNNUEhMUEtORhgBIAMoCzIMLkxPR05L",
             "RUtIQkFJEikKCWJ1ZmZfbGlzdBgMIAMoCzIWLlJvZ3VlSGFuZGJvb2tNYXpl",
             "QnVmZkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.KNIJHGNJIJMReflection.Descriptor, global::EggLink.DanhengServer.Proto.GIADLHEEPHDReflection.Descriptor, global::EggLink.DanhengServer.Proto.LOGNKEKHBAIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LOGNKEKHBAIReflection.Descriptor, global::EggLink.DanhengServer.Proto.GIADLHEEPHDReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueHandbookMazeBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.KNIJHGNJIJMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueHandbook), global::EggLink.DanhengServer.Proto.RogueHandbook.Parser, new[]{ "MiracleList", "BELOFMFHFDK", "BJCMPHLPKNF", "BuffList" }, null, null, null, null)
           }));

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static DHAHAKMPNAFReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFESEFIQUtNUE5BRi5wcm90bxoRTUVFSENCR0RCRUEucHJvdG8aFURldmVs",
-            "b3BtZW50VHlwZS5wcm90bxoRSklFTktGQURDSEUucHJvdG8aEUlPSkhKQUhJ",
-            "TUhNLnByb3RvIp4CCgtESEFIQUtNUE5BRhIMCgR0aW1lGA8gASgDEiUKC0VK",
+            "ChFESEFIQUtNUE5BRi5wcm90bxoRTUVFSENCR0RCRUEucHJvdG8aEUpJRU5L",
+            "RkFEQ0hFLnByb3RvGhFJT0pISkFISU1ITS5wcm90bxoVRGV2ZWxvcG1lbnRU",
+            "eXBlLnByb3RvIp4CCgtESEFIQUtNUE5BRhIMCgR0aW1lGA8gASgDEiUKC0VK",
             "SE1OS0hFUEZBGA4gASgOMhAuRGV2ZWxvcG1lbnRUeXBlEiQKC0xJSUJCR0dF",
             "SEZQGIEOIAEoCzIMLklPSkhKQUhJTUhNSAASJAoLSUtGRk9CQU1HSEoY8wEg",
             "ASgLMgwuTUVFSENCR0RCRUFIABIUCglhdmF0YXJfaWQYyAEgASgNSAASFgoL",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "bF9pZBjECSABKA1IAEINCgtGTUpERE5FREtHRkIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MEEHCBGDBEAReflection.Descriptor, global::EggLink.DanhengServer.Proto.DevelopmentTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.JIENKFADCHEReflection.Descriptor, global::EggLink.DanhengServer.Proto.IOJHJAHIMHMReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MEEHCBGDBEAReflection.Descriptor, global::EggLink.DanhengServer.Proto.JIENKFADCHEReflection.Descriptor, global::EggLink.DanhengServer.Proto.IOJHJAHIMHMReflection.Descriptor, global::EggLink.DanhengServer.Proto.DevelopmentTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DHAHAKMPNAF), global::EggLink.DanhengServer.Proto.DHAHAKMPNAF.Parser, new[]{ "Time", "EJHMNKHEPFA", "LIIBBGGEHFP", "IKFFOBAMGHJ", "AvatarId", "MDMGKHLHIIN", "CKKNNHMDCOG", "IELHLBFFAGK", "PanelId" }, new[]{ "FMJDDNEDKGF" }, null, null, null)
           }));

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CihSb2d1ZVRvdXJuR2V0TWlzY1JlYWxUaW1lRGF0YVNjUnNwLnByb3RvGhFO",
-            "S1BLSUFBTU9ERy5wcm90bxoRS0NMQ0hKTU5QR0wucHJvdG8aEU5OSUpDREtI",
-            "UEtMLnByb3RvGhFHUE5KTUVITkRNTi5wcm90bxoRRkJITkZKQ05ITUwucHJv",
+            "TklKQ0RLSFBLTC5wcm90bxoRS0NMQ0hKTU5QR0wucHJvdG8aEUdQTkpNRUhO",
+            "RE1OLnByb3RvGhFOS1BLSUFBTU9ERy5wcm90bxoRRkJITkZKQ05ITUwucHJv",
             "dG8i5AEKIlJvZ3VlVG91cm5HZXRNaXNjUmVhbFRpbWVEYXRhU2NSc3ASIQoL",
             "S0dDSUFJQUZJQkUYDSABKAsyDC5HUE5KTUVITkRNThIhCgtHQ0dMTktGREtL",
             "ThgHIAEoCzIMLk5OSUpDREtIUEtMEiEKC0NKQ09KQU1MRUVMGAIgASgLMgwu",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "TkZKQ05ITUxCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NKPKIAAMODGReflection.Descriptor, global::EggLink.DanhengServer.Proto.KCLCHJMNPGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.NNIJCDKHPKLReflection.Descriptor, global::EggLink.DanhengServer.Proto.GPNJMEHNDMNReflection.Descriptor, global::EggLink.DanhengServer.Proto.FBHNFJCNHMLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NNIJCDKHPKLReflection.Descriptor, global::EggLink.DanhengServer.Proto.KCLCHJMNPGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.GPNJMEHNDMNReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKPKIAAMODGReflection.Descriptor, global::EggLink.DanhengServer.Proto.FBHNFJCNHMLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGetMiscRealTimeDataScRsp), global::EggLink.DanhengServer.Proto.RogueTournGetMiscRealTimeDataScRsp.Parser, new[]{ "KGCIAIAFIBE", "GCGLNKFDKKN", "CJCOJAMLEEL", "Retcode", "CLKHPONDDDO", "PFOEPFPHFNJ" }, null, null, null, null)
           }));
