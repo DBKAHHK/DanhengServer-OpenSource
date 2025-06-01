@@ -21,7 +21,7 @@ public class HandlerChangeEraFlipperDataCsReq : Handler
             return;
         }
 
-        if (connection.Player!.SceneInstance!.FloorInfo?.FloorSavedValue.Find(x => x.Name == "FSV_FlashBackCount") !=
+        if (req.Data.EraFlipperDataList_.Any(x => x.EraFlipperRegionId == 2) && connection.Player!.SceneInstance!.FloorInfo?.FloorSavedValue.Find(x => x.Name == "FSV_FlashBackCount") !=
             null)
         {
             // should save
@@ -46,6 +46,6 @@ public class HandlerChangeEraFlipperDataCsReq : Handler
 
         component.ChangeEraFlipperStates(req.Data.EraFlipperDataList_.ToList());
         await connection.SendPacket(new PacketChangeEraFlipperDataScRsp(req));
-        //await connection.SendPacket(new PacketEraFlipperDataChangeScNotify(req, floorId));
+        //await connection.SendPacket(new PacketEraFlipperDataChangeScNotify(req, connection.Player!.SceneInstance.FloorId));
     }
 }

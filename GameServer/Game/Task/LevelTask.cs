@@ -17,7 +17,7 @@ public class LevelTask(PlayerInstance player)
 
     #region Prop Target
 
-    public EntityProp? TargetFetchAdvPropEx(TargetEvaluator act, SubMissionExcel subMission, GroupInfo? group = null)
+    public EntityProp? TargetFetchAdvPropEx(TargetEvaluator act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is TargetFetchAdvPropEx fetch)
         {
@@ -35,17 +35,17 @@ public class LevelTask(PlayerInstance player)
 
     #region Manage
 
-    public void TriggerInitAct(LevelInitSequeceConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public void TriggerInitAct(LevelInitSequeceConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         foreach (var task in act.TaskList) TriggerTask(task, subMission, group);
     }
 
-    public void TriggerStartAct(LevelStartSequeceConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public void TriggerStartAct(LevelStartSequeceConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         foreach (var task in act.TaskList) TriggerTask(task, subMission, group);
     }
 
-    private void TriggerTask(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    private void TriggerTask(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         try
         {
@@ -63,12 +63,12 @@ public class LevelTask(PlayerInstance player)
 
     #region Task
 
-    public async ValueTask PlayMessage(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask PlayMessage(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is PlayMessage message) await Player.MessageManager!.AddMessageSection(message.MessageSectionID);
     }
 
-    public async ValueTask DestroyProp(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask DestroyProp(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is DestroyProp destroyProp)
             foreach (var entity in Player.SceneInstance!.Entities.Values)
@@ -77,7 +77,7 @@ public class LevelTask(PlayerInstance player)
                     await Player.SceneInstance.RemoveEntity(entity);
     }
 
-    public async ValueTask TriggerCustomString(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask TriggerCustomString(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is TriggerCustomString triggerCustomString)
         {
@@ -93,19 +93,19 @@ public class LevelTask(PlayerInstance player)
         }
     }
 
-    public async ValueTask EnterMap(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask EnterMap(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is EnterMap enterMap)
             await Player.EnterSceneByEntranceId(enterMap.EntranceID, enterMap.GroupID, enterMap.AnchorID, true);
     }
 
-    public async ValueTask EnterMapByCondition(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask EnterMapByCondition(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is EnterMapByCondition enterMapByCondition)
             await Player.EnterSceneByEntranceId(enterMapByCondition.EntranceID.GetValue(), 0, 0, true);
     }
 
-    public async ValueTask TriggerPerformance(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask TriggerPerformance(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is TriggerPerformance triggerPerformance)
         {
@@ -120,7 +120,7 @@ public class LevelTask(PlayerInstance player)
         await System.Threading.Tasks.Task.CompletedTask;
     }
 
-    public async ValueTask PredicateTaskList(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask PredicateTaskList(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is PredicateTaskList predicateTaskList)
         {
@@ -143,7 +143,7 @@ public class LevelTask(PlayerInstance player)
         await System.Threading.Tasks.Task.CompletedTask;
     }
 
-    public async ValueTask ChangePropState(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask ChangePropState(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.PropState)
             foreach (var entity in Player.SceneInstance!.Entities.Values)
@@ -173,7 +173,7 @@ public class LevelTask(PlayerInstance player)
                     }
     }
 
-    public async ValueTask CreateTrialPlayer(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask CreateTrialPlayer(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatar)
             await Player.LineupManager!.AddAvatarToCurTeam(subMission.SubMissionInfo.ParamInt1);
@@ -183,7 +183,7 @@ public class LevelTask(PlayerInstance player)
                 async x => await Player.LineupManager!.AddAvatarToCurTeam(x));
     }
 
-    public async ValueTask ReplaceTrialPlayer(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask ReplaceTrialPlayer(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatar)
         {
@@ -201,7 +201,7 @@ public class LevelTask(PlayerInstance player)
         }
     }
 
-    public async ValueTask StoryLineReplaceTrialPlayer(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask StoryLineReplaceTrialPlayer(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.StoryLineAddTrialAvatar)
         {
@@ -211,7 +211,7 @@ public class LevelTask(PlayerInstance player)
         }
     }
 
-    public async ValueTask ReplaceVirtualTeam(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask ReplaceVirtualTeam(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (Player.LineupManager!.GetCurLineup()?.IsExtraLineup() != true) return;
 
@@ -232,7 +232,7 @@ public class LevelTask(PlayerInstance player)
         }
     }
 
-    public async ValueTask CreateHeroTrialPlayer(TaskConfigInfo act, SubMissionExcel subMission,
+    public async ValueTask CreateHeroTrialPlayer(TaskConfigInfo act, SubMissionData subMission,
         GroupInfo? group = null)
     {
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatar)
@@ -268,13 +268,13 @@ public class LevelTask(PlayerInstance player)
         }
     }
 
-    public async ValueTask DestroyTrialPlayer(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask DestroyTrialPlayer(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.DelTrialAvatar)
             await Player.LineupManager!.RemoveAvatarFromCurTeam(subMission.SubMissionInfo.ParamInt1);
     }
 
-    public async ValueTask ChangeGroupState(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask ChangeGroupState(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (group != null)
             foreach (var entity in Player.SceneInstance?.Entities.Values.ToList() ?? [])
@@ -283,7 +283,7 @@ public class LevelTask(PlayerInstance player)
                         await prop.SetState(PropStateEnum.Open);
     }
 
-    public async ValueTask TriggerEntityServerEvent(TaskConfigInfo act, SubMissionExcel subMission,
+    public async ValueTask TriggerEntityServerEvent(TaskConfigInfo act, SubMissionData subMission,
         GroupInfo? group = null)
     {
         if (group != null)
@@ -294,7 +294,7 @@ public class LevelTask(PlayerInstance player)
                         await prop.SetState(PropStateEnum.Open);
     }
 
-    public async ValueTask TriggerEntityEvent(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask TriggerEntityEvent(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is TriggerEntityEvent triggerEntityEvent)
             if (group != null)
@@ -305,7 +305,7 @@ public class LevelTask(PlayerInstance player)
                             await prop.SetState(PropStateEnum.Closed);
     }
 
-    public async ValueTask PropSetupUITrigger(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask PropSetupUITrigger(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is PropSetupUITrigger propSetupUiTrigger)
             foreach (var task in propSetupUiTrigger.ButtonCallback)
@@ -314,7 +314,7 @@ public class LevelTask(PlayerInstance player)
         await System.Threading.Tasks.Task.CompletedTask;
     }
 
-    public async ValueTask PropStateExecute(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public async ValueTask PropStateExecute(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is PropStateExecute propStateExecute)
         {
@@ -334,7 +334,7 @@ public class LevelTask(PlayerInstance player)
 
     #region Task Condition
 
-    public bool ByCompareSubMissionState(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public bool ByCompareSubMissionState(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is ByCompareSubMissionState compare)
         {
@@ -345,7 +345,7 @@ public class LevelTask(PlayerInstance player)
         return false;
     }
 
-    public bool ByCompareFloorSavedValue(TaskConfigInfo act, SubMissionExcel subMission, GroupInfo? group = null)
+    public bool ByCompareFloorSavedValue(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is ByCompareFloorSavedValue compare)
         {

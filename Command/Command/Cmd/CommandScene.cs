@@ -229,7 +229,7 @@ public class CommandScene : ICommand
 
         var player = arg.Target!.Player!;
 
-        var curDistance = 1000000L;
+        var curDistance = 1000000000L;
         EntityProp? nearest = null;
         foreach (var entityProp in player.SceneInstance!.Entities.Values.OfType<EntityProp>())
         {

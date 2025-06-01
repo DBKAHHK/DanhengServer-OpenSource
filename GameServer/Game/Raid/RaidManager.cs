@@ -85,7 +85,7 @@ public class RaidManager : BasePlayerManager
             var firstMission = excel.MainMissionIDList[0];
             var subMissionId =
                 GameData.MainMissionData[firstMission].MissionInfo!.StartSubMissionList[0]; // get the first sub mission
-            var subMission = GameData.SubMissionData[subMissionId];
+            var subMission = GameData.SubMissionInfoData[subMissionId];
 
             entranceId =
                 int.Parse(subMission.SubMissionInfo!.LevelFloorID.ToString()

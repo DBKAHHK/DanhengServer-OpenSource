@@ -11,12 +11,12 @@ public class MissionTaskTrigger(PlayerInstance player)
 
     public void TriggerMissionTask(int missionId)
     {
-        GameData.SubMissionData.TryGetValue(missionId, out var subMission);
+        GameData.SubMissionInfoData.TryGetValue(missionId, out var subMission);
         if (subMission != null)
             TriggerMissionTask(subMission.SubMissionTaskInfo ?? new LevelGraphConfigInfo(), subMission);
     }
 
-    public void TriggerMissionTask(LevelGraphConfigInfo subMissionTaskInfo, SubMissionExcel subMission)
+    public void TriggerMissionTask(LevelGraphConfigInfo subMissionTaskInfo, SubMissionData subMission)
     {
         foreach (var task in subMissionTaskInfo.OnInitSequece)
             Player.TaskManager?.LevelTask.TriggerInitAct(task, subMission);

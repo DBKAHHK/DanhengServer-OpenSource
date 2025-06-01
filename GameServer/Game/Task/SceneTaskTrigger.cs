@@ -17,10 +17,10 @@ public class SceneTaskTrigger(PlayerInstance player)
         {
             if (group.LevelGraphConfig == null) continue;
             foreach (var task in group.LevelGraphConfig.OnInitSequece)
-                Player.TaskManager?.LevelTask.TriggerInitAct(task, new SubMissionExcel(), group);
+                Player.TaskManager?.LevelTask.TriggerInitAct(task, new SubMissionData(0), group);
 
             foreach (var task in group.LevelGraphConfig.OnStartSequece)
-                Player.TaskManager?.LevelTask.TriggerStartAct(task, new SubMissionExcel(), group);
+                Player.TaskManager?.LevelTask.TriggerStartAct(task, new SubMissionData(0), group);
         }
     }
 
@@ -32,10 +32,10 @@ public class SceneTaskTrigger(PlayerInstance player)
         {
             if (group.LevelGraphConfig == null) return;
             foreach (var task in group.LevelGraphConfig.OnInitSequece)
-                Player.TaskManager?.LevelTask.TriggerInitAct(task, new SubMissionExcel(), group);
+                Player.TaskManager?.LevelTask.TriggerInitAct(task, new SubMissionData(0), group);
 
             foreach (var task in group.LevelGraphConfig.OnStartSequece)
-                Player.TaskManager?.LevelTask.TriggerStartAct(task, new SubMissionExcel(), group);
+                Player.TaskManager?.LevelTask.TriggerStartAct(task, new SubMissionData(0), group);
         }
     }
 }

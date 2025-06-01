@@ -76,6 +76,33 @@ public class SceneEntityLoader(SceneInstance scene)
 
                     Scene.Groups.Remove(group.Id);
                 }
+                else if (!group.SavedValueCondition.IsTrue(
+                             Scene.Player.SceneData!.FloorSavedData.GetValueOrDefault(Scene.FloorId,
+                                 []))) // condition: Saved Value Condition
+                {
+                    foreach (var entity in Scene.Entities.Values.Where(entity => entity.GroupId == group.Id))
+                    {
+                        await Scene.RemoveEntity(entity, false);
+                        removeList.Add(entity);
+                        refreshed = true;
+                    }
+
+                    Scene.Groups.Remove(group.Id);
+                }
+                else if (group.RelatedBattleId.Count > 0 && !Scene.Player.MissionManager!.GetRunningSubMissionList()
+                             .Any(x =>
+                                 x.FinishType == MissionFinishTypeEnum.StageWin &&
+                                 group.RelatedBattleId.Contains(x.ParamInt1)))
+                {
+                    foreach (var entity in Scene.Entities.Values.Where(entity => entity.GroupId == group.Id))
+                    {
+                        await Scene.RemoveEntity(entity, false);
+                        removeList.Add(entity);
+                        refreshed = true;
+                    }
+
+                    Scene.Groups.Remove(group.Id);
+                }
             }
             else // check if it should be loaded
             {
@@ -145,7 +172,7 @@ public class SceneEntityLoader(SceneInstance scene)
             -1) // check if group is already loaded
             return null;
 
-        if (!Scene.Player.MissionManager!.GetRunningSubMissionList().Any(x =>
+        if (info.RelatedBattleId.Count > 0 && !Scene.Player.MissionManager!.GetRunningSubMissionList().Any(x =>
                 x.FinishType == MissionFinishTypeEnum.StageWin && info.RelatedBattleId.Contains(x.ParamInt1)))
             return null;  // mission not activated
 
@@ -295,7 +322,7 @@ public class SceneEntityLoader(SceneInstance scene)
             await prop.SetState(PropStateEnum.Open);
         }
 
-        if (prop.PropInfo.PropID == 104006) await prop.SetState(PropStateEnum.Open);
+        if (prop.PropInfo.PropID is 104006 or 104005) await prop.SetState(PropStateEnum.Open);
 
         await Scene.AddEntity(prop, sendPacket);
 

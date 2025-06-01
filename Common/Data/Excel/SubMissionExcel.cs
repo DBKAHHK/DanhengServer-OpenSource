@@ -28,3 +28,15 @@ public class SubMissionExcel : ExcelResource
         GameData.SubMissionData[GetId()] = this;
     }
 }
+
+public class SubMissionData(int missionId)
+{
+    public int MissionId { get; set; } = missionId;
+    public int MainMissionId { get; set; }
+
+    public MissionInfo? MainMissionInfo { get; set; }
+
+    public SubMissionInfo? SubMissionInfo { get; set; }
+
+    public LevelGraphConfigInfo? SubMissionTaskInfo { get; set; }
+}

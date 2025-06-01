@@ -45,13 +45,12 @@ public class MainMissionExcel : ExcelResource
             foreach (var sub in missionInfo.SubMissionList)
             {
                 SubMissionIds.Add(sub.ID);
-                GameData.SubMissionData.TryGetValue(sub.ID, out var subMission);
-                if (subMission != null)
+                GameData.SubMissionInfoData[sub.ID] = new SubMissionData(sub.ID)
                 {
-                    subMission.MainMissionID = MainMissionID;
-                    subMission.MainMissionInfo = MissionInfo;
-                    subMission.SubMissionInfo = sub;
-                }
+                    MainMissionId = MainMissionID,
+                    MainMissionInfo = MissionInfo,
+                    SubMissionInfo = sub
+                };
             }
     }
 

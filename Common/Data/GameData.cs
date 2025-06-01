@@ -222,6 +222,7 @@ public static class GameData
 
     public static Dictionary<int, MainMissionExcel> MainMissionData { get; private set; } = [];
     public static Dictionary<int, SubMissionExcel> SubMissionData { get; private set; } = [];
+    public static ConcurrentDictionary<int, SubMissionData> SubMissionInfoData { get; private set; } = [];
     public static Dictionary<int, RewardDataExcel> RewardDataData { get; private set; } = [];
     public static Dictionary<int, MessageGroupConfigExcel> MessageGroupConfigData { get; private set; } = [];
     public static Dictionary<int, MessageSectionConfigExcel> MessageSectionConfigData { get; private set; } = [];

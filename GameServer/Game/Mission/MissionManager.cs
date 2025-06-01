@@ -171,7 +171,7 @@ public class MissionManager : BasePlayerManager
         bool doFinishTypeAction = true)
     {
         if (!ConfigManager.Config.ServerOption.EnableMission) return null;
-        GameData.SubMissionData.TryGetValue(missionId, out var mission);
+        GameData.SubMissionInfoData.TryGetValue(missionId, out var mission);
         if (mission == null) return null;
         if (Data.GetSubMissionStatus(missionId) != MissionPhaseEnum.None) return null; // already accepted
 
@@ -248,9 +248,9 @@ public class MissionManager : BasePlayerManager
     public async ValueTask FinishSubMission(int missionId)
     {
         if (!ConfigManager.Config.ServerOption.EnableMission) return;
-        GameData.SubMissionData.TryGetValue(missionId, out var subMission);
+        GameData.SubMissionInfoData.TryGetValue(missionId, out var subMission);
         if (subMission == null) return;
-        var mainMissionId = subMission.MainMissionID;
+        var mainMissionId = subMission.MainMissionId;
         if (Data.GetSubMissionStatus(missionId) != MissionPhaseEnum.Accept) return; // not accepted
         GameData.MainMissionData.TryGetValue(mainMissionId, out var mainMission); // get main mission
         if (mainMission == null) return;
@@ -397,7 +397,7 @@ public class MissionManager : BasePlayerManager
 
     public async ValueTask HandleSubMissionReward(int subMissionId)
     {
-        GameData.SubMissionData.TryGetValue(subMissionId, out var subMission);
+        GameData.SubMissionInfoData.TryGetValue(subMissionId, out var subMission);
         if (subMission == null) return;
         GameData.RewardDataData.TryGetValue(subMission.SubMissionInfo?.SubRewardID ?? 0, out var reward);
         var itemList = new List<ItemData>();
@@ -467,9 +467,9 @@ public class MissionManager : BasePlayerManager
     {
         if (!ConfigManager.Config.ServerOption.EnableMission) return;
 
-        GameData.SubMissionData.TryGetValue(missionId, out var subMission);
+        GameData.SubMissionInfoData.TryGetValue(missionId, out var subMission);
         if (subMission == null) return;
-        var mainMissionId = subMission.MainMissionID;
+        var mainMissionId = subMission.MainMissionId;
         GameData.MainMissionData.TryGetValue(mainMissionId, out var mainMission);
         if (mainMission == null) return;
 
@@ -521,7 +521,7 @@ public class MissionManager : BasePlayerManager
 
         Data.SubMissionProgressDict.TryGetValue(missionId, out var currentProgress);
         Data.SubMissionProgressDict[missionId] = currentProgress + progress;
-        GameData.SubMissionData.TryGetValue(missionId, out var subMission);
+        GameData.SubMissionInfoData.TryGetValue(missionId, out var subMission);
         if (subMission == null) return;
 
         if (currentProgress + progress >= (subMission.SubMissionInfo?.Progress ?? 1)) return;
@@ -541,7 +541,7 @@ public class MissionManager : BasePlayerManager
         if (!ConfigManager.Config.ServerOption.EnableMission) return;
 
         Data.SubMissionProgressDict[missionId] = progress;
-        GameData.SubMissionData.TryGetValue(missionId, out var subMission);
+        GameData.SubMissionInfoData.TryGetValue(missionId, out var subMission);
         if (subMission == null) return;
 
         if (progress >= (subMission.SubMissionInfo?.Progress ?? 1)) return;
@@ -577,7 +577,7 @@ public class MissionManager : BasePlayerManager
 
     public SubMissionInfo? GetSubMissionInfo(int missionId)
     {
-        GameData.SubMissionData.TryGetValue(missionId, out var subMission);
+        GameData.SubMissionInfoData.TryGetValue(missionId, out var subMission);
         if (subMission == null) return null;
         return subMission.SubMissionInfo;
     }
@@ -600,7 +600,7 @@ public class MissionManager : BasePlayerManager
         ids.AddRange(Data.RunningSubMissionIds);
         foreach (var id in ids)
         {
-            GameData.SubMissionData.TryGetValue(id, out var mission);
+            GameData.SubMissionInfoData.TryGetValue(id, out var mission);
             if (mission != null && mission.SubMissionInfo != null) list.Add(mission.SubMissionInfo);
         }
 
@@ -609,7 +609,7 @@ public class MissionManager : BasePlayerManager
 
     public int GetMissionProgress(int missionId)
     {
-        GameData.SubMissionData.TryGetValue(missionId, out var subMission);
+        GameData.SubMissionInfoData.TryGetValue(missionId, out var subMission);
         if (!ConfigManager.Config.ServerOption.EnableMission) return subMission?.SubMissionInfo?.Progress ?? 0;
 
         Data.SubMissionProgressDict.TryGetValue(missionId, out var progress);

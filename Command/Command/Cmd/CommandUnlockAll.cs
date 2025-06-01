@@ -21,8 +21,8 @@ public class CommandUnlockAll : ICommand
         var player = arg.Target!.Player!;
         var missionManager = player.MissionManager!;
 
-        foreach (var mission in GameData.SubMissionData.Values)
-            missionManager.Data.SetSubMissionStatus(mission.SubMissionID, MissionPhaseEnum.Finish);
+        foreach (var mission in GameData.SubMissionInfoData.Values)
+            missionManager.Data.SetSubMissionStatus(mission.MissionId, MissionPhaseEnum.Finish);
 
         foreach (var mission in GameData.MainMissionData.Values)
             missionManager.Data.SetMainMissionStatus(mission.MainMissionID, MissionPhaseEnum.Finish);

@@ -272,13 +272,13 @@ public static class MuipManager
             Dictionary<int, List<int>> missionDict = [];
             foreach (var subId in missionData.RunningSubMissionIds)
             {
-                var subMission = GameData.SubMissionData.GetValueOrDefault(subId);
+                var subMission = GameData.SubMissionInfoData.GetValueOrDefault(subId);
                 if (subMission == null) continue;
 
-                if (missionDict.ContainsKey(subMission.MainMissionID))
-                    missionDict[subMission.MainMissionID].Add(subMission.SubMissionID);
+                if (missionDict.ContainsKey(subMission.MainMissionId))
+                    missionDict[subMission.MainMissionId].Add(subMission.MissionId);
                 else
-                    missionDict[subMission.MainMissionID] = [subMission.SubMissionID];
+                    missionDict[subMission.MainMissionId] = [subMission.MissionId];
             }
 
             return new PlayerInformationResponse(0, "Success", new PlayerInformationData

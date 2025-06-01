@@ -656,7 +656,7 @@ public class ResourceManager
         Logger.Info(
             I18NManager.Translate("Server.ServerInfo.LoadingItem", I18NManager.Translate("Word.SubMissionInfo")));
         var count = 0;
-        var res = Parallel.ForEach(GameData.SubMissionData.Values, subMission =>
+        var res = Parallel.ForEach(GameData.SubMissionInfoData.Values, subMission =>
         {
             if (subMission.SubMissionInfo == null || subMission.SubMissionInfo.MissionJsonPath == "") return;
 
@@ -685,7 +685,7 @@ public class ResourceManager
         // wait it done
         while (!res.IsCompleted) Thread.Sleep(10);
 
-        if (count < GameData.SubMissionData.Count)
+        if (count < GameData.SubMissionInfoData.Count)
         {
             //Logger.Warn("Performance infos are missing, please check your resources folder: " + ConfigManager.Config.Path.ResourcePath + "/Config/Level/Mission/*/Act. Performances may not work!");
         }
