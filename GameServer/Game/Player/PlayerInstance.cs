@@ -162,8 +162,13 @@ public class PlayerInstance(PlayerData data)
     {
         Uid = Data.Uid;
         ActivityManager = new ActivityManager(this);
-        AvatarManager = new AvatarManager(this);
-        AvatarManager.AvatarData.DatabaseVersion = GameConstants.AvatarDbVersion;
+        AvatarManager = new AvatarManager(this)
+        {
+            AvatarData =
+            {
+                DatabaseVersion = GameConstants.AvatarDbVersion
+            }
+        };
 
         LineupManager = new LineupManager(this);
         InventoryManager = new InventoryManager(this);

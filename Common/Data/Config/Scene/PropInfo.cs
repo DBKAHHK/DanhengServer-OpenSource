@@ -19,7 +19,7 @@ public class PropInfo : PositionInfo
     public bool IsClientOnly { get; set; }
     public bool LoadOnInitial { get; set; }
 
-    public PropValueSource? ValueSource { get; set; }
+    public ValueSourceInfo? ValueSource { get; set; }
     public string? InitLevelGraph { get; set; }
 
     [JsonConverter(typeof(StringEnumConverter))]
@@ -87,7 +87,7 @@ public class PropInfo : PositionInfo
     }
 }
 
-public class PropValueSource
+public class ValueSourceInfo
 {
     public List<JObject> Values { get; set; } = [];
 }

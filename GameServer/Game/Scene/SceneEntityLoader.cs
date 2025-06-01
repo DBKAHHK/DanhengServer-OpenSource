@@ -130,25 +130,24 @@ public class SceneEntityLoader(SceneInstance scene)
               Scene.Player.MissionManager!.GetMainMissionStatus(info.OwnerMainMissionID) ==
               MissionPhaseEnum.Accept)) return null; // check if main mission is accepted
 
-        if (Scene.FloorId == 20332001 && info.Id == 109) // certain group id
-            if (Scene.Player.SceneData?.FloorSavedData.GetValueOrDefault(20332001, [])
-                    .GetValueOrDefault("ShowFeather", 0) != 1)
-                return null; // a temp solution for Sunday
-
         if ((!info.LoadCondition.IsTrue(missionData) ||
              info.UnloadCondition.IsTrue(missionData,
                  false) || // condition: Load Condition, Unload Condition, Force Unload Condition
              info.ForceUnloadCondition.IsTrue(missionData, false)) &&
             !forceLoad) return null; // check if group should be loaded forcefully
 
-        // if (!info.SavedValueCondition.IsTrue(
-        //         Scene.Player.SceneData!.FloorSavedData.GetValueOrDefault(Scene.FloorId, [])) &&
-        //     !forceLoad) // condition: Saved Value Condition
-        //     return null;
+        if (!info.SavedValueCondition.IsTrue(
+                Scene.Player.SceneData!.FloorSavedData.GetValueOrDefault(Scene.FloorId, [])) &&
+            !forceLoad) // condition: Saved Value Condition
+            return null;
 
         if (Scene.Entities.Values.ToList().FindIndex(x => x.GroupId == info.Id) !=
             -1) // check if group is already loaded
             return null;
+
+        if (!Scene.Player.MissionManager!.GetRunningSubMissionList().Any(x =>
+                x.FinishType == MissionFinishTypeEnum.StageWin && info.RelatedBattleId.Contains(x.ParamInt1)))
+            return null;  // mission not activated
 
         // load
         Scene.Groups.Add(info.Id); // add group to loaded groups

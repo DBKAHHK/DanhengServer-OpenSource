@@ -295,7 +295,9 @@ public class SceneInstance
             Player.SceneData.GroupPropertyData[FloorId] = groupData;
         }
 
-        var property = FloorInfo?.Groups.GetValueOrDefault(groupId)?.GroupPropertyMap.Values
+        var group = FloorInfo?.Groups.GetValueOrDefault(groupId);
+        if (group == null) return new GroupPropertyRefreshData(groupId, name, 0, value);
+        var property = group.GroupPropertyMap.Values
             .FirstOrDefault(x => x.Name == name);
         if (property == null) return new GroupPropertyRefreshData(groupId, name, 0, value);
 
@@ -314,7 +316,31 @@ public class SceneInstance
 
         if (callEvent && GroupPropertyUpdated != null) await GroupPropertyUpdated(res);
 
+        if (name == "SGP_PuzzleState" && group.ControlFloorSavedValue.Count > 0)
+        {
+            // set fsv
+            foreach (var key in group.ControlFloorSavedValue)
+            {
+                await UpdateFloorSavedValue(key, value);
+            }
+        }
+
         return res;
+    }
+
+    public async ValueTask UpdateFloorSavedValue(string name, int value)
+    {
+        if (!Player.SceneData!.FloorSavedData.TryGetValue(FloorId, out var floorSavedData))
+        {
+            floorSavedData = [];
+            Player.SceneData.FloorSavedData[FloorId] = floorSavedData;
+        }
+
+        if (FloorInfo?.FloorSavedValue.All(x => x.Name != name) == true) return;  // not exist
+
+        floorSavedData[name] = value;
+
+        await Player.SendPacket(new PacketUpdateFloorSavedValueNotify(name, value, Player));
     }
 
     public int GetGroupProperty(int groupId, string name)

@@ -246,7 +246,6 @@ public class ResourceManager
                             group.Id = groupInfo.ID;
                             // Use a sorted collection or maintain order manually
                             info.Groups[groupInfo.ID] = group;
-                            group.Load();
 
                             // Load graph
                             var graphPath = ConfigManager.Config.Path.ResourcePath + "/" + group.LevelGraph;
@@ -260,6 +259,8 @@ public class ResourceManager
                                 var graphInfo = LevelGraphConfigInfo.LoadFromJsonObject(graphObj);
                                 group.LevelGraphConfig = graphInfo;
                             }
+
+                            group.Load();
                         }
                     }
                     catch (Exception ex)

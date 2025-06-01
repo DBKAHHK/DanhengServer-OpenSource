@@ -114,12 +114,16 @@ public class FloorDimensionInfo
     public void OnLoad(FloorInfo floor)
     {
         foreach (var data in SavedValues)
+        {
+            if (floor.FloorSavedValue.Any(x => x.Name == data.Name)) continue;
+
             floor.FloorSavedValue.Add(new FloorSavedValueInfo
             {
                 ID = data.ID,
                 Name = data.Name,
                 DefaultValue = data.MaxValue
             });
+        }
 
         foreach (var index in GroupIndexList) GroupIDList.Add(floor.GroupInstanceList[index].ID);
     }

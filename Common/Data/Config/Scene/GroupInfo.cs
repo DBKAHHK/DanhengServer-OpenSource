@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Database.Quests;
+﻿using EggLink.DanhengServer.Data.Config.Task;
+using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Scene;
@@ -37,14 +38,51 @@ public class GroupInfo
     public List<PropInfo> PropList { get; set; } = [];
     public List<NpcInfo> NPCList { get; set; } = [];
     public Dictionary<int, GroupPropertyConfigInfo> GroupPropertyMap { get; set; } = [];
+    public ValueSourceInfo? ValueSource { get; set; }
 
     [JsonIgnore] public LevelGraphConfigInfo? LevelGraphConfig { get; set; }
 
     [JsonIgnore] public Dictionary<string, List<int>> PropTriggerCustomString { get; set; } = [];
+    [JsonIgnore] public List<string> ControlFloorSavedValue { get; set; } = [];
+    [JsonIgnore] public List<int> RelatedBattleId { get; set; } = [];
 
     public void Load()
     {
         foreach (var prop in PropList) prop.Load(this);
+
+        foreach (var source in ValueSource?.Values ?? [])
+        {
+            if (source["Key"]?.ToString() == "FSV")
+            {
+                var value = source["Value"];
+                if (value != null)
+                    ControlFloorSavedValue.Add(value.ToString());
+            }
+        }
+
+        foreach (var info in LevelGraphConfig?.OnInitSequece ?? [])
+        {
+            foreach (var configInfo in info.TaskList)
+            {
+                if (configInfo is TriggerBattle battle)
+                {
+                    if (battle.EventID.GetValue() > 0)
+                        RelatedBattleId.Add(battle.EventID.GetValue());
+                }
+            }
+        }
+
+        foreach (var info in LevelGraphConfig?.OnStartSequece ?? [])
+        {
+            foreach (var configInfo in info.TaskList)
+            {
+                if (configInfo is TriggerBattle battle)
+                {
+                    if (battle.EventID.GetValue() > 0)
+                        RelatedBattleId.Add(battle.EventID.GetValue());
+                }
+            }
+        }
     }
 }
 

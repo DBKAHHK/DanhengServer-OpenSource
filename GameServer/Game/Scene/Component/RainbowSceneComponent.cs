@@ -130,20 +130,7 @@ public class RainbowSceneComponent(SceneInstance scene) : BaseSceneComponent(sce
         if (string.IsNullOrEmpty(savedValueName)) return;
 
         // update floor saved data
-        if (SceneInst.Player.SceneData!.FloorSavedData.TryGetValue(SceneInst.FloorId, out var savedData))
-        {
-            savedData[savedValueName] = savedValue;
-        }
-        else
-        {
-            SceneInst.Player.SceneData!.FloorSavedData[SceneInst.FloorId] = new Dictionary<string, int>
-            {
-                { savedValueName, savedValue }
-            };
-        }
-
-        // send packet to client
-        await SceneInst.Player.SendPacket(new PacketUpdateFloorSavedValueNotify(savedValueName, savedValue, SceneInst.Player));
+        await SceneInst.UpdateFloorSavedValue(savedValueName, savedValue);
     }
 
     private async ValueTask CallCurrentTargetPuzzlePropertyAction(Dictionary<string, object> param)
