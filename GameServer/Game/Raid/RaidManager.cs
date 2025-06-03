@@ -172,7 +172,7 @@ public class RaidManager : BasePlayerManager
             // just resume
             record.Status = RaidStatus.Doing;
             Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus,
-                record.Lineup.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId / 10 : x.BaseAvatarId).ToList());
+                record.Lineup.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId : x.BaseAvatarId).ToList());
             await Player.LoadScene(record.PlaneId, record.FloorId, record.EntryId, record.Pos, record.Rot, true);
         }
 
