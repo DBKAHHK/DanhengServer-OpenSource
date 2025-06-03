@@ -111,7 +111,7 @@ public class StoryLineManager : BasePlayerManager
         }
 
         Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus,
-            lineInfo.Lineup.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId / 10 : x.BaseAvatarId).ToList());
+            lineInfo.Lineup.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId : x.BaseAvatarId).ToList());
 
         StoryLineData.CurStoryLineId = lineInfo.StoryLineId;
         await Player.SendPacket(new PacketStoryLineInfoScNotify(Player));
