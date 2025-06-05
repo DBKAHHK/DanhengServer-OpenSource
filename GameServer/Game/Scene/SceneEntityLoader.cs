@@ -77,8 +77,7 @@ public class SceneEntityLoader(SceneInstance scene)
                     Scene.Groups.Remove(group.Id);
                 }
                 else if (!group.SavedValueCondition.IsTrue(
-                             Scene.Player.SceneData!.FloorSavedData.GetValueOrDefault(Scene.FloorId,
-                                 []))) // condition: Saved Value Condition
+                             Scene.Player.SceneData!.GetFloorSavedValues(Scene.FloorId))) // condition: Saved Value Condition
                 {
                     foreach (var entity in Scene.Entities.Values.Where(entity => entity.GroupId == group.Id))
                     {

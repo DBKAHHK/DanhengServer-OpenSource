@@ -324,7 +324,7 @@ public class MissionManager : BasePlayerManager
         {
             // Player.ChangeAvatarPathType(8001, Enums.Avatar.MultiPathAvatarTypeEnum.Knight);
             var list = Player.LineupManager!.GetCurLineup()!.BaseAvatars!
-                .Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId / 10 : x.BaseAvatarId).ToList();
+                .Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId : x.BaseAvatarId).ToList();
             list[list.IndexOf(8001)] = Player.Data.CurrentGender == Gender.Man ? 1008003 : 1008004;
             Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus, list);
         }

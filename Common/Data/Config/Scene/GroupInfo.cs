@@ -7,6 +7,7 @@ using EggLink.DanhengServer.Enums.Task;
 using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Spectre.Console;
 
 namespace EggLink.DanhengServer.Data.Config.Scene;
 
@@ -96,34 +97,24 @@ public class LoadCondition
     public bool IsTrue(MissionData mission, bool defaultResult = true)
     {
         if (Conditions.Count == 0) return defaultResult;
-        var canLoad = Operation == OperationEnum.And;
+
         // check load condition
+        List<Func<bool>> conditionChecks = [];
+
         foreach (var condition in Conditions)
             if (condition.Type == LevelGroupMissionTypeEnum.MainMission)
             {
-                var info = mission.GetMainMissionStatus(condition.ID);
-                if (!ConfigManager.Config.ServerOption.EnableMission) info = MissionPhaseEnum.Finish;
+                var status = mission.GetMainMissionStatus(condition.ID);
+                if (!ConfigManager.Config.ServerOption.EnableMission) status = MissionPhaseEnum.Finish;
 
                 condition.Phase = condition.Phase == MissionPhaseEnum.Cancel
                     ? MissionPhaseEnum.Finish
                     : condition.Phase;
 
-                if (info != condition.Phase)
-                {
-                    if (Operation == OperationEnum.And)
-                    {
-                        canLoad = false;
-                        break;
-                    }
-                }
-                else
-                {
-                    if (Operation == OperationEnum.Or)
-                    {
-                        canLoad = true;
-                        break;
-                    }
-                }
+                conditionChecks.Add(CheckFunc);
+                continue;
+
+                bool CheckFunc() => status == condition.Phase;
             }
             else
             {
@@ -133,25 +124,23 @@ public class LoadCondition
                 condition.Phase = condition.Phase == MissionPhaseEnum.Cancel
                     ? MissionPhaseEnum.Finish
                     : condition.Phase;
-                if (status != condition.Phase)
-                {
-                    if (Operation == OperationEnum.And)
-                    {
-                        canLoad = false;
-                        break;
-                    }
-                }
-                else
-                {
-                    if (Operation == OperationEnum.Or)
-                    {
-                        canLoad = true;
-                        break;
-                    }
-                }
+
+                conditionChecks.Add(CheckFunc);
+                continue;
+
+                bool CheckFunc() => status == condition.Phase;
             }
 
-        return canLoad;
+        switch (Operation)
+        {
+            case OperationEnum.And when UtilTools.CheckAnd(conditionChecks, defaultResult):
+            case OperationEnum.Or when UtilTools.CheckOr(conditionChecks, defaultResult):
+                return true;
+            case OperationEnum.Not:
+                return !UtilTools.CheckOr(conditionChecks, defaultResult);
+            default:
+                return defaultResult;
+        }
     }
 }
 
@@ -165,43 +154,31 @@ public class SavedValueLoadCondition
     public bool IsTrue(Dictionary<string, int> savedValue, bool defaultResult = true)
     {
         if (Conditions.Count == 0) return defaultResult;
-        var canLoad = Operation == OperationEnum.And;
+
         // check load condition
+        List<Func<bool>> conditionChecks = [];
         foreach (var condition in Conditions)
         {
             // saved value
             var status = savedValue.GetValueOrDefault(condition.SavedValueName, 0);
-            var b = condition.Operation switch
-            {
-                CompareTypeEnum.Equal => status != condition.Value,
-                CompareTypeEnum.Greater => status <= condition.Value,
-                CompareTypeEnum.GreaterEqual => status > condition.Value,
-                CompareTypeEnum.Less => status >= condition.Value,
-                CompareTypeEnum.LessEqual => status < condition.Value,
-                CompareTypeEnum.NotEqual => status == condition.Value,
-                CompareTypeEnum.Unknow => true,
-                _ => false
-            };
+            if (condition.Operation == CompareTypeEnum.Unknow) continue;
 
-            if (b)
-            {
-                if (Operation == OperationEnum.And)
-                {
-                    canLoad = false;
-                    break;
-                }
-            }
-            else
-            {
-                if (Operation == OperationEnum.Or)
-                {
-                    canLoad = true;
-                    break;
-                }
-            }
+            conditionChecks.Add(CheckFunc);
+            continue;
+
+            bool CheckFunc() => UtilTools.CompareNumberByOperationEnum(status, condition.Value, condition.Operation);
         }
 
-        return canLoad;
+        switch (Operation)
+        {
+            case OperationEnum.And when UtilTools.CheckAnd(conditionChecks, defaultResult):
+            case OperationEnum.Or when UtilTools.CheckOr(conditionChecks, defaultResult):
+                return true;
+            case OperationEnum.Not:
+                return !UtilTools.CheckOr(conditionChecks, defaultResult);
+            default:
+                return defaultResult;
+        }
     }
 }
 

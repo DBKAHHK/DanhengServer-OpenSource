@@ -382,6 +382,15 @@ public static class GameData
         FloorInfoData.TryGetValue("P" + planeId + "_F" + floorId, out outer!);
     }
 
+    public static FloorInfo? GetFloorInfo(int floorId)
+    {
+        var entrance = MapEntranceData.FirstOrDefault(x => x.Value.FloorID == floorId);
+        if (entrance.Value == null) return null;
+
+        GetFloorInfo(entrance.Value.PlaneID, floorId, out var floorInfo);
+        return floorInfo;
+    }
+
     public static int GetPlayerExpRequired(int level)
     {
         var excel = PlayerLevelConfigData[level];

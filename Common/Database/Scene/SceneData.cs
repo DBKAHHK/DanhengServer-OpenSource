@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Enums.Scene;
+﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.Proto;
 using Google.Protobuf;
 using SqlSugar;
@@ -43,6 +44,35 @@ public class SceneData : BaseDatabaseDataHelper
 
     [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
     public Dictionary<int, int> FloorTargetPuzzleGroupData { get; set; } = new();
+
+    public int GetFloorSavedValue(int floorId, string key)
+    {
+        if (FloorSavedData.TryGetValue(floorId, out var data) && data.TryGetValue(key, out var value))
+        {
+            return value;
+        }
+
+        // get default value if not found
+        var floor = GameData.GetFloorInfo(floorId);
+        if (floor == null) return 0;
+
+        var savedValue = floor.FloorSavedValue.FirstOrDefault(x => x.Name == key);
+        return savedValue?.DefaultValue ?? 0;
+    }
+
+    public Dictionary<string, int> GetFloorSavedValues(int floorId)
+    {
+        var floor = GameData.GetFloorInfo(floorId);
+        if (floor == null) return [];
+
+        var savedValues = new Dictionary<string, int>();
+        foreach (var value in floor.FloorSavedValue)
+        {
+            savedValues[value.Name] = GetFloorSavedValue(floorId, value.Name);
+        }
+
+        return savedValues;
+    }
 }
 
 public class ScenePropData
