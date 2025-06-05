@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Custom;
+using EggLink.DanhengServer.GameServer.Plugin;
 using EggLink.DanhengServer.Internationalization;
 
 namespace EggLink.DanhengServer.Command.Command.Cmd;
@@ -35,5 +36,15 @@ public class CommandReload : ICommand
                                    new VideoKeysConfig();
         await arg.SendMsg(I18NManager.Translate("Game.Command.Reload.ConfigReloaded",
             I18NManager.Translate("Word.VideoKeys")));
+    }
+
+    [CommandMethod("0 plugin")]
+    public async ValueTask ReloadPlugin(CommandArg arg)
+    {
+        // Reload the plugin
+        PluginManager.UnloadPlugins();
+        PluginManager.LoadPlugins();
+        await arg.SendMsg(I18NManager.Translate("Game.Command.Reload.ConfigReloaded",
+            I18NManager.Translate("Word.Plugin")));
     }
 }

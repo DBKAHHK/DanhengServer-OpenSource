@@ -130,6 +130,7 @@ public class PluginManager
         plugin.OnUnload();
         Plugins.Remove(plugin);
         PluginAssemblies.Remove(plugin);
+        I18NManager.PluginLanguages.Remove(value.Name);
         Logger.Info($"Unloaded plugin {value.Name}");
     }
 
