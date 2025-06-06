@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtDaGFsbGVuZ2VTZXR0bGVOb3RpZnkucHJvdG8aEUNDTEdMUEFCR0hELnBy",
-            "b3RvGhJDdXJDaGFsbGVuZ2UucHJvdG8aDkl0ZW1MaXN0LnByb3RvIoUCChVD",
+            "b3RvGg5JdGVtTGlzdC5wcm90bxoSQ3VyQ2hhbGxlbmdlLnByb3RvIoUCChVD",
             "aGFsbGVuZ2VTZXR0bGVOb3RpZnkSJAoNY3VyX2NoYWxsZW5nZRgLIAEoCzIN",
             "LkN1ckNoYWxsZW5nZRIXCg9jaGFsbGVuZ2Vfc2NvcmUYCSABKA0SEwoLTFBM",
             "Sk1LUEJMSUYYAyABKA0SIQoLQ0NPQUpHREVQSkEYDCABKAsyDC5DQ0xHTFBB",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "Rk1MQk0YAiADKA0SFAoMY2hhbGxlbmdlX2lkGAcgASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CCLGLPABGHDReflection.Descriptor, global::EggLink.DanhengServer.Proto.CurChallengeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CCLGLPABGHDReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.CurChallengeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeSettleNotify), global::EggLink.DanhengServer.Proto.ChallengeSettleNotify.Parser, new[]{ "CurChallenge", "ChallengeScore", "LPLJMKPBLIF", "CCOAJGDEPJA", "ScoreTwo", "Star", "IsWin", "Reward", "HAHAEIFMLBM", "ChallengeId" }, null, null, null, null)
           }));
