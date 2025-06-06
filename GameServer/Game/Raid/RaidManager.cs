@@ -144,7 +144,7 @@ public class RaidManager : BasePlayerManager
 
             await Player.MissionManager!.AcceptMainMission(firstMission);
 
-            await Player.EnterScene(entranceId, 0, true);
+            await Player.EnterScene(entranceId, 0, false);
 
             record = new RaidRecord
             {
@@ -173,7 +173,7 @@ public class RaidManager : BasePlayerManager
             record.Status = RaidStatus.Doing;
             Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupHeliobus,
                 record.Lineup.Select(x => x.SpecialAvatarId > 0 ? x.SpecialAvatarId : x.BaseAvatarId).ToList());
-            await Player.LoadScene(record.PlaneId, record.FloorId, record.EntryId, record.Pos, record.Rot, true);
+            await Player.LoadScene(record.PlaneId, record.FloorId, record.EntryId, record.Pos, record.Rot, false);
         }
 
         await Player.SendPacket(new PacketRaidInfoNotify(record));
