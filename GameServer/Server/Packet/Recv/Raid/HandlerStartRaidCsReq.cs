@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Kcp;
+﻿using EggLink.DanhengServer.GameServer.Server.Packet.Send.Raid;
+using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Recv.Raid;
@@ -11,10 +12,13 @@ public class HandlerStartRaidCsReq : Handler
         var req = StartRaidCsReq.Parser.ParseFrom(data);
         var player = connection.Player!;
 
-        await player.RaidManager!.EnterRaid((int)req.RaidId, (int)req.WorldLevel,
+        var record = await player.RaidManager!.EnterRaid((int)req.RaidId, (int)req.WorldLevel,
             req.AvatarList.Select(x => (int)x).ToList(),
             req.IsSave == 1);
 
-        await connection.SendPacket(CmdIds.StartRaidScRsp);
+        if (record == null)
+            await connection.SendPacket(new PacketStartRaidScRsp(Retcode.RetReqParaInvalid));
+        else
+            await connection.SendPacket(new PacketStartRaidScRsp(record, player));
     }
 }

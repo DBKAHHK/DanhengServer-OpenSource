@@ -61,12 +61,12 @@ public class RaidManager : BasePlayerManager
 
     #region Player Action
 
-    public async ValueTask EnterRaid(int raidId, int worldLevel, List<int>? avatarList = null, bool enterSaved = false)
+    public async ValueTask<RaidRecord?> EnterRaid(int raidId, int worldLevel, List<int>? avatarList = null, bool enterSaved = false)
     {
-        if (RaidData.CurRaidId != 0) return;
+        if (RaidData.CurRaidId != 0) return null;
 
         GameData.RaidConfigData.TryGetValue(raidId * 100 + worldLevel, out var excel);
-        if (excel == null) return; // not exist
+        if (excel == null) return null; // not exist
 
         RaidData.RaidRecordDatas.TryGetValue(raidId, out var dict);
         dict ??= [];
@@ -177,6 +177,7 @@ public class RaidManager : BasePlayerManager
         }
 
         await Player.SendPacket(new PacketRaidInfoNotify(record));
+        return record;
     }
 
     public async ValueTask CheckIfLeaveRaid()

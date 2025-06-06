@@ -834,7 +834,7 @@ public class PlayerInstance(PlayerData data)
         Data.Pos = pos;
         Data.Rot = rot;
         var notSendMove = true;
-        if (planeId != Data.PlaneId || floorId != Data.FloorId || entryId != Data.EntryId || SceneInstance == null)
+        if (planeId != Data.PlaneId || floorId != Data.FloorId || entryId != Data.EntryId || SceneInstance == null || !mapTp)
         {
             if (SceneInstance != null)
                 await SceneInstance.OnDestroy();
