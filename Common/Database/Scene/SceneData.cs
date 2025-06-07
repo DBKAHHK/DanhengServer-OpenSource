@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
 using Google.Protobuf;
 using SqlSugar;
 
@@ -45,6 +46,9 @@ public class SceneData : BaseDatabaseDataHelper
     [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
     public Dictionary<int, int> FloorTargetPuzzleGroupData { get; set; } = new();
 
+    [SugarColumn(IsJson = true, ColumnDataType = "TEXT")]
+    public Dictionary<int, SwitchHandInfo> SwitchHandData { get; set; } = new();
+
     public int GetFloorSavedValue(int floorId, string key)
     {
         if (FloorSavedData.TryGetValue(floorId, out var data) && data.TryGetValue(key, out var value))
@@ -72,6 +76,32 @@ public class SceneData : BaseDatabaseDataHelper
         }
 
         return savedValues;
+    }
+}
+
+public class SwitchHandInfo
+{
+    public int ConfigId { get; set; }
+    public int CoinNum { get; set; }
+    public Position Pos { get; set; } = new();
+    public Position Rot { get; set; } = new();
+    public uint State { get; set; } = 101;
+    public byte[] ByteValue { get; set; } = [];
+
+    public HandInfo ToProto()
+    {
+        return new HandInfo
+        {
+            ConfigId = (uint)ConfigId,
+            HandByteValue = ByteString.CopyFrom(ByteValue),
+            HandCoinNum = (uint)CoinNum,
+            HandMotion = new MotionInfo
+            {
+                Pos = Pos.ToProto(),
+                Rot = Rot.ToProto()
+            },
+            HandState = State
+        };
     }
 }
 

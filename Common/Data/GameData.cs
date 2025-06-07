@@ -153,6 +153,7 @@ public static class GameData
     public static Dictionary<int, NPCDataExcel> NpcDataData { get; private set; } = [];
     public static Dictionary<int, MapEntranceExcel> MapEntranceData { get; private set; } = [];
     public static Dictionary<int, MazePlaneExcel> MazePlaneData { get; private set; } = [];
+    public static Dictionary<int, MazePuzzleSwitchHandExcel> MazePuzzleSwitchHandData { get; private set; } = [];
     public static Dictionary<int, MazeChestExcel> MazeChestData { get; private set; } = [];
     public static Dictionary<int, MazePropExcel> MazePropData { get; private set; } = [];
     public static Dictionary<int, PlaneEventExcel> PlaneEventData { get; private set; } = [];

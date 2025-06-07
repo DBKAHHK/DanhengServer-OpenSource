@@ -20,6 +20,7 @@ using EggLink.DanhengServer.GameServer.Game.Lineup;
 using EggLink.DanhengServer.GameServer.Game.Mail;
 using EggLink.DanhengServer.GameServer.Game.Message;
 using EggLink.DanhengServer.GameServer.Game.Mission;
+using EggLink.DanhengServer.GameServer.Game.Player.Components;
 using EggLink.DanhengServer.GameServer.Game.Quest;
 using EggLink.DanhengServer.GameServer.Game.Raid;
 using EggLink.DanhengServer.GameServer.Game.Rogue;
@@ -115,6 +116,7 @@ public class PlayerInstance(PlayerData data)
     public BattleCollegeData? BattleCollegeData { get; private set; }
     public ServerPrefsData? ServerPrefsData { get; private set; }
     public SceneInstance? SceneInstance { get; private set; }
+    public List<BasePlayerComponent> Components { get; } = [];
     public int Uid { get; set; }
     public Connection? Connection { get; set; }
     public bool Initialized { get; set; }
@@ -199,6 +201,8 @@ public class PlayerInstance(PlayerData data)
         TutorialGuideData = InitializeDatabase<TutorialGuideData>();
         ServerPrefsData = InitializeDatabase<ServerPrefsData>();
         BattleCollegeData = InitializeDatabase<BattleCollegeData>();
+
+        Components.Add(new SwitchHandComponent(this));
 
         if ((int)(ServerPrefsData.Version * 1000) != GameConstants.GameVersionInt)
         {
@@ -469,6 +473,11 @@ public class PlayerInstance(PlayerData data)
             await OfferingManager.UpdateOfferingData();
 
         DatabaseHelper.ToSaveUidList.SafeAdd(Uid);
+    }
+
+    public T GetComponent<T>() where T : BasePlayerComponent
+    {
+        return Components.OfType<T>().FirstOrDefault() ?? throw new InvalidOperationException($"Component {typeof(T)} not found.");
     }
 
     #endregion
