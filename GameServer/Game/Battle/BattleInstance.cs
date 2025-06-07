@@ -4,6 +4,7 @@ using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Avatar;
+using EggLink.DanhengServer.GameServer.Game.Lineup;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
@@ -117,7 +118,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
         value.BattleTargetList_.Add(battleTarget);
     }
 
-    public Dictionary<BaseAvatarInfo, AvatarType> GetBattleAvatars()
+    public List<AvatarLineupData> GetBattleAvatars()
     {
         var excel = GameData.StageConfigData[StageId];
         List<int> list = [.. excel.TrialAvatarList];
@@ -142,26 +143,27 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
 
         if (list.Count > 0) // if list is not empty
         {
-            Dictionary<BaseAvatarInfo, AvatarType> dict = [];
+            List<AvatarLineupData> avatars = [];
             foreach (var avatar in list)
             {
                 var specialAvatar = Player.AvatarManager!.GetTrialAvatar(avatar);
                 if (specialAvatar != null)
                 {
-                    dict.Add(specialAvatar, AvatarType.AvatarTrialType);
+                    specialAvatar.CheckLevel(Player.Data.WorldLevel);
+                    avatars.Add(new AvatarLineupData(specialAvatar, AvatarType.AvatarTrialType));
                 }
                 else
                 {
                     var avatarInfo = Player.AvatarManager!.GetFormalAvatar(avatar);
-                    if (avatarInfo != null) dict.Add(avatarInfo, AvatarType.AvatarFormalType);
+                    if (avatarInfo != null) avatars.Add(new AvatarLineupData(avatarInfo, AvatarType.AvatarFormalType));
                 }
             }
 
-            return dict;
+            return avatars;
         }
         else
         {
-            Dictionary<BaseAvatarInfo, AvatarType> dict = [];
+            List<AvatarLineupData> avatars = [];
             foreach (var avatar in Lineup.BaseAvatars!) // if list is empty, use scene lineup
             {
                 BaseAvatarInfo? avatarInstance = null;
@@ -181,6 +183,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
                     var specialAvatar = Player.AvatarManager!.GetTrialAvatar(avatar.SpecialAvatarId);
                     if (specialAvatar != null)
                     {
+                        specialAvatar.CheckLevel(Player.Data.WorldLevel);
                         avatarInstance = specialAvatar;
                         avatarType = AvatarType.AvatarTrialType;
                     }
@@ -192,10 +195,10 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
 
                 if (avatarInstance == null) continue;
 
-                dict.Add(avatarInstance, avatarType);
+                avatars.Add(new AvatarLineupData(avatarInstance, avatarType));
             }
 
-            return dict;
+            return avatars;
         }
     }
 
@@ -220,17 +223,39 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
             proto.MonsterWaveList.AddRange(protoWave);
         }
 
+        if (Player.BattleManager!.NextBattleMonsterIds.Count > 0)
+        {
+            var ids = Player.BattleManager!.NextBattleMonsterIds;
+            // split every 5
+            for (var i = 0; i < (ids.Count - 1) / 5 + 1; i++)
+            {
+                var count = Math.Min(5, ids.Count - i * 5);
+                var waveIds = ids.GetRange(i * 5, count);
+
+                proto.MonsterWaveList.Add(new SceneMonsterWave
+                {
+                    BattleStageId = (uint)(Stages.FirstOrDefault()?.StageID ?? 0),
+                    BattleWaveId = (uint)(proto.MonsterWaveList.Count + 1),
+                    MonsterParam = new SceneMonsterWaveParam(),
+                    MonsterList = { waveIds.Select(x => new SceneMonster
+                    {
+                        MonsterId = (uint)x
+                    }) }
+                });
+            }
+        }
+
         var avatars = GetBattleAvatars();
         foreach (var avatar in avatars)
-            proto.BattleAvatarList.Add(avatar.Key.ToBattleProto(
-                new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, Lineup), avatar.Value));
+            proto.BattleAvatarList.Add(avatar.AvatarInfo.ToBattleProto(
+                new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, Lineup), avatar.AvatarType));
 
         System.Threading.Tasks.Task.Run(async () =>
         {
             foreach (var monster in EntityMonsters) await monster.ApplyBuff(this);
 
             foreach (var avatar in AvatarInfo)
-                if (avatars.Keys.FirstOrDefault(x =>
+                if (avatars.Select(x => x.AvatarInfo).FirstOrDefault(x =>
                         x.BaseAvatarId == avatar.AvatarInfo.BaseAvatarId) !=
                     null) // if avatar is in lineup
                     await avatar.ApplyBuff(this);
