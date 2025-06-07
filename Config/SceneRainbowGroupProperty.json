@@ -55,6 +55,13 @@
                 }
               },
               {
+                "ActionType": "SetFloorSavedValue",
+                "Params": {
+                  "SavedValueName": "FSV_CompassFinished",
+                  "SavedValue": 1
+                }
+              },
+              {
                 "ActionType": "PropertyValueEqual",
                 "Params": {
                   "GroupId": 24,
@@ -229,6 +236,13 @@
                 }
               },
               {
+                "ActionType": "SetFloorSavedValue",
+                "Params": {
+                  "SavedValueName": "FSV_CompassFinished",
+                  "SavedValue": 2
+                }
+              },
+              {
                 "ActionType": "PropertyValueEqual",
                 "Params": {
                   "GroupId": 24,
@@ -400,6 +414,13 @@
                       }
                     }
                   ]
+                }
+              },
+              {
+                "ActionType": "SetFloorSavedValue",
+                "Params": {
+                  "SavedValueName": "FSV_CompassFinished",
+                  "SavedValue": 3
                 }
               },
               {
@@ -1389,6 +1410,13 @@
                   "GroupId": 99,
                   "PropertyName": "Set",
                   "PropertyValue": 1
+                }
+              },
+              {
+                "ActionType": "SetFloorSavedValue",
+                "Params": {
+                  "SavedValueName": "FSV_CompassFinished",
+                  "SavedValue": 1
                 }
               },
               {
