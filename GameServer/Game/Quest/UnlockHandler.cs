@@ -33,6 +33,7 @@ public class UnlockHandler(PlayerInstance player)
                     if (Player.Data.Level < int.Parse(condition.Param)) return false;
                     break;
                 case ConditionTypeEnum.FinishSubMission:
+                case ConditionTypeEnum.RealFinishSubMission:
                     if (Player.MissionManager?.GetSubMissionStatus(int.Parse(condition.Param)) !=
                         MissionPhaseEnum.Finish) return false;
                     break;

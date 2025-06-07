@@ -20,6 +20,7 @@ public class AvatarManager(PlayerInstance player) : BasePlayerManager(player)
     {
         GameData.AvatarConfigData.TryGetValue(avatarId, out var avatarExcel);
         if (avatarExcel == null) return null;
+        if (avatarExcel.MaxRank < 6) return null;
 
         GameData.MultiplePathAvatarConfigData.TryGetValue(avatarId, out var multiPathAvatar);
         if (multiPathAvatar != null && multiPathAvatar.BaseAvatarID != avatarId)

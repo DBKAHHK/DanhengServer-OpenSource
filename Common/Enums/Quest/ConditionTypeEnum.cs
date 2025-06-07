@@ -20,5 +20,6 @@ public enum ConditionTypeEnum
     ReleaseContentPackage = 15,
     SubMissionTaken = 16,
     HasItemMainType = 17,
-    FinishSimulatedRogueAreaProgress = 20
+    FinishSimulatedRogueAreaProgress = 20,
+    RealFinishSubMission = 21
 }
