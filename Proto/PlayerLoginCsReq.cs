@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerLoginCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8a",
-            "Ekxhbmd1YWdlVHlwZS5wcm90bxoRSkdGS0lDRENGTEoucHJvdG8aEU9DQ0hO",
+            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8a",
+            "EUpHRktJQ0RDRkxKLnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8aEU9DQ0hO",
             "RUZIR05FLnByb3RvIq4FChBQbGF5ZXJMb2dpbkNzUmVxEhMKC0JOSUdQRE9P",
             "SUxJGAggASgJEhQKC0lHTkZCTEdKSU9KGMkFIAEoCRIUCgxsb2dpbl9yYW5k",
             "b20YBSABKAQSFAoLTUxOQUJFUElOREIYoAEgASgNEhQKC0dNQUxDUE5PSEJG",
@@ -44,7 +44,7 @@ namespace EggLink.DanhengServer.Proto {
             "ChJjbGllbnRfcmVzX3ZlcnNpb24YDCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.JGFKICDCFLJReflection.Descriptor, global::EggLink.DanhengServer.Proto.OCCHNEFHGNEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.JGFKICDCFLJReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.OCCHNEFHGNEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerLoginCsReq), global::EggLink.DanhengServer.Proto.PlayerLoginCsReq.Parser, new[]{ "BNIGPDOOILI", "IGNFBLGJIOJ", "LoginRandom", "MLNABEPINDB", "GMALCPNOHBF", "Signature", "JMKHDHAIOIM", "DMPMHCCFBKG", "RogueGetInfo", "AKCEJFCFBAN", "HAEHHCPOAPP", "OEHJLODAHFN", "FADPDIBKNBI", "PKLICGMEIMB", "ClientVersion", "KIBBNBNGIJD", "OEENCFMCAHD", "HJDMJPEBPPM", "KFDJEIEOBBN", "MIOHKAOIDNK", "NHBHBALHJML", "OHPCKCNAEIK", "GEHAPNIHCDO", "Platform", "BPCKJKDENCB", "OCDACJNNJNJ", "BNBOALIAPAE", "ClientResVersion" }, null, null, null, null)
           }));

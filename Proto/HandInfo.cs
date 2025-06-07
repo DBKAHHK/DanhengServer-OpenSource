@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static HandInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5IYW5kSW5mby5wcm90bxoQTW90aW9uSW5mby5wcm90byJ+CghIYW5kSW5m",
-            "bxITCgtNQ0JJT0hNSU1HThgGIAEoDRIRCgljb25maWdfaWQYByABKA0SIAoL",
-            "aGFuZF9tb3Rpb24YASABKAsyCy5Nb3Rpb25JbmZvEhMKC01KTk5CTENEQ0JK",
-            "GAkgASgMEhMKC0dGSklJQUJBTkxNGAwgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Cg5IYW5kSW5mby5wcm90bxoQTW90aW9uSW5mby5wcm90byKDAQoISGFuZElu",
+            "Zm8SFQoNaGFuZF9jb2luX251bRgGIAEoDRIRCgljb25maWdfaWQYByABKA0S",
+            "IAoLaGFuZF9tb3Rpb24YASABKAsyCy5Nb3Rpb25JbmZvEhcKD2hhbmRfYnl0",
+            "ZV92YWx1ZRgJIAEoDBISCgpoYW5kX3N0YXRlGAwgASgNQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HandInfo), global::EggLink.DanhengServer.Proto.HandInfo.Parser, new[]{ "MCBIOHMIMGN", "ConfigId", "HandMotion", "MJNNBLCDCBJ", "GFJIIABANLM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HandInfo), global::EggLink.DanhengServer.Proto.HandInfo.Parser, new[]{ "HandCoinNum", "ConfigId", "HandMotion", "HandByteValue", "HandState" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +74,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HandInfo(HandInfo other) : this() {
-      mCBIOHMIMGN_ = other.mCBIOHMIMGN_;
+      handCoinNum_ = other.handCoinNum_;
       configId_ = other.configId_;
       handMotion_ = other.handMotion_ != null ? other.handMotion_.Clone() : null;
-      mJNNBLCDCBJ_ = other.mJNNBLCDCBJ_;
-      gFJIIABANLM_ = other.gFJIIABANLM_;
+      handByteValue_ = other.handByteValue_;
+      handState_ = other.handState_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,15 +88,15 @@ namespace EggLink.DanhengServer.Proto {
       return new HandInfo(this);
     }
 
-    /// <summary>Field number for the "MCBIOHMIMGN" field.</summary>
-    public const int MCBIOHMIMGNFieldNumber = 6;
-    private uint mCBIOHMIMGN_;
+    /// <summary>Field number for the "hand_coin_num" field.</summary>
+    public const int HandCoinNumFieldNumber = 6;
+    private uint handCoinNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MCBIOHMIMGN {
-      get { return mCBIOHMIMGN_; }
+    public uint HandCoinNum {
+      get { return handCoinNum_; }
       set {
-        mCBIOHMIMGN_ = value;
+        handCoinNum_ = value;
       }
     }
 
@@ -124,27 +124,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MJNNBLCDCBJ" field.</summary>
-    public const int MJNNBLCDCBJFieldNumber = 9;
-    private pb::ByteString mJNNBLCDCBJ_ = pb::ByteString.Empty;
+    /// <summary>Field number for the "hand_byte_value" field.</summary>
+    public const int HandByteValueFieldNumber = 9;
+    private pb::ByteString handByteValue_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString MJNNBLCDCBJ {
-      get { return mJNNBLCDCBJ_; }
+    public pb::ByteString HandByteValue {
+      get { return handByteValue_; }
       set {
-        mJNNBLCDCBJ_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        handByteValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "GFJIIABANLM" field.</summary>
-    public const int GFJIIABANLMFieldNumber = 12;
-    private uint gFJIIABANLM_;
+    /// <summary>Field number for the "hand_state" field.</summary>
+    public const int HandStateFieldNumber = 12;
+    private uint handState_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GFJIIABANLM {
-      get { return gFJIIABANLM_; }
+    public uint HandState {
+      get { return handState_; }
       set {
-        gFJIIABANLM_ = value;
+        handState_ = value;
       }
     }
 
@@ -163,11 +163,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MCBIOHMIMGN != other.MCBIOHMIMGN) return false;
+      if (HandCoinNum != other.HandCoinNum) return false;
       if (ConfigId != other.ConfigId) return false;
       if (!object.Equals(HandMotion, other.HandMotion)) return false;
-      if (MJNNBLCDCBJ != other.MJNNBLCDCBJ) return false;
-      if (GFJIIABANLM != other.GFJIIABANLM) return false;
+      if (HandByteValue != other.HandByteValue) return false;
+      if (HandState != other.HandState) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -175,11 +175,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MCBIOHMIMGN != 0) hash ^= MCBIOHMIMGN.GetHashCode();
+      if (HandCoinNum != 0) hash ^= HandCoinNum.GetHashCode();
       if (ConfigId != 0) hash ^= ConfigId.GetHashCode();
       if (handMotion_ != null) hash ^= HandMotion.GetHashCode();
-      if (MJNNBLCDCBJ.Length != 0) hash ^= MJNNBLCDCBJ.GetHashCode();
-      if (GFJIIABANLM != 0) hash ^= GFJIIABANLM.GetHashCode();
+      if (HandByteValue.Length != 0) hash ^= HandByteValue.GetHashCode();
+      if (HandState != 0) hash ^= HandState.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -202,21 +202,21 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(10);
         output.WriteMessage(HandMotion);
       }
-      if (MCBIOHMIMGN != 0) {
+      if (HandCoinNum != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(MCBIOHMIMGN);
+        output.WriteUInt32(HandCoinNum);
       }
       if (ConfigId != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(ConfigId);
       }
-      if (MJNNBLCDCBJ.Length != 0) {
+      if (HandByteValue.Length != 0) {
         output.WriteRawTag(74);
-        output.WriteBytes(MJNNBLCDCBJ);
+        output.WriteBytes(HandByteValue);
       }
-      if (GFJIIABANLM != 0) {
+      if (HandState != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(GFJIIABANLM);
+        output.WriteUInt32(HandState);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -232,21 +232,21 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(10);
         output.WriteMessage(HandMotion);
       }
-      if (MCBIOHMIMGN != 0) {
+      if (HandCoinNum != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(MCBIOHMIMGN);
+        output.WriteUInt32(HandCoinNum);
       }
       if (ConfigId != 0) {
         output.WriteRawTag(56);
         output.WriteUInt32(ConfigId);
       }
-      if (MJNNBLCDCBJ.Length != 0) {
+      if (HandByteValue.Length != 0) {
         output.WriteRawTag(74);
-        output.WriteBytes(MJNNBLCDCBJ);
+        output.WriteBytes(HandByteValue);
       }
-      if (GFJIIABANLM != 0) {
+      if (HandState != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(GFJIIABANLM);
+        output.WriteUInt32(HandState);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -258,8 +258,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MCBIOHMIMGN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MCBIOHMIMGN);
+      if (HandCoinNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HandCoinNum);
       }
       if (ConfigId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ConfigId);
@@ -267,11 +267,11 @@ namespace EggLink.DanhengServer.Proto {
       if (handMotion_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(HandMotion);
       }
-      if (MJNNBLCDCBJ.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(MJNNBLCDCBJ);
+      if (HandByteValue.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(HandByteValue);
       }
-      if (GFJIIABANLM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GFJIIABANLM);
+      if (HandState != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HandState);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -285,8 +285,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MCBIOHMIMGN != 0) {
-        MCBIOHMIMGN = other.MCBIOHMIMGN;
+      if (other.HandCoinNum != 0) {
+        HandCoinNum = other.HandCoinNum;
       }
       if (other.ConfigId != 0) {
         ConfigId = other.ConfigId;
@@ -297,11 +297,11 @@ namespace EggLink.DanhengServer.Proto {
         }
         HandMotion.MergeFrom(other.HandMotion);
       }
-      if (other.MJNNBLCDCBJ.Length != 0) {
-        MJNNBLCDCBJ = other.MJNNBLCDCBJ;
+      if (other.HandByteValue.Length != 0) {
+        HandByteValue = other.HandByteValue;
       }
-      if (other.GFJIIABANLM != 0) {
-        GFJIIABANLM = other.GFJIIABANLM;
+      if (other.HandState != 0) {
+        HandState = other.HandState;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -326,7 +326,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 48: {
-            MCBIOHMIMGN = input.ReadUInt32();
+            HandCoinNum = input.ReadUInt32();
             break;
           }
           case 56: {
@@ -334,11 +334,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            MJNNBLCDCBJ = input.ReadBytes();
+            HandByteValue = input.ReadBytes();
             break;
           }
           case 96: {
-            GFJIIABANLM = input.ReadUInt32();
+            HandState = input.ReadUInt32();
             break;
           }
         }
@@ -364,7 +364,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 48: {
-            MCBIOHMIMGN = input.ReadUInt32();
+            HandCoinNum = input.ReadUInt32();
             break;
           }
           case 56: {
@@ -372,11 +372,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            MJNNBLCDCBJ = input.ReadBytes();
+            HandByteValue = input.ReadBytes();
             break;
           }
           case 96: {
-            GFJIIABANLM = input.ReadUInt32();
+            HandState = input.ReadUInt32();
             break;
           }
         }

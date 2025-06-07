@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static PVEBattleResultScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpQVkVCYXR0bGVSZXN1bHRTY1JzcC5wcm90bxoVQmF0dGxlRW5kU3RhdHVz",
-            "LnByb3RvGhFNQktPQ01NSUNQRy5wcm90bxoSQmF0dGxlQXZhdGFyLnByb3Rv",
-            "Gg5JdGVtTGlzdC5wcm90byLpAwoUUFZFQmF0dGxlUmVzdWx0U2NSc3ASEwoL",
+            "ChpQVkVCYXR0bGVSZXN1bHRTY1JzcC5wcm90bxoSQmF0dGxlQXZhdGFyLnBy",
+            "b3RvGg5JdGVtTGlzdC5wcm90bxoRTUJLT0NNTUlDUEcucHJvdG8aFUJhdHRs",
+            "ZUVuZFN0YXR1cy5wcm90byLpAwoUUFZFQmF0dGxlUmVzdWx0U2NSc3ASEwoL",
             "R0dNUEZOS09GS0QYBSABKA0SIQoOaXRlbV9saXN0X3VuazEYCyABKAsyCS5J",
             "dGVtTGlzdBITCgtLTE9ERUxFQ01DSRgCIAEoDRIbChNtaXNtYXRjaF90dXJu",
             "X2NvdW50GA0gASgNEikKEmJhdHRsZV9hdmF0YXJfbGlzdBgBIAMoCzINLkJh",
@@ -40,7 +40,7 @@ namespace EggLink.DanhengServer.Proto {
             "dmVudF9pZBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleEndStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.MBKOCMMICPGReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.MBKOCMMICPGReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleEndStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PVEBattleResultScRsp), global::EggLink.DanhengServer.Proto.PVEBattleResultScRsp.Parser, new[]{ "GGMPFNKOFKD", "ItemListUnk1", "KLODELECMCI", "MismatchTurnCount", "BattleAvatarList", "Retcode", "DropData", "APJKCAOHAFP", "EndStatus", "StageId", "MultipleDropData", "KJCHGEHDLNO", "HKPGCAPIMAO", "CheckIdentical", "ItemListUnk2", "BattleId", "EventId" }, null, null, null, null)
           }));

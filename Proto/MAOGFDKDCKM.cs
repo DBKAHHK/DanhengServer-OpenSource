@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static MAOGFDKDCKMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFNQU9HRkRLRENLTS5wcm90bxoUTWFyYmxlR2FtZUluZm8ucHJvdG8aEUhC",
-            "R0hBT1BCS0pQLnByb3RvGhFQUElGRktKRUpKQS5wcm90bxoRRU9KTE5HRERM",
+            "ChFNQU9HRkRLRENLTS5wcm90bxoRSEJHSEFPUEJLSlAucHJvdG8aEVBQSUZG",
+            "S0pFSkpBLnByb3RvGhRNYXJibGVHYW1lSW5mby5wcm90bxoRRU9KTE5HRERM",
             "Tk4ucHJvdG8i7wIKC01BT0dGREtEQ0tNEhEKCWN1cl9yb3VuZBgFIAEoDRIp",
             "ChBtYXJibGVfZ2FtZV9pbmZvGA4gASgLMg8uTWFyYmxlR2FtZUluZm8SEwoL",
             "T01LS1BHRkpIRkUYCiABKAgSGwoFcGhhc2UYAiABKA4yDC5QUElGRktKRUpK",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "IAEoCzIMLkVPSkxOR0RETE5OQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HBGHAOPBKJPReflection.Descriptor, global::EggLink.DanhengServer.Proto.PPIFFKJEJJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOJLNGDDLNNReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HBGHAOPBKJPReflection.Descriptor, global::EggLink.DanhengServer.Proto.PPIFFKJEJJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOJLNGDDLNNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MAOGFDKDCKM), global::EggLink.DanhengServer.Proto.MAOGFDKDCKM.Parser, new[]{ "CurRound", "MarbleGameInfo", "OMKKPGFJHFE", "Phase", "SealOwnerUid", "AllowedMoveSealList", "DIBPGGOOGPK", "TeamBPlayer", "IEHFHKMDAGC", "OLKMCBJFLEJ", "DPLGCEKJACK", "TeamAPlayer" }, null, null, null, null)
           }));

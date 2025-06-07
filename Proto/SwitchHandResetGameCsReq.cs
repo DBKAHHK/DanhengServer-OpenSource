@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5Td2l0Y2hIYW5kUmVzZXRHYW1lQ3NSZXEucHJvdG8aDkhhbmRJbmZvLnBy",
-            "b3RvIjoKGFN3aXRjaEhhbmRSZXNldEdhbWVDc1JlcRIeCgtEUEpOQ0JCT0hL",
-            "RRgCIAEoCzIJLkhhbmRJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
-            "UHJvdG9iBnByb3RvMw=="));
+            "b3RvIj4KGFN3aXRjaEhhbmRSZXNldEdhbWVDc1JlcRIiCg9yZXNldF9oYW5k",
+            "X2luZm8YAiABKAsyCS5IYW5kSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HandInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwitchHandResetGameCsReq), global::EggLink.DanhengServer.Proto.SwitchHandResetGameCsReq.Parser, new[]{ "DPJNCBBOHKE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwitchHandResetGameCsReq), global::EggLink.DanhengServer.Proto.SwitchHandResetGameCsReq.Parser, new[]{ "ResetHandInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SwitchHandResetGameCsReq(SwitchHandResetGameCsReq other) : this() {
-      dPJNCBBOHKE_ = other.dPJNCBBOHKE_ != null ? other.dPJNCBBOHKE_.Clone() : null;
+      resetHandInfo_ = other.resetHandInfo_ != null ? other.resetHandInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SwitchHandResetGameCsReq(this);
     }
 
-    /// <summary>Field number for the "DPJNCBBOHKE" field.</summary>
-    public const int DPJNCBBOHKEFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.HandInfo dPJNCBBOHKE_;
+    /// <summary>Field number for the "reset_hand_info" field.</summary>
+    public const int ResetHandInfoFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.HandInfo resetHandInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HandInfo DPJNCBBOHKE {
-      get { return dPJNCBBOHKE_; }
+    public global::EggLink.DanhengServer.Proto.HandInfo ResetHandInfo {
+      get { return resetHandInfo_; }
       set {
-        dPJNCBBOHKE_ = value;
+        resetHandInfo_ = value;
       }
     }
 
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(DPJNCBBOHKE, other.DPJNCBBOHKE)) return false;
+      if (!object.Equals(ResetHandInfo, other.ResetHandInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (dPJNCBBOHKE_ != null) hash ^= DPJNCBBOHKE.GetHashCode();
+      if (resetHandInfo_ != null) hash ^= ResetHandInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (dPJNCBBOHKE_ != null) {
+      if (resetHandInfo_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(DPJNCBBOHKE);
+        output.WriteMessage(ResetHandInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (dPJNCBBOHKE_ != null) {
+      if (resetHandInfo_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(DPJNCBBOHKE);
+        output.WriteMessage(ResetHandInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -165,8 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (dPJNCBBOHKE_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DPJNCBBOHKE);
+      if (resetHandInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResetHandInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -180,11 +180,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.dPJNCBBOHKE_ != null) {
-        if (dPJNCBBOHKE_ == null) {
-          DPJNCBBOHKE = new global::EggLink.DanhengServer.Proto.HandInfo();
+      if (other.resetHandInfo_ != null) {
+        if (resetHandInfo_ == null) {
+          ResetHandInfo = new global::EggLink.DanhengServer.Proto.HandInfo();
         }
-        DPJNCBBOHKE.MergeFrom(other.DPJNCBBOHKE);
+        ResetHandInfo.MergeFrom(other.ResetHandInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -202,10 +202,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 18: {
-            if (dPJNCBBOHKE_ == null) {
-              DPJNCBBOHKE = new global::EggLink.DanhengServer.Proto.HandInfo();
+            if (resetHandInfo_ == null) {
+              ResetHandInfo = new global::EggLink.DanhengServer.Proto.HandInfo();
             }
-            input.ReadMessage(DPJNCBBOHKE);
+            input.ReadMessage(ResetHandInfo);
             break;
           }
         }
@@ -224,10 +224,10 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 18: {
-            if (dPJNCBBOHKE_ == null) {
-              DPJNCBBOHKE = new global::EggLink.DanhengServer.Proto.HandInfo();
+            if (resetHandInfo_ == null) {
+              ResetHandInfo = new global::EggLink.DanhengServer.Proto.HandInfo();
             }
-            input.ReadMessage(DPJNCBBOHKE);
+            input.ReadMessage(ResetHandInfo);
             break;
           }
         }

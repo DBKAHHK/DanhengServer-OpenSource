@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetBigDataRecommendScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5HZXRCaWdEYXRhUmVjb21tZW5kU2NSc3AucHJvdG8aGkJpZ0RhdGFSZWNv",
-            "bW1lbmRUeXBlLnByb3RvGhFHUENQR0JIT0ZDRi5wcm90bxoYRXF1aXBtZW50",
-            "UmVjb21tZW5kLnByb3RvGhRSZWxpY1JlY29tbWVuZC5wcm90byKkAgoYR2V0",
+            "Ch5HZXRCaWdEYXRhUmVjb21tZW5kU2NSc3AucHJvdG8aFFJlbGljUmVjb21t",
+            "ZW5kLnByb3RvGhpCaWdEYXRhUmVjb21tZW5kVHlwZS5wcm90bxoRR1BDUEdC",
+            "SE9GQ0YucHJvdG8aGEVxdWlwbWVudFJlY29tbWVuZC5wcm90byKkAgoYR2V0",
             "QmlnRGF0YVJlY29tbWVuZFNjUnNwEjYKF2JpZ19kYXRhX3JlY29tbWVuZF90",
             "eXBlGAYgASgOMhUuQmlnRGF0YVJlY29tbWVuZFR5cGUSFQoNaGFzX3JlY29t",
             "bWFuZBgEIAEoCBIPCgdyZXRjb2RlGAIgASgNEhQKDGVxdWlwX2F2YXRhchgF",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "SABCDQoLRFBDTkpJTExFSEpCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BigDataRecommendTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GPCPGBHOFCFReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentRecommendReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicRecommendReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicRecommendReflection.Descriptor, global::EggLink.DanhengServer.Proto.BigDataRecommendTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GPCPGBHOFCFReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentRecommendReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBigDataRecommendScRsp), global::EggLink.DanhengServer.Proto.GetBigDataRecommendScRsp.Parser, new[]{ "BigDataRecommendType", "HasRecommand", "Retcode", "EquipAvatar", "EquipmentRecommend", "RelicRecommend", "KGHLFCEOBKK" }, new[]{ "DPCNJILLEHJ" }, null, null, null)
           }));

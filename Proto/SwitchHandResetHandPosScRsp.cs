@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFTd2l0Y2hIYW5kUmVzZXRIYW5kUG9zU2NSc3AucHJvdG8aDkhhbmRJbmZv",
-            "LnByb3RvIk4KG1N3aXRjaEhhbmRSZXNldEhhbmRQb3NTY1JzcBIPCgdyZXRj",
-            "b2RlGAggASgNEh4KC0xCT01ERkhGRkNGGAwgASgLMgkuSGFuZEluZm9CHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "LnByb3RvIlMKG1N3aXRjaEhhbmRSZXNldEhhbmRQb3NTY1JzcBIPCgdyZXRj",
+            "b2RlGAggASgNEiMKEHRhcmdldF9oYW5kX2luZm8YDCABKAsyCS5IYW5kSW5m",
+            "b0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HandInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwitchHandResetHandPosScRsp), global::EggLink.DanhengServer.Proto.SwitchHandResetHandPosScRsp.Parser, new[]{ "Retcode", "LBOMDFHFFCF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwitchHandResetHandPosScRsp), global::EggLink.DanhengServer.Proto.SwitchHandResetHandPosScRsp.Parser, new[]{ "Retcode", "TargetHandInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SwitchHandResetHandPosScRsp(SwitchHandResetHandPosScRsp other) : this() {
       retcode_ = other.retcode_;
-      lBOMDFHFFCF_ = other.lBOMDFHFFCF_ != null ? other.lBOMDFHFFCF_.Clone() : null;
+      targetHandInfo_ = other.targetHandInfo_ != null ? other.targetHandInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LBOMDFHFFCF" field.</summary>
-    public const int LBOMDFHFFCFFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.HandInfo lBOMDFHFFCF_;
+    /// <summary>Field number for the "target_hand_info" field.</summary>
+    public const int TargetHandInfoFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.HandInfo targetHandInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HandInfo LBOMDFHFFCF {
-      get { return lBOMDFHFFCF_; }
+    public global::EggLink.DanhengServer.Proto.HandInfo TargetHandInfo {
+      get { return targetHandInfo_; }
       set {
-        lBOMDFHFFCF_ = value;
+        targetHandInfo_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (!object.Equals(LBOMDFHFFCF, other.LBOMDFHFFCF)) return false;
+      if (!object.Equals(TargetHandInfo, other.TargetHandInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (lBOMDFHFFCF_ != null) hash ^= LBOMDFHFFCF.GetHashCode();
+      if (targetHandInfo_ != null) hash ^= TargetHandInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -156,9 +156,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      if (lBOMDFHFFCF_ != null) {
+      if (targetHandInfo_ != null) {
         output.WriteRawTag(98);
-        output.WriteMessage(LBOMDFHFFCF);
+        output.WriteMessage(TargetHandInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -174,9 +174,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      if (lBOMDFHFFCF_ != null) {
+      if (targetHandInfo_ != null) {
         output.WriteRawTag(98);
-        output.WriteMessage(LBOMDFHFFCF);
+        output.WriteMessage(TargetHandInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (lBOMDFHFFCF_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LBOMDFHFFCF);
+      if (targetHandInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TargetHandInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,11 +209,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.lBOMDFHFFCF_ != null) {
-        if (lBOMDFHFFCF_ == null) {
-          LBOMDFHFFCF = new global::EggLink.DanhengServer.Proto.HandInfo();
+      if (other.targetHandInfo_ != null) {
+        if (targetHandInfo_ == null) {
+          TargetHandInfo = new global::EggLink.DanhengServer.Proto.HandInfo();
         }
-        LBOMDFHFFCF.MergeFrom(other.LBOMDFHFFCF);
+        TargetHandInfo.MergeFrom(other.TargetHandInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -235,10 +235,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 98: {
-            if (lBOMDFHFFCF_ == null) {
-              LBOMDFHFFCF = new global::EggLink.DanhengServer.Proto.HandInfo();
+            if (targetHandInfo_ == null) {
+              TargetHandInfo = new global::EggLink.DanhengServer.Proto.HandInfo();
             }
-            input.ReadMessage(LBOMDFHFFCF);
+            input.ReadMessage(TargetHandInfo);
             break;
           }
         }
@@ -261,10 +261,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 98: {
-            if (lBOMDFHFFCF_ == null) {
-              LBOMDFHFFCF = new global::EggLink.DanhengServer.Proto.HandInfo();
+            if (targetHandInfo_ == null) {
+              TargetHandInfo = new global::EggLink.DanhengServer.Proto.HandInfo();
             }
-            input.ReadMessage(LBOMDFHFFCF);
+            input.ReadMessage(TargetHandInfo);
             break;
           }
         }

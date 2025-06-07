@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static SwitchHandDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTd2l0Y2hIYW5kRGF0YVNjUnNwLnByb3RvGg5IYW5kSW5mby5wcm90byJw",
-            "ChNTd2l0Y2hIYW5kRGF0YVNjUnNwEh4KC0xCT01ERkhGRkNGGAYgAygLMgku",
-            "SGFuZEluZm8SEwoLRExOR0hIRE1KSk0YCyABKA0SEwoLQUJPSkpBTkRGTk8Y",
-            "BCABKA0SDwoHcmV0Y29kZRgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "ChlTd2l0Y2hIYW5kRGF0YVNjUnNwLnByb3RvGg5IYW5kSW5mby5wcm90byJ1",
+            "ChNTd2l0Y2hIYW5kRGF0YVNjUnNwEiMKEHRhcmdldF9oYW5kX2luZm8YBiAD",
+            "KAsyCS5IYW5kSW5mbxITCgtETE5HSEhETUpKTRgLIAEoDRITCgtBQk9KSkFO",
+            "REZOTxgEIAEoDRIPCgdyZXRjb2RlGAMgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HandInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwitchHandDataScRsp), global::EggLink.DanhengServer.Proto.SwitchHandDataScRsp.Parser, new[]{ "LBOMDFHFFCF", "DLNGHHDMJJM", "ABOJJANDFNO", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwitchHandDataScRsp), global::EggLink.DanhengServer.Proto.SwitchHandDataScRsp.Parser, new[]{ "TargetHandInfo", "DLNGHHDMJJM", "ABOJJANDFNO", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SwitchHandDataScRsp(SwitchHandDataScRsp other) : this() {
-      lBOMDFHFFCF_ = other.lBOMDFHFFCF_.Clone();
+      targetHandInfo_ = other.targetHandInfo_.Clone();
       dLNGHHDMJJM_ = other.dLNGHHDMJJM_;
       aBOJJANDFNO_ = other.aBOJJANDFNO_;
       retcode_ = other.retcode_;
@@ -87,15 +87,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SwitchHandDataScRsp(this);
     }
 
-    /// <summary>Field number for the "LBOMDFHFFCF" field.</summary>
-    public const int LBOMDFHFFCFFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HandInfo> _repeated_lBOMDFHFFCF_codec
+    /// <summary>Field number for the "target_hand_info" field.</summary>
+    public const int TargetHandInfoFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HandInfo> _repeated_targetHandInfo_codec
         = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.HandInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HandInfo> lBOMDFHFFCF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HandInfo>();
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HandInfo> targetHandInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HandInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HandInfo> LBOMDFHFFCF {
-      get { return lBOMDFHFFCF_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HandInfo> TargetHandInfo {
+      get { return targetHandInfo_; }
     }
 
     /// <summary>Field number for the "DLNGHHDMJJM" field.</summary>
@@ -149,7 +149,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!lBOMDFHFFCF_.Equals(other.lBOMDFHFFCF_)) return false;
+      if(!targetHandInfo_.Equals(other.targetHandInfo_)) return false;
       if (DLNGHHDMJJM != other.DLNGHHDMJJM) return false;
       if (ABOJJANDFNO != other.ABOJJANDFNO) return false;
       if (Retcode != other.Retcode) return false;
@@ -160,7 +160,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= lBOMDFHFFCF_.GetHashCode();
+      hash ^= targetHandInfo_.GetHashCode();
       if (DLNGHHDMJJM != 0) hash ^= DLNGHHDMJJM.GetHashCode();
       if (ABOJJANDFNO != 0) hash ^= ABOJJANDFNO.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
@@ -190,7 +190,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(ABOJJANDFNO);
       }
-      lBOMDFHFFCF_.WriteTo(output, _repeated_lBOMDFHFFCF_codec);
+      targetHandInfo_.WriteTo(output, _repeated_targetHandInfo_codec);
       if (DLNGHHDMJJM != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(DLNGHHDMJJM);
@@ -213,7 +213,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(ABOJJANDFNO);
       }
-      lBOMDFHFFCF_.WriteTo(ref output, _repeated_lBOMDFHFFCF_codec);
+      targetHandInfo_.WriteTo(ref output, _repeated_targetHandInfo_codec);
       if (DLNGHHDMJJM != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(DLNGHHDMJJM);
@@ -228,7 +228,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += lBOMDFHFFCF_.CalculateSize(_repeated_lBOMDFHFFCF_codec);
+      size += targetHandInfo_.CalculateSize(_repeated_targetHandInfo_codec);
       if (DLNGHHDMJJM != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DLNGHHDMJJM);
       }
@@ -250,7 +250,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      lBOMDFHFFCF_.Add(other.lBOMDFHFFCF_);
+      targetHandInfo_.Add(other.targetHandInfo_);
       if (other.DLNGHHDMJJM != 0) {
         DLNGHHDMJJM = other.DLNGHHDMJJM;
       }
@@ -284,7 +284,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 50: {
-            lBOMDFHFFCF_.AddEntriesFrom(input, _repeated_lBOMDFHFFCF_codec);
+            targetHandInfo_.AddEntriesFrom(input, _repeated_targetHandInfo_codec);
             break;
           }
           case 88: {
@@ -315,7 +315,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 50: {
-            lBOMDFHFFCF_.AddEntriesFrom(ref input, _repeated_lBOMDFHFFCF_codec);
+            targetHandInfo_.AddEntriesFrom(ref input, _repeated_targetHandInfo_codec);
             break;
           }
           case 88: {

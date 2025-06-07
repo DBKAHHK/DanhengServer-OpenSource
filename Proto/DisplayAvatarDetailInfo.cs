@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static DisplayAvatarDetailInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1EaXNwbGF5QXZhdGFyRGV0YWlsSW5mby5wcm90bxoaRGlzcGxheUVxdWlw",
-            "bWVudEluZm8ucHJvdG8aFkRpc3BsYXlSZWxpY0luZm8ucHJvdG8aFUF2YXRh",
-            "clNraWxsVHJlZS5wcm90byKfAgoXRGlzcGxheUF2YXRhckRldGFpbEluZm8S",
+            "Ch1EaXNwbGF5QXZhdGFyRGV0YWlsSW5mby5wcm90bxoVQXZhdGFyU2tpbGxU",
+            "cmVlLnByb3RvGhZEaXNwbGF5UmVsaWNJbmZvLnByb3RvGhpEaXNwbGF5RXF1",
+            "aXBtZW50SW5mby5wcm90byKfAgoXRGlzcGxheUF2YXRhckRldGFpbEluZm8S",
             "EQoJcHJvbW90aW9uGAEgASgNEhEKCWF2YXRhcl9pZBgMIAEoDRITCgtlbmhh",
             "bmNlZF9pZBgHIAEoDRIXCg9kcmVzc2VkX3NraW5faWQYDSABKA0SCwoDZXhw",
             "GAogASgNEgwKBHJhbmsYBSABKA0SDQoFbGV2ZWwYAyABKA0SKAoOc2tpbGx0",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "CnJlbGljX2xpc3QYBiADKAsyES5EaXNwbGF5UmVsaWNJbmZvQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayEquipmentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo), global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser, new[]{ "Promotion", "AvatarId", "EnhancedId", "DressedSkinId", "Exp", "Rank", "Level", "SkilltreeList", "Pos", "Equipment", "RelicList" }, null, null, null, null)
           }));
