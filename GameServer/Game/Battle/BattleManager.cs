@@ -18,6 +18,7 @@ namespace EggLink.DanhengServer.GameServer.Game.Battle;
 public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 {
     public StageConfigExcel? NextBattleStageConfig { get; set; }
+    public List<int> NextBattleMonsterIds { get; set; } = [];
 
     public async ValueTask<BattleInstance?> StartBattle(BaseGameEntity attackEntity, List<BaseGameEntity> targetEntityList,
         bool isSkill)
