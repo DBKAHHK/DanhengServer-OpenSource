@@ -75,11 +75,14 @@ public class AvatarManager(PlayerInstance player) : BasePlayerManager(player)
 
         if (!GameData.SpecialAvatarData.TryGetValue(avatarId * 10 + 0, out var excel)) return null;
 
+        var baseAvatarId = excel.AvatarID;
+        if (GameData.MultiplePathAvatarConfigData.TryGetValue(baseAvatarId, out var multiple))
+            baseAvatarId = multiple.BaseAvatarID;
         avatar = new SpecialAvatarInfo
         {
             SpecialAvatarId = excel.SpecialAvatarID,
             AvatarId = excel.AvatarID,
-            BaseAvatarId = excel.AvatarID,
+            BaseAvatarId = baseAvatarId,
             Level = excel.Level,
             Promotion = excel.Promotion
         };
