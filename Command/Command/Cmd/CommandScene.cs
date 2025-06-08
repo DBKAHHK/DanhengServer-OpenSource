@@ -204,6 +204,51 @@ public class CommandScene : ICommand
         await arg.SendMsg(I18NManager.Translate("Game.Command.Scene.SceneReset", floorId.ToString()));
     }
 
+    [CommandMethod("0 fsv")]
+    public async ValueTask SetFSV(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        if (arg.Args.Count < 3)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
+            return;
+        }
+
+        var name = arg.Args[1];
+        var value = int.Parse(arg.Args[2]);
+
+        await arg.Target!.Player!.SceneInstance!.UpdateFloorSavedValue(name, value);
+        await arg.SendMsg(I18NManager.Translate("Game.Command.Scene.FSVSet", name, value.ToString()));
+    }
+
+    [CommandMethod("0 gp")]
+    public async ValueTask SetGP(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        if (arg.Args.Count < 4)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
+            return;
+        }
+
+        var name = arg.Args[2];
+        var value = int.Parse(arg.Args[3]);
+        var groupId = int.Parse(arg.Args[1]);
+
+        await arg.Target!.Player!.SceneInstance!.UpdateGroupProperty(groupId, name, value);
+        await arg.SendMsg(I18NManager.Translate("Game.Command.Scene.FSVSet", name, value.ToString()));
+    }
+
     [CommandMethod("0 cur")]
     public async ValueTask GetCurrentScene(CommandArg arg)
     {
