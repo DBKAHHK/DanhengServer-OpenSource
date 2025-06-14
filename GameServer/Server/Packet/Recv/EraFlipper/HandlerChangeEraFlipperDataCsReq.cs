@@ -1,7 +1,6 @@
 ﻿using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Scene.Component;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.EraFlipper;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -21,27 +20,18 @@ public class HandlerChangeEraFlipperDataCsReq : Handler
             return;
         }
 
-        if (req.Data.EraFlipperDataList_.Any(x => x.EraFlipperRegionId == 2) && connection.Player!.SceneInstance!.FloorInfo?.FloorSavedValue.Find(x => x.Name == "FSV_FlashBackCount") !=
-            null)
+        if (req.Data.EraFlipperDataList_.Any(x => x.EraFlipperRegionId == 2))
         {
-            // should save
-            var plane = connection.Player.SceneInstance.PlaneId;
-            var floor = connection.Player.SceneInstance.FloorId;
-            connection.Player.SceneData!.FloorSavedData.TryGetValue(floor, out var value);
-            if (value == null)
-            {
-                value = [];
-                connection.Player.SceneData.FloorSavedData[floor] = value;
-            }
+            var curValue = connection.Player.SceneInstance!.GetFloorSavedValue("FSV_FlashBackCount") + 1;
+            await connection.Player!.SceneInstance!.UpdateFloorSavedValue("FSV_FlashBackCount", curValue);
 
-            value["FSV_FlashBackCount"] = 0;
-            value["FSV_FlashBackCount"] =
-                value.GetValueOrDefault("FSV_FlashBackCount", 0) + 1; // ParamString[2] is the key
-            await connection.SendPacket(new PacketUpdateFloorSavedValueNotify("FSV_FlashBackCount",
-                value["FSV_FlashBackCount"], connection.Player));
-
-            connection.Player.TaskManager?.SceneTaskTrigger.TriggerFloor(plane, floor);
-            connection.Player.MissionManager?.HandleFinishType(MissionFinishTypeEnum.FloorSavedValue);
+            Dictionary<int, int> gpValueDict = [];
+            gpValueDict.Add(1, 2);
+            gpValueDict.Add(2, 3);
+            gpValueDict.Add(3, 5);
+            gpValueDict.Add(4, 6);
+            var gpValue = gpValueDict.GetValueOrDefault(curValue, 0);
+            await connection.Player.SceneInstance!.UpdateGroupProperty(74, "MimiGoStep", gpValue);
         }
 
         component.ChangeEraFlipperStates(req.Data.EraFlipperDataList_.ToList());

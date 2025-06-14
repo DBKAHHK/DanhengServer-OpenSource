@@ -14,11 +14,11 @@ public class PacketGetEraFlipperDataScRsp : BasePacket
             {
                 EraFlipperDataList_ =
                 {
-                    player.SceneData!.EraFlipperData.RegionState.Select(x => new EraFlipperData
-                    {
-                        EraFlipperRegionId = (uint)x.Key,
-                        State = (uint)x.Value
-                    })
+                    //player.SceneData!.EraFlipperData.RegionState.Select(x => new EraFlipperData
+                    //{
+                    //    EraFlipperRegionId = (uint)x.Key,
+                    //    State = (uint)x.Value
+                    //})
                 }
             }
         };

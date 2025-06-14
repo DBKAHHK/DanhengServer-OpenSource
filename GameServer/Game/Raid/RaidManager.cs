@@ -271,14 +271,32 @@ public class RaidManager : BasePlayerManager
         GameData.RaidConfigData.TryGetValue(raidId * 100 + worldLevel, out var config);
         if (config == null) return;
 
-        config.MainMissionIDList.ForEach(async missionId =>
+        HashSet<int> floorIds = [];
+        foreach (var missionId in config.MainMissionIDList)
         {
             await Player.MissionManager!.RemoveMainMission(missionId);
-        });
+
+            GameData.MainMissionData.TryGetValue(missionId, out var mission);
+            if (mission?.MissionInfo.SubMissionList == null) continue;
+            foreach (var i in mission.MissionInfo.SubMissionList.Select(x => x.LevelFloorID).ToHashSet())
+            {
+                floorIds.Add(i);
+            }
+        }
 
         dict.Remove(worldLevel);
 
         if (dict.Count == 0) RaidData.RaidRecordDatas.Remove(raidId);
+
+        // reset scene data
+        foreach (var floorId in floorIds)
+        {
+            Player.SceneData!.PropTimelineData.Remove(floorId);
+            Player.SceneData!.GroupPropertyData.Remove(floorId);
+            Player.SceneData!.FloorTargetPuzzleGroupData.Remove(floorId);
+            Player.SceneData!.FloorSavedData.Remove(floorId);
+            Player.SceneData!.ScenePropData.Remove(floorId);
+        }
 
         await Player.SendPacket(new PacketDelSaveRaidScNotify(raidId, worldLevel));
     }
