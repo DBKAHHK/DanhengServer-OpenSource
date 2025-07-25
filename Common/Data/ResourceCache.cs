@@ -142,12 +142,21 @@ public class ResourceCache
             typeof(GameData).GetProperties(BindingFlags.Public | BindingFlags.Static),
             prop =>
             {
-                if (cacheData.GameDataValues.TryGetValue(prop.Name, out var valueBytes))
-                    prop.SetValue(null, JsonConvert.DeserializeObject(
-                            Encoding.UTF8.GetString(
-                                CompressionHelper.Decompress(valueBytes)), prop.PropertyType, Serializer
-                        )
-                    );
+                try 
+                {
+                    Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem", $"{prop.DeclaringType?.Name}.{prop.Name}"));
+                    if (cacheData.GameDataValues.TryGetValue(prop.Name, out var valueBytes))
+                        prop.SetValue(null, JsonConvert.DeserializeObject(
+                                Encoding.UTF8.GetString(
+                                    CompressionHelper.Decompress(valueBytes)), prop.PropertyType, Serializer
+                            )
+                        );
+                } 
+                catch (Exception e) 
+                {
+                    Logger.Error(I18NManager.Translate("Server.ServerInfo.FailedToLoadItem", $"{prop.DeclaringType?.Name}.{prop.Name}"));
+                    Logger.Error(e.Message);
+                }
             }
         );
 

@@ -58,7 +58,7 @@ public static class GameData
     public static Dictionary<int, MazeSkillExcel> MazeSkillData { get; private set; } = [];
     public static Dictionary<int, AvatarSkinExcel> AvatarSkinData { get; private set; } = [];
     public static Dictionary<int, AvatarDemoConfigExcel> AvatarDemoConfigData { get; private set; } = [];
-    public static Dictionary<int, ExpTypeExcel> ExpTypeData { get; } = [];
+    public static Dictionary<int, ExpTypeExcel> ExpTypeData { get; private set; } = [];
 
     public static Dictionary<int, MultiplePathAvatarConfigExcel> MultiplePathAvatarConfigData { get; private set; } =
         [];
@@ -125,7 +125,7 @@ public static class GameData
 
     public static Dictionary<int, QuestDataExcel> QuestDataData { get; private set; } = [];
     public static Dictionary<int, FinishWayExcel> FinishWayData { get; private set; } = [];
-    public static Dictionary<int, PlayerLevelConfigExcel> PlayerLevelConfigData { get; } = [];
+    public static Dictionary<int, PlayerLevelConfigExcel> PlayerLevelConfigData { get; private set; } = [];
     public static Dictionary<int, BackGroundMusicExcel> BackGroundMusicData { get; private set; } = [];
     public static Dictionary<int, ChatBubbleConfigExcel> ChatBubbleConfigData { get; private set; } = [];
     public static Dictionary<string, RechargeConfigExcel> RechargeConfigData { get; private set; } = [];
@@ -148,7 +148,7 @@ public static class GameData
     #region Maze
 
     [JsonConverter(typeof(ConcurrentDictionaryConverter<string, FloorInfo>))]
-    public static ConcurrentDictionary<string, FloorInfo> FloorInfoData { get; } = [];
+    public static ConcurrentDictionary<string, FloorInfo> FloorInfoData { get; private set; } = [];
 
     public static Dictionary<int, NPCDataExcel> NpcDataData { get; private set; } = [];
     public static Dictionary<int, MapEntranceExcel> MapEntranceData { get; private set; } = [];
@@ -193,7 +193,7 @@ public static class GameData
     public static Dictionary<int, ItemConfigExcel> ItemConfigData { get; private set; } = [];
     public static Dictionary<int, ItemUseBuffDataExcel> ItemUseBuffDataData { get; private set; } = [];
     public static Dictionary<int, EquipmentConfigExcel> EquipmentConfigData { get; private set; } = [];
-    public static Dictionary<int, EquipmentExpTypeExcel> EquipmentExpTypeData { get; } = [];
+    public static Dictionary<int, EquipmentExpTypeExcel> EquipmentExpTypeData { get; private set; } = [];
     public static Dictionary<int, EquipmentExpItemConfigExcel> EquipmentExpItemConfigData { get; private set; } = [];
 
     public static Dictionary<int, EquipmentPromotionConfigExcel> EquipmentPromotionConfigData { get; private set; } =
