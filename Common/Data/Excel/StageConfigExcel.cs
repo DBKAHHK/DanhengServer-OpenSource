@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Proto;
+﻿using System.Numerics;
+using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.Data.Excel;
 
@@ -83,5 +84,5 @@ public class StageMonsterList
 
 public class HashName
 {
-    public long Hash { get; set; } = 0;
+    public BigInteger Hash { get; set; } = 0;
 }

@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Numerics;
+using System.Text;
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Program.Program;
@@ -60,9 +61,9 @@ public static class HandbookGenerator
             return;
         }
 
-        var textMap = JsonConvert.DeserializeObject<Dictionary<long, string>>(File.ReadAllText(textMapPath));
+        var textMap = JsonConvert.DeserializeObject<Dictionary<BigInteger, string>>(File.ReadAllText(textMapPath));
         var fallbackTextMap =
-            JsonConvert.DeserializeObject<Dictionary<long, string>>(File.ReadAllText(fallbackTextMapPath));
+            JsonConvert.DeserializeObject<Dictionary<BigInteger, string>>(File.ReadAllText(fallbackTextMapPath));
 
         if (textMap == null || fallbackTextMap == null)
         {
@@ -139,8 +140,8 @@ public static class HandbookGenerator
         }
     }
 
-    public static void GenerateItem(StringBuilder builder, Dictionary<long, string> map,
-        Dictionary<long, string> fallback, bool setName)
+    public static void GenerateItem(StringBuilder builder, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback, bool setName)
     {
         foreach (var item in GameData.ItemConfigData.Values)
         {
@@ -152,8 +153,8 @@ public static class HandbookGenerator
         }
     }
 
-    public static void GenerateAvatar(StringBuilder builder, Dictionary<long, string> map,
-        Dictionary<long, string> fallback, bool setName)
+    public static void GenerateAvatar(StringBuilder builder, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback, bool setName)
     {
         foreach (var avatar in GameData.AvatarConfigData.Values)
         {
@@ -165,8 +166,8 @@ public static class HandbookGenerator
         }
     }
 
-    public static void GenerateMainMissionId(StringBuilder builder, Dictionary<long, string> map,
-        Dictionary<long, string> fallback)
+    public static void GenerateMainMissionId(StringBuilder builder, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback)
     {
         foreach (var mission in GameData.MainMissionData.Values)
         {
@@ -176,8 +177,8 @@ public static class HandbookGenerator
         }
     }
 
-    public static void GenerateSubMissionId(StringBuilder builder, Dictionary<long, string> map,
-        Dictionary<long, string> fallback)
+    public static void GenerateSubMissionId(StringBuilder builder, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback)
     {
         foreach (var mission in GameData.SubMissionData.Values)
         {
@@ -187,8 +188,8 @@ public static class HandbookGenerator
         }
     }
 
-    public static void GenerateStageId(StringBuilder builder, Dictionary<long, string> map,
-        Dictionary<long, string> fallback)
+    public static void GenerateStageId(StringBuilder builder, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback)
     {
         foreach (var stage in GameData.StageConfigData.Values)
         {
@@ -198,8 +199,8 @@ public static class HandbookGenerator
         }
     }
 
-    public static void GenerateRogueBuff(StringBuilder builder, Dictionary<long, string> map,
-        Dictionary<long, string> fallback, bool setName)
+    public static void GenerateRogueBuff(StringBuilder builder, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback, bool setName)
     {
         foreach (var buff in GameData.RogueMazeBuffData)
         {
@@ -214,8 +215,8 @@ public static class HandbookGenerator
         }
     }
 
-    public static void GenerateRogueMiracleDisplay(StringBuilder builder, Dictionary<long, string> map,
-        Dictionary<long, string> fallback, bool setName)
+    public static void GenerateRogueMiracleDisplay(StringBuilder builder, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback, bool setName)
     {
         foreach (var display in GameData.RogueMiracleData.Values)
         {
@@ -230,7 +231,7 @@ public static class HandbookGenerator
         }
     }
 
-    public static string GetNameFromTextMap(long key, Dictionary<long, string> map, Dictionary<long, string> fallback)
+    public static string GetNameFromTextMap(BigInteger key, Dictionary<BigInteger, string> map, Dictionary<BigInteger, string> fallback)
     {
         if (map.TryGetValue(key, out var value)) return value;
         if (fallback.TryGetValue(key, out value)) return value;
@@ -243,8 +244,8 @@ public static class HandbookGenerator
     }
 
 #if DEBUG
-    public static void GenerateRogueDiceSurfaceDisplay(StringBuilder builder, Dictionary<long, string> map,
-        Dictionary<long, string> fallback)
+    public static void GenerateRogueDiceSurfaceDisplay(StringBuilder builder, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback)
     {
         foreach (var display in GameData.RogueNousDiceSurfaceData.Values)
         {
@@ -258,8 +259,8 @@ public static class HandbookGenerator
         }
     }
 
-    public static void GenerateRogueDialogueDisplay(StringBuilder builder, Dictionary<long, string> map,
-        Dictionary<long, string> fallback)
+    public static void GenerateRogueDialogueDisplay(StringBuilder builder, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback)
     {
         foreach (var npc in GameData.RogueNPCData.Values.Where(x => x.RogueNpcConfig != null))
         {
