@@ -25,7 +25,8 @@ public class DanhengListener
         KeepAliveOptions = new KcpKeepAliveOptions(1000, 30000)
     };
 
-    public static Type BaseConnection { get; set; } = typeof(DanhengConnection);
+    public delegate DanhengConnection ConnectionCreatedHandler(KcpConversation conversation, IPEndPoint remote);
+    public static ConnectionCreatedHandler? CreateConnection { get; set; } = null;
 
     private static Socket? UDPListener => UDPClient?.Client;
     private static IKcpMultiplexConnection? Multiplex => KCPTransport?.Connection;
@@ -120,8 +121,8 @@ public class DanhengListener
     {
         var convId = Connections.GetNextAvailableIndex();
         var convo = Multiplex?.CreateConversation(convId, rcv.RemoteEndPoint, ConvOpt);
-        if (convo == null) return;
-        var con = (DanhengConnection)Activator.CreateInstance(BaseConnection, convo, rcv.RemoteEndPoint)!;
+        if (convo == null || CreateConnection == null) return;
+        var con = CreateConnection(convo, rcv.RemoteEndPoint);
         RegisterConnection(con);
         await SendHandshakeResponse(con, enet);
     }

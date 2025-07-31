@@ -7,7 +7,9 @@ using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.Enums.Task;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.Task.AvatarTask;
 using EggLink.DanhengServer.Proto;
+using System.Collections.Concurrent;
 
 namespace EggLink.DanhengServer.GameServer.Game.Task;
 
@@ -17,8 +19,10 @@ public class LevelTask(PlayerInstance player)
 
     #region Prop Target
 
-    public EntityProp? TargetFetchAdvPropEx(TargetEvaluator act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> TargetFetchAdvPropEx(TargetEvaluator act, SubMissionData subMission, GroupInfo? group = null)
     {
+        await ValueTask.CompletedTask;
+
         if (act is TargetFetchAdvPropEx fetch)
         {
             if (fetch.FetchType != TargetFetchAdvPropFetchTypeEnum.SinglePropByPropID) return null;
@@ -51,33 +55,54 @@ public class LevelTask(PlayerInstance player)
         {
             var methodName = act.Type.Replace("RPG.GameCore.", "");
 
-            var method = GetType().GetMethod(methodName);
-            if (method != null) _ = method.Invoke(this, [act, subMission, group]);
+            var method = GetOrCreateExecuteTask(methodName);
+            if (method != null) _ = method(act, subMission, group);
         }
         catch
         {
         }
     }
 
+    private ExecuteTask? GetOrCreateExecuteTask(string methodName)
+    {
+        // try to get from cache
+        if (_cachedTasks.TryGetValue(methodName, out var method)) return method;
+        var methodProp = GetType().GetMethod(methodName);
+        if (methodProp == null) return null;
+
+        method = (ExecuteTask)Delegate.CreateDelegate(typeof(ExecuteTask), this, methodProp);
+        _cachedTasks[methodName] = method;  // cached
+
+        return method;
+    }
+
+    private delegate ValueTask<object?> ExecuteTask(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null);
+
+    private readonly ConcurrentDictionary<string, ExecuteTask> _cachedTasks = [];
+
     #endregion
 
     #region Task
 
-    public async ValueTask PlayMessage(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> PlayMessage(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is PlayMessage message) await Player.MessageManager!.AddMessageSection(message.MessageSectionID);
+
+        return null;
     }
 
-    public async ValueTask DestroyProp(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> DestroyProp(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is DestroyProp destroyProp)
             foreach (var entity in Player.SceneInstance!.Entities.Values)
                 if (entity is EntityProp prop && prop.GroupId == destroyProp.GroupID.GetValue() &&
                     prop.InstId == destroyProp.ID.GetValue())
                     await Player.SceneInstance.RemoveEntity(entity);
+
+        return null;
     }
 
-    public async ValueTask TriggerCustomString(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> TriggerCustomString(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is TriggerCustomString triggerCustomString)
         {
@@ -91,21 +116,27 @@ public class LevelTask(PlayerInstance player)
 
             await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.PropState);
         }
+
+        return null;
     }
 
-    public async ValueTask EnterMap(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> EnterMap(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is EnterMap enterMap)
             await Player.EnterSceneByEntranceId(enterMap.EntranceID, enterMap.GroupID, enterMap.AnchorID, true);
+
+        return null;
     }
 
-    public async ValueTask EnterMapByCondition(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> EnterMapByCondition(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is EnterMapByCondition enterMapByCondition)
             await Player.EnterSceneByEntranceId(enterMapByCondition.EntranceID.GetValue(), 0, 0, true);
+
+        return null;
     }
 
-    public async ValueTask TriggerPerformance(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> TriggerPerformance(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is TriggerPerformance triggerPerformance)
         {
@@ -117,63 +148,68 @@ public class LevelTask(PlayerInstance player)
                     subMission);
         }
 
-        await System.Threading.Tasks.Task.CompletedTask;
+        await ValueTask.CompletedTask;
+
+        return null;
     }
 
-    public async ValueTask PredicateTaskList(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> PredicateTaskList(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is PredicateTaskList predicateTaskList)
         {
             // handle predicateCondition
             var methodName = predicateTaskList.Predicate.Type.Replace("RPG.GameCore.", "");
 
-            var method = GetType().GetMethod(methodName);
-            if (method != null)
-            {
-                var resp = method.Invoke(this, [predicateTaskList.Predicate, subMission, group]);
-                if (resp is bool res && res)
-                    foreach (var task in predicateTaskList.SuccessTaskList)
-                        TriggerTask(task, subMission, group);
-                else
-                    foreach (var task in predicateTaskList.FailedTaskList)
-                        TriggerTask(task, subMission, group);
-            }
+            var method = GetOrCreateExecuteTask(methodName);
+            if (method == null) return null;
+
+            var resp = await method(predicateTaskList.Predicate, subMission, group);
+            if (resp is true)
+                foreach (var task in predicateTaskList.SuccessTaskList)
+                    TriggerTask(task, subMission, group);
+            else
+                foreach (var task in predicateTaskList.FailedTaskList)
+                    TriggerTask(task, subMission, group);
         }
 
-        await System.Threading.Tasks.Task.CompletedTask;
+        return null;
     }
 
-    public async ValueTask ChangePropState(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> ChangePropState(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
-        if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.PropState)
-            foreach (var entity in Player.SceneInstance!.Entities.Values)
-                if (entity is EntityProp prop && prop.GroupId == subMission.SubMissionInfo.ParamInt1 &&
-                    prop.InstId == subMission.SubMissionInfo.ParamInt2)
-                    try
-                    {
-                        if (prop.Excel.PropStateList.Contains(PropStateEnum.Closed))
-                        {
-                            await prop.SetState(PropStateEnum.Closed);
-                        }
-                        else
-                        {
-                            await prop.SetState(
-                                prop.Excel.PropStateList[prop.Excel.PropStateList.IndexOf(prop.State) + 1]);
+        if (subMission.SubMissionInfo?.FinishType != MissionFinishTypeEnum.PropState) return null;
 
-                            // Elevator
-                            foreach (var id in prop.PropInfo.UnlockControllerID)
-                            foreach (var entity2 in Player.SceneInstance!.Entities.Values)
-                                if (entity2 is EntityProp prop2 && prop2.GroupId == id.Key &&
-                                    id.Value.Contains(prop2.InstId))
-                                    await prop2.SetState(PropStateEnum.Closed);
-                        }
-                    }
-                    catch
+        foreach (var entity in Player.SceneInstance!.Entities.Values)
+            if (entity is EntityProp prop && prop.GroupId == subMission.SubMissionInfo.ParamInt1 &&
+                prop.InstId == subMission.SubMissionInfo.ParamInt2)
+                try
+                {
+                    if (prop.Excel.PropStateList.Contains(PropStateEnum.Closed))
                     {
+                        await prop.SetState(PropStateEnum.Closed);
                     }
+                    else
+                    {
+                        await prop.SetState(
+                            prop.Excel.PropStateList[prop.Excel.PropStateList.IndexOf(prop.State) + 1]);
+
+                        // Elevator
+                        foreach (var id in prop.PropInfo.UnlockControllerID)
+                        foreach (var entity2 in Player.SceneInstance!.Entities.Values)
+                            if (entity2 is EntityProp prop2 && prop2.GroupId == id.Key &&
+                                id.Value.Contains(prop2.InstId))
+                                await prop2.SetState(PropStateEnum.Closed);
+                    }
+                }
+                catch
+                {
+                    // ignored
+                }
+
+        return null;
     }
 
-    public async ValueTask CreateTrialPlayer(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> CreateTrialPlayer(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatar)
             await Player.LineupManager!.AddAvatarToCurTeam(subMission.SubMissionInfo.ParamInt1);
@@ -181,9 +217,11 @@ public class LevelTask(PlayerInstance player)
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatarList)
             subMission.SubMissionInfo.ParamIntList?.ForEach(
                 async x => await Player.LineupManager!.AddAvatarToCurTeam(x));
+
+        return null;
     }
 
-    public async ValueTask ReplaceTrialPlayer(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> ReplaceTrialPlayer(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatar)
         {
@@ -199,9 +237,11 @@ public class LevelTask(PlayerInstance player)
             subMission.SubMissionInfo.ParamIntList?.ForEach(
                 async x => await Player.LineupManager!.AddAvatarToCurTeam(x));
         }
+
+        return null;
     }
 
-    public async ValueTask StoryLineReplaceTrialPlayer(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> StoryLineReplaceTrialPlayer(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.StoryLineAddTrialAvatar)
         {
@@ -209,11 +249,13 @@ public class LevelTask(PlayerInstance player)
             ids.ForEach(async void (x) => await Player.LineupManager!.RemoveAvatarFromCurTeam(x.BaseAvatarId, false));
             await Player.LineupManager!.AddAvatarToCurTeam(subMission.SubMissionInfo.ParamInt1);
         }
+
+        return null;
     }
 
-    public async ValueTask ReplaceVirtualTeam(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> ReplaceVirtualTeam(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
-        if (Player.LineupManager!.GetCurLineup()?.IsExtraLineup() != true) return;
+        if (Player.LineupManager!.GetCurLineup()?.IsExtraLineup() != true) return null;
 
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatar)
         {
@@ -230,9 +272,11 @@ public class LevelTask(PlayerInstance player)
             subMission.SubMissionInfo.ParamIntList?.ForEach(
                 async x => await Player.LineupManager!.AddAvatarToCurTeam(x));
         }
+
+        return null;
     }
 
-    public async ValueTask CreateHeroTrialPlayer(TaskConfigInfo act, SubMissionData subMission,
+    public async ValueTask<object?> CreateHeroTrialPlayer(TaskConfigInfo act, SubMissionData subMission,
         GroupInfo? group = null)
     {
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.GetTrialAvatar)
@@ -266,24 +310,30 @@ public class LevelTask(PlayerInstance player)
 
             list.ForEach(async x => await Player.LineupManager!.AddAvatarToCurTeam(x));
         }
+
+        return null;
     }
 
-    public async ValueTask DestroyTrialPlayer(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> DestroyTrialPlayer(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (subMission.SubMissionInfo?.FinishType == MissionFinishTypeEnum.DelTrialAvatar)
             await Player.LineupManager!.RemoveAvatarFromCurTeam(subMission.SubMissionInfo.ParamInt1);
+
+        return null;
     }
 
-    public async ValueTask ChangeGroupState(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> ChangeGroupState(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (group != null)
             foreach (var entity in Player.SceneInstance?.Entities.Values.ToList() ?? [])
                 if (entity is EntityProp prop && prop.GroupId == group.Id)
                     if (prop.Excel.PropStateList.Contains(PropStateEnum.Open))
                         await prop.SetState(PropStateEnum.Open);
+
+        return null;
     }
 
-    public async ValueTask TriggerEntityServerEvent(TaskConfigInfo act, SubMissionData subMission,
+    public async ValueTask<object?> TriggerEntityServerEvent(TaskConfigInfo act, SubMissionData subMission,
         GroupInfo? group = null)
     {
         if (group != null)
@@ -292,9 +342,11 @@ public class LevelTask(PlayerInstance player)
                     if (prop.Excel.PropStateList.Contains(PropStateEnum.Open) &&
                         (prop.State == PropStateEnum.Closed || prop.State == PropStateEnum.Locked))
                         await prop.SetState(PropStateEnum.Open);
+
+        return null;
     }
 
-    public async ValueTask TriggerEntityEvent(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> TriggerEntityEvent(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is TriggerEntityEvent triggerEntityEvent)
             if (group != null)
@@ -303,18 +355,22 @@ public class LevelTask(PlayerInstance player)
                         prop.InstId == triggerEntityEvent.InstanceID.GetValue())
                         if (prop.Excel.PropStateList.Contains(PropStateEnum.Closed))
                             await prop.SetState(PropStateEnum.Closed);
+
+        return null;
     }
 
-    public async ValueTask PropSetupUITrigger(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> PropSetupUITrigger(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is PropSetupUITrigger propSetupUiTrigger)
             foreach (var task in propSetupUiTrigger.ButtonCallback)
                 TriggerTask(task, subMission, group);
 
-        await System.Threading.Tasks.Task.CompletedTask;
+        await ValueTask.CompletedTask;
+
+        return null;
     }
 
-    public async ValueTask PropStateExecute(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> PropStateExecute(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
         if (act is PropStateExecute propStateExecute)
         {
@@ -328,14 +384,18 @@ public class LevelTask(PlayerInstance player)
                 if (resp is EntityProp result) await result.SetState(propStateExecute.State);
             }
         }
+
+        return null;
     }
 
     #endregion
 
     #region Task Condition
 
-    public bool ByCompareSubMissionState(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> ByCompareSubMissionState(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
+        await ValueTask.CompletedTask;
+
         if (act is ByCompareSubMissionState compare)
         {
             var mission = Player.MissionManager!.GetSubMissionStatus(compare.SubMissionID);
@@ -345,8 +405,10 @@ public class LevelTask(PlayerInstance player)
         return false;
     }
 
-    public bool ByCompareFloorSavedValue(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
+    public async ValueTask<object?> ByCompareFloorSavedValue(TaskConfigInfo act, SubMissionData subMission, GroupInfo? group = null)
     {
+        await ValueTask.CompletedTask;
+
         if (act is ByCompareFloorSavedValue compare)
         {
             var value = Player.SceneData!.FloorSavedData.GetValueOrDefault(Player.Data.FloorId, []);

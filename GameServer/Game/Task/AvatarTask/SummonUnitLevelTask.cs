@@ -3,6 +3,8 @@ using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Proto;
+using System.Collections.Concurrent;
+using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Task.AvatarTask;
 
@@ -10,9 +12,11 @@ public class SummonUnitLevelTask
 {
     #region Task Condition
 
-    public bool ByIsContainAdventureModifier(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
+    public async ValueTask<object?> ByIsContainAdventureModifier(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
         EntitySummonUnit? summonUnit)
     {
+        await ValueTask.CompletedTask;
+
         return true;
     }
 
@@ -31,19 +35,40 @@ public class SummonUnitLevelTask
         {
             var methodName = act.Type.Replace("RPG.GameCore.", "");
 
-            var method = GetType().GetMethod(methodName);
-            if (method != null) _ = method.Invoke(this, [act, targetEntities, summonUnit]);
+            // try to get from cache
+            var method = GetOrCreateExecuteTask(methodName);
+            if (method == null) return;
+
+            method(act, targetEntities, summonUnit);
         }
-        catch
+        catch (Exception e)
         {
+            Logger.GetByClassName().Error("An error occured, ", e);
         }
     }
+
+    private ExecuteTask? GetOrCreateExecuteTask(string methodName)
+    {
+        // try to get from cache
+        if (_cachedTasks.TryGetValue(methodName, out var method)) return method;
+        var methodProp = GetType().GetMethod(methodName);
+        if (methodProp == null) return null;
+
+        method = (ExecuteTask)Delegate.CreateDelegate(typeof(ExecuteTask), this, methodProp);
+        _cachedTasks[methodName] = method;  // cached
+
+        return method;
+    }
+
+    private delegate ValueTask<object?> ExecuteTask(TaskConfigInfo act, List<BaseGameEntity> targetEntities, EntitySummonUnit? summonUnit);
+
+    private readonly ConcurrentDictionary<string, ExecuteTask> _cachedTasks = [];
 
     #endregion
 
     #region Task
 
-    public async ValueTask PredicateTaskList(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
+    public async ValueTask<object?> PredicateTaskList(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
         EntitySummonUnit? summonUnit)
     {
         if (act is PredicateTaskList predicateTaskList)
@@ -51,26 +76,25 @@ public class SummonUnitLevelTask
             // handle predicateCondition
             var methodName = predicateTaskList.Predicate.Type.Replace("RPG.GameCore.", "");
 
-            var method = GetType().GetMethod(methodName);
-            if (method != null)
-            {
-                var resp = method.Invoke(this, [predicateTaskList.Predicate, targetEntities, summonUnit]);
-                if (resp is bool res && res)
-                    foreach (var task in predicateTaskList.SuccessTaskList)
-                        TriggerTask(task, targetEntities, summonUnit);
-                else
-                    foreach (var task in predicateTaskList.FailedTaskList)
-                        TriggerTask(task, targetEntities, summonUnit);
-            }
+            var method = GetOrCreateExecuteTask(methodName);
+            if (method == null) return null;
+
+            var resp = await method(predicateTaskList.Predicate, targetEntities, summonUnit);
+            if (resp is true)
+                foreach (var task in predicateTaskList.SuccessTaskList)
+                    TriggerTask(task, targetEntities, summonUnit);
+            else
+                foreach (var task in predicateTaskList.FailedTaskList)
+                    TriggerTask(task, targetEntities, summonUnit);
         }
 
-        await ValueTask.CompletedTask;
+        return null;
     }
 
-    public async ValueTask AddMazeBuff(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
+    public async ValueTask<object?> AddMazeBuff(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
         EntitySummonUnit? summonUnit)
     {
-        if (act is not AddMazeBuff addMazeBuff) return;
+        if (act is not AddMazeBuff addMazeBuff) return null;
 
         var buff = new SceneBuff(addMazeBuff.ID, 1, summonUnit?.CreateAvatarId ?? 0)
         {
@@ -86,12 +110,14 @@ public class SummonUnitLevelTask
 
             await monster.AddBuff(buff);
         }
+
+        return null;
     }
 
-    public async ValueTask RemoveMazeBuff(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
+    public async ValueTask<object?> RemoveMazeBuff(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
         EntitySummonUnit? summonUnit)
     {
-        if (act is not RemoveMazeBuff removeMazeBuff) return;
+        if (act is not RemoveMazeBuff removeMazeBuff) return null;
 
         foreach (var targetEntity in targetEntities)
         {
@@ -99,12 +125,14 @@ public class SummonUnitLevelTask
 
             await monster.RemoveBuff(removeMazeBuff.ID);
         }
+
+        return null;
     }
 
-    public async ValueTask RefreshMazeBuffTime(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
+    public async ValueTask<object?> RefreshMazeBuffTime(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
         EntitySummonUnit? summonUnit)
     {
-        if (act is not RefreshMazeBuffTime refreshMazeBuffTime) return;
+        if (act is not RefreshMazeBuffTime refreshMazeBuffTime) return null;
 
         var buff = new SceneBuff(refreshMazeBuffTime.ID, 1, summonUnit?.CreateAvatarId ?? 0)
         {
@@ -118,9 +146,11 @@ public class SummonUnitLevelTask
 
             await monster.AddBuff(buff);
         }
+
+        return null;
     }
 
-    public async ValueTask TriggerHitProp(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
+    public async ValueTask<object?> TriggerHitProp(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
         EntitySummonUnit? summonUnit)
     {
         foreach (var targetEntity in targetEntities)
@@ -145,6 +175,8 @@ public class SummonUnitLevelTask
 
             prop.Scene.Player.RogueManager!.GetRogueInstance()?.OnPropDestruct(prop);
         }
+
+        return null;
     }
 
     #endregion

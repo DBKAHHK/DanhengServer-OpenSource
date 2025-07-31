@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using EggLink.DanhengServer.Data;
+﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Inventory;
@@ -19,38 +18,15 @@ using MissionData = EggLink.DanhengServer.Database.Quests.MissionData;
 
 namespace EggLink.DanhengServer.GameServer.Game.Mission;
 
-public class MissionManager : BasePlayerManager
+public class MissionManager(PlayerInstance player) : BasePlayerManager(player)
 {
     #region Initializer & Properties
 
-    public MissionData Data { get; set; }
-    public Dictionary<FinishActionTypeEnum, MissionFinishActionHandler> ActionHandlers = [];
-    public Dictionary<MissionFinishTypeEnum, MissionFinishTypeHandler> FinishTypeHandlers = [];
+    public MissionData Data { get; set; } = DatabaseHelper.Instance!.GetInstanceOrCreateNew<MissionData>(player.Uid);
+    public static readonly Dictionary<FinishActionTypeEnum, MissionFinishActionHandler> ActionHandlers = [];
+    public static readonly Dictionary<MissionFinishTypeEnum, MissionFinishTypeHandler> FinishTypeHandlers = [];
 
     public readonly List<int> SkipSubMissionList = []; // bug
-
-    public MissionManager(PlayerInstance player) : base(player)
-    {
-        Data = DatabaseHelper.Instance!.GetInstanceOrCreateNew<MissionData>(player.Uid);
-
-        var types = Assembly.GetExecutingAssembly().GetTypes();
-        foreach (var type in types)
-        {
-            var attr = type.GetCustomAttribute<MissionFinishActionAttribute>();
-            if (attr != null)
-            {
-                var handler = (MissionFinishActionHandler)Activator.CreateInstance(type, null)!;
-                ActionHandlers.Add(attr.FinishAction, handler);
-            }
-
-            var attr2 = type.GetCustomAttribute<MissionFinishTypeAttribute>();
-            if (attr2 != null)
-            {
-                var handler = (MissionFinishTypeHandler)Activator.CreateInstance(type, null)!;
-                FinishTypeHandlers.Add(attr2.FinishType, handler);
-            }
-        }
-    }
 
     #endregion
 

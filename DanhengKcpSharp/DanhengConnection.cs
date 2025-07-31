@@ -1,10 +1,7 @@
 using System.Collections.Concurrent;
 using System.Net;
-using System.Reflection;
 using EggLink.DanhengServer.Kcp.KcpSharp;
 using EggLink.DanhengServer.Util;
-using Google.Protobuf;
-using Google.Protobuf.Reflection;
 
 namespace EggLink.DanhengServer.Kcp;
 
@@ -73,24 +70,21 @@ public class DanhengConnection
 
     public void LogPacket(string sendOrRecv, ushort opcode, byte[] payload)
     {
+        if (!ConfigManager.Config.ServerOption.LogOption.EnableGamePacketLog) return;
+
         try
         {
-            //Logger.DebugWriteLine($"{sendOrRecv}: {Enum.GetName(typeof(OpCode), opcode)}({opcode})\r\n{Convert.ToHexString(payload)}");
             if (IgnoreLog.Contains(opcode)) return;
-            var typ = AppDomain.CurrentDomain.GetAssemblies()
-                .SingleOrDefault(assembly => assembly.GetName().Name == "DanhengProto")!.GetTypes()
-                .First(t => t.Name == $"{LogMap[opcode]}"); //get the type using the packet name
-            var descriptor =
-                typ.GetProperty("Descriptor", BindingFlags.Public | BindingFlags.Static)?.GetValue(
-                    null, null) as MessageDescriptor; // get the static property Descriptor
-            var packet = descriptor?.Parser.ParseFrom(payload);
-            var formatter = JsonFormatter.Default;
-            var asJson = formatter.Format(packet);
+
+            if (ConfigManager.Config.ServerOption.LogOption.DisableLogDetailPacket) throw new Exception();
+
+            var asJson = PacketLogHelper.ConvertPacketToJson(opcode, payload);
             var output = $"{sendOrRecv}: {LogMap[opcode]}({opcode})\r\n{asJson}";
-#if DEBUG
-            Logger.Debug(output);
-#endif
-            if (DebugFile == "" || !ConfigManager.Config.ServerOption.SavePersonalDebugFile) return;
+
+            if (ConfigManager.Config.ServerOption.LogOption.LogPacketToConsole)
+                Logger.Debug(output);
+
+            if (DebugFile == "" || !ConfigManager.Config.ServerOption.LogOption.SavePersonalDebugFile) return;
             var sw = GetWriter();
             sw.WriteLine($"[{DateTime.Now:HH:mm:ss}] [GameServer] [DEBUG] " + output);
             sw.Flush();
@@ -98,10 +92,11 @@ public class DanhengConnection
         catch
         {
             var output = $"{sendOrRecv}: {LogMap.GetValueOrDefault(opcode, "UnknownPacket")}({opcode})";
-#if DEBUG
-            Logger.Debug(output);
-#endif
-            if (DebugFile != "" && ConfigManager.Config.ServerOption.SavePersonalDebugFile)
+
+            if (ConfigManager.Config.ServerOption.LogOption.LogPacketToConsole)
+                Logger.Debug(output);
+
+            if (DebugFile != "" && ConfigManager.Config.ServerOption.LogOption.SavePersonalDebugFile)
             {
                 var sw = GetWriter();
                 sw.WriteLine($"[{DateTime.Now:HH:mm:ss}] [GameServer] [DEBUG] " + output);

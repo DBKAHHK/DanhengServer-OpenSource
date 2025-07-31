@@ -35,17 +35,6 @@ public class ChessRogueInstance : BaseRogueInstance
         EventManager = new RogueEventManager(player, this);
         RogueType = rogueSubMode == RogueSubModeEnum.ChessRogueNous ? 160 : 130;
 
-
-        var types = Assembly.GetExecutingAssembly().GetTypes();
-        foreach (var type in types)
-        {
-            var attr = type.GetCustomAttribute<ModifierEffectAttribute>();
-            if (attr == null) continue;
-
-            var handler = (ModifierEffectHandler)Activator.CreateInstance(type, null)!;
-            ModifierEffectHandlers.Add(attr.EffectType, handler);
-        }
-
         foreach (var difficulty in areaExcel.DifficultyID)
             if (GameData.RogueDLCDifficultyData.TryGetValue(difficulty, out var diff))
                 DifficultyExcel.Add(diff);
@@ -69,7 +58,7 @@ public class ChessRogueInstance : BaseRogueInstance
     public int BossAeonId { get; set; }
     public List<RogueDLCDifficultyExcel> DifficultyExcel { get; set; } = [];
     public ChessRogueDiceInstance DiceInstance { get; set; }
-    public Dictionary<ModifierEffectTypeEnum, ModifierEffectHandler> ModifierEffectHandlers { get; set; } = [];
+    public static Dictionary<ModifierEffectTypeEnum, ModifierEffectHandler> ModifierEffectHandlers { get; set; } = [];
 
     public Dictionary<int, ChessRogueCellInstance> RogueCells { get; set; } = [];
     public ChessRogueCellInstance? CurCell { get; set; }

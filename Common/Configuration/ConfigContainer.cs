@@ -83,14 +83,26 @@ public class ServerOption
     public ServerAnnounce ServerAnnounce { get; set; } = new();
     public ServerProfile ServerProfile { get; set; } = new();
     public bool AutoCreateUser { get; set; } = true;
-    public bool SavePersonalDebugFile { get; set; } = false;
+    public LogOption LogOption { get; set; } = new();
     public int FarmingDropRate { get; set; } = 1;
-    public bool UseCache { get; set; } = true;
+    public bool UseCache { get; set; } = false;  // didnt recommend
 
     public int ValidFarmingDropRate()
     {
         return Math.Max(Math.Min(FarmingDropRate, 999), 1);
     }
+}
+
+public class LogOption
+{
+#if DEBUG
+    public bool EnableGamePacketLog { get; set; } = true;
+#else
+    public bool EnableGamePacketLog { get; set; } = false;
+#endif
+    public bool LogPacketToConsole { get; set; } = true;
+    public bool DisableLogDetailPacket { get; set; } = false;
+    public bool SavePersonalDebugFile { get; set; } = false;
 }
 
 public class ServerAnnounce

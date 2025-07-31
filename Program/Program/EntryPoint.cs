@@ -166,7 +166,8 @@ public class EntryPoint
         Logger.Info(I18NManager.Translate("Server.ServerInfo.ServerRunning", I18NManager.Translate("Word.Dispatch"),
             GetConfig().HttpServer.GetDisplayAddress()));
 
-        DanhengListener.BaseConnection = typeof(Connection);
+        var handler = new DanhengListener.ConnectionCreatedHandler((conversation, remote) => new Connection(conversation, remote));
+        DanhengListener.CreateConnection = handler;
         DanhengListener.StartListener();
 
         GenerateLogMap();
@@ -325,6 +326,8 @@ public class EntryPoint
 
             Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItem", I18NManager.Translate("Word.Database")));
         }
+
+        ServerUtils.InitializeHandlers();
 
         // check if the database is up to date
         var updated = false;

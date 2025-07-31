@@ -39,7 +39,7 @@ public class ChessRogueDiceModifierInstance(int modifierId, ChessRogueDiceSurfac
     {
         var effect = EffectConfig.EffectType;
 
-        instance.ModifierEffectHandlers.TryGetValue(effect, out var handler);
+        ChessRogueInstance.ModifierEffectHandlers.TryGetValue(effect, out var handler);
 
         if (handler != null)
             await handler.SelectCell(this, instance, selectCellId);
@@ -51,7 +51,7 @@ public class ChessRogueDiceModifierInstance(int modifierId, ChessRogueDiceSurfac
     {
         var effect = EffectConfig.EffectType;
 
-        instance.ModifierEffectHandlers.TryGetValue(effect, out var handler);
+        ChessRogueInstance.ModifierEffectHandlers.TryGetValue(effect, out var handler);
 
         if (handler != null)
             await handler.SelectModifierCell(this, instance, selectCellId);
@@ -63,7 +63,7 @@ public class ChessRogueDiceModifierInstance(int modifierId, ChessRogueDiceSurfac
     {
         var effect = EffectConfig.EffectType;
 
-        instance.ModifierEffectHandlers.TryGetValue(effect, out var handler);
+        ChessRogueInstance.ModifierEffectHandlers.TryGetValue(effect, out var handler);
 
         if (handler != null)
             await handler.OnConfirmed(this, instance);
@@ -75,7 +75,7 @@ public class ChessRogueDiceModifierInstance(int modifierId, ChessRogueDiceSurfac
     {
         var effect = EffectConfig.EffectType;
 
-        instance.ModifierEffectHandlers.TryGetValue(effect, out var handler);
+        ChessRogueInstance.ModifierEffectHandlers.TryGetValue(effect, out var handler);
 
         if (handler != null)
             handler.BeforeBattle(this, battle, instance);
@@ -87,7 +87,7 @@ public class ChessRogueDiceModifierInstance(int modifierId, ChessRogueDiceSurfac
     {
         var effect = EffectConfig.EffectType;
 
-        instance.ModifierEffectHandlers.TryGetValue(effect, out var handler);
+        ChessRogueInstance.ModifierEffectHandlers.TryGetValue(effect, out var handler);
 
         if (handler != null)
             await handler.AfterBattle(this, battle);

@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Data;
+﻿using System.Collections.Concurrent;
+using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Config.Task;
 using EggLink.DanhengServer.Enums.Avatar;
@@ -22,9 +23,13 @@ public class AbilityLevelTask(PlayerInstance player)
 
     #region Selector
 
-    public List<BaseGameEntity> TargetAlias(TargetEvaluator selector, BaseGameEntity casterEntity,
-        List<BaseGameEntity> targetEntities)
+    public async ValueTask<object> TargetAlias(AbilityLevelParam param)
     {
+        await ValueTask.CompletedTask;
+        var selector = param.TargetEvaluator!;
+        var casterEntity = param.CasterEntity;
+        var targetEntities = param.TargetEntities;
+
         if (selector is TargetAlias target)
             return target.Alias switch
             {
@@ -33,7 +38,7 @@ public class AbilityLevelTask(PlayerInstance player)
                 _ => targetEntities
             };
 
-        return [];
+        return new List<BaseGameEntity>();
     }
 
     #endregion
@@ -69,14 +74,13 @@ public class AbilityLevelTask(PlayerInstance player)
         {
             var methodName = param.Act.Type.Replace("RPG.GameCore.", "");
 
-            var method = GetType().GetMethod(methodName);
-            if (method != null)
-            {
-                var res = method.Invoke(this, [param]);
-                if (res is AbilityLevelResult result) return result;
+            // try to get from cache
+            var method = GetOrCreateExecuteTask(methodName);
+            if (method == null) return new AbilityLevelResult();
 
-                if (res is ValueTask<AbilityLevelResult> valueTask) return await valueTask;
-            }
+            var res = method(param);
+            var re = await res;
+            if (re is AbilityLevelResult result) return result;
         }
         catch (Exception e)
         {
@@ -86,11 +90,28 @@ public class AbilityLevelTask(PlayerInstance player)
         return new AbilityLevelResult();
     }
 
+    private ExecuteTask? GetOrCreateExecuteTask(string methodName)
+    {
+        // try to get from cache
+        if (_cachedTasks.TryGetValue(methodName, out var method)) return method;
+        var methodProp = GetType().GetMethod(methodName);
+        if (methodProp == null) return null;
+
+        method = (ExecuteTask)Delegate.CreateDelegate(typeof(ExecuteTask), this, methodProp);
+        _cachedTasks[methodName] = method;  // cached
+
+        return method;
+    }
+
+    private delegate ValueTask<object> ExecuteTask(AbilityLevelParam param);
+
+    private readonly ConcurrentDictionary<string, ExecuteTask> _cachedTasks = [];
+
     #endregion
 
     #region Task
 
-    public async ValueTask<AbilityLevelResult> PredicateTaskList(AbilityLevelParam param)
+    public async ValueTask<object> PredicateTaskList(AbilityLevelParam param)
     {
         BattleInstance? instance = null;
         List<HitMonsterInstance> battleInfos = [];
@@ -99,32 +120,23 @@ public class AbilityLevelTask(PlayerInstance player)
         {
             // handle predicateCondition
             var methodName = predicateTaskList.Predicate.Type.Replace("RPG.GameCore.", "");
-            var method = GetType().GetMethod(methodName);
+
+            var method = GetOrCreateExecuteTask(methodName);
+            var res = true;
             if (method != null)
             {
-                var resp = method.Invoke(this, [param with { Act = predicateTaskList.Predicate }]);
-                if (resp is not bool res) return new AbilityLevelResult(instance, battleInfos);
-
-                res = predicateTaskList.Predicate.Inverse ? !res : res;
-                if (res)
-                    foreach (var task in predicateTaskList.SuccessTaskList)
-                    {
-                        var result = await TriggerTask(param with { Act = task });
-                        if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
-
-                        if (result.Instance != null) instance = result.Instance;
-                    }
+                var resp = await method(param with { Act = predicateTaskList.Predicate });
+                if (resp is not bool r)
+                {
+                    res = false;
+                }
                 else
-                    foreach (var task in predicateTaskList.FailedTaskList)
-                    {
-                        var result = await TriggerTask(param with { Act = task });
-                        if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
-
-                        if (result.Instance != null) instance = result.Instance;
-                    }
+                {
+                    res = predicateTaskList.Predicate.Inverse ? !r : r;
+                }
             }
-            else
-            {
+
+            if (res)
                 foreach (var task in predicateTaskList.SuccessTaskList)
                 {
                     var result = await TriggerTask(param with { Act = task });
@@ -132,13 +144,20 @@ public class AbilityLevelTask(PlayerInstance player)
 
                     if (result.Instance != null) instance = result.Instance;
                 }
-            }
+            else
+                foreach (var task in predicateTaskList.FailedTaskList)
+                {
+                    var result = await TriggerTask(param with { Act = task });
+                    if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
+
+                    if (result.Instance != null) instance = result.Instance;
+                }
         }
 
         return new AbilityLevelResult(instance, battleInfos);
     }
 
-    public async ValueTask<AbilityLevelResult> AdventureTriggerAttack(AbilityLevelParam param)
+    public async ValueTask<object> AdventureTriggerAttack(AbilityLevelParam param)
     {
         BattleInstance? instance = null;
         List<HitMonsterInstance> battleInfos = [];
@@ -146,39 +165,37 @@ public class AbilityLevelTask(PlayerInstance player)
         if (param.Act is AdventureTriggerAttack adventureTriggerAttack)
         {
             var methodName = adventureTriggerAttack.AttackTargetType.Type.Replace("RPG.GameCore.", "");
-            var method = GetType().GetMethod(methodName);
-            if (method != null)
+            var method = GetOrCreateExecuteTask(methodName);
+            if (method == null) return new AbilityLevelResult();
+            var resp = await method(param with { TargetEvaluator = adventureTriggerAttack.AttackTargetType });
+
+            if (resp is List<BaseGameEntity> target)
             {
-                var resp = method.Invoke(this,
-                    [adventureTriggerAttack.AttackTargetType, param.CasterEntity, param.TargetEntities]);
-                if (resp is List<BaseGameEntity> target)
+                foreach (var task in adventureTriggerAttack.OnAttack)
                 {
-                    foreach (var task in adventureTriggerAttack.OnAttack)
+                    var result = await TriggerTask(param with { Act = task });
+                    if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
+                }
+
+                if (target.Count > 0 && adventureTriggerAttack.TriggerBattle)
+                {
+                    foreach (var task in adventureTriggerAttack.OnBattle)
                     {
                         var result = await TriggerTask(param with { Act = task });
                         if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
                     }
 
-                    if (target.Count > 0 && adventureTriggerAttack.TriggerBattle)
+                    foreach (var entity in param.TargetEntities)
                     {
-                        foreach (var task in adventureTriggerAttack.OnBattle)
-                        {
-                            var result = await TriggerTask(param with { Act = task });
-                            if (result.BattleInfos != null) battleInfos.AddRange(result.BattleInfos);
-                        }
+                        var type = MonsterBattleType.TriggerBattle;
+                        if (entity is EntityMonster { IsAlive: false })
+                            type = MonsterBattleType.DirectDieSkipBattle;
 
-                        foreach (var entity in param.TargetEntities)
-                        {
-                            var type = MonsterBattleType.TriggerBattle;
-                            if (entity is EntityMonster { IsAlive: false })
-                                type = MonsterBattleType.DirectDieSkipBattle;
-
-                            battleInfos.Add(new HitMonsterInstance(entity.EntityId, type));
-                        }
-
-                        instance = await Player.BattleManager!.StartBattle(param.CasterEntity, param.TargetEntities,
-                            param.Request.SkillIndex == 1);
+                        battleInfos.Add(new HitMonsterInstance(entity.EntityId, type));
                     }
+
+                    instance = await Player.BattleManager!.StartBattle(param.CasterEntity, param.TargetEntities,
+                        param.Request.SkillIndex == 1);
                 }
             }
         }
@@ -186,7 +203,7 @@ public class AbilityLevelTask(PlayerInstance player)
         return new AbilityLevelResult(instance, battleInfos);
     }
 
-    public async ValueTask<AbilityLevelResult> AddMazeBuff(AbilityLevelParam param)
+    public async ValueTask<object> AddMazeBuff(AbilityLevelParam param)
     {
         BattleInstance? instance = null;
         List<HitMonsterInstance> battleInfos = [];
@@ -194,32 +211,29 @@ public class AbilityLevelTask(PlayerInstance player)
         if (param.Act is AddMazeBuff addMazeBuff)
         {
             var methodName = addMazeBuff.TargetType.Type.Replace("RPG.GameCore.", "");
-            var method = GetType().GetMethod(methodName);
-            if (method != null)
-            {
-                var resp = method.Invoke(this,
-                    [addMazeBuff.TargetType, param.CasterEntity, param.TargetEntities]);
+            var method = GetOrCreateExecuteTask(methodName);
+            if (method == null) return new AbilityLevelResult();
+            var resp = await method(param with { TargetEvaluator = addMazeBuff.TargetType });
 
-                Dictionary<string, float> dynamic = [];
-                foreach (var dynamicValue in addMazeBuff.DynamicValues)
-                    dynamic.Add(dynamicValue.Key, dynamicValue.Value.GetValue());
+            Dictionary<string, float> dynamic = [];
+            foreach (var dynamicValue in addMazeBuff.DynamicValues)
+                dynamic.Add(dynamicValue.Key, dynamicValue.Value.GetValue());
 
-                if (resp is not List<BaseGameEntity> target) return new AbilityLevelResult(instance, battleInfos);
+            if (resp is not List<BaseGameEntity> target) return new AbilityLevelResult(instance, battleInfos);
 
-                foreach (var entity in target)
-                    await entity.AddBuff(new SceneBuff(addMazeBuff.ID, 1,
-                        (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.BaseAvatarId ?? 0,
-                        addMazeBuff.LifeTime.FixedValue.Value < -1 ? 20 : -1)
-                    {
-                        DynamicValues = dynamic
-                    });
-            }
+            foreach (var entity in target)
+                await entity.AddBuff(new SceneBuff(addMazeBuff.ID, 1,
+                    (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.BaseAvatarId ?? 0,
+                    addMazeBuff.LifeTime.FixedValue.Value < -1 ? 20 : -1)
+                {
+                    DynamicValues = dynamic
+                });
         }
 
         return new AbilityLevelResult(instance, battleInfos);
     }
 
-    public async ValueTask<AbilityLevelResult> AdventureFireProjectile(AbilityLevelParam param)
+    public async ValueTask<object> AdventureFireProjectile(AbilityLevelParam param)
     {
         BattleInstance? instance = null;
         List<HitMonsterInstance> battleInfos = [];
@@ -248,7 +262,7 @@ public class AbilityLevelTask(PlayerInstance player)
         return new AbilityLevelResult(instance, battleInfos);
     }
 
-    public async ValueTask<AbilityLevelResult> NewAdventureFireProjectile(AbilityLevelParam param)
+    public async ValueTask<object> NewAdventureFireProjectile(AbilityLevelParam param)
     {
         BattleInstance? instance = null;
         List<HitMonsterInstance> battleInfos = [];
@@ -277,7 +291,7 @@ public class AbilityLevelTask(PlayerInstance player)
         return new AbilityLevelResult(instance, battleInfos);
     }
 
-    public async ValueTask<AbilityLevelResult> CreateSummonUnit(AbilityLevelParam param)
+    public async ValueTask<object> CreateSummonUnit(AbilityLevelParam param)
     {
         if (param.Act is CreateSummonUnit createSummonUnit)
         {
@@ -304,7 +318,7 @@ public class AbilityLevelTask(PlayerInstance player)
         return new AbilityLevelResult();
     }
 
-    public async ValueTask<AbilityLevelResult> DestroySummonUnit(AbilityLevelParam param)
+    public async ValueTask<object> DestroySummonUnit(AbilityLevelParam param)
     {
         if (param.Act is DestroySummonUnit destroySummonUnit)
             await Player.SceneInstance!.RemoveSummonUnitById(destroySummonUnit.SummonUnit.SummonUnitID); // TODO
@@ -312,7 +326,7 @@ public class AbilityLevelTask(PlayerInstance player)
         return new AbilityLevelResult();
     }
 
-    public async ValueTask<AbilityLevelResult> AddAdventureModifier(AbilityLevelParam param)
+    public async ValueTask<object> AddAdventureModifier(AbilityLevelParam param)
     {
         if (param.Act is AddAdventureModifier addAdventureModifier)
         {
@@ -325,7 +339,7 @@ public class AbilityLevelTask(PlayerInstance player)
         return new AbilityLevelResult();
     }
 
-    public async ValueTask<AbilityLevelResult> RemoveAdventureModifier(AbilityLevelParam param)
+    public async ValueTask<object> RemoveAdventureModifier(AbilityLevelParam param)
     {
         if (param.Act is RemoveAdventureModifier removeAdventureModifier)
         {
@@ -338,7 +352,7 @@ public class AbilityLevelTask(PlayerInstance player)
         return new AbilityLevelResult();
     }
 
-    public async ValueTask<AbilityLevelResult> RemoveSelfModifier(AbilityLevelParam param)
+    public async ValueTask<object> RemoveSelfModifier(AbilityLevelParam param)
     {
         if (param.ModifierName != null)
             if (param.CasterEntity is IGameModifier mod)
@@ -347,7 +361,7 @@ public class AbilityLevelTask(PlayerInstance player)
         return new AbilityLevelResult();
     }
 
-    public async ValueTask<AbilityLevelResult> RefreshMazeBuffTime(AbilityLevelParam param)
+    public async ValueTask<object> RefreshMazeBuffTime(AbilityLevelParam param)
     {
         if (param.Act is RefreshMazeBuffTime refreshMazeBuffTime)
         {
@@ -361,7 +375,7 @@ public class AbilityLevelTask(PlayerInstance player)
         return new AbilityLevelResult();
     }
 
-    public async ValueTask<AbilityLevelResult> AdvModifyMaxMazeMP(AbilityLevelParam param)
+    public async ValueTask<object> AdvModifyMaxMazeMP(AbilityLevelParam param)
     {
         await ValueTask.CompletedTask;
 
@@ -379,7 +393,7 @@ public class AbilityLevelTask(PlayerInstance player)
         return new AbilityLevelResult();
     }
 
-    public async ValueTask AdventureSetAttackTargetMonsterDie(AbilityLevelParam param)
+    public async ValueTask<object> AdventureSetAttackTargetMonsterDie(AbilityLevelParam param)
     {
         var avatar = param.CasterEntity as AvatarSceneInfo;
         if (GameData.AvatarConfigData.TryGetValue(avatar?.AvatarInfo.AvatarId ?? 0, out var excel))
@@ -418,14 +432,18 @@ public class AbilityLevelTask(PlayerInstance player)
                 await instance.GainMoney(Random.Shared.Next(20, 60));
             }
         }
+
+        return new AbilityLevelResult();
     }
 
     #endregion
 
     #region Predicate
 
-    public bool ByAllowInstantKill(AbilityLevelParam param)
+    public async ValueTask<object> ByAllowInstantKill(AbilityLevelParam param)
     {
+        await ValueTask.CompletedTask;
+
         foreach (var targetEntity in param.TargetEntities)
             if (targetEntity is EntityMonster monster)
                 if (monster.MonsterData.Rank < MonsterRankEnum.Elite)
@@ -434,30 +452,31 @@ public class AbilityLevelTask(PlayerInstance player)
         return false;
     }
 
-    public bool ByIsContainAdventureModifier(AbilityLevelParam param)
+    public async ValueTask<object> ByIsContainAdventureModifier(AbilityLevelParam param)
     {
+        await ValueTask.CompletedTask;
+
         if (param.Act is ByIsContainAdventureModifier byIsContain)
         {
             // get target
             var result = false;
             var methodName = byIsContain.TargetType.Type.Replace("RPG.GameCore.", "");
-            var method = GetType().GetMethod(methodName);
-            if (method != null)
-            {
-                var resp = method.Invoke(this,
-                    [byIsContain.TargetType, param.CasterEntity, param.TargetEntities]);
 
-                if (resp is List<BaseGameEntity> target)
-                    foreach (var entity in target)
+            var method = GetOrCreateExecuteTask(methodName);
+            if (method == null) return false;
+
+            var resp = await method(param with { TargetEvaluator = byIsContain.TargetType });
+
+            if (resp is List<BaseGameEntity> target)
+                foreach (var entity in target)
+                {
+                    if (entity is not IGameModifier modifier) continue;
+                    if (modifier.Modifiers.Contains(byIsContain.ModifierName))
                     {
-                        if (entity is not IGameModifier modifier) continue;
-                        if (modifier.Modifiers.Contains(byIsContain.ModifierName))
-                        {
-                            result = true;
-                            break;
-                        }
+                        result = true;
+                        break;
                     }
-            }
+                }
 
             return result;
         }
@@ -465,42 +484,50 @@ public class AbilityLevelTask(PlayerInstance player)
         return false;
     }
 
-    public bool AdventureByInMotionState(AbilityLevelParam param)
+    public async ValueTask<object> AdventureByInMotionState(AbilityLevelParam param)
     {
+        await ValueTask.CompletedTask;
+
         return true;
     }
 
-    public bool AdventureByPlayerCurrentSkillType(AbilityLevelParam param)
+    public async ValueTask<object> AdventureByPlayerCurrentSkillType(AbilityLevelParam param)
     {
+        await ValueTask.CompletedTask;
+
         if (param.Act is AdventureByPlayerCurrentSkillType byPlayerCurrentSkillType)
             return param.Request.SkillIndex == (uint)byPlayerCurrentSkillType.SkillType;
 
         return false;
     }
 
-    public bool ByCompareCarryMazebuff(AbilityLevelParam param)
+    public async ValueTask<object> ByCompareCarryMazebuff(AbilityLevelParam param)
     {
+        await ValueTask.CompletedTask;
+
         if (param.Act is ByCompareCarryMazebuff byCompareCarryMazebuff)
             return param.CasterEntity.BuffList.Any(x => x.BuffId == byCompareCarryMazebuff.BuffID);
 
         return false;
     }
 
-    public bool ByAnd(AbilityLevelParam param)
+    public async ValueTask<object> ByAnd(AbilityLevelParam param)
     {
+        await ValueTask.CompletedTask;
+
         if (param.Act is ByAnd byAnd)
         {
             foreach (var task in byAnd.PredicateList)
             {
                 var methodName = task.Type.Replace("RPG.GameCore.", "");
-                var method = GetType().GetMethod(methodName);
-                if (method != null)
-                {
-                    var resp = method.Invoke(this, [param with { Act = task }]);
-                    if (resp is not bool res) return false;
-                    res = task.Inverse ? !res : res;
-                    if (!res) return false;
-                }
+
+                var method = GetOrCreateExecuteTask(methodName);
+                if (method == null) return false;
+
+                var resp = await method(param with { Act = task });
+                if (resp is not bool res) return false;
+                res = task.Inverse ? !res : res;
+                if (!res) return false;
             }
 
             return true;
@@ -520,4 +547,5 @@ public record AbilityLevelParam(
     BaseGameEntity CasterEntity,
     List<BaseGameEntity> TargetEntities,
     SceneCastSkillCsReq Request,
-    string? ModifierName);
+    string? ModifierName,
+    TargetEvaluator? TargetEvaluator = null);

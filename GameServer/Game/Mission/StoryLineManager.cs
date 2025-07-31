@@ -10,14 +10,9 @@ using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Mission;
 
-public class StoryLineManager : BasePlayerManager
+public class StoryLineManager(PlayerInstance player) : BasePlayerManager(player)
 {
-    public StoryLineManager(PlayerInstance player) : base(player)
-    {
-        StoryLineData = DatabaseHelper.Instance!.GetInstanceOrCreateNew<StoryLineData>(player.Uid);
-    }
-
-    public StoryLineData StoryLineData { get; set; }
+    public StoryLineData StoryLineData { get; set; } = DatabaseHelper.Instance!.GetInstanceOrCreateNew<StoryLineData>(player.Uid);
 
     public async ValueTask CheckIfEnterStoryLine()
     {

@@ -1,43 +1,17 @@
-﻿using System.Reflection;
-using EggLink.DanhengServer.Data;
+﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 
 namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 
-public class RogueEventManager
+public class RogueEventManager(PlayerInstance player, BaseRogueInstance rogueInstance)
 {
-    public Dictionary<DialogueEventCostTypeEnum, RogueEventCostHandler> CostHandler = [];
-    public Dictionary<DialogueEventTypeEnum, RogueEventEffectHandler> EffectHandler = [];
-    public PlayerInstance Player;
-    public BaseRogueInstance Rogue;
+    public static Dictionary<DialogueEventCostTypeEnum, RogueEventCostHandler> CostHandler = [];
+    public static Dictionary<DialogueEventTypeEnum, RogueEventEffectHandler> EffectHandler = [];
+    public PlayerInstance Player = player;
+    public BaseRogueInstance Rogue = rogueInstance;
     public List<RogueEventInstance> RunningEvent = [];
-
-    public RogueEventManager(PlayerInstance player, BaseRogueInstance rogueInstance)
-    {
-        Player = player;
-        Rogue = rogueInstance;
-
-        var types = Assembly.GetExecutingAssembly().GetTypes();
-        foreach (var type in types)
-        {
-            var attr = type.GetCustomAttribute<RogueEventAttribute>();
-            if (attr == null) continue;
-            if (attr.EffectType != DialogueEventTypeEnum.None)
-            {
-                // Effect
-                var effect = (RogueEventEffectHandler)Activator.CreateInstance(type, null)!;
-                EffectHandler.Add(attr.EffectType, effect);
-            }
-            else
-            {
-                // Cost
-                var cost = (RogueEventCostHandler)Activator.CreateInstance(type, null)!;
-                CostHandler.Add(attr.CostType, cost);
-            }
-        }
-    }
 
     public void OnNextRoom()
     {
