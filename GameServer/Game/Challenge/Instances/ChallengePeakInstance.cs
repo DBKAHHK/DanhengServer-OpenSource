@@ -127,7 +127,7 @@ public class ChallengePeakInstance(PlayerInstance player, ChallengeDataPb data) 
             if (target == null) continue;
 
             if (target.Progress <= target.TotalProgress)
-                stars++;
+                stars += 1u << targets.IndexOf(targetId);
         }
 
         return Math.Min(stars, 7);

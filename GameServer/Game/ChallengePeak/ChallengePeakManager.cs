@@ -96,18 +96,27 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
         var datas = Player.ChallengeManager!.ChallengeData.PeakLevelDatas;
         foreach (var lineup in lineups)
         {
+            List<uint> avatarIds = [];
+
+            foreach (var avatarId in lineup.PeakLevelLineup.ToList())
+            {
+                var avatar = Player.AvatarManager!.GetFormalAvatar((int)avatarId);
+                if (avatar != null)
+                    avatarIds.Add((uint)avatar.BaseAvatarId);
+            }
+
             if (!datas.TryGetValue((int)lineup.PeakLevelId,
                     out var data))
             {
                 datas[(int)lineup.PeakLevelId] = new ChallengePeakLevelData
                 {
                     LevelId = (int)lineup.PeakLevelId,
-                    BaseAvatarList = lineup.PeakLevelLineup.ToList()
+                    BaseAvatarList = avatarIds
                 };
             }
             else
             {
-                data.BaseAvatarList = lineup.PeakLevelLineup.ToList();
+                data.BaseAvatarList = avatarIds;
             }
         }
 
