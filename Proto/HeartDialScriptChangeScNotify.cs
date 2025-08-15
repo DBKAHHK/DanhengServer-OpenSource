@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNIZWFydERpYWxTY3JpcHRDaGFuZ2VTY05vdGlmeS5wcm90bxoZSGVhcnRE",
             "aWFsU2NyaXB0SW5mby5wcm90bxoRTU1FSU5GTURKRkcucHJvdG8aG0hlYXJ0",
-            "RGlhbFVubG9ja1N0YXR1cy5wcm90bxobSGVhcnREaWFsRGlhbG9ndWVJbmZv",
+            "RGlhbERpYWxvZ3VlSW5mby5wcm90bxobSGVhcnREaWFsVW5sb2NrU3RhdHVz",
             "LnByb3RvIuUBCh1IZWFydERpYWxTY3JpcHRDaGFuZ2VTY05vdGlmeRItCg11",
             "bmxvY2tfc3RhdHVzGAogASgOMhYuSGVhcnREaWFsVW5sb2NrU3RhdHVzEiEK",
             "C09DTU9FSklETEFNGAggAygLMgwuTU1FSU5GTURKRkcSOgoaY2hhbmdlZF9k",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "aWFsU2NyaXB0SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MMEINFMDJFGReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MMEINFMDJFGReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeartDialScriptChangeScNotify), global::EggLink.DanhengServer.Proto.HeartDialScriptChangeScNotify.Parser, new[]{ "UnlockStatus", "OCMOEJIDLAM", "ChangedDialogueInfoList", "ChangedScriptInfoList" }, null, null, null, null)
           }));

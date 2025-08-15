@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetAvatarDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhHZXRBdmF0YXJEYXRhU2NSc3AucHJvdG8aGU11bHRpUGF0aEF2YXRhclR5",
-            "cGUucHJvdG8aGU11bHRpUGF0aEF2YXRhckluZm8ucHJvdG8aEUtIT0NDSEFC",
-            "Tk1OLnByb3RvGgxBdmF0YXIucHJvdG8aG0dyb3d0aFRhcnRnZXRGdW5jVHlw",
+            "ChhHZXRBdmF0YXJEYXRhU2NSc3AucHJvdG8aEUtIT0NDSEFCTk1OLnByb3Rv",
+            "GhlNdWx0aVBhdGhBdmF0YXJJbmZvLnByb3RvGhlNdWx0aVBhdGhBdmF0YXJU",
+            "eXBlLnByb3RvGgxBdmF0YXIucHJvdG8aG0dyb3d0aFRhcnRnZXRGdW5jVHlw",
             "ZS5wcm90byKzAwoSR2V0QXZhdGFyRGF0YVNjUnNwEiEKC0ZFRlBJSkpMTkZH",
             "GAIgAygLMgwuS0hPQ0NIQUJOTU4SEQoJc2tpbl9saXN0GAQgAygNEg8KB3Jl",
             "dGNvZGUYCyABKA0SHAoLYXZhdGFyX2xpc3QYByADKAsyBy5BdmF0YXISEgoK",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "IwoFdmFsdWUYAiABKA4yFC5NdWx0aVBhdGhBdmF0YXJUeXBlOgI4AUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KHOCCHABNMNReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.GrowthTartgetFuncTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KHOCCHABNMNReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.GrowthTartgetFuncTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp), global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp.Parser, new[]{ "FEFPIJJLNFG", "SkinList", "Retcode", "AvatarList", "IsGetAll", "BasicTypeIdList", "PNKCFEALAMI", "CurAvatarPath", "JPNLPOPMKEJ", "MultiPathAvatarInfoList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

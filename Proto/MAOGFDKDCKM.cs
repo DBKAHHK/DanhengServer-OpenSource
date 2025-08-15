@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static MAOGFDKDCKMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFNQU9HRkRLRENLTS5wcm90bxoRRU9KTE5HRERMTk4ucHJvdG8aEVBQSUZG",
-            "S0pFSkpBLnByb3RvGhRNYXJibGVHYW1lSW5mby5wcm90bxoRSEJHSEFPUEJL",
+            "ChFNQU9HRkRLRENLTS5wcm90bxoRUFBJRkZLSkVKSkEucHJvdG8aFE1hcmJs",
+            "ZUdhbWVJbmZvLnByb3RvGhFFT0pMTkdERExOTi5wcm90bxoRSEJHSEFPUEJL",
             "SlAucHJvdG8i7wIKC01BT0dGREtEQ0tNEhMKC0lFSEZIS01EQUdDGAQgASgN",
             "EiMKDXRlYW1fYl9wbGF5ZXIYCyABKAsyDC5FT0pMTkdERExOThITCgtEUExH",
             "Q0VLSkFDSxgDIAEoAhIeChZhbGxvd2VkX21vdmVfc2VhbF9saXN0GA0gAygN",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "IAMoCzIMLkhCR0hBT1BCS0pQQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EOJLNGDDLNNReflection.Descriptor, global::EggLink.DanhengServer.Proto.PPIFFKJEJJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HBGHAOPBKJPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PPIFFKJEJJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOJLNGDDLNNReflection.Descriptor, global::EggLink.DanhengServer.Proto.HBGHAOPBKJPReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MAOGFDKDCKM), global::EggLink.DanhengServer.Proto.MAOGFDKDCKM.Parser, new[]{ "IEHFHKMDAGC", "TeamBPlayer", "DPLGCEKJACK", "AllowedMoveSealList", "Phase", "SealOwnerUid", "OMKKPGFJHFE", "DIBPGGOOGPK", "CurRound", "TeamAPlayer", "MarbleGameInfo", "OLKMCBJFLEJ" }, null, null, null, null)
           }));

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GIIHBKMJKHMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFHSUlIQktNSktITS5wcm90bxoRT0lMUElBQ0VOTkgucHJvdG8iWgoLR0lJ",
-            "SEJLTUpLSE0SEwoLSkhJQUtNQ0hQTEIYDCADKA0SEwoLT0ZHUEZJSkxITkMY",
-            "BiABKA0SIQoLYXZhdGFyX2xpc3QYDyADKAsyDC5PSUxQSUFDRU5OSEIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFHSUlIQktNSktITS5wcm90bxoRT0lMUElBQ0VOTkgucHJvdG8iXAoLR0lJ",
+            "SEJLTUpLSE0SEwoLSkhJQUtNQ0hQTEIYDCADKA0SFQoNcGVha19sZXZlbF9p",
+            "ZBgGIAEoDRIhCgthdmF0YXJfbGlzdBgPIAMoCzIMLk9JTFBJQUNFTk5IQh6q",
+            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OILPIACENNHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GIIHBKMJKHM), global::EggLink.DanhengServer.Proto.GIIHBKMJKHM.Parser, new[]{ "JHIAKMCHPLB", "OFGPFIJLHNC", "AvatarList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GIIHBKMJKHM), global::EggLink.DanhengServer.Proto.GIIHBKMJKHM.Parser, new[]{ "JHIAKMCHPLB", "PeakLevelId", "AvatarList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GIIHBKMJKHM(GIIHBKMJKHM other) : this() {
       jHIAKMCHPLB_ = other.jHIAKMCHPLB_.Clone();
-      oFGPFIJLHNC_ = other.oFGPFIJLHNC_;
+      peakLevelId_ = other.peakLevelId_;
       avatarList_ = other.avatarList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return jHIAKMCHPLB_; }
     }
 
-    /// <summary>Field number for the "OFGPFIJLHNC" field.</summary>
-    public const int OFGPFIJLHNCFieldNumber = 6;
-    private uint oFGPFIJLHNC_;
+    /// <summary>Field number for the "peak_level_id" field.</summary>
+    public const int PeakLevelIdFieldNumber = 6;
+    private uint peakLevelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OFGPFIJLHNC {
-      get { return oFGPFIJLHNC_; }
+    public uint PeakLevelId {
+      get { return peakLevelId_; }
       set {
-        oFGPFIJLHNC_ = value;
+        peakLevelId_ = value;
       }
     }
 
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!jHIAKMCHPLB_.Equals(other.jHIAKMCHPLB_)) return false;
-      if (OFGPFIJLHNC != other.OFGPFIJLHNC) return false;
+      if (PeakLevelId != other.PeakLevelId) return false;
       if(!avatarList_.Equals(other.avatarList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -145,7 +145,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= jHIAKMCHPLB_.GetHashCode();
-      if (OFGPFIJLHNC != 0) hash ^= OFGPFIJLHNC.GetHashCode();
+      if (PeakLevelId != 0) hash ^= PeakLevelId.GetHashCode();
       hash ^= avatarList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -165,9 +165,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (OFGPFIJLHNC != 0) {
+      if (PeakLevelId != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(OFGPFIJLHNC);
+        output.WriteUInt32(PeakLevelId);
       }
       jHIAKMCHPLB_.WriteTo(output, _repeated_jHIAKMCHPLB_codec);
       avatarList_.WriteTo(output, _repeated_avatarList_codec);
@@ -181,9 +181,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (OFGPFIJLHNC != 0) {
+      if (PeakLevelId != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(OFGPFIJLHNC);
+        output.WriteUInt32(PeakLevelId);
       }
       jHIAKMCHPLB_.WriteTo(ref output, _repeated_jHIAKMCHPLB_codec);
       avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
@@ -198,8 +198,8 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += jHIAKMCHPLB_.CalculateSize(_repeated_jHIAKMCHPLB_codec);
-      if (OFGPFIJLHNC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OFGPFIJLHNC);
+      if (PeakLevelId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakLevelId);
       }
       size += avatarList_.CalculateSize(_repeated_avatarList_codec);
       if (_unknownFields != null) {
@@ -215,8 +215,8 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       jHIAKMCHPLB_.Add(other.jHIAKMCHPLB_);
-      if (other.OFGPFIJLHNC != 0) {
-        OFGPFIJLHNC = other.OFGPFIJLHNC;
+      if (other.PeakLevelId != 0) {
+        PeakLevelId = other.PeakLevelId;
       }
       avatarList_.Add(other.avatarList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -235,7 +235,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 48: {
-            OFGPFIJLHNC = input.ReadUInt32();
+            PeakLevelId = input.ReadUInt32();
             break;
           }
           case 98:
@@ -263,7 +263,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 48: {
-            OFGPFIJLHNC = input.ReadUInt32();
+            PeakLevelId = input.ReadUInt32();
             break;
           }
           case 98:

@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static PDDKMLPNMAHReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFQRERLTUxQTk1BSC5wcm90byIiCgtQRERLTUxQTk1BSBITCgtPRkdQRklK",
-            "TEhOQxgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "ChFQRERLTUxQTk1BSC5wcm90byIkCgtQRERLTUxQTk1BSBIVCg1wZWFrX2xl",
+            "dmVsX2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PDDKMLPNMAH), global::EggLink.DanhengServer.Proto.PDDKMLPNMAH.Parser, new[]{ "OFGPFIJLHNC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PDDKMLPNMAH), global::EggLink.DanhengServer.Proto.PDDKMLPNMAH.Parser, new[]{ "PeakLevelId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PDDKMLPNMAH(PDDKMLPNMAH other) : this() {
-      oFGPFIJLHNC_ = other.oFGPFIJLHNC_;
+      peakLevelId_ = other.peakLevelId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new PDDKMLPNMAH(this);
     }
 
-    /// <summary>Field number for the "OFGPFIJLHNC" field.</summary>
-    public const int OFGPFIJLHNCFieldNumber = 13;
-    private uint oFGPFIJLHNC_;
+    /// <summary>Field number for the "peak_level_id" field.</summary>
+    public const int PeakLevelIdFieldNumber = 13;
+    private uint peakLevelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OFGPFIJLHNC {
-      get { return oFGPFIJLHNC_; }
+    public uint PeakLevelId {
+      get { return peakLevelId_; }
       set {
-        oFGPFIJLHNC_ = value;
+        peakLevelId_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (OFGPFIJLHNC != other.OFGPFIJLHNC) return false;
+      if (PeakLevelId != other.PeakLevelId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (OFGPFIJLHNC != 0) hash ^= OFGPFIJLHNC.GetHashCode();
+      if (PeakLevelId != 0) hash ^= PeakLevelId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (OFGPFIJLHNC != 0) {
+      if (PeakLevelId != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(OFGPFIJLHNC);
+        output.WriteUInt32(PeakLevelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (OFGPFIJLHNC != 0) {
+      if (PeakLevelId != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(OFGPFIJLHNC);
+        output.WriteUInt32(PeakLevelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (OFGPFIJLHNC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OFGPFIJLHNC);
+      if (PeakLevelId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakLevelId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.OFGPFIJLHNC != 0) {
-        OFGPFIJLHNC = other.OFGPFIJLHNC;
+      if (other.PeakLevelId != 0) {
+        PeakLevelId = other.PeakLevelId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 104: {
-            OFGPFIJLHNC = input.ReadUInt32();
+            PeakLevelId = input.ReadUInt32();
             break;
           }
         }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 104: {
-            OFGPFIJLHNC = input.ReadUInt32();
+            PeakLevelId = input.ReadUInt32();
             break;
           }
         }

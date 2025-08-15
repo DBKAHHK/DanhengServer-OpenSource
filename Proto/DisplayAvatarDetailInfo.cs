@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static DisplayAvatarDetailInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1EaXNwbGF5QXZhdGFyRGV0YWlsSW5mby5wcm90bxoaRGlzcGxheUVxdWlw",
-            "bWVudEluZm8ucHJvdG8aFkRpc3BsYXlSZWxpY0luZm8ucHJvdG8aFUF2YXRh",
-            "clNraWxsVHJlZS5wcm90byKZAgoXRGlzcGxheUF2YXRhckRldGFpbEluZm8S",
+            "Ch1EaXNwbGF5QXZhdGFyRGV0YWlsSW5mby5wcm90bxoWRGlzcGxheVJlbGlj",
+            "SW5mby5wcm90bxoVQXZhdGFyU2tpbGxUcmVlLnByb3RvGhpEaXNwbGF5RXF1",
+            "aXBtZW50SW5mby5wcm90byKZAgoXRGlzcGxheUF2YXRhckRldGFpbEluZm8S",
             "EAoIQXZhdGFySWQYAiABKA0SEQoJUHJvbW90aW9uGAcgASgNEhUKDURyZXNz",
             "ZWRTa2luSWQYCSABKA0SJAoJUmVsaWNMaXN0GAYgAygLMhEuRGlzcGxheVJl",
             "bGljSW5mbxILCgNQb3MYBCABKA0SKAoJRXF1aXBtZW50GAogASgLMhUuRGlz",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "ZXZlbBgIIAEoDRISCgpFbmhhbmNlZElkGAsgASgNQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayEquipmentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo), global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser, new[]{ "AvatarId", "Promotion", "DressedSkinId", "RelicList", "Pos", "Equipment", "Rank", "SkilltreeList", "Exp", "Level", "EnhancedId" }, null, null, null, null)
           }));

@@ -24,19 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static ILMELFJCCMDReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFJTE1FTEZKQ0NNRC5wcm90bxoRSk9GR0RBSUFEQk8ucHJvdG8aEUlJS05H",
-            "TkhETUZJLnByb3RvIo8CCgtJTE1FTEZKQ0NNRBITCgtDT0lGSEZQRUdQSBgL",
-            "IAEoAxITCgtCS01BTUdBUEVHSBgNIAEoDRITCgtCSUlOTkNORFBDRxgJIAEo",
-            "CBITCgtES0hJR0NJUEVLRhgEIAEoCBIhCgtQRUhJTkdKS0dDQhgGIAEoCzIM",
-            "LklJS05HTkhETUZJEiEKC0tNTkRFQkNGRkFEGAMgAygLMgwuSk9GR0RBSUFE",
-            "Qk8SMgoLSElKRERGQkVEUE8YDCADKAsyHS5JTE1FTEZKQ0NNRC5ISUpEREZC",
-            "RURQT0VudHJ5GjIKEEhJSkRERkJFRFBPRW50cnkSCwoDa2V5GAEgASgNEg0K",
-            "BXZhbHVlGAIgASgNOgI4AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "ChFJTE1FTEZKQ0NNRC5wcm90bxoRSUlLTkdOSERNRkkucHJvdG8aEUpPRkdE",
+            "QUlBREJPLnByb3RvIosCCgtJTE1FTEZKQ0NNRBITCgtDT0lGSEZQRUdQSBgL",
+            "IAEoAxITCgtCS01BTUdBUEVHSBgNIAEoDRIPCgdpc19yZWFkGAkgASgIEhMK",
+            "C0RLSElHQ0lQRUtGGAQgASgIEiEKC1BFSElOR0pLR0NCGAYgASgLMgwuSUlL",
+            "TkdOSERNRkkSIQoLS01OREVCQ0ZGQUQYAyADKAsyDC5KT0ZHREFJQURCTxIy",
+            "CgtISUpEREZCRURQTxgMIAMoCzIdLklMTUVMRkpDQ01ELkhJSkRERkJFRFBP",
+            "RW50cnkaMgoQSElKRERGQkVEUE9FbnRyeRILCgNrZXkYASABKA0SDQoFdmFs",
+            "dWUYAiABKA06AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JOFGDAIADBOReflection.Descriptor, global::EggLink.DanhengServer.Proto.IIKNGNHDMFIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IIKNGNHDMFIReflection.Descriptor, global::EggLink.DanhengServer.Proto.JOFGDAIADBOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ILMELFJCCMD), global::EggLink.DanhengServer.Proto.ILMELFJCCMD.Parser, new[]{ "COIFHFPEGPH", "BKMAMGAPEGH", "BIINNCNDPCG", "DKHIGCIPEKF", "PEHINGJKGCB", "KMNDEBCFFAD", "HIJDDFBEDPO" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ILMELFJCCMD), global::EggLink.DanhengServer.Proto.ILMELFJCCMD.Parser, new[]{ "COIFHFPEGPH", "BKMAMGAPEGH", "IsRead", "DKHIGCIPEKF", "PEHINGJKGCB", "KMNDEBCFFAD", "HIJDDFBEDPO" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -80,7 +80,7 @@ namespace EggLink.DanhengServer.Proto {
     public ILMELFJCCMD(ILMELFJCCMD other) : this() {
       cOIFHFPEGPH_ = other.cOIFHFPEGPH_;
       bKMAMGAPEGH_ = other.bKMAMGAPEGH_;
-      bIINNCNDPCG_ = other.bIINNCNDPCG_;
+      isRead_ = other.isRead_;
       dKHIGCIPEKF_ = other.dKHIGCIPEKF_;
       pEHINGJKGCB_ = other.pEHINGJKGCB_ != null ? other.pEHINGJKGCB_.Clone() : null;
       kMNDEBCFFAD_ = other.kMNDEBCFFAD_.Clone();
@@ -118,15 +118,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BIINNCNDPCG" field.</summary>
-    public const int BIINNCNDPCGFieldNumber = 9;
-    private bool bIINNCNDPCG_;
+    /// <summary>Field number for the "is_read" field.</summary>
+    public const int IsReadFieldNumber = 9;
+    private bool isRead_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool BIINNCNDPCG {
-      get { return bIINNCNDPCG_; }
+    public bool IsRead {
+      get { return isRead_; }
       set {
-        bIINNCNDPCG_ = value;
+        isRead_ = value;
       }
     }
 
@@ -193,7 +193,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (COIFHFPEGPH != other.COIFHFPEGPH) return false;
       if (BKMAMGAPEGH != other.BKMAMGAPEGH) return false;
-      if (BIINNCNDPCG != other.BIINNCNDPCG) return false;
+      if (IsRead != other.IsRead) return false;
       if (DKHIGCIPEKF != other.DKHIGCIPEKF) return false;
       if (!object.Equals(PEHINGJKGCB, other.PEHINGJKGCB)) return false;
       if(!kMNDEBCFFAD_.Equals(other.kMNDEBCFFAD_)) return false;
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (COIFHFPEGPH != 0L) hash ^= COIFHFPEGPH.GetHashCode();
       if (BKMAMGAPEGH != 0) hash ^= BKMAMGAPEGH.GetHashCode();
-      if (BIINNCNDPCG != false) hash ^= BIINNCNDPCG.GetHashCode();
+      if (IsRead != false) hash ^= IsRead.GetHashCode();
       if (DKHIGCIPEKF != false) hash ^= DKHIGCIPEKF.GetHashCode();
       if (pEHINGJKGCB_ != null) hash ^= PEHINGJKGCB.GetHashCode();
       hash ^= kMNDEBCFFAD_.GetHashCode();
@@ -239,9 +239,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(50);
         output.WriteMessage(PEHINGJKGCB);
       }
-      if (BIINNCNDPCG != false) {
+      if (IsRead != false) {
         output.WriteRawTag(72);
-        output.WriteBool(BIINNCNDPCG);
+        output.WriteBool(IsRead);
       }
       if (COIFHFPEGPH != 0L) {
         output.WriteRawTag(88);
@@ -271,9 +271,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(50);
         output.WriteMessage(PEHINGJKGCB);
       }
-      if (BIINNCNDPCG != false) {
+      if (IsRead != false) {
         output.WriteRawTag(72);
-        output.WriteBool(BIINNCNDPCG);
+        output.WriteBool(IsRead);
       }
       if (COIFHFPEGPH != 0L) {
         output.WriteRawTag(88);
@@ -300,7 +300,7 @@ namespace EggLink.DanhengServer.Proto {
       if (BKMAMGAPEGH != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BKMAMGAPEGH);
       }
-      if (BIINNCNDPCG != false) {
+      if (IsRead != false) {
         size += 1 + 1;
       }
       if (DKHIGCIPEKF != false) {
@@ -329,8 +329,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.BKMAMGAPEGH != 0) {
         BKMAMGAPEGH = other.BKMAMGAPEGH;
       }
-      if (other.BIINNCNDPCG != false) {
-        BIINNCNDPCG = other.BIINNCNDPCG;
+      if (other.IsRead != false) {
+        IsRead = other.IsRead;
       }
       if (other.DKHIGCIPEKF != false) {
         DKHIGCIPEKF = other.DKHIGCIPEKF;
@@ -374,7 +374,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            BIINNCNDPCG = input.ReadBool();
+            IsRead = input.ReadBool();
             break;
           }
           case 88: {
@@ -420,7 +420,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            BIINNCNDPCG = input.ReadBool();
+            IsRead = input.ReadBool();
             break;
           }
           case 88: {
