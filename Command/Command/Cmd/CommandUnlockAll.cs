@@ -98,4 +98,29 @@ public class CommandUnlockAll : ICommand
         await arg.Target!.Player!.SendPacket(new PacketPlayerKickOutScNotify());
         arg.Target!.Stop();
     }
+
+    [CommandMethod("0 challenge")]
+    public async ValueTask UnlockAllChallenge(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        var player = arg.Target!.Player!;
+        List<int> peakList = [2200503, 2200504, 2200505, 2200506];
+
+        List<int> allList = [.. peakList];
+
+        foreach (var id in allList)
+        {
+            // finish mission
+            await player.QuestManager!.AcceptQuest(id);
+            await player.QuestManager!.FinishQuest(id);
+        }
+
+        await arg.SendMsg(I18NManager.Translate("Game.Command.UnlockAll.UnlockedAll",
+            I18NManager.Translate("Word.TypesOfChallenge")));
+    }
 }

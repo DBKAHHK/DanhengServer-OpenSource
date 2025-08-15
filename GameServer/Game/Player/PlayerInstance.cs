@@ -9,6 +9,7 @@ using EggLink.DanhengServer.GameServer.Game.Activity;
 using EggLink.DanhengServer.GameServer.Game.Avatar;
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.Challenge;
+using EggLink.DanhengServer.GameServer.Game.ChallengePeak;
 using EggLink.DanhengServer.GameServer.Game.ChessRogue;
 using EggLink.DanhengServer.GameServer.Game.Friend;
 using EggLink.DanhengServer.GameServer.Game.Gacha;
@@ -93,6 +94,7 @@ public partial class PlayerInstance(PlayerData data)
     public MailManager? MailManager { get; private set; }
     public FriendManager? FriendManager { get; private set; }
     public ChallengeManager? ChallengeManager { get; private set; }
+    public ChallengePeakManager? ChallengePeakManager { get; private set; }
 
     #endregion
 
@@ -180,6 +182,7 @@ public partial class PlayerInstance(PlayerData data)
         RogueTournManager = new RogueTournManager(this);
         RogueMagicManager = new RogueMagicManager(this);
         ChallengeManager = new ChallengeManager(this);
+        ChallengePeakManager = new ChallengePeakManager(this);
         TaskManager = new TaskManager(this);
         RaidManager = new RaidManager(this);
         StoryLineManager = new StoryLineManager(this);
@@ -274,9 +277,6 @@ public partial class PlayerInstance(PlayerData data)
                 AvatarManager!.GetTrialAvatar(e.SpecialAvatarID)?.CheckLevel(Data.WorldLevel);
         }
 
-        await LoadScene(Data.PlaneId, Data.FloorId, Data.EntryId, Data.Pos!, Data.Rot!, false);
-        if (SceneInstance == null) await EnterScene(2000101, 0, false);
-
         if (ConfigManager.Config.ServerOption.EnableMission) await MissionManager!.AcceptMainMissionByCondition();
 
         await QuestManager!.AcceptQuestByCondition();
@@ -307,6 +307,9 @@ public partial class PlayerInstance(PlayerData data)
 
         if (RaidManager != null)
             await RaidManager.OnLogin();
+
+        await LoadScene(Data.PlaneId, Data.FloorId, Data.EntryId, Data.Pos!, Data.Rot!, false);
+        if (SceneInstance == null) await EnterScene(2000101, 0, false);
 
         InvokeOnPlayerLogin(this);
     }

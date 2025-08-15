@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Threading;
 
 namespace EggLink.DanhengServer.Data.Excel;
 
@@ -31,9 +32,9 @@ public class ChallengeConfigExcel : ExcelResource
     public List<int>? NpcMonsterIDList2 { get; set; } = [];
     public List<int>? EventIDList2 { get; set; } = [];
 
-    [JsonIgnore] public Dictionary<int, ChallengeMonsterInfo> ChallengeMonsters1 { get; set; } = new();
+    [JsonIgnore] public Dictionary<int, List<ChallengeMonsterInfo>> ChallengeMonsters1 { get; set; } = new();
 
-    [JsonIgnore] public Dictionary<int, ChallengeMonsterInfo> ChallengeMonsters2 { get; set; } = new();
+    [JsonIgnore] public Dictionary<int, List<ChallengeMonsterInfo>> ChallengeMonsters2 { get; set; } = new();
 
     public override int GetId()
     {
@@ -53,7 +54,7 @@ public class ChallengeConfigExcel : ExcelResource
     public void SetStoryExcel(ChallengeStoryExtraExcel storyExcel)
     {
         StoryExcel = storyExcel;
-        ChallengeCountDown = storyExcel.TurnLimit;
+        ChallengeCountDown = (int)storyExcel.TurnLimit;
     }
 
     public void SetBossExcel(ChallengeBossExtraExcel bossExcel)
@@ -68,16 +69,18 @@ public class ChallengeConfigExcel : ExcelResource
         {
             if (ConfigList1[i] == 0) break;
 
-            var Monster = new ChallengeMonsterInfo(ConfigList1[i], NpcMonsterIDList1![i], EventIDList1![i]);
-            ChallengeMonsters1.Add(Monster.ConfigId, Monster);
+            var monster = new ChallengeMonsterInfo(ConfigList1[i], NpcMonsterIDList1![i], EventIDList1![i]);
+            ChallengeMonsters1.TryAdd(MazeGroupID1, []);
+            ChallengeMonsters1[MazeGroupID1].Add(monster);
         }
 
         for (var i = 0; i < ConfigList2?.Count; i++)
         {
             if (ConfigList2[i] == 0) break;
 
-            var Monster = new ChallengeMonsterInfo(ConfigList2[i], NpcMonsterIDList2![i], EventIDList2![i]);
-            ChallengeMonsters2.Add(Monster.ConfigId, Monster);
+            var monster = new ChallengeMonsterInfo(ConfigList2[i], NpcMonsterIDList2![i], EventIDList2![i]);
+            ChallengeMonsters2.TryAdd(MazeGroupID2, []);
+            ChallengeMonsters2[MazeGroupID2].Add(monster);
         }
 
         ConfigList1 = null;
@@ -91,10 +94,10 @@ public class ChallengeConfigExcel : ExcelResource
     }
 
     [method: JsonConstructor]
-    public class ChallengeMonsterInfo(int ConfigId, int NpcMonsterId, int EventId)
+    public class ChallengeMonsterInfo(int configId, int npcMonsterId, int eventId)
     {
-        public int ConfigId = ConfigId;
-        public int EventId = EventId;
-        public int NpcMonsterId = NpcMonsterId;
+        public int ConfigId = configId;
+        public int EventId = eventId;
+        public int NpcMonsterId = npcMonsterId;
     }
 }

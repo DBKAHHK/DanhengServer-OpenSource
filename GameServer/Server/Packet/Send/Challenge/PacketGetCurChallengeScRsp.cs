@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.GameServer.Game.Player;
+﻿using EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
+using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -10,13 +11,12 @@ public class PacketGetCurChallengeScRsp : BasePacket
     {
         var proto = new GetCurChallengeScRsp();
 
-        if (player.ChallengeManager!.ChallengeInstance != null)
+        if (player.ChallengeManager!.ChallengeInstance is BaseLegacyChallengeInstance inst)
         {
-            proto.CurChallenge = player.ChallengeManager.ChallengeInstance.ToProto();
+            proto.CurChallenge = inst.ToProto();
             Task.Run(async () =>
             {
-                await player.LineupManager!.SetCurLineup(player.ChallengeManager.ChallengeInstance
-                    .CurrentExtraLineup + 10);
+                await player.LineupManager!.SetCurLineup(inst.GetCurrentExtraLineupType() + 10);
             }).Wait();
             var proto1 = player.LineupManager?.GetExtraLineup(ExtraLineupType.LineupChallenge)?.ToProto();
             if (proto1 != null)

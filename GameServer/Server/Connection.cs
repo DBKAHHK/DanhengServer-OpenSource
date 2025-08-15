@@ -146,6 +146,7 @@ public class Connection(KcpConversation conversation, IPEndPoint remote) : Danhe
             catch (Exception e)
             {
                 Logger.Error("An error occured ", e);
+
                 // get the packet rsp and set retCode to Retcode.RetFail
                 var curPacket = LogMap.GetValueOrDefault(opcode);
                 if (curPacket == null) return;

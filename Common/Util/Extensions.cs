@@ -1,5 +1,6 @@
 ﻿using System.Buffers.Binary;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Proto.ServerSide;
 using Newtonsoft.Json;
 
 namespace EggLink.DanhengServer.Util;
@@ -13,6 +14,36 @@ public static class Extensions
             X = vector.X,
             Y = vector.Y,
             Z = vector.Z
+        };
+    }
+
+    public static Position ToPosition(this Vector3Pb vector)
+    {
+        return new Position
+        {
+            X = vector.X,
+            Y = vector.Y,
+            Z = vector.Z
+        };
+    }
+
+    public static Vector ToVector(this Position position)
+    {
+        return new Vector
+        {
+            X = position.X,
+            Y = position.Y,
+            Z = position.Z
+        };
+    }
+
+    public static Vector3Pb ToVector3Pb(this Position position)
+    {
+        return new Vector3Pb
+        {
+            X = position.X,
+            Y = position.Y,
+            Z = position.Z
         };
     }
 

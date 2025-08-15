@@ -2,9 +2,13 @@
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Challenge;
 using EggLink.DanhengServer.Database.Inventory;
+using EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
+using EggLink.DanhengServer.GameServer.Game.Challenge.Instances;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Proto.ServerSide;
+using Google.Protobuf;
 using static EggLink.DanhengServer.GameServer.Plugin.Event.PluginEvent;
 
 namespace EggLink.DanhengServer.GameServer.Game.Challenge;
@@ -13,7 +17,7 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
 {
     #region Properties
 
-    public ChallengeInstance? ChallengeInstance { get; set; }
+    public BaseChallengeInstance? ChallengeInstance { get; set; }
 
     public ChallengeData ChallengeData { get; } =
         DatabaseHelper.Instance!.GetInstanceOrCreateNew<ChallengeData>(player.Uid);
@@ -82,11 +86,52 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
         }
 
         // Set challenge data for player
-        ChallengeInstance instance = new(Player, excel);
+        var data = new ChallengeDataPb();
+        BaseLegacyChallengeInstance instance;
+
+        // Set challenge type
+        if (excel.IsBoss())
+        {
+            data.Boss = new ChallengeBossDataPb
+            {
+                ChallengeMazeId = (uint)excel.ID,
+                CurStatus = 1,
+                CurrentStage = 1,
+                CurrentExtraLineup = ChallengeLineupTypePb.Challenge1
+            };
+
+            instance = new ChallengeBossInstance(Player, data);
+        }
+        else if (excel.IsStory())
+        {
+            data.Story = new ChallengeStoryDataPb
+            {
+                ChallengeMazeId = (uint)excel.ID,
+                CurStatus = 1,
+                CurrentStage = 1,
+                CurrentExtraLineup = ChallengeLineupTypePb.Challenge1
+            };
+
+            instance = new ChallengeStoryInstance(Player, data);
+        }
+        else
+        {
+            data.Memory = new ChallengeMemoryDataPb
+            {
+                ChallengeMazeId = (uint)excel.ID,
+                CurStatus = 1,
+                CurrentStage = 1,
+                CurrentExtraLineup = ChallengeLineupTypePb.Challenge1,
+                RoundsLeft = (uint)excel.ChallengeCountDown
+            };
+
+            instance = new ChallengeMemoryInstance(Player, data);
+        }
+
         ChallengeInstance = instance;
 
         // Set first lineup before we enter scenes
-        await Player.LineupManager!.SetCurLineup(instance.CurrentExtraLineup + 10);
+        await Player.LineupManager!.SetCurLineup(instance.GetCurrentExtraLineupType() + 10);
 
         // Enter scene
         try
@@ -104,20 +149,20 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
         }
 
         // Save start positions
-        instance.StartPos = Player.Data.Pos!;
-        instance.StartRot = Player.Data.Rot!;
-        instance.SavedMp = Player.LineupManager.GetCurLineup()!.Mp;
+        instance.SetStartPos(Player.Data.Pos!);
+        instance.SetStartRot(Player.Data.Rot!);
+        instance.SetSavedMp(Player.LineupManager.GetCurLineup()!.Mp);
 
         if (excel.IsStory() && storyBuffs != null)
         {
-            instance.StoryBuffs.Add((int)storyBuffs.BuffOne);
-            instance.StoryBuffs.Add((int)storyBuffs.BuffTwo);
+            instance.Data.Story.Buffs.Add(storyBuffs.BuffOne);
+            instance.Data.Story.Buffs.Add(storyBuffs.BuffTwo);
         }
 
         if (bossBuffs != null)
         {
-            instance.BossBuffs.Add((int)bossBuffs.BuffOne);
-            instance.BossBuffs.Add((int)bossBuffs.BuffTwo);
+            instance.Data.Boss.Buffs.Add(bossBuffs.BuffOne);
+            instance.Data.Boss.Buffs.Add(bossBuffs.BuffTwo);
         }
 
         InvokeOnPlayerEnterChallenge(Player, instance);
@@ -220,40 +265,37 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
         return rewardInfos;
     }
 
-    public void SaveInstance(ChallengeInstance instance)
+    public void SaveInstance(BaseChallengeInstance instance)
     {
-        ChallengeData.Instance.StartPos = instance.StartPos;
-        ChallengeData.Instance.StartRot = instance.StartRot;
-        ChallengeData.Instance.ChallengeId = instance.ChallengeId;
-        ChallengeData.Instance.CurrentStage = instance.CurrentStage;
-        ChallengeData.Instance.CurrentExtraLineup = instance.CurrentExtraLineup;
-        ChallengeData.Instance.Status = instance.Status;
-        ChallengeData.Instance.HasAvatarDied = instance.HasAvatarDied;
-        ChallengeData.Instance.SavedMp = instance.SavedMp;
-        ChallengeData.Instance.RoundsLeft = instance.RoundsLeft;
-        ChallengeData.Instance.Stars = instance.Stars;
-        ChallengeData.Instance.ScoreStage1 = instance.ScoreStage1;
-        ChallengeData.Instance.ScoreStage2 = instance.ScoreStage2;
-        ChallengeData.Instance.StoryBuffs = instance.StoryBuffs;
-        ChallengeData.Instance.BossBuffs = instance.BossBuffs;
+        ChallengeData.ChallengeInstance = Convert.ToBase64String(instance.Data.ToByteArray());
     }
 
     public void ClearInstance()
     {
-        ChallengeData.Instance.ChallengeId = 0;
+        ChallengeData.ChallengeInstance = null;
+        ChallengeInstance = null;
     }
 
     public void ResurrectInstance()
     {
-        if (ChallengeData.Instance != null && ChallengeData.Instance.ChallengeId != 0)
+        if (ChallengeData.ChallengeInstance == null) return;
+        var protoByte = Convert.FromBase64String(ChallengeData.ChallengeInstance);
+        var proto = ChallengeDataPb.Parser.ParseFrom(protoByte);
+
+        if (proto != null)
         {
-            var ChallengeId = ChallengeData.Instance.ChallengeId;
-            if (GameData.ChallengeConfigData.TryGetValue(ChallengeId, out var value))
+            ChallengeInstance = proto.ChallengeTypeCase switch
             {
-                var Excel = value;
-                var instance = new ChallengeInstance(Player, Excel, ChallengeData.Instance);
-                ChallengeInstance = instance;
-            }
+                ChallengeDataPb.ChallengeTypeOneofCase.Memory => new ChallengeMemoryInstance(Player, proto),
+                ChallengeDataPb.ChallengeTypeOneofCase.Peak => new ChallengePeakInstance(Player, proto),
+                ChallengeDataPb.ChallengeTypeOneofCase.Story => new ChallengeStoryInstance(Player, proto),
+                ChallengeDataPb.ChallengeTypeOneofCase.Boss => new ChallengeBossInstance(Player, proto),
+                _ => null
+            };
+        }
+        else
+        {
+            ChallengeData.ChallengeInstance = null;
         }
     }
 

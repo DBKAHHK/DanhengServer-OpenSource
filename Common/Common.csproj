@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Proto\Proto.csproj" />
+    <ProjectReference Include="..\ServerSideProto\ServerSideProto.csproj" />
   </ItemGroup>
 
 </Project>

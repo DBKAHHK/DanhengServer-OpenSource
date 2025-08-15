@@ -4,7 +4,7 @@
 public class ChallengeStoryExtraExcel : ExcelResource
 {
     public int ID { get; set; }
-    public int TurnLimit { get; set; }
+    public uint TurnLimit { get; set; }
     public int ClearScore { get; set; }
     public List<int>? BattleTargetID { get; set; }
 

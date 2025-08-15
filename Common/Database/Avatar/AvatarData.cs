@@ -268,6 +268,22 @@ public class FormalAvatarInfo : BaseAvatarInfo
         return proto;
     }
 
+    public ChallengePeakAvatar ToPeakAvatarProto()
+    {
+        return new ChallengePeakAvatar
+        {
+            AvatarId = (uint)AvatarId,
+            EquipmentUniqueId = (uint)GetCurPathInfo().EquipId,
+            RelicList =
+            {
+                GetCurPathInfo().Relic.Select(relic => new EquipRelic
+                {
+                    Type = (uint)relic.Key,
+                    RelicUniqueId = (uint)relic.Value
+                })
+            }
+        };
+    }
     public List<MultiPathAvatarInfo> ToAvatarPathProto()
     {
         var res = new List<MultiPathAvatarInfo>();

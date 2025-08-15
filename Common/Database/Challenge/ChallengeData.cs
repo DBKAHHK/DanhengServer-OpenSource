@@ -9,14 +9,23 @@ public class ChallengeData : BaseDatabaseDataHelper
 {
     [SugarColumn(IsJson = true)] public Dictionary<int, ChallengeHistoryData> History { get; set; } = new();
 
-    [SugarColumn(IsJson = true)] public ChallengeInstanceData Instance { get; set; } = new();
+    [SugarColumn(IsNullable = true)] public string? ChallengeInstance { get; set; }
+    [SugarColumn(IsNullable = true)] public string? Instance { get; set; } = null;  // placeholder
 
     [SugarColumn(IsJson = true)] public Dictionary<int, ChallengeGroupReward> TakenRewards { get; set; } = new();
+    [SugarColumn(IsJson = true)] public Dictionary<int, ChallengePeakLevelData> PeakLevelDatas { get; set; } = new();
 
-    public void delete(int ChallengeId)
+    public void Delete(int challengeId)
     {
-        History.Remove(ChallengeId);
+        History.Remove(challengeId);
     }
+}
+
+public class ChallengePeakLevelData
+{
+    public int LevelId { get; set; }
+    public uint PeakStar { get; set; }
+    public List<uint> BaseAvatarList { get; set; } = [];
 }
 
 public class ChallengeHistoryData(int uid, int challengeId)

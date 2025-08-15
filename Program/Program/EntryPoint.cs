@@ -8,6 +8,7 @@ using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Enums;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.GameServer.Command;
+using EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
 using EggLink.DanhengServer.GameServer.Plugin;
 using EggLink.DanhengServer.GameServer.Server;
 using EggLink.DanhengServer.GameServer.Server.Packet;
@@ -280,13 +281,14 @@ public class EntryPoint
                                     _ => PlayerStatusEnum.Rogue
                                 };
                     }
-                    else if ((con as Connection)!.Player!.ChallengeManager?.ChallengeInstance != null)
+                    else if ((con as Connection)!.Player!.ChallengeManager?.ChallengeInstance is
+                             BaseLegacyChallengeInstance inst)
                     {
                         status = PlayerStatusEnum.Challenge;
-                        if ((con as Connection)!.Player?.ChallengeManager?.ChallengeInstance?.Excel.StoryExcel != null)
+
+                        if (inst.Config.StoryExcel != null)
                             status = PlayerStatusEnum.ChallengeStory;
-                        else if ((con as Connection)!.Player?.ChallengeManager?.ChallengeInstance?.Excel.BossExcel !=
-                                 null)
+                        else if (inst.Config.BossExcel != null)
                             status = PlayerStatusEnum.ChallengeBoss;
                     }
                     else if ((con as Connection)!.Player!.RaidManager?.RaidData.CurRaidId != 0)

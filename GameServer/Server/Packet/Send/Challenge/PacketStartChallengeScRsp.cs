@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.GameServer.Game.Player;
+﻿using EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
+using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -22,8 +23,12 @@ public class PacketStartChallengeScRsp : BasePacket
 
         if (player.ChallengeManager!.ChallengeInstance != null)
         {
-            proto.CurChallenge = player.ChallengeManager.ChallengeInstance.ToProto();
-            proto.StageInfo = player.ChallengeManager.ChallengeInstance.ToStageInfo();
+            if (player.ChallengeManager.ChallengeInstance is BaseLegacyChallengeInstance inst)
+            {
+                proto.CurChallenge = inst.ToProto();
+                proto.StageInfo = inst.ToStageInfo();
+            }
+
             proto.LineupList.Add(player.LineupManager!.GetExtraLineup(ExtraLineupType.LineupChallenge)!.ToProto());
             proto.LineupList.Add(player.LineupManager!.GetExtraLineup(ExtraLineupType.LineupChallenge2)!.ToProto());
             if (sendScene) proto.Scene = player.SceneInstance!.ToProto();

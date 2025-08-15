@@ -16,6 +16,7 @@ public static class GameConstants
     public const int LAST_TRAIN_WORLD_ID = 501;
     public const int AMBUSH_BUFF_ID = 1000102;
     public const int CHALLENGE_ENTRANCE = 100000103;
+    public const int CHALLENGE_PEAK_ENTRANCE = 100000352;
     public const int CHALLENGE_STORY_ENTRANCE = 102020107;
     public const int CHALLENGE_BOSS_ENTRANCE = 1030402;
     public const int CURRENT_ROGUE_TOURN_SEASON = 2;

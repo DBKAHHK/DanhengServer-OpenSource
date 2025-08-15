@@ -76,6 +76,9 @@ public static class GameData
     public static Dictionary<int, ChallengeConfigExcel> ChallengeConfigData { get; private set; } = [];
     public static Dictionary<int, ChallengeTargetExcel> ChallengeTargetData { get; private set; } = [];
     public static Dictionary<int, ChallengeGroupExcel> ChallengeGroupData { get; private set; } = [];
+    public static Dictionary<int, ChallengePeakGroupConfigExcel> ChallengePeakGroupConfigData { get; private set; } = [];
+    public static Dictionary<int, ChallengePeakConfigExcel> ChallengePeakConfigData { get; private set; } = [];
+    public static Dictionary<int, ChallengePeakBossConfigExcel> ChallengePeakBossConfigData { get; private set; } = [];
     public static Dictionary<int, List<ChallengeRewardExcel>> ChallengeRewardData { get; private set; } = [];
 
     #endregion
@@ -91,6 +94,7 @@ public static class GameData
     public static Dictionary<int, MonsterConfigExcel> MonsterConfigData { get; private set; } = [];
     public static Dictionary<int, MonsterDropExcel> MonsterDropData { get; private set; } = [];
     public static Dictionary<int, BattleCollegeConfigExcel> BattleCollegeConfigData { get; private set; } = [];
+    public static Dictionary<int, BattleTargetConfigExcel> BattleTargetConfigData { get; private set; } = [];
 
     #endregion
 

@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Command;
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.Challenge;
+using EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
@@ -56,12 +57,12 @@ public static class PluginEvent
         OnPlayerQuitBattle?.Invoke(player, result);
     }
 
-    public static void InvokeOnPlayerEnterChallenge(PlayerInstance player, ChallengeInstance challenge)
+    public static void InvokeOnPlayerEnterChallenge(PlayerInstance player, BaseChallengeInstance challenge)
     {
         OnPlayerEnterChallenge?.Invoke(player, challenge);
     }
 
-    public static void InvokeOnPlayerQuitChallenge(PlayerInstance player, ChallengeInstance? challenge)
+    public static void InvokeOnPlayerQuitChallenge(PlayerInstance player, BaseChallengeInstance? challenge)
     {
         OnPlayerQuitChallenge?.Invoke(player, challenge);
     }
@@ -96,9 +97,9 @@ public static class PluginEvent
 
     public delegate void OnPlayerQuitBattleHandler(PlayerInstance player, PVEBattleResultCsReq result);
 
-    public delegate void OnPlayerEnterChallengeHandler(PlayerInstance player, ChallengeInstance challenge);
+    public delegate void OnPlayerEnterChallengeHandler(PlayerInstance player, BaseChallengeInstance challenge);
 
-    public delegate void OnPlayerQuitChallengeHandler(PlayerInstance player, ChallengeInstance? challenge);
+    public delegate void OnPlayerQuitChallengeHandler(PlayerInstance player, BaseChallengeInstance? challenge);
 
     public delegate void OnPlayerSyncLineupHandler(PlayerInstance player, LineupInfo? lineup);
 
