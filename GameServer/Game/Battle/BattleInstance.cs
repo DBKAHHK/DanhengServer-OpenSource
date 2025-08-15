@@ -277,6 +277,19 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
             proto.BattleTargetInfo.Add((uint)i, battleTargetEntry);
         }
 
+        // global buff
+        foreach (var buff in GameData.AvatarGlobalBuffConfigData.Values)
+        {
+            if (Player.AvatarManager!.GetFormalAvatar(buff.AvatarID) != null)
+            {
+                // add buff
+                Buffs.Add(new MazeBuff(buff.MazeBuffID, 1, -1)
+                {
+                    WaveFlag = -1
+                });
+            }
+        }
+
         foreach (var buff in Buffs)
         {
             if (buff.WaveFlag != null) continue;

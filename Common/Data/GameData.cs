@@ -48,6 +48,7 @@ public static class GameData
     #region Avatar
 
     public static Dictionary<int, AvatarConfigExcel> AvatarConfigData { get; private set; } = [];
+    public static Dictionary<int, AvatarGlobalBuffConfigExcel> AvatarGlobalBuffConfigData { get; private set; } = [];
 
     public static Dictionary<int, AdventureAbilityConfigListInfo> AdventureAbilityConfigListData { get; private set; } =
         [];
