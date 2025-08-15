@@ -25,17 +25,17 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZOcGNSb2d1ZUdhbWVJbmZvLnByb3RvIosCChBOcGNSb2d1ZUdhbWVJbmZv",
-            "EhMKC0VDQ0RHTEJLRUpFGAsgASgIEjcKC0tKQ0JORUlOREhMGAMgAygLMiIu",
-            "TnBjUm9ndWVHYW1lSW5mby5LSkNCTkVJTkRITEVudHJ5EhMKC0pFTkZIT01C",
-            "S0tFGA4gASgIEhQKDGFlb25fdGFsa19pZBgPIAEoDRIYChB0YWxrX2RpYWxv",
-            "Z3VlX2lkGAIgASgNEhcKD2V2ZW50X3VuaXF1ZV9pZBgNIAEoDRIXCg9maW5p",
-            "c2hfZGlhbG9ndWUYBCABKAgaMgoQS0pDQk5FSU5ESExFbnRyeRILCgNrZXkY",
+            "EhMKC0VDQ0RHTEJLRUpFGAYgASgIEhgKEHRhbGtfZGlhbG9ndWVfaWQYAiAB",
+            "KA0SNwoLS0pDQk5FSU5ESEwYAyADKAsyIi5OcGNSb2d1ZUdhbWVJbmZvLktK",
+            "Q0JORUlOREhMRW50cnkSEwoLSkVORkhPTUJLS0UYDiABKAgSFAoMYWVvbl90",
+            "YWxrX2lkGAsgASgNEhcKD2ZpbmlzaF9kaWFsb2d1ZRgNIAEoCBIXCg9ldmVu",
+            "dF91bmlxdWVfaWQYASABKA0aMgoQS0pDQk5FSU5ESExFbnRyeRILCgNrZXkY",
             "ASABKA0SDQoFdmFsdWUYAiABKA06AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NpcRogueGameInfo), global::EggLink.DanhengServer.Proto.NpcRogueGameInfo.Parser, new[]{ "ECCDGLBKEJE", "KJCBNEINDHL", "JENFHOMBKKE", "AeonTalkId", "TalkDialogueId", "EventUniqueId", "FinishDialogue" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NpcRogueGameInfo), global::EggLink.DanhengServer.Proto.NpcRogueGameInfo.Parser, new[]{ "ECCDGLBKEJE", "TalkDialogueId", "KJCBNEINDHL", "JENFHOMBKKE", "AeonTalkId", "FinishDialogue", "EventUniqueId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -78,12 +78,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NpcRogueGameInfo(NpcRogueGameInfo other) : this() {
       eCCDGLBKEJE_ = other.eCCDGLBKEJE_;
+      talkDialogueId_ = other.talkDialogueId_;
       kJCBNEINDHL_ = other.kJCBNEINDHL_.Clone();
       jENFHOMBKKE_ = other.jENFHOMBKKE_;
       aeonTalkId_ = other.aeonTalkId_;
-      talkDialogueId_ = other.talkDialogueId_;
-      eventUniqueId_ = other.eventUniqueId_;
       finishDialogue_ = other.finishDialogue_;
+      eventUniqueId_ = other.eventUniqueId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -94,7 +94,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ECCDGLBKEJE" field.</summary>
-    public const int ECCDGLBKEJEFieldNumber = 11;
+    public const int ECCDGLBKEJEFieldNumber = 6;
     private bool eCCDGLBKEJE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -102,6 +102,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return eCCDGLBKEJE_; }
       set {
         eCCDGLBKEJE_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "talk_dialogue_id" field.</summary>
+    public const int TalkDialogueIdFieldNumber = 2;
+    private uint talkDialogueId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TalkDialogueId {
+      get { return talkDialogueId_; }
+      set {
+        talkDialogueId_ = value;
       }
     }
 
@@ -129,7 +141,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "aeon_talk_id" field.</summary>
-    public const int AeonTalkIdFieldNumber = 15;
+    public const int AeonTalkIdFieldNumber = 11;
     private uint aeonTalkId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -140,32 +152,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "talk_dialogue_id" field.</summary>
-    public const int TalkDialogueIdFieldNumber = 2;
-    private uint talkDialogueId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TalkDialogueId {
-      get { return talkDialogueId_; }
-      set {
-        talkDialogueId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "event_unique_id" field.</summary>
-    public const int EventUniqueIdFieldNumber = 13;
-    private uint eventUniqueId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EventUniqueId {
-      get { return eventUniqueId_; }
-      set {
-        eventUniqueId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "finish_dialogue" field.</summary>
-    public const int FinishDialogueFieldNumber = 4;
+    public const int FinishDialogueFieldNumber = 13;
     private bool finishDialogue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -173,6 +161,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return finishDialogue_; }
       set {
         finishDialogue_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "event_unique_id" field.</summary>
+    public const int EventUniqueIdFieldNumber = 1;
+    private uint eventUniqueId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint EventUniqueId {
+      get { return eventUniqueId_; }
+      set {
+        eventUniqueId_ = value;
       }
     }
 
@@ -192,12 +192,12 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (ECCDGLBKEJE != other.ECCDGLBKEJE) return false;
+      if (TalkDialogueId != other.TalkDialogueId) return false;
       if (!KJCBNEINDHL.Equals(other.KJCBNEINDHL)) return false;
       if (JENFHOMBKKE != other.JENFHOMBKKE) return false;
       if (AeonTalkId != other.AeonTalkId) return false;
-      if (TalkDialogueId != other.TalkDialogueId) return false;
-      if (EventUniqueId != other.EventUniqueId) return false;
       if (FinishDialogue != other.FinishDialogue) return false;
+      if (EventUniqueId != other.EventUniqueId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -206,12 +206,12 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (ECCDGLBKEJE != false) hash ^= ECCDGLBKEJE.GetHashCode();
+      if (TalkDialogueId != 0) hash ^= TalkDialogueId.GetHashCode();
       hash ^= KJCBNEINDHL.GetHashCode();
       if (JENFHOMBKKE != false) hash ^= JENFHOMBKKE.GetHashCode();
       if (AeonTalkId != 0) hash ^= AeonTalkId.GetHashCode();
-      if (TalkDialogueId != 0) hash ^= TalkDialogueId.GetHashCode();
-      if (EventUniqueId != 0) hash ^= EventUniqueId.GetHashCode();
       if (FinishDialogue != false) hash ^= FinishDialogue.GetHashCode();
+      if (EventUniqueId != 0) hash ^= EventUniqueId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -230,30 +230,30 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (EventUniqueId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(EventUniqueId);
+      }
       if (TalkDialogueId != 0) {
         output.WriteRawTag(16);
         output.WriteUInt32(TalkDialogueId);
       }
       kJCBNEINDHL_.WriteTo(output, _map_kJCBNEINDHL_codec);
-      if (FinishDialogue != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(FinishDialogue);
-      }
       if (ECCDGLBKEJE != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteBool(ECCDGLBKEJE);
       }
-      if (EventUniqueId != 0) {
+      if (AeonTalkId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(AeonTalkId);
+      }
+      if (FinishDialogue != false) {
         output.WriteRawTag(104);
-        output.WriteUInt32(EventUniqueId);
+        output.WriteBool(FinishDialogue);
       }
       if (JENFHOMBKKE != false) {
         output.WriteRawTag(112);
         output.WriteBool(JENFHOMBKKE);
-      }
-      if (AeonTalkId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(AeonTalkId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -265,30 +265,30 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EventUniqueId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(EventUniqueId);
+      }
       if (TalkDialogueId != 0) {
         output.WriteRawTag(16);
         output.WriteUInt32(TalkDialogueId);
       }
       kJCBNEINDHL_.WriteTo(ref output, _map_kJCBNEINDHL_codec);
-      if (FinishDialogue != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(FinishDialogue);
-      }
       if (ECCDGLBKEJE != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteBool(ECCDGLBKEJE);
       }
-      if (EventUniqueId != 0) {
+      if (AeonTalkId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(AeonTalkId);
+      }
+      if (FinishDialogue != false) {
         output.WriteRawTag(104);
-        output.WriteUInt32(EventUniqueId);
+        output.WriteBool(FinishDialogue);
       }
       if (JENFHOMBKKE != false) {
         output.WriteRawTag(112);
         output.WriteBool(JENFHOMBKKE);
-      }
-      if (AeonTalkId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(AeonTalkId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -303,6 +303,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ECCDGLBKEJE != false) {
         size += 1 + 1;
       }
+      if (TalkDialogueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TalkDialogueId);
+      }
       size += kJCBNEINDHL_.CalculateSize(_map_kJCBNEINDHL_codec);
       if (JENFHOMBKKE != false) {
         size += 1 + 1;
@@ -310,14 +313,11 @@ namespace EggLink.DanhengServer.Proto {
       if (AeonTalkId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AeonTalkId);
       }
-      if (TalkDialogueId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TalkDialogueId);
+      if (FinishDialogue != false) {
+        size += 1 + 1;
       }
       if (EventUniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EventUniqueId);
-      }
-      if (FinishDialogue != false) {
-        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -334,6 +334,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ECCDGLBKEJE != false) {
         ECCDGLBKEJE = other.ECCDGLBKEJE;
       }
+      if (other.TalkDialogueId != 0) {
+        TalkDialogueId = other.TalkDialogueId;
+      }
       kJCBNEINDHL_.MergeFrom(other.kJCBNEINDHL_);
       if (other.JENFHOMBKKE != false) {
         JENFHOMBKKE = other.JENFHOMBKKE;
@@ -341,14 +344,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.AeonTalkId != 0) {
         AeonTalkId = other.AeonTalkId;
       }
-      if (other.TalkDialogueId != 0) {
-        TalkDialogueId = other.TalkDialogueId;
+      if (other.FinishDialogue != false) {
+        FinishDialogue = other.FinishDialogue;
       }
       if (other.EventUniqueId != 0) {
         EventUniqueId = other.EventUniqueId;
-      }
-      if (other.FinishDialogue != false) {
-        FinishDialogue = other.FinishDialogue;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -365,6 +365,10 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 8: {
+            EventUniqueId = input.ReadUInt32();
+            break;
+          }
           case 16: {
             TalkDialogueId = input.ReadUInt32();
             break;
@@ -373,24 +377,20 @@ namespace EggLink.DanhengServer.Proto {
             kJCBNEINDHL_.AddEntriesFrom(input, _map_kJCBNEINDHL_codec);
             break;
           }
-          case 32: {
-            FinishDialogue = input.ReadBool();
-            break;
-          }
-          case 88: {
+          case 48: {
             ECCDGLBKEJE = input.ReadBool();
             break;
           }
+          case 88: {
+            AeonTalkId = input.ReadUInt32();
+            break;
+          }
           case 104: {
-            EventUniqueId = input.ReadUInt32();
+            FinishDialogue = input.ReadBool();
             break;
           }
           case 112: {
             JENFHOMBKKE = input.ReadBool();
-            break;
-          }
-          case 120: {
-            AeonTalkId = input.ReadUInt32();
             break;
           }
         }
@@ -408,6 +408,10 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 8: {
+            EventUniqueId = input.ReadUInt32();
+            break;
+          }
           case 16: {
             TalkDialogueId = input.ReadUInt32();
             break;
@@ -416,24 +420,20 @@ namespace EggLink.DanhengServer.Proto {
             kJCBNEINDHL_.AddEntriesFrom(ref input, _map_kJCBNEINDHL_codec);
             break;
           }
-          case 32: {
-            FinishDialogue = input.ReadBool();
-            break;
-          }
-          case 88: {
+          case 48: {
             ECCDGLBKEJE = input.ReadBool();
             break;
           }
+          case 88: {
+            AeonTalkId = input.ReadUInt32();
+            break;
+          }
           case 104: {
-            EventUniqueId = input.ReadUInt32();
+            FinishDialogue = input.ReadBool();
             break;
           }
           case 112: {
             JENFHOMBKKE = input.ReadBool();
-            break;
-          }
-          case 120: {
-            AeonTalkId = input.ReadUInt32();
             break;
           }
         }

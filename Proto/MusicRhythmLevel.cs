@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZNdXNpY1JoeXRobUxldmVsLnByb3RvIk4KEE11c2ljUmh5dGhtTGV2ZWwS",
-            "EgoKZnVsbF9jb21ibxgLIAEoCBIQCghsZXZlbF9pZBgHIAEoDRIUCgx1bmxv",
-            "Y2tfbGV2ZWwYASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "EgoKZnVsbF9jb21ibxgGIAEoCBIUCgx1bmxvY2tfbGV2ZWwYCSABKA0SEAoI",
+            "bGV2ZWxfaWQYBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmLevel), global::EggLink.DanhengServer.Proto.MusicRhythmLevel.Parser, new[]{ "FullCombo", "LevelId", "UnlockLevel" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmLevel), global::EggLink.DanhengServer.Proto.MusicRhythmLevel.Parser, new[]{ "FullCombo", "UnlockLevel", "LevelId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmLevel(MusicRhythmLevel other) : this() {
       fullCombo_ = other.fullCombo_;
-      levelId_ = other.levelId_;
       unlockLevel_ = other.unlockLevel_;
+      levelId_ = other.levelId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "full_combo" field.</summary>
-    public const int FullComboFieldNumber = 11;
+    public const int FullComboFieldNumber = 6;
     private bool fullCombo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,20 +97,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "level_id" field.</summary>
-    public const int LevelIdFieldNumber = 7;
-    private uint levelId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LevelId {
-      get { return levelId_; }
-      set {
-        levelId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "unlock_level" field.</summary>
-    public const int UnlockLevelFieldNumber = 1;
+    public const int UnlockLevelFieldNumber = 9;
     private uint unlockLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return unlockLevel_; }
       set {
         unlockLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "level_id" field.</summary>
+    public const int LevelIdFieldNumber = 5;
+    private uint levelId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LevelId {
+      get { return levelId_; }
+      set {
+        levelId_ = value;
       }
     }
 
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (FullCombo != other.FullCombo) return false;
-      if (LevelId != other.LevelId) return false;
       if (UnlockLevel != other.UnlockLevel) return false;
+      if (LevelId != other.LevelId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (FullCombo != false) hash ^= FullCombo.GetHashCode();
-      if (LevelId != 0) hash ^= LevelId.GetHashCode();
       if (UnlockLevel != 0) hash ^= UnlockLevel.GetHashCode();
+      if (LevelId != 0) hash ^= LevelId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (UnlockLevel != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(UnlockLevel);
-      }
       if (LevelId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteUInt32(LevelId);
       }
       if (FullCombo != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteBool(FullCombo);
+      }
+      if (UnlockLevel != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(UnlockLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (UnlockLevel != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(UnlockLevel);
-      }
       if (LevelId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteUInt32(LevelId);
       }
       if (FullCombo != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteBool(FullCombo);
+      }
+      if (UnlockLevel != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(UnlockLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -214,11 +214,11 @@ namespace EggLink.DanhengServer.Proto {
       if (FullCombo != false) {
         size += 1 + 1;
       }
-      if (LevelId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelId);
-      }
       if (UnlockLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UnlockLevel);
+      }
+      if (LevelId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -235,11 +235,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.FullCombo != false) {
         FullCombo = other.FullCombo;
       }
-      if (other.LevelId != 0) {
-        LevelId = other.LevelId;
-      }
       if (other.UnlockLevel != 0) {
         UnlockLevel = other.UnlockLevel;
+      }
+      if (other.LevelId != 0) {
+        LevelId = other.LevelId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            UnlockLevel = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 40: {
             LevelId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 48: {
             FullCombo = input.ReadBool();
+            break;
+          }
+          case 72: {
+            UnlockLevel = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            UnlockLevel = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 40: {
             LevelId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 48: {
             FullCombo = input.ReadBool();
+            break;
+          }
+          case 72: {
+            UnlockLevel = input.ReadUInt32();
             break;
           }
         }

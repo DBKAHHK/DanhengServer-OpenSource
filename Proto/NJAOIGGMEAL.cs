@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFOSkFPSUdHTUVBTC5wcm90bxoRTExMT01BQ1BDR0IucHJvdG8iUwoLTkpB",
-            "T0lHR01FQUwSIQoLSE9GREJGTENHS0IYBCADKAsyDC5MTExPTUFDUENHQhIR",
-            "Cgljb3N0X3RpbWUYCyABKA0SDgoGbWFwX2lkGA8gASgNQh6qAhtFZ2dMaW5r",
+            "T0lHR01FQUwSIQoLSE9GREJGTENHS0IYDiADKAsyDC5MTExPTUFDUENHQhIO",
+            "CgZtYXBfaWQYDSABKA0SEQoJY29zdF90aW1lGAkgASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LLLOMACPCGBReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NJAOIGGMEAL), global::EggLink.DanhengServer.Proto.NJAOIGGMEAL.Parser, new[]{ "HOFDBFLCGKB", "CostTime", "MapId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NJAOIGGMEAL), global::EggLink.DanhengServer.Proto.NJAOIGGMEAL.Parser, new[]{ "HOFDBFLCGKB", "MapId", "CostTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NJAOIGGMEAL(NJAOIGGMEAL other) : this() {
       hOFDBFLCGKB_ = other.hOFDBFLCGKB_.Clone();
-      costTime_ = other.costTime_;
       mapId_ = other.mapId_;
+      costTime_ = other.costTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HOFDBFLCGKB" field.</summary>
-    public const int HOFDBFLCGKBFieldNumber = 4;
+    public const int HOFDBFLCGKBFieldNumber = 14;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LLLOMACPCGB> _repeated_hOFDBFLCGKB_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.LLLOMACPCGB.Parser);
+        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.LLLOMACPCGB.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LLLOMACPCGB> hOFDBFLCGKB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LLLOMACPCGB>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,20 +96,8 @@ namespace EggLink.DanhengServer.Proto {
       get { return hOFDBFLCGKB_; }
     }
 
-    /// <summary>Field number for the "cost_time" field.</summary>
-    public const int CostTimeFieldNumber = 11;
-    private uint costTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CostTime {
-      get { return costTime_; }
-      set {
-        costTime_ = value;
-      }
-    }
-
     /// <summary>Field number for the "map_id" field.</summary>
-    public const int MapIdFieldNumber = 15;
+    public const int MapIdFieldNumber = 13;
     private uint mapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -117,6 +105,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return mapId_; }
       set {
         mapId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cost_time" field.</summary>
+    public const int CostTimeFieldNumber = 9;
+    private uint costTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CostTime {
+      get { return costTime_; }
+      set {
+        costTime_ = value;
       }
     }
 
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!hOFDBFLCGKB_.Equals(other.hOFDBFLCGKB_)) return false;
-      if (CostTime != other.CostTime) return false;
       if (MapId != other.MapId) return false;
+      if (CostTime != other.CostTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= hOFDBFLCGKB_.GetHashCode();
-      if (CostTime != 0) hash ^= CostTime.GetHashCode();
       if (MapId != 0) hash ^= MapId.GetHashCode();
+      if (CostTime != 0) hash ^= CostTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,15 +166,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      hOFDBFLCGKB_.WriteTo(output, _repeated_hOFDBFLCGKB_codec);
       if (CostTime != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(CostTime);
       }
       if (MapId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(104);
         output.WriteUInt32(MapId);
       }
+      hOFDBFLCGKB_.WriteTo(output, _repeated_hOFDBFLCGKB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -185,15 +185,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      hOFDBFLCGKB_.WriteTo(ref output, _repeated_hOFDBFLCGKB_codec);
       if (CostTime != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(CostTime);
       }
       if (MapId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(104);
         output.WriteUInt32(MapId);
       }
+      hOFDBFLCGKB_.WriteTo(ref output, _repeated_hOFDBFLCGKB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += hOFDBFLCGKB_.CalculateSize(_repeated_hOFDBFLCGKB_codec);
-      if (CostTime != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CostTime);
-      }
       if (MapId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapId);
+      }
+      if (CostTime != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CostTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -224,11 +224,11 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       hOFDBFLCGKB_.Add(other.hOFDBFLCGKB_);
-      if (other.CostTime != 0) {
-        CostTime = other.CostTime;
-      }
       if (other.MapId != 0) {
         MapId = other.MapId;
+      }
+      if (other.CostTime != 0) {
+        CostTime = other.CostTime;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -245,16 +245,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
-            hOFDBFLCGKB_.AddEntriesFrom(input, _repeated_hOFDBFLCGKB_codec);
-            break;
-          }
-          case 88: {
+          case 72: {
             CostTime = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 104: {
             MapId = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            hOFDBFLCGKB_.AddEntriesFrom(input, _repeated_hOFDBFLCGKB_codec);
             break;
           }
         }
@@ -272,16 +272,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
-            hOFDBFLCGKB_.AddEntriesFrom(ref input, _repeated_hOFDBFLCGKB_codec);
-            break;
-          }
-          case 88: {
+          case 72: {
             CostTime = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 104: {
             MapId = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            hOFDBFLCGKB_.AddEntriesFrom(ref input, _repeated_hOFDBFLCGKB_codec);
             break;
           }
         }

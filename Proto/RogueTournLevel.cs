@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournLevelReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVSb2d1ZVRvdXJuTGV2ZWwucHJvdG8aGFJvZ3VlVG91cm5Sb29tTGlzdC5w",
-            "cm90bxobUm9ndWVUb3VybkxheWVyU3RhdHVzLnByb3RvIqYBCg9Sb2d1ZVRv",
-            "dXJuTGV2ZWwSLAoPdG91cm5fcm9vbV9saXN0GAYgAygLMhMuUm9ndWVUb3Vy",
-            "blJvb21MaXN0EiYKBnN0YXR1cxgPIAEoDjIWLlJvZ3VlVG91cm5MYXllclN0",
-            "YXR1cxIQCghsYXllcl9pZBgCIAEoDRIWCg5jdXJfcm9vbV9pbmRleBgEIAEo",
-            "DRITCgtsZXZlbF9pbmRleBgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "ChVSb2d1ZVRvdXJuTGV2ZWwucHJvdG8aG1JvZ3VlVG91cm5MYXllclN0YXR1",
+            "cy5wcm90bxoYUm9ndWVUb3VyblJvb21MaXN0LnByb3RvIqYBCg9Sb2d1ZVRv",
+            "dXJuTGV2ZWwSEwoLbGV2ZWxfaW5kZXgYCSABKA0SEAoIbGF5ZXJfaWQYBSAB",
+            "KA0SLAoPdG91cm5fcm9vbV9saXN0GA0gAygLMhMuUm9ndWVUb3VyblJvb21M",
+            "aXN0EiYKBnN0YXR1cxgOIAEoDjIWLlJvZ3VlVG91cm5MYXllclN0YXR1cxIW",
+            "Cg5jdXJfcm9vbV9pbmRleBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournRoomListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLayerStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournLayerStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournRoomListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournLevel), global::EggLink.DanhengServer.Proto.RogueTournLevel.Parser, new[]{ "TournRoomList", "Status", "LayerId", "CurRoomIndex", "LevelIndex" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournLevel), global::EggLink.DanhengServer.Proto.RogueTournLevel.Parser, new[]{ "LevelIndex", "LayerId", "TournRoomList", "Status", "CurRoomIndex" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,11 +76,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournLevel(RogueTournLevel other) : this() {
+      levelIndex_ = other.levelIndex_;
+      layerId_ = other.layerId_;
       tournRoomList_ = other.tournRoomList_.Clone();
       status_ = other.status_;
-      layerId_ = other.layerId_;
       curRoomIndex_ = other.curRoomIndex_;
-      levelIndex_ = other.levelIndex_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,31 +90,20 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournLevel(this);
     }
 
-    /// <summary>Field number for the "tourn_room_list" field.</summary>
-    public const int TournRoomListFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueTournRoomList> _repeated_tournRoomList_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.RogueTournRoomList.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournRoomList> tournRoomList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournRoomList>();
+    /// <summary>Field number for the "level_index" field.</summary>
+    public const int LevelIndexFieldNumber = 9;
+    private uint levelIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournRoomList> TournRoomList {
-      get { return tournRoomList_; }
-    }
-
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.RogueTournLayerStatus status_ = global::EggLink.DanhengServer.Proto.RogueTournLayerStatus.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournLayerStatus Status {
-      get { return status_; }
+    public uint LevelIndex {
+      get { return levelIndex_; }
       set {
-        status_ = value;
+        levelIndex_ = value;
       }
     }
 
     /// <summary>Field number for the "layer_id" field.</summary>
-    public const int LayerIdFieldNumber = 2;
+    public const int LayerIdFieldNumber = 5;
     private uint layerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -125,8 +114,31 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "tourn_room_list" field.</summary>
+    public const int TournRoomListFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueTournRoomList> _repeated_tournRoomList_codec
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.RogueTournRoomList.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournRoomList> tournRoomList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournRoomList>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueTournRoomList> TournRoomList {
+      get { return tournRoomList_; }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.RogueTournLayerStatus status_ = global::EggLink.DanhengServer.Proto.RogueTournLayerStatus.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueTournLayerStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
     /// <summary>Field number for the "cur_room_index" field.</summary>
-    public const int CurRoomIndexFieldNumber = 4;
+    public const int CurRoomIndexFieldNumber = 10;
     private uint curRoomIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -134,18 +146,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return curRoomIndex_; }
       set {
         curRoomIndex_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "level_index" field.</summary>
-    public const int LevelIndexFieldNumber = 3;
-    private uint levelIndex_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LevelIndex {
-      get { return levelIndex_; }
-      set {
-        levelIndex_ = value;
       }
     }
 
@@ -164,11 +164,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (LevelIndex != other.LevelIndex) return false;
+      if (LayerId != other.LayerId) return false;
       if(!tournRoomList_.Equals(other.tournRoomList_)) return false;
       if (Status != other.Status) return false;
-      if (LayerId != other.LayerId) return false;
       if (CurRoomIndex != other.CurRoomIndex) return false;
-      if (LevelIndex != other.LevelIndex) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,11 +176,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (LevelIndex != 0) hash ^= LevelIndex.GetHashCode();
+      if (LayerId != 0) hash ^= LayerId.GetHashCode();
       hash ^= tournRoomList_.GetHashCode();
       if (Status != global::EggLink.DanhengServer.Proto.RogueTournLayerStatus.None) hash ^= Status.GetHashCode();
-      if (LayerId != 0) hash ^= LayerId.GetHashCode();
       if (CurRoomIndex != 0) hash ^= CurRoomIndex.GetHashCode();
-      if (LevelIndex != 0) hash ^= LevelIndex.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -200,20 +200,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (LayerId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(LayerId);
       }
       if (LevelIndex != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteUInt32(LevelIndex);
       }
       if (CurRoomIndex != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(80);
         output.WriteUInt32(CurRoomIndex);
       }
       tournRoomList_.WriteTo(output, _repeated_tournRoomList_codec);
       if (Status != global::EggLink.DanhengServer.Proto.RogueTournLayerStatus.None) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(112);
         output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
@@ -227,20 +227,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LayerId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(LayerId);
       }
       if (LevelIndex != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteUInt32(LevelIndex);
       }
       if (CurRoomIndex != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(80);
         output.WriteUInt32(CurRoomIndex);
       }
       tournRoomList_.WriteTo(ref output, _repeated_tournRoomList_codec);
       if (Status != global::EggLink.DanhengServer.Proto.RogueTournLayerStatus.None) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(112);
         output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
@@ -253,18 +253,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += tournRoomList_.CalculateSize(_repeated_tournRoomList_codec);
-      if (Status != global::EggLink.DanhengServer.Proto.RogueTournLayerStatus.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      if (LevelIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelIndex);
       }
       if (LayerId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LayerId);
       }
+      size += tournRoomList_.CalculateSize(_repeated_tournRoomList_codec);
+      if (Status != global::EggLink.DanhengServer.Proto.RogueTournLayerStatus.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
       if (CurRoomIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurRoomIndex);
-      }
-      if (LevelIndex != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelIndex);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -278,18 +278,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      tournRoomList_.Add(other.tournRoomList_);
-      if (other.Status != global::EggLink.DanhengServer.Proto.RogueTournLayerStatus.None) {
-        Status = other.Status;
+      if (other.LevelIndex != 0) {
+        LevelIndex = other.LevelIndex;
       }
       if (other.LayerId != 0) {
         LayerId = other.LayerId;
       }
+      tournRoomList_.Add(other.tournRoomList_);
+      if (other.Status != global::EggLink.DanhengServer.Proto.RogueTournLayerStatus.None) {
+        Status = other.Status;
+      }
       if (other.CurRoomIndex != 0) {
         CurRoomIndex = other.CurRoomIndex;
-      }
-      if (other.LevelIndex != 0) {
-        LevelIndex = other.LevelIndex;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -306,23 +306,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 40: {
             LayerId = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 72: {
             LevelIndex = input.ReadUInt32();
             break;
           }
-          case 32: {
+          case 80: {
             CurRoomIndex = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 106: {
             tournRoomList_.AddEntriesFrom(input, _repeated_tournRoomList_codec);
             break;
           }
-          case 120: {
+          case 112: {
             Status = (global::EggLink.DanhengServer.Proto.RogueTournLayerStatus) input.ReadEnum();
             break;
           }
@@ -341,23 +341,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 40: {
             LayerId = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 72: {
             LevelIndex = input.ReadUInt32();
             break;
           }
-          case 32: {
+          case 80: {
             CurRoomIndex = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 106: {
             tournRoomList_.AddEntriesFrom(ref input, _repeated_tournRoomList_codec);
             break;
           }
-          case 120: {
+          case 112: {
             Status = (global::EggLink.DanhengServer.Proto.RogueTournLayerStatus) input.ReadEnum();
             break;
           }

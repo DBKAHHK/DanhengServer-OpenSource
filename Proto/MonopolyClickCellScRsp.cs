@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxNb25vcG9seUNsaWNrQ2VsbFNjUnNwLnByb3RvIkoKFk1vbm9wb2x5Q2xp",
-            "Y2tDZWxsU2NSc3ASDwoHY2VsbF9pZBgEIAEoDRIOCgZtYXBfaWQYCSABKA0S",
-            "DwoHcmV0Y29kZRgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "Y2tDZWxsU2NSc3ASDwoHY2VsbF9pZBgKIAEoDRIOCgZtYXBfaWQYBSABKA0S",
+            "DwoHcmV0Y29kZRgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cell_id" field.</summary>
-    public const int CellIdFieldNumber = 4;
+    public const int CellIdFieldNumber = 10;
     private uint cellId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "map_id" field.</summary>
-    public const int MapIdFieldNumber = 9;
+    public const int MapIdFieldNumber = 5;
     private uint mapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 15;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CellId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(CellId);
-      }
       if (MapId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(MapId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (CellId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(CellId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CellId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(CellId);
-      }
       if (MapId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(MapId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (CellId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(CellId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            CellId = input.ReadUInt32();
-            break;
-          }
-          case 72: {
+          case 40: {
             MapId = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 48: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            CellId = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            CellId = input.ReadUInt32();
-            break;
-          }
-          case 72: {
+          case 40: {
             MapId = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 48: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            CellId = input.ReadUInt32();
             break;
           }
         }

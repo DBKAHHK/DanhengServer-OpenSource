@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ci1HZXRBdmF0YXJEZWxpdmVyUmV3YXJkQWN0aXZpdHlEYXRhU2NSc3AucHJv",
             "dG8iZgonR2V0QXZhdGFyRGVsaXZlclJld2FyZEFjdGl2aXR5RGF0YVNjUnNw",
-            "EhEKCWF2YXRhcl9pZBgPIAEoDRIPCgdyZXRjb2RlGAEgASgNEhcKD2lzX3Rh",
-            "a2VuX3Jld2FyZBgCIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "EhcKD2lzX3Rha2VuX3Jld2FyZBgOIAEoCBIPCgdyZXRjb2RlGAogASgNEhEK",
+            "CWF2YXRhcl9pZBgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAvatarDeliverRewardActivityDataScRsp), global::EggLink.DanhengServer.Proto.GetAvatarDeliverRewardActivityDataScRsp.Parser, new[]{ "AvatarId", "Retcode", "IsTakenReward" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAvatarDeliverRewardActivityDataScRsp), global::EggLink.DanhengServer.Proto.GetAvatarDeliverRewardActivityDataScRsp.Parser, new[]{ "IsTakenReward", "Retcode", "AvatarId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAvatarDeliverRewardActivityDataScRsp(GetAvatarDeliverRewardActivityDataScRsp other) : this() {
-      avatarId_ = other.avatarId_;
-      retcode_ = other.retcode_;
       isTakenReward_ = other.isTakenReward_;
+      retcode_ = other.retcode_;
+      avatarId_ = other.avatarId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new GetAvatarDeliverRewardActivityDataScRsp(this);
     }
 
-    /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 15;
-    private uint avatarId_;
+    /// <summary>Field number for the "is_taken_reward" field.</summary>
+    public const int IsTakenRewardFieldNumber = 14;
+    private bool isTakenReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AvatarId {
-      get { return avatarId_; }
+    public bool IsTakenReward {
+      get { return isTakenReward_; }
       set {
-        avatarId_ = value;
+        isTakenReward_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 10;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,15 +110,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "is_taken_reward" field.</summary>
-    public const int IsTakenRewardFieldNumber = 2;
-    private bool isTakenReward_;
+    /// <summary>Field number for the "avatar_id" field.</summary>
+    public const int AvatarIdFieldNumber = 5;
+    private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsTakenReward {
-      get { return isTakenReward_; }
+    public uint AvatarId {
+      get { return avatarId_; }
       set {
-        isTakenReward_ = value;
+        avatarId_ = value;
       }
     }
 
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (AvatarId != other.AvatarId) return false;
-      if (Retcode != other.Retcode) return false;
       if (IsTakenReward != other.IsTakenReward) return false;
+      if (Retcode != other.Retcode) return false;
+      if (AvatarId != other.AvatarId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (IsTakenReward != false) hash ^= IsTakenReward.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (AvatarId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(AvatarId);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
       if (IsTakenReward != false) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(112);
         output.WriteBool(IsTakenReward);
-      }
-      if (AvatarId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AvatarId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(AvatarId);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
       if (IsTakenReward != false) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(112);
         output.WriteBool(IsTakenReward);
-      }
-      if (AvatarId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (AvatarId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
+      if (IsTakenReward != false) {
+        size += 1 + 1;
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (IsTakenReward != false) {
-        size += 1 + 1;
+      if (AvatarId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,14 +233,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.AvatarId != 0) {
-        AvatarId = other.AvatarId;
+      if (other.IsTakenReward != false) {
+        IsTakenReward = other.IsTakenReward;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.IsTakenReward != false) {
-        IsTakenReward = other.IsTakenReward;
+      if (other.AvatarId != 0) {
+        AvatarId = other.AvatarId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -257,16 +257,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 40: {
+            AvatarId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 16: {
+          case 112: {
             IsTakenReward = input.ReadBool();
-            break;
-          }
-          case 120: {
-            AvatarId = input.ReadUInt32();
             break;
           }
         }
@@ -284,16 +284,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 40: {
+            AvatarId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 16: {
+          case 112: {
             IsTakenReward = input.ReadBool();
-            break;
-          }
-          case 120: {
-            AvatarId = input.ReadUInt32();
             break;
           }
         }

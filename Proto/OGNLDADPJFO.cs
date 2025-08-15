@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPR05MREFEUEpGTy5wcm90bxoVUm9ndWVGaW5pc2hJbmZvLnByb3RvIkoK",
-            "C09HTkxEQURQSkZPEg4KBm1hcF9pZBgGIAEoDRIrChFyb2d1ZV9maW5pc2hf",
-            "aW5mbxgJIAEoCzIQLlJvZ3VlRmluaXNoSW5mb0IeqgIbRWdnTGluay5EYW5o",
+            "C09HTkxEQURQSkZPEg4KBm1hcF9pZBgJIAEoDRIrChFyb2d1ZV9maW5pc2hf",
+            "aW5mbxgLIAEoCzIQLlJvZ3VlRmluaXNoSW5mb0IeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueFinishInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "map_id" field.</summary>
-    public const int MapIdFieldNumber = 6;
+    public const int MapIdFieldNumber = 9;
     private uint mapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_finish_info" field.</summary>
-    public const int RogueFinishInfoFieldNumber = 9;
+    public const int RogueFinishInfoFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.RogueFinishInfo rogueFinishInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MapId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(72);
         output.WriteUInt32(MapId);
       }
       if (rogueFinishInfo_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(90);
         output.WriteMessage(RogueFinishInfo);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MapId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(72);
         output.WriteUInt32(MapId);
       }
       if (rogueFinishInfo_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(90);
         output.WriteMessage(RogueFinishInfo);
       }
       if (_unknownFields != null) {
@@ -230,11 +230,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 72: {
             MapId = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 90: {
             if (rogueFinishInfo_ == null) {
               RogueFinishInfo = new global::EggLink.DanhengServer.Proto.RogueFinishInfo();
             }
@@ -256,11 +256,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 72: {
             MapId = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 90: {
             if (rogueFinishInfo_ == null) {
               RogueFinishInfo = new global::EggLink.DanhengServer.Proto.RogueFinishInfo();
             }

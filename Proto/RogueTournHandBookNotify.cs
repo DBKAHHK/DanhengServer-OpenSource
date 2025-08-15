@@ -24,19 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournHandBookNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5Sb2d1ZVRvdXJuSGFuZEJvb2tOb3RpZnkucHJvdG8aEUFQRkpMT0ZJTkZK",
-            "LnByb3RvGhFKRklIR0RQT0lJRC5wcm90bxoRSk5JQU9HSUlPR0IucHJvdG8a",
-            "EUpDQ0NBQ05GREpHLnByb3RvGhFFQ0dPQ0hQTUNQRC5wcm90bxoRRklERk5O",
-            "Q0pBSkUucHJvdG8ihwIKGFJvZ3VlVG91cm5IYW5kQm9va05vdGlmeRIjCgtJ",
-            "SUhPUE1FRUFKQRgGIAEoCzIMLkpOSUFPR0lJT0dCSAASIwoLR1BPTEJER09P",
-            "T0QYCSABKAsyDC5KQ0NDQUNORkRKR0gAEhwKBGJ1ZmYYDCABKAsyDC5KRklI",
-            "R0RQT0lJREgAEiMKC05GTERPRElBQkNMGAsgASgLMgwuRUNHT0NIUE1DUERI",
-            "ABIqChJ0b3Vybl9mb3JtdWxhX2luZm8YDiABKAsyDC5BUEZKTE9GSU5GSkgA",
-            "EiMKC0pNSURMTERLSkJJGAMgASgLMgwuRklERk5OQ0pBSkVIAEINCgtQR09D",
+            "Ch5Sb2d1ZVRvdXJuSGFuZEJvb2tOb3RpZnkucHJvdG8aEUpGSUhHRFBPSUlE",
+            "LnByb3RvGhFKTklBT0dJSU9HQi5wcm90bxoRRUNHT0NIUE1DUEQucHJvdG8a",
+            "EUFQRkpMT0ZJTkZKLnByb3RvGhFGSURGTk5DSkFKRS5wcm90bxoRSkNDQ0FD",
+            "TkZESkcucHJvdG8ihwIKGFJvZ3VlVG91cm5IYW5kQm9va05vdGlmeRIjCgtJ",
+            "SUhPUE1FRUFKQRgJIAEoCzIMLkpOSUFPR0lJT0dCSAASIwoLR1BPTEJER09P",
+            "T0QYCiABKAsyDC5KQ0NDQUNORkRKR0gAEhwKBGJ1ZmYYAyABKAsyDC5KRklI",
+            "R0RQT0lJREgAEiMKC05GTERPRElBQkNMGAIgASgLMgwuRUNHT0NIUE1DUERI",
+            "ABIqChJ0b3Vybl9mb3JtdWxhX2luZm8YCCABKAsyDC5BUEZKTE9GSU5GSkgA",
+            "EiMKC0pNSURMTERLSkJJGAsgASgLMgwuRklERk5OQ0pBSkVIAEINCgtQR09D",
             "Q01HSExIS0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.APFJLOFINFJReflection.Descriptor, global::EggLink.DanhengServer.Proto.JFIHGDPOIIDReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNIAOGIIOGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.JCCCACNFDJGReflection.Descriptor, global::EggLink.DanhengServer.Proto.ECGOCHPMCPDReflection.Descriptor, global::EggLink.DanhengServer.Proto.FIDFNNCJAJEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JFIHGDPOIIDReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNIAOGIIOGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.ECGOCHPMCPDReflection.Descriptor, global::EggLink.DanhengServer.Proto.APFJLOFINFJReflection.Descriptor, global::EggLink.DanhengServer.Proto.FIDFNNCJAJEReflection.Descriptor, global::EggLink.DanhengServer.Proto.JCCCACNFDJGReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournHandBookNotify), global::EggLink.DanhengServer.Proto.RogueTournHandBookNotify.Parser, new[]{ "IIHOPMEEAJA", "GPOLBDGOOOD", "Buff", "NFLDODIABCL", "TournFormulaInfo", "JMIDLLDKJBI" }, new[]{ "PGOCCMGHLHK" }, null, null, null)
           }));
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IIHOPMEEAJA" field.</summary>
-    public const int IIHOPMEEAJAFieldNumber = 6;
+    public const int IIHOPMEEAJAFieldNumber = 9;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.JNIAOGIIOGB IIHOPMEEAJA {
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GPOLBDGOOOD" field.</summary>
-    public const int GPOLBDGOOODFieldNumber = 9;
+    public const int GPOLBDGOOODFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.JCCCACNFDJG GPOLBDGOOOD {
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff" field.</summary>
-    public const int BuffFieldNumber = 12;
+    public const int BuffFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.JFIHGDPOIID Buff {
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NFLDODIABCL" field.</summary>
-    public const int NFLDODIABCLFieldNumber = 11;
+    public const int NFLDODIABCLFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ECGOCHPMCPD NFLDODIABCL {
@@ -159,7 +159,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "tourn_formula_info" field.</summary>
-    public const int TournFormulaInfoFieldNumber = 14;
+    public const int TournFormulaInfoFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.APFJLOFINFJ TournFormulaInfo {
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JMIDLLDKJBI" field.</summary>
-    public const int JMIDLLDKJBIFieldNumber = 3;
+    public const int JMIDLLDKJBIFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.FIDFNNCJAJE JMIDLLDKJBI {
@@ -186,12 +186,12 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "PGOCCMGHLHK" oneof.</summary>
     public enum PGOCCMGHLHKOneofCase {
       None = 0,
-      IIHOPMEEAJA = 6,
-      GPOLBDGOOOD = 9,
-      Buff = 12,
-      NFLDODIABCL = 11,
-      TournFormulaInfo = 14,
-      JMIDLLDKJBI = 3,
+      IIHOPMEEAJA = 9,
+      GPOLBDGOOOD = 10,
+      Buff = 3,
+      NFLDODIABCL = 2,
+      TournFormulaInfo = 8,
+      JMIDLLDKJBI = 11,
     }
     private PGOCCMGHLHKOneofCase pGOCCMGHLHKCase_ = PGOCCMGHLHKOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -261,29 +261,29 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.JMIDLLDKJBI) {
-        output.WriteRawTag(26);
-        output.WriteMessage(JMIDLLDKJBI);
-      }
-      if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.IIHOPMEEAJA) {
-        output.WriteRawTag(50);
-        output.WriteMessage(IIHOPMEEAJA);
-      }
-      if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.GPOLBDGOOOD) {
-        output.WriteRawTag(74);
-        output.WriteMessage(GPOLBDGOOOD);
-      }
       if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.NFLDODIABCL) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(18);
         output.WriteMessage(NFLDODIABCL);
       }
       if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.Buff) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(26);
         output.WriteMessage(Buff);
       }
       if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.TournFormulaInfo) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(66);
         output.WriteMessage(TournFormulaInfo);
+      }
+      if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.IIHOPMEEAJA) {
+        output.WriteRawTag(74);
+        output.WriteMessage(IIHOPMEEAJA);
+      }
+      if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.GPOLBDGOOOD) {
+        output.WriteRawTag(82);
+        output.WriteMessage(GPOLBDGOOOD);
+      }
+      if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.JMIDLLDKJBI) {
+        output.WriteRawTag(90);
+        output.WriteMessage(JMIDLLDKJBI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -295,29 +295,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.JMIDLLDKJBI) {
-        output.WriteRawTag(26);
-        output.WriteMessage(JMIDLLDKJBI);
-      }
-      if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.IIHOPMEEAJA) {
-        output.WriteRawTag(50);
-        output.WriteMessage(IIHOPMEEAJA);
-      }
-      if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.GPOLBDGOOOD) {
-        output.WriteRawTag(74);
-        output.WriteMessage(GPOLBDGOOOD);
-      }
       if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.NFLDODIABCL) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(18);
         output.WriteMessage(NFLDODIABCL);
       }
       if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.Buff) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(26);
         output.WriteMessage(Buff);
       }
       if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.TournFormulaInfo) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(66);
         output.WriteMessage(TournFormulaInfo);
+      }
+      if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.IIHOPMEEAJA) {
+        output.WriteRawTag(74);
+        output.WriteMessage(IIHOPMEEAJA);
+      }
+      if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.GPOLBDGOOOD) {
+        output.WriteRawTag(82);
+        output.WriteMessage(GPOLBDGOOOD);
+      }
+      if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.JMIDLLDKJBI) {
+        output.WriteRawTag(90);
+        output.WriteMessage(JMIDLLDKJBI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -413,16 +413,34 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
-            global::EggLink.DanhengServer.Proto.FIDFNNCJAJE subBuilder = new global::EggLink.DanhengServer.Proto.FIDFNNCJAJE();
-            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.JMIDLLDKJBI) {
-              subBuilder.MergeFrom(JMIDLLDKJBI);
+          case 18: {
+            global::EggLink.DanhengServer.Proto.ECGOCHPMCPD subBuilder = new global::EggLink.DanhengServer.Proto.ECGOCHPMCPD();
+            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.NFLDODIABCL) {
+              subBuilder.MergeFrom(NFLDODIABCL);
             }
             input.ReadMessage(subBuilder);
-            JMIDLLDKJBI = subBuilder;
+            NFLDODIABCL = subBuilder;
             break;
           }
-          case 50: {
+          case 26: {
+            global::EggLink.DanhengServer.Proto.JFIHGDPOIID subBuilder = new global::EggLink.DanhengServer.Proto.JFIHGDPOIID();
+            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.Buff) {
+              subBuilder.MergeFrom(Buff);
+            }
+            input.ReadMessage(subBuilder);
+            Buff = subBuilder;
+            break;
+          }
+          case 66: {
+            global::EggLink.DanhengServer.Proto.APFJLOFINFJ subBuilder = new global::EggLink.DanhengServer.Proto.APFJLOFINFJ();
+            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.TournFormulaInfo) {
+              subBuilder.MergeFrom(TournFormulaInfo);
+            }
+            input.ReadMessage(subBuilder);
+            TournFormulaInfo = subBuilder;
+            break;
+          }
+          case 74: {
             global::EggLink.DanhengServer.Proto.JNIAOGIIOGB subBuilder = new global::EggLink.DanhengServer.Proto.JNIAOGIIOGB();
             if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.IIHOPMEEAJA) {
               subBuilder.MergeFrom(IIHOPMEEAJA);
@@ -431,7 +449,7 @@ namespace EggLink.DanhengServer.Proto {
             IIHOPMEEAJA = subBuilder;
             break;
           }
-          case 74: {
+          case 82: {
             global::EggLink.DanhengServer.Proto.JCCCACNFDJG subBuilder = new global::EggLink.DanhengServer.Proto.JCCCACNFDJG();
             if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.GPOLBDGOOOD) {
               subBuilder.MergeFrom(GPOLBDGOOOD);
@@ -441,30 +459,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 90: {
-            global::EggLink.DanhengServer.Proto.ECGOCHPMCPD subBuilder = new global::EggLink.DanhengServer.Proto.ECGOCHPMCPD();
-            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.NFLDODIABCL) {
-              subBuilder.MergeFrom(NFLDODIABCL);
+            global::EggLink.DanhengServer.Proto.FIDFNNCJAJE subBuilder = new global::EggLink.DanhengServer.Proto.FIDFNNCJAJE();
+            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.JMIDLLDKJBI) {
+              subBuilder.MergeFrom(JMIDLLDKJBI);
             }
             input.ReadMessage(subBuilder);
-            NFLDODIABCL = subBuilder;
-            break;
-          }
-          case 98: {
-            global::EggLink.DanhengServer.Proto.JFIHGDPOIID subBuilder = new global::EggLink.DanhengServer.Proto.JFIHGDPOIID();
-            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.Buff) {
-              subBuilder.MergeFrom(Buff);
-            }
-            input.ReadMessage(subBuilder);
-            Buff = subBuilder;
-            break;
-          }
-          case 114: {
-            global::EggLink.DanhengServer.Proto.APFJLOFINFJ subBuilder = new global::EggLink.DanhengServer.Proto.APFJLOFINFJ();
-            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.TournFormulaInfo) {
-              subBuilder.MergeFrom(TournFormulaInfo);
-            }
-            input.ReadMessage(subBuilder);
-            TournFormulaInfo = subBuilder;
+            JMIDLLDKJBI = subBuilder;
             break;
           }
         }
@@ -482,16 +482,34 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
-            global::EggLink.DanhengServer.Proto.FIDFNNCJAJE subBuilder = new global::EggLink.DanhengServer.Proto.FIDFNNCJAJE();
-            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.JMIDLLDKJBI) {
-              subBuilder.MergeFrom(JMIDLLDKJBI);
+          case 18: {
+            global::EggLink.DanhengServer.Proto.ECGOCHPMCPD subBuilder = new global::EggLink.DanhengServer.Proto.ECGOCHPMCPD();
+            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.NFLDODIABCL) {
+              subBuilder.MergeFrom(NFLDODIABCL);
             }
             input.ReadMessage(subBuilder);
-            JMIDLLDKJBI = subBuilder;
+            NFLDODIABCL = subBuilder;
             break;
           }
-          case 50: {
+          case 26: {
+            global::EggLink.DanhengServer.Proto.JFIHGDPOIID subBuilder = new global::EggLink.DanhengServer.Proto.JFIHGDPOIID();
+            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.Buff) {
+              subBuilder.MergeFrom(Buff);
+            }
+            input.ReadMessage(subBuilder);
+            Buff = subBuilder;
+            break;
+          }
+          case 66: {
+            global::EggLink.DanhengServer.Proto.APFJLOFINFJ subBuilder = new global::EggLink.DanhengServer.Proto.APFJLOFINFJ();
+            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.TournFormulaInfo) {
+              subBuilder.MergeFrom(TournFormulaInfo);
+            }
+            input.ReadMessage(subBuilder);
+            TournFormulaInfo = subBuilder;
+            break;
+          }
+          case 74: {
             global::EggLink.DanhengServer.Proto.JNIAOGIIOGB subBuilder = new global::EggLink.DanhengServer.Proto.JNIAOGIIOGB();
             if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.IIHOPMEEAJA) {
               subBuilder.MergeFrom(IIHOPMEEAJA);
@@ -500,7 +518,7 @@ namespace EggLink.DanhengServer.Proto {
             IIHOPMEEAJA = subBuilder;
             break;
           }
-          case 74: {
+          case 82: {
             global::EggLink.DanhengServer.Proto.JCCCACNFDJG subBuilder = new global::EggLink.DanhengServer.Proto.JCCCACNFDJG();
             if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.GPOLBDGOOOD) {
               subBuilder.MergeFrom(GPOLBDGOOOD);
@@ -510,30 +528,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 90: {
-            global::EggLink.DanhengServer.Proto.ECGOCHPMCPD subBuilder = new global::EggLink.DanhengServer.Proto.ECGOCHPMCPD();
-            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.NFLDODIABCL) {
-              subBuilder.MergeFrom(NFLDODIABCL);
+            global::EggLink.DanhengServer.Proto.FIDFNNCJAJE subBuilder = new global::EggLink.DanhengServer.Proto.FIDFNNCJAJE();
+            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.JMIDLLDKJBI) {
+              subBuilder.MergeFrom(JMIDLLDKJBI);
             }
             input.ReadMessage(subBuilder);
-            NFLDODIABCL = subBuilder;
-            break;
-          }
-          case 98: {
-            global::EggLink.DanhengServer.Proto.JFIHGDPOIID subBuilder = new global::EggLink.DanhengServer.Proto.JFIHGDPOIID();
-            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.Buff) {
-              subBuilder.MergeFrom(Buff);
-            }
-            input.ReadMessage(subBuilder);
-            Buff = subBuilder;
-            break;
-          }
-          case 114: {
-            global::EggLink.DanhengServer.Proto.APFJLOFINFJ subBuilder = new global::EggLink.DanhengServer.Proto.APFJLOFINFJ();
-            if (pGOCCMGHLHKCase_ == PGOCCMGHLHKOneofCase.TournFormulaInfo) {
-              subBuilder.MergeFrom(TournFormulaInfo);
-            }
-            input.ReadMessage(subBuilder);
-            TournFormulaInfo = subBuilder;
+            JMIDLLDKJBI = subBuilder;
             break;
           }
         }

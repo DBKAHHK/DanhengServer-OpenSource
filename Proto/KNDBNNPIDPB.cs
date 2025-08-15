@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFLTkRCTk5QSURQQi5wcm90bxoRR0FOTUNJSkNPS0kucHJvdG8iRwoLS05E",
-            "Qk5OUElEUEISIQoLUEVQTElOT0dFR0MYDCABKA4yDC5HQU5NQ0lKQ09LSRIV",
-            "Cg1kaXNwbGF5X3ZhbHVlGAggASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "Qk5OUElEUEISIQoLUEVQTElOT0dFR0MYBCABKA4yDC5HQU5NQ0lKQ09LSRIV",
+            "Cg1kaXNwbGF5X3ZhbHVlGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GANMCIJCOKIReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PEPLINOGEGC" field.</summary>
-    public const int PEPLINOGEGCFieldNumber = 12;
+    public const int PEPLINOGEGCFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.GANMCIJCOKI pEPLINOGEGC_ = global::EggLink.DanhengServer.Proto.GANMCIJCOKI.Match3BattleBuffTypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "display_value" field.</summary>
-    public const int DisplayValueFieldNumber = 8;
+    public const int DisplayValueFieldNumber = 5;
     private uint displayValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DisplayValue != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(DisplayValue);
-      }
       if (PEPLINOGEGC != global::EggLink.DanhengServer.Proto.GANMCIJCOKI.Match3BattleBuffTypeNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(32);
         output.WriteEnum((int) PEPLINOGEGC);
+      }
+      if (DisplayValue != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(DisplayValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DisplayValue != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(DisplayValue);
-      }
       if (PEPLINOGEGC != global::EggLink.DanhengServer.Proto.GANMCIJCOKI.Match3BattleBuffTypeNone) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(32);
         output.WriteEnum((int) PEPLINOGEGC);
+      }
+      if (DisplayValue != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(DisplayValue);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            DisplayValue = input.ReadUInt32();
+          case 32: {
+            PEPLINOGEGC = (global::EggLink.DanhengServer.Proto.GANMCIJCOKI) input.ReadEnum();
             break;
           }
-          case 96: {
-            PEPLINOGEGC = (global::EggLink.DanhengServer.Proto.GANMCIJCOKI) input.ReadEnum();
+          case 40: {
+            DisplayValue = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            DisplayValue = input.ReadUInt32();
+          case 32: {
+            PEPLINOGEGC = (global::EggLink.DanhengServer.Proto.GANMCIJCOKI) input.ReadEnum();
             break;
           }
-          case 96: {
-            PEPLINOGEGC = (global::EggLink.DanhengServer.Proto.GANMCIJCOKI) input.ReadEnum();
+          case 40: {
+            DisplayValue = input.ReadUInt32();
             break;
           }
         }

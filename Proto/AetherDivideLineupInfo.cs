@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxBZXRoZXJEaXZpZGVMaW5ldXBJbmZvLnByb3RvIkIKFkFldGhlckRpdmlk",
-            "ZUxpbmV1cEluZm8SGgoSYWV0aGVyX2F2YXRhcl9saXN0GAEgAygNEgwKBHNs",
-            "b3QYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "ZUxpbmV1cEluZm8SGgoSYWV0aGVyX2F2YXRhcl9saXN0GAIgAygNEgwKBHNs",
+            "b3QYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "aether_avatar_list" field.</summary>
-    public const int AetherAvatarListFieldNumber = 1;
+    public const int AetherAvatarListFieldNumber = 2;
     private static readonly pb::FieldCodec<uint> _repeated_aetherAvatarList_codec
-        = pb::FieldCodec.ForUInt32(10);
+        = pb::FieldCodec.ForUInt32(18);
     private readonly pbc::RepeatedField<uint> aetherAvatarList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "slot" field.</summary>
-    public const int SlotFieldNumber = 14;
+    public const int SlotFieldNumber = 8;
     private uint slot_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       aetherAvatarList_.WriteTo(output, _repeated_aetherAvatarList_codec);
       if (Slot != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteUInt32(Slot);
       }
       if (_unknownFields != null) {
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       aetherAvatarList_.WriteTo(ref output, _repeated_aetherAvatarList_codec);
       if (Slot != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteUInt32(Slot);
       }
       if (_unknownFields != null) {
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
+          case 18:
+          case 16: {
             aetherAvatarList_.AddEntriesFrom(input, _repeated_aetherAvatarList_codec);
             break;
           }
-          case 112: {
+          case 64: {
             Slot = input.ReadUInt32();
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
+          case 18:
+          case 16: {
             aetherAvatarList_.AddEntriesFrom(ref input, _repeated_aetherAvatarList_codec);
             break;
           }
-          case 112: {
+          case 64: {
             Slot = input.ReadUInt32();
             break;
           }

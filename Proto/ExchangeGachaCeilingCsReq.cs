@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9FeGNoYW5nZUdhY2hhQ2VpbGluZ0NzUmVxLnByb3RvIkIKGUV4Y2hhbmdl",
-            "R2FjaGFDZWlsaW5nQ3NSZXESEgoKZ2FjaGFfdHlwZRgEIAEoDRIRCglhdmF0",
-            "YXJfaWQYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "R2FjaGFDZWlsaW5nQ3NSZXESEQoJYXZhdGFyX2lkGA4gASgNEhIKCmdhY2hh",
+            "X3R5cGUYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ExchangeGachaCeilingCsReq), global::EggLink.DanhengServer.Proto.ExchangeGachaCeilingCsReq.Parser, new[]{ "GachaType", "AvatarId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ExchangeGachaCeilingCsReq), global::EggLink.DanhengServer.Proto.ExchangeGachaCeilingCsReq.Parser, new[]{ "AvatarId", "GachaType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExchangeGachaCeilingCsReq(ExchangeGachaCeilingCsReq other) : this() {
-      gachaType_ = other.gachaType_;
       avatarId_ = other.avatarId_;
+      gachaType_ = other.gachaType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ExchangeGachaCeilingCsReq(this);
     }
 
-    /// <summary>Field number for the "gacha_type" field.</summary>
-    public const int GachaTypeFieldNumber = 4;
-    private uint gachaType_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GachaType {
-      get { return gachaType_; }
-      set {
-        gachaType_ = value;
-      }
-    }
-
     /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 8;
+    public const int AvatarIdFieldNumber = 14;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return avatarId_; }
       set {
         avatarId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gacha_type" field.</summary>
+    public const int GachaTypeFieldNumber = 8;
+    private uint gachaType_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GachaType {
+      get { return gachaType_; }
+      set {
+        gachaType_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GachaType != other.GachaType) return false;
       if (AvatarId != other.AvatarId) return false;
+      if (GachaType != other.GachaType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GachaType != 0) hash ^= GachaType.GetHashCode();
       if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
+      if (GachaType != 0) hash ^= GachaType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (GachaType != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(64);
         output.WriteUInt32(GachaType);
       }
       if (AvatarId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(112);
         output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (GachaType != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(64);
         output.WriteUInt32(GachaType);
       }
       if (AvatarId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(112);
         output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GachaType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaType);
-      }
       if (AvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
+      }
+      if (GachaType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GachaType != 0) {
-        GachaType = other.GachaType;
-      }
       if (other.AvatarId != 0) {
         AvatarId = other.AvatarId;
+      }
+      if (other.GachaType != 0) {
+        GachaType = other.GachaType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 64: {
             GachaType = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 112: {
             AvatarId = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 64: {
             GachaType = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 112: {
             AvatarId = input.ReadUInt32();
             break;
           }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFDT0lFSUhOS0NESy5wcm90bxoRRUhGT0dKS0pNRUYucHJvdG8ikwEKC0NP",
-            "SUVJSE5LQ0RLEhwKBnNvdXJjZRgMIAEoCzIMLkVIRk9HSktKTUVGEjIKC0RG",
-            "R0RKTVBNQkxGGAQgAygLMh0uQ09JRUlITktDREsuREZHREpNUE1CTEZFbnRy",
+            "SUVJSE5LQ0RLEhwKBnNvdXJjZRgLIAEoCzIMLkVIRk9HSktKTUVGEjIKC0RG",
+            "R0RKTVBNQkxGGAggAygLMh0uQ09JRUlITktDREsuREZHREpNUE1CTEZFbnRy",
             "eRoyChBERkdESk1QTUJMRkVudHJ5EgsKA2tleRgBIAEoDRINCgV2YWx1ZRgC",
             "IAEoAToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "source" field.</summary>
-    public const int SourceFieldNumber = 12;
+    public const int SourceFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.EHFOGJKJMEF source_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,9 +99,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DFGDJMPMBLF" field.</summary>
-    public const int DFGDJMPMBLFFieldNumber = 4;
+    public const int DFGDJMPMBLFFieldNumber = 8;
     private static readonly pbc::MapField<uint, double>.Codec _map_dFGDJMPMBLF_codec
-        = new pbc::MapField<uint, double>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForDouble(17, 0D), 34);
+        = new pbc::MapField<uint, double>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForDouble(17, 0D), 66);
     private readonly pbc::MapField<uint, double> dFGDJMPMBLF_ = new pbc::MapField<uint, double>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -155,7 +155,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       dFGDJMPMBLF_.WriteTo(output, _map_dFGDJMPMBLF_codec);
       if (source_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(90);
         output.WriteMessage(Source);
       }
       if (_unknownFields != null) {
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       dFGDJMPMBLF_.WriteTo(ref output, _map_dFGDJMPMBLF_codec);
       if (source_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(90);
         output.WriteMessage(Source);
       }
       if (_unknownFields != null) {
@@ -221,11 +221,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 66: {
             dFGDJMPMBLF_.AddEntriesFrom(input, _map_dFGDJMPMBLF_codec);
             break;
           }
-          case 98: {
+          case 90: {
             if (source_ == null) {
               Source = new global::EggLink.DanhengServer.Proto.EHFOGJKJMEF();
             }
@@ -247,11 +247,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 66: {
             dFGDJMPMBLF_.AddEntriesFrom(ref input, _map_dFGDJMPMBLF_codec);
             break;
           }
-          case 98: {
+          case 90: {
             if (source_ == null) {
               Source = new global::EggLink.DanhengServer.Proto.EHFOGJKJMEF();
             }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFOQ0JJTUxQT0RPTi5wcm90bxoRTUVOUEJHR09HTUMucHJvdG8iRAoLTkNC",
-            "SU1MUE9ET04SIAoKYmxhY2tfbGlzdBgBIAEoCzIMLk1FTlBCR0dPR01DEhMK",
-            "C0lBSE9QRk5QRkxOGAQgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "SU1MUE9ET04SEwoLSUFIT1BGTlBGTE4YDiABKAgSIAoKYmxhY2tfbGlzdBgC",
+            "IAEoCzIMLk1FTlBCR0dPR01DQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MENPBGGOGMCReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NCBIMLPODON), global::EggLink.DanhengServer.Proto.NCBIMLPODON.Parser, new[]{ "BlackList", "IAHOPFNPFLN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NCBIMLPODON), global::EggLink.DanhengServer.Proto.NCBIMLPODON.Parser, new[]{ "IAHOPFNPFLN", "BlackList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NCBIMLPODON(NCBIMLPODON other) : this() {
-      blackList_ = other.blackList_ != null ? other.blackList_.Clone() : null;
       iAHOPFNPFLN_ = other.iAHOPFNPFLN_;
+      blackList_ = other.blackList_ != null ? other.blackList_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new NCBIMLPODON(this);
     }
 
-    /// <summary>Field number for the "black_list" field.</summary>
-    public const int BlackListFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.MENPBGGOGMC blackList_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MENPBGGOGMC BlackList {
-      get { return blackList_; }
-      set {
-        blackList_ = value;
-      }
-    }
-
     /// <summary>Field number for the "IAHOPFNPFLN" field.</summary>
-    public const int IAHOPFNPFLNFieldNumber = 4;
+    public const int IAHOPFNPFLNFieldNumber = 14;
     private bool iAHOPFNPFLN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return iAHOPFNPFLN_; }
       set {
         iAHOPFNPFLN_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "black_list" field.</summary>
+    public const int BlackListFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.MENPBGGOGMC blackList_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MENPBGGOGMC BlackList {
+      get { return blackList_; }
+      set {
+        blackList_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(BlackList, other.BlackList)) return false;
       if (IAHOPFNPFLN != other.IAHOPFNPFLN) return false;
+      if (!object.Equals(BlackList, other.BlackList)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (blackList_ != null) hash ^= BlackList.GetHashCode();
       if (IAHOPFNPFLN != false) hash ^= IAHOPFNPFLN.GetHashCode();
+      if (blackList_ != null) hash ^= BlackList.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (blackList_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteMessage(BlackList);
       }
       if (IAHOPFNPFLN != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(112);
         output.WriteBool(IAHOPFNPFLN);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (blackList_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(18);
         output.WriteMessage(BlackList);
       }
       if (IAHOPFNPFLN != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(112);
         output.WriteBool(IAHOPFNPFLN);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (blackList_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BlackList);
-      }
       if (IAHOPFNPFLN != false) {
         size += 1 + 1;
+      }
+      if (blackList_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BlackList);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.IAHOPFNPFLN != false) {
+        IAHOPFNPFLN = other.IAHOPFNPFLN;
+      }
       if (other.blackList_ != null) {
         if (blackList_ == null) {
           BlackList = new global::EggLink.DanhengServer.Proto.MENPBGGOGMC();
         }
         BlackList.MergeFrom(other.BlackList);
-      }
-      if (other.IAHOPFNPFLN != false) {
-        IAHOPFNPFLN = other.IAHOPFNPFLN;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,14 +230,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 18: {
             if (blackList_ == null) {
               BlackList = new global::EggLink.DanhengServer.Proto.MENPBGGOGMC();
             }
             input.ReadMessage(BlackList);
             break;
           }
-          case 32: {
+          case 112: {
             IAHOPFNPFLN = input.ReadBool();
             break;
           }
@@ -256,14 +256,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 18: {
             if (blackList_ == null) {
               BlackList = new global::EggLink.DanhengServer.Proto.MENPBGGOGMC();
             }
             input.ReadMessage(BlackList);
             break;
           }
-          case 32: {
+          case 112: {
             IAHOPFNPFLN = input.ReadBool();
             break;
           }

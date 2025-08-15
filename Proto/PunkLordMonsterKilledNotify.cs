@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFQdW5rTG9yZE1vbnN0ZXJLaWxsZWROb3RpZnkucHJvdG8aH0tpbGxlZFB1",
             "bmtMb3JkTW9uc3RlckluZm8ucHJvdG8iTgobUHVua0xvcmRNb25zdGVyS2ls",
-            "bGVkTm90aWZ5Ei8KC0FJRUNPQktFSUdCGAMgASgLMhouS2lsbGVkUHVua0xv",
+            "bGVkTm90aWZ5Ei8KC0FJRUNPQktFSUdCGAogASgLMhouS2lsbGVkUHVua0xv",
             "cmRNb25zdGVySW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "AIECOBKEIGB" field.</summary>
-    public const int AIECOBKEIGBFieldNumber = 3;
+    public const int AIECOBKEIGBFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.KilledPunkLordMonsterInfo aIECOBKEIGB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (aIECOBKEIGB_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(82);
         output.WriteMessage(AIECOBKEIGB);
       }
       if (_unknownFields != null) {
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (aIECOBKEIGB_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(82);
         output.WriteMessage(AIECOBKEIGB);
       }
       if (_unknownFields != null) {
@@ -202,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 82: {
             if (aIECOBKEIGB_ == null) {
               AIECOBKEIGB = new global::EggLink.DanhengServer.Proto.KilledPunkLordMonsterInfo();
             }
@@ -224,7 +224,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 82: {
             if (aIECOBKEIGB_ == null) {
               AIECOBKEIGB = new global::EggLink.DanhengServer.Proto.KilledPunkLordMonsterInfo();
             }

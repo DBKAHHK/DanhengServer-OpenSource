@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CihTeW5jUm9ndWVBZW9uTGV2ZWxVcFJld2FyZFNjTm90aWZ5LnByb3RvGg5J",
             "dGVtTGlzdC5wcm90byJfCiJTeW5jUm9ndWVBZW9uTGV2ZWxVcFJld2FyZFNj",
-            "Tm90aWZ5EhkKBnJld2FyZBgLIAEoCzIJLkl0ZW1MaXN0Eg8KB2Flb25faWQY",
-            "DSABKA0SDQoFbGV2ZWwYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "Tm90aWZ5EhkKBnJld2FyZBgBIAEoCzIJLkl0ZW1MaXN0Eg8KB2Flb25faWQY",
+            "BiABKA0SDQoFbGV2ZWwYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 11;
+    public const int RewardFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "aeon_id" field.</summary>
-    public const int AeonIdFieldNumber = 13;
+    public const int AeonIdFieldNumber = 6;
     private uint aeonId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 3;
+    public const int LevelFieldNumber = 10;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Level != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Level);
-      }
       if (reward_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(10);
         output.WriteMessage(Reward);
       }
       if (AeonId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(48);
         output.WriteUInt32(AeonId);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Level != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Level);
-      }
       if (reward_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(10);
         output.WriteMessage(Reward);
       }
       if (AeonId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(48);
         output.WriteUInt32(AeonId);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -260,19 +260,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 10: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 104: {
+          case 48: {
             AeonId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            Level = input.ReadUInt32();
             break;
           }
         }
@@ -290,19 +290,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 10: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 104: {
+          case 48: {
             AeonId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            Level = input.ReadUInt32();
             break;
           }
         }

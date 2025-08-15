@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFMQUlMTklHRlBPTy5wcm90byJQCgtMQUlMTklHRlBPTxIXCg9pc190YWtl",
-            "bl9yZXdhcmQYAiABKAgSEwoLQUVMUEZFQkdOT0sYBiABKAgSEwoLS0hHUEZI",
-            "Qk9FTEUYByABKARCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "bl9yZXdhcmQYCiABKAgSEwoLQUVMUEZFQkdOT0sYBSABKAgSEwoLS0hHUEZI",
+            "Qk9FTEUYASABKARCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_taken_reward" field.</summary>
-    public const int IsTakenRewardFieldNumber = 2;
+    public const int IsTakenRewardFieldNumber = 10;
     private bool isTakenReward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "AELPFEBGNOK" field.</summary>
-    public const int AELPFEBGNOKFieldNumber = 6;
+    public const int AELPFEBGNOKFieldNumber = 5;
     private bool aELPFEBGNOK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KHGPFHBOELE" field.</summary>
-    public const int KHGPFHBOELEFieldNumber = 7;
+    public const int KHGPFHBOELEFieldNumber = 1;
     private ulong kHGPFHBOELE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsTakenReward != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsTakenReward);
+      if (KHGPFHBOELE != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(KHGPFHBOELE);
       }
       if (AELPFEBGNOK != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteBool(AELPFEBGNOK);
       }
-      if (KHGPFHBOELE != 0UL) {
-        output.WriteRawTag(56);
-        output.WriteUInt64(KHGPFHBOELE);
+      if (IsTakenReward != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(IsTakenReward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsTakenReward != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsTakenReward);
+      if (KHGPFHBOELE != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(KHGPFHBOELE);
       }
       if (AELPFEBGNOK != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteBool(AELPFEBGNOK);
       }
-      if (KHGPFHBOELE != 0UL) {
-        output.WriteRawTag(56);
-        output.WriteUInt64(KHGPFHBOELE);
+      if (IsTakenReward != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(IsTakenReward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            IsTakenReward = input.ReadBool();
+          case 8: {
+            KHGPFHBOELE = input.ReadUInt64();
             break;
           }
-          case 48: {
+          case 40: {
             AELPFEBGNOK = input.ReadBool();
             break;
           }
-          case 56: {
-            KHGPFHBOELE = input.ReadUInt64();
+          case 80: {
+            IsTakenReward = input.ReadBool();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            IsTakenReward = input.ReadBool();
+          case 8: {
+            KHGPFHBOELE = input.ReadUInt64();
             break;
           }
-          case 48: {
+          case 40: {
             AELPFEBGNOK = input.ReadBool();
             break;
           }
-          case 56: {
-            KHGPFHBOELE = input.ReadUInt64();
+          case 80: {
+            IsTakenReward = input.ReadBool();
             break;
           }
         }

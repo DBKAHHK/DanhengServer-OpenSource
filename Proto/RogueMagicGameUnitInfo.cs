@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxSb2d1ZU1hZ2ljR2FtZVVuaXRJbmZvLnByb3RvGhhSb2d1ZU1hZ2ljR2Ft",
             "ZVVuaXQucHJvdG8iWQoWUm9ndWVNYWdpY0dhbWVVbml0SW5mbxIRCgl1bmlx",
-            "dWVfaWQYDSABKA0SLAoPZ2FtZV9tYWdpY191bml0GAQgASgLMhMuUm9ndWVN",
+            "dWVfaWQYBCABKA0SLAoPZ2FtZV9tYWdpY191bml0GAUgASgLMhMuUm9ndWVN",
             "YWdpY0dhbWVVbml0Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "unique_id" field.</summary>
-    public const int UniqueIdFieldNumber = 13;
+    public const int UniqueIdFieldNumber = 4;
     private uint uniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "game_magic_unit" field.</summary>
-    public const int GameMagicUnitFieldNumber = 4;
+    public const int GameMagicUnitFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.RogueMagicGameUnit gameMagicUnit_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (gameMagicUnit_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(GameMagicUnit);
-      }
       if (UniqueId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(32);
         output.WriteUInt32(UniqueId);
+      }
+      if (gameMagicUnit_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(GameMagicUnit);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (gameMagicUnit_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(GameMagicUnit);
-      }
       if (UniqueId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(32);
         output.WriteUInt32(UniqueId);
+      }
+      if (gameMagicUnit_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(GameMagicUnit);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 32: {
+            UniqueId = input.ReadUInt32();
+            break;
+          }
+          case 42: {
             if (gameMagicUnit_ == null) {
               GameMagicUnit = new global::EggLink.DanhengServer.Proto.RogueMagicGameUnit();
             }
             input.ReadMessage(GameMagicUnit);
-            break;
-          }
-          case 104: {
-            UniqueId = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 32: {
+            UniqueId = input.ReadUInt32();
+            break;
+          }
+          case 42: {
             if (gameMagicUnit_ == null) {
               GameMagicUnit = new global::EggLink.DanhengServer.Proto.RogueMagicGameUnit();
             }
             input.ReadMessage(GameMagicUnit);
-            break;
-          }
-          case 104: {
-            UniqueId = input.ReadUInt32();
             break;
           }
         }

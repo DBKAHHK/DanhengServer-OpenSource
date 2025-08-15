@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChFPTEJPUEdKRkZQTS5wcm90bxoRREhORkJHRU5MSUcucHJvdG8iRQoLT0xC",
             "T1BHSkZGUE0SEwoLQklJTk5DTkRQQ0cYBSABKAgSIQoLS0pLQktFR0lHSEsY",
-            "ASABKAsyDC5ESE5GQkdFTkxJR0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "BCABKAsyDC5ESE5GQkdFTkxJR0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DHNFBGENLIGReflection.Descriptor, },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KJKBKEGIGHK" field.</summary>
-    public const int KJKBKEGIGHKFieldNumber = 1;
+    public const int KJKBKEGIGHKFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.DHNFBGENLIG kJKBKEGIGHK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (kJKBKEGIGHK_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(34);
         output.WriteMessage(KJKBKEGIGHK);
       }
       if (BIINNCNDPCG != false) {
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (kJKBKEGIGHK_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(34);
         output.WriteMessage(KJKBKEGIGHK);
       }
       if (BIINNCNDPCG != false) {
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 34: {
             if (kJKBKEGIGHK_ == null) {
               KJKBKEGIGHK = new global::EggLink.DanhengServer.Proto.DHNFBGENLIG();
             }
@@ -256,7 +256,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 34: {
             if (kJKBKEGIGHK_ == null) {
               KJKBKEGIGHK = new global::EggLink.DanhengServer.Proto.DHNFBGENLIG();
             }

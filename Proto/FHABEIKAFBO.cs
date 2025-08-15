@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFGSEFCRUlLQUZCTy5wcm90bxocTWlzc2lvbkN1c3RvbVZhbHVlTGlzdC5w",
-            "cm90byJfCgtGSEFCRUlLQUZCTxIKCgJpZBgIIAEoDRI1ChFjdXN0b21fdmFs",
-            "dWVfbGlzdBjpDyABKAsyFy5NaXNzaW9uQ3VzdG9tVmFsdWVMaXN0SABCDQoL",
+            "cm90byJfCgtGSEFCRUlLQUZCTxIKCgJpZBgEIAEoDRI1ChFjdXN0b21fdmFs",
+            "dWVfbGlzdBj+DCABKAsyFy5NaXNzaW9uQ3VzdG9tVmFsdWVMaXN0SABCDQoL",
             "SUNBSUJFQUlBR0NCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -91,7 +91,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 8;
+    public const int IdFieldNumber = 4;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -103,7 +103,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "custom_value_list" field.</summary>
-    public const int CustomValueListFieldNumber = 2025;
+    public const int CustomValueListFieldNumber = 1662;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.MissionCustomValueList CustomValueList {
@@ -118,7 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "ICAIBEAIAGC" oneof.</summary>
     public enum ICAIBEAIAGCOneofCase {
       None = 0,
-      CustomValueList = 2025,
+      CustomValueList = 1662,
     }
     private ICAIBEAIAGCOneofCase iCAIBEAIAGCCase_ = ICAIBEAIAGCOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -181,11 +181,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Id != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(32);
         output.WriteUInt32(Id);
       }
       if (iCAIBEAIAGCCase_ == ICAIBEAIAGCOneofCase.CustomValueList) {
-        output.WriteRawTag(202, 126);
+        output.WriteRawTag(242, 103);
         output.WriteMessage(CustomValueList);
       }
       if (_unknownFields != null) {
@@ -199,11 +199,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(32);
         output.WriteUInt32(Id);
       }
       if (iCAIBEAIAGCCase_ == ICAIBEAIAGCOneofCase.CustomValueList) {
-        output.WriteRawTag(202, 126);
+        output.WriteRawTag(242, 103);
         output.WriteMessage(CustomValueList);
       }
       if (_unknownFields != null) {
@@ -261,11 +261,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 32: {
             Id = input.ReadUInt32();
             break;
           }
-          case 16202: {
+          case 13298: {
             global::EggLink.DanhengServer.Proto.MissionCustomValueList subBuilder = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
             if (iCAIBEAIAGCCase_ == ICAIBEAIAGCOneofCase.CustomValueList) {
               subBuilder.MergeFrom(CustomValueList);
@@ -289,11 +289,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 32: {
             Id = input.ReadUInt32();
             break;
           }
-          case 16202: {
+          case 13298: {
             global::EggLink.DanhengServer.Proto.MissionCustomValueList subBuilder = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
             if (iCAIBEAIAGCCase_ == ICAIBEAIAGCOneofCase.CustomValueList) {
               subBuilder.MergeFrom(CustomValueList);

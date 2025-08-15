@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static GGDEMGBOFGOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFHR0RFTUdCT0ZHTy5wcm90byJCCgtHR0RFTUdCT0ZHTxIMCgR0aW1lGAEg",
-            "ASgNEhAKCGxldmVsX2lkGA0gASgNEhMKC0tLRUhNQlBKT09DGA8gASgIQh6q",
+            "ChFHR0RFTUdCT0ZHTy5wcm90byJCCgtHR0RFTUdCT0ZHTxIMCgR0aW1lGAQg",
+            "ASgNEhAKCGxldmVsX2lkGAUgASgNEhMKC0tLRUhNQlBKT09DGAEgASgIQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "time" field.</summary>
-    public const int TimeFieldNumber = 1;
+    public const int TimeFieldNumber = 4;
     private uint time_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level_id" field.</summary>
-    public const int LevelIdFieldNumber = 13;
+    public const int LevelIdFieldNumber = 5;
     private uint levelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KKEHMBPJOOC" field.</summary>
-    public const int KKEHMBPJOOCFieldNumber = 15;
+    public const int KKEHMBPJOOCFieldNumber = 1;
     private bool kKEHMBPJOOC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Time != 0) {
+      if (KKEHMBPJOOC != false) {
         output.WriteRawTag(8);
+        output.WriteBool(KKEHMBPJOOC);
+      }
+      if (Time != 0) {
+        output.WriteRawTag(32);
         output.WriteUInt32(Time);
       }
       if (LevelId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(40);
         output.WriteUInt32(LevelId);
-      }
-      if (KKEHMBPJOOC != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(KKEHMBPJOOC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Time != 0) {
+      if (KKEHMBPJOOC != false) {
         output.WriteRawTag(8);
+        output.WriteBool(KKEHMBPJOOC);
+      }
+      if (Time != 0) {
+        output.WriteRawTag(32);
         output.WriteUInt32(Time);
       }
       if (LevelId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(40);
         output.WriteUInt32(LevelId);
-      }
-      if (KKEHMBPJOOC != false) {
-        output.WriteRawTag(120);
-        output.WriteBool(KKEHMBPJOOC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
+            KKEHMBPJOOC = input.ReadBool();
+            break;
+          }
+          case 32: {
             Time = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 40: {
             LevelId = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            KKEHMBPJOOC = input.ReadBool();
             break;
           }
         }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
+            KKEHMBPJOOC = input.ReadBool();
+            break;
+          }
+          case 32: {
             Time = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 40: {
             LevelId = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            KKEHMBPJOOC = input.ReadBool();
             break;
           }
         }

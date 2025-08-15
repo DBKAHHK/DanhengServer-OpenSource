@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CilUYWtlS2lsbGVkUHVua0xvcmRNb25zdGVyU2NvcmVDc1JlcS5wcm90bxoY",
             "UHVua0xvcmRNb25zdGVyS2V5LnByb3RvImQKI1Rha2VLaWxsZWRQdW5rTG9y",
-            "ZE1vbnN0ZXJTY29yZUNzUmVxEigKC1BLQ1BKSk5PQUxOGAggASgLMhMuUHVu",
-            "a0xvcmRNb25zdGVyS2V5EhMKC0tGRUpHRk5PTklQGAogASgIQh6qAhtFZ2dM",
+            "ZE1vbnN0ZXJTY29yZUNzUmVxEigKC1BLQ1BKSk5PQUxOGAogASgLMhMuUHVu",
+            "a0xvcmRNb25zdGVyS2V5EhMKC0tGRUpHRk5PTklQGAggASgIQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PunkLordMonsterKeyReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PKCPJJNOALN" field.</summary>
-    public const int PKCPJJNOALNFieldNumber = 8;
+    public const int PKCPJJNOALNFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.PunkLordMonsterKey pKCPJJNOALN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KFEJGFNONIP" field.</summary>
-    public const int KFEJGFNONIPFieldNumber = 10;
+    public const int KFEJGFNONIPFieldNumber = 8;
     private bool kFEJGFNONIP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (pKCPJJNOALN_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(PKCPJJNOALN);
-      }
       if (KFEJGFNONIP != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteBool(KFEJGFNONIP);
+      }
+      if (pKCPJJNOALN_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(PKCPJJNOALN);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (pKCPJJNOALN_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(PKCPJJNOALN);
-      }
       if (KFEJGFNONIP != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteBool(KFEJGFNONIP);
+      }
+      if (pKCPJJNOALN_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(PKCPJJNOALN);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 64: {
+            KFEJGFNONIP = input.ReadBool();
+            break;
+          }
+          case 82: {
             if (pKCPJJNOALN_ == null) {
               PKCPJJNOALN = new global::EggLink.DanhengServer.Proto.PunkLordMonsterKey();
             }
             input.ReadMessage(PKCPJJNOALN);
-            break;
-          }
-          case 80: {
-            KFEJGFNONIP = input.ReadBool();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 64: {
+            KFEJGFNONIP = input.ReadBool();
+            break;
+          }
+          case 82: {
             if (pKCPJJNOALN_ == null) {
               PKCPJJNOALN = new global::EggLink.DanhengServer.Proto.PunkLordMonsterKey();
             }
             input.ReadMessage(PKCPJJNOALN);
-            break;
-          }
-          case 80: {
-            KFEJGFNONIP = input.ReadBool();
             break;
           }
         }

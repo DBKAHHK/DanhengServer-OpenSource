@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFFTkpIRExIS0lOTy5wcm90bxoRR0NGRUhNRU5PTk0ucHJvdG8iMwoLRU5K",
-            "SERMSEtJTk8SJAoOcGVuZGluZ19hY3Rpb24YByABKAsyDC5HQ0ZFSE1FTk9O",
+            "SERMSEtJTk8SJAoOcGVuZGluZ19hY3Rpb24YDyABKAsyDC5HQ0ZFSE1FTk9O",
             "TUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GCFEHMENONMReflection.Descriptor, },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pending_action" field.</summary>
-    public const int PendingActionFieldNumber = 7;
+    public const int PendingActionFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.GCFEHMENONM pendingAction_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (pendingAction_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(122);
         output.WriteMessage(PendingAction);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (pendingAction_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(122);
         output.WriteMessage(PendingAction);
       }
       if (_unknownFields != null) {
@@ -200,7 +200,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 122: {
             if (pendingAction_ == null) {
               PendingAction = new global::EggLink.DanhengServer.Proto.GCFEHMENONM();
             }
@@ -222,7 +222,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 122: {
             if (pendingAction_ == null) {
               PendingAction = new global::EggLink.DanhengServer.Proto.GCFEHMENONM();
             }

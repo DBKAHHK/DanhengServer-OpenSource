@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFSb2d1ZVRvdXJuUmV2aXZlQXZhdGFyU2NSc3AucHJvdG8aEkl0ZW1Db3N0",
             "RGF0YS5wcm90byJYChtSb2d1ZVRvdXJuUmV2aXZlQXZhdGFyU2NSc3ASDwoH",
-            "cmV0Y29kZRgBIAEoDRIoChFyb2d1ZV9yZXZpdmVfY29zdBgIIAEoCzINLkl0",
+            "cmV0Y29kZRgHIAEoDRIoChFyb2d1ZV9yZXZpdmVfY29zdBgLIAEoCzINLkl0",
             "ZW1Db3N0RGF0YUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_revive_cost" field.</summary>
-    public const int RogueReviveCostFieldNumber = 8;
+    public const int RogueReviveCostFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.ItemCostData rogueReviveCost_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (rogueReviveCost_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(90);
         output.WriteMessage(RogueReviveCost);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (rogueReviveCost_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(90);
         output.WriteMessage(RogueReviveCost);
       }
       if (_unknownFields != null) {
@@ -231,11 +231,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 66: {
+          case 90: {
             if (rogueReviveCost_ == null) {
               RogueReviveCost = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
@@ -257,11 +257,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 66: {
+          case 90: {
             if (rogueReviveCost_ == null) {
               RogueReviveCost = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }

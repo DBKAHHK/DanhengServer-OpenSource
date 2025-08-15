@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFMYXN0U3ByaW5nUmVmcmVzaFRpbWVOb3RpZnkucHJvdG8iMgobTGFzdFNw",
-            "cmluZ1JlZnJlc2hUaW1lTm90aWZ5EhMKC0pCSUNJTkRQSUdNGAsgASgDQh6q",
+            "cmluZ1JlZnJlc2hUaW1lTm90aWZ5EhMKC0pCSUNJTkRQSUdNGA4gASgDQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JBICINDPIGM" field.</summary>
-    public const int JBICINDPIGMFieldNumber = 11;
+    public const int JBICINDPIGMFieldNumber = 14;
     private long jBICINDPIGM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (JBICINDPIGM != 0L) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(112);
         output.WriteInt64(JBICINDPIGM);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (JBICINDPIGM != 0L) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(112);
         output.WriteInt64(JBICINDPIGM);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
+          case 112: {
             JBICINDPIGM = input.ReadInt64();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
+          case 112: {
             JBICINDPIGM = input.ReadInt64();
             break;
           }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPT0ZLRUJQQU5MUC5wcm90bxoRREdFRk1MQlBGTU0ucHJvdG8iQgoLT09G",
-            "S0VCUEFOTFASEAoIbGV2ZWxfaWQYAiABKA0SIQoLRENGSEdBQUpMTk4YBCAD",
+            "S0VCUEFOTFASEAoIbGV2ZWxfaWQYBCABKA0SIQoLRENGSEdBQUpMTk4YByAD",
             "KAsyDC5ER0VGTUxCUEZNTUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level_id" field.</summary>
-    public const int LevelIdFieldNumber = 2;
+    public const int LevelIdFieldNumber = 4;
     private uint levelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DCFHGAAJLNN" field.</summary>
-    public const int DCFHGAAJLNNFieldNumber = 4;
+    public const int DCFHGAAJLNNFieldNumber = 7;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DGEFMLBPFMM> _repeated_dCFHGAAJLNN_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.DGEFMLBPFMM.Parser);
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.DGEFMLBPFMM.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DGEFMLBPFMM> dCFHGAAJLNN_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DGEFMLBPFMM>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (LevelId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(LevelId);
       }
       dCFHGAAJLNN_.WriteTo(output, _repeated_dCFHGAAJLNN_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LevelId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(LevelId);
       }
       dCFHGAAJLNN_.WriteTo(ref output, _repeated_dCFHGAAJLNN_codec);
@@ -216,11 +216,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 32: {
             LevelId = input.ReadUInt32();
             break;
           }
-          case 34: {
+          case 58: {
             dCFHGAAJLNN_.AddEntriesFrom(input, _repeated_dCFHGAAJLNN_codec);
             break;
           }
@@ -239,11 +239,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 32: {
             LevelId = input.ReadUInt32();
             break;
           }
-          case 34: {
+          case 58: {
             dCFHGAAJLNN_.AddEntriesFrom(ref input, _repeated_dCFHGAAJLNN_codec);
             break;
           }

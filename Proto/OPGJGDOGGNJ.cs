@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPUEdKR0RPR0dOSi5wcm90bxoRS0FNTEdMTU5KR0oucHJvdG8iPQoLT1BH",
-            "SkdET0dHTkoSGQoDcG9zGAIgASgOMgwuS0FNTEdMTU5KR0oSEwoLQkRKQ0dD",
-            "REpPRU8YBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "SkdET0dHTkoSGQoDcG9zGA8gASgOMgwuS0FNTEdMTU5KR0oSEwoLQkRKQ0dD",
+            "REpPRU8YDSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KAMLGLMNJGJReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pos" field.</summary>
-    public const int PosFieldNumber = 2;
+    public const int PosFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.KAMLGLMNJGJ pos_ = global::EggLink.DanhengServer.Proto.KAMLGLMNJGJ.WorkPosNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BDJCGCDJOEO" field.</summary>
-    public const int BDJCGCDJOEOFieldNumber = 6;
+    public const int BDJCGCDJOEOFieldNumber = 13;
     private uint bDJCGCDJOEO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Pos != global::EggLink.DanhengServer.Proto.KAMLGLMNJGJ.WorkPosNone) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Pos);
-      }
       if (BDJCGCDJOEO != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(104);
         output.WriteUInt32(BDJCGCDJOEO);
+      }
+      if (Pos != global::EggLink.DanhengServer.Proto.KAMLGLMNJGJ.WorkPosNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Pos);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Pos != global::EggLink.DanhengServer.Proto.KAMLGLMNJGJ.WorkPosNone) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Pos);
-      }
       if (BDJCGCDJOEO != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(104);
         output.WriteUInt32(BDJCGCDJOEO);
+      }
+      if (Pos != global::EggLink.DanhengServer.Proto.KAMLGLMNJGJ.WorkPosNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Pos);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            Pos = (global::EggLink.DanhengServer.Proto.KAMLGLMNJGJ) input.ReadEnum();
+          case 104: {
+            BDJCGCDJOEO = input.ReadUInt32();
             break;
           }
-          case 48: {
-            BDJCGCDJOEO = input.ReadUInt32();
+          case 120: {
+            Pos = (global::EggLink.DanhengServer.Proto.KAMLGLMNJGJ) input.ReadEnum();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            Pos = (global::EggLink.DanhengServer.Proto.KAMLGLMNJGJ) input.ReadEnum();
+          case 104: {
+            BDJCGCDJOEO = input.ReadUInt32();
             break;
           }
-          case 48: {
-            BDJCGCDJOEO = input.ReadUInt32();
+          case 120: {
+            Pos = (global::EggLink.DanhengServer.Proto.KAMLGLMNJGJ) input.ReadEnum();
             break;
           }
         }

@@ -25,10 +25,10 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFMRkdHUE5HS0JDSC5wcm90bxoSSXRlbUNvc3REYXRhLnByb3RvIuEBCgtM",
-            "RkdHUE5HS0JDSBIYChBmcmVlX3JlZm9yZ2VfbnVtGAMgASgNEjIKC0lBS0hN",
-            "TUVMTUZEGAkgAygLMh0uTEZHR1BOR0tCQ0guSUFLSE1NRUxNRkRFbnRyeRId",
-            "ChVpbnRfcmVmb3JnZV9udW1fdmFsdWUYDCABKAUSIgoLRkFJRElCT0RNQ0gY",
-            "CyABKAsyDS5JdGVtQ29zdERhdGEaQQoQSUFLSE1NRUxNRkRFbnRyeRILCgNr",
+            "RkdHUE5HS0JDSBIYChBmcmVlX3JlZm9yZ2VfbnVtGAggASgNEjIKC0lBS0hN",
+            "TUVMTUZEGA8gAygLMh0uTEZHR1BOR0tCQ0guSUFLSE1NRUxNRkRFbnRyeRId",
+            "ChVpbnRfcmVmb3JnZV9udW1fdmFsdWUYAyABKAUSIgoLRkFJRElCT0RNQ0gY",
+            "DSABKAsyDS5JdGVtQ29zdERhdGEaQQoQSUFLSE1NRUxNRkRFbnRyeRILCgNr",
             "ZXkYASABKA0SHAoFdmFsdWUYAiABKAsyDS5JdGVtQ29zdERhdGE6AjgBQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -90,7 +90,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "free_reforge_num" field.</summary>
-    public const int FreeReforgeNumFieldNumber = 3;
+    public const int FreeReforgeNumFieldNumber = 8;
     private uint freeReforgeNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -102,9 +102,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IAKHMMELMFD" field.</summary>
-    public const int IAKHMMELMFDFieldNumber = 9;
+    public const int IAKHMMELMFDFieldNumber = 15;
     private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ItemCostData>.Codec _map_iAKHMMELMFD_codec
-        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ItemCostData>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.ItemCostData.Parser), 74);
+        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ItemCostData>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.ItemCostData.Parser), 122);
     private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ItemCostData> iAKHMMELMFD_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.ItemCostData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -113,7 +113,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "int_reforge_num_value" field.</summary>
-    public const int IntReforgeNumValueFieldNumber = 12;
+    public const int IntReforgeNumValueFieldNumber = 3;
     private int intReforgeNumValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -125,7 +125,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FAIDIBODMCH" field.</summary>
-    public const int FAIDIBODMCHFieldNumber = 11;
+    public const int FAIDIBODMCHFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.ItemCostData fAIDIBODMCH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -184,19 +184,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FreeReforgeNum != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(FreeReforgeNum);
-      }
-      iAKHMMELMFD_.WriteTo(output, _map_iAKHMMELMFD_codec);
-      if (fAIDIBODMCH_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(FAIDIBODMCH);
-      }
       if (IntReforgeNumValue != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteInt32(IntReforgeNumValue);
       }
+      if (FreeReforgeNum != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(FreeReforgeNum);
+      }
+      if (fAIDIBODMCH_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FAIDIBODMCH);
+      }
+      iAKHMMELMFD_.WriteTo(output, _map_iAKHMMELMFD_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -207,19 +207,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FreeReforgeNum != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(FreeReforgeNum);
-      }
-      iAKHMMELMFD_.WriteTo(ref output, _map_iAKHMMELMFD_codec);
-      if (fAIDIBODMCH_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(FAIDIBODMCH);
-      }
       if (IntReforgeNumValue != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteInt32(IntReforgeNumValue);
       }
+      if (FreeReforgeNum != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(FreeReforgeNum);
+      }
+      if (fAIDIBODMCH_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FAIDIBODMCH);
+      }
+      iAKHMMELMFD_.WriteTo(ref output, _map_iAKHMMELMFD_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -281,22 +281,22 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 24: {
+            IntReforgeNumValue = input.ReadInt32();
+            break;
+          }
+          case 64: {
             FreeReforgeNum = input.ReadUInt32();
             break;
           }
-          case 74: {
-            iAKHMMELMFD_.AddEntriesFrom(input, _map_iAKHMMELMFD_codec);
-            break;
-          }
-          case 90: {
+          case 106: {
             if (fAIDIBODMCH_ == null) {
               FAIDIBODMCH = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(FAIDIBODMCH);
             break;
           }
-          case 96: {
-            IntReforgeNumValue = input.ReadInt32();
+          case 122: {
+            iAKHMMELMFD_.AddEntriesFrom(input, _map_iAKHMMELMFD_codec);
             break;
           }
         }
@@ -315,22 +315,22 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 24: {
+            IntReforgeNumValue = input.ReadInt32();
+            break;
+          }
+          case 64: {
             FreeReforgeNum = input.ReadUInt32();
             break;
           }
-          case 74: {
-            iAKHMMELMFD_.AddEntriesFrom(ref input, _map_iAKHMMELMFD_codec);
-            break;
-          }
-          case 90: {
+          case 106: {
             if (fAIDIBODMCH_ == null) {
               FAIDIBODMCH = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(FAIDIBODMCH);
             break;
           }
-          case 96: {
-            IntReforgeNumValue = input.ReadInt32();
+          case 122: {
+            iAKHMMELMFD_.AddEntriesFrom(ref input, _map_iAKHMMELMFD_codec);
             break;
           }
         }

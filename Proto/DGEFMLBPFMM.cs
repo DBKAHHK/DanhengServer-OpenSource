@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static DGEFMLBPFMMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFER0VGTUxCUEZNTS5wcm90byI8CgtER0VGTUxCUEZNTRIMCgR0aW1lGAEg",
-            "ASgNEgoKAmlkGAMgASgNEhMKC0xQQkhPTUZDTE9OGAggASgNQh6qAhtFZ2dM",
+            "ChFER0VGTUxCUEZNTS5wcm90byI8CgtER0VGTUxCUEZNTRIMCgR0aW1lGAcg",
+            "ASgNEgoKAmlkGAogASgNEhMKC0xQQkhPTUZDTE9OGA0gASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "time" field.</summary>
-    public const int TimeFieldNumber = 1;
+    public const int TimeFieldNumber = 7;
     private uint time_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 3;
+    public const int IdFieldNumber = 10;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LPBHOMFCLON" field.</summary>
-    public const int LPBHOMFCLONFieldNumber = 8;
+    public const int LPBHOMFCLONFieldNumber = 13;
     private uint lPBHOMFCLON_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Time != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(Time);
       }
       if (Id != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(80);
         output.WriteUInt32(Id);
       }
       if (LPBHOMFCLON != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(LPBHOMFCLON);
       }
       if (_unknownFields != null) {
@@ -189,15 +189,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Time != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(Time);
       }
       if (Id != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(80);
         output.WriteUInt32(Id);
       }
       if (LPBHOMFCLON != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(LPBHOMFCLON);
       }
       if (_unknownFields != null) {
@@ -255,15 +255,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 56: {
             Time = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 80: {
             Id = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 104: {
             LPBHOMFCLON = input.ReadUInt32();
             break;
           }
@@ -282,15 +282,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 56: {
             Time = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 80: {
             Id = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 104: {
             LPBHOMFCLON = input.ReadUInt32();
             break;
           }

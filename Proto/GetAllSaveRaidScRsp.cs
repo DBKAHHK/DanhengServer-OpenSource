@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlHZXRBbGxTYXZlUmFpZFNjUnNwLnByb3RvGg5SYWlkRGF0YS5wcm90byJJ",
-            "ChNHZXRBbGxTYXZlUmFpZFNjUnNwEiEKDnJhaWRfZGF0YV9saXN0GAEgAygL",
-            "MgkuUmFpZERhdGESDwoHcmV0Y29kZRgNIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "ChNHZXRBbGxTYXZlUmFpZFNjUnNwEg8KB3JldGNvZGUYDSABKA0SIQoOcmFp",
+            "ZF9kYXRhX2xpc3QYDiADKAsyCS5SYWlkRGF0YUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RaidDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAllSaveRaidScRsp), global::EggLink.DanhengServer.Proto.GetAllSaveRaidScRsp.Parser, new[]{ "RaidDataList", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAllSaveRaidScRsp), global::EggLink.DanhengServer.Proto.GetAllSaveRaidScRsp.Parser, new[]{ "Retcode", "RaidDataList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAllSaveRaidScRsp(GetAllSaveRaidScRsp other) : this() {
-      raidDataList_ = other.raidDataList_.Clone();
       retcode_ = other.retcode_;
+      raidDataList_ = other.raidDataList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,17 +82,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAllSaveRaidScRsp Clone() {
       return new GetAllSaveRaidScRsp(this);
-    }
-
-    /// <summary>Field number for the "raid_data_list" field.</summary>
-    public const int RaidDataListFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RaidData> _repeated_raidDataList_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.RaidData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidData> raidDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidData>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidData> RaidDataList {
-      get { return raidDataList_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -105,6 +94,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
+    }
+
+    /// <summary>Field number for the "raid_data_list" field.</summary>
+    public const int RaidDataListFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RaidData> _repeated_raidDataList_codec
+        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.RaidData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidData> raidDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidData>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidData> RaidDataList {
+      get { return raidDataList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!raidDataList_.Equals(other.raidDataList_)) return false;
       if (Retcode != other.Retcode) return false;
+      if(!raidDataList_.Equals(other.raidDataList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= raidDataList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= raidDataList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      raidDataList_.WriteTo(output, _repeated_raidDataList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
+      raidDataList_.WriteTo(output, _repeated_raidDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      raidDataList_.WriteTo(ref output, _repeated_raidDataList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
+      raidDataList_.WriteTo(ref output, _repeated_raidDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += raidDataList_.CalculateSize(_repeated_raidDataList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
+      size += raidDataList_.CalculateSize(_repeated_raidDataList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      raidDataList_.Add(other.raidDataList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      raidDataList_.Add(other.raidDataList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            raidDataList_.AddEntriesFrom(input, _repeated_raidDataList_codec);
-            break;
-          }
           case 104: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            raidDataList_.AddEntriesFrom(input, _repeated_raidDataList_codec);
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            raidDataList_.AddEntriesFrom(ref input, _repeated_raidDataList_codec);
-            break;
-          }
           case 104: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            raidDataList_.AddEntriesFrom(ref input, _repeated_raidDataList_codec);
             break;
           }
         }

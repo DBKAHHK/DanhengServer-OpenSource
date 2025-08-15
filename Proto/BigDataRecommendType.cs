@@ -24,14 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static BigDataRecommendTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpCaWdEYXRhUmVjb21tZW5kVHlwZS5wcm90byqFAgoUQmlnRGF0YVJlY29t",
+            "ChpCaWdEYXRhUmVjb21tZW5kVHlwZS5wcm90byqNAwoUQmlnRGF0YVJlY29t",
             "bWVuZFR5cGUSIAocQklHX0RBVEFfUkVDT01NRU5EX1RZUEVfTk9ORRAAEiUK",
             "IUJJR19EQVRBX1JFQ09NTUVORF9UWVBFX0VRVUlQTUVOVBABEiYKIkJJR19E",
             "QVRBX1JFQ09NTUVORF9UWVBFX1JFTElDX1NVSVQQAhIoCiRCSUdfREFUQV9S",
             "RUNPTU1FTkRfVFlQRV9SRUxJQ19BVkFUQVIQAxIoCiRCSUdfREFUQV9SRUNP",
             "TU1FTkRfVFlQRV9BVkFUQVJfUkVMSUMQBBIoCiRCSUdfREFUQV9SRUNPTU1F",
-            "TkRfVFlQRV9MT0NBTF9MRUdFTkQQBUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "TkRfVFlQRV9MT0NBTF9MRUdFTkQQBRIuCipCSUdfREFUQV9SRUNPTU1FTkRf",
+            "VFlQRV9DSEFMTEVOR0VfUEVBS19NT0IQBhIvCitCSUdfREFUQV9SRUNPTU1F",
+            "TkRfVFlQRV9DSEFMTEVOR0VfUEVBS19CT1NTEAcSJQohQklHX0RBVEFfUkVD",
+            "T01NRU5EX1RZUEVfQ0hBTExFTkdFEAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.BigDataRecommendType), }, null, null));
@@ -47,6 +50,9 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("BIG_DATA_RECOMMEND_TYPE_RELIC_AVATAR")] RelicAvatar = 3,
     [pbr::OriginalName("BIG_DATA_RECOMMEND_TYPE_AVATAR_RELIC")] AvatarRelic = 4,
     [pbr::OriginalName("BIG_DATA_RECOMMEND_TYPE_LOCAL_LEGEND")] LocalLegend = 5,
+    [pbr::OriginalName("BIG_DATA_RECOMMEND_TYPE_CHALLENGE_PEAK_MOB")] ChallengePeakMob = 6,
+    [pbr::OriginalName("BIG_DATA_RECOMMEND_TYPE_CHALLENGE_PEAK_BOSS")] ChallengePeakBoss = 7,
+    [pbr::OriginalName("BIG_DATA_RECOMMEND_TYPE_CHALLENGE")] Challenge = 8,
   }
 
   #endregion

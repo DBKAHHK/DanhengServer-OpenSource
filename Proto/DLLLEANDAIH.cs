@@ -24,11 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static DLLLEANDAIHReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFETExMRUFOREFJSC5wcm90byqPAQoLRExMTEVBTkRBSUgSJQohRlJJRU5E",
+            "ChFETExMRUFOREFJSC5wcm90byr6AQoLRExMTEVBTkRBSUgSJQohRlJJRU5E",
             "X1JFQ09NTUVORF9MSU5FVVBfVFlQRV9OT05FEAASKgomRlJJRU5EX1JFQ09N",
             "TUVORF9MSU5FVVBfVFlQRV9DSEFMTEVOR0UQARItCilGUklFTkRfUkVDT01N",
-            "RU5EX0xJTkVVUF9UWVBFX0xPQ0FMX0xFR0VORBACQh6qAhtFZ2dMaW5rLkRh",
-            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "RU5EX0xJTkVVUF9UWVBFX0xPQ0FMX0xFR0VORBACEjMKL0ZSSUVORF9SRUNP",
+            "TU1FTkRfTElORVVQX1RZUEVfQ0hBTExFTkdFX1BFQUtfTU9CEAMSNAowRlJJ",
+            "RU5EX1JFQ09NTUVORF9MSU5FVVBfVFlQRV9DSEFMTEVOR0VfUEVBS19CT1NT",
+            "EARCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.DLLLEANDAIH), }, null, null));
@@ -41,6 +43,8 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("FRIEND_RECOMMEND_LINEUP_TYPE_NONE")] FriendRecommendLineupTypeNone = 0,
     [pbr::OriginalName("FRIEND_RECOMMEND_LINEUP_TYPE_CHALLENGE")] FriendRecommendLineupTypeChallenge = 1,
     [pbr::OriginalName("FRIEND_RECOMMEND_LINEUP_TYPE_LOCAL_LEGEND")] FriendRecommendLineupTypeLocalLegend = 2,
+    [pbr::OriginalName("FRIEND_RECOMMEND_LINEUP_TYPE_CHALLENGE_PEAK_MOB")] FriendRecommendLineupTypeChallengePeakMob = 3,
+    [pbr::OriginalName("FRIEND_RECOMMEND_LINEUP_TYPE_CHALLENGE_PEAK_BOSS")] FriendRecommendLineupTypeChallengePeakBoss = 4,
   }
 
   #endregion

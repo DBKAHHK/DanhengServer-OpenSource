@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFOTEJNQ0dDQUVJTy5wcm90byJFCgtOTEJNQ0dDQUVJTxITCgtQSUxERUZL",
-            "UEtMRRgFIAMoDRITCgtBRkxFQUpJSE5FQhgNIAEoDRIMCgR0eXBlGA8gASgN",
+            "UEtMRRgHIAMoDRIMCgR0eXBlGAYgASgNEhMKC0FGTEVBSklITkVCGAogASgN",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NLBMCGCAEIO), global::EggLink.DanhengServer.Proto.NLBMCGCAEIO.Parser, new[]{ "PILDEFKPKLE", "AFLEAJIHNEB", "Type" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NLBMCGCAEIO), global::EggLink.DanhengServer.Proto.NLBMCGCAEIO.Parser, new[]{ "PILDEFKPKLE", "Type", "AFLEAJIHNEB" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NLBMCGCAEIO(NLBMCGCAEIO other) : this() {
       pILDEFKPKLE_ = other.pILDEFKPKLE_.Clone();
-      aFLEAJIHNEB_ = other.aFLEAJIHNEB_;
       type_ = other.type_;
+      aFLEAJIHNEB_ = other.aFLEAJIHNEB_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PILDEFKPKLE" field.</summary>
-    public const int PILDEFKPKLEFieldNumber = 5;
+    public const int PILDEFKPKLEFieldNumber = 7;
     private static readonly pb::FieldCodec<uint> _repeated_pILDEFKPKLE_codec
-        = pb::FieldCodec.ForUInt32(42);
+        = pb::FieldCodec.ForUInt32(58);
     private readonly pbc::RepeatedField<uint> pILDEFKPKLE_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,20 +95,8 @@ namespace EggLink.DanhengServer.Proto {
       get { return pILDEFKPKLE_; }
     }
 
-    /// <summary>Field number for the "AFLEAJIHNEB" field.</summary>
-    public const int AFLEAJIHNEBFieldNumber = 13;
-    private uint aFLEAJIHNEB_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AFLEAJIHNEB {
-      get { return aFLEAJIHNEB_; }
-      set {
-        aFLEAJIHNEB_ = value;
-      }
-    }
-
     /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 15;
+    public const int TypeFieldNumber = 6;
     private uint type_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -116,6 +104,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return type_; }
       set {
         type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AFLEAJIHNEB" field.</summary>
+    public const int AFLEAJIHNEBFieldNumber = 10;
+    private uint aFLEAJIHNEB_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AFLEAJIHNEB {
+      get { return aFLEAJIHNEB_; }
+      set {
+        aFLEAJIHNEB_ = value;
       }
     }
 
@@ -135,8 +135,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!pILDEFKPKLE_.Equals(other.pILDEFKPKLE_)) return false;
-      if (AFLEAJIHNEB != other.AFLEAJIHNEB) return false;
       if (Type != other.Type) return false;
+      if (AFLEAJIHNEB != other.AFLEAJIHNEB) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,8 +145,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= pILDEFKPKLE_.GetHashCode();
-      if (AFLEAJIHNEB != 0) hash ^= AFLEAJIHNEB.GetHashCode();
       if (Type != 0) hash ^= Type.GetHashCode();
+      if (AFLEAJIHNEB != 0) hash ^= AFLEAJIHNEB.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -165,14 +165,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Type != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Type);
+      }
       pILDEFKPKLE_.WriteTo(output, _repeated_pILDEFKPKLE_codec);
       if (AFLEAJIHNEB != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteUInt32(AFLEAJIHNEB);
-      }
-      if (Type != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(Type);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -184,14 +184,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Type != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Type);
+      }
       pILDEFKPKLE_.WriteTo(ref output, _repeated_pILDEFKPKLE_codec);
       if (AFLEAJIHNEB != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(80);
         output.WriteUInt32(AFLEAJIHNEB);
-      }
-      if (Type != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(Type);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -204,11 +204,11 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += pILDEFKPKLE_.CalculateSize(_repeated_pILDEFKPKLE_codec);
-      if (AFLEAJIHNEB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AFLEAJIHNEB);
-      }
       if (Type != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Type);
+      }
+      if (AFLEAJIHNEB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AFLEAJIHNEB);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -223,11 +223,11 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       pILDEFKPKLE_.Add(other.pILDEFKPKLE_);
-      if (other.AFLEAJIHNEB != 0) {
-        AFLEAJIHNEB = other.AFLEAJIHNEB;
-      }
       if (other.Type != 0) {
         Type = other.Type;
+      }
+      if (other.AFLEAJIHNEB != 0) {
+        AFLEAJIHNEB = other.AFLEAJIHNEB;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -244,17 +244,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42:
-          case 40: {
+          case 48: {
+            Type = input.ReadUInt32();
+            break;
+          }
+          case 58:
+          case 56: {
             pILDEFKPKLE_.AddEntriesFrom(input, _repeated_pILDEFKPKLE_codec);
             break;
           }
-          case 104: {
+          case 80: {
             AFLEAJIHNEB = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            Type = input.ReadUInt32();
             break;
           }
         }
@@ -272,17 +272,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42:
-          case 40: {
+          case 48: {
+            Type = input.ReadUInt32();
+            break;
+          }
+          case 58:
+          case 56: {
             pILDEFKPKLE_.AddEntriesFrom(ref input, _repeated_pILDEFKPKLE_codec);
             break;
           }
-          case 104: {
+          case 80: {
             AFLEAJIHNEB = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            Type = input.ReadUInt32();
             break;
           }
         }

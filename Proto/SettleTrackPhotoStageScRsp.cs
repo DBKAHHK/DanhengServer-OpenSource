@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBTZXR0bGVUcmFja1Bob3RvU3RhZ2VTY1JzcC5wcm90bxoRR0VPQUVPRkpP",
-            "R0MucHJvdG8idAoaU2V0dGxlVHJhY2tQaG90b1N0YWdlU2NSc3ASDwoHcmV0",
-            "Y29kZRgKIAEoDRIQCghzdGFnZV9pZBgDIAEoDRIhCgtMUElIQU5JT0pGSRgC",
-            "IAMoCzIMLkdFT0FFT0ZKT0dDEhAKCHNjb3JlX2lkGA0gASgNQh6qAhtFZ2dM",
+            "R0MucHJvdG8idAoaU2V0dGxlVHJhY2tQaG90b1N0YWdlU2NSc3ASEAoIc3Rh",
+            "Z2VfaWQYAyABKA0SDwoHcmV0Y29kZRgBIAEoDRIQCghzY29yZV9pZBgEIAEo",
+            "DRIhCgtMUElIQU5JT0pGSRgGIAMoCzIMLkdFT0FFT0ZKT0dDQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GEOAEOFJOGCReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SettleTrackPhotoStageScRsp), global::EggLink.DanhengServer.Proto.SettleTrackPhotoStageScRsp.Parser, new[]{ "Retcode", "StageId", "LPIHANIOJFI", "ScoreId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SettleTrackPhotoStageScRsp), global::EggLink.DanhengServer.Proto.SettleTrackPhotoStageScRsp.Parser, new[]{ "StageId", "Retcode", "ScoreId", "LPIHANIOJFI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SettleTrackPhotoStageScRsp(SettleTrackPhotoStageScRsp other) : this() {
-      retcode_ = other.retcode_;
       stageId_ = other.stageId_;
-      lPIHANIOJFI_ = other.lPIHANIOJFI_.Clone();
+      retcode_ = other.retcode_;
       scoreId_ = other.scoreId_;
+      lPIHANIOJFI_ = other.lPIHANIOJFI_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,18 +85,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SettleTrackPhotoStageScRsp Clone() {
       return new SettleTrackPhotoStageScRsp(this);
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
     }
 
     /// <summary>Field number for the "stage_id" field.</summary>
@@ -111,19 +99,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LPIHANIOJFI" field.</summary>
-    public const int LPIHANIOJFIFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GEOAEOFJOGC> _repeated_lPIHANIOJFI_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.GEOAEOFJOGC.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GEOAEOFJOGC> lPIHANIOJFI_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GEOAEOFJOGC>();
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 1;
+    private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GEOAEOFJOGC> LPIHANIOJFI {
-      get { return lPIHANIOJFI_; }
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
     }
 
     /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 13;
+    public const int ScoreIdFieldNumber = 4;
     private uint scoreId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -132,6 +121,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         scoreId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "LPIHANIOJFI" field.</summary>
+    public const int LPIHANIOJFIFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GEOAEOFJOGC> _repeated_lPIHANIOJFI_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.GEOAEOFJOGC.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GEOAEOFJOGC> lPIHANIOJFI_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GEOAEOFJOGC>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GEOAEOFJOGC> LPIHANIOJFI {
+      get { return lPIHANIOJFI_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if (StageId != other.StageId) return false;
-      if(!lPIHANIOJFI_.Equals(other.lPIHANIOJFI_)) return false;
+      if (Retcode != other.Retcode) return false;
       if (ScoreId != other.ScoreId) return false;
+      if(!lPIHANIOJFI_.Equals(other.lPIHANIOJFI_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (StageId != 0) hash ^= StageId.GetHashCode();
-      hash ^= lPIHANIOJFI_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
+      hash ^= lPIHANIOJFI_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,19 +182,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      lPIHANIOJFI_.WriteTo(output, _repeated_lPIHANIOJFI_codec);
+      if (Retcode != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Retcode);
+      }
       if (StageId != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(StageId);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Retcode);
-      }
       if (ScoreId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(32);
         output.WriteUInt32(ScoreId);
       }
+      lPIHANIOJFI_.WriteTo(output, _repeated_lPIHANIOJFI_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -205,19 +205,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      lPIHANIOJFI_.WriteTo(ref output, _repeated_lPIHANIOJFI_codec);
+      if (Retcode != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Retcode);
+      }
       if (StageId != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(StageId);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Retcode);
-      }
       if (ScoreId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(32);
         output.WriteUInt32(ScoreId);
       }
+      lPIHANIOJFI_.WriteTo(ref output, _repeated_lPIHANIOJFI_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -228,16 +228,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (StageId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StageId);
       }
-      size += lPIHANIOJFI_.CalculateSize(_repeated_lPIHANIOJFI_codec);
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
       if (ScoreId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
       }
+      size += lPIHANIOJFI_.CalculateSize(_repeated_lPIHANIOJFI_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -250,16 +250,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.StageId != 0) {
         StageId = other.StageId;
       }
-      lPIHANIOJFI_.Add(other.lPIHANIOJFI_);
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.ScoreId != 0) {
         ScoreId = other.ScoreId;
       }
+      lPIHANIOJFI_.Add(other.lPIHANIOJFI_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -275,20 +275,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            lPIHANIOJFI_.AddEntriesFrom(input, _repeated_lPIHANIOJFI_codec);
+          case 8: {
+            Retcode = input.ReadUInt32();
             break;
           }
           case 24: {
             StageId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Retcode = input.ReadUInt32();
+          case 32: {
+            ScoreId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            ScoreId = input.ReadUInt32();
+          case 50: {
+            lPIHANIOJFI_.AddEntriesFrom(input, _repeated_lPIHANIOJFI_codec);
             break;
           }
         }
@@ -306,20 +306,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            lPIHANIOJFI_.AddEntriesFrom(ref input, _repeated_lPIHANIOJFI_codec);
+          case 8: {
+            Retcode = input.ReadUInt32();
             break;
           }
           case 24: {
             StageId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Retcode = input.ReadUInt32();
+          case 32: {
+            ScoreId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            ScoreId = input.ReadUInt32();
+          case 50: {
+            lPIHANIOJFI_.AddEntriesFrom(ref input, _repeated_lPIHANIOJFI_codec);
             break;
           }
         }

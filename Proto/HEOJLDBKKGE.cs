@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFIRU9KTERCS0tHRS5wcm90byIwCgtIRU9KTERCS0tHRRIUCgxwYXNzZW5n",
-            "ZXJfaWQYCSABKA0SCwoDbnVtGAwgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJfaWQYAyABKA0SCwoDbnVtGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "passenger_id" field.</summary>
-    public const int PassengerIdFieldNumber = 9;
+    public const int PassengerIdFieldNumber = 3;
     private uint passengerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "num" field.</summary>
-    public const int NumFieldNumber = 12;
+    public const int NumFieldNumber = 9;
     private uint num_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PassengerId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(24);
         output.WriteUInt32(PassengerId);
       }
       if (Num != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(Num);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PassengerId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(24);
         output.WriteUInt32(PassengerId);
       }
       if (Num != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(Num);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 24: {
             PassengerId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 72: {
             Num = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 24: {
             PassengerId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 72: {
             Num = input.ReadUInt32();
             break;
           }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFGSU1BQ1BITE1OTy5wcm90byIzCgtGSU1BQ1BITE1OTxIVCgtLQkVGQ01J",
-            "SUlJThgBIAEoA0gAQg0KC0FJTkNPSU9ORkRKQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "SUlJThgNIAEoA0gAQg0KC0FJTkNPSU9ORkRKQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KBEFCMIIIIN" field.</summary>
-    public const int KBEFCMIIIINFieldNumber = 1;
+    public const int KBEFCMIIIINFieldNumber = 13;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long KBEFCMIIIIN {
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "AINCOIONFDJ" oneof.</summary>
     public enum AINCOIONFDJOneofCase {
       None = 0,
-      KBEFCMIIIIN = 1,
+      KBEFCMIIIIN = 13,
     }
     private AINCOIONFDJOneofCase aINCOIONFDJCase_ = AINCOIONFDJOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -178,7 +178,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (HasKBEFCMIIIIN) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(104);
         output.WriteInt64(KBEFCMIIIIN);
       }
       if (_unknownFields != null) {
@@ -192,7 +192,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (HasKBEFCMIIIIN) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(104);
         output.WriteInt64(KBEFCMIIIIN);
       }
       if (_unknownFields != null) {
@@ -241,7 +241,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 104: {
             KBEFCMIIIIN = input.ReadInt64();
             break;
           }
@@ -260,7 +260,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 104: {
             KBEFCMIIIIN = input.ReadInt64();
             break;
           }

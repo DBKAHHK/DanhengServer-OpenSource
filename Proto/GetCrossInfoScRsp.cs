@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdHZXRDcm9zc0luZm9TY1JzcC5wcm90bxoTRmlnaHRHYW1lTW9kZS5wcm90",
-            "byJ0ChFHZXRDcm9zc0luZm9TY1JzcBIPCgdyZXRjb2RlGAkgASgNEg8KB3Jv",
-            "b21faWQYCCABKAQSJwoPZmlnaHRfZ2FtZV9tb2RlGAwgASgOMg4uRmlnaHRH",
-            "YW1lTW9kZRIUCgxnYXRlX3Jvb21faWQYASABKARCHqoCG0VnZ0xpbmsuRGFu",
+            "byJ0ChFHZXRDcm9zc0luZm9TY1JzcBIPCgdyZXRjb2RlGAogASgNEg8KB3Jv",
+            "b21faWQYDiABKAQSJwoPZmlnaHRfZ2FtZV9tb2RlGAIgASgOMg4uRmlnaHRH",
+            "YW1lTW9kZRIUCgxnYXRlX3Jvb21faWQYByABKARCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightGameModeReflection.Descriptor, },
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 10;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "room_id" field.</summary>
-    public const int RoomIdFieldNumber = 8;
+    public const int RoomIdFieldNumber = 14;
     private ulong roomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "fight_game_mode" field.</summary>
-    public const int FightGameModeFieldNumber = 12;
+    public const int FightGameModeFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.FightGameMode fightGameMode_ = global::EggLink.DanhengServer.Proto.FightGameMode.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gate_room_id" field.</summary>
-    public const int GateRoomIdFieldNumber = 1;
+    public const int GateRoomIdFieldNumber = 7;
     private ulong gateRoomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) FightGameMode);
+      }
       if (GateRoomId != 0UL) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt64(GateRoomId);
       }
-      if (RoomId != 0UL) {
-        output.WriteRawTag(64);
-        output.WriteUInt64(RoomId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
-      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
-        output.WriteRawTag(96);
-        output.WriteEnum((int) FightGameMode);
+      if (RoomId != 0UL) {
+        output.WriteRawTag(112);
+        output.WriteUInt64(RoomId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) FightGameMode);
+      }
       if (GateRoomId != 0UL) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt64(GateRoomId);
       }
-      if (RoomId != 0UL) {
-        output.WriteRawTag(64);
-        output.WriteUInt64(RoomId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
-      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
-        output.WriteRawTag(96);
-        output.WriteEnum((int) FightGameMode);
+      if (RoomId != 0UL) {
+        output.WriteRawTag(112);
+        output.WriteUInt64(RoomId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -286,20 +286,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 16: {
+            FightGameMode = (global::EggLink.DanhengServer.Proto.FightGameMode) input.ReadEnum();
+            break;
+          }
+          case 56: {
             GateRoomId = input.ReadUInt64();
             break;
           }
-          case 64: {
-            RoomId = input.ReadUInt64();
-            break;
-          }
-          case 72: {
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 96: {
-            FightGameMode = (global::EggLink.DanhengServer.Proto.FightGameMode) input.ReadEnum();
+          case 112: {
+            RoomId = input.ReadUInt64();
             break;
           }
         }
@@ -317,20 +317,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 16: {
+            FightGameMode = (global::EggLink.DanhengServer.Proto.FightGameMode) input.ReadEnum();
+            break;
+          }
+          case 56: {
             GateRoomId = input.ReadUInt64();
             break;
           }
-          case 64: {
-            RoomId = input.ReadUInt64();
-            break;
-          }
-          case 72: {
+          case 80: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 96: {
-            FightGameMode = (global::EggLink.DanhengServer.Proto.FightGameMode) input.ReadEnum();
+          case 112: {
+            RoomId = input.ReadUInt64();
             break;
           }
         }

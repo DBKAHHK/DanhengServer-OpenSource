@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxEb0dhY2hhSW5Sb2xsU2hvcFNjUnNwLnByb3RvGg5JdGVtTGlzdC5wcm90",
-            "byKMAQoWRG9HYWNoYUluUm9sbFNob3BTY1JzcBIPCgdyZXRjb2RlGAMgASgN",
-            "EhQKDHJvbGxfc2hvcF9pZBgCIAEoDRITCgtQRU5JTEhHTEhITRgIIAEoDRIZ",
-            "CgZyZXdhcmQYBSABKAsyCS5JdGVtTGlzdBIbChNyZXdhcmRfZGlzcGxheV90",
-            "eXBlGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "byKMAQoWRG9HYWNoYUluUm9sbFNob3BTY1JzcBIZCgZyZXdhcmQYDCABKAsy",
+            "CS5JdGVtTGlzdBIPCgdyZXRjb2RlGAIgASgNEhMKC1BFTklMSEdMSEhNGA0g",
+            "ASgNEhsKE3Jld2FyZF9kaXNwbGF5X3R5cGUYBCABKA0SFAoMcm9sbF9zaG9w",
+            "X2lkGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DoGachaInRollShopScRsp), global::EggLink.DanhengServer.Proto.DoGachaInRollShopScRsp.Parser, new[]{ "Retcode", "RollShopId", "PENILHGLHHM", "Reward", "RewardDisplayType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DoGachaInRollShopScRsp), global::EggLink.DanhengServer.Proto.DoGachaInRollShopScRsp.Parser, new[]{ "Reward", "Retcode", "PENILHGLHHM", "RewardDisplayType", "RollShopId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DoGachaInRollShopScRsp(DoGachaInRollShopScRsp other) : this() {
-      retcode_ = other.retcode_;
-      rollShopId_ = other.rollShopId_;
-      pENILHGLHHM_ = other.pENILHGLHHM_;
       reward_ = other.reward_ != null ? other.reward_.Clone() : null;
+      retcode_ = other.retcode_;
+      pENILHGLHHM_ = other.pENILHGLHHM_;
       rewardDisplayType_ = other.rewardDisplayType_;
+      rollShopId_ = other.rollShopId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,44 +89,8 @@ namespace EggLink.DanhengServer.Proto {
       return new DoGachaInRollShopScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "roll_shop_id" field.</summary>
-    public const int RollShopIdFieldNumber = 2;
-    private uint rollShopId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RollShopId {
-      get { return rollShopId_; }
-      set {
-        rollShopId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "PENILHGLHHM" field.</summary>
-    public const int PENILHGLHHMFieldNumber = 8;
-    private uint pENILHGLHHM_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PENILHGLHHM {
-      get { return pENILHGLHHM_; }
-      set {
-        pENILHGLHHM_ = value;
-      }
-    }
-
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 5;
+    public const int RewardFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,8 +101,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 2;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PENILHGLHHM" field.</summary>
+    public const int PENILHGLHHMFieldNumber = 13;
+    private uint pENILHGLHHM_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PENILHGLHHM {
+      get { return pENILHGLHHM_; }
+      set {
+        pENILHGLHHM_ = value;
+      }
+    }
+
     /// <summary>Field number for the "reward_display_type" field.</summary>
-    public const int RewardDisplayTypeFieldNumber = 11;
+    public const int RewardDisplayTypeFieldNumber = 4;
     private uint rewardDisplayType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -146,6 +134,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return rewardDisplayType_; }
       set {
         rewardDisplayType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "roll_shop_id" field.</summary>
+    public const int RollShopIdFieldNumber = 11;
+    private uint rollShopId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RollShopId {
+      get { return rollShopId_; }
+      set {
+        rollShopId_ = value;
       }
     }
 
@@ -164,11 +164,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if (RollShopId != other.RollShopId) return false;
-      if (PENILHGLHHM != other.PENILHGLHHM) return false;
       if (!object.Equals(Reward, other.Reward)) return false;
+      if (Retcode != other.Retcode) return false;
+      if (PENILHGLHHM != other.PENILHGLHHM) return false;
       if (RewardDisplayType != other.RewardDisplayType) return false;
+      if (RollShopId != other.RollShopId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,11 +176,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (RollShopId != 0) hash ^= RollShopId.GetHashCode();
-      if (PENILHGLHHM != 0) hash ^= PENILHGLHHM.GetHashCode();
       if (reward_ != null) hash ^= Reward.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (PENILHGLHHM != 0) hash ^= PENILHGLHHM.GetHashCode();
       if (RewardDisplayType != 0) hash ^= RewardDisplayType.GetHashCode();
+      if (RollShopId != 0) hash ^= RollShopId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,25 +199,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RollShopId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(RollShopId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
+      if (RewardDisplayType != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(RewardDisplayType);
+      }
+      if (RollShopId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(RollShopId);
+      }
       if (reward_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(98);
         output.WriteMessage(Reward);
       }
       if (PENILHGLHHM != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(PENILHGLHHM);
-      }
-      if (RewardDisplayType != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(RewardDisplayType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -229,25 +229,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RollShopId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(RollShopId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
+      if (RewardDisplayType != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(RewardDisplayType);
+      }
+      if (RollShopId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(RollShopId);
+      }
       if (reward_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(98);
         output.WriteMessage(Reward);
       }
       if (PENILHGLHHM != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(PENILHGLHHM);
-      }
-      if (RewardDisplayType != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(RewardDisplayType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -259,20 +259,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (reward_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
+      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      if (RollShopId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RollShopId);
       }
       if (PENILHGLHHM != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PENILHGLHHM);
       }
-      if (reward_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
-      }
       if (RewardDisplayType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RewardDisplayType);
+      }
+      if (RollShopId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RollShopId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -286,23 +286,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
-      if (other.RollShopId != 0) {
-        RollShopId = other.RollShopId;
-      }
-      if (other.PENILHGLHHM != 0) {
-        PENILHGLHHM = other.PENILHGLHHM;
-      }
       if (other.reward_ != null) {
         if (reward_ == null) {
           Reward = new global::EggLink.DanhengServer.Proto.ItemList();
         }
         Reward.MergeFrom(other.Reward);
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
+      if (other.PENILHGLHHM != 0) {
+        PENILHGLHHM = other.PENILHGLHHM;
+      }
       if (other.RewardDisplayType != 0) {
         RewardDisplayType = other.RewardDisplayType;
+      }
+      if (other.RollShopId != 0) {
+        RollShopId = other.RollShopId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -320,26 +320,26 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            RollShopId = input.ReadUInt32();
-            break;
-          }
-          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 32: {
+            RewardDisplayType = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            RollShopId = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 64: {
+          case 104: {
             PENILHGLHHM = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            RewardDisplayType = input.ReadUInt32();
             break;
           }
         }
@@ -358,26 +358,26 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            RollShopId = input.ReadUInt32();
-            break;
-          }
-          case 24: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 32: {
+            RewardDisplayType = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            RollShopId = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 64: {
+          case 104: {
             PENILHGLHHM = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            RewardDisplayType = input.ReadUInt32();
             break;
           }
         }

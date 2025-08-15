@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFIT0JLRU9JQ0JNSS5wcm90bxocUm9ndWVNYWdpY0dhbWVVbml0SW5mby5w",
-            "cm90byJQCgtIT0JLRU9JQ0JNSRITCgtIS0tMUExETlBLRBgLIAMoDRIsCgtF",
-            "T0NJUEtHSkZPUBgHIAEoCzIXLlJvZ3VlTWFnaWNHYW1lVW5pdEluZm9CHqoC",
+            "cm90byJQCgtIT0JLRU9JQ0JNSRITCgtIS0tMUExETlBLRBgFIAMoDRIsCgtF",
+            "T0NJUEtHSkZPUBgIIAEoCzIXLlJvZ3VlTWFnaWNHYW1lVW5pdEluZm9CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfoReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HKKLPLDNPKD" field.</summary>
-    public const int HKKLPLDNPKDFieldNumber = 11;
+    public const int HKKLPLDNPKDFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_hKKLPLDNPKD_codec
-        = pb::FieldCodec.ForUInt32(90);
+        = pb::FieldCodec.ForUInt32(42);
     private readonly pbc::RepeatedField<uint> hKKLPLDNPKD_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "EOCIPKGJFOP" field.</summary>
-    public const int EOCIPKGJFOPFieldNumber = 7;
+    public const int EOCIPKGJFOPFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo eOCIPKGJFOP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      hKKLPLDNPKD_.WriteTo(output, _repeated_hKKLPLDNPKD_codec);
       if (eOCIPKGJFOP_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(66);
         output.WriteMessage(EOCIPKGJFOP);
       }
-      hKKLPLDNPKD_.WriteTo(output, _repeated_hKKLPLDNPKD_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      hKKLPLDNPKD_.WriteTo(ref output, _repeated_hKKLPLDNPKD_codec);
       if (eOCIPKGJFOP_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(66);
         output.WriteMessage(EOCIPKGJFOP);
       }
-      hKKLPLDNPKD_.WriteTo(ref output, _repeated_hKKLPLDNPKD_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -219,16 +219,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 42:
+          case 40: {
+            hKKLPLDNPKD_.AddEntriesFrom(input, _repeated_hKKLPLDNPKD_codec);
+            break;
+          }
+          case 66: {
             if (eOCIPKGJFOP_ == null) {
               EOCIPKGJFOP = new global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo();
             }
             input.ReadMessage(EOCIPKGJFOP);
-            break;
-          }
-          case 90:
-          case 88: {
-            hKKLPLDNPKD_.AddEntriesFrom(input, _repeated_hKKLPLDNPKD_codec);
             break;
           }
         }
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 42:
+          case 40: {
+            hKKLPLDNPKD_.AddEntriesFrom(ref input, _repeated_hKKLPLDNPKD_codec);
+            break;
+          }
+          case 66: {
             if (eOCIPKGJFOP_ == null) {
               EOCIPKGJFOP = new global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo();
             }
             input.ReadMessage(EOCIPKGJFOP);
-            break;
-          }
-          case 90:
-          case 88: {
-            hKKLPLDNPKD_.AddEntriesFrom(ref input, _repeated_hKKLPLDNPKD_codec);
             break;
           }
         }

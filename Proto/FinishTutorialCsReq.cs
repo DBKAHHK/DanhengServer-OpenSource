@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static FinishTutorialCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlGaW5pc2hUdXRvcmlhbENzUmVxLnByb3RvIioKE0ZpbmlzaFR1dG9yaWFs",
-            "Q3NSZXESEwoLdHV0b3JpYWxfaWQYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
-            "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChlGaW5pc2hUdXRvcmlhbENzUmVxLnByb3RvGhFNUEpQUEdIRkhFSC5wcm90",
+            "byJNChNGaW5pc2hUdXRvcmlhbENzUmVxEiEKC0JNTEVNT0JDTkNNGA4gASgO",
+            "MgwuTVBKUFBHSEZIRUgSEwoLdHV0b3JpYWxfaWQYCiABKA1CHqoCG0VnZ0xp",
+            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MPJPPGHFHEHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FinishTutorialCsReq), global::EggLink.DanhengServer.Proto.FinishTutorialCsReq.Parser, new[]{ "TutorialId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FinishTutorialCsReq), global::EggLink.DanhengServer.Proto.FinishTutorialCsReq.Parser, new[]{ "BMLEMOBCNCM", "TutorialId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,6 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FinishTutorialCsReq(FinishTutorialCsReq other) : this() {
+      bMLEMOBCNCM_ = other.bMLEMOBCNCM_;
       tutorialId_ = other.tutorialId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -82,8 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new FinishTutorialCsReq(this);
     }
 
+    /// <summary>Field number for the "BMLEMOBCNCM" field.</summary>
+    public const int BMLEMOBCNCMFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.MPJPPGHFHEH bMLEMOBCNCM_ = global::EggLink.DanhengServer.Proto.MPJPPGHFHEH.TutorialFinishTypeNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MPJPPGHFHEH BMLEMOBCNCM {
+      get { return bMLEMOBCNCM_; }
+      set {
+        bMLEMOBCNCM_ = value;
+      }
+    }
+
     /// <summary>Field number for the "tutorial_id" field.</summary>
-    public const int TutorialIdFieldNumber = 14;
+    public const int TutorialIdFieldNumber = 10;
     private uint tutorialId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,6 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (BMLEMOBCNCM != other.BMLEMOBCNCM) return false;
       if (TutorialId != other.TutorialId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -117,6 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (BMLEMOBCNCM != global::EggLink.DanhengServer.Proto.MPJPPGHFHEH.TutorialFinishTypeNone) hash ^= BMLEMOBCNCM.GetHashCode();
       if (TutorialId != 0) hash ^= TutorialId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -137,8 +153,12 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (TutorialId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteUInt32(TutorialId);
+      }
+      if (BMLEMOBCNCM != global::EggLink.DanhengServer.Proto.MPJPPGHFHEH.TutorialFinishTypeNone) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) BMLEMOBCNCM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -151,8 +171,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TutorialId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteUInt32(TutorialId);
+      }
+      if (BMLEMOBCNCM != global::EggLink.DanhengServer.Proto.MPJPPGHFHEH.TutorialFinishTypeNone) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) BMLEMOBCNCM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,6 +188,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (BMLEMOBCNCM != global::EggLink.DanhengServer.Proto.MPJPPGHFHEH.TutorialFinishTypeNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BMLEMOBCNCM);
+      }
       if (TutorialId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TutorialId);
       }
@@ -178,6 +205,9 @@ namespace EggLink.DanhengServer.Proto {
     public void MergeFrom(FinishTutorialCsReq other) {
       if (other == null) {
         return;
+      }
+      if (other.BMLEMOBCNCM != global::EggLink.DanhengServer.Proto.MPJPPGHFHEH.TutorialFinishTypeNone) {
+        BMLEMOBCNCM = other.BMLEMOBCNCM;
       }
       if (other.TutorialId != 0) {
         TutorialId = other.TutorialId;
@@ -197,8 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 112: {
+          case 80: {
             TutorialId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            BMLEMOBCNCM = (global::EggLink.DanhengServer.Proto.MPJPPGHFHEH) input.ReadEnum();
             break;
           }
         }
@@ -216,8 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 112: {
+          case 80: {
             TutorialId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            BMLEMOBCNCM = (global::EggLink.DanhengServer.Proto.MPJPPGHFHEH) input.ReadEnum();
             break;
           }
         }

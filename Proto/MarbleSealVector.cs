@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZNYXJibGVTZWFsVmVjdG9yLnByb3RvIigKEE1hcmJsZVNlYWxWZWN0b3IS",
-            "CQoBeBgEIAEoAhIJCgF5GAkgASgCQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "CQoBeRgIIAEoAhIJCgF4GAEgASgCQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleSealVector), global::EggLink.DanhengServer.Proto.MarbleSealVector.Parser, new[]{ "X", "Y" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleSealVector), global::EggLink.DanhengServer.Proto.MarbleSealVector.Parser, new[]{ "Y", "X" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarbleSealVector(MarbleSealVector other) : this() {
-      x_ = other.x_;
       y_ = other.y_;
+      x_ = other.x_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MarbleSealVector(this);
     }
 
-    /// <summary>Field number for the "x" field.</summary>
-    public const int XFieldNumber = 4;
-    private float x_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float X {
-      get { return x_; }
-      set {
-        x_ = value;
-      }
-    }
-
     /// <summary>Field number for the "y" field.</summary>
-    public const int YFieldNumber = 9;
+    public const int YFieldNumber = 8;
     private float y_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return y_; }
       set {
         y_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "x" field.</summary>
+    public const int XFieldNumber = 1;
+    private float x_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float X {
+      get { return x_; }
+      set {
+        x_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(X, other.X)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Y, other.Y)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(X, other.X)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (X != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(X);
       if (Y != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Y);
+      if (X != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(X);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (X != 0F) {
-        output.WriteRawTag(37);
+        output.WriteRawTag(13);
         output.WriteFloat(X);
       }
       if (Y != 0F) {
-        output.WriteRawTag(77);
+        output.WriteRawTag(69);
         output.WriteFloat(Y);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (X != 0F) {
-        output.WriteRawTag(37);
+        output.WriteRawTag(13);
         output.WriteFloat(X);
       }
       if (Y != 0F) {
-        output.WriteRawTag(77);
+        output.WriteRawTag(69);
         output.WriteFloat(Y);
       }
       if (_unknownFields != null) {
@@ -187,10 +187,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (X != 0F) {
+      if (Y != 0F) {
         size += 1 + 4;
       }
-      if (Y != 0F) {
+      if (X != 0F) {
         size += 1 + 4;
       }
       if (_unknownFields != null) {
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.X != 0F) {
-        X = other.X;
-      }
       if (other.Y != 0F) {
         Y = other.Y;
+      }
+      if (other.X != 0F) {
+        X = other.X;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 37: {
+          case 13: {
             X = input.ReadFloat();
             break;
           }
-          case 77: {
+          case 69: {
             Y = input.ReadFloat();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 37: {
+          case 13: {
             X = input.ReadFloat();
             break;
           }
-          case 77: {
+          case 69: {
             Y = input.ReadFloat();
             break;
           }

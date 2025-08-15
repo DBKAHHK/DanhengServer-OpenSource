@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFBUEZKTE9GSU5GSi5wcm90byIhCgtBUEZKTE9GSU5GShISCgpmb3JtdWxh",
-            "X2lkGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "X2lkGAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "formula_id" field.</summary>
-    public const int FormulaIdFieldNumber = 11;
+    public const int FormulaIdFieldNumber = 7;
     private uint formulaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (FormulaId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(FormulaId);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FormulaId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(FormulaId);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
+          case 56: {
             FormulaId = input.ReadUInt32();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
+          case 56: {
             FormulaId = input.ReadUInt32();
             break;
           }

@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiRHZXRSb2d1ZUFkdmVudHVyZVJvb21JbmZvU2NSc3AucHJvdG8aF0FkdmVu",
             "dHVyZVJvb21JbmZvLnByb3RvImIKHkdldFJvZ3VlQWR2ZW50dXJlUm9vbUlu",
-            "Zm9TY1JzcBIPCgdyZXRjb2RlGAwgASgNEi8KE2FkdmVudHVyZV9yb29tX2lu",
-            "Zm8YCiABKAsyEi5BZHZlbnR1cmVSb29tSW5mb0IeqgIbRWdnTGluay5EYW5o",
+            "Zm9TY1JzcBIvChNhZHZlbnR1cmVfcm9vbV9pbmZvGAsgASgLMhIuQWR2ZW50",
+            "dXJlUm9vbUluZm8SDwoHcmV0Y29kZRgHIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AdventureRoomInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueAdventureRoomInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueAdventureRoomInfoScRsp.Parser, new[]{ "Retcode", "AdventureRoomInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueAdventureRoomInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueAdventureRoomInfoScRsp.Parser, new[]{ "AdventureRoomInfo", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRogueAdventureRoomInfoScRsp(GetRogueAdventureRoomInfoScRsp other) : this() {
-      retcode_ = other.retcode_;
       adventureRoomInfo_ = other.adventureRoomInfo_ != null ? other.adventureRoomInfo_.Clone() : null;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetRogueAdventureRoomInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "adventure_room_info" field.</summary>
-    public const int AdventureRoomInfoFieldNumber = 10;
+    public const int AdventureRoomInfoFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.AdventureRoomInfo adventureRoomInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return adventureRoomInfo_; }
       set {
         adventureRoomInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 7;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if (!object.Equals(AdventureRoomInfo, other.AdventureRoomInfo)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (adventureRoomInfo_ != null) hash ^= AdventureRoomInfo.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (adventureRoomInfo_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(AdventureRoomInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
+      }
+      if (adventureRoomInfo_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AdventureRoomInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (adventureRoomInfo_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(AdventureRoomInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
+      }
+      if (adventureRoomInfo_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AdventureRoomInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (adventureRoomInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AdventureRoomInfo);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.adventureRoomInfo_ != null) {
         if (adventureRoomInfo_ == null) {
           AdventureRoomInfo = new global::EggLink.DanhengServer.Proto.AdventureRoomInfo();
         }
         AdventureRoomInfo.MergeFrom(other.AdventureRoomInfo);
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 56: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (adventureRoomInfo_ == null) {
               AdventureRoomInfo = new global::EggLink.DanhengServer.Proto.AdventureRoomInfo();
             }
             input.ReadMessage(AdventureRoomInfo);
-            break;
-          }
-          case 96: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 56: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (adventureRoomInfo_ == null) {
               AdventureRoomInfo = new global::EggLink.DanhengServer.Proto.AdventureRoomInfo();
             }
             input.ReadMessage(AdventureRoomInfo);
-            break;
-          }
-          case 96: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

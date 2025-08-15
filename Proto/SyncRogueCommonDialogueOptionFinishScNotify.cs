@@ -27,16 +27,16 @@ namespace EggLink.DanhengServer.Proto {
             "CjFTeW5jUm9ndWVDb21tb25EaWFsb2d1ZU9wdGlvbkZpbmlzaFNjTm90aWZ5",
             "LnByb3RvGiFSb2d1ZUNvbW1vbkRpYWxvZ3VlRGF0YUluZm8ucHJvdG8aI1Jv",
             "Z3VlQ29tbW9uRGlhbG9ndWVPcHRpb25JbmZvLnByb3RvIsoBCitTeW5jUm9n",
-            "dWVDb21tb25EaWFsb2d1ZU9wdGlvbkZpbmlzaFNjTm90aWZ5EjMKDWRpYWxv",
-            "Z3VlX2RhdGEYDyABKAsyHC5Sb2d1ZUNvbW1vbkRpYWxvZ3VlRGF0YUluZm8S",
-            "FwoPZXZlbnRfdW5pcXVlX2lkGAYgASgNEhEKCW9wdGlvbl9pZBgNIAEoDRI6",
-            "ChJyZXN1bHRfb3B0aW9uX2luZm8YCCABKAsyHi5Sb2d1ZUNvbW1vbkRpYWxv",
-            "Z3VlT3B0aW9uSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "dWVDb21tb25EaWFsb2d1ZU9wdGlvbkZpbmlzaFNjTm90aWZ5EhcKD2V2ZW50",
+            "X3VuaXF1ZV9pZBgGIAEoDRIRCglvcHRpb25faWQYCSABKA0SOgoScmVzdWx0",
+            "X29wdGlvbl9pbmZvGAUgASgLMh4uUm9ndWVDb21tb25EaWFsb2d1ZU9wdGlv",
+            "bkluZm8SMwoNZGlhbG9ndWVfZGF0YRgCIAEoCzIcLlJvZ3VlQ29tbW9uRGlh",
+            "bG9ndWVEYXRhSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueCommonDialogueOptionFinishScNotify), global::EggLink.DanhengServer.Proto.SyncRogueCommonDialogueOptionFinishScNotify.Parser, new[]{ "DialogueData", "EventUniqueId", "OptionId", "ResultOptionInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SyncRogueCommonDialogueOptionFinishScNotify), global::EggLink.DanhengServer.Proto.SyncRogueCommonDialogueOptionFinishScNotify.Parser, new[]{ "EventUniqueId", "OptionId", "ResultOptionInfo", "DialogueData" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,10 +78,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncRogueCommonDialogueOptionFinishScNotify(SyncRogueCommonDialogueOptionFinishScNotify other) : this() {
-      dialogueData_ = other.dialogueData_ != null ? other.dialogueData_.Clone() : null;
       eventUniqueId_ = other.eventUniqueId_;
       optionId_ = other.optionId_;
       resultOptionInfo_ = other.resultOptionInfo_ != null ? other.resultOptionInfo_.Clone() : null;
+      dialogueData_ = other.dialogueData_ != null ? other.dialogueData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,18 +89,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncRogueCommonDialogueOptionFinishScNotify Clone() {
       return new SyncRogueCommonDialogueOptionFinishScNotify(this);
-    }
-
-    /// <summary>Field number for the "dialogue_data" field.</summary>
-    public const int DialogueDataFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo dialogueData_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo DialogueData {
-      get { return dialogueData_; }
-      set {
-        dialogueData_ = value;
-      }
     }
 
     /// <summary>Field number for the "event_unique_id" field.</summary>
@@ -116,7 +104,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "option_id" field.</summary>
-    public const int OptionIdFieldNumber = 13;
+    public const int OptionIdFieldNumber = 9;
     private uint optionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -128,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "result_option_info" field.</summary>
-    public const int ResultOptionInfoFieldNumber = 8;
+    public const int ResultOptionInfoFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo resultOptionInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,6 +124,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return resultOptionInfo_; }
       set {
         resultOptionInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dialogue_data" field.</summary>
+    public const int DialogueDataFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo dialogueData_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo DialogueData {
+      get { return dialogueData_; }
+      set {
+        dialogueData_ = value;
       }
     }
 
@@ -154,10 +154,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(DialogueData, other.DialogueData)) return false;
       if (EventUniqueId != other.EventUniqueId) return false;
       if (OptionId != other.OptionId) return false;
       if (!object.Equals(ResultOptionInfo, other.ResultOptionInfo)) return false;
+      if (!object.Equals(DialogueData, other.DialogueData)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -165,10 +165,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (dialogueData_ != null) hash ^= DialogueData.GetHashCode();
       if (EventUniqueId != 0) hash ^= EventUniqueId.GetHashCode();
       if (OptionId != 0) hash ^= OptionId.GetHashCode();
       if (resultOptionInfo_ != null) hash ^= ResultOptionInfo.GetHashCode();
+      if (dialogueData_ != null) hash ^= DialogueData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -187,21 +187,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (dialogueData_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DialogueData);
+      }
+      if (resultOptionInfo_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ResultOptionInfo);
+      }
       if (EventUniqueId != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(EventUniqueId);
       }
-      if (resultOptionInfo_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(ResultOptionInfo);
-      }
       if (OptionId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(OptionId);
-      }
-      if (dialogueData_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(DialogueData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -213,21 +213,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (dialogueData_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(DialogueData);
+      }
+      if (resultOptionInfo_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ResultOptionInfo);
+      }
       if (EventUniqueId != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(EventUniqueId);
       }
-      if (resultOptionInfo_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(ResultOptionInfo);
-      }
       if (OptionId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(OptionId);
-      }
-      if (dialogueData_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(DialogueData);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -239,9 +239,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (dialogueData_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DialogueData);
-      }
       if (EventUniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EventUniqueId);
       }
@@ -250,6 +247,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (resultOptionInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResultOptionInfo);
+      }
+      if (dialogueData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DialogueData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -263,12 +263,6 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.dialogueData_ != null) {
-        if (dialogueData_ == null) {
-          DialogueData = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo();
-        }
-        DialogueData.MergeFrom(other.DialogueData);
-      }
       if (other.EventUniqueId != 0) {
         EventUniqueId = other.EventUniqueId;
       }
@@ -280,6 +274,12 @@ namespace EggLink.DanhengServer.Proto {
           ResultOptionInfo = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo();
         }
         ResultOptionInfo.MergeFrom(other.ResultOptionInfo);
+      }
+      if (other.dialogueData_ != null) {
+        if (dialogueData_ == null) {
+          DialogueData = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo();
+        }
+        DialogueData.MergeFrom(other.DialogueData);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -296,26 +296,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            EventUniqueId = input.ReadUInt32();
+          case 18: {
+            if (dialogueData_ == null) {
+              DialogueData = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo();
+            }
+            input.ReadMessage(DialogueData);
             break;
           }
-          case 66: {
+          case 42: {
             if (resultOptionInfo_ == null) {
               ResultOptionInfo = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo();
             }
             input.ReadMessage(ResultOptionInfo);
             break;
           }
-          case 104: {
-            OptionId = input.ReadUInt32();
+          case 48: {
+            EventUniqueId = input.ReadUInt32();
             break;
           }
-          case 122: {
-            if (dialogueData_ == null) {
-              DialogueData = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo();
-            }
-            input.ReadMessage(DialogueData);
+          case 72: {
+            OptionId = input.ReadUInt32();
             break;
           }
         }
@@ -333,26 +333,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            EventUniqueId = input.ReadUInt32();
+          case 18: {
+            if (dialogueData_ == null) {
+              DialogueData = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo();
+            }
+            input.ReadMessage(DialogueData);
             break;
           }
-          case 66: {
+          case 42: {
             if (resultOptionInfo_ == null) {
               ResultOptionInfo = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo();
             }
             input.ReadMessage(ResultOptionInfo);
             break;
           }
-          case 104: {
-            OptionId = input.ReadUInt32();
+          case 48: {
+            EventUniqueId = input.ReadUInt32();
             break;
           }
-          case 122: {
-            if (dialogueData_ == null) {
-              DialogueData = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueDataInfo();
-            }
-            input.ReadMessage(DialogueData);
+          case 72: {
+            OptionId = input.ReadUInt32();
             break;
           }
         }

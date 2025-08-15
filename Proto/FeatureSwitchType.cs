@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static FeatureSwitchTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byrEFAoRRmVhdHVyZVN3aXRjaFR5",
+            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byq4FgoRRmVhdHVyZVN3aXRjaFR5",
             "cGUSFwoTRkVBVFVSRV9TV0lUQ0hfTk9ORRAAEhcKE0ZFQVRVUkVfU1dJVENI",
             "X1NIT1AQARIeChpGRUFUVVJFX1NXSVRDSF9MSU5FVVBfTkFNRRACEiAKHEZF",
             "QVRVUkVfU1dJVENIX1JFQ0hBUkdFX1NIT1AQAxIbChdGRUFUVVJFX1NXSVRD",
@@ -83,7 +83,13 @@ namespace EggLink.DanhengServer.Proto {
             "R1VFX1RPVVJOX0NPQ09PThBHEh8KG0ZFQVRVUkVfU1dJVENIX0lURU1fQ09N",
             "UE9TRRBIEi4KKkZFQVRVUkVfU1dJVENIX0dST1dfTUFURVJJQUxfQVVUT19D",
             "T01QTEVURRBJEiMKH0ZFQVRVUkVfU1dJVENIX1NLSVBfUEVSRk9STUFOQ0UQ",
-            "SkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ShIXChNGRUFUVVJFX1NXSVRDSF9GQVRFEEsSJwojRkVBVFVSRV9TV0lUQ0hf",
+            "RkFURV9BVkFUQVJfSEFOREJPT0sQTBIhCh1GRUFUVVJFX1NXSVRDSF9FTEZf",
+            "UkVTVEFVUkFOVBBNEicKI0ZFQVRVUkVfU1dJVENIX0JBVFRMRV9USU1FT1VU",
+            "X0xFR0FMEE4SGgoWRkVBVFVSRV9TV0lUQ0hfSElQUExFThBPEiEKHUZFQVRV",
+            "UkVfU1dJVENIX0hJUFBMRU5fRUZGRUNUEFASJQohRkVBVFVSRV9TV0lUQ0hf",
+            "UkVQTEFZX1BFUkZPUk1BTkNFEFFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.FeatureSwitchType), }, null, null));
@@ -166,6 +172,13 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("FEATURE_SWITCH_ITEM_COMPOSE")] FeatureSwitchItemCompose = 72,
     [pbr::OriginalName("FEATURE_SWITCH_GROW_MATERIAL_AUTO_COMPLETE")] FeatureSwitchGrowMaterialAutoComplete = 73,
     [pbr::OriginalName("FEATURE_SWITCH_SKIP_PERFORMANCE")] FeatureSwitchSkipPerformance = 74,
+    [pbr::OriginalName("FEATURE_SWITCH_FATE")] FeatureSwitchFate = 75,
+    [pbr::OriginalName("FEATURE_SWITCH_FATE_AVATAR_HANDBOOK")] FeatureSwitchFateAvatarHandbook = 76,
+    [pbr::OriginalName("FEATURE_SWITCH_ELF_RESTAURANT")] FeatureSwitchElfRestaurant = 77,
+    [pbr::OriginalName("FEATURE_SWITCH_BATTLE_TIMEOUT_LEGAL")] FeatureSwitchBattleTimeoutLegal = 78,
+    [pbr::OriginalName("FEATURE_SWITCH_HIPPLEN")] FeatureSwitchHipplen = 79,
+    [pbr::OriginalName("FEATURE_SWITCH_HIPPLEN_EFFECT")] FeatureSwitchHipplenEffect = 80,
+    [pbr::OriginalName("FEATURE_SWITCH_REPLAY_PERFORMANCE")] FeatureSwitchReplayPerformance = 81,
   }
 
   #endregion

@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueCellUpdateNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBDaGVzc1JvZ3VlQ2VsbFVwZGF0ZU5vdGlmeS5wcm90bxodUm9ndWVNb2Rp",
-            "ZmllclNvdXJjZVR5cGUucHJvdG8aIENoZXNzUm9ndWVDZWxsVXBkYXRlUmVh",
-            "c29uLnByb3RvGhRDaGVzc1JvZ3VlQ2VsbC5wcm90byKyAQoaQ2hlc3NSb2d1",
-            "ZUNlbGxVcGRhdGVOb3RpZnkSEAoIYm9hcmRfaWQYCiABKA0SKwoGcmVhc29u",
-            "GAQgASgOMhsuQ2hlc3NSb2d1ZUNlbGxVcGRhdGVSZWFzb24SMQoPbW9kaWZp",
-            "ZXJfc291cmNlGAggASgOMhguUm9ndWVNb2RpZmllclNvdXJjZVR5cGUSIgoJ",
-            "Y2VsbF9saXN0GA0gAygLMg8uQ2hlc3NSb2d1ZUNlbGxCHqoCG0VnZ0xpbmsu",
+            "CiBDaGVzc1JvZ3VlQ2VsbFVwZGF0ZU5vdGlmeS5wcm90bxoUQ2hlc3NSb2d1",
+            "ZUNlbGwucHJvdG8aIENoZXNzUm9ndWVDZWxsVXBkYXRlUmVhc29uLnByb3Rv",
+            "Gh1Sb2d1ZU1vZGlmaWVyU291cmNlVHlwZS5wcm90byKyAQoaQ2hlc3NSb2d1",
+            "ZUNlbGxVcGRhdGVOb3RpZnkSMQoPbW9kaWZpZXJfc291cmNlGAogASgOMhgu",
+            "Um9ndWVNb2RpZmllclNvdXJjZVR5cGUSIgoJY2VsbF9saXN0GAQgAygLMg8u",
+            "Q2hlc3NSb2d1ZUNlbGwSKwoGcmVhc29uGAUgASgOMhsuQ2hlc3NSb2d1ZUNl",
+            "bGxVcGRhdGVSZWFzb24SEAoIYm9hcmRfaWQYByABKA1CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueModifierSourceTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueCellReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueCellReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueModifierSourceTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateNotify), global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateNotify.Parser, new[]{ "BoardId", "Reason", "ModifierSource", "CellList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateNotify), global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateNotify.Parser, new[]{ "ModifierSource", "CellList", "Reason", "BoardId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,10 +77,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueCellUpdateNotify(ChessRogueCellUpdateNotify other) : this() {
-      boardId_ = other.boardId_;
-      reason_ = other.reason_;
       modifierSource_ = other.modifierSource_;
       cellList_ = other.cellList_.Clone();
+      reason_ = other.reason_;
+      boardId_ = other.boardId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,32 +90,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueCellUpdateNotify(this);
     }
 
-    /// <summary>Field number for the "board_id" field.</summary>
-    public const int BoardIdFieldNumber = 10;
-    private uint boardId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BoardId {
-      get { return boardId_; }
-      set {
-        boardId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason reason_ = global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason Reason {
-      get { return reason_; }
-      set {
-        reason_ = value;
-      }
-    }
-
     /// <summary>Field number for the "modifier_source" field.</summary>
-    public const int ModifierSourceFieldNumber = 8;
+    public const int ModifierSourceFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.RogueModifierSourceType modifierSource_ = global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -127,14 +103,38 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cell_list" field.</summary>
-    public const int CellListFieldNumber = 13;
+    public const int CellListFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChessRogueCell> _repeated_cellList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.ChessRogueCell.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.ChessRogueCell.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueCell> cellList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueCell>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueCell> CellList {
       get { return cellList_; }
+    }
+
+    /// <summary>Field number for the "reason" field.</summary>
+    public const int ReasonFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason reason_ = global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason Reason {
+      get { return reason_; }
+      set {
+        reason_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "board_id" field.</summary>
+    public const int BoardIdFieldNumber = 7;
+    private uint boardId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BoardId {
+      get { return boardId_; }
+      set {
+        boardId_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -152,10 +152,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BoardId != other.BoardId) return false;
-      if (Reason != other.Reason) return false;
       if (ModifierSource != other.ModifierSource) return false;
       if(!cellList_.Equals(other.cellList_)) return false;
+      if (Reason != other.Reason) return false;
+      if (BoardId != other.BoardId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -163,10 +163,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BoardId != 0) hash ^= BoardId.GetHashCode();
-      if (Reason != global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason.None) hash ^= Reason.GetHashCode();
       if (ModifierSource != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) hash ^= ModifierSource.GetHashCode();
       hash ^= cellList_.GetHashCode();
+      if (Reason != global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason.None) hash ^= Reason.GetHashCode();
+      if (BoardId != 0) hash ^= BoardId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -185,19 +185,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      cellList_.WriteTo(output, _repeated_cellList_codec);
       if (Reason != global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason.None) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteEnum((int) Reason);
       }
-      if (ModifierSource != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) {
-        output.WriteRawTag(64);
-        output.WriteEnum((int) ModifierSource);
-      }
       if (BoardId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(BoardId);
       }
-      cellList_.WriteTo(output, _repeated_cellList_codec);
+      if (ModifierSource != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) ModifierSource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -208,19 +208,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      cellList_.WriteTo(ref output, _repeated_cellList_codec);
       if (Reason != global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason.None) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteEnum((int) Reason);
       }
-      if (ModifierSource != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) {
-        output.WriteRawTag(64);
-        output.WriteEnum((int) ModifierSource);
-      }
       if (BoardId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(BoardId);
       }
-      cellList_.WriteTo(ref output, _repeated_cellList_codec);
+      if (ModifierSource != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) ModifierSource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -231,16 +231,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BoardId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BoardId);
-      }
-      if (Reason != global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
-      }
       if (ModifierSource != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModifierSource);
       }
       size += cellList_.CalculateSize(_repeated_cellList_codec);
+      if (Reason != global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
+      }
+      if (BoardId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BoardId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -253,16 +253,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BoardId != 0) {
-        BoardId = other.BoardId;
-      }
-      if (other.Reason != global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason.None) {
-        Reason = other.Reason;
-      }
       if (other.ModifierSource != global::EggLink.DanhengServer.Proto.RogueModifierSourceType.RogueModifierSourceNone) {
         ModifierSource = other.ModifierSource;
       }
       cellList_.Add(other.cellList_);
+      if (other.Reason != global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason.None) {
+        Reason = other.Reason;
+      }
+      if (other.BoardId != 0) {
+        BoardId = other.BoardId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -278,20 +278,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 34: {
+            cellList_.AddEntriesFrom(input, _repeated_cellList_codec);
+            break;
+          }
+          case 40: {
             Reason = (global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason) input.ReadEnum();
             break;
           }
-          case 64: {
-            ModifierSource = (global::EggLink.DanhengServer.Proto.RogueModifierSourceType) input.ReadEnum();
-            break;
-          }
-          case 80: {
+          case 56: {
             BoardId = input.ReadUInt32();
             break;
           }
-          case 106: {
-            cellList_.AddEntriesFrom(input, _repeated_cellList_codec);
+          case 80: {
+            ModifierSource = (global::EggLink.DanhengServer.Proto.RogueModifierSourceType) input.ReadEnum();
             break;
           }
         }
@@ -309,20 +309,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 34: {
+            cellList_.AddEntriesFrom(ref input, _repeated_cellList_codec);
+            break;
+          }
+          case 40: {
             Reason = (global::EggLink.DanhengServer.Proto.ChessRogueCellUpdateReason) input.ReadEnum();
             break;
           }
-          case 64: {
-            ModifierSource = (global::EggLink.DanhengServer.Proto.RogueModifierSourceType) input.ReadEnum();
-            break;
-          }
-          case 80: {
+          case 56: {
             BoardId = input.ReadUInt32();
             break;
           }
-          case 106: {
-            cellList_.AddEntriesFrom(ref input, _repeated_cellList_codec);
+          case 80: {
+            ModifierSource = (global::EggLink.DanhengServer.Proto.RogueModifierSourceType) input.ReadEnum();
             break;
           }
         }

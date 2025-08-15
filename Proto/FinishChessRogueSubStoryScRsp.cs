@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNGaW5pc2hDaGVzc1JvZ3VlU3ViU3RvcnlTY1JzcC5wcm90byJ1Ch1GaW5p",
             "c2hDaGVzc1JvZ3VlU3ViU3RvcnlTY1JzcBIgChhjaGVzc19yb2d1ZV9zdWJf",
-            "c3RvcnlfaWQYAyABKA0SDwoHcmV0Y29kZRgNIAEoDRIhChljaGVzc19yb2d1",
-            "ZV9tYWluX3N0b3J5X2lkGAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "c3RvcnlfaWQYBSABKA0SIQoZY2hlc3Nfcm9ndWVfbWFpbl9zdG9yeV9pZBgE",
+            "IAEoDRIPCgdyZXRjb2RlGAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FinishChessRogueSubStoryScRsp), global::EggLink.DanhengServer.Proto.FinishChessRogueSubStoryScRsp.Parser, new[]{ "ChessRogueSubStoryId", "Retcode", "ChessRogueMainStoryId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FinishChessRogueSubStoryScRsp), global::EggLink.DanhengServer.Proto.FinishChessRogueSubStoryScRsp.Parser, new[]{ "ChessRogueSubStoryId", "ChessRogueMainStoryId", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FinishChessRogueSubStoryScRsp(FinishChessRogueSubStoryScRsp other) : this() {
       chessRogueSubStoryId_ = other.chessRogueSubStoryId_;
-      retcode_ = other.retcode_;
       chessRogueMainStoryId_ = other.chessRogueMainStoryId_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "chess_rogue_sub_story_id" field.</summary>
-    public const int ChessRogueSubStoryIdFieldNumber = 3;
+    public const int ChessRogueSubStoryIdFieldNumber = 5;
     private uint chessRogueSubStoryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,20 +98,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "chess_rogue_main_story_id" field.</summary>
-    public const int ChessRogueMainStoryIdFieldNumber = 7;
+    public const int ChessRogueMainStoryIdFieldNumber = 4;
     private uint chessRogueMainStoryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,6 +107,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return chessRogueMainStoryId_; }
       set {
         chessRogueMainStoryId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 7;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -138,8 +138,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (ChessRogueSubStoryId != other.ChessRogueSubStoryId) return false;
-      if (Retcode != other.Retcode) return false;
       if (ChessRogueMainStoryId != other.ChessRogueMainStoryId) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,8 +148,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (ChessRogueSubStoryId != 0) hash ^= ChessRogueSubStoryId.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (ChessRogueMainStoryId != 0) hash ^= ChessRogueMainStoryId.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ChessRogueSubStoryId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(ChessRogueSubStoryId);
-      }
       if (ChessRogueMainStoryId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(32);
         output.WriteUInt32(ChessRogueMainStoryId);
       }
+      if (ChessRogueSubStoryId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(ChessRogueSubStoryId);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ChessRogueSubStoryId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(ChessRogueSubStoryId);
-      }
       if (ChessRogueMainStoryId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(32);
         output.WriteUInt32(ChessRogueMainStoryId);
       }
+      if (ChessRogueSubStoryId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(ChessRogueSubStoryId);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -215,11 +215,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ChessRogueSubStoryId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChessRogueSubStoryId);
       }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (ChessRogueMainStoryId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChessRogueMainStoryId);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -236,11 +236,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ChessRogueSubStoryId != 0) {
         ChessRogueSubStoryId = other.ChessRogueSubStoryId;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.ChessRogueMainStoryId != 0) {
         ChessRogueMainStoryId = other.ChessRogueMainStoryId;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 32: {
+            ChessRogueMainStoryId = input.ReadUInt32();
+            break;
+          }
+          case 40: {
             ChessRogueSubStoryId = input.ReadUInt32();
             break;
           }
           case 56: {
-            ChessRogueMainStoryId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -284,15 +284,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 32: {
+            ChessRogueMainStoryId = input.ReadUInt32();
+            break;
+          }
+          case 40: {
             ChessRogueSubStoryId = input.ReadUInt32();
             break;
           }
           case 56: {
-            ChessRogueMainStoryId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
             Retcode = input.ReadUInt32();
             break;
           }

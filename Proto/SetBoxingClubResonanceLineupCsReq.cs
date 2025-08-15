@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidTZXRCb3hpbmdDbHViUmVzb25hbmNlTGluZXVwQ3NSZXEucHJvdG8aEUdO",
             "RUlCQlBPQUFCLnByb3RvIlwKIVNldEJveGluZ0NsdWJSZXNvbmFuY2VMaW5l",
-            "dXBDc1JlcRIUCgxjaGFsbGVuZ2VfaWQYBiABKA0SIQoLTURMQUNIREtNUEgY",
-            "DyADKAsyDC5HTkVJQkJQT0FBQkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "dXBDc1JlcRIUCgxjaGFsbGVuZ2VfaWQYByABKA0SIQoLTURMQUNIREtNUEgY",
+            "DSADKAsyDC5HTkVJQkJQT0FBQkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GNEIBBPOAABReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 6;
+    public const int ChallengeIdFieldNumber = 7;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MDLACHDKMPH" field.</summary>
-    public const int MDLACHDKMPHFieldNumber = 15;
+    public const int MDLACHDKMPHFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GNEIBBPOAAB> _repeated_mDLACHDKMPH_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.GNEIBBPOAAB.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.GNEIBBPOAAB.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GNEIBBPOAAB> mDLACHDKMPH_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GNEIBBPOAAB>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ChallengeId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteUInt32(ChallengeId);
       }
       mDLACHDKMPH_.WriteTo(output, _repeated_mDLACHDKMPH_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ChallengeId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteUInt32(ChallengeId);
       }
       mDLACHDKMPH_.WriteTo(ref output, _repeated_mDLACHDKMPH_codec);
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 56: {
             ChallengeId = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 106: {
             mDLACHDKMPH_.AddEntriesFrom(input, _repeated_mDLACHDKMPH_codec);
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 56: {
             ChallengeId = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 106: {
             mDLACHDKMPH_.AddEntriesFrom(ref input, _repeated_mDLACHDKMPH_codec);
             break;
           }

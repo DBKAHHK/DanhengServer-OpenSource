@@ -27,7 +27,7 @@ namespace EggLink.DanhengServer.Proto {
             "CihHZXRGYW50YXN0aWNTdG9yeUFjdGl2aXR5RGF0YVNjUnNwLnByb3RvGhFG",
             "SEJMR01QTUlJRS5wcm90byJYCiJHZXRGYW50YXN0aWNTdG9yeUFjdGl2aXR5",
             "RGF0YVNjUnNwEiEKC0ZQRVBJQ0ZDRkZNGAsgASgLMgwuRkhCTEdNUE1JSUUS",
-            "DwoHcmV0Y29kZRgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "DwoHcmV0Y29kZRgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FHBLGMPMIIEReflection.Descriptor, },
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
+    public const int RetcodeFieldNumber = 4;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,7 +154,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
       if (fPEPICFCFFM_ != null) {
@@ -172,7 +172,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
       if (fPEPICFCFFM_ != null) {
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 32: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -257,7 +257,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 32: {
             Retcode = input.ReadUInt32();
             break;
           }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9HZXRDaGF0RnJpZW5kSGlzdG9yeVNjUnNwLnByb3RvGhdGcmllbmRIaXN0",
             "b3J5SW5mby5wcm90byJdChlHZXRDaGF0RnJpZW5kSGlzdG9yeVNjUnNwEg8K",
-            "B3JldGNvZGUYBiABKA0SLwoTZnJpZW5kX2hpc3RvcnlfaW5mbxgKIAMoCzIS",
+            "B3JldGNvZGUYDyABKA0SLwoTZnJpZW5kX2hpc3RvcnlfaW5mbxgLIAMoCzIS",
             "LkZyaWVuZEhpc3RvcnlJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 15;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "friend_history_info" field.</summary>
-    public const int FriendHistoryInfoFieldNumber = 10;
+    public const int FriendHistoryInfoFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FriendHistoryInfo> _repeated_friendHistoryInfo_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.FriendHistoryInfo.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.FriendHistoryInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FriendHistoryInfo> friendHistoryInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FriendHistoryInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      friendHistoryInfo_.WriteTo(output, _repeated_friendHistoryInfo_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
-      friendHistoryInfo_.WriteTo(output, _repeated_friendHistoryInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      friendHistoryInfo_.WriteTo(ref output, _repeated_friendHistoryInfo_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
-      friendHistoryInfo_.WriteTo(ref output, _repeated_friendHistoryInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            Retcode = input.ReadUInt32();
+          case 90: {
+            friendHistoryInfo_.AddEntriesFrom(input, _repeated_friendHistoryInfo_codec);
             break;
           }
-          case 82: {
-            friendHistoryInfo_.AddEntriesFrom(input, _repeated_friendHistoryInfo_codec);
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            Retcode = input.ReadUInt32();
+          case 90: {
+            friendHistoryInfo_.AddEntriesFrom(ref input, _repeated_friendHistoryInfo_codec);
             break;
           }
-          case 82: {
-            friendHistoryInfo_.AddEntriesFrom(ref input, _repeated_friendHistoryInfo_codec);
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

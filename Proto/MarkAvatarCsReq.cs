@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVNYXJrQXZhdGFyQ3NSZXEucHJvdG8iNwoPTWFya0F2YXRhckNzUmVxEhEK",
-            "CWlzX21hcmtlZBgLIAEoCBIRCglhdmF0YXJfaWQYAyABKA1CHqoCG0VnZ0xp",
+            "CWF2YXRhcl9pZBgLIAEoDRIRCglpc19tYXJrZWQYAyABKAhCHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkAvatarCsReq), global::EggLink.DanhengServer.Proto.MarkAvatarCsReq.Parser, new[]{ "IsMarked", "AvatarId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkAvatarCsReq), global::EggLink.DanhengServer.Proto.MarkAvatarCsReq.Parser, new[]{ "AvatarId", "IsMarked" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarkAvatarCsReq(MarkAvatarCsReq other) : this() {
-      isMarked_ = other.isMarked_;
       avatarId_ = other.avatarId_;
+      isMarked_ = other.isMarked_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MarkAvatarCsReq(this);
     }
 
-    /// <summary>Field number for the "is_marked" field.</summary>
-    public const int IsMarkedFieldNumber = 11;
-    private bool isMarked_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsMarked {
-      get { return isMarked_; }
-      set {
-        isMarked_ = value;
-      }
-    }
-
     /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 3;
+    public const int AvatarIdFieldNumber = 11;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return avatarId_; }
       set {
         avatarId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_marked" field.</summary>
+    public const int IsMarkedFieldNumber = 3;
+    private bool isMarked_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsMarked {
+      get { return isMarked_; }
+      set {
+        isMarked_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsMarked != other.IsMarked) return false;
       if (AvatarId != other.AvatarId) return false;
+      if (IsMarked != other.IsMarked) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsMarked != false) hash ^= IsMarked.GetHashCode();
       if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
+      if (IsMarked != false) hash ^= IsMarked.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AvatarId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(AvatarId);
-      }
       if (IsMarked != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(24);
         output.WriteBool(IsMarked);
+      }
+      if (AvatarId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AvatarId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(AvatarId);
-      }
       if (IsMarked != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(24);
         output.WriteBool(IsMarked);
+      }
+      if (AvatarId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsMarked != false) {
-        size += 1 + 1;
-      }
       if (AvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
+      }
+      if (IsMarked != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsMarked != false) {
-        IsMarked = other.IsMarked;
-      }
       if (other.AvatarId != 0) {
         AvatarId = other.AvatarId;
+      }
+      if (other.IsMarked != false) {
+        IsMarked = other.IsMarked;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 24: {
-            AvatarId = input.ReadUInt32();
+            IsMarked = input.ReadBool();
             break;
           }
           case 88: {
-            IsMarked = input.ReadBool();
+            AvatarId = input.ReadUInt32();
             break;
           }
         }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 24: {
-            AvatarId = input.ReadUInt32();
+            IsMarked = input.ReadBool();
             break;
           }
           case 88: {
-            IsMarked = input.ReadBool();
+            AvatarId = input.ReadUInt32();
             break;
           }
         }

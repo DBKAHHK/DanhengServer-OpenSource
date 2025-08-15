@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJSb2d1ZU1pcmFjbGVEcm9wU2VsZWN0UmVzdWx0LnByb3RvIjcKHFJvZ3Vl",
-            "TWlyYWNsZURyb3BTZWxlY3RSZXN1bHQSFwoPZHJvcF9taXJhY2xlX2lkGAsg",
+            "TWlyYWNsZURyb3BTZWxlY3RSZXN1bHQSFwoPZHJvcF9taXJhY2xlX2lkGAwg",
             "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "drop_miracle_id" field.</summary>
-    public const int DropMiracleIdFieldNumber = 11;
+    public const int DropMiracleIdFieldNumber = 12;
     private uint dropMiracleId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (DropMiracleId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(96);
         output.WriteUInt32(DropMiracleId);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DropMiracleId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(96);
         output.WriteUInt32(DropMiracleId);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
+          case 96: {
             DropMiracleId = input.ReadUInt32();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
+          case 96: {
             DropMiracleId = input.ReadUInt32();
             break;
           }

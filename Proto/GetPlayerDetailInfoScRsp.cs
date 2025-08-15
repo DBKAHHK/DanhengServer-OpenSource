@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5HZXRQbGF5ZXJEZXRhaWxJbmZvU2NSc3AucHJvdG8aFlBsYXllckRldGFp",
-            "bEluZm8ucHJvdG8iUwoYR2V0UGxheWVyRGV0YWlsSW5mb1NjUnNwEg8KB3Jl",
-            "dGNvZGUYCiABKA0SJgoLZGV0YWlsX2luZm8YDSABKAsyES5QbGF5ZXJEZXRh",
-            "aWxJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "bEluZm8ucHJvdG8iUwoYR2V0UGxheWVyRGV0YWlsSW5mb1NjUnNwEiYKC2Rl",
+            "dGFpbF9pbmZvGAIgASgLMhEuUGxheWVyRGV0YWlsSW5mbxIPCgdyZXRjb2Rl",
+            "GAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerDetailInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPlayerDetailInfoScRsp), global::EggLink.DanhengServer.Proto.GetPlayerDetailInfoScRsp.Parser, new[]{ "Retcode", "DetailInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPlayerDetailInfoScRsp), global::EggLink.DanhengServer.Proto.GetPlayerDetailInfoScRsp.Parser, new[]{ "DetailInfo", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPlayerDetailInfoScRsp(GetPlayerDetailInfoScRsp other) : this() {
-      retcode_ = other.retcode_;
       detailInfo_ = other.detailInfo_ != null ? other.detailInfo_.Clone() : null;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetPlayerDetailInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "detail_info" field.</summary>
-    public const int DetailInfoFieldNumber = 13;
+    public const int DetailInfoFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.PlayerDetailInfo detailInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return detailInfo_; }
       set {
         detailInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 5;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if (!object.Equals(DetailInfo, other.DetailInfo)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (detailInfo_ != null) hash ^= DetailInfo.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Retcode);
-      }
       if (detailInfo_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(18);
         output.WriteMessage(DetailInfo);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Retcode);
-      }
       if (detailInfo_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(18);
         output.WriteMessage(DetailInfo);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (detailInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DetailInfo);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.detailInfo_ != null) {
         if (detailInfo_ == null) {
           DetailInfo = new global::EggLink.DanhengServer.Proto.PlayerDetailInfo();
         }
         DetailInfo.MergeFrom(other.DetailInfo);
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 106: {
+          case 18: {
             if (detailInfo_ == null) {
               DetailInfo = new global::EggLink.DanhengServer.Proto.PlayerDetailInfo();
             }
             input.ReadMessage(DetailInfo);
+            break;
+          }
+          case 40: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 106: {
+          case 18: {
             if (detailInfo_ == null) {
               DetailInfo = new global::EggLink.DanhengServer.Proto.PlayerDetailInfo();
             }
             input.ReadMessage(DetailInfo);
+            break;
+          }
+          case 40: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

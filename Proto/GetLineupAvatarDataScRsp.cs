@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5HZXRMaW5ldXBBdmF0YXJEYXRhU2NSc3AucHJvdG8aFkxpbmV1cEF2YXRh",
             "ckRhdGEucHJvdG8iWAoYR2V0TGluZXVwQXZhdGFyRGF0YVNjUnNwEg8KB3Jl",
-            "dGNvZGUYAiABKA0SKwoQYXZhdGFyX2RhdGFfbGlzdBgDIAMoCzIRLkxpbmV1",
+            "dGNvZGUYDSABKA0SKwoQYXZhdGFyX2RhdGFfbGlzdBgDIAMoCzIRLkxpbmV1",
             "cEF2YXRhckRhdGFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 2;
+    public const int RetcodeFieldNumber = 13;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      avatarDataList_.WriteTo(output, _repeated_avatarDataList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      avatarDataList_.WriteTo(output, _repeated_avatarDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      avatarDataList_.WriteTo(ref output, _repeated_avatarDataList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
       }
-      avatarDataList_.WriteTo(ref output, _repeated_avatarDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
           case 26: {
             avatarDataList_.AddEntriesFrom(input, _repeated_avatarDataList_codec);
+            break;
+          }
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
           case 26: {
             avatarDataList_.AddEntriesFrom(ref input, _repeated_avatarDataList_codec);
+            break;
+          }
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

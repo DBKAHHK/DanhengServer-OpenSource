@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRMb2NrUmVsaWNDc1JlcS5wcm90byJZCg5Mb2NrUmVsaWNDc1JlcRIUCgxp",
-            "c19wcm90ZWN0ZWQYCyABKAgSHAoUcmVsaWNfdW5pcXVlX2lkX2xpc3QYCCAD",
+            "c19wcm90ZWN0ZWQYBCABKAgSHAoUcmVsaWNfdW5pcXVlX2lkX2xpc3QYCyAD",
             "KA0SEwoLSUVNTlBHT01KQ08YDSABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_protected" field.</summary>
-    public const int IsProtectedFieldNumber = 11;
+    public const int IsProtectedFieldNumber = 4;
     private bool isProtected_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "relic_unique_id_list" field.</summary>
-    public const int RelicUniqueIdListFieldNumber = 8;
+    public const int RelicUniqueIdListFieldNumber = 11;
     private static readonly pb::FieldCodec<uint> _repeated_relicUniqueIdList_codec
-        = pb::FieldCodec.ForUInt32(66);
+        = pb::FieldCodec.ForUInt32(90);
     private readonly pbc::RepeatedField<uint> relicUniqueIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      relicUniqueIdList_.WriteTo(output, _repeated_relicUniqueIdList_codec);
       if (IsProtected != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(32);
         output.WriteBool(IsProtected);
       }
+      relicUniqueIdList_.WriteTo(output, _repeated_relicUniqueIdList_codec);
       if (IEMNPGOMJCO != false) {
         output.WriteRawTag(104);
         output.WriteBool(IEMNPGOMJCO);
@@ -185,11 +185,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      relicUniqueIdList_.WriteTo(ref output, _repeated_relicUniqueIdList_codec);
       if (IsProtected != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(32);
         output.WriteBool(IsProtected);
       }
+      relicUniqueIdList_.WriteTo(ref output, _repeated_relicUniqueIdList_codec);
       if (IEMNPGOMJCO != false) {
         output.WriteRawTag(104);
         output.WriteBool(IEMNPGOMJCO);
@@ -245,13 +245,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66:
-          case 64: {
-            relicUniqueIdList_.AddEntriesFrom(input, _repeated_relicUniqueIdList_codec);
+          case 32: {
+            IsProtected = input.ReadBool();
             break;
           }
+          case 90:
           case 88: {
-            IsProtected = input.ReadBool();
+            relicUniqueIdList_.AddEntriesFrom(input, _repeated_relicUniqueIdList_codec);
             break;
           }
           case 104: {
@@ -273,13 +273,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66:
-          case 64: {
-            relicUniqueIdList_.AddEntriesFrom(ref input, _repeated_relicUniqueIdList_codec);
+          case 32: {
+            IsProtected = input.ReadBool();
             break;
           }
+          case 90:
           case 88: {
-            IsProtected = input.ReadBool();
+            relicUniqueIdList_.AddEntriesFrom(ref input, _repeated_relicUniqueIdList_codec);
             break;
           }
           case 104: {

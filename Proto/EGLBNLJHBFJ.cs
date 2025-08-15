@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFFR0xCTkxKSEJGSi5wcm90bxoRTkZLREFBR0JNUEoucHJvdG8iMAoLRUdM",
-            "Qk5MSkhCRkoSIQoLQUlNR0RNRkFBSEgYAyABKAsyDC5ORktEQUFHQk1QSkIe",
+            "Qk5MSkhCRkoSIQoLQUlNR0RNRkFBSEgYByABKAsyDC5ORktEQUFHQk1QSkIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NFKDAAGBMPJReflection.Descriptor, },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "AIMGDMFAAHH" field.</summary>
-    public const int AIMGDMFAAHHFieldNumber = 3;
+    public const int AIMGDMFAAHHFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ aIMGDMFAAHH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (aIMGDMFAAHH_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(58);
         output.WriteMessage(AIMGDMFAAHH);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (aIMGDMFAAHH_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(58);
         output.WriteMessage(AIMGDMFAAHH);
       }
       if (_unknownFields != null) {
@@ -200,7 +200,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 58: {
             if (aIMGDMFAAHH_ == null) {
               AIMGDMFAAHH = new global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ();
             }
@@ -222,7 +222,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 58: {
             if (aIMGDMFAAHH_ == null) {
               AIMGDMFAAHH = new global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ();
             }

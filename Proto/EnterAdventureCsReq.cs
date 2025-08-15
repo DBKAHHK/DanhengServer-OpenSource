@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlFbnRlckFkdmVudHVyZUNzUmVxLnByb3RvIiUKE0VudGVyQWR2ZW50dXJl",
-            "Q3NSZXESDgoGbWFwX2lkGAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "Q3NSZXESDgoGbWFwX2lkGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "map_id" field.</summary>
-    public const int MapIdFieldNumber = 2;
+    public const int MapIdFieldNumber = 14;
     private uint mapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MapId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(112);
         output.WriteUInt32(MapId);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MapId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(112);
         output.WriteUInt32(MapId);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 112: {
             MapId = input.ReadUInt32();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 112: {
             MapId = input.ReadUInt32();
             break;
           }

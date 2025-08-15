@@ -24,20 +24,20 @@ namespace EggLink.DanhengServer.Proto {
     static DisplayAvatarDetailInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1EaXNwbGF5QXZhdGFyRGV0YWlsSW5mby5wcm90bxoVQXZhdGFyU2tpbGxU",
-            "cmVlLnByb3RvGhZEaXNwbGF5UmVsaWNJbmZvLnByb3RvGhpEaXNwbGF5RXF1",
-            "aXBtZW50SW5mby5wcm90byKfAgoXRGlzcGxheUF2YXRhckRldGFpbEluZm8S",
-            "EQoJcHJvbW90aW9uGAEgASgNEhEKCWF2YXRhcl9pZBgMIAEoDRITCgtlbmhh",
-            "bmNlZF9pZBgHIAEoDRIXCg9kcmVzc2VkX3NraW5faWQYDSABKA0SCwoDZXhw",
-            "GAogASgNEgwKBHJhbmsYBSABKA0SDQoFbGV2ZWwYAyABKA0SKAoOc2tpbGx0",
-            "cmVlX2xpc3QYDiADKAsyEC5BdmF0YXJTa2lsbFRyZWUSCwoDcG9zGAIgASgN",
-            "EigKCWVxdWlwbWVudBgIIAEoCzIVLkRpc3BsYXlFcXVpcG1lbnRJbmZvEiUK",
-            "CnJlbGljX2xpc3QYBiADKAsyES5EaXNwbGF5UmVsaWNJbmZvQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Ch1EaXNwbGF5QXZhdGFyRGV0YWlsSW5mby5wcm90bxoaRGlzcGxheUVxdWlw",
+            "bWVudEluZm8ucHJvdG8aFkRpc3BsYXlSZWxpY0luZm8ucHJvdG8aFUF2YXRh",
+            "clNraWxsVHJlZS5wcm90byKZAgoXRGlzcGxheUF2YXRhckRldGFpbEluZm8S",
+            "EAoIQXZhdGFySWQYAiABKA0SEQoJUHJvbW90aW9uGAcgASgNEhUKDURyZXNz",
+            "ZWRTa2luSWQYCSABKA0SJAoJUmVsaWNMaXN0GAYgAygLMhEuRGlzcGxheVJl",
+            "bGljSW5mbxILCgNQb3MYBCABKA0SKAoJRXF1aXBtZW50GAogASgLMhUuRGlz",
+            "cGxheUVxdWlwbWVudEluZm8SDAoEUmFuaxgFIAEoDRInCg1Ta2lsbHRyZWVM",
+            "aXN0GAMgAygLMhAuQXZhdGFyU2tpbGxUcmVlEgsKA0V4cBgOIAEoDRINCgVM",
+            "ZXZlbBgIIAEoDRISCgpFbmhhbmNlZElkGAsgASgNQh6qAhtFZ2dMaW5rLkRh",
+            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayEquipmentInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DisplayEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo), global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser, new[]{ "Promotion", "AvatarId", "EnhancedId", "DressedSkinId", "Exp", "Rank", "Level", "SkilltreeList", "Pos", "Equipment", "RelicList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo), global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser, new[]{ "AvatarId", "Promotion", "DressedSkinId", "RelicList", "Pos", "Equipment", "Rank", "SkilltreeList", "Exp", "Level", "EnhancedId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,17 +79,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DisplayAvatarDetailInfo(DisplayAvatarDetailInfo other) : this() {
-      promotion_ = other.promotion_;
       avatarId_ = other.avatarId_;
-      enhancedId_ = other.enhancedId_;
+      promotion_ = other.promotion_;
       dressedSkinId_ = other.dressedSkinId_;
-      exp_ = other.exp_;
-      rank_ = other.rank_;
-      level_ = other.level_;
-      skilltreeList_ = other.skilltreeList_.Clone();
+      relicList_ = other.relicList_.Clone();
       pos_ = other.pos_;
       equipment_ = other.equipment_ != null ? other.equipment_.Clone() : null;
-      relicList_ = other.relicList_.Clone();
+      rank_ = other.rank_;
+      skilltreeList_ = other.skilltreeList_.Clone();
+      exp_ = other.exp_;
+      level_ = other.level_;
+      enhancedId_ = other.enhancedId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -99,20 +99,8 @@ namespace EggLink.DanhengServer.Proto {
       return new DisplayAvatarDetailInfo(this);
     }
 
-    /// <summary>Field number for the "promotion" field.</summary>
-    public const int PromotionFieldNumber = 1;
-    private uint promotion_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Promotion {
-      get { return promotion_; }
-      set {
-        promotion_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 12;
+    /// <summary>Field number for the "AvatarId" field.</summary>
+    public const int AvatarIdFieldNumber = 2;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,20 +111,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "enhanced_id" field.</summary>
-    public const int EnhancedIdFieldNumber = 7;
-    private uint enhancedId_;
+    /// <summary>Field number for the "Promotion" field.</summary>
+    public const int PromotionFieldNumber = 7;
+    private uint promotion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EnhancedId {
-      get { return enhancedId_; }
+    public uint Promotion {
+      get { return promotion_; }
       set {
-        enhancedId_ = value;
+        promotion_ = value;
       }
     }
 
-    /// <summary>Field number for the "dressed_skin_id" field.</summary>
-    public const int DressedSkinIdFieldNumber = 13;
+    /// <summary>Field number for the "DressedSkinId" field.</summary>
+    public const int DressedSkinIdFieldNumber = 9;
     private uint dressedSkinId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -147,19 +135,42 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "exp" field.</summary>
-    public const int ExpFieldNumber = 10;
-    private uint exp_;
+    /// <summary>Field number for the "RelicList" field.</summary>
+    public const int RelicListFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayRelicInfo> _repeated_relicList_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.DisplayRelicInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayRelicInfo> relicList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayRelicInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Exp {
-      get { return exp_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayRelicInfo> RelicList {
+      get { return relicList_; }
+    }
+
+    /// <summary>Field number for the "Pos" field.</summary>
+    public const int PosFieldNumber = 4;
+    private uint pos_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Pos {
+      get { return pos_; }
       set {
-        exp_ = value;
+        pos_ = value;
       }
     }
 
-    /// <summary>Field number for the "rank" field.</summary>
+    /// <summary>Field number for the "Equipment" field.</summary>
+    public const int EquipmentFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.DisplayEquipmentInfo equipment_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.DisplayEquipmentInfo Equipment {
+      get { return equipment_; }
+      set {
+        equipment_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Rank" field.</summary>
     public const int RankFieldNumber = 5;
     private uint rank_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -171,8 +182,31 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 3;
+    /// <summary>Field number for the "SkilltreeList" field.</summary>
+    public const int SkilltreeListFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AvatarSkillTree> _repeated_skilltreeList_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.AvatarSkillTree.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AvatarSkillTree> skilltreeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AvatarSkillTree>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AvatarSkillTree> SkilltreeList {
+      get { return skilltreeList_; }
+    }
+
+    /// <summary>Field number for the "Exp" field.</summary>
+    public const int ExpFieldNumber = 14;
+    private uint exp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Exp {
+      get { return exp_; }
+      set {
+        exp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Level" field.</summary>
+    public const int LevelFieldNumber = 8;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -183,50 +217,16 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "skilltree_list" field.</summary>
-    public const int SkilltreeListFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AvatarSkillTree> _repeated_skilltreeList_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.AvatarSkillTree.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AvatarSkillTree> skilltreeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AvatarSkillTree>();
+    /// <summary>Field number for the "EnhancedId" field.</summary>
+    public const int EnhancedIdFieldNumber = 11;
+    private uint enhancedId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AvatarSkillTree> SkilltreeList {
-      get { return skilltreeList_; }
-    }
-
-    /// <summary>Field number for the "pos" field.</summary>
-    public const int PosFieldNumber = 2;
-    private uint pos_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Pos {
-      get { return pos_; }
+    public uint EnhancedId {
+      get { return enhancedId_; }
       set {
-        pos_ = value;
+        enhancedId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "equipment" field.</summary>
-    public const int EquipmentFieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.DisplayEquipmentInfo equipment_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.DisplayEquipmentInfo Equipment {
-      get { return equipment_; }
-      set {
-        equipment_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "relic_list" field.</summary>
-    public const int RelicListFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayRelicInfo> _repeated_relicList_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.DisplayRelicInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayRelicInfo> relicList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayRelicInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayRelicInfo> RelicList {
-      get { return relicList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -244,17 +244,17 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Promotion != other.Promotion) return false;
       if (AvatarId != other.AvatarId) return false;
-      if (EnhancedId != other.EnhancedId) return false;
+      if (Promotion != other.Promotion) return false;
       if (DressedSkinId != other.DressedSkinId) return false;
-      if (Exp != other.Exp) return false;
-      if (Rank != other.Rank) return false;
-      if (Level != other.Level) return false;
-      if(!skilltreeList_.Equals(other.skilltreeList_)) return false;
+      if(!relicList_.Equals(other.relicList_)) return false;
       if (Pos != other.Pos) return false;
       if (!object.Equals(Equipment, other.Equipment)) return false;
-      if(!relicList_.Equals(other.relicList_)) return false;
+      if (Rank != other.Rank) return false;
+      if(!skilltreeList_.Equals(other.skilltreeList_)) return false;
+      if (Exp != other.Exp) return false;
+      if (Level != other.Level) return false;
+      if (EnhancedId != other.EnhancedId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -262,17 +262,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Promotion != 0) hash ^= Promotion.GetHashCode();
       if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
-      if (EnhancedId != 0) hash ^= EnhancedId.GetHashCode();
+      if (Promotion != 0) hash ^= Promotion.GetHashCode();
       if (DressedSkinId != 0) hash ^= DressedSkinId.GetHashCode();
-      if (Exp != 0) hash ^= Exp.GetHashCode();
-      if (Rank != 0) hash ^= Rank.GetHashCode();
-      if (Level != 0) hash ^= Level.GetHashCode();
-      hash ^= skilltreeList_.GetHashCode();
+      hash ^= relicList_.GetHashCode();
       if (Pos != 0) hash ^= Pos.GetHashCode();
       if (equipment_ != null) hash ^= Equipment.GetHashCode();
-      hash ^= relicList_.GetHashCode();
+      if (Rank != 0) hash ^= Rank.GetHashCode();
+      hash ^= skilltreeList_.GetHashCode();
+      if (Exp != 0) hash ^= Exp.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
+      if (EnhancedId != 0) hash ^= EnhancedId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -291,44 +291,44 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Promotion != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Promotion);
-      }
-      if (Pos != 0) {
+      if (AvatarId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(Pos);
+        output.WriteUInt32(AvatarId);
       }
-      if (Level != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Level);
+      skilltreeList_.WriteTo(output, _repeated_skilltreeList_codec);
+      if (Pos != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Pos);
       }
       if (Rank != 0) {
         output.WriteRawTag(40);
         output.WriteUInt32(Rank);
       }
       relicList_.WriteTo(output, _repeated_relicList_codec);
-      if (EnhancedId != 0) {
+      if (Promotion != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(EnhancedId);
+        output.WriteUInt32(Promotion);
       }
-      if (equipment_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(Equipment);
-      }
-      if (Exp != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Exp);
-      }
-      if (AvatarId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(AvatarId);
+      if (Level != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Level);
       }
       if (DressedSkinId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(DressedSkinId);
       }
-      skilltreeList_.WriteTo(output, _repeated_skilltreeList_codec);
+      if (equipment_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Equipment);
+      }
+      if (EnhancedId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(EnhancedId);
+      }
+      if (Exp != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Exp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -339,44 +339,44 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Promotion != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Promotion);
-      }
-      if (Pos != 0) {
+      if (AvatarId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(Pos);
+        output.WriteUInt32(AvatarId);
       }
-      if (Level != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Level);
+      skilltreeList_.WriteTo(ref output, _repeated_skilltreeList_codec);
+      if (Pos != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Pos);
       }
       if (Rank != 0) {
         output.WriteRawTag(40);
         output.WriteUInt32(Rank);
       }
       relicList_.WriteTo(ref output, _repeated_relicList_codec);
-      if (EnhancedId != 0) {
+      if (Promotion != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(EnhancedId);
+        output.WriteUInt32(Promotion);
       }
-      if (equipment_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(Equipment);
-      }
-      if (Exp != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Exp);
-      }
-      if (AvatarId != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(AvatarId);
+      if (Level != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Level);
       }
       if (DressedSkinId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(DressedSkinId);
       }
-      skilltreeList_.WriteTo(ref output, _repeated_skilltreeList_codec);
+      if (equipment_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Equipment);
+      }
+      if (EnhancedId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(EnhancedId);
+      }
+      if (Exp != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Exp);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -387,35 +387,35 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Promotion != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Promotion);
-      }
       if (AvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
       }
-      if (EnhancedId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EnhancedId);
+      if (Promotion != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Promotion);
       }
       if (DressedSkinId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressedSkinId);
       }
-      if (Exp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Exp);
-      }
-      if (Rank != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Rank);
-      }
-      if (Level != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
-      }
-      size += skilltreeList_.CalculateSize(_repeated_skilltreeList_codec);
+      size += relicList_.CalculateSize(_repeated_relicList_codec);
       if (Pos != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pos);
       }
       if (equipment_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Equipment);
       }
-      size += relicList_.CalculateSize(_repeated_relicList_codec);
+      if (Rank != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Rank);
+      }
+      size += skilltreeList_.CalculateSize(_repeated_skilltreeList_codec);
+      if (Exp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Exp);
+      }
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      }
+      if (EnhancedId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EnhancedId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -428,28 +428,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Promotion != 0) {
-        Promotion = other.Promotion;
-      }
       if (other.AvatarId != 0) {
         AvatarId = other.AvatarId;
       }
-      if (other.EnhancedId != 0) {
-        EnhancedId = other.EnhancedId;
+      if (other.Promotion != 0) {
+        Promotion = other.Promotion;
       }
       if (other.DressedSkinId != 0) {
         DressedSkinId = other.DressedSkinId;
       }
-      if (other.Exp != 0) {
-        Exp = other.Exp;
-      }
-      if (other.Rank != 0) {
-        Rank = other.Rank;
-      }
-      if (other.Level != 0) {
-        Level = other.Level;
-      }
-      skilltreeList_.Add(other.skilltreeList_);
+      relicList_.Add(other.relicList_);
       if (other.Pos != 0) {
         Pos = other.Pos;
       }
@@ -459,7 +447,19 @@ namespace EggLink.DanhengServer.Proto {
         }
         Equipment.MergeFrom(other.Equipment);
       }
-      relicList_.Add(other.relicList_);
+      if (other.Rank != 0) {
+        Rank = other.Rank;
+      }
+      skilltreeList_.Add(other.skilltreeList_);
+      if (other.Exp != 0) {
+        Exp = other.Exp;
+      }
+      if (other.Level != 0) {
+        Level = other.Level;
+      }
+      if (other.EnhancedId != 0) {
+        EnhancedId = other.EnhancedId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -475,16 +475,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Promotion = input.ReadUInt32();
-            break;
-          }
           case 16: {
-            Pos = input.ReadUInt32();
+            AvatarId = input.ReadUInt32();
             break;
           }
-          case 24: {
-            Level = input.ReadUInt32();
+          case 26: {
+            skilltreeList_.AddEntriesFrom(input, _repeated_skilltreeList_codec);
+            break;
+          }
+          case 32: {
+            Pos = input.ReadUInt32();
             break;
           }
           case 40: {
@@ -496,30 +496,30 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            EnhancedId = input.ReadUInt32();
+            Promotion = input.ReadUInt32();
             break;
           }
-          case 66: {
+          case 64: {
+            Level = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            DressedSkinId = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             if (equipment_ == null) {
               Equipment = new global::EggLink.DanhengServer.Proto.DisplayEquipmentInfo();
             }
             input.ReadMessage(Equipment);
             break;
           }
-          case 80: {
+          case 88: {
+            EnhancedId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
             Exp = input.ReadUInt32();
-            break;
-          }
-          case 96: {
-            AvatarId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            DressedSkinId = input.ReadUInt32();
-            break;
-          }
-          case 114: {
-            skilltreeList_.AddEntriesFrom(input, _repeated_skilltreeList_codec);
             break;
           }
         }
@@ -537,16 +537,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Promotion = input.ReadUInt32();
-            break;
-          }
           case 16: {
-            Pos = input.ReadUInt32();
+            AvatarId = input.ReadUInt32();
             break;
           }
-          case 24: {
-            Level = input.ReadUInt32();
+          case 26: {
+            skilltreeList_.AddEntriesFrom(ref input, _repeated_skilltreeList_codec);
+            break;
+          }
+          case 32: {
+            Pos = input.ReadUInt32();
             break;
           }
           case 40: {
@@ -558,30 +558,30 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            EnhancedId = input.ReadUInt32();
+            Promotion = input.ReadUInt32();
             break;
           }
-          case 66: {
+          case 64: {
+            Level = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            DressedSkinId = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             if (equipment_ == null) {
               Equipment = new global::EggLink.DanhengServer.Proto.DisplayEquipmentInfo();
             }
             input.ReadMessage(Equipment);
             break;
           }
-          case 80: {
+          case 88: {
+            EnhancedId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
             Exp = input.ReadUInt32();
-            break;
-          }
-          case 96: {
-            AvatarId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            DressedSkinId = input.ReadUInt32();
-            break;
-          }
-          case 114: {
-            skilltreeList_.AddEntriesFrom(ref input, _repeated_skilltreeList_codec);
             break;
           }
         }

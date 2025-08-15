@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVQbGFuZXRGZXNTZXRDdXN0b21LZXlWYWx1ZVNjUnNwLnByb3RvIk4KH1Bs",
-            "YW5ldEZlc1NldEN1c3RvbUtleVZhbHVlU2NSc3ASDQoFdmFsdWUYCyABKA0S",
-            "DwoHcmV0Y29kZRgOIAEoDRILCgNrZXkYCSABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "YW5ldEZlc1NldEN1c3RvbUtleVZhbHVlU2NSc3ASDwoHcmV0Y29kZRgNIAEo",
+            "DRINCgV2YWx1ZRgPIAEoDRILCgNrZXkYCSABKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlanetFesSetCustomKeyValueScRsp), global::EggLink.DanhengServer.Proto.PlanetFesSetCustomKeyValueScRsp.Parser, new[]{ "Value", "Retcode", "Key" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlanetFesSetCustomKeyValueScRsp), global::EggLink.DanhengServer.Proto.PlanetFesSetCustomKeyValueScRsp.Parser, new[]{ "Retcode", "Value", "Key" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlanetFesSetCustomKeyValueScRsp(PlanetFesSetCustomKeyValueScRsp other) : this() {
-      value_ = other.value_;
       retcode_ = other.retcode_;
+      value_ = other.value_;
       key_ = other.key_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new PlanetFesSetCustomKeyValueScRsp(this);
     }
 
-    /// <summary>Field number for the "value" field.</summary>
-    public const int ValueFieldNumber = 11;
-    private uint value_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Value {
-      get { return value_; }
-      set {
-        value_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
+    public const int RetcodeFieldNumber = 13;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 15;
+    private uint value_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Value {
+      get { return value_; }
+      set {
+        value_ = value;
       }
     }
 
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Value != other.Value) return false;
       if (Retcode != other.Retcode) return false;
+      if (Value != other.Value) return false;
       if (Key != other.Key) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Value != 0) hash ^= Value.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (Value != 0) hash ^= Value.GetHashCode();
       if (Key != 0) hash ^= Key.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(Key);
       }
-      if (Value != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(Value);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
+      }
+      if (Value != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Value);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -193,13 +193,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(Key);
       }
-      if (Value != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(Value);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(104);
         output.WriteUInt32(Retcode);
+      }
+      if (Value != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Value);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,11 +211,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Value != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Value);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (Value != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Value);
       }
       if (Key != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Key);
@@ -232,11 +232,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Value != 0) {
-        Value = other.Value;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
+      }
+      if (other.Value != 0) {
+        Value = other.Value;
       }
       if (other.Key != 0) {
         Key = other.Key;
@@ -260,12 +260,12 @@ namespace EggLink.DanhengServer.Proto {
             Key = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Value = input.ReadUInt32();
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 120: {
+            Value = input.ReadUInt32();
             break;
           }
         }
@@ -287,12 +287,12 @@ namespace EggLink.DanhengServer.Proto {
             Key = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Value = input.ReadUInt32();
+          case 104: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 120: {
+            Value = input.ReadUInt32();
             break;
           }
         }

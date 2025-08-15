@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9Xb2xmQnJvR2FtZVVzZUJ1bGxldENzUmVxLnByb3RvGgxWZWN0b3IucHJv",
             "dG8iYAoZV29sZkJyb0dhbWVVc2VCdWxsZXRDc1JlcRIlCh1hc3Npc3RfbW9u",
-            "c3Rlcl9lbnRpdHlfaWRfbGlzdBgMIAMoDRIcCgtNSUJDRklNTUlLRxgLIAEo",
+            "c3Rlcl9lbnRpdHlfaWRfbGlzdBgHIAMoDRIcCgtNSUJDRklNTUlLRxgFIAEo",
             "CzIHLlZlY3RvckIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "assist_monster_entity_id_list" field.</summary>
-    public const int AssistMonsterEntityIdListFieldNumber = 12;
+    public const int AssistMonsterEntityIdListFieldNumber = 7;
     private static readonly pb::FieldCodec<uint> _repeated_assistMonsterEntityIdList_codec
-        = pb::FieldCodec.ForUInt32(98);
+        = pb::FieldCodec.ForUInt32(58);
     private readonly pbc::RepeatedField<uint> assistMonsterEntityIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MIBCFIMMIKG" field.</summary>
-    public const int MIBCFIMMIKGFieldNumber = 11;
+    public const int MIBCFIMMIKGFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.Vector mIBCFIMMIKG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (mIBCFIMMIKG_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(42);
         output.WriteMessage(MIBCFIMMIKG);
       }
       assistMonsterEntityIdList_.WriteTo(output, _repeated_assistMonsterEntityIdList_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (mIBCFIMMIKG_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(42);
         output.WriteMessage(MIBCFIMMIKG);
       }
       assistMonsterEntityIdList_.WriteTo(ref output, _repeated_assistMonsterEntityIdList_codec);
@@ -220,15 +220,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 42: {
             if (mIBCFIMMIKG_ == null) {
               MIBCFIMMIKG = new global::EggLink.DanhengServer.Proto.Vector();
             }
             input.ReadMessage(MIBCFIMMIKG);
             break;
           }
-          case 98:
-          case 96: {
+          case 58:
+          case 56: {
             assistMonsterEntityIdList_.AddEntriesFrom(input, _repeated_assistMonsterEntityIdList_codec);
             break;
           }
@@ -247,15 +247,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 42: {
             if (mIBCFIMMIKG_ == null) {
               MIBCFIMMIKG = new global::EggLink.DanhengServer.Proto.Vector();
             }
             input.ReadMessage(MIBCFIMMIKG);
             break;
           }
-          case 98:
-          case 96: {
+          case 58:
+          case 56: {
             assistMonsterEntityIdList_.AddEntriesFrom(ref input, _repeated_assistMonsterEntityIdList_codec);
             break;
           }

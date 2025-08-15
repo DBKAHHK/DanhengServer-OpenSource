@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChhEZXBsb3lSb3RhdGVyU2NSc3AucHJvdG8aF1JvdGF0ZXJFbmVyZ3lJbmZv",
             "LnByb3RvGhFSb3RhdGVyRGF0YS5wcm90byJyChJEZXBsb3lSb3RhdGVyU2NS",
-            "c3ASJwoLZW5lcmd5X2luZm8YDiABKAsyEi5Sb3RhdGVyRW5lcmd5SW5mbxIP",
-            "CgdyZXRjb2RlGA8gASgNEiIKDHJvdGF0ZXJfZGF0YRgDIAEoCzIMLlJvdGF0",
+            "c3ASJwoLZW5lcmd5X2luZm8YDyABKAsyEi5Sb3RhdGVyRW5lcmd5SW5mbxIP",
+            "CgdyZXRjb2RlGAggASgNEiIKDHJvdGF0ZXJfZGF0YRgDIAEoCzIMLlJvdGF0",
             "ZXJEYXRhQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "energy_info" field.</summary>
-    public const int EnergyInfoFieldNumber = 14;
+    public const int EnergyInfoFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.RotaterEnergyInfo energyInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 15;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -173,13 +173,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(26);
         output.WriteMessage(RotaterData);
       }
-      if (energyInfo_ != null) {
-        output.WriteRawTag(114);
-        output.WriteMessage(EnergyInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
+      }
+      if (energyInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(EnergyInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -195,13 +195,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(26);
         output.WriteMessage(RotaterData);
       }
-      if (energyInfo_ != null) {
-        output.WriteRawTag(114);
-        output.WriteMessage(EnergyInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
+      }
+      if (energyInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(EnergyInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -271,15 +271,15 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RotaterData);
             break;
           }
-          case 114: {
+          case 64: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             if (energyInfo_ == null) {
               EnergyInfo = new global::EggLink.DanhengServer.Proto.RotaterEnergyInfo();
             }
             input.ReadMessage(EnergyInfo);
-            break;
-          }
-          case 120: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -304,15 +304,15 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RotaterData);
             break;
           }
-          case 114: {
+          case 64: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             if (energyInfo_ == null) {
               EnergyInfo = new global::EggLink.DanhengServer.Proto.RotaterEnergyInfo();
             }
             input.ReadMessage(EnergyInfo);
-            break;
-          }
-          case 120: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

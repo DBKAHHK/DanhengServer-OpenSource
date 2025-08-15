@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg5SYWlkRGF0YS5wcm90bxoUUmFpZFRhcmdldEluZm8ucHJvdG8iWwoIUmFp",
-            "ZERhdGESKQoQcmFpZF90YXJnZXRfaW5mbxgBIAMoCzIPLlJhaWRUYXJnZXRJ",
-            "bmZvEhMKC3dvcmxkX2xldmVsGAsgASgNEg8KB3JhaWRfaWQYCiABKA1CHqoC",
+            "ZERhdGESKQoQcmFpZF90YXJnZXRfaW5mbxgNIAMoCzIPLlJhaWRUYXJnZXRJ",
+            "bmZvEhMKC3dvcmxkX2xldmVsGAQgASgNEg8KB3JhaWRfaWQYBiABKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RaidTargetInfoReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "raid_target_info" field.</summary>
-    public const int RaidTargetInfoFieldNumber = 1;
+    public const int RaidTargetInfoFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RaidTargetInfo> _repeated_raidTargetInfo_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.RaidTargetInfo.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.RaidTargetInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidTargetInfo> raidTargetInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidTargetInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 11;
+    public const int WorldLevelFieldNumber = 4;
     private uint worldLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "raid_id" field.</summary>
-    public const int RaidIdFieldNumber = 10;
+    public const int RaidIdFieldNumber = 6;
     private uint raidId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,15 +166,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      raidTargetInfo_.WriteTo(output, _repeated_raidTargetInfo_codec);
-      if (RaidId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(RaidId);
-      }
       if (WorldLevel != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(32);
         output.WriteUInt32(WorldLevel);
       }
+      if (RaidId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(RaidId);
+      }
+      raidTargetInfo_.WriteTo(output, _repeated_raidTargetInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -185,15 +185,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      raidTargetInfo_.WriteTo(ref output, _repeated_raidTargetInfo_codec);
-      if (RaidId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(RaidId);
-      }
       if (WorldLevel != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(32);
         output.WriteUInt32(WorldLevel);
       }
+      if (RaidId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(RaidId);
+      }
+      raidTargetInfo_.WriteTo(ref output, _repeated_raidTargetInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -245,16 +245,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            raidTargetInfo_.AddEntriesFrom(input, _repeated_raidTargetInfo_codec);
+          case 32: {
+            WorldLevel = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 48: {
             RaidId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            WorldLevel = input.ReadUInt32();
+          case 106: {
+            raidTargetInfo_.AddEntriesFrom(input, _repeated_raidTargetInfo_codec);
             break;
           }
         }
@@ -272,16 +272,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            raidTargetInfo_.AddEntriesFrom(ref input, _repeated_raidTargetInfo_codec);
+          case 32: {
+            WorldLevel = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 48: {
             RaidId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            WorldLevel = input.ReadUInt32();
+          case 106: {
+            raidTargetInfo_.AddEntriesFrom(ref input, _repeated_raidTargetInfo_codec);
             break;
           }
         }

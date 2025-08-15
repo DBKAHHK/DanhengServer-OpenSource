@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static FHMAIANENPOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFGSE1BSUFORU5QTy5wcm90byI6CgtGSE1BSUFORU5QTxITCgtMQUxEQUNN",
-            "Q0hGSRgKIAMoDRIWCg5zZWxlY3RfaGludF9pZBgDIAEoDUIeqgIbRWdnTGlu",
+            "ChFGSE1BSUFORU5QTy5wcm90byI6CgtGSE1BSUFORU5QTxIWCg5zZWxlY3Rf",
+            "aGludF9pZBgHIAEoDRITCgtMQUxEQUNNQ0hGSRgKIAMoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FHMAIANENPO), global::EggLink.DanhengServer.Proto.FHMAIANENPO.Parser, new[]{ "LALDACMCHFI", "SelectHintId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FHMAIANENPO), global::EggLink.DanhengServer.Proto.FHMAIANENPO.Parser, new[]{ "SelectHintId", "LALDACMCHFI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FHMAIANENPO(FHMAIANENPO other) : this() {
-      lALDACMCHFI_ = other.lALDACMCHFI_.Clone();
       selectHintId_ = other.selectHintId_;
+      lALDACMCHFI_ = other.lALDACMCHFI_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -81,6 +81,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FHMAIANENPO Clone() {
       return new FHMAIANENPO(this);
+    }
+
+    /// <summary>Field number for the "select_hint_id" field.</summary>
+    public const int SelectHintIdFieldNumber = 7;
+    private uint selectHintId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SelectHintId {
+      get { return selectHintId_; }
+      set {
+        selectHintId_ = value;
+      }
     }
 
     /// <summary>Field number for the "LALDACMCHFI" field.</summary>
@@ -92,18 +104,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> LALDACMCHFI {
       get { return lALDACMCHFI_; }
-    }
-
-    /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 3;
-    private uint selectHintId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SelectHintId {
-      get { return selectHintId_; }
-      set {
-        selectHintId_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -121,8 +121,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!lALDACMCHFI_.Equals(other.lALDACMCHFI_)) return false;
       if (SelectHintId != other.SelectHintId) return false;
+      if(!lALDACMCHFI_.Equals(other.lALDACMCHFI_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -130,8 +130,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= lALDACMCHFI_.GetHashCode();
       if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
+      hash ^= lALDACMCHFI_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (SelectHintId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(SelectHintId);
       }
       lALDACMCHFI_.WriteTo(output, _repeated_lALDACMCHFI_codec);
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SelectHintId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(SelectHintId);
       }
       lALDACMCHFI_.WriteTo(ref output, _repeated_lALDACMCHFI_codec);
@@ -180,10 +180,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += lALDACMCHFI_.CalculateSize(_repeated_lALDACMCHFI_codec);
       if (SelectHintId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectHintId);
       }
+      size += lALDACMCHFI_.CalculateSize(_repeated_lALDACMCHFI_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -196,10 +196,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      lALDACMCHFI_.Add(other.lALDACMCHFI_);
       if (other.SelectHintId != 0) {
         SelectHintId = other.SelectHintId;
       }
+      lALDACMCHFI_.Add(other.lALDACMCHFI_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -215,7 +215,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 56: {
             SelectHintId = input.ReadUInt32();
             break;
           }
@@ -239,7 +239,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 56: {
             SelectHintId = input.ReadUInt32();
             break;
           }

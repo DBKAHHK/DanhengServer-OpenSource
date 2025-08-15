@@ -26,16 +26,16 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidTdGFydEFldGhlckRpdmlkZVNjZW5lQmF0dGxlQ3NSZXEucHJvdG8aHUFz",
             "c2lzdE1vbnN0ZXJFbnRpdHlJbmZvLnByb3RvItQBCiFTdGFydEFldGhlckRp",
-            "dmlkZVNjZW5lQmF0dGxlQ3NSZXESJQodYXNzaXN0X21vbnN0ZXJfZW50aXR5",
-            "X2lkX2xpc3QYByADKA0SFgoOY2FzdF9lbnRpdHlfaWQYDiABKA0SEwoLc2tp",
-            "bGxfaW5kZXgYCyABKA0SPAoaYXNzaXN0X21vbnN0ZXJfZW50aXR5X2luZm8Y",
-            "CiADKAsyGC5Bc3Npc3RNb25zdGVyRW50aXR5SW5mbxIdChVhdHRhY2tlZF9i",
-            "eV9lbnRpdHlfaWQYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "dmlkZVNjZW5lQmF0dGxlQ3NSZXESFgoOY2FzdF9lbnRpdHlfaWQYCyABKA0S",
+            "JQodYXNzaXN0X21vbnN0ZXJfZW50aXR5X2lkX2xpc3QYAiADKA0SHQoVYXR0",
+            "YWNrZWRfYnlfZW50aXR5X2lkGA0gASgNEjwKGmFzc2lzdF9tb25zdGVyX2Vu",
+            "dGl0eV9pbmZvGA8gAygLMhguQXNzaXN0TW9uc3RlckVudGl0eUluZm8SEwoL",
+            "c2tpbGxfaW5kZXgYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartAetherDivideSceneBattleCsReq), global::EggLink.DanhengServer.Proto.StartAetherDivideSceneBattleCsReq.Parser, new[]{ "AssistMonsterEntityIdList", "CastEntityId", "SkillIndex", "AssistMonsterEntityInfo", "AttackedByEntityId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartAetherDivideSceneBattleCsReq), global::EggLink.DanhengServer.Proto.StartAetherDivideSceneBattleCsReq.Parser, new[]{ "CastEntityId", "AssistMonsterEntityIdList", "AttackedByEntityId", "AssistMonsterEntityInfo", "SkillIndex" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,11 +77,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartAetherDivideSceneBattleCsReq(StartAetherDivideSceneBattleCsReq other) : this() {
-      assistMonsterEntityIdList_ = other.assistMonsterEntityIdList_.Clone();
       castEntityId_ = other.castEntityId_;
-      skillIndex_ = other.skillIndex_;
-      assistMonsterEntityInfo_ = other.assistMonsterEntityInfo_.Clone();
+      assistMonsterEntityIdList_ = other.assistMonsterEntityIdList_.Clone();
       attackedByEntityId_ = other.attackedByEntityId_;
+      assistMonsterEntityInfo_ = other.assistMonsterEntityInfo_.Clone();
+      skillIndex_ = other.skillIndex_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,19 +91,8 @@ namespace EggLink.DanhengServer.Proto {
       return new StartAetherDivideSceneBattleCsReq(this);
     }
 
-    /// <summary>Field number for the "assist_monster_entity_id_list" field.</summary>
-    public const int AssistMonsterEntityIdListFieldNumber = 7;
-    private static readonly pb::FieldCodec<uint> _repeated_assistMonsterEntityIdList_codec
-        = pb::FieldCodec.ForUInt32(58);
-    private readonly pbc::RepeatedField<uint> assistMonsterEntityIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AssistMonsterEntityIdList {
-      get { return assistMonsterEntityIdList_; }
-    }
-
     /// <summary>Field number for the "cast_entity_id" field.</summary>
-    public const int CastEntityIdFieldNumber = 14;
+    public const int CastEntityIdFieldNumber = 11;
     private uint castEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -114,31 +103,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "skill_index" field.</summary>
-    public const int SkillIndexFieldNumber = 11;
-    private uint skillIndex_;
+    /// <summary>Field number for the "assist_monster_entity_id_list" field.</summary>
+    public const int AssistMonsterEntityIdListFieldNumber = 2;
+    private static readonly pb::FieldCodec<uint> _repeated_assistMonsterEntityIdList_codec
+        = pb::FieldCodec.ForUInt32(18);
+    private readonly pbc::RepeatedField<uint> assistMonsterEntityIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SkillIndex {
-      get { return skillIndex_; }
-      set {
-        skillIndex_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "assist_monster_entity_info" field.</summary>
-    public const int AssistMonsterEntityInfoFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfo> _repeated_assistMonsterEntityInfo_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfo> assistMonsterEntityInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfo> AssistMonsterEntityInfo {
-      get { return assistMonsterEntityInfo_; }
+    public pbc::RepeatedField<uint> AssistMonsterEntityIdList {
+      get { return assistMonsterEntityIdList_; }
     }
 
     /// <summary>Field number for the "attacked_by_entity_id" field.</summary>
-    public const int AttackedByEntityIdFieldNumber = 6;
+    public const int AttackedByEntityIdFieldNumber = 13;
     private uint attackedByEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -146,6 +123,29 @@ namespace EggLink.DanhengServer.Proto {
       get { return attackedByEntityId_; }
       set {
         attackedByEntityId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "assist_monster_entity_info" field.</summary>
+    public const int AssistMonsterEntityInfoFieldNumber = 15;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfo> _repeated_assistMonsterEntityInfo_codec
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfo> assistMonsterEntityInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AssistMonsterEntityInfo> AssistMonsterEntityInfo {
+      get { return assistMonsterEntityInfo_; }
+    }
+
+    /// <summary>Field number for the "skill_index" field.</summary>
+    public const int SkillIndexFieldNumber = 6;
+    private uint skillIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SkillIndex {
+      get { return skillIndex_; }
+      set {
+        skillIndex_ = value;
       }
     }
 
@@ -164,11 +164,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!assistMonsterEntityIdList_.Equals(other.assistMonsterEntityIdList_)) return false;
       if (CastEntityId != other.CastEntityId) return false;
-      if (SkillIndex != other.SkillIndex) return false;
-      if(!assistMonsterEntityInfo_.Equals(other.assistMonsterEntityInfo_)) return false;
+      if(!assistMonsterEntityIdList_.Equals(other.assistMonsterEntityIdList_)) return false;
       if (AttackedByEntityId != other.AttackedByEntityId) return false;
+      if(!assistMonsterEntityInfo_.Equals(other.assistMonsterEntityInfo_)) return false;
+      if (SkillIndex != other.SkillIndex) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,11 +176,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= assistMonsterEntityIdList_.GetHashCode();
       if (CastEntityId != 0) hash ^= CastEntityId.GetHashCode();
-      if (SkillIndex != 0) hash ^= SkillIndex.GetHashCode();
-      hash ^= assistMonsterEntityInfo_.GetHashCode();
+      hash ^= assistMonsterEntityIdList_.GetHashCode();
       if (AttackedByEntityId != 0) hash ^= AttackedByEntityId.GetHashCode();
+      hash ^= assistMonsterEntityInfo_.GetHashCode();
+      if (SkillIndex != 0) hash ^= SkillIndex.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,20 +199,20 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AttackedByEntityId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(AttackedByEntityId);
-      }
       assistMonsterEntityIdList_.WriteTo(output, _repeated_assistMonsterEntityIdList_codec);
-      assistMonsterEntityInfo_.WriteTo(output, _repeated_assistMonsterEntityInfo_codec);
       if (SkillIndex != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(SkillIndex);
       }
       if (CastEntityId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteUInt32(CastEntityId);
       }
+      if (AttackedByEntityId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(AttackedByEntityId);
+      }
+      assistMonsterEntityInfo_.WriteTo(output, _repeated_assistMonsterEntityInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -223,20 +223,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AttackedByEntityId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(AttackedByEntityId);
-      }
       assistMonsterEntityIdList_.WriteTo(ref output, _repeated_assistMonsterEntityIdList_codec);
-      assistMonsterEntityInfo_.WriteTo(ref output, _repeated_assistMonsterEntityInfo_codec);
       if (SkillIndex != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(SkillIndex);
       }
       if (CastEntityId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteUInt32(CastEntityId);
       }
+      if (AttackedByEntityId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(AttackedByEntityId);
+      }
+      assistMonsterEntityInfo_.WriteTo(ref output, _repeated_assistMonsterEntityInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -247,16 +247,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += assistMonsterEntityIdList_.CalculateSize(_repeated_assistMonsterEntityIdList_codec);
       if (CastEntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CastEntityId);
       }
-      if (SkillIndex != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SkillIndex);
-      }
-      size += assistMonsterEntityInfo_.CalculateSize(_repeated_assistMonsterEntityInfo_codec);
+      size += assistMonsterEntityIdList_.CalculateSize(_repeated_assistMonsterEntityIdList_codec);
       if (AttackedByEntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AttackedByEntityId);
+      }
+      size += assistMonsterEntityInfo_.CalculateSize(_repeated_assistMonsterEntityInfo_codec);
+      if (SkillIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SkillIndex);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -270,16 +270,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      assistMonsterEntityIdList_.Add(other.assistMonsterEntityIdList_);
       if (other.CastEntityId != 0) {
         CastEntityId = other.CastEntityId;
       }
-      if (other.SkillIndex != 0) {
-        SkillIndex = other.SkillIndex;
-      }
-      assistMonsterEntityInfo_.Add(other.assistMonsterEntityInfo_);
+      assistMonsterEntityIdList_.Add(other.assistMonsterEntityIdList_);
       if (other.AttackedByEntityId != 0) {
         AttackedByEntityId = other.AttackedByEntityId;
+      }
+      assistMonsterEntityInfo_.Add(other.assistMonsterEntityInfo_);
+      if (other.SkillIndex != 0) {
+        SkillIndex = other.SkillIndex;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -296,25 +296,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            AttackedByEntityId = input.ReadUInt32();
-            break;
-          }
-          case 58:
-          case 56: {
+          case 18:
+          case 16: {
             assistMonsterEntityIdList_.AddEntriesFrom(input, _repeated_assistMonsterEntityIdList_codec);
             break;
           }
-          case 82: {
-            assistMonsterEntityInfo_.AddEntriesFrom(input, _repeated_assistMonsterEntityInfo_codec);
-            break;
-          }
-          case 88: {
+          case 48: {
             SkillIndex = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 88: {
             CastEntityId = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            AttackedByEntityId = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            assistMonsterEntityInfo_.AddEntriesFrom(input, _repeated_assistMonsterEntityInfo_codec);
             break;
           }
         }
@@ -332,25 +332,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            AttackedByEntityId = input.ReadUInt32();
-            break;
-          }
-          case 58:
-          case 56: {
+          case 18:
+          case 16: {
             assistMonsterEntityIdList_.AddEntriesFrom(ref input, _repeated_assistMonsterEntityIdList_codec);
             break;
           }
-          case 82: {
-            assistMonsterEntityInfo_.AddEntriesFrom(ref input, _repeated_assistMonsterEntityInfo_codec);
-            break;
-          }
-          case 88: {
+          case 48: {
             SkillIndex = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 88: {
             CastEntityId = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            AttackedByEntityId = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            assistMonsterEntityInfo_.AddEntriesFrom(ref input, _repeated_assistMonsterEntityInfo_codec);
             break;
           }
         }

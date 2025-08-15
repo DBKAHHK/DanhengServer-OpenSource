@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static NFKDAAGBMPJReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFORktEQUFHQk1QSi5wcm90bxoRTUFBT0xLR0xMQkkucHJvdG8aFkZhdGVN",
-            "YXN0ZXJTdGF0dXMucHJvdG8ikAEKC05GS0RBQUdCTVBKEiEKBnN0YXR1cxgK",
-            "IAEoDjIRLkZhdGVNYXN0ZXJTdGF0dXMSCgoCaHAYDyABKAUSEQoJYXZhdGFy",
-            "X2lkGAkgASgNEiEKC01IR0RHR05JSkNHGAQgAygLMgwuTUFBT0xLR0xMQkkS",
-            "DAoEcmFuaxgNIAEoDRIOCgZtYXhfaHAYCyABKAVCHqoCG0VnZ0xpbmsuRGFu",
+            "ChFORktEQUFHQk1QSi5wcm90bxoWRmF0ZU1hc3RlclN0YXR1cy5wcm90bxoR",
+            "TUFBT0xLR0xMQkkucHJvdG8ikAEKC05GS0RBQUdCTVBKEg4KBm1heF9ocBgO",
+            "IAEoBRIRCglhdmF0YXJfaWQYByABKA0SIQoLTUhHREdHTklKQ0cYCiADKAsy",
+            "DC5NQUFPTEtHTExCSRIKCgJocBgLIAEoBRIMCgRyYW5rGAUgASgNEiEKBnN0",
+            "YXR1cxgIIAEoDjIRLkZhdGVNYXN0ZXJTdGF0dXNCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MAAOLKGLLBIReflection.Descriptor, global::EggLink.DanhengServer.Proto.FateMasterStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FateMasterStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.MAAOLKGLLBIReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ), global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ.Parser, new[]{ "Status", "Hp", "AvatarId", "MHGDGGNIJCG", "Rank", "MaxHp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ), global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ.Parser, new[]{ "MaxHp", "AvatarId", "MHGDGGNIJCG", "Hp", "Rank", "Status" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,12 +75,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NFKDAAGBMPJ(NFKDAAGBMPJ other) : this() {
-      status_ = other.status_;
-      hp_ = other.hp_;
+      maxHp_ = other.maxHp_;
       avatarId_ = other.avatarId_;
       mHGDGGNIJCG_ = other.mHGDGGNIJCG_.Clone();
+      hp_ = other.hp_;
       rank_ = other.rank_;
-      maxHp_ = other.maxHp_;
+      status_ = other.status_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,32 +90,20 @@ namespace EggLink.DanhengServer.Proto {
       return new NFKDAAGBMPJ(this);
     }
 
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.FateMasterStatus status_ = global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone;
+    /// <summary>Field number for the "max_hp" field.</summary>
+    public const int MaxHpFieldNumber = 14;
+    private int maxHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FateMasterStatus Status {
-      get { return status_; }
+    public int MaxHp {
+      get { return maxHp_; }
       set {
-        status_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "hp" field.</summary>
-    public const int HpFieldNumber = 15;
-    private int hp_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Hp {
-      get { return hp_; }
-      set {
-        hp_ = value;
+        maxHp_ = value;
       }
     }
 
     /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 9;
+    public const int AvatarIdFieldNumber = 7;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -127,9 +115,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MHGDGGNIJCG" field.</summary>
-    public const int MHGDGGNIJCGFieldNumber = 4;
+    public const int MHGDGGNIJCGFieldNumber = 10;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MAAOLKGLLBI> _repeated_mHGDGGNIJCG_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.MAAOLKGLLBI.Parser);
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.MAAOLKGLLBI.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MAAOLKGLLBI> mHGDGGNIJCG_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MAAOLKGLLBI>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,8 +125,20 @@ namespace EggLink.DanhengServer.Proto {
       get { return mHGDGGNIJCG_; }
     }
 
+    /// <summary>Field number for the "hp" field.</summary>
+    public const int HpFieldNumber = 11;
+    private int hp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Hp {
+      get { return hp_; }
+      set {
+        hp_ = value;
+      }
+    }
+
     /// <summary>Field number for the "rank" field.</summary>
-    public const int RankFieldNumber = 13;
+    public const int RankFieldNumber = 5;
     private uint rank_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -149,15 +149,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "max_hp" field.</summary>
-    public const int MaxHpFieldNumber = 11;
-    private int maxHp_;
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.FateMasterStatus status_ = global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int MaxHp {
-      get { return maxHp_; }
+    public global::EggLink.DanhengServer.Proto.FateMasterStatus Status {
+      get { return status_; }
       set {
-        maxHp_ = value;
+        status_ = value;
       }
     }
 
@@ -176,12 +176,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Status != other.Status) return false;
-      if (Hp != other.Hp) return false;
+      if (MaxHp != other.MaxHp) return false;
       if (AvatarId != other.AvatarId) return false;
       if(!mHGDGGNIJCG_.Equals(other.mHGDGGNIJCG_)) return false;
+      if (Hp != other.Hp) return false;
       if (Rank != other.Rank) return false;
-      if (MaxHp != other.MaxHp) return false;
+      if (Status != other.Status) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -189,12 +189,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Status != global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone) hash ^= Status.GetHashCode();
-      if (Hp != 0) hash ^= Hp.GetHashCode();
+      if (MaxHp != 0) hash ^= MaxHp.GetHashCode();
       if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
       hash ^= mHGDGGNIJCG_.GetHashCode();
+      if (Hp != 0) hash ^= Hp.GetHashCode();
       if (Rank != 0) hash ^= Rank.GetHashCode();
-      if (MaxHp != 0) hash ^= MaxHp.GetHashCode();
+      if (Status != global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -213,26 +213,26 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      mHGDGGNIJCG_.WriteTo(output, _repeated_mHGDGGNIJCG_codec);
+      if (Rank != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Rank);
+      }
       if (AvatarId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteUInt32(AvatarId);
       }
       if (Status != global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteEnum((int) Status);
       }
-      if (MaxHp != 0) {
-        output.WriteRawTag(88);
-        output.WriteInt32(MaxHp);
-      }
-      if (Rank != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Rank);
-      }
+      mHGDGGNIJCG_.WriteTo(output, _repeated_mHGDGGNIJCG_codec);
       if (Hp != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteInt32(Hp);
+      }
+      if (MaxHp != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(MaxHp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -244,26 +244,26 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      mHGDGGNIJCG_.WriteTo(ref output, _repeated_mHGDGGNIJCG_codec);
+      if (Rank != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Rank);
+      }
       if (AvatarId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteUInt32(AvatarId);
       }
       if (Status != global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteEnum((int) Status);
       }
-      if (MaxHp != 0) {
-        output.WriteRawTag(88);
-        output.WriteInt32(MaxHp);
-      }
-      if (Rank != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Rank);
-      }
+      mHGDGGNIJCG_.WriteTo(ref output, _repeated_mHGDGGNIJCG_codec);
       if (Hp != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteInt32(Hp);
+      }
+      if (MaxHp != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(MaxHp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -275,21 +275,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Status != global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
-      }
-      if (Hp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Hp);
+      if (MaxHp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxHp);
       }
       if (AvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
       }
       size += mHGDGGNIJCG_.CalculateSize(_repeated_mHGDGGNIJCG_codec);
+      if (Hp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Hp);
+      }
       if (Rank != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Rank);
       }
-      if (MaxHp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxHp);
+      if (Status != global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -303,21 +303,21 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Status != global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone) {
-        Status = other.Status;
-      }
-      if (other.Hp != 0) {
-        Hp = other.Hp;
+      if (other.MaxHp != 0) {
+        MaxHp = other.MaxHp;
       }
       if (other.AvatarId != 0) {
         AvatarId = other.AvatarId;
       }
       mHGDGGNIJCG_.Add(other.mHGDGGNIJCG_);
+      if (other.Hp != 0) {
+        Hp = other.Hp;
+      }
       if (other.Rank != 0) {
         Rank = other.Rank;
       }
-      if (other.MaxHp != 0) {
-        MaxHp = other.MaxHp;
+      if (other.Status != global::EggLink.DanhengServer.Proto.FateMasterStatus.TypeNone) {
+        Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -334,28 +334,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
-            mHGDGGNIJCG_.AddEntriesFrom(input, _repeated_mHGDGGNIJCG_codec);
-            break;
-          }
-          case 72: {
-            AvatarId = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            Status = (global::EggLink.DanhengServer.Proto.FateMasterStatus) input.ReadEnum();
-            break;
-          }
-          case 88: {
-            MaxHp = input.ReadInt32();
-            break;
-          }
-          case 104: {
+          case 40: {
             Rank = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 56: {
+            AvatarId = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            Status = (global::EggLink.DanhengServer.Proto.FateMasterStatus) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            mHGDGGNIJCG_.AddEntriesFrom(input, _repeated_mHGDGGNIJCG_codec);
+            break;
+          }
+          case 88: {
             Hp = input.ReadInt32();
+            break;
+          }
+          case 112: {
+            MaxHp = input.ReadInt32();
             break;
           }
         }
@@ -373,28 +373,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
-            mHGDGGNIJCG_.AddEntriesFrom(ref input, _repeated_mHGDGGNIJCG_codec);
-            break;
-          }
-          case 72: {
-            AvatarId = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            Status = (global::EggLink.DanhengServer.Proto.FateMasterStatus) input.ReadEnum();
-            break;
-          }
-          case 88: {
-            MaxHp = input.ReadInt32();
-            break;
-          }
-          case 104: {
+          case 40: {
             Rank = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 56: {
+            AvatarId = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            Status = (global::EggLink.DanhengServer.Proto.FateMasterStatus) input.ReadEnum();
+            break;
+          }
+          case 82: {
+            mHGDGGNIJCG_.AddEntriesFrom(ref input, _repeated_mHGDGGNIJCG_codec);
+            break;
+          }
+          case 88: {
             Hp = input.ReadInt32();
+            break;
+          }
+          case 112: {
+            MaxHp = input.ReadInt32();
             break;
           }
         }

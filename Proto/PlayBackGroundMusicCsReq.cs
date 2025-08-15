@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5QbGF5QmFja0dyb3VuZE11c2ljQ3NSZXEucHJvdG8iMQoYUGxheUJhY2tH",
-            "cm91bmRNdXNpY0NzUmVxEhUKDXBsYXlfbXVzaWNfaWQYDCABKA1CHqoCG0Vn",
+            "cm91bmRNdXNpY0NzUmVxEhUKDXBsYXlfbXVzaWNfaWQYAyABKA1CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "play_music_id" field.</summary>
-    public const int PlayMusicIdFieldNumber = 12;
+    public const int PlayMusicIdFieldNumber = 3;
     private uint playMusicId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PlayMusicId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(PlayMusicId);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PlayMusicId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(PlayMusicId);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
+          case 24: {
             PlayMusicId = input.ReadUInt32();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
+          case 24: {
             PlayMusicId = input.ReadUInt32();
             break;
           }

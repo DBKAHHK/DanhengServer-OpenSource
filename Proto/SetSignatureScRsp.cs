@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdTZXRTaWduYXR1cmVTY1JzcC5wcm90byI3ChFTZXRTaWduYXR1cmVTY1Jz",
-            "cBIPCgdyZXRjb2RlGAQgASgNEhEKCXNpZ25hdHVyZRgKIAEoCUIeqgIbRWdn",
+            "cBIPCgdyZXRjb2RlGAcgASgNEhEKCXNpZ25hdHVyZRgJIAEoCUIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "signature" field.</summary>
-    public const int SignatureFieldNumber = 10;
+    public const int SignatureFieldNumber = 9;
     private string signature_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (Signature.Length != 0) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(74);
         output.WriteString(Signature);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (Signature.Length != 0) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(74);
         output.WriteString(Signature);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 74: {
             Signature = input.ReadString();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 74: {
             Signature = input.ReadString();
             break;
           }

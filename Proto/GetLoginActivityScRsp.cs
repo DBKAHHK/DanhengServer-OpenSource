@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChtHZXRMb2dpbkFjdGl2aXR5U2NSc3AucHJvdG8aF0xvZ2luQWN0aXZpdHlE",
             "YXRhLnByb3RvIlkKFUdldExvZ2luQWN0aXZpdHlTY1JzcBIvChNsb2dpbl9h",
-            "Y3Rpdml0eV9saXN0GA4gAygLMhIuTG9naW5BY3Rpdml0eURhdGESDwoHcmV0",
-            "Y29kZRgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "Y3Rpdml0eV9saXN0GAwgAygLMhIuTG9naW5BY3Rpdml0eURhdGESDwoHcmV0",
+            "Y29kZRgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LoginActivityDataReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "login_activity_list" field.</summary>
-    public const int LoginActivityListFieldNumber = 14;
+    public const int LoginActivityListFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LoginActivityData> _repeated_loginActivityList_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.LoginActivityData.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.LoginActivityData.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LoginActivityData> loginActivityList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LoginActivityData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       loginActivityList_.WriteTo(output, _repeated_loginActivityList_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       loginActivityList_.WriteTo(ref output, _repeated_loginActivityList_codec);
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 98: {
             loginActivityList_.AddEntriesFrom(input, _repeated_loginActivityList_codec);
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 98: {
             loginActivityList_.AddEntriesFrom(ref input, _repeated_loginActivityList_codec);
             break;
           }

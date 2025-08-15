@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static OGFIODPILELReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFPR0ZJT0RQSUxFTC5wcm90byJMCgtPR0ZJT0RQSUxFTBITCgtETUtMTkpC",
-            "T0FCTxgOIAEoCBITCgtBS0hFSUxNTkRIShgEIAEoCBITCgtDQUNFS0VMTk1J",
+            "ChFPR0ZJT0RQSUxFTC5wcm90byJMCgtPR0ZJT0RQSUxFTBITCgtBS0hFSUxN",
+            "TkRIShgMIAEoCBITCgtETUtMTkpCT0FCTxgEIAEoCBITCgtDQUNFS0VMTk1J",
             "ThgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OGFIODPILEL), global::EggLink.DanhengServer.Proto.OGFIODPILEL.Parser, new[]{ "DMKLNJBOABO", "AKHEILMNDHJ", "CACEKELNMIN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OGFIODPILEL), global::EggLink.DanhengServer.Proto.OGFIODPILEL.Parser, new[]{ "AKHEILMNDHJ", "DMKLNJBOABO", "CACEKELNMIN" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OGFIODPILEL(OGFIODPILEL other) : this() {
-      dMKLNJBOABO_ = other.dMKLNJBOABO_;
       aKHEILMNDHJ_ = other.aKHEILMNDHJ_;
+      dMKLNJBOABO_ = other.dMKLNJBOABO_;
       cACEKELNMIN_ = other.cACEKELNMIN_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new OGFIODPILEL(this);
     }
 
-    /// <summary>Field number for the "DMKLNJBOABO" field.</summary>
-    public const int DMKLNJBOABOFieldNumber = 14;
-    private bool dMKLNJBOABO_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool DMKLNJBOABO {
-      get { return dMKLNJBOABO_; }
-      set {
-        dMKLNJBOABO_ = value;
-      }
-    }
-
     /// <summary>Field number for the "AKHEILMNDHJ" field.</summary>
-    public const int AKHEILMNDHJFieldNumber = 4;
+    public const int AKHEILMNDHJFieldNumber = 12;
     private bool aKHEILMNDHJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return aKHEILMNDHJ_; }
       set {
         aKHEILMNDHJ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "DMKLNJBOABO" field.</summary>
+    public const int DMKLNJBOABOFieldNumber = 4;
+    private bool dMKLNJBOABO_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DMKLNJBOABO {
+      get { return dMKLNJBOABO_; }
+      set {
+        dMKLNJBOABO_ = value;
       }
     }
 
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DMKLNJBOABO != other.DMKLNJBOABO) return false;
       if (AKHEILMNDHJ != other.AKHEILMNDHJ) return false;
+      if (DMKLNJBOABO != other.DMKLNJBOABO) return false;
       if (CACEKELNMIN != other.CACEKELNMIN) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DMKLNJBOABO != false) hash ^= DMKLNJBOABO.GetHashCode();
       if (AKHEILMNDHJ != false) hash ^= AKHEILMNDHJ.GetHashCode();
+      if (DMKLNJBOABO != false) hash ^= DMKLNJBOABO.GetHashCode();
       if (CACEKELNMIN != 0) hash ^= CACEKELNMIN.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(CACEKELNMIN);
       }
-      if (AKHEILMNDHJ != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(AKHEILMNDHJ);
-      }
       if (DMKLNJBOABO != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteBool(DMKLNJBOABO);
+      }
+      if (AKHEILMNDHJ != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(AKHEILMNDHJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -193,13 +193,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(CACEKELNMIN);
       }
-      if (AKHEILMNDHJ != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(AKHEILMNDHJ);
-      }
       if (DMKLNJBOABO != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteBool(DMKLNJBOABO);
+      }
+      if (AKHEILMNDHJ != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(AKHEILMNDHJ);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,10 +211,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DMKLNJBOABO != false) {
+      if (AKHEILMNDHJ != false) {
         size += 1 + 1;
       }
-      if (AKHEILMNDHJ != false) {
+      if (DMKLNJBOABO != false) {
         size += 1 + 1;
       }
       if (CACEKELNMIN != 0) {
@@ -232,11 +232,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DMKLNJBOABO != false) {
-        DMKLNJBOABO = other.DMKLNJBOABO;
-      }
       if (other.AKHEILMNDHJ != false) {
         AKHEILMNDHJ = other.AKHEILMNDHJ;
+      }
+      if (other.DMKLNJBOABO != false) {
+        DMKLNJBOABO = other.DMKLNJBOABO;
       }
       if (other.CACEKELNMIN != 0) {
         CACEKELNMIN = other.CACEKELNMIN;
@@ -261,11 +261,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 32: {
-            AKHEILMNDHJ = input.ReadBool();
+            DMKLNJBOABO = input.ReadBool();
             break;
           }
-          case 112: {
-            DMKLNJBOABO = input.ReadBool();
+          case 96: {
+            AKHEILMNDHJ = input.ReadBool();
             break;
           }
         }
@@ -288,11 +288,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 32: {
-            AKHEILMNDHJ = input.ReadBool();
+            DMKLNJBOABO = input.ReadBool();
             break;
           }
-          case 112: {
-            DMKLNJBOABO = input.ReadBool();
+          case 96: {
+            AKHEILMNDHJ = input.ReadBool();
             break;
           }
         }

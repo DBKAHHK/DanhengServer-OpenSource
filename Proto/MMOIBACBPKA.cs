@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFNTU9JQkFDQlBLQS5wcm90bxoRSERJSkpNRFBJTEUucHJvdG8iPwoLTU1P",
-            "SUJBQ0JQS0ESDQoFdmFsdWUYDiABKA0SIQoLUEpHQkZLTkpQTk8YBSABKA4y",
+            "SUJBQ0JQS0ESDQoFdmFsdWUYCiABKA0SIQoLUEpHQkZLTkpQTk8YBSABKA4y",
             "DC5IRElKSk1EUElMRUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "value" field.</summary>
-    public const int ValueFieldNumber = 14;
+    public const int ValueFieldNumber = 10;
     private uint value_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteEnum((int) PJGBFKNJPNO);
       }
       if (Value != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteUInt32(Value);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteEnum((int) PJGBFKNJPNO);
       }
       if (Value != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteUInt32(Value);
       }
       if (_unknownFields != null) {
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             PJGBFKNJPNO = (global::EggLink.DanhengServer.Proto.HDIJJMDPILE) input.ReadEnum();
             break;
           }
-          case 112: {
+          case 80: {
             Value = input.ReadUInt32();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             PJGBFKNJPNO = (global::EggLink.DanhengServer.Proto.HDIJJMDPILE) input.ReadEnum();
             break;
           }
-          case 112: {
+          case 80: {
             Value = input.ReadUInt32();
             break;
           }

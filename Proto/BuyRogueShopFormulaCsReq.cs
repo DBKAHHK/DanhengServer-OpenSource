@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5CdXlSb2d1ZVNob3BGb3JtdWxhQ3NSZXEucHJvdG8iUgoYQnV5Um9ndWVT",
-            "aG9wRm9ybXVsYUNzUmVxEhMKC0FPSUlIQ0ZNRlBIGAggAygNEiEKGWludGVy",
-            "YWN0ZWRfcHJvcF9lbnRpdHlfaWQYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "aG9wRm9ybXVsYUNzUmVxEhMKC0FPSUlIQ0ZNRlBIGAUgAygNEiEKGWludGVy",
+            "YWN0ZWRfcHJvcF9lbnRpdHlfaWQYAiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "AOIIHCFMFPH" field.</summary>
-    public const int AOIIHCFMFPHFieldNumber = 8;
+    public const int AOIIHCFMFPHFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_aOIIHCFMFPH_codec
-        = pb::FieldCodec.ForUInt32(66);
+        = pb::FieldCodec.ForUInt32(42);
     private readonly pbc::RepeatedField<uint> aOIIHCFMFPH_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "interacted_prop_entity_id" field.</summary>
-    public const int InteractedPropEntityIdFieldNumber = 9;
+    public const int InteractedPropEntityIdFieldNumber = 2;
     private uint interactedPropEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      aOIIHCFMFPH_.WriteTo(output, _repeated_aOIIHCFMFPH_codec);
       if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteUInt32(InteractedPropEntityId);
       }
+      aOIIHCFMFPH_.WriteTo(output, _repeated_aOIIHCFMFPH_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      aOIIHCFMFPH_.WriteTo(ref output, _repeated_aOIIHCFMFPH_codec);
       if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteUInt32(InteractedPropEntityId);
       }
+      aOIIHCFMFPH_.WriteTo(ref output, _repeated_aOIIHCFMFPH_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66:
-          case 64: {
-            aOIIHCFMFPH_.AddEntriesFrom(input, _repeated_aOIIHCFMFPH_codec);
+          case 16: {
+            InteractedPropEntityId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            InteractedPropEntityId = input.ReadUInt32();
+          case 42:
+          case 40: {
+            aOIIHCFMFPH_.AddEntriesFrom(input, _repeated_aOIIHCFMFPH_codec);
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66:
-          case 64: {
-            aOIIHCFMFPH_.AddEntriesFrom(ref input, _repeated_aOIIHCFMFPH_codec);
+          case 16: {
+            InteractedPropEntityId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            InteractedPropEntityId = input.ReadUInt32();
+          case 42:
+          case 40: {
+            aOIIHCFMFPH_.AddEntriesFrom(ref input, _repeated_aOIIHCFMFPH_codec);
             break;
           }
         }

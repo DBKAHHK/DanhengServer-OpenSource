@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChhFcmFGbGlwcGVyRGF0YUxpc3QucHJvdG8aFEVyYUZsaXBwZXJEYXRhLnBy",
             "b3RvIkQKEkVyYUZsaXBwZXJEYXRhTGlzdBIuChVlcmFfZmxpcHBlcl9kYXRh",
-            "X2xpc3QYDyADKAsyDy5FcmFGbGlwcGVyRGF0YUIeqgIbRWdnTGluay5EYW5o",
+            "X2xpc3QYCCADKAsyDy5FcmFGbGlwcGVyRGF0YUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EraFlipperDataReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "era_flipper_data_list" field.</summary>
-    public const int EraFlipperDataList_FieldNumber = 15;
+    public const int EraFlipperDataList_FieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EraFlipperData> _repeated_eraFlipperDataList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.EraFlipperData.Parser);
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.EraFlipperData.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EraFlipperData> eraFlipperDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EraFlipperData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 122: {
+          case 66: {
             eraFlipperDataList_.AddEntriesFrom(input, _repeated_eraFlipperDataList_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 122: {
+          case 66: {
             eraFlipperDataList_.AddEntriesFrom(ref input, _repeated_eraFlipperDataList_codec);
             break;
           }

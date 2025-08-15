@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFGS0JGT09FRlBBRS5wcm90bxobUm9ndWVDb2xsZWN0aW9uU3RhdHVzLnBy",
-            "b3RvIkoKC0ZLQkZPT0VGUEFFEiYKBnN0YXR1cxgKIAEoDjIWLlJvZ3VlQ29s",
-            "bGVjdGlvblN0YXR1cxITCgtJTkZCSFBHRExORBgIIAEoDUIeqgIbRWdnTGlu",
+            "b3RvIkoKC0ZLQkZPT0VGUEFFEiYKBnN0YXR1cxgJIAEoDjIWLlJvZ3VlQ29s",
+            "bGVjdGlvblN0YXR1cxITCgtJTkZCSFBHRExORBgPIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCollectionStatusReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 10;
+    public const int StatusFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.RogueCollectionStatus status_ = global::EggLink.DanhengServer.Proto.RogueCollectionStatus.RogueCollectionNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "INFBHPGDLND" field.</summary>
-    public const int INFBHPGDLNDFieldNumber = 8;
+    public const int INFBHPGDLNDFieldNumber = 15;
     private uint iNFBHPGDLND_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (INFBHPGDLND != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(INFBHPGDLND);
-      }
       if (Status != global::EggLink.DanhengServer.Proto.RogueCollectionStatus.RogueCollectionNone) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteEnum((int) Status);
+      }
+      if (INFBHPGDLND != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(INFBHPGDLND);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (INFBHPGDLND != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(INFBHPGDLND);
-      }
       if (Status != global::EggLink.DanhengServer.Proto.RogueCollectionStatus.RogueCollectionNone) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteEnum((int) Status);
+      }
+      if (INFBHPGDLND != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(INFBHPGDLND);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            INFBHPGDLND = input.ReadUInt32();
+          case 72: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueCollectionStatus) input.ReadEnum();
             break;
           }
-          case 80: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueCollectionStatus) input.ReadEnum();
+          case 120: {
+            INFBHPGDLND = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            INFBHPGDLND = input.ReadUInt32();
+          case 72: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueCollectionStatus) input.ReadEnum();
             break;
           }
-          case 80: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueCollectionStatus) input.ReadEnum();
+          case 120: {
+            INFBHPGDLND = input.ReadUInt32();
             break;
           }
         }

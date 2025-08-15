@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFISFBJQUZCSEpDRi5wcm90byIxCgtISFBJQUZCSEpDRhIRCglvcHRpb25f",
-            "aWQYCyABKA0SDwoHY29uZmlybRgEIAEoCEIeqgIbRWdnTGluay5EYW5oZW5n",
+            "aWQYBSABKA0SDwoHY29uZmlybRgLIAEoCEIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "option_id" field.</summary>
-    public const int OptionIdFieldNumber = 11;
+    public const int OptionIdFieldNumber = 5;
     private uint optionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "confirm" field.</summary>
-    public const int ConfirmFieldNumber = 4;
+    public const int ConfirmFieldNumber = 11;
     private bool confirm_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Confirm != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(Confirm);
-      }
       if (OptionId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt32(OptionId);
+      }
+      if (Confirm != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(Confirm);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Confirm != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(Confirm);
-      }
       if (OptionId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteUInt32(OptionId);
+      }
+      if (Confirm != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(Confirm);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            Confirm = input.ReadBool();
+          case 40: {
+            OptionId = input.ReadUInt32();
             break;
           }
           case 88: {
-            OptionId = input.ReadUInt32();
+            Confirm = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            Confirm = input.ReadBool();
+          case 40: {
+            OptionId = input.ReadUInt32();
             break;
           }
           case 88: {
-            OptionId = input.ReadUInt32();
+            Confirm = input.ReadBool();
             break;
           }
         }

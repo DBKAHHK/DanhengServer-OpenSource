@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChBSYWNpbmdEYXRhLnByb3RvGhVNb3ZpZVJhY2luZ1R5cGUucHJvdG8iZQoK",
-            "UmFjaW5nRGF0YRIeCgR0eXBlGAMgASgOMhAuTW92aWVSYWNpbmdUeXBlEhMK",
-            "C0lGQUlLT0lPSUREGA8gASgNEg0KBWxldmVsGAUgASgNEhMKC1BET01BQ0ZF",
-            "TUdHGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "UmFjaW5nRGF0YRITCgtQRE9NQUNGRU1HRxgHIAEoDRITCgtJRkFJS09JT0lE",
+            "RBgCIAEoDRINCgVsZXZlbBgDIAEoDRIeCgR0eXBlGAEgASgOMhAuTW92aWVS",
+            "YWNpbmdUeXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MovieRacingTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RacingData), global::EggLink.DanhengServer.Proto.RacingData.Parser, new[]{ "Type", "IFAIKOIOIDD", "Level", "PDOMACFEMGG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RacingData), global::EggLink.DanhengServer.Proto.RacingData.Parser, new[]{ "PDOMACFEMGG", "IFAIKOIOIDD", "Level", "Type" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RacingData(RacingData other) : this() {
-      type_ = other.type_;
+      pDOMACFEMGG_ = other.pDOMACFEMGG_;
       iFAIKOIOIDD_ = other.iFAIKOIOIDD_;
       level_ = other.level_;
-      pDOMACFEMGG_ = other.pDOMACFEMGG_;
+      type_ = other.type_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,20 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new RacingData(this);
     }
 
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.MovieRacingType type_ = global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake;
+    /// <summary>Field number for the "PDOMACFEMGG" field.</summary>
+    public const int PDOMACFEMGGFieldNumber = 7;
+    private uint pDOMACFEMGG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MovieRacingType Type {
-      get { return type_; }
+    public uint PDOMACFEMGG {
+      get { return pDOMACFEMGG_; }
       set {
-        type_ = value;
+        pDOMACFEMGG_ = value;
       }
     }
 
     /// <summary>Field number for the "IFAIKOIOIDD" field.</summary>
-    public const int IFAIKOIOIDDFieldNumber = 15;
+    public const int IFAIKOIOIDDFieldNumber = 2;
     private uint iFAIKOIOIDD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 5;
+    public const int LevelFieldNumber = 3;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,15 +123,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PDOMACFEMGG" field.</summary>
-    public const int PDOMACFEMGGFieldNumber = 9;
-    private uint pDOMACFEMGG_;
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.MovieRacingType type_ = global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PDOMACFEMGG {
-      get { return pDOMACFEMGG_; }
+    public global::EggLink.DanhengServer.Proto.MovieRacingType Type {
+      get { return type_; }
       set {
-        pDOMACFEMGG_ = value;
+        type_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Type != other.Type) return false;
+      if (PDOMACFEMGG != other.PDOMACFEMGG) return false;
       if (IFAIKOIOIDD != other.IFAIKOIOIDD) return false;
       if (Level != other.Level) return false;
-      if (PDOMACFEMGG != other.PDOMACFEMGG) return false;
+      if (Type != other.Type) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) hash ^= Type.GetHashCode();
+      if (PDOMACFEMGG != 0) hash ^= PDOMACFEMGG.GetHashCode();
       if (IFAIKOIOIDD != 0) hash ^= IFAIKOIOIDD.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
-      if (PDOMACFEMGG != 0) hash ^= PDOMACFEMGG.GetHashCode();
+      if (Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) hash ^= Type.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,20 +184,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
+      if (IFAIKOIOIDD != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(IFAIKOIOIDD);
+      }
       if (Level != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(Level);
       }
       if (PDOMACFEMGG != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteUInt32(PDOMACFEMGG);
-      }
-      if (IFAIKOIOIDD != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(IFAIKOIOIDD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -210,20 +210,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
+      if (IFAIKOIOIDD != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(IFAIKOIOIDD);
+      }
       if (Level != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(Level);
       }
       if (PDOMACFEMGG != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(56);
         output.WriteUInt32(PDOMACFEMGG);
-      }
-      if (IFAIKOIOIDD != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(IFAIKOIOIDD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      if (PDOMACFEMGG != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PDOMACFEMGG);
       }
       if (IFAIKOIOIDD != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IFAIKOIOIDD);
@@ -244,8 +244,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
-      if (PDOMACFEMGG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PDOMACFEMGG);
+      if (Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,8 +259,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) {
-        Type = other.Type;
+      if (other.PDOMACFEMGG != 0) {
+        PDOMACFEMGG = other.PDOMACFEMGG;
       }
       if (other.IFAIKOIOIDD != 0) {
         IFAIKOIOIDD = other.IFAIKOIOIDD;
@@ -268,8 +268,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Level != 0) {
         Level = other.Level;
       }
-      if (other.PDOMACFEMGG != 0) {
-        PDOMACFEMGG = other.PDOMACFEMGG;
+      if (other.Type != global::EggLink.DanhengServer.Proto.MovieRacingType.MovieRacingOverTake) {
+        Type = other.Type;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -286,20 +286,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 8: {
             Type = (global::EggLink.DanhengServer.Proto.MovieRacingType) input.ReadEnum();
             break;
           }
-          case 40: {
+          case 16: {
+            IFAIKOIOIDD = input.ReadUInt32();
+            break;
+          }
+          case 24: {
             Level = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 56: {
             PDOMACFEMGG = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            IFAIKOIOIDD = input.ReadUInt32();
             break;
           }
         }
@@ -317,20 +317,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 8: {
             Type = (global::EggLink.DanhengServer.Proto.MovieRacingType) input.ReadEnum();
             break;
           }
-          case 40: {
+          case 16: {
+            IFAIKOIOIDD = input.ReadUInt32();
+            break;
+          }
+          case 24: {
             Level = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 56: {
             PDOMACFEMGG = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            IFAIKOIOIDD = input.ReadUInt32();
             break;
           }
         }

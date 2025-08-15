@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static SceneGroupStateReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVTY2VuZUdyb3VwU3RhdGUucHJvdG8iRgoPU2NlbmVHcm91cFN0YXRlEhAK",
-            "CGdyb3VwX2lkGAIgASgNEg0KBXN0YXRlGAkgASgNEhIKCmlzX2RlZmF1bHQY",
-            "BCABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChVTY2VuZUdyb3VwU3RhdGUucHJvdG8iRgoPU2NlbmVHcm91cFN0YXRlEg0K",
+            "BXN0YXRlGAYgASgNEhAKCGdyb3VwX2lkGAggASgNEhIKCmlzX2RlZmF1bHQY",
+            "DCABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneGroupState), global::EggLink.DanhengServer.Proto.SceneGroupState.Parser, new[]{ "GroupId", "State", "IsDefault" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneGroupState), global::EggLink.DanhengServer.Proto.SceneGroupState.Parser, new[]{ "State", "GroupId", "IsDefault" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneGroupState(SceneGroupState other) : this() {
-      groupId_ = other.groupId_;
       state_ = other.state_;
+      groupId_ = other.groupId_;
       isDefault_ = other.isDefault_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new SceneGroupState(this);
     }
 
-    /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 2;
-    private uint groupId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GroupId {
-      get { return groupId_; }
-      set {
-        groupId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "state" field.</summary>
-    public const int StateFieldNumber = 9;
+    public const int StateFieldNumber = 6;
     private uint state_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,8 +96,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "group_id" field.</summary>
+    public const int GroupIdFieldNumber = 8;
+    private uint groupId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GroupId {
+      get { return groupId_; }
+      set {
+        groupId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "is_default" field.</summary>
-    public const int IsDefaultFieldNumber = 4;
+    public const int IsDefaultFieldNumber = 12;
     private bool isDefault_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,8 +135,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GroupId != other.GroupId) return false;
       if (State != other.State) return false;
+      if (GroupId != other.GroupId) return false;
       if (IsDefault != other.IsDefault) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -145,8 +145,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (State != 0) hash ^= State.GetHashCode();
+      if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (IsDefault != false) hash ^= IsDefault.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (State != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(State);
+      }
       if (GroupId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(64);
         output.WriteUInt32(GroupId);
       }
       if (IsDefault != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(96);
         output.WriteBool(IsDefault);
-      }
-      if (State != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(State);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (State != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(State);
+      }
       if (GroupId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(64);
         output.WriteUInt32(GroupId);
       }
       if (IsDefault != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(96);
         output.WriteBool(IsDefault);
-      }
-      if (State != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(State);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -210,11 +210,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GroupId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
-      }
       if (State != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(State);
+      }
+      if (GroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
       if (IsDefault != false) {
         size += 1 + 1;
@@ -231,11 +231,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GroupId != 0) {
-        GroupId = other.GroupId;
-      }
       if (other.State != 0) {
         State = other.State;
+      }
+      if (other.GroupId != 0) {
+        GroupId = other.GroupId;
       }
       if (other.IsDefault != false) {
         IsDefault = other.IsDefault;
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 48: {
+            State = input.ReadUInt32();
+            break;
+          }
+          case 64: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 32: {
+          case 96: {
             IsDefault = input.ReadBool();
-            break;
-          }
-          case 72: {
-            State = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 48: {
+            State = input.ReadUInt32();
+            break;
+          }
+          case 64: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 32: {
+          case 96: {
             IsDefault = input.ReadBool();
-            break;
-          }
-          case 72: {
-            State = input.ReadUInt32();
             break;
           }
         }

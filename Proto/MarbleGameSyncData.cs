@@ -24,33 +24,33 @@ namespace EggLink.DanhengServer.Proto {
     static MarbleGameSyncDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhNYXJibGVHYW1lU3luY0RhdGEucHJvdG8aEUZJUFBLTENPRUdKLnByb3Rv",
-            "GhZNYXJibGVTZWFsVmVjdG9yLnByb3RvGhVNYXJibGVGcmFtZVR5cGUucHJv",
-            "dG8aF01hcmJsZUZhY3Rpb25UeXBlLnByb3RvIscGChJNYXJibGVHYW1lU3lu",
-            "Y0RhdGESGAoQY29sbGlkZV9vd25lcl9pZBgHIAEoDRIOCgVsZXZlbBjnCyAB",
-            "KA0SEAoIc2tpbGxfaWQYCiABKA0SDgoGbWF4X2hwGAsgASgFEhIKCXNlYWxf",
-            "c2l6ZRizByABKAISFwoOcGxheWVyX2Jfc2NvcmUYygogASgNEigKDGNvbGxp",
-            "ZGVfdHlwZRgBIAEoDjISLk1hcmJsZUZhY3Rpb25UeXBlEhQKC0pMQ0lLQkxO",
-            "RU5IGLUDIAEoDRItChJjb2xsaXNpb25fcG9zaXRpb24YBCABKAsyES5NYXJi",
-            "bGVTZWFsVmVjdG9yEiEKC0NDTE1GQUJERU5BGCEgASgOMgwuRklQUEtMQ09F",
-            "R0oSFgoNaGl0X2xlZnRfdGltZRiVDCABKAISJAoKZnJhbWVfdHlwZRgDIAEo",
-            "DjIQLk1hcmJsZUZyYW1lVHlwZRIMCgR0aW1lGAwgASgCEg4KBmF0dGFjaxgI",
-            "IAEoBRIWCg1zZWFsX29uX3N0YWdlGKAIIAEoCBIQCgd0ZWNoX2lkGOgEIAEo",
-            "DRIUCgtOQktFTENISUxHRxikCiABKAgSFwoOcGxheWVyX2Ffc2NvcmUY2gIg",
-            "ASgNEjQKGWNvbGxpc2lvbl90YXJnZXRfdmVsb2NpdHkYDSABKAsyES5NYXJi",
-            "bGVTZWFsVmVjdG9yEigKDXNlYWxfcG9zaXRpb24YCSABKAsyES5NYXJibGVT",
-            "ZWFsVmVjdG9yEigKDXNlYWxfdmVsb2NpdHkYAiABKAsyES5NYXJibGVTZWFs",
-            "VmVjdG9yEhYKDWhpdF90YXJnZXRfaWQYvgQgASgNEhwKE2lzX2VmZmVjdF9h",
-            "dmFpbGFibGUY8AYgASgIEhYKDXNlYWxfc2tpbGxfaWQYxAEgASgNEhkKEWNv",
-            "bGxpZGVfdGFyZ2V0X2lkGA4gASgNEhAKB2J1ZmZfaWQY9w0gASgNEigKDXNl",
-            "YWxfcm90YXRpb24YDyABKAsyES5NYXJibGVTZWFsVmVjdG9yEgoKAmlkGAYg",
-            "ASgNEhAKB3RleHRfaWQY0wggASgNEhgKD2hwX2NoYW5nZV92YWx1ZRjIDSAB",
-            "KAUSCgoCaHAYBSABKAVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "ChhNYXJibGVHYW1lU3luY0RhdGEucHJvdG8aF01hcmJsZUZhY3Rpb25UeXBl",
+            "LnByb3RvGhVNYXJibGVGcmFtZVR5cGUucHJvdG8aFk1hcmJsZVNlYWxWZWN0",
+            "b3IucHJvdG8aEUZJUFBLTENPRUdKLnByb3RvIsgGChJNYXJibGVHYW1lU3lu",
+            "Y0RhdGESFAoLTkJLRUxDSElMR0cY3wYgASgIEgwKBHRpbWUYAiABKAISKAoN",
+            "c2VhbF9yb3RhdGlvbhgGIAEoCzIRLk1hcmJsZVNlYWxWZWN0b3ISCgoCaHAY",
+            "DCABKAUSEAoHdGVjaF9pZBjFBiABKA0SFgoNc2VhbF9za2lsbF9pZBjxDyAB",
+            "KA0SFgoNc2VhbF9vbl9zdGFnZRiZDSABKAgSKAoNc2VhbF9wb3NpdGlvbhgO",
+            "IAEoCzIRLk1hcmJsZVNlYWxWZWN0b3ISEAoHYnVmZl9pZBitDiABKA0SFAoL",
+            "SkxDSUtCTE5FTkgY9wcgASgNEigKDXNlYWxfdmVsb2NpdHkYBSABKAsyES5N",
+            "YXJibGVTZWFsVmVjdG9yEiQKCmZyYW1lX3R5cGUYASABKA4yEC5NYXJibGVG",
+            "cmFtZVR5cGUSIgoLQ0NMTUZBQkRFTkEY6gkgASgOMgwuRklQUEtMQ09FR0oS",
+            "CgoCaWQYCyABKA0SKAoMY29sbGlkZV90eXBlGAogASgOMhIuTWFyYmxlRmFj",
+            "dGlvblR5cGUSHAoTaXNfZWZmZWN0X2F2YWlsYWJsZRjIAyABKAgSLQoSY29s",
+            "bGlzaW9uX3Bvc2l0aW9uGAkgASgLMhEuTWFyYmxlU2VhbFZlY3RvchIWCg1o",
+            "aXRfbGVmdF90aW1lGMsMIAEoAhISCglzZWFsX3NpemUYwAwgASgCEhcKDnBs",
+            "YXllcl9iX3Njb3JlGOsOIAEoDRIOCgVsZXZlbBjfCCABKA0SFgoNaGl0X3Rh",
+            "cmdldF9pZBjXBCABKA0SDgoGbWF4X2hwGAMgASgFEhAKB3RleHRfaWQY4Q8g",
+            "ASgNEg4KBmF0dGFjaxgIIAEoBRIYChBjb2xsaWRlX293bmVyX2lkGA8gASgN",
+            "EhcKDnBsYXllcl9hX3Njb3JlGP0GIAEoDRIYCg9ocF9jaGFuZ2VfdmFsdWUY",
+            "5wcgASgFEhkKEWNvbGxpZGVfdGFyZ2V0X2lkGAcgASgNEhAKCHNraWxsX2lk",
+            "GAQgASgNEjQKGWNvbGxpc2lvbl90YXJnZXRfdmVsb2NpdHkYDSABKAsyES5N",
+            "YXJibGVTZWFsVmVjdG9yQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FIPPKLCOEGJReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleSealVectorReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleFrameTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleFactionTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleFactionTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleFrameTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleSealVectorReflection.Descriptor, global::EggLink.DanhengServer.Proto.FIPPKLCOEGJReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGameSyncData), global::EggLink.DanhengServer.Proto.MarbleGameSyncData.Parser, new[]{ "CollideOwnerId", "Level", "SkillId", "MaxHp", "SealSize", "PlayerBScore", "CollideType", "JLCIKBLNENH", "CollisionPosition", "CCLMFABDENA", "HitLeftTime", "FrameType", "Time", "Attack", "SealOnStage", "TechId", "NBKELCHILGG", "PlayerAScore", "CollisionTargetVelocity", "SealPosition", "SealVelocity", "HitTargetId", "IsEffectAvailable", "SealSkillId", "CollideTargetId", "BuffId", "SealRotation", "Id", "TextId", "HpChangeValue", "Hp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGameSyncData), global::EggLink.DanhengServer.Proto.MarbleGameSyncData.Parser, new[]{ "NBKELCHILGG", "Time", "SealRotation", "Hp", "TechId", "SealSkillId", "SealOnStage", "SealPosition", "BuffId", "JLCIKBLNENH", "SealVelocity", "FrameType", "CCLMFABDENA", "Id", "CollideType", "IsEffectAvailable", "CollisionPosition", "HitLeftTime", "SealSize", "PlayerBScore", "Level", "HitTargetId", "MaxHp", "TextId", "Attack", "CollideOwnerId", "PlayerAScore", "HpChangeValue", "CollideTargetId", "SkillId", "CollisionTargetVelocity" }, null, null, null, null)
           }));
     }
     #endregion
@@ -92,37 +92,37 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarbleGameSyncData(MarbleGameSyncData other) : this() {
-      collideOwnerId_ = other.collideOwnerId_;
-      level_ = other.level_;
-      skillId_ = other.skillId_;
-      maxHp_ = other.maxHp_;
+      nBKELCHILGG_ = other.nBKELCHILGG_;
+      time_ = other.time_;
+      sealRotation_ = other.sealRotation_ != null ? other.sealRotation_.Clone() : null;
+      hp_ = other.hp_;
+      techId_ = other.techId_;
+      sealSkillId_ = other.sealSkillId_;
+      sealOnStage_ = other.sealOnStage_;
+      sealPosition_ = other.sealPosition_ != null ? other.sealPosition_.Clone() : null;
+      buffId_ = other.buffId_;
+      jLCIKBLNENH_ = other.jLCIKBLNENH_;
+      sealVelocity_ = other.sealVelocity_ != null ? other.sealVelocity_.Clone() : null;
+      frameType_ = other.frameType_;
+      cCLMFABDENA_ = other.cCLMFABDENA_;
+      id_ = other.id_;
+      collideType_ = other.collideType_;
+      isEffectAvailable_ = other.isEffectAvailable_;
+      collisionPosition_ = other.collisionPosition_ != null ? other.collisionPosition_.Clone() : null;
+      hitLeftTime_ = other.hitLeftTime_;
       sealSize_ = other.sealSize_;
       playerBScore_ = other.playerBScore_;
-      collideType_ = other.collideType_;
-      jLCIKBLNENH_ = other.jLCIKBLNENH_;
-      collisionPosition_ = other.collisionPosition_ != null ? other.collisionPosition_.Clone() : null;
-      cCLMFABDENA_ = other.cCLMFABDENA_;
-      hitLeftTime_ = other.hitLeftTime_;
-      frameType_ = other.frameType_;
-      time_ = other.time_;
-      attack_ = other.attack_;
-      sealOnStage_ = other.sealOnStage_;
-      techId_ = other.techId_;
-      nBKELCHILGG_ = other.nBKELCHILGG_;
-      playerAScore_ = other.playerAScore_;
-      collisionTargetVelocity_ = other.collisionTargetVelocity_ != null ? other.collisionTargetVelocity_.Clone() : null;
-      sealPosition_ = other.sealPosition_ != null ? other.sealPosition_.Clone() : null;
-      sealVelocity_ = other.sealVelocity_ != null ? other.sealVelocity_.Clone() : null;
+      level_ = other.level_;
       hitTargetId_ = other.hitTargetId_;
-      isEffectAvailable_ = other.isEffectAvailable_;
-      sealSkillId_ = other.sealSkillId_;
-      collideTargetId_ = other.collideTargetId_;
-      buffId_ = other.buffId_;
-      sealRotation_ = other.sealRotation_ != null ? other.sealRotation_.Clone() : null;
-      id_ = other.id_;
+      maxHp_ = other.maxHp_;
       textId_ = other.textId_;
+      attack_ = other.attack_;
+      collideOwnerId_ = other.collideOwnerId_;
+      playerAScore_ = other.playerAScore_;
       hpChangeValue_ = other.hpChangeValue_;
-      hp_ = other.hp_;
+      collideTargetId_ = other.collideTargetId_;
+      skillId_ = other.skillId_;
+      collisionTargetVelocity_ = other.collisionTargetVelocity_ != null ? other.collisionTargetVelocity_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -132,56 +132,224 @@ namespace EggLink.DanhengServer.Proto {
       return new MarbleGameSyncData(this);
     }
 
-    /// <summary>Field number for the "collide_owner_id" field.</summary>
-    public const int CollideOwnerIdFieldNumber = 7;
-    private uint collideOwnerId_;
+    /// <summary>Field number for the "NBKELCHILGG" field.</summary>
+    public const int NBKELCHILGGFieldNumber = 863;
+    private bool nBKELCHILGG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CollideOwnerId {
-      get { return collideOwnerId_; }
+    public bool NBKELCHILGG {
+      get { return nBKELCHILGG_; }
       set {
-        collideOwnerId_ = value;
+        nBKELCHILGG_ = value;
       }
     }
 
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 1511;
-    private uint level_;
+    /// <summary>Field number for the "time" field.</summary>
+    public const int TimeFieldNumber = 2;
+    private float time_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Level {
-      get { return level_; }
+    public float Time {
+      get { return time_; }
       set {
-        level_ = value;
+        time_ = value;
       }
     }
 
-    /// <summary>Field number for the "skill_id" field.</summary>
-    public const int SkillIdFieldNumber = 10;
-    private uint skillId_;
+    /// <summary>Field number for the "seal_rotation" field.</summary>
+    public const int SealRotationFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.MarbleSealVector sealRotation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SkillId {
-      get { return skillId_; }
+    public global::EggLink.DanhengServer.Proto.MarbleSealVector SealRotation {
+      get { return sealRotation_; }
       set {
-        skillId_ = value;
+        sealRotation_ = value;
       }
     }
 
-    /// <summary>Field number for the "max_hp" field.</summary>
-    public const int MaxHpFieldNumber = 11;
-    private int maxHp_;
+    /// <summary>Field number for the "hp" field.</summary>
+    public const int HpFieldNumber = 12;
+    private int hp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int MaxHp {
-      get { return maxHp_; }
+    public int Hp {
+      get { return hp_; }
       set {
-        maxHp_ = value;
+        hp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tech_id" field.</summary>
+    public const int TechIdFieldNumber = 837;
+    private uint techId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TechId {
+      get { return techId_; }
+      set {
+        techId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "seal_skill_id" field.</summary>
+    public const int SealSkillIdFieldNumber = 2033;
+    private uint sealSkillId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SealSkillId {
+      get { return sealSkillId_; }
+      set {
+        sealSkillId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "seal_on_stage" field.</summary>
+    public const int SealOnStageFieldNumber = 1689;
+    private bool sealOnStage_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SealOnStage {
+      get { return sealOnStage_; }
+      set {
+        sealOnStage_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "seal_position" field.</summary>
+    public const int SealPositionFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.MarbleSealVector sealPosition_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MarbleSealVector SealPosition {
+      get { return sealPosition_; }
+      set {
+        sealPosition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "buff_id" field.</summary>
+    public const int BuffIdFieldNumber = 1837;
+    private uint buffId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BuffId {
+      get { return buffId_; }
+      set {
+        buffId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "JLCIKBLNENH" field.</summary>
+    public const int JLCIKBLNENHFieldNumber = 1015;
+    private uint jLCIKBLNENH_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint JLCIKBLNENH {
+      get { return jLCIKBLNENH_; }
+      set {
+        jLCIKBLNENH_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "seal_velocity" field.</summary>
+    public const int SealVelocityFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.MarbleSealVector sealVelocity_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MarbleSealVector SealVelocity {
+      get { return sealVelocity_; }
+      set {
+        sealVelocity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "frame_type" field.</summary>
+    public const int FrameTypeFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.MarbleFrameType frameType_ = global::EggLink.DanhengServer.Proto.MarbleFrameType.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MarbleFrameType FrameType {
+      get { return frameType_; }
+      set {
+        frameType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CCLMFABDENA" field.</summary>
+    public const int CCLMFABDENAFieldNumber = 1258;
+    private global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ cCLMFABDENA_ = global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ.MarbleHpChangeTypeNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ CCLMFABDENA {
+      get { return cCLMFABDENA_; }
+      set {
+        cCLMFABDENA_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 11;
+    private uint id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "collide_type" field.</summary>
+    public const int CollideTypeFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.MarbleFactionType collideType_ = global::EggLink.DanhengServer.Proto.MarbleFactionType.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MarbleFactionType CollideType {
+      get { return collideType_; }
+      set {
+        collideType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_effect_available" field.</summary>
+    public const int IsEffectAvailableFieldNumber = 456;
+    private bool isEffectAvailable_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsEffectAvailable {
+      get { return isEffectAvailable_; }
+      set {
+        isEffectAvailable_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "collision_position" field.</summary>
+    public const int CollisionPositionFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.MarbleSealVector collisionPosition_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MarbleSealVector CollisionPosition {
+      get { return collisionPosition_; }
+      set {
+        collisionPosition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hit_left_time" field.</summary>
+    public const int HitLeftTimeFieldNumber = 1611;
+    private float hitLeftTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float HitLeftTime {
+      get { return hitLeftTime_; }
+      set {
+        hitLeftTime_ = value;
       }
     }
 
     /// <summary>Field number for the "seal_size" field.</summary>
-    public const int SealSizeFieldNumber = 947;
+    public const int SealSizeFieldNumber = 1600;
     private float sealSize_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -193,7 +361,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "player_b_score" field.</summary>
-    public const int PlayerBScoreFieldNumber = 1354;
+    public const int PlayerBScoreFieldNumber = 1899;
     private uint playerBScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -204,87 +372,51 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "collide_type" field.</summary>
-    public const int CollideTypeFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.MarbleFactionType collideType_ = global::EggLink.DanhengServer.Proto.MarbleFactionType.None;
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 1119;
+    private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MarbleFactionType CollideType {
-      get { return collideType_; }
+    public uint Level {
+      get { return level_; }
       set {
-        collideType_ = value;
+        level_ = value;
       }
     }
 
-    /// <summary>Field number for the "JLCIKBLNENH" field.</summary>
-    public const int JLCIKBLNENHFieldNumber = 437;
-    private uint jLCIKBLNENH_;
+    /// <summary>Field number for the "hit_target_id" field.</summary>
+    public const int HitTargetIdFieldNumber = 599;
+    private uint hitTargetId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint JLCIKBLNENH {
-      get { return jLCIKBLNENH_; }
+    public uint HitTargetId {
+      get { return hitTargetId_; }
       set {
-        jLCIKBLNENH_ = value;
+        hitTargetId_ = value;
       }
     }
 
-    /// <summary>Field number for the "collision_position" field.</summary>
-    public const int CollisionPositionFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.MarbleSealVector collisionPosition_;
+    /// <summary>Field number for the "max_hp" field.</summary>
+    public const int MaxHpFieldNumber = 3;
+    private int maxHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MarbleSealVector CollisionPosition {
-      get { return collisionPosition_; }
+    public int MaxHp {
+      get { return maxHp_; }
       set {
-        collisionPosition_ = value;
+        maxHp_ = value;
       }
     }
 
-    /// <summary>Field number for the "CCLMFABDENA" field.</summary>
-    public const int CCLMFABDENAFieldNumber = 33;
-    private global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ cCLMFABDENA_ = global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ.MarbleHpChangeTypeNone;
+    /// <summary>Field number for the "text_id" field.</summary>
+    public const int TextIdFieldNumber = 2017;
+    private uint textId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ CCLMFABDENA {
-      get { return cCLMFABDENA_; }
+    public uint TextId {
+      get { return textId_; }
       set {
-        cCLMFABDENA_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "hit_left_time" field.</summary>
-    public const int HitLeftTimeFieldNumber = 1557;
-    private float hitLeftTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float HitLeftTime {
-      get { return hitLeftTime_; }
-      set {
-        hitLeftTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "frame_type" field.</summary>
-    public const int FrameTypeFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.MarbleFrameType frameType_ = global::EggLink.DanhengServer.Proto.MarbleFrameType.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MarbleFrameType FrameType {
-      get { return frameType_; }
-      set {
-        frameType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "time" field.</summary>
-    public const int TimeFieldNumber = 12;
-    private float time_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public float Time {
-      get { return time_; }
-      set {
-        time_ = value;
+        textId_ = value;
       }
     }
 
@@ -300,44 +432,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "seal_on_stage" field.</summary>
-    public const int SealOnStageFieldNumber = 1056;
-    private bool sealOnStage_;
+    /// <summary>Field number for the "collide_owner_id" field.</summary>
+    public const int CollideOwnerIdFieldNumber = 15;
+    private uint collideOwnerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool SealOnStage {
-      get { return sealOnStage_; }
+    public uint CollideOwnerId {
+      get { return collideOwnerId_; }
       set {
-        sealOnStage_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "tech_id" field.</summary>
-    public const int TechIdFieldNumber = 616;
-    private uint techId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TechId {
-      get { return techId_; }
-      set {
-        techId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "NBKELCHILGG" field.</summary>
-    public const int NBKELCHILGGFieldNumber = 1316;
-    private bool nBKELCHILGG_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool NBKELCHILGG {
-      get { return nBKELCHILGG_; }
-      set {
-        nBKELCHILGG_ = value;
+        collideOwnerId_ = value;
       }
     }
 
     /// <summary>Field number for the "player_a_score" field.</summary>
-    public const int PlayerAScoreFieldNumber = 346;
+    public const int PlayerAScoreFieldNumber = 893;
     private uint playerAScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -345,6 +453,42 @@ namespace EggLink.DanhengServer.Proto {
       get { return playerAScore_; }
       set {
         playerAScore_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hp_change_value" field.</summary>
+    public const int HpChangeValueFieldNumber = 999;
+    private int hpChangeValue_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int HpChangeValue {
+      get { return hpChangeValue_; }
+      set {
+        hpChangeValue_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "collide_target_id" field.</summary>
+    public const int CollideTargetIdFieldNumber = 7;
+    private uint collideTargetId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CollideTargetId {
+      get { return collideTargetId_; }
+      set {
+        collideTargetId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "skill_id" field.</summary>
+    public const int SkillIdFieldNumber = 4;
+    private uint skillId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SkillId {
+      get { return skillId_; }
+      set {
+        skillId_ = value;
       }
     }
 
@@ -357,150 +501,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return collisionTargetVelocity_; }
       set {
         collisionTargetVelocity_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "seal_position" field.</summary>
-    public const int SealPositionFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.MarbleSealVector sealPosition_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MarbleSealVector SealPosition {
-      get { return sealPosition_; }
-      set {
-        sealPosition_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "seal_velocity" field.</summary>
-    public const int SealVelocityFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.MarbleSealVector sealVelocity_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MarbleSealVector SealVelocity {
-      get { return sealVelocity_; }
-      set {
-        sealVelocity_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "hit_target_id" field.</summary>
-    public const int HitTargetIdFieldNumber = 574;
-    private uint hitTargetId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HitTargetId {
-      get { return hitTargetId_; }
-      set {
-        hitTargetId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "is_effect_available" field.</summary>
-    public const int IsEffectAvailableFieldNumber = 880;
-    private bool isEffectAvailable_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsEffectAvailable {
-      get { return isEffectAvailable_; }
-      set {
-        isEffectAvailable_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "seal_skill_id" field.</summary>
-    public const int SealSkillIdFieldNumber = 196;
-    private uint sealSkillId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SealSkillId {
-      get { return sealSkillId_; }
-      set {
-        sealSkillId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "collide_target_id" field.</summary>
-    public const int CollideTargetIdFieldNumber = 14;
-    private uint collideTargetId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CollideTargetId {
-      get { return collideTargetId_; }
-      set {
-        collideTargetId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "buff_id" field.</summary>
-    public const int BuffIdFieldNumber = 1783;
-    private uint buffId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BuffId {
-      get { return buffId_; }
-      set {
-        buffId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "seal_rotation" field.</summary>
-    public const int SealRotationFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.MarbleSealVector sealRotation_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MarbleSealVector SealRotation {
-      get { return sealRotation_; }
-      set {
-        sealRotation_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 6;
-    private uint id_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "text_id" field.</summary>
-    public const int TextIdFieldNumber = 1107;
-    private uint textId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TextId {
-      get { return textId_; }
-      set {
-        textId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "hp_change_value" field.</summary>
-    public const int HpChangeValueFieldNumber = 1736;
-    private int hpChangeValue_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int HpChangeValue {
-      get { return hpChangeValue_; }
-      set {
-        hpChangeValue_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "hp" field.</summary>
-    public const int HpFieldNumber = 5;
-    private int hp_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Hp {
-      get { return hp_; }
-      set {
-        hp_ = value;
       }
     }
 
@@ -519,37 +519,37 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CollideOwnerId != other.CollideOwnerId) return false;
-      if (Level != other.Level) return false;
-      if (SkillId != other.SkillId) return false;
-      if (MaxHp != other.MaxHp) return false;
+      if (NBKELCHILGG != other.NBKELCHILGG) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Time, other.Time)) return false;
+      if (!object.Equals(SealRotation, other.SealRotation)) return false;
+      if (Hp != other.Hp) return false;
+      if (TechId != other.TechId) return false;
+      if (SealSkillId != other.SealSkillId) return false;
+      if (SealOnStage != other.SealOnStage) return false;
+      if (!object.Equals(SealPosition, other.SealPosition)) return false;
+      if (BuffId != other.BuffId) return false;
+      if (JLCIKBLNENH != other.JLCIKBLNENH) return false;
+      if (!object.Equals(SealVelocity, other.SealVelocity)) return false;
+      if (FrameType != other.FrameType) return false;
+      if (CCLMFABDENA != other.CCLMFABDENA) return false;
+      if (Id != other.Id) return false;
+      if (CollideType != other.CollideType) return false;
+      if (IsEffectAvailable != other.IsEffectAvailable) return false;
+      if (!object.Equals(CollisionPosition, other.CollisionPosition)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(HitLeftTime, other.HitLeftTime)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SealSize, other.SealSize)) return false;
       if (PlayerBScore != other.PlayerBScore) return false;
-      if (CollideType != other.CollideType) return false;
-      if (JLCIKBLNENH != other.JLCIKBLNENH) return false;
-      if (!object.Equals(CollisionPosition, other.CollisionPosition)) return false;
-      if (CCLMFABDENA != other.CCLMFABDENA) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(HitLeftTime, other.HitLeftTime)) return false;
-      if (FrameType != other.FrameType) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Time, other.Time)) return false;
-      if (Attack != other.Attack) return false;
-      if (SealOnStage != other.SealOnStage) return false;
-      if (TechId != other.TechId) return false;
-      if (NBKELCHILGG != other.NBKELCHILGG) return false;
-      if (PlayerAScore != other.PlayerAScore) return false;
-      if (!object.Equals(CollisionTargetVelocity, other.CollisionTargetVelocity)) return false;
-      if (!object.Equals(SealPosition, other.SealPosition)) return false;
-      if (!object.Equals(SealVelocity, other.SealVelocity)) return false;
+      if (Level != other.Level) return false;
       if (HitTargetId != other.HitTargetId) return false;
-      if (IsEffectAvailable != other.IsEffectAvailable) return false;
-      if (SealSkillId != other.SealSkillId) return false;
-      if (CollideTargetId != other.CollideTargetId) return false;
-      if (BuffId != other.BuffId) return false;
-      if (!object.Equals(SealRotation, other.SealRotation)) return false;
-      if (Id != other.Id) return false;
+      if (MaxHp != other.MaxHp) return false;
       if (TextId != other.TextId) return false;
+      if (Attack != other.Attack) return false;
+      if (CollideOwnerId != other.CollideOwnerId) return false;
+      if (PlayerAScore != other.PlayerAScore) return false;
       if (HpChangeValue != other.HpChangeValue) return false;
-      if (Hp != other.Hp) return false;
+      if (CollideTargetId != other.CollideTargetId) return false;
+      if (SkillId != other.SkillId) return false;
+      if (!object.Equals(CollisionTargetVelocity, other.CollisionTargetVelocity)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -557,37 +557,37 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CollideOwnerId != 0) hash ^= CollideOwnerId.GetHashCode();
-      if (Level != 0) hash ^= Level.GetHashCode();
-      if (SkillId != 0) hash ^= SkillId.GetHashCode();
-      if (MaxHp != 0) hash ^= MaxHp.GetHashCode();
+      if (NBKELCHILGG != false) hash ^= NBKELCHILGG.GetHashCode();
+      if (Time != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Time);
+      if (sealRotation_ != null) hash ^= SealRotation.GetHashCode();
+      if (Hp != 0) hash ^= Hp.GetHashCode();
+      if (TechId != 0) hash ^= TechId.GetHashCode();
+      if (SealSkillId != 0) hash ^= SealSkillId.GetHashCode();
+      if (SealOnStage != false) hash ^= SealOnStage.GetHashCode();
+      if (sealPosition_ != null) hash ^= SealPosition.GetHashCode();
+      if (BuffId != 0) hash ^= BuffId.GetHashCode();
+      if (JLCIKBLNENH != 0) hash ^= JLCIKBLNENH.GetHashCode();
+      if (sealVelocity_ != null) hash ^= SealVelocity.GetHashCode();
+      if (FrameType != global::EggLink.DanhengServer.Proto.MarbleFrameType.None) hash ^= FrameType.GetHashCode();
+      if (CCLMFABDENA != global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ.MarbleHpChangeTypeNone) hash ^= CCLMFABDENA.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (CollideType != global::EggLink.DanhengServer.Proto.MarbleFactionType.None) hash ^= CollideType.GetHashCode();
+      if (IsEffectAvailable != false) hash ^= IsEffectAvailable.GetHashCode();
+      if (collisionPosition_ != null) hash ^= CollisionPosition.GetHashCode();
+      if (HitLeftTime != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(HitLeftTime);
       if (SealSize != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SealSize);
       if (PlayerBScore != 0) hash ^= PlayerBScore.GetHashCode();
-      if (CollideType != global::EggLink.DanhengServer.Proto.MarbleFactionType.None) hash ^= CollideType.GetHashCode();
-      if (JLCIKBLNENH != 0) hash ^= JLCIKBLNENH.GetHashCode();
-      if (collisionPosition_ != null) hash ^= CollisionPosition.GetHashCode();
-      if (CCLMFABDENA != global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ.MarbleHpChangeTypeNone) hash ^= CCLMFABDENA.GetHashCode();
-      if (HitLeftTime != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(HitLeftTime);
-      if (FrameType != global::EggLink.DanhengServer.Proto.MarbleFrameType.None) hash ^= FrameType.GetHashCode();
-      if (Time != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Time);
-      if (Attack != 0) hash ^= Attack.GetHashCode();
-      if (SealOnStage != false) hash ^= SealOnStage.GetHashCode();
-      if (TechId != 0) hash ^= TechId.GetHashCode();
-      if (NBKELCHILGG != false) hash ^= NBKELCHILGG.GetHashCode();
-      if (PlayerAScore != 0) hash ^= PlayerAScore.GetHashCode();
-      if (collisionTargetVelocity_ != null) hash ^= CollisionTargetVelocity.GetHashCode();
-      if (sealPosition_ != null) hash ^= SealPosition.GetHashCode();
-      if (sealVelocity_ != null) hash ^= SealVelocity.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
       if (HitTargetId != 0) hash ^= HitTargetId.GetHashCode();
-      if (IsEffectAvailable != false) hash ^= IsEffectAvailable.GetHashCode();
-      if (SealSkillId != 0) hash ^= SealSkillId.GetHashCode();
-      if (CollideTargetId != 0) hash ^= CollideTargetId.GetHashCode();
-      if (BuffId != 0) hash ^= BuffId.GetHashCode();
-      if (sealRotation_ != null) hash ^= SealRotation.GetHashCode();
-      if (Id != 0) hash ^= Id.GetHashCode();
+      if (MaxHp != 0) hash ^= MaxHp.GetHashCode();
       if (TextId != 0) hash ^= TextId.GetHashCode();
+      if (Attack != 0) hash ^= Attack.GetHashCode();
+      if (CollideOwnerId != 0) hash ^= CollideOwnerId.GetHashCode();
+      if (PlayerAScore != 0) hash ^= PlayerAScore.GetHashCode();
       if (HpChangeValue != 0) hash ^= HpChangeValue.GetHashCode();
-      if (Hp != 0) hash ^= Hp.GetHashCode();
+      if (CollideTargetId != 0) hash ^= CollideTargetId.GetHashCode();
+      if (SkillId != 0) hash ^= SkillId.GetHashCode();
+      if (collisionTargetVelocity_ != null) hash ^= CollisionTargetVelocity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -606,129 +606,129 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CollideType != global::EggLink.DanhengServer.Proto.MarbleFactionType.None) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) CollideType);
-      }
-      if (sealVelocity_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(SealVelocity);
-      }
       if (FrameType != global::EggLink.DanhengServer.Proto.MarbleFrameType.None) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteEnum((int) FrameType);
       }
-      if (collisionPosition_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(CollisionPosition);
+      if (Time != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Time);
       }
-      if (Hp != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(Hp);
+      if (MaxHp != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MaxHp);
       }
-      if (Id != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Id);
+      if (SkillId != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SkillId);
       }
-      if (CollideOwnerId != 0) {
+      if (sealVelocity_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SealVelocity);
+      }
+      if (sealRotation_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SealRotation);
+      }
+      if (CollideTargetId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(CollideOwnerId);
+        output.WriteUInt32(CollideTargetId);
       }
       if (Attack != 0) {
         output.WriteRawTag(64);
         output.WriteInt32(Attack);
       }
-      if (sealPosition_ != null) {
+      if (collisionPosition_ != null) {
         output.WriteRawTag(74);
-        output.WriteMessage(SealPosition);
+        output.WriteMessage(CollisionPosition);
       }
-      if (SkillId != 0) {
+      if (CollideType != global::EggLink.DanhengServer.Proto.MarbleFactionType.None) {
         output.WriteRawTag(80);
-        output.WriteUInt32(SkillId);
+        output.WriteEnum((int) CollideType);
       }
-      if (MaxHp != 0) {
+      if (Id != 0) {
         output.WriteRawTag(88);
-        output.WriteInt32(MaxHp);
+        output.WriteUInt32(Id);
       }
-      if (Time != 0F) {
-        output.WriteRawTag(101);
-        output.WriteFloat(Time);
+      if (Hp != 0) {
+        output.WriteRawTag(96);
+        output.WriteInt32(Hp);
       }
       if (collisionTargetVelocity_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(CollisionTargetVelocity);
       }
-      if (CollideTargetId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(CollideTargetId);
+      if (sealPosition_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(SealPosition);
       }
-      if (sealRotation_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(SealRotation);
+      if (CollideOwnerId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(CollideOwnerId);
       }
-      if (CCLMFABDENA != global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ.MarbleHpChangeTypeNone) {
-        output.WriteRawTag(136, 2);
-        output.WriteEnum((int) CCLMFABDENA);
-      }
-      if (SealSkillId != 0) {
-        output.WriteRawTag(160, 12);
-        output.WriteUInt32(SealSkillId);
-      }
-      if (PlayerAScore != 0) {
-        output.WriteRawTag(208, 21);
-        output.WriteUInt32(PlayerAScore);
-      }
-      if (JLCIKBLNENH != 0) {
-        output.WriteRawTag(168, 27);
-        output.WriteUInt32(JLCIKBLNENH);
+      if (IsEffectAvailable != false) {
+        output.WriteRawTag(192, 28);
+        output.WriteBool(IsEffectAvailable);
       }
       if (HitTargetId != 0) {
-        output.WriteRawTag(240, 35);
+        output.WriteRawTag(184, 37);
         output.WriteUInt32(HitTargetId);
       }
       if (TechId != 0) {
-        output.WriteRawTag(192, 38);
+        output.WriteRawTag(168, 52);
         output.WriteUInt32(TechId);
       }
-      if (IsEffectAvailable != false) {
-        output.WriteRawTag(128, 55);
-        output.WriteBool(IsEffectAvailable);
-      }
-      if (SealSize != 0F) {
-        output.WriteRawTag(157, 59);
-        output.WriteFloat(SealSize);
-      }
-      if (SealOnStage != false) {
-        output.WriteRawTag(128, 66);
-        output.WriteBool(SealOnStage);
-      }
-      if (TextId != 0) {
-        output.WriteRawTag(152, 69);
-        output.WriteUInt32(TextId);
-      }
       if (NBKELCHILGG != false) {
-        output.WriteRawTag(160, 82);
+        output.WriteRawTag(248, 53);
         output.WriteBool(NBKELCHILGG);
       }
-      if (PlayerBScore != 0) {
-        output.WriteRawTag(208, 84);
-        output.WriteUInt32(PlayerBScore);
-      }
-      if (Level != 0) {
-        output.WriteRawTag(184, 94);
-        output.WriteUInt32(Level);
-      }
-      if (HitLeftTime != 0F) {
-        output.WriteRawTag(173, 97);
-        output.WriteFloat(HitLeftTime);
+      if (PlayerAScore != 0) {
+        output.WriteRawTag(232, 55);
+        output.WriteUInt32(PlayerAScore);
       }
       if (HpChangeValue != 0) {
-        output.WriteRawTag(192, 108);
+        output.WriteRawTag(184, 62);
         output.WriteInt32(HpChangeValue);
       }
+      if (JLCIKBLNENH != 0) {
+        output.WriteRawTag(184, 63);
+        output.WriteUInt32(JLCIKBLNENH);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(248, 69);
+        output.WriteUInt32(Level);
+      }
+      if (CCLMFABDENA != global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ.MarbleHpChangeTypeNone) {
+        output.WriteRawTag(208, 78);
+        output.WriteEnum((int) CCLMFABDENA);
+      }
+      if (SealSize != 0F) {
+        output.WriteRawTag(133, 100);
+        output.WriteFloat(SealSize);
+      }
+      if (HitLeftTime != 0F) {
+        output.WriteRawTag(221, 100);
+        output.WriteFloat(HitLeftTime);
+      }
+      if (SealOnStage != false) {
+        output.WriteRawTag(200, 105);
+        output.WriteBool(SealOnStage);
+      }
       if (BuffId != 0) {
-        output.WriteRawTag(184, 111);
+        output.WriteRawTag(232, 114);
         output.WriteUInt32(BuffId);
+      }
+      if (PlayerBScore != 0) {
+        output.WriteRawTag(216, 118);
+        output.WriteUInt32(PlayerBScore);
+      }
+      if (TextId != 0) {
+        output.WriteRawTag(136, 126);
+        output.WriteUInt32(TextId);
+      }
+      if (SealSkillId != 0) {
+        output.WriteRawTag(136, 127);
+        output.WriteUInt32(SealSkillId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -740,129 +740,129 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CollideType != global::EggLink.DanhengServer.Proto.MarbleFactionType.None) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) CollideType);
-      }
-      if (sealVelocity_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(SealVelocity);
-      }
       if (FrameType != global::EggLink.DanhengServer.Proto.MarbleFrameType.None) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteEnum((int) FrameType);
       }
-      if (collisionPosition_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(CollisionPosition);
+      if (Time != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Time);
       }
-      if (Hp != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(Hp);
+      if (MaxHp != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MaxHp);
       }
-      if (Id != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Id);
+      if (SkillId != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SkillId);
       }
-      if (CollideOwnerId != 0) {
+      if (sealVelocity_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(SealVelocity);
+      }
+      if (sealRotation_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SealRotation);
+      }
+      if (CollideTargetId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(CollideOwnerId);
+        output.WriteUInt32(CollideTargetId);
       }
       if (Attack != 0) {
         output.WriteRawTag(64);
         output.WriteInt32(Attack);
       }
-      if (sealPosition_ != null) {
+      if (collisionPosition_ != null) {
         output.WriteRawTag(74);
-        output.WriteMessage(SealPosition);
+        output.WriteMessage(CollisionPosition);
       }
-      if (SkillId != 0) {
+      if (CollideType != global::EggLink.DanhengServer.Proto.MarbleFactionType.None) {
         output.WriteRawTag(80);
-        output.WriteUInt32(SkillId);
+        output.WriteEnum((int) CollideType);
       }
-      if (MaxHp != 0) {
+      if (Id != 0) {
         output.WriteRawTag(88);
-        output.WriteInt32(MaxHp);
+        output.WriteUInt32(Id);
       }
-      if (Time != 0F) {
-        output.WriteRawTag(101);
-        output.WriteFloat(Time);
+      if (Hp != 0) {
+        output.WriteRawTag(96);
+        output.WriteInt32(Hp);
       }
       if (collisionTargetVelocity_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(CollisionTargetVelocity);
       }
-      if (CollideTargetId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(CollideTargetId);
+      if (sealPosition_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(SealPosition);
       }
-      if (sealRotation_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(SealRotation);
+      if (CollideOwnerId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(CollideOwnerId);
       }
-      if (CCLMFABDENA != global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ.MarbleHpChangeTypeNone) {
-        output.WriteRawTag(136, 2);
-        output.WriteEnum((int) CCLMFABDENA);
-      }
-      if (SealSkillId != 0) {
-        output.WriteRawTag(160, 12);
-        output.WriteUInt32(SealSkillId);
-      }
-      if (PlayerAScore != 0) {
-        output.WriteRawTag(208, 21);
-        output.WriteUInt32(PlayerAScore);
-      }
-      if (JLCIKBLNENH != 0) {
-        output.WriteRawTag(168, 27);
-        output.WriteUInt32(JLCIKBLNENH);
+      if (IsEffectAvailable != false) {
+        output.WriteRawTag(192, 28);
+        output.WriteBool(IsEffectAvailable);
       }
       if (HitTargetId != 0) {
-        output.WriteRawTag(240, 35);
+        output.WriteRawTag(184, 37);
         output.WriteUInt32(HitTargetId);
       }
       if (TechId != 0) {
-        output.WriteRawTag(192, 38);
+        output.WriteRawTag(168, 52);
         output.WriteUInt32(TechId);
       }
-      if (IsEffectAvailable != false) {
-        output.WriteRawTag(128, 55);
-        output.WriteBool(IsEffectAvailable);
-      }
-      if (SealSize != 0F) {
-        output.WriteRawTag(157, 59);
-        output.WriteFloat(SealSize);
-      }
-      if (SealOnStage != false) {
-        output.WriteRawTag(128, 66);
-        output.WriteBool(SealOnStage);
-      }
-      if (TextId != 0) {
-        output.WriteRawTag(152, 69);
-        output.WriteUInt32(TextId);
-      }
       if (NBKELCHILGG != false) {
-        output.WriteRawTag(160, 82);
+        output.WriteRawTag(248, 53);
         output.WriteBool(NBKELCHILGG);
       }
-      if (PlayerBScore != 0) {
-        output.WriteRawTag(208, 84);
-        output.WriteUInt32(PlayerBScore);
-      }
-      if (Level != 0) {
-        output.WriteRawTag(184, 94);
-        output.WriteUInt32(Level);
-      }
-      if (HitLeftTime != 0F) {
-        output.WriteRawTag(173, 97);
-        output.WriteFloat(HitLeftTime);
+      if (PlayerAScore != 0) {
+        output.WriteRawTag(232, 55);
+        output.WriteUInt32(PlayerAScore);
       }
       if (HpChangeValue != 0) {
-        output.WriteRawTag(192, 108);
+        output.WriteRawTag(184, 62);
         output.WriteInt32(HpChangeValue);
       }
+      if (JLCIKBLNENH != 0) {
+        output.WriteRawTag(184, 63);
+        output.WriteUInt32(JLCIKBLNENH);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(248, 69);
+        output.WriteUInt32(Level);
+      }
+      if (CCLMFABDENA != global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ.MarbleHpChangeTypeNone) {
+        output.WriteRawTag(208, 78);
+        output.WriteEnum((int) CCLMFABDENA);
+      }
+      if (SealSize != 0F) {
+        output.WriteRawTag(133, 100);
+        output.WriteFloat(SealSize);
+      }
+      if (HitLeftTime != 0F) {
+        output.WriteRawTag(221, 100);
+        output.WriteFloat(HitLeftTime);
+      }
+      if (SealOnStage != false) {
+        output.WriteRawTag(200, 105);
+        output.WriteBool(SealOnStage);
+      }
       if (BuffId != 0) {
-        output.WriteRawTag(184, 111);
+        output.WriteRawTag(232, 114);
         output.WriteUInt32(BuffId);
+      }
+      if (PlayerBScore != 0) {
+        output.WriteRawTag(216, 118);
+        output.WriteUInt32(PlayerBScore);
+      }
+      if (TextId != 0) {
+        output.WriteRawTag(136, 126);
+        output.WriteUInt32(TextId);
+      }
+      if (SealSkillId != 0) {
+        output.WriteRawTag(136, 127);
+        output.WriteUInt32(SealSkillId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -874,17 +874,59 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CollideOwnerId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CollideOwnerId);
+      if (NBKELCHILGG != false) {
+        size += 2 + 1;
       }
-      if (Level != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      if (Time != 0F) {
+        size += 1 + 4;
       }
-      if (SkillId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SkillId);
+      if (sealRotation_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SealRotation);
       }
-      if (MaxHp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxHp);
+      if (Hp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Hp);
+      }
+      if (TechId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(TechId);
+      }
+      if (SealSkillId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(SealSkillId);
+      }
+      if (SealOnStage != false) {
+        size += 2 + 1;
+      }
+      if (sealPosition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SealPosition);
+      }
+      if (BuffId != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(BuffId);
+      }
+      if (JLCIKBLNENH != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(JLCIKBLNENH);
+      }
+      if (sealVelocity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SealVelocity);
+      }
+      if (FrameType != global::EggLink.DanhengServer.Proto.MarbleFrameType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FrameType);
+      }
+      if (CCLMFABDENA != global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ.MarbleHpChangeTypeNone) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) CCLMFABDENA);
+      }
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      }
+      if (CollideType != global::EggLink.DanhengServer.Proto.MarbleFactionType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CollideType);
+      }
+      if (IsEffectAvailable != false) {
+        size += 2 + 1;
+      }
+      if (collisionPosition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CollisionPosition);
+      }
+      if (HitLeftTime != 0F) {
+        size += 2 + 4;
       }
       if (SealSize != 0F) {
         size += 2 + 4;
@@ -892,80 +934,38 @@ namespace EggLink.DanhengServer.Proto {
       if (PlayerBScore != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(PlayerBScore);
       }
-      if (CollideType != global::EggLink.DanhengServer.Proto.MarbleFactionType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CollideType);
-      }
-      if (JLCIKBLNENH != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(JLCIKBLNENH);
-      }
-      if (collisionPosition_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CollisionPosition);
-      }
-      if (CCLMFABDENA != global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ.MarbleHpChangeTypeNone) {
-        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) CCLMFABDENA);
-      }
-      if (HitLeftTime != 0F) {
-        size += 2 + 4;
-      }
-      if (FrameType != global::EggLink.DanhengServer.Proto.MarbleFrameType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FrameType);
-      }
-      if (Time != 0F) {
-        size += 1 + 4;
-      }
-      if (Attack != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Attack);
-      }
-      if (SealOnStage != false) {
-        size += 2 + 1;
-      }
-      if (TechId != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(TechId);
-      }
-      if (NBKELCHILGG != false) {
-        size += 2 + 1;
-      }
-      if (PlayerAScore != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(PlayerAScore);
-      }
-      if (collisionTargetVelocity_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CollisionTargetVelocity);
-      }
-      if (sealPosition_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SealPosition);
-      }
-      if (sealVelocity_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SealVelocity);
+      if (Level != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
       if (HitTargetId != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(HitTargetId);
       }
-      if (IsEffectAvailable != false) {
-        size += 2 + 1;
-      }
-      if (SealSkillId != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(SealSkillId);
-      }
-      if (CollideTargetId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CollideTargetId);
-      }
-      if (BuffId != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(BuffId);
-      }
-      if (sealRotation_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SealRotation);
-      }
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
+      if (MaxHp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxHp);
       }
       if (TextId != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(TextId);
       }
+      if (Attack != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Attack);
+      }
+      if (CollideOwnerId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CollideOwnerId);
+      }
+      if (PlayerAScore != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(PlayerAScore);
+      }
       if (HpChangeValue != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(HpChangeValue);
       }
-      if (Hp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Hp);
+      if (CollideTargetId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CollideTargetId);
+      }
+      if (SkillId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SkillId);
+      }
+      if (collisionTargetVelocity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CollisionTargetVelocity);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -979,95 +979,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CollideOwnerId != 0) {
-        CollideOwnerId = other.CollideOwnerId;
-      }
-      if (other.Level != 0) {
-        Level = other.Level;
-      }
-      if (other.SkillId != 0) {
-        SkillId = other.SkillId;
-      }
-      if (other.MaxHp != 0) {
-        MaxHp = other.MaxHp;
-      }
-      if (other.SealSize != 0F) {
-        SealSize = other.SealSize;
-      }
-      if (other.PlayerBScore != 0) {
-        PlayerBScore = other.PlayerBScore;
-      }
-      if (other.CollideType != global::EggLink.DanhengServer.Proto.MarbleFactionType.None) {
-        CollideType = other.CollideType;
-      }
-      if (other.JLCIKBLNENH != 0) {
-        JLCIKBLNENH = other.JLCIKBLNENH;
-      }
-      if (other.collisionPosition_ != null) {
-        if (collisionPosition_ == null) {
-          CollisionPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
-        }
-        CollisionPosition.MergeFrom(other.CollisionPosition);
-      }
-      if (other.CCLMFABDENA != global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ.MarbleHpChangeTypeNone) {
-        CCLMFABDENA = other.CCLMFABDENA;
-      }
-      if (other.HitLeftTime != 0F) {
-        HitLeftTime = other.HitLeftTime;
-      }
-      if (other.FrameType != global::EggLink.DanhengServer.Proto.MarbleFrameType.None) {
-        FrameType = other.FrameType;
-      }
-      if (other.Time != 0F) {
-        Time = other.Time;
-      }
-      if (other.Attack != 0) {
-        Attack = other.Attack;
-      }
-      if (other.SealOnStage != false) {
-        SealOnStage = other.SealOnStage;
-      }
-      if (other.TechId != 0) {
-        TechId = other.TechId;
-      }
       if (other.NBKELCHILGG != false) {
         NBKELCHILGG = other.NBKELCHILGG;
       }
-      if (other.PlayerAScore != 0) {
-        PlayerAScore = other.PlayerAScore;
-      }
-      if (other.collisionTargetVelocity_ != null) {
-        if (collisionTargetVelocity_ == null) {
-          CollisionTargetVelocity = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
-        }
-        CollisionTargetVelocity.MergeFrom(other.CollisionTargetVelocity);
-      }
-      if (other.sealPosition_ != null) {
-        if (sealPosition_ == null) {
-          SealPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
-        }
-        SealPosition.MergeFrom(other.SealPosition);
-      }
-      if (other.sealVelocity_ != null) {
-        if (sealVelocity_ == null) {
-          SealVelocity = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
-        }
-        SealVelocity.MergeFrom(other.SealVelocity);
-      }
-      if (other.HitTargetId != 0) {
-        HitTargetId = other.HitTargetId;
-      }
-      if (other.IsEffectAvailable != false) {
-        IsEffectAvailable = other.IsEffectAvailable;
-      }
-      if (other.SealSkillId != 0) {
-        SealSkillId = other.SealSkillId;
-      }
-      if (other.CollideTargetId != 0) {
-        CollideTargetId = other.CollideTargetId;
-      }
-      if (other.BuffId != 0) {
-        BuffId = other.BuffId;
+      if (other.Time != 0F) {
+        Time = other.Time;
       }
       if (other.sealRotation_ != null) {
         if (sealRotation_ == null) {
@@ -1075,17 +991,101 @@ namespace EggLink.DanhengServer.Proto {
         }
         SealRotation.MergeFrom(other.SealRotation);
       }
+      if (other.Hp != 0) {
+        Hp = other.Hp;
+      }
+      if (other.TechId != 0) {
+        TechId = other.TechId;
+      }
+      if (other.SealSkillId != 0) {
+        SealSkillId = other.SealSkillId;
+      }
+      if (other.SealOnStage != false) {
+        SealOnStage = other.SealOnStage;
+      }
+      if (other.sealPosition_ != null) {
+        if (sealPosition_ == null) {
+          SealPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+        }
+        SealPosition.MergeFrom(other.SealPosition);
+      }
+      if (other.BuffId != 0) {
+        BuffId = other.BuffId;
+      }
+      if (other.JLCIKBLNENH != 0) {
+        JLCIKBLNENH = other.JLCIKBLNENH;
+      }
+      if (other.sealVelocity_ != null) {
+        if (sealVelocity_ == null) {
+          SealVelocity = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+        }
+        SealVelocity.MergeFrom(other.SealVelocity);
+      }
+      if (other.FrameType != global::EggLink.DanhengServer.Proto.MarbleFrameType.None) {
+        FrameType = other.FrameType;
+      }
+      if (other.CCLMFABDENA != global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ.MarbleHpChangeTypeNone) {
+        CCLMFABDENA = other.CCLMFABDENA;
+      }
       if (other.Id != 0) {
         Id = other.Id;
+      }
+      if (other.CollideType != global::EggLink.DanhengServer.Proto.MarbleFactionType.None) {
+        CollideType = other.CollideType;
+      }
+      if (other.IsEffectAvailable != false) {
+        IsEffectAvailable = other.IsEffectAvailable;
+      }
+      if (other.collisionPosition_ != null) {
+        if (collisionPosition_ == null) {
+          CollisionPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+        }
+        CollisionPosition.MergeFrom(other.CollisionPosition);
+      }
+      if (other.HitLeftTime != 0F) {
+        HitLeftTime = other.HitLeftTime;
+      }
+      if (other.SealSize != 0F) {
+        SealSize = other.SealSize;
+      }
+      if (other.PlayerBScore != 0) {
+        PlayerBScore = other.PlayerBScore;
+      }
+      if (other.Level != 0) {
+        Level = other.Level;
+      }
+      if (other.HitTargetId != 0) {
+        HitTargetId = other.HitTargetId;
+      }
+      if (other.MaxHp != 0) {
+        MaxHp = other.MaxHp;
       }
       if (other.TextId != 0) {
         TextId = other.TextId;
       }
+      if (other.Attack != 0) {
+        Attack = other.Attack;
+      }
+      if (other.CollideOwnerId != 0) {
+        CollideOwnerId = other.CollideOwnerId;
+      }
+      if (other.PlayerAScore != 0) {
+        PlayerAScore = other.PlayerAScore;
+      }
       if (other.HpChangeValue != 0) {
         HpChangeValue = other.HpChangeValue;
       }
-      if (other.Hp != 0) {
-        Hp = other.Hp;
+      if (other.CollideTargetId != 0) {
+        CollideTargetId = other.CollideTargetId;
+      }
+      if (other.SkillId != 0) {
+        SkillId = other.SkillId;
+      }
+      if (other.collisionTargetVelocity_ != null) {
+        if (collisionTargetVelocity_ == null) {
+          CollisionTargetVelocity = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+        }
+        CollisionTargetVelocity.MergeFrom(other.CollisionTargetVelocity);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1103,37 +1103,37 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            CollideType = (global::EggLink.DanhengServer.Proto.MarbleFactionType) input.ReadEnum();
+            FrameType = (global::EggLink.DanhengServer.Proto.MarbleFrameType) input.ReadEnum();
             break;
           }
-          case 18: {
+          case 21: {
+            Time = input.ReadFloat();
+            break;
+          }
+          case 24: {
+            MaxHp = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            SkillId = input.ReadUInt32();
+            break;
+          }
+          case 42: {
             if (sealVelocity_ == null) {
               SealVelocity = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
             input.ReadMessage(SealVelocity);
             break;
           }
-          case 24: {
-            FrameType = (global::EggLink.DanhengServer.Proto.MarbleFrameType) input.ReadEnum();
-            break;
-          }
-          case 34: {
-            if (collisionPosition_ == null) {
-              CollisionPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+          case 50: {
+            if (sealRotation_ == null) {
+              SealRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
-            input.ReadMessage(CollisionPosition);
-            break;
-          }
-          case 40: {
-            Hp = input.ReadInt32();
-            break;
-          }
-          case 48: {
-            Id = input.ReadUInt32();
+            input.ReadMessage(SealRotation);
             break;
           }
           case 56: {
-            CollideOwnerId = input.ReadUInt32();
+            CollideTargetId = input.ReadUInt32();
             break;
           }
           case 64: {
@@ -1141,22 +1141,22 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            if (sealPosition_ == null) {
-              SealPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+            if (collisionPosition_ == null) {
+              CollisionPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
-            input.ReadMessage(SealPosition);
+            input.ReadMessage(CollisionPosition);
             break;
           }
           case 80: {
-            SkillId = input.ReadUInt32();
+            CollideType = (global::EggLink.DanhengServer.Proto.MarbleFactionType) input.ReadEnum();
             break;
           }
           case 88: {
-            MaxHp = input.ReadInt32();
+            Id = input.ReadUInt32();
             break;
           }
-          case 101: {
-            Time = input.ReadFloat();
+          case 96: {
+            Hp = input.ReadInt32();
             break;
           }
           case 106: {
@@ -1166,79 +1166,79 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(CollisionTargetVelocity);
             break;
           }
-          case 112: {
-            CollideTargetId = input.ReadUInt32();
-            break;
-          }
-          case 122: {
-            if (sealRotation_ == null) {
-              SealRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+          case 114: {
+            if (sealPosition_ == null) {
+              SealPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
-            input.ReadMessage(SealRotation);
+            input.ReadMessage(SealPosition);
             break;
           }
-          case 264: {
-            CCLMFABDENA = (global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ) input.ReadEnum();
+          case 120: {
+            CollideOwnerId = input.ReadUInt32();
             break;
           }
-          case 1568: {
-            SealSkillId = input.ReadUInt32();
-            break;
-          }
-          case 2768: {
-            PlayerAScore = input.ReadUInt32();
-            break;
-          }
-          case 3496: {
-            JLCIKBLNENH = input.ReadUInt32();
-            break;
-          }
-          case 4592: {
-            HitTargetId = input.ReadUInt32();
-            break;
-          }
-          case 4928: {
-            TechId = input.ReadUInt32();
-            break;
-          }
-          case 7040: {
+          case 3648: {
             IsEffectAvailable = input.ReadBool();
             break;
           }
-          case 7581: {
-            SealSize = input.ReadFloat();
+          case 4792: {
+            HitTargetId = input.ReadUInt32();
             break;
           }
-          case 8448: {
-            SealOnStage = input.ReadBool();
+          case 6696: {
+            TechId = input.ReadUInt32();
             break;
           }
-          case 8856: {
-            TextId = input.ReadUInt32();
-            break;
-          }
-          case 10528: {
+          case 6904: {
             NBKELCHILGG = input.ReadBool();
             break;
           }
-          case 10832: {
-            PlayerBScore = input.ReadUInt32();
+          case 7144: {
+            PlayerAScore = input.ReadUInt32();
             break;
           }
-          case 12088: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 12461: {
-            HitLeftTime = input.ReadFloat();
-            break;
-          }
-          case 13888: {
+          case 7992: {
             HpChangeValue = input.ReadInt32();
             break;
           }
-          case 14264: {
+          case 8120: {
+            JLCIKBLNENH = input.ReadUInt32();
+            break;
+          }
+          case 8952: {
+            Level = input.ReadUInt32();
+            break;
+          }
+          case 10064: {
+            CCLMFABDENA = (global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ) input.ReadEnum();
+            break;
+          }
+          case 12805: {
+            SealSize = input.ReadFloat();
+            break;
+          }
+          case 12893: {
+            HitLeftTime = input.ReadFloat();
+            break;
+          }
+          case 13512: {
+            SealOnStage = input.ReadBool();
+            break;
+          }
+          case 14696: {
             BuffId = input.ReadUInt32();
+            break;
+          }
+          case 15192: {
+            PlayerBScore = input.ReadUInt32();
+            break;
+          }
+          case 16136: {
+            TextId = input.ReadUInt32();
+            break;
+          }
+          case 16264: {
+            SealSkillId = input.ReadUInt32();
             break;
           }
         }
@@ -1257,37 +1257,37 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            CollideType = (global::EggLink.DanhengServer.Proto.MarbleFactionType) input.ReadEnum();
+            FrameType = (global::EggLink.DanhengServer.Proto.MarbleFrameType) input.ReadEnum();
             break;
           }
-          case 18: {
+          case 21: {
+            Time = input.ReadFloat();
+            break;
+          }
+          case 24: {
+            MaxHp = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            SkillId = input.ReadUInt32();
+            break;
+          }
+          case 42: {
             if (sealVelocity_ == null) {
               SealVelocity = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
             input.ReadMessage(SealVelocity);
             break;
           }
-          case 24: {
-            FrameType = (global::EggLink.DanhengServer.Proto.MarbleFrameType) input.ReadEnum();
-            break;
-          }
-          case 34: {
-            if (collisionPosition_ == null) {
-              CollisionPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+          case 50: {
+            if (sealRotation_ == null) {
+              SealRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
-            input.ReadMessage(CollisionPosition);
-            break;
-          }
-          case 40: {
-            Hp = input.ReadInt32();
-            break;
-          }
-          case 48: {
-            Id = input.ReadUInt32();
+            input.ReadMessage(SealRotation);
             break;
           }
           case 56: {
-            CollideOwnerId = input.ReadUInt32();
+            CollideTargetId = input.ReadUInt32();
             break;
           }
           case 64: {
@@ -1295,22 +1295,22 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            if (sealPosition_ == null) {
-              SealPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+            if (collisionPosition_ == null) {
+              CollisionPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
-            input.ReadMessage(SealPosition);
+            input.ReadMessage(CollisionPosition);
             break;
           }
           case 80: {
-            SkillId = input.ReadUInt32();
+            CollideType = (global::EggLink.DanhengServer.Proto.MarbleFactionType) input.ReadEnum();
             break;
           }
           case 88: {
-            MaxHp = input.ReadInt32();
+            Id = input.ReadUInt32();
             break;
           }
-          case 101: {
-            Time = input.ReadFloat();
+          case 96: {
+            Hp = input.ReadInt32();
             break;
           }
           case 106: {
@@ -1320,79 +1320,79 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(CollisionTargetVelocity);
             break;
           }
-          case 112: {
-            CollideTargetId = input.ReadUInt32();
-            break;
-          }
-          case 122: {
-            if (sealRotation_ == null) {
-              SealRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
+          case 114: {
+            if (sealPosition_ == null) {
+              SealPosition = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
-            input.ReadMessage(SealRotation);
+            input.ReadMessage(SealPosition);
             break;
           }
-          case 264: {
-            CCLMFABDENA = (global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ) input.ReadEnum();
+          case 120: {
+            CollideOwnerId = input.ReadUInt32();
             break;
           }
-          case 1568: {
-            SealSkillId = input.ReadUInt32();
-            break;
-          }
-          case 2768: {
-            PlayerAScore = input.ReadUInt32();
-            break;
-          }
-          case 3496: {
-            JLCIKBLNENH = input.ReadUInt32();
-            break;
-          }
-          case 4592: {
-            HitTargetId = input.ReadUInt32();
-            break;
-          }
-          case 4928: {
-            TechId = input.ReadUInt32();
-            break;
-          }
-          case 7040: {
+          case 3648: {
             IsEffectAvailable = input.ReadBool();
             break;
           }
-          case 7581: {
-            SealSize = input.ReadFloat();
+          case 4792: {
+            HitTargetId = input.ReadUInt32();
             break;
           }
-          case 8448: {
-            SealOnStage = input.ReadBool();
+          case 6696: {
+            TechId = input.ReadUInt32();
             break;
           }
-          case 8856: {
-            TextId = input.ReadUInt32();
-            break;
-          }
-          case 10528: {
+          case 6904: {
             NBKELCHILGG = input.ReadBool();
             break;
           }
-          case 10832: {
-            PlayerBScore = input.ReadUInt32();
+          case 7144: {
+            PlayerAScore = input.ReadUInt32();
             break;
           }
-          case 12088: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 12461: {
-            HitLeftTime = input.ReadFloat();
-            break;
-          }
-          case 13888: {
+          case 7992: {
             HpChangeValue = input.ReadInt32();
             break;
           }
-          case 14264: {
+          case 8120: {
+            JLCIKBLNENH = input.ReadUInt32();
+            break;
+          }
+          case 8952: {
+            Level = input.ReadUInt32();
+            break;
+          }
+          case 10064: {
+            CCLMFABDENA = (global::EggLink.DanhengServer.Proto.FIPPKLCOEGJ) input.ReadEnum();
+            break;
+          }
+          case 12805: {
+            SealSize = input.ReadFloat();
+            break;
+          }
+          case 12893: {
+            HitLeftTime = input.ReadFloat();
+            break;
+          }
+          case 13512: {
+            SealOnStage = input.ReadBool();
+            break;
+          }
+          case 14696: {
             BuffId = input.ReadUInt32();
+            break;
+          }
+          case 15192: {
+            PlayerBScore = input.ReadUInt32();
+            break;
+          }
+          case 16136: {
+            TextId = input.ReadUInt32();
+            break;
+          }
+          case 16264: {
+            SealSkillId = input.ReadUInt32();
             break;
           }
         }

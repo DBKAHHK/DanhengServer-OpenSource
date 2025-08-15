@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static RogueBuffReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9Sb2d1ZUJ1ZmYucHJvdG8iKwoJUm9ndWVCdWZmEg0KBWxldmVsGA4gASgN",
-            "Eg8KB2J1ZmZfaWQYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "Cg9Sb2d1ZUJ1ZmYucHJvdG8iKwoJUm9ndWVCdWZmEg0KBWxldmVsGA8gASgN",
+            "Eg8KB2J1ZmZfaWQYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 14;
+    public const int LevelFieldNumber = 15;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff_id" field.</summary>
-    public const int BuffIdFieldNumber = 3;
+    public const int BuffIdFieldNumber = 9;
     private uint buffId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (BuffId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteUInt32(BuffId);
       }
       if (Level != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BuffId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteUInt32(BuffId);
       }
       if (Level != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 72: {
             BuffId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 120: {
             Level = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 72: {
             BuffId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 120: {
             Level = input.ReadUInt32();
             break;
           }

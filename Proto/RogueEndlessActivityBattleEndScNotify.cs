@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CitSb2d1ZUVuZGxlc3NBY3Rpdml0eUJhdHRsZUVuZFNjTm90aWZ5LnByb3Rv",
             "GhtSb2d1ZUVuZGxlc3NMYXllckluZm8ucHJvdG8iVAolUm9ndWVFbmRsZXNz",
-            "QWN0aXZpdHlCYXR0bGVFbmRTY05vdGlmeRIrCgtCT1BBQU5HS09HSBgPIAEo",
+            "QWN0aXZpdHlCYXR0bGVFbmRTY05vdGlmeRIrCgtCT1BBQU5HS09HSBgBIAEo",
             "CzIWLlJvZ3VlRW5kbGVzc0xheWVySW5mb0IeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BOPAANGKOGH" field.</summary>
-    public const int BOPAANGKOGHFieldNumber = 15;
+    public const int BOPAANGKOGHFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo bOPAANGKOGH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (bOPAANGKOGH_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(10);
         output.WriteMessage(BOPAANGKOGH);
       }
       if (_unknownFields != null) {
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (bOPAANGKOGH_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(10);
         output.WriteMessage(BOPAANGKOGH);
       }
       if (_unknownFields != null) {
@@ -202,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 122: {
+          case 10: {
             if (bOPAANGKOGH_ == null) {
               BOPAANGKOGH = new global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo();
             }
@@ -224,7 +224,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 122: {
+          case 10: {
             if (bOPAANGKOGH_ == null) {
               BOPAANGKOGH = new global::EggLink.DanhengServer.Proto.RogueEndlessLayerInfo();
             }

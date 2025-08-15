@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBVcGRhdGVNZWNoYW5pc21CYXJTY05vdGlmeS5wcm90bxoWTWVjaGFuaXNt",
             "QmFySW5mby5wcm90byJoChpVcGRhdGVNZWNoYW5pc21CYXJTY05vdGlmeRIQ",
-            "CghwbGFuZV9pZBgDIAEoDRImCgtHSUdLREFQR05NRRgHIAEoCzIRLk1lY2hh",
-            "bmlzbUJhckluZm8SEAoIZmxvb3JfaWQYCiABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "CghwbGFuZV9pZBgHIAEoDRImCgtHSUdLREFQR05NRRgBIAEoCzIRLk1lY2hh",
+            "bmlzbUJhckluZm8SEAoIZmxvb3JfaWQYAiABKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MechanismBarInfoReflection.Descriptor, },
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "plane_id" field.</summary>
-    public const int PlaneIdFieldNumber = 3;
+    public const int PlaneIdFieldNumber = 7;
     private uint planeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GIGKDAPGNME" field.</summary>
-    public const int GIGKDAPGNMEFieldNumber = 7;
+    public const int GIGKDAPGNMEFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.MechanismBarInfo gIGKDAPGNME_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "floor_id" field.</summary>
-    public const int FloorIdFieldNumber = 10;
+    public const int FloorIdFieldNumber = 2;
     private uint floorId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PlaneId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(PlaneId);
-      }
       if (gIGKDAPGNME_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(10);
         output.WriteMessage(GIGKDAPGNME);
       }
       if (FloorId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(16);
         output.WriteUInt32(FloorId);
+      }
+      if (PlaneId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(PlaneId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PlaneId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(PlaneId);
-      }
       if (gIGKDAPGNME_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(10);
         output.WriteMessage(GIGKDAPGNME);
       }
       if (FloorId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(16);
         output.WriteUInt32(FloorId);
+      }
+      if (PlaneId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(PlaneId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -260,19 +260,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            PlaneId = input.ReadUInt32();
-            break;
-          }
-          case 58: {
+          case 10: {
             if (gIGKDAPGNME_ == null) {
               GIGKDAPGNME = new global::EggLink.DanhengServer.Proto.MechanismBarInfo();
             }
             input.ReadMessage(GIGKDAPGNME);
             break;
           }
-          case 80: {
+          case 16: {
             FloorId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            PlaneId = input.ReadUInt32();
             break;
           }
         }
@@ -290,19 +290,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            PlaneId = input.ReadUInt32();
-            break;
-          }
-          case 58: {
+          case 10: {
             if (gIGKDAPGNME_ == null) {
               GIGKDAPGNME = new global::EggLink.DanhengServer.Proto.MechanismBarInfo();
             }
             input.ReadMessage(GIGKDAPGNME);
             break;
           }
-          case 80: {
+          case 16: {
             FloorId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            PlaneId = input.ReadUInt32();
             break;
           }
         }

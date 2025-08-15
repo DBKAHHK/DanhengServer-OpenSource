@@ -24,19 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static FightGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNGaWdodEdhbWVJbmZvLnByb3RvGhFNQU9HRkRLRENLTS5wcm90bxoYTWFy",
-            "YmxlR2FtZVN5bmNJbmZvLnByb3RvGhRNYXJibGVHYW1lSW5mby5wcm90bxoa",
-            "TWFyYmxlR2FtZUZpbmlzaEluZm8ucHJvdG8aGUZpZ2h0TWFyYmxlU2VhbElu",
-            "Zm8ucHJvdG8iswIKDUZpZ2h0R2FtZUluZm8SGQoRZ2FtZV9tZXNzYWdlX3R5",
-            "cGUYAiABKA0SLAoQbWFyYmxlX2dhbWVfaW5mbxiHBiABKAsyDy5NYXJibGVH",
-            "YW1lSW5mb0gAEjUKFW1hcmJsZV9nYW1lX3N5bmNfaW5mbxiQASABKAsyEy5N",
-            "YXJibGVHYW1lU3luY0luZm9IABIzChFyb2d1ZV9maW5pc2hfaW5mbxizAiAB",
-            "KAsyFS5NYXJibGVHYW1lRmluaXNoSW5mb0gAEiQKC01FSkRNSklLSU1PGIYH",
+            "ChNGaWdodEdhbWVJbmZvLnByb3RvGhhNYXJibGVHYW1lU3luY0luZm8ucHJv",
+            "dG8aFE1hcmJsZUdhbWVJbmZvLnByb3RvGhlGaWdodE1hcmJsZVNlYWxJbmZv",
+            "LnByb3RvGhpNYXJibGVHYW1lRmluaXNoSW5mby5wcm90bxoRTUFPR0ZES0RD",
+            "S00ucHJvdG8iswIKDUZpZ2h0R2FtZUluZm8SGQoRZ2FtZV9tZXNzYWdlX3R5",
+            "cGUYDiABKA0SLAoQbWFyYmxlX2dhbWVfaW5mbxiTDiABKAsyDy5NYXJibGVH",
+            "YW1lSW5mb0gAEjUKFW1hcmJsZV9nYW1lX3N5bmNfaW5mbxiECSABKAsyEy5N",
+            "YXJibGVHYW1lU3luY0luZm9IABIzChFyb2d1ZV9maW5pc2hfaW5mbxjADiAB",
+            "KAsyFS5NYXJibGVHYW1lRmluaXNoSW5mb0gAEiQKC01FSkRNSklLSU1PGJYK",
             "IAEoCzIMLk1BT0dGREtEQ0tNSAASNwoWZmlnaHRfbWFyYmxlX3NlYWxfaW5m",
-            "bxiNBSABKAsyFC5GaWdodE1hcmJsZVNlYWxJbmZvSABCDgoMR2FtZUluZm9D",
+            "bxjZDyABKAsyFC5GaWdodE1hcmJsZVNlYWxJbmZvSABCDgoMR2FtZUluZm9D",
             "YXNlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MAOGFDKDCKMReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FightMarbleSealInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleGameSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FightMarbleSealInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MAOGFDKDCKMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightGameInfo), global::EggLink.DanhengServer.Proto.FightGameInfo.Parser, new[]{ "GameMessageType", "MarbleGameInfo", "MarbleGameSyncInfo", "RogueFinishInfo", "MEJDMJIKIMO", "FightMarbleSealInfo" }, new[]{ "GameInfoCase" }, null, null, null)
           }));
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "game_message_type" field.</summary>
-    public const int GameMessageTypeFieldNumber = 2;
+    public const int GameMessageTypeFieldNumber = 14;
     private uint gameMessageType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -121,7 +121,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "marble_game_info" field.</summary>
-    public const int MarbleGameInfoFieldNumber = 775;
+    public const int MarbleGameInfoFieldNumber = 1811;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.MarbleGameInfo MarbleGameInfo {
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "marble_game_sync_info" field.</summary>
-    public const int MarbleGameSyncInfoFieldNumber = 144;
+    public const int MarbleGameSyncInfoFieldNumber = 1156;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.MarbleGameSyncInfo MarbleGameSyncInfo {
@@ -145,7 +145,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_finish_info" field.</summary>
-    public const int RogueFinishInfoFieldNumber = 307;
+    public const int RogueFinishInfoFieldNumber = 1856;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.MarbleGameFinishInfo RogueFinishInfo {
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MEJDMJIKIMO" field.</summary>
-    public const int MEJDMJIKIMOFieldNumber = 902;
+    public const int MEJDMJIKIMOFieldNumber = 1302;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.MAOGFDKDCKM MEJDMJIKIMO {
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "fight_marble_seal_info" field.</summary>
-    public const int FightMarbleSealInfoFieldNumber = 653;
+    public const int FightMarbleSealInfoFieldNumber = 2009;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.FightMarbleSealInfo FightMarbleSealInfo {
@@ -184,11 +184,11 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "GameInfoCase" oneof.</summary>
     public enum GameInfoCaseOneofCase {
       None = 0,
-      MarbleGameInfo = 775,
-      MarbleGameSyncInfo = 144,
-      RogueFinishInfo = 307,
-      MEJDMJIKIMO = 902,
-      FightMarbleSealInfo = 653,
+      MarbleGameInfo = 1811,
+      MarbleGameSyncInfo = 1156,
+      RogueFinishInfo = 1856,
+      MEJDMJIKIMO = 1302,
+      FightMarbleSealInfo = 2009,
     }
     private GameInfoCaseOneofCase gameInfoCaseCase_ = GameInfoCaseOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -259,28 +259,28 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (GameMessageType != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(112);
         output.WriteUInt32(GameMessageType);
       }
       if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MarbleGameSyncInfo) {
-        output.WriteRawTag(130, 9);
+        output.WriteRawTag(162, 72);
         output.WriteMessage(MarbleGameSyncInfo);
       }
+      if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MEJDMJIKIMO) {
+        output.WriteRawTag(178, 81);
+        output.WriteMessage(MEJDMJIKIMO);
+      }
+      if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MarbleGameInfo) {
+        output.WriteRawTag(154, 113);
+        output.WriteMessage(MarbleGameInfo);
+      }
       if (gameInfoCaseCase_ == GameInfoCaseOneofCase.RogueFinishInfo) {
-        output.WriteRawTag(154, 19);
+        output.WriteRawTag(130, 116);
         output.WriteMessage(RogueFinishInfo);
       }
       if (gameInfoCaseCase_ == GameInfoCaseOneofCase.FightMarbleSealInfo) {
-        output.WriteRawTag(234, 40);
+        output.WriteRawTag(202, 125);
         output.WriteMessage(FightMarbleSealInfo);
-      }
-      if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MarbleGameInfo) {
-        output.WriteRawTag(186, 48);
-        output.WriteMessage(MarbleGameInfo);
-      }
-      if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MEJDMJIKIMO) {
-        output.WriteRawTag(178, 56);
-        output.WriteMessage(MEJDMJIKIMO);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -293,28 +293,28 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (GameMessageType != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(112);
         output.WriteUInt32(GameMessageType);
       }
       if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MarbleGameSyncInfo) {
-        output.WriteRawTag(130, 9);
+        output.WriteRawTag(162, 72);
         output.WriteMessage(MarbleGameSyncInfo);
       }
+      if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MEJDMJIKIMO) {
+        output.WriteRawTag(178, 81);
+        output.WriteMessage(MEJDMJIKIMO);
+      }
+      if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MarbleGameInfo) {
+        output.WriteRawTag(154, 113);
+        output.WriteMessage(MarbleGameInfo);
+      }
       if (gameInfoCaseCase_ == GameInfoCaseOneofCase.RogueFinishInfo) {
-        output.WriteRawTag(154, 19);
+        output.WriteRawTag(130, 116);
         output.WriteMessage(RogueFinishInfo);
       }
       if (gameInfoCaseCase_ == GameInfoCaseOneofCase.FightMarbleSealInfo) {
-        output.WriteRawTag(234, 40);
+        output.WriteRawTag(202, 125);
         output.WriteMessage(FightMarbleSealInfo);
-      }
-      if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MarbleGameInfo) {
-        output.WriteRawTag(186, 48);
-        output.WriteMessage(MarbleGameInfo);
-      }
-      if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MEJDMJIKIMO) {
-        output.WriteRawTag(178, 56);
-        output.WriteMessage(MEJDMJIKIMO);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -407,11 +407,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 112: {
             GameMessageType = input.ReadUInt32();
             break;
           }
-          case 1154: {
+          case 9250: {
             global::EggLink.DanhengServer.Proto.MarbleGameSyncInfo subBuilder = new global::EggLink.DanhengServer.Proto.MarbleGameSyncInfo();
             if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MarbleGameSyncInfo) {
               subBuilder.MergeFrom(MarbleGameSyncInfo);
@@ -420,25 +420,16 @@ namespace EggLink.DanhengServer.Proto {
             MarbleGameSyncInfo = subBuilder;
             break;
           }
-          case 2458: {
-            global::EggLink.DanhengServer.Proto.MarbleGameFinishInfo subBuilder = new global::EggLink.DanhengServer.Proto.MarbleGameFinishInfo();
-            if (gameInfoCaseCase_ == GameInfoCaseOneofCase.RogueFinishInfo) {
-              subBuilder.MergeFrom(RogueFinishInfo);
+          case 10418: {
+            global::EggLink.DanhengServer.Proto.MAOGFDKDCKM subBuilder = new global::EggLink.DanhengServer.Proto.MAOGFDKDCKM();
+            if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MEJDMJIKIMO) {
+              subBuilder.MergeFrom(MEJDMJIKIMO);
             }
             input.ReadMessage(subBuilder);
-            RogueFinishInfo = subBuilder;
+            MEJDMJIKIMO = subBuilder;
             break;
           }
-          case 5226: {
-            global::EggLink.DanhengServer.Proto.FightMarbleSealInfo subBuilder = new global::EggLink.DanhengServer.Proto.FightMarbleSealInfo();
-            if (gameInfoCaseCase_ == GameInfoCaseOneofCase.FightMarbleSealInfo) {
-              subBuilder.MergeFrom(FightMarbleSealInfo);
-            }
-            input.ReadMessage(subBuilder);
-            FightMarbleSealInfo = subBuilder;
-            break;
-          }
-          case 6202: {
+          case 14490: {
             global::EggLink.DanhengServer.Proto.MarbleGameInfo subBuilder = new global::EggLink.DanhengServer.Proto.MarbleGameInfo();
             if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MarbleGameInfo) {
               subBuilder.MergeFrom(MarbleGameInfo);
@@ -447,13 +438,22 @@ namespace EggLink.DanhengServer.Proto {
             MarbleGameInfo = subBuilder;
             break;
           }
-          case 7218: {
-            global::EggLink.DanhengServer.Proto.MAOGFDKDCKM subBuilder = new global::EggLink.DanhengServer.Proto.MAOGFDKDCKM();
-            if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MEJDMJIKIMO) {
-              subBuilder.MergeFrom(MEJDMJIKIMO);
+          case 14850: {
+            global::EggLink.DanhengServer.Proto.MarbleGameFinishInfo subBuilder = new global::EggLink.DanhengServer.Proto.MarbleGameFinishInfo();
+            if (gameInfoCaseCase_ == GameInfoCaseOneofCase.RogueFinishInfo) {
+              subBuilder.MergeFrom(RogueFinishInfo);
             }
             input.ReadMessage(subBuilder);
-            MEJDMJIKIMO = subBuilder;
+            RogueFinishInfo = subBuilder;
+            break;
+          }
+          case 16074: {
+            global::EggLink.DanhengServer.Proto.FightMarbleSealInfo subBuilder = new global::EggLink.DanhengServer.Proto.FightMarbleSealInfo();
+            if (gameInfoCaseCase_ == GameInfoCaseOneofCase.FightMarbleSealInfo) {
+              subBuilder.MergeFrom(FightMarbleSealInfo);
+            }
+            input.ReadMessage(subBuilder);
+            FightMarbleSealInfo = subBuilder;
             break;
           }
         }
@@ -471,11 +471,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 112: {
             GameMessageType = input.ReadUInt32();
             break;
           }
-          case 1154: {
+          case 9250: {
             global::EggLink.DanhengServer.Proto.MarbleGameSyncInfo subBuilder = new global::EggLink.DanhengServer.Proto.MarbleGameSyncInfo();
             if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MarbleGameSyncInfo) {
               subBuilder.MergeFrom(MarbleGameSyncInfo);
@@ -484,25 +484,16 @@ namespace EggLink.DanhengServer.Proto {
             MarbleGameSyncInfo = subBuilder;
             break;
           }
-          case 2458: {
-            global::EggLink.DanhengServer.Proto.MarbleGameFinishInfo subBuilder = new global::EggLink.DanhengServer.Proto.MarbleGameFinishInfo();
-            if (gameInfoCaseCase_ == GameInfoCaseOneofCase.RogueFinishInfo) {
-              subBuilder.MergeFrom(RogueFinishInfo);
+          case 10418: {
+            global::EggLink.DanhengServer.Proto.MAOGFDKDCKM subBuilder = new global::EggLink.DanhengServer.Proto.MAOGFDKDCKM();
+            if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MEJDMJIKIMO) {
+              subBuilder.MergeFrom(MEJDMJIKIMO);
             }
             input.ReadMessage(subBuilder);
-            RogueFinishInfo = subBuilder;
+            MEJDMJIKIMO = subBuilder;
             break;
           }
-          case 5226: {
-            global::EggLink.DanhengServer.Proto.FightMarbleSealInfo subBuilder = new global::EggLink.DanhengServer.Proto.FightMarbleSealInfo();
-            if (gameInfoCaseCase_ == GameInfoCaseOneofCase.FightMarbleSealInfo) {
-              subBuilder.MergeFrom(FightMarbleSealInfo);
-            }
-            input.ReadMessage(subBuilder);
-            FightMarbleSealInfo = subBuilder;
-            break;
-          }
-          case 6202: {
+          case 14490: {
             global::EggLink.DanhengServer.Proto.MarbleGameInfo subBuilder = new global::EggLink.DanhengServer.Proto.MarbleGameInfo();
             if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MarbleGameInfo) {
               subBuilder.MergeFrom(MarbleGameInfo);
@@ -511,13 +502,22 @@ namespace EggLink.DanhengServer.Proto {
             MarbleGameInfo = subBuilder;
             break;
           }
-          case 7218: {
-            global::EggLink.DanhengServer.Proto.MAOGFDKDCKM subBuilder = new global::EggLink.DanhengServer.Proto.MAOGFDKDCKM();
-            if (gameInfoCaseCase_ == GameInfoCaseOneofCase.MEJDMJIKIMO) {
-              subBuilder.MergeFrom(MEJDMJIKIMO);
+          case 14850: {
+            global::EggLink.DanhengServer.Proto.MarbleGameFinishInfo subBuilder = new global::EggLink.DanhengServer.Proto.MarbleGameFinishInfo();
+            if (gameInfoCaseCase_ == GameInfoCaseOneofCase.RogueFinishInfo) {
+              subBuilder.MergeFrom(RogueFinishInfo);
             }
             input.ReadMessage(subBuilder);
-            MEJDMJIKIMO = subBuilder;
+            RogueFinishInfo = subBuilder;
+            break;
+          }
+          case 16074: {
+            global::EggLink.DanhengServer.Proto.FightMarbleSealInfo subBuilder = new global::EggLink.DanhengServer.Proto.FightMarbleSealInfo();
+            if (gameInfoCaseCase_ == GameInfoCaseOneofCase.FightMarbleSealInfo) {
+              subBuilder.MergeFrom(FightMarbleSealInfo);
+            }
+            input.ReadMessage(subBuilder);
+            FightMarbleSealInfo = subBuilder;
             break;
           }
         }

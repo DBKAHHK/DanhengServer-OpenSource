@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFDaGVzc1JvZ3VlTm91c0VkaXREaWNlQ3NSZXEucHJvdG8aFENoZXNzUm9n",
             "dWVEaWNlLnByb3RvIkcKG0NoZXNzUm9ndWVOb3VzRWRpdERpY2VDc1JlcRIo",
-            "Cg9xdWVyeV9kaWNlX2luZm8YDCABKAsyDy5DaGVzc1JvZ3VlRGljZUIeqgIb",
+            "Cg9xdWVyeV9kaWNlX2luZm8YAyABKAsyDy5DaGVzc1JvZ3VlRGljZUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueDiceReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "query_dice_info" field.</summary>
-    public const int QueryDiceInfoFieldNumber = 12;
+    public const int QueryDiceInfoFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.ChessRogueDice queryDiceInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (queryDiceInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(26);
         output.WriteMessage(QueryDiceInfo);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (queryDiceInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(26);
         output.WriteMessage(QueryDiceInfo);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98: {
+          case 26: {
             if (queryDiceInfo_ == null) {
               QueryDiceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueDice();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98: {
+          case 26: {
             if (queryDiceInfo_ == null) {
               QueryDiceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueDice();
             }

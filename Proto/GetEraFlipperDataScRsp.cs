@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxHZXRFcmFGbGlwcGVyRGF0YVNjUnNwLnByb3RvGhhFcmFGbGlwcGVyRGF0",
-            "YUxpc3QucHJvdG8iTAoWR2V0RXJhRmxpcHBlckRhdGFTY1JzcBIhCgRkYXRh",
-            "GAIgASgLMhMuRXJhRmxpcHBlckRhdGFMaXN0Eg8KB3JldGNvZGUYDCABKA1C",
+            "YUxpc3QucHJvdG8iTAoWR2V0RXJhRmxpcHBlckRhdGFTY1JzcBIPCgdyZXRj",
+            "b2RlGAUgASgNEiEKBGRhdGEYAiABKAsyEy5FcmFGbGlwcGVyRGF0YUxpc3RC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EraFlipperDataListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetEraFlipperDataScRsp), global::EggLink.DanhengServer.Proto.GetEraFlipperDataScRsp.Parser, new[]{ "Data", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetEraFlipperDataScRsp), global::EggLink.DanhengServer.Proto.GetEraFlipperDataScRsp.Parser, new[]{ "Retcode", "Data" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetEraFlipperDataScRsp(GetEraFlipperDataScRsp other) : this() {
-      data_ = other.data_ != null ? other.data_.Clone() : null;
       retcode_ = other.retcode_;
+      data_ = other.data_ != null ? other.data_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,6 +82,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetEraFlipperDataScRsp Clone() {
       return new GetEraFlipperDataScRsp(this);
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 5;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
     }
 
     /// <summary>Field number for the "data" field.</summary>
@@ -93,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return data_; }
       set {
         data_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Data, other.Data)) return false;
       if (Retcode != other.Retcode) return false;
+      if (!object.Equals(Data, other.Data)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (data_ != null) hash ^= Data.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (data_ != null) hash ^= Data.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(Data);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(Data);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (data_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (data_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.data_ != null) {
         if (data_ == null) {
           Data = new global::EggLink.DanhengServer.Proto.EraFlipperDataList();
         }
         Data.MergeFrom(other.Data);
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -237,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Data);
             break;
           }
-          case 96: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -263,7 +263,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Data);
             break;
           }
-          case 96: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }

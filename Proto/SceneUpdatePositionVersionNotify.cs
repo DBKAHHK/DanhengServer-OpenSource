@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiZTY2VuZVVwZGF0ZVBvc2l0aW9uVmVyc2lvbk5vdGlmeS5wcm90byI3CiBT",
             "Y2VuZVVwZGF0ZVBvc2l0aW9uVmVyc2lvbk5vdGlmeRITCgtwb3NfdmVyc2lv",
-            "bhgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bhgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pos_version" field.</summary>
-    public const int PosVersionFieldNumber = 10;
+    public const int PosVersionFieldNumber = 3;
     private uint posVersion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PosVersion != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(PosVersion);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PosVersion != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(PosVersion);
       }
       if (_unknownFields != null) {
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
+          case 24: {
             PosVersion = input.ReadUInt32();
             break;
           }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
+          case 24: {
             PosVersion = input.ReadUInt32();
             break;
           }

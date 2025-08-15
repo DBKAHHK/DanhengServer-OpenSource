@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFKTENIQktLRkFOTC5wcm90byI2CgtKTENIQktLRkFOTBITCgtET0dEQUNG",
-            "TEJPRRgBIAEoDRISCgpzdGFnZV90eXBlGAwgASgNQh6qAhtFZ2dMaW5rLkRh",
+            "TEJPRRgIIAEoDRISCgpzdGFnZV90eXBlGAkgASgNQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DOGDACFLBOE" field.</summary>
-    public const int DOGDACFLBOEFieldNumber = 1;
+    public const int DOGDACFLBOEFieldNumber = 8;
     private uint dOGDACFLBOE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stage_type" field.</summary>
-    public const int StageTypeFieldNumber = 12;
+    public const int StageTypeFieldNumber = 9;
     private uint stageType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (DOGDACFLBOE != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(64);
         output.WriteUInt32(DOGDACFLBOE);
       }
       if (StageType != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(StageType);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DOGDACFLBOE != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(64);
         output.WriteUInt32(DOGDACFLBOE);
       }
       if (StageType != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(72);
         output.WriteUInt32(StageType);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 64: {
             DOGDACFLBOE = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 72: {
             StageType = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 64: {
             DOGDACFLBOE = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 72: {
             StageType = input.ReadUInt32();
             break;
           }

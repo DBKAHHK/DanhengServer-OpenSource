@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpNYXJibGVTZWFsRmluaXNoSW5mby5wcm90byKJAQoUTWFyYmxlU2VhbEZp",
-            "bmlzaEluZm8SFAoMdG90YWxfZGFtYWdlGAsgASgFEg8KB2l0ZW1faWQYCiAB",
-            "KA0SFwoPa2lsbF9zZWFsX2NvdW50GAwgASgFEhYKDm1hdGNoX3RpdGxlX2lk",
-            "GA0gASgNEhkKEWtpbGxlZF9zZWFsX2NvdW50GAQgASgFQh6qAhtFZ2dMaW5r",
+            "bmlzaEluZm8SFAoMdG90YWxfZGFtYWdlGAsgASgFEhkKEWtpbGxlZF9zZWFs",
+            "X2NvdW50GA0gASgFEhYKDm1hdGNoX3RpdGxlX2lkGAggASgNEhcKD2tpbGxf",
+            "c2VhbF9jb3VudBgGIAEoBRIPCgdpdGVtX2lkGAEgASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleSealFinishInfo), global::EggLink.DanhengServer.Proto.MarbleSealFinishInfo.Parser, new[]{ "TotalDamage", "ItemId", "KillSealCount", "MatchTitleId", "KilledSealCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleSealFinishInfo), global::EggLink.DanhengServer.Proto.MarbleSealFinishInfo.Parser, new[]{ "TotalDamage", "KilledSealCount", "MatchTitleId", "KillSealCount", "ItemId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarbleSealFinishInfo(MarbleSealFinishInfo other) : this() {
       totalDamage_ = other.totalDamage_;
-      itemId_ = other.itemId_;
-      killSealCount_ = other.killSealCount_;
-      matchTitleId_ = other.matchTitleId_;
       killedSealCount_ = other.killedSealCount_;
+      matchTitleId_ = other.matchTitleId_;
+      killSealCount_ = other.killSealCount_;
+      itemId_ = other.itemId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -100,32 +100,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "item_id" field.</summary>
-    public const int ItemIdFieldNumber = 10;
-    private uint itemId_;
+    /// <summary>Field number for the "killed_seal_count" field.</summary>
+    public const int KilledSealCountFieldNumber = 13;
+    private int killedSealCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ItemId {
-      get { return itemId_; }
+    public int KilledSealCount {
+      get { return killedSealCount_; }
       set {
-        itemId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "kill_seal_count" field.</summary>
-    public const int KillSealCountFieldNumber = 12;
-    private int killSealCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int KillSealCount {
-      get { return killSealCount_; }
-      set {
-        killSealCount_ = value;
+        killedSealCount_ = value;
       }
     }
 
     /// <summary>Field number for the "match_title_id" field.</summary>
-    public const int MatchTitleIdFieldNumber = 13;
+    public const int MatchTitleIdFieldNumber = 8;
     private uint matchTitleId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,15 +124,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "killed_seal_count" field.</summary>
-    public const int KilledSealCountFieldNumber = 4;
-    private int killedSealCount_;
+    /// <summary>Field number for the "kill_seal_count" field.</summary>
+    public const int KillSealCountFieldNumber = 6;
+    private int killSealCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int KilledSealCount {
-      get { return killedSealCount_; }
+    public int KillSealCount {
+      get { return killSealCount_; }
       set {
-        killedSealCount_ = value;
+        killSealCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "item_id" field.</summary>
+    public const int ItemIdFieldNumber = 1;
+    private uint itemId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ItemId {
+      get { return itemId_; }
+      set {
+        itemId_ = value;
       }
     }
 
@@ -164,10 +164,10 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (TotalDamage != other.TotalDamage) return false;
-      if (ItemId != other.ItemId) return false;
-      if (KillSealCount != other.KillSealCount) return false;
-      if (MatchTitleId != other.MatchTitleId) return false;
       if (KilledSealCount != other.KilledSealCount) return false;
+      if (MatchTitleId != other.MatchTitleId) return false;
+      if (KillSealCount != other.KillSealCount) return false;
+      if (ItemId != other.ItemId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,10 +176,10 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (TotalDamage != 0) hash ^= TotalDamage.GetHashCode();
-      if (ItemId != 0) hash ^= ItemId.GetHashCode();
-      if (KillSealCount != 0) hash ^= KillSealCount.GetHashCode();
-      if (MatchTitleId != 0) hash ^= MatchTitleId.GetHashCode();
       if (KilledSealCount != 0) hash ^= KilledSealCount.GetHashCode();
+      if (MatchTitleId != 0) hash ^= MatchTitleId.GetHashCode();
+      if (KillSealCount != 0) hash ^= KillSealCount.GetHashCode();
+      if (ItemId != 0) hash ^= ItemId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -198,25 +198,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (KilledSealCount != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(KilledSealCount);
-      }
       if (ItemId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(8);
         output.WriteUInt32(ItemId);
+      }
+      if (KillSealCount != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(KillSealCount);
+      }
+      if (MatchTitleId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MatchTitleId);
       }
       if (TotalDamage != 0) {
         output.WriteRawTag(88);
         output.WriteInt32(TotalDamage);
       }
-      if (KillSealCount != 0) {
-        output.WriteRawTag(96);
-        output.WriteInt32(KillSealCount);
-      }
-      if (MatchTitleId != 0) {
+      if (KilledSealCount != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(MatchTitleId);
+        output.WriteInt32(KilledSealCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -228,25 +228,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (KilledSealCount != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(KilledSealCount);
-      }
       if (ItemId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(8);
         output.WriteUInt32(ItemId);
+      }
+      if (KillSealCount != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(KillSealCount);
+      }
+      if (MatchTitleId != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(MatchTitleId);
       }
       if (TotalDamage != 0) {
         output.WriteRawTag(88);
         output.WriteInt32(TotalDamage);
       }
-      if (KillSealCount != 0) {
-        output.WriteRawTag(96);
-        output.WriteInt32(KillSealCount);
-      }
-      if (MatchTitleId != 0) {
+      if (KilledSealCount != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(MatchTitleId);
+        output.WriteInt32(KilledSealCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -261,17 +261,17 @@ namespace EggLink.DanhengServer.Proto {
       if (TotalDamage != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalDamage);
       }
-      if (ItemId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
-      }
-      if (KillSealCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(KillSealCount);
+      if (KilledSealCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(KilledSealCount);
       }
       if (MatchTitleId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MatchTitleId);
       }
-      if (KilledSealCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(KilledSealCount);
+      if (KillSealCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(KillSealCount);
+      }
+      if (ItemId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -288,17 +288,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other.TotalDamage != 0) {
         TotalDamage = other.TotalDamage;
       }
-      if (other.ItemId != 0) {
-        ItemId = other.ItemId;
-      }
-      if (other.KillSealCount != 0) {
-        KillSealCount = other.KillSealCount;
+      if (other.KilledSealCount != 0) {
+        KilledSealCount = other.KilledSealCount;
       }
       if (other.MatchTitleId != 0) {
         MatchTitleId = other.MatchTitleId;
       }
-      if (other.KilledSealCount != 0) {
-        KilledSealCount = other.KilledSealCount;
+      if (other.KillSealCount != 0) {
+        KillSealCount = other.KillSealCount;
+      }
+      if (other.ItemId != 0) {
+        ItemId = other.ItemId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -315,24 +315,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            KilledSealCount = input.ReadInt32();
+          case 8: {
+            ItemId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            ItemId = input.ReadUInt32();
+          case 48: {
+            KillSealCount = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            MatchTitleId = input.ReadUInt32();
             break;
           }
           case 88: {
             TotalDamage = input.ReadInt32();
             break;
           }
-          case 96: {
-            KillSealCount = input.ReadInt32();
-            break;
-          }
           case 104: {
-            MatchTitleId = input.ReadUInt32();
+            KilledSealCount = input.ReadInt32();
             break;
           }
         }
@@ -350,24 +350,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            KilledSealCount = input.ReadInt32();
+          case 8: {
+            ItemId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            ItemId = input.ReadUInt32();
+          case 48: {
+            KillSealCount = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            MatchTitleId = input.ReadUInt32();
             break;
           }
           case 88: {
             TotalDamage = input.ReadInt32();
             break;
           }
-          case 96: {
-            KillSealCount = input.ReadInt32();
-            break;
-          }
           case 104: {
-            MatchTitleId = input.ReadUInt32();
+            KilledSealCount = input.ReadInt32();
             break;
           }
         }

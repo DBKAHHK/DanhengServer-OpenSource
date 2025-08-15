@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFDaGVzc1JvZ3VlUXVlc3RGaW5pc2hOb3RpZnkucHJvdG8iRAobQ2hlc3NS",
-            "b2d1ZVF1ZXN0RmluaXNoTm90aWZ5EhAKCHF1ZXN0X2lkGA0gASgNEhMKC05O",
-            "SkNDRkVJTkRPGAwgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "b2d1ZVF1ZXN0RmluaXNoTm90aWZ5EhMKC05OSkNDRkVJTkRPGAcgASgNEhAK",
+            "CHF1ZXN0X2lkGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueQuestFinishNotify), global::EggLink.DanhengServer.Proto.ChessRogueQuestFinishNotify.Parser, new[]{ "QuestId", "NNJCCFEINDO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueQuestFinishNotify), global::EggLink.DanhengServer.Proto.ChessRogueQuestFinishNotify.Parser, new[]{ "NNJCCFEINDO", "QuestId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueQuestFinishNotify(ChessRogueQuestFinishNotify other) : this() {
-      questId_ = other.questId_;
       nNJCCFEINDO_ = other.nNJCCFEINDO_;
+      questId_ = other.questId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueQuestFinishNotify(this);
     }
 
-    /// <summary>Field number for the "quest_id" field.</summary>
-    public const int QuestIdFieldNumber = 13;
-    private uint questId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint QuestId {
-      get { return questId_; }
-      set {
-        questId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "NNJCCFEINDO" field.</summary>
-    public const int NNJCCFEINDOFieldNumber = 12;
+    public const int NNJCCFEINDOFieldNumber = 7;
     private uint nNJCCFEINDO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return nNJCCFEINDO_; }
       set {
         nNJCCFEINDO_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "quest_id" field.</summary>
+    public const int QuestIdFieldNumber = 15;
+    private uint questId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint QuestId {
+      get { return questId_; }
+      set {
+        questId_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (QuestId != other.QuestId) return false;
       if (NNJCCFEINDO != other.NNJCCFEINDO) return false;
+      if (QuestId != other.QuestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (QuestId != 0) hash ^= QuestId.GetHashCode();
       if (NNJCCFEINDO != 0) hash ^= NNJCCFEINDO.GetHashCode();
+      if (QuestId != 0) hash ^= QuestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (NNJCCFEINDO != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt32(NNJCCFEINDO);
       }
       if (QuestId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(QuestId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (NNJCCFEINDO != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt32(NNJCCFEINDO);
       }
       if (QuestId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(QuestId);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (QuestId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(QuestId);
-      }
       if (NNJCCFEINDO != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NNJCCFEINDO);
+      }
+      if (QuestId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(QuestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.QuestId != 0) {
-        QuestId = other.QuestId;
-      }
       if (other.NNJCCFEINDO != 0) {
         NNJCCFEINDO = other.NNJCCFEINDO;
+      }
+      if (other.QuestId != 0) {
+        QuestId = other.QuestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
+          case 56: {
             NNJCCFEINDO = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 120: {
             QuestId = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
+          case 56: {
             NNJCCFEINDO = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 120: {
             QuestId = input.ReadUInt32();
             break;
           }

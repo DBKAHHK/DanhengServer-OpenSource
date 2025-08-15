@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHZXRTZWNyZXRLZXlJbmZvU2NSc3AucHJvdG8aE1NlY3JldEtleUluZm8u",
-            "cHJvdG8iYQoVR2V0U2VjcmV0S2V5SW5mb1NjUnNwEhIKCnNlY3JldF9yc3AY",
-            "BiABKAwSDwoHcmV0Y29kZRgMIAEoDRIjCgtzZWNyZXRfaW5mbxgLIAMoCzIO",
-            "LlNlY3JldEtleUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "cHJvdG8iYQoVR2V0U2VjcmV0S2V5SW5mb1NjUnNwEg8KB3JldGNvZGUYDiAB",
+            "KA0SIwoLc2VjcmV0X2luZm8YCCADKAsyDi5TZWNyZXRLZXlJbmZvEhIKCnNl",
+            "Y3JldF9yc3AYDSABKAxCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SecretKeyInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSecretKeyInfoScRsp), global::EggLink.DanhengServer.Proto.GetSecretKeyInfoScRsp.Parser, new[]{ "SecretRsp", "Retcode", "SecretInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSecretKeyInfoScRsp), global::EggLink.DanhengServer.Proto.GetSecretKeyInfoScRsp.Parser, new[]{ "Retcode", "SecretInfo", "SecretRsp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSecretKeyInfoScRsp(GetSecretKeyInfoScRsp other) : this() {
-      secretRsp_ = other.secretRsp_;
       retcode_ = other.retcode_;
       secretInfo_ = other.secretInfo_.Clone();
+      secretRsp_ = other.secretRsp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetSecretKeyInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "secret_rsp" field.</summary>
-    public const int SecretRspFieldNumber = 6;
-    private pb::ByteString secretRsp_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString SecretRsp {
-      get { return secretRsp_; }
-      set {
-        secretRsp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,14 +99,26 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "secret_info" field.</summary>
-    public const int SecretInfoFieldNumber = 11;
+    public const int SecretInfoFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SecretKeyInfo> _repeated_secretInfo_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.SecretKeyInfo.Parser);
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.SecretKeyInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SecretKeyInfo> secretInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SecretKeyInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SecretKeyInfo> SecretInfo {
       get { return secretInfo_; }
+    }
+
+    /// <summary>Field number for the "secret_rsp" field.</summary>
+    public const int SecretRspFieldNumber = 13;
+    private pb::ByteString secretRsp_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString SecretRsp {
+      get { return secretRsp_; }
+      set {
+        secretRsp_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SecretRsp != other.SecretRsp) return false;
       if (Retcode != other.Retcode) return false;
       if(!secretInfo_.Equals(other.secretInfo_)) return false;
+      if (SecretRsp != other.SecretRsp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (SecretRsp.Length != 0) hash ^= SecretRsp.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= secretInfo_.GetHashCode();
+      if (SecretRsp.Length != 0) hash ^= SecretRsp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,13 +167,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      secretInfo_.WriteTo(output, _repeated_secretInfo_codec);
       if (SecretRsp.Length != 0) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(106);
         output.WriteBytes(SecretRsp);
       }
-      secretInfo_.WriteTo(output, _repeated_secretInfo_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -186,13 +186,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      secretInfo_.WriteTo(ref output, _repeated_secretInfo_codec);
       if (SecretRsp.Length != 0) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(106);
         output.WriteBytes(SecretRsp);
       }
-      secretInfo_.WriteTo(ref output, _repeated_secretInfo_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (SecretRsp.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(SecretRsp);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       size += secretInfo_.CalculateSize(_repeated_secretInfo_codec);
+      if (SecretRsp.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(SecretRsp);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,13 +224,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.SecretRsp.Length != 0) {
-        SecretRsp = other.SecretRsp;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
       secretInfo_.Add(other.secretInfo_);
+      if (other.SecretRsp.Length != 0) {
+        SecretRsp = other.SecretRsp;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,15 +246,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
-            SecretRsp = input.ReadBytes();
-            break;
-          }
-          case 90: {
+          case 66: {
             secretInfo_.AddEntriesFrom(input, _repeated_secretInfo_codec);
             break;
           }
-          case 96: {
+          case 106: {
+            SecretRsp = input.ReadBytes();
+            break;
+          }
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -273,15 +273,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
-            SecretRsp = input.ReadBytes();
-            break;
-          }
-          case 90: {
+          case 66: {
             secretInfo_.AddEntriesFrom(ref input, _repeated_secretInfo_codec);
             break;
           }
-          case 96: {
+          case 106: {
+            SecretRsp = input.ReadBytes();
+            break;
+          }
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }

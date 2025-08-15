@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5DbGllbnRNYWlsQXR0YWNobWVudEl0ZW0ucHJvdG8iPAoYQ2xpZW50TWFp",
-            "bEF0dGFjaG1lbnRJdGVtEg8KB21haWxfaWQYByABKA0SDwoHaXRlbV9pZBgE",
+            "bEF0dGFjaG1lbnRJdGVtEg8KB21haWxfaWQYDiABKA0SDwoHaXRlbV9pZBgM",
             "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "mail_id" field.</summary>
-    public const int MailIdFieldNumber = 7;
+    public const int MailIdFieldNumber = 14;
     private uint mailId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_id" field.</summary>
-    public const int ItemIdFieldNumber = 4;
+    public const int ItemIdFieldNumber = 12;
     private uint itemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ItemId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(96);
         output.WriteUInt32(ItemId);
       }
       if (MailId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(112);
         output.WriteUInt32(MailId);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ItemId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(96);
         output.WriteUInt32(ItemId);
       }
       if (MailId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(112);
         output.WriteUInt32(MailId);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 96: {
             ItemId = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 112: {
             MailId = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 96: {
             ItemId = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 112: {
             MailId = input.ReadUInt32();
             break;
           }

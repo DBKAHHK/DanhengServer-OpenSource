@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static SwitchItemReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBTd2l0Y2hJdGVtLnByb3RvIjYKClN3aXRjaEl0ZW0SEwoLZGFpbHlfaW5k",
-            "ZXgYBiABKA0SEwoLRUlORkJHS0VOREgYByABKAhCHqoCG0VnZ0xpbmsuRGFu",
+            "ChBTd2l0Y2hJdGVtLnByb3RvIjYKClN3aXRjaEl0ZW0SEwoLRUlORkJHS0VO",
+            "REgYCSABKAgSEwoLZGFpbHlfaW5kZXgYAiABKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwitchItem), global::EggLink.DanhengServer.Proto.SwitchItem.Parser, new[]{ "DailyIndex", "EINFBGKENDH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwitchItem), global::EggLink.DanhengServer.Proto.SwitchItem.Parser, new[]{ "EINFBGKENDH", "DailyIndex" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SwitchItem(SwitchItem other) : this() {
-      dailyIndex_ = other.dailyIndex_;
       eINFBGKENDH_ = other.eINFBGKENDH_;
+      dailyIndex_ = other.dailyIndex_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new SwitchItem(this);
     }
 
-    /// <summary>Field number for the "daily_index" field.</summary>
-    public const int DailyIndexFieldNumber = 6;
-    private uint dailyIndex_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DailyIndex {
-      get { return dailyIndex_; }
-      set {
-        dailyIndex_ = value;
-      }
-    }
-
     /// <summary>Field number for the "EINFBGKENDH" field.</summary>
-    public const int EINFBGKENDHFieldNumber = 7;
+    public const int EINFBGKENDHFieldNumber = 9;
     private bool eINFBGKENDH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return eINFBGKENDH_; }
       set {
         eINFBGKENDH_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "daily_index" field.</summary>
+    public const int DailyIndexFieldNumber = 2;
+    private uint dailyIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DailyIndex {
+      get { return dailyIndex_; }
+      set {
+        dailyIndex_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DailyIndex != other.DailyIndex) return false;
       if (EINFBGKENDH != other.EINFBGKENDH) return false;
+      if (DailyIndex != other.DailyIndex) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DailyIndex != 0) hash ^= DailyIndex.GetHashCode();
       if (EINFBGKENDH != false) hash ^= EINFBGKENDH.GetHashCode();
+      if (DailyIndex != 0) hash ^= DailyIndex.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (DailyIndex != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(16);
         output.WriteUInt32(DailyIndex);
       }
       if (EINFBGKENDH != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteBool(EINFBGKENDH);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DailyIndex != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(16);
         output.WriteUInt32(DailyIndex);
       }
       if (EINFBGKENDH != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteBool(EINFBGKENDH);
       }
       if (_unknownFields != null) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DailyIndex != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DailyIndex);
-      }
       if (EINFBGKENDH != false) {
         size += 1 + 1;
+      }
+      if (DailyIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DailyIndex);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DailyIndex != 0) {
-        DailyIndex = other.DailyIndex;
-      }
       if (other.EINFBGKENDH != false) {
         EINFBGKENDH = other.EINFBGKENDH;
+      }
+      if (other.DailyIndex != 0) {
+        DailyIndex = other.DailyIndex;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 16: {
             DailyIndex = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 72: {
             EINFBGKENDH = input.ReadBool();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 16: {
             DailyIndex = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 72: {
             EINFBGKENDH = input.ReadBool();
             break;
           }

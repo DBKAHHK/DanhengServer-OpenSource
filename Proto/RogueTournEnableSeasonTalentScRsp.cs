@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidSb2d1ZVRvdXJuRW5hYmxlU2Vhc29uVGFsZW50U2NSc3AucHJvdG8aHFJv",
             "Z3VlVG91cm5TZWFzb25UYWxlbnQucHJvdG8iaQohUm9ndWVUb3VybkVuYWJs",
-            "ZVNlYXNvblRhbGVudFNjUnNwEjMKEnNlYXNvbl90YWxlbnRfaW5mbxgMIAEo",
-            "CzIXLlJvZ3VlVG91cm5TZWFzb25UYWxlbnQSDwoHcmV0Y29kZRgJIAEoDUIe",
+            "ZVNlYXNvblRhbGVudFNjUnNwEg8KB3JldGNvZGUYBCABKA0SMwoSc2Vhc29u",
+            "X3RhbGVudF9pbmZvGAEgASgLMhcuUm9ndWVUb3VyblNlYXNvblRhbGVudEIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournSeasonTalentReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournEnableSeasonTalentScRsp), global::EggLink.DanhengServer.Proto.RogueTournEnableSeasonTalentScRsp.Parser, new[]{ "SeasonTalentInfo", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournEnableSeasonTalentScRsp), global::EggLink.DanhengServer.Proto.RogueTournEnableSeasonTalentScRsp.Parser, new[]{ "Retcode", "SeasonTalentInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournEnableSeasonTalentScRsp(RogueTournEnableSeasonTalentScRsp other) : this() {
-      seasonTalentInfo_ = other.seasonTalentInfo_ != null ? other.seasonTalentInfo_.Clone() : null;
       retcode_ = other.retcode_;
+      seasonTalentInfo_ = other.seasonTalentInfo_ != null ? other.seasonTalentInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournEnableSeasonTalentScRsp(this);
     }
 
-    /// <summary>Field number for the "season_talent_info" field.</summary>
-    public const int SeasonTalentInfoFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent seasonTalentInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent SeasonTalentInfo {
-      get { return seasonTalentInfo_; }
-      set {
-        seasonTalentInfo_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 4;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "season_talent_info" field.</summary>
+    public const int SeasonTalentInfoFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent seasonTalentInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent SeasonTalentInfo {
+      get { return seasonTalentInfo_; }
+      set {
+        seasonTalentInfo_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(SeasonTalentInfo, other.SeasonTalentInfo)) return false;
       if (Retcode != other.Retcode) return false;
+      if (!object.Equals(SeasonTalentInfo, other.SeasonTalentInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (seasonTalentInfo_ != null) hash ^= SeasonTalentInfo.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (seasonTalentInfo_ != null) hash ^= SeasonTalentInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Retcode);
-      }
       if (seasonTalentInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(10);
         output.WriteMessage(SeasonTalentInfo);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Retcode);
-      }
       if (seasonTalentInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(10);
         output.WriteMessage(SeasonTalentInfo);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (seasonTalentInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SeasonTalentInfo);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (seasonTalentInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SeasonTalentInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.seasonTalentInfo_ != null) {
         if (seasonTalentInfo_ == null) {
           SeasonTalentInfo = new global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent();
         }
         SeasonTalentInfo.MergeFrom(other.SeasonTalentInfo);
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 10: {
             if (seasonTalentInfo_ == null) {
               SeasonTalentInfo = new global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent();
             }
             input.ReadMessage(SeasonTalentInfo);
+            break;
+          }
+          case 32: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 10: {
             if (seasonTalentInfo_ == null) {
               SeasonTalentInfo = new global::EggLink.DanhengServer.Proto.RogueTournSeasonTalent();
             }
             input.ReadMessage(SeasonTalentInfo);
+            break;
+          }
+          case 32: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

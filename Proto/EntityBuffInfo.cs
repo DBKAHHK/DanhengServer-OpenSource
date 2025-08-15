@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRFbnRpdHlCdWZmSW5mby5wcm90bxoOQnVmZkluZm8ucHJvdG8iQQoORW50",
-            "aXR5QnVmZkluZm8SEQoJZW50aXR5X2lkGAIgASgNEhwKCWJ1ZmZfbGlzdBgD",
+            "aXR5QnVmZkluZm8SEQoJZW50aXR5X2lkGAIgASgNEhwKCWJ1ZmZfbGlzdBgL",
             "IAMoCzIJLkJ1ZmZJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff_list" field.</summary>
-    public const int BuffListFieldNumber = 3;
+    public const int BuffListFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BuffInfo> _repeated_buffList_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.BuffInfo.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.BuffInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuffInfo> buffList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BuffInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -220,7 +220,7 @@ namespace EggLink.DanhengServer.Proto {
             EntityId = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 90: {
             buffList_.AddEntriesFrom(input, _repeated_buffList_codec);
             break;
           }
@@ -243,7 +243,7 @@ namespace EggLink.DanhengServer.Proto {
             EntityId = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 90: {
             buffList_.AddEntriesFrom(ref input, _repeated_buffList_codec);
             break;
           }

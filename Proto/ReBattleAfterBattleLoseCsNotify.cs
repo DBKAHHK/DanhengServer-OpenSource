@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVSZUJhdHRsZUFmdGVyQmF0dGxlTG9zZUNzTm90aWZ5LnByb3RvIjYKH1Jl",
             "QmF0dGxlQWZ0ZXJCYXR0bGVMb3NlQ3NOb3RpZnkSEwoLUE1KQUhJTEJMRkwY",
-            "DiABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CyABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PMJAHILBLFL" field.</summary>
-    public const int PMJAHILBLFLFieldNumber = 14;
+    public const int PMJAHILBLFLFieldNumber = 11;
     private bool pMJAHILBLFL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PMJAHILBLFL != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteBool(PMJAHILBLFL);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PMJAHILBLFL != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteBool(PMJAHILBLFL);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 112: {
+          case 88: {
             PMJAHILBLFL = input.ReadBool();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 112: {
+          case 88: {
             PMJAHILBLFL = input.ReadBool();
             break;
           }

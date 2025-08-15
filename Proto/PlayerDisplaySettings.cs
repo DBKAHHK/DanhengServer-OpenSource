@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChtQbGF5ZXJEaXNwbGF5U2V0dGluZ3MucHJvdG8aEUlIS0dOSkROQUxKLnBy",
             "b3RvGhFPQklITkdNTktFSy5wcm90byJgChVQbGF5ZXJEaXNwbGF5U2V0dGlu",
-            "Z3MSJAoOY2hhbGxlbmdlX2xpc3QYCiADKAsyDC5JSEtHTkpETkFMShIhCgtK",
-            "RlBDUERDRkxNRBgHIAEoCzIMLk9CSUhOR01OS0VLQh6qAhtFZ2dMaW5rLkRh",
+            "Z3MSJAoOY2hhbGxlbmdlX2xpc3QYDSADKAsyDC5JSEtHTkpETkFMShIhCgtK",
+            "RlBDUERDRkxNRBgCIAEoCzIMLk9CSUhOR01OS0VLQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IHKGNJDNALJReflection.Descriptor, global::EggLink.DanhengServer.Proto.OBIHNGMNKEKReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_list" field.</summary>
-    public const int ChallengeListFieldNumber = 10;
+    public const int ChallengeListFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.IHKGNJDNALJ> _repeated_challengeList_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.IHKGNJDNALJ.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.IHKGNJDNALJ.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IHKGNJDNALJ> challengeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IHKGNJDNALJ>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JFPCPDCFLMD" field.</summary>
-    public const int JFPCPDCFLMDFieldNumber = 7;
+    public const int JFPCPDCFLMDFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.OBIHNGMNKEK jFPCPDCFLMD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (jFPCPDCFLMD_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(18);
         output.WriteMessage(JFPCPDCFLMD);
       }
       challengeList_.WriteTo(output, _repeated_challengeList_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (jFPCPDCFLMD_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(18);
         output.WriteMessage(JFPCPDCFLMD);
       }
       challengeList_.WriteTo(ref output, _repeated_challengeList_codec);
@@ -220,14 +220,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 18: {
             if (jFPCPDCFLMD_ == null) {
               JFPCPDCFLMD = new global::EggLink.DanhengServer.Proto.OBIHNGMNKEK();
             }
             input.ReadMessage(JFPCPDCFLMD);
             break;
           }
-          case 82: {
+          case 106: {
             challengeList_.AddEntriesFrom(input, _repeated_challengeList_codec);
             break;
           }
@@ -246,14 +246,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 18: {
             if (jFPCPDCFLMD_ == null) {
               JFPCPDCFLMD = new global::EggLink.DanhengServer.Proto.OBIHNGMNKEK();
             }
             input.ReadMessage(JFPCPDCFLMD);
             break;
           }
-          case 82: {
+          case 106: {
             challengeList_.AddEntriesFrom(ref input, _repeated_challengeList_codec);
             break;
           }

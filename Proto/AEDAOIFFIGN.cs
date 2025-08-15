@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFBRURBT0lGRklHTi5wcm90bxoQQXZhdGFyVHlwZS5wcm90byJCCgtBRURB",
-            "T0lGRklHThIRCglhdmF0YXJfaWQYAyABKA0SIAoLYXZhdGFyX3R5cGUYDCAB",
+            "T0lGRklHThIRCglhdmF0YXJfaWQYDyABKA0SIAoLYXZhdGFyX3R5cGUYCyAB",
             "KA4yCy5BdmF0YXJUeXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 3;
+    public const int AvatarIdFieldNumber = 15;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_type" field.</summary>
-    public const int AvatarTypeFieldNumber = 12;
+    public const int AvatarTypeFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.AvatarType avatarType_ = global::EggLink.DanhengServer.Proto.AvatarType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AvatarId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(AvatarId);
-      }
       if (AvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteEnum((int) AvatarType);
+      }
+      if (AvatarId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AvatarId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(AvatarId);
-      }
       if (AvatarType != global::EggLink.DanhengServer.Proto.AvatarType.None) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteEnum((int) AvatarType);
+      }
+      if (AvatarId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            AvatarId = input.ReadUInt32();
+          case 88: {
+            AvatarType = (global::EggLink.DanhengServer.Proto.AvatarType) input.ReadEnum();
             break;
           }
-          case 96: {
-            AvatarType = (global::EggLink.DanhengServer.Proto.AvatarType) input.ReadEnum();
+          case 120: {
+            AvatarId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            AvatarId = input.ReadUInt32();
+          case 88: {
+            AvatarType = (global::EggLink.DanhengServer.Proto.AvatarType) input.ReadEnum();
             break;
           }
-          case 96: {
-            AvatarType = (global::EggLink.DanhengServer.Proto.AvatarType) input.ReadEnum();
+          case 120: {
+            AvatarId = input.ReadUInt32();
             break;
           }
         }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFTd2l0Y2hIYW5kUmVzZXRIYW5kUG9zQ3NSZXEucHJvdG8aEE1vdGlvbklu",
             "Zm8ucHJvdG8iUgobU3dpdGNoSGFuZFJlc2V0SGFuZFBvc0NzUmVxEiAKC2hh",
-            "bmRfbW90aW9uGAUgASgLMgsuTW90aW9uSW5mbxIRCgljb25maWdfaWQYDyAB",
+            "bmRfbW90aW9uGAMgASgLMgsuTW90aW9uSW5mbxIRCgljb25maWdfaWQYCCAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "hand_motion" field.</summary>
-    public const int HandMotionFieldNumber = 5;
+    public const int HandMotionFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.MotionInfo handMotion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "config_id" field.</summary>
-    public const int ConfigIdFieldNumber = 15;
+    public const int ConfigIdFieldNumber = 8;
     private uint configId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (handMotion_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(26);
         output.WriteMessage(HandMotion);
       }
       if (ConfigId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(64);
         output.WriteUInt32(ConfigId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (handMotion_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(26);
         output.WriteMessage(HandMotion);
       }
       if (ConfigId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(64);
         output.WriteUInt32(ConfigId);
       }
       if (_unknownFields != null) {
@@ -230,14 +230,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 26: {
             if (handMotion_ == null) {
               HandMotion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(HandMotion);
             break;
           }
-          case 120: {
+          case 64: {
             ConfigId = input.ReadUInt32();
             break;
           }
@@ -256,14 +256,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 26: {
             if (handMotion_ == null) {
               HandMotion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(HandMotion);
             break;
           }
-          case 120: {
+          case 64: {
             ConfigId = input.ReadUInt32();
             break;
           }

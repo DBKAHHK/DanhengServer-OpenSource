@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static RaidInfoNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRSYWlkSW5mb05vdGlmeS5wcm90bxoUUmFpZFRhcmdldEluZm8ucHJvdG8a",
-            "EFJhaWRTdGF0dXMucHJvdG8aDkl0ZW1MaXN0LnByb3RvIrYBCg5SYWlkSW5m",
-            "b05vdGlmeRIbCgZzdGF0dXMYCCABKA4yCy5SYWlkU3RhdHVzEhMKC3dvcmxk",
-            "X2xldmVsGAQgASgNEhgKEHJhaWRfZmluaXNoX3RpbWUYDCABKAQSDwoHcmFp",
-            "ZF9pZBgHIAEoDRIpChByYWlkX3RhcmdldF9pbmZvGAUgAygLMg8uUmFpZFRh",
-            "cmdldEluZm8SHAoJaXRlbV9saXN0GAEgASgLMgkuSXRlbUxpc3RCHqoCG0Vn",
+            "ChRSYWlkSW5mb05vdGlmeS5wcm90bxoOSXRlbUxpc3QucHJvdG8aFFJhaWRU",
+            "YXJnZXRJbmZvLnByb3RvGhBSYWlkU3RhdHVzLnByb3RvIrYBCg5SYWlkSW5m",
+            "b05vdGlmeRIcCglpdGVtX2xpc3QYBCABKAsyCS5JdGVtTGlzdBIbCgZzdGF0",
+            "dXMYCyABKA4yCy5SYWlkU3RhdHVzEhMKC3dvcmxkX2xldmVsGAYgASgNEikK",
+            "EHJhaWRfdGFyZ2V0X2luZm8YByADKAsyDy5SYWlkVGFyZ2V0SW5mbxIYChBy",
+            "YWlkX2ZpbmlzaF90aW1lGAogASgEEg8KB3JhaWRfaWQYDCABKA1CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RaidTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RaidStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RaidTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RaidStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RaidInfoNotify), global::EggLink.DanhengServer.Proto.RaidInfoNotify.Parser, new[]{ "Status", "WorldLevel", "RaidFinishTime", "RaidId", "RaidTargetInfo", "ItemList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RaidInfoNotify), global::EggLink.DanhengServer.Proto.RaidInfoNotify.Parser, new[]{ "ItemList", "Status", "WorldLevel", "RaidTargetInfo", "RaidFinishTime", "RaidId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,12 +76,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RaidInfoNotify(RaidInfoNotify other) : this() {
+      itemList_ = other.itemList_ != null ? other.itemList_.Clone() : null;
       status_ = other.status_;
       worldLevel_ = other.worldLevel_;
+      raidTargetInfo_ = other.raidTargetInfo_.Clone();
       raidFinishTime_ = other.raidFinishTime_;
       raidId_ = other.raidId_;
-      raidTargetInfo_ = other.raidTargetInfo_.Clone();
-      itemList_ = other.itemList_ != null ? other.itemList_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,8 +91,20 @@ namespace EggLink.DanhengServer.Proto {
       return new RaidInfoNotify(this);
     }
 
+    /// <summary>Field number for the "item_list" field.</summary>
+    public const int ItemListFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.ItemList itemList_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ItemList ItemList {
+      get { return itemList_; }
+      set {
+        itemList_ = value;
+      }
+    }
+
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 8;
+    public const int StatusFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.RaidStatus status_ = global::EggLink.DanhengServer.Proto.RaidStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 4;
+    public const int WorldLevelFieldNumber = 6;
     private uint worldLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -115,8 +127,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "raid_target_info" field.</summary>
+    public const int RaidTargetInfoFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RaidTargetInfo> _repeated_raidTargetInfo_codec
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.RaidTargetInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidTargetInfo> raidTargetInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidTargetInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidTargetInfo> RaidTargetInfo {
+      get { return raidTargetInfo_; }
+    }
+
     /// <summary>Field number for the "raid_finish_time" field.</summary>
-    public const int RaidFinishTimeFieldNumber = 12;
+    public const int RaidFinishTimeFieldNumber = 10;
     private ulong raidFinishTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -128,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "raid_id" field.</summary>
-    public const int RaidIdFieldNumber = 7;
+    public const int RaidIdFieldNumber = 12;
     private uint raidId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,29 +159,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return raidId_; }
       set {
         raidId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "raid_target_info" field.</summary>
-    public const int RaidTargetInfoFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RaidTargetInfo> _repeated_raidTargetInfo_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.RaidTargetInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidTargetInfo> raidTargetInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidTargetInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RaidTargetInfo> RaidTargetInfo {
-      get { return raidTargetInfo_; }
-    }
-
-    /// <summary>Field number for the "item_list" field.</summary>
-    public const int ItemListFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.ItemList itemList_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemList ItemList {
-      get { return itemList_; }
-      set {
-        itemList_ = value;
       }
     }
 
@@ -177,12 +177,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(ItemList, other.ItemList)) return false;
       if (Status != other.Status) return false;
       if (WorldLevel != other.WorldLevel) return false;
+      if(!raidTargetInfo_.Equals(other.raidTargetInfo_)) return false;
       if (RaidFinishTime != other.RaidFinishTime) return false;
       if (RaidId != other.RaidId) return false;
-      if(!raidTargetInfo_.Equals(other.raidTargetInfo_)) return false;
-      if (!object.Equals(ItemList, other.ItemList)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -190,12 +190,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (itemList_ != null) hash ^= ItemList.GetHashCode();
       if (Status != global::EggLink.DanhengServer.Proto.RaidStatus.None) hash ^= Status.GetHashCode();
       if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
+      hash ^= raidTargetInfo_.GetHashCode();
       if (RaidFinishTime != 0UL) hash ^= RaidFinishTime.GetHashCode();
       if (RaidId != 0) hash ^= RaidId.GetHashCode();
-      hash ^= raidTargetInfo_.GetHashCode();
-      if (itemList_ != null) hash ^= ItemList.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -215,25 +215,25 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (itemList_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(34);
         output.WriteMessage(ItemList);
       }
       if (WorldLevel != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(48);
         output.WriteUInt32(WorldLevel);
       }
       raidTargetInfo_.WriteTo(output, _repeated_raidTargetInfo_codec);
-      if (RaidId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(RaidId);
+      if (RaidFinishTime != 0UL) {
+        output.WriteRawTag(80);
+        output.WriteUInt64(RaidFinishTime);
       }
       if (Status != global::EggLink.DanhengServer.Proto.RaidStatus.None) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Status);
       }
-      if (RaidFinishTime != 0UL) {
+      if (RaidId != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt64(RaidFinishTime);
+        output.WriteUInt32(RaidId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -246,25 +246,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (itemList_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(34);
         output.WriteMessage(ItemList);
       }
       if (WorldLevel != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(48);
         output.WriteUInt32(WorldLevel);
       }
       raidTargetInfo_.WriteTo(ref output, _repeated_raidTargetInfo_codec);
-      if (RaidId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(RaidId);
+      if (RaidFinishTime != 0UL) {
+        output.WriteRawTag(80);
+        output.WriteUInt64(RaidFinishTime);
       }
       if (Status != global::EggLink.DanhengServer.Proto.RaidStatus.None) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(88);
         output.WriteEnum((int) Status);
       }
-      if (RaidFinishTime != 0UL) {
+      if (RaidId != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt64(RaidFinishTime);
+        output.WriteUInt32(RaidId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -276,21 +276,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (itemList_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ItemList);
+      }
       if (Status != global::EggLink.DanhengServer.Proto.RaidStatus.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (WorldLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
       }
+      size += raidTargetInfo_.CalculateSize(_repeated_raidTargetInfo_codec);
       if (RaidFinishTime != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(RaidFinishTime);
       }
       if (RaidId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RaidId);
-      }
-      size += raidTargetInfo_.CalculateSize(_repeated_raidTargetInfo_codec);
-      if (itemList_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ItemList);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -304,24 +304,24 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.itemList_ != null) {
+        if (itemList_ == null) {
+          ItemList = new global::EggLink.DanhengServer.Proto.ItemList();
+        }
+        ItemList.MergeFrom(other.ItemList);
+      }
       if (other.Status != global::EggLink.DanhengServer.Proto.RaidStatus.None) {
         Status = other.Status;
       }
       if (other.WorldLevel != 0) {
         WorldLevel = other.WorldLevel;
       }
+      raidTargetInfo_.Add(other.raidTargetInfo_);
       if (other.RaidFinishTime != 0UL) {
         RaidFinishTime = other.RaidFinishTime;
       }
       if (other.RaidId != 0) {
         RaidId = other.RaidId;
-      }
-      raidTargetInfo_.Add(other.raidTargetInfo_);
-      if (other.itemList_ != null) {
-        if (itemList_ == null) {
-          ItemList = new global::EggLink.DanhengServer.Proto.ItemList();
-        }
-        ItemList.MergeFrom(other.ItemList);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -338,31 +338,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 34: {
             if (itemList_ == null) {
               ItemList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(ItemList);
             break;
           }
-          case 32: {
+          case 48: {
             WorldLevel = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 58: {
             raidTargetInfo_.AddEntriesFrom(input, _repeated_raidTargetInfo_codec);
             break;
           }
-          case 56: {
-            RaidId = input.ReadUInt32();
+          case 80: {
+            RaidFinishTime = input.ReadUInt64();
             break;
           }
-          case 64: {
+          case 88: {
             Status = (global::EggLink.DanhengServer.Proto.RaidStatus) input.ReadEnum();
             break;
           }
           case 96: {
-            RaidFinishTime = input.ReadUInt64();
+            RaidId = input.ReadUInt32();
             break;
           }
         }
@@ -380,31 +380,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 34: {
             if (itemList_ == null) {
               ItemList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(ItemList);
             break;
           }
-          case 32: {
+          case 48: {
             WorldLevel = input.ReadUInt32();
             break;
           }
-          case 42: {
+          case 58: {
             raidTargetInfo_.AddEntriesFrom(ref input, _repeated_raidTargetInfo_codec);
             break;
           }
-          case 56: {
-            RaidId = input.ReadUInt32();
+          case 80: {
+            RaidFinishTime = input.ReadUInt64();
             break;
           }
-          case 64: {
+          case 88: {
             Status = (global::EggLink.DanhengServer.Proto.RaidStatus) input.ReadEnum();
             break;
           }
           case 96: {
-            RaidFinishTime = input.ReadUInt64();
+            RaidId = input.ReadUInt32();
             break;
           }
         }

@@ -24,21 +24,21 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueGetInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdDaGVzc1JvZ3VlR2V0SW5mby5wcm90bxoaQ2hlc3NSb2d1ZVRhbGVudElu",
-            "Zm8ucHJvdG8aHUNoZXNzUm9ndWVRdWVyeUFlb25JbmZvLnByb3RvGh1DaGVz",
-            "c1JvZ3VlUXVlcnlEaWNlSW5mby5wcm90bxoiQ2hlc3NSb2d1ZVF1ZXJ5RGlm",
-            "ZmN1bHR5SW5mby5wcm90byKdAgoRQ2hlc3NSb2d1ZUdldEluZm8SLwoQdGFs",
-            "ZW50X2luZm9fbGlzdBgCIAEoCzIVLkNoZXNzUm9ndWVUYWxlbnRJbmZvEhQK",
-            "DGFyZWFfaWRfbGlzdBgFIAMoDRIxCg9xdWVyeV9kaWNlX2luZm8YCSABKAsy",
-            "GC5DaGVzc1JvZ3VlUXVlcnlEaWNlSW5mbxI8ChVyb2d1ZV9kaWZmaWN1bHR5",
-            "X2luZm8YBCABKAsyHS5DaGVzc1JvZ3VlUXVlcnlEaWZmY3VsdHlJbmZvEh0K",
-            "FWV4cGxvcmVkX2FyZWFfaWRfbGlzdBgMIAMoDRIxCg9jaGVzc19hZW9uX2lu",
+            "ChdDaGVzc1JvZ3VlR2V0SW5mby5wcm90bxoiQ2hlc3NSb2d1ZVF1ZXJ5RGlm",
+            "ZmN1bHR5SW5mby5wcm90bxodQ2hlc3NSb2d1ZVF1ZXJ5RGljZUluZm8ucHJv",
+            "dG8aHUNoZXNzUm9ndWVRdWVyeUFlb25JbmZvLnByb3RvGhpDaGVzc1JvZ3Vl",
+            "VGFsZW50SW5mby5wcm90byKdAgoRQ2hlc3NSb2d1ZUdldEluZm8SMQoPcXVl",
+            "cnlfZGljZV9pbmZvGAYgASgLMhguQ2hlc3NSb2d1ZVF1ZXJ5RGljZUluZm8S",
+            "LwoQdGFsZW50X2luZm9fbGlzdBgHIAEoCzIVLkNoZXNzUm9ndWVUYWxlbnRJ",
+            "bmZvEjwKFXJvZ3VlX2RpZmZpY3VsdHlfaW5mbxgIIAEoCzIdLkNoZXNzUm9n",
+            "dWVRdWVyeURpZmZjdWx0eUluZm8SFAoMYXJlYV9pZF9saXN0GAUgAygNEh0K",
+            "FWV4cGxvcmVkX2FyZWFfaWRfbGlzdBgOIAMoDRIxCg9jaGVzc19hZW9uX2lu",
             "Zm8YDSABKAsyGC5DaGVzc1JvZ3VlUXVlcnlBZW9uSW5mb0IeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueTalentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryDiffcultyInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueQueryDiffcultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueQueryAeonInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueTalentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueGetInfo), global::EggLink.DanhengServer.Proto.ChessRogueGetInfo.Parser, new[]{ "TalentInfoList", "AreaIdList", "QueryDiceInfo", "RogueDifficultyInfo", "ExploredAreaIdList", "ChessAeonInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueGetInfo), global::EggLink.DanhengServer.Proto.ChessRogueGetInfo.Parser, new[]{ "QueryDiceInfo", "TalentInfoList", "RogueDifficultyInfo", "AreaIdList", "ExploredAreaIdList", "ChessAeonInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -80,10 +80,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueGetInfo(ChessRogueGetInfo other) : this() {
-      talentInfoList_ = other.talentInfoList_ != null ? other.talentInfoList_.Clone() : null;
-      areaIdList_ = other.areaIdList_.Clone();
       queryDiceInfo_ = other.queryDiceInfo_ != null ? other.queryDiceInfo_.Clone() : null;
+      talentInfoList_ = other.talentInfoList_ != null ? other.talentInfoList_.Clone() : null;
       rogueDifficultyInfo_ = other.rogueDifficultyInfo_ != null ? other.rogueDifficultyInfo_.Clone() : null;
+      areaIdList_ = other.areaIdList_.Clone();
       exploredAreaIdList_ = other.exploredAreaIdList_.Clone();
       chessAeonInfo_ = other.chessAeonInfo_ != null ? other.chessAeonInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -95,8 +95,20 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueGetInfo(this);
     }
 
+    /// <summary>Field number for the "query_dice_info" field.</summary>
+    public const int QueryDiceInfoFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfo queryDiceInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfo QueryDiceInfo {
+      get { return queryDiceInfo_; }
+      set {
+        queryDiceInfo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "talent_info_list" field.</summary>
-    public const int TalentInfoListFieldNumber = 2;
+    public const int TalentInfoListFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.ChessRogueTalentInfo talentInfoList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +116,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return talentInfoList_; }
       set {
         talentInfoList_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rogue_difficulty_info" field.</summary>
+    public const int RogueDifficultyInfoFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.ChessRogueQueryDiffcultyInfo rogueDifficultyInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ChessRogueQueryDiffcultyInfo RogueDifficultyInfo {
+      get { return rogueDifficultyInfo_; }
+      set {
+        rogueDifficultyInfo_ = value;
       }
     }
 
@@ -118,34 +142,10 @@ namespace EggLink.DanhengServer.Proto {
       get { return areaIdList_; }
     }
 
-    /// <summary>Field number for the "query_dice_info" field.</summary>
-    public const int QueryDiceInfoFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfo queryDiceInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfo QueryDiceInfo {
-      get { return queryDiceInfo_; }
-      set {
-        queryDiceInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "rogue_difficulty_info" field.</summary>
-    public const int RogueDifficultyInfoFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.ChessRogueQueryDiffcultyInfo rogueDifficultyInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChessRogueQueryDiffcultyInfo RogueDifficultyInfo {
-      get { return rogueDifficultyInfo_; }
-      set {
-        rogueDifficultyInfo_ = value;
-      }
-    }
-
     /// <summary>Field number for the "explored_area_id_list" field.</summary>
-    public const int ExploredAreaIdListFieldNumber = 12;
+    public const int ExploredAreaIdListFieldNumber = 14;
     private static readonly pb::FieldCodec<uint> _repeated_exploredAreaIdList_codec
-        = pb::FieldCodec.ForUInt32(98);
+        = pb::FieldCodec.ForUInt32(114);
     private readonly pbc::RepeatedField<uint> exploredAreaIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -180,10 +180,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(TalentInfoList, other.TalentInfoList)) return false;
-      if(!areaIdList_.Equals(other.areaIdList_)) return false;
       if (!object.Equals(QueryDiceInfo, other.QueryDiceInfo)) return false;
+      if (!object.Equals(TalentInfoList, other.TalentInfoList)) return false;
       if (!object.Equals(RogueDifficultyInfo, other.RogueDifficultyInfo)) return false;
+      if(!areaIdList_.Equals(other.areaIdList_)) return false;
       if(!exploredAreaIdList_.Equals(other.exploredAreaIdList_)) return false;
       if (!object.Equals(ChessAeonInfo, other.ChessAeonInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -193,10 +193,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (talentInfoList_ != null) hash ^= TalentInfoList.GetHashCode();
-      hash ^= areaIdList_.GetHashCode();
       if (queryDiceInfo_ != null) hash ^= QueryDiceInfo.GetHashCode();
+      if (talentInfoList_ != null) hash ^= TalentInfoList.GetHashCode();
       if (rogueDifficultyInfo_ != null) hash ^= RogueDifficultyInfo.GetHashCode();
+      hash ^= areaIdList_.GetHashCode();
       hash ^= exploredAreaIdList_.GetHashCode();
       if (chessAeonInfo_ != null) hash ^= ChessAeonInfo.GetHashCode();
       if (_unknownFields != null) {
@@ -217,24 +217,24 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      areaIdList_.WriteTo(output, _repeated_areaIdList_codec);
+      if (queryDiceInfo_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(QueryDiceInfo);
+      }
       if (talentInfoList_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(58);
         output.WriteMessage(TalentInfoList);
       }
       if (rogueDifficultyInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(66);
         output.WriteMessage(RogueDifficultyInfo);
       }
-      areaIdList_.WriteTo(output, _repeated_areaIdList_codec);
-      if (queryDiceInfo_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(QueryDiceInfo);
-      }
-      exploredAreaIdList_.WriteTo(output, _repeated_exploredAreaIdList_codec);
       if (chessAeonInfo_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(ChessAeonInfo);
       }
+      exploredAreaIdList_.WriteTo(output, _repeated_exploredAreaIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -245,24 +245,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      areaIdList_.WriteTo(ref output, _repeated_areaIdList_codec);
+      if (queryDiceInfo_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(QueryDiceInfo);
+      }
       if (talentInfoList_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(58);
         output.WriteMessage(TalentInfoList);
       }
       if (rogueDifficultyInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(66);
         output.WriteMessage(RogueDifficultyInfo);
       }
-      areaIdList_.WriteTo(ref output, _repeated_areaIdList_codec);
-      if (queryDiceInfo_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(QueryDiceInfo);
-      }
-      exploredAreaIdList_.WriteTo(ref output, _repeated_exploredAreaIdList_codec);
       if (chessAeonInfo_ != null) {
         output.WriteRawTag(106);
         output.WriteMessage(ChessAeonInfo);
       }
+      exploredAreaIdList_.WriteTo(ref output, _repeated_exploredAreaIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (talentInfoList_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TalentInfoList);
-      }
-      size += areaIdList_.CalculateSize(_repeated_areaIdList_codec);
       if (queryDiceInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryDiceInfo);
+      }
+      if (talentInfoList_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TalentInfoList);
       }
       if (rogueDifficultyInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueDifficultyInfo);
       }
+      size += areaIdList_.CalculateSize(_repeated_areaIdList_codec);
       size += exploredAreaIdList_.CalculateSize(_repeated_exploredAreaIdList_codec);
       if (chessAeonInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChessAeonInfo);
@@ -299,18 +299,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.talentInfoList_ != null) {
-        if (talentInfoList_ == null) {
-          TalentInfoList = new global::EggLink.DanhengServer.Proto.ChessRogueTalentInfo();
-        }
-        TalentInfoList.MergeFrom(other.TalentInfoList);
-      }
-      areaIdList_.Add(other.areaIdList_);
       if (other.queryDiceInfo_ != null) {
         if (queryDiceInfo_ == null) {
           QueryDiceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfo();
         }
         QueryDiceInfo.MergeFrom(other.QueryDiceInfo);
+      }
+      if (other.talentInfoList_ != null) {
+        if (talentInfoList_ == null) {
+          TalentInfoList = new global::EggLink.DanhengServer.Proto.ChessRogueTalentInfo();
+        }
+        TalentInfoList.MergeFrom(other.TalentInfoList);
       }
       if (other.rogueDifficultyInfo_ != null) {
         if (rogueDifficultyInfo_ == null) {
@@ -318,6 +317,7 @@ namespace EggLink.DanhengServer.Proto {
         }
         RogueDifficultyInfo.MergeFrom(other.RogueDifficultyInfo);
       }
+      areaIdList_.Add(other.areaIdList_);
       exploredAreaIdList_.Add(other.exploredAreaIdList_);
       if (other.chessAeonInfo_ != null) {
         if (chessAeonInfo_ == null) {
@@ -340,35 +340,30 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            if (talentInfoList_ == null) {
-              TalentInfoList = new global::EggLink.DanhengServer.Proto.ChessRogueTalentInfo();
-            }
-            input.ReadMessage(TalentInfoList);
-            break;
-          }
-          case 34: {
-            if (rogueDifficultyInfo_ == null) {
-              RogueDifficultyInfo = new global::EggLink.DanhengServer.Proto.ChessRogueQueryDiffcultyInfo();
-            }
-            input.ReadMessage(RogueDifficultyInfo);
-            break;
-          }
           case 42:
           case 40: {
             areaIdList_.AddEntriesFrom(input, _repeated_areaIdList_codec);
             break;
           }
-          case 74: {
+          case 50: {
             if (queryDiceInfo_ == null) {
               QueryDiceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfo();
             }
             input.ReadMessage(QueryDiceInfo);
             break;
           }
-          case 98:
-          case 96: {
-            exploredAreaIdList_.AddEntriesFrom(input, _repeated_exploredAreaIdList_codec);
+          case 58: {
+            if (talentInfoList_ == null) {
+              TalentInfoList = new global::EggLink.DanhengServer.Proto.ChessRogueTalentInfo();
+            }
+            input.ReadMessage(TalentInfoList);
+            break;
+          }
+          case 66: {
+            if (rogueDifficultyInfo_ == null) {
+              RogueDifficultyInfo = new global::EggLink.DanhengServer.Proto.ChessRogueQueryDiffcultyInfo();
+            }
+            input.ReadMessage(RogueDifficultyInfo);
             break;
           }
           case 106: {
@@ -376,6 +371,11 @@ namespace EggLink.DanhengServer.Proto {
               ChessAeonInfo = new global::EggLink.DanhengServer.Proto.ChessRogueQueryAeonInfo();
             }
             input.ReadMessage(ChessAeonInfo);
+            break;
+          }
+          case 114:
+          case 112: {
+            exploredAreaIdList_.AddEntriesFrom(input, _repeated_exploredAreaIdList_codec);
             break;
           }
         }
@@ -393,35 +393,30 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            if (talentInfoList_ == null) {
-              TalentInfoList = new global::EggLink.DanhengServer.Proto.ChessRogueTalentInfo();
-            }
-            input.ReadMessage(TalentInfoList);
-            break;
-          }
-          case 34: {
-            if (rogueDifficultyInfo_ == null) {
-              RogueDifficultyInfo = new global::EggLink.DanhengServer.Proto.ChessRogueQueryDiffcultyInfo();
-            }
-            input.ReadMessage(RogueDifficultyInfo);
-            break;
-          }
           case 42:
           case 40: {
             areaIdList_.AddEntriesFrom(ref input, _repeated_areaIdList_codec);
             break;
           }
-          case 74: {
+          case 50: {
             if (queryDiceInfo_ == null) {
               QueryDiceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueQueryDiceInfo();
             }
             input.ReadMessage(QueryDiceInfo);
             break;
           }
-          case 98:
-          case 96: {
-            exploredAreaIdList_.AddEntriesFrom(ref input, _repeated_exploredAreaIdList_codec);
+          case 58: {
+            if (talentInfoList_ == null) {
+              TalentInfoList = new global::EggLink.DanhengServer.Proto.ChessRogueTalentInfo();
+            }
+            input.ReadMessage(TalentInfoList);
+            break;
+          }
+          case 66: {
+            if (rogueDifficultyInfo_ == null) {
+              RogueDifficultyInfo = new global::EggLink.DanhengServer.Proto.ChessRogueQueryDiffcultyInfo();
+            }
+            input.ReadMessage(RogueDifficultyInfo);
             break;
           }
           case 106: {
@@ -429,6 +424,11 @@ namespace EggLink.DanhengServer.Proto {
               ChessAeonInfo = new global::EggLink.DanhengServer.Proto.ChessRogueQueryAeonInfo();
             }
             input.ReadMessage(ChessAeonInfo);
+            break;
+          }
+          case 114:
+          case 112: {
+            exploredAreaIdList_.AddEntriesFrom(ref input, _repeated_exploredAreaIdList_codec);
             break;
           }
         }

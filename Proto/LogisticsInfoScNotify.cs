@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtMb2dpc3RpY3NJbmZvU2NOb3RpZnkucHJvdG8aEUFHQURFTUFKSU1ELnBy",
-            "b3RvIjoKFUxvZ2lzdGljc0luZm9TY05vdGlmeRIhCgtOSkdBTUNDR0FEQxgK",
+            "b3RvIjoKFUxvZ2lzdGljc0luZm9TY05vdGlmeRIhCgtOSkdBTUNDR0FEQxgE",
             "IAEoCzIMLkFHQURFTUFKSU1EQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NJGAMCCGADC" field.</summary>
-    public const int NJGAMCCGADCFieldNumber = 10;
+    public const int NJGAMCCGADCFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.AGADEMAJIMD nJGAMCCGADC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (nJGAMCCGADC_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(34);
         output.WriteMessage(NJGAMCCGADC);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (nJGAMCCGADC_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(34);
         output.WriteMessage(NJGAMCCGADC);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 34: {
             if (nJGAMCCGADC_ == null) {
               NJGAMCCGADC = new global::EggLink.DanhengServer.Proto.AGADEMAJIMD();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 34: {
             if (nJGAMCCGADC_ == null) {
               NJGAMCCGADC = new global::EggLink.DanhengServer.Proto.AGADEMAJIMD();
             }

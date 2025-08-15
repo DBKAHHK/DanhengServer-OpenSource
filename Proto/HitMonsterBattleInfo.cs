@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChpIaXRNb25zdGVyQmF0dGxlSW5mby5wcm90bxoXTW9uc3RlckJhdHRsZVR5",
             "cGUucHJvdG8iaQoUSGl0TW9uc3RlckJhdHRsZUluZm8SIAoYdGFyZ2V0X21v",
-            "bnN0ZXJfZW50aXR5X2lkGAYgASgNEi8KE21vbnN0ZXJfYmF0dGxlX3R5cGUY",
-            "CyABKA4yEi5Nb25zdGVyQmF0dGxlVHlwZUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "bnN0ZXJfZW50aXR5X2lkGAcgASgNEi8KE21vbnN0ZXJfYmF0dGxlX3R5cGUY",
+            "AyABKA4yEi5Nb25zdGVyQmF0dGxlVHlwZUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MonsterBattleTypeReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "target_monster_entity_id" field.</summary>
-    public const int TargetMonsterEntityIdFieldNumber = 6;
+    public const int TargetMonsterEntityIdFieldNumber = 7;
     private uint targetMonsterEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "monster_battle_type" field.</summary>
-    public const int MonsterBattleTypeFieldNumber = 11;
+    public const int MonsterBattleTypeFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.MonsterBattleType monsterBattleType_ = global::EggLink.DanhengServer.Proto.MonsterBattleType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TargetMonsterEntityId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(TargetMonsterEntityId);
-      }
       if (MonsterBattleType != global::EggLink.DanhengServer.Proto.MonsterBattleType.None) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(24);
         output.WriteEnum((int) MonsterBattleType);
+      }
+      if (TargetMonsterEntityId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(TargetMonsterEntityId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TargetMonsterEntityId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(TargetMonsterEntityId);
-      }
       if (MonsterBattleType != global::EggLink.DanhengServer.Proto.MonsterBattleType.None) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(24);
         output.WriteEnum((int) MonsterBattleType);
+      }
+      if (TargetMonsterEntityId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(TargetMonsterEntityId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -228,12 +228,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            TargetMonsterEntityId = input.ReadUInt32();
+          case 24: {
+            MonsterBattleType = (global::EggLink.DanhengServer.Proto.MonsterBattleType) input.ReadEnum();
             break;
           }
-          case 88: {
-            MonsterBattleType = (global::EggLink.DanhengServer.Proto.MonsterBattleType) input.ReadEnum();
+          case 56: {
+            TargetMonsterEntityId = input.ReadUInt32();
             break;
           }
         }
@@ -251,12 +251,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            TargetMonsterEntityId = input.ReadUInt32();
+          case 24: {
+            MonsterBattleType = (global::EggLink.DanhengServer.Proto.MonsterBattleType) input.ReadEnum();
             break;
           }
-          case 88: {
-            MonsterBattleType = (global::EggLink.DanhengServer.Proto.MonsterBattleType) input.ReadEnum();
+          case 56: {
+            TargetMonsterEntityId = input.ReadUInt32();
             break;
           }
         }

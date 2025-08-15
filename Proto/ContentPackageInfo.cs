@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChhDb250ZW50UGFja2FnZUluZm8ucHJvdG8aGkNvbnRlbnRQYWNrYWdlU3Rh",
             "dHVzLnByb3RvIk8KEkNvbnRlbnRQYWNrYWdlSW5mbxISCgpjb250ZW50X2lk",
-            "GA8gASgNEiUKBnN0YXR1cxgKIAEoDjIVLkNvbnRlbnRQYWNrYWdlU3RhdHVz",
+            "GA4gASgNEiUKBnN0YXR1cxgKIAEoDjIVLkNvbnRlbnRQYWNrYWdlU3RhdHVz",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ContentPackageStatusReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "content_id" field.</summary>
-    public const int ContentIdFieldNumber = 15;
+    public const int ContentIdFieldNumber = 14;
     private uint contentId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteEnum((int) Status);
       }
       if (ContentId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(112);
         output.WriteUInt32(ContentId);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteEnum((int) Status);
       }
       if (ContentId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(112);
         output.WriteUInt32(ContentId);
       }
       if (_unknownFields != null) {
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             Status = (global::EggLink.DanhengServer.Proto.ContentPackageStatus) input.ReadEnum();
             break;
           }
-          case 120: {
+          case 112: {
             ContentId = input.ReadUInt32();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             Status = (global::EggLink.DanhengServer.Proto.ContentPackageStatus) input.ReadEnum();
             break;
           }
-          case 120: {
+          case 112: {
             ContentId = input.ReadUInt32();
             break;
           }

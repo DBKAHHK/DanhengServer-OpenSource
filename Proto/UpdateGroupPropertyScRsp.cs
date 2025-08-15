@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5VcGRhdGVHcm91cFByb3BlcnR5U2NSc3AucHJvdG8ixgEKGFVwZGF0ZUdy",
-            "b3VwUHJvcGVydHlTY1JzcBIUCgxkaW1lbnNpb25faWQYDiABKA0SDwoHcmV0",
-            "Y29kZRgPIAEoDRIQCghmbG9vcl9pZBgGIAEoDRIQCghncm91cF9pZBgCIAEo",
-            "DRIgChhncm91cF9vbGRfcHJvcGVydHlfdmFsdWUYDCABKAUSGwoTZ3JvdXBf",
-            "cHJvcGVydHlfbmFtZRgNIAEoCRIgChhncm91cF9uZXdfcHJvcGVydHlfdmFs",
+            "b3VwUHJvcGVydHlTY1JzcBIPCgdyZXRjb2RlGAwgASgNEiAKGGdyb3VwX29s",
+            "ZF9wcm9wZXJ0eV92YWx1ZRgDIAEoBRIQCghncm91cF9pZBgEIAEoDRIQCghm",
+            "bG9vcl9pZBgIIAEoDRIUCgxkaW1lbnNpb25faWQYAiABKA0SGwoTZ3JvdXBf",
+            "cHJvcGVydHlfbmFtZRgBIAEoCRIgChhncm91cF9uZXdfcHJvcGVydHlfdmFs",
             "dWUYBSABKAVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateGroupPropertyScRsp), global::EggLink.DanhengServer.Proto.UpdateGroupPropertyScRsp.Parser, new[]{ "DimensionId", "Retcode", "FloorId", "GroupId", "GroupOldPropertyValue", "GroupPropertyName", "GroupNewPropertyValue" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateGroupPropertyScRsp), global::EggLink.DanhengServer.Proto.UpdateGroupPropertyScRsp.Parser, new[]{ "Retcode", "GroupOldPropertyValue", "GroupId", "FloorId", "DimensionId", "GroupPropertyName", "GroupNewPropertyValue" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,11 +76,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateGroupPropertyScRsp(UpdateGroupPropertyScRsp other) : this() {
-      dimensionId_ = other.dimensionId_;
       retcode_ = other.retcode_;
-      floorId_ = other.floorId_;
-      groupId_ = other.groupId_;
       groupOldPropertyValue_ = other.groupOldPropertyValue_;
+      groupId_ = other.groupId_;
+      floorId_ = other.floorId_;
+      dimensionId_ = other.dimensionId_;
       groupPropertyName_ = other.groupPropertyName_;
       groupNewPropertyValue_ = other.groupNewPropertyValue_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -92,20 +92,8 @@ namespace EggLink.DanhengServer.Proto {
       return new UpdateGroupPropertyScRsp(this);
     }
 
-    /// <summary>Field number for the "dimension_id" field.</summary>
-    public const int DimensionIdFieldNumber = 14;
-    private uint dimensionId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DimensionId {
-      get { return dimensionId_; }
-      set {
-        dimensionId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 15;
+    public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -116,32 +104,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "floor_id" field.</summary>
-    public const int FloorIdFieldNumber = 6;
-    private uint floorId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FloorId {
-      get { return floorId_; }
-      set {
-        floorId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 2;
-    private uint groupId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GroupId {
-      get { return groupId_; }
-      set {
-        groupId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "group_old_property_value" field.</summary>
-    public const int GroupOldPropertyValueFieldNumber = 12;
+    public const int GroupOldPropertyValueFieldNumber = 3;
     private int groupOldPropertyValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,8 +116,44 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "group_id" field.</summary>
+    public const int GroupIdFieldNumber = 4;
+    private uint groupId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GroupId {
+      get { return groupId_; }
+      set {
+        groupId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "floor_id" field.</summary>
+    public const int FloorIdFieldNumber = 8;
+    private uint floorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FloorId {
+      get { return floorId_; }
+      set {
+        floorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dimension_id" field.</summary>
+    public const int DimensionIdFieldNumber = 2;
+    private uint dimensionId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DimensionId {
+      get { return dimensionId_; }
+      set {
+        dimensionId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "group_property_name" field.</summary>
-    public const int GroupPropertyNameFieldNumber = 13;
+    public const int GroupPropertyNameFieldNumber = 1;
     private string groupPropertyName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -191,11 +191,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DimensionId != other.DimensionId) return false;
       if (Retcode != other.Retcode) return false;
-      if (FloorId != other.FloorId) return false;
-      if (GroupId != other.GroupId) return false;
       if (GroupOldPropertyValue != other.GroupOldPropertyValue) return false;
+      if (GroupId != other.GroupId) return false;
+      if (FloorId != other.FloorId) return false;
+      if (DimensionId != other.DimensionId) return false;
       if (GroupPropertyName != other.GroupPropertyName) return false;
       if (GroupNewPropertyValue != other.GroupNewPropertyValue) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DimensionId != 0) hash ^= DimensionId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (FloorId != 0) hash ^= FloorId.GetHashCode();
-      if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (GroupOldPropertyValue != 0) hash ^= GroupOldPropertyValue.GetHashCode();
+      if (GroupId != 0) hash ^= GroupId.GetHashCode();
+      if (FloorId != 0) hash ^= FloorId.GetHashCode();
+      if (DimensionId != 0) hash ^= DimensionId.GetHashCode();
       if (GroupPropertyName.Length != 0) hash ^= GroupPropertyName.GetHashCode();
       if (GroupNewPropertyValue != 0) hash ^= GroupNewPropertyValue.GetHashCode();
       if (_unknownFields != null) {
@@ -230,8 +230,20 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GroupId != 0) {
+      if (GroupPropertyName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GroupPropertyName);
+      }
+      if (DimensionId != 0) {
         output.WriteRawTag(16);
+        output.WriteUInt32(DimensionId);
+      }
+      if (GroupOldPropertyValue != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(GroupOldPropertyValue);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(32);
         output.WriteUInt32(GroupId);
       }
       if (GroupNewPropertyValue != 0) {
@@ -239,23 +251,11 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteInt32(GroupNewPropertyValue);
       }
       if (FloorId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(FloorId);
       }
-      if (GroupOldPropertyValue != 0) {
-        output.WriteRawTag(96);
-        output.WriteInt32(GroupOldPropertyValue);
-      }
-      if (GroupPropertyName.Length != 0) {
-        output.WriteRawTag(106);
-        output.WriteString(GroupPropertyName);
-      }
-      if (DimensionId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(DimensionId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -268,8 +268,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GroupId != 0) {
+      if (GroupPropertyName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(GroupPropertyName);
+      }
+      if (DimensionId != 0) {
         output.WriteRawTag(16);
+        output.WriteUInt32(DimensionId);
+      }
+      if (GroupOldPropertyValue != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(GroupOldPropertyValue);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(32);
         output.WriteUInt32(GroupId);
       }
       if (GroupNewPropertyValue != 0) {
@@ -277,23 +289,11 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteInt32(GroupNewPropertyValue);
       }
       if (FloorId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(FloorId);
       }
-      if (GroupOldPropertyValue != 0) {
-        output.WriteRawTag(96);
-        output.WriteInt32(GroupOldPropertyValue);
-      }
-      if (GroupPropertyName.Length != 0) {
-        output.WriteRawTag(106);
-        output.WriteString(GroupPropertyName);
-      }
-      if (DimensionId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(DimensionId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -306,20 +306,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DimensionId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DimensionId);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (FloorId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FloorId);
+      if (GroupOldPropertyValue != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GroupOldPropertyValue);
       }
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
-      if (GroupOldPropertyValue != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GroupOldPropertyValue);
+      if (FloorId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FloorId);
+      }
+      if (DimensionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DimensionId);
       }
       if (GroupPropertyName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GroupPropertyName);
@@ -339,20 +339,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DimensionId != 0) {
-        DimensionId = other.DimensionId;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.FloorId != 0) {
-        FloorId = other.FloorId;
+      if (other.GroupOldPropertyValue != 0) {
+        GroupOldPropertyValue = other.GroupOldPropertyValue;
       }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
       }
-      if (other.GroupOldPropertyValue != 0) {
-        GroupOldPropertyValue = other.GroupOldPropertyValue;
+      if (other.FloorId != 0) {
+        FloorId = other.FloorId;
+      }
+      if (other.DimensionId != 0) {
+        DimensionId = other.DimensionId;
       }
       if (other.GroupPropertyName.Length != 0) {
         GroupPropertyName = other.GroupPropertyName;
@@ -375,7 +375,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 10: {
+            GroupPropertyName = input.ReadString();
+            break;
+          }
           case 16: {
+            DimensionId = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            GroupOldPropertyValue = input.ReadInt32();
+            break;
+          }
+          case 32: {
             GroupId = input.ReadUInt32();
             break;
           }
@@ -383,23 +395,11 @@ namespace EggLink.DanhengServer.Proto {
             GroupNewPropertyValue = input.ReadInt32();
             break;
           }
-          case 48: {
+          case 64: {
             FloorId = input.ReadUInt32();
             break;
           }
           case 96: {
-            GroupOldPropertyValue = input.ReadInt32();
-            break;
-          }
-          case 106: {
-            GroupPropertyName = input.ReadString();
-            break;
-          }
-          case 112: {
-            DimensionId = input.ReadUInt32();
-            break;
-          }
-          case 120: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -418,7 +418,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 10: {
+            GroupPropertyName = input.ReadString();
+            break;
+          }
           case 16: {
+            DimensionId = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            GroupOldPropertyValue = input.ReadInt32();
+            break;
+          }
+          case 32: {
             GroupId = input.ReadUInt32();
             break;
           }
@@ -426,23 +438,11 @@ namespace EggLink.DanhengServer.Proto {
             GroupNewPropertyValue = input.ReadInt32();
             break;
           }
-          case 48: {
+          case 64: {
             FloorId = input.ReadUInt32();
             break;
           }
           case 96: {
-            GroupOldPropertyValue = input.ReadInt32();
-            break;
-          }
-          case 106: {
-            GroupPropertyName = input.ReadString();
-            break;
-          }
-          case 112: {
-            DimensionId = input.ReadUInt32();
-            break;
-          }
-          case 120: {
             Retcode = input.ReadUInt32();
             break;
           }

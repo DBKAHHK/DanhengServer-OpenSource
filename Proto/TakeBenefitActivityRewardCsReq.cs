@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiRUYWtlQmVuZWZpdEFjdGl2aXR5UmV3YXJkQ3NSZXEucHJvdG8aEFN3aXRj",
             "aEl0ZW0ucHJvdG8iVwoeVGFrZUJlbmVmaXRBY3Rpdml0eVJld2FyZENzUmVx",
-            "EiAKC3N3aXRjaF9saXN0GA4gAygLMgsuU3dpdGNoSXRlbRITCgtCRkJQQ0JO",
-            "UEZQSBgEIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "EiAKC3N3aXRjaF9saXN0GAkgAygLMgsuU3dpdGNoSXRlbRITCgtCRkJQQ0JO",
+            "UEZQSBgPIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SwitchItemReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "switch_list" field.</summary>
-    public const int SwitchListFieldNumber = 14;
+    public const int SwitchListFieldNumber = 9;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SwitchItem> _repeated_switchList_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.SwitchItem.Parser);
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.SwitchItem.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SwitchItem> switchList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SwitchItem>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BFBPCBNPFPH" field.</summary>
-    public const int BFBPCBNPFPHFieldNumber = 4;
+    public const int BFBPCBNPFPHFieldNumber = 15;
     private bool bFBPCBNPFPH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      switchList_.WriteTo(output, _repeated_switchList_codec);
       if (BFBPCBNPFPH != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(120);
         output.WriteBool(BFBPCBNPFPH);
       }
-      switchList_.WriteTo(output, _repeated_switchList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      switchList_.WriteTo(ref output, _repeated_switchList_codec);
       if (BFBPCBNPFPH != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(120);
         output.WriteBool(BFBPCBNPFPH);
       }
-      switchList_.WriteTo(ref output, _repeated_switchList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            BFBPCBNPFPH = input.ReadBool();
+          case 74: {
+            switchList_.AddEntriesFrom(input, _repeated_switchList_codec);
             break;
           }
-          case 114: {
-            switchList_.AddEntriesFrom(input, _repeated_switchList_codec);
+          case 120: {
+            BFBPCBNPFPH = input.ReadBool();
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            BFBPCBNPFPH = input.ReadBool();
+          case 74: {
+            switchList_.AddEntriesFrom(ref input, _repeated_switchList_codec);
             break;
           }
-          case 114: {
-            switchList_.AddEntriesFrom(ref input, _repeated_switchList_codec);
+          case 120: {
+            BFBPCBNPFPH = input.ReadBool();
             break;
           }
         }

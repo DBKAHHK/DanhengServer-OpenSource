@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFBQUlCQUtFQ0hDRS5wcm90byIiCgtBQUlCQUtFQ0hDRRITCgtQQUdDQU1B",
-            "R0ZMQhgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "R0ZMQhgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PAGCAMAGFLB" field.</summary>
-    public const int PAGCAMAGFLBFieldNumber = 2;
+    public const int PAGCAMAGFLBFieldNumber = 7;
     private uint pAGCAMAGFLB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PAGCAMAGFLB != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(PAGCAMAGFLB);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PAGCAMAGFLB != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(PAGCAMAGFLB);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 56: {
             PAGCAMAGFLB = input.ReadUInt32();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 56: {
             PAGCAMAGFLB = input.ReadUInt32();
             break;
           }

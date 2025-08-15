@@ -27,9 +27,9 @@ namespace EggLink.DanhengServer.Proto {
             "CiFSb2d1ZUNvbW1vbkRpYWxvZ3VlRGF0YUluZm8ucHJvdG8aI1JvZ3VlQ29t",
             "bW9uRGlhbG9ndWVPcHRpb25JbmZvLnByb3RvGh1Sb2d1ZUNvbW1vbkRpYWxv",
             "Z3VlSW5mby5wcm90byKcAQobUm9ndWVDb21tb25EaWFsb2d1ZURhdGFJbmZv",
-            "Ei8KDWRpYWxvZ3VlX2luZm8YASABKAsyGC5Sb2d1ZUNvbW1vbkRpYWxvZ3Vl",
-            "SW5mbxIzCgtvcHRpb25fbGlzdBgLIAMoCzIeLlJvZ3VlQ29tbW9uRGlhbG9n",
-            "dWVPcHRpb25JbmZvEhcKD2V2ZW50X3VuaXF1ZV9pZBgCIAEoDUIeqgIbRWdn",
+            "Ei8KDWRpYWxvZ3VlX2luZm8YCCABKAsyGC5Sb2d1ZUNvbW1vbkRpYWxvZ3Vl",
+            "SW5mbxIzCgtvcHRpb25fbGlzdBgGIAMoCzIeLlJvZ3VlQ29tbW9uRGlhbG9n",
+            "dWVPcHRpb25JbmZvEhcKD2V2ZW50X3VuaXF1ZV9pZBgPIAEoDUIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonDialogueInfoReflection.Descriptor, },
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "dialogue_info" field.</summary>
-    public const int DialogueInfoFieldNumber = 1;
+    public const int DialogueInfoFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.RogueCommonDialogueInfo dialogueInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -101,9 +101,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "option_list" field.</summary>
-    public const int OptionListFieldNumber = 11;
+    public const int OptionListFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo> _repeated_optionList_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo> optionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "event_unique_id" field.</summary>
-    public const int EventUniqueIdFieldNumber = 2;
+    public const int EventUniqueIdFieldNumber = 15;
     private uint eventUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,15 +169,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      optionList_.WriteTo(output, _repeated_optionList_codec);
       if (dialogueInfo_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(66);
         output.WriteMessage(DialogueInfo);
       }
       if (EventUniqueId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(120);
         output.WriteUInt32(EventUniqueId);
       }
-      optionList_.WriteTo(output, _repeated_optionList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -188,15 +188,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      optionList_.WriteTo(ref output, _repeated_optionList_codec);
       if (dialogueInfo_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(66);
         output.WriteMessage(DialogueInfo);
       }
       if (EventUniqueId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(120);
         output.WriteUInt32(EventUniqueId);
       }
-      optionList_.WriteTo(ref output, _repeated_optionList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -251,19 +251,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 50: {
+            optionList_.AddEntriesFrom(input, _repeated_optionList_codec);
+            break;
+          }
+          case 66: {
             if (dialogueInfo_ == null) {
               DialogueInfo = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueInfo();
             }
             input.ReadMessage(DialogueInfo);
             break;
           }
-          case 16: {
+          case 120: {
             EventUniqueId = input.ReadUInt32();
-            break;
-          }
-          case 90: {
-            optionList_.AddEntriesFrom(input, _repeated_optionList_codec);
             break;
           }
         }
@@ -281,19 +281,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 50: {
+            optionList_.AddEntriesFrom(ref input, _repeated_optionList_codec);
+            break;
+          }
+          case 66: {
             if (dialogueInfo_ == null) {
               DialogueInfo = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueInfo();
             }
             input.ReadMessage(DialogueInfo);
             break;
           }
-          case 16: {
+          case 120: {
             EventUniqueId = input.ReadUInt32();
-            break;
-          }
-          case 90: {
-            optionList_.AddEntriesFrom(ref input, _repeated_optionList_codec);
             break;
           }
         }

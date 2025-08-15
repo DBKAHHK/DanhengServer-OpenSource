@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpHZXRHYWNoYUNlaWxpbmdTY1JzcC5wcm90bxoSR2FjaGFDZWlsaW5nLnBy",
-            "b3RvImEKFEdldEdhY2hhQ2VpbGluZ1NjUnNwEg8KB3JldGNvZGUYAiABKA0S",
-            "EgoKZ2FjaGFfdHlwZRgJIAEoDRIkCg1nYWNoYV9jZWlsaW5nGAcgASgLMg0u",
+            "b3RvImEKFEdldEdhY2hhQ2VpbGluZ1NjUnNwEg8KB3JldGNvZGUYByABKA0S",
+            "EgoKZ2FjaGFfdHlwZRgBIAEoDRIkCg1nYWNoYV9jZWlsaW5nGA4gASgLMg0u",
             "R2FjaGFDZWlsaW5nQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 2;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gacha_type" field.</summary>
-    public const int GachaTypeFieldNumber = 9;
+    public const int GachaTypeFieldNumber = 1;
     private uint gachaType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gacha_ceiling" field.</summary>
-    public const int GachaCeilingFieldNumber = 7;
+    public const int GachaCeilingFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.GachaCeiling gachaCeiling_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (GachaType != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(GachaType);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (gachaCeiling_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(114);
         output.WriteMessage(GachaCeiling);
-      }
-      if (GachaType != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(GachaType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GachaType != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(GachaType);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (gachaCeiling_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(114);
         output.WriteMessage(GachaCeiling);
-      }
-      if (GachaType != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(GachaType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -260,19 +260,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 8: {
+            GachaType = input.ReadUInt32();
+            break;
+          }
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 114: {
             if (gachaCeiling_ == null) {
               GachaCeiling = new global::EggLink.DanhengServer.Proto.GachaCeiling();
             }
             input.ReadMessage(GachaCeiling);
-            break;
-          }
-          case 72: {
-            GachaType = input.ReadUInt32();
             break;
           }
         }
@@ -290,19 +290,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 8: {
+            GachaType = input.ReadUInt32();
+            break;
+          }
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 58: {
+          case 114: {
             if (gachaCeiling_ == null) {
               GachaCeiling = new global::EggLink.DanhengServer.Proto.GachaCeiling();
             }
             input.ReadMessage(GachaCeiling);
-            break;
-          }
-          case 72: {
-            GachaType = input.ReadUInt32();
             break;
           }
         }

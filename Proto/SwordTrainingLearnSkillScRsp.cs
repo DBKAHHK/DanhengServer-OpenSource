@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJTd29yZFRyYWluaW5nTGVhcm5Ta2lsbFNjUnNwLnByb3RvIkEKHFN3b3Jk",
-            "VHJhaW5pbmdMZWFyblNraWxsU2NSc3ASDwoHcmV0Y29kZRgMIAEoDRIQCghz",
+            "VHJhaW5pbmdMZWFyblNraWxsU2NSc3ASDwoHcmV0Y29kZRgHIAEoDRIQCghz",
             "a2lsbF9pZBgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(SkillId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(SkillId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             SkillId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             SkillId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }

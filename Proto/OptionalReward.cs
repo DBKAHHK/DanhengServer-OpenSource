@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static OptionalRewardReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRPcHRpb25hbFJld2FyZC5wcm90byI7Cg5PcHRpb25hbFJld2FyZBINCgVs",
-            "ZXZlbBgLIAEoDRIaChJvcHRpb25hbF9yZXdhcmRfaWQYAyABKA1CHqoCG0Vn",
-            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChRPcHRpb25hbFJld2FyZC5wcm90byI5Cg5PcHRpb25hbFJld2FyZBINCgVM",
+            "ZXZlbBgHIAEoDRIYChBPcHRpb25hbFJld2FyZElkGAEgASgNQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -83,8 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new OptionalReward(this);
     }
 
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 11;
+    /// <summary>Field number for the "Level" field.</summary>
+    public const int LevelFieldNumber = 7;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,8 +95,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "optional_reward_id" field.</summary>
-    public const int OptionalRewardIdFieldNumber = 3;
+    /// <summary>Field number for the "OptionalRewardId" field.</summary>
+    public const int OptionalRewardIdFieldNumber = 1;
     private uint optionalRewardId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (OptionalRewardId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(OptionalRewardId);
       }
       if (Level != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (OptionalRewardId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(OptionalRewardId);
       }
       if (Level != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 8: {
             OptionalRewardId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 56: {
             Level = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 8: {
             OptionalRewardId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 56: {
             Level = input.ReadUInt32();
             break;
           }

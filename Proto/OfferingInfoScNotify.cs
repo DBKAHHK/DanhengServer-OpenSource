@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChpPZmZlcmluZ0luZm9TY05vdGlmeS5wcm90bxoST2ZmZXJpbmdJbmZvLnBy",
             "b3RvIjwKFE9mZmVyaW5nSW5mb1NjTm90aWZ5EiQKDW9mZmVyaW5nX2luZm8Y",
-            "CiABKAsyDS5PZmZlcmluZ0luZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "AyABKAsyDS5PZmZlcmluZ0luZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OfferingInfoReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "offering_info" field.</summary>
-    public const int OfferingInfoFieldNumber = 10;
+    public const int OfferingInfoFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.OfferingInfo offeringInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (offeringInfo_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(26);
         output.WriteMessage(OfferingInfo);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (offeringInfo_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(26);
         output.WriteMessage(OfferingInfo);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 26: {
             if (offeringInfo_ == null) {
               OfferingInfo = new global::EggLink.DanhengServer.Proto.OfferingInfo();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 26: {
             if (offeringInfo_ == null) {
               OfferingInfo = new global::EggLink.DanhengServer.Proto.OfferingInfo();
             }

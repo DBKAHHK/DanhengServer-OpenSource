@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CixWaXJ0dWFsTGluZXVwVHJpYWxBdmF0YXJDaGFuZ2VTY05vdGlmeS5wcm90",
             "byJ5CiZWaXJ0dWFsTGluZXVwVHJpYWxBdmF0YXJDaGFuZ2VTY05vdGlmeRIT",
-            "CgtLRk1GRkdHSk1ORRgLIAMoDRIQCghwbGFuZV9pZBgKIAEoDRITCgtJQkxC",
-            "TklBTlBIRBgFIAMoDRITCgtDTElJR01OTUhOQRgPIAEoCEIeqgIbRWdnTGlu",
+            "CgtLRk1GRkdHSk1ORRgBIAMoDRIQCghwbGFuZV9pZBgGIAEoDRITCgtJQkxC",
+            "TklBTlBIRBgOIAMoDRITCgtDTElJR01OTUhOQRgHIAEoCEIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -88,9 +88,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KFMFFGGJMNE" field.</summary>
-    public const int KFMFFGGJMNEFieldNumber = 11;
+    public const int KFMFFGGJMNEFieldNumber = 1;
     private static readonly pb::FieldCodec<uint> _repeated_kFMFFGGJMNE_codec
-        = pb::FieldCodec.ForUInt32(90);
+        = pb::FieldCodec.ForUInt32(10);
     private readonly pbc::RepeatedField<uint> kFMFFGGJMNE_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "plane_id" field.</summary>
-    public const int PlaneIdFieldNumber = 10;
+    public const int PlaneIdFieldNumber = 6;
     private uint planeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,9 +111,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IBLBNIANPHD" field.</summary>
-    public const int IBLBNIANPHDFieldNumber = 5;
+    public const int IBLBNIANPHDFieldNumber = 14;
     private static readonly pb::FieldCodec<uint> _repeated_iBLBNIANPHD_codec
-        = pb::FieldCodec.ForUInt32(42);
+        = pb::FieldCodec.ForUInt32(114);
     private readonly pbc::RepeatedField<uint> iBLBNIANPHD_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CLIIGMNMHNA" field.</summary>
-    public const int CLIIGMNMHNAFieldNumber = 15;
+    public const int CLIIGMNMHNAFieldNumber = 7;
     private bool cLIIGMNMHNA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -181,16 +181,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      iBLBNIANPHD_.WriteTo(output, _repeated_iBLBNIANPHD_codec);
+      kFMFFGGJMNE_.WriteTo(output, _repeated_kFMFFGGJMNE_codec);
       if (PlaneId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(PlaneId);
       }
-      kFMFFGGJMNE_.WriteTo(output, _repeated_kFMFFGGJMNE_codec);
       if (CLIIGMNMHNA != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(56);
         output.WriteBool(CLIIGMNMHNA);
       }
+      iBLBNIANPHD_.WriteTo(output, _repeated_iBLBNIANPHD_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -201,16 +201,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      iBLBNIANPHD_.WriteTo(ref output, _repeated_iBLBNIANPHD_codec);
+      kFMFFGGJMNE_.WriteTo(ref output, _repeated_kFMFFGGJMNE_codec);
       if (PlaneId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(48);
         output.WriteUInt32(PlaneId);
       }
-      kFMFFGGJMNE_.WriteTo(ref output, _repeated_kFMFFGGJMNE_codec);
       if (CLIIGMNMHNA != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(56);
         output.WriteBool(CLIIGMNMHNA);
       }
+      iBLBNIANPHD_.WriteTo(ref output, _repeated_iBLBNIANPHD_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -264,22 +264,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42:
-          case 40: {
-            iBLBNIANPHD_.AddEntriesFrom(input, _repeated_iBLBNIANPHD_codec);
-            break;
-          }
-          case 80: {
-            PlaneId = input.ReadUInt32();
-            break;
-          }
-          case 90:
-          case 88: {
+          case 10:
+          case 8: {
             kFMFFGGJMNE_.AddEntriesFrom(input, _repeated_kFMFFGGJMNE_codec);
             break;
           }
-          case 120: {
+          case 48: {
+            PlaneId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
             CLIIGMNMHNA = input.ReadBool();
+            break;
+          }
+          case 114:
+          case 112: {
+            iBLBNIANPHD_.AddEntriesFrom(input, _repeated_iBLBNIANPHD_codec);
             break;
           }
         }
@@ -297,22 +297,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42:
-          case 40: {
-            iBLBNIANPHD_.AddEntriesFrom(ref input, _repeated_iBLBNIANPHD_codec);
-            break;
-          }
-          case 80: {
-            PlaneId = input.ReadUInt32();
-            break;
-          }
-          case 90:
-          case 88: {
+          case 10:
+          case 8: {
             kFMFFGGJMNE_.AddEntriesFrom(ref input, _repeated_kFMFFGGJMNE_codec);
             break;
           }
-          case 120: {
+          case 48: {
+            PlaneId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
             CLIIGMNMHNA = input.ReadBool();
+            break;
+          }
+          case 114:
+          case 112: {
+            iBLBNIANPHD_.AddEntriesFrom(ref input, _repeated_iBLBNIANPHD_codec);
             break;
           }
         }

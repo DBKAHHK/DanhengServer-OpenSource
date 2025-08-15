@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdEZWxldGVGcmllbmRDc1JlcS5wcm90byI1ChFEZWxldGVGcmllbmRDc1Jl",
-            "cRITCgtGSU9DREJJUENHQhgOIAEoDRILCgN1aWQYDyABKA1CHqoCG0VnZ0xp",
+            "cRITCgtGSU9DREJJUENHQhgEIAEoDRILCgN1aWQYDSABKA1CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FIOCDBIPCGB" field.</summary>
-    public const int FIOCDBIPCGBFieldNumber = 14;
+    public const int FIOCDBIPCGBFieldNumber = 4;
     private uint fIOCDBIPCGB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 15;
+    public const int UidFieldNumber = 13;
     private uint uid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (FIOCDBIPCGB != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteUInt32(FIOCDBIPCGB);
       }
       if (Uid != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(104);
         output.WriteUInt32(Uid);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FIOCDBIPCGB != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(32);
         output.WriteUInt32(FIOCDBIPCGB);
       }
       if (Uid != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(104);
         output.WriteUInt32(Uid);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 112: {
+          case 32: {
             FIOCDBIPCGB = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 104: {
             Uid = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 112: {
+          case 32: {
             FIOCDBIPCGB = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 104: {
             Uid = input.ReadUInt32();
             break;
           }

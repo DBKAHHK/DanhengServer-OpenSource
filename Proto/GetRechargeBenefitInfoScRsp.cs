@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFHZXRSZWNoYXJnZUJlbmVmaXRJbmZvU2NSc3AucHJvdG8aGVJlY2hhcmdl",
             "QmVuZWZpdEluZm8ucHJvdG8iYwobR2V0UmVjaGFyZ2VCZW5lZml0SW5mb1Nj",
-            "UnNwEg8KB3JldGNvZGUYCCABKA0SMwoVcmVjaGFyZ2VfYmVuZWZpdF9saXN0",
-            "GAEgAygLMhQuUmVjaGFyZ2VCZW5lZml0SW5mb0IeqgIbRWdnTGluay5EYW5o",
+            "UnNwEg8KB3JldGNvZGUYBiABKA0SMwoVcmVjaGFyZ2VfYmVuZWZpdF9saXN0",
+            "GA0gAygLMhQuUmVjaGFyZ2VCZW5lZml0SW5mb0IeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RechargeBenefitInfoReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "recharge_benefit_list" field.</summary>
-    public const int RechargeBenefitListFieldNumber = 1;
+    public const int RechargeBenefitListFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RechargeBenefitInfo> _repeated_rechargeBenefitList_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.RechargeBenefitInfo.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.RechargeBenefitInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeBenefitInfo> rechargeBenefitList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeBenefitInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      rechargeBenefitList_.WriteTo(output, _repeated_rechargeBenefitList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
+      rechargeBenefitList_.WriteTo(output, _repeated_rechargeBenefitList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      rechargeBenefitList_.WriteTo(ref output, _repeated_rechargeBenefitList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
+      rechargeBenefitList_.WriteTo(ref output, _repeated_rechargeBenefitList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            rechargeBenefitList_.AddEntriesFrom(input, _repeated_rechargeBenefitList_codec);
+          case 48: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Retcode = input.ReadUInt32();
+          case 106: {
+            rechargeBenefitList_.AddEntriesFrom(input, _repeated_rechargeBenefitList_codec);
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            rechargeBenefitList_.AddEntriesFrom(ref input, _repeated_rechargeBenefitList_codec);
+          case 48: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Retcode = input.ReadUInt32();
+          case 106: {
+            rechargeBenefitList_.AddEntriesFrom(ref input, _repeated_rechargeBenefitList_codec);
             break;
           }
         }

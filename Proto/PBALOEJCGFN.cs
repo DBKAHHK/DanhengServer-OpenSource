@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQQkFMT0VKQ0dGTi5wcm90bxoWR2FtZVJvZ3VlTWlyYWNsZS5wcm90byJK",
-            "CgtQQkFMT0VKQ0dGThITCgtCRU1DRUVEQUJGRBgIIAEoDRImCgtKQUxBTU9Q",
-            "TERITxgLIAEoCzIRLkdhbWVSb2d1ZU1pcmFjbGVCHqoCG0VnZ0xpbmsuRGFu",
+            "CgtQQkFMT0VKQ0dGThITCgtCRU1DRUVEQUJGRBgKIAEoDRImCgtKQUxBTU9Q",
+            "TERITxgCIAEoCzIRLkdhbWVSb2d1ZU1pcmFjbGVCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GameRogueMiracleReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BEMCEEDABFD" field.</summary>
-    public const int BEMCEEDABFDFieldNumber = 8;
+    public const int BEMCEEDABFDFieldNumber = 10;
     private uint bEMCEEDABFD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JALAMOPLDHO" field.</summary>
-    public const int JALAMOPLDHOFieldNumber = 11;
+    public const int JALAMOPLDHOFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.GameRogueMiracle jALAMOPLDHO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BEMCEEDABFD != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(BEMCEEDABFD);
-      }
       if (jALAMOPLDHO_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(18);
         output.WriteMessage(JALAMOPLDHO);
+      }
+      if (BEMCEEDABFD != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(BEMCEEDABFD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BEMCEEDABFD != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(BEMCEEDABFD);
-      }
       if (jALAMOPLDHO_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(18);
         output.WriteMessage(JALAMOPLDHO);
+      }
+      if (BEMCEEDABFD != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(BEMCEEDABFD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            BEMCEEDABFD = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 18: {
             if (jALAMOPLDHO_ == null) {
               JALAMOPLDHO = new global::EggLink.DanhengServer.Proto.GameRogueMiracle();
             }
             input.ReadMessage(JALAMOPLDHO);
+            break;
+          }
+          case 80: {
+            BEMCEEDABFD = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            BEMCEEDABFD = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 18: {
             if (jALAMOPLDHO_ == null) {
               JALAMOPLDHO = new global::EggLink.DanhengServer.Proto.GameRogueMiracle();
             }
             input.ReadMessage(JALAMOPLDHO);
+            break;
+          }
+          case 80: {
+            BEMCEEDABFD = input.ReadUInt32();
             break;
           }
         }

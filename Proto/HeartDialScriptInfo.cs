@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static HeartDialScriptInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlIZWFydERpYWxTY3JpcHRJbmZvLnByb3RvGhdIZWFydERpYWxTdGVwVHlw",
-            "ZS5wcm90bxoaSGVhcnREaWFsRW1vdGlvblR5cGUucHJvdG8ipQEKE0hlYXJ0",
-            "RGlhbFNjcmlwdEluZm8SEwoLS0tHRklHQ0hLSUIYCCABKAgSLwoQY3VyX2Vt",
-            "b3Rpb25fdHlwZRgPIAEoDjIVLkhlYXJ0RGlhbEVtb3Rpb25UeXBlEhEKCXNj",
-            "cmlwdF9pZBgLIAEoDRITCgtKTVBFSkZJQ0tKTxgCIAEoCBIgCgRzdGVwGA0g",
+            "ChlIZWFydERpYWxTY3JpcHRJbmZvLnByb3RvGhpIZWFydERpYWxFbW90aW9u",
+            "VHlwZS5wcm90bxoXSGVhcnREaWFsU3RlcFR5cGUucHJvdG8ipQEKE0hlYXJ0",
+            "RGlhbFNjcmlwdEluZm8SLwoQY3VyX2Vtb3Rpb25fdHlwZRgLIAEoDjIVLkhl",
+            "YXJ0RGlhbEVtb3Rpb25UeXBlEhMKC0pNUEVKRklDS0pPGAEgASgIEhMKC0tL",
+            "R0ZJR0NIS0lCGA8gASgIEhEKCXNjcmlwdF9pZBgCIAEoDRIgCgRzdGVwGA4g",
             "ASgOMhIuSGVhcnREaWFsU3RlcFR5cGVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialStepTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialEmotionTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialEmotionTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialStepTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeartDialScriptInfo), global::EggLink.DanhengServer.Proto.HeartDialScriptInfo.Parser, new[]{ "KKGFIGCHKIB", "CurEmotionType", "ScriptId", "JMPEJFICKJO", "Step" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeartDialScriptInfo), global::EggLink.DanhengServer.Proto.HeartDialScriptInfo.Parser, new[]{ "CurEmotionType", "JMPEJFICKJO", "KKGFIGCHKIB", "ScriptId", "Step" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,10 +76,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HeartDialScriptInfo(HeartDialScriptInfo other) : this() {
-      kKGFIGCHKIB_ = other.kKGFIGCHKIB_;
       curEmotionType_ = other.curEmotionType_;
-      scriptId_ = other.scriptId_;
       jMPEJFICKJO_ = other.jMPEJFICKJO_;
+      kKGFIGCHKIB_ = other.kKGFIGCHKIB_;
+      scriptId_ = other.scriptId_;
       step_ = other.step_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -90,20 +90,8 @@ namespace EggLink.DanhengServer.Proto {
       return new HeartDialScriptInfo(this);
     }
 
-    /// <summary>Field number for the "KKGFIGCHKIB" field.</summary>
-    public const int KKGFIGCHKIBFieldNumber = 8;
-    private bool kKGFIGCHKIB_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool KKGFIGCHKIB {
-      get { return kKGFIGCHKIB_; }
-      set {
-        kKGFIGCHKIB_ = value;
-      }
-    }
-
     /// <summary>Field number for the "cur_emotion_type" field.</summary>
-    public const int CurEmotionTypeFieldNumber = 15;
+    public const int CurEmotionTypeFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.HeartDialEmotionType curEmotionType_ = global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -114,20 +102,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "script_id" field.</summary>
-    public const int ScriptIdFieldNumber = 11;
-    private uint scriptId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ScriptId {
-      get { return scriptId_; }
-      set {
-        scriptId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "JMPEJFICKJO" field.</summary>
-    public const int JMPEJFICKJOFieldNumber = 2;
+    public const int JMPEJFICKJOFieldNumber = 1;
     private bool jMPEJFICKJO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,8 +114,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "KKGFIGCHKIB" field.</summary>
+    public const int KKGFIGCHKIBFieldNumber = 15;
+    private bool kKGFIGCHKIB_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool KKGFIGCHKIB {
+      get { return kKGFIGCHKIB_; }
+      set {
+        kKGFIGCHKIB_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "script_id" field.</summary>
+    public const int ScriptIdFieldNumber = 2;
+    private uint scriptId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ScriptId {
+      get { return scriptId_; }
+      set {
+        scriptId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "step" field.</summary>
-    public const int StepFieldNumber = 13;
+    public const int StepFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.HeartDialStepType step_ = global::EggLink.DanhengServer.Proto.HeartDialStepType.Missing;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -165,10 +165,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (KKGFIGCHKIB != other.KKGFIGCHKIB) return false;
       if (CurEmotionType != other.CurEmotionType) return false;
-      if (ScriptId != other.ScriptId) return false;
       if (JMPEJFICKJO != other.JMPEJFICKJO) return false;
+      if (KKGFIGCHKIB != other.KKGFIGCHKIB) return false;
+      if (ScriptId != other.ScriptId) return false;
       if (Step != other.Step) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -177,10 +177,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (KKGFIGCHKIB != false) hash ^= KKGFIGCHKIB.GetHashCode();
       if (CurEmotionType != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) hash ^= CurEmotionType.GetHashCode();
-      if (ScriptId != 0) hash ^= ScriptId.GetHashCode();
       if (JMPEJFICKJO != false) hash ^= JMPEJFICKJO.GetHashCode();
+      if (KKGFIGCHKIB != false) hash ^= KKGFIGCHKIB.GetHashCode();
+      if (ScriptId != 0) hash ^= ScriptId.GetHashCode();
       if (Step != global::EggLink.DanhengServer.Proto.HeartDialStepType.Missing) hash ^= Step.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -201,24 +201,24 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (JMPEJFICKJO != false) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteBool(JMPEJFICKJO);
       }
-      if (KKGFIGCHKIB != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(KKGFIGCHKIB);
-      }
       if (ScriptId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(ScriptId);
       }
+      if (CurEmotionType != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) CurEmotionType);
+      }
       if (Step != global::EggLink.DanhengServer.Proto.HeartDialStepType.Missing) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteEnum((int) Step);
       }
-      if (CurEmotionType != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
+      if (KKGFIGCHKIB != false) {
         output.WriteRawTag(120);
-        output.WriteEnum((int) CurEmotionType);
+        output.WriteBool(KKGFIGCHKIB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -231,24 +231,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (JMPEJFICKJO != false) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteBool(JMPEJFICKJO);
       }
-      if (KKGFIGCHKIB != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(KKGFIGCHKIB);
-      }
       if (ScriptId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(ScriptId);
       }
+      if (CurEmotionType != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) CurEmotionType);
+      }
       if (Step != global::EggLink.DanhengServer.Proto.HeartDialStepType.Missing) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteEnum((int) Step);
       }
-      if (CurEmotionType != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
+      if (KKGFIGCHKIB != false) {
         output.WriteRawTag(120);
-        output.WriteEnum((int) CurEmotionType);
+        output.WriteBool(KKGFIGCHKIB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -260,17 +260,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (KKGFIGCHKIB != false) {
-        size += 1 + 1;
-      }
       if (CurEmotionType != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CurEmotionType);
       }
-      if (ScriptId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScriptId);
-      }
       if (JMPEJFICKJO != false) {
         size += 1 + 1;
+      }
+      if (KKGFIGCHKIB != false) {
+        size += 1 + 1;
+      }
+      if (ScriptId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScriptId);
       }
       if (Step != global::EggLink.DanhengServer.Proto.HeartDialStepType.Missing) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Step);
@@ -287,17 +287,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.KKGFIGCHKIB != false) {
-        KKGFIGCHKIB = other.KKGFIGCHKIB;
-      }
       if (other.CurEmotionType != global::EggLink.DanhengServer.Proto.HeartDialEmotionType.Peace) {
         CurEmotionType = other.CurEmotionType;
       }
-      if (other.ScriptId != 0) {
-        ScriptId = other.ScriptId;
-      }
       if (other.JMPEJFICKJO != false) {
         JMPEJFICKJO = other.JMPEJFICKJO;
+      }
+      if (other.KKGFIGCHKIB != false) {
+        KKGFIGCHKIB = other.KKGFIGCHKIB;
+      }
+      if (other.ScriptId != 0) {
+        ScriptId = other.ScriptId;
       }
       if (other.Step != global::EggLink.DanhengServer.Proto.HeartDialStepType.Missing) {
         Step = other.Step;
@@ -317,24 +317,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 8: {
             JMPEJFICKJO = input.ReadBool();
             break;
           }
-          case 64: {
-            KKGFIGCHKIB = input.ReadBool();
-            break;
-          }
-          case 88: {
+          case 16: {
             ScriptId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 88: {
+            CurEmotionType = (global::EggLink.DanhengServer.Proto.HeartDialEmotionType) input.ReadEnum();
+            break;
+          }
+          case 112: {
             Step = (global::EggLink.DanhengServer.Proto.HeartDialStepType) input.ReadEnum();
             break;
           }
           case 120: {
-            CurEmotionType = (global::EggLink.DanhengServer.Proto.HeartDialEmotionType) input.ReadEnum();
+            KKGFIGCHKIB = input.ReadBool();
             break;
           }
         }
@@ -352,24 +352,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 8: {
             JMPEJFICKJO = input.ReadBool();
             break;
           }
-          case 64: {
-            KKGFIGCHKIB = input.ReadBool();
-            break;
-          }
-          case 88: {
+          case 16: {
             ScriptId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 88: {
+            CurEmotionType = (global::EggLink.DanhengServer.Proto.HeartDialEmotionType) input.ReadEnum();
+            break;
+          }
+          case 112: {
             Step = (global::EggLink.DanhengServer.Proto.HeartDialStepType) input.ReadEnum();
             break;
           }
           case 120: {
-            CurEmotionType = (global::EggLink.DanhengServer.Proto.HeartDialEmotionType) input.ReadEnum();
+            KKGFIGCHKIB = input.ReadBool();
             break;
           }
         }

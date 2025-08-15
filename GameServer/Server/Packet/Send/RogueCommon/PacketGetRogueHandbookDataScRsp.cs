@@ -10,7 +10,7 @@ public class PacketGetRogueHandbookDataScRsp : BasePacket
     {
         var proto = new GetRogueHandbookDataScRsp
         {
-            HandbookInfo = new RogueHandbook()
+            RogueTournHandbook = new RogueHandbook()
         };
 
         //foreach (var item in GameData.RogueHandbookMiracleData)
@@ -26,7 +26,7 @@ public class PacketGetRogueHandbookDataScRsp : BasePacket
         {
             if (item.Value.Lv != 1)
                 continue;
-            proto.HandbookInfo.BuffList.Add(new RogueHandbookMazeBuff
+            proto.RogueTournHandbook.BuffList.Add(new RogueHandbookMazeBuff
             {
                 MazeBuffId = (uint)item.Value.ID
             });

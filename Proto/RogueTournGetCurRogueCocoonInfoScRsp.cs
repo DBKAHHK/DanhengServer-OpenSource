@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CipSb2d1ZVRvdXJuR2V0Q3VyUm9ndWVDb2Nvb25JbmZvU2NSc3AucHJvdG8i",
-            "ewokUm9ndWVUb3VybkdldEN1clJvZ3VlQ29jb29uSW5mb1NjUnNwEhMKC0lC",
-            "R05MQk9FQkNHGAsgASgNEhgKEGRpZmZpY3VsdHlfbGV2ZWwYBiABKA0SDwoH",
-            "cmV0Y29kZRgMIAEoDRITCgtQSUxNS0hDS01FRBgCIAEoDUIeqgIbRWdnTGlu",
+            "ewokUm9ndWVUb3VybkdldEN1clJvZ3VlQ29jb29uSW5mb1NjUnNwEg8KB3Jl",
+            "dGNvZGUYASABKA0SEwoLSUJHTkxCT0VCQ0cYBSABKA0SGAoQZGlmZmljdWx0",
+            "eV9sZXZlbBgNIAEoDRITCgtQSUxNS0hDS01FRBgMIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGetCurRogueCocoonInfoScRsp), global::EggLink.DanhengServer.Proto.RogueTournGetCurRogueCocoonInfoScRsp.Parser, new[]{ "IBGNLBOEBCG", "DifficultyLevel", "Retcode", "PILMKHCKMED" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGetCurRogueCocoonInfoScRsp), global::EggLink.DanhengServer.Proto.RogueTournGetCurRogueCocoonInfoScRsp.Parser, new[]{ "Retcode", "IBGNLBOEBCG", "DifficultyLevel", "PILMKHCKMED" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournGetCurRogueCocoonInfoScRsp(RogueTournGetCurRogueCocoonInfoScRsp other) : this() {
+      retcode_ = other.retcode_;
       iBGNLBOEBCG_ = other.iBGNLBOEBCG_;
       difficultyLevel_ = other.difficultyLevel_;
-      retcode_ = other.retcode_;
       pILMKHCKMED_ = other.pILMKHCKMED_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,8 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournGetCurRogueCocoonInfoScRsp(this);
     }
 
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 1;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
     /// <summary>Field number for the "IBGNLBOEBCG" field.</summary>
-    public const int IBGNLBOEBCGFieldNumber = 11;
+    public const int IBGNLBOEBCGFieldNumber = 5;
     private uint iBGNLBOEBCG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "difficulty_level" field.</summary>
-    public const int DifficultyLevelFieldNumber = 6;
+    public const int DifficultyLevelFieldNumber = 13;
     private uint difficultyLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,20 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "PILMKHCKMED" field.</summary>
-    public const int PILMKHCKMEDFieldNumber = 2;
+    public const int PILMKHCKMEDFieldNumber = 12;
     private uint pILMKHCKMED_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Retcode != other.Retcode) return false;
       if (IBGNLBOEBCG != other.IBGNLBOEBCG) return false;
       if (DifficultyLevel != other.DifficultyLevel) return false;
-      if (Retcode != other.Retcode) return false;
       if (PILMKHCKMED != other.PILMKHCKMED) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -161,9 +161,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (IBGNLBOEBCG != 0) hash ^= IBGNLBOEBCG.GetHashCode();
       if (DifficultyLevel != 0) hash ^= DifficultyLevel.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (PILMKHCKMED != 0) hash ^= PILMKHCKMED.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Retcode != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Retcode);
+      }
+      if (IBGNLBOEBCG != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(IBGNLBOEBCG);
+      }
       if (PILMKHCKMED != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(96);
         output.WriteUInt32(PILMKHCKMED);
       }
       if (DifficultyLevel != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(104);
         output.WriteUInt32(DifficultyLevel);
-      }
-      if (IBGNLBOEBCG != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(IBGNLBOEBCG);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Retcode != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Retcode);
+      }
+      if (IBGNLBOEBCG != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(IBGNLBOEBCG);
+      }
       if (PILMKHCKMED != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(96);
         output.WriteUInt32(PILMKHCKMED);
       }
       if (DifficultyLevel != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(104);
         output.WriteUInt32(DifficultyLevel);
-      }
-      if (IBGNLBOEBCG != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(IBGNLBOEBCG);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,14 +235,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
       if (IBGNLBOEBCG != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IBGNLBOEBCG);
       }
       if (DifficultyLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DifficultyLevel);
-      }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (PILMKHCKMED != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PILMKHCKMED);
@@ -259,14 +259,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.IBGNLBOEBCG != 0) {
         IBGNLBOEBCG = other.IBGNLBOEBCG;
       }
       if (other.DifficultyLevel != 0) {
         DifficultyLevel = other.DifficultyLevel;
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
       }
       if (other.PILMKHCKMED != 0) {
         PILMKHCKMED = other.PILMKHCKMED;
@@ -286,20 +286,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            PILMKHCKMED = input.ReadUInt32();
+          case 8: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 48: {
-            DifficultyLevel = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 40: {
             IBGNLBOEBCG = input.ReadUInt32();
             break;
           }
           case 96: {
-            Retcode = input.ReadUInt32();
+            PILMKHCKMED = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            DifficultyLevel = input.ReadUInt32();
             break;
           }
         }
@@ -317,20 +317,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            PILMKHCKMED = input.ReadUInt32();
+          case 8: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 48: {
-            DifficultyLevel = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 40: {
             IBGNLBOEBCG = input.ReadUInt32();
             break;
           }
           case 96: {
-            Retcode = input.ReadUInt32();
+            PILMKHCKMED = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            DifficultyLevel = input.ReadUInt32();
             break;
           }
         }

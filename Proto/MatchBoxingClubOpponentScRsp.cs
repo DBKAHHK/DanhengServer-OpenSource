@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJNYXRjaEJveGluZ0NsdWJPcHBvbmVudFNjUnNwLnByb3RvGhFGQ0lISUpM",
             "T01HQS5wcm90byJQChxNYXRjaEJveGluZ0NsdWJPcHBvbmVudFNjUnNwEg8K",
-            "B3JldGNvZGUYASABKA0SHwoJY2hhbGxlbmdlGA0gASgLMgwuRkNJSElKTE9N",
+            "B3JldGNvZGUYASABKA0SHwoJY2hhbGxlbmdlGAIgASgLMgwuRkNJSElKTE9N",
             "R0FCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FCIHIJLOMGAReflection.Descriptor, },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge" field.</summary>
-    public const int ChallengeFieldNumber = 13;
+    public const int ChallengeFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.FCIHIJLOMGA challenge_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (challenge_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(18);
         output.WriteMessage(Challenge);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (challenge_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(18);
         output.WriteMessage(Challenge);
       }
       if (_unknownFields != null) {
@@ -234,7 +234,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 18: {
             if (challenge_ == null) {
               Challenge = new global::EggLink.DanhengServer.Proto.FCIHIJLOMGA();
             }
@@ -260,7 +260,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 18: {
             if (challenge_ == null) {
               Challenge = new global::EggLink.DanhengServer.Proto.FCIHIJLOMGA();
             }

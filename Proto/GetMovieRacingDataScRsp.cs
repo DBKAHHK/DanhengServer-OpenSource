@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1HZXRNb3ZpZVJhY2luZ0RhdGFTY1JzcC5wcm90bxoQUmFjaW5nRGF0YS5w",
-            "cm90byJMChdHZXRNb3ZpZVJhY2luZ0RhdGFTY1JzcBIPCgdyZXRjb2RlGAsg",
-            "ASgNEiAKC09ESklHRUJFSEdDGAwgAygLMgsuUmFjaW5nRGF0YUIeqgIbRWdn",
+            "cm90byJMChdHZXRNb3ZpZVJhY2luZ0RhdGFTY1JzcBIgCgtPREpJR0VCRUhH",
+            "QxgOIAMoCzILLlJhY2luZ0RhdGESDwoHcmV0Y29kZRgLIAEoDUIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RacingDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMovieRacingDataScRsp), global::EggLink.DanhengServer.Proto.GetMovieRacingDataScRsp.Parser, new[]{ "Retcode", "ODJIGEBEHGC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMovieRacingDataScRsp), global::EggLink.DanhengServer.Proto.GetMovieRacingDataScRsp.Parser, new[]{ "ODJIGEBEHGC", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMovieRacingDataScRsp(GetMovieRacingDataScRsp other) : this() {
-      retcode_ = other.retcode_;
       oDJIGEBEHGC_ = other.oDJIGEBEHGC_.Clone();
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,6 +82,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetMovieRacingDataScRsp Clone() {
       return new GetMovieRacingDataScRsp(this);
+    }
+
+    /// <summary>Field number for the "ODJIGEBEHGC" field.</summary>
+    public const int ODJIGEBEHGCFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RacingData> _repeated_oDJIGEBEHGC_codec
+        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.RacingData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RacingData> oDJIGEBEHGC_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RacingData>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RacingData> ODJIGEBEHGC {
+      get { return oDJIGEBEHGC_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -94,17 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "ODJIGEBEHGC" field.</summary>
-    public const int ODJIGEBEHGCFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RacingData> _repeated_oDJIGEBEHGC_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.RacingData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RacingData> oDJIGEBEHGC_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RacingData>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RacingData> ODJIGEBEHGC {
-      get { return oDJIGEBEHGC_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if(!oDJIGEBEHGC_.Equals(other.oDJIGEBEHGC_)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= oDJIGEBEHGC_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += oDJIGEBEHGC_.CalculateSize(_repeated_oDJIGEBEHGC_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += oDJIGEBEHGC_.CalculateSize(_repeated_oDJIGEBEHGC_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      oDJIGEBEHGC_.Add(other.oDJIGEBEHGC_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      oDJIGEBEHGC_.Add(other.oDJIGEBEHGC_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -220,7 +220,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 98: {
+          case 114: {
             oDJIGEBEHGC_.AddEntriesFrom(input, _repeated_oDJIGEBEHGC_codec);
             break;
           }
@@ -243,7 +243,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 98: {
+          case 114: {
             oDJIGEBEHGC_.AddEntriesFrom(ref input, _repeated_oDJIGEBEHGC_codec);
             break;
           }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNGaW5pc2hDaGVzc1JvZ3VlU3ViU3RvcnlDc1JlcS5wcm90byJBCh1GaW5p",
             "c2hDaGVzc1JvZ3VlU3ViU3RvcnlDc1JlcRIgChhjaGVzc19yb2d1ZV9zdWJf",
-            "c3RvcnlfaWQYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "c3RvcnlfaWQYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "chess_rogue_sub_story_id" field.</summary>
-    public const int ChessRogueSubStoryIdFieldNumber = 14;
+    public const int ChessRogueSubStoryIdFieldNumber = 10;
     private uint chessRogueSubStoryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ChessRogueSubStoryId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteUInt32(ChessRogueSubStoryId);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ChessRogueSubStoryId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(80);
         output.WriteUInt32(ChessRogueSubStoryId);
       }
       if (_unknownFields != null) {
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 112: {
+          case 80: {
             ChessRogueSubStoryId = input.ReadUInt32();
             break;
           }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 112: {
+          case 80: {
             ChessRogueSubStoryId = input.ReadUInt32();
             break;
           }

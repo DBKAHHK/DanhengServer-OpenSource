@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBTdGFydFBhcnRpYWxDaGFsbGVuZ2VDc1JlcS5wcm90byJaChpTdGFydFBh",
-            "cnRpYWxDaGFsbGVuZ2VDc1JlcRIUCgxjaGFsbGVuZ2VfaWQYDyABKA0SFQoN",
-            "aXNfZmlyc3RfaGFsZhgGIAEoCBIPCgdidWZmX2lkGAsgASgNQh6qAhtFZ2dM",
+            "cnRpYWxDaGFsbGVuZ2VDc1JlcRIPCgdidWZmX2lkGAMgASgNEhUKDWlzX2Zp",
+            "cnN0X2hhbGYYDSABKAgSFAoMY2hhbGxlbmdlX2lkGAsgASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartPartialChallengeCsReq), global::EggLink.DanhengServer.Proto.StartPartialChallengeCsReq.Parser, new[]{ "ChallengeId", "IsFirstHalf", "BuffId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartPartialChallengeCsReq), global::EggLink.DanhengServer.Proto.StartPartialChallengeCsReq.Parser, new[]{ "BuffId", "IsFirstHalf", "ChallengeId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartPartialChallengeCsReq(StartPartialChallengeCsReq other) : this() {
-      challengeId_ = other.challengeId_;
-      isFirstHalf_ = other.isFirstHalf_;
       buffId_ = other.buffId_;
+      isFirstHalf_ = other.isFirstHalf_;
+      challengeId_ = other.challengeId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new StartPartialChallengeCsReq(this);
     }
 
-    /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 15;
-    private uint challengeId_;
+    /// <summary>Field number for the "buff_id" field.</summary>
+    public const int BuffIdFieldNumber = 3;
+    private uint buffId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ChallengeId {
-      get { return challengeId_; }
+    public uint BuffId {
+      get { return buffId_; }
       set {
-        challengeId_ = value;
+        buffId_ = value;
       }
     }
 
     /// <summary>Field number for the "is_first_half" field.</summary>
-    public const int IsFirstHalfFieldNumber = 6;
+    public const int IsFirstHalfFieldNumber = 13;
     private bool isFirstHalf_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "buff_id" field.</summary>
-    public const int BuffIdFieldNumber = 11;
-    private uint buffId_;
+    /// <summary>Field number for the "challenge_id" field.</summary>
+    public const int ChallengeIdFieldNumber = 11;
+    private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BuffId {
-      get { return buffId_; }
+    public uint ChallengeId {
+      get { return challengeId_; }
       set {
-        buffId_ = value;
+        challengeId_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ChallengeId != other.ChallengeId) return false;
-      if (IsFirstHalf != other.IsFirstHalf) return false;
       if (BuffId != other.BuffId) return false;
+      if (IsFirstHalf != other.IsFirstHalf) return false;
+      if (ChallengeId != other.ChallengeId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
-      if (IsFirstHalf != false) hash ^= IsFirstHalf.GetHashCode();
       if (BuffId != 0) hash ^= BuffId.GetHashCode();
+      if (IsFirstHalf != false) hash ^= IsFirstHalf.GetHashCode();
+      if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsFirstHalf != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsFirstHalf);
-      }
       if (BuffId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(24);
         output.WriteUInt32(BuffId);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(ChallengeId);
+      }
+      if (IsFirstHalf != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(IsFirstHalf);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsFirstHalf != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(IsFirstHalf);
-      }
       if (BuffId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(24);
         output.WriteUInt32(BuffId);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(ChallengeId);
+      }
+      if (IsFirstHalf != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(IsFirstHalf);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ChallengeId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChallengeId);
+      if (BuffId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffId);
       }
       if (IsFirstHalf != false) {
         size += 1 + 1;
       }
-      if (BuffId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffId);
+      if (ChallengeId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChallengeId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ChallengeId != 0) {
-        ChallengeId = other.ChallengeId;
+      if (other.BuffId != 0) {
+        BuffId = other.BuffId;
       }
       if (other.IsFirstHalf != false) {
         IsFirstHalf = other.IsFirstHalf;
       }
-      if (other.BuffId != 0) {
-        BuffId = other.BuffId;
+      if (other.ChallengeId != 0) {
+        ChallengeId = other.ChallengeId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            IsFirstHalf = input.ReadBool();
-            break;
-          }
-          case 88: {
+          case 24: {
             BuffId = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 88: {
             ChallengeId = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            IsFirstHalf = input.ReadBool();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            IsFirstHalf = input.ReadBool();
-            break;
-          }
-          case 88: {
+          case 24: {
             BuffId = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 88: {
             ChallengeId = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            IsFirstHalf = input.ReadBool();
             break;
           }
         }

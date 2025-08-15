@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVSb2d1ZVJldml2ZUluZm8ucHJvdG8aEkl0ZW1Db3N0RGF0YS5wcm90byI7",
-            "Cg9Sb2d1ZVJldml2ZUluZm8SKAoRcm9ndWVfcmV2aXZlX2Nvc3QYBiABKAsy",
+            "Cg9Sb2d1ZVJldml2ZUluZm8SKAoRcm9ndWVfcmV2aXZlX2Nvc3QYASABKAsy",
             "DS5JdGVtQ29zdERhdGFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_revive_cost" field.</summary>
-    public const int RogueReviveCostFieldNumber = 6;
+    public const int RogueReviveCostFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.ItemCostData rogueReviveCost_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (rogueReviveCost_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(10);
         output.WriteMessage(RogueReviveCost);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rogueReviveCost_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(10);
         output.WriteMessage(RogueReviveCost);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 10: {
             if (rogueReviveCost_ == null) {
               RogueReviveCost = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 10: {
             if (rogueReviveCost_ == null) {
               RogueReviveCost = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }

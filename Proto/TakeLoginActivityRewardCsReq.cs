@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJUYWtlTG9naW5BY3Rpdml0eVJld2FyZENzUmVxLnByb3RvIj0KHFRha2VM",
-            "b2dpbkFjdGl2aXR5UmV3YXJkQ3NSZXESCgoCaWQYAiABKA0SEQoJdGFrZV9k",
-            "YXlzGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "b2dpbkFjdGl2aXR5UmV3YXJkQ3NSZXESCgoCaWQYDSABKA0SEQoJdGFrZV9k",
+            "YXlzGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 2;
+    public const int IdFieldNumber = 13;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "take_days" field.</summary>
-    public const int TakeDaysFieldNumber = 13;
+    public const int TakeDaysFieldNumber = 14;
     private uint takeDays_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Id != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(104);
         output.WriteUInt32(Id);
       }
       if (TakeDays != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteUInt32(TakeDays);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(104);
         output.WriteUInt32(Id);
       }
       if (TakeDays != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteUInt32(TakeDays);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 104: {
             Id = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 112: {
             TakeDays = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 104: {
             Id = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 112: {
             TakeDays = input.ReadUInt32();
             break;
           }

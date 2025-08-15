@@ -24,11 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static FightGameModeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNGaWdodEdhbWVNb2RlLnByb3RvKoIBCg1GaWdodEdhbWVNb2RlEhgKFEZJ",
+            "ChNGaWdodEdhbWVNb2RlLnByb3RvKskBCg1GaWdodEdhbWVNb2RlEhgKFEZJ",
             "R0hUX0dBTUVfTU9ERV9OT05FEAASGgoWRklHSFRfR0FNRV9NT0RFX01BVENI",
             "MxABEhoKFkZJR0hUX0dBTUVfTU9ERV9NQVJCTEUQAhIfChtGSUdIVF9HQU1F",
-            "X01PREVfTUFUQ0gzX1NPTE8QA0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "X01PREVfTUFUQ0gzX1NPTE8QAxIhCh1GSUdIVF9HQU1FX01PREVfTUFUQ0gz",
+            "X1JPWUFMRRAEEiIKHkZJR0hUX0dBTUVfTU9ERV9NQVJCTEVfTUFJTlNVQhAF",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.FightGameMode), }, null, null));
@@ -42,6 +43,8 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("FIGHT_GAME_MODE_MATCH3")] Match3 = 1,
     [pbr::OriginalName("FIGHT_GAME_MODE_MARBLE")] Marble = 2,
     [pbr::OriginalName("FIGHT_GAME_MODE_MATCH3_SOLO")] Match3Solo = 3,
+    [pbr::OriginalName("FIGHT_GAME_MODE_MATCH3_ROYALE")] Match3Royale = 4,
+    [pbr::OriginalName("FIGHT_GAME_MODE_MARBLE_MAINSUB")] MarbleMainsub = 5,
   }
 
   #endregion

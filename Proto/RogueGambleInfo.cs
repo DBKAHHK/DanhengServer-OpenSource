@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static RogueGambleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVSb2d1ZUdhbWJsZUluZm8ucHJvdG8aEkl0ZW1Db3N0RGF0YS5wcm90bxoe",
-            "Um9ndWVHYW1ibGVNYXplR3JvdXBJbmZvLnByb3RvItIBCg9Sb2d1ZUdhbWJs",
-            "ZUluZm8SEwoLSEZCS0JISklFR0QYAiABKA0SMgoPbWF6ZV9ncm91cF9saXN0",
-            "GAggAygLMhkuUm9ndWVHYW1ibGVNYXplR3JvdXBJbmZvEhMKC0RESkREQktO",
-            "UEZGGAcgASgNEhYKDm1heF9nYW1lX3RpbWVzGAYgASgNEhAKCGNhbl9wbGF5",
-            "GAsgASgIEiQKDWN1cl9jb3N0X2l0ZW0YBCABKAsyDS5JdGVtQ29zdERhdGES",
-            "EQoJY3VyX3RpbWVzGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "ChVSb2d1ZUdhbWJsZUluZm8ucHJvdG8aHlJvZ3VlR2FtYmxlTWF6ZUdyb3Vw",
+            "SW5mby5wcm90bxoSSXRlbUNvc3REYXRhLnByb3RvItIBCg9Sb2d1ZUdhbWJs",
+            "ZUluZm8SFgoObWF4X2dhbWVfdGltZXMYDyABKA0SMgoPbWF6ZV9ncm91cF9s",
+            "aXN0GAUgAygLMhkuUm9ndWVHYW1ibGVNYXplR3JvdXBJbmZvEhMKC0RESkRE",
+            "QktOUEZGGAggASgNEhAKCGNhbl9wbGF5GA0gASgIEhEKCWN1cl90aW1lcxgM",
+            "IAEoDRITCgtIRkJLQkhKSUVHRBgHIAEoDRIkCg1jdXJfY29zdF9pdGVtGAsg",
+            "ASgLMg0uSXRlbUNvc3REYXRhQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGambleInfo), global::EggLink.DanhengServer.Proto.RogueGambleInfo.Parser, new[]{ "HFBKBHJIEGD", "MazeGroupList", "DDJDDBKNPFF", "MaxGameTimes", "CanPlay", "CurCostItem", "CurTimes" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGambleInfo), global::EggLink.DanhengServer.Proto.RogueGambleInfo.Parser, new[]{ "MaxGameTimes", "MazeGroupList", "DDJDDBKNPFF", "CanPlay", "CurTimes", "HFBKBHJIEGD", "CurCostItem" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,13 +77,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueGambleInfo(RogueGambleInfo other) : this() {
-      hFBKBHJIEGD_ = other.hFBKBHJIEGD_;
+      maxGameTimes_ = other.maxGameTimes_;
       mazeGroupList_ = other.mazeGroupList_.Clone();
       dDJDDBKNPFF_ = other.dDJDDBKNPFF_;
-      maxGameTimes_ = other.maxGameTimes_;
       canPlay_ = other.canPlay_;
-      curCostItem_ = other.curCostItem_ != null ? other.curCostItem_.Clone() : null;
       curTimes_ = other.curTimes_;
+      hFBKBHJIEGD_ = other.hFBKBHJIEGD_;
+      curCostItem_ = other.curCostItem_ != null ? other.curCostItem_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -93,43 +93,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueGambleInfo(this);
     }
 
-    /// <summary>Field number for the "HFBKBHJIEGD" field.</summary>
-    public const int HFBKBHJIEGDFieldNumber = 2;
-    private uint hFBKBHJIEGD_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HFBKBHJIEGD {
-      get { return hFBKBHJIEGD_; }
-      set {
-        hFBKBHJIEGD_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "maze_group_list" field.</summary>
-    public const int MazeGroupListFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo> _repeated_mazeGroupList_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo> mazeGroupList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo> MazeGroupList {
-      get { return mazeGroupList_; }
-    }
-
-    /// <summary>Field number for the "DDJDDBKNPFF" field.</summary>
-    public const int DDJDDBKNPFFFieldNumber = 7;
-    private uint dDJDDBKNPFF_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DDJDDBKNPFF {
-      get { return dDJDDBKNPFF_; }
-      set {
-        dDJDDBKNPFF_ = value;
-      }
-    }
-
     /// <summary>Field number for the "max_game_times" field.</summary>
-    public const int MaxGameTimesFieldNumber = 6;
+    public const int MaxGameTimesFieldNumber = 15;
     private uint maxGameTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -140,8 +105,31 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "maze_group_list" field.</summary>
+    public const int MazeGroupListFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo> _repeated_mazeGroupList_codec
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo> mazeGroupList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo> MazeGroupList {
+      get { return mazeGroupList_; }
+    }
+
+    /// <summary>Field number for the "DDJDDBKNPFF" field.</summary>
+    public const int DDJDDBKNPFFFieldNumber = 8;
+    private uint dDJDDBKNPFF_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DDJDDBKNPFF {
+      get { return dDJDDBKNPFF_; }
+      set {
+        dDJDDBKNPFF_ = value;
+      }
+    }
+
     /// <summary>Field number for the "can_play" field.</summary>
-    public const int CanPlayFieldNumber = 11;
+    public const int CanPlayFieldNumber = 13;
     private bool canPlay_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,20 +140,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "cur_cost_item" field.</summary>
-    public const int CurCostItemFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.ItemCostData curCostItem_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemCostData CurCostItem {
-      get { return curCostItem_; }
-      set {
-        curCostItem_ = value;
-      }
-    }
-
     /// <summary>Field number for the "cur_times" field.</summary>
-    public const int CurTimesFieldNumber = 10;
+    public const int CurTimesFieldNumber = 12;
     private uint curTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -173,6 +149,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return curTimes_; }
       set {
         curTimes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "HFBKBHJIEGD" field.</summary>
+    public const int HFBKBHJIEGDFieldNumber = 7;
+    private uint hFBKBHJIEGD_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint HFBKBHJIEGD {
+      get { return hFBKBHJIEGD_; }
+      set {
+        hFBKBHJIEGD_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cur_cost_item" field.</summary>
+    public const int CurCostItemFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.ItemCostData curCostItem_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ItemCostData CurCostItem {
+      get { return curCostItem_; }
+      set {
+        curCostItem_ = value;
       }
     }
 
@@ -191,13 +191,13 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (HFBKBHJIEGD != other.HFBKBHJIEGD) return false;
+      if (MaxGameTimes != other.MaxGameTimes) return false;
       if(!mazeGroupList_.Equals(other.mazeGroupList_)) return false;
       if (DDJDDBKNPFF != other.DDJDDBKNPFF) return false;
-      if (MaxGameTimes != other.MaxGameTimes) return false;
       if (CanPlay != other.CanPlay) return false;
-      if (!object.Equals(CurCostItem, other.CurCostItem)) return false;
       if (CurTimes != other.CurTimes) return false;
+      if (HFBKBHJIEGD != other.HFBKBHJIEGD) return false;
+      if (!object.Equals(CurCostItem, other.CurCostItem)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HFBKBHJIEGD != 0) hash ^= HFBKBHJIEGD.GetHashCode();
+      if (MaxGameTimes != 0) hash ^= MaxGameTimes.GetHashCode();
       hash ^= mazeGroupList_.GetHashCode();
       if (DDJDDBKNPFF != 0) hash ^= DDJDDBKNPFF.GetHashCode();
-      if (MaxGameTimes != 0) hash ^= MaxGameTimes.GetHashCode();
       if (CanPlay != false) hash ^= CanPlay.GetHashCode();
-      if (curCostItem_ != null) hash ^= CurCostItem.GetHashCode();
       if (CurTimes != 0) hash ^= CurTimes.GetHashCode();
+      if (HFBKBHJIEGD != 0) hash ^= HFBKBHJIEGD.GetHashCode();
+      if (curCostItem_ != null) hash ^= CurCostItem.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -230,30 +230,30 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      mazeGroupList_.WriteTo(output, _repeated_mazeGroupList_codec);
       if (HFBKBHJIEGD != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(HFBKBHJIEGD);
       }
-      if (curCostItem_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(CurCostItem);
-      }
-      if (MaxGameTimes != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(MaxGameTimes);
-      }
       if (DDJDDBKNPFF != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteUInt32(DDJDDBKNPFF);
       }
-      mazeGroupList_.WriteTo(output, _repeated_mazeGroupList_codec);
+      if (curCostItem_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CurCostItem);
+      }
       if (CurTimes != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(CurTimes);
       }
       if (CanPlay != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(104);
         output.WriteBool(CanPlay);
+      }
+      if (MaxGameTimes != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(MaxGameTimes);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -265,30 +265,30 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      mazeGroupList_.WriteTo(ref output, _repeated_mazeGroupList_codec);
       if (HFBKBHJIEGD != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(HFBKBHJIEGD);
       }
-      if (curCostItem_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(CurCostItem);
-      }
-      if (MaxGameTimes != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(MaxGameTimes);
-      }
       if (DDJDDBKNPFF != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteUInt32(DDJDDBKNPFF);
       }
-      mazeGroupList_.WriteTo(ref output, _repeated_mazeGroupList_codec);
+      if (curCostItem_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(CurCostItem);
+      }
       if (CurTimes != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(CurTimes);
       }
       if (CanPlay != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(104);
         output.WriteBool(CanPlay);
+      }
+      if (MaxGameTimes != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(MaxGameTimes);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -300,24 +300,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HFBKBHJIEGD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HFBKBHJIEGD);
+      if (MaxGameTimes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxGameTimes);
       }
       size += mazeGroupList_.CalculateSize(_repeated_mazeGroupList_codec);
       if (DDJDDBKNPFF != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DDJDDBKNPFF);
       }
-      if (MaxGameTimes != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxGameTimes);
-      }
       if (CanPlay != false) {
         size += 1 + 1;
       }
-      if (curCostItem_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CurCostItem);
-      }
       if (CurTimes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurTimes);
+      }
+      if (HFBKBHJIEGD != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HFBKBHJIEGD);
+      }
+      if (curCostItem_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CurCostItem);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -331,27 +331,27 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.HFBKBHJIEGD != 0) {
-        HFBKBHJIEGD = other.HFBKBHJIEGD;
+      if (other.MaxGameTimes != 0) {
+        MaxGameTimes = other.MaxGameTimes;
       }
       mazeGroupList_.Add(other.mazeGroupList_);
       if (other.DDJDDBKNPFF != 0) {
         DDJDDBKNPFF = other.DDJDDBKNPFF;
       }
-      if (other.MaxGameTimes != 0) {
-        MaxGameTimes = other.MaxGameTimes;
-      }
       if (other.CanPlay != false) {
         CanPlay = other.CanPlay;
+      }
+      if (other.CurTimes != 0) {
+        CurTimes = other.CurTimes;
+      }
+      if (other.HFBKBHJIEGD != 0) {
+        HFBKBHJIEGD = other.HFBKBHJIEGD;
       }
       if (other.curCostItem_ != null) {
         if (curCostItem_ == null) {
           CurCostItem = new global::EggLink.DanhengServer.Proto.ItemCostData();
         }
         CurCostItem.MergeFrom(other.CurCostItem);
-      }
-      if (other.CurTimes != 0) {
-        CurTimes = other.CurTimes;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -368,35 +368,35 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 42: {
+            mazeGroupList_.AddEntriesFrom(input, _repeated_mazeGroupList_codec);
+            break;
+          }
+          case 56: {
             HFBKBHJIEGD = input.ReadUInt32();
             break;
           }
-          case 34: {
+          case 64: {
+            DDJDDBKNPFF = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (curCostItem_ == null) {
               CurCostItem = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(CurCostItem);
             break;
           }
-          case 48: {
-            MaxGameTimes = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            DDJDDBKNPFF = input.ReadUInt32();
-            break;
-          }
-          case 66: {
-            mazeGroupList_.AddEntriesFrom(input, _repeated_mazeGroupList_codec);
-            break;
-          }
-          case 80: {
+          case 96: {
             CurTimes = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 104: {
             CanPlay = input.ReadBool();
+            break;
+          }
+          case 120: {
+            MaxGameTimes = input.ReadUInt32();
             break;
           }
         }
@@ -414,35 +414,35 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 42: {
+            mazeGroupList_.AddEntriesFrom(ref input, _repeated_mazeGroupList_codec);
+            break;
+          }
+          case 56: {
             HFBKBHJIEGD = input.ReadUInt32();
             break;
           }
-          case 34: {
+          case 64: {
+            DDJDDBKNPFF = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (curCostItem_ == null) {
               CurCostItem = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(CurCostItem);
             break;
           }
-          case 48: {
-            MaxGameTimes = input.ReadUInt32();
-            break;
-          }
-          case 56: {
-            DDJDDBKNPFF = input.ReadUInt32();
-            break;
-          }
-          case 66: {
-            mazeGroupList_.AddEntriesFrom(ref input, _repeated_mazeGroupList_codec);
-            break;
-          }
-          case 80: {
+          case 96: {
             CurTimes = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 104: {
             CanPlay = input.ReadBool();
+            break;
+          }
+          case 120: {
+            MaxGameTimes = input.ReadUInt32();
             break;
           }
         }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChlOcGNNb25zdGVyRXh0cmFJbmZvLnByb3RvGhlOcGNNb25zdGVyUm9ndWVJ",
             "bmZvLnByb3RvIlUKE05wY01vbnN0ZXJFeHRyYUluZm8SLwoPcm9ndWVfZ2Ft",
-            "ZV9pbmZvGAwgASgLMhQuTnBjTW9uc3RlclJvZ3VlSW5mb0gAQg0KC0dKT0pI",
+            "ZV9pbmZvGAIgASgLMhQuTnBjTW9uc3RlclJvZ3VlSW5mb0gAQg0KC0dKT0pI",
             "TEhHRERBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -90,7 +90,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_game_info" field.</summary>
-    public const int RogueGameInfoFieldNumber = 12;
+    public const int RogueGameInfoFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.NpcMonsterRogueInfo RogueGameInfo {
@@ -105,7 +105,7 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "GJOJHLHGDDA" oneof.</summary>
     public enum GJOJHLHGDDAOneofCase {
       None = 0,
-      RogueGameInfo = 12,
+      RogueGameInfo = 2,
     }
     private GJOJHLHGDDAOneofCase gJOJHLHGDDACase_ = GJOJHLHGDDAOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (gJOJHLHGDDACase_ == GJOJHLHGDDAOneofCase.RogueGameInfo) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(18);
         output.WriteMessage(RogueGameInfo);
       }
       if (_unknownFields != null) {
@@ -180,7 +180,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (gJOJHLHGDDACase_ == GJOJHLHGDDAOneofCase.RogueGameInfo) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(18);
         output.WriteMessage(RogueGameInfo);
       }
       if (_unknownFields != null) {
@@ -232,7 +232,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98: {
+          case 18: {
             global::EggLink.DanhengServer.Proto.NpcMonsterRogueInfo subBuilder = new global::EggLink.DanhengServer.Proto.NpcMonsterRogueInfo();
             if (gJOJHLHGDDACase_ == GJOJHLHGDDAOneofCase.RogueGameInfo) {
               subBuilder.MergeFrom(RogueGameInfo);
@@ -256,7 +256,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98: {
+          case 18: {
             global::EggLink.DanhengServer.Proto.NpcMonsterRogueInfo subBuilder = new global::EggLink.DanhengServer.Proto.NpcMonsterRogueInfo();
             if (gJOJHLHGDDACase_ == GJOJHLHGDDAOneofCase.RogueGameInfo) {
               subBuilder.MergeFrom(RogueGameInfo);

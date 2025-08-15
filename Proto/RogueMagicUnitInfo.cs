@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhSb2d1ZU1hZ2ljVW5pdEluZm8ucHJvdG8iRQoSUm9ndWVNYWdpY1VuaXRJ",
-            "bmZvEhUKDW1hZ2ljX3VuaXRfaWQYCSABKA0SGAoQbWFnaWNfdW5pdF9sZXZl",
-            "bBgPIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bmZvEhUKDW1hZ2ljX3VuaXRfaWQYCCABKA0SGAoQbWFnaWNfdW5pdF9sZXZl",
+            "bBgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "magic_unit_id" field.</summary>
-    public const int MagicUnitIdFieldNumber = 9;
+    public const int MagicUnitIdFieldNumber = 8;
     private uint magicUnitId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "magic_unit_level" field.</summary>
-    public const int MagicUnitLevelFieldNumber = 15;
+    public const int MagicUnitLevelFieldNumber = 12;
     private uint magicUnitLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MagicUnitId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(MagicUnitId);
       }
       if (MagicUnitLevel != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteUInt32(MagicUnitLevel);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MagicUnitId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(MagicUnitId);
       }
       if (MagicUnitLevel != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteUInt32(MagicUnitLevel);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 64: {
             MagicUnitId = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 96: {
             MagicUnitLevel = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 64: {
             MagicUnitId = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 96: {
             MagicUnitLevel = input.ReadUInt32();
             break;
           }

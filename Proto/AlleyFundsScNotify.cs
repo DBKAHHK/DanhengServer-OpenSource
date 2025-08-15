@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhBbGxleUZ1bmRzU2NOb3RpZnkucHJvdG8iJgoSQWxsZXlGdW5kc1NjTm90",
-            "aWZ5EhAKCGN1cl9mdW5kGAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "aWZ5EhAKCGN1cl9mdW5kGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_fund" field.</summary>
-    public const int CurFundFieldNumber = 2;
+    public const int CurFundFieldNumber = 13;
     private uint curFund_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (CurFund != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(104);
         output.WriteUInt32(CurFund);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CurFund != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(104);
         output.WriteUInt32(CurFund);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 104: {
             CurFund = input.ReadUInt32();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 104: {
             CurFund = input.ReadUInt32();
             break;
           }

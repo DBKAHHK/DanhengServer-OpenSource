@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFJQUFDQ0FGR0VQSS5wcm90bxoRSUhHSkxMTkdES0wucHJvdG8iZgoLSUFB",
-            "Q0NBRkdFUEkSDwoHY2VsbF9pZBgFIAEoDRITCgtKTURFRkxBRklDRRgCIAEo",
-            "CBIhCgtNQUZLQ0JPRE1NQxgBIAEoDjIMLklIR0pMTE5HREtMEg4KBm1hcF9p",
-            "ZBgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "Q0NBRkdFUEkSDgoGbWFwX2lkGAYgASgNEiEKC01BRktDQk9ETU1DGAIgASgO",
+            "MgwuSUhHSkxMTkdES0wSDwoHY2VsbF9pZBgJIAEoDRITCgtKTURFRkxBRklD",
+            "RRgNIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IHGJLLNGDKLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IAACCAFGEPI), global::EggLink.DanhengServer.Proto.IAACCAFGEPI.Parser, new[]{ "CellId", "JMDEFLAFICE", "MAFKCBODMMC", "MapId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IAACCAFGEPI), global::EggLink.DanhengServer.Proto.IAACCAFGEPI.Parser, new[]{ "MapId", "MAFKCBODMMC", "CellId", "JMDEFLAFICE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IAACCAFGEPI(IAACCAFGEPI other) : this() {
+      mapId_ = other.mapId_;
+      mAFKCBODMMC_ = other.mAFKCBODMMC_;
       cellId_ = other.cellId_;
       jMDEFLAFICE_ = other.jMDEFLAFICE_;
-      mAFKCBODMMC_ = other.mAFKCBODMMC_;
-      mapId_ = other.mapId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,8 +87,32 @@ namespace EggLink.DanhengServer.Proto {
       return new IAACCAFGEPI(this);
     }
 
+    /// <summary>Field number for the "map_id" field.</summary>
+    public const int MapIdFieldNumber = 6;
+    private uint mapId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MapId {
+      get { return mapId_; }
+      set {
+        mapId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "MAFKCBODMMC" field.</summary>
+    public const int MAFKCBODMMCFieldNumber = 2;
+    private global::EggLink.DanhengServer.Proto.IHGJLLNGDKL mAFKCBODMMC_ = global::EggLink.DanhengServer.Proto.IHGJLLNGDKL.MonopolyCellStateIdle;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.IHGJLLNGDKL MAFKCBODMMC {
+      get { return mAFKCBODMMC_; }
+      set {
+        mAFKCBODMMC_ = value;
+      }
+    }
+
     /// <summary>Field number for the "cell_id" field.</summary>
-    public const int CellIdFieldNumber = 5;
+    public const int CellIdFieldNumber = 9;
     private uint cellId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JMDEFLAFICE" field.</summary>
-    public const int JMDEFLAFICEFieldNumber = 2;
+    public const int JMDEFLAFICEFieldNumber = 13;
     private bool jMDEFLAFICE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,30 +132,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return jMDEFLAFICE_; }
       set {
         jMDEFLAFICE_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "MAFKCBODMMC" field.</summary>
-    public const int MAFKCBODMMCFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.IHGJLLNGDKL mAFKCBODMMC_ = global::EggLink.DanhengServer.Proto.IHGJLLNGDKL.MonopolyCellStateIdle;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.IHGJLLNGDKL MAFKCBODMMC {
-      get { return mAFKCBODMMC_; }
-      set {
-        mAFKCBODMMC_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "map_id" field.</summary>
-    public const int MapIdFieldNumber = 11;
-    private uint mapId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MapId {
-      get { return mapId_; }
-      set {
-        mapId_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (MapId != other.MapId) return false;
+      if (MAFKCBODMMC != other.MAFKCBODMMC) return false;
       if (CellId != other.CellId) return false;
       if (JMDEFLAFICE != other.JMDEFLAFICE) return false;
-      if (MAFKCBODMMC != other.MAFKCBODMMC) return false;
-      if (MapId != other.MapId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (MapId != 0) hash ^= MapId.GetHashCode();
+      if (MAFKCBODMMC != global::EggLink.DanhengServer.Proto.IHGJLLNGDKL.MonopolyCellStateIdle) hash ^= MAFKCBODMMC.GetHashCode();
       if (CellId != 0) hash ^= CellId.GetHashCode();
       if (JMDEFLAFICE != false) hash ^= JMDEFLAFICE.GetHashCode();
-      if (MAFKCBODMMC != global::EggLink.DanhengServer.Proto.IHGJLLNGDKL.MonopolyCellStateIdle) hash ^= MAFKCBODMMC.GetHashCode();
-      if (MapId != 0) hash ^= MapId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,20 +184,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MAFKCBODMMC != global::EggLink.DanhengServer.Proto.IHGJLLNGDKL.MonopolyCellStateIdle) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteEnum((int) MAFKCBODMMC);
       }
-      if (JMDEFLAFICE != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(JMDEFLAFICE);
+      if (MapId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(MapId);
       }
       if (CellId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(72);
         output.WriteUInt32(CellId);
       }
-      if (MapId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(MapId);
+      if (JMDEFLAFICE != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(JMDEFLAFICE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -210,20 +210,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MAFKCBODMMC != global::EggLink.DanhengServer.Proto.IHGJLLNGDKL.MonopolyCellStateIdle) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteEnum((int) MAFKCBODMMC);
       }
-      if (JMDEFLAFICE != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(JMDEFLAFICE);
+      if (MapId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(MapId);
       }
       if (CellId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(72);
         output.WriteUInt32(CellId);
       }
-      if (MapId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(MapId);
+      if (JMDEFLAFICE != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(JMDEFLAFICE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,17 +235,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (MapId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapId);
+      }
+      if (MAFKCBODMMC != global::EggLink.DanhengServer.Proto.IHGJLLNGDKL.MonopolyCellStateIdle) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MAFKCBODMMC);
+      }
       if (CellId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CellId);
       }
       if (JMDEFLAFICE != false) {
         size += 1 + 1;
-      }
-      if (MAFKCBODMMC != global::EggLink.DanhengServer.Proto.IHGJLLNGDKL.MonopolyCellStateIdle) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MAFKCBODMMC);
-      }
-      if (MapId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,17 +259,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.MapId != 0) {
+        MapId = other.MapId;
+      }
+      if (other.MAFKCBODMMC != global::EggLink.DanhengServer.Proto.IHGJLLNGDKL.MonopolyCellStateIdle) {
+        MAFKCBODMMC = other.MAFKCBODMMC;
+      }
       if (other.CellId != 0) {
         CellId = other.CellId;
       }
       if (other.JMDEFLAFICE != false) {
         JMDEFLAFICE = other.JMDEFLAFICE;
-      }
-      if (other.MAFKCBODMMC != global::EggLink.DanhengServer.Proto.IHGJLLNGDKL.MonopolyCellStateIdle) {
-        MAFKCBODMMC = other.MAFKCBODMMC;
-      }
-      if (other.MapId != 0) {
-        MapId = other.MapId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -286,20 +286,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 16: {
             MAFKCBODMMC = (global::EggLink.DanhengServer.Proto.IHGJLLNGDKL) input.ReadEnum();
             break;
           }
-          case 16: {
-            JMDEFLAFICE = input.ReadBool();
+          case 48: {
+            MapId = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 72: {
             CellId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            MapId = input.ReadUInt32();
+          case 104: {
+            JMDEFLAFICE = input.ReadBool();
             break;
           }
         }
@@ -317,20 +317,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 16: {
             MAFKCBODMMC = (global::EggLink.DanhengServer.Proto.IHGJLLNGDKL) input.ReadEnum();
             break;
           }
-          case 16: {
-            JMDEFLAFICE = input.ReadBool();
+          case 48: {
+            MapId = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 72: {
             CellId = input.ReadUInt32();
             break;
           }
-          case 88: {
-            MapId = input.ReadUInt32();
+          case 104: {
+            JMDEFLAFICE = input.ReadBool();
             break;
           }
         }

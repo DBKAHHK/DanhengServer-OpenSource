@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChFLTElOUEJOS0lJQS5wcm90bxoRUElJQk9KQ0VKSk4ucHJvdG8aIVN3b3Jk",
             "VHJhaW5pbmdEYWlseVBoYXNlVHlwZS5wcm90byJ4CgtLTElOUEJOS0lJQRIT",
-            "CgtFSUpERU9QT0ZOQhgPIAMoDRIhCgtETkNCUENFTktJRhgOIAMoCzIMLlBJ",
-            "SUJPSkNFSkpOEjEKC0NDTEpNTkNLRUNQGA0gASgOMhwuU3dvcmRUcmFpbmlu",
+            "CgtFSUpERU9QT0ZOQhgPIAMoDRIhCgtETkNCUENFTktJRhgGIAMoCzIMLlBJ",
+            "SUJPSkNFSkpOEjEKC0NDTEpNTkNLRUNQGAsgASgOMhwuU3dvcmRUcmFpbmlu",
             "Z0RhaWx5UGhhc2VUeXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -99,9 +99,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DNCBPCENKIF" field.</summary>
-    public const int DNCBPCENKIFFieldNumber = 14;
+    public const int DNCBPCENKIFFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PIIBOJCEJJN> _repeated_dNCBPCENKIF_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.PIIBOJCEJJN.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.PIIBOJCEJJN.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PIIBOJCEJJN> dNCBPCENKIF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PIIBOJCEJJN>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CCLJMNCKECP" field.</summary>
-    public const int CCLJMNCKECPFieldNumber = 13;
+    public const int CCLJMNCKECPFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType cCLJMNCKECP_ = global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      dNCBPCENKIF_.WriteTo(output, _repeated_dNCBPCENKIF_codec);
       if (CCLJMNCKECP != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteEnum((int) CCLJMNCKECP);
       }
-      dNCBPCENKIF_.WriteTo(output, _repeated_dNCBPCENKIF_codec);
       eIJDEOPOFNB_.WriteTo(output, _repeated_eIJDEOPOFNB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -183,11 +183,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      dNCBPCENKIF_.WriteTo(ref output, _repeated_dNCBPCENKIF_codec);
       if (CCLJMNCKECP != global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType.None) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteEnum((int) CCLJMNCKECP);
       }
-      dNCBPCENKIF_.WriteTo(ref output, _repeated_dNCBPCENKIF_codec);
       eIJDEOPOFNB_.WriteTo(ref output, _repeated_eIJDEOPOFNB_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -236,12 +236,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 104: {
-            CCLJMNCKECP = (global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType) input.ReadEnum();
+          case 50: {
+            dNCBPCENKIF_.AddEntriesFrom(input, _repeated_dNCBPCENKIF_codec);
             break;
           }
-          case 114: {
-            dNCBPCENKIF_.AddEntriesFrom(input, _repeated_dNCBPCENKIF_codec);
+          case 88: {
+            CCLJMNCKECP = (global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType) input.ReadEnum();
             break;
           }
           case 122:
@@ -264,12 +264,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 104: {
-            CCLJMNCKECP = (global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType) input.ReadEnum();
+          case 50: {
+            dNCBPCENKIF_.AddEntriesFrom(ref input, _repeated_dNCBPCENKIF_codec);
             break;
           }
-          case 114: {
-            dNCBPCENKIF_.AddEntriesFrom(ref input, _repeated_dNCBPCENKIF_codec);
+          case 88: {
+            CCLJMNCKECP = (global::EggLink.DanhengServer.Proto.SwordTrainingDailyPhaseType) input.ReadEnum();
             break;
           }
           case 122:

@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChhTZXRQbGF5ZXJJbmZvU2NSc3AucHJvdG8aGU11bHRpUGF0aEF2YXRhclR5",
             "cGUucHJvdG8aGU11bHRpUGF0aEF2YXRhckluZm8ucHJvdG8itQEKElNldFBs",
-            "YXllckluZm9TY1JzcBItCg9jdXJfYXZhdGFyX3BhdGgYAiABKA4yFC5NdWx0",
-            "aVBhdGhBdmF0YXJUeXBlEhEKCWlzX21vZGlmeRgBIAEoCBIPCgdyZXRjb2Rl",
-            "GA4gASgNEjcKGWN1cl9hdmF0YXJfcGF0aF9pbmZvX2xpc3QYCCADKAsyFC5N",
-            "dWx0aVBhdGhBdmF0YXJJbmZvEhMKC0pFTkRLQk9PQUlQGAkgASgDQh6qAhtF",
+            "YXllckluZm9TY1JzcBItCg9jdXJfYXZhdGFyX3BhdGgYASABKA4yFC5NdWx0",
+            "aVBhdGhBdmF0YXJUeXBlEhMKC0pFTkRLQk9PQUlQGAsgASgDEjcKGWN1cl9h",
+            "dmF0YXJfcGF0aF9pbmZvX2xpc3QYCiADKAsyFC5NdWx0aVBhdGhBdmF0YXJJ",
+            "bmZvEhEKCWlzX21vZGlmeRgOIAEoCBIPCgdyZXRjb2RlGAggASgNQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetPlayerInfoScRsp), global::EggLink.DanhengServer.Proto.SetPlayerInfoScRsp.Parser, new[]{ "CurAvatarPath", "IsModify", "Retcode", "CurAvatarPathInfoList", "JENDKBOOAIP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetPlayerInfoScRsp), global::EggLink.DanhengServer.Proto.SetPlayerInfoScRsp.Parser, new[]{ "CurAvatarPath", "JENDKBOOAIP", "CurAvatarPathInfoList", "IsModify", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,10 +77,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetPlayerInfoScRsp(SetPlayerInfoScRsp other) : this() {
       curAvatarPath_ = other.curAvatarPath_;
+      jENDKBOOAIP_ = other.jENDKBOOAIP_;
+      curAvatarPathInfoList_ = other.curAvatarPathInfoList_.Clone();
       isModify_ = other.isModify_;
       retcode_ = other.retcode_;
-      curAvatarPathInfoList_ = other.curAvatarPathInfoList_.Clone();
-      jENDKBOOAIP_ = other.jENDKBOOAIP_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,7 +91,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_avatar_path" field.</summary>
-    public const int CurAvatarPathFieldNumber = 2;
+    public const int CurAvatarPathFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.MultiPathAvatarType curAvatarPath_ = global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -102,8 +102,31 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "JENDKBOOAIP" field.</summary>
+    public const int JENDKBOOAIPFieldNumber = 11;
+    private long jENDKBOOAIP_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long JENDKBOOAIP {
+      get { return jENDKBOOAIP_; }
+      set {
+        jENDKBOOAIP_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cur_avatar_path_info_list" field.</summary>
+    public const int CurAvatarPathInfoListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> _repeated_curAvatarPathInfoList_codec
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> curAvatarPathInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> CurAvatarPathInfoList {
+      get { return curAvatarPathInfoList_; }
+    }
+
     /// <summary>Field number for the "is_modify" field.</summary>
-    public const int IsModifyFieldNumber = 1;
+    public const int IsModifyFieldNumber = 14;
     private bool isModify_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -115,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,29 +146,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "cur_avatar_path_info_list" field.</summary>
-    public const int CurAvatarPathInfoListFieldNumber = 8;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> _repeated_curAvatarPathInfoList_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> curAvatarPathInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MultiPathAvatarInfo> CurAvatarPathInfoList {
-      get { return curAvatarPathInfoList_; }
-    }
-
-    /// <summary>Field number for the "JENDKBOOAIP" field.</summary>
-    public const int JENDKBOOAIPFieldNumber = 9;
-    private long jENDKBOOAIP_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long JENDKBOOAIP {
-      get { return jENDKBOOAIP_; }
-      set {
-        jENDKBOOAIP_ = value;
       }
     }
 
@@ -165,10 +165,10 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (CurAvatarPath != other.CurAvatarPath) return false;
+      if (JENDKBOOAIP != other.JENDKBOOAIP) return false;
+      if(!curAvatarPathInfoList_.Equals(other.curAvatarPathInfoList_)) return false;
       if (IsModify != other.IsModify) return false;
       if (Retcode != other.Retcode) return false;
-      if(!curAvatarPathInfoList_.Equals(other.curAvatarPathInfoList_)) return false;
-      if (JENDKBOOAIP != other.JENDKBOOAIP) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -177,10 +177,10 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (CurAvatarPath != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) hash ^= CurAvatarPath.GetHashCode();
+      if (JENDKBOOAIP != 0L) hash ^= JENDKBOOAIP.GetHashCode();
+      hash ^= curAvatarPathInfoList_.GetHashCode();
       if (IsModify != false) hash ^= IsModify.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= curAvatarPathInfoList_.GetHashCode();
-      if (JENDKBOOAIP != 0L) hash ^= JENDKBOOAIP.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,22 +199,22 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsModify != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(IsModify);
-      }
       if (CurAvatarPath != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteEnum((int) CurAvatarPath);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Retcode);
       }
       curAvatarPathInfoList_.WriteTo(output, _repeated_curAvatarPathInfoList_codec);
       if (JENDKBOOAIP != 0L) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteInt64(JENDKBOOAIP);
       }
-      if (Retcode != 0) {
+      if (IsModify != false) {
         output.WriteRawTag(112);
-        output.WriteUInt32(Retcode);
+        output.WriteBool(IsModify);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -226,22 +226,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsModify != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(IsModify);
-      }
       if (CurAvatarPath != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteEnum((int) CurAvatarPath);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Retcode);
       }
       curAvatarPathInfoList_.WriteTo(ref output, _repeated_curAvatarPathInfoList_codec);
       if (JENDKBOOAIP != 0L) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteInt64(JENDKBOOAIP);
       }
-      if (Retcode != 0) {
+      if (IsModify != false) {
         output.WriteRawTag(112);
-        output.WriteUInt32(Retcode);
+        output.WriteBool(IsModify);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
       if (CurAvatarPath != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CurAvatarPath);
       }
+      if (JENDKBOOAIP != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(JENDKBOOAIP);
+      }
+      size += curAvatarPathInfoList_.CalculateSize(_repeated_curAvatarPathInfoList_codec);
       if (IsModify != false) {
         size += 1 + 1;
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      size += curAvatarPathInfoList_.CalculateSize(_repeated_curAvatarPathInfoList_codec);
-      if (JENDKBOOAIP != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(JENDKBOOAIP);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -281,15 +281,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other.CurAvatarPath != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
         CurAvatarPath = other.CurAvatarPath;
       }
+      if (other.JENDKBOOAIP != 0L) {
+        JENDKBOOAIP = other.JENDKBOOAIP;
+      }
+      curAvatarPathInfoList_.Add(other.curAvatarPathInfoList_);
       if (other.IsModify != false) {
         IsModify = other.IsModify;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
-      }
-      curAvatarPathInfoList_.Add(other.curAvatarPathInfoList_);
-      if (other.JENDKBOOAIP != 0L) {
-        JENDKBOOAIP = other.JENDKBOOAIP;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -307,23 +307,23 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            IsModify = input.ReadBool();
-            break;
-          }
-          case 16: {
             CurAvatarPath = (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) input.ReadEnum();
             break;
           }
-          case 66: {
+          case 64: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             curAvatarPathInfoList_.AddEntriesFrom(input, _repeated_curAvatarPathInfoList_codec);
             break;
           }
-          case 72: {
+          case 88: {
             JENDKBOOAIP = input.ReadInt64();
             break;
           }
           case 112: {
-            Retcode = input.ReadUInt32();
+            IsModify = input.ReadBool();
             break;
           }
         }
@@ -342,23 +342,23 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            IsModify = input.ReadBool();
-            break;
-          }
-          case 16: {
             CurAvatarPath = (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) input.ReadEnum();
             break;
           }
-          case 66: {
+          case 64: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             curAvatarPathInfoList_.AddEntriesFrom(ref input, _repeated_curAvatarPathInfoList_codec);
             break;
           }
-          case 72: {
+          case 88: {
             JENDKBOOAIP = input.ReadInt64();
             break;
           }
           case 112: {
-            Retcode = input.ReadUInt32();
+            IsModify = input.ReadBool();
             break;
           }
         }

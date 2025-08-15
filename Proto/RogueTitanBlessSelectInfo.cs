@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9Sb2d1ZVRpdGFuQmxlc3NTZWxlY3RJbmZvLnByb3RvGhpUaXRhbkJsZXNz",
             "U2VsZWN0VHlwZS5wcm90byLBAQoZUm9ndWVUaXRhbkJsZXNzU2VsZWN0SW5m",
-            "bxITCgtOQ0xBRUhBSUpKQhgFIAEoDRIwChFibGVzc19zZWxlY3RfdHlwZRgE",
-            "IAEoDjIVLlRpdGFuQmxlc3NTZWxlY3RUeXBlEhMKC0dNSUxOR0dIRURDGAog",
-            "ASgNEhsKE3RpdGFuX2JsZXNzX2lkX2xpc3QYASADKA0SFgoOc2VsZWN0X2hp",
-            "bnRfaWQYCSABKA0SEwoLT0ZCTVBPSlBET0oYDSABKA1CHqoCG0VnZ0xpbmsu",
+            "bxITCgtOQ0xBRUhBSUpKQhgMIAEoDRITCgtPRkJNUE9KUERPShgNIAEoDRIW",
+            "Cg5zZWxlY3RfaGludF9pZBgLIAEoDRITCgtHTUlMTkdHSEVEQxgIIAEoDRIb",
+            "ChN0aXRhbl9ibGVzc19pZF9saXN0GAUgAygNEjAKEWJsZXNzX3NlbGVjdF90",
+            "eXBlGAMgASgOMhUuVGl0YW5CbGVzc1NlbGVjdFR5cGVCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TitanBlessSelectTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTitanBlessSelectInfo), global::EggLink.DanhengServer.Proto.RogueTitanBlessSelectInfo.Parser, new[]{ "NCLAEHAIJJB", "BlessSelectType", "GMILNGGHEDC", "TitanBlessIdList", "SelectHintId", "OFBMPOJPDOJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTitanBlessSelectInfo), global::EggLink.DanhengServer.Proto.RogueTitanBlessSelectInfo.Parser, new[]{ "NCLAEHAIJJB", "OFBMPOJPDOJ", "SelectHintId", "GMILNGGHEDC", "TitanBlessIdList", "BlessSelectType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,11 +77,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTitanBlessSelectInfo(RogueTitanBlessSelectInfo other) : this() {
       nCLAEHAIJJB_ = other.nCLAEHAIJJB_;
-      blessSelectType_ = other.blessSelectType_;
+      oFBMPOJPDOJ_ = other.oFBMPOJPDOJ_;
+      selectHintId_ = other.selectHintId_;
       gMILNGGHEDC_ = other.gMILNGGHEDC_;
       titanBlessIdList_ = other.titanBlessIdList_.Clone();
-      selectHintId_ = other.selectHintId_;
-      oFBMPOJPDOJ_ = other.oFBMPOJPDOJ_;
+      blessSelectType_ = other.blessSelectType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -92,7 +92,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NCLAEHAIJJB" field.</summary>
-    public const int NCLAEHAIJJBFieldNumber = 5;
+    public const int NCLAEHAIJJBFieldNumber = 12;
     private uint nCLAEHAIJJB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,53 +100,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return nCLAEHAIJJB_; }
       set {
         nCLAEHAIJJB_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "bless_select_type" field.</summary>
-    public const int BlessSelectTypeFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.TitanBlessSelectType blessSelectType_ = global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.TitanBlessSelectType BlessSelectType {
-      get { return blessSelectType_; }
-      set {
-        blessSelectType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "GMILNGGHEDC" field.</summary>
-    public const int GMILNGGHEDCFieldNumber = 10;
-    private uint gMILNGGHEDC_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GMILNGGHEDC {
-      get { return gMILNGGHEDC_; }
-      set {
-        gMILNGGHEDC_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "titan_bless_id_list" field.</summary>
-    public const int TitanBlessIdListFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_titanBlessIdList_codec
-        = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> titanBlessIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> TitanBlessIdList {
-      get { return titanBlessIdList_; }
-    }
-
-    /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 9;
-    private uint selectHintId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SelectHintId {
-      get { return selectHintId_; }
-      set {
-        selectHintId_ = value;
       }
     }
 
@@ -159,6 +112,53 @@ namespace EggLink.DanhengServer.Proto {
       get { return oFBMPOJPDOJ_; }
       set {
         oFBMPOJPDOJ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "select_hint_id" field.</summary>
+    public const int SelectHintIdFieldNumber = 11;
+    private uint selectHintId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SelectHintId {
+      get { return selectHintId_; }
+      set {
+        selectHintId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "GMILNGGHEDC" field.</summary>
+    public const int GMILNGGHEDCFieldNumber = 8;
+    private uint gMILNGGHEDC_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GMILNGGHEDC {
+      get { return gMILNGGHEDC_; }
+      set {
+        gMILNGGHEDC_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "titan_bless_id_list" field.</summary>
+    public const int TitanBlessIdListFieldNumber = 5;
+    private static readonly pb::FieldCodec<uint> _repeated_titanBlessIdList_codec
+        = pb::FieldCodec.ForUInt32(42);
+    private readonly pbc::RepeatedField<uint> titanBlessIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> TitanBlessIdList {
+      get { return titanBlessIdList_; }
+    }
+
+    /// <summary>Field number for the "bless_select_type" field.</summary>
+    public const int BlessSelectTypeFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.TitanBlessSelectType blessSelectType_ = global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.TitanBlessSelectType BlessSelectType {
+      get { return blessSelectType_; }
+      set {
+        blessSelectType_ = value;
       }
     }
 
@@ -178,11 +178,11 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (NCLAEHAIJJB != other.NCLAEHAIJJB) return false;
-      if (BlessSelectType != other.BlessSelectType) return false;
+      if (OFBMPOJPDOJ != other.OFBMPOJPDOJ) return false;
+      if (SelectHintId != other.SelectHintId) return false;
       if (GMILNGGHEDC != other.GMILNGGHEDC) return false;
       if(!titanBlessIdList_.Equals(other.titanBlessIdList_)) return false;
-      if (SelectHintId != other.SelectHintId) return false;
-      if (OFBMPOJPDOJ != other.OFBMPOJPDOJ) return false;
+      if (BlessSelectType != other.BlessSelectType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -191,11 +191,11 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (NCLAEHAIJJB != 0) hash ^= NCLAEHAIJJB.GetHashCode();
-      if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) hash ^= BlessSelectType.GetHashCode();
+      if (OFBMPOJPDOJ != 0) hash ^= OFBMPOJPDOJ.GetHashCode();
+      if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
       if (GMILNGGHEDC != 0) hash ^= GMILNGGHEDC.GetHashCode();
       hash ^= titanBlessIdList_.GetHashCode();
-      if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
-      if (OFBMPOJPDOJ != 0) hash ^= OFBMPOJPDOJ.GetHashCode();
+      if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) hash ^= BlessSelectType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -214,22 +214,22 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      titanBlessIdList_.WriteTo(output, _repeated_titanBlessIdList_codec);
       if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteEnum((int) BlessSelectType);
       }
-      if (NCLAEHAIJJB != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(NCLAEHAIJJB);
+      titanBlessIdList_.WriteTo(output, _repeated_titanBlessIdList_codec);
+      if (GMILNGGHEDC != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(GMILNGGHEDC);
       }
       if (SelectHintId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(SelectHintId);
       }
-      if (GMILNGGHEDC != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(GMILNGGHEDC);
+      if (NCLAEHAIJJB != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(NCLAEHAIJJB);
       }
       if (OFBMPOJPDOJ != 0) {
         output.WriteRawTag(104);
@@ -245,22 +245,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      titanBlessIdList_.WriteTo(ref output, _repeated_titanBlessIdList_codec);
       if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteEnum((int) BlessSelectType);
       }
-      if (NCLAEHAIJJB != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(NCLAEHAIJJB);
+      titanBlessIdList_.WriteTo(ref output, _repeated_titanBlessIdList_codec);
+      if (GMILNGGHEDC != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(GMILNGGHEDC);
       }
       if (SelectHintId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(88);
         output.WriteUInt32(SelectHintId);
       }
-      if (GMILNGGHEDC != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(GMILNGGHEDC);
+      if (NCLAEHAIJJB != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(NCLAEHAIJJB);
       }
       if (OFBMPOJPDOJ != 0) {
         output.WriteRawTag(104);
@@ -279,18 +279,18 @@ namespace EggLink.DanhengServer.Proto {
       if (NCLAEHAIJJB != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NCLAEHAIJJB);
       }
-      if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BlessSelectType);
+      if (OFBMPOJPDOJ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OFBMPOJPDOJ);
+      }
+      if (SelectHintId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectHintId);
       }
       if (GMILNGGHEDC != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GMILNGGHEDC);
       }
       size += titanBlessIdList_.CalculateSize(_repeated_titanBlessIdList_codec);
-      if (SelectHintId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectHintId);
-      }
-      if (OFBMPOJPDOJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OFBMPOJPDOJ);
+      if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BlessSelectType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -307,18 +307,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other.NCLAEHAIJJB != 0) {
         NCLAEHAIJJB = other.NCLAEHAIJJB;
       }
-      if (other.BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
-        BlessSelectType = other.BlessSelectType;
+      if (other.OFBMPOJPDOJ != 0) {
+        OFBMPOJPDOJ = other.OFBMPOJPDOJ;
+      }
+      if (other.SelectHintId != 0) {
+        SelectHintId = other.SelectHintId;
       }
       if (other.GMILNGGHEDC != 0) {
         GMILNGGHEDC = other.GMILNGGHEDC;
       }
       titanBlessIdList_.Add(other.titanBlessIdList_);
-      if (other.SelectHintId != 0) {
-        SelectHintId = other.SelectHintId;
-      }
-      if (other.OFBMPOJPDOJ != 0) {
-        OFBMPOJPDOJ = other.OFBMPOJPDOJ;
+      if (other.BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
+        BlessSelectType = other.BlessSelectType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -335,25 +335,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
-            titanBlessIdList_.AddEntriesFrom(input, _repeated_titanBlessIdList_codec);
-            break;
-          }
-          case 32: {
+          case 24: {
             BlessSelectType = (global::EggLink.DanhengServer.Proto.TitanBlessSelectType) input.ReadEnum();
             break;
           }
+          case 42:
           case 40: {
-            NCLAEHAIJJB = input.ReadUInt32();
+            titanBlessIdList_.AddEntriesFrom(input, _repeated_titanBlessIdList_codec);
             break;
           }
-          case 72: {
+          case 64: {
+            GMILNGGHEDC = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             SelectHintId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            GMILNGGHEDC = input.ReadUInt32();
+          case 96: {
+            NCLAEHAIJJB = input.ReadUInt32();
             break;
           }
           case 104: {
@@ -375,25 +375,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
-            titanBlessIdList_.AddEntriesFrom(ref input, _repeated_titanBlessIdList_codec);
-            break;
-          }
-          case 32: {
+          case 24: {
             BlessSelectType = (global::EggLink.DanhengServer.Proto.TitanBlessSelectType) input.ReadEnum();
             break;
           }
+          case 42:
           case 40: {
-            NCLAEHAIJJB = input.ReadUInt32();
+            titanBlessIdList_.AddEntriesFrom(ref input, _repeated_titanBlessIdList_codec);
             break;
           }
-          case 72: {
+          case 64: {
+            GMILNGGHEDC = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             SelectHintId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            GMILNGGHEDC = input.ReadUInt32();
+          case 96: {
+            NCLAEHAIJJB = input.ReadUInt32();
             break;
           }
           case 104: {

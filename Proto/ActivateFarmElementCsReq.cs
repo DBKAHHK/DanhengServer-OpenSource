@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5BY3RpdmF0ZUZhcm1FbGVtZW50Q3NSZXEucHJvdG8iQgoYQWN0aXZhdGVG",
-            "YXJtRWxlbWVudENzUmVxEhEKCWVudGl0eV9pZBgGIAEoDRITCgt3b3JsZF9s",
-            "ZXZlbBgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "YXJtRWxlbWVudENzUmVxEhEKCWVudGl0eV9pZBgLIAEoDRITCgt3b3JsZF9s",
+            "ZXZlbBgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entity_id" field.</summary>
-    public const int EntityIdFieldNumber = 6;
+    public const int EntityIdFieldNumber = 11;
     private uint entityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 2;
+    public const int WorldLevelFieldNumber = 3;
     private uint worldLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (WorldLevel != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt32(WorldLevel);
       }
       if (EntityId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(88);
         output.WriteUInt32(EntityId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (WorldLevel != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt32(WorldLevel);
       }
       if (EntityId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(88);
         output.WriteUInt32(EntityId);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 24: {
             WorldLevel = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 88: {
             EntityId = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 24: {
             WorldLevel = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 88: {
             EntityId = input.ReadUInt32();
             break;
           }

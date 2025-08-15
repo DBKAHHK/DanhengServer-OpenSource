@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFTdHJvbmdDaGFsbGVuZ2VBY3Rpdml0eUluZm8ucHJvdG8aIVN0cm9uZ0No",
             "YWxsZW5nZUFjdGl2aXR5RGF0YS5wcm90byKzAQobU3Ryb25nQ2hhbGxlbmdl",
-            "QWN0aXZpdHlJbmZvEkIKC0FMQ0VETUxIRkxNGAUgAygLMi0uU3Ryb25nQ2hh",
+            "QWN0aXZpdHlJbmZvEkIKC0FMQ0VETUxIRkxNGA0gAygLMi0uU3Ryb25nQ2hh",
             "bGxlbmdlQWN0aXZpdHlJbmZvLkFMQ0VETUxIRkxNRW50cnkaUAoQQUxDRURN",
             "TEhGTE1FbnRyeRILCgNrZXkYASABKA0SKwoFdmFsdWUYAiABKAsyHC5TdHJv",
             "bmdDaGFsbGVuZ2VBY3Rpdml0eURhdGE6AjgBQh6qAhtFZ2dMaW5rLkRhbmhl",
@@ -87,9 +87,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ALCEDMLHFLM" field.</summary>
-    public const int ALCEDMLHFLMFieldNumber = 5;
+    public const int ALCEDMLHFLMFieldNumber = 13;
     private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData>.Codec _map_aLCEDMLHFLM_codec
-        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData.Parser), 42);
+        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData.Parser), 106);
     private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData> aLCEDMLHFLM_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.StrongChallengeActivityData>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -190,7 +190,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 106: {
             aLCEDMLHFLM_.AddEntriesFrom(input, _map_aLCEDMLHFLM_codec);
             break;
           }
@@ -209,7 +209,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 106: {
             aLCEDMLHFLM_.AddEntriesFrom(ref input, _map_aLCEDMLHFLM_codec);
             break;
           }

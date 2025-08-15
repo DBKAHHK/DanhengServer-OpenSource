@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhNYXJibGVTaG9wQnV5Q3NSZXEucHJvdG8iLgoSTWFyYmxlU2hvcEJ1eUNz",
-            "UmVxEhgKEG1hcmJsZV9zZWFsX2xpc3QYDiADKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "UmVxEhgKEG1hcmJsZV9zZWFsX2xpc3QYBiADKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "marble_seal_list" field.</summary>
-    public const int MarbleSealListFieldNumber = 14;
+    public const int MarbleSealListFieldNumber = 6;
     private static readonly pb::FieldCodec<uint> _repeated_marbleSealList_codec
-        = pb::FieldCodec.ForUInt32(114);
+        = pb::FieldCodec.ForUInt32(50);
     private readonly pbc::RepeatedField<uint> marbleSealList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,8 +186,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114:
-          case 112: {
+          case 50:
+          case 48: {
             marbleSealList_.AddEntriesFrom(input, _repeated_marbleSealList_codec);
             break;
           }
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114:
-          case 112: {
+          case 50:
+          case 48: {
             marbleSealList_.AddEntriesFrom(ref input, _repeated_marbleSealList_codec);
             break;
           }

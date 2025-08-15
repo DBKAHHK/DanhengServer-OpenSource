@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdCZW5lZml0UmV3YXJkSXRlbS5wcm90bxoOSXRlbUxpc3QucHJvdG8iQAoR",
-            "QmVuZWZpdFJld2FyZEl0ZW0SDQoFbGV2ZWwYCiABKA0SHAoJaXRlbV9saXN0",
-            "GA8gASgLMgkuSXRlbUxpc3RCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "QmVuZWZpdFJld2FyZEl0ZW0SDQoFbGV2ZWwYDiABKA0SHAoJaXRlbV9saXN0",
+            "GAMgASgLMgkuSXRlbUxpc3RCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 10;
+    public const int LevelFieldNumber = 14;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_list" field.</summary>
-    public const int ItemListFieldNumber = 15;
+    public const int ItemListFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.ItemList itemList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Level != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Level);
-      }
       if (itemList_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(26);
         output.WriteMessage(ItemList);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Level != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Level);
-      }
       if (itemList_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(26);
         output.WriteMessage(ItemList);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 26: {
             if (itemList_ == null) {
               ItemList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(ItemList);
+            break;
+          }
+          case 112: {
+            Level = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 26: {
             if (itemList_ == null) {
               ItemList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(ItemList);
+            break;
+          }
+          case 112: {
+            Level = input.ReadUInt32();
             break;
           }
         }

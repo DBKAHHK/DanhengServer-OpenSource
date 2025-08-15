@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFNSUlBSU9ETEVPQS5wcm90bxoRT0NNSE9GRU1OSEkucHJvdG8iRgoLTUlJ",
-            "QUlPRExFT0ESIQoLR0FOQUtGQUlCRkMYBCADKAsyDC5PQ01IT0ZFTU5ISRIU",
+            "QUlPRExFT0ESIQoLR0FOQUtGQUlCRkMYCiADKAsyDC5PQ01IT0ZFTU5ISRIU",
             "CgxwYXNzZW5nZXJfaWQYASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GANAKFAIBFC" field.</summary>
-    public const int GANAKFAIBFCFieldNumber = 4;
+    public const int GANAKFAIBFCFieldNumber = 10;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OCMHOFEMNHI> _repeated_gANAKFAIBFC_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.OCMHOFEMNHI.Parser);
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.OCMHOFEMNHI.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OCMHOFEMNHI> gANAKFAIBFC_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OCMHOFEMNHI>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -220,7 +220,7 @@ namespace EggLink.DanhengServer.Proto {
             PassengerId = input.ReadUInt32();
             break;
           }
-          case 34: {
+          case 82: {
             gANAKFAIBFC_.AddEntriesFrom(input, _repeated_gANAKFAIBFC_codec);
             break;
           }
@@ -243,7 +243,7 @@ namespace EggLink.DanhengServer.Proto {
             PassengerId = input.ReadUInt32();
             break;
           }
-          case 34: {
+          case 82: {
             gANAKFAIBFC_.AddEntriesFrom(ref input, _repeated_gANAKFAIBFC_codec);
             break;
           }

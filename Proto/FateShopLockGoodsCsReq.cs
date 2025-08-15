@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxGYXRlU2hvcExvY2tHb29kc0NzUmVxLnByb3RvIi4KFkZhdGVTaG9wTG9j",
-            "a0dvb2RzQ3NSZXESFAoMaXNfcHJvdGVjdGVkGA4gASgIQh6qAhtFZ2dMaW5r",
+            "a0dvb2RzQ3NSZXESFAoMaXNfcHJvdGVjdGVkGAIgASgIQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_protected" field.</summary>
-    public const int IsProtectedFieldNumber = 14;
+    public const int IsProtectedFieldNumber = 2;
     private bool isProtected_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsProtected != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(16);
         output.WriteBool(IsProtected);
       }
       if (_unknownFields != null) {
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsProtected != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(16);
         output.WriteBool(IsProtected);
       }
       if (_unknownFields != null) {
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 112: {
+          case 16: {
             IsProtected = input.ReadBool();
             break;
           }
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 112: {
+          case 16: {
             IsProtected = input.ReadBool();
             break;
           }

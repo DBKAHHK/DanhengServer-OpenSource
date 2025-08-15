@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxNb25vcG9seUNsaWNrQ2VsbENzUmVxLnByb3RvIjkKFk1vbm9wb2x5Q2xp",
-            "Y2tDZWxsQ3NSZXESDwoHY2VsbF9pZBgKIAEoDRIOCgZtYXBfaWQYAiABKA1C",
+            "Y2tDZWxsQ3NSZXESDgoGbWFwX2lkGAIgASgNEg8KB2NlbGxfaWQYCSABKA1C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyClickCellCsReq), global::EggLink.DanhengServer.Proto.MonopolyClickCellCsReq.Parser, new[]{ "CellId", "MapId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyClickCellCsReq), global::EggLink.DanhengServer.Proto.MonopolyClickCellCsReq.Parser, new[]{ "MapId", "CellId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MonopolyClickCellCsReq(MonopolyClickCellCsReq other) : this() {
-      cellId_ = other.cellId_;
       mapId_ = other.mapId_;
+      cellId_ = other.cellId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -81,18 +81,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MonopolyClickCellCsReq Clone() {
       return new MonopolyClickCellCsReq(this);
-    }
-
-    /// <summary>Field number for the "cell_id" field.</summary>
-    public const int CellIdFieldNumber = 10;
-    private uint cellId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CellId {
-      get { return cellId_; }
-      set {
-        cellId_ = value;
-      }
     }
 
     /// <summary>Field number for the "map_id" field.</summary>
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return mapId_; }
       set {
         mapId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cell_id" field.</summary>
+    public const int CellIdFieldNumber = 9;
+    private uint cellId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CellId {
+      get { return cellId_; }
+      set {
+        cellId_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CellId != other.CellId) return false;
       if (MapId != other.MapId) return false;
+      if (CellId != other.CellId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CellId != 0) hash ^= CellId.GetHashCode();
       if (MapId != 0) hash ^= MapId.GetHashCode();
+      if (CellId != 0) hash ^= CellId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(MapId);
       }
       if (CellId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteUInt32(CellId);
       }
       if (_unknownFields != null) {
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(MapId);
       }
       if (CellId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteUInt32(CellId);
       }
       if (_unknownFields != null) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CellId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CellId);
-      }
       if (MapId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapId);
+      }
+      if (CellId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CellId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CellId != 0) {
-        CellId = other.CellId;
-      }
       if (other.MapId != 0) {
         MapId = other.MapId;
+      }
+      if (other.CellId != 0) {
+        CellId = other.CellId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             MapId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 72: {
             CellId = input.ReadUInt32();
             break;
           }
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
             MapId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 72: {
             CellId = input.ReadUInt32();
             break;
           }

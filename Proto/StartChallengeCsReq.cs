@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlTdGFydENoYWxsZW5nZUNzUmVxLnByb3RvGhdDaGFsbGVuZ2VCdWZmSW5m",
-            "by5wcm90byKAAQoTU3RhcnRDaGFsbGVuZ2VDc1JlcRIUCgxjaGFsbGVuZ2Vf",
-            "aWQYCCABKA0SFQoNc2Vjb25kX2xpbmV1cBgFIAMoDRImCgpzdGFnZV9pbmZv",
-            "GAogASgLMhIuQ2hhbGxlbmdlQnVmZkluZm8SFAoMZmlyc3RfbGluZXVwGAMg",
-            "AygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "by5wcm90byKAAQoTU3RhcnRDaGFsbGVuZ2VDc1JlcRIUCgxmaXJzdF9saW5l",
+            "dXAYCyADKA0SFAoMY2hhbGxlbmdlX2lkGAkgASgNEhUKDXNlY29uZF9saW5l",
+            "dXAYBiADKA0SJgoKc3RhZ2VfaW5mbxgDIAEoCzISLkNoYWxsZW5nZUJ1ZmZJ",
+            "bmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeBuffInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartChallengeCsReq), global::EggLink.DanhengServer.Proto.StartChallengeCsReq.Parser, new[]{ "ChallengeId", "SecondLineup", "StageInfo", "FirstLineup" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartChallengeCsReq), global::EggLink.DanhengServer.Proto.StartChallengeCsReq.Parser, new[]{ "FirstLineup", "ChallengeId", "SecondLineup", "StageInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartChallengeCsReq(StartChallengeCsReq other) : this() {
+      firstLineup_ = other.firstLineup_.Clone();
       challengeId_ = other.challengeId_;
       secondLineup_ = other.secondLineup_.Clone();
       stageInfo_ = other.stageInfo_ != null ? other.stageInfo_.Clone() : null;
-      firstLineup_ = other.firstLineup_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,8 +87,19 @@ namespace EggLink.DanhengServer.Proto {
       return new StartChallengeCsReq(this);
     }
 
+    /// <summary>Field number for the "first_lineup" field.</summary>
+    public const int FirstLineupFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_firstLineup_codec
+        = pb::FieldCodec.ForUInt32(90);
+    private readonly pbc::RepeatedField<uint> firstLineup_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> FirstLineup {
+      get { return firstLineup_; }
+    }
+
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 8;
+    public const int ChallengeIdFieldNumber = 9;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,9 +111,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "second_lineup" field.</summary>
-    public const int SecondLineupFieldNumber = 5;
+    public const int SecondLineupFieldNumber = 6;
     private static readonly pb::FieldCodec<uint> _repeated_secondLineup_codec
-        = pb::FieldCodec.ForUInt32(42);
+        = pb::FieldCodec.ForUInt32(50);
     private readonly pbc::RepeatedField<uint> secondLineup_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stage_info" field.</summary>
-    public const int StageInfoFieldNumber = 10;
+    public const int StageInfoFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.ChallengeBuffInfo stageInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -120,17 +131,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         stageInfo_ = value;
       }
-    }
-
-    /// <summary>Field number for the "first_lineup" field.</summary>
-    public const int FirstLineupFieldNumber = 3;
-    private static readonly pb::FieldCodec<uint> _repeated_firstLineup_codec
-        = pb::FieldCodec.ForUInt32(26);
-    private readonly pbc::RepeatedField<uint> firstLineup_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> FirstLineup {
-      get { return firstLineup_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -148,10 +148,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!firstLineup_.Equals(other.firstLineup_)) return false;
       if (ChallengeId != other.ChallengeId) return false;
       if(!secondLineup_.Equals(other.secondLineup_)) return false;
       if (!object.Equals(StageInfo, other.StageInfo)) return false;
-      if(!firstLineup_.Equals(other.firstLineup_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -159,10 +159,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= firstLineup_.GetHashCode();
       if (ChallengeId != 0) hash ^= ChallengeId.GetHashCode();
       hash ^= secondLineup_.GetHashCode();
       if (stageInfo_ != null) hash ^= StageInfo.GetHashCode();
-      hash ^= firstLineup_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -181,16 +181,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      firstLineup_.WriteTo(output, _repeated_firstLineup_codec);
-      secondLineup_.WriteTo(output, _repeated_secondLineup_codec);
-      if (ChallengeId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(ChallengeId);
-      }
       if (stageInfo_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(26);
         output.WriteMessage(StageInfo);
       }
+      secondLineup_.WriteTo(output, _repeated_secondLineup_codec);
+      if (ChallengeId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(ChallengeId);
+      }
+      firstLineup_.WriteTo(output, _repeated_firstLineup_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -201,16 +201,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      firstLineup_.WriteTo(ref output, _repeated_firstLineup_codec);
-      secondLineup_.WriteTo(ref output, _repeated_secondLineup_codec);
-      if (ChallengeId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(ChallengeId);
-      }
       if (stageInfo_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(26);
         output.WriteMessage(StageInfo);
       }
+      secondLineup_.WriteTo(ref output, _repeated_secondLineup_codec);
+      if (ChallengeId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(ChallengeId);
+      }
+      firstLineup_.WriteTo(ref output, _repeated_firstLineup_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -221,6 +221,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += firstLineup_.CalculateSize(_repeated_firstLineup_codec);
       if (ChallengeId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChallengeId);
       }
@@ -228,7 +229,6 @@ namespace EggLink.DanhengServer.Proto {
       if (stageInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StageInfo);
       }
-      size += firstLineup_.CalculateSize(_repeated_firstLineup_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -241,6 +241,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      firstLineup_.Add(other.firstLineup_);
       if (other.ChallengeId != 0) {
         ChallengeId = other.ChallengeId;
       }
@@ -251,7 +252,6 @@ namespace EggLink.DanhengServer.Proto {
         }
         StageInfo.MergeFrom(other.StageInfo);
       }
-      firstLineup_.Add(other.firstLineup_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -267,25 +267,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26:
-          case 24: {
-            firstLineup_.AddEntriesFrom(input, _repeated_firstLineup_codec);
-            break;
-          }
-          case 42:
-          case 40: {
-            secondLineup_.AddEntriesFrom(input, _repeated_secondLineup_codec);
-            break;
-          }
-          case 64: {
-            ChallengeId = input.ReadUInt32();
-            break;
-          }
-          case 82: {
+          case 26: {
             if (stageInfo_ == null) {
               StageInfo = new global::EggLink.DanhengServer.Proto.ChallengeBuffInfo();
             }
             input.ReadMessage(StageInfo);
+            break;
+          }
+          case 50:
+          case 48: {
+            secondLineup_.AddEntriesFrom(input, _repeated_secondLineup_codec);
+            break;
+          }
+          case 72: {
+            ChallengeId = input.ReadUInt32();
+            break;
+          }
+          case 90:
+          case 88: {
+            firstLineup_.AddEntriesFrom(input, _repeated_firstLineup_codec);
             break;
           }
         }
@@ -303,25 +303,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26:
-          case 24: {
-            firstLineup_.AddEntriesFrom(ref input, _repeated_firstLineup_codec);
-            break;
-          }
-          case 42:
-          case 40: {
-            secondLineup_.AddEntriesFrom(ref input, _repeated_secondLineup_codec);
-            break;
-          }
-          case 64: {
-            ChallengeId = input.ReadUInt32();
-            break;
-          }
-          case 82: {
+          case 26: {
             if (stageInfo_ == null) {
               StageInfo = new global::EggLink.DanhengServer.Proto.ChallengeBuffInfo();
             }
             input.ReadMessage(StageInfo);
+            break;
+          }
+          case 50:
+          case 48: {
+            secondLineup_.AddEntriesFrom(ref input, _repeated_secondLineup_codec);
+            break;
+          }
+          case 72: {
+            ChallengeId = input.ReadUInt32();
+            break;
+          }
+          case 90:
+          case 88: {
+            firstLineup_.AddEntriesFrom(ref input, _repeated_firstLineup_codec);
             break;
           }
         }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlXb3JrYmVuY2hGdW5jSWRJbmZvLnByb3RvIjgKE1dvcmtiZW5jaEZ1bmNJ",
-            "ZEluZm8SEAoIaXNfdmFsaWQYCiABKAgSDwoHZnVuY19pZBgJIAEoDUIeqgIb",
+            "ZEluZm8SEAoIaXNfdmFsaWQYCiABKAgSDwoHZnVuY19pZBgMIAEoDUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "func_id" field.</summary>
-    public const int FuncIdFieldNumber = 9;
+    public const int FuncIdFieldNumber = 12;
     private uint funcId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FuncId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(FuncId);
-      }
       if (IsValid != false) {
         output.WriteRawTag(80);
         output.WriteBool(IsValid);
+      }
+      if (FuncId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(FuncId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FuncId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(FuncId);
-      }
       if (IsValid != false) {
         output.WriteRawTag(80);
         output.WriteBool(IsValid);
+      }
+      if (FuncId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(FuncId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
-            FuncId = input.ReadUInt32();
-            break;
-          }
           case 80: {
             IsValid = input.ReadBool();
+            break;
+          }
+          case 96: {
+            FuncId = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
-            FuncId = input.ReadUInt32();
-            break;
-          }
           case 80: {
             IsValid = input.ReadBool();
+            break;
+          }
+          case 96: {
+            FuncId = input.ReadUInt32();
             break;
           }
         }

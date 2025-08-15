@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHZXRUdXRvcmlhbEd1aWRlU2NSc3AucHJvdG8aE1R1dG9yaWFsR3VpZGUu",
-            "cHJvdG8iVQoVR2V0VHV0b3JpYWxHdWlkZVNjUnNwEisKE3R1dG9yaWFsX2d1",
-            "aWRlX2xpc3QYBiADKAsyDi5UdXRvcmlhbEd1aWRlEg8KB3JldGNvZGUYCSAB",
-            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "cHJvdG8iUwoVR2V0VHV0b3JpYWxHdWlkZVNjUnNwEikKEVR1dG9yaWFsR3Vp",
+            "ZGVMaXN0GAcgAygLMg4uVHV0b3JpYWxHdWlkZRIPCgdSZXRjb2RlGAwgASgN",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TutorialGuideReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -84,10 +84,10 @@ namespace EggLink.DanhengServer.Proto {
       return new GetTutorialGuideScRsp(this);
     }
 
-    /// <summary>Field number for the "tutorial_guide_list" field.</summary>
-    public const int TutorialGuideListFieldNumber = 6;
+    /// <summary>Field number for the "TutorialGuideList" field.</summary>
+    public const int TutorialGuideListFieldNumber = 7;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TutorialGuide> _repeated_tutorialGuideList_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.TutorialGuide.Parser);
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.TutorialGuide.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TutorialGuide> tutorialGuideList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TutorialGuide>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,8 +95,8 @@ namespace EggLink.DanhengServer.Proto {
       get { return tutorialGuideList_; }
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    /// <summary>Field number for the "Retcode" field.</summary>
+    public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       tutorialGuideList_.WriteTo(output, _repeated_tutorialGuideList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       tutorialGuideList_.WriteTo(ref output, _repeated_tutorialGuideList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -216,11 +216,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 58: {
             tutorialGuideList_.AddEntriesFrom(input, _repeated_tutorialGuideList_codec);
             break;
           }
-          case 72: {
+          case 96: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -239,11 +239,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 58: {
             tutorialGuideList_.AddEntriesFrom(ref input, _repeated_tutorialGuideList_codec);
             break;
           }
-          case 72: {
+          case 96: {
             Retcode = input.ReadUInt32();
             break;
           }

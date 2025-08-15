@@ -27,14 +27,14 @@ namespace EggLink.DanhengServer.Proto {
             "CilHZXRGcmllbmRSZWNvbW1lbmRMaW5ldXBEZXRhaWxTY1JzcC5wcm90bxoR",
             "RExMTEVBTkRBSUgucHJvdG8aHURpc3BsYXlBdmF0YXJEZXRhaWxJbmZvLnBy",
             "b3RvIpsBCiNHZXRGcmllbmRSZWNvbW1lbmRMaW5ldXBEZXRhaWxTY1JzcBIL",
-            "CgN1aWQYCSABKA0SCwoDa2V5GAUgASgNEg8KB3JldGNvZGUYByABKA0SLQoL",
-            "Q0NHRE1PT0xISEIYASADKAsyGC5EaXNwbGF5QXZhdGFyRGV0YWlsSW5mbxIa",
-            "CgR0eXBlGAogASgOMgwuRExMTEVBTkRBSUhCHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "CgNrZXkYAiABKA0SCwoDdWlkGAQgASgNEi0KC0NDR0RNT09MSEhCGAkgAygL",
+            "MhguRGlzcGxheUF2YXRhckRldGFpbEluZm8SGgoEdHlwZRgNIAEoDjIMLkRM",
+            "TExFQU5EQUlIEg8KB3JldGNvZGUYASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DLLLEANDAIHReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFriendRecommendLineupDetailScRsp), global::EggLink.DanhengServer.Proto.GetFriendRecommendLineupDetailScRsp.Parser, new[]{ "Uid", "Key", "Retcode", "CCGDMOOLHHB", "Type" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFriendRecommendLineupDetailScRsp), global::EggLink.DanhengServer.Proto.GetFriendRecommendLineupDetailScRsp.Parser, new[]{ "Key", "Uid", "CCGDMOOLHHB", "Type", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,11 +76,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetFriendRecommendLineupDetailScRsp(GetFriendRecommendLineupDetailScRsp other) : this() {
-      uid_ = other.uid_;
       key_ = other.key_;
-      retcode_ = other.retcode_;
+      uid_ = other.uid_;
       cCGDMOOLHHB_ = other.cCGDMOOLHHB_.Clone();
       type_ = other.type_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,20 +90,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetFriendRecommendLineupDetailScRsp(this);
     }
 
-    /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 9;
-    private uint uid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Uid {
-      get { return uid_; }
-      set {
-        uid_ = value;
-      }
-    }
-
     /// <summary>Field number for the "key" field.</summary>
-    public const int KeyFieldNumber = 5;
+    public const int KeyFieldNumber = 2;
     private uint key_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -114,22 +102,22 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
-    private uint retcode_;
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 4;
+    private uint uid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
+    public uint Uid {
+      get { return uid_; }
       set {
-        retcode_ = value;
+        uid_ = value;
       }
     }
 
     /// <summary>Field number for the "CCGDMOOLHHB" field.</summary>
-    public const int CCGDMOOLHHBFieldNumber = 1;
+    public const int CCGDMOOLHHBFieldNumber = 9;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> _repeated_cCGDMOOLHHB_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser);
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo> cCGDMOOLHHB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DisplayAvatarDetailInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +126,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 10;
+    public const int TypeFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.DLLLEANDAIH type_ = global::EggLink.DanhengServer.Proto.DLLLEANDAIH.FriendRecommendLineupTypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -146,6 +134,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return type_; }
       set {
         type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 1;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -164,11 +164,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Uid != other.Uid) return false;
       if (Key != other.Key) return false;
-      if (Retcode != other.Retcode) return false;
+      if (Uid != other.Uid) return false;
       if(!cCGDMOOLHHB_.Equals(other.cCGDMOOLHHB_)) return false;
       if (Type != other.Type) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,11 +176,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Uid != 0) hash ^= Uid.GetHashCode();
       if (Key != 0) hash ^= Key.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (Uid != 0) hash ^= Uid.GetHashCode();
       hash ^= cCGDMOOLHHB_.GetHashCode();
       if (Type != global::EggLink.DanhengServer.Proto.DLLLEANDAIH.FriendRecommendLineupTypeNone) hash ^= Type.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,21 +199,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      cCGDMOOLHHB_.WriteTo(output, _repeated_cCGDMOOLHHB_codec);
-      if (Key != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(Key);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
+      if (Key != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Key);
+      }
       if (Uid != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(Uid);
       }
+      cCGDMOOLHHB_.WriteTo(output, _repeated_cCGDMOOLHHB_codec);
       if (Type != global::EggLink.DanhengServer.Proto.DLLLEANDAIH.FriendRecommendLineupTypeNone) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(104);
         output.WriteEnum((int) Type);
       }
       if (_unknownFields != null) {
@@ -226,21 +226,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      cCGDMOOLHHB_.WriteTo(ref output, _repeated_cCGDMOOLHHB_codec);
-      if (Key != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(Key);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
+      if (Key != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Key);
+      }
       if (Uid != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(Uid);
       }
+      cCGDMOOLHHB_.WriteTo(ref output, _repeated_cCGDMOOLHHB_codec);
       if (Type != global::EggLink.DanhengServer.Proto.DLLLEANDAIH.FriendRecommendLineupTypeNone) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(104);
         output.WriteEnum((int) Type);
       }
       if (_unknownFields != null) {
@@ -253,18 +253,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Uid != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
-      }
       if (Key != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Key);
       }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      if (Uid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
       }
       size += cCGDMOOLHHB_.CalculateSize(_repeated_cCGDMOOLHHB_codec);
       if (Type != global::EggLink.DanhengServer.Proto.DLLLEANDAIH.FriendRecommendLineupTypeNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -278,18 +278,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Uid != 0) {
-        Uid = other.Uid;
-      }
       if (other.Key != 0) {
         Key = other.Key;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
+      if (other.Uid != 0) {
+        Uid = other.Uid;
       }
       cCGDMOOLHHB_.Add(other.cCGDMOOLHHB_);
       if (other.Type != global::EggLink.DanhengServer.Proto.DLLLEANDAIH.FriendRecommendLineupTypeNone) {
         Type = other.Type;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -306,23 +306,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            cCGDMOOLHHB_.AddEntriesFrom(input, _repeated_cCGDMOOLHHB_codec);
-            break;
-          }
-          case 40: {
-            Key = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 8: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 16: {
+            Key = input.ReadUInt32();
+            break;
+          }
+          case 32: {
             Uid = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 74: {
+            cCGDMOOLHHB_.AddEntriesFrom(input, _repeated_cCGDMOOLHHB_codec);
+            break;
+          }
+          case 104: {
             Type = (global::EggLink.DanhengServer.Proto.DLLLEANDAIH) input.ReadEnum();
             break;
           }
@@ -341,23 +341,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            cCGDMOOLHHB_.AddEntriesFrom(ref input, _repeated_cCGDMOOLHHB_codec);
-            break;
-          }
-          case 40: {
-            Key = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 8: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 16: {
+            Key = input.ReadUInt32();
+            break;
+          }
+          case 32: {
             Uid = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 74: {
+            cCGDMOOLHHB_.AddEntriesFrom(ref input, _repeated_cCGDMOOLHHB_codec);
+            break;
+          }
+          case 104: {
             Type = (global::EggLink.DanhengServer.Proto.DLLLEANDAIH) input.ReadEnum();
             break;
           }

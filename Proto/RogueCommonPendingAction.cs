@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5Sb2d1ZUNvbW1vblBlbmRpbmdBY3Rpb24ucHJvdG8aEVJvZ3VlQWN0aW9u",
             "LnByb3RvIlYKGFJvZ3VlQ29tbW9uUGVuZGluZ0FjdGlvbhIWCg5xdWV1ZV9w",
-            "b3NpdGlvbhgIIAEoDRIiCgxyb2d1ZV9hY3Rpb24YBCABKAsyDC5Sb2d1ZUFj",
+            "b3NpdGlvbhgJIAEoDRIiCgxyb2d1ZV9hY3Rpb24YAyABKAsyDC5Sb2d1ZUFj",
             "dGlvbkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueActionReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "queue_position" field.</summary>
-    public const int QueuePositionFieldNumber = 8;
+    public const int QueuePositionFieldNumber = 9;
     private uint queuePosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_action" field.</summary>
-    public const int RogueActionFieldNumber = 4;
+    public const int RogueActionFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.RogueAction rogueAction_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (rogueAction_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(RogueAction);
       }
       if (QueuePosition != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(QueuePosition);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rogueAction_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteMessage(RogueAction);
       }
       if (QueuePosition != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(QueuePosition);
       }
       if (_unknownFields != null) {
@@ -230,14 +230,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 26: {
             if (rogueAction_ == null) {
               RogueAction = new global::EggLink.DanhengServer.Proto.RogueAction();
             }
             input.ReadMessage(RogueAction);
             break;
           }
-          case 64: {
+          case 72: {
             QueuePosition = input.ReadUInt32();
             break;
           }
@@ -256,14 +256,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 26: {
             if (rogueAction_ == null) {
               RogueAction = new global::EggLink.DanhengServer.Proto.RogueAction();
             }
             input.ReadMessage(RogueAction);
             break;
           }
-          case 64: {
+          case 72: {
             QueuePosition = input.ReadUInt32();
             break;
           }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtCdXlSb2d1ZVNob3BCdWZmQ3NSZXEucHJvdG8iUAoVQnV5Um9ndWVTaG9w",
-            "QnVmZkNzUmVxEiEKGWludGVyYWN0ZWRfcHJvcF9lbnRpdHlfaWQYAiABKA0S",
-            "FAoMYnVmZl9pZF9saXN0GAogAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "QnVmZkNzUmVxEiEKGWludGVyYWN0ZWRfcHJvcF9lbnRpdHlfaWQYCCABKA0S",
+            "FAoMYnVmZl9pZF9saXN0GA8gAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "interacted_prop_entity_id" field.</summary>
-    public const int InteractedPropEntityIdFieldNumber = 2;
+    public const int InteractedPropEntityIdFieldNumber = 8;
     private uint interactedPropEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff_id_list" field.</summary>
-    public const int BuffIdListFieldNumber = 10;
+    public const int BuffIdListFieldNumber = 15;
     private static readonly pb::FieldCodec<uint> _repeated_buffIdList_codec
-        = pb::FieldCodec.ForUInt32(82);
+        = pb::FieldCodec.ForUInt32(122);
     private readonly pbc::RepeatedField<uint> buffIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(64);
         output.WriteUInt32(InteractedPropEntityId);
       }
       buffIdList_.WriteTo(output, _repeated_buffIdList_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(64);
         output.WriteUInt32(InteractedPropEntityId);
       }
       buffIdList_.WriteTo(ref output, _repeated_buffIdList_codec);
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 64: {
             InteractedPropEntityId = input.ReadUInt32();
             break;
           }
-          case 82:
-          case 80: {
+          case 122:
+          case 120: {
             buffIdList_.AddEntriesFrom(input, _repeated_buffIdList_codec);
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 64: {
             InteractedPropEntityId = input.ReadUInt32();
             break;
           }
-          case 82:
-          case 80: {
+          case 122:
+          case 120: {
             buffIdList_.AddEntriesFrom(ref input, _repeated_buffIdList_codec);
             break;
           }

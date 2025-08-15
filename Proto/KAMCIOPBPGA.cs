@@ -24,16 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static KAMCIOPBPGAReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFLQU1DSU9QQlBHQS5wcm90bxoRT0lMUElBQ0VOTkgucHJvdG8aFlBsYXll",
-            "clNpbXBsZUluZm8ucHJvdG8iggEKC0tBTUNJT1BCUEdBEiEKC2F2YXRhcl9s",
-            "aXN0GAYgAygLMgwuT0lMUElBQ0VOTkgSJgoLcGxheWVyX2luZm8YCiABKAsy",
-            "ES5QbGF5ZXJTaW1wbGVJbmZvEhMKC3JlbWFya19uYW1lGA0gASgJEhMKC0pI",
-            "SUFLTUNIUExCGAcgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
-            "dG9iBnByb3RvMw=="));
+            "ChFLQU1DSU9QQlBHQS5wcm90bxoRT0lMUElBQ0VOTkgucHJvdG8iRQoLS0FN",
+            "Q0lPUEJQR0ESEwoLSkhJQUtNQ0hQTEIYCiADKA0SIQoLYXZhdGFyX2xpc3QY",
+            "CCADKAsyDC5PSUxQSUFDRU5OSEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OILPIACENNHReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerSimpleInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OILPIACENNHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KAMCIOPBPGA), global::EggLink.DanhengServer.Proto.KAMCIOPBPGA.Parser, new[]{ "AvatarList", "PlayerInfo", "RemarkName", "JHIAKMCHPLB" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KAMCIOPBPGA), global::EggLink.DanhengServer.Proto.KAMCIOPBPGA.Parser, new[]{ "JHIAKMCHPLB", "AvatarList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KAMCIOPBPGA(KAMCIOPBPGA other) : this() {
-      avatarList_ = other.avatarList_.Clone();
-      playerInfo_ = other.playerInfo_ != null ? other.playerInfo_.Clone() : null;
-      remarkName_ = other.remarkName_;
       jHIAKMCHPLB_ = other.jHIAKMCHPLB_.Clone();
+      avatarList_ = other.avatarList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,50 +84,26 @@ namespace EggLink.DanhengServer.Proto {
       return new KAMCIOPBPGA(this);
     }
 
-    /// <summary>Field number for the "avatar_list" field.</summary>
-    public const int AvatarListFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OILPIACENNH> _repeated_avatarList_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.OILPIACENNH.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH> AvatarList {
-      get { return avatarList_; }
-    }
-
-    /// <summary>Field number for the "player_info" field.</summary>
-    public const int PlayerInfoFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.PlayerSimpleInfo playerInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlayerSimpleInfo PlayerInfo {
-      get { return playerInfo_; }
-      set {
-        playerInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "remark_name" field.</summary>
-    public const int RemarkNameFieldNumber = 13;
-    private string remarkName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string RemarkName {
-      get { return remarkName_; }
-      set {
-        remarkName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "JHIAKMCHPLB" field.</summary>
-    public const int JHIAKMCHPLBFieldNumber = 7;
+    public const int JHIAKMCHPLBFieldNumber = 10;
     private static readonly pb::FieldCodec<uint> _repeated_jHIAKMCHPLB_codec
-        = pb::FieldCodec.ForUInt32(58);
+        = pb::FieldCodec.ForUInt32(82);
     private readonly pbc::RepeatedField<uint> jHIAKMCHPLB_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> JHIAKMCHPLB {
       get { return jHIAKMCHPLB_; }
+    }
+
+    /// <summary>Field number for the "avatar_list" field.</summary>
+    public const int AvatarListFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OILPIACENNH> _repeated_avatarList_codec
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.OILPIACENNH.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH> AvatarList {
+      get { return avatarList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -149,10 +121,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!avatarList_.Equals(other.avatarList_)) return false;
-      if (!object.Equals(PlayerInfo, other.PlayerInfo)) return false;
-      if (RemarkName != other.RemarkName) return false;
       if(!jHIAKMCHPLB_.Equals(other.jHIAKMCHPLB_)) return false;
+      if(!avatarList_.Equals(other.avatarList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +130,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= avatarList_.GetHashCode();
-      if (playerInfo_ != null) hash ^= PlayerInfo.GetHashCode();
-      if (RemarkName.Length != 0) hash ^= RemarkName.GetHashCode();
       hash ^= jHIAKMCHPLB_.GetHashCode();
+      hash ^= avatarList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,14 +152,6 @@ namespace EggLink.DanhengServer.Proto {
     #else
       avatarList_.WriteTo(output, _repeated_avatarList_codec);
       jHIAKMCHPLB_.WriteTo(output, _repeated_jHIAKMCHPLB_codec);
-      if (playerInfo_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(PlayerInfo);
-      }
-      if (RemarkName.Length != 0) {
-        output.WriteRawTag(106);
-        output.WriteString(RemarkName);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -204,14 +164,6 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       jHIAKMCHPLB_.WriteTo(ref output, _repeated_jHIAKMCHPLB_codec);
-      if (playerInfo_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(PlayerInfo);
-      }
-      if (RemarkName.Length != 0) {
-        output.WriteRawTag(106);
-        output.WriteString(RemarkName);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -222,14 +174,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += avatarList_.CalculateSize(_repeated_avatarList_codec);
-      if (playerInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerInfo);
-      }
-      if (RemarkName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(RemarkName);
-      }
       size += jHIAKMCHPLB_.CalculateSize(_repeated_jHIAKMCHPLB_codec);
+      size += avatarList_.CalculateSize(_repeated_avatarList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -242,17 +188,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      avatarList_.Add(other.avatarList_);
-      if (other.playerInfo_ != null) {
-        if (playerInfo_ == null) {
-          PlayerInfo = new global::EggLink.DanhengServer.Proto.PlayerSimpleInfo();
-        }
-        PlayerInfo.MergeFrom(other.PlayerInfo);
-      }
-      if (other.RemarkName.Length != 0) {
-        RemarkName = other.RemarkName;
-      }
       jHIAKMCHPLB_.Add(other.jHIAKMCHPLB_);
+      avatarList_.Add(other.avatarList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -268,24 +205,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 66: {
             avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
             break;
           }
-          case 58:
-          case 56: {
+          case 82:
+          case 80: {
             jHIAKMCHPLB_.AddEntriesFrom(input, _repeated_jHIAKMCHPLB_codec);
-            break;
-          }
-          case 82: {
-            if (playerInfo_ == null) {
-              PlayerInfo = new global::EggLink.DanhengServer.Proto.PlayerSimpleInfo();
-            }
-            input.ReadMessage(PlayerInfo);
-            break;
-          }
-          case 106: {
-            RemarkName = input.ReadString();
             break;
           }
         }
@@ -303,24 +229,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 66: {
             avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
             break;
           }
-          case 58:
-          case 56: {
+          case 82:
+          case 80: {
             jHIAKMCHPLB_.AddEntriesFrom(ref input, _repeated_jHIAKMCHPLB_codec);
-            break;
-          }
-          case 82: {
-            if (playerInfo_ == null) {
-              PlayerInfo = new global::EggLink.DanhengServer.Proto.PlayerSimpleInfo();
-            }
-            input.ReadMessage(PlayerInfo);
-            break;
-          }
-          case 106: {
-            RemarkName = input.ReadString();
             break;
           }
         }

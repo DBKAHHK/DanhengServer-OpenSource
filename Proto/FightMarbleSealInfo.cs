@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlGaWdodE1hcmJsZVNlYWxJbmZvLnByb3RvGhZNYXJibGVTZWFsVmVjdG9y",
-            "LnByb3RvIm8KE0ZpZ2h0TWFyYmxlU2VhbEluZm8SDwoHaXRlbV9pZBgMIAEo",
-            "DRIvChRzZWFsX3RhcmdldF9yb3RhdGlvbhgFIAEoCzIRLk1hcmJsZVNlYWxW",
-            "ZWN0b3ISFgoOc2VhbF9vd25lcl91aWQYDiABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "LnByb3RvIm8KE0ZpZ2h0TWFyYmxlU2VhbEluZm8SFgoOc2VhbF9vd25lcl91",
+            "aWQYBCABKA0SDwoHaXRlbV9pZBgLIAEoDRIvChRzZWFsX3RhcmdldF9yb3Rh",
+            "dGlvbhgPIAEoCzIRLk1hcmJsZVNlYWxWZWN0b3JCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleSealVectorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightMarbleSealInfo), global::EggLink.DanhengServer.Proto.FightMarbleSealInfo.Parser, new[]{ "ItemId", "SealTargetRotation", "SealOwnerUid" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightMarbleSealInfo), global::EggLink.DanhengServer.Proto.FightMarbleSealInfo.Parser, new[]{ "SealOwnerUid", "ItemId", "SealTargetRotation" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FightMarbleSealInfo(FightMarbleSealInfo other) : this() {
+      sealOwnerUid_ = other.sealOwnerUid_;
       itemId_ = other.itemId_;
       sealTargetRotation_ = other.sealTargetRotation_ != null ? other.sealTargetRotation_.Clone() : null;
-      sealOwnerUid_ = other.sealOwnerUid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,8 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new FightMarbleSealInfo(this);
     }
 
+    /// <summary>Field number for the "seal_owner_uid" field.</summary>
+    public const int SealOwnerUidFieldNumber = 4;
+    private uint sealOwnerUid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SealOwnerUid {
+      get { return sealOwnerUid_; }
+      set {
+        sealOwnerUid_ = value;
+      }
+    }
+
     /// <summary>Field number for the "item_id" field.</summary>
-    public const int ItemIdFieldNumber = 12;
+    public const int ItemIdFieldNumber = 11;
     private uint itemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "seal_target_rotation" field.</summary>
-    public const int SealTargetRotationFieldNumber = 5;
+    public const int SealTargetRotationFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.MarbleSealVector sealTargetRotation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -107,18 +119,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return sealTargetRotation_; }
       set {
         sealTargetRotation_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "seal_owner_uid" field.</summary>
-    public const int SealOwnerUidFieldNumber = 14;
-    private uint sealOwnerUid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SealOwnerUid {
-      get { return sealOwnerUid_; }
-      set {
-        sealOwnerUid_ = value;
       }
     }
 
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (SealOwnerUid != other.SealOwnerUid) return false;
       if (ItemId != other.ItemId) return false;
       if (!object.Equals(SealTargetRotation, other.SealTargetRotation)) return false;
-      if (SealOwnerUid != other.SealOwnerUid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (SealOwnerUid != 0) hash ^= SealOwnerUid.GetHashCode();
       if (ItemId != 0) hash ^= ItemId.GetHashCode();
       if (sealTargetRotation_ != null) hash ^= SealTargetRotation.GetHashCode();
-      if (SealOwnerUid != 0) hash ^= SealOwnerUid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (sealTargetRotation_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(SealTargetRotation);
+      if (SealOwnerUid != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SealOwnerUid);
       }
       if (ItemId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteUInt32(ItemId);
       }
-      if (SealOwnerUid != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(SealOwnerUid);
+      if (sealTargetRotation_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(SealTargetRotation);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (sealTargetRotation_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(SealTargetRotation);
+      if (SealOwnerUid != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(SealOwnerUid);
       }
       if (ItemId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteUInt32(ItemId);
       }
-      if (SealOwnerUid != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(SealOwnerUid);
+      if (sealTargetRotation_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(SealTargetRotation);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (SealOwnerUid != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SealOwnerUid);
+      }
       if (ItemId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
       }
       if (sealTargetRotation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SealTargetRotation);
-      }
-      if (SealOwnerUid != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SealOwnerUid);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,6 +233,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.SealOwnerUid != 0) {
+        SealOwnerUid = other.SealOwnerUid;
+      }
       if (other.ItemId != 0) {
         ItemId = other.ItemId;
       }
@@ -241,9 +244,6 @@ namespace EggLink.DanhengServer.Proto {
           SealTargetRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
         }
         SealTargetRotation.MergeFrom(other.SealTargetRotation);
-      }
-      if (other.SealOwnerUid != 0) {
-        SealOwnerUid = other.SealOwnerUid;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,19 +260,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 32: {
+            SealOwnerUid = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            ItemId = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             if (sealTargetRotation_ == null) {
               SealTargetRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
             input.ReadMessage(SealTargetRotation);
-            break;
-          }
-          case 96: {
-            ItemId = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            SealOwnerUid = input.ReadUInt32();
             break;
           }
         }
@@ -290,19 +290,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 32: {
+            SealOwnerUid = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            ItemId = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             if (sealTargetRotation_ == null) {
               SealTargetRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
             input.ReadMessage(SealTargetRotation);
-            break;
-          }
-          case 96: {
-            ItemId = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            SealOwnerUid = input.ReadUInt32();
             break;
           }
         }

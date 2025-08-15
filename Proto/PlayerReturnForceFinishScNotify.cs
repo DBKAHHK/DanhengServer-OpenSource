@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVQbGF5ZXJSZXR1cm5Gb3JjZUZpbmlzaFNjTm90aWZ5LnByb3RvGhFBRkJO",
             "RUlCSUpORC5wcm90byJECh9QbGF5ZXJSZXR1cm5Gb3JjZUZpbmlzaFNjTm90",
-            "aWZ5EiEKC1BGRUlEUE9MT0tNGA0gASgLMgwuQUZCTkVJQklKTkRCHqoCG0Vn",
+            "aWZ5EiEKC1BGRUlEUE9MT0tNGAogASgLMgwuQUZCTkVJQklKTkRCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AFBNEIBIJNDReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PFEIDPOLOKM" field.</summary>
-    public const int PFEIDPOLOKMFieldNumber = 13;
+    public const int PFEIDPOLOKMFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.AFBNEIBIJND pFEIDPOLOKM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (pFEIDPOLOKM_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(82);
         output.WriteMessage(PFEIDPOLOKM);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (pFEIDPOLOKM_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(82);
         output.WriteMessage(PFEIDPOLOKM);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 82: {
             if (pFEIDPOLOKM_ == null) {
               PFEIDPOLOKM = new global::EggLink.DanhengServer.Proto.AFBNEIBIJND();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 82: {
             if (pFEIDPOLOKM_ == null) {
               PFEIDPOLOKM = new global::EggLink.DanhengServer.Proto.AFBNEIBIJND();
             }

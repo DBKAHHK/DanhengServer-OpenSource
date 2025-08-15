@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9Td2l0Y2hIYW5kQ29pblVwZGF0ZVNjUnNwLnByb3RvIkMKGVN3aXRjaEhh",
-            "bmRDb2luVXBkYXRlU2NSc3ASDwoHcmV0Y29kZRgPIAEoDRIVCg1oYW5kX2Nv",
-            "aW5fbnVtGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "bmRDb2luVXBkYXRlU2NSc3ASDwoHcmV0Y29kZRgBIAEoDRIVCg1oYW5kX2Nv",
+            "aW5fbnVtGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 15;
+    public const int RetcodeFieldNumber = 1;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "hand_coin_num" field.</summary>
-    public const int HandCoinNumFieldNumber = 5;
+    public const int HandCoinNumFieldNumber = 10;
     private uint handCoinNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HandCoinNum != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(HandCoinNum);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
+      }
+      if (HandCoinNum != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(HandCoinNum);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HandCoinNum != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(HandCoinNum);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
+      }
+      if (HandCoinNum != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(HandCoinNum);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            HandCoinNum = input.ReadUInt32();
+          case 8: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Retcode = input.ReadUInt32();
+          case 80: {
+            HandCoinNum = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            HandCoinNum = input.ReadUInt32();
+          case 8: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Retcode = input.ReadUInt32();
+          case 80: {
+            HandCoinNum = input.ReadUInt32();
             break;
           }
         }

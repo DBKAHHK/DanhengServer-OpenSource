@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidNb25vcG9seVNvY2lhbEV2ZW50RWZmZWN0U2NOb3RpZnkucHJvdG8aHFNv",
             "Y2lhbEV2ZW50U2VydmVyQ2FjaGUucHJvdG8iUQohTW9ub3BvbHlTb2NpYWxF",
-            "dmVudEVmZmVjdFNjTm90aWZ5EiwKC01JQUVBRkZER01IGAogAygLMhcuU29j",
+            "dmVudEVmZmVjdFNjTm90aWZ5EiwKC01JQUVBRkZER01IGAUgAygLMhcuU29j",
             "aWFsRXZlbnRTZXJ2ZXJDYWNoZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MIAEAFFDGMH" field.</summary>
-    public const int MIAEAFFDGMHFieldNumber = 10;
+    public const int MIAEAFFDGMHFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SocialEventServerCache> _repeated_mIAEAFFDGMH_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.SocialEventServerCache.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.SocialEventServerCache.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache> mIAEAFFDGMH_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 42: {
             mIAEAFFDGMH_.AddEntriesFrom(input, _repeated_mIAEAFFDGMH_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 42: {
             mIAEAFFDGMH_.AddEntriesFrom(ref input, _repeated_mIAEAFFDGMH_codec);
             break;
           }

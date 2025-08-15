@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBRdWlja1N0YXJ0RmFybUVsZW1lbnRDc1JlcS5wcm90byJGChpRdWlja1N0",
-            "YXJ0RmFybUVsZW1lbnRDc1JlcRITCgt3b3JsZF9sZXZlbBgPIAEoDRITCgtK",
-            "REFOT0tOSE5ITBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "YXJ0RmFybUVsZW1lbnRDc1JlcRITCgtKREFOT0tOSE5ITBgDIAEoDRITCgt3",
+            "b3JsZF9sZXZlbBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QuickStartFarmElementCsReq), global::EggLink.DanhengServer.Proto.QuickStartFarmElementCsReq.Parser, new[]{ "WorldLevel", "JDANOKNHNHL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QuickStartFarmElementCsReq), global::EggLink.DanhengServer.Proto.QuickStartFarmElementCsReq.Parser, new[]{ "JDANOKNHNHL", "WorldLevel" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuickStartFarmElementCsReq(QuickStartFarmElementCsReq other) : this() {
-      worldLevel_ = other.worldLevel_;
       jDANOKNHNHL_ = other.jDANOKNHNHL_;
+      worldLevel_ = other.worldLevel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new QuickStartFarmElementCsReq(this);
     }
 
-    /// <summary>Field number for the "world_level" field.</summary>
-    public const int WorldLevelFieldNumber = 15;
-    private uint worldLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint WorldLevel {
-      get { return worldLevel_; }
-      set {
-        worldLevel_ = value;
-      }
-    }
-
     /// <summary>Field number for the "JDANOKNHNHL" field.</summary>
-    public const int JDANOKNHNHLFieldNumber = 10;
+    public const int JDANOKNHNHLFieldNumber = 3;
     private uint jDANOKNHNHL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return jDANOKNHNHL_; }
       set {
         jDANOKNHNHL_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "world_level" field.</summary>
+    public const int WorldLevelFieldNumber = 10;
+    private uint worldLevel_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint WorldLevel {
+      get { return worldLevel_; }
+      set {
+        worldLevel_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (WorldLevel != other.WorldLevel) return false;
       if (JDANOKNHNHL != other.JDANOKNHNHL) return false;
+      if (WorldLevel != other.WorldLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
       if (JDANOKNHNHL != 0) hash ^= JDANOKNHNHL.GetHashCode();
+      if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (JDANOKNHNHL != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(JDANOKNHNHL);
       }
       if (WorldLevel != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(80);
         output.WriteUInt32(WorldLevel);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (JDANOKNHNHL != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(JDANOKNHNHL);
       }
       if (WorldLevel != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(80);
         output.WriteUInt32(WorldLevel);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (WorldLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
-      }
       if (JDANOKNHNHL != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JDANOKNHNHL);
+      }
+      if (WorldLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.WorldLevel != 0) {
-        WorldLevel = other.WorldLevel;
-      }
       if (other.JDANOKNHNHL != 0) {
         JDANOKNHNHL = other.JDANOKNHNHL;
+      }
+      if (other.WorldLevel != 0) {
+        WorldLevel = other.WorldLevel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
+          case 24: {
             JDANOKNHNHL = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 80: {
             WorldLevel = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
+          case 24: {
             JDANOKNHNHL = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 80: {
             WorldLevel = input.ReadUInt32();
             break;
           }

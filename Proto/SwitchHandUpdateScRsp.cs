@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChtTd2l0Y2hIYW5kVXBkYXRlU2NSc3AucHJvdG8aF0hhbmRPcGVyYXRpb25J",
             "bmZvLnByb3RvGg5IYW5kSW5mby5wcm90byJ3ChVTd2l0Y2hIYW5kVXBkYXRl",
-            "U2NSc3ASLwoTaGFuZF9vcGVyYXRpb25faW5mbxgLIAEoCzISLkhhbmRPcGVy",
-            "YXRpb25JbmZvEg8KB3JldGNvZGUYCCABKA0SHAoJaGFuZF9pbmZvGAYgASgL",
-            "MgkuSGFuZEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "U2NSc3ASHAoJaGFuZF9pbmZvGA8gASgLMgkuSGFuZEluZm8SDwoHcmV0Y29k",
+            "ZRgIIAEoDRIvChNoYW5kX29wZXJhdGlvbl9pbmZvGAEgASgLMhIuSGFuZE9w",
+            "ZXJhdGlvbkluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HandOperationInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HandInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwitchHandUpdateScRsp), global::EggLink.DanhengServer.Proto.SwitchHandUpdateScRsp.Parser, new[]{ "HandOperationInfo", "Retcode", "HandInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwitchHandUpdateScRsp), global::EggLink.DanhengServer.Proto.SwitchHandUpdateScRsp.Parser, new[]{ "HandInfo", "Retcode", "HandOperationInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,9 +75,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SwitchHandUpdateScRsp(SwitchHandUpdateScRsp other) : this() {
-      handOperationInfo_ = other.handOperationInfo_ != null ? other.handOperationInfo_.Clone() : null;
-      retcode_ = other.retcode_;
       handInfo_ = other.handInfo_ != null ? other.handInfo_.Clone() : null;
+      retcode_ = other.retcode_;
+      handOperationInfo_ = other.handOperationInfo_ != null ? other.handOperationInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,15 +87,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SwitchHandUpdateScRsp(this);
     }
 
-    /// <summary>Field number for the "hand_operation_info" field.</summary>
-    public const int HandOperationInfoFieldNumber = 11;
-    private global::EggLink.DanhengServer.Proto.HandOperationInfo handOperationInfo_;
+    /// <summary>Field number for the "hand_info" field.</summary>
+    public const int HandInfoFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.HandInfo handInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HandOperationInfo HandOperationInfo {
-      get { return handOperationInfo_; }
+    public global::EggLink.DanhengServer.Proto.HandInfo HandInfo {
+      get { return handInfo_; }
       set {
-        handOperationInfo_ = value;
+        handInfo_ = value;
       }
     }
 
@@ -111,15 +111,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "hand_info" field.</summary>
-    public const int HandInfoFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.HandInfo handInfo_;
+    /// <summary>Field number for the "hand_operation_info" field.</summary>
+    public const int HandOperationInfoFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.HandOperationInfo handOperationInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HandInfo HandInfo {
-      get { return handInfo_; }
+    public global::EggLink.DanhengServer.Proto.HandOperationInfo HandOperationInfo {
+      get { return handOperationInfo_; }
       set {
-        handInfo_ = value;
+        handOperationInfo_ = value;
       }
     }
 
@@ -138,9 +138,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(HandOperationInfo, other.HandOperationInfo)) return false;
-      if (Retcode != other.Retcode) return false;
       if (!object.Equals(HandInfo, other.HandInfo)) return false;
+      if (Retcode != other.Retcode) return false;
+      if (!object.Equals(HandOperationInfo, other.HandOperationInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,9 +148,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (handOperationInfo_ != null) hash ^= HandOperationInfo.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (handInfo_ != null) hash ^= HandInfo.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (handOperationInfo_ != null) hash ^= HandOperationInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -169,17 +169,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (handInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(HandInfo);
+      if (handOperationInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(HandOperationInfo);
       }
       if (Retcode != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      if (handOperationInfo_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(HandOperationInfo);
+      if (handInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(HandInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -191,17 +191,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (handInfo_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(HandInfo);
+      if (handOperationInfo_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(HandOperationInfo);
       }
       if (Retcode != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      if (handOperationInfo_ != null) {
-        output.WriteRawTag(90);
-        output.WriteMessage(HandOperationInfo);
+      if (handInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(HandInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -213,14 +213,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (handOperationInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HandOperationInfo);
+      if (handInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HandInfo);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (handInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HandInfo);
+      if (handOperationInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HandOperationInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -234,20 +234,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.handOperationInfo_ != null) {
-        if (handOperationInfo_ == null) {
-          HandOperationInfo = new global::EggLink.DanhengServer.Proto.HandOperationInfo();
-        }
-        HandOperationInfo.MergeFrom(other.HandOperationInfo);
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.handInfo_ != null) {
         if (handInfo_ == null) {
           HandInfo = new global::EggLink.DanhengServer.Proto.HandInfo();
         }
         HandInfo.MergeFrom(other.HandInfo);
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
+      if (other.handOperationInfo_ != null) {
+        if (handOperationInfo_ == null) {
+          HandOperationInfo = new global::EggLink.DanhengServer.Proto.HandOperationInfo();
+        }
+        HandOperationInfo.MergeFrom(other.HandOperationInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -264,22 +264,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
-            if (handInfo_ == null) {
-              HandInfo = new global::EggLink.DanhengServer.Proto.HandInfo();
+          case 10: {
+            if (handOperationInfo_ == null) {
+              HandOperationInfo = new global::EggLink.DanhengServer.Proto.HandOperationInfo();
             }
-            input.ReadMessage(HandInfo);
+            input.ReadMessage(HandOperationInfo);
             break;
           }
           case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 90: {
-            if (handOperationInfo_ == null) {
-              HandOperationInfo = new global::EggLink.DanhengServer.Proto.HandOperationInfo();
+          case 122: {
+            if (handInfo_ == null) {
+              HandInfo = new global::EggLink.DanhengServer.Proto.HandInfo();
             }
-            input.ReadMessage(HandOperationInfo);
+            input.ReadMessage(HandInfo);
             break;
           }
         }
@@ -297,22 +297,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
-            if (handInfo_ == null) {
-              HandInfo = new global::EggLink.DanhengServer.Proto.HandInfo();
+          case 10: {
+            if (handOperationInfo_ == null) {
+              HandOperationInfo = new global::EggLink.DanhengServer.Proto.HandOperationInfo();
             }
-            input.ReadMessage(HandInfo);
+            input.ReadMessage(HandOperationInfo);
             break;
           }
           case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 90: {
-            if (handOperationInfo_ == null) {
-              HandOperationInfo = new global::EggLink.DanhengServer.Proto.HandOperationInfo();
+          case 122: {
+            if (handInfo_ == null) {
+              HandInfo = new global::EggLink.DanhengServer.Proto.HandInfo();
             }
-            input.ReadMessage(HandOperationInfo);
+            input.ReadMessage(HandInfo);
             break;
           }
         }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidHcm93dGhUYXJnZXRBdmF0YXJDaGFuZ2VkU2NOb3RpZnkucHJvdG8aG0dy",
             "b3d0aFRhcnRnZXRGdW5jVHlwZS5wcm90byJxCiFHcm93dGhUYXJnZXRBdmF0",
-            "YXJDaGFuZ2VkU2NOb3RpZnkSEwoLSlBOTFBPUE1LRUoYCyABKA0SNwoXZ3Jv",
+            "YXJDaGFuZ2VkU2NOb3RpZnkSEwoLSlBOTFBPUE1LRUoYBCABKA0SNwoXZ3Jv",
             "d3RoX3RhcmdldF90eXBlX2xpc3QYDCADKA4yFi5Hcm93dGhUYXJ0Z2V0RnVu",
             "Y1R5cGVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JPNLPOPMKEJ" field.</summary>
-    public const int JPNLPOPMKEJFieldNumber = 11;
+    public const int JPNLPOPMKEJFieldNumber = 4;
     private uint jPNLPOPMKEJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (JPNLPOPMKEJ != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(32);
         output.WriteUInt32(JPNLPOPMKEJ);
       }
       growthTargetTypeList_.WriteTo(output, _repeated_growthTargetTypeList_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (JPNLPOPMKEJ != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(32);
         output.WriteUInt32(JPNLPOPMKEJ);
       }
       growthTargetTypeList_.WriteTo(ref output, _repeated_growthTargetTypeList_codec);
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
+          case 32: {
             JPNLPOPMKEJ = input.ReadUInt32();
             break;
           }
@@ -241,7 +241,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
+          case 32: {
             JPNLPOPMKEJ = input.ReadUInt32();
             break;
           }

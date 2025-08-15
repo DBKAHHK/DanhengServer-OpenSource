@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFNQklOTUFPTkJDRC5wcm90bxoRR09DS0JMTkpJQkcucHJvdG8iLwoLTUJJ",
-            "Tk1BT05CQ0QSIAoKc2tpbGxfbGlzdBgHIAMoCzIMLkdPQ0tCTE5KSUJHQh6q",
+            "Tk1BT05CQ0QSIAoKc2tpbGxfbGlzdBgLIAMoCzIMLkdPQ0tCTE5KSUJHQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GOCKBLNJIBGReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "skill_list" field.</summary>
-    public const int SkillListFieldNumber = 7;
+    public const int SkillListFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GOCKBLNJIBG> _repeated_skillList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.GOCKBLNJIBG.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.GOCKBLNJIBG.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GOCKBLNJIBG> skillList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GOCKBLNJIBG>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 90: {
             skillList_.AddEntriesFrom(input, _repeated_skillList_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 90: {
             skillList_.AddEntriesFrom(ref input, _repeated_skillList_codec);
             break;
           }

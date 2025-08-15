@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidSb2d1ZVRvdXJuRW5hYmxlU2Vhc29uVGFsZW50Q3NSZXEucHJvdG8iNgoh",
             "Um9ndWVUb3VybkVuYWJsZVNlYXNvblRhbGVudENzUmVxEhEKCXRhbGVudF9p",
-            "ZBgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "ZBgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "talent_id" field.</summary>
-    public const int TalentIdFieldNumber = 1;
+    public const int TalentIdFieldNumber = 4;
     private uint talentId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (TalentId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteUInt32(TalentId);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TalentId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteUInt32(TalentId);
       }
       if (_unknownFields != null) {
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 32: {
             TalentId = input.ReadUInt32();
             break;
           }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 32: {
             TalentId = input.ReadUInt32();
             break;
           }

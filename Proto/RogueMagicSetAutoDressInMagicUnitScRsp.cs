@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CixSb2d1ZU1hZ2ljU2V0QXV0b0RyZXNzSW5NYWdpY1VuaXRTY1JzcC5wcm90",
-            "byJUCiZSb2d1ZU1hZ2ljU2V0QXV0b0RyZXNzSW5NYWdpY1VuaXRTY1JzcBIP",
-            "CgdyZXRjb2RlGAIgASgNEhkKEWVuYWJsZV9hdXRvX2RyZXNzGAcgASgIQh6q",
+            "byJUCiZSb2d1ZU1hZ2ljU2V0QXV0b0RyZXNzSW5NYWdpY1VuaXRTY1JzcBIZ",
+            "ChFlbmFibGVfYXV0b19kcmVzcxgBIAEoCBIPCgdyZXRjb2RlGA8gASgNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicSetAutoDressInMagicUnitScRsp), global::EggLink.DanhengServer.Proto.RogueMagicSetAutoDressInMagicUnitScRsp.Parser, new[]{ "Retcode", "EnableAutoDress" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicSetAutoDressInMagicUnitScRsp), global::EggLink.DanhengServer.Proto.RogueMagicSetAutoDressInMagicUnitScRsp.Parser, new[]{ "EnableAutoDress", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicSetAutoDressInMagicUnitScRsp(RogueMagicSetAutoDressInMagicUnitScRsp other) : this() {
-      retcode_ = other.retcode_;
       enableAutoDress_ = other.enableAutoDress_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueMagicSetAutoDressInMagicUnitScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 2;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "enable_auto_dress" field.</summary>
-    public const int EnableAutoDressFieldNumber = 7;
+    public const int EnableAutoDressFieldNumber = 1;
     private bool enableAutoDress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return enableAutoDress_; }
       set {
         enableAutoDress_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 15;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if (EnableAutoDress != other.EnableAutoDress) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (EnableAutoDress != false) hash ^= EnableAutoDress.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(Retcode);
-      }
       if (EnableAutoDress != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteBool(EnableAutoDress);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(Retcode);
-      }
       if (EnableAutoDress != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteBool(EnableAutoDress);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (EnableAutoDress != false) {
         size += 1 + 1;
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.EnableAutoDress != false) {
         EnableAutoDress = other.EnableAutoDress;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            Retcode = input.ReadUInt32();
+          case 8: {
+            EnableAutoDress = input.ReadBool();
             break;
           }
-          case 56: {
-            EnableAutoDress = input.ReadBool();
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            Retcode = input.ReadUInt32();
+          case 8: {
+            EnableAutoDress = input.ReadBool();
             break;
           }
-          case 56: {
-            EnableAutoDress = input.ReadBool();
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

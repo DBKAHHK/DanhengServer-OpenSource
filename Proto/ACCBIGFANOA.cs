@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static ACCBIGFANOAReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFBQ0NCSUdGQU5PQS5wcm90byJICgtBQ0NCSUdGQU5PQRIPCgdjYXJkX2lk",
-            "GA4gASgNEhMKC1BORU9PTEZMTkxLGAYgAygNEhMKC0JKS0hQQURDTEhJGAcg",
+            "ChFBQ0NCSUdGQU5PQS5wcm90byJICgtBQ0NCSUdGQU5PQRITCgtCSktIUEFE",
+            "Q0xISRgMIAEoDRITCgtQTkVPT0xGTE5MSxgPIAMoDRIPCgdjYXJkX2lkGAsg",
             "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ACCBIGFANOA), global::EggLink.DanhengServer.Proto.ACCBIGFANOA.Parser, new[]{ "CardId", "PNEOOLFLNLK", "BJKHPADCLHI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ACCBIGFANOA), global::EggLink.DanhengServer.Proto.ACCBIGFANOA.Parser, new[]{ "BJKHPADCLHI", "PNEOOLFLNLK", "CardId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ACCBIGFANOA(ACCBIGFANOA other) : this() {
-      cardId_ = other.cardId_;
-      pNEOOLFLNLK_ = other.pNEOOLFLNLK_.Clone();
       bJKHPADCLHI_ = other.bJKHPADCLHI_;
+      pNEOOLFLNLK_ = other.pNEOOLFLNLK_.Clone();
+      cardId_ = other.cardId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,31 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ACCBIGFANOA(this);
     }
 
-    /// <summary>Field number for the "card_id" field.</summary>
-    public const int CardIdFieldNumber = 14;
-    private uint cardId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CardId {
-      get { return cardId_; }
-      set {
-        cardId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "PNEOOLFLNLK" field.</summary>
-    public const int PNEOOLFLNLKFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_pNEOOLFLNLK_codec
-        = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> pNEOOLFLNLK_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> PNEOOLFLNLK {
-      get { return pNEOOLFLNLK_; }
-    }
-
     /// <summary>Field number for the "BJKHPADCLHI" field.</summary>
-    public const int BJKHPADCLHIFieldNumber = 7;
+    public const int BJKHPADCLHIFieldNumber = 12;
     private uint bJKHPADCLHI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -116,6 +93,29 @@ namespace EggLink.DanhengServer.Proto {
       get { return bJKHPADCLHI_; }
       set {
         bJKHPADCLHI_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PNEOOLFLNLK" field.</summary>
+    public const int PNEOOLFLNLKFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_pNEOOLFLNLK_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> pNEOOLFLNLK_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> PNEOOLFLNLK {
+      get { return pNEOOLFLNLK_; }
+    }
+
+    /// <summary>Field number for the "card_id" field.</summary>
+    public const int CardIdFieldNumber = 11;
+    private uint cardId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CardId {
+      get { return cardId_; }
+      set {
+        cardId_ = value;
       }
     }
 
@@ -134,9 +134,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CardId != other.CardId) return false;
-      if(!pNEOOLFLNLK_.Equals(other.pNEOOLFLNLK_)) return false;
       if (BJKHPADCLHI != other.BJKHPADCLHI) return false;
+      if(!pNEOOLFLNLK_.Equals(other.pNEOOLFLNLK_)) return false;
+      if (CardId != other.CardId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -144,9 +144,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CardId != 0) hash ^= CardId.GetHashCode();
-      hash ^= pNEOOLFLNLK_.GetHashCode();
       if (BJKHPADCLHI != 0) hash ^= BJKHPADCLHI.GetHashCode();
+      hash ^= pNEOOLFLNLK_.GetHashCode();
+      if (CardId != 0) hash ^= CardId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -165,15 +165,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      pNEOOLFLNLK_.WriteTo(output, _repeated_pNEOOLFLNLK_codec);
-      if (BJKHPADCLHI != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(BJKHPADCLHI);
-      }
       if (CardId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteUInt32(CardId);
       }
+      if (BJKHPADCLHI != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(BJKHPADCLHI);
+      }
+      pNEOOLFLNLK_.WriteTo(output, _repeated_pNEOOLFLNLK_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -184,15 +184,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      pNEOOLFLNLK_.WriteTo(ref output, _repeated_pNEOOLFLNLK_codec);
-      if (BJKHPADCLHI != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(BJKHPADCLHI);
-      }
       if (CardId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteUInt32(CardId);
       }
+      if (BJKHPADCLHI != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(BJKHPADCLHI);
+      }
+      pNEOOLFLNLK_.WriteTo(ref output, _repeated_pNEOOLFLNLK_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -203,12 +203,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CardId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CardId);
-      }
-      size += pNEOOLFLNLK_.CalculateSize(_repeated_pNEOOLFLNLK_codec);
       if (BJKHPADCLHI != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BJKHPADCLHI);
+      }
+      size += pNEOOLFLNLK_.CalculateSize(_repeated_pNEOOLFLNLK_codec);
+      if (CardId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CardId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -222,12 +222,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CardId != 0) {
-        CardId = other.CardId;
-      }
-      pNEOOLFLNLK_.Add(other.pNEOOLFLNLK_);
       if (other.BJKHPADCLHI != 0) {
         BJKHPADCLHI = other.BJKHPADCLHI;
+      }
+      pNEOOLFLNLK_.Add(other.pNEOOLFLNLK_);
+      if (other.CardId != 0) {
+        CardId = other.CardId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -244,17 +244,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50:
-          case 48: {
-            pNEOOLFLNLK_.AddEntriesFrom(input, _repeated_pNEOOLFLNLK_codec);
+          case 88: {
+            CardId = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 96: {
             BJKHPADCLHI = input.ReadUInt32();
             break;
           }
-          case 112: {
-            CardId = input.ReadUInt32();
+          case 122:
+          case 120: {
+            pNEOOLFLNLK_.AddEntriesFrom(input, _repeated_pNEOOLFLNLK_codec);
             break;
           }
         }
@@ -272,17 +272,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50:
-          case 48: {
-            pNEOOLFLNLK_.AddEntriesFrom(ref input, _repeated_pNEOOLFLNLK_codec);
+          case 88: {
+            CardId = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 96: {
             BJKHPADCLHI = input.ReadUInt32();
             break;
           }
-          case 112: {
-            CardId = input.ReadUInt32();
+          case 122:
+          case 120: {
+            pNEOOLFLNLK_.AddEntriesFrom(ref input, _repeated_pNEOOLFLNLK_codec);
             break;
           }
         }

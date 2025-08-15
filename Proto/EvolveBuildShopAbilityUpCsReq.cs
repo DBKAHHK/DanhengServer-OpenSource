@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNFdm9sdmVCdWlsZFNob3BBYmlsaXR5VXBDc1JlcS5wcm90byJDCh1Fdm9s",
-            "dmVCdWlsZFNob3BBYmlsaXR5VXBDc1JlcRITCgtORUNJTEpPSkdBThgPIAEo",
+            "dmVCdWlsZFNob3BBYmlsaXR5VXBDc1JlcRITCgtORUNJTEpPSkdBThgLIAEo",
             "DRINCgVsZXZlbBgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NECILJOJGAN" field.</summary>
-    public const int NECILJOJGANFieldNumber = 15;
+    public const int NECILJOJGANFieldNumber = 11;
     private uint nECILJOJGAN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Level);
       }
       if (NECILJOJGAN != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(NECILJOJGAN);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Level);
       }
       if (NECILJOJGAN != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(NECILJOJGAN);
       }
       if (_unknownFields != null) {
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             Level = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 88: {
             NECILJOJGAN = input.ReadUInt32();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             Level = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 88: {
             NECILJOJGAN = input.ReadUInt32();
             break;
           }

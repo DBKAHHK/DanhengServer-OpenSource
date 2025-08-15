@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpVbmxvY2tUZWxlcG9ydE5vdGlmeS5wcm90byI9ChRVbmxvY2tUZWxlcG9y",
-            "dE5vdGlmeRIQCghlbnRyeV9pZBgGIAEoDRITCgt0ZWxlcG9ydF9pZBgNIAEo",
+            "dE5vdGlmeRIQCghlbnRyeV9pZBgJIAEoDRITCgt0ZWxlcG9ydF9pZBgLIAEo",
             "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entry_id" field.</summary>
-    public const int EntryIdFieldNumber = 6;
+    public const int EntryIdFieldNumber = 9;
     private uint entryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "teleport_id" field.</summary>
-    public const int TeleportIdFieldNumber = 13;
+    public const int TeleportIdFieldNumber = 11;
     private uint teleportId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EntryId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(72);
         output.WriteUInt32(EntryId);
       }
       if (TeleportId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(TeleportId);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EntryId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(72);
         output.WriteUInt32(EntryId);
       }
       if (TeleportId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(TeleportId);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 72: {
             EntryId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 88: {
             TeleportId = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 72: {
             EntryId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 88: {
             TeleportId = input.ReadUInt32();
             break;
           }

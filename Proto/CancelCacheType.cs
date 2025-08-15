@@ -24,10 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static CancelCacheTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVDYW5jZWxDYWNoZVR5cGUucHJvdG8qbAoPQ2FuY2VsQ2FjaGVUeXBlEhoK",
-            "FkNBQ0hFX05PVElGWV9UWVBFX05PTkUQABIdChlDQUNIRV9OT1RJRllfVFlQ",
-            "RV9SRUNZQ0xFEAESHgoaQ0FDSEVfTk9USUZZX1RZUEVfUkVDSEFSR0UQAkIe",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChVDYW5jZWxDYWNoZVR5cGUucHJvdG8qlgEKD0NhbmNlbENhY2hlVHlwZRIa",
+            "ChZDQUNIRV9OT1RJRllfVFlQRV9OT05FEAASHQoZQ0FDSEVfTk9USUZZX1RZ",
+            "UEVfUkVDWUNMRRABEh4KGkNBQ0hFX05PVElGWV9UWVBFX1JFQ0hBUkdFEAIS",
+            "KAokQ0FDSEVfTk9USUZZX1RZUEVfSVRFTV9BVVRPX1RSQU5TRkVSEANCHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.CancelCacheType), }, null, null));
@@ -40,6 +41,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("CACHE_NOTIFY_TYPE_NONE")] CacheNotifyTypeNone = 0,
     [pbr::OriginalName("CACHE_NOTIFY_TYPE_RECYCLE")] CacheNotifyTypeRecycle = 1,
     [pbr::OriginalName("CACHE_NOTIFY_TYPE_RECHARGE")] CacheNotifyTypeRecharge = 2,
+    [pbr::OriginalName("CACHE_NOTIFY_TYPE_ITEM_AUTO_TRANSFER")] CacheNotifyTypeItemAutoTransfer = 3,
   }
 
   #endregion

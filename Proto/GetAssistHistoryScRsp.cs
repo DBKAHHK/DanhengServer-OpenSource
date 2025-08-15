@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHZXRBc3Npc3RIaXN0b3J5U2NSc3AucHJvdG8igwEKFUdldEFzc2lzdEhp",
-            "c3RvcnlTY1JzcBIaChJ0b2RheV91c2VfdWlkX2xpc3QYCiADKA0SEwoLTkZK",
-            "SkFQTlBQS1AYDyABKA0SEwoLUEJGTkVJR09QTVAYCSABKA0SEwoLT01IQ0hK",
-            "TExJSUYYByABKA0SDwoHcmV0Y29kZRgLIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "c3RvcnlTY1JzcBITCgtPTUhDSEpMTElJRhgMIAEoDRITCgtQQkZORUlHT1BN",
+            "UBgCIAEoDRIaChJ0b2RheV91c2VfdWlkX2xpc3QYASADKA0SDwoHcmV0Y29k",
+            "ZRgLIAEoDRITCgtORkpKQVBOUFBLUBgJIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAssistHistoryScRsp), global::EggLink.DanhengServer.Proto.GetAssistHistoryScRsp.Parser, new[]{ "TodayUseUidList", "NFJJAPNPPKP", "PBFNEIGOPMP", "OMHCHJLLIIF", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAssistHistoryScRsp), global::EggLink.DanhengServer.Proto.GetAssistHistoryScRsp.Parser, new[]{ "OMHCHJLLIIF", "PBFNEIGOPMP", "TodayUseUidList", "Retcode", "NFJJAPNPPKP" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +74,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAssistHistoryScRsp(GetAssistHistoryScRsp other) : this() {
-      todayUseUidList_ = other.todayUseUidList_.Clone();
-      nFJJAPNPPKP_ = other.nFJJAPNPPKP_;
-      pBFNEIGOPMP_ = other.pBFNEIGOPMP_;
       oMHCHJLLIIF_ = other.oMHCHJLLIIF_;
+      pBFNEIGOPMP_ = other.pBFNEIGOPMP_;
+      todayUseUidList_ = other.todayUseUidList_.Clone();
       retcode_ = other.retcode_;
+      nFJJAPNPPKP_ = other.nFJJAPNPPKP_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,31 +88,20 @@ namespace EggLink.DanhengServer.Proto {
       return new GetAssistHistoryScRsp(this);
     }
 
-    /// <summary>Field number for the "today_use_uid_list" field.</summary>
-    public const int TodayUseUidListFieldNumber = 10;
-    private static readonly pb::FieldCodec<uint> _repeated_todayUseUidList_codec
-        = pb::FieldCodec.ForUInt32(82);
-    private readonly pbc::RepeatedField<uint> todayUseUidList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "OMHCHJLLIIF" field.</summary>
+    public const int OMHCHJLLIIFFieldNumber = 12;
+    private uint oMHCHJLLIIF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> TodayUseUidList {
-      get { return todayUseUidList_; }
-    }
-
-    /// <summary>Field number for the "NFJJAPNPPKP" field.</summary>
-    public const int NFJJAPNPPKPFieldNumber = 15;
-    private uint nFJJAPNPPKP_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NFJJAPNPPKP {
-      get { return nFJJAPNPPKP_; }
+    public uint OMHCHJLLIIF {
+      get { return oMHCHJLLIIF_; }
       set {
-        nFJJAPNPPKP_ = value;
+        oMHCHJLLIIF_ = value;
       }
     }
 
     /// <summary>Field number for the "PBFNEIGOPMP" field.</summary>
-    public const int PBFNEIGOPMPFieldNumber = 9;
+    public const int PBFNEIGOPMPFieldNumber = 2;
     private uint pBFNEIGOPMP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,16 +112,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "OMHCHJLLIIF" field.</summary>
-    public const int OMHCHJLLIIFFieldNumber = 7;
-    private uint oMHCHJLLIIF_;
+    /// <summary>Field number for the "today_use_uid_list" field.</summary>
+    public const int TodayUseUidListFieldNumber = 1;
+    private static readonly pb::FieldCodec<uint> _repeated_todayUseUidList_codec
+        = pb::FieldCodec.ForUInt32(10);
+    private readonly pbc::RepeatedField<uint> todayUseUidList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OMHCHJLLIIF {
-      get { return oMHCHJLLIIF_; }
-      set {
-        oMHCHJLLIIF_ = value;
-      }
+    public pbc::RepeatedField<uint> TodayUseUidList {
+      get { return todayUseUidList_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -144,6 +132,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "NFJJAPNPPKP" field.</summary>
+    public const int NFJJAPNPPKPFieldNumber = 9;
+    private uint nFJJAPNPPKP_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NFJJAPNPPKP {
+      get { return nFJJAPNPPKP_; }
+      set {
+        nFJJAPNPPKP_ = value;
       }
     }
 
@@ -162,11 +162,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!todayUseUidList_.Equals(other.todayUseUidList_)) return false;
-      if (NFJJAPNPPKP != other.NFJJAPNPPKP) return false;
-      if (PBFNEIGOPMP != other.PBFNEIGOPMP) return false;
       if (OMHCHJLLIIF != other.OMHCHJLLIIF) return false;
+      if (PBFNEIGOPMP != other.PBFNEIGOPMP) return false;
+      if(!todayUseUidList_.Equals(other.todayUseUidList_)) return false;
       if (Retcode != other.Retcode) return false;
+      if (NFJJAPNPPKP != other.NFJJAPNPPKP) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -174,11 +174,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= todayUseUidList_.GetHashCode();
-      if (NFJJAPNPPKP != 0) hash ^= NFJJAPNPPKP.GetHashCode();
-      if (PBFNEIGOPMP != 0) hash ^= PBFNEIGOPMP.GetHashCode();
       if (OMHCHJLLIIF != 0) hash ^= OMHCHJLLIIF.GetHashCode();
+      if (PBFNEIGOPMP != 0) hash ^= PBFNEIGOPMP.GetHashCode();
+      hash ^= todayUseUidList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (NFJJAPNPPKP != 0) hash ^= NFJJAPNPPKP.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -197,22 +197,22 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (OMHCHJLLIIF != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(OMHCHJLLIIF);
-      }
+      todayUseUidList_.WriteTo(output, _repeated_todayUseUidList_codec);
       if (PBFNEIGOPMP != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteUInt32(PBFNEIGOPMP);
       }
-      todayUseUidList_.WriteTo(output, _repeated_todayUseUidList_codec);
+      if (NFJJAPNPPKP != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(NFJJAPNPPKP);
+      }
       if (Retcode != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
-      if (NFJJAPNPPKP != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(NFJJAPNPPKP);
+      if (OMHCHJLLIIF != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(OMHCHJLLIIF);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -224,22 +224,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (OMHCHJLLIIF != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(OMHCHJLLIIF);
-      }
+      todayUseUidList_.WriteTo(ref output, _repeated_todayUseUidList_codec);
       if (PBFNEIGOPMP != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteUInt32(PBFNEIGOPMP);
       }
-      todayUseUidList_.WriteTo(ref output, _repeated_todayUseUidList_codec);
+      if (NFJJAPNPPKP != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(NFJJAPNPPKP);
+      }
       if (Retcode != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
-      if (NFJJAPNPPKP != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(NFJJAPNPPKP);
+      if (OMHCHJLLIIF != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(OMHCHJLLIIF);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -251,18 +251,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += todayUseUidList_.CalculateSize(_repeated_todayUseUidList_codec);
-      if (NFJJAPNPPKP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NFJJAPNPPKP);
+      if (OMHCHJLLIIF != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OMHCHJLLIIF);
       }
       if (PBFNEIGOPMP != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PBFNEIGOPMP);
       }
-      if (OMHCHJLLIIF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OMHCHJLLIIF);
-      }
+      size += todayUseUidList_.CalculateSize(_repeated_todayUseUidList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (NFJJAPNPPKP != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NFJJAPNPPKP);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -276,18 +276,18 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      todayUseUidList_.Add(other.todayUseUidList_);
-      if (other.NFJJAPNPPKP != 0) {
-        NFJJAPNPPKP = other.NFJJAPNPPKP;
+      if (other.OMHCHJLLIIF != 0) {
+        OMHCHJLLIIF = other.OMHCHJLLIIF;
       }
       if (other.PBFNEIGOPMP != 0) {
         PBFNEIGOPMP = other.PBFNEIGOPMP;
       }
-      if (other.OMHCHJLLIIF != 0) {
-        OMHCHJLLIIF = other.OMHCHJLLIIF;
-      }
+      todayUseUidList_.Add(other.todayUseUidList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
+      }
+      if (other.NFJJAPNPPKP != 0) {
+        NFJJAPNPPKP = other.NFJJAPNPPKP;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -304,25 +304,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            OMHCHJLLIIF = input.ReadUInt32();
+          case 10:
+          case 8: {
+            todayUseUidList_.AddEntriesFrom(input, _repeated_todayUseUidList_codec);
             break;
           }
-          case 72: {
+          case 16: {
             PBFNEIGOPMP = input.ReadUInt32();
             break;
           }
-          case 82:
-          case 80: {
-            todayUseUidList_.AddEntriesFrom(input, _repeated_todayUseUidList_codec);
+          case 72: {
+            NFJJAPNPPKP = input.ReadUInt32();
             break;
           }
           case 88: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 120: {
-            NFJJAPNPPKP = input.ReadUInt32();
+          case 96: {
+            OMHCHJLLIIF = input.ReadUInt32();
             break;
           }
         }
@@ -340,25 +340,25 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            OMHCHJLLIIF = input.ReadUInt32();
+          case 10:
+          case 8: {
+            todayUseUidList_.AddEntriesFrom(ref input, _repeated_todayUseUidList_codec);
             break;
           }
-          case 72: {
+          case 16: {
             PBFNEIGOPMP = input.ReadUInt32();
             break;
           }
-          case 82:
-          case 80: {
-            todayUseUidList_.AddEntriesFrom(ref input, _repeated_todayUseUidList_codec);
+          case 72: {
+            NFJJAPNPPKP = input.ReadUInt32();
             break;
           }
           case 88: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 120: {
-            NFJJAPNPPKP = input.ReadUInt32();
+          case 96: {
+            OMHCHJLLIIF = input.ReadUInt32();
             break;
           }
         }

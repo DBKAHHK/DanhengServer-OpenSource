@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5RdWl0VHJlYXN1cmVEdW5nZW9uQ3NSZXEucHJvdG8iRAoYUXVpdFRyZWFz",
-            "dXJlRHVuZ2VvbkNzUmVxEhMKC1BDUERGSkhESkNDGAggASgIEhMKC05MTURF",
-            "TU9IQk9PGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "dXJlRHVuZ2VvbkNzUmVxEhMKC1BDUERGSkhESkNDGAwgASgIEhMKC05MTURF",
+            "TU9IQk9PGAQgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PCPDFJHDJCC" field.</summary>
-    public const int PCPDFJHDJCCFieldNumber = 8;
+    public const int PCPDFJHDJCCFieldNumber = 12;
     private bool pCPDFJHDJCC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NLMDEMOHBOO" field.</summary>
-    public const int NLMDEMOHBOOFieldNumber = 6;
+    public const int NLMDEMOHBOOFieldNumber = 4;
     private uint nLMDEMOHBOO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (NLMDEMOHBOO != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteUInt32(NLMDEMOHBOO);
       }
       if (PCPDFJHDJCC != false) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(96);
         output.WriteBool(PCPDFJHDJCC);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (NLMDEMOHBOO != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(32);
         output.WriteUInt32(NLMDEMOHBOO);
       }
       if (PCPDFJHDJCC != false) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(96);
         output.WriteBool(PCPDFJHDJCC);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 32: {
             NLMDEMOHBOO = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 96: {
             PCPDFJHDJCC = input.ReadBool();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 32: {
             NLMDEMOHBOO = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 96: {
             PCPDFJHDJCC = input.ReadBool();
             break;
           }

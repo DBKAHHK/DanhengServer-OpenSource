@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNSZWxpY1NtYXJ0V2VhclVwZGF0ZVBsYW5TY1JzcC5wcm90bxoYUmVsaWNT",
             "bWFydFdlYXJQbGFuLnByb3RvIlkKHVJlbGljU21hcnRXZWFyVXBkYXRlUGxh",
-            "blNjUnNwEicKCnJlbGljX3BsYW4YBiABKAsyEy5SZWxpY1NtYXJ0V2VhclBs",
-            "YW4SDwoHcmV0Y29kZRgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "blNjUnNwEicKCnJlbGljX3BsYW4YDiABKAsyEy5SZWxpY1NtYXJ0V2VhclBs",
+            "YW4SDwoHcmV0Y29kZRgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicSmartWearPlanReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "relic_plan" field.</summary>
-    public const int RelicPlanFieldNumber = 6;
+    public const int RelicPlanFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.RelicSmartWearPlan relicPlan_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
+    public const int RetcodeFieldNumber = 1;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (relicPlan_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(RelicPlan);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
+      }
+      if (relicPlan_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(RelicPlan);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (relicPlan_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(RelicPlan);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
+      }
+      if (relicPlan_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(RelicPlan);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 8: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 114: {
             if (relicPlan_ == null) {
               RelicPlan = new global::EggLink.DanhengServer.Proto.RelicSmartWearPlan();
             }
             input.ReadMessage(RelicPlan);
-            break;
-          }
-          case 112: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 8: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 114: {
             if (relicPlan_ == null) {
               RelicPlan = new global::EggLink.DanhengServer.Proto.RelicSmartWearPlan();
             }
             input.ReadMessage(RelicPlan);
-            break;
-          }
-          case 112: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

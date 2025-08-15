@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFHRU9BRU9GSk9HQy5wcm90byI1CgtHRU9BRU9GSk9HQxIRCgllbnRpdHlf",
-            "aWQYBCABKA0SEwoLS0ZCT0FPTkxERU0YCiABKAhCHqoCG0VnZ0xpbmsuRGFu",
+            "aWQYBiABKA0SEwoLS0ZCT0FPTkxERU0YCSABKAhCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entity_id" field.</summary>
-    public const int EntityIdFieldNumber = 4;
+    public const int EntityIdFieldNumber = 6;
     private uint entityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KFBOAONLDEM" field.</summary>
-    public const int KFBOAONLDEMFieldNumber = 10;
+    public const int KFBOAONLDEMFieldNumber = 9;
     private bool kFBOAONLDEM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EntityId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(48);
         output.WriteUInt32(EntityId);
       }
       if (KFBOAONLDEM != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteBool(KFBOAONLDEM);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EntityId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(48);
         output.WriteUInt32(EntityId);
       }
       if (KFBOAONLDEM != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteBool(KFBOAONLDEM);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 48: {
             EntityId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 72: {
             KFBOAONLDEM = input.ReadBool();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 48: {
             EntityId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 72: {
             KFBOAONLDEM = input.ReadBool();
             break;
           }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlFeHBVcEVxdWlwbWVudENzUmVxLnByb3RvGhJJdGVtQ29zdERhdGEucHJv",
-            "dG8iVAoTRXhwVXBFcXVpcG1lbnRDc1JlcRIgCgljb3N0X2RhdGEYAiABKAsy",
-            "DS5JdGVtQ29zdERhdGESGwoTZXF1aXBtZW50X3VuaXF1ZV9pZBgBIAEoDUIe",
+            "dG8iVAoTRXhwVXBFcXVpcG1lbnRDc1JlcRIgCgljb3N0X2RhdGEYDSABKAsy",
+            "DS5JdGVtQ29zdERhdGESGwoTZXF1aXBtZW50X3VuaXF1ZV9pZBgIIAEoDUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cost_data" field.</summary>
-    public const int CostDataFieldNumber = 2;
+    public const int CostDataFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.ItemCostData costData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "equipment_unique_id" field.</summary>
-    public const int EquipmentUniqueIdFieldNumber = 1;
+    public const int EquipmentUniqueIdFieldNumber = 8;
     private uint equipmentUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EquipmentUniqueId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(64);
         output.WriteUInt32(EquipmentUniqueId);
       }
       if (costData_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(106);
         output.WriteMessage(CostData);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EquipmentUniqueId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(64);
         output.WriteUInt32(EquipmentUniqueId);
       }
       if (costData_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(106);
         output.WriteMessage(CostData);
       }
       if (_unknownFields != null) {
@@ -230,11 +230,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 64: {
             EquipmentUniqueId = input.ReadUInt32();
             break;
           }
-          case 18: {
+          case 106: {
             if (costData_ == null) {
               CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
@@ -256,11 +256,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 64: {
             EquipmentUniqueId = input.ReadUInt32();
             break;
           }
-          case 18: {
+          case 106: {
             if (costData_ == null) {
               CostData = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }

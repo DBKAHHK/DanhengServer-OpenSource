@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static KKFKKPPLDAIReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFLS0ZLS1BQTERBSS5wcm90byJHCgtLS0ZLS1BQTERBSRISCgp2aXNpdG9y",
-            "X2lkGAYgASgNEg8KB2lzX21lZXQYDiABKAgSEwoLQU1MS1BPSERFTE4YDSAB",
+            "ChFLS0ZLS1BQTERBSS5wcm90byJHCgtLS0ZLS1BQTERBSRIPCgdpc19tZWV0",
+            "GAkgASgIEhIKCnZpc2l0b3JfaWQYCiABKA0SEwoLQU1MS1BPSERFTE4YDyAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KKFKKPPLDAI), global::EggLink.DanhengServer.Proto.KKFKKPPLDAI.Parser, new[]{ "VisitorId", "IsMeet", "AMLKPOHDELN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KKFKKPPLDAI), global::EggLink.DanhengServer.Proto.KKFKKPPLDAI.Parser, new[]{ "IsMeet", "VisitorId", "AMLKPOHDELN" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KKFKKPPLDAI(KKFKKPPLDAI other) : this() {
-      visitorId_ = other.visitorId_;
       isMeet_ = other.isMeet_;
+      visitorId_ = other.visitorId_;
       aMLKPOHDELN_ = other.aMLKPOHDELN_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new KKFKKPPLDAI(this);
     }
 
-    /// <summary>Field number for the "visitor_id" field.</summary>
-    public const int VisitorIdFieldNumber = 6;
-    private uint visitorId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint VisitorId {
-      get { return visitorId_; }
-      set {
-        visitorId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "is_meet" field.</summary>
-    public const int IsMeetFieldNumber = 14;
+    public const int IsMeetFieldNumber = 9;
     private bool isMeet_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,8 +96,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "visitor_id" field.</summary>
+    public const int VisitorIdFieldNumber = 10;
+    private uint visitorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint VisitorId {
+      get { return visitorId_; }
+      set {
+        visitorId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "AMLKPOHDELN" field.</summary>
-    public const int AMLKPOHDELNFieldNumber = 13;
+    public const int AMLKPOHDELNFieldNumber = 15;
     private uint aMLKPOHDELN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,8 +135,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (VisitorId != other.VisitorId) return false;
       if (IsMeet != other.IsMeet) return false;
+      if (VisitorId != other.VisitorId) return false;
       if (AMLKPOHDELN != other.AMLKPOHDELN) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -145,8 +145,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (VisitorId != 0) hash ^= VisitorId.GetHashCode();
       if (IsMeet != false) hash ^= IsMeet.GetHashCode();
+      if (VisitorId != 0) hash ^= VisitorId.GetHashCode();
       if (AMLKPOHDELN != 0) hash ^= AMLKPOHDELN.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (IsMeet != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsMeet);
+      }
       if (VisitorId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(80);
         output.WriteUInt32(VisitorId);
       }
       if (AMLKPOHDELN != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(AMLKPOHDELN);
-      }
-      if (IsMeet != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(IsMeet);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (IsMeet != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IsMeet);
+      }
       if (VisitorId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(80);
         output.WriteUInt32(VisitorId);
       }
       if (AMLKPOHDELN != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt32(AMLKPOHDELN);
-      }
-      if (IsMeet != false) {
-        output.WriteRawTag(112);
-        output.WriteBool(IsMeet);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -210,11 +210,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (VisitorId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(VisitorId);
-      }
       if (IsMeet != false) {
         size += 1 + 1;
+      }
+      if (VisitorId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(VisitorId);
       }
       if (AMLKPOHDELN != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AMLKPOHDELN);
@@ -231,11 +231,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.VisitorId != 0) {
-        VisitorId = other.VisitorId;
-      }
       if (other.IsMeet != false) {
         IsMeet = other.IsMeet;
+      }
+      if (other.VisitorId != 0) {
+        VisitorId = other.VisitorId;
       }
       if (other.AMLKPOHDELN != 0) {
         AMLKPOHDELN = other.AMLKPOHDELN;
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 72: {
+            IsMeet = input.ReadBool();
+            break;
+          }
+          case 80: {
             VisitorId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 120: {
             AMLKPOHDELN = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            IsMeet = input.ReadBool();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 72: {
+            IsMeet = input.ReadBool();
+            break;
+          }
+          case 80: {
             VisitorId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 120: {
             AMLKPOHDELN = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            IsMeet = input.ReadBool();
             break;
           }
         }

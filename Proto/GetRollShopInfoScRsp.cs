@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpHZXRSb2xsU2hvcEluZm9TY1JzcC5wcm90byJvChRHZXRSb2xsU2hvcElu",
-            "Zm9TY1JzcBIUCgxnYWNoYV9yYW5kb20YDiABKA0SGgoSc2hvcF9ncm91cF9p",
-            "ZF9saXN0GAIgAygNEhQKDHJvbGxfc2hvcF9pZBgJIAEoDRIPCgdyZXRjb2Rl",
-            "GA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "Zm9TY1JzcBIPCgdyZXRjb2RlGAIgASgNEhQKDGdhY2hhX3JhbmRvbRgOIAEo",
+            "DRIUCgxyb2xsX3Nob3BfaWQYBiABKA0SGgoSc2hvcF9ncm91cF9pZF9saXN0",
+            "GAogAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRollShopInfoScRsp), global::EggLink.DanhengServer.Proto.GetRollShopInfoScRsp.Parser, new[]{ "GachaRandom", "ShopGroupIdList", "RollShopId", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRollShopInfoScRsp), global::EggLink.DanhengServer.Proto.GetRollShopInfoScRsp.Parser, new[]{ "Retcode", "GachaRandom", "RollShopId", "ShopGroupIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRollShopInfoScRsp(GetRollShopInfoScRsp other) : this() {
-      gachaRandom_ = other.gachaRandom_;
-      shopGroupIdList_ = other.shopGroupIdList_.Clone();
-      rollShopId_ = other.rollShopId_;
       retcode_ = other.retcode_;
+      gachaRandom_ = other.gachaRandom_;
+      rollShopId_ = other.rollShopId_;
+      shopGroupIdList_ = other.shopGroupIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,6 +85,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetRollShopInfoScRsp Clone() {
       return new GetRollShopInfoScRsp(this);
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 2;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
     }
 
     /// <summary>Field number for the "gacha_random" field.</summary>
@@ -99,19 +111,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "shop_group_id_list" field.</summary>
-    public const int ShopGroupIdListFieldNumber = 2;
-    private static readonly pb::FieldCodec<uint> _repeated_shopGroupIdList_codec
-        = pb::FieldCodec.ForUInt32(18);
-    private readonly pbc::RepeatedField<uint> shopGroupIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> ShopGroupIdList {
-      get { return shopGroupIdList_; }
-    }
-
     /// <summary>Field number for the "roll_shop_id" field.</summary>
-    public const int RollShopIdFieldNumber = 9;
+    public const int RollShopIdFieldNumber = 6;
     private uint rollShopId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,16 +123,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
-    private uint retcode_;
+    /// <summary>Field number for the "shop_group_id_list" field.</summary>
+    public const int ShopGroupIdListFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_shopGroupIdList_codec
+        = pb::FieldCodec.ForUInt32(82);
+    private readonly pbc::RepeatedField<uint> shopGroupIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
+    public pbc::RepeatedField<uint> ShopGroupIdList {
+      get { return shopGroupIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GachaRandom != other.GachaRandom) return false;
-      if(!shopGroupIdList_.Equals(other.shopGroupIdList_)) return false;
-      if (RollShopId != other.RollShopId) return false;
       if (Retcode != other.Retcode) return false;
+      if (GachaRandom != other.GachaRandom) return false;
+      if (RollShopId != other.RollShopId) return false;
+      if(!shopGroupIdList_.Equals(other.shopGroupIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GachaRandom != 0) hash ^= GachaRandom.GetHashCode();
-      hash ^= shopGroupIdList_.GetHashCode();
-      if (RollShopId != 0) hash ^= RollShopId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (GachaRandom != 0) hash ^= GachaRandom.GetHashCode();
+      if (RollShopId != 0) hash ^= RollShopId.GetHashCode();
+      hash ^= shopGroupIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,15 +182,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      shopGroupIdList_.WriteTo(output, _repeated_shopGroupIdList_codec);
-      if (RollShopId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(RollShopId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
+      if (RollShopId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(RollShopId);
+      }
+      shopGroupIdList_.WriteTo(output, _repeated_shopGroupIdList_codec);
       if (GachaRandom != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(GachaRandom);
@@ -205,15 +205,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      shopGroupIdList_.WriteTo(ref output, _repeated_shopGroupIdList_codec);
-      if (RollShopId != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(RollShopId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
+      if (RollShopId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(RollShopId);
+      }
+      shopGroupIdList_.WriteTo(ref output, _repeated_shopGroupIdList_codec);
       if (GachaRandom != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(GachaRandom);
@@ -228,16 +228,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GachaRandom != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaRandom);
-      }
-      size += shopGroupIdList_.CalculateSize(_repeated_shopGroupIdList_codec);
-      if (RollShopId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RollShopId);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
+      if (GachaRandom != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaRandom);
+      }
+      if (RollShopId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RollShopId);
+      }
+      size += shopGroupIdList_.CalculateSize(_repeated_shopGroupIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -250,16 +250,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GachaRandom != 0) {
-        GachaRandom = other.GachaRandom;
-      }
-      shopGroupIdList_.Add(other.shopGroupIdList_);
-      if (other.RollShopId != 0) {
-        RollShopId = other.RollShopId;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      if (other.GachaRandom != 0) {
+        GachaRandom = other.GachaRandom;
+      }
+      if (other.RollShopId != 0) {
+        RollShopId = other.RollShopId;
+      }
+      shopGroupIdList_.Add(other.shopGroupIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -275,17 +275,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
           case 16: {
-            shopGroupIdList_.AddEntriesFrom(input, _repeated_shopGroupIdList_codec);
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 48: {
             RollShopId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Retcode = input.ReadUInt32();
+          case 82:
+          case 80: {
+            shopGroupIdList_.AddEntriesFrom(input, _repeated_shopGroupIdList_codec);
             break;
           }
           case 112: {
@@ -307,17 +307,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
           case 16: {
-            shopGroupIdList_.AddEntriesFrom(ref input, _repeated_shopGroupIdList_codec);
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 48: {
             RollShopId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Retcode = input.ReadUInt32();
+          case 82:
+          case 80: {
+            shopGroupIdList_.AddEntriesFrom(ref input, _repeated_shopGroupIdList_codec);
             break;
           }
           case 112: {

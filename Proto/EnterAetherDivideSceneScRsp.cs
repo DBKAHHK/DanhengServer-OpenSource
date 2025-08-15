@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFFbnRlckFldGhlckRpdmlkZVNjZW5lU2NSc3AucHJvdG8iQwobRW50ZXJB",
-            "ZXRoZXJEaXZpZGVTY2VuZVNjUnNwEhMKC0JES05HRE9DUEdQGAUgASgNEg8K",
-            "B3JldGNvZGUYDSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "ZXRoZXJEaXZpZGVTY2VuZVNjUnNwEhMKC0JES05HRE9DUEdQGAwgASgNEg8K",
+            "B3JldGNvZGUYBCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BDKNGDOCPGP" field.</summary>
-    public const int BDKNGDOCPGPFieldNumber = 5;
+    public const int BDKNGDOCPGPFieldNumber = 12;
     private uint bDKNGDOCPGP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 4;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BDKNGDOCPGP != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(BDKNGDOCPGP);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
+      }
+      if (BDKNGDOCPGP != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(BDKNGDOCPGP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BDKNGDOCPGP != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(BDKNGDOCPGP);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
+      }
+      if (BDKNGDOCPGP != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(BDKNGDOCPGP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            BDKNGDOCPGP = input.ReadUInt32();
+          case 32: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Retcode = input.ReadUInt32();
+          case 96: {
+            BDKNGDOCPGP = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            BDKNGDOCPGP = input.ReadUInt32();
+          case 32: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Retcode = input.ReadUInt32();
+          case 96: {
+            BDKNGDOCPGP = input.ReadUInt32();
             break;
           }
         }

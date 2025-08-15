@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhNaXNzaW9uQ3VzdG9tVmFsdWUucHJvdG8iTgoSTWlzc2lvbkN1c3RvbVZh",
-            "bHVlEg0KBWluZGV4GAMgASgNEhMKC0RGREVLQU5KQkxHGAggASgJEhQKDGN1",
-            "c3RvbV92YWx1ZRgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "bHVlEg0KBWluZGV4GAogASgNEhMKC0RGREVLQU5KQkxHGAwgASgJEhQKDGN1",
+            "c3RvbV92YWx1ZRgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "index" field.</summary>
-    public const int IndexFieldNumber = 3;
+    public const int IndexFieldNumber = 10;
     private uint index_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DFDEKANJBLG" field.</summary>
-    public const int DFDEKANJBLGFieldNumber = 8;
+    public const int DFDEKANJBLGFieldNumber = 12;
     private string dFDEKANJBLG_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "custom_value" field.</summary>
-    public const int CustomValueFieldNumber = 5;
+    public const int CustomValueFieldNumber = 3;
     private uint customValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Index != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Index);
-      }
       if (CustomValue != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(CustomValue);
       }
+      if (Index != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Index);
+      }
       if (DFDEKANJBLG.Length != 0) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(98);
         output.WriteString(DFDEKANJBLG);
       }
       if (_unknownFields != null) {
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Index != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(Index);
-      }
       if (CustomValue != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(CustomValue);
       }
+      if (Index != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Index);
+      }
       if (DFDEKANJBLG.Length != 0) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(98);
         output.WriteString(DFDEKANJBLG);
       }
       if (_unknownFields != null) {
@@ -257,14 +257,14 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 24: {
-            Index = input.ReadUInt32();
-            break;
-          }
-          case 40: {
             CustomValue = input.ReadUInt32();
             break;
           }
-          case 66: {
+          case 80: {
+            Index = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             DFDEKANJBLG = input.ReadString();
             break;
           }
@@ -284,14 +284,14 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 24: {
-            Index = input.ReadUInt32();
-            break;
-          }
-          case 40: {
             CustomValue = input.ReadUInt32();
             break;
           }
-          case 66: {
+          case 80: {
+            Index = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             DFDEKANJBLG = input.ReadString();
             break;
           }

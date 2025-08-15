@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CilXb3JrYmVuY2hSZWZvcmdlSGV4QXZhdGFyVGFyZ2V0SW5mby5wcm90byJE",
             "CiNXb3JrYmVuY2hSZWZvcmdlSGV4QXZhdGFyVGFyZ2V0SW5mbxIdChV0YXJn",
-            "ZXRfcmVmb3JnZV9oZXhfaWQYDyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "ZXRfcmVmb3JnZV9oZXhfaWQYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "target_reforge_hex_id" field.</summary>
-    public const int TargetReforgeHexIdFieldNumber = 15;
+    public const int TargetReforgeHexIdFieldNumber = 9;
     private uint targetReforgeHexId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (TargetReforgeHexId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(72);
         output.WriteUInt32(TargetReforgeHexId);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TargetReforgeHexId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(72);
         output.WriteUInt32(TargetReforgeHexId);
       }
       if (_unknownFields != null) {
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 120: {
+          case 72: {
             TargetReforgeHexId = input.ReadUInt32();
             break;
           }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 120: {
+          case 72: {
             TargetReforgeHexId = input.ReadUInt32();
             break;
           }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVNb25vcG9seVNjcmFjaFJhZmZsZVRpY2tldENzUmVxLnByb3RvIkcKH01v",
-            "bm9wb2x5U2NyYWNoUmFmZmxlVGlja2V0Q3NSZXESDwoHcG9vbF9pZBgHIAEo",
-            "DRITCgtQTUVMQ0RGSEdLQxgNIAEoBEIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "bm9wb2x5U2NyYWNoUmFmZmxlVGlja2V0Q3NSZXESDwoHcG9vbF9pZBgFIAEo",
+            "DRITCgtQTUVMQ0RGSEdLQxgPIAEoBEIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pool_id" field.</summary>
-    public const int PoolIdFieldNumber = 7;
+    public const int PoolIdFieldNumber = 5;
     private uint poolId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PMELCDFHGKC" field.</summary>
-    public const int PMELCDFHGKCFieldNumber = 13;
+    public const int PMELCDFHGKCFieldNumber = 15;
     private ulong pMELCDFHGKC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PoolId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteUInt32(PoolId);
       }
       if (PMELCDFHGKC != 0UL) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt64(PMELCDFHGKC);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PoolId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteUInt32(PoolId);
       }
       if (PMELCDFHGKC != 0UL) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteUInt64(PMELCDFHGKC);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
+          case 40: {
             PoolId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 120: {
             PMELCDFHGKC = input.ReadUInt64();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
+          case 40: {
             PoolId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 120: {
             PMELCDFHGKC = input.ReadUInt64();
             break;
           }

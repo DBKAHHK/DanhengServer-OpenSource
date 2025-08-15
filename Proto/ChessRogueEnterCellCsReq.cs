@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5DaGVzc1JvZ3VlRW50ZXJDZWxsQ3NSZXEucHJvdG8iRgoYQ2hlc3NSb2d1",
             "ZUVudGVyQ2VsbENzUmVxEhkKEXNlbGVjdF9tb25zdGVyX2lkGAkgASgNEg8K",
-            "B2NlbGxfaWQYASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "B2NlbGxfaWQYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cell_id" field.</summary>
-    public const int CellIdFieldNumber = 1;
+    public const int CellIdFieldNumber = 10;
     private uint cellId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CellId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(CellId);
-      }
       if (SelectMonsterId != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(SelectMonsterId);
+      }
+      if (CellId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(CellId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CellId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(CellId);
-      }
       if (SelectMonsterId != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(SelectMonsterId);
+      }
+      if (CellId != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(CellId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            CellId = input.ReadUInt32();
-            break;
-          }
           case 72: {
             SelectMonsterId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            CellId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            CellId = input.ReadUInt32();
-            break;
-          }
           case 72: {
             SelectMonsterId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            CellId = input.ReadUInt32();
             break;
           }
         }

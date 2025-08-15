@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5HZXRQbGF5ZXJSZXBsYXlJbmZvU2NSc3AucHJvdG8aEFJlcGxheUluZm8u",
-            "cHJvdG8iTQoYR2V0UGxheWVyUmVwbGF5SW5mb1NjUnNwEiAKC0tHQ0ZFQUxB",
-            "TktPGAcgAygLMgsuUmVwbGF5SW5mbxIPCgdyZXRjb2RlGAwgASgNQh6qAhtF",
+            "cHJvdG8iTQoYR2V0UGxheWVyUmVwbGF5SW5mb1NjUnNwEg8KB3JldGNvZGUY",
+            "DCABKA0SIAoLS0dDRkVBTEFOS08YBiADKAsyCy5SZXBsYXlJbmZvQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ReplayInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPlayerReplayInfoScRsp), global::EggLink.DanhengServer.Proto.GetPlayerReplayInfoScRsp.Parser, new[]{ "KGCFEALANKO", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPlayerReplayInfoScRsp), global::EggLink.DanhengServer.Proto.GetPlayerReplayInfoScRsp.Parser, new[]{ "Retcode", "KGCFEALANKO" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPlayerReplayInfoScRsp(GetPlayerReplayInfoScRsp other) : this() {
-      kGCFEALANKO_ = other.kGCFEALANKO_.Clone();
       retcode_ = other.retcode_;
+      kGCFEALANKO_ = other.kGCFEALANKO_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,17 +82,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPlayerReplayInfoScRsp Clone() {
       return new GetPlayerReplayInfoScRsp(this);
-    }
-
-    /// <summary>Field number for the "KGCFEALANKO" field.</summary>
-    public const int KGCFEALANKOFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ReplayInfo> _repeated_kGCFEALANKO_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.ReplayInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ReplayInfo> kGCFEALANKO_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ReplayInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ReplayInfo> KGCFEALANKO {
-      get { return kGCFEALANKO_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -105,6 +94,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
+    }
+
+    /// <summary>Field number for the "KGCFEALANKO" field.</summary>
+    public const int KGCFEALANKOFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ReplayInfo> _repeated_kGCFEALANKO_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.ReplayInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ReplayInfo> kGCFEALANKO_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ReplayInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ReplayInfo> KGCFEALANKO {
+      get { return kGCFEALANKO_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!kGCFEALANKO_.Equals(other.kGCFEALANKO_)) return false;
       if (Retcode != other.Retcode) return false;
+      if(!kGCFEALANKO_.Equals(other.kGCFEALANKO_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= kGCFEALANKO_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= kGCFEALANKO_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += kGCFEALANKO_.CalculateSize(_repeated_kGCFEALANKO_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
+      size += kGCFEALANKO_.CalculateSize(_repeated_kGCFEALANKO_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      kGCFEALANKO_.Add(other.kGCFEALANKO_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      kGCFEALANKO_.Add(other.kGCFEALANKO_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 50: {
             kGCFEALANKO_.AddEntriesFrom(input, _repeated_kGCFEALANKO_codec);
             break;
           }
@@ -239,7 +239,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 50: {
             kGCFEALANKO_.AddEntriesFrom(ref input, _repeated_kGCFEALANKO_codec);
             break;
           }

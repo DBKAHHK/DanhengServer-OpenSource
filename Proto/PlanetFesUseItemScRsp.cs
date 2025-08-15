@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtQbGFuZXRGZXNVc2VJdGVtU2NSc3AucHJvdG8aFVBsYW5ldEZlc1Jld2Fy",
-            "ZC5wcm90byJKChVQbGFuZXRGZXNVc2VJdGVtU2NSc3ASDwoHcmV0Y29kZRgJ",
-            "IAEoDRIgCgZyZXdhcmQYCyABKAsyEC5QbGFuZXRGZXNSZXdhcmRCHqoCG0Vn",
+            "ZC5wcm90byJKChVQbGFuZXRGZXNVc2VJdGVtU2NSc3ASDwoHcmV0Y29kZRgE",
+            "IAEoDRIgCgZyZXdhcmQYCCABKAsyEC5QbGFuZXRGZXNSZXdhcmRCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlanetFesRewardReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 4;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 11;
+    public const int RewardFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.PlanetFesReward reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
       if (reward_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(66);
         output.WriteMessage(Reward);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
       if (reward_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(66);
         output.WriteMessage(Reward);
       }
       if (_unknownFields != null) {
@@ -230,11 +230,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 32: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 66: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.PlanetFesReward();
             }
@@ -256,11 +256,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 32: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 66: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.PlanetFesReward();
             }

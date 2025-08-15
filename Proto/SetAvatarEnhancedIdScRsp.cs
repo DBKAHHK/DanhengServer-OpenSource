@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5TZXRBdmF0YXJFbmhhbmNlZElkU2NSc3AucHJvdG8iYQoYU2V0QXZhdGFy",
-            "RW5oYW5jZWRJZFNjUnNwEg8KB3JldGNvZGUYDyABKA0SFgoOY3VyX2VuaGFu",
-            "Y2VfaWQYAiABKA0SHAoUc2V0X3RhcmdldF9hdmF0YXJfaWQYBSABKA1CHqoC",
+            "RW5oYW5jZWRJZFNjUnNwEg8KB3JldGNvZGUYDiABKA0SFgoOY3VyX2VuaGFu",
+            "Y2VfaWQYBCABKA0SHAoUc2V0X3RhcmdldF9hdmF0YXJfaWQYDyABKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 15;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_enhance_id" field.</summary>
-    public const int CurEnhanceIdFieldNumber = 2;
+    public const int CurEnhanceIdFieldNumber = 4;
     private uint curEnhanceId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "set_target_avatar_id" field.</summary>
-    public const int SetTargetAvatarIdFieldNumber = 5;
+    public const int SetTargetAvatarIdFieldNumber = 15;
     private uint setTargetAvatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (CurEnhanceId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(CurEnhanceId);
       }
-      if (SetTargetAvatarId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SetTargetAvatarId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
+      }
+      if (SetTargetAvatarId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(SetTargetAvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CurEnhanceId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(CurEnhanceId);
       }
-      if (SetTargetAvatarId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SetTargetAvatarId);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
+      }
+      if (SetTargetAvatarId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(SetTargetAvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 32: {
             CurEnhanceId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            SetTargetAvatarId = input.ReadUInt32();
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
           case 120: {
-            Retcode = input.ReadUInt32();
+            SetTargetAvatarId = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 32: {
             CurEnhanceId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            SetTargetAvatarId = input.ReadUInt32();
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
           case 120: {
-            Retcode = input.ReadUInt32();
+            SetTargetAvatarId = input.ReadUInt32();
             break;
           }
         }

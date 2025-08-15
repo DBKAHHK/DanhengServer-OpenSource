@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhNYXJrQ2hhdEVtb2ppU2NSc3AucHJvdG8iTQoSTWFya0NoYXRFbW9qaVNj",
-            "UnNwEg8KB3JldGNvZGUYDSABKA0SFAoMaXNfcmVtb3ZlX2lkGAggASgIEhAK",
-            "CGV4dHJhX2lkGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "UnNwEg8KB3JldGNvZGUYByABKA0SEAoIZXh0cmFfaWQYASABKA0SFAoMaXNf",
+            "cmVtb3ZlX2lkGAsgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkChatEmojiScRsp), global::EggLink.DanhengServer.Proto.MarkChatEmojiScRsp.Parser, new[]{ "Retcode", "IsRemoveId", "ExtraId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarkChatEmojiScRsp), global::EggLink.DanhengServer.Proto.MarkChatEmojiScRsp.Parser, new[]{ "Retcode", "ExtraId", "IsRemoveId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarkChatEmojiScRsp(MarkChatEmojiScRsp other) : this() {
       retcode_ = other.retcode_;
-      isRemoveId_ = other.isRemoveId_;
       extraId_ = other.extraId_;
+      isRemoveId_ = other.isRemoveId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,20 +97,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "is_remove_id" field.</summary>
-    public const int IsRemoveIdFieldNumber = 8;
-    private bool isRemoveId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsRemoveId {
-      get { return isRemoveId_; }
-      set {
-        isRemoveId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "extra_id" field.</summary>
-    public const int ExtraIdFieldNumber = 11;
+    public const int ExtraIdFieldNumber = 1;
     private uint extraId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return extraId_; }
       set {
         extraId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_remove_id" field.</summary>
+    public const int IsRemoveIdFieldNumber = 11;
+    private bool isRemoveId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsRemoveId {
+      get { return isRemoveId_; }
+      set {
+        isRemoveId_ = value;
       }
     }
 
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (IsRemoveId != other.IsRemoveId) return false;
       if (ExtraId != other.ExtraId) return false;
+      if (IsRemoveId != other.IsRemoveId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (IsRemoveId != false) hash ^= IsRemoveId.GetHashCode();
       if (ExtraId != 0) hash ^= ExtraId.GetHashCode();
+      if (IsRemoveId != false) hash ^= IsRemoveId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsRemoveId != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(IsRemoveId);
-      }
       if (ExtraId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteUInt32(ExtraId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
+      }
+      if (IsRemoveId != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(IsRemoveId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsRemoveId != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(IsRemoveId);
-      }
       if (ExtraId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteUInt32(ExtraId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
+      }
+      if (IsRemoveId != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(IsRemoveId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -214,11 +214,11 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (IsRemoveId != false) {
-        size += 1 + 1;
-      }
       if (ExtraId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExtraId);
+      }
+      if (IsRemoveId != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -235,11 +235,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.IsRemoveId != false) {
-        IsRemoveId = other.IsRemoveId;
-      }
       if (other.ExtraId != 0) {
         ExtraId = other.ExtraId;
+      }
+      if (other.IsRemoveId != false) {
+        IsRemoveId = other.IsRemoveId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            IsRemoveId = input.ReadBool();
-            break;
-          }
-          case 88: {
+          case 8: {
             ExtraId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 56: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            IsRemoveId = input.ReadBool();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            IsRemoveId = input.ReadBool();
-            break;
-          }
-          case 88: {
+          case 8: {
             ExtraId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 56: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            IsRemoveId = input.ReadBool();
             break;
           }
         }

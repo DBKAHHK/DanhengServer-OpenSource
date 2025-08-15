@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJDaGFsbGVuZ2VTdG9yeVN0YWdlVGVydGluZ2dpLnByb3RvGhlDaGFsbGVu",
             "Z2VMaW5ldXBMaXN0LnByb3RvIqMBChxDaGFsbGVuZ2VTdG9yeVN0YWdlVGVy",
-            "dGluZ2dpEhAKCGJ1ZmZfdHdvGA4gASgNEhAKCHNjb3JlX2lkGA0gASgNEg0K",
-            "BWxldmVsGAkgASgNEhAKCGJ1ZmZfb25lGAMgASgNEikKC2xpbmV1cF9saXN0",
-            "GAggAygLMhQuQ2hhbGxlbmdlTGluZXVwTGlzdBITCgtJTkhERE5OUEJEQhgE",
+            "dGluZ2dpEhMKC0lOSERETk5QQkRCGAogASgNEhAKCGJ1ZmZfb25lGAEgASgN",
+            "EhAKCHNjb3JlX2lkGAggASgNEhAKCGJ1ZmZfdHdvGAkgASgNEikKC2xpbmV1",
+            "cF9saXN0GAQgAygLMhQuQ2hhbGxlbmdlTGluZXVwTGlzdBINCgVsZXZlbBgF",
             "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeLineupListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeStoryStageTertinggi), global::EggLink.DanhengServer.Proto.ChallengeStoryStageTertinggi.Parser, new[]{ "BuffTwo", "ScoreId", "Level", "BuffOne", "LineupList", "INHDDNNPBDB" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeStoryStageTertinggi), global::EggLink.DanhengServer.Proto.ChallengeStoryStageTertinggi.Parser, new[]{ "INHDDNNPBDB", "BuffOne", "ScoreId", "BuffTwo", "LineupList", "Level" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,12 +75,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengeStoryStageTertinggi(ChallengeStoryStageTertinggi other) : this() {
-      buffTwo_ = other.buffTwo_;
-      scoreId_ = other.scoreId_;
-      level_ = other.level_;
-      buffOne_ = other.buffOne_;
-      lineupList_ = other.lineupList_.Clone();
       iNHDDNNPBDB_ = other.iNHDDNNPBDB_;
+      buffOne_ = other.buffOne_;
+      scoreId_ = other.scoreId_;
+      buffTwo_ = other.buffTwo_;
+      lineupList_ = other.lineupList_.Clone();
+      level_ = other.level_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,44 +90,20 @@ namespace EggLink.DanhengServer.Proto {
       return new ChallengeStoryStageTertinggi(this);
     }
 
-    /// <summary>Field number for the "buff_two" field.</summary>
-    public const int BuffTwoFieldNumber = 14;
-    private uint buffTwo_;
+    /// <summary>Field number for the "INHDDNNPBDB" field.</summary>
+    public const int INHDDNNPBDBFieldNumber = 10;
+    private uint iNHDDNNPBDB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BuffTwo {
-      get { return buffTwo_; }
+    public uint INHDDNNPBDB {
+      get { return iNHDDNNPBDB_; }
       set {
-        buffTwo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 13;
-    private uint scoreId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ScoreId {
-      get { return scoreId_; }
-      set {
-        scoreId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 9;
-    private uint level_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Level {
-      get { return level_; }
-      set {
-        level_ = value;
+        iNHDDNNPBDB_ = value;
       }
     }
 
     /// <summary>Field number for the "buff_one" field.</summary>
-    public const int BuffOneFieldNumber = 3;
+    public const int BuffOneFieldNumber = 1;
     private uint buffOne_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,10 +114,34 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "score_id" field.</summary>
+    public const int ScoreIdFieldNumber = 8;
+    private uint scoreId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ScoreId {
+      get { return scoreId_; }
+      set {
+        scoreId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "buff_two" field.</summary>
+    public const int BuffTwoFieldNumber = 9;
+    private uint buffTwo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BuffTwo {
+      get { return buffTwo_; }
+      set {
+        buffTwo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "lineup_list" field.</summary>
-    public const int LineupListFieldNumber = 8;
+    public const int LineupListFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChallengeLineupList> _repeated_lineupList_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.ChallengeLineupList.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.ChallengeLineupList.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengeLineupList> lineupList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengeLineupList>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -149,15 +149,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return lineupList_; }
     }
 
-    /// <summary>Field number for the "INHDDNNPBDB" field.</summary>
-    public const int INHDDNNPBDBFieldNumber = 4;
-    private uint iNHDDNNPBDB_;
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 5;
+    private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint INHDDNNPBDB {
-      get { return iNHDDNNPBDB_; }
+    public uint Level {
+      get { return level_; }
       set {
-        iNHDDNNPBDB_ = value;
+        level_ = value;
       }
     }
 
@@ -176,12 +176,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BuffTwo != other.BuffTwo) return false;
-      if (ScoreId != other.ScoreId) return false;
-      if (Level != other.Level) return false;
-      if (BuffOne != other.BuffOne) return false;
-      if(!lineupList_.Equals(other.lineupList_)) return false;
       if (INHDDNNPBDB != other.INHDDNNPBDB) return false;
+      if (BuffOne != other.BuffOne) return false;
+      if (ScoreId != other.ScoreId) return false;
+      if (BuffTwo != other.BuffTwo) return false;
+      if(!lineupList_.Equals(other.lineupList_)) return false;
+      if (Level != other.Level) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -189,12 +189,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BuffTwo != 0) hash ^= BuffTwo.GetHashCode();
-      if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
-      if (Level != 0) hash ^= Level.GetHashCode();
-      if (BuffOne != 0) hash ^= BuffOne.GetHashCode();
-      hash ^= lineupList_.GetHashCode();
       if (INHDDNNPBDB != 0) hash ^= INHDDNNPBDB.GetHashCode();
+      if (BuffOne != 0) hash ^= BuffOne.GetHashCode();
+      if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
+      if (BuffTwo != 0) hash ^= BuffTwo.GetHashCode();
+      hash ^= lineupList_.GetHashCode();
+      if (Level != 0) hash ^= Level.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -214,25 +214,25 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (BuffOne != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(BuffOne);
-      }
-      if (INHDDNNPBDB != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(INHDDNNPBDB);
       }
       lineupList_.WriteTo(output, _repeated_lineupList_codec);
       if (Level != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(Level);
       }
       if (ScoreId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(64);
         output.WriteUInt32(ScoreId);
       }
       if (BuffTwo != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(72);
         output.WriteUInt32(BuffTwo);
+      }
+      if (INHDDNNPBDB != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(INHDDNNPBDB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -245,25 +245,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BuffOne != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(BuffOne);
-      }
-      if (INHDDNNPBDB != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(INHDDNNPBDB);
       }
       lineupList_.WriteTo(ref output, _repeated_lineupList_codec);
       if (Level != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(Level);
       }
       if (ScoreId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(64);
         output.WriteUInt32(ScoreId);
       }
       if (BuffTwo != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(72);
         output.WriteUInt32(BuffTwo);
+      }
+      if (INHDDNNPBDB != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(INHDDNNPBDB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -275,21 +275,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BuffTwo != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffTwo);
-      }
-      if (ScoreId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
-      }
-      if (Level != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      if (INHDDNNPBDB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INHDDNNPBDB);
       }
       if (BuffOne != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffOne);
       }
+      if (ScoreId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
+      }
+      if (BuffTwo != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffTwo);
+      }
       size += lineupList_.CalculateSize(_repeated_lineupList_codec);
-      if (INHDDNNPBDB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INHDDNNPBDB);
+      if (Level != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -303,21 +303,21 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BuffTwo != 0) {
-        BuffTwo = other.BuffTwo;
-      }
-      if (other.ScoreId != 0) {
-        ScoreId = other.ScoreId;
-      }
-      if (other.Level != 0) {
-        Level = other.Level;
+      if (other.INHDDNNPBDB != 0) {
+        INHDDNNPBDB = other.INHDDNNPBDB;
       }
       if (other.BuffOne != 0) {
         BuffOne = other.BuffOne;
       }
+      if (other.ScoreId != 0) {
+        ScoreId = other.ScoreId;
+      }
+      if (other.BuffTwo != 0) {
+        BuffTwo = other.BuffTwo;
+      }
       lineupList_.Add(other.lineupList_);
-      if (other.INHDDNNPBDB != 0) {
-        INHDDNNPBDB = other.INHDDNNPBDB;
+      if (other.Level != 0) {
+        Level = other.Level;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -334,28 +334,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 8: {
             BuffOne = input.ReadUInt32();
             break;
           }
-          case 32: {
-            INHDDNNPBDB = input.ReadUInt32();
-            break;
-          }
-          case 66: {
+          case 34: {
             lineupList_.AddEntriesFrom(input, _repeated_lineupList_codec);
             break;
           }
-          case 72: {
+          case 40: {
             Level = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 64: {
             ScoreId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 72: {
             BuffTwo = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            INHDDNNPBDB = input.ReadUInt32();
             break;
           }
         }
@@ -373,28 +373,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 8: {
             BuffOne = input.ReadUInt32();
             break;
           }
-          case 32: {
-            INHDDNNPBDB = input.ReadUInt32();
-            break;
-          }
-          case 66: {
+          case 34: {
             lineupList_.AddEntriesFrom(ref input, _repeated_lineupList_codec);
             break;
           }
-          case 72: {
+          case 40: {
             Level = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 64: {
             ScoreId = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 72: {
             BuffTwo = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            INHDDNNPBDB = input.ReadUInt32();
             break;
           }
         }

@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFOSktFTk5DSkxDRi5wcm90bxoRSEhQSUFGQkhKQ0YucHJvdG8aGVRyYWlu",
-            "UGFydHlFdmVudFR5cGUucHJvdG8ibQoLTkpLRU5OQ0pMQ0YSKQoLSE9JT0tC",
-            "S0dGRE4YBiABKA4yFC5UcmFpblBhcnR5RXZlbnRUeXBlEiEKC29wdGlvbl9s",
-            "aXN0GAUgAygLMgwuSEhQSUFGQkhKQ0YSEAoIZXZlbnRfaWQYCCABKA1CHqoC",
+            "UGFydHlFdmVudFR5cGUucHJvdG8ibQoLTkpLRU5OQ0pMQ0YSEAoIZXZlbnRf",
+            "aWQYASABKA0SIQoLb3B0aW9uX2xpc3QYAyADKAsyDC5ISFBJQUZCSEpDRhIp",
+            "CgtIT0lPS0JLR0ZEThgGIAEoDjIULlRyYWluUGFydHlFdmVudFR5cGVCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HHPIAFBHJCFReflection.Descriptor, global::EggLink.DanhengServer.Proto.TrainPartyEventTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NJKENNCJLCF), global::EggLink.DanhengServer.Proto.NJKENNCJLCF.Parser, new[]{ "HOIOKBKGFDN", "OptionList", "EventId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NJKENNCJLCF), global::EggLink.DanhengServer.Proto.NJKENNCJLCF.Parser, new[]{ "EventId", "OptionList", "HOIOKBKGFDN" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NJKENNCJLCF(NJKENNCJLCF other) : this() {
-      hOIOKBKGFDN_ = other.hOIOKBKGFDN_;
-      optionList_ = other.optionList_.Clone();
       eventId_ = other.eventId_;
+      optionList_ = other.optionList_.Clone();
+      hOIOKBKGFDN_ = other.hOIOKBKGFDN_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,6 +84,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NJKENNCJLCF Clone() {
       return new NJKENNCJLCF(this);
+    }
+
+    /// <summary>Field number for the "event_id" field.</summary>
+    public const int EventIdFieldNumber = 1;
+    private uint eventId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint EventId {
+      get { return eventId_; }
+      set {
+        eventId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "option_list" field.</summary>
+    public const int OptionListFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HHPIAFBHJCF> _repeated_optionList_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.HHPIAFBHJCF.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HHPIAFBHJCF> optionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HHPIAFBHJCF>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HHPIAFBHJCF> OptionList {
+      get { return optionList_; }
     }
 
     /// <summary>Field number for the "HOIOKBKGFDN" field.</summary>
@@ -95,29 +118,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return hOIOKBKGFDN_; }
       set {
         hOIOKBKGFDN_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "option_list" field.</summary>
-    public const int OptionListFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HHPIAFBHJCF> _repeated_optionList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.HHPIAFBHJCF.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HHPIAFBHJCF> optionList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HHPIAFBHJCF>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HHPIAFBHJCF> OptionList {
-      get { return optionList_; }
-    }
-
-    /// <summary>Field number for the "event_id" field.</summary>
-    public const int EventIdFieldNumber = 8;
-    private uint eventId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EventId {
-      get { return eventId_; }
-      set {
-        eventId_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (HOIOKBKGFDN != other.HOIOKBKGFDN) return false;
-      if(!optionList_.Equals(other.optionList_)) return false;
       if (EventId != other.EventId) return false;
+      if(!optionList_.Equals(other.optionList_)) return false;
+      if (HOIOKBKGFDN != other.HOIOKBKGFDN) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HOIOKBKGFDN != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) hash ^= HOIOKBKGFDN.GetHashCode();
-      hash ^= optionList_.GetHashCode();
       if (EventId != 0) hash ^= EventId.GetHashCode();
+      hash ^= optionList_.GetHashCode();
+      if (HOIOKBKGFDN != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) hash ^= HOIOKBKGFDN.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,14 +167,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (EventId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(EventId);
+      }
       optionList_.WriteTo(output, _repeated_optionList_codec);
       if (HOIOKBKGFDN != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) {
         output.WriteRawTag(48);
         output.WriteEnum((int) HOIOKBKGFDN);
-      }
-      if (EventId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(EventId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -186,14 +186,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EventId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(EventId);
+      }
       optionList_.WriteTo(ref output, _repeated_optionList_codec);
       if (HOIOKBKGFDN != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) {
         output.WriteRawTag(48);
         output.WriteEnum((int) HOIOKBKGFDN);
-      }
-      if (EventId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(EventId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -205,12 +205,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HOIOKBKGFDN != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HOIOKBKGFDN);
-      }
-      size += optionList_.CalculateSize(_repeated_optionList_codec);
       if (EventId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EventId);
+      }
+      size += optionList_.CalculateSize(_repeated_optionList_codec);
+      if (HOIOKBKGFDN != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HOIOKBKGFDN);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -224,12 +224,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.HOIOKBKGFDN != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) {
-        HOIOKBKGFDN = other.HOIOKBKGFDN;
-      }
-      optionList_.Add(other.optionList_);
       if (other.EventId != 0) {
         EventId = other.EventId;
+      }
+      optionList_.Add(other.optionList_);
+      if (other.HOIOKBKGFDN != global::EggLink.DanhengServer.Proto.TrainPartyEventType.KDialogueEventNone) {
+        HOIOKBKGFDN = other.HOIOKBKGFDN;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 8: {
+            EventId = input.ReadUInt32();
+            break;
+          }
+          case 26: {
             optionList_.AddEntriesFrom(input, _repeated_optionList_codec);
             break;
           }
           case 48: {
             HOIOKBKGFDN = (global::EggLink.DanhengServer.Proto.TrainPartyEventType) input.ReadEnum();
-            break;
-          }
-          case 64: {
-            EventId = input.ReadUInt32();
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 8: {
+            EventId = input.ReadUInt32();
+            break;
+          }
+          case 26: {
             optionList_.AddEntriesFrom(ref input, _repeated_optionList_codec);
             break;
           }
           case 48: {
             HOIOKBKGFDN = (global::EggLink.DanhengServer.Proto.TrainPartyEventType) input.ReadEnum();
-            break;
-          }
-          case 64: {
-            EventId = input.ReadUInt32();
             break;
           }
         }

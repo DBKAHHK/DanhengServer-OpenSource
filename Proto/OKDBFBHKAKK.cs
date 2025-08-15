@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPS0RCRkJIS0FLSy5wcm90byKzAQoLT0tEQkZCSEtBS0sSEwoLQ0VJSEZP",
-            "S0VOT0IYDSADKA0SEwoLTEJCSklNQU1DR0UYASABKA0SMgoLTEpMS05ESkNC",
-            "TUYYDiADKAsyHS5PS0RCRkJIS0FLSy5MSkxLTkRKQ0JNRkVudHJ5EhIKCmR1",
-            "cmFiaWxpdHkYBiABKA0aMgoQTEpMS05ESkNCTUZFbnRyeRILCgNrZXkYASAB",
+            "S0VOT0IYDCADKA0SEgoKZHVyYWJpbGl0eRgLIAEoDRIyCgtMSkxLTkRKQ0JN",
+            "RhgPIAMoCzIdLk9LREJGQkhLQUtLLkxKTEtOREpDQk1GRW50cnkSEwoLTEJC",
+            "SklNQU1DR0UYByABKA0aMgoQTEpMS05ESkNCTUZFbnRyeRILCgNrZXkYASAB",
             "KA0SDQoFdmFsdWUYAiABKA06AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OKDBFBHKAKK), global::EggLink.DanhengServer.Proto.OKDBFBHKAKK.Parser, new[]{ "CEIHFOKENOB", "LBBJIMAMCGE", "LJLKNDJCBMF", "Durability" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OKDBFBHKAKK), global::EggLink.DanhengServer.Proto.OKDBFBHKAKK.Parser, new[]{ "CEIHFOKENOB", "Durability", "LJLKNDJCBMF", "LBBJIMAMCGE" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -76,9 +76,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OKDBFBHKAKK(OKDBFBHKAKK other) : this() {
       cEIHFOKENOB_ = other.cEIHFOKENOB_.Clone();
-      lBBJIMAMCGE_ = other.lBBJIMAMCGE_;
-      lJLKNDJCBMF_ = other.lJLKNDJCBMF_.Clone();
       durability_ = other.durability_;
+      lJLKNDJCBMF_ = other.lJLKNDJCBMF_.Clone();
+      lBBJIMAMCGE_ = other.lBBJIMAMCGE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,9 +89,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CEIHFOKENOB" field.</summary>
-    public const int CEIHFOKENOBFieldNumber = 13;
+    public const int CEIHFOKENOBFieldNumber = 12;
     private static readonly pb::FieldCodec<uint> _repeated_cEIHFOKENOB_codec
-        = pb::FieldCodec.ForUInt32(106);
+        = pb::FieldCodec.ForUInt32(98);
     private readonly pbc::RepeatedField<uint> cEIHFOKENOB_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,31 +99,8 @@ namespace EggLink.DanhengServer.Proto {
       get { return cEIHFOKENOB_; }
     }
 
-    /// <summary>Field number for the "LBBJIMAMCGE" field.</summary>
-    public const int LBBJIMAMCGEFieldNumber = 1;
-    private uint lBBJIMAMCGE_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LBBJIMAMCGE {
-      get { return lBBJIMAMCGE_; }
-      set {
-        lBBJIMAMCGE_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "LJLKNDJCBMF" field.</summary>
-    public const int LJLKNDJCBMFFieldNumber = 14;
-    private static readonly pbc::MapField<uint, uint>.Codec _map_lJLKNDJCBMF_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 114);
-    private readonly pbc::MapField<uint, uint> lJLKNDJCBMF_ = new pbc::MapField<uint, uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, uint> LJLKNDJCBMF {
-      get { return lJLKNDJCBMF_; }
-    }
-
     /// <summary>Field number for the "durability" field.</summary>
-    public const int DurabilityFieldNumber = 6;
+    public const int DurabilityFieldNumber = 11;
     private uint durability_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +108,29 @@ namespace EggLink.DanhengServer.Proto {
       get { return durability_; }
       set {
         durability_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "LJLKNDJCBMF" field.</summary>
+    public const int LJLKNDJCBMFFieldNumber = 15;
+    private static readonly pbc::MapField<uint, uint>.Codec _map_lJLKNDJCBMF_codec
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 122);
+    private readonly pbc::MapField<uint, uint> lJLKNDJCBMF_ = new pbc::MapField<uint, uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<uint, uint> LJLKNDJCBMF {
+      get { return lJLKNDJCBMF_; }
+    }
+
+    /// <summary>Field number for the "LBBJIMAMCGE" field.</summary>
+    public const int LBBJIMAMCGEFieldNumber = 7;
+    private uint lBBJIMAMCGE_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LBBJIMAMCGE {
+      get { return lBBJIMAMCGE_; }
+      set {
+        lBBJIMAMCGE_ = value;
       }
     }
 
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!cEIHFOKENOB_.Equals(other.cEIHFOKENOB_)) return false;
-      if (LBBJIMAMCGE != other.LBBJIMAMCGE) return false;
-      if (!LJLKNDJCBMF.Equals(other.LJLKNDJCBMF)) return false;
       if (Durability != other.Durability) return false;
+      if (!LJLKNDJCBMF.Equals(other.LJLKNDJCBMF)) return false;
+      if (LBBJIMAMCGE != other.LBBJIMAMCGE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,9 +161,9 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= cEIHFOKENOB_.GetHashCode();
-      if (LBBJIMAMCGE != 0) hash ^= LBBJIMAMCGE.GetHashCode();
-      hash ^= LJLKNDJCBMF.GetHashCode();
       if (Durability != 0) hash ^= Durability.GetHashCode();
+      hash ^= LJLKNDJCBMF.GetHashCode();
+      if (LBBJIMAMCGE != 0) hash ^= LBBJIMAMCGE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,11 +183,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (LBBJIMAMCGE != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(LBBJIMAMCGE);
       }
       if (Durability != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(88);
         output.WriteUInt32(Durability);
       }
       cEIHFOKENOB_.WriteTo(output, _repeated_cEIHFOKENOB_codec);
@@ -203,11 +203,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LBBJIMAMCGE != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(56);
         output.WriteUInt32(LBBJIMAMCGE);
       }
       if (Durability != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(88);
         output.WriteUInt32(Durability);
       }
       cEIHFOKENOB_.WriteTo(ref output, _repeated_cEIHFOKENOB_codec);
@@ -223,12 +223,12 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += cEIHFOKENOB_.CalculateSize(_repeated_cEIHFOKENOB_codec);
-      if (LBBJIMAMCGE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LBBJIMAMCGE);
-      }
-      size += lJLKNDJCBMF_.CalculateSize(_map_lJLKNDJCBMF_codec);
       if (Durability != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Durability);
+      }
+      size += lJLKNDJCBMF_.CalculateSize(_map_lJLKNDJCBMF_codec);
+      if (LBBJIMAMCGE != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LBBJIMAMCGE);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -243,12 +243,12 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       cEIHFOKENOB_.Add(other.cEIHFOKENOB_);
-      if (other.LBBJIMAMCGE != 0) {
-        LBBJIMAMCGE = other.LBBJIMAMCGE;
-      }
-      lJLKNDJCBMF_.MergeFrom(other.lJLKNDJCBMF_);
       if (other.Durability != 0) {
         Durability = other.Durability;
+      }
+      lJLKNDJCBMF_.MergeFrom(other.lJLKNDJCBMF_);
+      if (other.LBBJIMAMCGE != 0) {
+        LBBJIMAMCGE = other.LBBJIMAMCGE;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -265,20 +265,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 56: {
             LBBJIMAMCGE = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 88: {
             Durability = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
+          case 98:
+          case 96: {
             cEIHFOKENOB_.AddEntriesFrom(input, _repeated_cEIHFOKENOB_codec);
             break;
           }
-          case 114: {
+          case 122: {
             lJLKNDJCBMF_.AddEntriesFrom(input, _map_lJLKNDJCBMF_codec);
             break;
           }
@@ -297,20 +297,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 56: {
             LBBJIMAMCGE = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 88: {
             Durability = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
+          case 98:
+          case 96: {
             cEIHFOKENOB_.AddEntriesFrom(ref input, _repeated_cEIHFOKENOB_codec);
             break;
           }
-          case 114: {
+          case 122: {
             lJLKNDJCBMF_.AddEntriesFrom(ref input, _map_lJLKNDJCBMF_codec);
             break;
           }

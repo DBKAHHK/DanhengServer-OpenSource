@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhNYXRjaFRocmVlQmlyZEluZm8ucHJvdG8iWQoSTWF0Y2hUaHJlZUJpcmRJ",
-            "bmZvEhYKDmJpcmRfdG9wX3Njb3JlGAggASgNEg8KB2JpcmRfaWQYCyABKA0S",
-            "CwoDcG9zGA4gASgNEg0KBWNvdW50GAogASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmZvEg8KB2JpcmRfaWQYDyABKA0SFgoOYmlyZF90b3Bfc2NvcmUYDCABKA0S",
+            "DQoFY291bnQYDSABKA0SCwoDcG9zGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeBirdInfo), global::EggLink.DanhengServer.Proto.MatchThreeBirdInfo.Parser, new[]{ "BirdTopScore", "BirdId", "Pos", "Count" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeBirdInfo), global::EggLink.DanhengServer.Proto.MatchThreeBirdInfo.Parser, new[]{ "BirdId", "BirdTopScore", "Count", "Pos" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MatchThreeBirdInfo(MatchThreeBirdInfo other) : this() {
-      birdTopScore_ = other.birdTopScore_;
       birdId_ = other.birdId_;
-      pos_ = other.pos_;
+      birdTopScore_ = other.birdTopScore_;
       count_ = other.count_;
+      pos_ = other.pos_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MatchThreeBirdInfo(this);
     }
 
-    /// <summary>Field number for the "bird_top_score" field.</summary>
-    public const int BirdTopScoreFieldNumber = 8;
-    private uint birdTopScore_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BirdTopScore {
-      get { return birdTopScore_; }
-      set {
-        birdTopScore_ = value;
-      }
-    }
-
     /// <summary>Field number for the "bird_id" field.</summary>
-    public const int BirdIdFieldNumber = 11;
+    public const int BirdIdFieldNumber = 15;
     private uint birdId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,20 +98,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "pos" field.</summary>
-    public const int PosFieldNumber = 14;
-    private uint pos_;
+    /// <summary>Field number for the "bird_top_score" field.</summary>
+    public const int BirdTopScoreFieldNumber = 12;
+    private uint birdTopScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Pos {
-      get { return pos_; }
+    public uint BirdTopScore {
+      get { return birdTopScore_; }
       set {
-        pos_ = value;
+        birdTopScore_ = value;
       }
     }
 
     /// <summary>Field number for the "count" field.</summary>
-    public const int CountFieldNumber = 10;
+    public const int CountFieldNumber = 13;
     private uint count_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +119,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return count_; }
       set {
         count_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pos" field.</summary>
+    public const int PosFieldNumber = 5;
+    private uint pos_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Pos {
+      get { return pos_; }
+      set {
+        pos_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BirdTopScore != other.BirdTopScore) return false;
       if (BirdId != other.BirdId) return false;
-      if (Pos != other.Pos) return false;
+      if (BirdTopScore != other.BirdTopScore) return false;
       if (Count != other.Count) return false;
+      if (Pos != other.Pos) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BirdTopScore != 0) hash ^= BirdTopScore.GetHashCode();
       if (BirdId != 0) hash ^= BirdId.GetHashCode();
-      if (Pos != 0) hash ^= Pos.GetHashCode();
+      if (BirdTopScore != 0) hash ^= BirdTopScore.GetHashCode();
       if (Count != 0) hash ^= Count.GetHashCode();
+      if (Pos != 0) hash ^= Pos.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Pos != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Pos);
+      }
       if (BirdTopScore != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(96);
         output.WriteUInt32(BirdTopScore);
       }
       if (Count != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(104);
         output.WriteUInt32(Count);
       }
       if (BirdId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(120);
         output.WriteUInt32(BirdId);
-      }
-      if (Pos != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(Pos);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Pos != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Pos);
+      }
       if (BirdTopScore != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(96);
         output.WriteUInt32(BirdTopScore);
       }
       if (Count != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(104);
         output.WriteUInt32(Count);
       }
       if (BirdId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(120);
         output.WriteUInt32(BirdId);
-      }
-      if (Pos != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(Pos);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BirdTopScore != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BirdTopScore);
-      }
       if (BirdId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BirdId);
       }
-      if (Pos != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pos);
+      if (BirdTopScore != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BirdTopScore);
       }
       if (Count != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
+      }
+      if (Pos != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pos);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BirdTopScore != 0) {
-        BirdTopScore = other.BirdTopScore;
-      }
       if (other.BirdId != 0) {
         BirdId = other.BirdId;
       }
-      if (other.Pos != 0) {
-        Pos = other.Pos;
+      if (other.BirdTopScore != 0) {
+        BirdTopScore = other.BirdTopScore;
       }
       if (other.Count != 0) {
         Count = other.Count;
+      }
+      if (other.Pos != 0) {
+        Pos = other.Pos;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 40: {
+            Pos = input.ReadUInt32();
+            break;
+          }
+          case 96: {
             BirdTopScore = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 104: {
             Count = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 120: {
             BirdId = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            Pos = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 40: {
+            Pos = input.ReadUInt32();
+            break;
+          }
+          case 96: {
             BirdTopScore = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 104: {
             Count = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 120: {
             BirdId = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            Pos = input.ReadUInt32();
             break;
           }
         }

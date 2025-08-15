@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBTZXRHcm93dGhUYXJnZXRBdmF0YXJDc1JlcS5wcm90bxobR3Jvd3RoVGFy",
             "dGdldEZ1bmNUeXBlLnByb3RvGhdHcm93dGhUYXJnZXRTdGF0ZS5wcm90byKh",
-            "AQoaU2V0R3Jvd3RoVGFyZ2V0QXZhdGFyQ3NSZXESIgoGc291cmNlGAUgASgO",
-            "MhIuR3Jvd3RoVGFyZ2V0U3RhdGUSEwoLSUROTUVLTkhMUE8YCCABKA0SEQoJ",
-            "YXZhdGFyX2lkGAQgASgNEjcKF2dyb3d0aF90YXJnZXRfdHlwZV9saXN0GA4g",
-            "AygOMhYuR3Jvd3RoVGFydGdldEZ1bmNUeXBlQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "AQoaU2V0R3Jvd3RoVGFyZ2V0QXZhdGFyQ3NSZXESIgoGc291cmNlGAYgASgO",
+            "MhIuR3Jvd3RoVGFyZ2V0U3RhdGUSEwoLSUROTUVLTkhMUE8YCiABKA0SNwoX",
+            "Z3Jvd3RoX3RhcmdldF90eXBlX2xpc3QYCSADKA4yFi5Hcm93dGhUYXJ0Z2V0",
+            "RnVuY1R5cGUSEQoJYXZhdGFyX2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GrowthTartgetFuncTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GrowthTargetStateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetGrowthTargetAvatarCsReq), global::EggLink.DanhengServer.Proto.SetGrowthTargetAvatarCsReq.Parser, new[]{ "Source", "IDNMEKNHLPO", "AvatarId", "GrowthTargetTypeList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetGrowthTargetAvatarCsReq), global::EggLink.DanhengServer.Proto.SetGrowthTargetAvatarCsReq.Parser, new[]{ "Source", "IDNMEKNHLPO", "GrowthTargetTypeList", "AvatarId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,8 +78,8 @@ namespace EggLink.DanhengServer.Proto {
     public SetGrowthTargetAvatarCsReq(SetGrowthTargetAvatarCsReq other) : this() {
       source_ = other.source_;
       iDNMEKNHLPO_ = other.iDNMEKNHLPO_;
-      avatarId_ = other.avatarId_;
       growthTargetTypeList_ = other.growthTargetTypeList_.Clone();
+      avatarId_ = other.avatarId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,7 +90,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "source" field.</summary>
-    public const int SourceFieldNumber = 5;
+    public const int SourceFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.GrowthTargetState source_ = global::EggLink.DanhengServer.Proto.GrowthTargetState.GrowthTargetAvatarNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -102,7 +102,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IDNMEKNHLPO" field.</summary>
-    public const int IDNMEKNHLPOFieldNumber = 8;
+    public const int IDNMEKNHLPOFieldNumber = 10;
     private uint iDNMEKNHLPO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -113,8 +113,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "growth_target_type_list" field.</summary>
+    public const int GrowthTargetTypeListFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> _repeated_growthTargetTypeList_codec
+        = pb::FieldCodec.ForEnum(74, x => (int) x, x => (global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType) x);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> growthTargetTypeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> GrowthTargetTypeList {
+      get { return growthTargetTypeList_; }
+    }
+
     /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 4;
+    public const int AvatarIdFieldNumber = 13;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,17 +134,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         avatarId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "growth_target_type_list" field.</summary>
-    public const int GrowthTargetTypeListFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> _repeated_growthTargetTypeList_codec
-        = pb::FieldCodec.ForEnum(114, x => (int) x, x => (global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType) x);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> growthTargetTypeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> GrowthTargetTypeList {
-      get { return growthTargetTypeList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -153,8 +153,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (Source != other.Source) return false;
       if (IDNMEKNHLPO != other.IDNMEKNHLPO) return false;
-      if (AvatarId != other.AvatarId) return false;
       if(!growthTargetTypeList_.Equals(other.growthTargetTypeList_)) return false;
+      if (AvatarId != other.AvatarId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (Source != global::EggLink.DanhengServer.Proto.GrowthTargetState.GrowthTargetAvatarNone) hash ^= Source.GetHashCode();
       if (IDNMEKNHLPO != 0) hash ^= IDNMEKNHLPO.GetHashCode();
-      if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
       hash ^= growthTargetTypeList_.GetHashCode();
+      if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,19 +184,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AvatarId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(AvatarId);
-      }
       if (Source != global::EggLink.DanhengServer.Proto.GrowthTargetState.GrowthTargetAvatarNone) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteEnum((int) Source);
       }
+      growthTargetTypeList_.WriteTo(output, _repeated_growthTargetTypeList_codec);
       if (IDNMEKNHLPO != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteUInt32(IDNMEKNHLPO);
       }
-      growthTargetTypeList_.WriteTo(output, _repeated_growthTargetTypeList_codec);
+      if (AvatarId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(AvatarId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -207,19 +207,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AvatarId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(AvatarId);
-      }
       if (Source != global::EggLink.DanhengServer.Proto.GrowthTargetState.GrowthTargetAvatarNone) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteEnum((int) Source);
       }
+      growthTargetTypeList_.WriteTo(ref output, _repeated_growthTargetTypeList_codec);
       if (IDNMEKNHLPO != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteUInt32(IDNMEKNHLPO);
       }
-      growthTargetTypeList_.WriteTo(ref output, _repeated_growthTargetTypeList_codec);
+      if (AvatarId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(AvatarId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -236,10 +236,10 @@ namespace EggLink.DanhengServer.Proto {
       if (IDNMEKNHLPO != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IDNMEKNHLPO);
       }
+      size += growthTargetTypeList_.CalculateSize(_repeated_growthTargetTypeList_codec);
       if (AvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
       }
-      size += growthTargetTypeList_.CalculateSize(_repeated_growthTargetTypeList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -258,10 +258,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IDNMEKNHLPO != 0) {
         IDNMEKNHLPO = other.IDNMEKNHLPO;
       }
+      growthTargetTypeList_.Add(other.growthTargetTypeList_);
       if (other.AvatarId != 0) {
         AvatarId = other.AvatarId;
       }
-      growthTargetTypeList_.Add(other.growthTargetTypeList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -277,21 +277,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            AvatarId = input.ReadUInt32();
-            break;
-          }
-          case 40: {
+          case 48: {
             Source = (global::EggLink.DanhengServer.Proto.GrowthTargetState) input.ReadEnum();
             break;
           }
-          case 64: {
+          case 74:
+          case 72: {
+            growthTargetTypeList_.AddEntriesFrom(input, _repeated_growthTargetTypeList_codec);
+            break;
+          }
+          case 80: {
             IDNMEKNHLPO = input.ReadUInt32();
             break;
           }
-          case 114:
-          case 112: {
-            growthTargetTypeList_.AddEntriesFrom(input, _repeated_growthTargetTypeList_codec);
+          case 104: {
+            AvatarId = input.ReadUInt32();
             break;
           }
         }
@@ -309,21 +309,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            AvatarId = input.ReadUInt32();
-            break;
-          }
-          case 40: {
+          case 48: {
             Source = (global::EggLink.DanhengServer.Proto.GrowthTargetState) input.ReadEnum();
             break;
           }
-          case 64: {
+          case 74:
+          case 72: {
+            growthTargetTypeList_.AddEntriesFrom(ref input, _repeated_growthTargetTypeList_codec);
+            break;
+          }
+          case 80: {
             IDNMEKNHLPO = input.ReadUInt32();
             break;
           }
-          case 114:
-          case 112: {
-            growthTargetTypeList_.AddEntriesFrom(ref input, _repeated_growthTargetTypeList_codec);
+          case 104: {
+            AvatarId = input.ReadUInt32();
             break;
           }
         }

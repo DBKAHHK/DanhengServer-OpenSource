@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static AJNAJINFJICReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFBSk5BSklORkpJQy5wcm90byI2CgtBSk5BSklORkpJQxIOCgZpc193aW4Y",
-            "DCABKAgSFwoPYmF0dGxlX2V2ZW50X2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRh",
+            "ChFBSk5BSklORkpJQy5wcm90byI2CgtBSk5BSklORkpJQxIXCg9iYXR0bGVf",
+            "ZXZlbnRfaWQYDiABKA0SDgoGaXNfd2luGA0gASgIQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AJNAJINFJIC), global::EggLink.DanhengServer.Proto.AJNAJINFJIC.Parser, new[]{ "IsWin", "BattleEventId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AJNAJINFJIC), global::EggLink.DanhengServer.Proto.AJNAJINFJIC.Parser, new[]{ "BattleEventId", "IsWin" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AJNAJINFJIC(AJNAJINFJIC other) : this() {
-      isWin_ = other.isWin_;
       battleEventId_ = other.battleEventId_;
+      isWin_ = other.isWin_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new AJNAJINFJIC(this);
     }
 
-    /// <summary>Field number for the "is_win" field.</summary>
-    public const int IsWinFieldNumber = 12;
-    private bool isWin_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsWin {
-      get { return isWin_; }
-      set {
-        isWin_ = value;
-      }
-    }
-
     /// <summary>Field number for the "battle_event_id" field.</summary>
-    public const int BattleEventIdFieldNumber = 13;
+    public const int BattleEventIdFieldNumber = 14;
     private uint battleEventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return battleEventId_; }
       set {
         battleEventId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_win" field.</summary>
+    public const int IsWinFieldNumber = 13;
+    private bool isWin_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsWin {
+      get { return isWin_; }
+      set {
+        isWin_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsWin != other.IsWin) return false;
       if (BattleEventId != other.BattleEventId) return false;
+      if (IsWin != other.IsWin) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsWin != false) hash ^= IsWin.GetHashCode();
       if (BattleEventId != 0) hash ^= BattleEventId.GetHashCode();
+      if (IsWin != false) hash ^= IsWin.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsWin != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteBool(IsWin);
       }
       if (BattleEventId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteUInt32(BattleEventId);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsWin != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(104);
         output.WriteBool(IsWin);
       }
       if (BattleEventId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteUInt32(BattleEventId);
       }
       if (_unknownFields != null) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsWin != false) {
-        size += 1 + 1;
-      }
       if (BattleEventId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BattleEventId);
+      }
+      if (IsWin != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsWin != false) {
-        IsWin = other.IsWin;
-      }
       if (other.BattleEventId != 0) {
         BattleEventId = other.BattleEventId;
+      }
+      if (other.IsWin != false) {
+        IsWin = other.IsWin;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
+          case 104: {
             IsWin = input.ReadBool();
             break;
           }
-          case 104: {
+          case 112: {
             BattleEventId = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
+          case 104: {
             IsWin = input.ReadBool();
             break;
           }
-          case 104: {
+          case 112: {
             BattleEventId = input.ReadUInt32();
             break;
           }

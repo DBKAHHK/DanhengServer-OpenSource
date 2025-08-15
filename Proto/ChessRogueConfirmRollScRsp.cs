@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBDaGVzc1JvZ3VlQ29uZmlybVJvbGxTY1JzcC5wcm90bxoYQ2hlc3NSb2d1",
             "ZURpY2VJbmZvLnByb3RvIlsKGkNoZXNzUm9ndWVDb25maXJtUm9sbFNjUnNw",
-            "Eg8KB3JldGNvZGUYByABKA0SLAoPcm9ndWVfZGljZV9pbmZvGA4gASgLMhMu",
+            "Eg8KB3JldGNvZGUYDiABKA0SLAoPcm9ndWVfZGljZV9pbmZvGAEgASgLMhMu",
             "Q2hlc3NSb2d1ZURpY2VJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_dice_info" field.</summary>
-    public const int RogueDiceInfoFieldNumber = 14;
+    public const int RogueDiceInfoFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.ChessRogueDiceInfo rogueDiceInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Retcode);
-      }
       if (rogueDiceInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(10);
         output.WriteMessage(RogueDiceInfo);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Retcode);
-      }
       if (rogueDiceInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(10);
         output.WriteMessage(RogueDiceInfo);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 114: {
+          case 10: {
             if (rogueDiceInfo_ == null) {
               RogueDiceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueDiceInfo();
             }
             input.ReadMessage(RogueDiceInfo);
+            break;
+          }
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 114: {
+          case 10: {
             if (rogueDiceInfo_ == null) {
               RogueDiceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueDiceInfo();
             }
             input.ReadMessage(RogueDiceInfo);
+            break;
+          }
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

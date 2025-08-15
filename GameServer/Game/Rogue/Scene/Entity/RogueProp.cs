@@ -37,7 +37,7 @@ public class RogueProp(SceneInstance scene, MazePropExcel excel, GroupInfo group
         if (NextRoomId != 0 || NextSiteId != 0 || ChestCanUseTimes != 0) // do not set if all are 0
             proto.Prop.ExtraInfo = new PropExtraInfo
             {
-                RogueInfo = new PropRogueInfo
+                RogueGameInfo = new PropRogueInfo
                 {
                     RoomId = (uint)NextRoomId,
                     SiteId = (uint)NextSiteId

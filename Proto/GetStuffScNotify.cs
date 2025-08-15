@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZHZXRTdHVmZlNjTm90aWZ5LnByb3RvGhJHZXRTdHVmZlR5cGUucHJvdG8i",
-            "SwoQR2V0U3R1ZmZTY05vdGlmeRIiCgtBT0NFTEtPTkhPQhgPIAEoDjINLkdl",
-            "dFN0dWZmVHlwZRITCgtCREpDR0NESk9FTxgHIAEoDUIeqgIbRWdnTGluay5E",
+            "SwoQR2V0U3R1ZmZTY05vdGlmeRIiCgtBT0NFTEtPTkhPQhgIIAEoDjINLkdl",
+            "dFN0dWZmVHlwZRITCgtCREpDR0NESk9FTxgJIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GetStuffTypeReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "AOCELKONHOB" field.</summary>
-    public const int AOCELKONHOBFieldNumber = 15;
+    public const int AOCELKONHOBFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.GetStuffType aOCELKONHOB_ = global::EggLink.DanhengServer.Proto.GetStuffType.Unknow;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BDJCGCDJOEO" field.</summary>
-    public const int BDJCGCDJOEOFieldNumber = 7;
+    public const int BDJCGCDJOEOFieldNumber = 9;
     private uint bDJCGCDJOEO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BDJCGCDJOEO != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(BDJCGCDJOEO);
-      }
       if (AOCELKONHOB != global::EggLink.DanhengServer.Proto.GetStuffType.Unknow) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(64);
         output.WriteEnum((int) AOCELKONHOB);
+      }
+      if (BDJCGCDJOEO != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(BDJCGCDJOEO);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BDJCGCDJOEO != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(BDJCGCDJOEO);
-      }
       if (AOCELKONHOB != global::EggLink.DanhengServer.Proto.GetStuffType.Unknow) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(64);
         output.WriteEnum((int) AOCELKONHOB);
+      }
+      if (BDJCGCDJOEO != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(BDJCGCDJOEO);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            BDJCGCDJOEO = input.ReadUInt32();
+          case 64: {
+            AOCELKONHOB = (global::EggLink.DanhengServer.Proto.GetStuffType) input.ReadEnum();
             break;
           }
-          case 120: {
-            AOCELKONHOB = (global::EggLink.DanhengServer.Proto.GetStuffType) input.ReadEnum();
+          case 72: {
+            BDJCGCDJOEO = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            BDJCGCDJOEO = input.ReadUInt32();
+          case 64: {
+            AOCELKONHOB = (global::EggLink.DanhengServer.Proto.GetStuffType) input.ReadEnum();
             break;
           }
-          case 120: {
-            AOCELKONHOB = (global::EggLink.DanhengServer.Proto.GetStuffType) input.ReadEnum();
+          case 72: {
+            BDJCGCDJOEO = input.ReadUInt32();
             break;
           }
         }

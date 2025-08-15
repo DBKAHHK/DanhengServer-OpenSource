@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static FinishTutorialGuideScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5GaW5pc2hUdXRvcmlhbEd1aWRlU2NSc3AucHJvdG8aE1R1dG9yaWFsR3Vp",
-            "ZGUucHJvdG8aDkl0ZW1MaXN0LnByb3RvIm4KGEZpbmlzaFR1dG9yaWFsR3Vp",
-            "ZGVTY1JzcBImCg50dXRvcmlhbF9ndWlkZRgJIAEoCzIOLlR1dG9yaWFsR3Vp",
-            "ZGUSGQoGcmV3YXJkGAogASgLMgkuSXRlbUxpc3QSDwoHcmV0Y29kZRgLIAEo",
-            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch5GaW5pc2hUdXRvcmlhbEd1aWRlU2NSc3AucHJvdG8aDkl0ZW1MaXN0LnBy",
+            "b3RvGhNUdXRvcmlhbEd1aWRlLnByb3RvIm0KGEZpbmlzaFR1dG9yaWFsR3Vp",
+            "ZGVTY1JzcBIlCg1UdXRvcmlhbEd1aWRlGA4gASgLMg4uVHV0b3JpYWxHdWlk",
+            "ZRIZCgZSZXdhcmQYBiABKAsyCS5JdGVtTGlzdBIPCgdSZXRjb2RlGAcgASgN",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TutorialGuideReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.TutorialGuideReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FinishTutorialGuideScRsp), global::EggLink.DanhengServer.Proto.FinishTutorialGuideScRsp.Parser, new[]{ "TutorialGuide", "Reward", "Retcode" }, null, null, null, null)
           }));
@@ -86,8 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new FinishTutorialGuideScRsp(this);
     }
 
-    /// <summary>Field number for the "tutorial_guide" field.</summary>
-    public const int TutorialGuideFieldNumber = 9;
+    /// <summary>Field number for the "TutorialGuide" field.</summary>
+    public const int TutorialGuideFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.TutorialGuide tutorialGuide_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,8 +98,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 10;
+    /// <summary>Field number for the "Reward" field.</summary>
+    public const int RewardFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,8 +110,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    /// <summary>Field number for the "Retcode" field.</summary>
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (tutorialGuide_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(TutorialGuide);
-      }
       if (reward_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(50);
         output.WriteMessage(Reward);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
+      }
+      if (tutorialGuide_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(TutorialGuide);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (tutorialGuide_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(TutorialGuide);
-      }
       if (reward_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(50);
         output.WriteMessage(Reward);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
+      }
+      if (tutorialGuide_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(TutorialGuide);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -263,22 +263,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
-            if (tutorialGuide_ == null) {
-              TutorialGuide = new global::EggLink.DanhengServer.Proto.TutorialGuide();
-            }
-            input.ReadMessage(TutorialGuide);
-            break;
-          }
-          case 82: {
+          case 50: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 88: {
+          case 56: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            if (tutorialGuide_ == null) {
+              TutorialGuide = new global::EggLink.DanhengServer.Proto.TutorialGuide();
+            }
+            input.ReadMessage(TutorialGuide);
             break;
           }
         }
@@ -296,22 +296,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
-            if (tutorialGuide_ == null) {
-              TutorialGuide = new global::EggLink.DanhengServer.Proto.TutorialGuide();
-            }
-            input.ReadMessage(TutorialGuide);
-            break;
-          }
-          case 82: {
+          case 50: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 88: {
+          case 56: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            if (tutorialGuide_ == null) {
+              TutorialGuide = new global::EggLink.DanhengServer.Proto.TutorialGuide();
+            }
+            input.ReadMessage(TutorialGuide);
             break;
           }
         }

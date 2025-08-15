@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTalentInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVSb2d1ZVRhbGVudEluZm8ucHJvdG8aGVJvZ3VlVW5sb2NrUHJvZ3Jlc3Mu",
-            "cHJvdG8aF1JvZ3VlVGFsZW50U3RhdHVzLnByb3RvIoIBCg9Sb2d1ZVRhbGVu",
-            "dEluZm8SEQoJdGFsZW50X2lkGAIgASgNEiIKBnN0YXR1cxgBIAEoDjISLlJv",
-            "Z3VlVGFsZW50U3RhdHVzEjgKGnJvZ3VlX3VubG9ja19wcm9ncmVzc19saXN0",
-            "GAcgAygLMhQuUm9ndWVVbmxvY2tQcm9ncmVzc0IeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChVSb2d1ZVRhbGVudEluZm8ucHJvdG8aEUtMQUFISkhOTENKLnByb3RvGhdS",
+            "b2d1ZVRhbGVudFN0YXR1cy5wcm90byJ6Cg9Sb2d1ZVRhbGVudEluZm8SEQoJ",
+            "dGFsZW50X2lkGAEgASgNEiIKBnN0YXR1cxgNIAEoDjISLlJvZ3VlVGFsZW50",
+            "U3RhdHVzEjAKGnJvZ3VlX3VubG9ja19wcm9ncmVzc19saXN0GAcgAygLMgwu",
+            "S0xBQUhKSE5MQ0pCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueUnlockProgressReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTalentStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KLAAHJHNLCJReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTalentStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTalentInfo), global::EggLink.DanhengServer.Proto.RogueTalentInfo.Parser, new[]{ "TalentId", "Status", "RogueUnlockProgressList" }, null, null, null, null)
           }));
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "talent_id" field.</summary>
-    public const int TalentIdFieldNumber = 2;
+    public const int TalentIdFieldNumber = 1;
     private uint talentId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 1;
+    public const int StatusFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.RogueTalentStatus status_ = global::EggLink.DanhengServer.Proto.RogueTalentStatus.Lock;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -113,12 +113,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "rogue_unlock_progress_list" field.</summary>
     public const int RogueUnlockProgressListFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueUnlockProgress> _repeated_rogueUnlockProgressList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.RogueUnlockProgress.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueUnlockProgress> rogueUnlockProgressList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueUnlockProgress>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KLAAHJHNLCJ> _repeated_rogueUnlockProgressList_codec
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.KLAAHJHNLCJ.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KLAAHJHNLCJ> rogueUnlockProgressList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KLAAHJHNLCJ>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueUnlockProgress> RogueUnlockProgressList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KLAAHJHNLCJ> RogueUnlockProgressList {
       get { return rogueUnlockProgressList_; }
     }
 
@@ -168,15 +168,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Status != global::EggLink.DanhengServer.Proto.RogueTalentStatus.Lock) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) Status);
-      }
       if (TalentId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt32(TalentId);
       }
       rogueUnlockProgressList_.WriteTo(output, _repeated_rogueUnlockProgressList_codec);
+      if (Status != global::EggLink.DanhengServer.Proto.RogueTalentStatus.Lock) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Status);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -187,15 +187,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Status != global::EggLink.DanhengServer.Proto.RogueTalentStatus.Lock) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) Status);
-      }
       if (TalentId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt32(TalentId);
       }
       rogueUnlockProgressList_.WriteTo(ref output, _repeated_rogueUnlockProgressList_codec);
+      if (Status != global::EggLink.DanhengServer.Proto.RogueTalentStatus.Lock) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Status);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -248,15 +248,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueTalentStatus) input.ReadEnum();
-            break;
-          }
-          case 16: {
             TalentId = input.ReadUInt32();
             break;
           }
           case 58: {
             rogueUnlockProgressList_.AddEntriesFrom(input, _repeated_rogueUnlockProgressList_codec);
+            break;
+          }
+          case 104: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueTalentStatus) input.ReadEnum();
             break;
           }
         }
@@ -275,15 +275,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueTalentStatus) input.ReadEnum();
-            break;
-          }
-          case 16: {
             TalentId = input.ReadUInt32();
             break;
           }
           case 58: {
             rogueUnlockProgressList_.AddEntriesFrom(ref input, _repeated_rogueUnlockProgressList_codec);
+            break;
+          }
+          case 104: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueTalentStatus) input.ReadEnum();
             break;
           }
         }

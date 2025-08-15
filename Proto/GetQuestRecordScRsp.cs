@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlHZXRRdWVzdFJlY29yZFNjUnNwLnByb3RvGhFFUEpERkJBT0ZERi5wcm90",
-            "byJJChNHZXRRdWVzdFJlY29yZFNjUnNwEiEKC09CRU1HQUNNR05IGAIgAygL",
+            "byJJChNHZXRRdWVzdFJlY29yZFNjUnNwEiEKC09CRU1HQUNNR05IGAMgAygL",
             "MgwuRVBKREZCQU9GREYSDwoHcmV0Y29kZRgBIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "OBEMGACMGNH" field.</summary>
-    public const int OBEMGACMGNHFieldNumber = 2;
+    public const int OBEMGACMGNHFieldNumber = 3;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EPJDFBAOFDF> _repeated_oBEMGACMGNH_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.EPJDFBAOFDF.Parser);
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.EPJDFBAOFDF.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EPJDFBAOFDF> oBEMGACMGNH_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EPJDFBAOFDF>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -220,7 +220,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 18: {
+          case 26: {
             oBEMGACMGNH_.AddEntriesFrom(input, _repeated_oBEMGACMGNH_codec);
             break;
           }
@@ -243,7 +243,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 18: {
+          case 26: {
             oBEMGACMGNH_.AddEntriesFrom(ref input, _repeated_oBEMGACMGNH_codec);
             break;
           }

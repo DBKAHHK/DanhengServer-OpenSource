@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5GaWdodFNlc3Npb25TdG9wU2NOb3RpZnkucHJvdG8aFkZpZ2h0U2Vzc2lv",
             "bkluZm8ucHJvdG8iQwoYRmlnaHRTZXNzaW9uU3RvcFNjTm90aWZ5EicKDHNl",
-            "c3Npb25faW5mbxgIIAEoCzIRLkZpZ2h0U2Vzc2lvbkluZm9CHqoCG0VnZ0xp",
+            "c3Npb25faW5mbxgCIAEoCzIRLkZpZ2h0U2Vzc2lvbkluZm9CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightSessionInfoReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "session_info" field.</summary>
-    public const int SessionInfoFieldNumber = 8;
+    public const int SessionInfoFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.FightSessionInfo sessionInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (sessionInfo_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(18);
         output.WriteMessage(SessionInfo);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (sessionInfo_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(18);
         output.WriteMessage(SessionInfo);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 18: {
             if (sessionInfo_ == null) {
               SessionInfo = new global::EggLink.DanhengServer.Proto.FightSessionInfo();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 18: {
             if (sessionInfo_ == null) {
               SessionInfo = new global::EggLink.DanhengServer.Proto.FightSessionInfo();
             }

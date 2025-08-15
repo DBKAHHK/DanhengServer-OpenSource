@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFTdHJvbmdDaGFsbGVuZ2VBY3Rpdml0eURhdGEucHJvdG8aH1N0cm9uZ0No",
             "YWxsZW5nZUF2YXRhckRhdGEucHJvdG8imgEKG1N0cm9uZ0NoYWxsZW5nZUFj",
-            "dGl2aXR5RGF0YRIQCghzdGFnZV9pZBgBIAEoDRIvCgtBSElOUENLR0tKRxgO",
-            "IAEoCzIaLlN0cm9uZ0NoYWxsZW5nZUF2YXRhckRhdGESEwoLSkdCQUlORkRC",
-            "QU4YCCABKA0SEQoJbWF4X3Njb3JlGAQgASgNEhAKCHBhbmVsX2lkGA0gASgN",
+            "dGl2aXR5RGF0YRITCgtKR0JBSU5GREJBThgIIAEoDRIQCghzdGFnZV9pZBgJ",
+            "IAEoDRIRCgltYXhfc2NvcmUYDSABKA0SEAoIcGFuZWxfaWQYDyABKA0SLwoL",
+            "QUhJTlBDS0dLSkcYDCABKAsyGi5TdHJvbmdDaGFsbGVuZ2VBdmF0YXJEYXRh",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.StrongChallengeAvatarDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StrongChallengeActivityData), global::EggLink.DanhengServer.Proto.StrongChallengeActivityData.Parser, new[]{ "StageId", "AHINPCKGKJG", "JGBAINFDBAN", "MaxScore", "PanelId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StrongChallengeActivityData), global::EggLink.DanhengServer.Proto.StrongChallengeActivityData.Parser, new[]{ "JGBAINFDBAN", "StageId", "MaxScore", "PanelId", "AHINPCKGKJG" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StrongChallengeActivityData(StrongChallengeActivityData other) : this() {
-      stageId_ = other.stageId_;
-      aHINPCKGKJG_ = other.aHINPCKGKJG_ != null ? other.aHINPCKGKJG_.Clone() : null;
       jGBAINFDBAN_ = other.jGBAINFDBAN_;
+      stageId_ = other.stageId_;
       maxScore_ = other.maxScore_;
       panelId_ = other.panelId_;
+      aHINPCKGKJG_ = other.aHINPCKGKJG_ != null ? other.aHINPCKGKJG_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,30 +87,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StrongChallengeActivityData Clone() {
       return new StrongChallengeActivityData(this);
-    }
-
-    /// <summary>Field number for the "stage_id" field.</summary>
-    public const int StageIdFieldNumber = 1;
-    private uint stageId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint StageId {
-      get { return stageId_; }
-      set {
-        stageId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "AHINPCKGKJG" field.</summary>
-    public const int AHINPCKGKJGFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.StrongChallengeAvatarData aHINPCKGKJG_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.StrongChallengeAvatarData AHINPCKGKJG {
-      get { return aHINPCKGKJG_; }
-      set {
-        aHINPCKGKJG_ = value;
-      }
     }
 
     /// <summary>Field number for the "JGBAINFDBAN" field.</summary>
@@ -125,8 +101,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "stage_id" field.</summary>
+    public const int StageIdFieldNumber = 9;
+    private uint stageId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint StageId {
+      get { return stageId_; }
+      set {
+        stageId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "max_score" field.</summary>
-    public const int MaxScoreFieldNumber = 4;
+    public const int MaxScoreFieldNumber = 13;
     private uint maxScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +126,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "panel_id" field.</summary>
-    public const int PanelIdFieldNumber = 13;
+    public const int PanelIdFieldNumber = 15;
     private uint panelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -146,6 +134,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return panelId_; }
       set {
         panelId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AHINPCKGKJG" field.</summary>
+    public const int AHINPCKGKJGFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.StrongChallengeAvatarData aHINPCKGKJG_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.StrongChallengeAvatarData AHINPCKGKJG {
+      get { return aHINPCKGKJG_; }
+      set {
+        aHINPCKGKJG_ = value;
       }
     }
 
@@ -164,11 +164,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (StageId != other.StageId) return false;
-      if (!object.Equals(AHINPCKGKJG, other.AHINPCKGKJG)) return false;
       if (JGBAINFDBAN != other.JGBAINFDBAN) return false;
+      if (StageId != other.StageId) return false;
       if (MaxScore != other.MaxScore) return false;
       if (PanelId != other.PanelId) return false;
+      if (!object.Equals(AHINPCKGKJG, other.AHINPCKGKJG)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -176,11 +176,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (StageId != 0) hash ^= StageId.GetHashCode();
-      if (aHINPCKGKJG_ != null) hash ^= AHINPCKGKJG.GetHashCode();
       if (JGBAINFDBAN != 0) hash ^= JGBAINFDBAN.GetHashCode();
+      if (StageId != 0) hash ^= StageId.GetHashCode();
       if (MaxScore != 0) hash ^= MaxScore.GetHashCode();
       if (PanelId != 0) hash ^= PanelId.GetHashCode();
+      if (aHINPCKGKJG_ != null) hash ^= AHINPCKGKJG.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,25 +199,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (StageId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(StageId);
-      }
-      if (MaxScore != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(MaxScore);
-      }
       if (JGBAINFDBAN != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(JGBAINFDBAN);
       }
-      if (PanelId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(PanelId);
+      if (StageId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(StageId);
       }
       if (aHINPCKGKJG_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(98);
         output.WriteMessage(AHINPCKGKJG);
+      }
+      if (MaxScore != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(MaxScore);
+      }
+      if (PanelId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(PanelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -229,25 +229,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (StageId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(StageId);
-      }
-      if (MaxScore != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(MaxScore);
-      }
       if (JGBAINFDBAN != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(JGBAINFDBAN);
       }
-      if (PanelId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(PanelId);
+      if (StageId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(StageId);
       }
       if (aHINPCKGKJG_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(98);
         output.WriteMessage(AHINPCKGKJG);
+      }
+      if (MaxScore != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(MaxScore);
+      }
+      if (PanelId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(PanelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -259,20 +259,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (StageId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StageId);
-      }
-      if (aHINPCKGKJG_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AHINPCKGKJG);
-      }
       if (JGBAINFDBAN != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JGBAINFDBAN);
+      }
+      if (StageId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StageId);
       }
       if (MaxScore != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxScore);
       }
       if (PanelId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
+      }
+      if (aHINPCKGKJG_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AHINPCKGKJG);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -286,23 +286,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.StageId != 0) {
-        StageId = other.StageId;
-      }
-      if (other.aHINPCKGKJG_ != null) {
-        if (aHINPCKGKJG_ == null) {
-          AHINPCKGKJG = new global::EggLink.DanhengServer.Proto.StrongChallengeAvatarData();
-        }
-        AHINPCKGKJG.MergeFrom(other.AHINPCKGKJG);
-      }
       if (other.JGBAINFDBAN != 0) {
         JGBAINFDBAN = other.JGBAINFDBAN;
+      }
+      if (other.StageId != 0) {
+        StageId = other.StageId;
       }
       if (other.MaxScore != 0) {
         MaxScore = other.MaxScore;
       }
       if (other.PanelId != 0) {
         PanelId = other.PanelId;
+      }
+      if (other.aHINPCKGKJG_ != null) {
+        if (aHINPCKGKJG_ == null) {
+          AHINPCKGKJG = new global::EggLink.DanhengServer.Proto.StrongChallengeAvatarData();
+        }
+        AHINPCKGKJG.MergeFrom(other.AHINPCKGKJG);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -319,27 +319,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            StageId = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            MaxScore = input.ReadUInt32();
-            break;
-          }
           case 64: {
             JGBAINFDBAN = input.ReadUInt32();
             break;
           }
-          case 104: {
-            PanelId = input.ReadUInt32();
+          case 72: {
+            StageId = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 98: {
             if (aHINPCKGKJG_ == null) {
               AHINPCKGKJG = new global::EggLink.DanhengServer.Proto.StrongChallengeAvatarData();
             }
             input.ReadMessage(AHINPCKGKJG);
+            break;
+          }
+          case 104: {
+            MaxScore = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            PanelId = input.ReadUInt32();
             break;
           }
         }
@@ -357,27 +357,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            StageId = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            MaxScore = input.ReadUInt32();
-            break;
-          }
           case 64: {
             JGBAINFDBAN = input.ReadUInt32();
             break;
           }
-          case 104: {
-            PanelId = input.ReadUInt32();
+          case 72: {
+            StageId = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 98: {
             if (aHINPCKGKJG_ == null) {
               AHINPCKGKJG = new global::EggLink.DanhengServer.Proto.StrongChallengeAvatarData();
             }
             input.ReadMessage(AHINPCKGKJG);
+            break;
+          }
+          case 104: {
+            MaxScore = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            PanelId = input.ReadUInt32();
             break;
           }
         }

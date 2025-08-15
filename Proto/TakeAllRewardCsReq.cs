@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhUYWtlQWxsUmV3YXJkQ3NSZXEucHJvdG8aFE9wdGlvbmFsUmV3YXJkLnBy",
-            "b3RvIjoKElRha2VBbGxSZXdhcmRDc1JlcRIkCgtNT0RPT0ZKT0lBTxgNIAMo",
+            "b3RvIjoKElRha2VBbGxSZXdhcmRDc1JlcRIkCgtNT0RPT0ZKT0lBTxgFIAMo",
             "CzIPLk9wdGlvbmFsUmV3YXJkQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MODOOFJOIAO" field.</summary>
-    public const int MODOOFJOIAOFieldNumber = 13;
+    public const int MODOOFJOIAOFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OptionalReward> _repeated_mODOOFJOIAO_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.OptionalReward.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.OptionalReward.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OptionalReward> mODOOFJOIAO_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OptionalReward>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 42: {
             mODOOFJOIAO_.AddEntriesFrom(input, _repeated_mODOOFJOIAO_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 42: {
             mODOOFJOIAO_.AddEntriesFrom(ref input, _repeated_mODOOFJOIAO_codec);
             break;
           }

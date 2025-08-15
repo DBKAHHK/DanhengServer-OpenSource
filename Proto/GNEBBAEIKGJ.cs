@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFHTkVCQkFFSUtHSi5wcm90byI0CgtHTkVCQkFFSUtHShIQCghsZXZlbF9p",
-            "ZBgHIAEoDRITCgtBS0xPRUlHS0dBThgCIAMoDUIeqgIbRWdnTGluay5EYW5o",
+            "ZBgJIAEoDRITCgtBS0xPRUlHS0dBThgDIAMoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level_id" field.</summary>
-    public const int LevelIdFieldNumber = 7;
+    public const int LevelIdFieldNumber = 9;
     private uint levelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,9 +96,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "AKLOEIGKGAN" field.</summary>
-    public const int AKLOEIGKGANFieldNumber = 2;
+    public const int AKLOEIGKGANFieldNumber = 3;
     private static readonly pb::FieldCodec<uint> _repeated_aKLOEIGKGAN_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(26);
     private readonly pbc::RepeatedField<uint> aKLOEIGKGAN_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       aKLOEIGKGAN_.WriteTo(output, _repeated_aKLOEIGKGAN_codec);
       if (LevelId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(LevelId);
       }
       if (_unknownFields != null) {
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       aKLOEIGKGAN_.WriteTo(ref output, _repeated_aKLOEIGKGAN_codec);
       if (LevelId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(LevelId);
       }
       if (_unknownFields != null) {
@@ -215,12 +215,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
+          case 26:
+          case 24: {
             aKLOEIGKGAN_.AddEntriesFrom(input, _repeated_aKLOEIGKGAN_codec);
             break;
           }
-          case 56: {
+          case 72: {
             LevelId = input.ReadUInt32();
             break;
           }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
+          case 26:
+          case 24: {
             aKLOEIGKGAN_.AddEntriesFrom(ref input, _repeated_aKLOEIGKGAN_codec);
             break;
           }
-          case 56: {
+          case 72: {
             LevelId = input.ReadUInt32();
             break;
           }

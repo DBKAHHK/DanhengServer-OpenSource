@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJUYWtlVHJpYWxBY3Rpdml0eVJld2FyZFNjUnNwLnByb3RvGg5JdGVtTGlz",
             "dC5wcm90byJcChxUYWtlVHJpYWxBY3Rpdml0eVJld2FyZFNjUnNwEg8KB3Jl",
-            "dGNvZGUYDCABKA0SEAoIc3RhZ2VfaWQYCCABKA0SGQoGcmV3YXJkGAQgASgL",
+            "dGNvZGUYByABKA0SEAoIc3RhZ2VfaWQYCCABKA0SGQoGcmV3YXJkGAIgASgL",
             "MgkuSXRlbUxpc3RCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 4;
+    public const int RewardFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -169,16 +169,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (reward_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(18);
         output.WriteMessage(Reward);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Retcode);
       }
       if (StageId != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(StageId);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -191,16 +191,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (reward_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(18);
         output.WriteMessage(Reward);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Retcode);
       }
       if (StageId != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(StageId);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -260,19 +260,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 18: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 64: {
-            StageId = input.ReadUInt32();
+          case 56: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 96: {
-            Retcode = input.ReadUInt32();
+          case 64: {
+            StageId = input.ReadUInt32();
             break;
           }
         }
@@ -290,19 +290,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 18: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 64: {
-            StageId = input.ReadUInt32();
+          case 56: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 96: {
-            Retcode = input.ReadUInt32();
+          case 64: {
+            StageId = input.ReadUInt32();
             break;
           }
         }

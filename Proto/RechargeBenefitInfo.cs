@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlSZWNoYXJnZUJlbmVmaXRJbmZvLnByb3RvIloKE1JlY2hhcmdlQmVuZWZp",
-            "dEluZm8SEwoLSkNMT0JJQVBLRUcYBCADKA0SEAoIcHJvZ3Jlc3MYAiABKA0S",
-            "CgoCaWQYDyABKA0SEAoIcGFuZWxfaWQYDiABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "dEluZm8SEAoIcHJvZ3Jlc3MYASABKA0SEwoLSkNMT0JJQVBLRUcYCyADKA0S",
+            "EAoIcGFuZWxfaWQYBSABKA0SCgoCaWQYAiABKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RechargeBenefitInfo), global::EggLink.DanhengServer.Proto.RechargeBenefitInfo.Parser, new[]{ "JCLOBIAPKEG", "Progress", "Id", "PanelId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RechargeBenefitInfo), global::EggLink.DanhengServer.Proto.RechargeBenefitInfo.Parser, new[]{ "Progress", "JCLOBIAPKEG", "PanelId", "Id" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RechargeBenefitInfo(RechargeBenefitInfo other) : this() {
-      jCLOBIAPKEG_ = other.jCLOBIAPKEG_.Clone();
       progress_ = other.progress_;
-      id_ = other.id_;
+      jCLOBIAPKEG_ = other.jCLOBIAPKEG_.Clone();
       panelId_ = other.panelId_;
+      id_ = other.id_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,19 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RechargeBenefitInfo(this);
     }
 
-    /// <summary>Field number for the "JCLOBIAPKEG" field.</summary>
-    public const int JCLOBIAPKEGFieldNumber = 4;
-    private static readonly pb::FieldCodec<uint> _repeated_jCLOBIAPKEG_codec
-        = pb::FieldCodec.ForUInt32(34);
-    private readonly pbc::RepeatedField<uint> jCLOBIAPKEG_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JCLOBIAPKEG {
-      get { return jCLOBIAPKEG_; }
-    }
-
     /// <summary>Field number for the "progress" field.</summary>
-    public const int ProgressFieldNumber = 2;
+    public const int ProgressFieldNumber = 1;
     private uint progress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,20 +98,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 15;
-    private uint id_;
+    /// <summary>Field number for the "JCLOBIAPKEG" field.</summary>
+    public const int JCLOBIAPKEGFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_jCLOBIAPKEG_codec
+        = pb::FieldCodec.ForUInt32(90);
+    private readonly pbc::RepeatedField<uint> jCLOBIAPKEG_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
+    public pbc::RepeatedField<uint> JCLOBIAPKEG {
+      get { return jCLOBIAPKEG_; }
     }
 
     /// <summary>Field number for the "panel_id" field.</summary>
-    public const int PanelIdFieldNumber = 14;
+    public const int PanelIdFieldNumber = 5;
     private uint panelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -130,6 +118,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return panelId_; }
       set {
         panelId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 2;
+    private uint id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Id {
+      get { return id_; }
+      set {
+        id_ = value;
       }
     }
 
@@ -148,10 +148,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!jCLOBIAPKEG_.Equals(other.jCLOBIAPKEG_)) return false;
       if (Progress != other.Progress) return false;
-      if (Id != other.Id) return false;
+      if(!jCLOBIAPKEG_.Equals(other.jCLOBIAPKEG_)) return false;
       if (PanelId != other.PanelId) return false;
+      if (Id != other.Id) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -159,10 +159,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= jCLOBIAPKEG_.GetHashCode();
       if (Progress != 0) hash ^= Progress.GetHashCode();
-      if (Id != 0) hash ^= Id.GetHashCode();
+      hash ^= jCLOBIAPKEG_.GetHashCode();
       if (PanelId != 0) hash ^= PanelId.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,18 +182,18 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Progress != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt32(Progress);
       }
-      jCLOBIAPKEG_.WriteTo(output, _repeated_jCLOBIAPKEG_codec);
-      if (PanelId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(PanelId);
-      }
       if (Id != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(16);
         output.WriteUInt32(Id);
       }
+      if (PanelId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(PanelId);
+      }
+      jCLOBIAPKEG_.WriteTo(output, _repeated_jCLOBIAPKEG_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -205,18 +205,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Progress != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt32(Progress);
       }
-      jCLOBIAPKEG_.WriteTo(ref output, _repeated_jCLOBIAPKEG_codec);
-      if (PanelId != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(PanelId);
-      }
       if (Id != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(16);
         output.WriteUInt32(Id);
       }
+      if (PanelId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(PanelId);
+      }
+      jCLOBIAPKEG_.WriteTo(ref output, _repeated_jCLOBIAPKEG_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -227,15 +227,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += jCLOBIAPKEG_.CalculateSize(_repeated_jCLOBIAPKEG_codec);
       if (Progress != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Progress);
       }
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
-      }
+      size += jCLOBIAPKEG_.CalculateSize(_repeated_jCLOBIAPKEG_codec);
       if (PanelId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
+      }
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -249,15 +249,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      jCLOBIAPKEG_.Add(other.jCLOBIAPKEG_);
       if (other.Progress != 0) {
         Progress = other.Progress;
       }
-      if (other.Id != 0) {
-        Id = other.Id;
-      }
+      jCLOBIAPKEG_.Add(other.jCLOBIAPKEG_);
       if (other.PanelId != 0) {
         PanelId = other.PanelId;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -274,21 +274,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 8: {
             Progress = input.ReadUInt32();
             break;
           }
-          case 34:
-          case 32: {
-            jCLOBIAPKEG_.AddEntriesFrom(input, _repeated_jCLOBIAPKEG_codec);
+          case 16: {
+            Id = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 40: {
             PanelId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Id = input.ReadUInt32();
+          case 90:
+          case 88: {
+            jCLOBIAPKEG_.AddEntriesFrom(input, _repeated_jCLOBIAPKEG_codec);
             break;
           }
         }
@@ -306,21 +306,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 8: {
             Progress = input.ReadUInt32();
             break;
           }
-          case 34:
-          case 32: {
-            jCLOBIAPKEG_.AddEntriesFrom(ref input, _repeated_jCLOBIAPKEG_codec);
+          case 16: {
+            Id = input.ReadUInt32();
             break;
           }
-          case 112: {
+          case 40: {
             PanelId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            Id = input.ReadUInt32();
+          case 90:
+          case 88: {
+            jCLOBIAPKEG_.AddEntriesFrom(ref input, _repeated_jCLOBIAPKEG_codec);
             break;
           }
         }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQRUFKTEFESU5GSy5wcm90bxoRQ01ITUJMQUxPSE4ucHJvdG8aEU5MRkRL",
-            "T0lPRE1ELnByb3RvImYKC1BFQUpMQURJTkZLEiMKC0JBTU5PSktNQk1OGAUg",
-            "ASgLMgwuQ01ITUJMQUxPSE5IABIjCgtGSkdNTklPSUxPSxgLIAEoCzIMLk5M",
+            "T0lPRE1ELnByb3RvImYKC1BFQUpMQURJTkZLEiMKC0JBTU5PSktNQk1OGAog",
+            "ASgLMgwuQ01ITUJMQUxPSE5IABIjCgtGSkdNTklPSUxPSxgOIAEoCzIMLk5M",
             "RkRLT0lPRE1ESABCDQoLUEhKTEZDSkpITUVCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -93,7 +93,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BAMNOJKMBMN" field.</summary>
-    public const int BAMNOJKMBMNFieldNumber = 5;
+    public const int BAMNOJKMBMNFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.CMHMBLALOHN BAMNOJKMBMN {
@@ -105,7 +105,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FJGMNIOILOK" field.</summary>
-    public const int FJGMNIOILOKFieldNumber = 11;
+    public const int FJGMNIOILOKFieldNumber = 14;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.NLFDKOIODMD FJGMNIOILOK {
@@ -120,8 +120,8 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "PHJLFCJJHME" oneof.</summary>
     public enum PHJLFCJJHMEOneofCase {
       None = 0,
-      BAMNOJKMBMN = 5,
-      FJGMNIOILOK = 11,
+      BAMNOJKMBMN = 10,
+      FJGMNIOILOK = 14,
     }
     private PHJLFCJJHMEOneofCase pHJLFCJJHMECase_ = PHJLFCJJHMEOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -184,11 +184,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (pHJLFCJJHMECase_ == PHJLFCJJHMEOneofCase.BAMNOJKMBMN) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(82);
         output.WriteMessage(BAMNOJKMBMN);
       }
       if (pHJLFCJJHMECase_ == PHJLFCJJHMEOneofCase.FJGMNIOILOK) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(114);
         output.WriteMessage(FJGMNIOILOK);
       }
       if (_unknownFields != null) {
@@ -202,11 +202,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (pHJLFCJJHMECase_ == PHJLFCJJHMEOneofCase.BAMNOJKMBMN) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(82);
         output.WriteMessage(BAMNOJKMBMN);
       }
       if (pHJLFCJJHMECase_ == PHJLFCJJHMEOneofCase.FJGMNIOILOK) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(114);
         output.WriteMessage(FJGMNIOILOK);
       }
       if (_unknownFields != null) {
@@ -267,7 +267,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 82: {
             global::EggLink.DanhengServer.Proto.CMHMBLALOHN subBuilder = new global::EggLink.DanhengServer.Proto.CMHMBLALOHN();
             if (pHJLFCJJHMECase_ == PHJLFCJJHMEOneofCase.BAMNOJKMBMN) {
               subBuilder.MergeFrom(BAMNOJKMBMN);
@@ -276,7 +276,7 @@ namespace EggLink.DanhengServer.Proto {
             BAMNOJKMBMN = subBuilder;
             break;
           }
-          case 90: {
+          case 114: {
             global::EggLink.DanhengServer.Proto.NLFDKOIODMD subBuilder = new global::EggLink.DanhengServer.Proto.NLFDKOIODMD();
             if (pHJLFCJJHMECase_ == PHJLFCJJHMEOneofCase.FJGMNIOILOK) {
               subBuilder.MergeFrom(FJGMNIOILOK);
@@ -300,7 +300,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 82: {
             global::EggLink.DanhengServer.Proto.CMHMBLALOHN subBuilder = new global::EggLink.DanhengServer.Proto.CMHMBLALOHN();
             if (pHJLFCJJHMECase_ == PHJLFCJJHMEOneofCase.BAMNOJKMBMN) {
               subBuilder.MergeFrom(BAMNOJKMBMN);
@@ -309,7 +309,7 @@ namespace EggLink.DanhengServer.Proto {
             BAMNOJKMBMN = subBuilder;
             break;
           }
-          case 90: {
+          case 114: {
             global::EggLink.DanhengServer.Proto.NLFDKOIODMD subBuilder = new global::EggLink.DanhengServer.Proto.NLFDKOIODMD();
             if (pHJLFCJJHMECase_ == PHJLFCJJHMEOneofCase.FJGMNIOILOK) {
               subBuilder.MergeFrom(FJGMNIOILOK);

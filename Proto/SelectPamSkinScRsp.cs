@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhTZWxlY3RQYW1Ta2luU2NSc3AucHJvdG8iSQoSU2VsZWN0UGFtU2tpblNj",
-            "UnNwEg8KB3JldGNvZGUYDiABKA0SEAoIY3VyX3NraW4YBSABKA0SEAoIc2V0",
-            "X3NraW4YASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "UnNwEg8KB3JldGNvZGUYCyABKA0SEAoIc2V0X3NraW4YAyABKA0SEAoIY3Vy",
+            "X3NraW4YDCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SelectPamSkinScRsp), global::EggLink.DanhengServer.Proto.SelectPamSkinScRsp.Parser, new[]{ "Retcode", "CurSkin", "SetSkin" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SelectPamSkinScRsp), global::EggLink.DanhengServer.Proto.SelectPamSkinScRsp.Parser, new[]{ "Retcode", "SetSkin", "CurSkin" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SelectPamSkinScRsp(SelectPamSkinScRsp other) : this() {
       retcode_ = other.retcode_;
-      curSkin_ = other.curSkin_;
       setSkin_ = other.setSkin_;
+      curSkin_ = other.curSkin_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,20 +97,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "cur_skin" field.</summary>
-    public const int CurSkinFieldNumber = 5;
-    private uint curSkin_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurSkin {
-      get { return curSkin_; }
-      set {
-        curSkin_ = value;
-      }
-    }
-
     /// <summary>Field number for the "set_skin" field.</summary>
-    public const int SetSkinFieldNumber = 1;
+    public const int SetSkinFieldNumber = 3;
     private uint setSkin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return setSkin_; }
       set {
         setSkin_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cur_skin" field.</summary>
+    public const int CurSkinFieldNumber = 12;
+    private uint curSkin_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CurSkin {
+      get { return curSkin_; }
+      set {
+        curSkin_ = value;
       }
     }
 
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Retcode != other.Retcode) return false;
-      if (CurSkin != other.CurSkin) return false;
       if (SetSkin != other.SetSkin) return false;
+      if (CurSkin != other.CurSkin) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (CurSkin != 0) hash ^= CurSkin.GetHashCode();
       if (SetSkin != 0) hash ^= SetSkin.GetHashCode();
+      if (CurSkin != 0) hash ^= CurSkin.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (SetSkin != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteUInt32(SetSkin);
       }
-      if (CurSkin != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(CurSkin);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
+      }
+      if (CurSkin != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(CurSkin);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SetSkin != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(24);
         output.WriteUInt32(SetSkin);
       }
-      if (CurSkin != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(CurSkin);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
+      }
+      if (CurSkin != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(CurSkin);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -214,11 +214,11 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      if (CurSkin != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurSkin);
-      }
       if (SetSkin != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SetSkin);
+      }
+      if (CurSkin != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurSkin);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -235,11 +235,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      if (other.CurSkin != 0) {
-        CurSkin = other.CurSkin;
-      }
       if (other.SetSkin != 0) {
         SetSkin = other.SetSkin;
+      }
+      if (other.CurSkin != 0) {
+        CurSkin = other.CurSkin;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 24: {
             SetSkin = input.ReadUInt32();
             break;
           }
-          case 40: {
-            CurSkin = input.ReadUInt32();
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 96: {
+            CurSkin = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 24: {
             SetSkin = input.ReadUInt32();
             break;
           }
-          case 40: {
-            CurSkin = input.ReadUInt32();
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 96: {
+            CurSkin = input.ReadUInt32();
             break;
           }
         }

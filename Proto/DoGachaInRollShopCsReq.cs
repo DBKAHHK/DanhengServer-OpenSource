@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxEb0dhY2hhSW5Sb2xsU2hvcENzUmVxLnByb3RvIlkKFkRvR2FjaGFJblJv",
-            "bGxTaG9wQ3NSZXESFAoMZ2FjaGFfcmFuZG9tGAwgASgNEhQKDHJvbGxfc2hv",
-            "cF9pZBgFIAEoDRITCgtnYWNoYV9jb3VudBgIIAEoDUIeqgIbRWdnTGluay5E",
+            "bGxTaG9wQ3NSZXESFAoMcm9sbF9zaG9wX2lkGAIgASgNEhQKDGdhY2hhX3Jh",
+            "bmRvbRgGIAEoDRITCgtnYWNoYV9jb3VudBgNIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DoGachaInRollShopCsReq), global::EggLink.DanhengServer.Proto.DoGachaInRollShopCsReq.Parser, new[]{ "GachaRandom", "RollShopId", "GachaCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DoGachaInRollShopCsReq), global::EggLink.DanhengServer.Proto.DoGachaInRollShopCsReq.Parser, new[]{ "RollShopId", "GachaRandom", "GachaCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DoGachaInRollShopCsReq(DoGachaInRollShopCsReq other) : this() {
-      gachaRandom_ = other.gachaRandom_;
       rollShopId_ = other.rollShopId_;
+      gachaRandom_ = other.gachaRandom_;
       gachaCount_ = other.gachaCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new DoGachaInRollShopCsReq(this);
     }
 
-    /// <summary>Field number for the "gacha_random" field.</summary>
-    public const int GachaRandomFieldNumber = 12;
-    private uint gachaRandom_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GachaRandom {
-      get { return gachaRandom_; }
-      set {
-        gachaRandom_ = value;
-      }
-    }
-
     /// <summary>Field number for the "roll_shop_id" field.</summary>
-    public const int RollShopIdFieldNumber = 5;
+    public const int RollShopIdFieldNumber = 2;
     private uint rollShopId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,8 +97,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "gacha_random" field.</summary>
+    public const int GachaRandomFieldNumber = 6;
+    private uint gachaRandom_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GachaRandom {
+      get { return gachaRandom_; }
+      set {
+        gachaRandom_ = value;
+      }
+    }
+
     /// <summary>Field number for the "gacha_count" field.</summary>
-    public const int GachaCountFieldNumber = 8;
+    public const int GachaCountFieldNumber = 13;
     private uint gachaCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GachaRandom != other.GachaRandom) return false;
       if (RollShopId != other.RollShopId) return false;
+      if (GachaRandom != other.GachaRandom) return false;
       if (GachaCount != other.GachaCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GachaRandom != 0) hash ^= GachaRandom.GetHashCode();
       if (RollShopId != 0) hash ^= RollShopId.GetHashCode();
+      if (GachaRandom != 0) hash ^= GachaRandom.GetHashCode();
       if (GachaCount != 0) hash ^= GachaCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (RollShopId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(RollShopId);
       }
-      if (GachaCount != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(GachaCount);
-      }
       if (GachaRandom != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(48);
         output.WriteUInt32(GachaRandom);
+      }
+      if (GachaCount != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(GachaCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (RollShopId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(RollShopId);
       }
-      if (GachaCount != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(GachaCount);
-      }
       if (GachaRandom != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(48);
         output.WriteUInt32(GachaRandom);
+      }
+      if (GachaCount != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(GachaCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,11 +211,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GachaRandom != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaRandom);
-      }
       if (RollShopId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RollShopId);
+      }
+      if (GachaRandom != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaRandom);
       }
       if (GachaCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaCount);
@@ -232,11 +232,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GachaRandom != 0) {
-        GachaRandom = other.GachaRandom;
-      }
       if (other.RollShopId != 0) {
         RollShopId = other.RollShopId;
+      }
+      if (other.GachaRandom != 0) {
+        GachaRandom = other.GachaRandom;
       }
       if (other.GachaCount != 0) {
         GachaCount = other.GachaCount;
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 16: {
             RollShopId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            GachaCount = input.ReadUInt32();
+          case 48: {
+            GachaRandom = input.ReadUInt32();
             break;
           }
-          case 96: {
-            GachaRandom = input.ReadUInt32();
+          case 104: {
+            GachaCount = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 16: {
             RollShopId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            GachaCount = input.ReadUInt32();
+          case 48: {
+            GachaRandom = input.ReadUInt32();
             break;
           }
-          case 96: {
-            GachaRandom = input.ReadUInt32();
+          case 104: {
+            GachaCount = input.ReadUInt32();
             break;
           }
         }

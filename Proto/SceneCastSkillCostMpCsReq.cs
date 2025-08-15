@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9TY2VuZUNhc3RTa2lsbENvc3RNcENzUmVxLnByb3RvImcKGVNjZW5lQ2Fz",
-            "dFNraWxsQ29zdE1wQ3NSZXESHQoVYXR0YWNrZWRfYnlfZW50aXR5X2lkGAcg",
-            "ASgNEhYKDmNhc3RfZW50aXR5X2lkGAYgASgNEhMKC3NraWxsX2luZGV4GAQg",
+            "dFNraWxsQ29zdE1wQ3NSZXESHQoVYXR0YWNrZWRfYnlfZW50aXR5X2lkGA8g",
+            "ASgNEhYKDmNhc3RfZW50aXR5X2lkGAIgASgNEhMKC3NraWxsX2luZGV4GAkg",
             "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "attacked_by_entity_id" field.</summary>
-    public const int AttackedByEntityIdFieldNumber = 7;
+    public const int AttackedByEntityIdFieldNumber = 15;
     private uint attackedByEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cast_entity_id" field.</summary>
-    public const int CastEntityIdFieldNumber = 6;
+    public const int CastEntityIdFieldNumber = 2;
     private uint castEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "skill_index" field.</summary>
-    public const int SkillIndexFieldNumber = 4;
+    public const int SkillIndexFieldNumber = 9;
     private uint skillIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SkillIndex != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(SkillIndex);
-      }
       if (CastEntityId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(16);
         output.WriteUInt32(CastEntityId);
       }
+      if (SkillIndex != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(SkillIndex);
+      }
       if (AttackedByEntityId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(120);
         output.WriteUInt32(AttackedByEntityId);
       }
       if (_unknownFields != null) {
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SkillIndex != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(SkillIndex);
-      }
       if (CastEntityId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(16);
         output.WriteUInt32(CastEntityId);
       }
+      if (SkillIndex != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(SkillIndex);
+      }
       if (AttackedByEntityId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(120);
         output.WriteUInt32(AttackedByEntityId);
       }
       if (_unknownFields != null) {
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            SkillIndex = input.ReadUInt32();
-            break;
-          }
-          case 48: {
+          case 16: {
             CastEntityId = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 72: {
+            SkillIndex = input.ReadUInt32();
+            break;
+          }
+          case 120: {
             AttackedByEntityId = input.ReadUInt32();
             break;
           }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            SkillIndex = input.ReadUInt32();
-            break;
-          }
-          case 48: {
+          case 16: {
             CastEntityId = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 72: {
+            SkillIndex = input.ReadUInt32();
+            break;
+          }
+          case 120: {
             AttackedByEntityId = input.ReadUInt32();
             break;
           }

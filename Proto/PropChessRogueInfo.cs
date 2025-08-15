@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhQcm9wQ2hlc3NSb2d1ZUluZm8ucHJvdG8iQgoSUHJvcENoZXNzUm9ndWVJ",
-            "bmZvEhMKC0FLQ0dIQkZHQkNDGAsgASgIEhcKD2VudGVyX25leHRfY2VsbBgE",
+            "bmZvEhMKC0FLQ0dIQkZHQkNDGA8gASgIEhcKD2VudGVyX25leHRfY2VsbBgF",
             "IAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "AKCGHBFGBCC" field.</summary>
-    public const int AKCGHBFGBCCFieldNumber = 11;
+    public const int AKCGHBFGBCCFieldNumber = 15;
     private bool aKCGHBFGBCC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "enter_next_cell" field.</summary>
-    public const int EnterNextCellFieldNumber = 4;
+    public const int EnterNextCellFieldNumber = 5;
     private bool enterNextCell_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EnterNextCell != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(EnterNextCell);
       }
       if (AKCGHBFGBCC != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(120);
         output.WriteBool(AKCGHBFGBCC);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EnterNextCell != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(EnterNextCell);
       }
       if (AKCGHBFGBCC != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(120);
         output.WriteBool(AKCGHBFGBCC);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 40: {
             EnterNextCell = input.ReadBool();
             break;
           }
-          case 88: {
+          case 120: {
             AKCGHBFGBCC = input.ReadBool();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 40: {
             EnterNextCell = input.ReadBool();
             break;
           }
-          case 88: {
+          case 120: {
             AKCGHBFGBCC = input.ReadBool();
             break;
           }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlTcGFjZVpvb011dGF0ZUNzUmVxLnByb3RvIjkKE1NwYWNlWm9vTXV0YXRl",
-            "Q3NSZXESEQoJdW5pcXVlX2lkGAUgASgNEg8KB2l0ZW1faWQYDSABKA1CHqoC",
+            "Q3NSZXESEQoJdW5pcXVlX2lkGAMgASgNEg8KB2l0ZW1faWQYASABKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "unique_id" field.</summary>
-    public const int UniqueIdFieldNumber = 5;
+    public const int UniqueIdFieldNumber = 3;
     private uint uniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_id" field.</summary>
-    public const int ItemIdFieldNumber = 13;
+    public const int ItemIdFieldNumber = 1;
     private uint itemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (UniqueId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(UniqueId);
-      }
       if (ItemId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(8);
         output.WriteUInt32(ItemId);
+      }
+      if (UniqueId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(UniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (UniqueId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(UniqueId);
-      }
       if (ItemId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(8);
         output.WriteUInt32(ItemId);
+      }
+      if (UniqueId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(UniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            UniqueId = input.ReadUInt32();
+          case 8: {
+            ItemId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            ItemId = input.ReadUInt32();
+          case 24: {
+            UniqueId = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            UniqueId = input.ReadUInt32();
+          case 8: {
+            ItemId = input.ReadUInt32();
             break;
           }
-          case 104: {
-            ItemId = input.ReadUInt32();
+          case 24: {
+            UniqueId = input.ReadUInt32();
             break;
           }
         }

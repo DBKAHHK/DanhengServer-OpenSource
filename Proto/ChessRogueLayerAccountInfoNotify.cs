@@ -27,8 +27,8 @@ namespace EggLink.DanhengServer.Proto {
             "CiZDaGVzc1JvZ3VlTGF5ZXJBY2NvdW50SW5mb05vdGlmeS5wcm90bxoaQ2hl",
             "c3NSb2d1ZUZpbmlzaEluZm8ucHJvdG8iegogQ2hlc3NSb2d1ZUxheWVyQWNj",
             "b3VudEluZm9Ob3RpZnkSEAoIbGF5ZXJfaWQYDiABKA0SKgoLZmluaXNoX2lu",
-            "Zm8YDCABKAsyFS5DaGVzc1JvZ3VlRmluaXNoSW5mbxIYChBkaWZmaWN1bHR5",
-            "X2xldmVsGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "Zm8YASABKAsyFS5DaGVzc1JvZ3VlRmluaXNoSW5mbxIYChBkaWZmaWN1bHR5",
+            "X2xldmVsGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueFinishInfoReflection.Descriptor, },
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "finish_info" field.</summary>
-    public const int FinishInfoFieldNumber = 12;
+    public const int FinishInfoFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo finishInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "difficulty_level" field.</summary>
-    public const int DifficultyLevelFieldNumber = 15;
+    public const int DifficultyLevelFieldNumber = 5;
     private uint difficultyLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -170,16 +170,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (finishInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(10);
         output.WriteMessage(FinishInfo);
+      }
+      if (DifficultyLevel != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(DifficultyLevel);
       }
       if (LayerId != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(LayerId);
-      }
-      if (DifficultyLevel != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(DifficultyLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -192,16 +192,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (finishInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(10);
         output.WriteMessage(FinishInfo);
+      }
+      if (DifficultyLevel != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(DifficultyLevel);
       }
       if (LayerId != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(LayerId);
-      }
-      if (DifficultyLevel != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(DifficultyLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -261,19 +261,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98: {
+          case 10: {
             if (finishInfo_ == null) {
               FinishInfo = new global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo();
             }
             input.ReadMessage(FinishInfo);
             break;
           }
-          case 112: {
-            LayerId = input.ReadUInt32();
+          case 40: {
+            DifficultyLevel = input.ReadUInt32();
             break;
           }
-          case 120: {
-            DifficultyLevel = input.ReadUInt32();
+          case 112: {
+            LayerId = input.ReadUInt32();
             break;
           }
         }
@@ -291,19 +291,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98: {
+          case 10: {
             if (finishInfo_ == null) {
               FinishInfo = new global::EggLink.DanhengServer.Proto.ChessRogueFinishInfo();
             }
             input.ReadMessage(FinishInfo);
             break;
           }
-          case 112: {
-            LayerId = input.ReadUInt32();
+          case 40: {
+            DifficultyLevel = input.ReadUInt32();
             break;
           }
-          case 120: {
-            DifficultyLevel = input.ReadUInt32();
+          case 112: {
+            LayerId = input.ReadUInt32();
             break;
           }
         }

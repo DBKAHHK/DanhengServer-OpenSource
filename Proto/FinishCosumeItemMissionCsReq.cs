@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJGaW5pc2hDb3N1bWVJdGVtTWlzc2lvbkNzUmVxLnByb3RvGg5JdGVtTGlz",
             "dC5wcm90byJUChxGaW5pc2hDb3N1bWVJdGVtTWlzc2lvbkNzUmVxEhwKCWl0",
-            "ZW1fbGlzdBgIIAEoCzIJLkl0ZW1MaXN0EhYKDnN1Yl9taXNzaW9uX2lkGAMg",
+            "ZW1fbGlzdBgIIAEoCzIJLkl0ZW1MaXN0EhYKDnN1Yl9taXNzaW9uX2lkGAcg",
             "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "sub_mission_id" field.</summary>
-    public const int SubMissionIdFieldNumber = 3;
+    public const int SubMissionIdFieldNumber = 7;
     private uint subMissionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (SubMissionId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(SubMissionId);
       }
       if (itemList_ != null) {
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SubMissionId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(SubMissionId);
       }
       if (itemList_ != null) {
@@ -230,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 56: {
             SubMissionId = input.ReadUInt32();
             break;
           }
@@ -256,7 +256,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 56: {
             SubMissionId = input.ReadUInt32();
             break;
           }

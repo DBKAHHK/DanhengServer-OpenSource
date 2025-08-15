@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFUcmVhc3VyZUR1bmdlb25EYXRhU2NOb3RpZnkucHJvdG8aGlRyZWFzdXJl",
             "RHVuZ2VvbkxldmVsLnByb3RvIkkKG1RyZWFzdXJlRHVuZ2VvbkRhdGFTY05v",
-            "dGlmeRIqCgtETEVKUEpKQ0VMShgLIAEoCzIVLlRyZWFzdXJlRHVuZ2Vvbkxl",
+            "dGlmeRIqCgtETEVKUEpKQ0VMShgNIAEoCzIVLlRyZWFzdXJlRHVuZ2Vvbkxl",
             "dmVsQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TreasureDungeonLevelReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DLEJPJJCELJ" field.</summary>
-    public const int DLEJPJJCELJFieldNumber = 11;
+    public const int DLEJPJJCELJFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.TreasureDungeonLevel dLEJPJJCELJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (dLEJPJJCELJ_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(106);
         output.WriteMessage(DLEJPJJCELJ);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (dLEJPJJCELJ_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(106);
         output.WriteMessage(DLEJPJJCELJ);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 106: {
             if (dLEJPJJCELJ_ == null) {
               DLEJPJJCELJ = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 106: {
             if (dLEJPJJCELJ_ == null) {
               DLEJPJJCELJ = new global::EggLink.DanhengServer.Proto.TreasureDungeonLevel();
             }

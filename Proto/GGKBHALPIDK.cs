@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GGKBHALPIDKReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFHR0tCSEFMUElESy5wcm90byJICgtHR0tCSEFMUElESxITCgtMSEJET05K",
-            "SUlDQxgIIAEoDRIPCgdhcmVhX2lkGAYgASgNEhMKC0lNTEhGR0VQQ0FOGAsg",
+            "ChFHR0tCSEFMUElESy5wcm90byJICgtHR0tCSEFMUElESxIPCgdhcmVhX2lk",
+            "GAogASgNEhMKC0lNTEhGR0VQQ0FOGAEgASgNEhMKC0xIQkRPTkpJSUNDGA0g",
             "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GGKBHALPIDK), global::EggLink.DanhengServer.Proto.GGKBHALPIDK.Parser, new[]{ "LHBDONJIICC", "AreaId", "IMLHFGEPCAN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GGKBHALPIDK), global::EggLink.DanhengServer.Proto.GGKBHALPIDK.Parser, new[]{ "AreaId", "IMLHFGEPCAN", "LHBDONJIICC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GGKBHALPIDK(GGKBHALPIDK other) : this() {
-      lHBDONJIICC_ = other.lHBDONJIICC_;
       areaId_ = other.areaId_;
       iMLHFGEPCAN_ = other.iMLHFGEPCAN_;
+      lHBDONJIICC_ = other.lHBDONJIICC_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GGKBHALPIDK(this);
     }
 
-    /// <summary>Field number for the "LHBDONJIICC" field.</summary>
-    public const int LHBDONJIICCFieldNumber = 8;
-    private uint lHBDONJIICC_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LHBDONJIICC {
-      get { return lHBDONJIICC_; }
-      set {
-        lHBDONJIICC_ = value;
-      }
-    }
-
     /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 6;
+    public const int AreaIdFieldNumber = 10;
     private uint areaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IMLHFGEPCAN" field.</summary>
-    public const int IMLHFGEPCANFieldNumber = 11;
+    public const int IMLHFGEPCANFieldNumber = 1;
     private uint iMLHFGEPCAN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -117,6 +105,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return iMLHFGEPCAN_; }
       set {
         iMLHFGEPCAN_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "LHBDONJIICC" field.</summary>
+    public const int LHBDONJIICCFieldNumber = 13;
+    private uint lHBDONJIICC_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LHBDONJIICC {
+      get { return lHBDONJIICC_; }
+      set {
+        lHBDONJIICC_ = value;
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LHBDONJIICC != other.LHBDONJIICC) return false;
       if (AreaId != other.AreaId) return false;
       if (IMLHFGEPCAN != other.IMLHFGEPCAN) return false;
+      if (LHBDONJIICC != other.LHBDONJIICC) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LHBDONJIICC != 0) hash ^= LHBDONJIICC.GetHashCode();
       if (AreaId != 0) hash ^= AreaId.GetHashCode();
       if (IMLHFGEPCAN != 0) hash ^= IMLHFGEPCAN.GetHashCode();
+      if (LHBDONJIICC != 0) hash ^= LHBDONJIICC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (IMLHFGEPCAN != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(IMLHFGEPCAN);
+      }
       if (AreaId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(80);
         output.WriteUInt32(AreaId);
       }
       if (LHBDONJIICC != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(LHBDONJIICC);
-      }
-      if (IMLHFGEPCAN != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(IMLHFGEPCAN);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (IMLHFGEPCAN != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(IMLHFGEPCAN);
+      }
       if (AreaId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(80);
         output.WriteUInt32(AreaId);
       }
       if (LHBDONJIICC != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(LHBDONJIICC);
-      }
-      if (IMLHFGEPCAN != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(IMLHFGEPCAN);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LHBDONJIICC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LHBDONJIICC);
-      }
       if (AreaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
       }
       if (IMLHFGEPCAN != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IMLHFGEPCAN);
+      }
+      if (LHBDONJIICC != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LHBDONJIICC);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LHBDONJIICC != 0) {
-        LHBDONJIICC = other.LHBDONJIICC;
-      }
       if (other.AreaId != 0) {
         AreaId = other.AreaId;
       }
       if (other.IMLHFGEPCAN != 0) {
         IMLHFGEPCAN = other.IMLHFGEPCAN;
+      }
+      if (other.LHBDONJIICC != 0) {
+        LHBDONJIICC = other.LHBDONJIICC;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 8: {
+            IMLHFGEPCAN = input.ReadUInt32();
+            break;
+          }
+          case 80: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 104: {
             LHBDONJIICC = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            IMLHFGEPCAN = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 8: {
+            IMLHFGEPCAN = input.ReadUInt32();
+            break;
+          }
+          case 80: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 104: {
             LHBDONJIICC = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            IMLHFGEPCAN = input.ReadUInt32();
             break;
           }
         }

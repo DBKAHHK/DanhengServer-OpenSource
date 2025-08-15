@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidHZXRGaXJzdFRhbGtCeVBlcmZvcm1hbmNlTnBjU2NSc3AucHJvdG8aIE5w",
             "Y01lZXRCeVBlcmZvcm1hbmNlU3RhdHVzLnByb3RvIm8KIUdldEZpcnN0VGFs",
-            "a0J5UGVyZm9ybWFuY2VOcGNTY1JzcBIPCgdyZXRjb2RlGAUgASgNEjkKFG5w",
-            "Y19tZWV0X3N0YXR1c19saXN0GA0gAygLMhsuTnBjTWVldEJ5UGVyZm9ybWFu",
-            "Y2VTdGF0dXNCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "a0J5UGVyZm9ybWFuY2VOcGNTY1JzcBI5ChRucGNfbWVldF9zdGF0dXNfbGlz",
+            "dBgDIAMoCzIbLk5wY01lZXRCeVBlcmZvcm1hbmNlU3RhdHVzEg8KB3JldGNv",
+            "ZGUYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFirstTalkByPerformanceNpcScRsp), global::EggLink.DanhengServer.Proto.GetFirstTalkByPerformanceNpcScRsp.Parser, new[]{ "Retcode", "NpcMeetStatusList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFirstTalkByPerformanceNpcScRsp), global::EggLink.DanhengServer.Proto.GetFirstTalkByPerformanceNpcScRsp.Parser, new[]{ "NpcMeetStatusList", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetFirstTalkByPerformanceNpcScRsp(GetFirstTalkByPerformanceNpcScRsp other) : this() {
-      retcode_ = other.retcode_;
       npcMeetStatusList_ = other.npcMeetStatusList_.Clone();
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,8 +86,19 @@ namespace EggLink.DanhengServer.Proto {
       return new GetFirstTalkByPerformanceNpcScRsp(this);
     }
 
+    /// <summary>Field number for the "npc_meet_status_list" field.</summary>
+    public const int NpcMeetStatusListFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus> _repeated_npcMeetStatusList_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus> npcMeetStatusList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus> NpcMeetStatusList {
+      get { return npcMeetStatusList_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 10;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,17 +107,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "npc_meet_status_list" field.</summary>
-    public const int NpcMeetStatusListFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus> _repeated_npcMeetStatusList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus> npcMeetStatusList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NpcMeetByPerformanceStatus> NpcMeetStatusList {
-      get { return npcMeetStatusList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if(!npcMeetStatusList_.Equals(other.npcMeetStatusList_)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= npcMeetStatusList_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      npcMeetStatusList_.WriteTo(output, _repeated_npcMeetStatusList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
-      npcMeetStatusList_.WriteTo(output, _repeated_npcMeetStatusList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -168,11 +168,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      npcMeetStatusList_.WriteTo(ref output, _repeated_npcMeetStatusList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
-      npcMeetStatusList_.WriteTo(ref output, _repeated_npcMeetStatusList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -183,10 +183,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += npcMeetStatusList_.CalculateSize(_repeated_npcMeetStatusList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += npcMeetStatusList_.CalculateSize(_repeated_npcMeetStatusList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -199,10 +199,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      npcMeetStatusList_.Add(other.npcMeetStatusList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      npcMeetStatusList_.Add(other.npcMeetStatusList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -218,12 +218,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 26: {
+            npcMeetStatusList_.AddEntriesFrom(input, _repeated_npcMeetStatusList_codec);
             break;
           }
-          case 106: {
-            npcMeetStatusList_.AddEntriesFrom(input, _repeated_npcMeetStatusList_codec);
+          case 80: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -241,12 +241,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 26: {
+            npcMeetStatusList_.AddEntriesFrom(ref input, _repeated_npcMeetStatusList_codec);
             break;
           }
-          case 106: {
-            npcMeetStatusList_.AddEntriesFrom(ref input, _repeated_npcMeetStatusList_codec);
+          case 80: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

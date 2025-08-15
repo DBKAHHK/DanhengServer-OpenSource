@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRDaGVzc1JvZ3VlRGljZS5wcm90bxofQ2hlc3NSb2d1ZURpY2VTdXJmYWNl",
-            "SW5mby5wcm90byJ6Cg5DaGVzc1JvZ3VlRGljZRIRCglicmFuY2hfaWQYASAB",
-            "KA0SMAoMc3VyZmFjZV9saXN0GAogAygLMhouQ2hlc3NSb2d1ZURpY2VTdXJm",
-            "YWNlSW5mbxISCgpzdXJmYWNlX2lkGAggASgNEg8KB3Nsb3RfaWQYBSABKA1C",
+            "SW5mby5wcm90byJ6Cg5DaGVzc1JvZ3VlRGljZRIwCgxzdXJmYWNlX2xpc3QY",
+            "BiADKAsyGi5DaGVzc1JvZ3VlRGljZVN1cmZhY2VJbmZvEg8KB3Nsb3RfaWQY",
+            "DyABKA0SEgoKc3VyZmFjZV9pZBgNIAEoDRIRCglicmFuY2hfaWQYDCABKA1C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueDice), global::EggLink.DanhengServer.Proto.ChessRogueDice.Parser, new[]{ "BranchId", "SurfaceList", "SurfaceId", "SlotId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueDice), global::EggLink.DanhengServer.Proto.ChessRogueDice.Parser, new[]{ "SurfaceList", "SlotId", "SurfaceId", "BranchId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueDice(ChessRogueDice other) : this() {
-      branchId_ = other.branchId_;
       surfaceList_ = other.surfaceList_.Clone();
-      surfaceId_ = other.surfaceId_;
       slotId_ = other.slotId_;
+      surfaceId_ = other.surfaceId_;
+      branchId_ = other.branchId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,22 +87,10 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueDice(this);
     }
 
-    /// <summary>Field number for the "branch_id" field.</summary>
-    public const int BranchIdFieldNumber = 1;
-    private uint branchId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BranchId {
-      get { return branchId_; }
-      set {
-        branchId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "surface_list" field.</summary>
-    public const int SurfaceListFieldNumber = 10;
+    public const int SurfaceListFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo> _repeated_surfaceList_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo> surfaceList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChessRogueDiceSurfaceInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,8 +98,20 @@ namespace EggLink.DanhengServer.Proto {
       get { return surfaceList_; }
     }
 
+    /// <summary>Field number for the "slot_id" field.</summary>
+    public const int SlotIdFieldNumber = 15;
+    private uint slotId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SlotId {
+      get { return slotId_; }
+      set {
+        slotId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "surface_id" field.</summary>
-    public const int SurfaceIdFieldNumber = 8;
+    public const int SurfaceIdFieldNumber = 13;
     private uint surfaceId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,15 +122,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "slot_id" field.</summary>
-    public const int SlotIdFieldNumber = 5;
-    private uint slotId_;
+    /// <summary>Field number for the "branch_id" field.</summary>
+    public const int BranchIdFieldNumber = 12;
+    private uint branchId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SlotId {
-      get { return slotId_; }
+    public uint BranchId {
+      get { return branchId_; }
       set {
-        slotId_ = value;
+        branchId_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BranchId != other.BranchId) return false;
       if(!surfaceList_.Equals(other.surfaceList_)) return false;
-      if (SurfaceId != other.SurfaceId) return false;
       if (SlotId != other.SlotId) return false;
+      if (SurfaceId != other.SurfaceId) return false;
+      if (BranchId != other.BranchId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BranchId != 0) hash ^= BranchId.GetHashCode();
       hash ^= surfaceList_.GetHashCode();
-      if (SurfaceId != 0) hash ^= SurfaceId.GetHashCode();
       if (SlotId != 0) hash ^= SlotId.GetHashCode();
+      if (SurfaceId != 0) hash ^= SurfaceId.GetHashCode();
+      if (BranchId != 0) hash ^= BranchId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,19 +182,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      surfaceList_.WriteTo(output, _repeated_surfaceList_codec);
       if (BranchId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(96);
         output.WriteUInt32(BranchId);
       }
-      if (SlotId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SlotId);
-      }
       if (SurfaceId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(SurfaceId);
       }
-      surfaceList_.WriteTo(output, _repeated_surfaceList_codec);
+      if (SlotId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(SlotId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -205,19 +205,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      surfaceList_.WriteTo(ref output, _repeated_surfaceList_codec);
       if (BranchId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(96);
         output.WriteUInt32(BranchId);
       }
-      if (SlotId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SlotId);
-      }
       if (SurfaceId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(SurfaceId);
       }
-      surfaceList_.WriteTo(ref output, _repeated_surfaceList_codec);
+      if (SlotId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(SlotId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -228,15 +228,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BranchId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BranchId);
-      }
       size += surfaceList_.CalculateSize(_repeated_surfaceList_codec);
+      if (SlotId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SlotId);
+      }
       if (SurfaceId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SurfaceId);
       }
-      if (SlotId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SlotId);
+      if (BranchId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BranchId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -250,15 +250,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BranchId != 0) {
-        BranchId = other.BranchId;
-      }
       surfaceList_.Add(other.surfaceList_);
+      if (other.SlotId != 0) {
+        SlotId = other.SlotId;
+      }
       if (other.SurfaceId != 0) {
         SurfaceId = other.SurfaceId;
       }
-      if (other.SlotId != 0) {
-        SlotId = other.SlotId;
+      if (other.BranchId != 0) {
+        BranchId = other.BranchId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -275,20 +275,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 50: {
+            surfaceList_.AddEntriesFrom(input, _repeated_surfaceList_codec);
+            break;
+          }
+          case 96: {
             BranchId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            SlotId = input.ReadUInt32();
-            break;
-          }
-          case 64: {
+          case 104: {
             SurfaceId = input.ReadUInt32();
             break;
           }
-          case 82: {
-            surfaceList_.AddEntriesFrom(input, _repeated_surfaceList_codec);
+          case 120: {
+            SlotId = input.ReadUInt32();
             break;
           }
         }
@@ -306,20 +306,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 50: {
+            surfaceList_.AddEntriesFrom(ref input, _repeated_surfaceList_codec);
+            break;
+          }
+          case 96: {
             BranchId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            SlotId = input.ReadUInt32();
-            break;
-          }
-          case 64: {
+          case 104: {
             SurfaceId = input.ReadUInt32();
             break;
           }
-          case 82: {
-            surfaceList_.AddEntriesFrom(ref input, _repeated_surfaceList_codec);
+          case 120: {
+            SlotId = input.ReadUInt32();
             break;
           }
         }

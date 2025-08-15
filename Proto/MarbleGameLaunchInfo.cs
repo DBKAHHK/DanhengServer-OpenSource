@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpNYXJibGVHYW1lTGF1bmNoSW5mby5wcm90bxoWTWFyYmxlU2VhbFZlY3Rv",
-            "ci5wcm90byJYChRNYXJibGVHYW1lTGF1bmNoSW5mbxIPCgdpdGVtX2lkGAYg",
-            "ASgNEi8KFHNlYWxfdGFyZ2V0X3JvdGF0aW9uGAEgASgLMhEuTWFyYmxlU2Vh",
+            "ci5wcm90byJYChRNYXJibGVHYW1lTGF1bmNoSW5mbxIPCgdpdGVtX2lkGAkg",
+            "ASgNEi8KFHNlYWxfdGFyZ2V0X3JvdGF0aW9uGAggASgLMhEuTWFyYmxlU2Vh",
             "bFZlY3RvckIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_id" field.</summary>
-    public const int ItemIdFieldNumber = 6;
+    public const int ItemIdFieldNumber = 9;
     private uint itemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "seal_target_rotation" field.</summary>
-    public const int SealTargetRotationFieldNumber = 1;
+    public const int SealTargetRotationFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.MarbleSealVector sealTargetRotation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (sealTargetRotation_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(66);
         output.WriteMessage(SealTargetRotation);
       }
       if (ItemId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(72);
         output.WriteUInt32(ItemId);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (sealTargetRotation_ != null) {
-        output.WriteRawTag(10);
+        output.WriteRawTag(66);
         output.WriteMessage(SealTargetRotation);
       }
       if (ItemId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(72);
         output.WriteUInt32(ItemId);
       }
       if (_unknownFields != null) {
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 66: {
             if (sealTargetRotation_ == null) {
               SealTargetRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
             input.ReadMessage(SealTargetRotation);
             break;
           }
-          case 48: {
+          case 72: {
             ItemId = input.ReadUInt32();
             break;
           }
@@ -257,14 +257,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 66: {
             if (sealTargetRotation_ == null) {
               SealTargetRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
             input.ReadMessage(SealTargetRotation);
             break;
           }
-          case 48: {
+          case 72: {
             ItemId = input.ReadUInt32();
             break;
           }

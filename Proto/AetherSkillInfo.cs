@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVBZXRoZXJTa2lsbEluZm8ucHJvdG8iTgoPQWV0aGVyU2tpbGxJbmZvEgsK",
-            "A251bRgJIAEoDRIPCgdpdGVtX2lkGAQgASgNEh0KFXNraWxsX2RyZXNzX2F2",
-            "YXRhcl9pZBgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "A251bRgEIAEoDRIPCgdpdGVtX2lkGAMgASgNEh0KFXNraWxsX2RyZXNzX2F2",
+            "YXRhcl9pZBgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "num" field.</summary>
-    public const int NumFieldNumber = 9;
+    public const int NumFieldNumber = 4;
     private uint num_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_id" field.</summary>
-    public const int ItemIdFieldNumber = 4;
+    public const int ItemIdFieldNumber = 3;
     private uint itemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "skill_dress_avatar_id" field.</summary>
-    public const int SkillDressAvatarIdFieldNumber = 5;
+    public const int SkillDressAvatarIdFieldNumber = 14;
     private uint skillDressAvatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ItemId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(ItemId);
       }
-      if (SkillDressAvatarId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SkillDressAvatarId);
-      }
       if (Num != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(Num);
+      }
+      if (SkillDressAvatarId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(SkillDressAvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ItemId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(ItemId);
       }
-      if (SkillDressAvatarId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(SkillDressAvatarId);
-      }
       if (Num != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(Num);
+      }
+      if (SkillDressAvatarId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(SkillDressAvatarId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 24: {
             ItemId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            SkillDressAvatarId = input.ReadUInt32();
+          case 32: {
+            Num = input.ReadUInt32();
             break;
           }
-          case 72: {
-            Num = input.ReadUInt32();
+          case 112: {
+            SkillDressAvatarId = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 24: {
             ItemId = input.ReadUInt32();
             break;
           }
-          case 40: {
-            SkillDressAvatarId = input.ReadUInt32();
+          case 32: {
+            Num = input.ReadUInt32();
             break;
           }
-          case 72: {
-            Num = input.ReadUInt32();
+          case 112: {
+            SkillDressAvatarId = input.ReadUInt32();
             break;
           }
         }

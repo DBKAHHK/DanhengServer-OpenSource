@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJGYXRlU3luY0FjdGlvblJlc3VsdFNjTm90aWZ5LnByb3RvGhFJQkVJSUhM",
             "REtBTi5wcm90byJIChxGYXRlU3luY0FjdGlvblJlc3VsdFNjTm90aWZ5EigK",
-            "EmFjdGlvbl9yZXN1bHRfbGlzdBgPIAMoCzIMLklCRUlJSExES0FOQh6qAhtF",
+            "EmFjdGlvbl9yZXN1bHRfbGlzdBgLIAMoCzIMLklCRUlJSExES0FOQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IBEIIHLDKANReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "action_result_list" field.</summary>
-    public const int ActionResultListFieldNumber = 15;
+    public const int ActionResultListFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.IBEIIHLDKAN> _repeated_actionResultList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.IBEIIHLDKAN.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.IBEIIHLDKAN.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IBEIIHLDKAN> actionResultList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IBEIIHLDKAN>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 122: {
+          case 90: {
             actionResultList_.AddEntriesFrom(input, _repeated_actionResultList_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 122: {
+          case 90: {
             actionResultList_.AddEntriesFrom(ref input, _repeated_actionResultList_codec);
             break;
           }

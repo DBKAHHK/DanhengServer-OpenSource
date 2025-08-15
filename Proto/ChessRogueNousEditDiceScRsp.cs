@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFDaGVzc1JvZ3VlTm91c0VkaXREaWNlU2NSc3AucHJvdG8aFENoZXNzUm9n",
             "dWVEaWNlLnByb3RvIlgKG0NoZXNzUm9ndWVOb3VzRWRpdERpY2VTY1JzcBIo",
-            "Cg9xdWVyeV9kaWNlX2luZm8YDyABKAsyDy5DaGVzc1JvZ3VlRGljZRIPCgdy",
-            "ZXRjb2RlGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "Cg9xdWVyeV9kaWNlX2luZm8YASABKAsyDy5DaGVzc1JvZ3VlRGljZRIPCgdy",
+            "ZXRjb2RlGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueDiceReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "query_dice_info" field.</summary>
-    public const int QueryDiceInfoFieldNumber = 15;
+    public const int QueryDiceInfoFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.ChessRogueDice queryDiceInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 10;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Retcode);
-      }
       if (queryDiceInfo_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(10);
         output.WriteMessage(QueryDiceInfo);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Retcode);
-      }
       if (queryDiceInfo_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(10);
         output.WriteMessage(QueryDiceInfo);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 10: {
             if (queryDiceInfo_ == null) {
               QueryDiceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueDice();
             }
             input.ReadMessage(QueryDiceInfo);
+            break;
+          }
+          case 80: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 10: {
             if (queryDiceInfo_ == null) {
               QueryDiceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueDice();
             }
             input.ReadMessage(QueryDiceInfo);
+            break;
+          }
+          case 80: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

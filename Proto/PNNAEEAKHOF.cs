@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQTk5BRUVBS0hPRi5wcm90bxoRQ09JRUlITktDREsucHJvdG8iMAoLUE5O",
-            "QUVFQUtIT0YSIQoLSkpCT09ITk1QTkIYAiADKAsyDC5DT0lFSUhOS0NES0Ie",
+            "QUVFQUtIT0YSIQoLSkpCT09ITk1QTkIYBCADKAsyDC5DT0lFSUhOS0NES0Ie",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.COIEIHNKCDKReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JJBOOHNMPNB" field.</summary>
-    public const int JJBOOHNMPNBFieldNumber = 2;
+    public const int JJBOOHNMPNBFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.COIEIHNKCDK> _repeated_jJBOOHNMPNB_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.COIEIHNKCDK.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.COIEIHNKCDK.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.COIEIHNKCDK> jJBOOHNMPNB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.COIEIHNKCDK>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 34: {
             jJBOOHNMPNB_.AddEntriesFrom(input, _repeated_jJBOOHNMPNB_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 34: {
             jJBOOHNMPNB_.AddEntriesFrom(ref input, _repeated_jJBOOHNMPNB_codec);
             break;
           }

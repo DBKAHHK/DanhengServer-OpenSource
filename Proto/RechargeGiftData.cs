@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZSZWNoYXJnZUdpZnREYXRhLnByb3RvGhhSZWNoYXJnZUdpZnRTdGF0dXMu",
-            "cHJvdG8iRgoQUmVjaGFyZ2VHaWZ0RGF0YRINCgVpbmRleBgKIAEoDRIjCgZz",
-            "dGF0dXMYAiABKA4yEy5SZWNoYXJnZUdpZnRTdGF0dXNCHqoCG0VnZ0xpbmsu",
+            "cHJvdG8iRgoQUmVjaGFyZ2VHaWZ0RGF0YRINCgVpbmRleBgEIAEoDRIjCgZz",
+            "dGF0dXMYDyABKA4yEy5SZWNoYXJnZUdpZnRTdGF0dXNCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RechargeGiftStatusReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "index" field.</summary>
-    public const int IndexFieldNumber = 10;
+    public const int IndexFieldNumber = 4;
     private uint index_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 2;
+    public const int StatusFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.RechargeGiftStatus status_ = global::EggLink.DanhengServer.Proto.RechargeGiftStatus.NotReach;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Status != global::EggLink.DanhengServer.Proto.RechargeGiftStatus.NotReach) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Status);
-      }
       if (Index != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(32);
         output.WriteUInt32(Index);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.RechargeGiftStatus.NotReach) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Status != global::EggLink.DanhengServer.Proto.RechargeGiftStatus.NotReach) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) Status);
-      }
       if (Index != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(32);
         output.WriteUInt32(Index);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.RechargeGiftStatus.NotReach) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            Status = (global::EggLink.DanhengServer.Proto.RechargeGiftStatus) input.ReadEnum();
+          case 32: {
+            Index = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Index = input.ReadUInt32();
+          case 120: {
+            Status = (global::EggLink.DanhengServer.Proto.RechargeGiftStatus) input.ReadEnum();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            Status = (global::EggLink.DanhengServer.Proto.RechargeGiftStatus) input.ReadEnum();
+          case 32: {
+            Index = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Index = input.ReadUInt32();
+          case 120: {
+            Status = (global::EggLink.DanhengServer.Proto.RechargeGiftStatus) input.ReadEnum();
             break;
           }
         }

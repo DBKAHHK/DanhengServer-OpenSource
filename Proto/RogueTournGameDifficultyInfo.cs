@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJSb2d1ZVRvdXJuR2FtZURpZmZpY3VsdHlJbmZvLnByb3RvIjoKHFJvZ3Vl",
             "VG91cm5HYW1lRGlmZmljdWx0eUluZm8SGgoSZGlmZmljdWx0eV9pZF9saXN0",
-            "GAIgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "GAQgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "difficulty_id_list" field.</summary>
-    public const int DifficultyIdListFieldNumber = 2;
+    public const int DifficultyIdListFieldNumber = 4;
     private static readonly pb::FieldCodec<uint> _repeated_difficultyIdList_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(34);
     private readonly pbc::RepeatedField<uint> difficultyIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
+          case 34:
+          case 32: {
             difficultyIdList_.AddEntriesFrom(input, _repeated_difficultyIdList_codec);
             break;
           }
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
+          case 34:
+          case 32: {
             difficultyIdList_.AddEntriesFrom(ref input, _repeated_difficultyIdList_codec);
             break;
           }

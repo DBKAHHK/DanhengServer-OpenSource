@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9TdHJvbmdDaGFsbGVuZ2VBdmF0YXJEYXRhLnByb3RvGhtTdHJvbmdDaGFs",
             "bGVuZ2VBdmF0YXIucHJvdG8iWwoZU3Ryb25nQ2hhbGxlbmdlQXZhdGFyRGF0",
-            "YRIrCgthdmF0YXJfbGlzdBgGIAMoCzIWLlN0cm9uZ0NoYWxsZW5nZUF2YXRh",
-            "chIRCglidWZmX2xpc3QYCyADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "YRIrCgthdmF0YXJfbGlzdBgCIAMoCzIWLlN0cm9uZ0NoYWxsZW5nZUF2YXRh",
+            "chIRCglidWZmX2xpc3QYDCADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.StrongChallengeAvatarReflection.Descriptor, },
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_list" field.</summary>
-    public const int AvatarListFieldNumber = 6;
+    public const int AvatarListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.StrongChallengeAvatar> _repeated_avatarList_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.StrongChallengeAvatar.Parser);
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.StrongChallengeAvatar.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.StrongChallengeAvatar> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.StrongChallengeAvatar>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff_list" field.</summary>
-    public const int BuffListFieldNumber = 11;
+    public const int BuffListFieldNumber = 12;
     private static readonly pb::FieldCodec<uint> _repeated_buffList_codec
-        = pb::FieldCodec.ForUInt32(90);
+        = pb::FieldCodec.ForUInt32(98);
     private readonly pbc::RepeatedField<uint> buffList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -206,12 +206,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 18: {
             avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
             break;
           }
-          case 90:
-          case 88: {
+          case 98:
+          case 96: {
             buffList_.AddEntriesFrom(input, _repeated_buffList_codec);
             break;
           }
@@ -230,12 +230,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 18: {
             avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
             break;
           }
-          case 90:
-          case 88: {
+          case 98:
+          case 96: {
             buffList_.AddEntriesFrom(ref input, _repeated_buffList_codec);
             break;
           }

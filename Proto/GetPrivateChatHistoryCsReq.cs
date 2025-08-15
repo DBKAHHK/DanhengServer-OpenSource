@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBHZXRQcml2YXRlQ2hhdEhpc3RvcnlDc1JlcS5wcm90byJHChpHZXRQcml2",
-            "YXRlQ2hhdEhpc3RvcnlDc1JlcRIUCgxjb250YWN0X3NpZGUYBiABKA0SEwoL",
-            "dGFyZ2V0X3NpZGUYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "YXRlQ2hhdEhpc3RvcnlDc1JlcRIUCgxjb250YWN0X3NpZGUYBSABKA0SEwoL",
+            "dGFyZ2V0X3NpZGUYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "contact_side" field.</summary>
-    public const int ContactSideFieldNumber = 6;
+    public const int ContactSideFieldNumber = 5;
     private uint contactSide_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "target_side" field.</summary>
-    public const int TargetSideFieldNumber = 3;
+    public const int TargetSideFieldNumber = 9;
     private uint targetSide_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TargetSide != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(TargetSide);
-      }
       if (ContactSide != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteUInt32(ContactSide);
+      }
+      if (TargetSide != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(TargetSide);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TargetSide != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(TargetSide);
-      }
       if (ContactSide != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteUInt32(ContactSide);
+      }
+      if (TargetSide != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(TargetSide);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            TargetSide = input.ReadUInt32();
+          case 40: {
+            ContactSide = input.ReadUInt32();
             break;
           }
-          case 48: {
-            ContactSide = input.ReadUInt32();
+          case 72: {
+            TargetSide = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            TargetSide = input.ReadUInt32();
+          case 40: {
+            ContactSide = input.ReadUInt32();
             break;
           }
-          case 48: {
-            ContactSide = input.ReadUInt32();
+          case 72: {
+            TargetSide = input.ReadUInt32();
             break;
           }
         }

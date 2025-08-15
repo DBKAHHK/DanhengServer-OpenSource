@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBVcGRhdGVNb3ZpZVJhY2luZ0RhdGFTY1JzcC5wcm90bxoQUmFjaW5nRGF0",
             "YS5wcm90byJPChpVcGRhdGVNb3ZpZVJhY2luZ0RhdGFTY1JzcBIPCgdyZXRj",
-            "b2RlGAkgASgNEiAKC0tJSENIREZGUE9MGA8gASgLMgsuUmFjaW5nRGF0YUIe",
+            "b2RlGAogASgNEiAKC0tJSENIREZGUE9MGAcgASgLMgsuUmFjaW5nRGF0YUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RacingDataReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 10;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KIHCHDFFPOL" field.</summary>
-    public const int KIHCHDFFPOLFieldNumber = 15;
+    public const int KIHCHDFFPOLFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.RacingData kIHCHDFFPOL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Retcode);
-      }
       if (kIHCHDFFPOL_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(58);
         output.WriteMessage(KIHCHDFFPOL);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(Retcode);
-      }
       if (kIHCHDFFPOL_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(58);
         output.WriteMessage(KIHCHDFFPOL);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 58: {
             if (kIHCHDFFPOL_ == null) {
               KIHCHDFFPOL = new global::EggLink.DanhengServer.Proto.RacingData();
             }
             input.ReadMessage(KIHCHDFFPOL);
+            break;
+          }
+          case 80: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 58: {
             if (kIHCHDFFPOL_ == null) {
               KIHCHDFFPOL = new global::EggLink.DanhengServer.Proto.RacingData();
             }
             input.ReadMessage(KIHCHDFFPOL);
+            break;
+          }
+          case 80: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

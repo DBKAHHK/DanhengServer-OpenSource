@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidUYWtlTXVsdGlwbGVFeHBlZGl0aW9uUmV3YXJkQ3NSZXEucHJvdG8iQgoh",
             "VGFrZU11bHRpcGxlRXhwZWRpdGlvblJld2FyZENzUmVxEh0KFXRha2VfbXVs",
-            "dGlfZXhwZWRpdGlvbhgHIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "dGlfZXhwZWRpdGlvbhgKIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "take_multi_expedition" field.</summary>
-    public const int TakeMultiExpeditionFieldNumber = 7;
+    public const int TakeMultiExpeditionFieldNumber = 10;
     private static readonly pb::FieldCodec<uint> _repeated_takeMultiExpedition_codec
-        = pb::FieldCodec.ForUInt32(58);
+        = pb::FieldCodec.ForUInt32(82);
     private readonly pbc::RepeatedField<uint> takeMultiExpedition_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58:
-          case 56: {
+          case 82:
+          case 80: {
             takeMultiExpedition_.AddEntriesFrom(input, _repeated_takeMultiExpedition_codec);
             break;
           }
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58:
-          case 56: {
+          case 82:
+          case 80: {
             takeMultiExpedition_.AddEntriesFrom(ref input, _repeated_takeMultiExpedition_codec);
             break;
           }

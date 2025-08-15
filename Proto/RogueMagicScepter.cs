@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdSb2d1ZU1hZ2ljU2NlcHRlci5wcm90byI2ChFSb2d1ZU1hZ2ljU2NlcHRl",
-            "chISCgpzY2VwdGVyX2lkGAcgASgNEg0KBWxldmVsGAUgASgNQh6qAhtFZ2dM",
+            "chISCgpzY2VwdGVyX2lkGA8gASgNEg0KBWxldmVsGAkgASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "scepter_id" field.</summary>
-    public const int ScepterIdFieldNumber = 7;
+    public const int ScepterIdFieldNumber = 15;
     private uint scepterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 5;
+    public const int LevelFieldNumber = 9;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Level != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(72);
         output.WriteUInt32(Level);
       }
       if (ScepterId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(120);
         output.WriteUInt32(ScepterId);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Level != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(72);
         output.WriteUInt32(Level);
       }
       if (ScepterId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(120);
         output.WriteUInt32(ScepterId);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 72: {
             Level = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 120: {
             ScepterId = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 72: {
             Level = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 120: {
             ScepterId = input.ReadUInt32();
             break;
           }

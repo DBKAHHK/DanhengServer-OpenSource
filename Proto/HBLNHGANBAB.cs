@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFIQkxOSEdBTkJBQi5wcm90bxoWR2FtZVJvZ3VlTWlyYWNsZS5wcm90byI2",
-            "CgtIQkxOSEdBTkJBQhInCgxtaXJhY2xlX2luZm8YDCABKAsyES5HYW1lUm9n",
+            "CgtIQkxOSEdBTkJBQhInCgxtaXJhY2xlX2luZm8YAyABKAsyES5HYW1lUm9n",
             "dWVNaXJhY2xlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "miracle_info" field.</summary>
-    public const int MiracleInfoFieldNumber = 12;
+    public const int MiracleInfoFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.GameRogueMiracle miracleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (miracleInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(26);
         output.WriteMessage(MiracleInfo);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (miracleInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(26);
         output.WriteMessage(MiracleInfo);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98: {
+          case 26: {
             if (miracleInfo_ == null) {
               MiracleInfo = new global::EggLink.DanhengServer.Proto.GameRogueMiracle();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98: {
+          case 26: {
             if (miracleInfo_ == null) {
               MiracleInfo = new global::EggLink.DanhengServer.Proto.GameRogueMiracle();
             }

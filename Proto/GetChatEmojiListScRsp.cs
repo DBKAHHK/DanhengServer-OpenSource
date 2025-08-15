@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHZXRDaGF0RW1vamlMaXN0U2NSc3AucHJvdG8iQQoVR2V0Q2hhdEVtb2pp",
-            "TGlzdFNjUnNwEg8KB3JldGNvZGUYCSABKA0SFwoPY2hhdF9lbW9qaV9saXN0",
+            "TGlzdFNjUnNwEg8KB3JldGNvZGUYDyABKA0SFwoPY2hhdF9lbW9qaV9saXN0",
             "GAUgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 15;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       chatEmojiList_.WriteTo(output, _repeated_chatEmojiList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       chatEmojiList_.WriteTo(ref output, _repeated_chatEmojiList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -221,7 +221,7 @@ namespace EggLink.DanhengServer.Proto {
             chatEmojiList_.AddEntriesFrom(input, _repeated_chatEmojiList_codec);
             break;
           }
-          case 72: {
+          case 120: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -245,7 +245,7 @@ namespace EggLink.DanhengServer.Proto {
             chatEmojiList_.AddEntriesFrom(ref input, _repeated_chatEmojiList_codec);
             break;
           }
-          case 72: {
+          case 120: {
             Retcode = input.ReadUInt32();
             break;
           }

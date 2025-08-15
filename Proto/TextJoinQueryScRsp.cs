@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhUZXh0Sm9pblF1ZXJ5U2NSc3AucHJvdG8aEUlPTU9QRU5FTUJGLnByb3Rv",
-            "IkgKElRleHRKb2luUXVlcnlTY1JzcBIhCgtOS0tLT1BBQ09LRxgGIAMoCzIM",
-            "LklPTU9QRU5FTUJGEg8KB3JldGNvZGUYDyABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "IkgKElRleHRKb2luUXVlcnlTY1JzcBIhCgtOS0tLT1BBQ09LRxgEIAMoCzIM",
+            "LklPTU9QRU5FTUJGEg8KB3JldGNvZGUYCCABKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IOMOPENEMBFReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NKKKOPACOKG" field.</summary>
-    public const int NKKKOPACOKGFieldNumber = 6;
+    public const int NKKKOPACOKGFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.IOMOPENEMBF> _repeated_nKKKOPACOKG_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.IOMOPENEMBF.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.IOMOPENEMBF.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IOMOPENEMBF> nKKKOPACOKG_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IOMOPENEMBF>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 15;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       nKKKOPACOKG_.WriteTo(output, _repeated_nKKKOPACOKG_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       nKKKOPACOKG_.WriteTo(ref output, _repeated_nKKKOPACOKG_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -216,11 +216,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 34: {
             nKKKOPACOKG_.AddEntriesFrom(input, _repeated_nKKKOPACOKG_codec);
             break;
           }
-          case 120: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -239,11 +239,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 34: {
             nKKKOPACOKG_.AddEntriesFrom(ref input, _repeated_nKKKOPACOKG_codec);
             break;
           }
-          case 120: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }

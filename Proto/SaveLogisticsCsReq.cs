@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhTYXZlTG9naXN0aWNzQ3NSZXEucHJvdG8aEU5KQU9JR0dNRUFMLnByb3Rv",
-            "IjcKElNhdmVMb2dpc3RpY3NDc1JlcRIhCgtBUE1DUEhGTUFFRxgFIAMoCzIM",
+            "IjcKElNhdmVMb2dpc3RpY3NDc1JlcRIhCgtBUE1DUEhGTUFFRxgJIAMoCzIM",
             "Lk5KQU9JR0dNRUFMQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "APMCPHFMAEG" field.</summary>
-    public const int APMCPHFMAEGFieldNumber = 5;
+    public const int APMCPHFMAEGFieldNumber = 9;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.NJAOIGGMEAL> _repeated_aPMCPHFMAEG_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.NJAOIGGMEAL.Parser);
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.NJAOIGGMEAL.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NJAOIGGMEAL> aPMCPHFMAEG_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NJAOIGGMEAL>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 74: {
             aPMCPHFMAEG_.AddEntriesFrom(input, _repeated_aPMCPHFMAEG_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 74: {
             aPMCPHFMAEG_.AddEntriesFrom(ref input, _repeated_aPMCPHFMAEG_codec);
             break;
           }

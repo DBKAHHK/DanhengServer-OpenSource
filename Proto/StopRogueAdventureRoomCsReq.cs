@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFTdG9wUm9ndWVBZHZlbnR1cmVSb29tQ3NSZXEucHJvdG8iVQobU3RvcFJv",
-            "Z3VlQWR2ZW50dXJlUm9vbUNzUmVxEhcKD2FkdmVudHVyZV9zY29yZRgDIAEo",
-            "DRIdChVoaXRfdGFyZ2V0X2luZGV4X2xpc3QYByADKA1CHqoCG0VnZ0xpbmsu",
+            "Z3VlQWR2ZW50dXJlUm9vbUNzUmVxEh0KFWhpdF90YXJnZXRfaW5kZXhfbGlz",
+            "dBgKIAMoDRIXCg9hZHZlbnR1cmVfc2NvcmUYByABKA1CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StopRogueAdventureRoomCsReq), global::EggLink.DanhengServer.Proto.StopRogueAdventureRoomCsReq.Parser, new[]{ "AdventureScore", "HitTargetIndexList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StopRogueAdventureRoomCsReq), global::EggLink.DanhengServer.Proto.StopRogueAdventureRoomCsReq.Parser, new[]{ "HitTargetIndexList", "AdventureScore" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StopRogueAdventureRoomCsReq(StopRogueAdventureRoomCsReq other) : this() {
-      adventureScore_ = other.adventureScore_;
       hitTargetIndexList_ = other.hitTargetIndexList_.Clone();
+      adventureScore_ = other.adventureScore_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +84,19 @@ namespace EggLink.DanhengServer.Proto {
       return new StopRogueAdventureRoomCsReq(this);
     }
 
+    /// <summary>Field number for the "hit_target_index_list" field.</summary>
+    public const int HitTargetIndexListFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_hitTargetIndexList_codec
+        = pb::FieldCodec.ForUInt32(82);
+    private readonly pbc::RepeatedField<uint> hitTargetIndexList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> HitTargetIndexList {
+      get { return hitTargetIndexList_; }
+    }
+
     /// <summary>Field number for the "adventure_score" field.</summary>
-    public const int AdventureScoreFieldNumber = 3;
+    public const int AdventureScoreFieldNumber = 7;
     private uint adventureScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -94,17 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         adventureScore_ = value;
       }
-    }
-
-    /// <summary>Field number for the "hit_target_index_list" field.</summary>
-    public const int HitTargetIndexListFieldNumber = 7;
-    private static readonly pb::FieldCodec<uint> _repeated_hitTargetIndexList_codec
-        = pb::FieldCodec.ForUInt32(58);
-    private readonly pbc::RepeatedField<uint> hitTargetIndexList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> HitTargetIndexList {
-      get { return hitTargetIndexList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (AdventureScore != other.AdventureScore) return false;
       if(!hitTargetIndexList_.Equals(other.hitTargetIndexList_)) return false;
+      if (AdventureScore != other.AdventureScore) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (AdventureScore != 0) hash ^= AdventureScore.GetHashCode();
       hash ^= hitTargetIndexList_.GetHashCode();
+      if (AdventureScore != 0) hash ^= AdventureScore.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (AdventureScore != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(AdventureScore);
       }
       hitTargetIndexList_.WriteTo(output, _repeated_hitTargetIndexList_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AdventureScore != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(AdventureScore);
       }
       hitTargetIndexList_.WriteTo(ref output, _repeated_hitTargetIndexList_codec);
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += hitTargetIndexList_.CalculateSize(_repeated_hitTargetIndexList_codec);
       if (AdventureScore != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AdventureScore);
       }
-      size += hitTargetIndexList_.CalculateSize(_repeated_hitTargetIndexList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      hitTargetIndexList_.Add(other.hitTargetIndexList_);
       if (other.AdventureScore != 0) {
         AdventureScore = other.AdventureScore;
       }
-      hitTargetIndexList_.Add(other.hitTargetIndexList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 56: {
             AdventureScore = input.ReadUInt32();
             break;
           }
-          case 58:
-          case 56: {
+          case 82:
+          case 80: {
             hitTargetIndexList_.AddEntriesFrom(input, _repeated_hitTargetIndexList_codec);
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 56: {
             AdventureScore = input.ReadUInt32();
             break;
           }
-          case 58:
-          case 56: {
+          case 82:
+          case 80: {
             hitTargetIndexList_.AddEntriesFrom(ref input, _repeated_hitTargetIndexList_codec);
             break;
           }

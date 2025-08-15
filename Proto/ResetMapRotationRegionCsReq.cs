@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static ResetMapRotationRegionCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFSZXNldE1hcFJvdGF0aW9uUmVnaW9uQ3NSZXEucHJvdG8aEUlDSU1BS0JB",
-            "SkdCLnByb3RvGhBNb3Rpb25JbmZvLnByb3RvIlsKG1Jlc2V0TWFwUm90YXRp",
-            "b25SZWdpb25Dc1JlcRIbCgZtb3Rpb24YDyABKAsyCy5Nb3Rpb25JbmZvEh8K",
-            "CXJvZ3VlX21hcBgJIAEoCzIMLklDSU1BS0JBSkdCQh6qAhtFZ2dMaW5rLkRh",
+            "CiFSZXNldE1hcFJvdGF0aW9uUmVnaW9uQ3NSZXEucHJvdG8aEE1vdGlvbklu",
+            "Zm8ucHJvdG8aEUlDSU1BS0JBSkdCLnByb3RvIlsKG1Jlc2V0TWFwUm90YXRp",
+            "b25SZWdpb25Dc1JlcRIfCglyb2d1ZV9tYXAYByABKAsyDC5JQ0lNQUtCQUpH",
+            "QhIbCgZtb3Rpb24YDiABKAsyCy5Nb3Rpb25JbmZvQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ResetMapRotationRegionCsReq), global::EggLink.DanhengServer.Proto.ResetMapRotationRegionCsReq.Parser, new[]{ "Motion", "RogueMap" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ResetMapRotationRegionCsReq), global::EggLink.DanhengServer.Proto.ResetMapRotationRegionCsReq.Parser, new[]{ "RogueMap", "Motion" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResetMapRotationRegionCsReq(ResetMapRotationRegionCsReq other) : this() {
-      motion_ = other.motion_ != null ? other.motion_.Clone() : null;
       rogueMap_ = other.rogueMap_ != null ? other.rogueMap_.Clone() : null;
+      motion_ = other.motion_ != null ? other.motion_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ResetMapRotationRegionCsReq(this);
     }
 
-    /// <summary>Field number for the "motion" field.</summary>
-    public const int MotionFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.MotionInfo motion_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MotionInfo Motion {
-      get { return motion_; }
-      set {
-        motion_ = value;
-      }
-    }
-
     /// <summary>Field number for the "rogue_map" field.</summary>
-    public const int RogueMapFieldNumber = 9;
+    public const int RogueMapFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.ICIMAKBAJGB rogueMap_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return rogueMap_; }
       set {
         rogueMap_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "motion" field.</summary>
+    public const int MotionFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.MotionInfo motion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MotionInfo Motion {
+      get { return motion_; }
+      set {
+        motion_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Motion, other.Motion)) return false;
       if (!object.Equals(RogueMap, other.RogueMap)) return false;
+      if (!object.Equals(Motion, other.Motion)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (motion_ != null) hash ^= Motion.GetHashCode();
       if (rogueMap_ != null) hash ^= RogueMap.GetHashCode();
+      if (motion_ != null) hash ^= Motion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (rogueMap_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(58);
         output.WriteMessage(RogueMap);
       }
       if (motion_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(114);
         output.WriteMessage(Motion);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rogueMap_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(58);
         output.WriteMessage(RogueMap);
       }
       if (motion_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(114);
         output.WriteMessage(Motion);
       }
       if (_unknownFields != null) {
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (motion_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Motion);
-      }
       if (rogueMap_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueMap);
+      }
+      if (motion_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Motion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,17 +207,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.motion_ != null) {
-        if (motion_ == null) {
-          Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
-        }
-        Motion.MergeFrom(other.Motion);
-      }
       if (other.rogueMap_ != null) {
         if (rogueMap_ == null) {
           RogueMap = new global::EggLink.DanhengServer.Proto.ICIMAKBAJGB();
         }
         RogueMap.MergeFrom(other.RogueMap);
+      }
+      if (other.motion_ != null) {
+        if (motion_ == null) {
+          Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
+        }
+        Motion.MergeFrom(other.Motion);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -234,14 +234,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
+          case 58: {
             if (rogueMap_ == null) {
               RogueMap = new global::EggLink.DanhengServer.Proto.ICIMAKBAJGB();
             }
             input.ReadMessage(RogueMap);
             break;
           }
-          case 122: {
+          case 114: {
             if (motion_ == null) {
               Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
@@ -263,14 +263,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
+          case 58: {
             if (rogueMap_ == null) {
               RogueMap = new global::EggLink.DanhengServer.Proto.ICIMAKBAJGB();
             }
             input.ReadMessage(RogueMap);
             break;
           }
-          case 122: {
+          case 114: {
             if (motion_ == null) {
               Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }

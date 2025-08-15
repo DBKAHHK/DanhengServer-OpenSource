@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPS0xIQkNGTUJCTy5wcm90byKKAQoLT0tMSEJDRk1CQk8SMgoLTkZCR0xC",
-            "RUVJQk0YAiADKAsyHS5PS0xIQkNGTUJCTy5ORkJHTEJFRUlCTUVudHJ5EhMK",
-            "C01DUE1JSkFDTUNJGA4gAygNGjIKEE5GQkdMQkVFSUJNRW50cnkSCwoDa2V5",
+            "RUVJQk0YCSADKAsyHS5PS0xIQkNGTUJCTy5ORkJHTEJFRUlCTUVudHJ5EhMK",
+            "C01DUE1JSkFDTUNJGAggAygNGjIKEE5GQkdMQkVFSUJNRW50cnkSCwoDa2V5",
             "GAEgASgNEg0KBXZhbHVlGAIgASgNOgI4AUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NFBGLBEEIBM" field.</summary>
-    public const int NFBGLBEEIBMFieldNumber = 2;
+    public const int NFBGLBEEIBMFieldNumber = 9;
     private static readonly pbc::MapField<uint, uint>.Codec _map_nFBGLBEEIBM_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 18);
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 74);
     private readonly pbc::MapField<uint, uint> nFBGLBEEIBM_ = new pbc::MapField<uint, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MCPMIJACMCI" field.</summary>
-    public const int MCPMIJACMCIFieldNumber = 14;
+    public const int MCPMIJACMCIFieldNumber = 8;
     private static readonly pb::FieldCodec<uint> _repeated_mCPMIJACMCI_codec
-        = pb::FieldCodec.ForUInt32(114);
+        = pb::FieldCodec.ForUInt32(66);
     private readonly pbc::RepeatedField<uint> mCPMIJACMCI_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,8 +151,8 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      nFBGLBEEIBM_.WriteTo(output, _map_nFBGLBEEIBM_codec);
       mCPMIJACMCI_.WriteTo(output, _repeated_mCPMIJACMCI_codec);
+      nFBGLBEEIBM_.WriteTo(output, _map_nFBGLBEEIBM_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -163,8 +163,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      nFBGLBEEIBM_.WriteTo(ref output, _map_nFBGLBEEIBM_codec);
       mCPMIJACMCI_.WriteTo(ref output, _repeated_mCPMIJACMCI_codec);
+      nFBGLBEEIBM_.WriteTo(ref output, _map_nFBGLBEEIBM_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -206,13 +206,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            nFBGLBEEIBM_.AddEntriesFrom(input, _map_nFBGLBEEIBM_codec);
+          case 66:
+          case 64: {
+            mCPMIJACMCI_.AddEntriesFrom(input, _repeated_mCPMIJACMCI_codec);
             break;
           }
-          case 114:
-          case 112: {
-            mCPMIJACMCI_.AddEntriesFrom(input, _repeated_mCPMIJACMCI_codec);
+          case 74: {
+            nFBGLBEEIBM_.AddEntriesFrom(input, _map_nFBGLBEEIBM_codec);
             break;
           }
         }
@@ -230,13 +230,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            nFBGLBEEIBM_.AddEntriesFrom(ref input, _map_nFBGLBEEIBM_codec);
+          case 66:
+          case 64: {
+            mCPMIJACMCI_.AddEntriesFrom(ref input, _repeated_mCPMIJACMCI_codec);
             break;
           }
-          case 114:
-          case 112: {
-            mCPMIJACMCI_.AddEntriesFrom(ref input, _repeated_mCPMIJACMCI_codec);
+          case 74: {
+            nFBGLBEEIBM_.AddEntriesFrom(ref input, _map_nFBGLBEEIBM_codec);
             break;
           }
         }

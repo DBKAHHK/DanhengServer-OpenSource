@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNSb2d1ZU1hZ2ljU2NlcHRlclNlbGVjdFJlc3VsdC5wcm90bxoXUm9ndWVN",
             "YWdpY1NjZXB0ZXIucHJvdG8iYAodUm9ndWVNYWdpY1NjZXB0ZXJTZWxlY3RS",
-            "ZXN1bHQSEwoLQUJCTUhQS0dBSUsYCCABKAgSKgoOc2VsZWN0X3NjZXB0ZXIY",
-            "CyABKAsyEi5Sb2d1ZU1hZ2ljU2NlcHRlckIeqgIbRWdnTGluay5EYW5oZW5n",
+            "ZXN1bHQSKgoOc2VsZWN0X3NjZXB0ZXIYBiABKAsyEi5Sb2d1ZU1hZ2ljU2Nl",
+            "cHRlchITCgtBQkJNSFBLR0FJSxgFIAEoCEIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicScepterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicScepterSelectResult), global::EggLink.DanhengServer.Proto.RogueMagicScepterSelectResult.Parser, new[]{ "ABBMHPKGAIK", "SelectScepter" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicScepterSelectResult), global::EggLink.DanhengServer.Proto.RogueMagicScepterSelectResult.Parser, new[]{ "SelectScepter", "ABBMHPKGAIK" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicScepterSelectResult(RogueMagicScepterSelectResult other) : this() {
-      aBBMHPKGAIK_ = other.aBBMHPKGAIK_;
       selectScepter_ = other.selectScepter_ != null ? other.selectScepter_.Clone() : null;
+      aBBMHPKGAIK_ = other.aBBMHPKGAIK_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueMagicScepterSelectResult(this);
     }
 
-    /// <summary>Field number for the "ABBMHPKGAIK" field.</summary>
-    public const int ABBMHPKGAIKFieldNumber = 8;
-    private bool aBBMHPKGAIK_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ABBMHPKGAIK {
-      get { return aBBMHPKGAIK_; }
-      set {
-        aBBMHPKGAIK_ = value;
-      }
-    }
-
     /// <summary>Field number for the "select_scepter" field.</summary>
-    public const int SelectScepterFieldNumber = 11;
+    public const int SelectScepterFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.RogueMagicScepter selectScepter_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return selectScepter_; }
       set {
         selectScepter_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ABBMHPKGAIK" field.</summary>
+    public const int ABBMHPKGAIKFieldNumber = 5;
+    private bool aBBMHPKGAIK_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ABBMHPKGAIK {
+      get { return aBBMHPKGAIK_; }
+      set {
+        aBBMHPKGAIK_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ABBMHPKGAIK != other.ABBMHPKGAIK) return false;
       if (!object.Equals(SelectScepter, other.SelectScepter)) return false;
+      if (ABBMHPKGAIK != other.ABBMHPKGAIK) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ABBMHPKGAIK != false) hash ^= ABBMHPKGAIK.GetHashCode();
       if (selectScepter_ != null) hash ^= SelectScepter.GetHashCode();
+      if (ABBMHPKGAIK != false) hash ^= ABBMHPKGAIK.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ABBMHPKGAIK != false) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(40);
         output.WriteBool(ABBMHPKGAIK);
       }
       if (selectScepter_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(50);
         output.WriteMessage(SelectScepter);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ABBMHPKGAIK != false) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(40);
         output.WriteBool(ABBMHPKGAIK);
       }
       if (selectScepter_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(50);
         output.WriteMessage(SelectScepter);
       }
       if (_unknownFields != null) {
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ABBMHPKGAIK != false) {
-        size += 1 + 1;
-      }
       if (selectScepter_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SelectScepter);
+      }
+      if (ABBMHPKGAIK != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ABBMHPKGAIK != false) {
-        ABBMHPKGAIK = other.ABBMHPKGAIK;
-      }
       if (other.selectScepter_ != null) {
         if (selectScepter_ == null) {
           SelectScepter = new global::EggLink.DanhengServer.Proto.RogueMagicScepter();
         }
         SelectScepter.MergeFrom(other.SelectScepter);
+      }
+      if (other.ABBMHPKGAIK != false) {
+        ABBMHPKGAIK = other.ABBMHPKGAIK;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,11 +231,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 40: {
             ABBMHPKGAIK = input.ReadBool();
             break;
           }
-          case 90: {
+          case 50: {
             if (selectScepter_ == null) {
               SelectScepter = new global::EggLink.DanhengServer.Proto.RogueMagicScepter();
             }
@@ -257,11 +257,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 40: {
             ABBMHPKGAIK = input.ReadBool();
             break;
           }
-          case 90: {
+          case 50: {
             if (selectScepter_ == null) {
               SelectScepter = new global::EggLink.DanhengServer.Proto.RogueMagicScepter();
             }

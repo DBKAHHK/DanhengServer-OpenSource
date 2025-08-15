@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1MZWF2ZVRyaWFsQWN0aXZpdHlTY1JzcC5wcm90byI8ChdMZWF2ZVRyaWFs",
-            "QWN0aXZpdHlTY1JzcBIQCghzdGFnZV9pZBgHIAEoDRIPCgdyZXRjb2RlGAgg",
+            "QWN0aXZpdHlTY1JzcBIQCghzdGFnZV9pZBgDIAEoDRIPCgdyZXRjb2RlGAUg",
             "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stage_id" field.</summary>
-    public const int StageIdFieldNumber = 7;
+    public const int StageIdFieldNumber = 3;
     private uint stageId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (StageId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteUInt32(StageId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (StageId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteUInt32(StageId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
+          case 24: {
             StageId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
+          case 24: {
             StageId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }

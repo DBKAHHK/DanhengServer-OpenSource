@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static TakeRechargeGiftRewardScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFUYWtlUmVjaGFyZ2VHaWZ0UmV3YXJkU2NSc3AucHJvdG8aFlJlY2hhcmdl",
-            "R2lmdEluZm8ucHJvdG8aDkl0ZW1MaXN0LnByb3RvInsKG1Rha2VSZWNoYXJn",
-            "ZUdpZnRSZXdhcmRTY1JzcBIZCgZyZXdhcmQYDCABKAsyCS5JdGVtTGlzdBIP",
-            "CgdyZXRjb2RlGAMgASgNEjAKFXJlY2hhcmdlX2JlbmVmaXRfaW5mbxgHIAEo",
-            "CzIRLlJlY2hhcmdlR2lmdEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "CiFUYWtlUmVjaGFyZ2VHaWZ0UmV3YXJkU2NSc3AucHJvdG8aDkl0ZW1MaXN0",
+            "LnByb3RvGhZSZWNoYXJnZUdpZnRJbmZvLnByb3RvInsKG1Rha2VSZWNoYXJn",
+            "ZUdpZnRSZXdhcmRTY1JzcBIZCgZyZXdhcmQYBSABKAsyCS5JdGVtTGlzdBIw",
+            "ChVyZWNoYXJnZV9iZW5lZml0X2luZm8YDyABKAsyES5SZWNoYXJnZUdpZnRJ",
+            "bmZvEg8KB3JldGNvZGUYByABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RechargeGiftInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RechargeGiftInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRechargeGiftRewardScRsp), global::EggLink.DanhengServer.Proto.TakeRechargeGiftRewardScRsp.Parser, new[]{ "Reward", "Retcode", "RechargeBenefitInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRechargeGiftRewardScRsp), global::EggLink.DanhengServer.Proto.TakeRechargeGiftRewardScRsp.Parser, new[]{ "Reward", "RechargeBenefitInfo", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,8 +76,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeRechargeGiftRewardScRsp(TakeRechargeGiftRewardScRsp other) : this() {
       reward_ = other.reward_ != null ? other.reward_.Clone() : null;
-      retcode_ = other.retcode_;
       rechargeBenefitInfo_ = other.rechargeBenefitInfo_ != null ? other.rechargeBenefitInfo_.Clone() : null;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 12;
+    public const int RewardFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,20 +99,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 3;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "recharge_benefit_info" field.</summary>
-    public const int RechargeBenefitInfoFieldNumber = 7;
+    public const int RechargeBenefitInfoFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.RechargeGiftInfo rechargeBenefitInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -120,6 +108,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return rechargeBenefitInfo_; }
       set {
         rechargeBenefitInfo_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 7;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -139,8 +139,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(Reward, other.Reward)) return false;
-      if (Retcode != other.Retcode) return false;
       if (!object.Equals(RechargeBenefitInfo, other.RechargeBenefitInfo)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -149,8 +149,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (reward_ != null) hash ^= Reward.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (rechargeBenefitInfo_ != null) hash ^= RechargeBenefitInfo.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -169,17 +169,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (reward_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Reward);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (rechargeBenefitInfo_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(122);
         output.WriteMessage(RechargeBenefitInfo);
-      }
-      if (reward_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(Reward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -191,17 +191,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (reward_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Reward);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (rechargeBenefitInfo_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(122);
         output.WriteMessage(RechargeBenefitInfo);
-      }
-      if (reward_ != null) {
-        output.WriteRawTag(98);
-        output.WriteMessage(Reward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -216,11 +216,11 @@ namespace EggLink.DanhengServer.Proto {
       if (reward_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
       }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (rechargeBenefitInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RechargeBenefitInfo);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -240,14 +240,14 @@ namespace EggLink.DanhengServer.Proto {
         }
         Reward.MergeFrom(other.Reward);
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.rechargeBenefitInfo_ != null) {
         if (rechargeBenefitInfo_ == null) {
           RechargeBenefitInfo = new global::EggLink.DanhengServer.Proto.RechargeGiftInfo();
         }
         RechargeBenefitInfo.MergeFrom(other.RechargeBenefitInfo);
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -264,22 +264,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 58: {
-            if (rechargeBenefitInfo_ == null) {
-              RechargeBenefitInfo = new global::EggLink.DanhengServer.Proto.RechargeGiftInfo();
-            }
-            input.ReadMessage(RechargeBenefitInfo);
-            break;
-          }
-          case 98: {
+          case 42: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
+            break;
+          }
+          case 56: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            if (rechargeBenefitInfo_ == null) {
+              RechargeBenefitInfo = new global::EggLink.DanhengServer.Proto.RechargeGiftInfo();
+            }
+            input.ReadMessage(RechargeBenefitInfo);
             break;
           }
         }
@@ -297,22 +297,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 58: {
-            if (rechargeBenefitInfo_ == null) {
-              RechargeBenefitInfo = new global::EggLink.DanhengServer.Proto.RechargeGiftInfo();
-            }
-            input.ReadMessage(RechargeBenefitInfo);
-            break;
-          }
-          case 98: {
+          case 42: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
+            break;
+          }
+          case 56: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            if (rechargeBenefitInfo_ == null) {
+              RechargeBenefitInfo = new global::EggLink.DanhengServer.Proto.RechargeGiftInfo();
+            }
+            input.ReadMessage(RechargeBenefitInfo);
             break;
           }
         }

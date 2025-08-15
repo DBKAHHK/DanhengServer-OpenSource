@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static ParkourEndLevelScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpQYXJrb3VyRW5kTGV2ZWxTY1JzcC5wcm90bxoRUE9BSEFCREtQS0oucHJv",
-            "dG8aEUdHREVNR0JPRkdPLnByb3RvIrYBChRQYXJrb3VyRW5kTGV2ZWxTY1Jz",
-            "cBIQCghsZXZlbF9pZBgGIAEoDRITCgtLS0VITUJQSk9PQxgMIAEoCBITCgtG",
-            "REdNT0VPQUpLUBgEIAEoCBIMCgR0aW1lGAogASgNEg8KB3JldGNvZGUYCCAB",
-            "KA0SIAoKZW5kX3JlYXNvbhgPIAEoDjIMLlBPQUhBQkRLUEtKEiEKC0JMTURL",
-            "SktPSU9IGA4gASgLMgwuR0dERU1HQk9GR09CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "ChpQYXJrb3VyRW5kTGV2ZWxTY1JzcC5wcm90bxoRR0dERU1HQk9GR08ucHJv",
+            "dG8aEVBPQUhBQkRLUEtKLnByb3RvIrYBChRQYXJrb3VyRW5kTGV2ZWxTY1Jz",
+            "cBITCgtLS0VITUJQSk9PQxgLIAEoCBIhCgtCTE1ES0pLT0lPSBgNIAEoCzIM",
+            "LkdHREVNR0JPRkdPEhAKCGxldmVsX2lkGA4gASgNEg8KB3JldGNvZGUYCSAB",
+            "KA0SIAoKZW5kX3JlYXNvbhgDIAEoDjIMLlBPQUhBQkRLUEtKEhMKC0ZER01P",
+            "RU9BSktQGAUgASgIEgwKBHRpbWUYByABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.POAHABDKPKJReflection.Descriptor, global::EggLink.DanhengServer.Proto.GGDEMGBOFGOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GGDEMGBOFGOReflection.Descriptor, global::EggLink.DanhengServer.Proto.POAHABDKPKJReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ParkourEndLevelScRsp), global::EggLink.DanhengServer.Proto.ParkourEndLevelScRsp.Parser, new[]{ "LevelId", "KKEHMBPJOOC", "FDGMOEOAJKP", "Time", "Retcode", "EndReason", "BLMDKJKOIOH" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ParkourEndLevelScRsp), global::EggLink.DanhengServer.Proto.ParkourEndLevelScRsp.Parser, new[]{ "KKEHMBPJOOC", "BLMDKJKOIOH", "LevelId", "Retcode", "EndReason", "FDGMOEOAJKP", "Time" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,13 +76,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ParkourEndLevelScRsp(ParkourEndLevelScRsp other) : this() {
-      levelId_ = other.levelId_;
       kKEHMBPJOOC_ = other.kKEHMBPJOOC_;
-      fDGMOEOAJKP_ = other.fDGMOEOAJKP_;
-      time_ = other.time_;
+      bLMDKJKOIOH_ = other.bLMDKJKOIOH_ != null ? other.bLMDKJKOIOH_.Clone() : null;
+      levelId_ = other.levelId_;
       retcode_ = other.retcode_;
       endReason_ = other.endReason_;
-      bLMDKJKOIOH_ = other.bLMDKJKOIOH_ != null ? other.bLMDKJKOIOH_.Clone() : null;
+      fDGMOEOAJKP_ = other.fDGMOEOAJKP_;
+      time_ = other.time_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -92,20 +92,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ParkourEndLevelScRsp(this);
     }
 
-    /// <summary>Field number for the "level_id" field.</summary>
-    public const int LevelIdFieldNumber = 6;
-    private uint levelId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LevelId {
-      get { return levelId_; }
-      set {
-        levelId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "KKEHMBPJOOC" field.</summary>
-    public const int KKEHMBPJOOCFieldNumber = 12;
+    public const int KKEHMBPJOOCFieldNumber = 11;
     private bool kKEHMBPJOOC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -116,32 +104,32 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "FDGMOEOAJKP" field.</summary>
-    public const int FDGMOEOAJKPFieldNumber = 4;
-    private bool fDGMOEOAJKP_;
+    /// <summary>Field number for the "BLMDKJKOIOH" field.</summary>
+    public const int BLMDKJKOIOHFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.GGDEMGBOFGO bLMDKJKOIOH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool FDGMOEOAJKP {
-      get { return fDGMOEOAJKP_; }
+    public global::EggLink.DanhengServer.Proto.GGDEMGBOFGO BLMDKJKOIOH {
+      get { return bLMDKJKOIOH_; }
       set {
-        fDGMOEOAJKP_ = value;
+        bLMDKJKOIOH_ = value;
       }
     }
 
-    /// <summary>Field number for the "time" field.</summary>
-    public const int TimeFieldNumber = 10;
-    private uint time_;
+    /// <summary>Field number for the "level_id" field.</summary>
+    public const int LevelIdFieldNumber = 14;
+    private uint levelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Time {
-      get { return time_; }
+    public uint LevelId {
+      get { return levelId_; }
       set {
-        time_ = value;
+        levelId_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +141,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "end_reason" field.</summary>
-    public const int EndReasonFieldNumber = 15;
+    public const int EndReasonFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.POAHABDKPKJ endReason_ = global::EggLink.DanhengServer.Proto.POAHABDKPKJ.ParkourEndLevelReasonNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -164,15 +152,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BLMDKJKOIOH" field.</summary>
-    public const int BLMDKJKOIOHFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.GGDEMGBOFGO bLMDKJKOIOH_;
+    /// <summary>Field number for the "FDGMOEOAJKP" field.</summary>
+    public const int FDGMOEOAJKPFieldNumber = 5;
+    private bool fDGMOEOAJKP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GGDEMGBOFGO BLMDKJKOIOH {
-      get { return bLMDKJKOIOH_; }
+    public bool FDGMOEOAJKP {
+      get { return fDGMOEOAJKP_; }
       set {
-        bLMDKJKOIOH_ = value;
+        fDGMOEOAJKP_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "time" field.</summary>
+    public const int TimeFieldNumber = 7;
+    private uint time_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Time {
+      get { return time_; }
+      set {
+        time_ = value;
       }
     }
 
@@ -191,13 +191,13 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LevelId != other.LevelId) return false;
       if (KKEHMBPJOOC != other.KKEHMBPJOOC) return false;
-      if (FDGMOEOAJKP != other.FDGMOEOAJKP) return false;
-      if (Time != other.Time) return false;
+      if (!object.Equals(BLMDKJKOIOH, other.BLMDKJKOIOH)) return false;
+      if (LevelId != other.LevelId) return false;
       if (Retcode != other.Retcode) return false;
       if (EndReason != other.EndReason) return false;
-      if (!object.Equals(BLMDKJKOIOH, other.BLMDKJKOIOH)) return false;
+      if (FDGMOEOAJKP != other.FDGMOEOAJKP) return false;
+      if (Time != other.Time) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LevelId != 0) hash ^= LevelId.GetHashCode();
       if (KKEHMBPJOOC != false) hash ^= KKEHMBPJOOC.GetHashCode();
-      if (FDGMOEOAJKP != false) hash ^= FDGMOEOAJKP.GetHashCode();
-      if (Time != 0) hash ^= Time.GetHashCode();
+      if (bLMDKJKOIOH_ != null) hash ^= BLMDKJKOIOH.GetHashCode();
+      if (LevelId != 0) hash ^= LevelId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (EndReason != global::EggLink.DanhengServer.Proto.POAHABDKPKJ.ParkourEndLevelReasonNone) hash ^= EndReason.GetHashCode();
-      if (bLMDKJKOIOH_ != null) hash ^= BLMDKJKOIOH.GetHashCode();
+      if (FDGMOEOAJKP != false) hash ^= FDGMOEOAJKP.GetHashCode();
+      if (Time != 0) hash ^= Time.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -230,33 +230,33 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (EndReason != global::EggLink.DanhengServer.Proto.POAHABDKPKJ.ParkourEndLevelReasonNone) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) EndReason);
+      }
       if (FDGMOEOAJKP != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(FDGMOEOAJKP);
       }
-      if (LevelId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(LevelId);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
-      }
       if (Time != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(Time);
       }
+      if (Retcode != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Retcode);
+      }
       if (KKEHMBPJOOC != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteBool(KKEHMBPJOOC);
       }
       if (bLMDKJKOIOH_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(106);
         output.WriteMessage(BLMDKJKOIOH);
       }
-      if (EndReason != global::EggLink.DanhengServer.Proto.POAHABDKPKJ.ParkourEndLevelReasonNone) {
-        output.WriteRawTag(120);
-        output.WriteEnum((int) EndReason);
+      if (LevelId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(LevelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -268,33 +268,33 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EndReason != global::EggLink.DanhengServer.Proto.POAHABDKPKJ.ParkourEndLevelReasonNone) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) EndReason);
+      }
       if (FDGMOEOAJKP != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(FDGMOEOAJKP);
       }
-      if (LevelId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(LevelId);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
-      }
       if (Time != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(56);
         output.WriteUInt32(Time);
       }
+      if (Retcode != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Retcode);
+      }
       if (KKEHMBPJOOC != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteBool(KKEHMBPJOOC);
       }
       if (bLMDKJKOIOH_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(106);
         output.WriteMessage(BLMDKJKOIOH);
       }
-      if (EndReason != global::EggLink.DanhengServer.Proto.POAHABDKPKJ.ParkourEndLevelReasonNone) {
-        output.WriteRawTag(120);
-        output.WriteEnum((int) EndReason);
+      if (LevelId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(LevelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -306,17 +306,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LevelId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelId);
-      }
       if (KKEHMBPJOOC != false) {
         size += 1 + 1;
       }
-      if (FDGMOEOAJKP != false) {
-        size += 1 + 1;
+      if (bLMDKJKOIOH_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BLMDKJKOIOH);
       }
-      if (Time != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Time);
+      if (LevelId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelId);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -324,8 +321,11 @@ namespace EggLink.DanhengServer.Proto {
       if (EndReason != global::EggLink.DanhengServer.Proto.POAHABDKPKJ.ParkourEndLevelReasonNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EndReason);
       }
-      if (bLMDKJKOIOH_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BLMDKJKOIOH);
+      if (FDGMOEOAJKP != false) {
+        size += 1 + 1;
+      }
+      if (Time != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Time);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -339,17 +339,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LevelId != 0) {
-        LevelId = other.LevelId;
-      }
       if (other.KKEHMBPJOOC != false) {
         KKEHMBPJOOC = other.KKEHMBPJOOC;
       }
-      if (other.FDGMOEOAJKP != false) {
-        FDGMOEOAJKP = other.FDGMOEOAJKP;
+      if (other.bLMDKJKOIOH_ != null) {
+        if (bLMDKJKOIOH_ == null) {
+          BLMDKJKOIOH = new global::EggLink.DanhengServer.Proto.GGDEMGBOFGO();
+        }
+        BLMDKJKOIOH.MergeFrom(other.BLMDKJKOIOH);
       }
-      if (other.Time != 0) {
-        Time = other.Time;
+      if (other.LevelId != 0) {
+        LevelId = other.LevelId;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -357,11 +357,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.EndReason != global::EggLink.DanhengServer.Proto.POAHABDKPKJ.ParkourEndLevelReasonNone) {
         EndReason = other.EndReason;
       }
-      if (other.bLMDKJKOIOH_ != null) {
-        if (bLMDKJKOIOH_ == null) {
-          BLMDKJKOIOH = new global::EggLink.DanhengServer.Proto.GGDEMGBOFGO();
-        }
-        BLMDKJKOIOH.MergeFrom(other.BLMDKJKOIOH);
+      if (other.FDGMOEOAJKP != false) {
+        FDGMOEOAJKP = other.FDGMOEOAJKP;
+      }
+      if (other.Time != 0) {
+        Time = other.Time;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -378,35 +378,35 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 24: {
+            EndReason = (global::EggLink.DanhengServer.Proto.POAHABDKPKJ) input.ReadEnum();
+            break;
+          }
+          case 40: {
             FDGMOEOAJKP = input.ReadBool();
             break;
           }
-          case 48: {
-            LevelId = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 56: {
             Time = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 72: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             KKEHMBPJOOC = input.ReadBool();
             break;
           }
-          case 114: {
+          case 106: {
             if (bLMDKJKOIOH_ == null) {
               BLMDKJKOIOH = new global::EggLink.DanhengServer.Proto.GGDEMGBOFGO();
             }
             input.ReadMessage(BLMDKJKOIOH);
             break;
           }
-          case 120: {
-            EndReason = (global::EggLink.DanhengServer.Proto.POAHABDKPKJ) input.ReadEnum();
+          case 112: {
+            LevelId = input.ReadUInt32();
             break;
           }
         }
@@ -424,35 +424,35 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 24: {
+            EndReason = (global::EggLink.DanhengServer.Proto.POAHABDKPKJ) input.ReadEnum();
+            break;
+          }
+          case 40: {
             FDGMOEOAJKP = input.ReadBool();
             break;
           }
-          case 48: {
-            LevelId = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 56: {
             Time = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 72: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             KKEHMBPJOOC = input.ReadBool();
             break;
           }
-          case 114: {
+          case 106: {
             if (bLMDKJKOIOH_ == null) {
               BLMDKJKOIOH = new global::EggLink.DanhengServer.Proto.GGDEMGBOFGO();
             }
             input.ReadMessage(BLMDKJKOIOH);
             break;
           }
-          case 120: {
-            EndReason = (global::EggLink.DanhengServer.Proto.POAHABDKPKJ) input.ReadEnum();
+          case 112: {
+            LevelId = input.ReadUInt32();
             break;
           }
         }

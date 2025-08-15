@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBSZXN0YXJ0Q2hhbGxlbmdlUGhhc2VTY1JzcC5wcm90bxoPU2NlbmVJbmZv",
             "LnByb3RvIkgKGlJlc3RhcnRDaGFsbGVuZ2VQaGFzZVNjUnNwEhkKBXNjZW5l",
-            "GAogASgLMgouU2NlbmVJbmZvEg8KB3JldGNvZGUYDCABKA1CHqoCG0VnZ0xp",
+            "GAYgASgLMgouU2NlbmVJbmZvEg8KB3JldGNvZGUYAiABKA1CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "scene" field.</summary>
-    public const int SceneFieldNumber = 10;
+    public const int SceneFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.SceneInfo scene_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
+    public const int RetcodeFieldNumber = 2;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (scene_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(Scene);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
+      }
+      if (scene_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Scene);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (scene_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(Scene);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
+      }
+      if (scene_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Scene);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 16: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 50: {
             if (scene_ == null) {
               Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
             }
             input.ReadMessage(Scene);
-            break;
-          }
-          case 96: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 16: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 50: {
             if (scene_ == null) {
               Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
             }
             input.ReadMessage(Scene);
-            break;
-          }
-          case 96: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

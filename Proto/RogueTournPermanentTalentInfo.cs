@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNSb2d1ZVRvdXJuUGVybWFuZW50VGFsZW50SW5mby5wcm90bxoZUm9ndWVU",
             "YWxlbnRJbmZvTGlzdC5wcm90byJuCh1Sb2d1ZVRvdXJuUGVybWFuZW50VGFs",
-            "ZW50SW5mbxIuChB0YWxlbnRfaW5mb19saXN0GAcgASgLMhQuUm9ndWVUYWxl",
-            "bnRJbmZvTGlzdBIdChV0b3Vybl90YWxlbnRfY29pbl9udW0YDiABKA1CHqoC",
+            "ZW50SW5mbxIuChB0YWxlbnRfaW5mb19saXN0GAkgASgLMhQuUm9ndWVUYWxl",
+            "bnRJbmZvTGlzdBIdChV0b3Vybl90YWxlbnRfY29pbl9udW0YDyABKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTalentInfoListReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "talent_info_list" field.</summary>
-    public const int TalentInfoListFieldNumber = 7;
+    public const int TalentInfoListFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.RogueTalentInfoList talentInfoList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "tourn_talent_coin_num" field.</summary>
-    public const int TournTalentCoinNumFieldNumber = 14;
+    public const int TournTalentCoinNumFieldNumber = 15;
     private uint tournTalentCoinNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (talentInfoList_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(74);
         output.WriteMessage(TalentInfoList);
       }
       if (TournTalentCoinNum != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteUInt32(TournTalentCoinNum);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (talentInfoList_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(74);
         output.WriteMessage(TalentInfoList);
       }
       if (TournTalentCoinNum != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteUInt32(TournTalentCoinNum);
       }
       if (_unknownFields != null) {
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 74: {
             if (talentInfoList_ == null) {
               TalentInfoList = new global::EggLink.DanhengServer.Proto.RogueTalentInfoList();
             }
             input.ReadMessage(TalentInfoList);
             break;
           }
-          case 112: {
+          case 120: {
             TournTalentCoinNum = input.ReadUInt32();
             break;
           }
@@ -257,14 +257,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 74: {
             if (talentInfoList_ == null) {
               TalentInfoList = new global::EggLink.DanhengServer.Proto.RogueTalentInfoList();
             }
             input.ReadMessage(TalentInfoList);
             break;
           }
-          case 112: {
+          case 120: {
             TournTalentCoinNum = input.ReadUInt32();
             break;
           }

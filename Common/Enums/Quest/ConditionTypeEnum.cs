@@ -21,5 +21,9 @@ public enum ConditionTypeEnum
     SubMissionTaken = 16,
     HasItemMainType = 17,
     FinishSimulatedRogueAreaProgress = 20,
-    RealFinishSubMission = 21
+    RealFinishSubMission = 21,
+    RealFinishMainMission = 22,
+    RogueTournExpLevel = 23,
+    ElfProgress = 24,
+    ElfProgressDay = 25
 }

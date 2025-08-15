@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRMZWF2ZVJhaWRDc1JlcS5wcm90byIyCg5MZWF2ZVJhaWRDc1JlcRIPCgdp",
-            "c19zYXZlGAcgASgIEg8KB3JhaWRfaWQYDCABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "c19zYXZlGAIgASgIEg8KB3JhaWRfaWQYCCABKA1CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_save" field.</summary>
-    public const int IsSaveFieldNumber = 7;
+    public const int IsSaveFieldNumber = 2;
     private bool isSave_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "raid_id" field.</summary>
-    public const int RaidIdFieldNumber = 12;
+    public const int RaidIdFieldNumber = 8;
     private uint raidId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsSave != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteBool(IsSave);
       }
       if (RaidId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(RaidId);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsSave != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteBool(IsSave);
       }
       if (RaidId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(RaidId);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
+          case 16: {
             IsSave = input.ReadBool();
             break;
           }
-          case 96: {
+          case 64: {
             RaidId = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
+          case 16: {
             IsSave = input.ReadBool();
             break;
           }
-          case 96: {
+          case 64: {
             RaidId = input.ReadUInt32();
             break;
           }

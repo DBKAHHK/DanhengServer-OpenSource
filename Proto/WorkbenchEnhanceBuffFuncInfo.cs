@@ -26,9 +26,9 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJXb3JrYmVuY2hFbmhhbmNlQnVmZkZ1bmNJbmZvLnByb3RvItEBChxXb3Jr",
             "YmVuY2hFbmhhbmNlQnVmZkZ1bmNJbmZvEg8KB2N1cl9udW0YASABKA0SVAoV",
-            "YnVmZl9lbmhhbmNlX2Nvc3RfbWFwGAQgAygLMjUuV29ya2JlbmNoRW5oYW5j",
+            "YnVmZl9lbmhhbmNlX2Nvc3RfbWFwGAogAygLMjUuV29ya2JlbmNoRW5oYW5j",
             "ZUJ1ZmZGdW5jSW5mby5CdWZmRW5oYW5jZUNvc3RNYXBFbnRyeRIPCgdtYXhf",
-            "bnVtGA8gASgNGjkKF0J1ZmZFbmhhbmNlQ29zdE1hcEVudHJ5EgsKA2tleRgB",
+            "bnVtGAUgASgNGjkKF0J1ZmZFbmhhbmNlQ29zdE1hcEVudHJ5EgsKA2tleRgB",
             "IAEoDRINCgV2YWx1ZRgCIAEoDToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -101,9 +101,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff_enhance_cost_map" field.</summary>
-    public const int BuffEnhanceCostMapFieldNumber = 4;
+    public const int BuffEnhanceCostMapFieldNumber = 10;
     private static readonly pbc::MapField<uint, uint>.Codec _map_buffEnhanceCostMap_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 34);
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 82);
     private readonly pbc::MapField<uint, uint> buffEnhanceCostMap_ = new pbc::MapField<uint, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "max_num" field.</summary>
-    public const int MaxNumFieldNumber = 15;
+    public const int MaxNumFieldNumber = 5;
     private uint maxNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -173,11 +173,11 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(CurNum);
       }
-      buffEnhanceCostMap_.WriteTo(output, _map_buffEnhanceCostMap_codec);
       if (MaxNum != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(40);
         output.WriteUInt32(MaxNum);
       }
+      buffEnhanceCostMap_.WriteTo(output, _map_buffEnhanceCostMap_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -192,11 +192,11 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(CurNum);
       }
-      buffEnhanceCostMap_.WriteTo(ref output, _map_buffEnhanceCostMap_codec);
       if (MaxNum != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(40);
         output.WriteUInt32(MaxNum);
       }
+      buffEnhanceCostMap_.WriteTo(ref output, _map_buffEnhanceCostMap_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -252,12 +252,12 @@ namespace EggLink.DanhengServer.Proto {
             CurNum = input.ReadUInt32();
             break;
           }
-          case 34: {
-            buffEnhanceCostMap_.AddEntriesFrom(input, _map_buffEnhanceCostMap_codec);
+          case 40: {
+            MaxNum = input.ReadUInt32();
             break;
           }
-          case 120: {
-            MaxNum = input.ReadUInt32();
+          case 82: {
+            buffEnhanceCostMap_.AddEntriesFrom(input, _map_buffEnhanceCostMap_codec);
             break;
           }
         }
@@ -279,12 +279,12 @@ namespace EggLink.DanhengServer.Proto {
             CurNum = input.ReadUInt32();
             break;
           }
-          case 34: {
-            buffEnhanceCostMap_.AddEntriesFrom(ref input, _map_buffEnhanceCostMap_codec);
+          case 40: {
+            MaxNum = input.ReadUInt32();
             break;
           }
-          case 120: {
-            MaxNum = input.ReadUInt32();
+          case 82: {
+            buffEnhanceCostMap_.AddEntriesFrom(ref input, _map_buffEnhanceCostMap_codec);
             break;
           }
         }

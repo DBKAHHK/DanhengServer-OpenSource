@@ -25,7 +25,7 @@ public class DispatchRoutes
         {
             Name = config.GameServer.GameServerId,
             DispatchUrl = $"{config.HttpServer.GetDisplayAddress()}/query_gateway",
-            EnvType = "2",
+            EnvType = "21",
             DisplayName = config.GameServer.GameServerName
         });
         Logger.Info("Client request: query_dispatch");

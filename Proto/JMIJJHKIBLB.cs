@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFKTUlKSkhLSUJMQi5wcm90byJGCgtKTUlKSkhLSUJMQhIUCgxjaGFsbGVu",
-            "Z2VfaWQYAyABKA0SDAoEc3RhchgIIAEoDRITCgtHSklFQUhEQk5OSRgHIAEo",
+            "Z2VfaWQYByABKA0SDAoEc3RhchgIIAEoDRITCgtHSklFQUhEQk5OSRgNIAEo",
             "CEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 3;
+    public const int ChallengeIdFieldNumber = 7;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GJIEAHDBNNI" field.</summary>
-    public const int GJIEAHDBNNIFieldNumber = 7;
+    public const int GJIEAHDBNNIFieldNumber = 13;
     private bool gJIEAHDBNNI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ChallengeId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(ChallengeId);
-      }
-      if (GJIEAHDBNNI != false) {
         output.WriteRawTag(56);
-        output.WriteBool(GJIEAHDBNNI);
+        output.WriteUInt32(ChallengeId);
       }
       if (Star != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(Star);
+      }
+      if (GJIEAHDBNNI != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(GJIEAHDBNNI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ChallengeId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(ChallengeId);
-      }
-      if (GJIEAHDBNNI != false) {
         output.WriteRawTag(56);
-        output.WriteBool(GJIEAHDBNNI);
+        output.WriteUInt32(ChallengeId);
       }
       if (Star != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(Star);
+      }
+      if (GJIEAHDBNNI != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(GJIEAHDBNNI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            ChallengeId = input.ReadUInt32();
-            break;
-          }
           case 56: {
-            GJIEAHDBNNI = input.ReadBool();
+            ChallengeId = input.ReadUInt32();
             break;
           }
           case 64: {
             Star = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            GJIEAHDBNNI = input.ReadBool();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            ChallengeId = input.ReadUInt32();
-            break;
-          }
           case 56: {
-            GJIEAHDBNNI = input.ReadBool();
+            ChallengeId = input.ReadUInt32();
             break;
           }
           case 64: {
             Star = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            GJIEAHDBNNI = input.ReadBool();
             break;
           }
         }

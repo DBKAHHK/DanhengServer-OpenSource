@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPQklITkdNTktFSy5wcm90bxoRS1BJR0xPUEVNQ0YucHJvdG8aEUJDUERG",
-            "SVBPTUFQLnByb3RvImYKC09CSUhOR01OS0VLEiMKC0xPT05FSEZOQVBDGAIg",
+            "SVBPTUFQLnByb3RvImYKC09CSUhOR01OS0VLEiMKC0xPT05FSEZOQVBDGAEg",
             "ASgLMgwuS1BJR0xPUEVNQ0ZIABIjCgtEQU9QT0hBTU9NRhgLIAEoCzIMLkJD",
             "UERGSVBPTUFQSABCDQoLS0hERk5BTEhNRklCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
@@ -93,7 +93,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LOONEHFNAPC" field.</summary>
-    public const int LOONEHFNAPCFieldNumber = 2;
+    public const int LOONEHFNAPCFieldNumber = 1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.KPIGLOPEMCF LOONEHFNAPC {
@@ -120,7 +120,7 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "KHDFNALHMFI" oneof.</summary>
     public enum KHDFNALHMFIOneofCase {
       None = 0,
-      LOONEHFNAPC = 2,
+      LOONEHFNAPC = 1,
       DAOPOHAMOMF = 11,
     }
     private KHDFNALHMFIOneofCase kHDFNALHMFICase_ = KHDFNALHMFIOneofCase.None;
@@ -184,7 +184,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (kHDFNALHMFICase_ == KHDFNALHMFIOneofCase.LOONEHFNAPC) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(LOONEHFNAPC);
       }
       if (kHDFNALHMFICase_ == KHDFNALHMFIOneofCase.DAOPOHAMOMF) {
@@ -202,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (kHDFNALHMFICase_ == KHDFNALHMFIOneofCase.LOONEHFNAPC) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(LOONEHFNAPC);
       }
       if (kHDFNALHMFICase_ == KHDFNALHMFIOneofCase.DAOPOHAMOMF) {
@@ -267,7 +267,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 10: {
             global::EggLink.DanhengServer.Proto.KPIGLOPEMCF subBuilder = new global::EggLink.DanhengServer.Proto.KPIGLOPEMCF();
             if (kHDFNALHMFICase_ == KHDFNALHMFIOneofCase.LOONEHFNAPC) {
               subBuilder.MergeFrom(LOONEHFNAPC);
@@ -300,7 +300,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 10: {
             global::EggLink.DanhengServer.Proto.KPIGLOPEMCF subBuilder = new global::EggLink.DanhengServer.Proto.KPIGLOPEMCF();
             if (kHDFNALHMFICase_ == KHDFNALHMFIOneofCase.LOONEHFNAPC) {
               subBuilder.MergeFrom(LOONEHFNAPC);

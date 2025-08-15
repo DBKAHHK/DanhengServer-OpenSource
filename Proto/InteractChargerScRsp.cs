@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static InteractChargerScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpJbnRlcmFjdENoYXJnZXJTY1JzcC5wcm90bxoRQ2hhcmdlckluZm8ucHJv",
-            "dG8aF1JvdGF0ZXJFbmVyZ3lJbmZvLnByb3RvInQKFEludGVyYWN0Q2hhcmdl",
-            "clNjUnNwEg8KB3JldGNvZGUYDSABKA0SIgoMY2hhcmdlcl9pbmZvGAUgASgL",
-            "MgwuQ2hhcmdlckluZm8SJwoLZW5lcmd5X2luZm8YBCABKAsyEi5Sb3RhdGVy",
-            "RW5lcmd5SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "ChpJbnRlcmFjdENoYXJnZXJTY1JzcC5wcm90bxoXUm90YXRlckVuZXJneUlu",
+            "Zm8ucHJvdG8aEUNoYXJnZXJJbmZvLnByb3RvInQKFEludGVyYWN0Q2hhcmdl",
+            "clNjUnNwEiIKDGNoYXJnZXJfaW5mbxgPIAEoCzIMLkNoYXJnZXJJbmZvEicK",
+            "C2VuZXJneV9pbmZvGAQgASgLMhIuUm90YXRlckVuZXJneUluZm8SDwoHcmV0",
+            "Y29kZRgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.InteractChargerScRsp), global::EggLink.DanhengServer.Proto.InteractChargerScRsp.Parser, new[]{ "Retcode", "ChargerInfo", "EnergyInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.InteractChargerScRsp), global::EggLink.DanhengServer.Proto.InteractChargerScRsp.Parser, new[]{ "ChargerInfo", "EnergyInfo", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,9 +75,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InteractChargerScRsp(InteractChargerScRsp other) : this() {
-      retcode_ = other.retcode_;
       chargerInfo_ = other.chargerInfo_ != null ? other.chargerInfo_.Clone() : null;
       energyInfo_ = other.energyInfo_ != null ? other.energyInfo_.Clone() : null;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,20 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new InteractChargerScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "charger_info" field.</summary>
-    public const int ChargerInfoFieldNumber = 5;
+    public const int ChargerInfoFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.ChargerInfo chargerInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,6 +111,18 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 14;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -138,9 +138,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if (!object.Equals(ChargerInfo, other.ChargerInfo)) return false;
       if (!object.Equals(EnergyInfo, other.EnergyInfo)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,9 +148,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (chargerInfo_ != null) hash ^= ChargerInfo.GetHashCode();
       if (energyInfo_ != null) hash ^= EnergyInfo.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -173,13 +173,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(34);
         output.WriteMessage(EnergyInfo);
       }
-      if (chargerInfo_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(ChargerInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
+      }
+      if (chargerInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(ChargerInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -195,13 +195,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(34);
         output.WriteMessage(EnergyInfo);
       }
-      if (chargerInfo_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(ChargerInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
+      }
+      if (chargerInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(ChargerInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -213,14 +213,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (chargerInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ChargerInfo);
       }
       if (energyInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnergyInfo);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -234,9 +234,6 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.chargerInfo_ != null) {
         if (chargerInfo_ == null) {
           ChargerInfo = new global::EggLink.DanhengServer.Proto.ChargerInfo();
@@ -248,6 +245,9 @@ namespace EggLink.DanhengServer.Proto {
           EnergyInfo = new global::EggLink.DanhengServer.Proto.RotaterEnergyInfo();
         }
         EnergyInfo.MergeFrom(other.EnergyInfo);
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -271,15 +271,15 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(EnergyInfo);
             break;
           }
-          case 42: {
+          case 112: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             if (chargerInfo_ == null) {
               ChargerInfo = new global::EggLink.DanhengServer.Proto.ChargerInfo();
             }
             input.ReadMessage(ChargerInfo);
-            break;
-          }
-          case 104: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -304,15 +304,15 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(EnergyInfo);
             break;
           }
-          case 42: {
+          case 112: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
             if (chargerInfo_ == null) {
               ChargerInfo = new global::EggLink.DanhengServer.Proto.ChargerInfo();
             }
             input.ReadMessage(ChargerInfo);
-            break;
-          }
-          case 104: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

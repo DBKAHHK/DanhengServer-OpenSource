@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChtGYXRlUGVuZGluZ0FjdGlvbkluZm8ucHJvdG8aEVBFQUpMQURJTkZLLnBy",
             "b3RvIlIKFUZhdGVQZW5kaW5nQWN0aW9uSW5mbxIWCg5xdWV1ZV9wb3NpdGlv",
-            "bhgFIAEoDRIhCgtLSUFCQ0ZIREdCSxgPIAEoCzIMLlBFQUpMQURJTkZLQh6q",
+            "bhgMIAEoDRIhCgtLSUFCQ0ZIREdCSxgCIAEoCzIMLlBFQUpMQURJTkZLQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PEAJLADINFKReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "queue_position" field.</summary>
-    public const int QueuePositionFieldNumber = 5;
+    public const int QueuePositionFieldNumber = 12;
     private uint queuePosition_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KIABCFHDGBK" field.</summary>
-    public const int KIABCFHDGBKFieldNumber = 15;
+    public const int KIABCFHDGBKFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.PEAJLADINFK kIABCFHDGBK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (QueuePosition != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(QueuePosition);
-      }
       if (kIABCFHDGBK_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(18);
         output.WriteMessage(KIABCFHDGBK);
+      }
+      if (QueuePosition != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(QueuePosition);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (QueuePosition != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(QueuePosition);
-      }
       if (kIABCFHDGBK_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(18);
         output.WriteMessage(KIABCFHDGBK);
+      }
+      if (QueuePosition != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(QueuePosition);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            QueuePosition = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 18: {
             if (kIABCFHDGBK_ == null) {
               KIABCFHDGBK = new global::EggLink.DanhengServer.Proto.PEAJLADINFK();
             }
             input.ReadMessage(KIABCFHDGBK);
+            break;
+          }
+          case 96: {
+            QueuePosition = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            QueuePosition = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 18: {
             if (kIABCFHDGBK_ == null) {
               KIABCFHDGBK = new global::EggLink.DanhengServer.Proto.PEAJLADINFK();
             }
             input.ReadMessage(KIABCFHDGBK);
+            break;
+          }
+          case 96: {
+            QueuePosition = input.ReadUInt32();
             break;
           }
         }

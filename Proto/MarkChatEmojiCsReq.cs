@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhNYXJrQ2hhdEVtb2ppQ3NSZXEucHJvdG8iPAoSTWFya0NoYXRFbW9qaUNz",
-            "UmVxEhAKCGV4dHJhX2lkGAsgASgNEhQKDGlzX3JlbW92ZV9pZBgPIAEoCEIe",
+            "UmVxEhAKCGV4dHJhX2lkGAwgASgNEhQKDGlzX3JlbW92ZV9pZBgDIAEoCEIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "extra_id" field.</summary>
-    public const int ExtraIdFieldNumber = 11;
+    public const int ExtraIdFieldNumber = 12;
     private uint extraId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_remove_id" field.</summary>
-    public const int IsRemoveIdFieldNumber = 15;
+    public const int IsRemoveIdFieldNumber = 3;
     private bool isRemoveId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ExtraId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(ExtraId);
-      }
       if (IsRemoveId != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(24);
         output.WriteBool(IsRemoveId);
+      }
+      if (ExtraId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(ExtraId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ExtraId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(ExtraId);
-      }
       if (IsRemoveId != false) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(24);
         output.WriteBool(IsRemoveId);
+      }
+      if (ExtraId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(ExtraId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
-            ExtraId = input.ReadUInt32();
+          case 24: {
+            IsRemoveId = input.ReadBool();
             break;
           }
-          case 120: {
-            IsRemoveId = input.ReadBool();
+          case 96: {
+            ExtraId = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
-            ExtraId = input.ReadUInt32();
+          case 24: {
+            IsRemoveId = input.ReadBool();
             break;
           }
-          case 120: {
-            IsRemoveId = input.ReadBool();
+          case 96: {
+            ExtraId = input.ReadUInt32();
             break;
           }
         }

@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpTZXRQZXJzb25hbENhcmRTY1JzcC5wcm90byJBChRTZXRQZXJzb25hbENh",
-            "cmRTY1JzcBIYChBwZXJzb25hbF9jYXJkX2lkGAogASgNEg8KB3JldGNvZGUY",
-            "BSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "cmRTY1JzcBIPCgdyZXRjb2RlGAcgASgNEhgKEHBlcnNvbmFsX2NhcmRfaWQY",
+            "DyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetPersonalCardScRsp), global::EggLink.DanhengServer.Proto.SetPersonalCardScRsp.Parser, new[]{ "PersonalCardId", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetPersonalCardScRsp), global::EggLink.DanhengServer.Proto.SetPersonalCardScRsp.Parser, new[]{ "Retcode", "PersonalCardId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetPersonalCardScRsp(SetPersonalCardScRsp other) : this() {
-      personalCardId_ = other.personalCardId_;
       retcode_ = other.retcode_;
+      personalCardId_ = other.personalCardId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new SetPersonalCardScRsp(this);
     }
 
-    /// <summary>Field number for the "personal_card_id" field.</summary>
-    public const int PersonalCardIdFieldNumber = 10;
-    private uint personalCardId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PersonalCardId {
-      get { return personalCardId_; }
-      set {
-        personalCardId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "personal_card_id" field.</summary>
+    public const int PersonalCardIdFieldNumber = 15;
+    private uint personalCardId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PersonalCardId {
+      get { return personalCardId_; }
+      set {
+        personalCardId_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PersonalCardId != other.PersonalCardId) return false;
       if (Retcode != other.Retcode) return false;
+      if (PersonalCardId != other.PersonalCardId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (PersonalCardId != 0) hash ^= PersonalCardId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (PersonalCardId != 0) hash ^= PersonalCardId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (PersonalCardId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteUInt32(PersonalCardId);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (PersonalCardId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteUInt32(PersonalCardId);
       }
       if (_unknownFields != null) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (PersonalCardId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PersonalCardId);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (PersonalCardId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PersonalCardId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.PersonalCardId != 0) {
-        PersonalCardId = other.PersonalCardId;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
+      }
+      if (other.PersonalCardId != 0) {
+        PersonalCardId = other.PersonalCardId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 120: {
             PersonalCardId = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 120: {
             PersonalCardId = input.ReadUInt32();
             break;
           }

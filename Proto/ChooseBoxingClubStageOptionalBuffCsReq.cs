@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CixDaG9vc2VCb3hpbmdDbHViU3RhZ2VPcHRpb25hbEJ1ZmZDc1JlcS5wcm90",
             "byJTCiZDaG9vc2VCb3hpbmdDbHViU3RhZ2VPcHRpb25hbEJ1ZmZDc1JlcRIT",
-            "CgtGTUdNQUlFR09GUBgBIAEoDRIUCgxjaGFsbGVuZ2VfaWQYCCABKA1CHqoC",
+            "CgtGTUdNQUlFR09GUBgEIAEoDRIUCgxjaGFsbGVuZ2VfaWQYDSABKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FMGMAIEGOFP" field.</summary>
-    public const int FMGMAIEGOFPFieldNumber = 1;
+    public const int FMGMAIEGOFPFieldNumber = 4;
     private uint fMGMAIEGOFP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 8;
+    public const int ChallengeIdFieldNumber = 13;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (FMGMAIEGOFP != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteUInt32(FMGMAIEGOFP);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FMGMAIEGOFP != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteUInt32(FMGMAIEGOFP);
       }
       if (ChallengeId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(ChallengeId);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 32: {
             FMGMAIEGOFP = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 104: {
             ChallengeId = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 32: {
             FMGMAIEGOFP = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 104: {
             ChallengeId = input.ReadUInt32();
             break;
           }

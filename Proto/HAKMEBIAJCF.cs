@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFIQUtNRUJJQUpDRi5wcm90bxoRS0tOTE1DSklHQUYucHJvdG8iMAoLSEFL",
-            "TUVCSUFKQ0YSIQoLTUtPQU1CTUtESUQYAiADKAsyDC5LS05MTUNKSUdBRkIe",
+            "TUVCSUFKQ0YSIQoLTUtPQU1CTUtESUQYBiADKAsyDC5LS05MTUNKSUdBRkIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KKNLMCJIGAFReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MKOAMBMKDID" field.</summary>
-    public const int MKOAMBMKDIDFieldNumber = 2;
+    public const int MKOAMBMKDIDFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KKNLMCJIGAF> _repeated_mKOAMBMKDID_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.KKNLMCJIGAF.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.KKNLMCJIGAF.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KKNLMCJIGAF> mKOAMBMKDID_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KKNLMCJIGAF>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 50: {
             mKOAMBMKDID_.AddEntriesFrom(input, _repeated_mKOAMBMKDID_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 50: {
             mKOAMBMKDID_.AddEntriesFrom(ref input, _repeated_mKOAMBMKDID_codec);
             break;
           }

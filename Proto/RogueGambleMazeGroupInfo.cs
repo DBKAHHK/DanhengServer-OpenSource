@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5Sb2d1ZUdhbWJsZU1hemVHcm91cEluZm8ucHJvdG8aGVJvZ3VlR2FtYmxl",
-            "TWF6ZUluZm8ucHJvdG8iagoYUm9ndWVHYW1ibGVNYXplR3JvdXBJbmZvEhAK",
-            "CGdyb3VwX2lkGAMgASgNEicKCW1hemVfbGlzdBgOIAMoCzIULlJvZ3VlR2Ft",
-            "YmxlTWF6ZUluZm8SEwoLRU5CSUpCRkJORUMYCyABKAhCHqoCG0VnZ0xpbmsu",
+            "TWF6ZUluZm8ucHJvdG8iagoYUm9ndWVHYW1ibGVNYXplR3JvdXBJbmZvEhMK",
+            "C0VOQklKQkZCTkVDGAsgASgIEhAKCGdyb3VwX2lkGAkgASgNEicKCW1hemVf",
+            "bGlzdBgOIAMoCzIULlJvZ3VlR2FtYmxlTWF6ZUluZm9CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueGambleMazeInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo), global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo.Parser, new[]{ "GroupId", "MazeList", "ENBIJBFBNEC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo), global::EggLink.DanhengServer.Proto.RogueGambleMazeGroupInfo.Parser, new[]{ "ENBIJBFBNEC", "GroupId", "MazeList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueGambleMazeGroupInfo(RogueGambleMazeGroupInfo other) : this() {
+      eNBIJBFBNEC_ = other.eNBIJBFBNEC_;
       groupId_ = other.groupId_;
       mazeList_ = other.mazeList_.Clone();
-      eNBIJBFBNEC_ = other.eNBIJBFBNEC_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,8 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueGambleMazeGroupInfo(this);
     }
 
+    /// <summary>Field number for the "ENBIJBFBNEC" field.</summary>
+    public const int ENBIJBFBNECFieldNumber = 11;
+    private bool eNBIJBFBNEC_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ENBIJBFBNEC {
+      get { return eNBIJBFBNEC_; }
+      set {
+        eNBIJBFBNEC_ = value;
+      }
+    }
+
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 3;
+    public const int GroupIdFieldNumber = 9;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,18 +121,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return mazeList_; }
     }
 
-    /// <summary>Field number for the "ENBIJBFBNEC" field.</summary>
-    public const int ENBIJBFBNECFieldNumber = 11;
-    private bool eNBIJBFBNEC_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ENBIJBFBNEC {
-      get { return eNBIJBFBNEC_; }
-      set {
-        eNBIJBFBNEC_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ENBIJBFBNEC != other.ENBIJBFBNEC) return false;
       if (GroupId != other.GroupId) return false;
       if(!mazeList_.Equals(other.mazeList_)) return false;
-      if (ENBIJBFBNEC != other.ENBIJBFBNEC) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (ENBIJBFBNEC != false) hash ^= ENBIJBFBNEC.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
       hash ^= mazeList_.GetHashCode();
-      if (ENBIJBFBNEC != false) hash ^= ENBIJBFBNEC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (GroupId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteUInt32(GroupId);
       }
       if (ENBIJBFBNEC != false) {
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (GroupId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(72);
         output.WriteUInt32(GroupId);
       }
       if (ENBIJBFBNEC != false) {
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (ENBIJBFBNEC != false) {
+        size += 1 + 1;
+      }
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
       size += mazeList_.CalculateSize(_repeated_mazeList_codec);
-      if (ENBIJBFBNEC != false) {
-        size += 1 + 1;
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -224,13 +224,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.ENBIJBFBNEC != false) {
+        ENBIJBFBNEC = other.ENBIJBFBNEC;
+      }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
       }
       mazeList_.Add(other.mazeList_);
-      if (other.ENBIJBFBNEC != false) {
-        ENBIJBFBNEC = other.ENBIJBFBNEC;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -246,7 +246,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 72: {
             GroupId = input.ReadUInt32();
             break;
           }
@@ -273,7 +273,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 72: {
             GroupId = input.ReadUInt32();
             break;
           }

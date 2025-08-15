@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9FbnRlclRyZWFzdXJlRHVuZ2VvbkNzUmVxLnByb3RvGhFKQUNLRUpMS0pO",
             "QS5wcm90byJTChlFbnRlclRyZWFzdXJlRHVuZ2VvbkNzUmVxEhMKC05MTURF",
-            "TU9IQk9PGAIgASgNEiEKC2F2YXRhcl9saXN0GA4gAygLMgwuSkFDS0VKTEtK",
+            "TU9IQk9PGAMgASgNEiEKC2F2YXRhcl9saXN0GAIgAygLMgwuSkFDS0VKTEtK",
             "TkFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JACKEJLKJNAReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NLMDEMOHBOO" field.</summary>
-    public const int NLMDEMOHBOOFieldNumber = 2;
+    public const int NLMDEMOHBOOFieldNumber = 3;
     private uint nLMDEMOHBOO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_list" field.</summary>
-    public const int AvatarListFieldNumber = 14;
+    public const int AvatarListFieldNumber = 2;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.JACKEJLKJNA> _repeated_avatarList_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.JACKEJLKJNA.Parser);
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.JACKEJLKJNA.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JACKEJLKJNA> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JACKEJLKJNA>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      avatarList_.WriteTo(output, _repeated_avatarList_codec);
       if (NLMDEMOHBOO != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt32(NLMDEMOHBOO);
       }
-      avatarList_.WriteTo(output, _repeated_avatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       if (NLMDEMOHBOO != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt32(NLMDEMOHBOO);
       }
-      avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            NLMDEMOHBOO = input.ReadUInt32();
+          case 18: {
+            avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
             break;
           }
-          case 114: {
-            avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
+          case 24: {
+            NLMDEMOHBOO = input.ReadUInt32();
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            NLMDEMOHBOO = input.ReadUInt32();
+          case 18: {
+            avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
             break;
           }
-          case 114: {
-            avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
+          case 24: {
+            NLMDEMOHBOO = input.ReadUInt32();
             break;
           }
         }
