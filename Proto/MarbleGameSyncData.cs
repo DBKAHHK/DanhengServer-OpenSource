@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static MarbleGameSyncDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhNYXJibGVHYW1lU3luY0RhdGEucHJvdG8aEUZJUFBLTENPRUdKLnByb3Rv",
-            "GhVNYXJibGVGcmFtZVR5cGUucHJvdG8aFk1hcmJsZVNlYWxWZWN0b3IucHJv",
-            "dG8aF01hcmJsZUZhY3Rpb25UeXBlLnByb3RvIsgGChJNYXJibGVHYW1lU3lu",
+            "ChhNYXJibGVHYW1lU3luY0RhdGEucHJvdG8aF01hcmJsZUZhY3Rpb25UeXBl",
+            "LnByb3RvGhZNYXJibGVTZWFsVmVjdG9yLnByb3RvGhFGSVBQS0xDT0VHSi5w",
+            "cm90bxoVTWFyYmxlRnJhbWVUeXBlLnByb3RvIsgGChJNYXJibGVHYW1lU3lu",
             "Y0RhdGESFAoLTkJLRUxDSElMR0cY3wYgASgIEgwKBHRpbWUYAiABKAISKAoN",
             "c2VhbF9yb3RhdGlvbhgGIAEoCzIRLk1hcmJsZVNlYWxWZWN0b3ISCgoCaHAY",
             "DCABKAUSEAoHdGVjaF9pZBjFBiABKA0SFgoNc2VhbF9za2lsbF9pZBjxDyAB",
@@ -48,7 +48,7 @@ namespace EggLink.DanhengServer.Proto {
             "YXJibGVTZWFsVmVjdG9yQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FIPPKLCOEGJReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleFrameTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleSealVectorReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleFactionTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleFactionTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleSealVectorReflection.Descriptor, global::EggLink.DanhengServer.Proto.FIPPKLCOEGJReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleFrameTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGameSyncData), global::EggLink.DanhengServer.Proto.MarbleGameSyncData.Parser, new[]{ "NBKELCHILGG", "Time", "SealRotation", "Hp", "TechId", "SealSkillId", "SealOnStage", "SealPosition", "BuffId", "JLCIKBLNENH", "SealVelocity", "FrameType", "CCLMFABDENA", "Id", "CollideType", "IsEffectAvailable", "CollisionPosition", "HitLeftTime", "SealSize", "PlayerBScore", "Level", "HitTargetId", "MaxHp", "TextId", "Attack", "CollideOwnerId", "PlayerAScore", "HpChangeValue", "CollideTargetId", "SkillId", "CollisionTargetVelocity" }, null, null, null, null)
           }));

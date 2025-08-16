@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPS0hFS0xCRkFDQS5wcm90bxoZQ2hhbGxlbmdlTGluZXVwTGlzdC5wcm90",
-            "byJyCgtPS0hFS0xCRkFDQRITCgtJRVBIRExNTE9BTxgPIAMoDRIVCg1wZWFr",
-            "X2xldmVsX2lkGA4gASgNEhEKCXBlYWtfc3RhchgJIAEoDRIkCgZsaW5ldXAY",
-            "BiABKAsyFC5DaGFsbGVuZ2VMaW5ldXBMaXN0Qh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "byJ5CgtPS0hFS0xCRkFDQRITCgtJRVBIRExNTE9BTxgPIAMoDRIVCg1wZWFr",
+            "X2xldmVsX2lkGA4gASgNEhgKEHBlYWtfcm91bmRfY291bnQYCSABKA0SJAoG",
+            "bGluZXVwGAYgASgLMhQuQ2hhbGxlbmdlTGluZXVwTGlzdEIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeLineupListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OKHEKLBFACA), global::EggLink.DanhengServer.Proto.OKHEKLBFACA.Parser, new[]{ "IEPHDLMLOAO", "PeakLevelId", "PeakStar", "Lineup" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OKHEKLBFACA), global::EggLink.DanhengServer.Proto.OKHEKLBFACA.Parser, new[]{ "IEPHDLMLOAO", "PeakLevelId", "PeakRoundCount", "Lineup" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     public OKHEKLBFACA(OKHEKLBFACA other) : this() {
       iEPHDLMLOAO_ = other.iEPHDLMLOAO_.Clone();
       peakLevelId_ = other.peakLevelId_;
-      peakStar_ = other.peakStar_;
+      peakRoundCount_ = other.peakRoundCount_;
       lineup_ = other.lineup_ != null ? other.lineup_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -110,15 +110,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "peak_star" field.</summary>
-    public const int PeakStarFieldNumber = 9;
-    private uint peakStar_;
+    /// <summary>Field number for the "peak_round_count" field.</summary>
+    public const int PeakRoundCountFieldNumber = 9;
+    private uint peakRoundCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PeakStar {
-      get { return peakStar_; }
+    public uint PeakRoundCount {
+      get { return peakRoundCount_; }
       set {
-        peakStar_ = value;
+        peakRoundCount_ = value;
       }
     }
 
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if(!iEPHDLMLOAO_.Equals(other.iEPHDLMLOAO_)) return false;
       if (PeakLevelId != other.PeakLevelId) return false;
-      if (PeakStar != other.PeakStar) return false;
+      if (PeakRoundCount != other.PeakRoundCount) return false;
       if (!object.Equals(Lineup, other.Lineup)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -162,7 +162,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       hash ^= iEPHDLMLOAO_.GetHashCode();
       if (PeakLevelId != 0) hash ^= PeakLevelId.GetHashCode();
-      if (PeakStar != 0) hash ^= PeakStar.GetHashCode();
+      if (PeakRoundCount != 0) hash ^= PeakRoundCount.GetHashCode();
       if (lineup_ != null) hash ^= Lineup.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -186,9 +186,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(50);
         output.WriteMessage(Lineup);
       }
-      if (PeakStar != 0) {
+      if (PeakRoundCount != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(PeakStar);
+        output.WriteUInt32(PeakRoundCount);
       }
       if (PeakLevelId != 0) {
         output.WriteRawTag(112);
@@ -209,9 +209,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(50);
         output.WriteMessage(Lineup);
       }
-      if (PeakStar != 0) {
+      if (PeakRoundCount != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(PeakStar);
+        output.WriteUInt32(PeakRoundCount);
       }
       if (PeakLevelId != 0) {
         output.WriteRawTag(112);
@@ -232,8 +232,8 @@ namespace EggLink.DanhengServer.Proto {
       if (PeakLevelId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakLevelId);
       }
-      if (PeakStar != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakStar);
+      if (PeakRoundCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakRoundCount);
       }
       if (lineup_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Lineup);
@@ -254,8 +254,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.PeakLevelId != 0) {
         PeakLevelId = other.PeakLevelId;
       }
-      if (other.PeakStar != 0) {
-        PeakStar = other.PeakStar;
+      if (other.PeakRoundCount != 0) {
+        PeakRoundCount = other.PeakRoundCount;
       }
       if (other.lineup_ != null) {
         if (lineup_ == null) {
@@ -286,7 +286,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            PeakStar = input.ReadUInt32();
+            PeakRoundCount = input.ReadUInt32();
             break;
           }
           case 112: {
@@ -321,7 +321,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            PeakStar = input.ReadUInt32();
+            PeakRoundCount = input.ReadUInt32();
             break;
           }
           case 112: {

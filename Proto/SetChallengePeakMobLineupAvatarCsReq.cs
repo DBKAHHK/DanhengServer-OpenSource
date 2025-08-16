@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CipTZXRDaGFsbGVuZ2VQZWFrTW9iTGluZXVwQXZhdGFyQ3NSZXEucHJvdG8a",
-            "GUNoYWxsZW5nZVBlYWtMaW5ldXAucHJvdG8igQEKJFNldENoYWxsZW5nZVBl",
-            "YWtNb2JMaW5ldXBBdmF0YXJDc1JlcRIpCgtsaW5ldXBfbGlzdBgPIAMoCzIU",
-            "LkNoYWxsZW5nZVBlYWtMaW5ldXASGQoRY3VyX3BlYWtfZ3JvdXBfaWQYCyAB",
-            "KA0SEwoLQ0hIQ0NHTEdGRkYYDSADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
-            "cnZlci5Qcm90b2IGcHJvdG8z"));
+            "GUNoYWxsZW5nZVBlYWtMaW5ldXAucHJvdG8ifQokU2V0Q2hhbGxlbmdlUGVh",
+            "a01vYkxpbmV1cEF2YXRhckNzUmVxEikKC2xpbmV1cF9saXN0GA8gAygLMhQu",
+            "Q2hhbGxlbmdlUGVha0xpbmV1cBIVCg1wZWFrX2dyb3VwX2lkGAsgASgNEhMK",
+            "C0NISENDR0xHRkZGGA0gAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengePeakLineupReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetChallengePeakMobLineupAvatarCsReq), global::EggLink.DanhengServer.Proto.SetChallengePeakMobLineupAvatarCsReq.Parser, new[]{ "LineupList", "CurPeakGroupId", "CHHCCGLGFFF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetChallengePeakMobLineupAvatarCsReq), global::EggLink.DanhengServer.Proto.SetChallengePeakMobLineupAvatarCsReq.Parser, new[]{ "LineupList", "PeakGroupId", "CHHCCGLGFFF" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetChallengePeakMobLineupAvatarCsReq(SetChallengePeakMobLineupAvatarCsReq other) : this() {
       lineupList_ = other.lineupList_.Clone();
-      curPeakGroupId_ = other.curPeakGroupId_;
+      peakGroupId_ = other.peakGroupId_;
       cHHCCGLGFFF_ = other.cHHCCGLGFFF_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -98,15 +98,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return lineupList_; }
     }
 
-    /// <summary>Field number for the "cur_peak_group_id" field.</summary>
-    public const int CurPeakGroupIdFieldNumber = 11;
-    private uint curPeakGroupId_;
+    /// <summary>Field number for the "peak_group_id" field.</summary>
+    public const int PeakGroupIdFieldNumber = 11;
+    private uint peakGroupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurPeakGroupId {
-      get { return curPeakGroupId_; }
+    public uint PeakGroupId {
+      get { return peakGroupId_; }
       set {
-        curPeakGroupId_ = value;
+        peakGroupId_ = value;
       }
     }
 
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!lineupList_.Equals(other.lineupList_)) return false;
-      if (CurPeakGroupId != other.CurPeakGroupId) return false;
+      if (PeakGroupId != other.PeakGroupId) return false;
       if(!cHHCCGLGFFF_.Equals(other.cHHCCGLGFFF_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= lineupList_.GetHashCode();
-      if (CurPeakGroupId != 0) hash ^= CurPeakGroupId.GetHashCode();
+      if (PeakGroupId != 0) hash ^= PeakGroupId.GetHashCode();
       hash ^= cHHCCGLGFFF_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,9 +167,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CurPeakGroupId != 0) {
+      if (PeakGroupId != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(CurPeakGroupId);
+        output.WriteUInt32(PeakGroupId);
       }
       cHHCCGLGFFF_.WriteTo(output, _repeated_cHHCCGLGFFF_codec);
       lineupList_.WriteTo(output, _repeated_lineupList_codec);
@@ -183,9 +183,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CurPeakGroupId != 0) {
+      if (PeakGroupId != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(CurPeakGroupId);
+        output.WriteUInt32(PeakGroupId);
       }
       cHHCCGLGFFF_.WriteTo(ref output, _repeated_cHHCCGLGFFF_codec);
       lineupList_.WriteTo(ref output, _repeated_lineupList_codec);
@@ -200,8 +200,8 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += lineupList_.CalculateSize(_repeated_lineupList_codec);
-      if (CurPeakGroupId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurPeakGroupId);
+      if (PeakGroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakGroupId);
       }
       size += cHHCCGLGFFF_.CalculateSize(_repeated_cHHCCGLGFFF_codec);
       if (_unknownFields != null) {
@@ -217,8 +217,8 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       lineupList_.Add(other.lineupList_);
-      if (other.CurPeakGroupId != 0) {
-        CurPeakGroupId = other.CurPeakGroupId;
+      if (other.PeakGroupId != 0) {
+        PeakGroupId = other.PeakGroupId;
       }
       cHHCCGLGFFF_.Add(other.cHHCCGLGFFF_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -237,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 88: {
-            CurPeakGroupId = input.ReadUInt32();
+            PeakGroupId = input.ReadUInt32();
             break;
           }
           case 106:
@@ -265,7 +265,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 88: {
-            CurPeakGroupId = input.ReadUInt32();
+            PeakGroupId = input.ReadUInt32();
             break;
           }
           case 106:

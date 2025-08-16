@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static KEHMGKIHEFNReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFLRUhNR0tJSEVGTi5wcm90bxoRRkNOT0xMRkdQQ0sucHJvdG8aEUtBTUNJ",
-            "T1BCUEdBLnByb3RvGhFES0hFTkxNQUVCRS5wcm90bxoRSUlHSkZQTUlHS0Yu",
+            "ChFLRUhNR0tJSEVGTi5wcm90bxoRSUlHSkZQTUlHS0YucHJvdG8aEURLSEVO",
+            "TE1BRUJFLnByb3RvGhFGQ05PTExGR1BDSy5wcm90bxoRS0FNQ0lPUEJQR0Eu",
             "cHJvdG8aFlBsYXllclNpbXBsZUluZm8ucHJvdG8i7QEKC0tFSE1HS0lIRUZO",
             "EhMKC3JlbWFya19uYW1lGAYgASgJEiYKC3BsYXllcl9pbmZvGA8gASgLMhEu",
             "UGxheWVyU2ltcGxlSW5mbxIjCgtHSUVJREpFRVBBQxgOIAEoCzIMLkZDTk9M",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "S0FKQkxKSxgEIAEoCzIMLklJR0pGUE1JR0tGSABCDQoLR0xNUExEQkxNRUNC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FCNOLLFGPCKReflection.Descriptor, global::EggLink.DanhengServer.Proto.KAMCIOPBPGAReflection.Descriptor, global::EggLink.DanhengServer.Proto.DKHENLMAEBEReflection.Descriptor, global::EggLink.DanhengServer.Proto.IIGJFPMIGKFReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerSimpleInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IIGJFPMIGKFReflection.Descriptor, global::EggLink.DanhengServer.Proto.DKHENLMAEBEReflection.Descriptor, global::EggLink.DanhengServer.Proto.FCNOLLFGPCKReflection.Descriptor, global::EggLink.DanhengServer.Proto.KAMCIOPBPGAReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerSimpleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KEHMGKIHEFN), global::EggLink.DanhengServer.Proto.KEHMGKIHEFN.Parser, new[]{ "RemarkName", "PlayerInfo", "GIEIDJEEPAC", "ADDCJEJPFEF", "PMHIBHNEPHI", "JILKKAJBLJK" }, new[]{ "GLMPLDBLMEC" }, null, null, null)
           }));

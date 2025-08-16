@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CipDaGFsbGVuZ2VQZWFrR3JvdXBEYXRhVXBkYXRlU2NOb3RpZnkucHJvdG8a",
-            "F0NoYWxsZW5nZVBlYWtJbmZvLnByb3RvIlQKJENoYWxsZW5nZVBlYWtHcm91",
-            "cERhdGFVcGRhdGVTY05vdGlmeRIsChB1cGRhdGVfcGVha19kYXRhGA0gASgL",
-            "MhIuQ2hhbGxlbmdlUGVha0luZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "HENoYWxsZW5nZVBlYWtMZXZlbEluZm8ucHJvdG8iWQokQ2hhbGxlbmdlUGVh",
+            "a0dyb3VwRGF0YVVwZGF0ZVNjTm90aWZ5EjEKEHVwZGF0ZV9wZWFrX2RhdGEY",
+            "DSABKAsyFy5DaGFsbGVuZ2VQZWFrTGV2ZWxJbmZvQh6qAhtFZ2dMaW5rLkRh",
+            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengePeakInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengePeakGroupDataUpdateScNotify), global::EggLink.DanhengServer.Proto.ChallengePeakGroupDataUpdateScNotify.Parser, new[]{ "UpdatePeakData" }, null, null, null, null)
           }));
@@ -86,10 +86,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "update_peak_data" field.</summary>
     public const int UpdatePeakDataFieldNumber = 13;
-    private global::EggLink.DanhengServer.Proto.ChallengePeakInfo updatePeakData_;
+    private global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo updatePeakData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChallengePeakInfo UpdatePeakData {
+    public global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo UpdatePeakData {
       get { return updatePeakData_; }
       set {
         updatePeakData_ = value;
@@ -183,7 +183,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.updatePeakData_ != null) {
         if (updatePeakData_ == null) {
-          UpdatePeakData = new global::EggLink.DanhengServer.Proto.ChallengePeakInfo();
+          UpdatePeakData = new global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo();
         }
         UpdatePeakData.MergeFrom(other.UpdatePeakData);
       }
@@ -204,7 +204,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 106: {
             if (updatePeakData_ == null) {
-              UpdatePeakData = new global::EggLink.DanhengServer.Proto.ChallengePeakInfo();
+              UpdatePeakData = new global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo();
             }
             input.ReadMessage(UpdatePeakData);
             break;
@@ -226,7 +226,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 106: {
             if (updatePeakData_ == null) {
-              UpdatePeakData = new global::EggLink.DanhengServer.Proto.ChallengePeakInfo();
+              UpdatePeakData = new global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo();
             }
             input.ReadMessage(UpdatePeakData);
             break;

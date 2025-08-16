@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static KAMCIOPBPGAReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFLQU1DSU9QQlBHQS5wcm90bxoRT0lMUElBQ0VOTkgucHJvdG8iRQoLS0FN",
-            "Q0lPUEJQR0ESEwoLSkhJQUtNQ0hQTEIYCiADKA0SIQoLYXZhdGFyX2xpc3QY",
-            "CCADKAsyDC5PSUxQSUFDRU5OSEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "ChFLQU1DSU9QQlBHQS5wcm90bxoRT0lMUElBQ0VOTkgucHJvdG8iSgoLS0FN",
+            "Q0lPUEJQR0ESGAoQcGVha190YXJnZXRfbGlzdBgKIAMoDRIhCgthdmF0YXJf",
+            "bGlzdBgIIAMoCzIMLk9JTFBJQUNFTk5IQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OILPIACENNHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KAMCIOPBPGA), global::EggLink.DanhengServer.Proto.KAMCIOPBPGA.Parser, new[]{ "JHIAKMCHPLB", "AvatarList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KAMCIOPBPGA), global::EggLink.DanhengServer.Proto.KAMCIOPBPGA.Parser, new[]{ "PeakTargetList", "AvatarList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KAMCIOPBPGA(KAMCIOPBPGA other) : this() {
-      jHIAKMCHPLB_ = other.jHIAKMCHPLB_.Clone();
+      peakTargetList_ = other.peakTargetList_.Clone();
       avatarList_ = other.avatarList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new KAMCIOPBPGA(this);
     }
 
-    /// <summary>Field number for the "JHIAKMCHPLB" field.</summary>
-    public const int JHIAKMCHPLBFieldNumber = 10;
-    private static readonly pb::FieldCodec<uint> _repeated_jHIAKMCHPLB_codec
+    /// <summary>Field number for the "peak_target_list" field.</summary>
+    public const int PeakTargetListFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_peakTargetList_codec
         = pb::FieldCodec.ForUInt32(82);
-    private readonly pbc::RepeatedField<uint> jHIAKMCHPLB_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> peakTargetList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JHIAKMCHPLB {
-      get { return jHIAKMCHPLB_; }
+    public pbc::RepeatedField<uint> PeakTargetList {
+      get { return peakTargetList_; }
     }
 
     /// <summary>Field number for the "avatar_list" field.</summary>
@@ -121,7 +121,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!jHIAKMCHPLB_.Equals(other.jHIAKMCHPLB_)) return false;
+      if(!peakTargetList_.Equals(other.peakTargetList_)) return false;
       if(!avatarList_.Equals(other.avatarList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -130,7 +130,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= jHIAKMCHPLB_.GetHashCode();
+      hash ^= peakTargetList_.GetHashCode();
       hash ^= avatarList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       avatarList_.WriteTo(output, _repeated_avatarList_codec);
-      jHIAKMCHPLB_.WriteTo(output, _repeated_jHIAKMCHPLB_codec);
+      peakTargetList_.WriteTo(output, _repeated_peakTargetList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -163,7 +163,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
-      jHIAKMCHPLB_.WriteTo(ref output, _repeated_jHIAKMCHPLB_codec);
+      peakTargetList_.WriteTo(ref output, _repeated_peakTargetList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += jHIAKMCHPLB_.CalculateSize(_repeated_jHIAKMCHPLB_codec);
+      size += peakTargetList_.CalculateSize(_repeated_peakTargetList_codec);
       size += avatarList_.CalculateSize(_repeated_avatarList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      jHIAKMCHPLB_.Add(other.jHIAKMCHPLB_);
+      peakTargetList_.Add(other.peakTargetList_);
       avatarList_.Add(other.avatarList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -211,7 +211,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 82:
           case 80: {
-            jHIAKMCHPLB_.AddEntriesFrom(input, _repeated_jHIAKMCHPLB_codec);
+            peakTargetList_.AddEntriesFrom(input, _repeated_peakTargetList_codec);
             break;
           }
         }
@@ -235,7 +235,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 82:
           case 80: {
-            jHIAKMCHPLB_.AddEntriesFrom(ref input, _repeated_jHIAKMCHPLB_codec);
+            peakTargetList_.AddEntriesFrom(ref input, _repeated_peakTargetList_codec);
             break;
           }
         }

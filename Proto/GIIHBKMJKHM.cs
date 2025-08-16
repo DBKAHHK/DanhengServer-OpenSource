@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GIIHBKMJKHMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFHSUlIQktNSktITS5wcm90bxoRT0lMUElBQ0VOTkgucHJvdG8iXAoLR0lJ",
-            "SEJLTUpLSE0SEwoLSkhJQUtNQ0hQTEIYDCADKA0SFQoNcGVha19sZXZlbF9p",
-            "ZBgGIAEoDRIhCgthdmF0YXJfbGlzdBgPIAMoCzIMLk9JTFBJQUNFTk5IQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChFHSUlIQktNSktITS5wcm90bxoRT0lMUElBQ0VOTkgucHJvdG8iYQoLR0lJ",
+            "SEJLTUpLSE0SGAoQcGVha190YXJnZXRfbGlzdBgMIAMoDRIVCg1wZWFrX2xl",
+            "dmVsX2lkGAYgASgNEiEKC2F2YXRhcl9saXN0GA8gAygLMgwuT0lMUElBQ0VO",
+            "TkhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OILPIACENNHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GIIHBKMJKHM), global::EggLink.DanhengServer.Proto.GIIHBKMJKHM.Parser, new[]{ "JHIAKMCHPLB", "PeakLevelId", "AvatarList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GIIHBKMJKHM), global::EggLink.DanhengServer.Proto.GIIHBKMJKHM.Parser, new[]{ "PeakTargetList", "PeakLevelId", "AvatarList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GIIHBKMJKHM(GIIHBKMJKHM other) : this() {
-      jHIAKMCHPLB_ = other.jHIAKMCHPLB_.Clone();
+      peakTargetList_ = other.peakTargetList_.Clone();
       peakLevelId_ = other.peakLevelId_;
       avatarList_ = other.avatarList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GIIHBKMJKHM(this);
     }
 
-    /// <summary>Field number for the "JHIAKMCHPLB" field.</summary>
-    public const int JHIAKMCHPLBFieldNumber = 12;
-    private static readonly pb::FieldCodec<uint> _repeated_jHIAKMCHPLB_codec
+    /// <summary>Field number for the "peak_target_list" field.</summary>
+    public const int PeakTargetListFieldNumber = 12;
+    private static readonly pb::FieldCodec<uint> _repeated_peakTargetList_codec
         = pb::FieldCodec.ForUInt32(98);
-    private readonly pbc::RepeatedField<uint> jHIAKMCHPLB_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> peakTargetList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JHIAKMCHPLB {
-      get { return jHIAKMCHPLB_; }
+    public pbc::RepeatedField<uint> PeakTargetList {
+      get { return peakTargetList_; }
     }
 
     /// <summary>Field number for the "peak_level_id" field.</summary>
@@ -134,7 +134,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!jHIAKMCHPLB_.Equals(other.jHIAKMCHPLB_)) return false;
+      if(!peakTargetList_.Equals(other.peakTargetList_)) return false;
       if (PeakLevelId != other.PeakLevelId) return false;
       if(!avatarList_.Equals(other.avatarList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -144,7 +144,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= jHIAKMCHPLB_.GetHashCode();
+      hash ^= peakTargetList_.GetHashCode();
       if (PeakLevelId != 0) hash ^= PeakLevelId.GetHashCode();
       hash ^= avatarList_.GetHashCode();
       if (_unknownFields != null) {
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(PeakLevelId);
       }
-      jHIAKMCHPLB_.WriteTo(output, _repeated_jHIAKMCHPLB_codec);
+      peakTargetList_.WriteTo(output, _repeated_peakTargetList_codec);
       avatarList_.WriteTo(output, _repeated_avatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -185,7 +185,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(PeakLevelId);
       }
-      jHIAKMCHPLB_.WriteTo(ref output, _repeated_jHIAKMCHPLB_codec);
+      peakTargetList_.WriteTo(ref output, _repeated_peakTargetList_codec);
       avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += jHIAKMCHPLB_.CalculateSize(_repeated_jHIAKMCHPLB_codec);
+      size += peakTargetList_.CalculateSize(_repeated_peakTargetList_codec);
       if (PeakLevelId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakLevelId);
       }
@@ -214,7 +214,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      jHIAKMCHPLB_.Add(other.jHIAKMCHPLB_);
+      peakTargetList_.Add(other.peakTargetList_);
       if (other.PeakLevelId != 0) {
         PeakLevelId = other.PeakLevelId;
       }
@@ -240,7 +240,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 98:
           case 96: {
-            jHIAKMCHPLB_.AddEntriesFrom(input, _repeated_jHIAKMCHPLB_codec);
+            peakTargetList_.AddEntriesFrom(input, _repeated_peakTargetList_codec);
             break;
           }
           case 122: {
@@ -268,7 +268,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 98:
           case 96: {
-            jHIAKMCHPLB_.AddEntriesFrom(ref input, _repeated_jHIAKMCHPLB_codec);
+            peakTargetList_.AddEntriesFrom(ref input, _repeated_peakTargetList_codec);
             break;
           }
           case 122: {

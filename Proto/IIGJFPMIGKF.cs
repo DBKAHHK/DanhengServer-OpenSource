@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static IIGJFPMIGKFReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFJSUdKRlBNSUdLRi5wcm90bxoRT0lMUElBQ0VOTkgucHJvdG8igAEKC0lJ",
-            "R0pGUE1JR0tGEhMKC0pISUFLTUNIUExCGAIgAygNEhMKC0ZLUEhOQU5MRU1K",
-            "GAMgASgIEiEKC2F2YXRhcl9saXN0GAogAygLMgwuT0lMUElBQ0VOTkgSDwoH",
-            "YnVmZl9pZBgIIAEoDRITCgtQTEZLTkNOQVBITRgBIAEoCEIeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFJSUdKRlBNSUdLRi5wcm90bxoRT0lMUElBQ0VOTkgucHJvdG8ihwEKC0lJ",
+            "R0pGUE1JR0tGEhgKEHBlYWtfdGFyZ2V0X2xpc3QYAiADKA0SDwoHaXNfaGFy",
+            "ZBgDIAEoCBIhCgthdmF0YXJfbGlzdBgKIAMoCzIMLk9JTFBJQUNFTk5IEg8K",
+            "B2J1ZmZfaWQYCCABKA0SGQoRaXNfdWx0cmFfYm9zc193aW4YASABKAhCHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OILPIACENNHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IIGJFPMIGKF), global::EggLink.DanhengServer.Proto.IIGJFPMIGKF.Parser, new[]{ "JHIAKMCHPLB", "FKPHNANLEMJ", "AvatarList", "BuffId", "PLFKNCNAPHM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IIGJFPMIGKF), global::EggLink.DanhengServer.Proto.IIGJFPMIGKF.Parser, new[]{ "PeakTargetList", "IsHard", "AvatarList", "BuffId", "IsUltraBossWin" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +74,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IIGJFPMIGKF(IIGJFPMIGKF other) : this() {
-      jHIAKMCHPLB_ = other.jHIAKMCHPLB_.Clone();
-      fKPHNANLEMJ_ = other.fKPHNANLEMJ_;
+      peakTargetList_ = other.peakTargetList_.Clone();
+      isHard_ = other.isHard_;
       avatarList_ = other.avatarList_.Clone();
       buffId_ = other.buffId_;
-      pLFKNCNAPHM_ = other.pLFKNCNAPHM_;
+      isUltraBossWin_ = other.isUltraBossWin_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,26 +88,26 @@ namespace EggLink.DanhengServer.Proto {
       return new IIGJFPMIGKF(this);
     }
 
-    /// <summary>Field number for the "JHIAKMCHPLB" field.</summary>
-    public const int JHIAKMCHPLBFieldNumber = 2;
-    private static readonly pb::FieldCodec<uint> _repeated_jHIAKMCHPLB_codec
+    /// <summary>Field number for the "peak_target_list" field.</summary>
+    public const int PeakTargetListFieldNumber = 2;
+    private static readonly pb::FieldCodec<uint> _repeated_peakTargetList_codec
         = pb::FieldCodec.ForUInt32(18);
-    private readonly pbc::RepeatedField<uint> jHIAKMCHPLB_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> peakTargetList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JHIAKMCHPLB {
-      get { return jHIAKMCHPLB_; }
+    public pbc::RepeatedField<uint> PeakTargetList {
+      get { return peakTargetList_; }
     }
 
-    /// <summary>Field number for the "FKPHNANLEMJ" field.</summary>
-    public const int FKPHNANLEMJFieldNumber = 3;
-    private bool fKPHNANLEMJ_;
+    /// <summary>Field number for the "is_hard" field.</summary>
+    public const int IsHardFieldNumber = 3;
+    private bool isHard_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool FKPHNANLEMJ {
-      get { return fKPHNANLEMJ_; }
+    public bool IsHard {
+      get { return isHard_; }
       set {
-        fKPHNANLEMJ_ = value;
+        isHard_ = value;
       }
     }
 
@@ -134,15 +134,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PLFKNCNAPHM" field.</summary>
-    public const int PLFKNCNAPHMFieldNumber = 1;
-    private bool pLFKNCNAPHM_;
+    /// <summary>Field number for the "is_ultra_boss_win" field.</summary>
+    public const int IsUltraBossWinFieldNumber = 1;
+    private bool isUltraBossWin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool PLFKNCNAPHM {
-      get { return pLFKNCNAPHM_; }
+    public bool IsUltraBossWin {
+      get { return isUltraBossWin_; }
       set {
-        pLFKNCNAPHM_ = value;
+        isUltraBossWin_ = value;
       }
     }
 
@@ -161,11 +161,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!jHIAKMCHPLB_.Equals(other.jHIAKMCHPLB_)) return false;
-      if (FKPHNANLEMJ != other.FKPHNANLEMJ) return false;
+      if(!peakTargetList_.Equals(other.peakTargetList_)) return false;
+      if (IsHard != other.IsHard) return false;
       if(!avatarList_.Equals(other.avatarList_)) return false;
       if (BuffId != other.BuffId) return false;
-      if (PLFKNCNAPHM != other.PLFKNCNAPHM) return false;
+      if (IsUltraBossWin != other.IsUltraBossWin) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -173,11 +173,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= jHIAKMCHPLB_.GetHashCode();
-      if (FKPHNANLEMJ != false) hash ^= FKPHNANLEMJ.GetHashCode();
+      hash ^= peakTargetList_.GetHashCode();
+      if (IsHard != false) hash ^= IsHard.GetHashCode();
       hash ^= avatarList_.GetHashCode();
       if (BuffId != 0) hash ^= BuffId.GetHashCode();
-      if (PLFKNCNAPHM != false) hash ^= PLFKNCNAPHM.GetHashCode();
+      if (IsUltraBossWin != false) hash ^= IsUltraBossWin.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -196,14 +196,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PLFKNCNAPHM != false) {
+      if (IsUltraBossWin != false) {
         output.WriteRawTag(8);
-        output.WriteBool(PLFKNCNAPHM);
+        output.WriteBool(IsUltraBossWin);
       }
-      jHIAKMCHPLB_.WriteTo(output, _repeated_jHIAKMCHPLB_codec);
-      if (FKPHNANLEMJ != false) {
+      peakTargetList_.WriteTo(output, _repeated_peakTargetList_codec);
+      if (IsHard != false) {
         output.WriteRawTag(24);
-        output.WriteBool(FKPHNANLEMJ);
+        output.WriteBool(IsHard);
       }
       if (BuffId != 0) {
         output.WriteRawTag(64);
@@ -220,14 +220,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PLFKNCNAPHM != false) {
+      if (IsUltraBossWin != false) {
         output.WriteRawTag(8);
-        output.WriteBool(PLFKNCNAPHM);
+        output.WriteBool(IsUltraBossWin);
       }
-      jHIAKMCHPLB_.WriteTo(ref output, _repeated_jHIAKMCHPLB_codec);
-      if (FKPHNANLEMJ != false) {
+      peakTargetList_.WriteTo(ref output, _repeated_peakTargetList_codec);
+      if (IsHard != false) {
         output.WriteRawTag(24);
-        output.WriteBool(FKPHNANLEMJ);
+        output.WriteBool(IsHard);
       }
       if (BuffId != 0) {
         output.WriteRawTag(64);
@@ -244,15 +244,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += jHIAKMCHPLB_.CalculateSize(_repeated_jHIAKMCHPLB_codec);
-      if (FKPHNANLEMJ != false) {
+      size += peakTargetList_.CalculateSize(_repeated_peakTargetList_codec);
+      if (IsHard != false) {
         size += 1 + 1;
       }
       size += avatarList_.CalculateSize(_repeated_avatarList_codec);
       if (BuffId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffId);
       }
-      if (PLFKNCNAPHM != false) {
+      if (IsUltraBossWin != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -267,16 +267,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      jHIAKMCHPLB_.Add(other.jHIAKMCHPLB_);
-      if (other.FKPHNANLEMJ != false) {
-        FKPHNANLEMJ = other.FKPHNANLEMJ;
+      peakTargetList_.Add(other.peakTargetList_);
+      if (other.IsHard != false) {
+        IsHard = other.IsHard;
       }
       avatarList_.Add(other.avatarList_);
       if (other.BuffId != 0) {
         BuffId = other.BuffId;
       }
-      if (other.PLFKNCNAPHM != false) {
-        PLFKNCNAPHM = other.PLFKNCNAPHM;
+      if (other.IsUltraBossWin != false) {
+        IsUltraBossWin = other.IsUltraBossWin;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -294,16 +294,16 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            PLFKNCNAPHM = input.ReadBool();
+            IsUltraBossWin = input.ReadBool();
             break;
           }
           case 18:
           case 16: {
-            jHIAKMCHPLB_.AddEntriesFrom(input, _repeated_jHIAKMCHPLB_codec);
+            peakTargetList_.AddEntriesFrom(input, _repeated_peakTargetList_codec);
             break;
           }
           case 24: {
-            FKPHNANLEMJ = input.ReadBool();
+            IsHard = input.ReadBool();
             break;
           }
           case 64: {
@@ -330,16 +330,16 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            PLFKNCNAPHM = input.ReadBool();
+            IsUltraBossWin = input.ReadBool();
             break;
           }
           case 18:
           case 16: {
-            jHIAKMCHPLB_.AddEntriesFrom(ref input, _repeated_jHIAKMCHPLB_codec);
+            peakTargetList_.AddEntriesFrom(ref input, _repeated_peakTargetList_codec);
             break;
           }
           case 24: {
-            FKPHNANLEMJ = input.ReadBool();
+            IsHard = input.ReadBool();
             break;
           }
           case 64: {

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static TakeChallengePeakRewardCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJUYWtlQ2hhbGxlbmdlUGVha1Jld2FyZENzUmVxLnByb3RvImYKHFRha2VD",
+            "CiJUYWtlQ2hhbGxlbmdlUGVha1Jld2FyZENzUmVxLnByb3RvImIKHFRha2VD",
             "aGFsbGVuZ2VQZWFrUmV3YXJkQ3NSZXESFgoOcGVha19yZXdhcmRfaWQYBCAD",
-            "KA0SEwoLRktOTk5QTFBOR0oYDyADKA0SGQoRY3VyX3BlYWtfZ3JvdXBfaWQY",
-            "DSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "KA0SEwoLRktOTk5QTFBOR0oYDyADKA0SFQoNcGVha19ncm91cF9pZBgNIAEo",
+            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeChallengePeakRewardCsReq), global::EggLink.DanhengServer.Proto.TakeChallengePeakRewardCsReq.Parser, new[]{ "PeakRewardId", "FKNNNPLPNGJ", "CurPeakGroupId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeChallengePeakRewardCsReq), global::EggLink.DanhengServer.Proto.TakeChallengePeakRewardCsReq.Parser, new[]{ "PeakRewardId", "FKNNNPLPNGJ", "PeakGroupId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     public TakeChallengePeakRewardCsReq(TakeChallengePeakRewardCsReq other) : this() {
       peakRewardId_ = other.peakRewardId_.Clone();
       fKNNNPLPNGJ_ = other.fKNNNPLPNGJ_.Clone();
-      curPeakGroupId_ = other.curPeakGroupId_;
+      peakGroupId_ = other.peakGroupId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -107,15 +107,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return fKNNNPLPNGJ_; }
     }
 
-    /// <summary>Field number for the "cur_peak_group_id" field.</summary>
-    public const int CurPeakGroupIdFieldNumber = 13;
-    private uint curPeakGroupId_;
+    /// <summary>Field number for the "peak_group_id" field.</summary>
+    public const int PeakGroupIdFieldNumber = 13;
+    private uint peakGroupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurPeakGroupId {
-      get { return curPeakGroupId_; }
+    public uint PeakGroupId {
+      get { return peakGroupId_; }
       set {
-        curPeakGroupId_ = value;
+        peakGroupId_ = value;
       }
     }
 
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if(!peakRewardId_.Equals(other.peakRewardId_)) return false;
       if(!fKNNNPLPNGJ_.Equals(other.fKNNNPLPNGJ_)) return false;
-      if (CurPeakGroupId != other.CurPeakGroupId) return false;
+      if (PeakGroupId != other.PeakGroupId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       hash ^= peakRewardId_.GetHashCode();
       hash ^= fKNNNPLPNGJ_.GetHashCode();
-      if (CurPeakGroupId != 0) hash ^= CurPeakGroupId.GetHashCode();
+      if (PeakGroupId != 0) hash ^= PeakGroupId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,9 +166,9 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       peakRewardId_.WriteTo(output, _repeated_peakRewardId_codec);
-      if (CurPeakGroupId != 0) {
+      if (PeakGroupId != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(CurPeakGroupId);
+        output.WriteUInt32(PeakGroupId);
       }
       fKNNNPLPNGJ_.WriteTo(output, _repeated_fKNNNPLPNGJ_codec);
       if (_unknownFields != null) {
@@ -182,9 +182,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       peakRewardId_.WriteTo(ref output, _repeated_peakRewardId_codec);
-      if (CurPeakGroupId != 0) {
+      if (PeakGroupId != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(CurPeakGroupId);
+        output.WriteUInt32(PeakGroupId);
       }
       fKNNNPLPNGJ_.WriteTo(ref output, _repeated_fKNNNPLPNGJ_codec);
       if (_unknownFields != null) {
@@ -199,8 +199,8 @@ namespace EggLink.DanhengServer.Proto {
       int size = 0;
       size += peakRewardId_.CalculateSize(_repeated_peakRewardId_codec);
       size += fKNNNPLPNGJ_.CalculateSize(_repeated_fKNNNPLPNGJ_codec);
-      if (CurPeakGroupId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurPeakGroupId);
+      if (PeakGroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakGroupId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       peakRewardId_.Add(other.peakRewardId_);
       fKNNNPLPNGJ_.Add(other.fKNNNPLPNGJ_);
-      if (other.CurPeakGroupId != 0) {
-        CurPeakGroupId = other.CurPeakGroupId;
+      if (other.PeakGroupId != 0) {
+        PeakGroupId = other.PeakGroupId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -240,7 +240,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            CurPeakGroupId = input.ReadUInt32();
+            PeakGroupId = input.ReadUInt32();
             break;
           }
           case 122:
@@ -269,7 +269,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            CurPeakGroupId = input.ReadUInt32();
+            PeakGroupId = input.ReadUInt32();
             break;
           }
           case 122:

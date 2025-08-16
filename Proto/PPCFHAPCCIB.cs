@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQUENGSEFQQ0NJQi5wcm90bxoZQ2hhbGxlbmdlTGluZXVwTGlzdC5wcm90",
-            "byLEAQoLUFBDRkhBUENDSUISEwoLTkhHT01BS0hDT1AYAiABKAgSEwoLTEdK",
-            "Q0VQTk1DS00YBCABKAgSDwoHYnVmZl9pZBgPIAEoDRITCgtLSkJMTUFQS01C",
-            "SxgFIAEoDRIkCgZsaW5ldXAYCyABKAsyFC5DaGFsbGVuZ2VMaW5ldXBMaXN0",
-            "EhMKC0lFUEhETE1MT0FPGAggAygNEhUKDXBlYWtfbGV2ZWxfaWQYDSABKA0S",
-            "EwoLSkJPTEFBRkRLQU4YDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "byLLAQoLUFBDRkhBUENDSUISEwoLTkhHT01BS0hDT1AYAiABKAgSEwoLTEdK",
+            "Q0VQTk1DS00YBCABKAgSDwoHYnVmZl9pZBgPIAEoDRIaChJsZWFzdF9yb3Vu",
+            "ZHNfY291bnQYBSABKA0SJAoGbGluZXVwGAsgASgLMhQuQ2hhbGxlbmdlTGlu",
+            "ZXVwTGlzdBITCgtJRVBIRExNTE9BTxgIIAMoDRIVCg1wZWFrX2xldmVsX2lk",
+            "GA0gASgNEhMKC0pCT0xBQUZES0FOGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeLineupListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PPCFHAPCCIB), global::EggLink.DanhengServer.Proto.PPCFHAPCCIB.Parser, new[]{ "NHGOMAKHCOP", "LGJCEPNMCKM", "BuffId", "KJBLMAPKMBK", "Lineup", "IEPHDLMLOAO", "PeakLevelId", "JBOLAAFDKAN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PPCFHAPCCIB), global::EggLink.DanhengServer.Proto.PPCFHAPCCIB.Parser, new[]{ "NHGOMAKHCOP", "LGJCEPNMCKM", "BuffId", "LeastRoundsCount", "Lineup", "IEPHDLMLOAO", "PeakLevelId", "JBOLAAFDKAN" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,7 +79,7 @@ namespace EggLink.DanhengServer.Proto {
       nHGOMAKHCOP_ = other.nHGOMAKHCOP_;
       lGJCEPNMCKM_ = other.lGJCEPNMCKM_;
       buffId_ = other.buffId_;
-      kJBLMAPKMBK_ = other.kJBLMAPKMBK_;
+      leastRoundsCount_ = other.leastRoundsCount_;
       lineup_ = other.lineup_ != null ? other.lineup_.Clone() : null;
       iEPHDLMLOAO_ = other.iEPHDLMLOAO_.Clone();
       peakLevelId_ = other.peakLevelId_;
@@ -129,15 +129,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KJBLMAPKMBK" field.</summary>
-    public const int KJBLMAPKMBKFieldNumber = 5;
-    private uint kJBLMAPKMBK_;
+    /// <summary>Field number for the "least_rounds_count" field.</summary>
+    public const int LeastRoundsCountFieldNumber = 5;
+    private uint leastRoundsCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KJBLMAPKMBK {
-      get { return kJBLMAPKMBK_; }
+    public uint LeastRoundsCount {
+      get { return leastRoundsCount_; }
       set {
-        kJBLMAPKMBK_ = value;
+        leastRoundsCount_ = value;
       }
     }
 
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
       if (NHGOMAKHCOP != other.NHGOMAKHCOP) return false;
       if (LGJCEPNMCKM != other.LGJCEPNMCKM) return false;
       if (BuffId != other.BuffId) return false;
-      if (KJBLMAPKMBK != other.KJBLMAPKMBK) return false;
+      if (LeastRoundsCount != other.LeastRoundsCount) return false;
       if (!object.Equals(Lineup, other.Lineup)) return false;
       if(!iEPHDLMLOAO_.Equals(other.iEPHDLMLOAO_)) return false;
       if (PeakLevelId != other.PeakLevelId) return false;
@@ -221,7 +221,7 @@ namespace EggLink.DanhengServer.Proto {
       if (NHGOMAKHCOP != false) hash ^= NHGOMAKHCOP.GetHashCode();
       if (LGJCEPNMCKM != false) hash ^= LGJCEPNMCKM.GetHashCode();
       if (BuffId != 0) hash ^= BuffId.GetHashCode();
-      if (KJBLMAPKMBK != 0) hash ^= KJBLMAPKMBK.GetHashCode();
+      if (LeastRoundsCount != 0) hash ^= LeastRoundsCount.GetHashCode();
       if (lineup_ != null) hash ^= Lineup.GetHashCode();
       hash ^= iEPHDLMLOAO_.GetHashCode();
       if (PeakLevelId != 0) hash ^= PeakLevelId.GetHashCode();
@@ -252,9 +252,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteBool(LGJCEPNMCKM);
       }
-      if (KJBLMAPKMBK != 0) {
+      if (LeastRoundsCount != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(KJBLMAPKMBK);
+        output.WriteUInt32(LeastRoundsCount);
       }
       iEPHDLMLOAO_.WriteTo(output, _repeated_iEPHDLMLOAO_codec);
       if (lineup_ != null) {
@@ -291,9 +291,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteBool(LGJCEPNMCKM);
       }
-      if (KJBLMAPKMBK != 0) {
+      if (LeastRoundsCount != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(KJBLMAPKMBK);
+        output.WriteUInt32(LeastRoundsCount);
       }
       iEPHDLMLOAO_.WriteTo(ref output, _repeated_iEPHDLMLOAO_codec);
       if (lineup_ != null) {
@@ -331,8 +331,8 @@ namespace EggLink.DanhengServer.Proto {
       if (BuffId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffId);
       }
-      if (KJBLMAPKMBK != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KJBLMAPKMBK);
+      if (LeastRoundsCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LeastRoundsCount);
       }
       if (lineup_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Lineup);
@@ -365,8 +365,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.BuffId != 0) {
         BuffId = other.BuffId;
       }
-      if (other.KJBLMAPKMBK != 0) {
-        KJBLMAPKMBK = other.KJBLMAPKMBK;
+      if (other.LeastRoundsCount != 0) {
+        LeastRoundsCount = other.LeastRoundsCount;
       }
       if (other.lineup_ != null) {
         if (lineup_ == null) {
@@ -405,7 +405,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            KJBLMAPKMBK = input.ReadUInt32();
+            LeastRoundsCount = input.ReadUInt32();
             break;
           }
           case 66:
@@ -456,7 +456,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            KJBLMAPKMBK = input.ReadUInt32();
+            LeastRoundsCount = input.ReadUInt32();
             break;
           }
           case 66:

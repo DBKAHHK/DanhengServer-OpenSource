@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerSimpleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJTaW1wbGVJbmZvLnByb3RvGhhGcmllbmRPbmxpbmVTdGF0dXMu",
-            "cHJvdG8aFkFzc2lzdFNpbXBsZUluZm8ucHJvdG8aEUlOTENHS0hNQUhFLnBy",
+            "ChZQbGF5ZXJTaW1wbGVJbmZvLnByb3RvGhZBc3Npc3RTaW1wbGVJbmZvLnBy",
+            "b3RvGhFJTkxDR0tITUFIRS5wcm90bxoYRnJpZW5kT25saW5lU3RhdHVzLnBy",
             "b3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8ikQMKEFBsYXllclNpbXBsZUluZm8S",
             "FQoNcGVyc29uYWxfY2FyZBgDIAEoDRIfCghwbGF0Zm9ybRgCIAEoDjINLlBs",
             "YXRmb3JtVHlwZRILCgN1aWQYCSABKA0SEQoJc2lnbmF0dXJlGA8gASgJEg0K",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "DRITCgtHTUFMQ1BOT0hCRhgOIAEoCUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FriendOnlineStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistSimpleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.INLCGKHMAHEReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AssistSimpleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.INLCGKHMAHEReflection.Descriptor, global::EggLink.DanhengServer.Proto.FriendOnlineStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerSimpleInfo), global::EggLink.DanhengServer.Proto.PlayerSimpleInfo.Parser, new[]{ "PersonalCard", "Platform", "Uid", "Signature", "Level", "HeadIcon", "LastActiveTime", "LOLNMADMPKL", "OnlineStatus", "AssistSimpleInfoList", "Nickname", "AKCEJFCFBAN", "IsBanned", "ChatBubbleId", "GMALCPNOHBF" }, null, null, null, null)
           }));

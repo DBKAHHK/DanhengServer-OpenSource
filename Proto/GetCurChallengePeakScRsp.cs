@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GetCurChallengePeakScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5HZXRDdXJDaGFsbGVuZ2VQZWFrU2NSc3AucHJvdG8iqAEKGEdldEN1ckNo",
-            "YWxsZW5nZVBlYWtTY1JzcBIRCglwZWFrX3N0YXIYDSABKA0SEwoLSkJJQ0lC",
-            "S1BKS0kYByABKAgSEwoLSkhJQUtNQ0hQTEIYCyADKA0SDwoHaXNfcmVhZBgC",
-            "IAEoCBIWCg5wZWFrX2Jvc3NfYnVmZhgJIAEoDRIPCgdyZXRjb2RlGAwgASgN",
-            "EhUKDXBlYWtfbGV2ZWxfaWQYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
-            "cnZlci5Qcm90b2IGcHJvdG8z"));
+            "Ch5HZXRDdXJDaGFsbGVuZ2VQZWFrU2NSc3AucHJvdG8ivQEKGEdldEN1ckNo",
+            "YWxsZW5nZVBlYWtTY1JzcBIYChBwZWFrX3JvdW5kX2NvdW50GA0gASgNEhgK",
+            "EGlzX3Njb3JlX2NoYW5nZWQYByABKAgSGAoQcGVha190YXJnZXRfbGlzdBgL",
+            "IAMoDRITCgtpc19maW5pc2hlZBgCIAEoCBIWCg5wZWFrX2Jvc3NfYnVmZhgJ",
+            "IAEoDRIPCgdyZXRjb2RlGAwgASgNEhUKDXBlYWtfbGV2ZWxfaWQYAyABKA1C",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetCurChallengePeakScRsp), global::EggLink.DanhengServer.Proto.GetCurChallengePeakScRsp.Parser, new[]{ "PeakStar", "JBICIBKPJKI", "JHIAKMCHPLB", "IsRead", "PeakBossBuff", "Retcode", "PeakLevelId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetCurChallengePeakScRsp), global::EggLink.DanhengServer.Proto.GetCurChallengePeakScRsp.Parser, new[]{ "PeakRoundCount", "IsScoreChanged", "PeakTargetList", "IsFinished", "PeakBossBuff", "Retcode", "PeakLevelId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCurChallengePeakScRsp(GetCurChallengePeakScRsp other) : this() {
-      peakStar_ = other.peakStar_;
-      jBICIBKPJKI_ = other.jBICIBKPJKI_;
-      jHIAKMCHPLB_ = other.jHIAKMCHPLB_.Clone();
-      isRead_ = other.isRead_;
+      peakRoundCount_ = other.peakRoundCount_;
+      isScoreChanged_ = other.isScoreChanged_;
+      peakTargetList_ = other.peakTargetList_.Clone();
+      isFinished_ = other.isFinished_;
       peakBossBuff_ = other.peakBossBuff_;
       retcode_ = other.retcode_;
       peakLevelId_ = other.peakLevelId_;
@@ -91,50 +91,50 @@ namespace EggLink.DanhengServer.Proto {
       return new GetCurChallengePeakScRsp(this);
     }
 
-    /// <summary>Field number for the "peak_star" field.</summary>
-    public const int PeakStarFieldNumber = 13;
-    private uint peakStar_;
+    /// <summary>Field number for the "peak_round_count" field.</summary>
+    public const int PeakRoundCountFieldNumber = 13;
+    private uint peakRoundCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PeakStar {
-      get { return peakStar_; }
+    public uint PeakRoundCount {
+      get { return peakRoundCount_; }
       set {
-        peakStar_ = value;
+        peakRoundCount_ = value;
       }
     }
 
-    /// <summary>Field number for the "JBICIBKPJKI" field.</summary>
-    public const int JBICIBKPJKIFieldNumber = 7;
-    private bool jBICIBKPJKI_;
+    /// <summary>Field number for the "is_score_changed" field.</summary>
+    public const int IsScoreChangedFieldNumber = 7;
+    private bool isScoreChanged_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool JBICIBKPJKI {
-      get { return jBICIBKPJKI_; }
+    public bool IsScoreChanged {
+      get { return isScoreChanged_; }
       set {
-        jBICIBKPJKI_ = value;
+        isScoreChanged_ = value;
       }
     }
 
-    /// <summary>Field number for the "JHIAKMCHPLB" field.</summary>
-    public const int JHIAKMCHPLBFieldNumber = 11;
-    private static readonly pb::FieldCodec<uint> _repeated_jHIAKMCHPLB_codec
+    /// <summary>Field number for the "peak_target_list" field.</summary>
+    public const int PeakTargetListFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_peakTargetList_codec
         = pb::FieldCodec.ForUInt32(90);
-    private readonly pbc::RepeatedField<uint> jHIAKMCHPLB_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> peakTargetList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JHIAKMCHPLB {
-      get { return jHIAKMCHPLB_; }
+    public pbc::RepeatedField<uint> PeakTargetList {
+      get { return peakTargetList_; }
     }
 
-    /// <summary>Field number for the "is_read" field.</summary>
-    public const int IsReadFieldNumber = 2;
-    private bool isRead_;
+    /// <summary>Field number for the "is_finished" field.</summary>
+    public const int IsFinishedFieldNumber = 2;
+    private bool isFinished_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsRead {
-      get { return isRead_; }
+    public bool IsFinished {
+      get { return isFinished_; }
       set {
-        isRead_ = value;
+        isFinished_ = value;
       }
     }
 
@@ -189,10 +189,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PeakStar != other.PeakStar) return false;
-      if (JBICIBKPJKI != other.JBICIBKPJKI) return false;
-      if(!jHIAKMCHPLB_.Equals(other.jHIAKMCHPLB_)) return false;
-      if (IsRead != other.IsRead) return false;
+      if (PeakRoundCount != other.PeakRoundCount) return false;
+      if (IsScoreChanged != other.IsScoreChanged) return false;
+      if(!peakTargetList_.Equals(other.peakTargetList_)) return false;
+      if (IsFinished != other.IsFinished) return false;
       if (PeakBossBuff != other.PeakBossBuff) return false;
       if (Retcode != other.Retcode) return false;
       if (PeakLevelId != other.PeakLevelId) return false;
@@ -203,10 +203,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (PeakStar != 0) hash ^= PeakStar.GetHashCode();
-      if (JBICIBKPJKI != false) hash ^= JBICIBKPJKI.GetHashCode();
-      hash ^= jHIAKMCHPLB_.GetHashCode();
-      if (IsRead != false) hash ^= IsRead.GetHashCode();
+      if (PeakRoundCount != 0) hash ^= PeakRoundCount.GetHashCode();
+      if (IsScoreChanged != false) hash ^= IsScoreChanged.GetHashCode();
+      hash ^= peakTargetList_.GetHashCode();
+      if (IsFinished != false) hash ^= IsFinished.GetHashCode();
       if (PeakBossBuff != 0) hash ^= PeakBossBuff.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (PeakLevelId != 0) hash ^= PeakLevelId.GetHashCode();
@@ -228,30 +228,30 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsRead != false) {
+      if (IsFinished != false) {
         output.WriteRawTag(16);
-        output.WriteBool(IsRead);
+        output.WriteBool(IsFinished);
       }
       if (PeakLevelId != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(PeakLevelId);
       }
-      if (JBICIBKPJKI != false) {
+      if (IsScoreChanged != false) {
         output.WriteRawTag(56);
-        output.WriteBool(JBICIBKPJKI);
+        output.WriteBool(IsScoreChanged);
       }
       if (PeakBossBuff != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(PeakBossBuff);
       }
-      jHIAKMCHPLB_.WriteTo(output, _repeated_jHIAKMCHPLB_codec);
+      peakTargetList_.WriteTo(output, _repeated_peakTargetList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
-      if (PeakStar != 0) {
+      if (PeakRoundCount != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(PeakStar);
+        output.WriteUInt32(PeakRoundCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -263,30 +263,30 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsRead != false) {
+      if (IsFinished != false) {
         output.WriteRawTag(16);
-        output.WriteBool(IsRead);
+        output.WriteBool(IsFinished);
       }
       if (PeakLevelId != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(PeakLevelId);
       }
-      if (JBICIBKPJKI != false) {
+      if (IsScoreChanged != false) {
         output.WriteRawTag(56);
-        output.WriteBool(JBICIBKPJKI);
+        output.WriteBool(IsScoreChanged);
       }
       if (PeakBossBuff != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(PeakBossBuff);
       }
-      jHIAKMCHPLB_.WriteTo(ref output, _repeated_jHIAKMCHPLB_codec);
+      peakTargetList_.WriteTo(ref output, _repeated_peakTargetList_codec);
       if (Retcode != 0) {
         output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
-      if (PeakStar != 0) {
+      if (PeakRoundCount != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(PeakStar);
+        output.WriteUInt32(PeakRoundCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -298,14 +298,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (PeakStar != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakStar);
+      if (PeakRoundCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakRoundCount);
       }
-      if (JBICIBKPJKI != false) {
+      if (IsScoreChanged != false) {
         size += 1 + 1;
       }
-      size += jHIAKMCHPLB_.CalculateSize(_repeated_jHIAKMCHPLB_codec);
-      if (IsRead != false) {
+      size += peakTargetList_.CalculateSize(_repeated_peakTargetList_codec);
+      if (IsFinished != false) {
         size += 1 + 1;
       }
       if (PeakBossBuff != 0) {
@@ -329,15 +329,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.PeakStar != 0) {
-        PeakStar = other.PeakStar;
+      if (other.PeakRoundCount != 0) {
+        PeakRoundCount = other.PeakRoundCount;
       }
-      if (other.JBICIBKPJKI != false) {
-        JBICIBKPJKI = other.JBICIBKPJKI;
+      if (other.IsScoreChanged != false) {
+        IsScoreChanged = other.IsScoreChanged;
       }
-      jHIAKMCHPLB_.Add(other.jHIAKMCHPLB_);
-      if (other.IsRead != false) {
-        IsRead = other.IsRead;
+      peakTargetList_.Add(other.peakTargetList_);
+      if (other.IsFinished != false) {
+        IsFinished = other.IsFinished;
       }
       if (other.PeakBossBuff != 0) {
         PeakBossBuff = other.PeakBossBuff;
@@ -364,7 +364,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            IsRead = input.ReadBool();
+            IsFinished = input.ReadBool();
             break;
           }
           case 24: {
@@ -372,7 +372,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            JBICIBKPJKI = input.ReadBool();
+            IsScoreChanged = input.ReadBool();
             break;
           }
           case 72: {
@@ -381,7 +381,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 90:
           case 88: {
-            jHIAKMCHPLB_.AddEntriesFrom(input, _repeated_jHIAKMCHPLB_codec);
+            peakTargetList_.AddEntriesFrom(input, _repeated_peakTargetList_codec);
             break;
           }
           case 96: {
@@ -389,7 +389,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            PeakStar = input.ReadUInt32();
+            PeakRoundCount = input.ReadUInt32();
             break;
           }
         }
@@ -408,7 +408,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            IsRead = input.ReadBool();
+            IsFinished = input.ReadBool();
             break;
           }
           case 24: {
@@ -416,7 +416,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            JBICIBKPJKI = input.ReadBool();
+            IsScoreChanged = input.ReadBool();
             break;
           }
           case 72: {
@@ -425,7 +425,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 90:
           case 88: {
-            jHIAKMCHPLB_.AddEntriesFrom(ref input, _repeated_jHIAKMCHPLB_codec);
+            peakTargetList_.AddEntriesFrom(ref input, _repeated_peakTargetList_codec);
             break;
           }
           case 96: {
@@ -433,7 +433,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            PeakStar = input.ReadUInt32();
+            PeakRoundCount = input.ReadUInt32();
             break;
           }
         }

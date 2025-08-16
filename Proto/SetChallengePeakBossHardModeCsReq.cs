@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static SetChallengePeakBossHardModeCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CidTZXRDaGFsbGVuZ2VQZWFrQm9zc0hhcmRNb2RlQ3NSZXEucHJvdG8iUwoh",
-            "U2V0Q2hhbGxlbmdlUGVha0Jvc3NIYXJkTW9kZUNzUmVxEhkKEWN1cl9wZWFr",
-            "X2dyb3VwX2lkGAUgASgNEhMKC0ZLUEhOQU5MRU1KGAcgASgIQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CidTZXRDaGFsbGVuZ2VQZWFrQm9zc0hhcmRNb2RlQ3NSZXEucHJvdG8iSwoh",
+            "U2V0Q2hhbGxlbmdlUGVha0Jvc3NIYXJkTW9kZUNzUmVxEhUKDXBlYWtfZ3Jv",
+            "dXBfaWQYBSABKA0SDwoHaXNfaGFyZBgHIAEoCEIeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetChallengePeakBossHardModeCsReq), global::EggLink.DanhengServer.Proto.SetChallengePeakBossHardModeCsReq.Parser, new[]{ "CurPeakGroupId", "FKPHNANLEMJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetChallengePeakBossHardModeCsReq), global::EggLink.DanhengServer.Proto.SetChallengePeakBossHardModeCsReq.Parser, new[]{ "PeakGroupId", "IsHard" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetChallengePeakBossHardModeCsReq(SetChallengePeakBossHardModeCsReq other) : this() {
-      curPeakGroupId_ = other.curPeakGroupId_;
-      fKPHNANLEMJ_ = other.fKPHNANLEMJ_;
+      peakGroupId_ = other.peakGroupId_;
+      isHard_ = other.isHard_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,27 +84,27 @@ namespace EggLink.DanhengServer.Proto {
       return new SetChallengePeakBossHardModeCsReq(this);
     }
 
-    /// <summary>Field number for the "cur_peak_group_id" field.</summary>
-    public const int CurPeakGroupIdFieldNumber = 5;
-    private uint curPeakGroupId_;
+    /// <summary>Field number for the "peak_group_id" field.</summary>
+    public const int PeakGroupIdFieldNumber = 5;
+    private uint peakGroupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurPeakGroupId {
-      get { return curPeakGroupId_; }
+    public uint PeakGroupId {
+      get { return peakGroupId_; }
       set {
-        curPeakGroupId_ = value;
+        peakGroupId_ = value;
       }
     }
 
-    /// <summary>Field number for the "FKPHNANLEMJ" field.</summary>
-    public const int FKPHNANLEMJFieldNumber = 7;
-    private bool fKPHNANLEMJ_;
+    /// <summary>Field number for the "is_hard" field.</summary>
+    public const int IsHardFieldNumber = 7;
+    private bool isHard_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool FKPHNANLEMJ {
-      get { return fKPHNANLEMJ_; }
+    public bool IsHard {
+      get { return isHard_; }
       set {
-        fKPHNANLEMJ_ = value;
+        isHard_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CurPeakGroupId != other.CurPeakGroupId) return false;
-      if (FKPHNANLEMJ != other.FKPHNANLEMJ) return false;
+      if (PeakGroupId != other.PeakGroupId) return false;
+      if (IsHard != other.IsHard) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CurPeakGroupId != 0) hash ^= CurPeakGroupId.GetHashCode();
-      if (FKPHNANLEMJ != false) hash ^= FKPHNANLEMJ.GetHashCode();
+      if (PeakGroupId != 0) hash ^= PeakGroupId.GetHashCode();
+      if (IsHard != false) hash ^= IsHard.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CurPeakGroupId != 0) {
+      if (PeakGroupId != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(CurPeakGroupId);
+        output.WriteUInt32(PeakGroupId);
       }
-      if (FKPHNANLEMJ != false) {
+      if (IsHard != false) {
         output.WriteRawTag(56);
-        output.WriteBool(FKPHNANLEMJ);
+        output.WriteBool(IsHard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CurPeakGroupId != 0) {
+      if (PeakGroupId != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(CurPeakGroupId);
+        output.WriteUInt32(PeakGroupId);
       }
-      if (FKPHNANLEMJ != false) {
+      if (IsHard != false) {
         output.WriteRawTag(56);
-        output.WriteBool(FKPHNANLEMJ);
+        output.WriteBool(IsHard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,10 +188,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CurPeakGroupId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurPeakGroupId);
+      if (PeakGroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakGroupId);
       }
-      if (FKPHNANLEMJ != false) {
+      if (IsHard != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CurPeakGroupId != 0) {
-        CurPeakGroupId = other.CurPeakGroupId;
+      if (other.PeakGroupId != 0) {
+        PeakGroupId = other.PeakGroupId;
       }
-      if (other.FKPHNANLEMJ != false) {
-        FKPHNANLEMJ = other.FKPHNANLEMJ;
+      if (other.IsHard != false) {
+        IsHard = other.IsHard;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -228,11 +228,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 40: {
-            CurPeakGroupId = input.ReadUInt32();
+            PeakGroupId = input.ReadUInt32();
             break;
           }
           case 56: {
-            FKPHNANLEMJ = input.ReadBool();
+            IsHard = input.ReadBool();
             break;
           }
         }
@@ -251,11 +251,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 40: {
-            CurPeakGroupId = input.ReadUInt32();
+            PeakGroupId = input.ReadUInt32();
             break;
           }
           case 56: {
-            FKPHNANLEMJ = input.ReadBool();
+            IsHard = input.ReadBool();
             break;
           }
         }

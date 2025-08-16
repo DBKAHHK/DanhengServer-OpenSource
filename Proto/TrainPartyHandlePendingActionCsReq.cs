@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static TrainPartyHandlePendingActionCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CihUcmFpblBhcnR5SGFuZGxlUGVuZGluZ0FjdGlvbkNzUmVxLnByb3RvGhFI",
-            "UEZLR0RESUZIRy5wcm90bxoRR0xCRkJOSEZDTk8ucHJvdG8aEVBFQ0dMS0NJ",
-            "Q0dPLnByb3RvGhFFTkNKS1BHT0lBTC5wcm90byLjAQoiVHJhaW5QYXJ0eUhh",
+            "CihUcmFpblBhcnR5SGFuZGxlUGVuZGluZ0FjdGlvbkNzUmVxLnByb3RvGhFH",
+            "TEJGQk5IRkNOTy5wcm90bxoRUEVDR0xLQ0lDR08ucHJvdG8aEUVOQ0pLUEdP",
+            "SUFMLnByb3RvGhFIUEZLR0RESUZIRy5wcm90byLjAQoiVHJhaW5QYXJ0eUhh",
             "bmRsZVBlbmRpbmdBY3Rpb25Dc1JlcRIWCg5xdWV1ZV9wb3NpdGlvbhgCIAEo",
             "DRIkCgtJQU1LREpDRk1JQhiJASABKAsyDC5IUEZLR0RESUZIR0gAEiQKC1BN",
             "TUdPQ0pGRUVKGPAHIAEoCzIMLkdMQkZCTkhGQ05PSAASJAoLTEdCSkFFTERQ",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "KAsyDC5FTkNKS1BHT0lBTEgAQg0KC0VLSUVETkNLSEhBQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HPFKGDDIFHGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GLBFBNHFCNOReflection.Descriptor, global::EggLink.DanhengServer.Proto.PECGLKCICGOReflection.Descriptor, global::EggLink.DanhengServer.Proto.ENCJKPGOIALReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GLBFBNHFCNOReflection.Descriptor, global::EggLink.DanhengServer.Proto.PECGLKCICGOReflection.Descriptor, global::EggLink.DanhengServer.Proto.ENCJKPGOIALReflection.Descriptor, global::EggLink.DanhengServer.Proto.HPFKGDDIFHGReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyHandlePendingActionCsReq), global::EggLink.DanhengServer.Proto.TrainPartyHandlePendingActionCsReq.Parser, new[]{ "QueuePosition", "IAMKDJCFMIB", "PMMGOCJFEEJ", "LGBJAELDPNB", "BGJMFBHCMKL" }, new[]{ "EKIEDNCKHHA" }, null, null, null)
           }));
