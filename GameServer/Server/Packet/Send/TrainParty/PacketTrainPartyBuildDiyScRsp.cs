@@ -15,7 +15,21 @@ public class PacketTrainPartyBuildDiyScRsp : BasePacket
             }
             : new TrainPartyBuildDiyScRsp
             {
-                AreaId = (uint)area.AreaId
+                AreaId = (uint)area.AreaId,
+                DynamicInfo = { area.DynamicInfo.Select(x => new AreaDynamicInfo
+                {
+                    DiceSlotId = (uint)x.Key,
+                    DiyDynamicId = (uint)x.Value
+                }) },
+                //FFLPKLLDHLM = {new CIKOHJNAGON  // TODO update
+                //{
+                //    AreaId = (uint)area.AreaId,
+                //    KCJBMKJLFBA = area.DynamicInfo.Select(x => new AreaDynamicInfo
+                //    {
+                //        DiceSlotId = (uint)x.Key,
+                //        DiyDynamicId = (uint)x.Value
+                //    }).First(),
+                //}}
             };
 
         SetData(proto);

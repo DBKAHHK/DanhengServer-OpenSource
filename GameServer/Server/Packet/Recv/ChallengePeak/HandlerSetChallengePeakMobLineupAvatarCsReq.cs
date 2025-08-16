@@ -10,7 +10,7 @@ public class HandlerSetChallengePeakMobLineupAvatarCsReq : Handler
     {
         var req = SetChallengePeakMobLineupAvatarCsReq.Parser.ParseFrom(data);
 
-        await connection.Player!.ChallengePeakManager!.SetLineupAvatars((int)req.CurPeakGroupId, req.LineupList.ToList());
+        await connection.Player!.ChallengePeakManager!.SetLineupAvatars((int)req.PeakGroupId, req.LineupList.ToList());
 
         await connection.SendPacket(CmdIds.SetChallengePeakMobLineupAvatarScRsp);
     }

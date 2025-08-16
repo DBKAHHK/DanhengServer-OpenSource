@@ -19,6 +19,7 @@ public class ChallengePeakInstance(PlayerInstance player, ChallengeDataPb data) 
     #region Properties
 
     public ChallengePeakConfigExcel Config { get; } = GameData.ChallengePeakConfigData[(int)data.Peak.CurrentPeakLevelId];
+    public List<int> AllBattleTargets { get; } = [];
     public bool IsWin { get; private set; }
 
     #endregion
@@ -63,14 +64,22 @@ public class ChallengePeakInstance(PlayerInstance player, ChallengeDataPb data) 
         {
             var excel = GameData.BattleTargetConfigData.GetValueOrDefault(Config.BossExcel.HardTarget);
             if (excel != null)
+            {
                 battle.AddBattleTarget(5, excel.ID, 0, excel.TargetParam);
+                AllBattleTargets.Add(excel.ID);
+            }
         }
-
-        foreach (var targetId in Config.NormalTargetList)
+        else
         {
-            var excel = GameData.BattleTargetConfigData.GetValueOrDefault(targetId);
-            if (excel != null)
-                battle.AddBattleTarget(5, excel.ID, 0, excel.TargetParam);
+            foreach (var targetId in Config.NormalTargetList)
+            {
+                var excel = GameData.BattleTargetConfigData.GetValueOrDefault(targetId);
+                if (excel != null)
+                {
+                    battle.AddBattleTarget(5, excel.ID, 0, excel.TargetParam);
+                    AllBattleTargets.Add(excel.ID);
+                }
+            }
         }
     }
 
@@ -85,12 +94,17 @@ public class ChallengePeakInstance(PlayerInstance player, ChallengeDataPb data) 
                 if (monsters == 0)
                 {
                     Data.Peak.CurStatus = (int)ChallengeStatus.ChallengeFinish;
-                    Data.Peak.Stars = CalculateStars(req);
+                    var res = CalculateStars(req);
+                    Data.Peak.Stars = res.Item1;
+                    Data.Peak.RoundCnt = req.Stt.RoundCnt;
                     IsWin = true;
+                    
+                    await Player.SendPacket(new PacketChallengePeakSettleScNotify(this, res.Item2));
 
-                    await Player.SendPacket(new PacketChallengePeakSettleScNotify(this));
                     // Call MissionManager
                     await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.ChallengeFinish, this);
+
+                    await Player.ChallengePeakManager!.SaveHistory(this, res.Item2);
                 }
 
                 // Set saved technique points (This will be restored if the player resets the challenge)
@@ -110,27 +124,38 @@ public class ChallengePeakInstance(PlayerInstance player, ChallengeDataPb data) 
                 Data.Peak.CurStatus = (int)ChallengeStatus.ChallengeFailed;
 
                 // Send challenge result data
-                await Player.SendPacket(new PacketChallengePeakSettleScNotify(this));
+                await Player.SendPacket(new PacketChallengePeakSettleScNotify(this, []));
 
                 break;
         }
     }
 
-    public uint CalculateStars(PVEBattleResultCsReq req)
+    public (uint, List<uint>) CalculateStars(PVEBattleResultCsReq req)
     {
-        var targets = Config.NormalTargetList;
+        var targets = AllBattleTargets;
         var stars = 0u;
 
+        List<uint> finishedIds = [];
         foreach (var targetId in targets)
         {
             var target = req.Stt.BattleTargetInfo[5].BattleTargetList_.FirstOrDefault(x => x.Id == targetId);
             if (target == null) continue;
+            var excel = GameData.BattleTargetConfigData.GetValueOrDefault(targetId);
+            if (excel == null) continue;
 
-            if (target.Progress <= target.TotalProgress)
-                stars += 1u << targets.IndexOf(targetId);
+            if (target.Progress <= excel.TargetParam)
+            {
+                stars += 1u;
+                finishedIds.Add((uint)targetId);
+            }
         }
 
-        return Math.Min(stars, 7);
+        if (Data.Peak.IsHard && Config.BossExcel != null)
+        {
+            stars = 3;
+        }
+
+        return (Math.Min(stars, 3), finishedIds);
     }
 
     #endregion

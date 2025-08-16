@@ -20,8 +20,8 @@ public class PacketChallengeBossPhaseSettleNotify : BasePacket
             Star = challenge.Data.Boss.Stars,
             Phase = challenge.Data.Boss.CurrentStage,
             IsReward = true,
-            IsSecondHalf = challenge.Data.Boss.CurrentStage == challenge.Config.StageNum,
-            PageType = 1
+            ShowRemainAction = challenge.Data.Boss.CurrentStage == challenge.Config.StageNum,
+            CurChallengeType = 1
         };
 
         proto.BattleTargetList.AddRange(targetLists?.BattleTargetList_ ?? []);

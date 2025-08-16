@@ -57,6 +57,7 @@ message ChallengeBossDataPb {
 }
 
 message ChallengePeakDataPb {
+    uint32 CurrentPeakGroupId = 1;
     uint32 CurrentPeakLevelId = 2;
     repeated uint32 Buffs = 3;
     uint32 CurStatus = 4;
@@ -66,6 +67,7 @@ message ChallengePeakDataPb {
     uint32 Stars = 8;
     ChallengeLineupTypePb CurrentExtraLineup = 9;
     bool IsHard = 10;
+    uint32 RoundCnt = 11;
 }
 
 message ChallengeDataPb {

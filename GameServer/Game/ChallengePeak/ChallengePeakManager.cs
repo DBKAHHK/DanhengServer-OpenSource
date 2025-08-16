@@ -8,9 +8,7 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.ChallengePeak;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Proto.ServerSide;
-using System.Drawing.Drawing2D;
 using EggLink.DanhengServer.Util;
-using ChallengePeakInfo = EggLink.DanhengServer.Proto.ChallengePeakInfo;
 using ChallengePeakLevelInfo = EggLink.DanhengServer.Proto.ChallengePeakLevelInfo;
 
 namespace EggLink.DanhengServer.GameServer.Game.ChallengePeak;
@@ -22,31 +20,37 @@ namespace EggLink.DanhengServer.GameServer.Game.ChallengePeak;
 /// <see cref="EggLink.DanhengServer.GameServer.Game.Challenge.ChallengeManager"/>
 public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(player)
 {
-    public ChallengePeakInfo GetChallengePeakInfo(int groupId)
+    public bool BossIsHard { get; set; } = true;
+    public ChallengePeakLevelInfo GetChallengePeakInfo(int groupId)
     {
-        var proto = new ChallengePeakInfo
+        var proto = new ChallengePeakLevelInfo
         {
-            CurPeakGroupId = (uint)groupId,
+            PeakGroupId = (uint)groupId,
         };
 
         var data = GameData.ChallengePeakGroupConfigData.GetValueOrDefault(groupId);
         if (data == null) return proto;
 
+        var starNum = 0;
         foreach (var levelId in data.PreLevelIDList)
         {
             var levelData = GameData.ChallengePeakConfigData.GetValueOrDefault(levelId);
             if (levelData == null) continue;
 
-            var levelProto = new ChallengePeakLevelInfo
+            var levelProto = new ChallengePeakPreLevel
             {
                 PeakLevelId = (uint)levelId,
-                IsRead = true
+                IsFinished = true
             };
 
             if (Player.ChallengeManager!.ChallengeData.PeakLevelDatas.TryGetValue(levelId, out var levelPbData))
             {
-                levelProto.PeakStar = levelPbData.PeakStar;
-                levelProto.PeakLevelLineup.AddRange(levelPbData.BaseAvatarList);
+                starNum += (int)levelPbData.PeakStar;
+
+                levelProto.PeakRoundCount = levelPbData.RoundCnt;
+                levelProto.PeakLevelAvatarIdList.AddRange(levelPbData.BaseAvatarList);
+                levelProto.PeakTargetList.AddRange(levelPbData.FinishedTargetList);
+
                 foreach (var avatarId in levelPbData.BaseAvatarList)
                 {
                     var avatar = Player.AvatarManager!.GetFormalAvatar((int)avatarId);
@@ -55,10 +59,14 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
                     levelProto.PeakAvatarInfoList.Add(avatar.ToPeakAvatarProto());
                     proto.PeakAvatarInfoList.Add(avatar.ToPeakAvatarProto());
                 }
+
+                proto.FinishedPreNum++;
             }
 
-            proto.PeakLevelInfoList.Add(levelProto);
+            proto.PeakPreLevelInfoList.Add(levelProto);
         }
+
+        proto.PreLevelStars = (uint)starNum;
 
         // boss
         var bossLevelId = data.BossLevelID;
@@ -67,26 +75,67 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
         var bossLevelData = GameData.ChallengePeakBossConfigData.GetValueOrDefault(bossLevelId);
         if (bossLevelData == null) return proto;
 
-        var bossProto = new ChallengePeakLevelInfo
+        var bossProto = new ChallengePeakBossLevel
         {
             PeakLevelId = (uint)bossLevelId,
-            IsRead = true
+            IsFinished = true,
+            PeakEasyBoss = new ChallengePeakBossInfo(),
+            PeakHardBoss = new ChallengePeakBossInfo()
         };
 
-        if (Player.ChallengeManager!.ChallengeData.PeakLevelDatas.TryGetValue(bossLevelId, out var bossPbData))
+        HashSet<uint> targetIds = [];
+        HashSet<uint> avatarIds = [];
+        if (Player.ChallengeManager!.ChallengeData.PeakBossLevelDatas.TryGetValue(bossLevelId << 2 & 0, out var bossPbData))  // easy (is hard = 0)
         {
-            bossProto.PeakStar = bossPbData.PeakStar;
-            bossProto.PeakLevelLineup.AddRange(bossPbData.BaseAvatarList);
+            bossProto.PeakEasyBoss.PeakLevelAvatarIdList.AddRange(bossPbData.BaseAvatarList);
+            bossProto.PeakEasyBoss.BossDisplayAvatarIdList.AddRange(bossPbData.BaseAvatarList);
+
+            bossProto.PeakEasyBoss.LeastRoundsCount = bossPbData.RoundCnt;
+            bossProto.PeakEasyBoss.IsFinished = true;
+            bossProto.PeakEasyBoss.BuffId = bossPbData.BuffId;
+
+            foreach (var targetId in bossPbData.FinishedTargetList)
+            {
+                targetIds.Add(targetId);
+            }
+
             foreach (var avatarId in bossPbData.BaseAvatarList)
             {
-                var avatar = Player.AvatarManager!.GetFormalAvatar((int)avatarId);
-                if (avatar == null) continue;
-                bossProto.PeakAvatarInfoList.Add(avatar.ToPeakAvatarProto());
-                proto.PeakAvatarInfoList.Add(avatar.ToPeakAvatarProto());
+                avatarIds.Add(avatarId);
             }
         }
 
-        proto.PeakLevelInfoList.Add(bossProto);
+        if (Player.ChallengeManager!.ChallengeData.PeakBossLevelDatas.TryGetValue(bossLevelId << 2 | 1, out var bossHardPbData))  // easy (is hard = 1)
+        {
+            bossProto.IsUltraBossWin = true;
+            bossProto.PeakHardBoss.PeakLevelAvatarIdList.AddRange(bossHardPbData.BaseAvatarList);
+            bossProto.PeakHardBoss.BossDisplayAvatarIdList.AddRange(bossHardPbData.BaseAvatarList);
+
+            bossProto.PeakHardBoss.LeastRoundsCount = bossHardPbData.RoundCnt;
+            bossProto.PeakHardBoss.IsFinished = true;
+            bossProto.PeakHardBoss.BuffId = bossHardPbData.BuffId;
+
+            foreach (var targetId in bossHardPbData.FinishedTargetList)
+            {
+                targetIds.Add(targetId);
+            }
+
+            foreach (var avatarId in bossHardPbData.BaseAvatarList)
+            {
+                avatarIds.Add(avatarId);
+            }
+        }
+
+        foreach (var avatarId in avatarIds)
+        {
+            var avatar = Player.AvatarManager!.GetFormalAvatar((int)avatarId);
+            if (avatar == null) continue;
+            proto.PeakAvatarInfoList.Add(avatar.ToPeakAvatarProto());
+        }
+
+        bossProto.PeakTargetList.AddRange(targetIds);
+
+        proto.PeakBossLevel = bossProto;
 
         return proto;
     }
@@ -98,7 +147,7 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
         {
             List<uint> avatarIds = [];
 
-            foreach (var avatarId in lineup.PeakLevelLineup.ToList())
+            foreach (var avatarId in lineup.PeakLevelAvatarIdList.ToList())
             {
                 var avatar = Player.AvatarManager!.GetFormalAvatar((int)avatarId);
                 if (avatar != null)
@@ -121,6 +170,64 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
         }
 
         await Player.SendPacket(new PacketChallengePeakGroupDataUpdateScNotify(GetChallengePeakInfo(groupId)));
+    }
+
+    public async ValueTask SaveHistory(ChallengePeakInstance inst, List<uint> targetIds)
+    {
+        if (inst.Config.BossExcel != null)
+        {
+            // is hard
+            var isHard = inst.Data.Peak.IsHard;
+            var levelId = (int)inst.Data.Peak.CurrentPeakLevelId << 2 | (isHard ? 1 : 0);
+
+            // get old data
+            if (Player.ChallengeManager!.ChallengeData.PeakBossLevelDatas.TryGetValue(levelId, out var oldData) &&
+                oldData.FinishedTargetList.Count > targetIds.Count && oldData.RoundCnt < inst.Data.Peak.RoundCnt)
+            {
+                // better data already exists, do not overwrite
+                return;
+            }
+
+            // Save boss data
+            var data = new ChallengePeakBossLevelData
+            {
+                LevelId = (int)inst.Data.Peak.CurrentPeakLevelId,
+                IsHard = isHard,
+                BaseAvatarList = Player.LineupManager!.GetCurLineup()?.BaseAvatars?.Select(x => (uint)x.BaseAvatarId).ToList() ?? [],
+                RoundCnt = inst.Data.Peak.RoundCnt,
+                BuffId = inst.Data.Peak.Buffs.FirstOrDefault(),
+                FinishedTargetList = targetIds,
+                PeakStar = (uint)targetIds.Count
+            };
+
+            Player.ChallengeManager!.ChallengeData.PeakBossLevelDatas[levelId] = data;
+        }
+        else
+        {
+            // Save level data
+            var levelId = (int)inst.Data.Peak.CurrentPeakLevelId;
+
+            // get old data
+            if (Player.ChallengeManager!.ChallengeData.PeakLevelDatas.TryGetValue(levelId, out var oldData) &&
+                oldData.FinishedTargetList.Count > targetIds.Count && oldData.RoundCnt < inst.Data.Peak.RoundCnt)
+            {
+                // better data already exists, do not overwrite
+                return;
+            }
+
+            var data = new ChallengePeakLevelData
+            {
+                LevelId = levelId,
+                BaseAvatarList = Player.LineupManager!.GetCurLineup()?.BaseAvatars?.Select(x => (uint)x.BaseAvatarId).ToList() ?? [],
+                RoundCnt = inst.Data.Peak.RoundCnt,
+                FinishedTargetList = targetIds,
+                PeakStar = (uint)targetIds.Count
+            };
+
+            Player.ChallengeManager!.ChallengeData.PeakLevelDatas[levelId] = data;
+        }
+
+        await Player.SendPacket(new PacketChallengePeakGroupDataUpdateScNotify(GetChallengePeakInfo((int)inst.Data.Peak.CurrentPeakGroupId)));
     }
 
     public async ValueTask StartChallenge(int levelId, uint buffId, List<int> avatarIdList)
@@ -164,7 +271,7 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
         lineup.Mp = 5; // Max Mp
 
         // Make sure this lineup has avatars set
-        if (Player.AvatarManager!.AvatarData!.FormalAvatars.Count == 0)
+        if (Player.AvatarManager!.AvatarData.FormalAvatars.Count == 0)
         {
             await Player.SendPacket(new PacketStartChallengePeakScRsp(Retcode.RetChallengeLineupEmpty));
             return;
@@ -182,11 +289,16 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
         {
             Peak = new ChallengePeakDataPb
             {
+                CurrentPeakGroupId = (uint)(GameData.ChallengePeakGroupConfigData.Values
+                    .FirstOrDefault(x => x.BossLevelID == levelId || x.PreLevelIDList.Contains(levelId))?.ID ?? 1),
                 CurrentPeakLevelId = (uint)levelId,
                 CurrentExtraLineup = ChallengeLineupTypePb.Challenge1,
                 CurStatus = 1
             }
         };
+
+        if (excel.BossExcel != null)
+            data.Peak.IsHard = BossIsHard;
 
         if (buffId > 0)
         {

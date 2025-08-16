@@ -11,12 +11,12 @@ public class PacketGetChallengePeakDataScRsp : BasePacket
     {
         var proto = new GetChallengePeakDataScRsp
         {
-            FHODLMICBGP = 1
+            CurPeakGroupId = 1
         };
 
         foreach (var groupId in GameData.ChallengePeakGroupConfigData.Keys)
         {
-            proto.ChallengePeakList.Add(player.ChallengePeakManager!.GetChallengePeakInfo(groupId));
+            proto.ChallengePeakLevelList.Add(player.ChallengePeakManager!.GetChallengePeakInfo(groupId));
         }
 
         SetData(proto);

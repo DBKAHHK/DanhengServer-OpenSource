@@ -44,20 +44,21 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             "IAEoDRIRCglDdXJTdGF0dXMYBSABKA0SDwoHU2F2ZWRNcBgGIAEoDRIyChJD",
             "dXJyZW50RXh0cmFMaW5ldXAYByABKA4yFi5DaGFsbGVuZ2VMaW5ldXBUeXBl",
             "UGISDQoFU3RhcnMYCCABKA0SEwoLU2NvcmVTdGFnZTEYCSABKA0SEwoLU2Nv",
-            "cmVTdGFnZTIYCiABKA0SDQoFQnVmZnMYCyADKA0i8wEKE0NoYWxsZW5nZVBl",
-            "YWtEYXRhUGISGgoSQ3VycmVudFBlYWtMZXZlbElkGAIgASgNEg0KBUJ1ZmZz",
-            "GAMgAygNEhEKCUN1clN0YXR1cxgEIAEoDRIcCghTdGFydFBvcxgFIAEoCzIK",
-            "LlZlY3RvcjNQYhIcCghTdGFydFJvdBgGIAEoCzIKLlZlY3RvcjNQYhIPCgdT",
-            "YXZlZE1wGAcgASgNEg0KBVN0YXJzGAggASgNEjIKEkN1cnJlbnRFeHRyYUxp",
-            "bmV1cBgJIAEoDjIWLkNoYWxsZW5nZUxpbmV1cFR5cGVQYhIOCgZJc0hhcmQY",
-            "CiABKAgiwQEKD0NoYWxsZW5nZURhdGFQYhIoCgZtZW1vcnkYASABKAsyFi5D",
-            "aGFsbGVuZ2VNZW1vcnlEYXRhUGJIABImCgVzdG9yeRgCIAEoCzIVLkNoYWxs",
-            "ZW5nZVN0b3J5RGF0YVBiSAASJAoEYm9zcxgDIAEoCzIULkNoYWxsZW5nZUJv",
-            "c3NEYXRhUGJIABIkCgRwZWFrGAQgASgLMhQuQ2hhbGxlbmdlUGVha0RhdGFQ",
-            "YkgAQhAKDmNoYWxsZW5nZV90eXBlKlEKFUNoYWxsZW5nZUxpbmV1cFR5cGVQ",
-            "YhIICgROb25lEAASDgoKQ2hhbGxlbmdlMRABEg4KCkNoYWxsZW5nZTIQAxIO",
-            "CgpDaGFsbGVuZ2UzEARCKaoCJkVnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "by5TZXJ2ZXJTaWRlYgZwcm90bzM="));
+            "cmVTdGFnZTIYCiABKA0SDQoFQnVmZnMYCyADKA0ioQIKE0NoYWxsZW5nZVBl",
+            "YWtEYXRhUGISGgoSQ3VycmVudFBlYWtHcm91cElkGAEgASgNEhoKEkN1cnJl",
+            "bnRQZWFrTGV2ZWxJZBgCIAEoDRINCgVCdWZmcxgDIAMoDRIRCglDdXJTdGF0",
+            "dXMYBCABKA0SHAoIU3RhcnRQb3MYBSABKAsyCi5WZWN0b3IzUGISHAoIU3Rh",
+            "cnRSb3QYBiABKAsyCi5WZWN0b3IzUGISDwoHU2F2ZWRNcBgHIAEoDRINCgVT",
+            "dGFycxgIIAEoDRIyChJDdXJyZW50RXh0cmFMaW5ldXAYCSABKA4yFi5DaGFs",
+            "bGVuZ2VMaW5ldXBUeXBlUGISDgoGSXNIYXJkGAogASgIEhAKCFJvdW5kQ250",
+            "GAsgASgNIsEBCg9DaGFsbGVuZ2VEYXRhUGISKAoGbWVtb3J5GAEgASgLMhYu",
+            "Q2hhbGxlbmdlTWVtb3J5RGF0YVBiSAASJgoFc3RvcnkYAiABKAsyFS5DaGFs",
+            "bGVuZ2VTdG9yeURhdGFQYkgAEiQKBGJvc3MYAyABKAsyFC5DaGFsbGVuZ2VC",
+            "b3NzRGF0YVBiSAASJAoEcGVhaxgEIAEoCzIULkNoYWxsZW5nZVBlYWtEYXRh",
+            "UGJIAEIQCg5jaGFsbGVuZ2VfdHlwZSpRChVDaGFsbGVuZ2VMaW5ldXBUeXBl",
+            "UGISCAoETm9uZRAAEg4KCkNoYWxsZW5nZTEQARIOCgpDaGFsbGVuZ2UyEAMS",
+            "DgoKQ2hhbGxlbmdlMxAEQimqAiZFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG8uU2VydmVyU2lkZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.ServerSide.ChallengeLineupTypePb), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,7 +66,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.ChallengeMemoryDataPb), global::EggLink.DanhengServer.Proto.ServerSide.ChallengeMemoryDataPb.Parser, new[]{ "ChallengeMazeId", "StartPos", "StartRot", "CurrentStage", "CurStatus", "DeadAvatarNum", "SavedMp", "CurrentExtraLineup", "RoundsLeft", "Stars" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.ChallengeStoryDataPb), global::EggLink.DanhengServer.Proto.ServerSide.ChallengeStoryDataPb.Parser, new[]{ "ChallengeMazeId", "StartPos", "StartRot", "CurrentStage", "CurStatus", "SavedMp", "CurrentExtraLineup", "Stars", "ScoreStage1", "ScoreStage2", "Buffs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.ChallengeBossDataPb), global::EggLink.DanhengServer.Proto.ServerSide.ChallengeBossDataPb.Parser, new[]{ "ChallengeMazeId", "StartPos", "StartRot", "CurrentStage", "CurStatus", "SavedMp", "CurrentExtraLineup", "Stars", "ScoreStage1", "ScoreStage2", "Buffs" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.ChallengePeakDataPb), global::EggLink.DanhengServer.Proto.ServerSide.ChallengePeakDataPb.Parser, new[]{ "CurrentPeakLevelId", "Buffs", "CurStatus", "StartPos", "StartRot", "SavedMp", "Stars", "CurrentExtraLineup", "IsHard" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.ChallengePeakDataPb), global::EggLink.DanhengServer.Proto.ServerSide.ChallengePeakDataPb.Parser, new[]{ "CurrentPeakGroupId", "CurrentPeakLevelId", "Buffs", "CurStatus", "StartPos", "StartRot", "SavedMp", "Stars", "CurrentExtraLineup", "IsHard", "RoundCnt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.ChallengeDataPb), global::EggLink.DanhengServer.Proto.ServerSide.ChallengeDataPb.Parser, new[]{ "Memory", "Story", "Boss", "Peak" }, new[]{ "ChallengeType" }, null, null, null)
           }));
     }
@@ -2061,6 +2062,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengePeakDataPb(ChallengePeakDataPb other) : this() {
+      currentPeakGroupId_ = other.currentPeakGroupId_;
       currentPeakLevelId_ = other.currentPeakLevelId_;
       buffs_ = other.buffs_.Clone();
       curStatus_ = other.curStatus_;
@@ -2070,6 +2072,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       stars_ = other.stars_;
       currentExtraLineup_ = other.currentExtraLineup_;
       isHard_ = other.isHard_;
+      roundCnt_ = other.roundCnt_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2077,6 +2080,18 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengePeakDataPb Clone() {
       return new ChallengePeakDataPb(this);
+    }
+
+    /// <summary>Field number for the "CurrentPeakGroupId" field.</summary>
+    public const int CurrentPeakGroupIdFieldNumber = 1;
+    private uint currentPeakGroupId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CurrentPeakGroupId {
+      get { return currentPeakGroupId_; }
+      set {
+        currentPeakGroupId_ = value;
+      }
     }
 
     /// <summary>Field number for the "CurrentPeakLevelId" field.</summary>
@@ -2186,6 +2201,18 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
     }
 
+    /// <summary>Field number for the "RoundCnt" field.</summary>
+    public const int RoundCntFieldNumber = 11;
+    private uint roundCnt_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RoundCnt {
+      get { return roundCnt_; }
+      set {
+        roundCnt_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2201,6 +2228,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (CurrentPeakGroupId != other.CurrentPeakGroupId) return false;
       if (CurrentPeakLevelId != other.CurrentPeakLevelId) return false;
       if(!buffs_.Equals(other.buffs_)) return false;
       if (CurStatus != other.CurStatus) return false;
@@ -2210,6 +2238,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (Stars != other.Stars) return false;
       if (CurrentExtraLineup != other.CurrentExtraLineup) return false;
       if (IsHard != other.IsHard) return false;
+      if (RoundCnt != other.RoundCnt) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2217,6 +2246,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (CurrentPeakGroupId != 0) hash ^= CurrentPeakGroupId.GetHashCode();
       if (CurrentPeakLevelId != 0) hash ^= CurrentPeakLevelId.GetHashCode();
       hash ^= buffs_.GetHashCode();
       if (CurStatus != 0) hash ^= CurStatus.GetHashCode();
@@ -2226,6 +2256,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (Stars != 0) hash ^= Stars.GetHashCode();
       if (CurrentExtraLineup != global::EggLink.DanhengServer.Proto.ServerSide.ChallengeLineupTypePb.None) hash ^= CurrentExtraLineup.GetHashCode();
       if (IsHard != false) hash ^= IsHard.GetHashCode();
+      if (RoundCnt != 0) hash ^= RoundCnt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2244,6 +2275,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (CurrentPeakGroupId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(CurrentPeakGroupId);
+      }
       if (CurrentPeakLevelId != 0) {
         output.WriteRawTag(16);
         output.WriteUInt32(CurrentPeakLevelId);
@@ -2277,6 +2312,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(80);
         output.WriteBool(IsHard);
       }
+      if (RoundCnt != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(RoundCnt);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2287,6 +2326,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CurrentPeakGroupId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(CurrentPeakGroupId);
+      }
       if (CurrentPeakLevelId != 0) {
         output.WriteRawTag(16);
         output.WriteUInt32(CurrentPeakLevelId);
@@ -2320,6 +2363,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(80);
         output.WriteBool(IsHard);
       }
+      if (RoundCnt != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(RoundCnt);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2330,6 +2377,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (CurrentPeakGroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurrentPeakGroupId);
+      }
       if (CurrentPeakLevelId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurrentPeakLevelId);
       }
@@ -2355,6 +2405,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (IsHard != false) {
         size += 1 + 1;
       }
+      if (RoundCnt != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RoundCnt);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2366,6 +2419,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     public void MergeFrom(ChallengePeakDataPb other) {
       if (other == null) {
         return;
+      }
+      if (other.CurrentPeakGroupId != 0) {
+        CurrentPeakGroupId = other.CurrentPeakGroupId;
       }
       if (other.CurrentPeakLevelId != 0) {
         CurrentPeakLevelId = other.CurrentPeakLevelId;
@@ -2398,6 +2454,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (other.IsHard != false) {
         IsHard = other.IsHard;
       }
+      if (other.RoundCnt != 0) {
+        RoundCnt = other.RoundCnt;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2413,6 +2472,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 8: {
+            CurrentPeakGroupId = input.ReadUInt32();
+            break;
+          }
           case 16: {
             CurrentPeakLevelId = input.ReadUInt32();
             break;
@@ -2456,6 +2519,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             IsHard = input.ReadBool();
             break;
           }
+          case 88: {
+            RoundCnt = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -2471,6 +2538,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 8: {
+            CurrentPeakGroupId = input.ReadUInt32();
+            break;
+          }
           case 16: {
             CurrentPeakLevelId = input.ReadUInt32();
             break;
@@ -2512,6 +2583,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
           }
           case 80: {
             IsHard = input.ReadBool();
+            break;
+          }
+          case 88: {
+            RoundCnt = input.ReadUInt32();
             break;
           }
         }

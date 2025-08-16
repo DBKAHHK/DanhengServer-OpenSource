@@ -14,6 +14,7 @@ public class ChallengeData : BaseDatabaseDataHelper
 
     [SugarColumn(IsJson = true)] public Dictionary<int, ChallengeGroupReward> TakenRewards { get; set; } = new();
     [SugarColumn(IsJson = true)] public Dictionary<int, ChallengePeakLevelData> PeakLevelDatas { get; set; } = new();
+    [SugarColumn(IsJson = true)] public Dictionary<int, ChallengePeakBossLevelData> PeakBossLevelDatas { get; set; } = new();
 
     public void Delete(int challengeId)
     {
@@ -24,8 +25,21 @@ public class ChallengeData : BaseDatabaseDataHelper
 public class ChallengePeakLevelData
 {
     public int LevelId { get; set; }
+    public uint RoundCnt { get; set; }
     public uint PeakStar { get; set; }
     public List<uint> BaseAvatarList { get; set; } = [];
+    public List<uint> FinishedTargetList { get; set; } = [];
+}
+
+public class ChallengePeakBossLevelData
+{
+    public int LevelId { get; set; }
+    public uint BuffId { get; set; }
+    public bool IsHard { get; set; }
+    public uint RoundCnt { get; set; }
+    public uint PeakStar { get; set; }
+    public List<uint> BaseAvatarList { get; set; } = [];
+    public List<uint> FinishedTargetList { get; set; } = [];
 }
 
 public class ChallengeHistoryData(int uid, int challengeId)

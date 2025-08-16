@@ -6,13 +6,15 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.ChallengePeak;
 
 public class PacketChallengePeakSettleScNotify : BasePacket
 {
-    public PacketChallengePeakSettleScNotify(ChallengePeakInstance inst) : base(CmdIds.ChallengePeakSettleScNotify)
+    public PacketChallengePeakSettleScNotify(ChallengePeakInstance inst, List<uint> targetIdList) : base(CmdIds.ChallengePeakSettleScNotify)
     {
         var proto = new ChallengePeakSettleScNotify
         {
-            PeakStar = inst.Data.Peak.Stars,
+            PeakRoundCount = inst.Data.Peak.RoundCnt,
             IsWin = inst.IsWin,
-            PeakLevelId = inst.Data.Peak.CurrentPeakLevelId
+            PeakLevelId = inst.Data.Peak.CurrentPeakLevelId,
+            PeakTargetList = { targetIdList },
+            IsUltraBossWin = inst is { IsWin: true, Config.BossExcel: not null } && inst.Data.Peak.IsHard
         };
 
         SetData(proto);

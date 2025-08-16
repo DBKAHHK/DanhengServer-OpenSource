@@ -11,6 +11,6 @@ public class HandlerStartChallengePeakCsReq : Handler
         var req = StartChallengePeakCsReq.Parser.ParseFrom(data);
 
         await connection.Player!.ChallengePeakManager!.StartChallenge((int)req.PeakLevelId, req.PeakBossBuff,
-            req.PeakLevelLineup.Select(x => (int)x).ToList());
+            req.PeakLevelAvatarIdList.Select(x => (int)x).ToList());
     }
 }
