@@ -154,19 +154,11 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
                     avatarIds.Add((uint)avatar.BaseAvatarId);
             }
 
-            if (!datas.TryGetValue((int)lineup.PeakLevelId,
-                    out var data))
+            datas[(int)lineup.PeakLevelId] = new ChallengePeakLevelData
             {
-                datas[(int)lineup.PeakLevelId] = new ChallengePeakLevelData
-                {
-                    LevelId = (int)lineup.PeakLevelId,
-                    BaseAvatarList = avatarIds
-                };
-            }
-            else
-            {
-                data.BaseAvatarList = avatarIds;
-            }
+                LevelId = (int)lineup.PeakLevelId,
+                BaseAvatarList = avatarIds
+            };  // reset
         }
 
         await Player.SendPacket(new PacketChallengePeakGroupDataUpdateScNotify(GetChallengePeakInfo(groupId)));
