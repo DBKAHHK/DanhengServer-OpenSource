@@ -641,10 +641,16 @@ public class MissionManager(PlayerInstance player) : BasePlayerManager(player)
 
     public void OnLoadScene(SceneInfo info)
     {
+        var targetSubIds =
+            Player.SceneInstance?.FloorInfo?.Groups.Values.SelectMany(x => x.RelatedMissionId).ToList() ?? [];
+
+        HashSet<int> mainIds = [];
         foreach (var mainMission in GameData.MainMissionData.Values)
         {
-            foreach (var subMission in mainMission.MissionInfo?.SubMissionList ?? [])
-                if (subMission.LevelFloorID == info.FloorId)
+            foreach (var subMission in mainMission.MissionInfo.SubMissionList)
+            {
+                if (targetSubIds.Contains(subMission.ID))
+                {
                     info.SceneMissionInfo.SubMissionStatusList.Add(new Proto.Mission
                     {
                         Id = (uint)subMission.ID,
@@ -652,15 +658,17 @@ public class MissionManager(PlayerInstance player) : BasePlayerManager(player)
                         Progress = (uint)GetMissionProgress(subMission.ID)
                     });
 
-            foreach (var subMission in mainMission.MissionInfo?.SubMissionList ?? [])
-                if (subMission.LevelFloorID == info.FloorId)
-                {
-                    if (GetMainMissionStatus(mainMission.MainMissionID) == MissionPhaseEnum.Finish)
-                        info.SceneMissionInfo.FinishedMainMissionIdList.Add((uint)mainMission.MainMissionID);
-                    else if (GetMainMissionStatus(mainMission.MainMissionID) == MissionPhaseEnum.Accept)
-                        info.SceneMissionInfo.UnfinishedMainMissionIdList.Add((uint)mainMission.MainMissionID);
-                    break; // only one
+                    mainIds.Add(mainMission.MainMissionID);
                 }
+            }
+        }
+
+        foreach (var mainId in mainIds)
+        {
+            if (GetMainMissionStatus(mainId) == MissionPhaseEnum.Finish)
+                info.SceneMissionInfo.FinishedMainMissionIdList.Add((uint)mainId);
+            else if (GetMainMissionStatus(mainId) == MissionPhaseEnum.Accept)
+                info.SceneMissionInfo.UnfinishedMainMissionIdList.Add((uint)mainId);
         }
     }
 

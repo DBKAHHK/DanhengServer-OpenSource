@@ -26,6 +26,7 @@ public class GroupInfo
     public bool LoadOnInitial { get; set; }
     public string GroupName { get; set; } = "";
     public SavedValueLoadCondition SavedValueCondition { get; set; } = new();
+    public AtmosphereCondition AtmosphereCondition { get; set; } = new();
     public LoadCondition LoadCondition { get; set; } = new();
     public LoadCondition UnloadCondition { get; set; } = new();
     public LoadCondition ForceUnloadCondition { get; set; } = new();
@@ -46,6 +47,7 @@ public class GroupInfo
     [JsonIgnore] public Dictionary<string, List<int>> PropTriggerCustomString { get; set; } = [];
     [JsonIgnore] public List<string> ControlFloorSavedValue { get; set; } = [];
     [JsonIgnore] public List<int> RelatedBattleId { get; set; } = [];
+    [JsonIgnore] public List<int> RelatedMissionId { get; set; } = [];
 
     public void Load()
     {
@@ -84,7 +86,26 @@ public class GroupInfo
                 }
             }
         }
+
+        if (LoadSide != GroupLoadSideEnum.Client) return;
+        foreach (var info in AtmosphereCondition.Conditions)
+        {
+            if (info.TryGetValue("SubMissionID", out var value) && value is long v)
+            {
+                // try cast to int
+                var missionId = (int)v;
+                RelatedMissionId.Add(missionId);
+            }
+        }
     }
+}
+
+public class AtmosphereCondition
+{
+    public List<Dictionary<string, object>> Conditions { get; set; } = [];
+    
+    [JsonConverter(typeof(StringEnumConverter))]
+    public OperationEnum Operation { get; set; } = OperationEnum.And;
 }
 
 public class LoadCondition

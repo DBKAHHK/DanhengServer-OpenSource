@@ -175,6 +175,8 @@ public class SceneEntityLoader(SceneInstance scene)
                 x.FinishType == MissionFinishTypeEnum.StageWin && info.RelatedBattleId.Contains(x.ParamInt1)))
             return null;  // mission not activated
 
+        // TODO atmosphere conditions
+
         // load
         Scene.Groups.Add(info.Id); // add group to loaded groups
 
