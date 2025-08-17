@@ -84,6 +84,7 @@ public class ServerOption
     public ServerProfile ServerProfile { get; set; } = new();
     public bool AutoCreateUser { get; set; } = true;
     public LogOption LogOption { get; set; } = new();
+    public ServerConfig ServerConfig { get; set; } = new();
     public int FarmingDropRate { get; set; } = 1;
     public bool UseCache { get; set; } = false;  // didnt recommend
 
@@ -91,6 +92,22 @@ public class ServerOption
     {
         return Math.Max(Math.Min(FarmingDropRate, 999), 1);
     }
+}
+
+public class ServerConfig
+{
+    public bool RunDispatch { get; set; } = true;
+    public string FromDispatchBaseUrl { get; set; } = "";
+    public bool RunGateway { get; set; } = true;  // if run gateway, also run game server
+    public List<ServerRegion> Regions { get; set; } = [];
+}
+
+public class ServerRegion
+{
+    public string GateWayAddress { get; set; } = "";
+    public string GameServerName { get; set; } = "";
+    public string GameServerId { get; set; } = "";
+    public int EnvType { get; set; } = 21;
 }
 
 public class LogOption

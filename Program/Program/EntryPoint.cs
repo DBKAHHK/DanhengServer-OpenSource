@@ -167,64 +167,71 @@ public class EntryPoint
         Logger.Info(I18NManager.Translate("Server.ServerInfo.ServerRunning", I18NManager.Translate("Word.Dispatch"),
             GetConfig().HttpServer.GetDisplayAddress()));
 
-        var handler = new DanhengListener.ConnectionCreatedHandler((conversation, remote) => new Connection(conversation, remote));
-        DanhengListener.CreateConnection = handler;
-        DanhengListener.StartListener();
+        if (ConfigManager.Config.ServerOption.ServerConfig.RunGateway)
+        {
+            var handler = new DanhengListener.ConnectionCreatedHandler((conversation, remote) => new Connection(conversation, remote));
+            DanhengListener.CreateConnection = handler;
+            DanhengListener.StartListener();
+        }
 
         GenerateLogMap();
 
         // Load the game data
-        try
+        if (ConfigManager.Config.ServerOption.ServerConfig.RunGateway)
         {
-            var isCache = false;
-            if (File.Exists(ResourceCache.CachePath))
-                if (ConfigManager.Config.ServerOption.UseCache)
+            try
+            {
+                var isCache = false;
+                if (File.Exists(ResourceCache.CachePath))
+                    if (ConfigManager.Config.ServerOption.UseCache)
+                    {
+                        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem",
+                            I18NManager.Translate("Word.Cache")));
+                        isCache = ResourceCache.LoadCache();
+
+                        // Clear all game data if cache loading fails
+                        if (!isCache)
+                        {
+                            ResourceCache.ClearGameData();
+                            Logger.Warn(I18NManager.Translate("Server.ServerInfo.CacheLoadFailed"));
+                        }
+                    }
+                    else
+                    {
+                        File.Delete(ResourceCache.CachePath);
+                        Logger.Warn(I18NManager.Translate("Server.ServerInfo.CacheLoadSkip"));
+                    }
+
+                if (!isCache)
                 {
                     Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem",
-                        I18NManager.Translate("Word.Cache")));
-                    isCache = ResourceCache.LoadCache();
+                        I18NManager.Translate("Word.GameData")));
+                    ResourceManager.LoadGameData();
 
-                    // Clear all game data if cache loading fails
-                    if (!isCache)
+                    // Async process cache saving
+                    if (ConfigManager.Config.ServerOption.UseCache && ResourceCache.IsComplete)
                     {
-                        ResourceCache.ClearGameData();
-                        Logger.Warn(I18NManager.Translate("Server.ServerInfo.CacheLoadFailed"));
+                        Logger.Warn(I18NManager.Translate("Server.ServerInfo.WaitingItem",
+                            I18NManager.Translate("Word.Cache")));
+                        _ = ResourceCache.SaveCache();
                     }
                 }
-                else
-                {
-                    File.Delete(ResourceCache.CachePath);
-                    Logger.Warn(I18NManager.Translate("Server.ServerInfo.CacheLoadSkip"));
-                }
-
-            if (!isCache)
-            {
-                Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem",
-                    I18NManager.Translate("Word.GameData")));
-                ResourceManager.LoadGameData();
-
-                // Async process cache saving
-                if (ConfigManager.Config.ServerOption.UseCache && ResourceCache.IsComplete)
-                {
-                    Logger.Warn(I18NManager.Translate("Server.ServerInfo.WaitingItem",
-                        I18NManager.Translate("Word.Cache")));
-                    _ = ResourceCache.SaveCache();
-                }
             }
-        }
-        catch (Exception e)
-        {
-            Logger.Error(
-                I18NManager.Translate("Server.ServerInfo.FailedToLoadItem", I18NManager.Translate("Word.GameData")), e);
-            Console.ReadLine();
-            return;
-        }
+            catch (Exception e)
+            {
+                Logger.Error(
+                    I18NManager.Translate("Server.ServerInfo.FailedToLoadItem", I18NManager.Translate("Word.GameData")),
+                    e);
+                Console.ReadLine();
+                return;
+            }
 
-        // check option
-        if (args.Contains("-generate-tourn"))
-        {
-            TournRoomGenerator.GenerateFile("RogueTournRoom.json");
-            return;
+            // check option
+            if (args.Contains("-generate-tourn"))
+            {
+                TournRoomGenerator.GenerateFile("RogueTournRoom.json");
+                return;
+            }
         }
 
         // Register the command handlers
@@ -313,7 +320,8 @@ public class EntryPoint
         };
 
         // generate the handbook
-        new Task(HandbookGenerator.GenerateAll).Start();
+        if (ConfigManager.Config.ServerOption.ServerConfig.RunGateway)
+            new Task(HandbookGenerator.GenerateAll).Start();
 
         if (!DatabaseHelper.LoadAllData)
         {

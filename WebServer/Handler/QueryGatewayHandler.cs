@@ -24,7 +24,7 @@ internal partial class QueryGatewayHandler
             RegionName = config.GameServer.GameServerId,
             Ip = config.GameServer.PublicAddress,
             Port = config.GameServer.Port,
-            LoginWhiteMsg = I18NManager.Translate("Server.Web.Maintain"),
+            Msg = I18NManager.Translate("Server.Web.Maintain"),
             EnableVersionUpdate = true,
             EnableUploadBattleLog = true,
             EnableDesignDataVersionUpdate = true,

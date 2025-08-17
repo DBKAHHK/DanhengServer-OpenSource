@@ -14,20 +14,37 @@ namespace EggLink.DanhengServer.WebServer.Controllers;
 [Route("/")]
 public class DispatchRoutes
 {
-    public static ConfigContainer config = ConfigManager.Config;
+    public static ConfigContainer Config = ConfigManager.Config;
     public static Logger Logger = new("DispatchServer");
 
     [HttpGet("query_dispatch")]
     public string QueryDispatch()
     {
+        if (!Config.ServerOption.ServerConfig.RunDispatch)
+            return "";
+
         var data = new Dispatch();
-        data.RegionList.Add(new RegionInfo
+
+        if (Config.ServerOption.ServerConfig.RunGateway)
+            data.RegionList.Add(new RegionInfo
+            {
+                Name = Config.GameServer.GameServerId,
+                DispatchUrl = $"{Config.HttpServer.GetDisplayAddress()}/query_gateway",
+                EnvType = "21",
+                DisplayName = Config.GameServer.GameServerName
+            });
+
+        foreach (var region in Config.ServerOption.ServerConfig.Regions)
         {
-            Name = config.GameServer.GameServerId,
-            DispatchUrl = $"{config.HttpServer.GetDisplayAddress()}/query_gateway",
-            EnvType = "21",
-            DisplayName = config.GameServer.GameServerName
-        });
+            data.RegionList.Add(new RegionInfo
+            {
+                Name = region.GameServerId,
+                DisplayName = region.GameServerName,
+                EnvType = region.EnvType.ToString(),
+                DispatchUrl = region.GateWayAddress,
+            });
+        }
+
         Logger.Info("Client request: query_dispatch");
         return Convert.ToBase64String(data.ToByteArray());
     }
