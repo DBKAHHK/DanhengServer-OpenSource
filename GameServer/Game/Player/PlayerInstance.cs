@@ -208,52 +208,6 @@ public partial class PlayerInstance(PlayerData data)
 
         Data.LastActiveTime = Extensions.GetUnixSec();
 
-        if (LineupManager!.GetCurLineup() != null) // null -> ignore(new player)
-        {
-            if (LineupManager!.GetCurLineup()!.IsExtraLineup() &&
-                RaidManager!.RaidData.CurRaidId == 0 && StoryLineManager!.StoryLineData.CurStoryLineId == 0 &&
-                ChallengeManager!.ChallengeInstance == null) // do not use extra lineup when login
-            {
-                LineupManager!.SetExtraLineup(ExtraLineupType.LineupNone, []);
-                if (LineupManager!.GetCurLineup()!.IsExtraLineup()) await LineupManager!.SetCurLineup(0);
-            }
-
-            foreach (var lineup in LineupManager.LineupData.Lineups)
-            {
-                if (lineup.Value.BaseAvatars!.Count >= 5)
-                    lineup.Value.BaseAvatars = lineup.Value.BaseAvatars.GetRange(0, 4);
-
-                foreach (var avatar in lineup.Value.BaseAvatars!)
-                    if (avatar.BaseAvatarId > 10000)
-                    {
-                        GameData.SpecialAvatarData.TryGetValue(avatar.BaseAvatarId, out var special);
-                        if (special != null)
-                        {
-                            avatar.SpecialAvatarId = special.SpecialAvatarID;
-                            avatar.BaseAvatarId = special.AvatarID;
-                        }
-                        else
-                        {
-                            GameData.SpecialAvatarData.TryGetValue(avatar.BaseAvatarId * 10 + Data.WorldLevel,
-                                out special);
-                            if (special != null)
-                            {
-                                avatar.SpecialAvatarId = special.SpecialAvatarID;
-                                avatar.BaseAvatarId = special.AvatarID;
-                            }
-                        }
-                    }
-            }
-
-            foreach (var avatar in LineupManager.GetCurLineup()!.BaseAvatars!)
-            {
-                var avatarData = AvatarManager.GetFormalAvatar(avatar.BaseAvatarId);
-                if (avatarData is { CurrentHp: <= 0 })
-                    // revive
-                    avatarData.CurrentHp = 2000;
-            }
-        }
-
         foreach (var avatar in AvatarManager?.AvatarData.FormalAvatars ?? [])
         foreach (var path in avatar.PathInfos.Values)
         foreach (var skill in path.GetSkillTree())
@@ -307,6 +261,52 @@ public partial class PlayerInstance(PlayerData data)
 
         if (RaidManager != null)
             await RaidManager.OnLogin();
+
+        if (LineupManager!.GetCurLineup() != null) // null -> ignore(new player)
+        {
+            if (LineupManager!.GetCurLineup()!.IsExtraLineup() &&
+                RaidManager!.RaidData.CurRaidId == 0 && StoryLineManager!.StoryLineData.CurStoryLineId == 0 &&
+                ChallengeManager!.ChallengeInstance == null) // do not use extra lineup when login
+            {
+                LineupManager!.SetExtraLineup(ExtraLineupType.LineupNone, []);
+                if (LineupManager!.GetCurLineup()!.IsExtraLineup()) await LineupManager!.SetCurLineup(0);
+            }
+
+            foreach (var lineup in LineupManager.LineupData.Lineups)
+            {
+                if (lineup.Value.BaseAvatars!.Count >= 5)
+                    lineup.Value.BaseAvatars = lineup.Value.BaseAvatars.GetRange(0, 4);
+
+                foreach (var avatar in lineup.Value.BaseAvatars!)
+                    if (avatar.BaseAvatarId > 10000)
+                    {
+                        GameData.SpecialAvatarData.TryGetValue(avatar.BaseAvatarId, out var special);
+                        if (special != null)
+                        {
+                            avatar.SpecialAvatarId = special.SpecialAvatarID;
+                            avatar.BaseAvatarId = special.AvatarID;
+                        }
+                        else
+                        {
+                            GameData.SpecialAvatarData.TryGetValue(avatar.BaseAvatarId * 10 + Data.WorldLevel,
+                                out special);
+                            if (special != null)
+                            {
+                                avatar.SpecialAvatarId = special.SpecialAvatarID;
+                                avatar.BaseAvatarId = special.AvatarID;
+                            }
+                        }
+                    }
+            }
+
+            foreach (var avatar in LineupManager.GetCurLineup()!.BaseAvatars!)
+            {
+                var avatarData = AvatarManager.GetFormalAvatar(avatar.BaseAvatarId);
+                if (avatarData is { CurrentHp: <= 0 })
+                    // revive
+                    avatarData.CurrentHp = 2000;
+            }
+        }
 
         await LoadScene(Data.PlaneId, Data.FloorId, Data.EntryId, Data.Pos!, Data.Rot!, false);
         if (SceneInstance == null) await EnterScene(2000101, 0, false);
