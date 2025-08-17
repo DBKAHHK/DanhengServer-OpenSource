@@ -28,7 +28,7 @@ public class HandlerLeaveChallengeCsReq : Handler
             player.ChallengeManager!.ClearInstance();
 
             // Leave scene
-            await player.LineupManager.SetCurLineup(0);
+            player.LineupManager.SetExtraLineup(ExtraLineupType.LineupNone, []);
             // Heal avatars (temproary solution)
             foreach (var avatar in player.LineupManager.GetCurLineup()!.AvatarData!.FormalAvatars)
                 avatar.CurrentHp = 10000;

@@ -15,10 +15,6 @@ public class HandlerLeaveChallengePeakCsReq : Handler
         // TODO: check for plane type
         if (player.SceneInstance != null)
         {
-            // As of 1.5.0, the server now has to handle the player leaving battle too
-            await player.ForceQuitBattle();
-
-            // Reset lineup
             player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupChallenge, []);
 
             InvokeOnPlayerQuitChallenge(player, player.ChallengeManager!.ChallengeInstance);
@@ -27,7 +23,7 @@ public class HandlerLeaveChallengePeakCsReq : Handler
             player.ChallengeManager!.ClearInstance();
 
             // Leave scene
-            await player.LineupManager.SetCurLineup(0);
+            player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupNone, []);
             // Heal avatars (temproary solution)
             foreach (var avatar in player.LineupManager.GetCurLineup()!.AvatarData!.FormalAvatars)
                 avatar.CurrentHp = 10000;
