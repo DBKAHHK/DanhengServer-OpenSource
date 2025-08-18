@@ -97,6 +97,8 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                     case ItemSubTypeEnum.Food:
                     case ItemSubTypeEnum.Book:
                     case ItemSubTypeEnum.FindChest:
+                    case ItemSubTypeEnum.Gift:
+                    case ItemSubTypeEnum.ForceOpitonalGift:
                         itemData = await PutItem(itemId, count);
                         break;
                 }
@@ -362,6 +364,7 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         {
             case ItemMainTypeEnum.Material:
             case ItemMainTypeEnum.Pet:
+            case ItemMainTypeEnum.Usable:
                 return Data.MaterialItems.Find(x => x.ItemId == itemId);
             case ItemMainTypeEnum.Equipment:
                 return uniqueId > 0
@@ -695,89 +698,99 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         GameData.ItemConfigData.TryGetValue(itemId, out var itemConfig);
         if (itemConfig == null) return (Retcode.RetItemNotExist, null);
         var dataId = itemConfig.ID;
-        GameData.ItemUseBuffDataData.TryGetValue(dataId, out var useConfig);
-        if (useConfig == null) return (Retcode.RetItemUseConfigNotExist, null);
 
-        for (var i = 0; i < count; i++) // do count times
+        List<ItemData> resItemDatas = [];
+        if (GameData.ItemUseBuffDataData.TryGetValue(dataId, out var useConfig))
         {
-            if (useConfig.PreviewSkillPoint != 0) await Player.LineupManager!.GainMp((int)useConfig.PreviewSkillPoint);
-
-            if (baseAvatarId > 0)
+            for (var i = 0; i < count; i++) // do count times
             {
-                // single use
-                var avatar = Player.AvatarManager!.GetFormalAvatar(baseAvatarId);
-                if (avatar == null) return (Retcode.RetAvatarNotExist, null);
+                if (useConfig.PreviewSkillPoint != 0) await Player.LineupManager!.GainMp((int)useConfig.PreviewSkillPoint);
 
-                var extraLineup = Player.LineupManager!.GetCurLineup()?.IsExtraLineup() == true;
-
-                if (useConfig.PreviewHPRecoveryPercent != 0)
+                if (baseAvatarId > 0)
                 {
-                    avatar.SetCurHp(
-                        Math.Min(Math.Max(avatar.CurrentHp + (int)(useConfig.PreviewHPRecoveryPercent * 10000), 0),
-                            10000), extraLineup);
+                    // single use
+                    var avatar = Player.AvatarManager!.GetFormalAvatar(baseAvatarId);
+                    if (avatar == null) return (Retcode.RetAvatarNotExist, null);
 
-                    await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                    var extraLineup = Player.LineupManager!.GetCurLineup()?.IsExtraLineup() == true;
+
+                    if (useConfig.PreviewHPRecoveryPercent != 0)
+                    {
+                        avatar.SetCurHp(
+                            Math.Min(Math.Max(avatar.CurrentHp + (int)(useConfig.PreviewHPRecoveryPercent * 10000), 0),
+                                10000), extraLineup);
+
+                        await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                    }
+
+                    if (useConfig.PreviewHPRecoveryValue != 0)
+                    {
+                        avatar.SetCurHp(
+                            Math.Min(Math.Max(avatar.CurrentHp + (int)useConfig.PreviewHPRecoveryValue, 0), 10000),
+                            extraLineup);
+
+                        await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                    }
+
+                    if (useConfig.PreviewPowerPercent != 0)
+                    {
+                        avatar.SetCurSp(
+                            Math.Min(Math.Max(avatar.CurrentHp + (int)(useConfig.PreviewPowerPercent * 10000), 0), 10000),
+                            extraLineup);
+
+                        await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                    }
                 }
-
-                if (useConfig.PreviewHPRecoveryValue != 0)
+                else
                 {
-                    avatar.SetCurHp(
-                        Math.Min(Math.Max(avatar.CurrentHp + (int)useConfig.PreviewHPRecoveryValue, 0), 10000),
-                        extraLineup);
+                    // team use
+                    if (useConfig.PreviewHPRecoveryPercent != 0)
+                    {
+                        Player.LineupManager!.GetCurLineup()!.Heal((int)(useConfig.PreviewHPRecoveryPercent * 10000), true);
 
-                    await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
-                }
+                        await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                    }
 
-                if (useConfig.PreviewPowerPercent != 0)
-                {
-                    avatar.SetCurSp(
-                        Math.Min(Math.Max(avatar.CurrentHp + (int)(useConfig.PreviewPowerPercent * 10000), 0), 10000),
-                        extraLineup);
+                    if (useConfig.PreviewHPRecoveryValue != 0)
+                    {
+                        Player.LineupManager!.GetCurLineup()!.Heal((int)useConfig.PreviewHPRecoveryValue, true);
 
-                    await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                        await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                    }
+
+                    if (useConfig.PreviewPowerPercent != 0)
+                    {
+                        Player.LineupManager!.GetCurLineup()!.AddPercentSp((int)(useConfig.PreviewPowerPercent * 10000));
+
+                        await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
+                    }
                 }
             }
-            else
-            {
-                // team use
-                if (useConfig.PreviewHPRecoveryPercent != 0)
-                {
-                    Player.LineupManager!.GetCurLineup()!.Heal((int)(useConfig.PreviewHPRecoveryPercent * 10000), true);
 
-                    await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
-                }
+            //maze buff
+            if (useConfig.MazeBuffID > 0)
+                foreach (var info in Player.SceneInstance?.AvatarInfo.Values.ToList() ?? [])
+                    if (baseAvatarId == 0 || info.AvatarInfo.BaseAvatarId == baseAvatarId)
+                        await info.AddBuff(new SceneBuff(useConfig.MazeBuffID, 1, info.AvatarInfo.AvatarId));
 
-                if (useConfig.PreviewHPRecoveryValue != 0)
-                {
-                    Player.LineupManager!.GetCurLineup()!.Heal((int)useConfig.PreviewHPRecoveryValue, true);
-
-                    await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
-                }
-
-                if (useConfig.PreviewPowerPercent != 0)
-                {
-                    Player.LineupManager!.GetCurLineup()!.AddPercentSp((int)(useConfig.PreviewPowerPercent * 10000));
-
-                    await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
-                }
-            }
+            if (useConfig.MazeBuffID2 > 0)
+                foreach (var info in Player.SceneInstance?.AvatarInfo.Values.ToList() ?? [])
+                    if (baseAvatarId == 0 || info.AvatarInfo.BaseAvatarId == baseAvatarId)
+                        await info.AddBuff(new SceneBuff(useConfig.MazeBuffID2, 1, info.AvatarInfo.AvatarId));
         }
 
-        //maze buff
-        if (useConfig.MazeBuffID > 0)
-            foreach (var info in Player.SceneInstance?.AvatarInfo.Values.ToList() ?? [])
-                if (baseAvatarId == 0 || info.AvatarInfo.BaseAvatarId == baseAvatarId)
-                    await info.AddBuff(new SceneBuff(useConfig.MazeBuffID, 1, info.AvatarInfo.AvatarId));
-
-        if (useConfig.MazeBuffID2 > 0)
-            foreach (var info in Player.SceneInstance?.AvatarInfo.Values.ToList() ?? [])
-                if (baseAvatarId == 0 || info.AvatarInfo.BaseAvatarId == baseAvatarId)
-                    await info.AddBuff(new SceneBuff(useConfig.MazeBuffID2, 1, info.AvatarInfo.AvatarId));
+        if (GameData.ItemUseDataData.TryGetValue(dataId, out var useData))
+        {
+            foreach (var rewardId in useData.UseParam)
+            {
+                resItemDatas.AddRange(await HandleReward(rewardId, true));
+            }
+        }
 
         // remove item
         await RemoveItem(itemId, count);
 
-        return (Retcode.RetSucc, null);
+        return (Retcode.RetSucc, resItemDatas);
     }
 
     #region Equip

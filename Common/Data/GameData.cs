@@ -197,6 +197,7 @@ public static class GameData
     public static Dictionary<int, MappingInfoExcel> MappingInfoData { get; private set; } = [];
     public static Dictionary<int, ItemConfigExcel> ItemConfigData { get; private set; } = [];
     public static Dictionary<int, ItemUseBuffDataExcel> ItemUseBuffDataData { get; private set; } = [];
+    public static Dictionary<int, ItemUseDataExcel> ItemUseDataData { get; private set; } = [];
     public static Dictionary<int, EquipmentConfigExcel> EquipmentConfigData { get; private set; } = [];
     public static Dictionary<int, EquipmentExpTypeExcel> EquipmentExpTypeData { get; private set; } = [];
     public static Dictionary<int, EquipmentExpItemConfigExcel> EquipmentExpItemConfigData { get; private set; } = [];

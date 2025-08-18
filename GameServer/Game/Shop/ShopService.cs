@@ -3,6 +3,7 @@ using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
+using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Game.Shop;
 
@@ -19,7 +20,7 @@ public class ShopService(PlayerInstance player) : BasePlayerManager(player)
 
         foreach (var cost in goods.CostList) await Player.InventoryManager!.RemoveItem(cost.Key, cost.Value * count);
         var items = new List<ItemData>();
-        if (itemConfig.ItemMainType == ItemMainTypeEnum.Equipment || itemConfig.ItemMainType == ItemMainTypeEnum.Relic)
+        if (itemConfig.ItemMainType is ItemMainTypeEnum.Equipment or ItemMainTypeEnum.Relic)
         {
             for (var i = 0; i < count; i++)
             {
@@ -30,7 +31,18 @@ public class ShopService(PlayerInstance player) : BasePlayerManager(player)
         else
         {
             var item = await Player.InventoryManager!.AddItem(itemConfig.ID, count, false);
-            if (item != null) items.Add(item);
+            if (item != null)
+            { 
+                if (GameData.ItemUseDataData.TryGetValue(item.ItemId, out var useData) && useData.IsAutoUse)
+                {
+                    var res = await Player.InventoryManager!.UseItem(item.ItemId);
+                    if (res.returnItems != null) items.AddRange(res.returnItems);
+                }
+                else
+                {
+                    items.Add(item);
+                }
+            }
         }
 
         await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.BuyShopGoods, goods);

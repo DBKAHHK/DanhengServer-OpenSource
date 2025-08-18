@@ -14,13 +14,13 @@ public class PacketGetShopListScRsp : BasePacket
         };
 
         foreach (var item in GameData.ShopConfigData.Values)
-            if (item.ShopType == shopType)
+            if (item.ShopType == shopType && item.Goods.Count > 0)
                 proto.ShopList.Add(new Proto.Shop
                 {
                     ShopId = (uint)item.ShopID,
                     CityLevel = 1,
                     EndTime = uint.MaxValue,
-                    GoodsList = { item.Goods.Select(g => g.ToProto()) }
+                    GoodsList = { item.Goods.Where(x => x.ItemID != 0).Select(g => g.ToProto()) }
                 });
 
         SetData(proto);
