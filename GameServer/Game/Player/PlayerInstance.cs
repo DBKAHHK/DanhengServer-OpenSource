@@ -26,6 +26,7 @@ using EggLink.DanhengServer.GameServer.Game.RogueMagic;
 using EggLink.DanhengServer.GameServer.Game.RogueTourn;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Shop;
+using EggLink.DanhengServer.GameServer.Game.Sync.Player;
 using EggLink.DanhengServer.GameServer.Game.Task;
 using EggLink.DanhengServer.GameServer.Game.TrainParty;
 using EggLink.DanhengServer.GameServer.Server;
@@ -301,7 +302,7 @@ public partial class PlayerInstance(PlayerData data)
 
             foreach (var avatar in LineupManager.GetCurLineup()!.BaseAvatars!)
             {
-                var avatarData = AvatarManager.GetFormalAvatar(avatar.BaseAvatarId);
+                var avatarData = AvatarManager!.GetFormalAvatar(avatar.BaseAvatarId);
                 if (avatarData is { CurrentHp: <= 0 })
                     // revive
                     avatarData.CurrentHp = 2000;
@@ -327,6 +328,17 @@ public partial class PlayerInstance(PlayerData data)
     #endregion
 
     #region Actions
+
+    public async ValueTask SetPlayerHeadFrameId(uint headFrameId, long expireTime)
+    {
+        Data.HeadFrame = new PlayerHeadFrameInfo
+        {
+            HeadFrameId = headFrameId,
+            HeadFrameExpireTime = expireTime
+        };
+
+        await SendPacket(new PacketPlayerSyncScNotify([new PlayerBoardSync(this)]));
+    }
 
     public async ValueTask ChangeAvatarPathType(int baseAvatarId, MultiPathAvatarTypeEnum type)
     {

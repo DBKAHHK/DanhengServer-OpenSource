@@ -45,6 +45,8 @@ public class PlayerData : BaseDatabaseDataHelper
     [SugarColumn(IsNullable = true, IsJson = true)]
     public Position? Rot { get; set; }
 
+    [SugarColumn(IsJson = true)] public PlayerHeadFrameInfo HeadFrame { get; set; } = new();
+
     [SugarColumn(IsNullable = true)] public int PlaneId { get; set; }
 
     [SugarColumn(IsNullable = true)] public int FloorId { get; set; }
@@ -104,11 +106,12 @@ public class PlayerData : BaseDatabaseDataHelper
             Platform = PlatformType.Pc,
             LastActiveTime = LastActiveTime,
             ChatBubbleId = (uint)ChatBubble,
-            PersonalCard = (uint)PersonalCard
+            PersonalCard = (uint)PersonalCard,
+            HeadFrame = HeadFrame.ToProto()
         };
 
         var pos = 0;
-        var instance = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid)!;
+        var instance = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid);
         if (instance == null)
         {
             // Handle server profile
@@ -131,7 +134,7 @@ public class PlayerData : BaseDatabaseDataHelper
         }
 
         foreach (var avatar in instance.AssistAvatars.Select(
-                     assist => instance.FormalAvatars.Find(x => x.AvatarId == assist)!))
+                     assist => instance.FormalAvatars.Find(x => x.AvatarId == assist)))
             if (avatar != null)
                 info.AssistSimpleInfoList.Add(new AssistSimpleInfo
                 {
@@ -159,7 +162,8 @@ public class PlayerData : BaseDatabaseDataHelper
             WorldLevel = (uint)WorldLevel,
             EMOBIJBDKEI = true, // ShowDisplayAvatar
             RecordInfo = new PlayerRecordInfo(),
-            PrivacySettings = new PrivacySettings()
+            PrivacySettings = new PrivacySettings(),
+            HeadFrame = HeadFrame.ToProto()
         };
 
         var avatarInfo = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid);
@@ -197,5 +201,20 @@ public class PlayerData : BaseDatabaseDataHelper
                     new PlayerDataCollection(this, inventoryInfo, new LineupInfo())));
 
         return info;
+    }
+}
+
+public class PlayerHeadFrameInfo
+{
+    public long HeadFrameExpireTime { get; set; }
+    public uint HeadFrameId { get; set; }
+
+    public HeadFrameInfo ToProto()
+    {
+        return new HeadFrameInfo
+        {
+            HeadFrameExpireTime = HeadFrameExpireTime,
+            HeadFrameId = HeadFrameId
+        };
     }
 }

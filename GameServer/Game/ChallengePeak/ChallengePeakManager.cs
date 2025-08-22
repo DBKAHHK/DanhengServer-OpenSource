@@ -47,7 +47,7 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
             {
                 starNum += (int)levelPbData.PeakStar;
 
-                levelProto.PeakRoundCount = levelPbData.RoundCnt;
+                levelProto.PeakRoundsCount = levelPbData.RoundCnt;
                 levelProto.PeakLevelAvatarIdList.AddRange(levelPbData.BaseAvatarList);
                 levelProto.PeakTargetList.AddRange(levelPbData.FinishedTargetList);
 
@@ -193,6 +193,20 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
             };
 
             Player.ChallengeManager!.ChallengeData.PeakBossLevelDatas[levelId] = data;
+
+            // set head frame
+            if (isHard)
+            {
+                await Player.SetPlayerHeadFrameId(GameConstants.CHALLENGE_PEAK_ULTRA_FRAME_ID, long.MaxValue);
+            }
+            else
+            {
+                var targetFrameId = data.PeakStar + 226000;
+                if (Player.Data.HeadFrame.HeadFrameId < targetFrameId)
+                {
+                    await Player.SetPlayerHeadFrameId(targetFrameId, long.MaxValue);
+                }
+            }
         }
         else
         {

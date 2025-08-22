@@ -21,6 +21,11 @@ public static class GameConstants
     public const int CHALLENGE_BOSS_ENTRANCE = 1030402;
     public const int CURRENT_ROGUE_TOURN_SEASON = 2;
 
+    public const uint CHALLENGE_PEAK_BRONZE_FRAME_ID = 226001;
+    public const uint CHALLENGE_PEAK_SILVER_FRAME_ID = 226002;
+    public const uint CHALLENGE_PEAK_GOLD_FRAME_ID = 226003;
+    public const uint CHALLENGE_PEAK_ULTRA_FRAME_ID = 226004;
+
     public static readonly List<int> UpgradeWorldLevel = [20, 30, 40, 50, 60, 65];
     public static readonly List<int> AllowedChessRogueEntranceId = [8020701, 8020901, 8020401, 8020201];
 }

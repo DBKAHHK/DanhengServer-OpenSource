@@ -4,6 +4,7 @@ using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Message;
 using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Enums.Item;
+using EggLink.DanhengServer.GameServer.Game.Sync;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -11,6 +12,18 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
 
 public class PacketPlayerSyncScNotify : BasePacket
 {
+    public PacketPlayerSyncScNotify(List<BaseSyncData> datas) : base(CmdIds.PlayerSyncScNotify)
+    {
+        var proto = new PlayerSyncScNotify();
+
+        foreach (var data in datas)
+        {
+            data.SyncData(proto);
+        }
+
+        SetData(proto);
+    }
+
     public PacketPlayerSyncScNotify(ItemData item) : base(CmdIds.PlayerSyncScNotify)
     {
         var proto = new PlayerSyncScNotify();

@@ -17,7 +17,8 @@ public class PacketGetPlayerBoardDataScRsp : BasePacket
             UnlockedHeadIconList =
                 { player.PlayerUnlockData!.HeadIcons.Select(x => new HeadIconData { Id = (uint)x }) },
             AssistAvatarIdList = { player.AvatarManager!.AvatarData.AssistAvatars.Select(x => (uint)x) },
-            DisplayAvatarVec = new DisplayAvatarVec()
+            DisplayAvatarVec = new DisplayAvatarVec(),
+            HeadFrame = player.Data.HeadFrame.ToProto()
         };
 
         var pos = 0;
