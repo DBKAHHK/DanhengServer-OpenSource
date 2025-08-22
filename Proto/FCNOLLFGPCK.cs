@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFGQ05PTExGR1BDSy5wcm90bxoZQ2hhbGxlbmdlTGluZXVwTGlzdC5wcm90",
-            "bxoWUGxheWVyU2ltcGxlSW5mby5wcm90byLAAQoLRkNOT0xMRkdQQ0sSKQoL",
-            "bGluZXVwX2xpc3QYBCADKAsyFC5DaGFsbGVuZ2VMaW5ldXBMaXN0EhMKC0lO",
-            "SERETk5QQkRCGAsgASgNEhAKCHNjb3JlX2lkGAYgASgNEhAKCGJ1ZmZfb25l",
-            "GA4gASgNEiYKC3BsYXllcl9pbmZvGAMgASgLMhEuUGxheWVyU2ltcGxlSW5m",
-            "bxIQCghidWZmX3R3bxgFIAEoDRITCgtyZW1hcmtfbmFtZRgKIAEoCUIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "bxoWUGxheWVyU2ltcGxlSW5mby5wcm90byLEAQoLRkNOT0xMRkdQQ0sSKQoL",
+            "bGluZXVwX2xpc3QYBCADKAsyFC5DaGFsbGVuZ2VMaW5ldXBMaXN0EhcKD2N1",
+            "cl9sZXZlbF9zdGFycxgLIAEoDRIQCghzY29yZV9pZBgGIAEoDRIQCghidWZm",
+            "X29uZRgOIAEoDRImCgtwbGF5ZXJfaW5mbxgDIAEoCzIRLlBsYXllclNpbXBs",
+            "ZUluZm8SEAoIYnVmZl90d28YBSABKA0SEwoLcmVtYXJrX25hbWUYCiABKAlC",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeLineupListReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerSimpleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FCNOLLFGPCK), global::EggLink.DanhengServer.Proto.FCNOLLFGPCK.Parser, new[]{ "LineupList", "INHDDNNPBDB", "ScoreId", "BuffOne", "PlayerInfo", "BuffTwo", "RemarkName" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FCNOLLFGPCK), global::EggLink.DanhengServer.Proto.FCNOLLFGPCK.Parser, new[]{ "LineupList", "CurLevelStars", "ScoreId", "BuffOne", "PlayerInfo", "BuffTwo", "RemarkName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FCNOLLFGPCK(FCNOLLFGPCK other) : this() {
       lineupList_ = other.lineupList_.Clone();
-      iNHDDNNPBDB_ = other.iNHDDNNPBDB_;
+      curLevelStars_ = other.curLevelStars_;
       scoreId_ = other.scoreId_;
       buffOne_ = other.buffOne_;
       playerInfo_ = other.playerInfo_ != null ? other.playerInfo_.Clone() : null;
@@ -103,15 +103,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return lineupList_; }
     }
 
-    /// <summary>Field number for the "INHDDNNPBDB" field.</summary>
-    public const int INHDDNNPBDBFieldNumber = 11;
-    private uint iNHDDNNPBDB_;
+    /// <summary>Field number for the "cur_level_stars" field.</summary>
+    public const int CurLevelStarsFieldNumber = 11;
+    private uint curLevelStars_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint INHDDNNPBDB {
-      get { return iNHDDNNPBDB_; }
+    public uint CurLevelStars {
+      get { return curLevelStars_; }
       set {
-        iNHDDNNPBDB_ = value;
+        curLevelStars_ = value;
       }
     }
 
@@ -191,7 +191,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!lineupList_.Equals(other.lineupList_)) return false;
-      if (INHDDNNPBDB != other.INHDDNNPBDB) return false;
+      if (CurLevelStars != other.CurLevelStars) return false;
       if (ScoreId != other.ScoreId) return false;
       if (BuffOne != other.BuffOne) return false;
       if (!object.Equals(PlayerInfo, other.PlayerInfo)) return false;
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= lineupList_.GetHashCode();
-      if (INHDDNNPBDB != 0) hash ^= INHDDNNPBDB.GetHashCode();
+      if (CurLevelStars != 0) hash ^= CurLevelStars.GetHashCode();
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
       if (BuffOne != 0) hash ^= BuffOne.GetHashCode();
       if (playerInfo_ != null) hash ^= PlayerInfo.GetHashCode();
@@ -246,9 +246,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(82);
         output.WriteString(RemarkName);
       }
-      if (INHDDNNPBDB != 0) {
+      if (CurLevelStars != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(INHDDNNPBDB);
+        output.WriteUInt32(CurLevelStars);
       }
       if (BuffOne != 0) {
         output.WriteRawTag(112);
@@ -281,9 +281,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(82);
         output.WriteString(RemarkName);
       }
-      if (INHDDNNPBDB != 0) {
+      if (CurLevelStars != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(INHDDNNPBDB);
+        output.WriteUInt32(CurLevelStars);
       }
       if (BuffOne != 0) {
         output.WriteRawTag(112);
@@ -300,8 +300,8 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += lineupList_.CalculateSize(_repeated_lineupList_codec);
-      if (INHDDNNPBDB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(INHDDNNPBDB);
+      if (CurLevelStars != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurLevelStars);
       }
       if (ScoreId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
@@ -331,8 +331,8 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       lineupList_.Add(other.lineupList_);
-      if (other.INHDDNNPBDB != 0) {
-        INHDDNNPBDB = other.INHDDNNPBDB;
+      if (other.CurLevelStars != 0) {
+        CurLevelStars = other.CurLevelStars;
       }
       if (other.ScoreId != 0) {
         ScoreId = other.ScoreId;
@@ -391,7 +391,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 88: {
-            INHDDNNPBDB = input.ReadUInt32();
+            CurLevelStars = input.ReadUInt32();
             break;
           }
           case 112: {
@@ -437,7 +437,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 88: {
-            INHDDNNPBDB = input.ReadUInt32();
+            CurLevelStars = input.ReadUInt32();
             break;
           }
           case 112: {

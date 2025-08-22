@@ -92,7 +92,7 @@ public class ChallengeBossInstance(PlayerInstance player, ChallengeDataPb data) 
                 CurBossBuffs = new ChallengeBossBuffList
                 {
                     BuffList = { Data.Boss.Buffs },
-                    ChallengeBossConst = 1
+                    BossGroupConst = 1
                 }
             },
             RoundCount = (uint)Config.ChallengeCountDown,

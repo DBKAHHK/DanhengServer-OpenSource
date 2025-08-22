@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9IZWxpb2J1c0FjdGl2aXR5RGF0YVNjUnNwLnByb3RvGh1IZWxpb2J1c0No",
-            "YWxsZW5nZUxpbmV1cC5wcm90bxoRREVKQUtQT0VQS04ucHJvdG8aEUdCSktL",
-            "RkhQRkZOLnByb3RvGhFKTUlKSkhLSUJMQi5wcm90byKjAgoZSGVsaW9idXNB",
+            "YWxsZW5nZUxpbmV1cC5wcm90bxoRREVKQUtQT0VQS04ucHJvdG8aEUpNSUpK",
+            "SEtJQkxCLnByb3RvGhFHQkpLS0ZIUEZGTi5wcm90byKjAgoZSGVsaW9idXNB",
             "Y3Rpdml0eURhdGFTY1JzcBITCgtJQkhBQUVKRUVIQxgOIAEoDRITCgtJUEhL",
             "REVMTU9JSBgPIAEoDRITCgtFRU5KQlBNTkRPTBgLIAEoDRIPCgdyZXRjb2Rl",
             "GAggASgNEiQKDmNoYWxsZW5nZV9saXN0GAYgAygLMgwuSk1JSkpIS0lCTEIS",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "aGFzZRgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.DEJAKPOEPKNReflection.Descriptor, global::EggLink.DanhengServer.Proto.GBJKKFHPFFNReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMIJJHKIBLBReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeliobusChallengeLineupReflection.Descriptor, global::EggLink.DanhengServer.Proto.DEJAKPOEPKNReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMIJJHKIBLBReflection.Descriptor, global::EggLink.DanhengServer.Proto.GBJKKFHPFFNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp), global::EggLink.DanhengServer.Proto.HeliobusActivityDataScRsp.Parser, new[]{ "IBHAAEJEEHC", "IPHKDELMOIH", "EENJBPMNDOL", "Retcode", "ChallengeList", "SkillInfo", "NFDBMHPPFIP", "GCLJENGJICM", "Level", "Phase" }, null, null, null, null)
           }));

@@ -25,19 +25,19 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFDaGFsbGVuZ2VQZWFrU2V0dGxlU2NOb3RpZnkucHJvdG8aHUNoYWxsZW5n",
-            "ZVBlYWtSZXdhcmRJbmZvLnByb3RvIrUCChtDaGFsbGVuZ2VQZWFrU2V0dGxl",
+            "ZVBlYWtSZXdhcmRJbmZvLnByb3RvIrYCChtDaGFsbGVuZ2VQZWFrU2V0dGxl",
             "U2NOb3RpZnkSEwoLSE5BRklBTklKQUgYCCABKAgSFQoNcGVha19sZXZlbF9p",
             "ZBgCIAEoDRIYChBpc19zY29yZV9jaGFuZ2VkGAcgASgIEjIKEHBlYWtfcmV3",
-            "YXJkX2xpc3QYDiADKAsyGC5DaGFsbGVuZ2VQZWFrUmV3YXJkSW5mbxIYChBw",
-            "ZWFrX3JvdW5kX2NvdW50GAYgASgNEg4KBmlzX3dpbhgBIAEoCBITCgtIT0VI",
-            "SU9CSUlFShgLIAEoDRIZChFpc191bHRyYV9ib3NzX3dpbhgNIAEoCBITCgtB",
-            "QlBEQUtOQ05GTRgDIAEoCBIYChBwZWFrX3RhcmdldF9saXN0GAkgAygNEhMK",
-            "C0JLRkxPT0dQRVBHGAQgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
-            "UHJvdG9iBnByb3RvMw=="));
+            "YXJkX2xpc3QYDiADKAsyGC5DaGFsbGVuZ2VQZWFrUmV3YXJkSW5mbxIZChFw",
+            "ZWFrX3JvdW5kc19jb3VudBgGIAEoDRIOCgZpc193aW4YASABKAgSEwoLSE9F",
+            "SElPQklJRUoYCyABKA0SGQoRaXNfdWx0cmFfYm9zc193aW4YDSABKAgSEwoL",
+            "QUJQREFLTkNORk0YAyABKAgSGAoQcGVha190YXJnZXRfbGlzdBgJIAMoDRIT",
+            "CgtCS0ZMT09HUEVQRxgEIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengePeakRewardInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengePeakSettleScNotify), global::EggLink.DanhengServer.Proto.ChallengePeakSettleScNotify.Parser, new[]{ "HNAFIANIJAH", "PeakLevelId", "IsScoreChanged", "PeakRewardList", "PeakRoundCount", "IsWin", "HOEHIOBIIEJ", "IsUltraBossWin", "ABPDAKNCNFM", "PeakTargetList", "BKFLOOGPEPG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengePeakSettleScNotify), global::EggLink.DanhengServer.Proto.ChallengePeakSettleScNotify.Parser, new[]{ "HNAFIANIJAH", "PeakLevelId", "IsScoreChanged", "PeakRewardList", "PeakRoundsCount", "IsWin", "HOEHIOBIIEJ", "IsUltraBossWin", "ABPDAKNCNFM", "PeakTargetList", "BKFLOOGPEPG" }, null, null, null, null)
           }));
     }
     #endregion
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       peakLevelId_ = other.peakLevelId_;
       isScoreChanged_ = other.isScoreChanged_;
       peakRewardList_ = other.peakRewardList_.Clone();
-      peakRoundCount_ = other.peakRoundCount_;
+      peakRoundsCount_ = other.peakRoundsCount_;
       isWin_ = other.isWin_;
       hOEHIOBIIEJ_ = other.hOEHIOBIIEJ_;
       isUltraBossWin_ = other.isUltraBossWin_;
@@ -146,15 +146,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return peakRewardList_; }
     }
 
-    /// <summary>Field number for the "peak_round_count" field.</summary>
-    public const int PeakRoundCountFieldNumber = 6;
-    private uint peakRoundCount_;
+    /// <summary>Field number for the "peak_rounds_count" field.</summary>
+    public const int PeakRoundsCountFieldNumber = 6;
+    private uint peakRoundsCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PeakRoundCount {
-      get { return peakRoundCount_; }
+    public uint PeakRoundsCount {
+      get { return peakRoundsCount_; }
       set {
-        peakRoundCount_ = value;
+        peakRoundsCount_ = value;
       }
     }
 
@@ -248,7 +248,7 @@ namespace EggLink.DanhengServer.Proto {
       if (PeakLevelId != other.PeakLevelId) return false;
       if (IsScoreChanged != other.IsScoreChanged) return false;
       if(!peakRewardList_.Equals(other.peakRewardList_)) return false;
-      if (PeakRoundCount != other.PeakRoundCount) return false;
+      if (PeakRoundsCount != other.PeakRoundsCount) return false;
       if (IsWin != other.IsWin) return false;
       if (HOEHIOBIIEJ != other.HOEHIOBIIEJ) return false;
       if (IsUltraBossWin != other.IsUltraBossWin) return false;
@@ -266,7 +266,7 @@ namespace EggLink.DanhengServer.Proto {
       if (PeakLevelId != 0) hash ^= PeakLevelId.GetHashCode();
       if (IsScoreChanged != false) hash ^= IsScoreChanged.GetHashCode();
       hash ^= peakRewardList_.GetHashCode();
-      if (PeakRoundCount != 0) hash ^= PeakRoundCount.GetHashCode();
+      if (PeakRoundsCount != 0) hash ^= PeakRoundsCount.GetHashCode();
       if (IsWin != false) hash ^= IsWin.GetHashCode();
       if (HOEHIOBIIEJ != 0) hash ^= HOEHIOBIIEJ.GetHashCode();
       if (IsUltraBossWin != false) hash ^= IsUltraBossWin.GetHashCode();
@@ -307,9 +307,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteBool(BKFLOOGPEPG);
       }
-      if (PeakRoundCount != 0) {
+      if (PeakRoundsCount != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(PeakRoundCount);
+        output.WriteUInt32(PeakRoundsCount);
       }
       if (IsScoreChanged != false) {
         output.WriteRawTag(56);
@@ -355,9 +355,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteBool(BKFLOOGPEPG);
       }
-      if (PeakRoundCount != 0) {
+      if (PeakRoundsCount != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(PeakRoundCount);
+        output.WriteUInt32(PeakRoundsCount);
       }
       if (IsScoreChanged != false) {
         output.WriteRawTag(56);
@@ -397,8 +397,8 @@ namespace EggLink.DanhengServer.Proto {
         size += 1 + 1;
       }
       size += peakRewardList_.CalculateSize(_repeated_peakRewardList_codec);
-      if (PeakRoundCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakRoundCount);
+      if (PeakRoundsCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakRoundsCount);
       }
       if (IsWin != false) {
         size += 1 + 1;
@@ -438,8 +438,8 @@ namespace EggLink.DanhengServer.Proto {
         IsScoreChanged = other.IsScoreChanged;
       }
       peakRewardList_.Add(other.peakRewardList_);
-      if (other.PeakRoundCount != 0) {
-        PeakRoundCount = other.PeakRoundCount;
+      if (other.PeakRoundsCount != 0) {
+        PeakRoundsCount = other.PeakRoundsCount;
       }
       if (other.IsWin != false) {
         IsWin = other.IsWin;
@@ -489,7 +489,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 48: {
-            PeakRoundCount = input.ReadUInt32();
+            PeakRoundsCount = input.ReadUInt32();
             break;
           }
           case 56: {
@@ -549,7 +549,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 48: {
-            PeakRoundCount = input.ReadUInt32();
+            PeakRoundsCount = input.ReadUInt32();
             break;
           }
           case 56: {

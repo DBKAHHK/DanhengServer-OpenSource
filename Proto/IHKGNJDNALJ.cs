@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static IHKGNJDNALJReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFJSEtHTkpETkFMSi5wcm90byJeCgtJSEtHTkpETkFMShITCgtKR01JUE1E",
-            "UFBJShgDIAEoDRITCgtLSENOQUpPS0pIShgEIAEoDRITCgtGQ0NESUxHR09D",
-            "SRgOIAEoDRIQCghncm91cF9pZBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFJSEtHTkpETkFMSi5wcm90byJkCgtJSEtHTkpETkFMShITCgtKR01JUE1E",
+            "UFBJShgDIAEoDRIZChFncm91cF90b3RhbF9zdGFycxgEIAEoDRITCgtGQ0NE",
+            "SUxHR09DSRgOIAEoDRIQCghncm91cF9pZBgKIAEoDUIeqgIbRWdnTGluay5E",
+            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IHKGNJDNALJ), global::EggLink.DanhengServer.Proto.IHKGNJDNALJ.Parser, new[]{ "JGMIPMDPPIJ", "KHCNAJOKJHJ", "FCCDILGGOCI", "GroupId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IHKGNJDNALJ), global::EggLink.DanhengServer.Proto.IHKGNJDNALJ.Parser, new[]{ "JGMIPMDPPIJ", "GroupTotalStars", "FCCDILGGOCI", "GroupId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IHKGNJDNALJ(IHKGNJDNALJ other) : this() {
       jGMIPMDPPIJ_ = other.jGMIPMDPPIJ_;
-      kHCNAJOKJHJ_ = other.kHCNAJOKJHJ_;
+      groupTotalStars_ = other.groupTotalStars_;
       fCCDILGGOCI_ = other.fCCDILGGOCI_;
       groupId_ = other.groupId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -98,15 +98,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KHCNAJOKJHJ" field.</summary>
-    public const int KHCNAJOKJHJFieldNumber = 4;
-    private uint kHCNAJOKJHJ_;
+    /// <summary>Field number for the "group_total_stars" field.</summary>
+    public const int GroupTotalStarsFieldNumber = 4;
+    private uint groupTotalStars_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KHCNAJOKJHJ {
-      get { return kHCNAJOKJHJ_; }
+    public uint GroupTotalStars {
+      get { return groupTotalStars_; }
       set {
-        kHCNAJOKJHJ_ = value;
+        groupTotalStars_ = value;
       }
     }
 
@@ -150,7 +150,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (JGMIPMDPPIJ != other.JGMIPMDPPIJ) return false;
-      if (KHCNAJOKJHJ != other.KHCNAJOKJHJ) return false;
+      if (GroupTotalStars != other.GroupTotalStars) return false;
       if (FCCDILGGOCI != other.FCCDILGGOCI) return false;
       if (GroupId != other.GroupId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -161,7 +161,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (JGMIPMDPPIJ != 0) hash ^= JGMIPMDPPIJ.GetHashCode();
-      if (KHCNAJOKJHJ != 0) hash ^= KHCNAJOKJHJ.GetHashCode();
+      if (GroupTotalStars != 0) hash ^= GroupTotalStars.GetHashCode();
       if (FCCDILGGOCI != 0) hash ^= FCCDILGGOCI.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (_unknownFields != null) {
@@ -186,9 +186,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(JGMIPMDPPIJ);
       }
-      if (KHCNAJOKJHJ != 0) {
+      if (GroupTotalStars != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(KHCNAJOKJHJ);
+        output.WriteUInt32(GroupTotalStars);
       }
       if (GroupId != 0) {
         output.WriteRawTag(80);
@@ -212,9 +212,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(JGMIPMDPPIJ);
       }
-      if (KHCNAJOKJHJ != 0) {
+      if (GroupTotalStars != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(KHCNAJOKJHJ);
+        output.WriteUInt32(GroupTotalStars);
       }
       if (GroupId != 0) {
         output.WriteRawTag(80);
@@ -237,8 +237,8 @@ namespace EggLink.DanhengServer.Proto {
       if (JGMIPMDPPIJ != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JGMIPMDPPIJ);
       }
-      if (KHCNAJOKJHJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KHCNAJOKJHJ);
+      if (GroupTotalStars != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupTotalStars);
       }
       if (FCCDILGGOCI != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FCCDILGGOCI);
@@ -261,8 +261,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.JGMIPMDPPIJ != 0) {
         JGMIPMDPPIJ = other.JGMIPMDPPIJ;
       }
-      if (other.KHCNAJOKJHJ != 0) {
-        KHCNAJOKJHJ = other.KHCNAJOKJHJ;
+      if (other.GroupTotalStars != 0) {
+        GroupTotalStars = other.GroupTotalStars;
       }
       if (other.FCCDILGGOCI != 0) {
         FCCDILGGOCI = other.FCCDILGGOCI;
@@ -290,7 +290,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 32: {
-            KHCNAJOKJHJ = input.ReadUInt32();
+            GroupTotalStars = input.ReadUInt32();
             break;
           }
           case 80: {
@@ -321,7 +321,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 32: {
-            KHCNAJOKJHJ = input.ReadUInt32();
+            GroupTotalStars = input.ReadUInt32();
             break;
           }
           case 80: {

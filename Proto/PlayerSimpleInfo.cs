@@ -24,23 +24,23 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerSimpleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJTaW1wbGVJbmZvLnByb3RvGhZBc3Npc3RTaW1wbGVJbmZvLnBy",
-            "b3RvGhFJTkxDR0tITUFIRS5wcm90bxoYRnJpZW5kT25saW5lU3RhdHVzLnBy",
-            "b3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8ikQMKEFBsYXllclNpbXBsZUluZm8S",
-            "FQoNcGVyc29uYWxfY2FyZBgDIAEoDRIfCghwbGF0Zm9ybRgCIAEoDjINLlBs",
-            "YXRmb3JtVHlwZRILCgN1aWQYCSABKA0SEQoJc2lnbmF0dXJlGA8gASgJEg0K",
-            "BWxldmVsGA0gASgNEhEKCWhlYWRfaWNvbhgKIAEoDRIYChBsYXN0X2FjdGl2",
-            "ZV90aW1lGAsgASgDEiIKC0xPTE5NQURNUEtMGNkHIAEoCzIMLklOTENHS0hN",
-            "QUhFEioKDW9ubGluZV9zdGF0dXMYBSABKA4yEy5GcmllbmRPbmxpbmVTdGF0",
-            "dXMSMgoXYXNzaXN0X3NpbXBsZV9pbmZvX2xpc3QYDCADKAsyES5Bc3Npc3RT",
-            "aW1wbGVJbmZvEhAKCG5pY2tuYW1lGAggASgJEhMKC0FLQ0VKRkNGQkFOGAcg",
-            "ASgJEhEKCWlzX2Jhbm5lZBgEIAEoCBIWCg5jaGF0X2J1YmJsZV9pZBgBIAEo",
-            "DRITCgtHTUFMQ1BOT0hCRhgOIAEoCUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "ChZQbGF5ZXJTaW1wbGVJbmZvLnByb3RvGhNIZWFkRnJhbWVJbmZvLnByb3Rv",
+            "GhZBc3Npc3RTaW1wbGVJbmZvLnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8a",
+            "GEZyaWVuZE9ubGluZVN0YXR1cy5wcm90byKSAwoQUGxheWVyU2ltcGxlSW5m",
+            "bxIVCg1wZXJzb25hbF9jYXJkGAMgASgNEh8KCHBsYXRmb3JtGAIgASgOMg0u",
+            "UGxhdGZvcm1UeXBlEgsKA3VpZBgJIAEoDRIRCglzaWduYXR1cmUYDyABKAkS",
+            "DQoFbGV2ZWwYDSABKA0SEQoJaGVhZF9pY29uGAogASgNEhgKEGxhc3RfYWN0",
+            "aXZlX3RpbWUYCyABKAMSIwoKaGVhZF9mcmFtZRjZByABKAsyDi5IZWFkRnJh",
+            "bWVJbmZvEioKDW9ubGluZV9zdGF0dXMYBSABKA4yEy5GcmllbmRPbmxpbmVT",
+            "dGF0dXMSMgoXYXNzaXN0X3NpbXBsZV9pbmZvX2xpc3QYDCADKAsyES5Bc3Np",
+            "c3RTaW1wbGVJbmZvEhAKCG5pY2tuYW1lGAggASgJEhMKC0FLQ0VKRkNGQkFO",
+            "GAcgASgJEhEKCWlzX2Jhbm5lZBgEIAEoCBIWCg5jaGF0X2J1YmJsZV9pZBgB",
+            "IAEoDRITCgtHTUFMQ1BOT0hCRhgOIAEoCUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AssistSimpleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.INLCGKHMAHEReflection.Descriptor, global::EggLink.DanhengServer.Proto.FriendOnlineStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeadFrameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistSimpleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.FriendOnlineStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerSimpleInfo), global::EggLink.DanhengServer.Proto.PlayerSimpleInfo.Parser, new[]{ "PersonalCard", "Platform", "Uid", "Signature", "Level", "HeadIcon", "LastActiveTime", "LOLNMADMPKL", "OnlineStatus", "AssistSimpleInfoList", "Nickname", "AKCEJFCFBAN", "IsBanned", "ChatBubbleId", "GMALCPNOHBF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerSimpleInfo), global::EggLink.DanhengServer.Proto.PlayerSimpleInfo.Parser, new[]{ "PersonalCard", "Platform", "Uid", "Signature", "Level", "HeadIcon", "LastActiveTime", "HeadFrame", "OnlineStatus", "AssistSimpleInfoList", "Nickname", "AKCEJFCFBAN", "IsBanned", "ChatBubbleId", "GMALCPNOHBF" }, null, null, null, null)
           }));
     }
     #endregion
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
       level_ = other.level_;
       headIcon_ = other.headIcon_;
       lastActiveTime_ = other.lastActiveTime_;
-      lOLNMADMPKL_ = other.lOLNMADMPKL_ != null ? other.lOLNMADMPKL_.Clone() : null;
+      headFrame_ = other.headFrame_ != null ? other.headFrame_.Clone() : null;
       onlineStatus_ = other.onlineStatus_;
       assistSimpleInfoList_ = other.assistSimpleInfoList_.Clone();
       nickname_ = other.nickname_;
@@ -190,15 +190,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LOLNMADMPKL" field.</summary>
-    public const int LOLNMADMPKLFieldNumber = 985;
-    private global::EggLink.DanhengServer.Proto.INLCGKHMAHE lOLNMADMPKL_;
+    /// <summary>Field number for the "head_frame" field.</summary>
+    public const int HeadFrameFieldNumber = 985;
+    private global::EggLink.DanhengServer.Proto.HeadFrameInfo headFrame_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.INLCGKHMAHE LOLNMADMPKL {
-      get { return lOLNMADMPKL_; }
+    public global::EggLink.DanhengServer.Proto.HeadFrameInfo HeadFrame {
+      get { return headFrame_; }
       set {
-        lOLNMADMPKL_ = value;
+        headFrame_ = value;
       }
     }
 
@@ -307,7 +307,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Level != other.Level) return false;
       if (HeadIcon != other.HeadIcon) return false;
       if (LastActiveTime != other.LastActiveTime) return false;
-      if (!object.Equals(LOLNMADMPKL, other.LOLNMADMPKL)) return false;
+      if (!object.Equals(HeadFrame, other.HeadFrame)) return false;
       if (OnlineStatus != other.OnlineStatus) return false;
       if(!assistSimpleInfoList_.Equals(other.assistSimpleInfoList_)) return false;
       if (Nickname != other.Nickname) return false;
@@ -329,7 +329,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Level != 0) hash ^= Level.GetHashCode();
       if (HeadIcon != 0) hash ^= HeadIcon.GetHashCode();
       if (LastActiveTime != 0L) hash ^= LastActiveTime.GetHashCode();
-      if (lOLNMADMPKL_ != null) hash ^= LOLNMADMPKL.GetHashCode();
+      if (headFrame_ != null) hash ^= HeadFrame.GetHashCode();
       if (OnlineStatus != global::EggLink.DanhengServer.Proto.FriendOnlineStatus.Offline) hash ^= OnlineStatus.GetHashCode();
       hash ^= assistSimpleInfoList_.GetHashCode();
       if (Nickname.Length != 0) hash ^= Nickname.GetHashCode();
@@ -408,9 +408,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(122);
         output.WriteString(Signature);
       }
-      if (lOLNMADMPKL_ != null) {
+      if (headFrame_ != null) {
         output.WriteRawTag(202, 61);
-        output.WriteMessage(LOLNMADMPKL);
+        output.WriteMessage(HeadFrame);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -475,9 +475,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(122);
         output.WriteString(Signature);
       }
-      if (lOLNMADMPKL_ != null) {
+      if (headFrame_ != null) {
         output.WriteRawTag(202, 61);
-        output.WriteMessage(LOLNMADMPKL);
+        output.WriteMessage(HeadFrame);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -510,8 +510,8 @@ namespace EggLink.DanhengServer.Proto {
       if (LastActiveTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(LastActiveTime);
       }
-      if (lOLNMADMPKL_ != null) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(LOLNMADMPKL);
+      if (headFrame_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(HeadFrame);
       }
       if (OnlineStatus != global::EggLink.DanhengServer.Proto.FriendOnlineStatus.Offline) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OnlineStatus);
@@ -565,11 +565,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.LastActiveTime != 0L) {
         LastActiveTime = other.LastActiveTime;
       }
-      if (other.lOLNMADMPKL_ != null) {
-        if (lOLNMADMPKL_ == null) {
-          LOLNMADMPKL = new global::EggLink.DanhengServer.Proto.INLCGKHMAHE();
+      if (other.headFrame_ != null) {
+        if (headFrame_ == null) {
+          HeadFrame = new global::EggLink.DanhengServer.Proto.HeadFrameInfo();
         }
-        LOLNMADMPKL.MergeFrom(other.LOLNMADMPKL);
+        HeadFrame.MergeFrom(other.HeadFrame);
       }
       if (other.OnlineStatus != global::EggLink.DanhengServer.Proto.FriendOnlineStatus.Offline) {
         OnlineStatus = other.OnlineStatus;
@@ -662,10 +662,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 7882: {
-            if (lOLNMADMPKL_ == null) {
-              LOLNMADMPKL = new global::EggLink.DanhengServer.Proto.INLCGKHMAHE();
+            if (headFrame_ == null) {
+              HeadFrame = new global::EggLink.DanhengServer.Proto.HeadFrameInfo();
             }
-            input.ReadMessage(LOLNMADMPKL);
+            input.ReadMessage(HeadFrame);
             break;
           }
         }
@@ -740,10 +740,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 7882: {
-            if (lOLNMADMPKL_ == null) {
-              LOLNMADMPKL = new global::EggLink.DanhengServer.Proto.INLCGKHMAHE();
+            if (headFrame_ == null) {
+              HeadFrame = new global::EggLink.DanhengServer.Proto.HeadFrameInfo();
             }
-            input.ReadMessage(LOLNMADMPKL);
+            input.ReadMessage(HeadFrame);
             break;
           }
         }

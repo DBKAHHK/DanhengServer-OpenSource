@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtSb2d1ZVRvdXJuQ3VyR2FtZUluZm8ucHJvdG8aG1JvZ3VlVG91cm5Gb3Jt",
-            "dWxhSW5mby5wcm90bxoiUm9ndWVUb3VybkdhbWVEaWZmaWN1bHR5SW5mby5w",
-            "cm90bxobQ2hlc3NSb2d1ZU1pcmFjbGVJbmZvLnByb3RvGhFDR0pOSE5NQU1E",
-            "SC5wcm90bxoYQ2hlc3NSb2d1ZUJ1ZmZJbmZvLnByb3RvGhpSb2d1ZVRvdXJu",
-            "TGluZXVwSW5mby5wcm90bxoZUm9ndWVUb3VybkxldmVsSW5mby5wcm90bxoY",
-            "S2V5d29yZFVubG9ja1ZhbHVlLnByb3RvGhhSb2d1ZUdhbWVJdGVtVmFsdWUu",
-            "cHJvdG8aHFJvZ3VlVG91cm5HYW1lQXJlYUluZm8ucHJvdG8aGlJvZ3VlVG91",
-            "cm5Nb2R1bGVJbmZvLnByb3RvIosEChVSb2d1ZVRvdXJuQ3VyR2FtZUluZm8S",
+            "dWxhSW5mby5wcm90bxoaUm9ndWVUb3Vybk1vZHVsZUluZm8ucHJvdG8aIlJv",
+            "Z3VlVG91cm5HYW1lRGlmZmljdWx0eUluZm8ucHJvdG8aGVJvZ3VlVG91cm5M",
+            "ZXZlbEluZm8ucHJvdG8aHFJvZ3VlVG91cm5HYW1lQXJlYUluZm8ucHJvdG8a",
+            "GENoZXNzUm9ndWVCdWZmSW5mby5wcm90bxoYUm9ndWVHYW1lSXRlbVZhbHVl",
+            "LnByb3RvGhpSb2d1ZVRvdXJuTGluZXVwSW5mby5wcm90bxoRQ0dKTkhOTUFN",
+            "REgucHJvdG8aG0NoZXNzUm9ndWVNaXJhY2xlSW5mby5wcm90bxoYS2V5d29y",
+            "ZFVubG9ja1ZhbHVlLnByb3RvIosEChVSb2d1ZVRvdXJuQ3VyR2FtZUluZm8S",
             "LAoMbWlyYWNsZV9pbmZvGAggASgLMhYuQ2hlc3NSb2d1ZU1pcmFjbGVJbmZv",
             "EjIKEnRvdXJuX2Zvcm11bGFfaW5mbxgFIAEoCzIWLlJvZ3VlVG91cm5Gb3Jt",
             "dWxhSW5mbxI7Chpyb2d1ZV90b3Vybl9nYW1lX2FyZWFfaW5mbxgJIAEoCzIX",
@@ -45,7 +45,7 @@ namespace EggLink.DanhengServer.Proto {
             "ZmZpY3VsdHlJbmZvEiMKBWxldmVsGAYgASgLMhQuUm9ndWVUb3VybkxldmVs",
             "SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournFormulaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournGameDifficultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGJNHNMAMDHReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KeywordUnlockValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGameItemValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournModuleInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournFormulaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournModuleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournGameDifficultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGameItemValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGJNHNMAMDHReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KeywordUnlockValueReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournCurGameInfo), global::EggLink.DanhengServer.Proto.RogueTournCurGameInfo.Parser, new[]{ "MiracleInfo", "TournFormulaInfo", "RogueTournGameAreaInfo", "Buff", "UnlockValue", "JMIDLLDKJBI", "TournModuleInfo", "Lineup", "ItemValue", "GameDifficultyInfo", "Level" }, null, null, null, null)
           }));

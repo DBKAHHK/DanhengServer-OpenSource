@@ -16,7 +16,7 @@ public class PacketGetCurChallengePeakScRsp : BasePacket
             proto.IsFinished = true;
             proto.PeakLevelId = peak.Data.Peak.CurrentPeakLevelId;
             proto.PeakBossBuff = peak.Data.Peak.Buffs.FirstOrDefault(0u);
-            proto.PeakRoundCount = peak.Data.Peak.RoundCnt;
+            proto.PeakRoundsCount = peak.Data.Peak.RoundCnt;
         }
 
         SetData(proto);

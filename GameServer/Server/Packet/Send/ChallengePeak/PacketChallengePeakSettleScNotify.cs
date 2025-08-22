@@ -10,7 +10,7 @@ public class PacketChallengePeakSettleScNotify : BasePacket
     {
         var proto = new ChallengePeakSettleScNotify
         {
-            PeakRoundCount = inst.Data.Peak.RoundCnt,
+            PeakRoundsCount = inst.Data.Peak.RoundCnt,
             IsWin = inst.IsWin,
             PeakLevelId = inst.Data.Peak.CurrentPeakLevelId,
             PeakTargetList = { targetIdList },
