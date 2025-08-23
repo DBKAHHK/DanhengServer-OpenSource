@@ -16,7 +16,7 @@ public class PacketGetCurChallengeScRsp : BasePacket
             proto.CurChallenge = inst.ToProto();
             Task.Run(async () =>
             {
-                await player.LineupManager!.SetCurLineup(inst.GetCurrentExtraLineupType() + 10);
+                await player.LineupManager!.SetExtraLineup((ExtraLineupType)inst.GetCurrentExtraLineupType());
             }).Wait();
             var proto1 = player.LineupManager?.GetExtraLineup(ExtraLineupType.LineupChallenge)?.ToProto();
             if (proto1 != null)

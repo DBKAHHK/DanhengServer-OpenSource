@@ -10,7 +10,7 @@ public class ChallengeData : BaseDatabaseDataHelper
     [SugarColumn(IsJson = true)] public Dictionary<int, ChallengeHistoryData> History { get; set; } = new();
 
     [SugarColumn(IsNullable = true)] public string? ChallengeInstance { get; set; }
-    [SugarColumn(IsNullable = true)] public string? Instance { get; set; } = null;  // placeholder
+    [SugarColumn] public string Instance { get; set; } = "";  // placeholder
 
     [SugarColumn(IsJson = true)] public Dictionary<int, ChallengeGroupReward> TakenRewards { get; set; } = new();
     [SugarColumn(IsJson = true)] public Dictionary<int, ChallengePeakLevelData> PeakLevelDatas { get; set; } = new();
