@@ -13,6 +13,7 @@ public class PacketSwitchHandCoinUpdateScRsp : BasePacket
         };
         SetData(proto);
     }
+
     public PacketSwitchHandCoinUpdateScRsp(uint coinNum) : base(CmdIds.SwitchHandCoinUpdateScRsp)
     {
         var proto = new SwitchHandCoinUpdateScRsp

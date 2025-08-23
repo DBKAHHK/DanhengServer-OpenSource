@@ -1,5 +1,4 @@
-﻿using EggLink.DanhengServer.GameServer.Game.Challenge;
-using EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
+﻿using EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 

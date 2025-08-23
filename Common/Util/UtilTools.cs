@@ -1,6 +1,5 @@
-﻿using EggLink.DanhengServer.Enums;
+﻿using System.Globalization;
 using EggLink.DanhengServer.Enums.Task;
-using System.Globalization;
 
 namespace EggLink.DanhengServer.Util;
 
@@ -23,20 +22,15 @@ public static class UtilTools
         if (actions.Count == 0) return defaultValue;
 
         foreach (var action in actions)
-        {
             try
             {
                 var returnValue = action.Invoke();
-                if (!returnValue)
-                {
-                    return false;
-                }
+                if (!returnValue) return false;
             }
             catch
             {
                 // ignored
             }
-        }
 
         return true;
     }
@@ -45,20 +39,16 @@ public static class UtilTools
     {
         if (actions.Count == 0) return defaultValue;
         foreach (var action in actions)
-        {
             try
             {
                 var returnValue = action.Invoke();
-                if (returnValue)
-                {
-                    return true;
-                }
+                if (returnValue) return true;
             }
             catch
             {
                 // ignored
             }
-        }
+
         return false;
     }
 

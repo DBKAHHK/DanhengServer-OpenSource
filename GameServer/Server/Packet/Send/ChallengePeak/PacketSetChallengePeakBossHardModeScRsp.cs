@@ -5,7 +5,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.ChallengePeak;
 
 public class PacketSetChallengePeakBossHardModeScRsp : BasePacket
 {
-    public PacketSetChallengePeakBossHardModeScRsp(uint groupId, bool isHard) : base(CmdIds.SetChallengePeakBossHardModeScRsp)
+    public PacketSetChallengePeakBossHardModeScRsp(uint groupId, bool isHard) : base(
+        CmdIds.SetChallengePeakBossHardModeScRsp)
     {
         var proto = new SetChallengePeakBossHardModeScRsp
         {

@@ -14,11 +14,30 @@ using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Challenge.Instances;
 
-public class ChallengeMemoryInstance(PlayerInstance player, ChallengeDataPb data) : BaseLegacyChallengeInstance(player, data)
+public class ChallengeMemoryInstance(PlayerInstance player, ChallengeDataPb data)
+    : BaseLegacyChallengeInstance(player, data)
 {
     #region Properties
 
-    public override ChallengeConfigExcel Config { get; } = GameData.ChallengeConfigData[(int)data.Memory.ChallengeMazeId];
+    public override ChallengeConfigExcel Config { get; } =
+        GameData.ChallengeConfigData[(int)data.Memory.ChallengeMazeId];
+
+    #endregion
+
+    #region Serialization
+
+    public override CurChallenge ToProto()
+    {
+        return new CurChallenge
+        {
+            ChallengeId = Data.Memory.ChallengeMazeId,
+            DeadAvatarNum = Data.Memory.DeadAvatarNum,
+            ExtraLineupType = (ExtraLineupType)Data.Memory.CurrentExtraLineup,
+            Status = (ChallengeStatus)Data.Memory.CurStatus,
+            StageInfo = new ChallengeCurBuffInfo(),
+            RoundCount = (uint)(Config.ChallengeCountDown - Data.Memory.RoundsLeft)
+        };
+    }
 
     #endregion
 
@@ -57,23 +76,6 @@ public class ChallengeMemoryInstance(PlayerInstance player, ChallengeDataPb data
     public override void SetSavedMp(int mp)
     {
         Data.Memory.SavedMp = (uint)mp;
-    }
-
-    #endregion
-
-    #region Serialization
-
-    public override CurChallenge ToProto()
-    {
-        return new CurChallenge
-        {
-            ChallengeId = Data.Memory.ChallengeMazeId,
-            DeadAvatarNum = Data.Memory.DeadAvatarNum,
-            ExtraLineupType = (ExtraLineupType)Data.Memory.CurrentExtraLineup,
-            Status = (ChallengeStatus)Data.Memory.CurStatus,
-            StageInfo = new ChallengeCurBuffInfo(),
-            RoundCount = (uint)(Config.ChallengeCountDown - Data.Memory.RoundsLeft)
-        };
     }
 
     #endregion

@@ -3,7 +3,6 @@ using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Internationalization;
-using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.Command.Command.Cmd;
@@ -105,15 +104,9 @@ public class CommandScene : ICommand
         }
 
         var scene = arg.Target!.Player!.SceneInstance!;
-        foreach (var groupId in scene.Groups)
-        {
-            await scene.UpdateGroupProperty(groupId, "Lock", 0);
-        }
+        foreach (var groupId in scene.Groups) await scene.UpdateGroupProperty(groupId, "Lock", 0);
 
-        foreach (var groupId in scene.Groups)
-        {
-            await scene.UpdateGroupProperty(groupId, "PlateArrived", 2);
-        }
+        foreach (var groupId in scene.Groups) await scene.UpdateGroupProperty(groupId, "PlateArrived", 2);
 
         if (arg.Target.Player.SceneInstance!.FloorId == 20431001)
         {
@@ -124,17 +117,13 @@ public class CommandScene : ICommand
             // update floor saved data
             if (arg.Target.Player.SceneData!.FloorSavedData.TryGetValue(arg.Target.Player.SceneInstance!.FloorId,
                     out var savedData))
-            {
                 savedData[savedValueName] = savedValue;
-            }
             else
-            {
                 arg.Target.Player.SceneData!.FloorSavedData[arg.Target.Player.SceneInstance!.FloorId] =
                     new Dictionary<string, int>
                     {
                         { savedValueName, savedValue }
                     };
-            }
 
             // send packet to client
             await arg.Target.Player.SendPacket(

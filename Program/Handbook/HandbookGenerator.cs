@@ -231,7 +231,8 @@ public static class HandbookGenerator
         }
     }
 
-    public static string GetNameFromTextMap(BigInteger key, Dictionary<BigInteger, string> map, Dictionary<BigInteger, string> fallback)
+    public static string GetNameFromTextMap(BigInteger key, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback)
     {
         if (map.TryGetValue(key, out var value)) return value;
         if (fallback.TryGetValue(key, out value)) return value;

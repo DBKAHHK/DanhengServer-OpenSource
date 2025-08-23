@@ -26,10 +26,7 @@ public class SwitchHandComponent(PlayerInstance player) : BasePlayerComponent(pl
     {
         var excel = GameData.MazePuzzleSwitchHandData.GetValueOrDefault(configId);
         if (excel == null) return (Retcode.RetInteractConfigNotExist, null);
-        if (Player.SceneData!.SwitchHandData.TryGetValue(configId, out var info))
-        {
-            return (Retcode.RetSucc, info);
-        }
+        if (Player.SceneData!.SwitchHandData.TryGetValue(configId, out var info)) return (Retcode.RetSucc, info);
 
         // create a new one
         info = new SwitchHandInfo
@@ -39,7 +36,8 @@ public class SwitchHandComponent(PlayerInstance player) : BasePlayerComponent(pl
         // set default values
         var floorInfo = GameData.GetFloorInfo(excel.FloorID);
         if (floorInfo == null) return (Retcode.RetInteractConfigNotExist, null);
-        if (!floorInfo.Groups.TryGetValue(excel.SwitchHandID[0], out var groupInfo)) return (Retcode.RetReqParaInvalid, null);
+        if (!floorInfo.Groups.TryGetValue(excel.SwitchHandID[0], out var groupInfo))
+            return (Retcode.RetReqParaInvalid, null);
         var prop = groupInfo.PropList.FirstOrDefault(x => x.ID == excel.SwitchHandID[1]);
         if (prop == null) return (Retcode.RetReqParaInvalid, null);
 

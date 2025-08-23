@@ -50,14 +50,12 @@ public class AvatarManager(PlayerInstance player) : BasePlayerManager(player)
         AvatarData.FormalAvatars.Add(avatar);
 
         if (avatarExcel.Rarity == RarityEnum.CombatPowerAvatarRarityType5 && avatarExcel.AvatarID <= 3000)
-        {
             // add development
             Player.FriendRecordData!.AddAndRemoveOld(new FriendDevelopmentInfoPb
             {
                 DevelopmentType = DevelopmentType.DevelopmentUnlockAvatar,
                 Params = { { "AvatarId", (uint)avatarExcel.AvatarID } }
             });
-        }
 
         if (sync)
             await Player.SendPacket(new PacketPlayerSyncScNotify(avatar));

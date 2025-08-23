@@ -646,30 +646,24 @@ public class MissionManager(PlayerInstance player) : BasePlayerManager(player)
 
         HashSet<int> mainIds = [];
         foreach (var mainMission in GameData.MainMissionData.Values)
-        {
-            foreach (var subMission in mainMission.MissionInfo.SubMissionList)
+        foreach (var subMission in mainMission.MissionInfo.SubMissionList)
+            if (targetSubIds.Contains(subMission.ID))
             {
-                if (targetSubIds.Contains(subMission.ID))
+                info.SceneMissionInfo.SubMissionStatusList.Add(new Proto.Mission
                 {
-                    info.SceneMissionInfo.SubMissionStatusList.Add(new Proto.Mission
-                    {
-                        Id = (uint)subMission.ID,
-                        Status = GetSubMissionStatus(subMission.ID).ToProto(),
-                        Progress = (uint)GetMissionProgress(subMission.ID)
-                    });
+                    Id = (uint)subMission.ID,
+                    Status = GetSubMissionStatus(subMission.ID).ToProto(),
+                    Progress = (uint)GetMissionProgress(subMission.ID)
+                });
 
-                    mainIds.Add(mainMission.MainMissionID);
-                }
+                mainIds.Add(mainMission.MainMissionID);
             }
-        }
 
         foreach (var mainId in mainIds)
-        {
             if (GetMainMissionStatus(mainId) == MissionPhaseEnum.Finish)
                 info.SceneMissionInfo.FinishedMainMissionIdList.Add((uint)mainId);
             else if (GetMainMissionStatus(mainId) == MissionPhaseEnum.Accept)
                 info.SceneMissionInfo.UnfinishedMainMissionIdList.Add((uint)mainId);
-        }
     }
 
     #endregion

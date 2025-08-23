@@ -51,10 +51,7 @@ public class EraFlipperSceneComponent(SceneInstance scene) : BaseSceneComponent(
         foreach (var data in dataList)
         {
             SceneInst.Player.SceneData!.EraFlipperData.RegionState[(int)data.EraFlipperRegionId] = (int)data.State;
-            if (data.EraFlipperRegionId == CurRegionId)
-            {
-                RegionState = (int)data.State;
-            }
+            if (data.EraFlipperRegionId == CurRegionId) RegionState = (int)data.State;
         }
     }
 }

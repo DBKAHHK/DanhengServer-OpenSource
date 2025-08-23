@@ -237,10 +237,13 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
                     BattleStageId = (uint)(Stages.FirstOrDefault()?.StageID ?? 0),
                     BattleWaveId = (uint)(proto.MonsterWaveList.Count + 1),
                     MonsterParam = new SceneMonsterWaveParam(),
-                    MonsterList = { waveIds.Select(x => new SceneMonster
+                    MonsterList =
                     {
-                        MonsterId = (uint)x
-                    }) }
+                        waveIds.Select(x => new SceneMonster
+                        {
+                            MonsterId = (uint)x
+                        })
+                    }
                 });
             }
         }
@@ -279,16 +282,12 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
 
         // global buff
         foreach (var buff in GameData.AvatarGlobalBuffConfigData.Values)
-        {
             if (Player.AvatarManager!.GetFormalAvatar(buff.AvatarID) != null)
-            {
                 // add buff
                 Buffs.Add(new MazeBuff(buff.MazeBuffID, 1, -1)
                 {
                     WaveFlag = -1
                 });
-            }
-        }
 
         foreach (var buff in Buffs)
         {

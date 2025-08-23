@@ -16,14 +16,10 @@ public class HandlerMazeKillDirectCsReq : Handler
         {
             if (!connection.Player!.SceneInstance!.Entities.TryGetValue((int)entityId, out var entity)) continue;
             if (entity is EntityMonster monster)
-            {
                 await monster.Kill();
-            }
             else
-            {
                 // remove entity if it's not a monster
                 connection.Player.SceneInstance.Entities.Remove((int)entityId);
-            }
         }
 
         await connection.SendPacket(new PacketMazeKillDirectScRsp(req.EntityList.ToList()));

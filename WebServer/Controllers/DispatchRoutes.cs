@@ -35,15 +35,13 @@ public class DispatchRoutes
             });
 
         foreach (var region in Config.ServerOption.ServerConfig.Regions)
-        {
             data.RegionList.Add(new RegionInfo
             {
                 Name = region.GameServerId,
                 DisplayName = region.GameServerName,
                 EnvType = region.EnvType.ToString(),
-                DispatchUrl = region.GateWayAddress,
+                DispatchUrl = region.GateWayAddress
             });
-        }
 
         Logger.Info("Client request: query_dispatch");
         return Convert.ToBase64String(data.ToByteArray());

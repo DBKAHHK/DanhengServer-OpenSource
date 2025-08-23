@@ -67,7 +67,8 @@ public class PacketSceneGroupRefreshScNotify : BasePacket
     {
     }
 
-    public PacketSceneGroupRefreshScNotify(SceneInstance scene, List<GroupPropertyRefreshData> refreshDataList) :base(CmdIds.SceneGroupRefreshScNotify)
+    public PacketSceneGroupRefreshScNotify(SceneInstance scene, List<GroupPropertyRefreshData> refreshDataList) : base(
+        CmdIds.SceneGroupRefreshScNotify)
     {
         var proto = new SceneGroupRefreshScNotify
         {
@@ -83,6 +84,7 @@ public class PacketSceneGroupRefreshScNotify : BasePacket
                 list = [];
                 refreshDataDict[data.GroupId] = list;
             }
+
             list.Add(data);
         }
 
@@ -95,14 +97,12 @@ public class PacketSceneGroupRefreshScNotify : BasePacket
             };
 
             foreach (var data in dataList)
-            {
                 group.RefreshProperty.Add(new ScenePropertyRefreshInfo
                 {
                     GroupNewPropertyValue = data.NewValue,
                     GroupOldPropertyValue = data.OldValue,
                     GroupPropertyName = data.PropertyName
                 });
-            }
 
             proto.GroupRefreshList.Add(group);
         }

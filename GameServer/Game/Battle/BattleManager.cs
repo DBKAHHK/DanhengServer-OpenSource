@@ -20,7 +20,8 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
     public StageConfigExcel? NextBattleStageConfig { get; set; }
     public List<int> NextBattleMonsterIds { get; set; } = [];
 
-    public async ValueTask<BattleInstance?> StartBattle(BaseGameEntity attackEntity, List<BaseGameEntity> targetEntityList,
+    public async ValueTask<BattleInstance?> StartBattle(BaseGameEntity attackEntity,
+        List<BaseGameEntity> targetEntityList,
         bool isSkill)
     {
         if (Player.BattleInstance != null) return Player.BattleInstance;

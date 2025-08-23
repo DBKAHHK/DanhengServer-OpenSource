@@ -65,17 +65,15 @@ public class ChallengeEntityLoader(SceneInstance scene, PlayerInstance player) :
         // Get current stage monster infos
         var stages = instance.GetStageMonsters();
 
-        if (!stages.TryGetValue(group.Id, out var challengeMonsters))
-        {
-            return null;
-        }
+        if (!stages.TryGetValue(group.Id, out var challengeMonsters)) return null;
 
         // Get challenge monster info
         if (challengeMonsters.All(x => x.ConfigId != info.ID)) return null;
         var challengeMonsterInfo = challengeMonsters.First(x => x.ConfigId == info.ID);
 
         // Get excels from game data
-        if (!GameData.NpcMonsterDataData.TryGetValue(challengeMonsterInfo.NpcMonsterId, out var npcMonsterExcel)) return null;
+        if (!GameData.NpcMonsterDataData.TryGetValue(challengeMonsterInfo.NpcMonsterId, out var npcMonsterExcel))
+            return null;
 
         // Create monster from group monster info
         var entity = new EntityMonster(Scene, info.ToPositionProto(), info.ToRotationProto(), group.Id, info.ID,

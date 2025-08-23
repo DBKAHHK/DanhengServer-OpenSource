@@ -37,6 +37,36 @@ public class EntityMonster(
     public override int EntityId { get; set; } = 0;
     public override int GroupId { get; set; } = groupId;
 
+    public List<string> Modifiers { get; set; } = [];
+
+    public async ValueTask AddModifier(string modifierName)
+    {
+        if (Modifiers.Contains(modifierName)) return;
+
+        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
+        GameData.AdventureAbilityConfigListData.TryGetValue(MonsterData.ID, out var ability);
+        if (modifier == null || ability == null) return;
+
+        await Scene.Player.TaskManager!.AbilityLevelTask.TriggerTasks(ability, modifier.OnCreate, this, [],
+            new SceneCastSkillCsReq());
+
+        Modifiers.Add(modifierName);
+    }
+
+    public async ValueTask RemoveModifier(string modifierName)
+    {
+        if (!Modifiers.Contains(modifierName)) return;
+
+        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
+        GameData.AdventureAbilityConfigListData.TryGetValue(MonsterData.ID, out var ability);
+        if (modifier == null || ability == null) return;
+
+        await Scene.Player.TaskManager!.AbilityLevelTask.TriggerTasks(ability, modifier.OnDestroy, this, [],
+            new SceneCastSkillCsReq());
+
+        Modifiers.Remove(modifierName);
+    }
+
     public override async ValueTask AddBuff(SceneBuff buff)
     {
         if (!GameData.MazeBuffData.TryGetValue(buff.BuffId * 10 + buff.BuffLevel, out var buffExcel)) return;
@@ -100,36 +130,6 @@ public class EntityMonster(
             };
 
         return proto;
-    }
-
-    public List<string> Modifiers { get; set; } = [];
-
-    public async ValueTask AddModifier(string modifierName)
-    {
-        if (Modifiers.Contains(modifierName)) return;
-
-        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
-        GameData.AdventureAbilityConfigListData.TryGetValue(MonsterData.ID, out var ability);
-        if (modifier == null || ability == null) return;
-
-        await Scene.Player.TaskManager!.AbilityLevelTask.TriggerTasks(ability, modifier.OnCreate, this, [],
-            new SceneCastSkillCsReq());
-
-        Modifiers.Add(modifierName);
-    }
-
-    public async ValueTask RemoveModifier(string modifierName)
-    {
-        if (!Modifiers.Contains(modifierName)) return;
-
-        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
-        GameData.AdventureAbilityConfigListData.TryGetValue(MonsterData.ID, out var ability);
-        if (modifier == null || ability == null) return;
-
-        await Scene.Player.TaskManager!.AbilityLevelTask.TriggerTasks(ability, modifier.OnDestroy, this, [],
-            new SceneCastSkillCsReq());
-
-        Modifiers.Remove(modifierName);
     }
 
     public async ValueTask RemoveBuff(int buffId)

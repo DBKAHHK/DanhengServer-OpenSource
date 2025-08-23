@@ -22,7 +22,8 @@ public class HandlerPlayerGetTokenCsReq : Handler
         // call dispatch /get_account_info api to get account info
         int uid;
 
-        if (ConfigManager.Config.ServerOption.ServerConfig.RunDispatch || string.IsNullOrEmpty(ConfigManager.Config.ServerOption.ServerConfig.FromDispatchBaseUrl))
+        if (ConfigManager.Config.ServerOption.ServerConfig.RunDispatch ||
+            string.IsNullOrEmpty(ConfigManager.Config.ServerOption.ServerConfig.FromDispatchBaseUrl))
         {
             // dispatch running, use local db
             var account = DatabaseHelper.Instance?.GetInstance<AccountData>(int.Parse(req.AccountUid));

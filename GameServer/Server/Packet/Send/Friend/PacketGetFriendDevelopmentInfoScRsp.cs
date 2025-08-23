@@ -20,13 +20,9 @@ public class PacketGetFriendDevelopmentInfoScRsp : BasePacket
     public PacketGetFriendDevelopmentInfoScRsp(FriendRecordData data) : base(CmdIds.GetFriendDevelopmentInfoScRsp)
     {
         foreach (var friendDevelopmentInfoPb in data.DevelopmentInfos.ToArray())
-        {
             if (Extensions.GetUnixSec() - friendDevelopmentInfoPb.Time >=
                 TimeSpan.TicksPerDay * 7 / TimeSpan.TicksPerSecond)
-            {
                 data.DevelopmentInfos.Remove(friendDevelopmentInfoPb);
-            }
-        }
 
         var proto = new GetFriendDevelopmentInfoScRsp
         {

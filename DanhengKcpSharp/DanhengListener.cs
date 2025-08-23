@@ -8,6 +8,8 @@ namespace EggLink.DanhengServer.Kcp;
 
 public class DanhengListener
 {
+    public delegate DanhengConnection ConnectionCreatedHandler(KcpConversation conversation, IPEndPoint remote);
+
     private static UdpClient? UDPClient;
     private static IPEndPoint? ListenAddress;
     private static IKcpTransport<IKcpMultiplexConnection>? KCPTransport;
@@ -25,7 +27,6 @@ public class DanhengListener
         KeepAliveOptions = new KcpKeepAliveOptions(1000, 30000)
     };
 
-    public delegate DanhengConnection ConnectionCreatedHandler(KcpConversation conversation, IPEndPoint remote);
     public static ConnectionCreatedHandler? CreateConnection { get; set; } = null;
 
     private static Socket? UDPListener => UDPClient?.Client;

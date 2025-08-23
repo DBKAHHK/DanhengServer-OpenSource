@@ -15,7 +15,7 @@ public class RainbowSceneComponent(SceneInstance scene) : BaseSceneComponent(sce
         CurTargetPuzzleGroupId =
             SceneInst.Player.SceneData!.FloorTargetPuzzleGroupData.GetValueOrDefault(SceneInst.FloorId, 0);
 
-        SceneInst.GroupPropertyUpdated += GroupPropertyUpdated; 
+        SceneInst.GroupPropertyUpdated += GroupPropertyUpdated;
         return ValueTask.CompletedTask;
     }
 
@@ -39,7 +39,6 @@ public class RainbowSceneComponent(SceneInstance scene) : BaseSceneComponent(sce
     private async ValueTask ExecuteRainbowActions(List<RainbowActionInfo> actions)
     {
         foreach (var action in actions)
-        {
             switch (action.ActionType)
             {
                 case SceneActionTypeEnum.Unknown:
@@ -66,7 +65,6 @@ public class RainbowSceneComponent(SceneInstance scene) : BaseSceneComponent(sce
                     await CallCurrentTargetPuzzlePropertyChanged(action.Params);
                     break;
             }
-        }
     }
 
     private async ValueTask SetGroupProperty(Dictionary<string, object> param)
@@ -116,10 +114,8 @@ public class RainbowSceneComponent(SceneInstance scene) : BaseSceneComponent(sce
         // check if group property value equal to target value
         var groupPropertyValue = SceneInst.GetGroupProperty(groupId, propertyName);
         if (groupPropertyValue == propertyValue)
-        {
             // execute actions
             await ExecuteRainbowActions(actions);
-        }
     }
 
     private async ValueTask SetFloorSavedValue(Dictionary<string, object> param)
@@ -136,7 +132,7 @@ public class RainbowSceneComponent(SceneInstance scene) : BaseSceneComponent(sce
     private async ValueTask CallCurrentTargetPuzzlePropertyAction(Dictionary<string, object> param)
     {
         var propertyName = (string)(param.GetValueOrDefault("PropertyName") ?? string.Empty);
-        
+
         if (string.IsNullOrEmpty(propertyName)) return;
 
         // get current target puzzle group actions
@@ -147,7 +143,8 @@ public class RainbowSceneComponent(SceneInstance scene) : BaseSceneComponent(sce
         var propertyAction = modifiedGroupActions.GetValueOrDefault(propertyName);
 
         // get cur actions
-        var targetActions = propertyAction?.GetValueOrDefault(SceneInst.GetGroupProperty(CurTargetPuzzleGroupId, propertyName));
+        var targetActions =
+            propertyAction?.GetValueOrDefault(SceneInst.GetGroupProperty(CurTargetPuzzleGroupId, propertyName));
         if (targetActions == null) return;
 
         // execute actions
@@ -158,7 +155,7 @@ public class RainbowSceneComponent(SceneInstance scene) : BaseSceneComponent(sce
     {
         var propertyName = (string)(param.GetValueOrDefault("PropertyName") ?? string.Empty);
         var propertyValue = (int)(long)(param.GetValueOrDefault("PropertyValue") ?? 0);
-        
+
         if (string.IsNullOrEmpty(propertyName)) return;
 
         // get current target puzzle group actions

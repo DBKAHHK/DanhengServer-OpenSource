@@ -6,7 +6,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.SwitchHand;
 
 public class PacketSwitchHandUpdateScRsp : BasePacket
 {
-    public PacketSwitchHandUpdateScRsp(SwitchHandInfo info, HandOperationInfo? operationInfo) : base(CmdIds.SwitchHandUpdateScRsp)
+    public PacketSwitchHandUpdateScRsp(SwitchHandInfo info, HandOperationInfo? operationInfo) : base(
+        CmdIds.SwitchHandUpdateScRsp)
     {
         var proto = new SwitchHandUpdateScRsp
         {
@@ -16,7 +17,8 @@ public class PacketSwitchHandUpdateScRsp : BasePacket
         SetData(proto);
     }
 
-    public PacketSwitchHandUpdateScRsp(Retcode ret, HandOperationInfo? operationInfo) : base(CmdIds.SwitchHandUpdateScRsp)
+    public PacketSwitchHandUpdateScRsp(Retcode ret, HandOperationInfo? operationInfo) : base(
+        CmdIds.SwitchHandUpdateScRsp)
     {
         var proto = new SwitchHandUpdateScRsp
         {

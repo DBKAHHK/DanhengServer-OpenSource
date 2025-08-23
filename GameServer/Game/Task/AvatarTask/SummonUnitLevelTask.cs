@@ -1,9 +1,9 @@
-﻿using EggLink.DanhengServer.Data.Config.Task;
+﻿using System.Collections.Concurrent;
+using EggLink.DanhengServer.Data.Config.Task;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Proto;
-using System.Collections.Concurrent;
 using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Task.AvatarTask;
@@ -12,7 +12,8 @@ public class SummonUnitLevelTask
 {
     #region Task Condition
 
-    public async ValueTask<object?> ByIsContainAdventureModifier(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
+    public async ValueTask<object?> ByIsContainAdventureModifier(TaskConfigInfo act,
+        List<BaseGameEntity> targetEntities,
         EntitySummonUnit? summonUnit)
     {
         await ValueTask.CompletedTask;
@@ -24,7 +25,8 @@ public class SummonUnitLevelTask
 
     #region Manage
 
-    public void TriggerTasks(List<TaskConfigInfo> tasks, List<BaseGameEntity> targetEntities, EntitySummonUnit? summonUnit)
+    public void TriggerTasks(List<TaskConfigInfo> tasks, List<BaseGameEntity> targetEntities,
+        EntitySummonUnit? summonUnit)
     {
         foreach (var task in tasks) TriggerTask(task, targetEntities, summonUnit);
     }
@@ -55,12 +57,13 @@ public class SummonUnitLevelTask
         if (methodProp == null) return null;
 
         method = (ExecuteTask)Delegate.CreateDelegate(typeof(ExecuteTask), this, methodProp);
-        _cachedTasks[methodName] = method;  // cached
+        _cachedTasks[methodName] = method; // cached
 
         return method;
     }
 
-    private delegate ValueTask<object?> ExecuteTask(TaskConfigInfo act, List<BaseGameEntity> targetEntities, EntitySummonUnit? summonUnit);
+    private delegate ValueTask<object?> ExecuteTask(TaskConfigInfo act, List<BaseGameEntity> targetEntities,
+        EntitySummonUnit? summonUnit);
 
     private readonly ConcurrentDictionary<string, ExecuteTask> _cachedTasks = [];
 

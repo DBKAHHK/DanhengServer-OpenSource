@@ -16,12 +16,8 @@ public class HandlerSwitchHandResetGameCsReq : Handler
         var info = component.UpdateHandInfo(req.ResetHandInfo);
 
         if (info.Item2 == null)
-        {
             await connection.SendPacket(new PacketSwitchHandResetGameScRsp(info.Item1));
-        }
         else
-        {
             await connection.SendPacket(new PacketSwitchHandResetGameScRsp(info.Item2));
-        }
     }
 }

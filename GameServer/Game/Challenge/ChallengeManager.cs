@@ -10,7 +10,6 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Proto.ServerSide;
 using Google.Protobuf;
-using System;
 using static EggLink.DanhengServer.GameServer.Plugin.Event.PluginEvent;
 
 namespace EggLink.DanhengServer.GameServer.Game.Challenge;
@@ -285,7 +284,6 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
         var proto = ChallengeDataPb.Parser.ParseFrom(protoByte);
 
         if (proto != null)
-        {
             ChallengeInstance = proto.ChallengeTypeCase switch
             {
                 ChallengeDataPb.ChallengeTypeOneofCase.Memory => new ChallengeMemoryInstance(Player, proto),
@@ -294,11 +292,8 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
                 ChallengeDataPb.ChallengeTypeOneofCase.Boss => new ChallengeBossInstance(Player, proto),
                 _ => null
             };
-        }
         else
-        {
             ChallengeData.ChallengeInstance = null;
-        }
     }
 
     public void SaveBattleRecord(BaseLegacyChallengeInstance inst)

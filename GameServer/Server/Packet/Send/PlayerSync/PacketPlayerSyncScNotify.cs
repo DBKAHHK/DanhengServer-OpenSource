@@ -16,10 +16,7 @@ public class PacketPlayerSyncScNotify : BasePacket
     {
         var proto = new PlayerSyncScNotify();
 
-        foreach (var data in datas)
-        {
-            data.SyncData(proto);
-        }
+        foreach (var data in datas) data.SyncData(proto);
 
         SetData(proto);
     }

@@ -5,7 +5,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.ChallengePeak;
 
 public class PacketChallengePeakGroupDataUpdateScNotify : BasePacket
 {
-    public PacketChallengePeakGroupDataUpdateScNotify(ChallengePeakLevelInfo info) : base(CmdIds.ChallengePeakGroupDataUpdateScNotify)
+    public PacketChallengePeakGroupDataUpdateScNotify(ChallengePeakLevelInfo info) : base(
+        CmdIds.ChallengePeakGroupDataUpdateScNotify)
     {
         var proto = new ChallengePeakGroupDataUpdateScNotify
         {

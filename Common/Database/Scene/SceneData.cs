@@ -51,10 +51,7 @@ public class SceneData : BaseDatabaseDataHelper
 
     public int GetFloorSavedValue(int floorId, string key)
     {
-        if (FloorSavedData.TryGetValue(floorId, out var data) && data.TryGetValue(key, out var value))
-        {
-            return value;
-        }
+        if (FloorSavedData.TryGetValue(floorId, out var data) && data.TryGetValue(key, out var value)) return value;
 
         // get default value if not found
         var floor = GameData.GetFloorInfo(floorId);
@@ -70,10 +67,7 @@ public class SceneData : BaseDatabaseDataHelper
         if (floor == null) return [];
 
         var savedValues = new Dictionary<string, int>();
-        foreach (var value in floor.FloorSavedValue)
-        {
-            savedValues[value.Name] = GetFloorSavedValue(floorId, value.Name);
-        }
+        foreach (var value in floor.FloorSavedValue) savedValues[value.Name] = GetFloorSavedValue(floorId, value.Name);
 
         return savedValues;
     }

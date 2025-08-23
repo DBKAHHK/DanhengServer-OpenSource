@@ -6,7 +6,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.ChallengePeak;
 
 public class PacketChallengePeakSettleScNotify : BasePacket
 {
-    public PacketChallengePeakSettleScNotify(ChallengePeakInstance inst, List<uint> targetIdList) : base(CmdIds.ChallengePeakSettleScNotify)
+    public PacketChallengePeakSettleScNotify(ChallengePeakInstance inst, List<uint> targetIdList) : base(
+        CmdIds.ChallengePeakSettleScNotify)
     {
         var proto = new ChallengePeakSettleScNotify
         {

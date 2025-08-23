@@ -13,7 +13,6 @@ public abstract class BaseChallengeInstance(PlayerInstance player, ChallengeData
 
     public virtual void OnBattleStart(BattleInstance battle)
     {
-
     }
 
     public virtual async ValueTask OnBattleEnd(BattleInstance battle, PVEBattleResultCsReq req)
@@ -23,5 +22,7 @@ public abstract class BaseChallengeInstance(PlayerInstance player, ChallengeData
 
     public abstract Dictionary<int, List<ChallengeConfigExcel.ChallengeMonsterInfo>> GetStageMonsters();
 
-    public virtual void OnUpdate() { }
+    public virtual void OnUpdate()
+    {
+    }
 }

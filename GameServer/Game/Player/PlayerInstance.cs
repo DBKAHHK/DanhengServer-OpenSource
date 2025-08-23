@@ -238,13 +238,9 @@ public partial class PlayerInstance(PlayerData data)
         if (ConfigManager.Config.ServerOption.EnableMission) await MissionManager!.AcceptMainMissionByCondition();
 
         foreach (var friendDevelopmentInfoPb in FriendRecordData.DevelopmentInfos.ToArray())
-        {
             if (Extensions.GetUnixSec() - friendDevelopmentInfoPb.Time >=
                 TimeSpan.TicksPerDay * 7 / TimeSpan.TicksPerSecond)
-            {
                 FriendRecordData.DevelopmentInfos.Remove(friendDevelopmentInfoPb);
-            }
-        }
 
         await QuestManager!.AcceptQuestByCondition();
     }
@@ -497,7 +493,8 @@ public partial class PlayerInstance(PlayerData data)
 
     public T GetComponent<T>() where T : BasePlayerComponent
     {
-        return Components.OfType<T>().FirstOrDefault() ?? throw new InvalidOperationException($"Component {typeof(T)} not found.");
+        return Components.OfType<T>().FirstOrDefault() ??
+               throw new InvalidOperationException($"Component {typeof(T)} not found.");
     }
 
     #endregion

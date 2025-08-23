@@ -20,7 +20,8 @@ public class MissionHandlerGroupPropertyValue : MissionFinishTypeHandler
         if (prop == value) await player.MissionManager!.FinishSubMission(info.ID);
     }
 
-    public override async ValueTask HandleQuestFinishType(PlayerInstance player, QuestDataExcel quest, FinishWayExcel excel, object? arg)
+    public override async ValueTask HandleQuestFinishType(PlayerInstance player, QuestDataExcel quest,
+        FinishWayExcel excel, object? arg)
     {
         var floorId = excel.MazeFloorID;
         var groupId = excel.ParamInt1;

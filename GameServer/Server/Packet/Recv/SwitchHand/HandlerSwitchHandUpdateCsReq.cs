@@ -15,12 +15,8 @@ public class HandlerSwitchHandUpdateCsReq : Handler
         var component = connection.Player!.GetComponent<SwitchHandComponent>();
         var info = component.UpdateHandInfo(req.OperationHandInfo);
         if (info.Item2 == null)
-        {
             await connection.SendPacket(new PacketSwitchHandUpdateScRsp(info.Item1, req.HandOperationInfo));
-        }
         else
-        {
             await connection.SendPacket(new PacketSwitchHandUpdateScRsp(info.Item2, req.HandOperationInfo));
-        }
     }
 }

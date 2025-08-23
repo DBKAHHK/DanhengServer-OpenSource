@@ -15,7 +15,8 @@ public class PacketUpdateGroupPropertyScRsp : BasePacket
         SetData(proto);
     }
 
-    public PacketUpdateGroupPropertyScRsp(GroupPropertyRefreshData data, UpdateGroupPropertyCsReq req) : base(CmdIds.UpdateGroupPropertyScRsp)
+    public PacketUpdateGroupPropertyScRsp(GroupPropertyRefreshData data, UpdateGroupPropertyCsReq req) : base(
+        CmdIds.UpdateGroupPropertyScRsp)
     {
         var proto = new UpdateGroupPropertyScRsp
         {

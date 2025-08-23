@@ -10,7 +10,8 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.Friend;
 
 public class PacketGetFriendBattleRecordDetailScRsp : BasePacket
 {
-    public PacketGetFriendBattleRecordDetailScRsp(FriendRecordData recordData, ChallengeData challengeData, AvatarData avatarData) : base(
+    public PacketGetFriendBattleRecordDetailScRsp(FriendRecordData recordData, ChallengeData challengeData,
+        AvatarData avatarData) : base(
         CmdIds.GetFriendBattleRecordDetailScRsp)
     {
         var proto = new GetFriendBattleRecordDetailScRsp
@@ -35,7 +36,7 @@ public class PacketGetFriendBattleRecordDetailScRsp : BasePacket
             {
                 var stt = new PreLevelStatistics
                 {
-                    PeakLevelId = (uint)preId,
+                    PeakLevelId = (uint)preId
                 };
 
                 var rec = challengeData.PeakLevelDatas.GetValueOrDefault(preId);
@@ -51,7 +52,9 @@ public class PacketGetFriendBattleRecordDetailScRsp : BasePacket
                                 Index = index++,
                                 Id = x,
                                 AvatarType = AvatarType.AvatarFormalType,
-                                Level = (uint)(avatarData.FormalAvatars.Find(avatar => avatar.BaseAvatarId == x)?.Level ?? 1)
+                                Level =
+                                    (uint)(avatarData.FormalAvatars.Find(avatar => avatar.BaseAvatarId == x)?.Level ??
+                                           1)
                             })
                         }
                     };
@@ -62,10 +65,9 @@ public class PacketGetFriendBattleRecordDetailScRsp : BasePacket
                 peakRec.PreLevelSttList.Add(stt);
             }
 
-            var bossRec = challengeData.PeakBossLevelDatas.GetValueOrDefault(data.BossLevelID << 2 | 1);
-            bossRec ??= challengeData.PeakBossLevelDatas.GetValueOrDefault(data.BossLevelID << 2 | 0);
+            var bossRec = challengeData.PeakBossLevelDatas.GetValueOrDefault((data.BossLevelID << 2) | 1);
+            bossRec ??= challengeData.PeakBossLevelDatas.GetValueOrDefault((data.BossLevelID << 2) | 0);
             if (bossRec != null)
-            {
                 peakRec.BossLevelStt = new BossLevelStatistics
                 {
                     PeakLevelId = (uint)bossRec.LevelId,
@@ -79,13 +81,14 @@ public class PacketGetFriendBattleRecordDetailScRsp : BasePacket
                                 Index = (uint)index,
                                 Id = x,
                                 AvatarType = AvatarType.AvatarFormalType,
-                                Level = (uint)(avatarData.FormalAvatars.Find(avatar => avatar.BaseAvatarId == x)?.Level ?? 1)
+                                Level =
+                                    (uint)(avatarData.FormalAvatars.Find(avatar => avatar.BaseAvatarId == x)?.Level ??
+                                           1)
                             })
                         }
                     },
                     LeastRoundsCount = bossRec.RoundCnt
                 };
-            }
 
             proto.PeakRecord.Add(peakRec);
         }
@@ -101,5 +104,5 @@ public class PacketGetFriendBattleRecordDetailScRsp : BasePacket
         };
 
         SetData(proto);
-    } 
+    }
 }

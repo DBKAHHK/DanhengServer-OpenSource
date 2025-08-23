@@ -47,7 +47,8 @@ public class ResourceManager
         GameData.RogueMiracleGroupData =
             LoadCustomFile<Dictionary<int, List<int>>>("Rogue Miracle Group", "RogueMiracleGroup") ?? [];
         GameData.SceneRainbowGroupPropertyData =
-            LoadCustomFile<SceneRainbowGroupPropertyConfig>("Scene Rainbow Group Property", "SceneRainbowGroupProperty") ?? new SceneRainbowGroupPropertyConfig();
+            LoadCustomFile<SceneRainbowGroupPropertyConfig>("Scene Rainbow Group Property",
+                "SceneRainbowGroupProperty") ?? new SceneRainbowGroupPropertyConfig();
         GameData.RogueMiracleEffectData =
             LoadCustomFile<RogueMiracleEffectConfig>("Rogue Miracle Effect", "RogueMiracleEffectGen") ??
             new RogueMiracleEffectConfig();

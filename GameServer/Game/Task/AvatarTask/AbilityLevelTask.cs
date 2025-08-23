@@ -46,7 +46,8 @@ public class AbilityLevelTask(PlayerInstance player)
     #region Manage
 
     public async ValueTask<AbilityLevelResult> TriggerTasks(AdventureAbilityConfigListInfo abilities,
-        List<TaskConfigInfo> tasks, BaseGameEntity casterEntity, List<BaseGameEntity> targetEntities, SceneCastSkillCsReq req,
+        List<TaskConfigInfo> tasks, BaseGameEntity casterEntity, List<BaseGameEntity> targetEntities,
+        SceneCastSkillCsReq req,
         string? modifierName = null)
     {
         BattleInstance? instance = null;
@@ -98,7 +99,7 @@ public class AbilityLevelTask(PlayerInstance player)
         if (methodProp == null) return null;
 
         method = (ExecuteTask)Delegate.CreateDelegate(typeof(ExecuteTask), this, methodProp);
-        _cachedTasks[methodName] = method;  // cached
+        _cachedTasks[methodName] = method; // cached
 
         return method;
     }
@@ -127,13 +128,9 @@ public class AbilityLevelTask(PlayerInstance player)
             {
                 var resp = await method(param with { Act = predicateTaskList.Predicate });
                 if (resp is not bool r)
-                {
                     res = false;
-                }
                 else
-                {
                     res = predicateTaskList.Predicate.Inverse ? !r : r;
-                }
             }
 
             if (res)

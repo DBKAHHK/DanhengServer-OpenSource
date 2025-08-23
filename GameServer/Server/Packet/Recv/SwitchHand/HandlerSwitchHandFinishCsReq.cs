@@ -14,12 +14,8 @@ public class HandlerSwitchHandFinishCsReq : Handler
         var info = component.GetHandInfo(component.RunningHandConfigId);
         component.RunningHandConfigId = 0;
         if (info.Item2 == null)
-        {
             await connection.SendPacket(new PacketSwitchHandFinishScRsp(info.Item1));
-        }
         else
-        {
             await connection.SendPacket(new PacketSwitchHandFinishScRsp(info.Item2));
-        }
     }
 }

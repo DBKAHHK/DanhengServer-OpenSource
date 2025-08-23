@@ -1,5 +1,4 @@
 ﻿using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Enums.Avatar;
@@ -284,6 +283,7 @@ public class FormalAvatarInfo : BaseAvatarInfo
             }
         };
     }
+
     public List<MultiPathAvatarInfo> ToAvatarPathProto()
     {
         var res = new List<MultiPathAvatarInfo>();
@@ -537,13 +537,10 @@ public class PathInfo(int pathId)
 
     public Dictionary<int, int> GetSkillTree()
     {
-        if (EnhanceInfos.TryGetValue(EnhanceId, out var enhance))
-        {
-            return enhance.SkillTree;
-        }
+        if (EnhanceInfos.TryGetValue(EnhanceId, out var enhance)) return enhance.SkillTree;
 
         EnhanceInfos[EnhanceId] = new EnhanceInfo(EnhanceId);
-        
+
         // create default skill tree
         var avatarExcel = GameData.AvatarConfigData.GetValueOrDefault(PathId);
         if (avatarExcel == null) return [];
@@ -551,10 +548,7 @@ public class PathInfo(int pathId)
         var skills = avatarExcel.DefaultSkillTree.GetValueOrDefault(EnhanceId);
         if (skills == null) return [];
 
-        foreach (var skill in skills)
-        {
-            EnhanceInfos[EnhanceId].SkillTree.Add(skill.PointID, skill.Level);
-        }
+        foreach (var skill in skills) EnhanceInfos[EnhanceId].SkillTree.Add(skill.PointID, skill.Level);
 
         return EnhanceInfos[EnhanceId].SkillTree;
     }

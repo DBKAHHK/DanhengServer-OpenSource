@@ -61,7 +61,8 @@ public class RaidManager : BasePlayerManager
 
     #region Player Action
 
-    public async ValueTask<RaidRecord?> EnterRaid(int raidId, int worldLevel, List<int>? avatarList = null, bool enterSaved = false)
+    public async ValueTask<RaidRecord?> EnterRaid(int raidId, int worldLevel, List<int>? avatarList = null,
+        bool enterSaved = false)
     {
         if (RaidData.CurRaidId != 0) return null;
 
@@ -279,9 +280,7 @@ public class RaidManager : BasePlayerManager
             GameData.MainMissionData.TryGetValue(missionId, out var mission);
             if (mission?.MissionInfo.SubMissionList == null) continue;
             foreach (var i in mission.MissionInfo.SubMissionList.Select(x => x.LevelFloorID).ToHashSet())
-            {
                 floorIds.Add(i);
-            }
         }
 
         dict.Remove(worldLevel);

@@ -79,32 +79,32 @@ public partial class PlayerInstance
                 switch (newState)
                 {
                     case PropStateEnum.Closed:
-                        {
-                            foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupId))
-                                if (p.Excel.PropType == PropTypeEnum.PROP_TREASURE_CHEST)
-                                {
-                                    await p.SetState(PropStateEnum.ChestClosed);
-                                }
-                                else if (p.Excel.PropType == prop.Excel.PropType)
-                                {
-                                    // Skip
-                                }
-                                else
-                                {
-                                    await p.SetState(PropStateEnum.Open);
-                                }
-
-                            break;
-                        }
-                    case PropStateEnum.Open:
-                        {
-                            foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupId).Where(p =>
-                                         p.Excel.PropType is not PropTypeEnum.PROP_TREASURE_CHEST &&
-                                         p.Excel.PropType != prop.Excel.PropType))
+                    {
+                        foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupId))
+                            if (p.Excel.PropType == PropTypeEnum.PROP_TREASURE_CHEST)
+                            {
+                                await p.SetState(PropStateEnum.ChestClosed);
+                            }
+                            else if (p.Excel.PropType == prop.Excel.PropType)
+                            {
+                                // Skip
+                            }
+                            else
+                            {
                                 await p.SetState(PropStateEnum.Open);
+                            }
 
-                            break;
-                        }
+                        break;
+                    }
+                    case PropStateEnum.Open:
+                    {
+                        foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupId).Where(p =>
+                                     p.Excel.PropType is not PropTypeEnum.PROP_TREASURE_CHEST &&
+                                     p.Excel.PropType != prop.Excel.PropType))
+                            await p.SetState(PropStateEnum.Open);
+
+                        break;
+                    }
                 }
 
                 break;
@@ -142,9 +142,7 @@ public partial class PlayerInstance
                 if (prop.Excel.ID == 104039)
                 {
                     foreach (var p in SceneInstance.GetEntitiesInGroup<EntityProp>(prop.GroupId))
-                    {
                         await p.SetState(newState);
-                    }
 
                     await MissionManager!.OnPlayerInteractWithProp();
                 }
@@ -378,7 +376,8 @@ public partial class PlayerInstance
         Data.Pos = pos;
         Data.Rot = rot;
         var notSendMove = true;
-        if (planeId != Data.PlaneId || floorId != Data.FloorId || entryId != Data.EntryId || SceneInstance == null || !mapTp)
+        if (planeId != Data.PlaneId || floorId != Data.FloorId || entryId != Data.EntryId || SceneInstance == null ||
+            !mapTp)
         {
             if (SceneInstance != null)
                 await SceneInstance.OnDestroy();

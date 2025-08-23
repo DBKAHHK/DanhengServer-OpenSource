@@ -16,15 +16,6 @@ namespace EggLink.DanhengServer.GameServer.Game.Challenge.Instances;
 
 public class ChallengePeakInstance(PlayerInstance player, ChallengeDataPb data) : BaseChallengeInstance(player, data)
 {
-
-    #region Properties
-
-    public ChallengePeakConfigExcel Config { get; } = GameData.ChallengePeakConfigData[(int)data.Peak.CurrentPeakLevelId];
-    public List<int> AllBattleTargets { get; } = [];
-    public bool IsWin { get; private set; }
-
-    #endregion
-
     #region Setter & Getter
 
     public override Dictionary<int, List<ChallengeConfigExcel.ChallengeMonsterInfo>> GetStageMonsters()
@@ -35,13 +26,21 @@ public class ChallengePeakInstance(PlayerInstance player, ChallengeDataPb data) 
 
         monsters.Add(Config.MazeGroupID, []);
         for (var i = 0; i < Config.ConfigIDList.Count; i++)
-        {
             monsters[Config.MazeGroupID].Add(new ChallengeConfigExcel.ChallengeMonsterInfo(Config.ConfigIDList[i],
                 Config.NpcMonsterIDList[i], Config.BossExcel.HardEventIDList[i]));
-        }
 
         return monsters;
     }
+
+    #endregion
+
+    #region Properties
+
+    public ChallengePeakConfigExcel Config { get; } =
+        GameData.ChallengePeakConfigData[(int)data.Peak.CurrentPeakLevelId];
+
+    public List<int> AllBattleTargets { get; } = [];
+    public bool IsWin { get; private set; }
 
     #endregion
 
@@ -54,12 +53,10 @@ public class ChallengePeakInstance(PlayerInstance player, ChallengeDataPb data) 
     public override void OnBattleStart(BattleInstance battle)
     {
         foreach (var peakBuff in Data.Peak.Buffs)
-        {
             battle.Buffs.Add(new MazeBuff((int)peakBuff, 1, -1)
             {
                 WaveFlag = -1
             });
-        }
 
         if (Data.Peak.IsHard && Config.BossExcel != null)
         {
@@ -99,11 +96,12 @@ public class ChallengePeakInstance(PlayerInstance player, ChallengeDataPb data) 
                     Data.Peak.Stars = res.Item1;
                     Data.Peak.RoundCnt = req.Stt.RoundCnt;
                     IsWin = true;
-                    
+
                     await Player.SendPacket(new PacketChallengePeakSettleScNotify(this, res.Item2));
 
                     // Call MissionManager
-                    await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.ChallengePeakBattleFinish, this);
+                    await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.ChallengePeakBattleFinish,
+                        this);
 
                     await Player.ChallengePeakManager!.SaveHistory(this, res.Item2);
 
@@ -158,10 +156,7 @@ public class ChallengePeakInstance(PlayerInstance player, ChallengeDataPb data) 
             }
         }
 
-        if (Data.Peak.IsHard && Config.BossExcel != null)
-        {
-            stars = 3;
-        }
+        if (Data.Peak.IsHard && Config.BossExcel != null) stars = 3;
 
         return (Math.Min(stars, 3), finishedIds);
     }

@@ -14,11 +14,37 @@ using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Challenge.Instances;
 
-public class ChallengeStoryInstance(PlayerInstance player, ChallengeDataPb data) : BaseLegacyChallengeInstance(player, data)
+public class ChallengeStoryInstance(PlayerInstance player, ChallengeDataPb data)
+    : BaseLegacyChallengeInstance(player, data)
 {
     #region Properties
 
-    public override ChallengeConfigExcel Config { get; } = GameData.ChallengeConfigData[(int)data.Story.ChallengeMazeId];
+    public override ChallengeConfigExcel Config { get; } =
+        GameData.ChallengeConfigData[(int)data.Story.ChallengeMazeId];
+
+    #endregion
+
+    #region Serialization
+
+    public override CurChallenge ToProto()
+    {
+        return new CurChallenge
+        {
+            ChallengeId = Data.Story.ChallengeMazeId,
+            ExtraLineupType = (ExtraLineupType)Data.Story.CurrentExtraLineup,
+            Status = (ChallengeStatus)Data.Story.CurStatus,
+            StageInfo = new ChallengeCurBuffInfo
+            {
+                CurStoryBuffs = new ChallengeStoryBuffList
+                {
+                    BuffList = { Data.Story.Buffs }
+                }
+            },
+            RoundCount = (uint)Config.ChallengeCountDown,
+            ScoreId = Data.Story.ScoreStage1,
+            ScoreTwo = Data.Story.ScoreStage2
+        };
+    }
 
     #endregion
 
@@ -74,30 +100,6 @@ public class ChallengeStoryInstance(PlayerInstance player, ChallengeDataPb data)
         return Data.Story.CurrentStage == 1
             ? Config.ChallengeMonsters1
             : Config.ChallengeMonsters2;
-    }
-
-    #endregion
-
-    #region Serialization
-
-    public override CurChallenge ToProto()
-    {
-        return new CurChallenge
-        {
-            ChallengeId = Data.Story.ChallengeMazeId,
-            ExtraLineupType = (ExtraLineupType)Data.Story.CurrentExtraLineup,
-            Status = (ChallengeStatus)Data.Story.CurStatus,
-            StageInfo = new ChallengeCurBuffInfo
-            {
-                CurStoryBuffs = new ChallengeStoryBuffList
-                {
-                    BuffList = { Data.Story.Buffs }
-                }
-            },
-            RoundCount = (uint)Config.ChallengeCountDown,
-            ScoreId = Data.Story.ScoreStage1,
-            ScoreTwo = Data.Story.ScoreStage2
-        };
     }
 
     #endregion

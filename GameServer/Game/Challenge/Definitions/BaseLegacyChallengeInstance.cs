@@ -6,11 +6,12 @@ using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
 
-public abstract class BaseLegacyChallengeInstance(PlayerInstance player, ChallengeDataPb data) : BaseChallengeInstance(player, data)
+public abstract class BaseLegacyChallengeInstance(PlayerInstance player, ChallengeDataPb data)
+    : BaseChallengeInstance(player, data)
 {
-    public abstract CurChallenge ToProto();
     public bool IsWin { get; set; }
     public abstract ChallengeConfigExcel Config { get; }
+    public abstract CurChallenge ToProto();
 
     public abstract uint GetStars();
     public abstract int GetCurrentExtraLineupType();

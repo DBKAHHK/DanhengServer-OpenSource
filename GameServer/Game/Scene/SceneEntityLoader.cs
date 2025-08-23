@@ -77,7 +77,8 @@ public class SceneEntityLoader(SceneInstance scene)
                     Scene.Groups.Remove(group.Id);
                 }
                 else if (!group.SavedValueCondition.IsTrue(
-                             Scene.Player.SceneData!.GetFloorSavedValues(Scene.FloorId))) // condition: Saved Value Condition
+                             Scene.Player.SceneData!
+                                 .GetFloorSavedValues(Scene.FloorId))) // condition: Saved Value Condition
                 {
                     foreach (var entity in Scene.Entities.Values.Where(entity => entity.GroupId == group.Id))
                     {
@@ -173,7 +174,7 @@ public class SceneEntityLoader(SceneInstance scene)
 
         if (info.RelatedBattleId.Count > 0 && !Scene.Player.MissionManager!.GetRunningSubMissionList().Any(x =>
                 x.FinishType == MissionFinishTypeEnum.StageWin && info.RelatedBattleId.Contains(x.ParamInt1)))
-            return null;  // mission not activated
+            return null; // mission not activated
 
         // TODO atmosphere conditions
 

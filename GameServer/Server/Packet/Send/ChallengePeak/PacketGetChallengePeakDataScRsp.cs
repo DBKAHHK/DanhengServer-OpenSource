@@ -15,9 +15,7 @@ public class PacketGetChallengePeakDataScRsp : BasePacket
         };
 
         foreach (var groupId in GameData.ChallengePeakGroupConfigData.Keys)
-        {
             proto.ChallengePeakLevelList.Add(player.ChallengePeakManager!.GetChallengePeakInfo(groupId));
-        }
 
         SetData(proto);
     }

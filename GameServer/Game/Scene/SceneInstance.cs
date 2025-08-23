@@ -3,6 +3,7 @@ using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Enums.Avatar;
+using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.Enums.Scene;
 using EggLink.DanhengServer.GameServer.Game.Activity.Loaders;
 using EggLink.DanhengServer.GameServer.Game.Battle;
@@ -18,8 +19,6 @@ using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
-using System.Management;
-using EggLink.DanhengServer.Enums.Mission;
 
 namespace EggLink.DanhengServer.GameServer.Game.Scene;
 
@@ -94,9 +93,7 @@ public class SceneInstance
                     .GetValueOrDefault(entity.Value.GroupId, []);
 
                 foreach (var info in property.Values.Where(x => x.Side != GroupPropertySideEnum.ClientOnly))
-                {
                     resProperty.Add(info.Name, savedProp.GetValueOrDefault(info.Name, info.DefaultValue));
-                }
 
                 groups.Add(new SceneEntityGroupInfo
                 {
@@ -104,6 +101,7 @@ public class SceneInstance
                     GroupPropertyMap = { resProperty }
                 });
             }
+
             groups[groups.FindIndex(x => x.GroupId == entity.Value.GroupId)].EntityList.Add(entity.Value.ToProto());
         }
 
@@ -117,9 +115,7 @@ public class SceneInstance
                     .GetValueOrDefault(groupId, []);
 
                 foreach (var info in property.Values.Where(x => x.Side != GroupPropertySideEnum.ClientOnly))
-                {
                     resProperty.Add(info.Name, savedProp.GetValueOrDefault(info.Name, info.DefaultValue));
-                }
 
                 groups.Add(new SceneEntityGroupInfo
                 {
@@ -247,12 +243,13 @@ public class SceneInstance
                 EntityLoader = new TrialActivityEntityLoader(this, Player);
                 break;
             default:
-                EntityLoader = Player.StoryLineManager?.StoryLineData.CurStoryLineId != 0 ? new StoryLineEntityLoader(this) : new SceneEntityLoader(this);
+                EntityLoader = Player.StoryLineManager?.StoryLineData.CurStoryLineId != 0
+                    ? new StoryLineEntityLoader(this)
+                    : new SceneEntityLoader(this);
                 break;
         }
 
         foreach (var module in floor.LevelFeatureModules.ToHashSet())
-        {
             switch (module)
             {
                 case LevelFeatureTypeEnum.EraFlipper:
@@ -262,12 +259,9 @@ public class SceneInstance
                     Components.Add(new RotatableRegionSceneComponent(this));
                     break;
             }
-        }
 
         if (GameData.SceneRainbowGroupPropertyData.FloorProperty.ContainsKey(FloorId))
-        {
             Components.Add(new RainbowSceneComponent(this));
-        }
 
         System.Threading.Tasks.Task.Run(async () => { await EntityLoader.LoadEntity(); }).Wait();
 
@@ -281,13 +275,15 @@ public class SceneInstance
     #region Event
 
     public delegate ValueTask GroupPropertyUpdateArg(GroupPropertyRefreshData data);
+
     public event GroupPropertyUpdateArg? GroupPropertyUpdated;
 
     #endregion
 
     #region Scene Actions
 
-    public async ValueTask<GroupPropertyRefreshData> UpdateGroupProperty(int groupId, string name, int value, bool callEvent = true)
+    public async ValueTask<GroupPropertyRefreshData> UpdateGroupProperty(int groupId, string name, int value,
+        bool callEvent = true)
     {
         // save
         if (!Player.SceneData!.GroupPropertyData.TryGetValue(FloorId, out var groupData))
@@ -318,13 +314,9 @@ public class SceneInstance
         if (callEvent && GroupPropertyUpdated != null) await GroupPropertyUpdated(res);
 
         if (name == "SGP_PuzzleState" && group.ControlFloorSavedValue.Count > 0)
-        {
             // set fsv
             foreach (var key in group.ControlFloorSavedValue)
-            {
                 await UpdateFloorSavedValue(key, value);
-            }
-        }
 
         return res;
     }
@@ -337,7 +329,7 @@ public class SceneInstance
             Player.SceneData.FloorSavedData[FloorId] = floorSavedData;
         }
 
-        if (FloorInfo?.FloorSavedValue.All(x => x.Name != name) == true) return;  // not exist
+        if (FloorInfo?.FloorSavedValue.All(x => x.Name != name) == true) return; // not exist
 
         floorSavedData[name] = value;
 
@@ -490,10 +482,7 @@ public class SceneInstance
 
     public async ValueTask InitializeComponents()
     {
-        foreach (var component in Components)
-        {
-            await component.Initialize();
-        }
+        foreach (var component in Components) await component.Initialize();
     }
 
     public T? GetComponent<T>() where T : BaseSceneComponent
@@ -724,10 +713,6 @@ public class SceneInstance
 
 public class AvatarSceneInfo : BaseGameEntity, IGameModifier
 {
-    public BaseAvatarInfo AvatarInfo { get; set; }
-    public AvatarType AvatarType { get; set; }
-    public PlayerInstance Player { get; set; }
-
     public AvatarSceneInfo(BaseAvatarInfo avatarInfo, AvatarType avatarType, PlayerInstance player)
     {
         AvatarInfo = avatarInfo;
@@ -752,9 +737,48 @@ public class AvatarSceneInfo : BaseGameEntity, IGameModifier
         }
     }
 
+    public BaseAvatarInfo AvatarInfo { get; set; }
+    public AvatarType AvatarType { get; set; }
+    public PlayerInstance Player { get; set; }
+
     public override int EntityId { get; set; }
 
     public override int GroupId { get; set; } = 0;
+
+    public List<string> Modifiers { get; set; } = [];
+
+    public async ValueTask AddModifier(string modifierName)
+    {
+        if (Modifiers.Contains(modifierName)) return;
+        Modifiers.Add(modifierName);
+
+        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
+        GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.AvatarId, out var avatarAbility);
+        if (modifier == null || avatarAbility == null) return;
+
+        await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnCreate, this, [],
+            new SceneCastSkillCsReq
+            {
+                TargetMotion = new MotionInfo
+                {
+                    Pos = Player.Data.Pos?.ToProto() ?? new Vector(),
+                    Rot = Player.Data.Rot?.ToProto() ?? new Vector()
+                }
+            });
+    }
+
+    public async ValueTask RemoveModifier(string modifierName)
+    {
+        if (!Modifiers.Contains(modifierName)) return;
+
+        Modifiers.Remove(modifierName);
+        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
+        GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.AvatarId, out var avatarAbility);
+        if (modifier == null || avatarAbility == null) return;
+
+        await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnDestroy, this, [],
+            new SceneCastSkillCsReq());
+    }
 
     public override async ValueTask AddBuff(SceneBuff buff)
     {
@@ -817,41 +841,6 @@ public class AvatarSceneInfo : BaseGameEntity, IGameModifier
                 AvatarType = AvatarType
             }
         };
-    }
-
-    public List<string> Modifiers { get; set; } = [];
-
-    public async ValueTask AddModifier(string modifierName)
-    {
-        if (Modifiers.Contains(modifierName)) return;
-        Modifiers.Add(modifierName);
-
-        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
-        GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.AvatarId, out var avatarAbility);
-        if (modifier == null || avatarAbility == null) return;
-
-        await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnCreate, this, [],
-            new SceneCastSkillCsReq
-            {
-                TargetMotion = new MotionInfo
-                {
-                    Pos = Player.Data.Pos?.ToProto() ?? new Vector(),
-                    Rot = Player.Data.Rot?.ToProto() ?? new Vector()
-                }
-            });
-    }
-
-    public async ValueTask RemoveModifier(string modifierName)
-    {
-        if (!Modifiers.Contains(modifierName)) return;
-
-        Modifiers.Remove(modifierName);
-        GameData.AdventureModifierData.TryGetValue(modifierName, out var modifier);
-        GameData.AdventureAbilityConfigListData.TryGetValue(AvatarInfo.AvatarId, out var avatarAbility);
-        if (modifier == null || avatarAbility == null) return;
-
-        await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnDestroy, this, [],
-            new SceneCastSkillCsReq());
     }
 
     public async ValueTask RemoveBuff(int buffId)

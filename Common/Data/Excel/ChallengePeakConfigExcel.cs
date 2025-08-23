@@ -1,4 +1,3 @@
-using EggLink.DanhengServer.Data.Custom;
 using Newtonsoft.Json;
 
 namespace EggLink.DanhengServer.Data.Excel;
@@ -17,7 +16,9 @@ public class ChallengePeakConfigExcel : ExcelResource
     public List<int> NpcMonsterIDList { get; set; } = [];
     public List<int> NormalTargetList { get; set; } = [];
 
-    [JsonIgnore] public Dictionary<int, List<ChallengeConfigExcel.ChallengeMonsterInfo>> ChallengeMonsters { get; } = [];
+    [JsonIgnore]
+    public Dictionary<int, List<ChallengeConfigExcel.ChallengeMonsterInfo>> ChallengeMonsters { get; } = [];
+
     [JsonIgnore] public ChallengePeakBossConfigExcel? BossExcel { get; set; }
 
     public override int GetId()
@@ -31,8 +32,8 @@ public class ChallengePeakConfigExcel : ExcelResource
 
         ChallengeMonsters.Add(MazeGroupID, []);
         for (var i = 0; i < ConfigIDList.Count; i++)
-        {
-            ChallengeMonsters[MazeGroupID].Add(new ChallengeConfigExcel.ChallengeMonsterInfo(ConfigIDList[i], NpcMonsterIDList[i], EventIDList[i]));
-        }
+            ChallengeMonsters[MazeGroupID]
+                .Add(new ChallengeConfigExcel.ChallengeMonsterInfo(ConfigIDList[i], NpcMonsterIDList[i],
+                    EventIDList[i]));
     }
 }

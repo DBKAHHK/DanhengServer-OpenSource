@@ -169,7 +169,9 @@ public class EntryPoint
 
         if (ConfigManager.Config.ServerOption.ServerConfig.RunGateway)
         {
-            var handler = new DanhengListener.ConnectionCreatedHandler((conversation, remote) => new Connection(conversation, remote));
+            var handler =
+                new DanhengListener.ConnectionCreatedHandler((conversation, remote) =>
+                    new Connection(conversation, remote));
             DanhengListener.CreateConnection = handler;
             DanhengListener.StartListener();
         }

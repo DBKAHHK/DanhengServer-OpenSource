@@ -15,6 +15,7 @@ public class PacketSwitchHandResetGameScRsp : BasePacket
 
         SetData(proto);
     }
+
     public PacketSwitchHandResetGameScRsp(Retcode ret) : base(CmdIds.SwitchHandResetGameScRsp)
     {
         var proto = new SwitchHandResetGameScRsp

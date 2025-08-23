@@ -8,16 +8,12 @@ namespace EggLink.DanhengServer.Kcp;
 
 public static class PacketLogHelper
 {
-    private delegate IMessage ParseIMessage(byte[] data);
     private static ConcurrentDictionary<ushort, ParseIMessage> CachedParsers { get; } = [];
 
     public static string ConvertPacketToJson(ushort opcode, byte[] payload)
     {
         var descriptor = GetParser(opcode);
-        if (descriptor == null)
-        {
-            throw new Exception();
-        }
+        if (descriptor == null) throw new Exception();
 
         var message = descriptor(payload);
         var formatter = JsonFormatter.Default;
@@ -27,10 +23,7 @@ public static class PacketLogHelper
 
     private static ParseIMessage? GetParser(ushort opcode)
     {
-        if (CachedParsers.TryGetValue(opcode, out var parser))
-        {
-            return parser;
-        }
+        if (CachedParsers.TryGetValue(opcode, out var parser)) return parser;
 
         lock (CachedParsers)
         {
@@ -42,7 +35,7 @@ public static class PacketLogHelper
             if (typ == null) return null;
             var desc = typ.GetProperty("Descriptor", BindingFlags.Public | BindingFlags.Static);
             if (desc?.GetMethod == null) return null;
-            
+
             // get parser
             if (desc.GetValue(null) is not MessageDescriptor parserProperty) return null;
 
@@ -60,4 +53,6 @@ public static class PacketLogHelper
             return parser;
         }
     }
+
+    private delegate IMessage ParseIMessage(byte[] data);
 }

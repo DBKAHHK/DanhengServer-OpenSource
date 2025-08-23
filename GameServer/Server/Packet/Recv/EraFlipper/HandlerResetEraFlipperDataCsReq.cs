@@ -20,7 +20,8 @@ public class HandlerResetEraFlipperDataCsReq : Handler
         }
 
         // leave
-        await connection.SendPacket(new PacketResetEraFlipperDataScRsp(component.CurRegionId, component.RegionState, req.PAHMAGPFDDJ));
+        await connection.SendPacket(
+            new PacketResetEraFlipperDataScRsp(component.CurRegionId, component.RegionState, req.PAHMAGPFDDJ));
 
         component.LeaveFlipperRegion();
     }

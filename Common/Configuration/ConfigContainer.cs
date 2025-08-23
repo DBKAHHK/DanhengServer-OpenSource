@@ -86,7 +86,7 @@ public class ServerOption
     public LogOption LogOption { get; set; } = new();
     public ServerConfig ServerConfig { get; set; } = new();
     public int FarmingDropRate { get; set; } = 1;
-    public bool UseCache { get; set; } = false;  // didnt recommend
+    public bool UseCache { get; set; } = false; // didnt recommend
 
     public int ValidFarmingDropRate()
     {
@@ -98,7 +98,7 @@ public class ServerConfig
 {
     public bool RunDispatch { get; set; } = true;
     public string FromDispatchBaseUrl { get; set; } = "";
-    public bool RunGateway { get; set; } = true;  // if run gateway, also run game server
+    public bool RunGateway { get; set; } = true; // if run gateway, also run game server
     public List<ServerRegion> Regions { get; set; } = [];
 }
 

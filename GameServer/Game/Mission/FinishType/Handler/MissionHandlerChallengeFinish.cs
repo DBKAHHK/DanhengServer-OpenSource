@@ -1,7 +1,6 @@
 ﻿using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Mission;
-using EggLink.DanhengServer.GameServer.Game.Challenge;
 using EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
 using EggLink.DanhengServer.GameServer.Game.Player;
 

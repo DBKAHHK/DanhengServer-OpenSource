@@ -167,13 +167,10 @@ public class LineupManager : BasePlayerManager
             var trial = Player.AvatarManager!.GetTrialAvatar(avatarId, refresh);
             if (trial != null)
             {
-                if (GameData.MultiplePathAvatarConfigData.TryGetValue(trial.AvatarId, out var pathExcel) && pathExcel.Gender != GenderTypeEnum.GENDER_NONE)
-                {
+                if (GameData.MultiplePathAvatarConfigData.TryGetValue(trial.AvatarId, out var pathExcel) &&
+                    pathExcel.Gender != GenderTypeEnum.GENDER_NONE)
                     if (pathExcel.Gender != (GenderTypeEnum)Player.Data.CurrentGender)
-                    {
                         continue;
-                    }
-                }
 
                 trial.CheckLevel(worldLevel);
                 lineup.BaseAvatars!.Add(new LineupAvatarInfo

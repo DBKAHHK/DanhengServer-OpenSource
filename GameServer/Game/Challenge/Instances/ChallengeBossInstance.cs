@@ -12,11 +12,11 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Proto.ServerSide;
 using EggLink.DanhengServer.Util;
-using SqlSugar;
 
 namespace EggLink.DanhengServer.GameServer.Game.Challenge.Instances;
 
-public class ChallengeBossInstance(PlayerInstance player, ChallengeDataPb data) : BaseLegacyChallengeInstance(player, data)
+public class ChallengeBossInstance(PlayerInstance player, ChallengeDataPb data)
+    : BaseLegacyChallengeInstance(player, data)
 {
     #region Properties
 
@@ -99,7 +99,7 @@ public class ChallengeBossInstance(PlayerInstance player, ChallengeDataPb data) 
             },
             RoundCount = (uint)Config.ChallengeCountDown,
             ScoreId = Data.Boss.ScoreStage1,
-            ScoreTwo = Data.Boss.ScoreStage2,
+            ScoreTwo = Data.Boss.ScoreStage2
         };
     }
 
@@ -292,7 +292,7 @@ public class ChallengeBossInstance(PlayerInstance player, ChallengeDataPb data) 
             Player.FriendRecordData!.AddAndRemoveOld(new FriendDevelopmentInfoPb
             {
                 DevelopmentType = DevelopmentType.DevelopmentBossChallenge,
-                Params = {{ "ChallengeId", (uint)Config.ID } }
+                Params = { { "ChallengeId", (uint)Config.ID } }
             });
         }
         else
@@ -332,7 +332,6 @@ public class ChallengeBossInstance(PlayerInstance player, ChallengeDataPb data) 
 
         Player.ChallengeManager!.SaveInstance(this);
     }
-
 
     #endregion
 }

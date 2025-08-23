@@ -14,7 +14,7 @@ public class HandlerSwitchHandResetHandPosCsReq : Handler
         var req = SwitchHandResetHandPosCsReq.Parser.ParseFrom(data);
 
         var component = connection.Player!.GetComponent<SwitchHandComponent>();
-        
+
         var info = component.GetHandInfo((int)req.ConfigId);
         if (info.Item2 == null)
         {

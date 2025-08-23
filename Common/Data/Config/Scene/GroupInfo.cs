@@ -7,7 +7,6 @@ using EggLink.DanhengServer.Enums.Task;
 using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using Spectre.Console;
 
 namespace EggLink.DanhengServer.Data.Config.Scene;
 
@@ -54,56 +53,40 @@ public class GroupInfo
         foreach (var prop in PropList) prop.Load(this);
 
         foreach (var source in ValueSource?.Values ?? [])
-        {
             if (source["Key"]?.ToString() == "FSV")
             {
                 var value = source["Value"];
                 if (value != null)
                     ControlFloorSavedValue.Add(value.ToString());
             }
-        }
 
         foreach (var info in LevelGraphConfig?.OnInitSequece ?? [])
-        {
-            foreach (var configInfo in info.TaskList)
-            {
-                if (configInfo is TriggerBattle battle)
-                {
-                    if (battle.EventID.GetValue() > 0)
-                        RelatedBattleId.Add(battle.EventID.GetValue());
-                }
-            }
-        }
+        foreach (var configInfo in info.TaskList)
+            if (configInfo is TriggerBattle battle)
+                if (battle.EventID.GetValue() > 0)
+                    RelatedBattleId.Add(battle.EventID.GetValue());
 
         foreach (var info in LevelGraphConfig?.OnStartSequece ?? [])
-        {
-            foreach (var configInfo in info.TaskList)
-            {
-                if (configInfo is TriggerBattle battle)
-                {
-                    if (battle.EventID.GetValue() > 0)
-                        RelatedBattleId.Add(battle.EventID.GetValue());
-                }
-            }
-        }
+        foreach (var configInfo in info.TaskList)
+            if (configInfo is TriggerBattle battle)
+                if (battle.EventID.GetValue() > 0)
+                    RelatedBattleId.Add(battle.EventID.GetValue());
 
         if (LoadSide != GroupLoadSideEnum.Client) return;
         foreach (var info in AtmosphereCondition.Conditions)
-        {
             if (info.TryGetValue("SubMissionID", out var value) && value is long v)
             {
                 // try cast to int
                 var missionId = (int)v;
                 RelatedMissionId.Add(missionId);
             }
-        }
     }
 }
 
 public class AtmosphereCondition
 {
     public List<Dictionary<string, object>> Conditions { get; set; } = [];
-    
+
     [JsonConverter(typeof(StringEnumConverter))]
     public OperationEnum Operation { get; set; } = OperationEnum.And;
 }
@@ -135,7 +118,10 @@ public class LoadCondition
                 conditionChecks.Add(CheckFunc);
                 continue;
 
-                bool CheckFunc() => status == condition.Phase;
+                bool CheckFunc()
+                {
+                    return status == condition.Phase;
+                }
             }
             else
             {
@@ -149,7 +135,10 @@ public class LoadCondition
                 conditionChecks.Add(CheckFunc);
                 continue;
 
-                bool CheckFunc() => status == condition.Phase;
+                bool CheckFunc()
+                {
+                    return status == condition.Phase;
+                }
             }
 
         return Operation switch
@@ -184,7 +173,10 @@ public class SavedValueLoadCondition
             conditionChecks.Add(CheckFunc);
             continue;
 
-            bool CheckFunc() => UtilTools.CompareNumberByOperationEnum(status, condition.Value, condition.Operation);
+            bool CheckFunc()
+            {
+                return UtilTools.CompareNumberByOperationEnum(status, condition.Value, condition.Operation);
+            }
         }
 
         switch (Operation)

@@ -3,7 +3,6 @@ using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Player;
-using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Game.Shop;
 
@@ -32,7 +31,7 @@ public class ShopService(PlayerInstance player) : BasePlayerManager(player)
         {
             var item = await Player.InventoryManager!.AddItem(itemConfig.ID, count, false);
             if (item != null)
-            { 
+            {
                 if (GameData.ItemUseDataData.TryGetValue(item.ItemId, out var useData) && useData.IsAutoUse)
                 {
                     var res = await Player.InventoryManager!.UseItem(item.ItemId);

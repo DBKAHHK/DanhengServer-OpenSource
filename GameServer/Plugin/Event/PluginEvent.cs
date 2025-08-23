@@ -1,6 +1,5 @@
 ﻿using EggLink.DanhengServer.Command;
 using EggLink.DanhengServer.GameServer.Game.Battle;
-using EggLink.DanhengServer.GameServer.Game.Challenge;
 using EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Scene;

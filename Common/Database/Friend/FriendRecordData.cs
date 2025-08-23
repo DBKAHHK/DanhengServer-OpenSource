@@ -7,8 +7,13 @@ namespace EggLink.DanhengServer.Database.Friend;
 [SugarTable("friend_record_data")]
 public class FriendRecordData : BaseDatabaseDataHelper
 {
-    [SugarColumn(IsJson = true)] public List<FriendDevelopmentInfoPb> DevelopmentInfos { get; set; } = [];  // max 20 entries
-    [SugarColumn(IsJson = true)] public Dictionary<uint, ChallengeGroupStatisticsPb> ChallengeGroupStatistics { get; set; } = [];  // cur group statistics
+    [SugarColumn(IsJson = true)]
+    public List<FriendDevelopmentInfoPb> DevelopmentInfos { get; set; } = []; // max 20 entries
+
+    [SugarColumn(IsJson = true)]
+    public Dictionary<uint, ChallengeGroupStatisticsPb> ChallengeGroupStatistics { get; set; } =
+        []; // cur group statistics
+
     public uint NextRecordId { get; set; }
 
     public void AddAndRemoveOld(FriendDevelopmentInfoPb info)
@@ -18,14 +23,10 @@ public class FriendRecordData : BaseDatabaseDataHelper
 
         // if param equal remove
         foreach (var infoPb in same.ToArray())
-        {
             // ReSharper disable once UsageOfDefaultStructEquality
             if (infoPb.Params.SequenceEqual(info.Params))
-            {
                 // remove
                 DevelopmentInfos.Remove(infoPb);
-            }
-        }
 
         DevelopmentInfos.Add(info);
     }
@@ -112,43 +113,28 @@ public class ChallengeGroupStatisticsPb
         if (MemoryGroupStatistics != null)
         {
             foreach (var memoryGroupStatistic in MemoryGroupStatistics.Values)
-            {
                 proto.GroupTotalStars += memoryGroupStatistic.Stars;
-            }
 
             var maxFloor = MemoryGroupStatistics.Values.MaxBy(x => x.Level);
-            if (maxFloor != null)
-            {
-                proto.MemoryGroup = maxFloor.ToProto();
-            }
+            if (maxFloor != null) proto.MemoryGroup = maxFloor.ToProto();
         }
 
         if (StoryGroupStatistics != null)
         {
             foreach (var storyGroupStatistic in StoryGroupStatistics.Values)
-            {
                 proto.GroupTotalStars += storyGroupStatistic.Stars;
-            }
 
             var maxFloor = StoryGroupStatistics.Values.MaxBy(x => x.Level);
-            if (maxFloor != null)
-            {
-                proto.StoryGroup = maxFloor.ToProto();
-            }
+            if (maxFloor != null) proto.StoryGroup = maxFloor.ToProto();
         }
 
         if (BossGroupStatistics != null)
         {
             foreach (var bossGroupStatistic in BossGroupStatistics.Values)
-            {
                 proto.GroupTotalStars += bossGroupStatistic.Stars;
-            }
 
             var maxFloor = BossGroupStatistics.Values.MaxBy(x => x.Level);
-            if (maxFloor != null)
-            {
-                proto.BossGroup = maxFloor.ToProto();
-            }
+            if (maxFloor != null) proto.BossGroup = maxFloor.ToProto();
         }
 
         return proto;

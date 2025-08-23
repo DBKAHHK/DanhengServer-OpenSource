@@ -1,4 +1,5 @@
-﻿using EggLink.DanhengServer.Data;
+﻿using System.Collections.Frozen;
+using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Friend;
 using EggLink.DanhengServer.Database.Inventory;
@@ -14,7 +15,6 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 using Google.Protobuf.Collections;
-using System.Collections.Frozen;
 
 namespace EggLink.DanhengServer.GameServer.Game.Inventory;
 
@@ -67,14 +67,12 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                 itemData = await PutItem(itemId, 1, rank, level: level, uniqueId: ++Data.NextUniqueId);
 
                 if (itemConfig.Rarity == ItemRarityEnum.SuperRare)
-                {
                     // add development
                     Player.FriendRecordData!.AddAndRemoveOld(new FriendDevelopmentInfoPb
                     {
                         DevelopmentType = DevelopmentType.DevelopmentUnlockEquipment,
                         Params = { { "EquipmentTid", (uint)itemConfig.ID } }
                     });
-                }
                 break;
             case ItemMainTypeEnum.Usable:
                 switch (itemConfig.ItemSubType)
@@ -715,7 +713,8 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         {
             for (var i = 0; i < count; i++) // do count times
             {
-                if (useConfig.PreviewSkillPoint != 0) await Player.LineupManager!.GainMp((int)useConfig.PreviewSkillPoint);
+                if (useConfig.PreviewSkillPoint != 0)
+                    await Player.LineupManager!.GainMp((int)useConfig.PreviewSkillPoint);
 
                 if (baseAvatarId > 0)
                 {
@@ -746,7 +745,8 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                     if (useConfig.PreviewPowerPercent != 0)
                     {
                         avatar.SetCurSp(
-                            Math.Min(Math.Max(avatar.CurrentHp + (int)(useConfig.PreviewPowerPercent * 10000), 0), 10000),
+                            Math.Min(Math.Max(avatar.CurrentHp + (int)(useConfig.PreviewPowerPercent * 10000), 0),
+                                10000),
                             extraLineup);
 
                         await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
@@ -757,7 +757,8 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                     // team use
                     if (useConfig.PreviewHPRecoveryPercent != 0)
                     {
-                        Player.LineupManager!.GetCurLineup()!.Heal((int)(useConfig.PreviewHPRecoveryPercent * 10000), true);
+                        Player.LineupManager!.GetCurLineup()!.Heal((int)(useConfig.PreviewHPRecoveryPercent * 10000),
+                            true);
 
                         await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
                     }
@@ -771,7 +772,8 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
 
                     if (useConfig.PreviewPowerPercent != 0)
                     {
-                        Player.LineupManager!.GetCurLineup()!.AddPercentSp((int)(useConfig.PreviewPowerPercent * 10000));
+                        Player.LineupManager!.GetCurLineup()!.AddPercentSp((int)(useConfig.PreviewPowerPercent *
+                            10000));
 
                         await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager.GetCurLineup()!));
                     }
@@ -791,12 +793,8 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
         }
 
         if (GameData.ItemUseDataData.TryGetValue(dataId, out var useData))
-        {
             foreach (var rewardId in useData.UseParam)
-            {
                 resItemDatas.AddRange(await HandleReward(rewardId, true));
-            }
-        }
 
         // remove item
         await RemoveItem(itemId, count);

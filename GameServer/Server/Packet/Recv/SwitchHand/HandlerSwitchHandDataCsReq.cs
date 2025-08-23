@@ -17,13 +17,9 @@ public class HandlerSwitchHandDataCsReq : Handler
         {
             var info = component.GetHandInfo((int)req.ConfigId);
             if (info.Item2 == null)
-            {
                 await connection.SendPacket(new PacketSwitchHandDataScRsp(info.Item1));
-            }
             else
-            {
                 await connection.SendPacket(new PacketSwitchHandDataScRsp(info.Item2));
-            }
         }
         else
         {
