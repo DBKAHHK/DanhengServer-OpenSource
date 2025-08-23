@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
+using EggLink.DanhengServer.Database.Quests;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 using SqlSugar;
@@ -168,9 +169,10 @@ public class PlayerData : BaseDatabaseDataHelper
         };
 
         var avatarInfo = DatabaseHelper.Instance!.GetInstance<AvatarData>(Uid);
-        var inventoryInfo = DatabaseHelper.Instance!.GetInstance<InventoryData>(Uid);
+        var inventoryInfo = DatabaseHelper.Instance.GetInstance<InventoryData>(Uid);
+        var questInfo = DatabaseHelper.Instance.GetInstance<QuestData>(Uid);
 
-        if (avatarInfo == null || inventoryInfo == null)
+        if (avatarInfo == null || inventoryInfo == null || questInfo == null)
         {
             // Handle server profile
             var serverProfile = ConfigManager.Config.ServerOption.ServerProfile;
@@ -186,6 +188,18 @@ public class PlayerData : BaseDatabaseDataHelper
                         }));
             return info;
         }
+
+        info.RecordInfo = new PlayerRecordInfo
+        {
+            CollectAvatarCount = (uint)avatarInfo.FormalAvatars.Count,
+            CollectEquipmentCount = (uint)inventoryInfo.EquipmentItems.Select(x => x.ItemId).ToHashSet().Count,
+            CollectRelicCount = (uint)inventoryInfo.RelicItems.Count,
+            CollectAchievementCount = (uint)GameData.AchievementDataData.Values.Select(x => x.QuestID).ToHashSet()
+                .Count(x => questInfo.Quests.GetValueOrDefault(x)?.QuestStatus is QuestStatus.QuestFinish
+                    or QuestStatus.QuestClose), // count finished achievements
+            CollectionInfo = new PlayerCollectionInfo(),
+            CollectDiscCount = (uint)GameData.BackGroundMusicData.Count
+        };
 
         var pos = 0;
         foreach (var avatar in avatarInfo.AssistAvatars.Select(assist =>
@@ -248,7 +262,8 @@ public class PrivacySettingsPb
             DisplayActiveState = DisplayActiveState,
             DisplayRecentlyState = DisplayRecentlyState,
             DisplayBattleRecord = DisplayBattleRecord,
-            DisplayCollection = DisplayCollection
+            DisplayCollection = DisplayCollection,
+            ExtraSettingsInfo = new PlayerExtraSettingsInfo()
         };
     }
 }

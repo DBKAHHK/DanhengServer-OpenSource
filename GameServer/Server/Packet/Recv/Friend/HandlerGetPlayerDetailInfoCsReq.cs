@@ -11,7 +11,7 @@ public class HandlerGetPlayerDetailInfoCsReq : Handler
     {
         var req = GetPlayerDetailInfoCsReq.Parser.ParseFrom(data);
 
-        var playerData = connection.Player!.FriendManager!.GetFriendPlayerData([(int)req.Uid]).First();
+        var playerData = connection.Player!.FriendManager!.GetFriendPlayerData([(int)req.Uid]).FirstOrDefault();
         if (playerData == null)
         {
             await connection.SendPacket(new PacketGetPlayerDetailInfoScRsp());

@@ -128,6 +128,7 @@ public static class GameData
 
     #region Player
 
+    public static Dictionary<int, AchievementDataExcel> AchievementDataData { get; private set; } = [];
     public static Dictionary<int, QuestDataExcel> QuestDataData { get; private set; } = [];
     public static Dictionary<int, FinishWayExcel> FinishWayData { get; private set; } = [];
     public static Dictionary<int, PlayerLevelConfigExcel> PlayerLevelConfigData { get; private set; } = [];
