@@ -56,6 +56,7 @@ public class PlayerData : BaseDatabaseDataHelper
     [SugarColumn(IsNullable = true)] public long LastActiveTime { get; set; }
 
     [SugarColumn(IsJson = true)] public List<int> TakenLevelReward { get; set; } = [];
+    [SugarColumn(IsJson = true)] public PrivacySettingsPb PrivacySettings { get; set; } = new();
 
     public static PlayerData? GetPlayerByUid(long uid)
     {
@@ -162,7 +163,7 @@ public class PlayerData : BaseDatabaseDataHelper
             WorldLevel = (uint)WorldLevel,
             EMOBIJBDKEI = true, // ShowDisplayAvatar
             RecordInfo = new PlayerRecordInfo(),
-            PrivacySettings = new PrivacySettings(),
+            PrivacySettings = PrivacySettings.ToProto(),
             HeadFrame = HeadFrame.ToProto()
         };
 
@@ -215,6 +216,39 @@ public class PlayerHeadFrameInfo
         {
             HeadFrameExpireTime = HeadFrameExpireTime,
             HeadFrameId = HeadFrameId
+        };
+    }
+}
+
+public class PrivacySettingsPb
+{
+    public bool DisplayChallengeLineup { get; set; } = true;
+    public bool DisplayActiveState { get; set; } = true;
+    public bool DisplayRecentlyState { get; set; } = true;
+    public bool DisplayBattleRecord { get; set; } = true;
+    public bool DisplayCollection { get; set; } = true;
+
+    public PrivacySettings ToProto()
+    {
+        return new PrivacySettings
+        {
+            DisplayChallengeLineup = DisplayChallengeLineup,
+            DisplayActiveState = DisplayActiveState,
+            DisplayRecentlyState = DisplayRecentlyState,
+            DisplayBattleRecord = DisplayBattleRecord,
+            DisplayCollection = DisplayCollection
+        };
+    }
+
+    public PlayerSettingInfo ToSettingProto()
+    {
+        return new PlayerSettingInfo
+        {
+            DisplayChallengeLineup = DisplayChallengeLineup,
+            DisplayActiveState = DisplayActiveState,
+            DisplayRecentlyState = DisplayRecentlyState,
+            DisplayBattleRecord = DisplayBattleRecord,
+            DisplayCollection = DisplayCollection
         };
     }
 }

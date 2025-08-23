@@ -14,7 +14,7 @@ public class PacketGetBasicInfoScRsp : BasePacket
             CurDay = 1,
             NextRecoverTime = player.Data.NextStaminaRecover / 1000,
             GameplayBirthday = (uint)player.Data.Birthday,
-            PlayerSettingInfo = new PlayerSettingInfo(),
+            PlayerSettingInfo = player.Data.PrivacySettings.ToSettingProto(),
             Gender = (uint)player.Data.CurrentGender
         };
 
