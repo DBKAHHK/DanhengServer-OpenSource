@@ -15,7 +15,8 @@ public class HandlerSearchPlayerCsReq : Handler
 
         foreach (var uid in req.UidList)
         {
-            var player = connection.Player!.FriendManager!.GetFriendPlayerData([(int)uid]).First();
+            var player = connection.Player!.FriendManager!.GetFriendPlayerData([(int)uid])
+                .FirstOrDefault(x => x.Uid == (int)uid);
             if (player != null) playerList.Add(player);
         }
 
