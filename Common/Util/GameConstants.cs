@@ -2,7 +2,7 @@
 
 public static class GameConstants
 {
-    public const string GAME_VERSION = "3.5.51";
+    public const string GAME_VERSION = "3.5.52";
     public const string AvatarDbVersion = "20250430";
     public const int GameVersionInt = 3200;
     public const int MAX_STAMINA = 300;
