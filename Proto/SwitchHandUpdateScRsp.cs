@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static SwitchHandUpdateScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtTd2l0Y2hIYW5kVXBkYXRlU2NSc3AucHJvdG8aDkhhbmRJbmZvLnByb3Rv",
-            "GhdIYW5kT3BlcmF0aW9uSW5mby5wcm90byJ3ChVTd2l0Y2hIYW5kVXBkYXRl",
+            "ChtTd2l0Y2hIYW5kVXBkYXRlU2NSc3AucHJvdG8aF0hhbmRPcGVyYXRpb25J",
+            "bmZvLnByb3RvGg5IYW5kSW5mby5wcm90byJ3ChVTd2l0Y2hIYW5kVXBkYXRl",
             "U2NSc3ASHAoJaGFuZF9pbmZvGA8gASgLMgkuSGFuZEluZm8SDwoHcmV0Y29k",
             "ZRgIIAEoDRIvChNoYW5kX29wZXJhdGlvbl9pbmZvGAEgASgLMhIuSGFuZE9w",
             "ZXJhdGlvbkluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HandInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HandOperationInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HandOperationInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HandInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SwitchHandUpdateScRsp), global::EggLink.DanhengServer.Proto.SwitchHandUpdateScRsp.Parser, new[]{ "HandInfo", "Retcode", "HandOperationInfo" }, null, null, null, null)
           }));

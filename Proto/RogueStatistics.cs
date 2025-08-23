@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueStatisticsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVSb2d1ZVN0YXRpc3RpY3MucHJvdG8aEU9HTkxEQURQSkZPLnByb3RvGhFB",
-            "TkdPQU1BRE9NQS5wcm90bxoRTEZKUEREQ05CS0MucHJvdG8aEU5IQUdQTU1D",
-            "RENGLnByb3RvGhFHR0tCSEFMUElESy5wcm90byLVAQoPUm9ndWVTdGF0aXN0",
+            "ChVSb2d1ZVN0YXRpc3RpY3MucHJvdG8aEUFOR09BTUFET01BLnByb3RvGhFH",
+            "R0tCSEFMUElESy5wcm90bxoRTkhBR1BNTUNEQ0YucHJvdG8aEU9HTkxEQURQ",
+            "SkZPLnByb3RvGhFMRkpQRERDTkJLQy5wcm90byLVAQoPUm9ndWVTdGF0aXN0",
             "aWNzEiEKC0hETEpCQURFS0ZJGA0gASgLMgwuTkhBR1BNTUNEQ0YSIQoLUExD",
             "Q0VIRE5BRkwYAiABKAsyDC5HR0tCSEFMUElESxIhCgtBUE1KRkdLSUZPThgK",
             "IAEoCzIMLkxGSlBERENOQktDEiQKC0VER0ZFREpCQUhGGLEOIAEoCzIMLk9H",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "TUFIAEINCgtBQUhMSUlGQ0JNREIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OGNLDADPJFOReflection.Descriptor, global::EggLink.DanhengServer.Proto.ANGOAMADOMAReflection.Descriptor, global::EggLink.DanhengServer.Proto.LFJPDDCNBKCReflection.Descriptor, global::EggLink.DanhengServer.Proto.NHAGPMMCDCFReflection.Descriptor, global::EggLink.DanhengServer.Proto.GGKBHALPIDKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ANGOAMADOMAReflection.Descriptor, global::EggLink.DanhengServer.Proto.GGKBHALPIDKReflection.Descriptor, global::EggLink.DanhengServer.Proto.NHAGPMMCDCFReflection.Descriptor, global::EggLink.DanhengServer.Proto.OGNLDADPJFOReflection.Descriptor, global::EggLink.DanhengServer.Proto.LFJPDDCNBKCReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueStatistics), global::EggLink.DanhengServer.Proto.RogueStatistics.Parser, new[]{ "HDLJBADEKFI", "PLCCEHDNAFL", "APMJFGKIFON", "EDGFEDJBAHF", "OPFPOLCGMED" }, new[]{ "AAHLIIFCBMD" }, null, null, null)
           }));

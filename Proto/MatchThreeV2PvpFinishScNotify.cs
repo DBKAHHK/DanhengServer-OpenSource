@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static MatchThreeV2PvpFinishScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNNYXRjaFRocmVlVjJQdnBGaW5pc2hTY05vdGlmeS5wcm90bxoYTWF0Y2gz",
-            "RmluaXNoUmVhc29uLnByb3RvGhFLRk5KQUtHRUZMQS5wcm90bxoTRmlnaHRH",
-            "YW1lTW9kZS5wcm90bxoRQ0RJTUVNRkpKRlAucHJvdG8i2QEKHU1hdGNoVGhy",
+            "CiNNYXRjaFRocmVlVjJQdnBGaW5pc2hTY05vdGlmeS5wcm90bxoTRmlnaHRH",
+            "YW1lTW9kZS5wcm90bxoYTWF0Y2gzRmluaXNoUmVhc29uLnByb3RvGhFDRElN",
+            "RU1GSkpGUC5wcm90bxoRS0ZOSkFLR0VGTEEucHJvdG8i2QEKHU1hdGNoVGhy",
             "ZWVWMlB2cEZpbmlzaFNjTm90aWZ5EiMKBnJlYXNvbhgBIAEoDjITLk1hdGNo",
             "M0ZpbmlzaFJlYXNvbhITCgtLT0pJSEpJSEtJQRgDIAEoDRIjCgtCRUlQQlBL",
             "S0RNSRgPIAEoDjIOLkZpZ2h0R2FtZU1vZGUSEwoLRkRHRE9LQUZCREgYByAB",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "SkZMTEdHSxgGIAEoCzIMLktGTkpBS0dFRkxBQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.Match3FinishReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.KFNJAKGEFLAReflection.Descriptor, global::EggLink.DanhengServer.Proto.FightGameModeReflection.Descriptor, global::EggLink.DanhengServer.Proto.CDIMEMFJJFPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightGameModeReflection.Descriptor, global::EggLink.DanhengServer.Proto.Match3FinishReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.CDIMEMFJJFPReflection.Descriptor, global::EggLink.DanhengServer.Proto.KFNJAKGEFLAReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MatchThreeV2PvpFinishScNotify), global::EggLink.DanhengServer.Proto.MatchThreeV2PvpFinishScNotify.Parser, new[]{ "Reason", "KOJIHJIHKIA", "BEIPBPKKDMI", "FDGDOKAFBDH", "NIAEGHJLNMB", "EAHMJFLLGGK" }, null, null, null, null)
           }));

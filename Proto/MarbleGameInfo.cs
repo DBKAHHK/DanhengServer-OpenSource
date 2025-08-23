@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static MarbleGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRNYXJibGVHYW1lSW5mby5wcm90bxoUTWFyYmxlVGVhbVR5cGUucHJvdG8a",
-            "FExvYmJ5QmFzaWNJbmZvLnByb3RvIsIDCg5NYXJibGVHYW1lSW5mbxIpChBw",
+            "ChRNYXJibGVHYW1lSW5mby5wcm90bxoUTG9iYnlCYXNpY0luZm8ucHJvdG8a",
+            "FE1hcmJsZVRlYW1UeXBlLnByb3RvIsIDCg5NYXJibGVHYW1lSW5mbxIpChBw",
             "bGF5ZXJfdGVhbV90eXBlGAYgASgOMg8uTWFyYmxlVGVhbVR5cGUSEAoIbGV2",
             "ZWxfaWQYDyABKA0SGAoQdGVhbV9hX3NlYWxfbGlzdBgOIAMoDRIVCg10ZWFt",
             "X2FfcGxheWVyGA0gASgNEhkKEWNvbnRyb2xfYnlfc2VydmVyGAkgASgIEhYK",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "ZRgCIAEoDjIPLk1hcmJsZVRlYW1UeXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleTeamTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyBasicInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LobbyBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleTeamTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGameInfo), global::EggLink.DanhengServer.Proto.MarbleGameInfo.Parser, new[]{ "PlayerTeamType", "LevelId", "TeamASealList", "TeamAPlayer", "ControlByServer", "PlayerBScore", "LIKHCLPMHJK", "TeamBPlayer", "LobbyBasicInfo", "MarbleLevelId", "PlayerAScore", "TeamBSealList", "TeamARank", "PBFAIOJJGNL", "TeamBRank", "CurActionTeamType" }, null, null, null, null)
           }));

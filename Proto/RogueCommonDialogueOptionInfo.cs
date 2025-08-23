@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonDialogueOptionInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNSb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uSW5mby5wcm90bxoqUm9ndWVD",
-            "b21tb25EaWFsb2d1ZU9wdGlvbkRpc3BsYXlJbmZvLnByb3RvGilSb2d1ZUNv",
-            "bW1vbkRpYWxvZ3VlT3B0aW9uUmVzdWx0SW5mby5wcm90byLlAQodUm9ndWVD",
+            "CiNSb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uSW5mby5wcm90bxopUm9ndWVD",
+            "b21tb25EaWFsb2d1ZU9wdGlvblJlc3VsdEluZm8ucHJvdG8aKlJvZ3VlQ29t",
+            "bW9uRGlhbG9ndWVPcHRpb25EaXNwbGF5SW5mby5wcm90byLlAQodUm9ndWVD",
             "b21tb25EaWFsb2d1ZU9wdGlvbkluZm8SEAoIaXNfdmFsaWQYCSABKAgSPAoN",
             "ZGlzcGxheV92YWx1ZRgGIAEoCzIlLlJvZ3VlQ29tbW9uRGlhbG9ndWVPcHRp",
             "b25EaXNwbGF5SW5mbxJAChJvcHRpb25fcmVzdWx0X2luZm8YDyADKAsyJC5S",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "GAogASgIEg4KBmFyZ19pZBgDIAEoDRIRCglvcHRpb25faWQYDiABKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionResultInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionDisplayInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo), global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionInfo.Parser, new[]{ "IsValid", "DisplayValue", "OptionResultInfo", "Confirm", "ArgId", "OptionId" }, null, null, null, null)
           }));

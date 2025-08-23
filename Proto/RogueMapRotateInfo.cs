@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMapRotateInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhSb2d1ZU1hcFJvdGF0ZUluZm8ucHJvdG8aEUNoYXJnZXJJbmZvLnByb3Rv",
-            "GhFSb3RhdGVyRGF0YS5wcm90bxoXUm90YXRlckVuZXJneUluZm8ucHJvdG8a",
-            "EUlDSU1BS0JBSkdCLnByb3RvIvIBChJSb2d1ZU1hcFJvdGF0ZUluZm8SEwoL",
+            "ChhSb2d1ZU1hcFJvdGF0ZUluZm8ucHJvdG8aEVJvdGF0ZXJEYXRhLnByb3Rv",
+            "GhFJQ0lNQUtCQUpHQi5wcm90bxoXUm90YXRlckVuZXJneUluZm8ucHJvdG8a",
+            "EUNoYXJnZXJJbmZvLnByb3RvIvIBChJSb2d1ZU1hcFJvdGF0ZUluZm8SEwoL",
             "TkZMQk9OREpBSUUYAyABKA0SJwoRcm90YXRlcl9kYXRhX2xpc3QYCiADKAsy",
             "DC5Sb3RhdGVyRGF0YRIRCglpc19yb3RhdGUYDiABKAgSHQoVZXJhX2ZsaXBw",
             "ZXJfcmVnaW9uX2lkGAggASgFEh8KCXJvZ3VlX21hcBgPIAEoCzIMLklDSU1B",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "Zm8SIgoMY2hhcmdlcl9pbmZvGAcgAygLMgwuQ2hhcmdlckluZm9CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMapRotateInfo), global::EggLink.DanhengServer.Proto.RogueMapRotateInfo.Parser, new[]{ "NFLBONDJAIE", "RotaterDataList", "IsRotate", "EraFlipperRegionId", "RogueMap", "EnergyInfo", "ChargerInfo" }, null, null, null, null)
           }));

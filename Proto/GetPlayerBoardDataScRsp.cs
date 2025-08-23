@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static GetPlayerBoardDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HZXRQbGF5ZXJCb2FyZERhdGFTY1JzcC5wcm90bxoTSGVhZEZyYW1lSW5m",
-            "by5wcm90bxoSSGVhZEljb25EYXRhLnByb3RvGhZEaXNwbGF5QXZhdGFyVmVj",
+            "Ch1HZXRQbGF5ZXJCb2FyZERhdGFTY1JzcC5wcm90bxoSSGVhZEljb25EYXRh",
+            "LnByb3RvGhZEaXNwbGF5QXZhdGFyVmVjLnByb3RvGhNIZWFkRnJhbWVJbmZv",
             "LnByb3RvIrwCChdHZXRQbGF5ZXJCb2FyZERhdGFTY1JzcBIRCglzaWduYXR1",
             "cmUYAiABKAkSIwobdW5sb2NrZWRfcGVyc29uYWxfY2FyZF9saXN0GAMgAygN",
             "EhwKFGN1cnJlbnRfaGVhZF9pY29uX2lkGAcgASgNEh0KFWFzc2lzdF9hdmF0",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "YWRJY29uRGF0YUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeadFrameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeadIconDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayAvatarVecReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeadIconDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.DisplayAvatarVecReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeadFrameInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPlayerBoardDataScRsp), global::EggLink.DanhengServer.Proto.GetPlayerBoardDataScRsp.Parser, new[]{ "Signature", "UnlockedPersonalCardList", "CurrentHeadIconId", "AssistAvatarIdList", "DisplayAvatarVec", "PersonalCardId", "Retcode", "HeadFrame", "UnlockedHeadIconList" }, null, null, null, null)
           }));
