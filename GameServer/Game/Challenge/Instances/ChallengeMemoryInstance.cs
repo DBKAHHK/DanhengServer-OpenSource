@@ -1,5 +1,6 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Database.Friend;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
@@ -171,6 +172,16 @@ public class ChallengeMemoryInstance(PlayerInstance player, ChallengeDataPb data
 
             // Call MissionManager
             await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.ChallengeFinish, this);
+
+            // save
+            Player.ChallengeManager.SaveBattleRecord(this);
+
+            // add development
+            Player.FriendRecordData!.AddAndRemoveOld(new FriendDevelopmentInfoPb
+            {
+                DevelopmentType = DevelopmentType.DevelopmentMemoryChallenge,
+                Params = { { "ChallengeId", (uint)Config.ID } }
+            });
         }
         else
         {
@@ -184,7 +195,7 @@ public class ChallengeMemoryInstance(PlayerInstance player, ChallengeDataPb data
 
             // Change player line up
             SetCurrentExtraLineup(ExtraLineupType.LineupChallenge2);
-            await Player.LineupManager!.SetCurLineup((int)(Data.Memory.CurrentExtraLineup + 10));
+            await Player.LineupManager!.SetExtraLineup((ExtraLineupType)GetCurrentExtraLineupType());
             await Player.SendPacket(new PacketChallengeLineupNotify((ExtraLineupType)Data.Memory.CurrentExtraLineup));
             Data.Memory.SavedMp = (uint)Player.LineupManager.GetCurLineup()!.Mp;
 

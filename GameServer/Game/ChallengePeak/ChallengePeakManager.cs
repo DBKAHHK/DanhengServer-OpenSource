@@ -1,10 +1,8 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Challenge;
 using EggLink.DanhengServer.Database.Lineup;
-using EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
 using EggLink.DanhengServer.GameServer.Game.Challenge.Instances;
 using EggLink.DanhengServer.GameServer.Game.Player;
-using EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.ChallengePeak;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Proto.ServerSide;
@@ -85,7 +83,7 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
 
         HashSet<uint> targetIds = [];
         HashSet<uint> avatarIds = [];
-        if (Player.ChallengeManager!.ChallengeData.PeakBossLevelDatas.TryGetValue(bossLevelId << 2 & 0, out var bossPbData))  // easy (is hard = 0)
+        if (Player.ChallengeManager!.ChallengeData.PeakBossLevelDatas.TryGetValue(bossLevelId << 2 | 0, out var bossPbData))  // easy (is hard = 0)
         {
             bossProto.PeakEasyBoss.PeakLevelAvatarIdList.AddRange(bossPbData.BaseAvatarList);
             bossProto.PeakEasyBoss.BossDisplayAvatarIdList.AddRange(bossPbData.BaseAvatarList);
@@ -316,7 +314,7 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
         Player.ChallengeManager!.ChallengeInstance = instance;
 
         // Set first lineup before we enter scenes
-        await Player.LineupManager!.SetCurLineup((int)instance.Data.Peak.CurrentExtraLineup + 10);
+        await Player.LineupManager!.SetExtraLineup((ExtraLineupType)instance.Data.Peak.CurrentExtraLineup);
 
         // Enter scene
         try

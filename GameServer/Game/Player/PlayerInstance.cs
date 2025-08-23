@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Avatar;
+using EggLink.DanhengServer.Database.Friend;
 using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Database.Scene;
 using EggLink.DanhengServer.Database.Tutorial;
@@ -105,6 +106,7 @@ public partial class PlayerInstance(PlayerData data)
 
     public PlayerData Data { get; set; } = data;
     public PlayerUnlockData? PlayerUnlockData { get; private set; }
+    public FriendRecordData? FriendRecordData { get; private set; }
     public SceneData? SceneData { get; private set; }
     public HeartDialData? HeartDialData { get; private set; }
     public TutorialData? TutorialData { get; private set; }
@@ -198,6 +200,7 @@ public partial class PlayerInstance(PlayerData data)
         TutorialGuideData = InitializeDatabase<TutorialGuideData>();
         ServerPrefsData = InitializeDatabase<ServerPrefsData>();
         BattleCollegeData = InitializeDatabase<BattleCollegeData>();
+        FriendRecordData = InitializeDatabase<FriendRecordData>();
 
         Components.Add(new SwitchHandComponent(this));
 
@@ -233,6 +236,15 @@ public partial class PlayerInstance(PlayerData data)
         }
 
         if (ConfigManager.Config.ServerOption.EnableMission) await MissionManager!.AcceptMainMissionByCondition();
+
+        foreach (var friendDevelopmentInfoPb in FriendRecordData.DevelopmentInfos.ToArray())
+        {
+            if (Extensions.GetUnixSec() - friendDevelopmentInfoPb.Time >=
+                TimeSpan.TicksPerDay * 7 / TimeSpan.TicksPerSecond)
+            {
+                FriendRecordData.DevelopmentInfos.Remove(friendDevelopmentInfoPb);
+            }
+        }
 
         await QuestManager!.AcceptQuestByCondition();
     }

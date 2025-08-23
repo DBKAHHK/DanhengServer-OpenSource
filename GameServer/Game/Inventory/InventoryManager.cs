@@ -1,6 +1,6 @@
-﻿using System.Collections.Frozen;
-using EggLink.DanhengServer.Data;
+﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
+using EggLink.DanhengServer.Database.Friend;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Enums.Mission;
@@ -14,6 +14,7 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 using Google.Protobuf.Collections;
+using System.Collections.Frozen;
 
 namespace EggLink.DanhengServer.GameServer.Game.Inventory;
 
@@ -64,6 +65,16 @@ public class InventoryManager(PlayerInstance player) : BasePlayerManager(player)
                 }
 
                 itemData = await PutItem(itemId, 1, rank, level: level, uniqueId: ++Data.NextUniqueId);
+
+                if (itemConfig.Rarity == ItemRarityEnum.SuperRare)
+                {
+                    // add development
+                    Player.FriendRecordData!.AddAndRemoveOld(new FriendDevelopmentInfoPb
+                    {
+                        DevelopmentType = DevelopmentType.DevelopmentUnlockEquipment,
+                        Params = { { "EquipmentTid", (uint)itemConfig.ID } }
+                    });
+                }
                 break;
             case ItemMainTypeEnum.Usable:
                 switch (itemConfig.ItemSubType)

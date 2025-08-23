@@ -188,14 +188,14 @@ public class PlayerData : BaseDatabaseDataHelper
 
         var pos = 0;
         foreach (var avatar in avatarInfo.AssistAvatars.Select(assist =>
-                     avatarInfo.FormalAvatars.Find(x => x.AvatarId == assist)))
+                     avatarInfo.FormalAvatars.Find(x => x.BaseAvatarId == assist)))
             if (avatar != null)
                 info.AssistAvatarList.Add(avatar.ToDetailProto(pos++,
                     new PlayerDataCollection(this, inventoryInfo, new LineupInfo())));
 
         pos = 0;
         foreach (var avatar in avatarInfo.DisplayAvatars.Select(display =>
-                     avatarInfo.FormalAvatars.Find(x => x.AvatarId == display)))
+                     avatarInfo.FormalAvatars.Find(x => x.BaseAvatarId == display)))
             if (avatar != null)
                 info.DisplayAvatarList.Add(avatar.ToDetailProto(pos++,
                     new PlayerDataCollection(this, inventoryInfo, new LineupInfo())));

@@ -189,6 +189,28 @@ public class LineupManager : BasePlayerManager
         LineupData.CurExtraLineup = index;
     }
 
+    public async ValueTask SetExtraLineup(ExtraLineupType type, bool notify = true)
+    {
+        if (type == ExtraLineupType.LineupNone)
+        {
+            // reset lineup
+            LineupData.CurExtraLineup = -1;
+            if (notify) await Player.SendPacket(new PacketSyncLineupNotify(GetCurLineup()!));
+            return;
+        }
+
+        var index = (int)type + 10;
+
+        // get cur extra lineup
+        var lineup = GetExtraLineup(type);
+        if (lineup == null || lineup.BaseAvatars?.Count == 0) return;
+
+        LineupData.CurExtraLineup = index;
+
+        // sync
+        if (notify) await Player.SendPacket(new PacketSyncLineupNotify(GetCurLineup()!));
+    }
+
     public async ValueTask AddAvatar(int lineupIndex, int avatarId, bool sendPacket = true)
     {
         if (lineupIndex < 0) return;

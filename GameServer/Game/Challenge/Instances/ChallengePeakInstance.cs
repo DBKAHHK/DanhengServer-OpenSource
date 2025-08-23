@@ -1,5 +1,6 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Database.Friend;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
@@ -102,9 +103,16 @@ public class ChallengePeakInstance(PlayerInstance player, ChallengeDataPb data) 
                     await Player.SendPacket(new PacketChallengePeakSettleScNotify(this, res.Item2));
 
                     // Call MissionManager
-                    await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.ChallengeFinish, this);
+                    await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.ChallengePeakBattleFinish, this);
 
                     await Player.ChallengePeakManager!.SaveHistory(this, res.Item2);
+
+                    // add development
+                    Player.FriendRecordData!.AddAndRemoveOld(new FriendDevelopmentInfoPb
+                    {
+                        DevelopmentType = DevelopmentType.DevelopmentChallengePeak,
+                        Params = { { "PeakLevelId", (uint)Config.ID } }
+                    });
                 }
 
                 // Set saved technique points (This will be restored if the player resets the challenge)

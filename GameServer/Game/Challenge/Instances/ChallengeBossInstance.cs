@@ -1,5 +1,6 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Database.Friend;
 using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Game.Battle;
@@ -11,6 +12,7 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Proto.ServerSide;
 using EggLink.DanhengServer.Util;
+using SqlSugar;
 
 namespace EggLink.DanhengServer.GameServer.Game.Challenge.Instances;
 
@@ -282,6 +284,16 @@ public class ChallengeBossInstance(PlayerInstance player, ChallengeDataPb data) 
 
             // Call MissionManager
             await Player.MissionManager!.HandleFinishType(MissionFinishTypeEnum.ChallengeFinish, this);
+
+            // save
+            Player.ChallengeManager.SaveBattleRecord(this);
+
+            // add development
+            Player.FriendRecordData!.AddAndRemoveOld(new FriendDevelopmentInfoPb
+            {
+                DevelopmentType = DevelopmentType.DevelopmentBossChallenge,
+                Params = {{ "ChallengeId", (uint)Config.ID } }
+            });
         }
         else
         {
@@ -301,7 +313,7 @@ public class ChallengeBossInstance(PlayerInstance player, ChallengeDataPb data) 
 
         // Change player line up
         SetCurrentExtraLineup(ExtraLineupType.LineupChallenge2);
-        await Player.LineupManager!.SetCurLineup(GetCurrentExtraLineupType() + 10);
+        await Player.LineupManager!.SetExtraLineup((ExtraLineupType)GetCurrentExtraLineupType());
         await Player.SendPacket(new PacketChallengeLineupNotify((ExtraLineupType)GetCurrentExtraLineupType()));
         Data.Boss.SavedMp = (uint)Player.LineupManager.GetCurLineup()!.Mp;
 

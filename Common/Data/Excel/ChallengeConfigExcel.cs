@@ -19,6 +19,7 @@ public class ChallengeConfigExcel : ExcelResource
     public int StageNum { get; set; }
     public int ChallengeCountDown { get; set; }
     public int MazeBuffID { get; set; }
+    public uint Floor { get; set; }
 
     public List<int>? ChallengeTargetID { get; set; } = [];
 

@@ -2,7 +2,9 @@
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Avatar;
+using EggLink.DanhengServer.Database.Friend;
 using EggLink.DanhengServer.Database.Inventory;
+using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Avatar;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.PlayerSync;
@@ -46,6 +48,16 @@ public class AvatarManager(PlayerInstance player) : BasePlayerManager(player)
         };
 
         AvatarData.FormalAvatars.Add(avatar);
+
+        if (avatarExcel.Rarity == RarityEnum.CombatPowerAvatarRarityType5 && avatarExcel.AvatarID <= 3000)
+        {
+            // add development
+            Player.FriendRecordData!.AddAndRemoveOld(new FriendDevelopmentInfoPb
+            {
+                DevelopmentType = DevelopmentType.DevelopmentUnlockAvatar,
+                Params = { { "AvatarId", (uint)avatarExcel.AvatarID } }
+            });
+        }
 
         if (sync)
             await Player.SendPacket(new PacketPlayerSyncScNotify(avatar));

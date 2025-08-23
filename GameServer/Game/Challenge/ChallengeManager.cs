@@ -1,6 +1,7 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Challenge;
+using EggLink.DanhengServer.Database.Friend;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.GameServer.Game.Challenge.Definitions;
 using EggLink.DanhengServer.GameServer.Game.Challenge.Instances;
@@ -9,6 +10,7 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.Challenge;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Proto.ServerSide;
 using Google.Protobuf;
+using System;
 using static EggLink.DanhengServer.GameServer.Plugin.Event.PluginEvent;
 
 namespace EggLink.DanhengServer.GameServer.Game.Challenge;
@@ -131,7 +133,7 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
         ChallengeInstance = instance;
 
         // Set first lineup before we enter scenes
-        await Player.LineupManager!.SetCurLineup(instance.GetCurrentExtraLineupType() + 10);
+        await Player.LineupManager!.SetExtraLineup((ExtraLineupType)instance.GetCurrentExtraLineupType());
 
         // Enter scene
         try
@@ -296,6 +298,201 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
         else
         {
             ChallengeData.ChallengeInstance = null;
+        }
+    }
+
+    public void SaveBattleRecord(BaseLegacyChallengeInstance inst)
+    {
+        switch (inst)
+        {
+            case ChallengeMemoryInstance memory:
+            {
+                Player.FriendRecordData!.ChallengeGroupStatistics.TryAdd((uint)memory.Config.GroupID,
+                    new ChallengeGroupStatisticsPb
+                    {
+                        GroupId = (uint)memory.Config.GroupID
+                    });
+                var stats = Player.FriendRecordData.ChallengeGroupStatistics[(uint)memory.Config.GroupID];
+
+                stats.MemoryGroupStatistics ??= [];
+
+                var starCount = 0u;
+                for (var i = 0; i < 3; i++) starCount += (memory.Data.Memory.Stars & (1 << i)) != 0 ? 1u : 0u;
+
+                if (stats.MemoryGroupStatistics.GetValueOrDefault((uint)memory.Config.ID)?.Stars >
+                    starCount) return; // dont save if we have more stars already
+
+
+                var pb = new MemoryGroupStatisticsPb
+                {
+                    RoundCount = (uint)(memory.Config.ChallengeCountDown - memory.Data.Memory.RoundsLeft),
+                    Stars = starCount,
+                    RecordId = Player.FriendRecordData!.NextRecordId++,
+                    Level = memory.Config.Floor
+                };
+
+                List<ExtraLineupType> lineupTypes =
+                [
+                    ExtraLineupType.LineupChallenge
+                ];
+
+                if (memory.Config.StageNum >= 2)
+                    lineupTypes.Add(ExtraLineupType.LineupChallenge2);
+
+                foreach (var type in lineupTypes)
+                {
+                    var lineup = Player.LineupManager!.GetExtraLineup(type);
+                    if (lineup == null) continue;
+
+                    var index = 0u;
+                    var lineupPb = new List<ChallengeAvatarInfoPb>();
+
+                    foreach (var avatar in lineup.BaseAvatars ?? [])
+                    {
+                        var formalAvatar = Player.AvatarManager!.GetFormalAvatar(avatar.BaseAvatarId);
+                        if (formalAvatar == null) continue;
+
+                        lineupPb.Add(new ChallengeAvatarInfoPb
+                        {
+                            Index = index++,
+                            Id = (uint)formalAvatar.BaseAvatarId,
+                            AvatarType = AvatarType.AvatarFormalType,
+                            Level = (uint)formalAvatar.Level
+                        });
+                    }
+
+                    pb.Lineups.Add(lineupPb);
+                }
+
+                stats.MemoryGroupStatistics[(uint)memory.Config.ID] = pb;
+                break;
+            }
+            case ChallengeStoryInstance story:
+            {
+                Player.FriendRecordData!.ChallengeGroupStatistics.TryAdd((uint)story.Config.GroupID,
+                    new ChallengeGroupStatisticsPb
+                    {
+                        GroupId = (uint)story.Config.GroupID
+                    });
+                var stats = Player.FriendRecordData.ChallengeGroupStatistics[(uint)story.Config.GroupID];
+
+                stats.StoryGroupStatistics ??= [];
+
+                var starCount = 0u;
+                for (var i = 0; i < 3; i++) starCount += (story.Data.Story.Stars & (1 << i)) != 0 ? 1u : 0u;
+
+                if (stats.StoryGroupStatistics.GetValueOrDefault((uint)story.Config.ID)?.Stars >
+                    starCount) return; // dont save if we have more stars already
+
+                var pb = new StoryGroupStatisticsPb
+                {
+                    Stars = starCount,
+                    RecordId = Player.FriendRecordData!.NextRecordId++,
+                    Level = story.Config.Floor,
+                    BuffOne = story.Data.Story.Buffs.Count > 0 ? story.Data.Story.Buffs[0] : 0,
+                    BuffTwo = story.Data.Story.Buffs.Count > 1 ? story.Data.Story.Buffs[1] : 0,
+                    Score = (uint)story.GetTotalScore()
+                };
+
+                List<ExtraLineupType> lineupTypes =
+                [
+                    ExtraLineupType.LineupChallenge
+                ];
+
+                if (story.Config.StageNum >= 2)
+                    lineupTypes.Add(ExtraLineupType.LineupChallenge2);
+
+                foreach (var type in lineupTypes)
+                {
+                    var lineup = Player.LineupManager!.GetExtraLineup(type);
+                    if (lineup == null) continue;
+
+                    var index = 0u;
+                    var lineupPb = new List<ChallengeAvatarInfoPb>();
+
+                    foreach (var avatar in lineup.BaseAvatars ?? [])
+                    {
+                        var formalAvatar = Player.AvatarManager!.GetFormalAvatar(avatar.BaseAvatarId);
+                        if (formalAvatar == null) continue;
+
+                        lineupPb.Add(new ChallengeAvatarInfoPb
+                        {
+                            Index = index++,
+                            Id = (uint)formalAvatar.BaseAvatarId,
+                            AvatarType = AvatarType.AvatarFormalType,
+                            Level = (uint)formalAvatar.Level
+                        });
+                    }
+
+                    pb.Lineups.Add(lineupPb);
+                }
+
+                stats.StoryGroupStatistics[(uint)story.Config.ID] = pb;
+                break;
+            }
+            case ChallengeBossInstance boss:
+            {
+                Player.FriendRecordData!.ChallengeGroupStatistics.TryAdd((uint)boss.Config.GroupID,
+                    new ChallengeGroupStatisticsPb
+                    {
+                        GroupId = (uint)boss.Config.GroupID
+                    });
+                var stats = Player.FriendRecordData.ChallengeGroupStatistics[(uint)boss.Config.GroupID];
+
+                stats.BossGroupStatistics ??= [];
+
+                var starCount = 0u;
+                for (var i = 0; i < 3; i++) starCount += (boss.Data.Boss.Stars & (1 << i)) != 0 ? 1u : 0u;
+
+                if (stats.BossGroupStatistics.GetValueOrDefault((uint)boss.Config.ID)?.Stars >
+                    starCount) return; // dont save if we have more stars already
+
+                var pb = new BossGroupStatisticsPb
+                {
+                    Stars = starCount,
+                    RecordId = Player.FriendRecordData!.NextRecordId++,
+                    Level = boss.Config.Floor,
+                    BuffOne = boss.Data.Boss.Buffs.Count > 0 ? boss.Data.Boss.Buffs[0] : 0,
+                    BuffTwo = boss.Data.Boss.Buffs.Count > 1 ? boss.Data.Boss.Buffs[1] : 0,
+                    Score = (uint)boss.GetTotalScore()
+                };
+
+                List<ExtraLineupType> lineupTypes =
+                [
+                    ExtraLineupType.LineupChallenge
+                ];
+
+                if (boss.Config.StageNum >= 2)
+                    lineupTypes.Add(ExtraLineupType.LineupChallenge2);
+
+                foreach (var type in lineupTypes)
+                {
+                    var lineup = Player.LineupManager!.GetExtraLineup(type);
+                    if (lineup == null) continue;
+
+                    var index = 0u;
+                    var lineupPb = new List<ChallengeAvatarInfoPb>();
+
+                    foreach (var avatar in lineup.BaseAvatars ?? [])
+                    {
+                        var formalAvatar = Player.AvatarManager!.GetFormalAvatar(avatar.BaseAvatarId);
+                        if (formalAvatar == null) continue;
+
+                        lineupPb.Add(new ChallengeAvatarInfoPb
+                        {
+                            Index = index++,
+                            Id = (uint)formalAvatar.BaseAvatarId,
+                            AvatarType = AvatarType.AvatarFormalType,
+                            Level = (uint)formalAvatar.Level
+                        });
+                    }
+
+                    pb.Lineups.Add(lineupPb);
+                }
+
+                stats.BossGroupStatistics[(uint)boss.Config.ID] = pb;
+                break;
+            }
         }
     }
 

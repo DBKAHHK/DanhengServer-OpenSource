@@ -26,6 +26,8 @@ public static class GameConstants
     public const uint CHALLENGE_PEAK_GOLD_FRAME_ID = 226003;
     public const uint CHALLENGE_PEAK_ULTRA_FRAME_ID = 226004;
 
+    public const uint CHALLENGE_PEAK_CUR_GROUP_ID = 1;
+
     public static readonly List<int> UpgradeWorldLevel = [20, 30, 40, 50, 60, 65];
     public static readonly List<int> AllowedChessRogueEntranceId = [8020701, 8020901, 8020401, 8020201];
 }
