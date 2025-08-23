@@ -17,9 +17,9 @@ public class HandlerSetAssistAvatarCsReq : Handler
         {
             if (id == 0) continue;
 
-            var avatarData = player.AvatarManager!.AvatarData.FormalAvatars.First(x =>
+            var avatarData = player.AvatarManager!.AvatarData.FormalAvatars.FirstOrDefault(x =>
                 x.BaseAvatarId == (int)id);
-            if (avatarData != null) avatars.Add(avatarData.AvatarId);
+            if (avatarData != null) avatars.Add(avatarData.BaseAvatarId);
         }
 
         await connection.SendPacket(new PacketSetAssistAvatarScRsp(req.AvatarIdList));
