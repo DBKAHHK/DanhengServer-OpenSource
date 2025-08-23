@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNIZWFydERpYWxTY3JpcHRDaGFuZ2VTY05vdGlmeS5wcm90bxobSGVhcnRE",
-            "aWFsVW5sb2NrU3RhdHVzLnByb3RvGhtIZWFydERpYWxEaWFsb2d1ZUluZm8u",
-            "cHJvdG8aGUhlYXJ0RGlhbFNjcmlwdEluZm8ucHJvdG8aEU1NRUlORk1ESkZH",
+            "aWFsRGlhbG9ndWVJbmZvLnByb3RvGhtIZWFydERpYWxVbmxvY2tTdGF0dXMu",
+            "cHJvdG8aEU1NRUlORk1ESkZHLnByb3RvGhlIZWFydERpYWxTY3JpcHRJbmZv",
             "LnByb3RvIuUBCh1IZWFydERpYWxTY3JpcHRDaGFuZ2VTY05vdGlmeRItCg11",
             "bmxvY2tfc3RhdHVzGAogASgOMhYuSGVhcnREaWFsVW5sb2NrU3RhdHVzEiEK",
             "C09DTU9FSklETEFNGAggAygLMgwuTU1FSU5GTURKRkcSOgoaY2hhbmdlZF9k",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "aWFsU2NyaXB0SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MMEINFMDJFGReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.MMEINFMDJFGReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeartDialScriptChangeScNotify), global::EggLink.DanhengServer.Proto.HeartDialScriptChangeScNotify.Parser, new[]{ "UnlockStatus", "OCMOEJIDLAM", "ChangedDialogueInfoList", "ChangedScriptInfoList" }, null, null, null, null)
           }));

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static NFKDAAGBMPJReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFORktEQUFHQk1QSi5wcm90bxoRTUFBT0xLR0xMQkkucHJvdG8aFkZhdGVN",
-            "YXN0ZXJTdGF0dXMucHJvdG8ikAEKC05GS0RBQUdCTVBKEg4KBm1heF9ocBgO",
+            "ChFORktEQUFHQk1QSi5wcm90bxoWRmF0ZU1hc3RlclN0YXR1cy5wcm90bxoR",
+            "TUFBT0xLR0xMQkkucHJvdG8ikAEKC05GS0RBQUdCTVBKEg4KBm1heF9ocBgO",
             "IAEoBRIRCglhdmF0YXJfaWQYByABKA0SIQoLTUhHREdHTklKQ0cYCiADKAsy",
             "DC5NQUFPTEtHTExCSRIKCgJocBgLIAEoBRIMCgRyYW5rGAUgASgNEiEKBnN0",
             "YXR1cxgIIAEoDjIRLkZhdGVNYXN0ZXJTdGF0dXNCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MAAOLKGLLBIReflection.Descriptor, global::EggLink.DanhengServer.Proto.FateMasterStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FateMasterStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.MAAOLKGLLBIReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ), global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ.Parser, new[]{ "MaxHp", "AvatarId", "MHGDGGNIJCG", "Hp", "Rank", "Status" }, null, null, null, null)
           }));

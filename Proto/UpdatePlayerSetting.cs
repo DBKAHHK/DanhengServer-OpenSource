@@ -24,21 +24,22 @@ namespace EggLink.DanhengServer.Proto {
     static UpdatePlayerSettingReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlVcGRhdGVQbGF5ZXJTZXR0aW5nLnByb3RvGhFPR0ZJT0RQSUxFTC5wcm90",
-            "byKSAwoTVXBkYXRlUGxheWVyU2V0dGluZxIVCgtLQVBESU1HSkxORhgDIAEo",
-            "CEgAEhUKC01NTU5KQ0hFTUZOGAogASgISAASFQoLTktFS0lCTkpNUEEYBSAB",
-            "KAhIABIfChVkaXNwbGF5X2JhdHRsZV9yZWNvcmQYBCABKAhIABIcChJkaXNw",
-            "bGF5X2NvbGxlY3Rpb24YDSABKAhIABIgChZkaXNwbGF5X3JlY2VudGx5X3N0",
-            "YXRlGAggASgISAASIgoYZGlzcGxheV9jaGFsbGVuZ2VfbGluZXVwGAIgASgI",
-            "SAASHgoUZGlzcGxheV9hY3RpdmVfc3RhdGUYBiABKAhIABIVCgtHTUpBTk9K",
-            "TUtDRRgBIAEoCEgAEiMKC0dIS0NNRE5LT1BOGAcgASgLMgwuT0dGSU9EUElM",
-            "RUxIABIVCgtBQU1FTE9IUEJITBgMIAEoCEgAEhYKC01DQ0pMQkVNS0NOGP0M",
-            "IAEoCEgAEhYKC09FR0lGT0RFQUtLGOoBIAEoCEgAQg4KDHNldHRpbmdfY2Fz",
-            "ZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChlVcGRhdGVQbGF5ZXJTZXR0aW5nLnByb3RvGh1QbGF5ZXJFeHRyYVNldHRp",
+            "bmdzSW5mby5wcm90byKmAwoTVXBkYXRlUGxheWVyU2V0dGluZxIVCgtLQVBE",
+            "SU1HSkxORhgDIAEoCEgAEhUKC01NTU5KQ0hFTUZOGAogASgISAASFQoLTktF",
+            "S0lCTkpNUEEYBSABKAhIABIfChVkaXNwbGF5X2JhdHRsZV9yZWNvcmQYBCAB",
+            "KAhIABIcChJkaXNwbGF5X2NvbGxlY3Rpb24YDSABKAhIABIgChZkaXNwbGF5",
+            "X3JlY2VudGx5X3N0YXRlGAggASgISAASIgoYZGlzcGxheV9jaGFsbGVuZ2Vf",
+            "bGluZXVwGAIgASgISAASHgoUZGlzcGxheV9hY3RpdmVfc3RhdGUYBiABKAhI",
+            "ABIVCgtHTUpBTk9KTUtDRRgBIAEoCEgAEjcKE2V4dHJhX3NldHRpbmdzX2lu",
+            "Zm8YByABKAsyGC5QbGF5ZXJFeHRyYVNldHRpbmdzSW5mb0gAEhUKC0FBTUVM",
+            "T0hQQkhMGAwgASgISAASFgoLTUNDSkxCRU1LQ04Y/QwgASgISAASFgoLT0VH",
+            "SUZPREVBS0sY6gEgASgISABCDgoMc2V0dGluZ19jYXNlQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OGFIODPILELReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdatePlayerSetting), global::EggLink.DanhengServer.Proto.UpdatePlayerSetting.Parser, new[]{ "KAPDIMGJLNF", "MMMNJCHEMFN", "NKEKIBNJMPA", "DisplayBattleRecord", "DisplayCollection", "DisplayRecentlyState", "DisplayChallengeLineup", "DisplayActiveState", "GMJANOJMKCE", "GHKCMDNKOPN", "AAMELOHPBHL", "MCCJLBEMKCN", "OEGIFODEAKK" }, new[]{ "SettingCase" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdatePlayerSetting), global::EggLink.DanhengServer.Proto.UpdatePlayerSetting.Parser, new[]{ "KAPDIMGJLNF", "MMMNJCHEMFN", "NKEKIBNJMPA", "DisplayBattleRecord", "DisplayCollection", "DisplayRecentlyState", "DisplayChallengeLineup", "DisplayActiveState", "GMJANOJMKCE", "ExtraSettingsInfo", "AAMELOHPBHL", "MCCJLBEMKCN", "OEGIFODEAKK" }, new[]{ "SettingCase" }, null, null, null)
           }));
     }
     #endregion
@@ -108,8 +109,8 @@ namespace EggLink.DanhengServer.Proto {
         case SettingCaseOneofCase.GMJANOJMKCE:
           GMJANOJMKCE = other.GMJANOJMKCE;
           break;
-        case SettingCaseOneofCase.GHKCMDNKOPN:
-          GHKCMDNKOPN = other.GHKCMDNKOPN.Clone();
+        case SettingCaseOneofCase.ExtraSettingsInfo:
+          ExtraSettingsInfo = other.ExtraSettingsInfo.Clone();
           break;
         case SettingCaseOneofCase.AAMELOHPBHL:
           AAMELOHPBHL = other.AAMELOHPBHL;
@@ -365,15 +366,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GHKCMDNKOPN" field.</summary>
-    public const int GHKCMDNKOPNFieldNumber = 7;
+    /// <summary>Field number for the "extra_settings_info" field.</summary>
+    public const int ExtraSettingsInfoFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.OGFIODPILEL GHKCMDNKOPN {
-      get { return settingCaseCase_ == SettingCaseOneofCase.GHKCMDNKOPN ? (global::EggLink.DanhengServer.Proto.OGFIODPILEL) settingCase_ : null; }
+    public global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo ExtraSettingsInfo {
+      get { return settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo ? (global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo) settingCase_ : null; }
       set {
         settingCase_ = value;
-        settingCaseCase_ = value == null ? SettingCaseOneofCase.None : SettingCaseOneofCase.GHKCMDNKOPN;
+        settingCaseCase_ = value == null ? SettingCaseOneofCase.None : SettingCaseOneofCase.ExtraSettingsInfo;
       }
     }
 
@@ -468,7 +469,7 @@ namespace EggLink.DanhengServer.Proto {
       DisplayChallengeLineup = 2,
       DisplayActiveState = 6,
       GMJANOJMKCE = 1,
-      GHKCMDNKOPN = 7,
+      ExtraSettingsInfo = 7,
       AAMELOHPBHL = 12,
       MCCJLBEMKCN = 1661,
       OEGIFODEAKK = 234,
@@ -511,7 +512,7 @@ namespace EggLink.DanhengServer.Proto {
       if (DisplayChallengeLineup != other.DisplayChallengeLineup) return false;
       if (DisplayActiveState != other.DisplayActiveState) return false;
       if (GMJANOJMKCE != other.GMJANOJMKCE) return false;
-      if (!object.Equals(GHKCMDNKOPN, other.GHKCMDNKOPN)) return false;
+      if (!object.Equals(ExtraSettingsInfo, other.ExtraSettingsInfo)) return false;
       if (AAMELOHPBHL != other.AAMELOHPBHL) return false;
       if (MCCJLBEMKCN != other.MCCJLBEMKCN) return false;
       if (OEGIFODEAKK != other.OEGIFODEAKK) return false;
@@ -532,7 +533,7 @@ namespace EggLink.DanhengServer.Proto {
       if (HasDisplayChallengeLineup) hash ^= DisplayChallengeLineup.GetHashCode();
       if (HasDisplayActiveState) hash ^= DisplayActiveState.GetHashCode();
       if (HasGMJANOJMKCE) hash ^= GMJANOJMKCE.GetHashCode();
-      if (settingCaseCase_ == SettingCaseOneofCase.GHKCMDNKOPN) hash ^= GHKCMDNKOPN.GetHashCode();
+      if (settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo) hash ^= ExtraSettingsInfo.GetHashCode();
       if (HasAAMELOHPBHL) hash ^= AAMELOHPBHL.GetHashCode();
       if (HasMCCJLBEMKCN) hash ^= MCCJLBEMKCN.GetHashCode();
       if (HasOEGIFODEAKK) hash ^= OEGIFODEAKK.GetHashCode();
@@ -579,9 +580,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteBool(DisplayActiveState);
       }
-      if (settingCaseCase_ == SettingCaseOneofCase.GHKCMDNKOPN) {
+      if (settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo) {
         output.WriteRawTag(58);
-        output.WriteMessage(GHKCMDNKOPN);
+        output.WriteMessage(ExtraSettingsInfo);
       }
       if (HasDisplayRecentlyState) {
         output.WriteRawTag(64);
@@ -641,9 +642,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteBool(DisplayActiveState);
       }
-      if (settingCaseCase_ == SettingCaseOneofCase.GHKCMDNKOPN) {
+      if (settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo) {
         output.WriteRawTag(58);
-        output.WriteMessage(GHKCMDNKOPN);
+        output.WriteMessage(ExtraSettingsInfo);
       }
       if (HasDisplayRecentlyState) {
         output.WriteRawTag(64);
@@ -706,8 +707,8 @@ namespace EggLink.DanhengServer.Proto {
       if (HasGMJANOJMKCE) {
         size += 1 + 1;
       }
-      if (settingCaseCase_ == SettingCaseOneofCase.GHKCMDNKOPN) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GHKCMDNKOPN);
+      if (settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtraSettingsInfo);
       }
       if (HasAAMELOHPBHL) {
         size += 1 + 1;
@@ -758,11 +759,11 @@ namespace EggLink.DanhengServer.Proto {
         case SettingCaseOneofCase.GMJANOJMKCE:
           GMJANOJMKCE = other.GMJANOJMKCE;
           break;
-        case SettingCaseOneofCase.GHKCMDNKOPN:
-          if (GHKCMDNKOPN == null) {
-            GHKCMDNKOPN = new global::EggLink.DanhengServer.Proto.OGFIODPILEL();
+        case SettingCaseOneofCase.ExtraSettingsInfo:
+          if (ExtraSettingsInfo == null) {
+            ExtraSettingsInfo = new global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo();
           }
-          GHKCMDNKOPN.MergeFrom(other.GHKCMDNKOPN);
+          ExtraSettingsInfo.MergeFrom(other.ExtraSettingsInfo);
           break;
         case SettingCaseOneofCase.AAMELOHPBHL:
           AAMELOHPBHL = other.AAMELOHPBHL;
@@ -815,12 +816,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            global::EggLink.DanhengServer.Proto.OGFIODPILEL subBuilder = new global::EggLink.DanhengServer.Proto.OGFIODPILEL();
-            if (settingCaseCase_ == SettingCaseOneofCase.GHKCMDNKOPN) {
-              subBuilder.MergeFrom(GHKCMDNKOPN);
+            global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo subBuilder = new global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo();
+            if (settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo) {
+              subBuilder.MergeFrom(ExtraSettingsInfo);
             }
             input.ReadMessage(subBuilder);
-            GHKCMDNKOPN = subBuilder;
+            ExtraSettingsInfo = subBuilder;
             break;
           }
           case 64: {
@@ -887,12 +888,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            global::EggLink.DanhengServer.Proto.OGFIODPILEL subBuilder = new global::EggLink.DanhengServer.Proto.OGFIODPILEL();
-            if (settingCaseCase_ == SettingCaseOneofCase.GHKCMDNKOPN) {
-              subBuilder.MergeFrom(GHKCMDNKOPN);
+            global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo subBuilder = new global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo();
+            if (settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo) {
+              subBuilder.MergeFrom(ExtraSettingsInfo);
             }
             input.ReadMessage(subBuilder);
-            GHKCMDNKOPN = subBuilder;
+            ExtraSettingsInfo = subBuilder;
             break;
           }
           case 64: {

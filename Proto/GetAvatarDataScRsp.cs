@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static GetAvatarDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhHZXRBdmF0YXJEYXRhU2NSc3AucHJvdG8aDEF2YXRhci5wcm90bxobR3Jv",
-            "d3RoVGFydGdldEZ1bmNUeXBlLnByb3RvGhlNdWx0aVBhdGhBdmF0YXJJbmZv",
-            "LnByb3RvGhlNdWx0aVBhdGhBdmF0YXJUeXBlLnByb3RvGhFLSE9DQ0hBQk5N",
-            "Ti5wcm90byKzAwoSR2V0QXZhdGFyRGF0YVNjUnNwEiEKC0ZFRlBJSkpMTkZH",
+            "ChhHZXRBdmF0YXJEYXRhU2NSc3AucHJvdG8aDEF2YXRhci5wcm90bxoRS0hP",
+            "Q0NIQUJOTU4ucHJvdG8aG0dyb3d0aFRhcnRnZXRGdW5jVHlwZS5wcm90bxoZ",
+            "TXVsdGlQYXRoQXZhdGFySW5mby5wcm90bxoZTXVsdGlQYXRoQXZhdGFyVHlw",
+            "ZS5wcm90byKzAwoSR2V0QXZhdGFyRGF0YVNjUnNwEiEKC0ZFRlBJSkpMTkZH",
             "GAIgAygLMgwuS0hPQ0NIQUJOTU4SEQoJc2tpbl9saXN0GAQgAygNEg8KB3Jl",
             "dGNvZGUYCyABKA0SHAoLYXZhdGFyX2xpc3QYByADKAsyBy5BdmF0YXISEgoK",
             "aXNfZ2V0X2FsbBgNIAEoCBIaChJiYXNpY190eXBlX2lkX2xpc3QYCCADKA0S",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "IwoFdmFsdWUYAiABKA4yFC5NdWx0aVBhdGhBdmF0YXJUeXBlOgI4AUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.GrowthTartgetFuncTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.KHOCCHABNMNReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.KHOCCHABNMNReflection.Descriptor, global::EggLink.DanhengServer.Proto.GrowthTartgetFuncTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp), global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp.Parser, new[]{ "FEFPIJJLNFG", "SkinList", "Retcode", "AvatarList", "IsGetAll", "BasicTypeIdList", "PNKCFEALAMI", "CurAvatarPath", "JPNLPOPMKEJ", "MultiPathAvatarInfoList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

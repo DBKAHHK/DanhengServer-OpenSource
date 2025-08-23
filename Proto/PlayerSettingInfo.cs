@@ -24,20 +24,21 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerSettingInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdQbGF5ZXJTZXR0aW5nSW5mby5wcm90bxoRT0dGSU9EUElMRUwucHJvdG8i",
-            "5QIKEVBsYXllclNldHRpbmdJbmZvEhMKC01NTU5KQ0hFTUZOGA0gASgIEhMK",
-            "C0dNSkFOT0pNS0NFGAkgASgIEhMKC05LRUtJQk5KTVBBGA8gASgIEhwKFGRp",
-            "c3BsYXlfYWN0aXZlX3N0YXRlGAEgASgIEiEKC0dIS0NNRE5LT1BOGAggASgL",
-            "MgwuT0dGSU9EUElMRUwSEwoLS0FQRElNR0pMTkYYAiABKAgSIAoYZGlzcGxh",
-            "eV9jaGFsbGVuZ2VfbGluZXVwGAcgASgIEh4KFmRpc3BsYXlfcmVjZW50bHlf",
-            "c3RhdGUYBCABKAgSEwoLQUFNRUxPSFBCSEwYBSABKAgSGgoSZGlzcGxheV9j",
-            "b2xsZWN0aW9uGAsgASgIEhMKC01DQ0pMQkVNS0NOGA4gASgIEhQKC09FR0lG",
-            "T0RFQUtLGNMKIAEoCBIdChVkaXNwbGF5X2JhdHRsZV9yZWNvcmQYAyABKAhC",
-            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChdQbGF5ZXJTZXR0aW5nSW5mby5wcm90bxodUGxheWVyRXh0cmFTZXR0aW5n",
+            "c0luZm8ucHJvdG8i+QIKEVBsYXllclNldHRpbmdJbmZvEhMKC01NTU5KQ0hF",
+            "TUZOGA0gASgIEhMKC0dNSkFOT0pNS0NFGAkgASgIEhMKC05LRUtJQk5KTVBB",
+            "GA8gASgIEhwKFGRpc3BsYXlfYWN0aXZlX3N0YXRlGAEgASgIEjUKE2V4dHJh",
+            "X3NldHRpbmdzX2luZm8YCCABKAsyGC5QbGF5ZXJFeHRyYVNldHRpbmdzSW5m",
+            "bxITCgtLQVBESU1HSkxORhgCIAEoCBIgChhkaXNwbGF5X2NoYWxsZW5nZV9s",
+            "aW5ldXAYByABKAgSHgoWZGlzcGxheV9yZWNlbnRseV9zdGF0ZRgEIAEoCBIT",
+            "CgtBQU1FTE9IUEJITBgFIAEoCBIaChJkaXNwbGF5X2NvbGxlY3Rpb24YCyAB",
+            "KAgSEwoLTUNDSkxCRU1LQ04YDiABKAgSFAoLT0VHSUZPREVBS0sY0wogASgI",
+            "Eh0KFWRpc3BsYXlfYmF0dGxlX3JlY29yZBgDIAEoCEIeqgIbRWdnTGluay5E",
+            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OGFIODPILELReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerSettingInfo), global::EggLink.DanhengServer.Proto.PlayerSettingInfo.Parser, new[]{ "MMMNJCHEMFN", "GMJANOJMKCE", "NKEKIBNJMPA", "DisplayActiveState", "GHKCMDNKOPN", "KAPDIMGJLNF", "DisplayChallengeLineup", "DisplayRecentlyState", "AAMELOHPBHL", "DisplayCollection", "MCCJLBEMKCN", "OEGIFODEAKK", "DisplayBattleRecord" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerSettingInfo), global::EggLink.DanhengServer.Proto.PlayerSettingInfo.Parser, new[]{ "MMMNJCHEMFN", "GMJANOJMKCE", "NKEKIBNJMPA", "DisplayActiveState", "ExtraSettingsInfo", "KAPDIMGJLNF", "DisplayChallengeLineup", "DisplayRecentlyState", "AAMELOHPBHL", "DisplayCollection", "MCCJLBEMKCN", "OEGIFODEAKK", "DisplayBattleRecord" }, null, null, null, null)
           }));
     }
     #endregion
@@ -83,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       gMJANOJMKCE_ = other.gMJANOJMKCE_;
       nKEKIBNJMPA_ = other.nKEKIBNJMPA_;
       displayActiveState_ = other.displayActiveState_;
-      gHKCMDNKOPN_ = other.gHKCMDNKOPN_ != null ? other.gHKCMDNKOPN_.Clone() : null;
+      extraSettingsInfo_ = other.extraSettingsInfo_ != null ? other.extraSettingsInfo_.Clone() : null;
       kAPDIMGJLNF_ = other.kAPDIMGJLNF_;
       displayChallengeLineup_ = other.displayChallengeLineup_;
       displayRecentlyState_ = other.displayRecentlyState_;
@@ -149,15 +150,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GHKCMDNKOPN" field.</summary>
-    public const int GHKCMDNKOPNFieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.OGFIODPILEL gHKCMDNKOPN_;
+    /// <summary>Field number for the "extra_settings_info" field.</summary>
+    public const int ExtraSettingsInfoFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo extraSettingsInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.OGFIODPILEL GHKCMDNKOPN {
-      get { return gHKCMDNKOPN_; }
+    public global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo ExtraSettingsInfo {
+      get { return extraSettingsInfo_; }
       set {
-        gHKCMDNKOPN_ = value;
+        extraSettingsInfo_ = value;
       }
     }
 
@@ -276,7 +277,7 @@ namespace EggLink.DanhengServer.Proto {
       if (GMJANOJMKCE != other.GMJANOJMKCE) return false;
       if (NKEKIBNJMPA != other.NKEKIBNJMPA) return false;
       if (DisplayActiveState != other.DisplayActiveState) return false;
-      if (!object.Equals(GHKCMDNKOPN, other.GHKCMDNKOPN)) return false;
+      if (!object.Equals(ExtraSettingsInfo, other.ExtraSettingsInfo)) return false;
       if (KAPDIMGJLNF != other.KAPDIMGJLNF) return false;
       if (DisplayChallengeLineup != other.DisplayChallengeLineup) return false;
       if (DisplayRecentlyState != other.DisplayRecentlyState) return false;
@@ -296,7 +297,7 @@ namespace EggLink.DanhengServer.Proto {
       if (GMJANOJMKCE != false) hash ^= GMJANOJMKCE.GetHashCode();
       if (NKEKIBNJMPA != false) hash ^= NKEKIBNJMPA.GetHashCode();
       if (DisplayActiveState != false) hash ^= DisplayActiveState.GetHashCode();
-      if (gHKCMDNKOPN_ != null) hash ^= GHKCMDNKOPN.GetHashCode();
+      if (extraSettingsInfo_ != null) hash ^= ExtraSettingsInfo.GetHashCode();
       if (KAPDIMGJLNF != false) hash ^= KAPDIMGJLNF.GetHashCode();
       if (DisplayChallengeLineup != false) hash ^= DisplayChallengeLineup.GetHashCode();
       if (DisplayRecentlyState != false) hash ^= DisplayRecentlyState.GetHashCode();
@@ -347,9 +348,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteBool(DisplayChallengeLineup);
       }
-      if (gHKCMDNKOPN_ != null) {
+      if (extraSettingsInfo_ != null) {
         output.WriteRawTag(66);
-        output.WriteMessage(GHKCMDNKOPN);
+        output.WriteMessage(ExtraSettingsInfo);
       }
       if (GMJANOJMKCE != false) {
         output.WriteRawTag(72);
@@ -409,9 +410,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteBool(DisplayChallengeLineup);
       }
-      if (gHKCMDNKOPN_ != null) {
+      if (extraSettingsInfo_ != null) {
         output.WriteRawTag(66);
-        output.WriteMessage(GHKCMDNKOPN);
+        output.WriteMessage(ExtraSettingsInfo);
       }
       if (GMJANOJMKCE != false) {
         output.WriteRawTag(72);
@@ -459,8 +460,8 @@ namespace EggLink.DanhengServer.Proto {
       if (DisplayActiveState != false) {
         size += 1 + 1;
       }
-      if (gHKCMDNKOPN_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GHKCMDNKOPN);
+      if (extraSettingsInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtraSettingsInfo);
       }
       if (KAPDIMGJLNF != false) {
         size += 1 + 1;
@@ -510,11 +511,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.DisplayActiveState != false) {
         DisplayActiveState = other.DisplayActiveState;
       }
-      if (other.gHKCMDNKOPN_ != null) {
-        if (gHKCMDNKOPN_ == null) {
-          GHKCMDNKOPN = new global::EggLink.DanhengServer.Proto.OGFIODPILEL();
+      if (other.extraSettingsInfo_ != null) {
+        if (extraSettingsInfo_ == null) {
+          ExtraSettingsInfo = new global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo();
         }
-        GHKCMDNKOPN.MergeFrom(other.GHKCMDNKOPN);
+        ExtraSettingsInfo.MergeFrom(other.ExtraSettingsInfo);
       }
       if (other.KAPDIMGJLNF != false) {
         KAPDIMGJLNF = other.KAPDIMGJLNF;
@@ -580,10 +581,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            if (gHKCMDNKOPN_ == null) {
-              GHKCMDNKOPN = new global::EggLink.DanhengServer.Proto.OGFIODPILEL();
+            if (extraSettingsInfo_ == null) {
+              ExtraSettingsInfo = new global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo();
             }
-            input.ReadMessage(GHKCMDNKOPN);
+            input.ReadMessage(ExtraSettingsInfo);
             break;
           }
           case 72: {
@@ -650,10 +651,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 66: {
-            if (gHKCMDNKOPN_ == null) {
-              GHKCMDNKOPN = new global::EggLink.DanhengServer.Proto.OGFIODPILEL();
+            if (extraSettingsInfo_ == null) {
+              ExtraSettingsInfo = new global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo();
             }
-            input.ReadMessage(GHKCMDNKOPN);
+            input.ReadMessage(ExtraSettingsInfo);
             break;
           }
           case 72: {

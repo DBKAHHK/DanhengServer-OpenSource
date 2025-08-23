@@ -25,17 +25,18 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZQbGF5ZXJSZWNvcmRJbmZvLnByb3RvGhpQbGF5ZXJDb2xsZWN0aW9uSW5m",
-            "by5wcm90byLqAQoQUGxheWVyUmVjb3JkSW5mbxITCgtGSEtLTVBERE1HTxgO",
-            "IAEoDRITCgtKRlBHQktCUEJORhgPIAEoDRITCgtHRUtLTkRPTkhMShgEIAEo",
-            "DRITCgtDRkRGTUdMTElDTxgKIAEoDRITCgtFTUpERUJETUhMTBgDIAEoDRIu",
-            "Cg9jb2xsZWN0aW9uX2luZm8YDCABKAsyFS5QbGF5ZXJDb2xsZWN0aW9uSW5m",
-            "bxITCgtFSEJERUlKSk9ISxgFIAEoDRITCgtCSEZFRkVPRE5JTRgBIAEoDRIT",
-            "CgtIS05PQUtHQ0pCSxgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "by5wcm90byKjAgoQUGxheWVyUmVjb3JkSW5mbxIaChJjb2xsZWN0X2Rpc2Nf",
+            "Y291bnQYDiABKA0SHwoXY29sbGVjdF9lcXVpcG1lbnRfY291bnQYDyABKA0S",
+            "EwoLR0VLS05ET05ITEoYBCABKA0SHAoUY29sbGVjdF9hdmF0YXJfY291bnQY",
+            "CiABKA0SGgoSY29sbGVjdF9ib29rX2NvdW50GAMgASgNEi4KD2NvbGxlY3Rp",
+            "b25faW5mbxgMIAEoCzIVLlBsYXllckNvbGxlY3Rpb25JbmZvEiEKGWNvbGxl",
+            "Y3RfYWNoaWV2ZW1lbnRfY291bnQYBSABKA0SGwoTY29sbGVjdF9yZWxpY19j",
+            "b3VudBgBIAEoDRITCgtIS05PQUtHQ0pCSxgNIAEoDUIeqgIbRWdnTGluay5E",
+            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerCollectionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerRecordInfo), global::EggLink.DanhengServer.Proto.PlayerRecordInfo.Parser, new[]{ "FHKKMPDDMGO", "JFPGBKBPBNF", "GEKKNDONHLJ", "CFDFMGLLICO", "EMJDEBDMHLL", "CollectionInfo", "EHBDEIJJOHK", "BHFEFEODNIM", "HKNOAKGCJBK" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerRecordInfo), global::EggLink.DanhengServer.Proto.PlayerRecordInfo.Parser, new[]{ "CollectDiscCount", "CollectEquipmentCount", "GEKKNDONHLJ", "CollectAvatarCount", "CollectBookCount", "CollectionInfo", "CollectAchievementCount", "CollectRelicCount", "HKNOAKGCJBK" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,14 +78,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlayerRecordInfo(PlayerRecordInfo other) : this() {
-      fHKKMPDDMGO_ = other.fHKKMPDDMGO_;
-      jFPGBKBPBNF_ = other.jFPGBKBPBNF_;
+      collectDiscCount_ = other.collectDiscCount_;
+      collectEquipmentCount_ = other.collectEquipmentCount_;
       gEKKNDONHLJ_ = other.gEKKNDONHLJ_;
-      cFDFMGLLICO_ = other.cFDFMGLLICO_;
-      eMJDEBDMHLL_ = other.eMJDEBDMHLL_;
+      collectAvatarCount_ = other.collectAvatarCount_;
+      collectBookCount_ = other.collectBookCount_;
       collectionInfo_ = other.collectionInfo_ != null ? other.collectionInfo_.Clone() : null;
-      eHBDEIJJOHK_ = other.eHBDEIJJOHK_;
-      bHFEFEODNIM_ = other.bHFEFEODNIM_;
+      collectAchievementCount_ = other.collectAchievementCount_;
+      collectRelicCount_ = other.collectRelicCount_;
       hKNOAKGCJBK_ = other.hKNOAKGCJBK_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -95,27 +96,27 @@ namespace EggLink.DanhengServer.Proto {
       return new PlayerRecordInfo(this);
     }
 
-    /// <summary>Field number for the "FHKKMPDDMGO" field.</summary>
-    public const int FHKKMPDDMGOFieldNumber = 14;
-    private uint fHKKMPDDMGO_;
+    /// <summary>Field number for the "collect_disc_count" field.</summary>
+    public const int CollectDiscCountFieldNumber = 14;
+    private uint collectDiscCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FHKKMPDDMGO {
-      get { return fHKKMPDDMGO_; }
+    public uint CollectDiscCount {
+      get { return collectDiscCount_; }
       set {
-        fHKKMPDDMGO_ = value;
+        collectDiscCount_ = value;
       }
     }
 
-    /// <summary>Field number for the "JFPGBKBPBNF" field.</summary>
-    public const int JFPGBKBPBNFFieldNumber = 15;
-    private uint jFPGBKBPBNF_;
+    /// <summary>Field number for the "collect_equipment_count" field.</summary>
+    public const int CollectEquipmentCountFieldNumber = 15;
+    private uint collectEquipmentCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint JFPGBKBPBNF {
-      get { return jFPGBKBPBNF_; }
+    public uint CollectEquipmentCount {
+      get { return collectEquipmentCount_; }
       set {
-        jFPGBKBPBNF_ = value;
+        collectEquipmentCount_ = value;
       }
     }
 
@@ -131,27 +132,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CFDFMGLLICO" field.</summary>
-    public const int CFDFMGLLICOFieldNumber = 10;
-    private uint cFDFMGLLICO_;
+    /// <summary>Field number for the "collect_avatar_count" field.</summary>
+    public const int CollectAvatarCountFieldNumber = 10;
+    private uint collectAvatarCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CFDFMGLLICO {
-      get { return cFDFMGLLICO_; }
+    public uint CollectAvatarCount {
+      get { return collectAvatarCount_; }
       set {
-        cFDFMGLLICO_ = value;
+        collectAvatarCount_ = value;
       }
     }
 
-    /// <summary>Field number for the "EMJDEBDMHLL" field.</summary>
-    public const int EMJDEBDMHLLFieldNumber = 3;
-    private uint eMJDEBDMHLL_;
+    /// <summary>Field number for the "collect_book_count" field.</summary>
+    public const int CollectBookCountFieldNumber = 3;
+    private uint collectBookCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EMJDEBDMHLL {
-      get { return eMJDEBDMHLL_; }
+    public uint CollectBookCount {
+      get { return collectBookCount_; }
       set {
-        eMJDEBDMHLL_ = value;
+        collectBookCount_ = value;
       }
     }
 
@@ -167,27 +168,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "EHBDEIJJOHK" field.</summary>
-    public const int EHBDEIJJOHKFieldNumber = 5;
-    private uint eHBDEIJJOHK_;
+    /// <summary>Field number for the "collect_achievement_count" field.</summary>
+    public const int CollectAchievementCountFieldNumber = 5;
+    private uint collectAchievementCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EHBDEIJJOHK {
-      get { return eHBDEIJJOHK_; }
+    public uint CollectAchievementCount {
+      get { return collectAchievementCount_; }
       set {
-        eHBDEIJJOHK_ = value;
+        collectAchievementCount_ = value;
       }
     }
 
-    /// <summary>Field number for the "BHFEFEODNIM" field.</summary>
-    public const int BHFEFEODNIMFieldNumber = 1;
-    private uint bHFEFEODNIM_;
+    /// <summary>Field number for the "collect_relic_count" field.</summary>
+    public const int CollectRelicCountFieldNumber = 1;
+    private uint collectRelicCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BHFEFEODNIM {
-      get { return bHFEFEODNIM_; }
+    public uint CollectRelicCount {
+      get { return collectRelicCount_; }
       set {
-        bHFEFEODNIM_ = value;
+        collectRelicCount_ = value;
       }
     }
 
@@ -218,14 +219,14 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FHKKMPDDMGO != other.FHKKMPDDMGO) return false;
-      if (JFPGBKBPBNF != other.JFPGBKBPBNF) return false;
+      if (CollectDiscCount != other.CollectDiscCount) return false;
+      if (CollectEquipmentCount != other.CollectEquipmentCount) return false;
       if (GEKKNDONHLJ != other.GEKKNDONHLJ) return false;
-      if (CFDFMGLLICO != other.CFDFMGLLICO) return false;
-      if (EMJDEBDMHLL != other.EMJDEBDMHLL) return false;
+      if (CollectAvatarCount != other.CollectAvatarCount) return false;
+      if (CollectBookCount != other.CollectBookCount) return false;
       if (!object.Equals(CollectionInfo, other.CollectionInfo)) return false;
-      if (EHBDEIJJOHK != other.EHBDEIJJOHK) return false;
-      if (BHFEFEODNIM != other.BHFEFEODNIM) return false;
+      if (CollectAchievementCount != other.CollectAchievementCount) return false;
+      if (CollectRelicCount != other.CollectRelicCount) return false;
       if (HKNOAKGCJBK != other.HKNOAKGCJBK) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -234,14 +235,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FHKKMPDDMGO != 0) hash ^= FHKKMPDDMGO.GetHashCode();
-      if (JFPGBKBPBNF != 0) hash ^= JFPGBKBPBNF.GetHashCode();
+      if (CollectDiscCount != 0) hash ^= CollectDiscCount.GetHashCode();
+      if (CollectEquipmentCount != 0) hash ^= CollectEquipmentCount.GetHashCode();
       if (GEKKNDONHLJ != 0) hash ^= GEKKNDONHLJ.GetHashCode();
-      if (CFDFMGLLICO != 0) hash ^= CFDFMGLLICO.GetHashCode();
-      if (EMJDEBDMHLL != 0) hash ^= EMJDEBDMHLL.GetHashCode();
+      if (CollectAvatarCount != 0) hash ^= CollectAvatarCount.GetHashCode();
+      if (CollectBookCount != 0) hash ^= CollectBookCount.GetHashCode();
       if (collectionInfo_ != null) hash ^= CollectionInfo.GetHashCode();
-      if (EHBDEIJJOHK != 0) hash ^= EHBDEIJJOHK.GetHashCode();
-      if (BHFEFEODNIM != 0) hash ^= BHFEFEODNIM.GetHashCode();
+      if (CollectAchievementCount != 0) hash ^= CollectAchievementCount.GetHashCode();
+      if (CollectRelicCount != 0) hash ^= CollectRelicCount.GetHashCode();
       if (HKNOAKGCJBK != 0) hash ^= HKNOAKGCJBK.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -261,25 +262,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BHFEFEODNIM != 0) {
+      if (CollectRelicCount != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(BHFEFEODNIM);
+        output.WriteUInt32(CollectRelicCount);
       }
-      if (EMJDEBDMHLL != 0) {
+      if (CollectBookCount != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(EMJDEBDMHLL);
+        output.WriteUInt32(CollectBookCount);
       }
       if (GEKKNDONHLJ != 0) {
         output.WriteRawTag(32);
         output.WriteUInt32(GEKKNDONHLJ);
       }
-      if (EHBDEIJJOHK != 0) {
+      if (CollectAchievementCount != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(EHBDEIJJOHK);
+        output.WriteUInt32(CollectAchievementCount);
       }
-      if (CFDFMGLLICO != 0) {
+      if (CollectAvatarCount != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(CFDFMGLLICO);
+        output.WriteUInt32(CollectAvatarCount);
       }
       if (collectionInfo_ != null) {
         output.WriteRawTag(98);
@@ -289,13 +290,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(104);
         output.WriteUInt32(HKNOAKGCJBK);
       }
-      if (FHKKMPDDMGO != 0) {
+      if (CollectDiscCount != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(FHKKMPDDMGO);
+        output.WriteUInt32(CollectDiscCount);
       }
-      if (JFPGBKBPBNF != 0) {
+      if (CollectEquipmentCount != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(JFPGBKBPBNF);
+        output.WriteUInt32(CollectEquipmentCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -307,25 +308,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BHFEFEODNIM != 0) {
+      if (CollectRelicCount != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(BHFEFEODNIM);
+        output.WriteUInt32(CollectRelicCount);
       }
-      if (EMJDEBDMHLL != 0) {
+      if (CollectBookCount != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(EMJDEBDMHLL);
+        output.WriteUInt32(CollectBookCount);
       }
       if (GEKKNDONHLJ != 0) {
         output.WriteRawTag(32);
         output.WriteUInt32(GEKKNDONHLJ);
       }
-      if (EHBDEIJJOHK != 0) {
+      if (CollectAchievementCount != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(EHBDEIJJOHK);
+        output.WriteUInt32(CollectAchievementCount);
       }
-      if (CFDFMGLLICO != 0) {
+      if (CollectAvatarCount != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(CFDFMGLLICO);
+        output.WriteUInt32(CollectAvatarCount);
       }
       if (collectionInfo_ != null) {
         output.WriteRawTag(98);
@@ -335,13 +336,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(104);
         output.WriteUInt32(HKNOAKGCJBK);
       }
-      if (FHKKMPDDMGO != 0) {
+      if (CollectDiscCount != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(FHKKMPDDMGO);
+        output.WriteUInt32(CollectDiscCount);
       }
-      if (JFPGBKBPBNF != 0) {
+      if (CollectEquipmentCount != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(JFPGBKBPBNF);
+        output.WriteUInt32(CollectEquipmentCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -353,29 +354,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FHKKMPDDMGO != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FHKKMPDDMGO);
+      if (CollectDiscCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CollectDiscCount);
       }
-      if (JFPGBKBPBNF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JFPGBKBPBNF);
+      if (CollectEquipmentCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CollectEquipmentCount);
       }
       if (GEKKNDONHLJ != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GEKKNDONHLJ);
       }
-      if (CFDFMGLLICO != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CFDFMGLLICO);
+      if (CollectAvatarCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CollectAvatarCount);
       }
-      if (EMJDEBDMHLL != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EMJDEBDMHLL);
+      if (CollectBookCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CollectBookCount);
       }
       if (collectionInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CollectionInfo);
       }
-      if (EHBDEIJJOHK != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EHBDEIJJOHK);
+      if (CollectAchievementCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CollectAchievementCount);
       }
-      if (BHFEFEODNIM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BHFEFEODNIM);
+      if (CollectRelicCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CollectRelicCount);
       }
       if (HKNOAKGCJBK != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HKNOAKGCJBK);
@@ -392,20 +393,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FHKKMPDDMGO != 0) {
-        FHKKMPDDMGO = other.FHKKMPDDMGO;
+      if (other.CollectDiscCount != 0) {
+        CollectDiscCount = other.CollectDiscCount;
       }
-      if (other.JFPGBKBPBNF != 0) {
-        JFPGBKBPBNF = other.JFPGBKBPBNF;
+      if (other.CollectEquipmentCount != 0) {
+        CollectEquipmentCount = other.CollectEquipmentCount;
       }
       if (other.GEKKNDONHLJ != 0) {
         GEKKNDONHLJ = other.GEKKNDONHLJ;
       }
-      if (other.CFDFMGLLICO != 0) {
-        CFDFMGLLICO = other.CFDFMGLLICO;
+      if (other.CollectAvatarCount != 0) {
+        CollectAvatarCount = other.CollectAvatarCount;
       }
-      if (other.EMJDEBDMHLL != 0) {
-        EMJDEBDMHLL = other.EMJDEBDMHLL;
+      if (other.CollectBookCount != 0) {
+        CollectBookCount = other.CollectBookCount;
       }
       if (other.collectionInfo_ != null) {
         if (collectionInfo_ == null) {
@@ -413,11 +414,11 @@ namespace EggLink.DanhengServer.Proto {
         }
         CollectionInfo.MergeFrom(other.CollectionInfo);
       }
-      if (other.EHBDEIJJOHK != 0) {
-        EHBDEIJJOHK = other.EHBDEIJJOHK;
+      if (other.CollectAchievementCount != 0) {
+        CollectAchievementCount = other.CollectAchievementCount;
       }
-      if (other.BHFEFEODNIM != 0) {
-        BHFEFEODNIM = other.BHFEFEODNIM;
+      if (other.CollectRelicCount != 0) {
+        CollectRelicCount = other.CollectRelicCount;
       }
       if (other.HKNOAKGCJBK != 0) {
         HKNOAKGCJBK = other.HKNOAKGCJBK;
@@ -438,11 +439,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            BHFEFEODNIM = input.ReadUInt32();
+            CollectRelicCount = input.ReadUInt32();
             break;
           }
           case 24: {
-            EMJDEBDMHLL = input.ReadUInt32();
+            CollectBookCount = input.ReadUInt32();
             break;
           }
           case 32: {
@@ -450,11 +451,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            EHBDEIJJOHK = input.ReadUInt32();
+            CollectAchievementCount = input.ReadUInt32();
             break;
           }
           case 80: {
-            CFDFMGLLICO = input.ReadUInt32();
+            CollectAvatarCount = input.ReadUInt32();
             break;
           }
           case 98: {
@@ -469,11 +470,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            FHKKMPDDMGO = input.ReadUInt32();
+            CollectDiscCount = input.ReadUInt32();
             break;
           }
           case 120: {
-            JFPGBKBPBNF = input.ReadUInt32();
+            CollectEquipmentCount = input.ReadUInt32();
             break;
           }
         }
@@ -492,11 +493,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            BHFEFEODNIM = input.ReadUInt32();
+            CollectRelicCount = input.ReadUInt32();
             break;
           }
           case 24: {
-            EMJDEBDMHLL = input.ReadUInt32();
+            CollectBookCount = input.ReadUInt32();
             break;
           }
           case 32: {
@@ -504,11 +505,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            EHBDEIJJOHK = input.ReadUInt32();
+            CollectAchievementCount = input.ReadUInt32();
             break;
           }
           case 80: {
-            CFDFMGLLICO = input.ReadUInt32();
+            CollectAvatarCount = input.ReadUInt32();
             break;
           }
           case 98: {
@@ -523,11 +524,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            FHKKMPDDMGO = input.ReadUInt32();
+            CollectDiscCount = input.ReadUInt32();
             break;
           }
           case 120: {
-            JFPGBKBPBNF = input.ReadUInt32();
+            CollectEquipmentCount = input.ReadUInt32();
             break;
           }
         }

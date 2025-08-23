@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static ChallengeBossInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdDaGFsbGVuZ2VCb3NzSW5mby5wcm90bxohQ2hhbGxlbmdlQm9zc1Npbmds",
-            "ZU5vZGVJbmZvLnByb3RvGiBDaGFsbGVuZ2VCb3NzRXF1aXBtZW50SW5mby5w",
-            "cm90bxoiQ2hhbGxlbmdlQm9zc0F2YXRhclJlbGljSW5mby5wcm90byKsBAoR",
+            "ChdDaGFsbGVuZ2VCb3NzSW5mby5wcm90bxogQ2hhbGxlbmdlQm9zc0VxdWlw",
+            "bWVudEluZm8ucHJvdG8aIkNoYWxsZW5nZUJvc3NBdmF0YXJSZWxpY0luZm8u",
+            "cHJvdG8aIUNoYWxsZW5nZUJvc3NTaW5nbGVOb2RlSW5mby5wcm90byKsBAoR",
             "Q2hhbGxlbmdlQm9zc0luZm8SEwoLTkNCRE5QR1BFQUkYCSABKAgSFAoMZmly",
             "c3RfbGluZXVwGAggAygNElMKGmNoYWxsZW5nZV9hdmF0YXJfcmVsaWNfbWFw",
             "GA0gAygLMi8uQ2hhbGxlbmdlQm9zc0luZm8uQ2hhbGxlbmdlQXZhdGFyUmVs",
@@ -42,7 +42,7 @@ namespace EggLink.DanhengServer.Proto {
             "aXBtZW50SW5mbzoCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeBossEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossAvatarRelicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeBossSingleNodeInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeBossInfo), global::EggLink.DanhengServer.Proto.ChallengeBossInfo.Parser, new[]{ "NCBDNPGPEAI", "FirstLineup", "ChallengeAvatarRelicMap", "SecondLineup", "SecondNode", "ChallengeAvatarEquipmentMap", "FirstNode" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));

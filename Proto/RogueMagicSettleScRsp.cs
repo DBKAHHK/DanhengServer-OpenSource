@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtSb2d1ZU1hZ2ljU2V0dGxlU2NSc3AucHJvdG8aHFJvZ3VlTWFnaWNDdXJT",
-            "Y2VuZUluZm8ucHJvdG8aEUhDSkdQTURHQkpPLnByb3RvGg5JdGVtTGlzdC5w",
-            "cm90bxoaUm9ndWVNYWdpY0ZpbmlzaEluZm8ucHJvdG8i2gEKFVJvZ3VlTWFn",
+            "Y2VuZUluZm8ucHJvdG8aDkl0ZW1MaXN0LnByb3RvGhpSb2d1ZU1hZ2ljRmlu",
+            "aXNoSW5mby5wcm90bxoRSENKR1BNREdCSk8ucHJvdG8i2gEKFVJvZ3VlTWFn",
             "aWNTZXR0bGVTY1JzcBIPCgdyZXRjb2RlGAogASgNEjsKGnJvZ3VlX3RvdXJu",
             "X2N1cl9zY2VuZV9pbmZvGAIgASgLMhcuUm9ndWVNYWdpY0N1clNjZW5lSW5m",
             "bxIhCgtNR0NGT0dMS01DSBgNIAEoCzIMLkhDSkdQTURHQkpPEjAKEXRvdXJu",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "R0ZPTkZEQkZCTkEYDiABKAsyCS5JdGVtTGlzdEIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicCurSceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HCJGPMDGBJOReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicFinishInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicCurSceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicFinishInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HCJGPMDGBJOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicSettleScRsp), global::EggLink.DanhengServer.Proto.RogueMagicSettleScRsp.Parser, new[]{ "Retcode", "RogueTournCurSceneInfo", "MGCFOGLKMCH", "TournFinishInfo", "GFONFDBFBNA" }, null, null, null, null)
           }));
