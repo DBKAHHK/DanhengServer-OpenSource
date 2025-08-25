@@ -13,6 +13,9 @@ public class RogueTournRoomConfig
 
     public int AnchorGroup { get; set; }
     public int AnchorId { get; set; }
+    public uint SingleRoomId { get; set; }
+    public uint DoubleRoomId { get; set; }
+    public uint TripleRoomId { get; set; }
 
     public List<int> DefaultLoadBasicGroup { get; set; } = [];
     public List<int> DefaultLoadGroup { get; set; } = [];
@@ -29,6 +32,9 @@ public class RogueTournRoomConfig
             DefaultLoadBasicGroup = DefaultLoadBasicGroup,
             DefaultLoadGroup = DefaultLoadGroup,
             EntranceId = EntranceId,
+            TripleRoomId = TripleRoomId,
+            SingleRoomId = SingleRoomId,
+            DoubleRoomId = DoubleRoomId,
             SubMonsterGroup = SubMonsterGroup
         };
     }

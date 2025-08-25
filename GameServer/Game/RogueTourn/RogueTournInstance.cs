@@ -410,7 +410,7 @@ public class RogueTournInstance : BaseRogueInstance
             {
                 ENNPJGLCBEM = new FKOCBOOCDNL
                 {
-                    POIIAIAKILF = (uint)TitanType
+                    POIIAIAKILF = 1
                 }
             }
         };
