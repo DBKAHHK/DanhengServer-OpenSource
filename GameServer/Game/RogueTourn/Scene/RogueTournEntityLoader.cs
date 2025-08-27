@@ -32,7 +32,6 @@ public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) 
             foreach (var group in Scene.FloorInfo?.Groups.Values!)
                 if (rogue.CurLevel?.CurRoom?.GetLoadGroupList().Contains(group.Id) == true)
                     await LoadGroup(group);
-                else if (group.Category == GroupCategoryEnum.Normal) await LoadGroup(group);
         }
 
         Scene.IsLoaded = true;

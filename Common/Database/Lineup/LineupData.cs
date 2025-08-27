@@ -130,7 +130,7 @@ public class LineupInfo
             Index = (uint)(LineupData?.Lineups?.Values.ToList().IndexOf(this) ?? 0)
         };
 
-        if (LineupType != (int)ExtraLineupType.LineupNone) info.Index = (uint)(LineupType + 10);
+        if (LineupType != (int)ExtraLineupType.LineupNone) info.Index = 0;
 
         if (BaseAvatars?.Find(item => item.BaseAvatarId == LeaderAvatarId) != null) // find leader,if not exist,set to 0
             info.LeaderSlot = (uint)BaseAvatars.IndexOf(BaseAvatars.Find(item => item.BaseAvatarId == LeaderAvatarId)!);

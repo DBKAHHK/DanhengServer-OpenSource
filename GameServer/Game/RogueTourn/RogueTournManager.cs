@@ -116,7 +116,7 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
         return new RogueTournSeasonInfo
         {
             SubTournId = GameConstants.CURRENT_ROGUE_TOURN_SEASON,
-            MainTournId = 1
+            MainTournId = 2
         };
     }
 

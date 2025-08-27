@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Enums.TournRogue;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueTourn;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -23,5 +24,6 @@ public class HandlerRogueTournEnterRoomCsReq : Handler
 
         await inst.EnterRoom((int)(req.CurRoomIndex + 1), (RogueTournRoomTypeEnum)req.NextRoomType);
         await connection.SendPacket(new PacketRogueTournEnterRoomScRsp(Retcode.RetSucc, inst));
+        await connection.SendPacket(new PacketEnterSceneByServerScNotify(player.SceneInstance!));
     }
 }

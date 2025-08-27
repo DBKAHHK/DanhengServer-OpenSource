@@ -72,7 +72,6 @@ public class RogueTournInstance : BaseRogueInstance
         { RogueTournRoomTypeEnum.Coin, 4 },
         { RogueTournRoomTypeEnum.Shop, 4 },
         { RogueTournRoomTypeEnum.Event, 7 },
-        { RogueTournRoomTypeEnum.Adventure, 6 },
         { RogueTournRoomTypeEnum.Reward, 5 },
         { RogueTournRoomTypeEnum.Hidden, 1 }
     };
@@ -108,7 +107,6 @@ public class RogueTournInstance : BaseRogueInstance
         CurLevel.CurRoom?.Init(type);
 
         // next room
-        CurActionQueuePosition += 15;
         var next = CurLevel.Rooms.Find(x => x.RoomIndex == roomIndex + 1);
         if (next != null)
             next.Status = RogueTournRoomStatus.Inited;
@@ -200,7 +198,7 @@ public class RogueTournInstance : BaseRogueInstance
                     }
 
                     await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
-                        bless.ToResultProto(RogueCommonActionResultSourceType.Select)));
+                        bless.ToResultProto(RogueCommonActionResultSourceType.None), RogueCommonActionResultDisplayType.Multi));
                 }
 
             RogueActions.Remove(action.QueuePosition);
@@ -358,7 +356,7 @@ public class RogueTournInstance : BaseRogueInstance
                     RogueFormulas.Add(formula);
                     await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
                         formula.ToResultProto(RogueCommonActionResultSourceType.Select,
-                            RogueBuffs.Select(x => x.BuffId).ToList()), RogueCommonActionResultDisplayType.Single));
+                            RogueBuffs.Select(x => x.BuffId).ToList()), RogueCommonActionResultDisplayType.Multi));
                 }
 
             RogueActions.Remove(action.QueuePosition);
@@ -554,7 +552,8 @@ public class RogueTournInstance : BaseRogueInstance
             TournModuleInfo = new RogueTournModuleInfo
             {
                 AllowFood = true
-            }
+            },
+            JMIDLLDKJBI = new()
         };
     }
 

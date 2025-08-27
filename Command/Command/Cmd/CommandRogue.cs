@@ -80,6 +80,26 @@ public class CommandRogue : ICommand
         }
     }
 
+
+    [CommandMethod("0 roll")]
+    public async ValueTask RollBuff(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        var instance = arg.Target.Player!.RogueManager?.GetRogueInstance();
+        if (instance == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Rogue.PlayerNotInRogue"));
+            return;
+        }
+
+        await instance.RollBuff(1);
+    }
+
     [CommandMethod("0 miracle")]
     public async ValueTask GetMiracle(CommandArg arg)
     {
