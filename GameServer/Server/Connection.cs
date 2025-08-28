@@ -1,6 +1,8 @@
 ﻿using System.Buffers;
 using System.Net;
 using System.Reflection;
+using EggLink.DanhengServer.Data.Custom;
+using EggLink.DanhengServer.Enums.Server;
 using EggLink.DanhengServer.GameServer.Game.MultiPlayer.MarbleGame;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet;
@@ -20,6 +22,16 @@ public class Connection(KcpConversation conversation, IPEndPoint remote) : Danhe
     public PlayerInstance? Player { get; set; }
     public MarbleGameRoomInstance? MarbleRoom { get; set; }
     public MarbleGamePlayerInstance? MarblePlayer { get; set; }
+
+    public List<PacketActionData> CustomPacketQueue { get; set; } = [];
+
+    private PacketActionData? GetCurActionData()
+    {
+        if (CustomPacketQueue.Count == 0) return null;
+        var actionData = CustomPacketQueue[0];
+
+        return actionData;
+    }
 
     public override async void Start()
     {
@@ -116,6 +128,43 @@ public class Connection(KcpConversation conversation, IPEndPoint remote) : Danhe
 
     private async Task HandlePacket(ushort opcode, byte[] header, byte[] payload)
     {
+        // check if it's a custom packet
+        var action = GetCurActionData();
+        var packetName = LogMap.GetValueOrDefault(opcode);
+
+        if (action is { Action: PacketActionTypeEnum.WaitForPacket } && action.Param.PacketName == packetName)
+        {
+            // while run action
+            var interrupt = action.Param.InterruptFormalHandler;
+            while (true)
+            {
+                switch (action.Action)
+                {
+                    case PacketActionTypeEnum.SendPacket:
+                    {
+                        var sendPacket = new BasePacket((ushort)LogMap.FirstOrDefault(x =>
+                            x.Value == action.Param.PacketName).Key);
+
+                        sendPacket.SetData(action.Param.PacketData);
+
+                        await SendPacket(sendPacket);
+                        break;
+                    }
+                    case PacketActionTypeEnum.WaitForPacket:
+                    {
+                        break;
+                    }
+                }
+
+                CustomPacketQueue.RemoveAt(0);
+                action = GetCurActionData();
+                if (action == null || action.Action == PacketActionTypeEnum.WaitForPacket) break;
+            }
+
+            if (interrupt)
+                return;
+        }
+
         // Find the Handler for this opcode
         var handler = HandlerManager.GetHandler(opcode);
         if (handler != null)
@@ -198,7 +247,6 @@ public class Connection(KcpConversation conversation, IPEndPoint remote) : Danhe
 
         // No handler found
         // get the packet name
-        var packetName = LogMap.GetValueOrDefault(opcode);
         if (packetName == null) return;
 
         var respName = packetName.Replace("Cs", "Sc").Replace("Req", "Rsp"); // Get the response packet name
