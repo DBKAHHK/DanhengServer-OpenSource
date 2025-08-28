@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Scene.Entity;
 using EggLink.DanhengServer.Proto;
@@ -6,38 +7,45 @@ using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 
-public class RogueEventInstance(int eventId, RogueNpc npc, List<RogueEventParam> optionIds, int uniqueId)
+public class RogueEventInstance(int eventId, RogueNpc npc, List<RogueEventOption> optionIds, int uniqueId)
 {
-    public RogueEventInstance(RogueNPCExcel excel, RogueNpc npc, int uniqueId) : this(excel.RogueNPCID, npc, [],
+    public RogueEventInstance(RogueDialogueEventConfig conf, RogueNpc npc, int uniqueId) : this((int)conf.NpcId, npc, [],
         uniqueId) // check in RogueInstance.cs
     {
-        foreach (var option in excel.RogueNpcConfig!.DialogueList[0].OptionInfo?.OptionList ?? [])
-        {
-            GameData.DialogueEventData.TryGetValue(option.OptionID, out var dialogueEvent);
-            if (dialogueEvent == null) continue;
+        Config = conf;
 
-            var argId = 0;
-            if (dialogueEvent.DynamicContentID > 0)
+        foreach (var option in conf.Options)
+        {
+            var argId = 0u;
+            if (option.DynamicActions.Count > 0)
             {
-                GameData.DialogueDynamicContentData.TryGetValue(dialogueEvent.DynamicContentID, out var dynamicContent);
-                if (dynamicContent != null) argId = dynamicContent.Keys.ToList().RandomElement();
+                var dynamicIds = option.DynamicActions.Select(x => x.DynamicId).ToList();
+                argId = dynamicIds.RandomElement();
             }
 
-            Options.Add(new RogueEventParam
+            Options.Add(new RogueEventOption(this)
             {
-                OptionId = option.OptionID,
+                OptionId = option.OptionId,
                 ArgId = argId
             });
         }
     }
 
+    public RogueDialogueEventConfig? Config { get; set; }
     public int EventId { get; set; } = eventId;
     public bool Finished { get; set; }
     public RogueNpc EventEntity { get; set; } = npc;
-    public List<RogueEventParam> Options { get; set; } = optionIds;
+    public List<RogueEventOption> Options { get; set; } = optionIds;
     public int EventUniqueId { get; set; } = uniqueId;
     public int SelectedOptionId { get; set; } = 0;
     public List<int> EffectEventId { get; set; } = [];
+
+    #region Variable
+
+    public Dictionary<string, int> IntVariables { get; set; } = new();
+    public Dictionary<string, double> DoubleVariables { get; set; } = new();
+
+    #endregion
 
     public async ValueTask Finish()
     {
@@ -72,12 +80,14 @@ public class RogueEventInstance(int eventId, RogueNpc npc, List<RogueEventParam>
     }
 }
 
-public class RogueEventParam
+public class RogueEventOption(RogueEventInstance eventInstance)
 {
-    public int OptionId { get; set; }
-    public int ArgId { get; set; }
-    public float Ratio { get; set; }
+    public RogueEventInstance EventInstance { get; set; } = eventInstance;
+    public uint OptionId { get; set; }
+    public uint ArgId { get; set; }
+    public string? BindDoubleValue { get; set; }
     public bool IsSelected { get; set; } = false;
+    public bool IsValid { get; set; } = true;
     public bool? OverrideSelected { get; set; } = null;
     public List<RogueEventResultInfo> Results { get; set; } = [];
 
@@ -85,12 +95,12 @@ public class RogueEventParam
     {
         return new RogueCommonDialogueOptionInfo
         {
-            ArgId = (uint)ArgId,
-            IsValid = true,
-            OptionId = (uint)OptionId,
+            ArgId = ArgId,
+            IsValid = IsValid,
+            OptionId = OptionId,
             DisplayValue = new RogueCommonDialogueOptionDisplayInfo
             {
-                DisplayFloatValue = Ratio
+                DisplayFloatValue = BindDoubleValue != null ? (float)EventInstance.DoubleVariables.GetValueOrDefault(BindDoubleValue, 0d) : 0f
             },
             OptionResultInfo = { Results.Select(x => x.ToProto()) },
             Confirm = OverrideSelected ?? IsSelected

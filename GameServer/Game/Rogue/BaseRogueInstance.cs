@@ -5,16 +5,19 @@ using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.GameServer.Game.Battle;
+using EggLink.DanhengServer.GameServer.Game.ChessRogue;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Miracle;
 using EggLink.DanhengServer.GameServer.Game.Rogue.Scene.Entity;
+using EggLink.DanhengServer.GameServer.Game.RogueTourn;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using System;
 using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
 
 namespace EggLink.DanhengServer.GameServer.Game.Rogue;
@@ -155,6 +158,27 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
                     buff.ToResultProto(source), RogueCommonActionResultDisplayType.Single));
             }
         }
+    }
+
+    public virtual async ValueTask EnhanceBuffs(List<int> buffIds,
+        RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Dialogue)
+    {
+        List<RogueCommonActionResult> res = [];
+
+        foreach (var buffId in buffIds)
+        {
+            var buff = RogueBuffs.Find(x => x.BuffExcel.MazeBuffID == buffId);
+            if (buff == null) continue;
+            GameData.RogueBuffData.TryGetValue(buffId * 100 + buff.BuffLevel + 1,
+                out var excel); // make sure the next level exists
+
+            if (excel == null) continue;
+            buff.BuffLevel++;
+            res.Add(buff.ToResultProto(source));
+        }
+
+        await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode,
+            res, RogueCommonActionResultDisplayType.Multi));
     }
 
     public virtual List<RogueBuffInstance> GetRogueBuffInGroup(int groupId)
@@ -457,18 +481,29 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
 
     public async ValueTask<RogueEventInstance> GenerateEvent(RogueNpc npc)
     {
-        RogueNPCExcel? dialogue;
-        do
+        RogueDialogueEventConfig? dialogue = null;
+
+        switch (RogueSubMode)
         {
-            dialogue = GameData.RogueNPCData.Values.ToList().RandomElement();
-            if (dialogue.NPCJsonPath.Contains("RogueNPC_230") && RogueSubMode != RogueSubModeEnum.TournRogue)
-                // skip because it's a tourn rogue event
-                dialogue = null;
-            else if (!dialogue.NPCJsonPath.Contains("RogueNPC_230") && RogueSubMode == RogueSubModeEnum.TournRogue)
-                // skip because it's not a tourn rogue event
-                dialogue = null;
-        } while (dialogue == null || (!dialogue.CanUseInVer(RogueType) &&
-                                      dialogue.RogueNpcConfig?.DialogueType == RogueDialogueTypeEnum.Event));
+            case RogueSubModeEnum.CosmosRogue:
+            case RogueSubModeEnum.CosmosRogueEndless:
+                dialogue = GameData.CosmosRogueDialogueEventConfig.Values.ToList().RandomElement();
+                break;
+            case RogueSubModeEnum.TournRogue:
+                dialogue = GameData.TournRogueDialogueEventConfig.Values.ToList().RandomElement();
+                break;
+            case RogueSubModeEnum.ChessRogue:
+                dialogue = GameData.SwarmRogueDialogueEventConfig.Values.ToList().RandomElement();
+                break;
+            case RogueSubModeEnum.ChessRogueNous:
+                dialogue = GameData.NousRogueDialogueEventConfig.Values.ToList().RandomElement();
+                break;
+            case RogueSubModeEnum.MagicRogue:
+                dialogue = GameData.MagicRogueDialogueEventConfig.Values.ToList().RandomElement();
+                break;
+        }
+
+        if (dialogue == null) throw new Exception("No dialogue event config found for rogue mode " + RogueSubMode);
 
         var instance = new RogueEventInstance(dialogue, npc, CurEventUniqueId++);
         if (EventManager == null) return instance;

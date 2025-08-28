@@ -39,28 +39,6 @@ public static class ServerUtils
             }
         }
 
-        // rogue event handlers
-        {
-            var types = Assembly.GetExecutingAssembly().GetTypes();
-            foreach (var type in types)
-            {
-                var attr = type.GetCustomAttribute<RogueEventAttribute>();
-                if (attr == null) continue;
-                if (attr.EffectType != DialogueEventTypeEnum.None)
-                {
-                    // Effect
-                    var effect = (RogueEventEffectHandler)Activator.CreateInstance(type, null)!;
-                    RogueEventManager.EffectHandler.Add(attr.EffectType, effect);
-                }
-                else
-                {
-                    // Cost
-                    var cost = (RogueEventCostHandler)Activator.CreateInstance(type, null)!;
-                    RogueEventManager.CostHandler.Add(attr.CostType, cost);
-                }
-            }
-        }
-
         // chess rogue modifier handlers
         {
             var types = Assembly.GetExecutingAssembly().GetTypes();

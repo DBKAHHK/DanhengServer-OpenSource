@@ -14,7 +14,12 @@ public class PacketRogueTournSettleScRsp : BasePacket
             TournFinishInfo = new RogueTournFinishInfo
             {
                 RogueTournCurInfo = instance.ToProto(),
-                RogueLineupInfo = instance.Player.LineupManager!.GetCurLineup()!.ToProto()
+                RogueLineupInfo = instance.Player.LineupManager!.GetCurLineup()!.ToProto(),
+                CJCOJAMLEEL = new(),
+                CLKHPONDDDO = new(),
+                GCGLNKFDKKN = new(),
+                KGCIAIAFIBE = new(),
+                PFOEPFPHFNJ = new()
             }
         };
 

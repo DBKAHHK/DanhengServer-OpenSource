@@ -6,12 +6,12 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
 
 public class PacketSyncRogueCommonDialogueDataScNotify : BasePacket
 {
-    public PacketSyncRogueCommonDialogueDataScNotify(RogueEventInstance rogueEvent) : base(
+    public PacketSyncRogueCommonDialogueDataScNotify(List<RogueEventInstance> rogueEvent) : base(
         CmdIds.SyncRogueCommonDialogueDataScNotify)
     {
         var proto = new SyncRogueCommonDialogueDataScNotify();
 
-        proto.DialogueDataList.Add(rogueEvent.ToProto());
+        proto.DialogueDataList.AddRange(rogueEvent.Select(x => x.ToProto()));
 
         SetData(proto);
     }

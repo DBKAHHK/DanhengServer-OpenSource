@@ -56,6 +56,7 @@ public class ResourceManager
         LoadRogueTournRoomData();
         LoadChessRogueDiceSurfaceEffectData();
         LoadRogueMagicRoomData();
+        LoadRogueDialogueEventData();
 
         Task.WaitAll(t1, t2, t3, t4, t5, t6, t7, t8, t9);
 
@@ -1043,6 +1044,65 @@ public class ResourceManager
 
         Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
             I18NManager.Translate("Word.RogueDiceSurfaceInfo")));
+    }
+
+    public static void LoadRogueDialogueEventData()
+    {
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem",
+            I18NManager.Translate("Word.DialogueInfo")));
+        var count = 0;
+
+        FileInfo cosmosRogue = new(ConfigManager.Config.Path.ConfigPath + "/Rogue/Dialogue/CosmosRogueEvent.json");
+        FileInfo tournRogue = new(ConfigManager.Config.Path.ConfigPath + "/Rogue/Dialogue/Tourn2RogueEvent.json");
+        FileInfo swarmRogue = new(ConfigManager.Config.Path.ConfigPath + "/Rogue/Dialogue/SwarmRogueEvent.json");
+        FileInfo nousRogue = new(ConfigManager.Config.Path.ConfigPath + "/Rogue/Dialogue/NousRogueEvent.json");
+        FileInfo magicRogue = new(ConfigManager.Config.Path.ConfigPath + "/Rogue/Dialogue/MagicRogueEvent.json");
+
+        if (!cosmosRogue.Exists || !tournRogue.Exists)
+        {
+            Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
+                I18NManager.Translate("Word.DialogueInfo"),
+                $"{ConfigManager.Config.Path.ConfigPath}/Rogue/Dialogue/",
+                I18NManager.Translate("Word.Dialogue")));
+
+            return;
+        }
+
+        Dictionary<FileInfo, Dictionary<uint, RogueDialogueEventConfig>> files = new()
+        {
+            { cosmosRogue, GameData.CosmosRogueDialogueEventConfig },
+            { tournRogue, GameData.TournRogueDialogueEventConfig },
+            { swarmRogue, GameData.SwarmRogueDialogueEventConfig },
+            { nousRogue, GameData.NousRogueDialogueEventConfig },
+            { magicRogue, GameData.MagicRogueDialogueEventConfig }
+        };
+
+        foreach (var file in files)
+        {
+            try
+            {
+                using var reader = file.Key.OpenRead();
+                using StreamReader reader2 = new(reader);
+                var text = reader2.ReadToEnd();
+                var json = JsonConvert.DeserializeObject<List<RogueDialogueEventConfig>>(text);
+                if (json == null) throw new Exception($"Failed to deserialize {file.Key.Name}");
+
+                foreach (var conf in json)
+                {
+                    file.Value.Add(conf.NpcId << 2 | conf.Progress, conf);
+                }
+
+                count += json.Count;
+            }
+            catch (Exception ex)
+            {
+                ResourceCache.IsComplete = false;
+                Logger.Error("Error in reading " + cosmosRogue.Name, ex);
+            }
+        }
+
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
+            I18NManager.Translate("Word.DialogueInfo")));
     }
 
     public static void AddRoomToGameData(RogueDLCBlockTypeEnum type, ChessRogueRoomConfig room)

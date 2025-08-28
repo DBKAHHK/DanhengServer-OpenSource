@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Data.Custom;
+using EggLink.DanhengServer.GameServer.Game.RogueTourn;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
@@ -75,14 +76,13 @@ public class RogueBuffSelectMenu(BaseRogueInstance rogue)
 
     public RogueCommonBuffSelectInfo ToProto()
     {
-        return new RogueCommonBuffSelectInfo
+        var info = new RogueCommonBuffSelectInfo
         {
             CanRoll = true,
             RollBuffCount = (uint)RollCount,
             RollBuffFreeCount = (uint)RollFreeCount,
             RollBuffMaxCount = (uint)RollMaxCount,
             SourceCurCount = (uint)CurCount,
-            SourceTotalCount = (uint)TotalCount,
             RollBuffCostData = new ItemCostData
             {
                 ItemList =
@@ -101,6 +101,14 @@ public class RogueBuffSelectMenu(BaseRogueInstance rogue)
             HandbookUnlockBuffIdList = { Buffs.Select(x => (uint)x.MazeBuffID) },
             SelectBuffs = { Buffs.Select(x => x.ToProto()) }
         };
+
+        if (rogue is RogueTournInstance)
+        {
+            info.RollBuffCostData = null;
+            info.HandbookUnlockBuffIdList.Clear();
+        }
+
+        return info;
     }
 
     public RogueCommonBuffReforgeSelectInfo ToReforgeProto()

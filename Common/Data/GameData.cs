@@ -126,6 +126,8 @@ public static class GameData
     public static Dictionary<int, RogueNousTalentExcel> RogueNousTalentData { get; private set; } = [];
     public static Dictionary<int, List<RogueDLCChessBoardExcel>> RogueSwarmChessBoardData { get; private set; } = [];
     public static Dictionary<int, List<RogueDLCChessBoardExcel>> RogueNousChessBoardData { get; private set; } = [];
+    public static Dictionary<uint, RogueDialogueEventConfig> SwarmRogueDialogueEventConfig { get; private set; } = [];
+    public static Dictionary<uint, RogueDialogueEventConfig> NousRogueDialogueEventConfig { get; private set; } = [];
 
     #endregion
 
@@ -313,6 +315,8 @@ public static class GameData
     public static Dictionary<int, RogueWolfGunMiracleTargetExcel> RogueWolfGunMiracleTargetData { get; private set; } =
         [];
 
+    public static Dictionary<uint, RogueDialogueEventConfig> CosmosRogueDialogueEventConfig { get; private set; } = [];
+
     #endregion
 
     #region TournRogue
@@ -349,6 +353,8 @@ public static class GameData
     public static List<RogueTournRoomConfig> RogueTournRoomGenData { get; set; } =
         [];
 
+    public static Dictionary<uint, RogueDialogueEventConfig> TournRogueDialogueEventConfig { get; private set; } = [];
+
     #endregion
 
     #region RogueMagic
@@ -369,6 +375,8 @@ public static class GameData
         [];
 
     public static Dictionary<int, int> RogueMagicLayerIdRoomCountDict { get; set; } = [];
+
+    public static Dictionary<uint, RogueDialogueEventConfig> MagicRogueDialogueEventConfig { get; private set; } = [];
 
     #endregion
 
