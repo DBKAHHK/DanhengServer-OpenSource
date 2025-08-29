@@ -1,5 +1,6 @@
 ﻿using EggLink.DanhengServer.Enums.RogueMagic;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueMagic;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.Scene;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -23,5 +24,6 @@ public class HandlerRogueMagicEnterRoomCsReq : Handler
 
         await inst.EnterRoom((int)(req.CurRoomIndex + 1), (RogueMagicRoomTypeEnum)req.NextRoomType);
         await connection.SendPacket(new PacketRogueMagicEnterRoomScRsp(Retcode.RetSucc, inst));
+        await connection.SendPacket(new PacketEnterSceneByServerScNotify(connection.Player!.SceneInstance!));
     }
 }

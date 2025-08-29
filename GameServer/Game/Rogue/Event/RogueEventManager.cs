@@ -144,10 +144,15 @@ public class RogueEventManager(PlayerInstance player, BaseRogueInstance rogueIns
         if (dynamicAct != null)
             await RogueEventActionExecutor.ExecuteActions(Rogue, eventInstance, dynamicAct.SelectActions);
 
+        if (eventInstance.EffectEventId.Count > 0)
+            option.OverrideSelected = false;
+
         // send rsp
         await Player.SendPacket(new PacketSyncRogueCommonDialogueOptionFinishScNotify(eventInstance));
         option.IsSelected = true;
+
         await Player.SendPacket(new PacketSelectRogueCommonDialogueOptionScRsp(eventInstance));
+
 
         eventInstance.EffectEventId.Clear();
     }

@@ -11,6 +11,8 @@ public class RogueTitanBlessSelectMenu(RogueTournInstance rogue)
 {
     public List<RogueTournTitanBlessExcel> Blesses { get; set; } = [];
     public int QueueAppend { get; set; } = 3;
+    public int MaxRerollCount { get; set; } = 1;
+    public int CurRerollCount { get; set; } = 0;
     public bool TypeSelect { get; set; }
 
     public void RollTitanBless(int count = 3, bool typeSelect = false)
@@ -35,7 +37,14 @@ public class RogueTitanBlessSelectMenu(RogueTournInstance rogue)
                 RogueTitanCategoryEnum.Day && x.TitanBlessLevel == 1 &&
                 !rogue.RogueTitanBlessInstance.BlessTypeExcel.Contains(x)).ToList().RandomElement();
 
+            var other = GameData.RogueTournTitanBlessData.Values.Where(x => x.TitanBlessLevel == 1 &&
+                                                                            !rogue.RogueTitanBlessInstance
+                                                                                .BlessTypeExcel.Contains(x) &&
+                                                                            x != day && x != night).ToList()
+                .RandomElement();
+
             list.Add(day);
+            list.Add(other);
             list.Add(night);
         }
 
@@ -55,6 +64,14 @@ public class RogueTitanBlessSelectMenu(RogueTournInstance rogue)
         Blesses = result;
     }
 
+    public void Reroll()
+    {
+        if (CurRerollCount >= MaxRerollCount) return;
+        CurRerollCount++;
+
+        RollTitanBless(Blesses.Count, TypeSelect);
+    }
+
     public RogueActionInstance GetActionInstance()
     {
         rogue.CurActionQueuePosition += QueueAppend;
@@ -65,7 +82,6 @@ public class RogueTitanBlessSelectMenu(RogueTournInstance rogue)
         };
     }
 
-
     public RogueTitanBlessSelectInfo ToProto()
     {
         return new RogueTitanBlessSelectInfo
@@ -74,7 +90,9 @@ public class RogueTitanBlessSelectMenu(RogueTournInstance rogue)
                 ? TitanBlessSelectType.KSelectTitanBlessType
                 : TitanBlessSelectType.KSelectTitanBlessEnhance,
             TitanBlessIdList = { Blesses.Select(x => (uint)x.TitanBlessID) },
-            SelectHintId = (uint)(TypeSelect ? 310001 : 310002)
+            SelectHintId = (uint)(TypeSelect ? 310001 : 310002),
+            MaxRerollCount = (uint)MaxRerollCount,
+            CurRerollCount = (uint)CurRerollCount
         };
     }
 }

@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.GameServer.Game.Rogue.Buff;
+using EggLink.DanhengServer.GameServer.Game.RogueTourn.Titan;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -10,7 +11,7 @@ public class PacketHandleRogueCommonPendingActionScRsp : BasePacket
         bool selectMiracle = false, bool selectBonus = false, bool selectFormula = false,
         bool reforgeBuff = false, bool selectMagicUnit = false, bool selectScepter = false,
         bool selectTitanBlessEnhance = false, bool selectTitanBlessType = false,
-        RogueBuffSelectMenu? menu = null) : base(
+        RogueBuffSelectMenu? menu = null, RogueTitanBlessSelectMenu? titanMenu = null) : base(
         CmdIds.HandleRogueCommonPendingActionScRsp)
     {
         var proto = new HandleRogueCommonPendingActionScRsp
@@ -41,6 +42,12 @@ public class PacketHandleRogueCommonPendingActionScRsp : BasePacket
             proto.BuffRerollCallback = new RogueBuffRerollCallback
             {
                 BuffSelectInfo = menu.ToProto()
+            };
+
+        if (titanMenu != null)
+            proto.TitanBlessRerollCallback = new RogueTitanBlessRerollCallback
+            {
+                TitanRerollInfo = titanMenu.ToProto()
             };
 
         SetData(proto);

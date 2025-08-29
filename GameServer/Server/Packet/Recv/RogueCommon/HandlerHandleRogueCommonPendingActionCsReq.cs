@@ -41,6 +41,9 @@ public class HandlerHandleRogueCommonPendingActionCsReq : Handler
             await tournInstance3.HandleTitanBlessSelect((int)req.TitanBlessSelectEnhanceResult.SelectTitanBlessId,
                 (int)req.QueueLocation);
 
+        if (req.TitanBlessRerollResult != null && rogue is RogueTournInstance tournInstance4)
+            await tournInstance4.HandleRerollTitanBless((int)req.QueueLocation);
+
         if (req.MagicUnitSelectResult != null && rogue is RogueMagicInstance magic)
             await magic.HandleMagicUnitSelect(req.MagicUnitSelectResult.SelectMagicUnit, (int)req.QueueLocation);
 

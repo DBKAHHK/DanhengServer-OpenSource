@@ -215,6 +215,19 @@ public class RogueTournInstance : BaseRogueInstance
         await UpdateMenu();
     }
 
+    public async ValueTask HandleRerollTitanBless(int location)
+    {
+        if (RogueActions.Count == 0) return;
+        var action = RogueActions.First().Value;
+        if (action.RogueTitanBlessSelectMenu != null)
+        {
+            action.RogueTitanBlessSelectMenu.Reroll(); // reroll
+            await Player.SendPacket(
+                new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location,
+                    titanMenu: action.RogueTitanBlessSelectMenu));
+        }
+    }
+
     #endregion
 
     #region Buff & Formula
