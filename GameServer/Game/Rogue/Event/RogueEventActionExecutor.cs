@@ -194,12 +194,12 @@ public static class RogueEventActionExecutor
             if (hpChangeByCurHp != 0) formalAvatar.ExtraLineupHp = (int)Math.Ceiling(formalAvatar.ExtraLineupHp * ((10000 + hpChangeByCurHp) / 10000d));
 
             if (spChange != 0)
-                formalAvatar.ExtraLineupSp = Math.Max(Math.Min(formalAvatar.ExtraLineupSp + spChange, 0), 10000);
+                formalAvatar.ExtraLineupSp = Math.Min(Math.Max(formalAvatar.ExtraLineupSp + spChange, 0), 10000);
         }
 
         var curLineup = rogue.Player.LineupManager!.GetCurLineup()!;
         if (mpChange != 0)
-            curLineup.Mp = Math.Max(Math.Min(0, curLineup.Mp + mpChange), rogue.Player.LineupManager!.GetMaxMp());
+            curLineup.Mp = Math.Min(Math.Max(0, curLineup.Mp + mpChange), rogue.Player.LineupManager!.GetMaxMp());
 
         // sync
         await rogue.Player.SendPacket(new PacketSyncLineupNotify(rogue.Player.LineupManager!.GetCurLineup()!));
