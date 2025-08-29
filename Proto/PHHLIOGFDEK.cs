@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static PHHLIOGFDEKReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFQSEhMSU9HRkRFSy5wcm90byJMCgtQSEhMSU9HRkRFSxITCgtDQVBJQ0ND",
-            "SUVCTxgCIAMoDRITCgtPRkdCSkNDQ0lLRRgKIAEoDRITCgtJSkhMT0pFRkNQ",
-            "TRgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "ChFQSEhMSU9HRkRFSy5wcm90byJPCgtQSEhMSU9HRkRFSxITCgtDQVBJQ0ND",
+            "SUVCTxgCIAMoDRIWCg5kaXZpc2lvbl9sZXZlbBgKIAEoDRITCgtJSkhMT0pF",
+            "RkNQTRgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PHHLIOGFDEK), global::EggLink.DanhengServer.Proto.PHHLIOGFDEK.Parser, new[]{ "CAPICCCIEBO", "OFGBJCCCIKE", "IJHLOJEFCPM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PHHLIOGFDEK), global::EggLink.DanhengServer.Proto.PHHLIOGFDEK.Parser, new[]{ "CAPICCCIEBO", "DivisionLevel", "IJHLOJEFCPM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PHHLIOGFDEK(PHHLIOGFDEK other) : this() {
       cAPICCCIEBO_ = other.cAPICCCIEBO_.Clone();
-      oFGBJCCCIKE_ = other.oFGBJCCCIKE_;
+      divisionLevel_ = other.divisionLevel_;
       iJHLOJEFCPM_ = other.iJHLOJEFCPM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return cAPICCCIEBO_; }
     }
 
-    /// <summary>Field number for the "OFGBJCCCIKE" field.</summary>
-    public const int OFGBJCCCIKEFieldNumber = 10;
-    private uint oFGBJCCCIKE_;
+    /// <summary>Field number for the "division_level" field.</summary>
+    public const int DivisionLevelFieldNumber = 10;
+    private uint divisionLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OFGBJCCCIKE {
-      get { return oFGBJCCCIKE_; }
+    public uint DivisionLevel {
+      get { return divisionLevel_; }
       set {
-        oFGBJCCCIKE_ = value;
+        divisionLevel_ = value;
       }
     }
 
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!cAPICCCIEBO_.Equals(other.cAPICCCIEBO_)) return false;
-      if (OFGBJCCCIKE != other.OFGBJCCCIKE) return false;
+      if (DivisionLevel != other.DivisionLevel) return false;
       if (IJHLOJEFCPM != other.IJHLOJEFCPM) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= cAPICCCIEBO_.GetHashCode();
-      if (OFGBJCCCIKE != 0) hash ^= OFGBJCCCIKE.GetHashCode();
+      if (DivisionLevel != 0) hash ^= DivisionLevel.GetHashCode();
       if (IJHLOJEFCPM != 0) hash ^= IJHLOJEFCPM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,9 +167,9 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       cAPICCCIEBO_.WriteTo(output, _repeated_cAPICCCIEBO_codec);
-      if (OFGBJCCCIKE != 0) {
+      if (DivisionLevel != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(OFGBJCCCIKE);
+        output.WriteUInt32(DivisionLevel);
       }
       if (IJHLOJEFCPM != 0) {
         output.WriteRawTag(104);
@@ -186,9 +186,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       cAPICCCIEBO_.WriteTo(ref output, _repeated_cAPICCCIEBO_codec);
-      if (OFGBJCCCIKE != 0) {
+      if (DivisionLevel != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(OFGBJCCCIKE);
+        output.WriteUInt32(DivisionLevel);
       }
       if (IJHLOJEFCPM != 0) {
         output.WriteRawTag(104);
@@ -205,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += cAPICCCIEBO_.CalculateSize(_repeated_cAPICCCIEBO_codec);
-      if (OFGBJCCCIKE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OFGBJCCCIKE);
+      if (DivisionLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DivisionLevel);
       }
       if (IJHLOJEFCPM != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IJHLOJEFCPM);
@@ -224,8 +224,8 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       cAPICCCIEBO_.Add(other.cAPICCCIEBO_);
-      if (other.OFGBJCCCIKE != 0) {
-        OFGBJCCCIKE = other.OFGBJCCCIKE;
+      if (other.DivisionLevel != 0) {
+        DivisionLevel = other.DivisionLevel;
       }
       if (other.IJHLOJEFCPM != 0) {
         IJHLOJEFCPM = other.IJHLOJEFCPM;
@@ -251,7 +251,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            OFGBJCCCIKE = input.ReadUInt32();
+            DivisionLevel = input.ReadUInt32();
             break;
           }
           case 104: {
@@ -279,7 +279,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            OFGBJCCCIKE = input.ReadUInt32();
+            DivisionLevel = input.ReadUInt32();
             break;
           }
           case 104: {

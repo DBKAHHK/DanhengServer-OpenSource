@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static NLCCEDEHEHEReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFOTENDRURFSEVIRS5wcm90byIiCgtOTENDRURFSEVIRRITCgtPRkdCSkND",
-            "Q0lLRRgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "ChFOTENDRURFSEVIRS5wcm90byIlCgtOTENDRURFSEVIRRIWCg5kaXZpc2lv",
+            "bl9sZXZlbBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NLCCEDEHEHE), global::EggLink.DanhengServer.Proto.NLCCEDEHEHE.Parser, new[]{ "OFGBJCCCIKE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NLCCEDEHEHE), global::EggLink.DanhengServer.Proto.NLCCEDEHEHE.Parser, new[]{ "DivisionLevel" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NLCCEDEHEHE(NLCCEDEHEHE other) : this() {
-      oFGBJCCCIKE_ = other.oFGBJCCCIKE_;
+      divisionLevel_ = other.divisionLevel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new NLCCEDEHEHE(this);
     }
 
-    /// <summary>Field number for the "OFGBJCCCIKE" field.</summary>
-    public const int OFGBJCCCIKEFieldNumber = 9;
-    private uint oFGBJCCCIKE_;
+    /// <summary>Field number for the "division_level" field.</summary>
+    public const int DivisionLevelFieldNumber = 9;
+    private uint divisionLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OFGBJCCCIKE {
-      get { return oFGBJCCCIKE_; }
+    public uint DivisionLevel {
+      get { return divisionLevel_; }
       set {
-        oFGBJCCCIKE_ = value;
+        divisionLevel_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (OFGBJCCCIKE != other.OFGBJCCCIKE) return false;
+      if (DivisionLevel != other.DivisionLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (OFGBJCCCIKE != 0) hash ^= OFGBJCCCIKE.GetHashCode();
+      if (DivisionLevel != 0) hash ^= DivisionLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (OFGBJCCCIKE != 0) {
+      if (DivisionLevel != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(OFGBJCCCIKE);
+        output.WriteUInt32(DivisionLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (OFGBJCCCIKE != 0) {
+      if (DivisionLevel != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(OFGBJCCCIKE);
+        output.WriteUInt32(DivisionLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (OFGBJCCCIKE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OFGBJCCCIKE);
+      if (DivisionLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DivisionLevel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.OFGBJCCCIKE != 0) {
-        OFGBJCCCIKE = other.OFGBJCCCIKE;
+      if (other.DivisionLevel != 0) {
+        DivisionLevel = other.DivisionLevel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 72: {
-            OFGBJCCCIKE = input.ReadUInt32();
+            DivisionLevel = input.ReadUInt32();
             break;
           }
         }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 72: {
-            OFGBJCCCIKE = input.ReadUInt32();
+            DivisionLevel = input.ReadUInt32();
             break;
           }
         }

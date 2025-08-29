@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static StartChallengeScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTdGFydENoYWxsZW5nZVNjUnNwLnByb3RvGhJDdXJDaGFsbGVuZ2UucHJv",
-            "dG8aEExpbmV1cEluZm8ucHJvdG8aD1NjZW5lSW5mby5wcm90bxoYQ2hhbGxl",
-            "bmdlU3RhZ2VJbmZvLnByb3RvIrIBChNTdGFydENoYWxsZW5nZVNjUnNwEiQK",
+            "ChlTdGFydENoYWxsZW5nZVNjUnNwLnByb3RvGhhDaGFsbGVuZ2VTdGFnZUlu",
+            "Zm8ucHJvdG8aEkN1ckNoYWxsZW5nZS5wcm90bxoPU2NlbmVJbmZvLnByb3Rv",
+            "GhBMaW5ldXBJbmZvLnByb3RvIrIBChNTdGFydENoYWxsZW5nZVNjUnNwEiQK",
             "DWN1cl9jaGFsbGVuZ2UYBSABKAsyDS5DdXJDaGFsbGVuZ2USGQoFc2NlbmUY",
             "CiABKAsyCi5TY2VuZUluZm8SIAoLbGluZXVwX2xpc3QYCCADKAsyCy5MaW5l",
             "dXBJbmZvEg8KB3JldGNvZGUYDyABKA0SJwoKc3RhZ2VfaW5mbxgGIAEoCzIT",
             "LkNoYWxsZW5nZVN0YWdlSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CurChallengeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStageInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeStageInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CurChallengeReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartChallengeScRsp), global::EggLink.DanhengServer.Proto.StartChallengeScRsp.Parser, new[]{ "CurChallenge", "Scene", "LineupList", "Retcode", "StageInfo" }, null, null, null, null)
           }));

@@ -24,20 +24,20 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournGetMiscRealTimeDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CihSb2d1ZVRvdXJuR2V0TWlzY1JlYWxUaW1lRGF0YVNjUnNwLnByb3RvGhFG",
-            "QkhORkpDTkhNTC5wcm90bxoRTktQS0lBQU1PREcucHJvdG8aEU5OSUpDREtI",
-            "UEtMLnByb3RvGhFHUE5KTUVITkRNTi5wcm90bxoRS0NMQ0hKTU5QR0wucHJv",
-            "dG8i5AEKIlJvZ3VlVG91cm5HZXRNaXNjUmVhbFRpbWVEYXRhU2NSc3ASIQoL",
-            "S0dDSUFJQUZJQkUYAiABKAsyDC5HUE5KTUVITkRNThIhCgtDTEtIUE9ORERE",
-            "TxgFIAEoCzIMLktDTENISk1OUEdMEiEKC1BGT0VQRlBIRk5KGA0gASgLMgwu",
-            "RkJITkZKQ05ITUwSIQoLQ0pDT0pBTUxFRUwYBCABKAsyDC5OS1BLSUFBTU9E",
-            "RxIhCgtHQ0dMTktGREtLThgOIAEoCzIMLk5OSUpDREtIUEtMEg8KB3JldGNv",
-            "ZGUYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
-            "dG8z"));
+            "CihSb2d1ZVRvdXJuR2V0TWlzY1JlYWxUaW1lRGF0YVNjUnNwLnByb3RvGhFO",
+            "S1BLSUFBTU9ERy5wcm90bxoRRkJITkZKQ05ITUwucHJvdG8aHFJvZ3VlVG91",
+            "cm5EaXZpc2lvbkluZm8ucHJvdG8aEU5OSUpDREtIUEtMLnByb3RvGhFHUE5K",
+            "TUVITkRNTi5wcm90byL1AQoiUm9ndWVUb3VybkdldE1pc2NSZWFsVGltZURh",
+            "dGFTY1JzcBIhCgtLR0NJQUlBRklCRRgCIAEoCzIMLkdQTkpNRUhORE1OEjIK",
+            "EW5ld19kaXZpc2lvbl9pbmZvGAUgASgLMhcuUm9ndWVUb3VybkRpdmlzaW9u",
+            "SW5mbxIhCgtQRk9FUEZQSEZOShgNIAEoCzIMLkZCSE5GSkNOSE1MEiEKC0NK",
+            "Q09KQU1MRUVMGAQgASgLMgwuTktQS0lBQU1PREcSIQoLR0NHTE5LRkRLS04Y",
+            "DiABKAsyDC5OTklKQ0RLSFBLTBIPCgdyZXRjb2RlGAggASgNQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FBHNFJCNHMLReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKPKIAAMODGReflection.Descriptor, global::EggLink.DanhengServer.Proto.NNIJCDKHPKLReflection.Descriptor, global::EggLink.DanhengServer.Proto.GPNJMEHNDMNReflection.Descriptor, global::EggLink.DanhengServer.Proto.KCLCHJMNPGLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NKPKIAAMODGReflection.Descriptor, global::EggLink.DanhengServer.Proto.FBHNFJCNHMLReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournDivisionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NNIJCDKHPKLReflection.Descriptor, global::EggLink.DanhengServer.Proto.GPNJMEHNDMNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGetMiscRealTimeDataScRsp), global::EggLink.DanhengServer.Proto.RogueTournGetMiscRealTimeDataScRsp.Parser, new[]{ "KGCIAIAFIBE", "CLKHPONDDDO", "PFOEPFPHFNJ", "CJCOJAMLEEL", "GCGLNKFDKKN", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGetMiscRealTimeDataScRsp), global::EggLink.DanhengServer.Proto.RogueTournGetMiscRealTimeDataScRsp.Parser, new[]{ "KGCIAIAFIBE", "NewDivisionInfo", "PFOEPFPHFNJ", "CJCOJAMLEEL", "GCGLNKFDKKN", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -80,7 +80,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournGetMiscRealTimeDataScRsp(RogueTournGetMiscRealTimeDataScRsp other) : this() {
       kGCIAIAFIBE_ = other.kGCIAIAFIBE_ != null ? other.kGCIAIAFIBE_.Clone() : null;
-      cLKHPONDDDO_ = other.cLKHPONDDDO_ != null ? other.cLKHPONDDDO_.Clone() : null;
+      newDivisionInfo_ = other.newDivisionInfo_ != null ? other.newDivisionInfo_.Clone() : null;
       pFOEPFPHFNJ_ = other.pFOEPFPHFNJ_ != null ? other.pFOEPFPHFNJ_.Clone() : null;
       cJCOJAMLEEL_ = other.cJCOJAMLEEL_ != null ? other.cJCOJAMLEEL_.Clone() : null;
       gCGLNKFDKKN_ = other.gCGLNKFDKKN_ != null ? other.gCGLNKFDKKN_.Clone() : null;
@@ -106,15 +106,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CLKHPONDDDO" field.</summary>
-    public const int CLKHPONDDDOFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.KCLCHJMNPGL cLKHPONDDDO_;
+    /// <summary>Field number for the "new_division_info" field.</summary>
+    public const int NewDivisionInfoFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.RogueTournDivisionInfo newDivisionInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KCLCHJMNPGL CLKHPONDDDO {
-      get { return cLKHPONDDDO_; }
+    public global::EggLink.DanhengServer.Proto.RogueTournDivisionInfo NewDivisionInfo {
+      get { return newDivisionInfo_; }
       set {
-        cLKHPONDDDO_ = value;
+        newDivisionInfo_ = value;
       }
     }
 
@@ -182,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(KGCIAIAFIBE, other.KGCIAIAFIBE)) return false;
-      if (!object.Equals(CLKHPONDDDO, other.CLKHPONDDDO)) return false;
+      if (!object.Equals(NewDivisionInfo, other.NewDivisionInfo)) return false;
       if (!object.Equals(PFOEPFPHFNJ, other.PFOEPFPHFNJ)) return false;
       if (!object.Equals(CJCOJAMLEEL, other.CJCOJAMLEEL)) return false;
       if (!object.Equals(GCGLNKFDKKN, other.GCGLNKFDKKN)) return false;
@@ -195,7 +195,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (kGCIAIAFIBE_ != null) hash ^= KGCIAIAFIBE.GetHashCode();
-      if (cLKHPONDDDO_ != null) hash ^= CLKHPONDDDO.GetHashCode();
+      if (newDivisionInfo_ != null) hash ^= NewDivisionInfo.GetHashCode();
       if (pFOEPFPHFNJ_ != null) hash ^= PFOEPFPHFNJ.GetHashCode();
       if (cJCOJAMLEEL_ != null) hash ^= CJCOJAMLEEL.GetHashCode();
       if (gCGLNKFDKKN_ != null) hash ^= GCGLNKFDKKN.GetHashCode();
@@ -226,9 +226,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(34);
         output.WriteMessage(CJCOJAMLEEL);
       }
-      if (cLKHPONDDDO_ != null) {
+      if (newDivisionInfo_ != null) {
         output.WriteRawTag(42);
-        output.WriteMessage(CLKHPONDDDO);
+        output.WriteMessage(NewDivisionInfo);
       }
       if (Retcode != 0) {
         output.WriteRawTag(64);
@@ -260,9 +260,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(34);
         output.WriteMessage(CJCOJAMLEEL);
       }
-      if (cLKHPONDDDO_ != null) {
+      if (newDivisionInfo_ != null) {
         output.WriteRawTag(42);
-        output.WriteMessage(CLKHPONDDDO);
+        output.WriteMessage(NewDivisionInfo);
       }
       if (Retcode != 0) {
         output.WriteRawTag(64);
@@ -289,8 +289,8 @@ namespace EggLink.DanhengServer.Proto {
       if (kGCIAIAFIBE_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(KGCIAIAFIBE);
       }
-      if (cLKHPONDDDO_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CLKHPONDDDO);
+      if (newDivisionInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NewDivisionInfo);
       }
       if (pFOEPFPHFNJ_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PFOEPFPHFNJ);
@@ -322,11 +322,11 @@ namespace EggLink.DanhengServer.Proto {
         }
         KGCIAIAFIBE.MergeFrom(other.KGCIAIAFIBE);
       }
-      if (other.cLKHPONDDDO_ != null) {
-        if (cLKHPONDDDO_ == null) {
-          CLKHPONDDDO = new global::EggLink.DanhengServer.Proto.KCLCHJMNPGL();
+      if (other.newDivisionInfo_ != null) {
+        if (newDivisionInfo_ == null) {
+          NewDivisionInfo = new global::EggLink.DanhengServer.Proto.RogueTournDivisionInfo();
         }
-        CLKHPONDDDO.MergeFrom(other.CLKHPONDDDO);
+        NewDivisionInfo.MergeFrom(other.NewDivisionInfo);
       }
       if (other.pFOEPFPHFNJ_ != null) {
         if (pFOEPFPHFNJ_ == null) {
@@ -379,10 +379,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 42: {
-            if (cLKHPONDDDO_ == null) {
-              CLKHPONDDDO = new global::EggLink.DanhengServer.Proto.KCLCHJMNPGL();
+            if (newDivisionInfo_ == null) {
+              NewDivisionInfo = new global::EggLink.DanhengServer.Proto.RogueTournDivisionInfo();
             }
-            input.ReadMessage(CLKHPONDDDO);
+            input.ReadMessage(NewDivisionInfo);
             break;
           }
           case 64: {
@@ -433,10 +433,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 42: {
-            if (cLKHPONDDDO_ == null) {
-              CLKHPONDDDO = new global::EggLink.DanhengServer.Proto.KCLCHJMNPGL();
+            if (newDivisionInfo_ == null) {
+              NewDivisionInfo = new global::EggLink.DanhengServer.Proto.RogueTournDivisionInfo();
             }
-            input.ReadMessage(CLKHPONDDDO);
+            input.ReadMessage(NewDivisionInfo);
             break;
           }
           case 64: {

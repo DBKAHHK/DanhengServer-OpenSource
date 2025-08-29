@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFBTkdPQU1BRE9NQS5wcm90bxoaUm9ndWVUb3VybkZpbmlzaEluZm8ucHJv",
-            "dG8ifgoLQU5HT0FNQURPTUESEwoLSUpITE9KRUZDUE0YBCABKA0SEwoLT0ZH",
-            "QkpDQ0NJS0UYCSABKA0SMAoRdG91cm5fZmluaXNoX2luZm8YASABKAsyFS5S",
-            "b2d1ZVRvdXJuRmluaXNoSW5mbxITCgtKQkxPS0xDUEFGThgMIAEoDUIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "dG8igQEKC0FOR09BTUFET01BEhMKC0lKSExPSkVGQ1BNGAQgASgNEhYKDmRp",
+            "dmlzaW9uX2xldmVsGAkgASgNEjAKEXRvdXJuX2ZpbmlzaF9pbmZvGAEgASgL",
+            "MhUuUm9ndWVUb3VybkZpbmlzaEluZm8SEwoLSkJMT0tMQ1BBRk4YDCABKA1C",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournFinishInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ANGOAMADOMA), global::EggLink.DanhengServer.Proto.ANGOAMADOMA.Parser, new[]{ "IJHLOJEFCPM", "OFGBJCCCIKE", "TournFinishInfo", "JBLOKLCPAFN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ANGOAMADOMA), global::EggLink.DanhengServer.Proto.ANGOAMADOMA.Parser, new[]{ "IJHLOJEFCPM", "DivisionLevel", "TournFinishInfo", "JBLOKLCPAFN" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ANGOAMADOMA(ANGOAMADOMA other) : this() {
       iJHLOJEFCPM_ = other.iJHLOJEFCPM_;
-      oFGBJCCCIKE_ = other.oFGBJCCCIKE_;
+      divisionLevel_ = other.divisionLevel_;
       tournFinishInfo_ = other.tournFinishInfo_ != null ? other.tournFinishInfo_.Clone() : null;
       jBLOKLCPAFN_ = other.jBLOKLCPAFN_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -99,15 +99,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "OFGBJCCCIKE" field.</summary>
-    public const int OFGBJCCCIKEFieldNumber = 9;
-    private uint oFGBJCCCIKE_;
+    /// <summary>Field number for the "division_level" field.</summary>
+    public const int DivisionLevelFieldNumber = 9;
+    private uint divisionLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OFGBJCCCIKE {
-      get { return oFGBJCCCIKE_; }
+    public uint DivisionLevel {
+      get { return divisionLevel_; }
       set {
-        oFGBJCCCIKE_ = value;
+        divisionLevel_ = value;
       }
     }
 
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (IJHLOJEFCPM != other.IJHLOJEFCPM) return false;
-      if (OFGBJCCCIKE != other.OFGBJCCCIKE) return false;
+      if (DivisionLevel != other.DivisionLevel) return false;
       if (!object.Equals(TournFinishInfo, other.TournFinishInfo)) return false;
       if (JBLOKLCPAFN != other.JBLOKLCPAFN) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -162,7 +162,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (IJHLOJEFCPM != 0) hash ^= IJHLOJEFCPM.GetHashCode();
-      if (OFGBJCCCIKE != 0) hash ^= OFGBJCCCIKE.GetHashCode();
+      if (DivisionLevel != 0) hash ^= DivisionLevel.GetHashCode();
       if (tournFinishInfo_ != null) hash ^= TournFinishInfo.GetHashCode();
       if (JBLOKLCPAFN != 0) hash ^= JBLOKLCPAFN.GetHashCode();
       if (_unknownFields != null) {
@@ -191,9 +191,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(IJHLOJEFCPM);
       }
-      if (OFGBJCCCIKE != 0) {
+      if (DivisionLevel != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(OFGBJCCCIKE);
+        output.WriteUInt32(DivisionLevel);
       }
       if (JBLOKLCPAFN != 0) {
         output.WriteRawTag(96);
@@ -217,9 +217,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(IJHLOJEFCPM);
       }
-      if (OFGBJCCCIKE != 0) {
+      if (DivisionLevel != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(OFGBJCCCIKE);
+        output.WriteUInt32(DivisionLevel);
       }
       if (JBLOKLCPAFN != 0) {
         output.WriteRawTag(96);
@@ -238,8 +238,8 @@ namespace EggLink.DanhengServer.Proto {
       if (IJHLOJEFCPM != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IJHLOJEFCPM);
       }
-      if (OFGBJCCCIKE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OFGBJCCCIKE);
+      if (DivisionLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DivisionLevel);
       }
       if (tournFinishInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TournFinishInfo);
@@ -262,8 +262,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IJHLOJEFCPM != 0) {
         IJHLOJEFCPM = other.IJHLOJEFCPM;
       }
-      if (other.OFGBJCCCIKE != 0) {
-        OFGBJCCCIKE = other.OFGBJCCCIKE;
+      if (other.DivisionLevel != 0) {
+        DivisionLevel = other.DivisionLevel;
       }
       if (other.tournFinishInfo_ != null) {
         if (tournFinishInfo_ == null) {
@@ -301,7 +301,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            OFGBJCCCIKE = input.ReadUInt32();
+            DivisionLevel = input.ReadUInt32();
             break;
           }
           case 96: {
@@ -335,7 +335,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            OFGBJCCCIKE = input.ReadUInt32();
+            DivisionLevel = input.ReadUInt32();
             break;
           }
           case 96: {

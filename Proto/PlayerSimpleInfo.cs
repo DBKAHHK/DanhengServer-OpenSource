@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerSimpleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJTaW1wbGVJbmZvLnByb3RvGhhGcmllbmRPbmxpbmVTdGF0dXMu",
-            "cHJvdG8aFkFzc2lzdFNpbXBsZUluZm8ucHJvdG8aE0hlYWRGcmFtZUluZm8u",
-            "cHJvdG8aElBsYXRmb3JtVHlwZS5wcm90byKSAwoQUGxheWVyU2ltcGxlSW5m",
+            "ChZQbGF5ZXJTaW1wbGVJbmZvLnByb3RvGhZBc3Npc3RTaW1wbGVJbmZvLnBy",
+            "b3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8aGEZyaWVuZE9ubGluZVN0YXR1cy5w",
+            "cm90bxoTSGVhZEZyYW1lSW5mby5wcm90byKSAwoQUGxheWVyU2ltcGxlSW5m",
             "bxIVCg1wZXJzb25hbF9jYXJkGAMgASgNEh8KCHBsYXRmb3JtGAIgASgOMg0u",
             "UGxhdGZvcm1UeXBlEgsKA3VpZBgJIAEoDRIRCglzaWduYXR1cmUYDyABKAkS",
             "DQoFbGV2ZWwYDSABKA0SEQoJaGVhZF9pY29uGAogASgNEhgKEGxhc3RfYWN0",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "IAEoDRITCgtHTUFMQ1BOT0hCRhgOIAEoCUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FriendOnlineStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.AssistSimpleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeadFrameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AssistSimpleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.FriendOnlineStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeadFrameInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerSimpleInfo), global::EggLink.DanhengServer.Proto.PlayerSimpleInfo.Parser, new[]{ "PersonalCard", "Platform", "Uid", "Signature", "Level", "HeadIcon", "LastActiveTime", "HeadFrame", "OnlineStatus", "AssistSimpleInfoList", "Nickname", "AKCEJFCFBAN", "IsBanned", "ChatBubbleId", "GMALCPNOHBF" }, null, null, null, null)
           }));

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFLRUhNR0tJSEVGTi5wcm90bxoRREtIRU5MTUFFQkUucHJvdG8aEUtBTUNJ",
-            "T1BCUEdBLnByb3RvGhFJSUdKRlBNSUdLRi5wcm90bxoWUGxheWVyU2ltcGxl",
-            "SW5mby5wcm90bxoRRkNOT0xMRkdQQ0sucHJvdG8i7QEKC0tFSE1HS0lIRUZO",
+            "T1BCUEdBLnByb3RvGhZQbGF5ZXJTaW1wbGVJbmZvLnByb3RvGhFGQ05PTExG",
+            "R1BDSy5wcm90bxoRSUlHSkZQTUlHS0YucHJvdG8i7QEKC0tFSE1HS0lIRUZO",
             "EhMKC3JlbWFya19uYW1lGAYgASgJEiYKC3BsYXllcl9pbmZvGA8gASgLMhEu",
             "UGxheWVyU2ltcGxlSW5mbxIjCgtHSUVJREpFRVBBQxgOIAEoCzIMLkZDTk9M",
             "TEZHUENLSAASIwoLQUREQ0pFSlBGRUYYCiABKAsyDC5LQU1DSU9QQlBHQUgA",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "S0FKQkxKSxgEIAEoCzIMLklJR0pGUE1JR0tGSABCDQoLR0xNUExEQkxNRUNC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DKHENLMAEBEReflection.Descriptor, global::EggLink.DanhengServer.Proto.KAMCIOPBPGAReflection.Descriptor, global::EggLink.DanhengServer.Proto.IIGJFPMIGKFReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerSimpleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FCNOLLFGPCKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DKHENLMAEBEReflection.Descriptor, global::EggLink.DanhengServer.Proto.KAMCIOPBPGAReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerSimpleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FCNOLLFGPCKReflection.Descriptor, global::EggLink.DanhengServer.Proto.IIGJFPMIGKFReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KEHMGKIHEFN), global::EggLink.DanhengServer.Proto.KEHMGKIHEFN.Parser, new[]{ "RemarkName", "PlayerInfo", "GIEIDJEEPAC", "ADDCJEJPFEF", "PMHIBHNEPHI", "JILKKAJBLJK" }, new[]{ "GLMPLDBLMEC" }, null, null, null)
           }));
