@@ -8,14 +8,16 @@ using EggLink.DanhengServer.GameServer.Game.Rogue.Scene.Entity;
 using EggLink.DanhengServer.GameServer.Game.Scene;
 using EggLink.DanhengServer.GameServer.Game.Scene.Entity;
 using EggLink.DanhengServer.Util;
+using EggLink.DanhengServer.Util.Security;
 
 namespace EggLink.DanhengServer.GameServer.Game.RogueTourn.Scene;
 
 public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) : SceneEntityLoader(scene)
 {
     public List<RogueTournRoomTypeEnum> ExistTypes = [];
-    public List<int> FinalRoomBossIds = [3007091, 3007101, 3007111, 3007121, 3007131, 3007141];
-    public List<int> LayerNormalBossIds = [3007011, 3007021, 3007031, 3007041, 3007051, 3007061, 3007071, 3007081];
+    public List<int> FinalRoomBossIds = [5004141, 3004171, 3004161, 3004151];
+    public List<int> Layer1NormalBossIds { get; set; } = [3013081, 3013161, 3013041, 3013241, 3013131, 3013201, 3013231, 3013181, 3013191, 3013251, 3013121];
+    public List<int> Layer2NormalBossIds { get; set; } = [5004071, 5004051, 5004021, 5004081];
     public PlayerInstance Player = player;
     public List<int> RogueDoorPropIds = [1033, 1034, 1035, 1036, 1037, 1000];
 
@@ -43,7 +45,7 @@ public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) 
         foreach (var npc in info.NPCList)
             try
             {
-                if (await LoadNpc(npc, info) is EntityNpc entity) entityList.Add(entity);
+                if (await LoadNpc(npc, info) is { } entity) entityList.Add(entity);
             }
             catch
             {
@@ -52,7 +54,7 @@ public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) 
         foreach (var monster in info.MonsterList)
             try
             {
-                if (await LoadMonster(monster, info) is EntityMonster entity) entityList.Add(entity);
+                if (await LoadMonster(monster, info) is { } entity) entityList.Add(entity);
             }
             catch
             {
@@ -61,7 +63,7 @@ public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) 
         foreach (var prop in info.PropList)
             try
             {
-                if (await LoadProp(prop, info) is EntityProp entity) entityList.Add(entity);
+                if (await LoadProp(prop, info) is { } entity) entityList.Add(entity);
             }
             catch
             {
@@ -120,28 +122,52 @@ public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) 
         {
             if (rogueInstance.CurLevel?.LevelIndex == 3)
                 rogueMonster = GameData.RogueMonsterData[FinalRoomBossIds.RandomElement()];
+            else if (rogueInstance.CurLevel?.LevelIndex == 2)
+                rogueMonster = GameData.RogueMonsterData[Layer2NormalBossIds.RandomElement()];
             else
-                rogueMonster = GameData.RogueMonsterData[LayerNormalBossIds.RandomElement()];
+                rogueMonster = GameData.RogueMonsterData[Layer1NormalBossIds.RandomElement()];
         }
         else
         {
             NPCMonsterDataExcel? data;
+            MonsterTemplateConfigExcel? templateConfigExcel;
             do
             {
                 rogueMonster = GameData.RogueMonsterData.Values.ToList().RandomElement();
                 GameData.NpcMonsterDataData.TryGetValue(rogueMonster.NpcMonsterID, out data);
-            } while (data == null || !allowedRank.Contains(data.Rank));
+                templateConfigExcel = GameData.MonsterTemplateConfigData.Values.FirstOrDefault(x =>
+                    x.NPCMonsterList.Contains(rogueMonster.NpcMonsterID));
+
+            } while (data == null || !allowedRank.Contains(data.Rank) || templateConfigExcel == null ||
+                     templateConfigExcel.MonsterCampID < 12 || templateConfigExcel.MonsterCampID > 15);
         }
 
         GameData.NpcMonsterDataData.TryGetValue(rogueMonster.NpcMonsterID, out var excel);
+        var template = GameData.MonsterTemplateConfigData.Values.FirstOrDefault(x =>
+            x.NPCMonsterList.Contains(rogueMonster.NpcMonsterID));
         if (excel == null) return null;
+
+        var level = 10;
+
+        if (rogueInstance.DifficultyExcels.Count > 0)
+        {
+            var diff = rogueInstance.DifficultyExcels[
+                Math.Min(rogueInstance.DifficultyExcels.Count, rogueInstance.CurLevel!.LevelIndex) - 1];
+            if (diff.LevelList.Count > 0)
+                level = diff.LevelList.First();
+        }
+
+        var monsterConf =
+            GameData.MonsterConfigData.Values.FirstOrDefault(x => x.MonsterTemplateID == template?.MonsterTemplateID);
 
         EntityMonster entity =
             new(Scene, info.ToPositionProto(), info.ToRotationProto(), group.Id, info.ID, excel, info)
             {
                 EventId = rogueMonster.EventID,
                 CustomStageId = rogueMonster.EventID,
-                RogueMonsterId = rogueMonster.RogueMonsterID
+                RogueMonsterId = rogueMonster.RogueMonsterID,
+                CustomLevel = level,
+                HardLevelGroup = monsterConf?.HardLevelGroup ?? 1
             };
 
         await Scene.AddEntity(entity, sendPacket);
@@ -151,8 +177,9 @@ public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) 
 
     public override async ValueTask<EntityProp?> LoadProp(PropInfo info, GroupInfo group, bool sendPacket = false)
     {
+        var rogue = Player.RogueTournManager?.RogueTournInstance;
         var room = Player.RogueTournManager?.RogueTournInstance?.CurLevel?.CurRoom;
-        if (room == null) return null;
+        if (room == null || rogue == null) return null;
 
         GameData.MazePropData.TryGetValue(info.PropID, out var propExcel);
         if (propExcel == null) return null;
@@ -163,9 +190,12 @@ public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) 
 
         if (RogueDoorPropIds.Contains(prop.PropInfo.PropID))
         {
-            if (room is { RoomIndex: 4, LevelInstance.LevelIndex: 3 }) // last room
+            if (rogue.CurLevel?.LayerId == rogue.Levels.Last().Key &&
+                rogue.CurLevel?.Rooms.Last().RoomIndex == room.RoomIndex) // last room
+            {
                 // exit
                 prop.CustomPropId = 1033;
+            }
             else
                 do // find next room
                 {
@@ -200,13 +230,13 @@ public class RogueTournEntityLoader(SceneInstance scene, PlayerInstance player) 
                         RogueTournRoomTypeEnum.Reward => 1035,
                         RogueTournRoomTypeEnum.Adventure => 1035,
                         RogueTournRoomTypeEnum.Hidden => 1037,
-                        RogueTournRoomTypeEnum.Respite => 1034,
+                        RogueTournRoomTypeEnum.Respite => 1036,
                         _ => 1034
                     };
 
-
                     if (room.LevelInstance.Rooms.Last() == room) // last room
                         prop.EnterNextLayer = true;
+
                     prop.RoomType = nextRoom;
                     prop.IsTournRogue = true;
 

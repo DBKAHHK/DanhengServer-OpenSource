@@ -46,6 +46,8 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
 
     public RogueTournInfo ToProto()
     {
+        var maxDivision = GameData.RogueTournDivisionData.Values.MaxBy(x => x.DivisionLevel) ?? new RogueTournDivisionExcel();
+
         var proto = new RogueTournInfo
         {
             ExtraScoreInfo = ToExtraScoreProto(),
@@ -60,7 +62,11 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
                 Capacity = 0
             },
             SeasonTalentInfo = ToSeasonTalentProto(),
-            LKCEFCLJCBM = new KCLCHJMNPGL()
+            RogueDivisionInfo = new RogueTournDivisionInfo
+            {
+                DivisionLevel = (uint)maxDivision.DivisionLevel,
+                DivisionProgress = (uint)maxDivision.DivisionProgress
+            }
         };
 
         return proto;
@@ -166,11 +172,11 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
         foreach (var formulaId in GameData.RogueTournFormulaData.Keys) proto.HandbookFormulaList.Add((uint)formulaId);
 
         foreach (var miracleId in GameData.RogueTournHandbookMiracleData.Keys)
-            proto.HandbookMiracleList.Add((uint)miracleId);
+            proto.HandbookTournMiracleList.Add((uint)miracleId);
 
         foreach (var blessId in GameData.RogueTournTitanBlessData.Keys) proto.HandbookTitanBlessList.Add((uint)blessId);
 
-        //foreach (var eventId in GameData.RogueTournHandBookEventData.Keys) proto.HandbookEventList.Add((uint)eventId);
+        foreach (var eventId in GameData.RogueTournHandBookEventData.Keys) proto.HandbookMiracleList.Add((uint)eventId);  // TODO edit field name
 
         return proto;
     }

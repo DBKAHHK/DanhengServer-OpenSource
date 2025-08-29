@@ -1,4 +1,5 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.Enums.Scene;
@@ -69,11 +70,9 @@ public class RogueTournInstance : BaseRogueInstance
     public Dictionary<RogueTournRoomTypeEnum, int> RoomTypeWeight { get; set; } = new()
     {
         { RogueTournRoomTypeEnum.Battle, 15 },
-        { RogueTournRoomTypeEnum.Coin, 4 },
-        { RogueTournRoomTypeEnum.Shop, 4 },
         { RogueTournRoomTypeEnum.Event, 7 },
         { RogueTournRoomTypeEnum.Reward, 5 },
-        { RogueTournRoomTypeEnum.Hidden, 1 }
+        { RogueTournRoomTypeEnum.Encounter, 5 },
     };
 
     public RogueTournLevelInstance? CurLevel => Levels.GetValueOrDefault(CurLayerId);
@@ -84,7 +83,12 @@ public class RogueTournInstance : BaseRogueInstance
 
     public async ValueTask EnterNextLayer(int roomIndex, RogueTournRoomTypeEnum type)
     {
-        CurLayerId += 100;
+        var curInd = Levels.Keys.ToList().IndexOf(CurLayerId);
+        var nextLayerId = Levels.Keys.ToList()[curInd + 1];
+        var nextLayer = Levels[nextLayerId];
+        CurLevel!.LevelStatus = RogueTournLayerStatus.Finish;
+
+        CurLayerId = nextLayer.LayerId;
         await EnterRoom(1, type);
     }
 
@@ -311,6 +315,13 @@ public class RogueTournInstance : BaseRogueInstance
         return res;
     }
 
+    public override async ValueTask AddBuffList(List<BaseRogueBuffExcel> excel)
+    {
+        await base.AddBuffList(excel);
+
+        await ExpandFormula();
+    }
+
     public async ValueTask ExpandFormula()
     {
         // expand formula
@@ -375,6 +386,7 @@ public class RogueTournInstance : BaseRogueInstance
             RogueActions.Remove(action.QueuePosition);
         }
 
+        await ExpandFormula();
         await UpdateMenu();
 
         await Player.SendPacket(
@@ -426,11 +438,36 @@ public class RogueTournInstance : BaseRogueInstance
             }
         };
 
+        Dictionary<int, int> divisionBuffs =
+        new() {
+            { 1, 651031 },
+            { 2, 651032 },
+            { 3, 651033 },
+            { 4, 651034 },
+            { 5, 651035 },
+            { 6, 651036 },
+        };
+
+        var divisionLevel = AreaExcel.DivisionLevel;
+        foreach (var buff in divisionBuffs.Where(x => divisionLevel >= x.Key))
+        {
+            battle.Buffs.Add(new MazeBuff(buff.Value, 1, -1)
+            {
+                WaveFlag = -1,
+                DynamicValues =
+                {
+                    { "_RogueLayer", CurLevel?.LevelIndex ?? 1 }
+                }
+            });
+        }
+
+        battle.IsTournRogue = true;
+
         if (DifficultyExcels.Count > 0)
         {
-            var diff = DifficultyExcels.RandomElement();
+            var diff = DifficultyExcels[Math.Min(DifficultyExcels.Count, CurLevel!.LevelIndex) - 1];
             if (diff.LevelList.Count > 0)
-                battle.CustomLevel = diff.LevelList.RandomElement();
+                battle.CustomLevel = diff.LevelList.First();
         }
 
         foreach (var formula in RogueFormulas.Where(formula =>
@@ -441,6 +478,11 @@ public class RogueTournInstance : BaseRogueInstance
             {
                 WaveFlag = -1
             });
+
+        battle.Buffs.Add(new MazeBuff(634000, 1, -1)  // day and night
+        {
+            WaveFlag = -1
+        });
 
         RogueTitanBlessInstance.OnBattleStart(battle);
     }

@@ -34,6 +34,7 @@ public class EntityMonster(
 
     public int RogueMonsterId { get; set; } = 0;
     public int CustomLevel { get; set; } = 0;
+    public int HardLevelGroup { get; set; } = 0;
     public override int EntityId { get; set; } = 0;
     public override int GroupId { get; set; } = groupId;
 
@@ -125,7 +126,8 @@ public class EntityMonster(
                 RogueGameInfo = new NpcMonsterRogueInfo
                 {
                     RogueMonsterId = (uint)RogueMonsterId,
-                    Level = (uint)CustomLevel
+                    Level = (uint)CustomLevel,
+                    HardLevelGroup = (uint)HardLevelGroup
                 }
             };
 

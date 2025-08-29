@@ -14,12 +14,26 @@ public class RogueTournLevelInstance
         EntranceId = GameData.RogueTournRoomGenData.Where(x => x.RoomType != RogueTournRoomTypeEnum.Adventure)
             .Select(x => x.EntranceId).ToHashSet().ToList()
             .RandomElement();
-        if (levelIndex == 2)
-            foreach (var index in Enumerable.Range(1, 5))
-                Rooms.Add(new RogueTournRoomInstance(index, this));
+
+        if (levelIndex == 3)
+            EntranceId = 8060101;
+
+        var roomExcel = GameData.RogueTournLayerRoomData.GetValueOrDefault(layerId);
+
+        if (roomExcel == null)
+        {
+            if (levelIndex == 2)
+                foreach (var index in Enumerable.Range(1, 5))
+                    Rooms.Add(new RogueTournRoomInstance(index, this));
+            else
+                foreach (var index in Enumerable.Range(1, 4))
+                    Rooms.Add(new RogueTournRoomInstance(index, this));
+        }
         else
-            foreach (var index in Enumerable.Range(1, 4))
+        {
+            foreach (var index in Enumerable.Range(1, roomExcel.Count))
                 Rooms.Add(new RogueTournRoomInstance(index, this));
+        }
     }
 
     public List<RogueTournRoomInstance> Rooms { get; set; } = [];

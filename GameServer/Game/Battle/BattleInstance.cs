@@ -67,6 +67,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
     public Dictionary<int, BattleTargetList> BattleTargets { get; set; } = [];
     public BattleCollegeConfigExcel? CollegeConfigExcel { get; set; }
     public PVEBattleResultCsReq? BattleResult { get; set; }
+    public bool IsTournRogue { get; set; }
 
     public ItemList GetDropItemList()
     {
@@ -220,6 +221,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
             if (CustomLevel > 0)
                 foreach (var item in protoWave)
                     item.MonsterParam.Level = (uint)CustomLevel;
+
             proto.MonsterWaveList.AddRange(protoWave);
         }
 
@@ -301,6 +303,9 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
                 count++;
             }
         }
+
+        if (IsTournRogue)
+            proto.AJGPJGLPMIO = new();
 
         proto.BuffList.AddRange(Buffs.Select(buff => buff.ToProto(this)));
         return proto;

@@ -19,6 +19,7 @@ public class RogueTournAreaExcel : ExcelResource
     public int ExpScoreID { get; set; }
     public int UnlockID { get; set; }
     public int AreaID { get; set; }
+    public int DivisionLevel { get; set; }
     public HashName AreaNameID { get; set; } = new();
     public bool IsHard { get; set; }
 

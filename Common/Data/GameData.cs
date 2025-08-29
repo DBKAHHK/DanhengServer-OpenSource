@@ -95,6 +95,7 @@ public static class GameData
     public static Dictionary<int, InteractConfigExcel> InteractConfigData { get; private set; } = [];
     public static Dictionary<int, NPCMonsterDataExcel> NpcMonsterDataData { get; private set; } = [];
     public static Dictionary<int, MonsterConfigExcel> MonsterConfigData { get; private set; } = [];
+    public static Dictionary<int, MonsterTemplateConfigExcel> MonsterTemplateConfigData { get; private set; } = [];
     public static Dictionary<int, MonsterDropExcel> MonsterDropData { get; private set; } = [];
     public static Dictionary<int, BattleCollegeConfigExcel> BattleCollegeConfigData { get; private set; } = [];
     public static Dictionary<int, BattleTargetConfigExcel> BattleTargetConfigData { get; private set; } = [];
@@ -322,7 +323,9 @@ public static class GameData
     #region TournRogue
 
     public static Dictionary<int, RogueTournAreaExcel> RogueTournAreaData { get; private set; } = [];
+    public static Dictionary<int, Dictionary<int, RogueTournLayerRoomExcel>> RogueTournLayerRoomData { get; private set; } = [];
     public static Dictionary<int, RogueTournWorkbenchExcel> RogueTournWorkbenchData { get; private set; } = [];
+    public static Dictionary<int, RogueTournDivisionExcel> RogueTournDivisionData { get; private set; } = [];
     public static Dictionary<int, RogueTournWorkbenchFuncExcel> RogueTournWorkbenchFuncData { get; private set; } = [];
     public static Dictionary<int, RogueTournFormulaExcel> RogueTournFormulaData { get; private set; } = [];
     public static Dictionary<int, RogueTournMiracleExcel> RogueTournMiracleData { get; private set; } = [];

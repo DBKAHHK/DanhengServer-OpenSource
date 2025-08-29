@@ -1,4 +1,6 @@
-﻿using EggLink.DanhengServer.GameServer.Game.RogueTourn;
+﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.GameServer.Game.RogueTourn;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
 
@@ -8,6 +10,8 @@ public class PacketRogueTournSettleScRsp : BasePacket
 {
     public PacketRogueTournSettleScRsp(RogueTournInstance instance) : base(CmdIds.RogueTournSettleScRsp)
     {
+        var maxDivision = GameData.RogueTournDivisionData.Values.MaxBy(x => x.DivisionLevel) ?? new RogueTournDivisionExcel();
+
         var proto = new RogueTournSettleScRsp
         {
             RogueTournCurSceneInfo = instance.ToCurSceneInfo(),
@@ -16,7 +20,11 @@ public class PacketRogueTournSettleScRsp : BasePacket
                 RogueTournCurInfo = instance.ToProto(),
                 RogueLineupInfo = instance.Player.LineupManager!.GetCurLineup()!.ToProto(),
                 CJCOJAMLEEL = new(),
-                CLKHPONDDDO = new(),
+                NewDivisionInfo = new RogueTournDivisionInfo
+                {
+                    DivisionLevel = (uint)maxDivision.DivisionLevel,
+                    DivisionProgress = (uint)maxDivision.DivisionProgress
+                },
                 GCGLNKFDKKN = new(),
                 KGCIAIAFIBE = new(),
                 PFOEPFPHFNJ = new()

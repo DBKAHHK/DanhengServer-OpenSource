@@ -4,6 +4,8 @@
 public class MonsterConfigExcel : ExcelResource
 {
     public int MonsterID { get; set; }
+    public int MonsterTemplateID { get; set; }
+    public int HardLevelGroup { get; set; }
 
     public override int GetId()
     {
