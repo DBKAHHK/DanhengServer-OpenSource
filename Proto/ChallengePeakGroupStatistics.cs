@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static ChallengePeakGroupStatisticsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJDaGFsbGVuZ2VQZWFrR3JvdXBTdGF0aXN0aWNzLnByb3RvGhhQcmVMZXZl",
-            "bFN0YXRpc3RpY3MucHJvdG8aGUJvc3NMZXZlbFN0YXRpc3RpY3MucHJvdG8i",
+            "CiJDaGFsbGVuZ2VQZWFrR3JvdXBTdGF0aXN0aWNzLnByb3RvGhlCb3NzTGV2",
+            "ZWxTdGF0aXN0aWNzLnByb3RvGhhQcmVMZXZlbFN0YXRpc3RpY3MucHJvdG8i",
             "jwEKHENoYWxsZW5nZVBlYWtHcm91cFN0YXRpc3RpY3MSLwoScHJlX2xldmVs",
             "X3N0dF9saXN0GAMgAygLMhMuUHJlTGV2ZWxTdGF0aXN0aWNzEiwKDmJvc3Nf",
             "bGV2ZWxfc3R0GA0gASgLMhQuQm9zc0xldmVsU3RhdGlzdGljcxIQCghncm91",
             "cF9pZBgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PreLevelStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.BossLevelStatisticsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BossLevelStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.PreLevelStatisticsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengePeakGroupStatistics), global::EggLink.DanhengServer.Proto.ChallengePeakGroupStatistics.Parser, new[]{ "PreLevelSttList", "BossLevelStt", "GroupId" }, null, null, null, null)
           }));

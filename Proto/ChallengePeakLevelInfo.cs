@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static ChallengePeakLevelInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxDaGFsbGVuZ2VQZWFrTGV2ZWxJbmZvLnByb3RvGhFER0ZGTk9QRkxORS5w",
-            "cm90bxobQ2hhbGxlbmdlUGVha1ByZUxldmVsLnByb3RvGhlDaGFsbGVuZ2VQ",
-            "ZWFrQXZhdGFyLnByb3RvGhxDaGFsbGVuZ2VQZWFrQm9zc0xldmVsLnByb3Rv",
+            "ChxDaGFsbGVuZ2VQZWFrTGV2ZWxJbmZvLnByb3RvGhlDaGFsbGVuZ2VQZWFr",
+            "QXZhdGFyLnByb3RvGhFER0ZGTk9QRkxORS5wcm90bxocQ2hhbGxlbmdlUGVh",
+            "a0Jvc3NMZXZlbC5wcm90bxobQ2hhbGxlbmdlUGVha1ByZUxldmVsLnByb3Rv",
             "IuwCChZDaGFsbGVuZ2VQZWFrTGV2ZWxJbmZvEhgKEGZpbmlzaGVkX3ByZV9u",
             "dW0YAiABKA0SMAoPcGVha19ib3NzX2xldmVsGAogASgLMhcuQ2hhbGxlbmdl",
             "UGVha0Jvc3NMZXZlbBIVCg1wZWFrX2dyb3VwX2lkGAMgASgNEjMKFXBlYWtf",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "Tk9QRkxORUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DGFFNOPFLNEReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengePeakPreLevelReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengePeakAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengePeakBossLevelReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengePeakAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.DGFFNOPFLNEReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengePeakBossLevelReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengePeakPreLevelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo), global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo.Parser, new[]{ "FinishedPreNum", "PeakBossLevel", "PeakGroupId", "PeakAvatarInfoList", "IsEasy", "OELEEFGAONP", "AllowChangeBossMode", "PeakPreLevelInfoList", "PreLevelStars", "APGEFOFMKBG" }, null, null, null, null)
           }));

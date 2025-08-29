@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static ReplaceLineupCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhSZXBsYWNlTGluZXVwQ3NSZXEucHJvdG8aFExpbmV1cFNsb3REYXRhLnBy",
-            "b3RvGhVFeHRyYUxpbmV1cFR5cGUucHJvdG8i0gEKElJlcGxhY2VMaW5ldXBD",
+            "ChhSZXBsYWNlTGluZXVwQ3NSZXEucHJvdG8aFUV4dHJhTGluZXVwVHlwZS5w",
+            "cm90bxoUTGluZXVwU2xvdERhdGEucHJvdG8i0gEKElJlcGxhY2VMaW5ldXBD",
             "c1JlcRIaChJnYW1lX3N0b3J5X2xpbmVfaWQYByABKA0SKQoQbGluZXVwX3Ns",
             "b3RfbGlzdBgIIAMoCzIPLkxpbmV1cFNsb3REYXRhEg0KBWluZGV4GAsgASgN",
             "EhAKCHBsYW5lX2lkGAMgASgNEhMKC2xlYWRlcl9zbG90GAIgASgNEisKEWV4",
@@ -33,7 +33,7 @@ namespace EggLink.DanhengServer.Proto {
             "X3ZpcnR1YWwYCSABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LineupSlotDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupSlotDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ReplaceLineupCsReq), global::EggLink.DanhengServer.Proto.ReplaceLineupCsReq.Parser, new[]{ "GameStoryLineId", "LineupSlotList", "Index", "PlaneId", "LeaderSlot", "ExtraLineupType", "IsVirtual" }, null, null, null, null)
           }));

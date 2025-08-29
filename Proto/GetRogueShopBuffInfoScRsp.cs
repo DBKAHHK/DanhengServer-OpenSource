@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GetRogueShopBuffInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9HZXRSb2d1ZVNob3BCdWZmSW5mb1NjUnNwLnByb3RvGhFCdXlCdWZmSW5m",
-            "by5wcm90bxoSSXRlbUNvc3REYXRhLnByb3RvIqEBChlHZXRSb2d1ZVNob3BC",
+            "Ch9HZXRSb2d1ZVNob3BCdWZmSW5mb1NjUnNwLnByb3RvGhJJdGVtQ29zdERh",
+            "dGEucHJvdG8aEUJ1eUJ1ZmZJbmZvLnByb3RvIqEBChlHZXRSb2d1ZVNob3BC",
             "dWZmSW5mb1NjUnNwEg8KB3JldGNvZGUYDCABKA0SJQoPcm9ndWVfYnVmZl9p",
             "bmZvGA8gASgLMgwuQnV5QnVmZkluZm8SEwoLQUVGSEtBTkJGTkMYAiABKAUS",
             "EwoLRUZPSk9DRkdJREoYCiABKAUSIgoLSUhKSENDRk1JRkQYAyABKAsyDS5J",
             "dGVtQ29zdERhdGFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BuyBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.BuyBuffInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetRogueShopBuffInfoScRsp), global::EggLink.DanhengServer.Proto.GetRogueShopBuffInfoScRsp.Parser, new[]{ "Retcode", "RogueBuffInfo", "AEFHKANBFNC", "EFOJOCFGIDJ", "IHJHCCFMIFD" }, null, null, null, null)
           }));

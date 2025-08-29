@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static CurChallengeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJDdXJDaGFsbGVuZ2UucHJvdG8aFUV4dHJhTGluZXVwVHlwZS5wcm90bxoa",
-            "Q2hhbGxlbmdlQ3VyQnVmZkluZm8ucHJvdG8aFUNoYWxsZW5nZVN0YXR1cy5w",
+            "ChJDdXJDaGFsbGVuZ2UucHJvdG8aFUV4dHJhTGluZXVwVHlwZS5wcm90bxoV",
+            "Q2hhbGxlbmdlU3RhdHVzLnByb3RvGhpDaGFsbGVuZ2VDdXJCdWZmSW5mby5w",
             "cm90bxoRS2lsbE1vbnN0ZXIucHJvdG8imgIKDEN1ckNoYWxsZW5nZRIrChFl",
             "eHRyYV9saW5ldXBfdHlwZRgPIAEoDjIQLkV4dHJhTGluZXVwVHlwZRInChFr",
             "aWxsX21vbnN0ZXJfbGlzdBgLIAMoCzIMLktpbGxNb25zdGVyEhMKC3JvdW5k",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "CXNjb3JlX3R3bxgOIAEoDRIUCgxjaGFsbGVuZ2VfaWQYCiABKA1CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeCurBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ExtraLineupTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeCurBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KillMonsterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CurChallenge), global::EggLink.DanhengServer.Proto.CurChallenge.Parser, new[]{ "ExtraLineupType", "KillMonsterList", "RoundCount", "StageInfo", "ScoreId", "Status", "DeadAvatarNum", "ScoreTwo", "ChallengeId" }, null, null, null, null)
           }));

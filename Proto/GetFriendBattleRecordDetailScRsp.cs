@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetFriendBattleRecordDetailScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiZHZXRGcmllbmRCYXR0bGVSZWNvcmREZXRhaWxTY1JzcC5wcm90bxoeQ2hh",
-            "bGxlbmdlR3JvdXBTdGF0aXN0aWNzLnByb3RvGhVSb2d1ZVN0YXRpc3RpY3Mu",
-            "cHJvdG8aIkNoYWxsZW5nZVBlYWtHcm91cFN0YXRpc3RpY3MucHJvdG8i0QEK",
+            "CiZHZXRGcmllbmRCYXR0bGVSZWNvcmREZXRhaWxTY1JzcC5wcm90bxoiQ2hh",
+            "bGxlbmdlUGVha0dyb3VwU3RhdGlzdGljcy5wcm90bxoeQ2hhbGxlbmdlR3Jv",
+            "dXBTdGF0aXN0aWNzLnByb3RvGhVSb2d1ZVN0YXRpc3RpY3MucHJvdG8i0QEK",
             "IEdldEZyaWVuZEJhdHRsZVJlY29yZERldGFpbFNjUnNwEjIKC3BlYWtfcmVj",
             "b3JkGAwgAygLMh0uQ2hhbGxlbmdlUGVha0dyb3VwU3RhdGlzdGljcxIzChBj",
             "aGFsbGVuZ2VfcmVjb3JkGA8gAygLMhkuQ2hhbGxlbmdlR3JvdXBTdGF0aXN0",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "CgN1aWQYAyABKA0SDwoHcmV0Y29kZRgNIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengeGroupStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengePeakGroupStatisticsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengePeakGroupStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeGroupStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueStatisticsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFriendBattleRecordDetailScRsp), global::EggLink.DanhengServer.Proto.GetFriendBattleRecordDetailScRsp.Parser, new[]{ "PeakRecord", "ChallengeRecord", "RogueRecord", "Uid", "Retcode" }, null, null, null, null)
           }));
