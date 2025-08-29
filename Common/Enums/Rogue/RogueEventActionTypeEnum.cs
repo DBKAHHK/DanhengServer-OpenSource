@@ -25,5 +25,8 @@ public enum RogueEventActionTypeEnum
     ActionGetBuffInFormula,
     ActionEnhanceAllBuff,
     ActionGetBuffInFormulaUntilExpandAll,
-    ActionAddFormulaAndExpand
+    ActionAddFormulaAndExpand,
+    ActionDropMiracle,
+    ActionDropBuff,
+    ActionAddDialogueEvent
 }

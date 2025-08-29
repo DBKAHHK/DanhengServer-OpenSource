@@ -6,7 +6,7 @@
 /// <typeparam name="T"></typeparam>
 public class RandomList<T>
 {
-    private readonly List<T> _List = [];
+    private readonly List<T> _list = [];
 
     public RandomList()
     {
@@ -14,21 +14,21 @@ public class RandomList<T>
 
     public RandomList(IEnumerable<T> collection)
     {
-        _List.AddRange(collection);
+        _list.AddRange(collection);
     }
 
     public void Add(T item, int weight)
     {
-        for (var i = 0; i < weight; i++) _List.Add(item);
+        for (var i = 0; i < weight; i++) _list.Add(item);
     }
 
     public void Remove(T item)
     {
-        var temp = _List.Clone().ToList();
-        _List.Clear();
+        var temp = _list.Clone().ToList();
+        _list.Clear();
         foreach (var i in temp)
             if (i?.Equals(item) == false)
-                _List.Add(i);
+                _list.Add(i);
     }
 
     public void AddRange(IEnumerable<T> collection, IEnumerable<int> weights)
@@ -39,17 +39,17 @@ public class RandomList<T>
 
     public T? GetRandom()
     {
-        if (_List.Count == 0) return default;
-        return _List[Random.Shared.Next(_List.Count)];
+        if (_list.Count == 0) return default;
+        return _list[Random.Shared.Next(_list.Count)];
     }
 
     public void Clear()
     {
-        _List.Clear();
+        _list.Clear();
     }
 
     public int GetCount()
     {
-        return _List.Count;
+        return _list.Count;
     }
 }

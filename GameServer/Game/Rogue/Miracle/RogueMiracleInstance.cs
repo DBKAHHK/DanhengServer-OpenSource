@@ -144,11 +144,11 @@ public class RogueMiracleInstance
         };
     }
 
-    public RogueCommonActionResult ToGetResult()
+    public RogueCommonActionResult ToGetResult(RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Select)
     {
         return new RogueCommonActionResult
         {
-            Source = RogueCommonActionResultSourceType.Select,
+            Source = source,
             RogueAction = new RogueCommonActionResultData
             {
                 GetMiracleList = new RogueCommonMiracle

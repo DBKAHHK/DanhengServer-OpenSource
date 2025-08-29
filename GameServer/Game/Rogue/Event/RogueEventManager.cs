@@ -1,7 +1,9 @@
 ﻿using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Enums.Rogue;
+using EggLink.DanhengServer.Enums.TournRogue;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.RogueCommon;
+using Newtonsoft.Json.Linq;
 
 namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 
@@ -50,6 +52,34 @@ public class RogueEventManager(PlayerInstance player, BaseRogueInstance rogueIns
                         if (Rogue.Player.LineupManager!.GetCurLineup()?.BaseAvatars?.All(x =>
                                 x.BaseAvatarId != Convert.ToInt32(condition.Param["AvatarId"])) == true)
                             optionInst.IsValid = false;
+                        break;
+                    case RogueEventConditionTypeEnum.CondHasMiracle:
+                        var categories = (JArray?)condition.Param["Categories"];
+
+                        if (categories == null || categories.Count == 0) break;
+                        List<RogueTournMiracleCategoryEnum> categoryEnums = [];
+
+                        foreach (var cat in categories)
+                        {
+                            if (Enum.TryParse(cat.ToString(), out RogueTournMiracleCategoryEnum categoryEnum))
+                                categoryEnums.Add(categoryEnum);
+                        }
+
+                        if (Rogue.RogueMiracles.Keys.All(x =>
+                                !categoryEnums.Contains(
+                                    GameData.RogueTournMiracleData.GetValueOrDefault(x)?.MiracleCategory ??
+                                    RogueTournMiracleCategoryEnum.None)))
+                            optionInst.IsValid = false;
+
+                        break;
+                    case RogueEventConditionTypeEnum.CondHasBuff:
+                        var groupId = Convert.ToInt32(condition.Param["GroupId"]);
+                        var group = GameData.RogueBuffGroupData.GetValueOrDefault(groupId);
+                        if (group == null) break;
+
+                        var buffInGroup = group.BuffList.Select(x => x.MazeBuffID).ToHashSet();
+                        if (Rogue.RogueBuffs.All(x => !buffInGroup.Contains(x.BuffId))) optionInst.IsValid = false;
+
                         break;
                 }
             }
@@ -118,5 +148,7 @@ public class RogueEventManager(PlayerInstance player, BaseRogueInstance rogueIns
         await Player.SendPacket(new PacketSyncRogueCommonDialogueOptionFinishScNotify(eventInstance));
         option.IsSelected = true;
         await Player.SendPacket(new PacketSelectRogueCommonDialogueOptionScRsp(eventInstance));
+
+        eventInstance.EffectEventId.Clear();
     }
 }

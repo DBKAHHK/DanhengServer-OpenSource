@@ -325,6 +325,7 @@ public static class GameData
     public static Dictionary<int, RogueTournWorkbenchExcel> RogueTournWorkbenchData { get; private set; } = [];
     public static Dictionary<int, RogueTournWorkbenchFuncExcel> RogueTournWorkbenchFuncData { get; private set; } = [];
     public static Dictionary<int, RogueTournFormulaExcel> RogueTournFormulaData { get; private set; } = [];
+    public static Dictionary<int, RogueTournMiracleExcel> RogueTournMiracleData { get; private set; } = [];
     public static Dictionary<int, RogueTournTitanTalentExcel> RogueTournTitanTalentData { get; private set; } = [];
 
     public static Dictionary<RogueTitanTypeEnum, RogueTournTitanTypeExcel>

@@ -5,5 +5,7 @@ public enum RogueEventConditionTypeEnum
     CondNone = 0,
     CondCheckMoney,
     CondHasAvatar,
-    CondLineupHasAvatar
+    CondLineupHasAvatar,
+    CondHasMiracle,
+    CondHasBuff
 }

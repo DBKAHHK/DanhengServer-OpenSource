@@ -143,6 +143,23 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         await UpdateMenu();
     }
 
+    public virtual async ValueTask RemoveBuffList(List<int> buffIds)
+    {
+        List<RogueCommonActionResult> resultList = [];
+        foreach (var buff in buffIds)
+        {
+            var res = await RemoveBuff(buff, displayType: RogueCommonActionResultDisplayType.Multi, updateMenu: false,
+                notify: false);
+
+            if (res != null) resultList.Add(res);
+        }
+
+        await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, resultList,
+            RogueCommonActionResultDisplayType.Multi));
+
+        await UpdateMenu();
+    }
+
     public virtual async ValueTask EnhanceBuff(int buffId,
         RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Dialogue)
     {
@@ -392,17 +409,39 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
             new PacketHandleRogueCommonPendingActionScRsp(action.QueuePosition, location, selectMiracle: true));
     }
 
-    public virtual async ValueTask AddMiracle(int miracleId)
+    public virtual async ValueTask AddMiracle(int miracleId, RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Select)
     {
         if (RogueMiracles.ContainsKey(miracleId)) return;
 
         GameData.RogueMiracleData.TryGetValue(miracleId, out var excel);
-        if (excel == null) return;
+        GameData.RogueTournMiracleData.TryGetValue(miracleId, out var excelT);
+        if (excel == null && excelT == null) return;
 
         var miracle = new RogueMiracleInstance(this, miracleId);
         RogueMiracles.Add(miracleId, miracle);
-        await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, miracle.ToGetResult(),
+        await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, miracle.ToGetResult(source),
             RogueCommonActionResultDisplayType.Single));
+    }
+
+    public virtual async ValueTask AddMiracleList(List<int> miracleIds, RogueCommonActionResultSourceType source = RogueCommonActionResultSourceType.Select)
+    {
+        List<RogueCommonActionResult> res = [];
+
+        foreach (var miracleId in miracleIds)
+        {
+            if (RogueMiracles.ContainsKey(miracleId)) return;
+
+            GameData.RogueMiracleData.TryGetValue(miracleId, out var excel);
+            GameData.RogueTournMiracleData.TryGetValue(miracleId, out var excelT);
+            if (excel == null && excelT == null) return;
+
+            var miracle = new RogueMiracleInstance(this, miracleId);
+            RogueMiracles.Add(miracleId, miracle);
+
+            res.Add(miracle.ToGetResult(source));
+        }
+        await Player.SendPacket(new PacketSyncRogueCommonActionResultScNotify(RogueSubMode, res,
+            RogueCommonActionResultDisplayType.Multi));
     }
 
     #endregion
@@ -483,26 +522,48 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
     {
         RogueDialogueEventConfig? dialogue = null;
 
+        RandomList<RogueDialogueEventConfig> randomList = new();
         switch (RogueSubMode)
         {
             case RogueSubModeEnum.CosmosRogue:
             case RogueSubModeEnum.CosmosRogueEndless:
-                dialogue = GameData.CosmosRogueDialogueEventConfig.Values.ToList().RandomElement();
+                foreach (var e in GameData.CosmosRogueDialogueEventConfig.Values.ToList())
+                {
+                    randomList.Add(e, e.Weight);
+                }
+
                 break;
             case RogueSubModeEnum.TournRogue:
-                dialogue = GameData.TournRogueDialogueEventConfig.Values.ToList().RandomElement();
+                foreach (var e in GameData.TournRogueDialogueEventConfig.Values.ToList())
+                {
+                    randomList.Add(e, e.Weight);
+                }
+
                 break;
             case RogueSubModeEnum.ChessRogue:
-                dialogue = GameData.SwarmRogueDialogueEventConfig.Values.ToList().RandomElement();
+                foreach (var e in GameData.SwarmRogueDialogueEventConfig.Values.ToList())
+                {
+                    randomList.Add(e, e.Weight);
+                }
                 break;
+
             case RogueSubModeEnum.ChessRogueNous:
-                dialogue = GameData.NousRogueDialogueEventConfig.Values.ToList().RandomElement();
+                foreach (var e in GameData.NousRogueDialogueEventConfig.Values.ToList())
+                {
+                    randomList.Add(e, e.Weight);
+                }
+
                 break;
             case RogueSubModeEnum.MagicRogue:
-                dialogue = GameData.MagicRogueDialogueEventConfig.Values.ToList().RandomElement();
+                foreach (var e in GameData.MagicRogueDialogueEventConfig.Values.ToList())
+                {
+                    randomList.Add(e, e.Weight);
+                }
+
                 break;
         }
 
+        if (randomList.GetCount() > 0) dialogue = randomList.GetRandom();
         if (dialogue == null) throw new Exception("No dialogue event config found for rogue mode " + RogueSubMode);
 
         var instance = new RogueEventInstance(dialogue, npc, CurEventUniqueId++);

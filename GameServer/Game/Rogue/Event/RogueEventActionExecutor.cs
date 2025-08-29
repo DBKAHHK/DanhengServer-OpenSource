@@ -6,6 +6,10 @@ using EggLink.DanhengServer.GameServer.Game.RogueTourn;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Lineup;
 using Newtonsoft.Json.Linq;
 using SqlSugar;
+using System.Linq;
+using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.Rogue.Event;
 
@@ -94,7 +98,15 @@ public static class RogueEventActionExecutor
             case RogueEventActionTypeEnum.ActionAddFormulaAndExpand:
                 await ActionAddFormulaAndExpand(rogue, eventInst, actionData);
                 break;
-            case RogueEventActionTypeEnum.ActionNone:
+            case RogueEventActionTypeEnum.ActionDropMiracle:
+                await ActionDropMiracle(rogue, eventInst, actionData);
+                break;
+            case RogueEventActionTypeEnum.ActionDropBuff:
+                await ActionDropBuff(rogue, eventInst, actionData);
+                break;
+            case RogueEventActionTypeEnum.ActionAddDialogueEvent:
+                await ActionAddDialogueEvent(rogue, eventInst, actionData);
+                break;
             default:
                 break;
         }
@@ -171,17 +183,23 @@ public static class RogueEventActionExecutor
     {
         var hpChangeByCurHp = Convert.ToInt32(actionData.Param.GetValueOrDefault("HpChangeByCurHp", 0));
         var hpChange = Convert.ToInt32(actionData.Param.GetValueOrDefault("HpChange", 0));
+        var spChange = Convert.ToInt32(actionData.Param.GetValueOrDefault("SpChange", 0));
+        var mpChange = Convert.ToInt32(actionData.Param.GetValueOrDefault("MpChange", 0));
 
         foreach (var formalAvatar in rogue.Player.AvatarManager!.AvatarData.FormalAvatars)
         {
             if (hpChange != 0)
                 formalAvatar.ExtraLineupHp = hpChange;
 
-            if (hpChangeByCurHp != 0)
-            {
-                formalAvatar.ExtraLineupHp = (int)Math.Ceiling(formalAvatar.ExtraLineupHp * (-hpChangeByCurHp / 10000d));
-            }
+            if (hpChangeByCurHp != 0) formalAvatar.ExtraLineupHp = (int)Math.Ceiling(formalAvatar.ExtraLineupHp * ((10000 + hpChangeByCurHp) / 10000d));
+
+            if (spChange != 0)
+                formalAvatar.ExtraLineupSp = Math.Max(Math.Min(formalAvatar.ExtraLineupSp + spChange, 0), 10000);
         }
+
+        var curLineup = rogue.Player.LineupManager!.GetCurLineup()!;
+        if (mpChange != 0)
+            curLineup.Mp = Math.Max(Math.Min(0, curLineup.Mp + mpChange), rogue.Player.LineupManager!.GetMaxMp());
 
         // sync
         await rogue.Player.SendPacket(new PacketSyncLineupNotify(rogue.Player.LineupManager!.GetCurLineup()!));
@@ -190,7 +208,21 @@ public static class RogueEventActionExecutor
     private static async ValueTask ActionRemoveBuff(BaseRogueInstance rogue, RogueEventInstance eventInst,
         RogueDialogueEventActionData actionData)
     {
-        // TODO select buff to remove
+        var count = Convert.ToInt32(actionData.Param.GetValueOrDefault("Count", 1));
+        var groupId = Convert.ToInt32(actionData.Param.GetValueOrDefault("GroupId", 0));
+        if (count <= 0) return;
+
+        var group = GameData.RogueBuffGroupData.GetValueOrDefault(groupId)?.BuffList.Select(x => x.MazeBuffID).ToList();
+        if (group == null && groupId != 0) return;
+
+        var ownedBuffs = groupId == 0 || group == null
+            ? rogue.RogueBuffs.ToList()
+            : rogue.RogueBuffs.Where(x => group.Contains(x.BuffId)).ToList();
+
+        if (ownedBuffs.Count == 0) return;
+        var selectedBuffs = ownedBuffs.OrderBy(_ => Guid.NewGuid()).Take(Math.Min(count, ownedBuffs.Count)).ToList();  // avoid ownedBuffs.Count < count
+
+        await rogue.RemoveBuffList(selectedBuffs.Select(x => x.BuffId).ToList());
     }
 
     private static async ValueTask ActionInvalidateOption(BaseRogueInstance rogue, RogueEventInstance eventInst,
@@ -213,7 +245,7 @@ public static class RogueEventActionExecutor
         var miracleId = Convert.ToInt32(actionData.Param.GetValueOrDefault("MiracleId", 0));
         if (miracleId == 0) return;
 
-        await rogue.AddMiracle(miracleId);
+        await rogue.AddMiracle(miracleId, RogueCommonActionResultSourceType.Dialogue);
     }
 
     private static async ValueTask ActionGetBuffInGroup(BaseRogueInstance rogue, RogueEventInstance eventInst,
@@ -237,7 +269,7 @@ public static class RogueEventActionExecutor
     {
         var stageId = Convert.ToInt32(actionData.Param.GetValueOrDefault("StageId", 0));
         var winActions = (JArray?)actionData.Param.GetValueOrDefault("WinActions");  // TODO
-        if (!GameData.PlaneEventData.ContainsKey(stageId)) return;
+        if (!GameData.PlaneEventData.ContainsKey(stageId * 10 + rogue.Player.Data.WorldLevel)) return;
 
         var optionInst = eventInst.Options.Find(x => x.OptionId == eventInst.SelectedOptionId);
         if (optionInst == null) return;
@@ -358,7 +390,7 @@ public static class RogueEventActionExecutor
         var notOwned = group.Where(x => !owned.Contains(x.MazeBuffID)).ToList();
         if (notOwned.Count == 0) return;
 
-        await rogue.AddBuffList(notOwned.Take(Math.Min(count, notOwned.Count)).ToList());
+        await rogue.AddBuffList(notOwned.OrderBy(_ => Guid.NewGuid()).Take(Math.Min(count, notOwned.Count)).ToList());
     }
 
     private static async ValueTask ActionGetBuff(BaseRogueInstance rogue, RogueEventInstance eventInst,
@@ -375,14 +407,32 @@ public static class RogueEventActionExecutor
         var notOwned = group.Where(x => !owned.Contains(x.MazeBuffID)).ToList();
         if (notOwned.Count == 0) return;
 
-        await rogue.AddBuffList(notOwned.Take(Math.Min(count, notOwned.Count)).ToList());
+        await rogue.AddBuffList(notOwned.OrderBy(_ => Guid.NewGuid()).Take(Math.Min(count, notOwned.Count)).ToList());
     }
 
     private static async ValueTask ActionGetMiracleByCategory(BaseRogueInstance rogue, RogueEventInstance eventInst,
         RogueDialogueEventActionData actionData)
     {
-        // TODO
-        await ValueTask.CompletedTask;
+        var categories = (JArray?)actionData.Param.GetValueOrDefault("Categories");
+        var count = Convert.ToInt32(actionData.Param.GetValueOrDefault("Count", 1));
+        if (categories == null || categories.Count == 0 || count == 0) return;
+        List<RogueTournMiracleCategoryEnum> categoryEnums = [];
+        foreach (var cat in categories)
+        {
+            if (Enum.TryParse(cat.ToString(), out RogueTournMiracleCategoryEnum categoryEnum))
+                categoryEnums.Add(categoryEnum);
+        }
+
+        if (categoryEnums.Count == 0) return;
+        var possibleMiracles = GameData.RogueTournMiracleData.Values
+            .Where(x => categoryEnums.Contains(x.MiracleCategory) && !rogue.RogueMiracles.ContainsKey(x.MiracleID) &&
+                        x.TournMode == RogueTournModeEnum.Tourn2)
+            .ToList();
+
+        if (possibleMiracles.Count == 0) return;
+        var selectedMiracles = possibleMiracles.OrderBy(_ => Guid.NewGuid()).Take(Math.Min(count, possibleMiracles.Count)).ToList();  // avoid possibleMiracles.Count < count
+
+        await rogue.AddMiracleList(selectedMiracles.Select(x => x.MiracleID).ToList(), RogueCommonActionResultSourceType.Dialogue);
     }
 
     private static async ValueTask ActionDropFormula(BaseRogueInstance rogue, RogueEventInstance eventInst,
@@ -416,10 +466,34 @@ public static class RogueEventActionExecutor
         var count = Convert.ToInt32(actionData.Param.GetValueOrDefault("Count", 1));
         if (count <= 0) return;
 
-        if (rogue is RogueTournInstance inst)
+        if (rogue is not RogueTournInstance inst) return;
+
+        Dictionary<int, int> typeNumDict = [];
+        foreach (var excel in inst.RogueFormulas)
         {
-            // TODO
+            typeNumDict.TryAdd(excel.MainBuffTypeID, 0);
+            typeNumDict.TryAdd(excel.SubBuffTypeID, 0);
+
+            typeNumDict[excel.MainBuffTypeID] = Math.Max(typeNumDict[excel.MainBuffTypeID], excel.MainBuffNum);
+            typeNumDict[excel.SubBuffTypeID] = Math.Max(typeNumDict[excel.SubBuffTypeID], excel.SubBuffNum);
         }
+
+        List<int> availableTypes = [];
+        foreach (var (typeId, num) in typeNumDict)
+        {
+            var ownedNum = inst.RogueBuffs.Count(x => x.BuffExcel.RogueBuffType == typeId);
+            if (ownedNum < num)
+                availableTypes.Add(typeId);
+        }
+
+        if (availableTypes.Count == 0) return;
+
+        var owned = rogue.RogueBuffs.Select(x => x.BuffId).ToList();
+        var notOwned = GameData.RogueBuffData.Values.Where(x => x is RogueTournBuffExcel)
+            .Where(x => !owned.Contains(x.MazeBuffID) && availableTypes.Contains(x.RogueBuffType) && x.MazeBuffLevel == 1).ToList();
+        if (notOwned.Count == 0) return;
+
+        await rogue.AddBuffList(notOwned.OrderBy(_ => Guid.NewGuid()).Take(Math.Min(count, notOwned.Count)).ToList());  // avoid notOwned.Count < count
     }
 
     private static async ValueTask ActionEnhanceAllBuff(BaseRogueInstance rogue, RogueEventInstance eventInst,
@@ -433,6 +507,41 @@ public static class RogueEventActionExecutor
     private static async ValueTask ActionGetBuffInFormulaUntilExpandAll(BaseRogueInstance rogue,
         RogueEventInstance eventInst, RogueDialogueEventActionData actionData)
     {
+        if (rogue is not RogueTournInstance inst) return;
+
+        Dictionary<int, int> typeNumDict = [];
+        foreach (var excel in inst.RogueFormulas)
+        {
+            typeNumDict.TryAdd(excel.MainBuffTypeID, 0);
+            typeNumDict.TryAdd(excel.SubBuffTypeID, 0);
+
+            typeNumDict[excel.MainBuffTypeID] = Math.Max(typeNumDict[excel.MainBuffTypeID], excel.MainBuffNum);
+            typeNumDict[excel.SubBuffTypeID] = Math.Max(typeNumDict[excel.SubBuffTypeID], excel.SubBuffNum);
+        }
+
+        List<int> availableTypes = [];
+        foreach (var (typeId, num) in typeNumDict)
+        {
+            var ownedNum = inst.RogueBuffs.Count(x => x.BuffExcel.RogueBuffType == typeId);
+            if (ownedNum < num)
+                availableTypes.Add(typeId);
+        }
+
+        if (availableTypes.Count == 0) return;
+
+        var owned = rogue.RogueBuffs.Select(x => x.BuffId).ToList();
+        var notOwned = GameData.RogueBuffData.Values.Where(x => x is RogueTournBuffExcel)
+            .Where(x => !owned.Contains(x.MazeBuffID) && availableTypes.Contains(x.RogueBuffType) && x.MazeBuffLevel == 1).ToList();
+        if (notOwned.Count == 0) return;
+
+        while (inst.ExpandedFormulaIdList.Count < inst.RogueFormulas.Count)
+        {
+            var add = notOwned.RandomElement();
+            await inst.AddBuff(add.MazeBuffID);
+
+            notOwned.Remove(add);
+            if (notOwned.Count == 0) break;
+        }
     }
 
     private static async ValueTask ActionAddFormulaAndExpand(BaseRogueInstance rogue, RogueEventInstance eventInst,
@@ -453,5 +562,28 @@ public static class RogueEventActionExecutor
             await inst.RollFormula(count, categoryList);
 
         // TODO expand it
+    }
+
+    private static async ValueTask ActionDropMiracle(BaseRogueInstance rogue, RogueEventInstance eventInst,
+        RogueDialogueEventActionData actionData)
+    {
+        await ValueTask.CompletedTask;
+    }
+
+    private static async ValueTask ActionDropBuff(BaseRogueInstance rogue, RogueEventInstance eventInst,
+        RogueDialogueEventActionData actionData)
+    {
+        // TODO select buff to remove
+        await ValueTask.CompletedTask;
+    }
+
+    private static async ValueTask ActionAddDialogueEvent(BaseRogueInstance rogue, RogueEventInstance eventInst,
+        RogueDialogueEventActionData actionData)
+    {
+        var eventId = Convert.ToInt32(actionData.Param.GetValueOrDefault("EventId", 0));
+        if (eventId == 0) return;
+
+        eventInst.EffectEventId.Add(eventId);
+        await ValueTask.CompletedTask;
     }
 }
