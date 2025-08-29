@@ -833,7 +833,7 @@
               "Percent": 0.8,
               "SuccAction": [
                 {
-                  "Name": "ActionRemoveBuff",
+                  "Name": "ActionDropBuff",
                   "Param": {
                     "Count": 1,
                     "GroupId": 100001
@@ -850,7 +850,7 @@
               ],
               "FailAction": [
                 {
-                  "Name": "ActionRemoveBuff",
+                  "Name": "ActionDropBuff",
                   "Param": {
                     "Count": 1,
                     "GroupId": 100002
@@ -893,7 +893,7 @@
         "OptionId": 10501,
         "SelectActions": [
           {
-            "Name": "ActionRemoveBuff",
+            "Name": "ActionDropBuff",
             "Param": {
               "Count": 1,
               "GroupId": 100005
@@ -1037,29 +1037,17 @@
               "Percent": 0.6,
               "SuccAction": [
                 {
-                  "Name": "ActionInvalidateOption",
+                  "Name": "ActionAddDialogueEvent",
                   "Param": {
-                    "OptionId": 10807
-                  }
-                },
-                {
-                  "Name": "ActionInvalidateOption",
-                  "Param": {
-                    "OptionId": 10808
+                    "EventId": 10803
                   }
                 }
               ],
               "FailAction": [
                 {
-                  "Name": "ActionInvalidateOption",
+                  "Name": "ActionAddDialogueEvent",
                   "Param": {
-                    "OptionId": 10805
-                  }
-                },
-                {
-                  "Name": "ActionInvalidateOption",
-                  "Param": {
-                    "OptionId": 10806
+                    "EventId": 10804
                   }
                 }
               ]
@@ -1076,29 +1064,17 @@
               "Percent": 0.6,
               "SuccAction": [
                 {
-                  "Name": "ActionInvalidateOption",
+                  "Name": "ActionAddDialogueEvent",
                   "Param": {
-                    "OptionId": 10807
-                  }
-                },
-                {
-                  "Name": "ActionInvalidateOption",
-                  "Param": {
-                    "OptionId": 10808
+                    "EventId": 10803
                   }
                 }
               ],
               "FailAction": [
                 {
-                  "Name": "ActionInvalidateOption",
+                  "Name": "ActionAddDialogueEvent",
                   "Param": {
-                    "OptionId": 10805
-                  }
-                },
-                {
-                  "Name": "ActionInvalidateOption",
-                  "Param": {
-                    "OptionId": 10806
+                    "EventId": 10804
                   }
                 }
               ]
@@ -1115,6 +1091,12 @@
               "Percent": 0.7,
               "SuccAction": [
                 {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 10809
+                  }
+                },
+                {
                   "Name": "ActionChangeMoney",
                   "Param": {
                     "Count": 150,
@@ -1127,8 +1109,21 @@
                   "Name": "ActionRandomAction",
                   "Param": {
                     "Percent": 0.667,
-                    "SuccAction": [],
+                    "SuccAction": [
+                      {
+                        "Name": "ActionAddDialogueEvent",
+                        "Param": {
+                          "EventId": 10810
+                        }
+                      }
+                    ],
                     "FailAction": [
+                      {
+                        "Name": "ActionAddDialogueEvent",
+                        "Param": {
+                          "EventId": 10811
+                        }
+                      },
                       {
                         "Name": "ActionChangeMoney",
                         "Param": {
@@ -1153,6 +1148,12 @@
               "Percent": 0.7,
               "SuccAction": [
                 {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 10809
+                  }
+                },
+                {
                   "Name": "ActionChangeMoney",
                   "Param": {
                     "Count": 150,
@@ -1165,8 +1166,21 @@
                   "Name": "ActionRandomAction",
                   "Param": {
                     "Percent": 0.667,
-                    "SuccAction": [],
+                    "SuccAction": [
+                      {
+                        "Name": "ActionAddDialogueEvent",
+                        "Param": {
+                          "EventId": 10810
+                        }
+                      }
+                    ],
                     "FailAction": [
+                      {
+                        "Name": "ActionAddDialogueEvent",
+                        "Param": {
+                          "EventId": 10811
+                        }
+                      },
                       {
                         "Name": "ActionChangeMoney",
                         "Param": {
@@ -1188,31 +1202,27 @@
           {
             "Name": "ActionRandomAction",
             "Param": {
-              "Percent": 0.7,
+              "Percent": 0.6,
               "SuccAction": [
                 {
-                  "Name": "ActionChangeMoney",
+                  "Name": "ActionAddDialogueEvent",
                   "Param": {
-                    "Count": 150,
-                    "ShowType": 2
+                    "EventId": 10812
                   }
                 }
               ],
               "FailAction": [
                 {
-                  "Name": "ActionRandomAction",
+                  "Name": "ActionAddDialogueEvent",
                   "Param": {
-                    "Percent": 0.667,
-                    "SuccAction": [],
-                    "FailAction": [
-                      {
-                        "Name": "ActionChangeMoney",
-                        "Param": {
-                          "Count": 400,
-                          "ShowType": 2
-                        }
-                      }
-                    ]
+                    "EventId": 10811
+                  }
+                },
+                {
+                  "Name": "ActionChangeMoney",
+                  "Param": {
+                    "Count": 400,
+                    "ShowType": 2
                   }
                 }
               ]
@@ -1227,8 +1237,21 @@
             "Name": "ActionRandomAction",
             "Param": {
               "Percent": 0.6,
-              "SuccAction": [],
+              "SuccAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 10812
+                  }
+                }
+              ],
               "FailAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 10811
+                  }
+                },
                 {
                   "Name": "ActionChangeMoney",
                   "Param": {
@@ -1868,6 +1891,12 @@
               "PercentName": "GamePercent",
               "SuccAction": [
                 {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 13510
+                  }
+                },
+                {
                   "Name": "ActionTriggerBattle",
                   "Param": {
                     "StageId": 80212022
@@ -1876,11 +1905,33 @@
               ],
               "FailAction": [
                 {
-                  "Name": "ActionAddBuff",
+                  "Name": "ActionRandomAction",
                   "Param": {
-                    "GroupId": 100410,
-                    "Count": 1,
-                    "HintId": 7
+                    "Percent": 0.8,
+                    "SuccAction": [
+                      {
+                        "Name": "ActionAddDialogueEvent",
+                        "Param": {
+                          "EventId": 13507
+                        }
+                      },
+                      {
+                        "Name": "ActionAddBuff",
+                        "Param": {
+                          "GroupId": 100410,
+                          "Count": 1,
+                          "HintId": 7
+                        }
+                      }
+                    ],
+                    "FailAction": [
+                      {
+                        "Name": "ActionAddDialogueEvent",
+                        "Param": {
+                          "EventId": 13514
+                        }
+                      }
+                    ]
                   }
                 },
                 {
@@ -1936,6 +1987,12 @@
               "PercentName": "GamePercent",
               "SuccAction": [
                 {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 13513
+                  }
+                },
+                {
                   "Name": "ActionTriggerBattle",
                   "Param": {
                     "StageId": 80212022
@@ -1944,10 +2001,32 @@
               ],
               "FailAction": [
                 {
-                  "Name": "ActionChangeMoney",
+                  "Name": "ActionRandomAction",
                   "Param": {
-                    "Count": 100,
-                    "ShowType": 2
+                    "Percent": 0.8,
+                    "SuccAction": [
+                      {
+                        "Name": "ActionAddDialogueEvent",
+                        "Param": {
+                          "EventId": 13509
+                        }
+                      },
+                      {
+                        "Name": "ActionChangeMoney",
+                        "Param": {
+                          "Count": 100,
+                          "ShowType": 2
+                        }
+                      }
+                    ],
+                    "FailAction": [
+                      {
+                        "Name": "ActionAddDialogueEvent",
+                        "Param": {
+                          "EventId": 13514
+                        }
+                      }
+                    ]
                   }
                 },
                 {
@@ -2169,10 +2248,23 @@
         ],
         "SelectActions": [
           {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -50,
+              "ShowType": 0
+            }
+          },
+          {
             "Name": "ActionRandomActionByVariable",
             "Param": {
               "PercentName": "GamePercent",
               "SuccAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 19305
+                  }
+                },
                 {
                   "Name": "ActionAddBuff",
                   "Param": {
@@ -2183,6 +2275,12 @@
                 }
               ],
               "FailAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 19306
+                  }
+                },
                 {
                   "Name": "ActionChangeMoney",
                   "Param": {

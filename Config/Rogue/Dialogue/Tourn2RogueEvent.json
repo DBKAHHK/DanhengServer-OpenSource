@@ -18,7 +18,7 @@
             "Param": {
               "MinCount": 1,
               "MaxCount": 3,
-              "GroupId": 2030012
+              "GroupId": 2030002
             }
           }
         ]
@@ -48,7 +48,7 @@
             "Name": "ActionAddBuff",
             "Param": {
               "Count": 3,
-              "GroupId": 2030112,
+              "GroupId": 2030102,
               "HintId": 7
             }
           }
@@ -107,7 +107,7 @@
             "Name": "ActionGetBuff",
             "Param": {
               "Count": 3,
-              "GroupId": 2030112
+              "GroupId": 2030102
             }
           }
         ]
@@ -183,7 +183,7 @@
             "Name": "ActionGetBuff",
             "Param": {
               "Count": 3,
-              "GroupId": 2030111
+              "GroupId": 2030101
             }
           }
         ]
@@ -200,7 +200,7 @@
                   "Name": "ActionGetBuff",
                   "Param": {
                     "Count": 4,
-                    "GroupId": 2030111
+                    "GroupId": 2030101
                   }
                 }
               ],
@@ -236,7 +236,7 @@
             "Name": "ActionAddBuff",
             "Param": {
               "Count": 3,
-              "GroupId": 2030111,
+              "GroupId": 2030101,
               "HintId": 7
             }
           }
@@ -273,7 +273,7 @@
             "Name": "ActionAddBuff",
             "Param": {
               "Count": 2,
-              "GroupId": 2030013,
+              "GroupId": 2030003,
               "HintId": 7
             }
           }
@@ -312,7 +312,7 @@
             "Name": "ActionAddBuff",
             "Param": {
               "Count": 1,
-              "GroupId": 2030013,
+              "GroupId": 2030003,
               "HintId": 7
             }
           }
@@ -331,7 +331,7 @@
             "Name": "ActionAddBuff",
             "Param": {
               "Count": 1,
-              "GroupId": 2030012,
+              "GroupId": 2030002,
               "HintId": 7
             }
           }
@@ -344,7 +344,7 @@
             "Name": "ActionAddBuff",
             "Param": {
               "Count": 2,
-              "GroupId": 2030111,
+              "GroupId": 2030101,
               "HintId": 7
             }
           }
@@ -373,7 +373,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030932
+                  "GroupId": 1030922
                 }
               }
             ]
@@ -384,7 +384,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030132
+                  "GroupId": 1030122
                 }
               }
             ]
@@ -395,7 +395,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030232
+                  "GroupId": 1030222
                 }
               }
             ]
@@ -406,7 +406,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030432
+                  "GroupId": 1030422
                 }
               }
             ]
@@ -417,7 +417,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030532
+                  "GroupId": 1030522
                 }
               }
             ]
@@ -428,7 +428,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030632
+                  "GroupId": 1030622
                 }
               }
             ]
@@ -439,7 +439,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030732
+                  "GroupId": 1030722
                 }
               }
             ]
@@ -450,7 +450,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030832
+                  "GroupId": 1030822
                 }
               }
             ]
@@ -495,7 +495,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030932
+                  "GroupId": 1030922
                 }
               }
             ]
@@ -506,7 +506,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030132
+                  "GroupId": 1030122
                 }
               }
             ]
@@ -517,7 +517,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030232
+                  "GroupId": 1030222
                 }
               }
             ]
@@ -528,7 +528,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030432
+                  "GroupId": 1030422
                 }
               }
             ]
@@ -539,7 +539,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030532
+                  "GroupId": 1030522
                 }
               }
             ]
@@ -550,7 +550,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030632
+                  "GroupId": 1030622
                 }
               }
             ]
@@ -561,7 +561,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030732
+                  "GroupId": 1030722
                 }
               }
             ]
@@ -572,7 +572,7 @@
               {
                 "Name": "ActionGetBuffInGroup",
                 "Param": {
-                  "GroupId": 1030832
+                  "GroupId": 1030822
                 }
               }
             ]
@@ -634,7 +634,7 @@
             "Name": "ActionAddBuff",
             "Param": {
               "Count": 2,
-              "GroupId": 2030111,
+              "GroupId": 2030101,
               "HintId": 7
             }
           }
@@ -715,6 +715,12 @@
               "PercentName": "GamePercent",
               "SuccAction": [
                 {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 2
+                  }
+                },
+                {
                   "Name": "ActionTriggerBattle",
                   "Param": {
                     "StageId": 80212022,
@@ -722,7 +728,7 @@
                       {
                         "Name": "ActionAddBuff",
                         "Param": {
-                          "GroupId": 2030113,
+                          "GroupId": 2030103,
                           "Count": 1,
                           "HintId": 7
                         }
@@ -733,11 +739,33 @@
               ],
               "FailAction": [
                 {
-                  "Name": "ActionAddBuff",
+                  "Name": "ActionRandomAction",
                   "Param": {
-                    "GroupId": 2030112,
-                    "Count": 1,
-                    "HintId": 7
+                    "Percent": 0.8,
+                    "SuccAction": [
+                      {
+                        "Name": "ActionAddDialogueEvent",
+                        "Param": {
+                          "EventId": 3
+                        }
+                      },
+                      {
+                        "Name": "ActionAddBuff",
+                        "Param": {
+                          "GroupId": 2030102,
+                          "Count": 1,
+                          "HintId": 7
+                        }
+                      }
+                    ],
+                    "FailAction": [
+                      {
+                        "Name": "ActionAddDialogueEvent",
+                        "Param": {
+                          "EventId": 4
+                        }
+                      }
+                    ]
                   }
                 },
                 {
@@ -797,10 +825,10 @@
         "OptionId": 2,
         "SelectActions": [
           {
-            "Name": "ActionRemoveBuff",
+            "Name": "ActionDropBuff",
             "Param": {
               "Count": 1,
-              "GroupId": 2030111
+              "GroupId": 2030101
             }
           },
           {
@@ -849,6 +877,12 @@
               "PercentName": "GamePercent",
               "SuccAction": [
                 {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 2
+                  }
+                },
+                {
                   "Name": "ActionChangeLineupData",
                   "Param": {
                     "HpChangeByCurHp": -9900
@@ -857,9 +891,15 @@
               ],
               "FailAction": [
                 {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 3
+                  }
+                },
+                {
                   "Name": "ActionAddBuff",
                   "Param": {
-                    "GroupId": 2030112,
+                    "GroupId": 2030102,
                     "Count": 1,
                     "HintId": 7
                   }
@@ -900,7 +940,7 @@
             "Name": "ActionAddBuff",
             "Param": {
               "Count": 2,
-              "GroupId": 2030112,
+              "GroupId": 2030102,
               "HintId": 7
             }
           }
@@ -1013,20 +1053,39 @@
         ],
         "SelectActions": [
           {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -50,
+              "ShowType": 0
+            }
+          },
+          {
             "Name": "ActionRandomActionByVariable",
             "Param": {
               "PercentName": "GamePercent",
               "SuccAction": [
                 {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 5
+                  }
+                },
+                {
                   "Name": "ActionAddBuff",
                   "Param": {
-                    "GroupId": 2030013,
+                    "GroupId": 2030003,
                     "Count": 2,
                     "HintId": 7
                   }
                 }
               ],
               "FailAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 6
+                  }
+                },
                 {
                   "Name": "ActionChangeMoney",
                   "Param": {
@@ -1099,7 +1158,7 @@
             "Name": "ActionEnhanceRandomBuff",
             "Param": {
               "Count": 5,
-              "GroupId": 2030113
+              "GroupId": 2030103
             }
           }
         ]
@@ -1168,6 +1227,266 @@
     ]
   },
   {
+    "NpcId": 622201,
+    "Progress": 0,
+    "Weight": 100,
+    "AllowRogueType": [
+      "TournRogue"
+    ],
+    "AllowRoomType": [
+      "Event"
+    ],
+    "Options": [
+      {
+        "OptionId": 422201,
+        "SelectActions": [
+          {
+            "Name": "ActionGetMiracleByCategory",
+            "Param": {
+              "Count": 3,
+              "Categories": [
+                "Rare",
+                "Common",
+                "Legendary"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422202,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeLineupData",
+            "Param": {
+              "HpChangeByCurHp": -9900,
+              "SpChange": -10000,
+              "MpChange": -10000
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422203,
+        "ValidConditions": [
+          {
+            "Name": "CondCheckMoney",
+            "Param": {
+              "GreaterOrEqual": 100
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -100,
+              "ShowType": 0
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422204,
+        "SelectActions": [
+          {
+            "Name": "ActionRemoveBuff",
+            "Param": {
+              "Count": 1,
+              "GroupId": 2030102
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422205,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 400,
+              "ShowType": 2
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422206,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeLineupData",
+            "Param": {
+              "HpChangeByCurHp": -9900,
+              "SpChange": -10000,
+              "MpChange": -10000
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422207,
+        "SelectActions": [
+          {
+            "Name": "ActionGetMiracleByCategory",
+            "Param": {
+              "Count": 1,
+              "Categories": [
+                "Negative"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422208,
+        "SelectActions": [
+          {
+            "Name": "ActionRemoveBuff",
+            "Param": {
+              "Count": 1,
+              "GroupId": 2030102
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422209,
+        "SelectActions": [
+          {
+            "Name": "ActionAddFormula",
+            "Param": {
+              "Count": 1,
+              "Categories": [
+                "Epic"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422210,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeLineupData",
+            "Param": {
+              "HpChangeByCurHp": -9900,
+              "SpChange": -10000,
+              "MpChange": -10000
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422211,
+        "SelectActions": [
+          {
+            "Name": "ActionGetMiracleByCategory",
+            "Param": {
+              "Count": 1,
+              "Categories": [
+                "Negative"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422212,
+        "ValidConditions": [
+          {
+            "Name": "CondCheckMoney",
+            "Param": {
+              "GreaterOrEqual": 100
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -100,
+              "ShowType": 0
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422213,
+        "SelectActions": [
+          {
+            "Name": "ActionGetBuff",
+            "Param": {
+              "Count": 3,
+              "GroupId": 2030102
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422214,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeLineupData",
+            "Param": {
+              "HpChangeByCurHp": -9900,
+              "SpChange": -10000,
+              "MpChange": -10000
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422215,
+        "SelectActions": [
+          {
+            "Name": "ActionGetMiracleByCategory",
+            "Param": {
+              "Count": 1,
+              "Categories": [
+                "Negative"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422216,
+        "ValidConditions": [
+          {
+            "Name": "CondCheckMoney",
+            "Param": {
+              "GreaterOrEqual": 100
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -100,
+              "ShowType": 0
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 422217
+      },
+      {
+        "OptionId": 422218
+      },
+      {
+        "OptionId": 422219
+      },
+      {
+        "OptionId": 422220
+      },
+      {
+        "OptionId": 422221
+      }
+    ]
+  },
+  {
     "NpcId": 622601,
     "Progress": 0,
     "Weight": 100,
@@ -1213,8 +1532,930 @@
             "Name": "ActionAddBuff",
             "Param": {
               "Count": 2,
-              "GroupId": 2030111,
+              "GroupId": 2030101,
               "HintId": 7
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NpcId": 623501,
+    "Progress": 0,
+    "Weight": 200,
+    "AllowRogueType": [
+      "TournRogue"
+    ],
+    "AllowRoomType": [
+      "Event",
+      "Reward"
+    ],
+    "Options": [
+      {
+        "OptionId": 423501,
+        "ValidConditions": [
+          {
+            "Name": "CondHasMiracle",
+            "Param": {
+              "Categories": [
+                "Common"
+              ]
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionDropMiracle",
+            "Param": {
+              "Count": 1,
+              "Categories": [
+                "Common"
+              ]
+            }
+          },
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 500,
+              "ShowType": 0
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 423502,
+        "ValidConditions": [
+          {
+            "Name": "CondHasMiracle",
+            "Param": {
+              "Categories": [
+                "Rare"
+              ]
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionDropMiracle",
+            "Param": {
+              "Count": 1,
+              "Categories": [
+                "Rare"
+              ]
+            }
+          },
+          {
+            "Name": "ActionGetBuff",
+            "Param": {
+              "Count": 4,
+              "GroupId": 2030102
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 423503,
+        "ValidConditions": [
+          {
+            "Name": "CondHasMiracle",
+            "Param": {
+              "Categories": [
+                "Legendary"
+              ]
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionDropMiracle",
+            "Param": {
+              "Count": 1,
+              "Categories": [
+                "Legendary"
+              ]
+            }
+          },
+          {
+            "Name": "ActionGetBuff",
+            "Param": {
+              "Count": 4,
+              "GroupId": 2030003
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 423504,
+        "ValidConditions": [
+          {
+            "Name": "CondCheckMoney",
+            "Param": {
+              "GreaterOrEqual": 50
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -50,
+              "ShowType": 0
+            }
+          },
+          {
+            "Name": "ActionGetMiracleByCategory",
+            "Param": {
+              "Count": 3,
+              "Categories": [
+                "Common",
+                "Rare",
+                "Legendary"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 423505,
+        "ValidConditions": [
+          {
+            "Name": "CondCheckMoney",
+            "Param": {
+              "GreaterOrEqual": 150
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -150,
+              "ShowType": 0
+            }
+          },
+          {
+            "Name": "ActionGetBuff",
+            "Param": {
+              "Count": 3,
+              "GroupId": 2030003
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 423506,
+        "ValidConditions": [
+          {
+            "Name": "CondCheckMoney",
+            "Param": {
+              "GreaterOrEqual": 400
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -400,
+              "ShowType": 0
+            }
+          },
+          {
+            "Name": "ActionAddFormula",
+            "Param": {
+              "Count": 2,
+              "Categories": [
+                "Legendary",
+                "Epic"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 423507,
+        "ValidConditions": [
+          {
+            "Name": "CondHasBuff",
+            "Param": {
+              "GroupId": 2030001
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionDropBuff",
+            "Param": {
+              "GroupId": 2030001,
+              "Count": 1
+            }
+          },
+          {
+            "Name": "ActionGetBuff",
+            "Param": {
+              "Count": 3,
+              "GroupId": 2030103
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 423508,
+        "ValidConditions": [
+          {
+            "Name": "CondHasBuff",
+            "Param": {
+              "GroupId": 2030002
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionDropBuff",
+            "Param": {
+              "GroupId": 2030002,
+              "Count": 1
+            }
+          },
+          {
+            "Name": "ActionGetMiracleByCategory",
+            "Param": {
+              "Count": 4,
+              "Categories": [
+                "Legendary",
+                "Rare",
+                "Common"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 423509,
+        "ValidConditions": [
+          {
+            "Name": "CondHasBuff",
+            "Param": {
+              "GroupId": 2030003
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionDropBuff",
+            "Param": {
+              "GroupId": 2030003,
+              "Count": 1
+            }
+          },
+          {
+            "Name": "ActionGetBuffInFormula",
+            "Param": {
+              "Count": 4
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 423510,
+        "ValidConditions": [
+          {
+            "Name": "CondHasBuff",
+            "Param": {
+              "GroupId": 2030102
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 423511,
+        "ValidConditions": [
+          {
+            "Name": "CondHasMiracle",
+            "Param": {
+              "Categories": [
+                "Common",
+                "Rare",
+                "Legendary"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 423512,
+        "ValidConditions": [
+          {
+            "Name": "CondCheckMoney",
+            "Param": {
+              "GreaterOrEqual": 50
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 423513,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 4000,
+              "ShowType": 2
+            }
+          },
+          {
+            "Name": "ActionGetBuff",
+            "Param": {
+              "Count": 40,
+              "GroupId": 2030102
+            }
+          },
+          {
+            "Name": "ActionGetMiracleByCategory",
+            "Param": {
+              "Count": 20,
+              "Categories": [
+                "Legendary",
+                "Rare",
+                "Common"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NpcId": 623801,
+    "Progress": 0,
+    "Weight": 100,
+    "AllowRogueType": [
+      "TournRogue"
+    ],
+    "AllowRoomType": [
+      "Event"
+    ],
+    "Options": [
+      {
+        "OptionId": 523807,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 150,
+              "ShowType": 2
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523808,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 150,
+              "ShowType": 2
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523809,
+        "SelectActions": [
+          {
+            "Name": "ActionGetBuff",
+            "Param": {
+              "Count": 4,
+              "GroupId": 2030103
+            }
+          },
+          {
+            "Name": "ActionAddFormula",
+            "Param": {
+              "Count": 2,
+              "Categories": [
+                "Rare",
+                "Epic"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523810,
+        "SelectActions": [
+          {
+            "Name": "ActionGetBuff",
+            "Param": {
+              "Count": 2,
+              "GroupId": 2030103
+            }
+          },
+          {
+            "Name": "ActionAddFormula",
+            "Param": {
+              "Count": 1,
+              "Categories": [
+                "Rare",
+                "Epic"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523811,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 150,
+              "ShowType": 2
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523812,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 150,
+              "ShowType": 2
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523813,
+        "SelectActions": [
+          {
+            "Name": "ActionGetBuff",
+            "Param": {
+              "Count": 6,
+              "GroupId": 2030102
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523814,
+        "SelectActions": [
+          {
+            "Name": "ActionGetBuff",
+            "Param": {
+              "Count": 3,
+              "GroupId": 2030102
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523815,
+        "ValidConditions": [
+          {
+            "Name": "CondCheckMoney",
+            "Param": {
+              "GreaterOrEqual": 100
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -100,
+              "ShowType": 0
+            }
+          },
+          {
+            "Name": "ActionRandomAction",
+            "Param": {
+              "Percent": 0.5,
+              "SuccAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523803
+                  }
+                }
+              ],
+              "FailAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523804
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523816,
+        "SelectActions": [
+          {
+            "Name": "ActionRandomAction",
+            "Param": {
+              "Percent": 0.5,
+              "SuccAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523826
+                  }
+                }
+              ],
+              "FailAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523827
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523817,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 150,
+              "ShowType": 2
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523818,
+        "ValidConditions": [
+          {
+            "Name": "CondCheckMoney",
+            "Param": {
+              "GreaterOrEqual": 100
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -100,
+              "ShowType": 0
+            }
+          },
+          {
+            "Name": "ActionRandomAction",
+            "Param": {
+              "Percent": 0.5,
+              "SuccAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523801
+                  }
+                }
+              ],
+              "FailAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523802
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523819,
+        "SelectActions": [
+          {
+            "Name": "ActionRandomAction",
+            "Param": {
+              "Percent": 0.5,
+              "SuccAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523824
+                  }
+                }
+              ],
+              "FailAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523825
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523820,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 150,
+              "ShowType": 2
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523821,
+        "ValidConditions": [
+          {
+            "Name": "CondCheckMoney",
+            "Param": {
+              "GreaterOrEqual": 100
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -100,
+              "ShowType": 0
+            }
+          },
+          {
+            "Name": "ActionRandomAction",
+            "Param": {
+              "Percent": 0.5,
+              "SuccAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523805
+                  }
+                }
+              ],
+              "FailAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523806
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523822,
+        "SelectActions": [
+          {
+            "Name": "ActionRandomAction",
+            "Param": {
+              "Percent": 0.5,
+              "SuccAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523828
+                  }
+                }
+              ],
+              "FailAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523829
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523823,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 150,
+              "ShowType": 2
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523830,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 150,
+              "ShowType": 2
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523831,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 150,
+              "ShowType": 2
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523832,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 400,
+              "ShowType": 2
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523833,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 200,
+              "ShowType": 2
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523834
+      },
+      {
+        "OptionId": 523835
+      },
+      {
+        "OptionId": 523836
+      }
+    ]
+  },
+  {
+    "NpcId": 623901,
+    "Progress": 0,
+    "Weight": 100,
+    "AllowRogueType": [
+      "TournRogue"
+    ],
+    "AllowRoomType": [
+      "Event",
+      "Reward"
+    ],
+    "Options": [
+      {
+        "OptionId": 523901,
+        "SelectActions": [
+          {
+            "Name": "ActionGetMiracleByCategory",
+            "Param": {
+              "Count": 3,
+              "Categories": [
+                "Common"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523902,
+        "SelectActions": [
+          {
+            "Name": "ActionGetMiracleByCategory",
+            "Param": {
+              "Count": 1,
+              "Categories": [
+                "Legendary"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523905,
+        "SelectActions": [
+          {
+            "Name": "ActionAddBuff",
+            "Param": {
+              "Count": 2,
+              "HintId": 7,
+              "GroupId": 2030001
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523906,
+        "SelectActions": [
+          {
+            "Name": "ActionAddBuff",
+            "Param": {
+              "Count": 1,
+              "HintId": 7,
+              "GroupId": 2030003
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523909,
+        "SelectActions": [
+          {
+            "Name": "ActionRandomAction",
+            "Param": {
+              "Percent": 0.5,
+              "SuccAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523903
+                  }
+                }
+              ],
+              "FailAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523904
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523910,
+        "SelectActions": [
+          {
+            "Name": "ActionRandomAction",
+            "Param": {
+              "Percent": 0.5,
+              "SuccAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523907
+                  }
+                }
+              ],
+              "FailAction": [
+                {
+                  "Name": "ActionAddDialogueEvent",
+                  "Param": {
+                    "EventId": 523908
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 523911
+      },
+      {
+        "OptionId": 523912,
+        "SelectActions": [
+          {
+            "Name": "ActionAddBuff",
+            "Param": {
+              "Count": 1,
+              "HintId": 7,
+              "GroupId": 2030001
+            }
+          },
+          {
+            "Name": "ActionGetMiracleByCategory",
+            "Param": {
+              "Count": 1,
+              "Categories": [
+                "Common"
+              ]
             }
           }
         ]
@@ -1224,7 +2465,7 @@
   {
     "NpcId": 624101,
     "Progress": 0,
-    "Weight": 200,
+    "Weight": 150,
     "AllowRogueType": [
       "TournRogue"
     ],
@@ -1318,6 +2559,272 @@
             "Name": "ActionAddMiracle",
             "Param": {
               "MiracleId": 8042
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NpcId": 624201,
+    "Progress": 0,
+    "Weight": 100,
+    "AllowRogueType": [
+      "TournRogue"
+    ],
+    "AllowRoomType": [
+      "Event"
+    ],
+    "Options": [
+      {
+        "OptionId": 424201,
+        "ValidConditions": [
+          {
+            "Name": "CondCheckMoney",
+            "Param": {
+              "GreaterOrEqual": 50
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -50,
+              "ShowType": 0
+            }
+          },
+          {
+            "Name": "ActionGetBuff",
+            "Param": {
+              "Count": 2,
+              "GroupId": 2030101
+            }
+          },
+          {
+            "Name": "ActionRandomAction",
+            "Param": {
+              "Percent": 0.5,
+              "SuccAction": [
+                {
+                  "Name": "ActionGetBuff",
+                  "Param": {
+                    "Count": 1,
+                    "GroupId": 2030101
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 424202,
+        "ValidConditions": [
+          {
+            "Name": "CondCheckMoney",
+            "Param": {
+              "GreaterOrEqual": 100
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -100,
+              "ShowType": 0
+            }
+          },
+          {
+            "Name": "ActionGetMiracleByCategory",
+            "Param": {
+              "Count": 2,
+              "Categories": [
+                "Common",
+                "Rare"
+              ]
+            }
+          },
+          {
+            "Name": "ActionRandomAction",
+            "Param": {
+              "Percent": 0.5,
+              "SuccAction": [
+                {
+                  "Name": "ActionGetMiracleByCategory",
+                  "Param": {
+                    "Count": 1,
+                    "Categories": [
+                      "Common",
+                      "Rare"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 424203,
+        "ValidConditions": [
+          {
+            "Name": "CondCheckMoney",
+            "Param": {
+              "GreaterOrEqual": 300
+            }
+          }
+        ],
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": -300,
+              "ShowType": 0
+            }
+          },
+          {
+            "Name": "ActionAddFormula",
+            "Param": {
+              "Count": 2,
+              "Categories": [
+                "Epic",
+                "Rare"
+              ]
+            }
+          },
+          {
+            "Name": "ActionRandomAction",
+            "Param": {
+              "Percent": 0.5,
+              "SuccAction": [
+                {
+                  "Name": "ActionAddFormula",
+                  "Param": {
+                    "Count": 2,
+                    "Categories": [
+                      "Epic",
+                      "Rare"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 424204,
+        "SelectActions": [
+          {
+            "Name": "ActionTriggerBattle",
+            "Param": {
+              "StageId": 83005341,
+              "WinActions": [
+                {
+                  "Name": "ActionGetMiracleByCategory",
+                  "Param": {
+                    "Count": 1,
+                    "Categories": [
+                      "Common",
+                      "Rare",
+                      "Legendary"
+                    ]
+                  }
+                },
+                {
+                  "Name": "ActionAddBuff",
+                  "Param": {
+                    "GroupId": 2030102,
+                    "Count": 1,
+                    "HintId": 7
+                  }
+                },
+                {
+                  "Name": "ActionChangeMoney",
+                  "Param": {
+                    "Count": 100,
+                    "ShowType": 2
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "NpcId": 624301,
+    "Progress": 0,
+    "Weight": 100,
+    "AllowRogueType": [
+      "TournRogue"
+    ],
+    "AllowRoomType": [
+      "Event",
+      "Reward"
+    ],
+    "Options": [
+      {
+        "OptionId": 424301,
+        "SelectActions": [
+          {
+            "Name": "ActionChangeMoney",
+            "Param": {
+              "Count": 150,
+              "ShowType": 2
+            }
+          }
+        ]
+      },
+      {
+        "OptionId": 424302,
+        "SelectActions": [
+          {
+            "Name": "ActionRandomAction",
+            "Param": {
+              "Percent": 0.5,
+              "SuccAction": [
+                {
+                  "Name": "ActionChangeMoney",
+                  "Param": {
+                    "Count": 100,
+                    "ShowType": 2
+                  }
+                }
+              ],
+              "FailAction": [
+                {
+                  "Name": "ActionRandomAction",
+                  "Param": {
+                    "Percent": 0.2,
+                    "SuccAction": [
+                      {
+                        "Name": "ActionGetBuff",
+                        "Param": {
+                          "Count": 5,
+                          "GroupId": 2030102
+                        }
+                      }
+                    ],
+                    "FailAction": [
+                      {
+                        "Name": "ActionGetMiracleByCategory",
+                        "Param": {
+                          "Count": 2,
+                          "Categories": [
+                            "Common",
+                            "Rare",
+                            "Legendary"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
             }
           }
         ]
