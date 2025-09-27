@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static PVEBattleResultCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpQVkVCYXR0bGVSZXN1bHRDc1JlcS5wcm90bxoOQmF0dGxlT3AucHJvdG8a",
-            "FkJhdHRsZVN0YXRpc3RpY3MucHJvdG8aFUJhdHRsZUVuZFN0YXR1cy5wcm90",
+            "ChpQVkVCYXR0bGVSZXN1bHRDc1JlcS5wcm90bxoWQmF0dGxlU3RhdGlzdGlj",
+            "cy5wcm90bxoOQmF0dGxlT3AucHJvdG8aFUJhdHRsZUVuZFN0YXR1cy5wcm90",
             "byLwAwoUUFZFQmF0dGxlUmVzdWx0Q3NSZXESGgoSdHVybl9zbmFwc2hvdF9o",
             "YXNoGAQgASgMEhEKCWNvc3RfdGltZRgFIAEoDRIWCg5jbGllbnRfdmVyc2lv",
             "bhgLIAEoDRITCgtKQ0pGR09KRkVHRRgMIAEoDRIiChppc19haV9jb25zaWRl",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "ChBIUEVLRUtJUEpMRkVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
             "DToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleOpReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleEndStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleOpReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleEndStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PVEBattleResultCsReq), global::EggLink.DanhengServer.Proto.PVEBattleResultCsReq.Parser, new[]{ "TurnSnapshotHash", "CostTime", "ClientVersion", "JCJFGOJFEGE", "IsAiConsiderUltraSkill", "ClientResVersion", "GJGKAGFPAGM", "DebugExtraInfo", "IsAutoFight", "BattleId", "EndStatus", "OpList", "HPEKEKIPJLF", "StageId", "Stt" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

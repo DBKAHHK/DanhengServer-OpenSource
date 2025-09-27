@@ -14,6 +14,7 @@ using EggLink.DanhengServer.GameServer.Game.ChallengePeak;
 using EggLink.DanhengServer.GameServer.Game.ChessRogue;
 using EggLink.DanhengServer.GameServer.Game.Friend;
 using EggLink.DanhengServer.GameServer.Game.Gacha;
+using EggLink.DanhengServer.GameServer.Game.GridFight;
 using EggLink.DanhengServer.GameServer.Game.Inventory;
 using EggLink.DanhengServer.GameServer.Game.Lineup;
 using EggLink.DanhengServer.GameServer.Game.Mail;
@@ -88,6 +89,7 @@ public partial class PlayerInstance(PlayerData data)
 
     public ActivityManager? ActivityManager { get; private set; }
     public TrainPartyManager? TrainPartyManager { get; private set; }
+    public GridFightManager? GridFightManager { get; private set; }
 
     #endregion
 
@@ -191,6 +193,7 @@ public partial class PlayerInstance(PlayerData data)
         StoryLineManager = new StoryLineManager(this);
         QuestManager = new QuestManager(this);
         TrainPartyManager = new TrainPartyManager(this);
+        GridFightManager = new GridFightManager(this);
         OfferingManager = new OfferingManager(this);
 
         PlayerUnlockData = InitializeDatabase<PlayerUnlockData>();

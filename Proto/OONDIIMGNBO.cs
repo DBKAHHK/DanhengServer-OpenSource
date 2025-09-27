@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static OONDIIMGNBOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFPT05ESUlNR05CTy5wcm90bxoRT0NJSkRDRk9NRE4ucHJvdG8aEUpORUFQ",
-            "TEtLUEVKLnByb3RvGhFBS0dKSUhLUEJHQy5wcm90bxoRSEFFQUpCQ09ITkMu",
-            "cHJvdG8aEkJhdHRsZUF2YXRhci5wcm90bxoRRkJQSkFCT0hLRkkucHJvdG8a",
-            "EUVEQkhQREZNT0pELnByb3RvIqkDCgtPT05ESUlNR05CTxIiCgtOT0JOT0pB",
+            "ChFPT05ESUlNR05CTy5wcm90bxoSQmF0dGxlQXZhdGFyLnByb3RvGhFGQlBK",
+            "QUJPSEtGSS5wcm90bxoRRURCSFBERk1PSkQucHJvdG8aEUpORUFQTEtLUEVK",
+            "LnByb3RvGhFPQ0lKRENGT01ETi5wcm90bxoRSEFFQUpCQ09ITkMucHJvdG8a",
+            "EUFLR0pJSEtQQkdDLnByb3RvIrADCgtPT05ESUlNR05CTxIiCgtOT0JOT0pB",
             "TE5OTBgBIAMoCzINLkJhdHRsZUF2YXRhchIWCg5iYXR0bGVfd2F2ZV9pZBgC",
             "IAEoDRITCgtLR0NMREZLSkNDTBgDIAEoDRITCgtOQ0lBREJBS01BRRgEIAEo",
             "DRIhCgtGSkhJT0ZBS0xJQhgHIAMoCzIMLkFLR0pJSEtQQkdDEiEKC1BCTERN",
@@ -35,13 +35,13 @@ namespace EggLink.DanhengServer.Proto {
             "KA0SIQoLTUZLQkdDSkpISEIYCiADKAsyDC5GQlBKQUJPSEtGSRIhCgtCRERO",
             "TUFHS05QRhgLIAEoCzIMLkVEQkhQREZNT0pEEhMKC0ZKTkRPTVBCTkVQGAwg",
             "ASgNEg4KBnNlYXNvbhgNIAEoDRIhCgtJTk1NUERFS0dCTxgOIAMoCzIMLkhB",
-            "RUFKQkNPSE5DEhMKC0FLTkNMRE9ETE1MGA8gASgIEhMKC0VMSUZOSkJOQUdD",
-            "GBAgASgNEiEKC0pPSE1PQkRJUEpEGBEgAygLMgwuSk5FQVBMS0tQRUpCHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "RUFKQkNPSE5DEhoKEmdyaWRfZ2FtZV9maW5pc2hlZBgPIAEoCBITCgtFTElG",
+            "TkpCTkFHQxgQIAEoDRIhCgtKT0hNT0JESVBKRBgRIAMoCzIMLkpORUFQTEtL",
+            "UEVKQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OCIJDCFOMDNReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNEAPLKKPEJReflection.Descriptor, global::EggLink.DanhengServer.Proto.AKGJIHKPBGCReflection.Descriptor, global::EggLink.DanhengServer.Proto.HAEAJBCOHNCReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.FBPJABOHKFIReflection.Descriptor, global::EggLink.DanhengServer.Proto.EDBHPDFMOJDReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.FBPJABOHKFIReflection.Descriptor, global::EggLink.DanhengServer.Proto.EDBHPDFMOJDReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNEAPLKKPEJReflection.Descriptor, global::EggLink.DanhengServer.Proto.OCIJDCFOMDNReflection.Descriptor, global::EggLink.DanhengServer.Proto.HAEAJBCOHNCReflection.Descriptor, global::EggLink.DanhengServer.Proto.AKGJIHKPBGCReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OONDIIMGNBO), global::EggLink.DanhengServer.Proto.OONDIIMGNBO.Parser, new[]{ "NOBNOJALNNL", "BattleWaveId", "KGCLDFKJCCL", "NCIADBAKMAE", "FJHIOFAKLIB", "PBLDMKIFFNO", "DFNBKALPGPH", "MFKBGCJJHHB", "BDDNMAGKNPF", "FJNDOMPBNEP", "Season", "INMMPDEKGBO", "AKNCLDODLML", "ELIFNJBNAGC", "JOHMOBDIPJD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OONDIIMGNBO), global::EggLink.DanhengServer.Proto.OONDIIMGNBO.Parser, new[]{ "NOBNOJALNNL", "BattleWaveId", "KGCLDFKJCCL", "NCIADBAKMAE", "FJHIOFAKLIB", "PBLDMKIFFNO", "DFNBKALPGPH", "MFKBGCJJHHB", "BDDNMAGKNPF", "FJNDOMPBNEP", "Season", "INMMPDEKGBO", "GridGameFinished", "ELIFNJBNAGC", "JOHMOBDIPJD" }, null, null, null, null)
           }));
     }
     #endregion
@@ -95,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
       fJNDOMPBNEP_ = other.fJNDOMPBNEP_;
       season_ = other.season_;
       iNMMPDEKGBO_ = other.iNMMPDEKGBO_.Clone();
-      aKNCLDODLML_ = other.aKNCLDODLML_;
+      gridGameFinished_ = other.gridGameFinished_;
       eLIFNJBNAGC_ = other.eLIFNJBNAGC_;
       jOHMOBDIPJD_ = other.jOHMOBDIPJD_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -246,15 +246,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return iNMMPDEKGBO_; }
     }
 
-    /// <summary>Field number for the "AKNCLDODLML" field.</summary>
-    public const int AKNCLDODLMLFieldNumber = 15;
-    private bool aKNCLDODLML_;
+    /// <summary>Field number for the "grid_game_finished" field.</summary>
+    public const int GridGameFinishedFieldNumber = 15;
+    private bool gridGameFinished_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool AKNCLDODLML {
-      get { return aKNCLDODLML_; }
+    public bool GridGameFinished {
+      get { return gridGameFinished_; }
       set {
-        aKNCLDODLML_ = value;
+        gridGameFinished_ = value;
       }
     }
 
@@ -308,7 +308,7 @@ namespace EggLink.DanhengServer.Proto {
       if (FJNDOMPBNEP != other.FJNDOMPBNEP) return false;
       if (Season != other.Season) return false;
       if(!iNMMPDEKGBO_.Equals(other.iNMMPDEKGBO_)) return false;
-      if (AKNCLDODLML != other.AKNCLDODLML) return false;
+      if (GridGameFinished != other.GridGameFinished) return false;
       if (ELIFNJBNAGC != other.ELIFNJBNAGC) return false;
       if(!jOHMOBDIPJD_.Equals(other.jOHMOBDIPJD_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -330,7 +330,7 @@ namespace EggLink.DanhengServer.Proto {
       if (FJNDOMPBNEP != 0) hash ^= FJNDOMPBNEP.GetHashCode();
       if (Season != 0) hash ^= Season.GetHashCode();
       hash ^= iNMMPDEKGBO_.GetHashCode();
-      if (AKNCLDODLML != false) hash ^= AKNCLDODLML.GetHashCode();
+      if (GridGameFinished != false) hash ^= GridGameFinished.GetHashCode();
       if (ELIFNJBNAGC != 0) hash ^= ELIFNJBNAGC.GetHashCode();
       hash ^= jOHMOBDIPJD_.GetHashCode();
       if (_unknownFields != null) {
@@ -384,9 +384,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Season);
       }
       iNMMPDEKGBO_.WriteTo(output, _repeated_iNMMPDEKGBO_codec);
-      if (AKNCLDODLML != false) {
+      if (GridGameFinished != false) {
         output.WriteRawTag(120);
-        output.WriteBool(AKNCLDODLML);
+        output.WriteBool(GridGameFinished);
       }
       if (ELIFNJBNAGC != 0) {
         output.WriteRawTag(128, 1);
@@ -436,9 +436,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Season);
       }
       iNMMPDEKGBO_.WriteTo(ref output, _repeated_iNMMPDEKGBO_codec);
-      if (AKNCLDODLML != false) {
+      if (GridGameFinished != false) {
         output.WriteRawTag(120);
-        output.WriteBool(AKNCLDODLML);
+        output.WriteBool(GridGameFinished);
       }
       if (ELIFNJBNAGC != 0) {
         output.WriteRawTag(128, 1);
@@ -481,7 +481,7 @@ namespace EggLink.DanhengServer.Proto {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Season);
       }
       size += iNMMPDEKGBO_.CalculateSize(_repeated_iNMMPDEKGBO_codec);
-      if (AKNCLDODLML != false) {
+      if (GridGameFinished != false) {
         size += 1 + 1;
       }
       if (ELIFNJBNAGC != 0) {
@@ -529,8 +529,8 @@ namespace EggLink.DanhengServer.Proto {
         Season = other.Season;
       }
       iNMMPDEKGBO_.Add(other.iNMMPDEKGBO_);
-      if (other.AKNCLDODLML != false) {
-        AKNCLDODLML = other.AKNCLDODLML;
+      if (other.GridGameFinished != false) {
+        GridGameFinished = other.GridGameFinished;
       }
       if (other.ELIFNJBNAGC != 0) {
         ELIFNJBNAGC = other.ELIFNJBNAGC;
@@ -603,7 +603,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 120: {
-            AKNCLDODLML = input.ReadBool();
+            GridGameFinished = input.ReadBool();
             break;
           }
           case 128: {
@@ -681,7 +681,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 120: {
-            AKNCLDODLML = input.ReadBool();
+            GridGameFinished = input.ReadBool();
             break;
           }
           case 128: {

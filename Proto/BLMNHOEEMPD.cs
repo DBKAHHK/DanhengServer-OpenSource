@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static BLMNHOEEMPDReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFCTE1OSE9FRU1QRC5wcm90bxoRREFGTU5ITUlFTUEucHJvdG8iwgEKC0JM",
-            "TU5IT0VFTVBEEhMKC0hCRUtFRktKQUdBGAEgASgNEiEKC01FQkpDTEVOUElP",
-            "GA8gAygLMgwuREFGTU5ITUlFTUESMgoLS0ZPS0FJS0dPS0YYDSADKAsyHS5C",
-            "TE1OSE9FRU1QRC5LRk9LQUlLR09LRkVudHJ5EhMKC0VHTENMTUpCREZQGAsg",
-            "ASgIGjIKEEtGT0tBSUtHT0tGRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgNOgI4AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "ChFCTE1OSE9FRU1QRC5wcm90bxobR3JpZEZpZ2h0R2FtZUl0ZW1JbmZvLnBy",
+            "b3RvIswBCgtCTE1OSE9FRU1QRBITCgtIQkVLRUZLSkFHQRgBIAEoDRIrCgtN",
+            "RUJKQ0xFTlBJTxgPIAMoCzIWLkdyaWRGaWdodEdhbWVJdGVtSW5mbxIyCgtL",
+            "Rk9LQUlLR09LRhgNIAMoCzIdLkJMTU5IT0VFTVBELktGT0tBSUtHT0tGRW50",
+            "cnkSEwoLRUdMQ0xNSkJERlAYCyABKAgaMgoQS0ZPS0FJS0dPS0ZFbnRyeRIL",
+            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKA06AjgBQh6qAhtFZ2dMaW5rLkRh",
+            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DAFMNHMIEMAReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightGameItemInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BLMNHOEEMPD), global::EggLink.DanhengServer.Proto.BLMNHOEEMPD.Parser, new[]{ "HBEKEFKJAGA", "MEBJCLENPIO", "KFOKAIKGOKF", "EGLCLMJBDFP" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
@@ -103,12 +103,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "MEBJCLENPIO" field.</summary>
     public const int MEBJCLENPIOFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DAFMNHMIEMA> _repeated_mEBJCLENPIO_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.DAFMNHMIEMA.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DAFMNHMIEMA> mEBJCLENPIO_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DAFMNHMIEMA>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GridFightGameItemInfo> _repeated_mEBJCLENPIO_codec
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.GridFightGameItemInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightGameItemInfo> mEBJCLENPIO_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightGameItemInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DAFMNHMIEMA> MEBJCLENPIO {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightGameItemInfo> MEBJCLENPIO {
       get { return mEBJCLENPIO_; }
     }
 

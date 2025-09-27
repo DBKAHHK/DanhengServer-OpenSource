@@ -24,20 +24,21 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightSeasonHandBookNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNHcmlkRmlnaHRTZWFzb25IYW5kQm9va05vdGlmeS5wcm90bxoRQ0lFT0lJ",
-            "R1BGQ1AucHJvdG8aEUlMR0JGSVBDR0pQLnByb3RvGhdHcmlkRmlnaHRJdGVt",
-            "SW5mby5wcm90bxoRSEVPRkFLTkhMQUkucHJvdG8aEUtKTFBIQ0dLTkZCLnBy",
-            "b3RvIoQCCh1HcmlkRmlnaHRTZWFzb25IYW5kQm9va05vdGlmeRIkCgtQT0VM",
-            "RUpKTUhFRxjPASABKAsyDC5DSUVPSUlHUEZDUEgAEjwKHWhhbmRib29rX2dy",
-            "aWRfZmlnaHRfaXRlbV9pbmZvGI0JIAEoCzISLkdyaWRGaWdodEl0ZW1JbmZv",
-            "SAASJAoLTEdLQUlMQkJHSkgY4AogASgLMgwuS0pMUEhDR0tORkJIABIkCgtF",
-            "RkdQRU5BSURQRhi0CSABKAsyDC5JTEdCRklQQ0dKUEgAEiQKC0ZIQk9OT0ZL",
-            "TEdIGP4FIAEoCzIMLkhFT0ZBS05ITEFJSABCDQoLUFBPSUFKRUNIQUVCHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiNHcmlkRmlnaHRTZWFzb25IYW5kQm9va05vdGlmeS5wcm90bxoRSEVPRkFL",
+            "TkhMQUkucHJvdG8aEUlMR0JGSVBDR0pQLnByb3RvGhFLSkxQSENHS05GQi5w",
+            "cm90bxoXR3JpZEZpZ2h0SXRlbUluZm8ucHJvdG8aGUdyaWRGaWdodEF2YXRh",
+            "ckluZm8ucHJvdG8ioAIKHUdyaWRGaWdodFNlYXNvbkhhbmRCb29rTm90aWZ5",
+            "EkAKH2hhbmRib29rX2dyaWRfZmlnaHRfYXZhdGFyX2luZm8YzwEgASgLMhQu",
+            "R3JpZEZpZ2h0QXZhdGFySW5mb0gAEjwKHWhhbmRib29rX2dyaWRfZmlnaHRf",
+            "aXRlbV9pbmZvGI0JIAEoCzISLkdyaWRGaWdodEl0ZW1JbmZvSAASJAoLTEdL",
+            "QUlMQkJHSkgY4AogASgLMgwuS0pMUEhDR0tORkJIABIkCgtFRkdQRU5BSURQ",
+            "Rhi0CSABKAsyDC5JTEdCRklQQ0dKUEgAEiQKC0ZIQk9OT0ZLTEdIGP4FIAEo",
+            "CzIMLkhFT0ZBS05ITEFJSABCDQoLUFBPSUFKRUNIQUVCHqoCG0VnZ0xpbmsu",
+            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CIEOIIGPFCPReflection.Descriptor, global::EggLink.DanhengServer.Proto.ILGBFIPCGJPReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HEOFAKNHLAIReflection.Descriptor, global::EggLink.DanhengServer.Proto.KJLPHCGKNFBReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HEOFAKNHLAIReflection.Descriptor, global::EggLink.DanhengServer.Proto.ILGBFIPCGJPReflection.Descriptor, global::EggLink.DanhengServer.Proto.KJLPHCGKNFBReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAvatarInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSeasonHandBookNotify), global::EggLink.DanhengServer.Proto.GridFightSeasonHandBookNotify.Parser, new[]{ "POELEJJMHEG", "HandbookGridFightItemInfo", "LGKAILBBGJH", "EFGPENAIDPF", "FHBONOFKLGH" }, new[]{ "PPOIAJECHAE" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSeasonHandBookNotify), global::EggLink.DanhengServer.Proto.GridFightSeasonHandBookNotify.Parser, new[]{ "HandbookGridFightAvatarInfo", "HandbookGridFightItemInfo", "LGKAILBBGJH", "EFGPENAIDPF", "FHBONOFKLGH" }, new[]{ "PPOIAJECHAE" }, null, null, null)
           }));
     }
     #endregion
@@ -80,8 +81,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightSeasonHandBookNotify(GridFightSeasonHandBookNotify other) : this() {
       switch (other.PPOIAJECHAECase) {
-        case PPOIAJECHAEOneofCase.POELEJJMHEG:
-          POELEJJMHEG = other.POELEJJMHEG.Clone();
+        case PPOIAJECHAEOneofCase.HandbookGridFightAvatarInfo:
+          HandbookGridFightAvatarInfo = other.HandbookGridFightAvatarInfo.Clone();
           break;
         case PPOIAJECHAEOneofCase.HandbookGridFightItemInfo:
           HandbookGridFightItemInfo = other.HandbookGridFightItemInfo.Clone();
@@ -106,15 +107,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightSeasonHandBookNotify(this);
     }
 
-    /// <summary>Field number for the "POELEJJMHEG" field.</summary>
-    public const int POELEJJMHEGFieldNumber = 207;
+    /// <summary>Field number for the "handbook_grid_fight_avatar_info" field.</summary>
+    public const int HandbookGridFightAvatarInfoFieldNumber = 207;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.CIEOIIGPFCP POELEJJMHEG {
-      get { return pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.POELEJJMHEG ? (global::EggLink.DanhengServer.Proto.CIEOIIGPFCP) pPOIAJECHAE_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightAvatarInfo HandbookGridFightAvatarInfo {
+      get { return pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.HandbookGridFightAvatarInfo ? (global::EggLink.DanhengServer.Proto.GridFightAvatarInfo) pPOIAJECHAE_ : null; }
       set {
         pPOIAJECHAE_ = value;
-        pPOIAJECHAECase_ = value == null ? PPOIAJECHAEOneofCase.None : PPOIAJECHAEOneofCase.POELEJJMHEG;
+        pPOIAJECHAECase_ = value == null ? PPOIAJECHAEOneofCase.None : PPOIAJECHAEOneofCase.HandbookGridFightAvatarInfo;
       }
     }
 
@@ -170,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "PPOIAJECHAE" oneof.</summary>
     public enum PPOIAJECHAEOneofCase {
       None = 0,
-      POELEJJMHEG = 207,
+      HandbookGridFightAvatarInfo = 207,
       HandbookGridFightItemInfo = 1165,
       LGKAILBBGJH = 1376,
       EFGPENAIDPF = 1204,
@@ -205,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(POELEJJMHEG, other.POELEJJMHEG)) return false;
+      if (!object.Equals(HandbookGridFightAvatarInfo, other.HandbookGridFightAvatarInfo)) return false;
       if (!object.Equals(HandbookGridFightItemInfo, other.HandbookGridFightItemInfo)) return false;
       if (!object.Equals(LGKAILBBGJH, other.LGKAILBBGJH)) return false;
       if (!object.Equals(EFGPENAIDPF, other.EFGPENAIDPF)) return false;
@@ -218,7 +219,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.POELEJJMHEG) hash ^= POELEJJMHEG.GetHashCode();
+      if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.HandbookGridFightAvatarInfo) hash ^= HandbookGridFightAvatarInfo.GetHashCode();
       if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.HandbookGridFightItemInfo) hash ^= HandbookGridFightItemInfo.GetHashCode();
       if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.LGKAILBBGJH) hash ^= LGKAILBBGJH.GetHashCode();
       if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.EFGPENAIDPF) hash ^= EFGPENAIDPF.GetHashCode();
@@ -242,9 +243,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.POELEJJMHEG) {
+      if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.HandbookGridFightAvatarInfo) {
         output.WriteRawTag(250, 12);
-        output.WriteMessage(POELEJJMHEG);
+        output.WriteMessage(HandbookGridFightAvatarInfo);
       }
       if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.FHBONOFKLGH) {
         output.WriteRawTag(242, 47);
@@ -272,9 +273,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.POELEJJMHEG) {
+      if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.HandbookGridFightAvatarInfo) {
         output.WriteRawTag(250, 12);
-        output.WriteMessage(POELEJJMHEG);
+        output.WriteMessage(HandbookGridFightAvatarInfo);
       }
       if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.FHBONOFKLGH) {
         output.WriteRawTag(242, 47);
@@ -302,8 +303,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.POELEJJMHEG) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(POELEJJMHEG);
+      if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.HandbookGridFightAvatarInfo) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(HandbookGridFightAvatarInfo);
       }
       if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.HandbookGridFightItemInfo) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(HandbookGridFightItemInfo);
@@ -330,11 +331,11 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       switch (other.PPOIAJECHAECase) {
-        case PPOIAJECHAEOneofCase.POELEJJMHEG:
-          if (POELEJJMHEG == null) {
-            POELEJJMHEG = new global::EggLink.DanhengServer.Proto.CIEOIIGPFCP();
+        case PPOIAJECHAEOneofCase.HandbookGridFightAvatarInfo:
+          if (HandbookGridFightAvatarInfo == null) {
+            HandbookGridFightAvatarInfo = new global::EggLink.DanhengServer.Proto.GridFightAvatarInfo();
           }
-          POELEJJMHEG.MergeFrom(other.POELEJJMHEG);
+          HandbookGridFightAvatarInfo.MergeFrom(other.HandbookGridFightAvatarInfo);
           break;
         case PPOIAJECHAEOneofCase.HandbookGridFightItemInfo:
           if (HandbookGridFightItemInfo == null) {
@@ -378,12 +379,12 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 1658: {
-            global::EggLink.DanhengServer.Proto.CIEOIIGPFCP subBuilder = new global::EggLink.DanhengServer.Proto.CIEOIIGPFCP();
-            if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.POELEJJMHEG) {
-              subBuilder.MergeFrom(POELEJJMHEG);
+            global::EggLink.DanhengServer.Proto.GridFightAvatarInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightAvatarInfo();
+            if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.HandbookGridFightAvatarInfo) {
+              subBuilder.MergeFrom(HandbookGridFightAvatarInfo);
             }
             input.ReadMessage(subBuilder);
-            POELEJJMHEG = subBuilder;
+            HandbookGridFightAvatarInfo = subBuilder;
             break;
           }
           case 6130: {
@@ -438,12 +439,12 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 1658: {
-            global::EggLink.DanhengServer.Proto.CIEOIIGPFCP subBuilder = new global::EggLink.DanhengServer.Proto.CIEOIIGPFCP();
-            if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.POELEJJMHEG) {
-              subBuilder.MergeFrom(POELEJJMHEG);
+            global::EggLink.DanhengServer.Proto.GridFightAvatarInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightAvatarInfo();
+            if (pPOIAJECHAECase_ == PPOIAJECHAEOneofCase.HandbookGridFightAvatarInfo) {
+              subBuilder.MergeFrom(HandbookGridFightAvatarInfo);
             }
             input.ReadMessage(subBuilder);
-            POELEJJMHEG = subBuilder;
+            HandbookGridFightAvatarInfo = subBuilder;
             break;
           }
           case 6130: {

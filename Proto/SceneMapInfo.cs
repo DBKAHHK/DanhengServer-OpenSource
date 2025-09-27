@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static SceneMapInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJTY2VuZU1hcEluZm8ucHJvdG8aD01hemVHcm91cC5wcm90bxoTTWF6ZVBy",
-            "b3BTdGF0ZS5wcm90bxoPQ2hlc3RJbmZvLnByb3RvGhhNYXplUHJvcFN0YXRl",
-            "RXh0cmEucHJvdG8aEU5QQU9HS0ZLQUFFLnByb3RvIuYDCgxTY2VuZU1hcElu",
+            "ChJTY2VuZU1hcEluZm8ucHJvdG8aGE1hemVQcm9wU3RhdGVFeHRyYS5wcm90",
+            "bxoPQ2hlc3RJbmZvLnByb3RvGg9NYXplR3JvdXAucHJvdG8aE01hemVQcm9w",
+            "U3RhdGUucHJvdG8aEU5QQU9HS0ZLQUFFLnByb3RvIuYDCgxTY2VuZU1hcElu",
             "Zm8SOwoQZmxvb3Jfc2F2ZWRfZGF0YRgIIAMoCzIhLlNjZW5lTWFwSW5mby5G",
             "bG9vclNhdmVkRGF0YUVudHJ5EiYKDm1hemVfcHJvcF9saXN0GAwgAygLMg4u",
             "TWF6ZVByb3BTdGF0ZRIhCgtKTUxETU9DTk1ITRgGIAMoCzIMLk5QQU9HS0ZL",
@@ -40,7 +40,7 @@ namespace EggLink.DanhengServer.Proto {
             "ASABKAkSDQoFdmFsdWUYAiABKAU6AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateExtraReflection.Descriptor, global::EggLink.DanhengServer.Proto.NPAOGKFKAAEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MazePropStateExtraReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.NPAOGKFKAAEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMapInfo), global::EggLink.DanhengServer.Proto.SceneMapInfo.Parser, new[]{ "FloorSavedData", "MazePropList", "JMLDMOCNMHM", "MazePropExtraList", "EntryId", "FloorId", "ChestList", "MazeGroupList", "DimensionId", "Retcode", "LightenSectionList", "CurMapEntryId", "UnlockTeleportList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

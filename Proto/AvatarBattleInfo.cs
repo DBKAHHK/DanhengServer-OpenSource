@@ -25,11 +25,11 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZBdmF0YXJCYXR0bGVJbmZvLnByb3RvGhVBdmF0YXJTa2lsbFRyZWUucHJv",
-            "dG8aEVBKTkJMTklQRklHLnByb3RvGhdFcXVpcG1lbnRQcm9wZXJ0eS5wcm90",
-            "bxoRU3BBZGRTb3VyY2UucHJvdG8aFEF2YXRhclByb3BlcnR5LnByb3RvGhpB",
+            "dG8aEUJhdHRsZVJlbGljLnByb3RvGhZTa2lsbFVzZVByb3BlcnR5LnByb3Rv",
+            "GhNBYmlsaXR5VXNlU3R0LnByb3RvGhdFcXVpcG1lbnRQcm9wZXJ0eS5wcm90",
+            "bxoUQXZhdGFyUHJvcGVydHkucHJvdG8aEVNwQWRkU291cmNlLnByb3RvGhpB",
             "dHRhY2tEYW1hZ2VQcm9wZXJ0eS5wcm90bxoQQXZhdGFyVHlwZS5wcm90bxoR",
-            "QmF0dGxlUmVsaWMucHJvdG8aFlNraWxsVXNlUHJvcGVydHkucHJvdG8aE0Fi",
-            "aWxpdHlVc2VTdHQucHJvdG8ijAwKEEF2YXRhckJhdHRsZUluZm8SIAoLYXZh",
+            "UEpOQkxOSVBGSUcucHJvdG8ijAwKEEF2YXRhckJhdHRsZUluZm8SIAoLYXZh",
             "dGFyX3R5cGUYASABKA4yCy5BdmF0YXJUeXBlEgoKAmlkGAIgASgNEhQKDGF2",
             "YXRhcl9sZXZlbBgDIAEoDRITCgthdmF0YXJfcmFuaxgEIAEoDRIYChBhdmF0",
             "YXJfcHJvbW90aW9uGAUgASgNEiYKDWF2YXRhcl9zdGF0dXMYBiABKAsyDy5B",
@@ -66,7 +66,7 @@ namespace EggLink.DanhengServer.Proto {
             "ASgNEiEKC0pLSERMRUxKRklDGDkgASgLMgwuUEpOQkxOSVBGSUdCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.PJNBLNIPFIGReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.SpAddSourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AttackDamagePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleRelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillUsePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AbilityUseSttReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleRelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillUsePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AbilityUseSttReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.SpAddSourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.AttackDamagePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.PJNBLNIPFIGReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AvatarBattleInfo), global::EggLink.DanhengServer.Proto.AvatarBattleInfo.Parser, new[]{ "AvatarType", "Id", "AvatarLevel", "AvatarRank", "AvatarPromotion", "AvatarStatus", "AvatarSkill", "AvatarEquipment", "TotalTurns", "TotalDamage", "TotalHeal", "TotalDamageTaken", "TotalHpRecover", "TotalSpCost", "StageId", "StageType", "TotalBreakDamage", "AttackTypeDamage", "AttackTypeBreakDamage", "AttackTypeMaxDamage", "SkillTimes", "DelayCumulate", "TotalSpAdd", "SpAddSource", "TotalBpCost", "DieTimes", "ReviveTimes", "BreakTimes", "ExtraTurns", "TotalShield", "TotalShieldTaken", "TotalShieldDamage", "InitialStatus", "Relics", "AssistUid", "AADGFLPBPDF", "FPFBMIMBBHJ", "GGPJOHNOCPC", "LACKCJHHIMK", "FMODLGOBNPE", "LHKABNICKJN", "NCJHDJJDJNL", "LKMGDIADOPB", "IBLGMCIPCKM", "HACJDJIGMGP", "IMDJAHAJGCF", "JDOLKDBICLJ", "CACCODDCJHI", "LLDMLOHBFLO", "CHNIKKCIBEG", "LBNJHHHLPMO", "PDLILFICHIL", "PMKLPHJIOHC", "MPFAENEKFDC", "AvatarEnhanceId", "LDMJDILBDFO", "JKHDLELJFIC" }, null, null, null, null)
           }));

@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static LMBDADOPCPGReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFMTUJEQURPUENQRy5wcm90byI3CgtMTUJEQURPUENQRxITCgtKTkdGTkpQ",
-            "SE1MShgBIAMoDRITCgtDQU5OR0ZEQUZPRRgCIAMoDUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFMTUJEQURPUENQRy5wcm90byJCCgtMTUJEQURPUENQRxIeChZncmlkX2Zp",
+            "Z2h0X2F2YXRhcl9saXN0GAEgAygNEhMKC0NBTk5HRkRBRk9FGAIgAygNQh6q",
+            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LMBDADOPCPG), global::EggLink.DanhengServer.Proto.LMBDADOPCPG.Parser, new[]{ "JNGFNJPHMLJ", "CANNGFDAFOE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LMBDADOPCPG), global::EggLink.DanhengServer.Proto.LMBDADOPCPG.Parser, new[]{ "GridFightAvatarList", "CANNGFDAFOE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LMBDADOPCPG(LMBDADOPCPG other) : this() {
-      jNGFNJPHMLJ_ = other.jNGFNJPHMLJ_.Clone();
+      gridFightAvatarList_ = other.gridFightAvatarList_.Clone();
       cANNGFDAFOE_ = other.cANNGFDAFOE_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new LMBDADOPCPG(this);
     }
 
-    /// <summary>Field number for the "JNGFNJPHMLJ" field.</summary>
-    public const int JNGFNJPHMLJFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_jNGFNJPHMLJ_codec
+    /// <summary>Field number for the "grid_fight_avatar_list" field.</summary>
+    public const int GridFightAvatarListFieldNumber = 1;
+    private static readonly pb::FieldCodec<uint> _repeated_gridFightAvatarList_codec
         = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> jNGFNJPHMLJ_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> gridFightAvatarList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JNGFNJPHMLJ {
-      get { return jNGFNJPHMLJ_; }
+    public pbc::RepeatedField<uint> GridFightAvatarList {
+      get { return gridFightAvatarList_; }
     }
 
     /// <summary>Field number for the "CANNGFDAFOE" field.</summary>
@@ -120,7 +120,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!jNGFNJPHMLJ_.Equals(other.jNGFNJPHMLJ_)) return false;
+      if(!gridFightAvatarList_.Equals(other.gridFightAvatarList_)) return false;
       if(!cANNGFDAFOE_.Equals(other.cANNGFDAFOE_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -129,7 +129,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= jNGFNJPHMLJ_.GetHashCode();
+      hash ^= gridFightAvatarList_.GetHashCode();
       hash ^= cANNGFDAFOE_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -149,7 +149,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      jNGFNJPHMLJ_.WriteTo(output, _repeated_jNGFNJPHMLJ_codec);
+      gridFightAvatarList_.WriteTo(output, _repeated_gridFightAvatarList_codec);
       cANNGFDAFOE_.WriteTo(output, _repeated_cANNGFDAFOE_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -161,7 +161,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      jNGFNJPHMLJ_.WriteTo(ref output, _repeated_jNGFNJPHMLJ_codec);
+      gridFightAvatarList_.WriteTo(ref output, _repeated_gridFightAvatarList_codec);
       cANNGFDAFOE_.WriteTo(ref output, _repeated_cANNGFDAFOE_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -173,7 +173,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += jNGFNJPHMLJ_.CalculateSize(_repeated_jNGFNJPHMLJ_codec);
+      size += gridFightAvatarList_.CalculateSize(_repeated_gridFightAvatarList_codec);
       size += cANNGFDAFOE_.CalculateSize(_repeated_cANNGFDAFOE_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      jNGFNJPHMLJ_.Add(other.jNGFNJPHMLJ_);
+      gridFightAvatarList_.Add(other.gridFightAvatarList_);
       cANNGFDAFOE_.Add(other.cANNGFDAFOE_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10:
           case 8: {
-            jNGFNJPHMLJ_.AddEntriesFrom(input, _repeated_jNGFNJPHMLJ_codec);
+            gridFightAvatarList_.AddEntriesFrom(input, _repeated_gridFightAvatarList_codec);
             break;
           }
           case 18:
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10:
           case 8: {
-            jNGFNJPHMLJ_.AddEntriesFrom(ref input, _repeated_jNGFNJPHMLJ_codec);
+            gridFightAvatarList_.AddEntriesFrom(ref input, _repeated_gridFightAvatarList_codec);
             break;
           }
           case 18:

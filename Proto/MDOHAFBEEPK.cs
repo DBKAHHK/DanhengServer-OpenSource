@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static MDOHAFBEEPKReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFNRE9IQUZCRUVQSy5wcm90bxoRT0RES0tBSE5NSEsucHJvdG8aEU5QUE5G",
-            "UFBFTk1DLnByb3RvGhFDRElNRU1GSkpGUC5wcm90bxoRS05EQk5OUElEUEIu",
+            "ChFNRE9IQUZCRUVQSy5wcm90bxoRT0RES0tBSE5NSEsucHJvdG8aEUNESU1F",
+            "TUZKSkZQLnByb3RvGhFOUFBORlBQRU5NQy5wcm90bxoRS05EQk5OUElEUEIu",
             "cHJvdG8aEUJIR1BIS0xFSEVDLnByb3RvIukCCgtNRE9IQUZCRUVQSxIhCgtO",
             "SUFFR0hKTE5NQhgLIAEoCzIMLkNESU1FTUZKSkZQEh8KCWJ1ZmZfbGlzdBgM",
             "IAMoCzIMLktOREJOTlBJRFBCEhAKCHNjb3JlX2lkGA0gASgNEhMKC2VuZXJn",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "dGVtX2xpc3QYBCADKAsyDC5CSEdQSEtMRUhFQ0IeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ODDKKAHNMHKReflection.Descriptor, global::EggLink.DanhengServer.Proto.NPPNFPPENMCReflection.Descriptor, global::EggLink.DanhengServer.Proto.CDIMEMFJJFPReflection.Descriptor, global::EggLink.DanhengServer.Proto.KNDBNNPIDPBReflection.Descriptor, global::EggLink.DanhengServer.Proto.BHGPHKLEHECReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ODDKKAHNMHKReflection.Descriptor, global::EggLink.DanhengServer.Proto.CDIMEMFJJFPReflection.Descriptor, global::EggLink.DanhengServer.Proto.NPPNFPPENMCReflection.Descriptor, global::EggLink.DanhengServer.Proto.KNDBNNPIDPBReflection.Descriptor, global::EggLink.DanhengServer.Proto.BHGPHKLEHECReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MDOHAFBEEPK), global::EggLink.DanhengServer.Proto.MDOHAFBEEPK.Parser, new[]{ "NIAEGHJLNMB", "BuffList", "ScoreId", "EnergyInfo", "CurHp", "GDFNDPMJDAF", "MIDEJNJCAIA", "NAJLPNLNOJE", "AIHMGHAJGKJ", "ANHFJKEPCGF", "PKDPIEMGIBE", "OpList", "KJPMOHFIILO", "ItemList" }, null, null, null, null)
           }));

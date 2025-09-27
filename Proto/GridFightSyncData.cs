@@ -25,52 +25,52 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdHcmlkRmlnaHRTeW5jRGF0YS5wcm90bxoRQUFCSEJESk5DR0cucHJvdG8a",
-            "F0dyaWRGaWdodExvY2tUeXBlLnByb3RvGhFPTEVJREJMQklMRC5wcm90bxoR",
-            "Tk1LSENDSEhMSkEucHJvdG8aEU1BTkFBTkJJTkNCLnByb3RvGhFBQ0hKR0VF",
-            "S0NBSC5wcm90bxoRQ0dMRUlQQVBOS0QucHJvdG8aEURDQkxHRUFIT0VHLnBy",
-            "b3RvGhFDR0ZCQUdBRk1PRy5wcm90bxoRS0JPTE1LQkZCSkoucHJvdG8aEUtO",
-            "UEtQTkVMQUdGLnByb3RvGhFHRUhLS0ZJSU9CRS5wcm90bxoRTU9GREpFRENP",
-            "S08ucHJvdG8aEUlQTENMQ0xQRUdMLnByb3RvGhFEQUZNTkhNSUVNQS5wcm90",
-            "bxoRSk9BQU9QSFBNSEsucHJvdG8aEUdOR0FESExMTEtBLnByb3RvGhFOTUJB",
-            "UE5GSURFSS5wcm90bxoRTklCRURJQk5QSUsucHJvdG8aEUNHSEpFRk9ORUFL",
-            "LnByb3RvGhFCTENKR0dHQ0tJTC5wcm90bxocR3JpZEZpZ2h0UGVuZGluZ0Fj",
-            "dGlvbi5wcm90bxoRT0tOQUVMTVBLREYucHJvdG8iwAsKEUdyaWRGaWdodFN5",
-            "bmNEYXRhEiQKC0NHSUpGTURITExIGI4MIAEoCzIMLk1PRkRKRURDT0tPSAAS",
-            "JAoLT0dIRExDRUFNQUMY/QkgASgLMgwuTU9GREpFRENPS09IABIWCgtBR0lO",
-            "QU9KQUpHTBifBiABKA1IABIkCgtQTUxPQ0JISURETBiJByABKAsyDC5HRUhL",
-            "S0ZJSU9CRUgAEiQKC0dLTkFESUlPSk5EGLkBIAEoCzIMLkdFSEtLRklJT0JF",
-            "SAASJAoLUFBMSERGSUZPR0IY/wMgASgLMgwuR0VIS0tGSUlPQkVIABIVCgpp",
-            "dGVtX3ZhbHVlGPQLIAEoDUgAEiQKC0VPREdDTkFGSUFDGLoIIAEoCzIMLkNH",
-            "RkJBR0FGTU9HSAASJAoLS0dDTERGS0pDQ0wYugogASgLMgwuQkxDSkdHR0NL",
-            "SUxIABIWCgtHSkVMR0hLSUVCQhj6ASABKA1IABIkCgtOQkpJQ0RBSkRHRhjr",
-            "CSABKAsyDC5JUExDTENMUEVHTEgAEjIKDnBlbmRpbmdfYWN0aW9uGM8HIAEo",
-            "CzIXLkdyaWRGaWdodFBlbmRpbmdBY3Rpb25IABIkCgtIRkdJSU5EQkNPRRiR",
-            "DiABKAsyDC5KT0FBT1BIUE1IS0gAEiQKC0xBREZLQ0RCSk5EGO4KIAEoCzIM",
-            "LkdOR0FESExMTEtBSAASJAoLRktKSU9MSUZMS0MYxg4gASgLMgwuTUFOQUFO",
-            "QklOQ0JIABIkCgtBTEFGSklMQ09NTxjLAyABKAsyDC5BQUJIQkRKTkNHR0gA",
-            "EiQKC01QQ0NQR0pGQkRIGPEBIAEoCzIMLkRDQkxHRUFIT0VHSAASFgoLQ0FE",
-            "QURGTkNOTU8Yug0gASgNSAASFgoLRUVQQ0pLTUJQSk8YoQ0gASgNSAASFgoL",
-            "RUhLTlBHRUFFTUgY3QwgASgNSAASFgoLQ0lMR0lGR0ZCSUgYrAkgASgNSAAS",
-            "JAoLTEVBSEZNUEdBQkoYmgYgASgLMgwuTk1CQVBORklERUlIABIoCglsb2Nr",
-            "X3R5cGUY9g0gASgOMhIuR3JpZEZpZ2h0TG9ja1R5cGVIABIkCgtHQU5GSUJE",
-            "TUlMSBjqDiABKAsyDC5PS05BRUxNUEtERkgAEhYKC0dOSEtEQU1PR0JOGIYD",
-            "IAEoDUgAEhYKC05ISU9JQUVDRERMGPQFIAEoDUgAEhYKC0ROREZNRUpCTEhP",
-            "GK4KIAEoDUgAEiQKC0RJTEhGRUhCR0ROGMMEIAEoCzIMLkFDSEpHRUVLQ0FI",
-            "SAASJAoLR0FBRE1LTExMTUcY6Q8gASgLMgwuS0JPTE1LQkZCSkpIABIkCgtJ",
-            "T09DTUlFSVBHRBiTDSABKAsyDC5DR0hKRUZPTkVBS0gAEiQKC05FTExKQUpK",
-            "R0hQGL4NIAEoCzIMLkNHSEpFRk9ORUFLSAASFgoLT0xPS0xORk5ITE0YtQEg",
-            "ASgNSAASJAoLR05OSENETUpIRk4YrgwgASgLMgwuTk1LSENDSEhMSkFIABIk",
-            "CgtGSVBKRUVNQ0xCQhiFAiABKAsyDC5OTUtIQ0NISExKQUgAEhYKC0tMUEVF",
-            "RVBFS0VNGKQGIAEoDUgAEiQKC0hKQkFDSktNTUFNGIsBIAEoCzIMLk5JQkVE",
-            "SUJOUElLSAASJAoLQUhQSEtDSEhJQ08YrAQgASgLMgwuQ0dMRUlQQVBOS0RI",
-            "ABIkCgtEQkJOT0RFSU5ETRi1DyABKAsyDC5EQUZNTkhNSUVNQUgAEhYKC0NH",
-            "RkFNSEdBSUNBGPMFIAEoDUgAEhUKC0tQTkJGSEVERE9GGFsgASgNSAASJAoL",
-            "UE9NRUxFTU9QQUsYxAUgASgLMgwuS05QS1BORUxBR0ZIABIkCgtGTU5LTUNH",
-            "QU1KRhj4DCABKAsyDC5PTEVJREJMQklMREgAEhYKC0lLRUdOREVJUEZHGL0C",
-            "IAEoDUgAQgsKCXN5bmNfaXRlbUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "EUpPQUFPUEhQTUhLLnByb3RvGhFNQU5BQU5CSU5DQi5wcm90bxoRQ0dGQkFH",
+            "QUZNT0cucHJvdG8aEUFDSEpHRUVLQ0FILnByb3RvGhFJUExDTENMUEVHTC5w",
+            "cm90bxoRRENCTEdFQUhPRUcucHJvdG8aEU5NS0hDQ0hITEpBLnByb3RvGhdH",
+            "cmlkRmlnaHRMb2NrVHlwZS5wcm90bxoRQ0dISkVGT05FQUsucHJvdG8aEUdF",
+            "SEtLRklJT0JFLnByb3RvGhFLTlBLUE5FTEFHRi5wcm90bxoRT0xFSURCTEJJ",
+            "TEQucHJvdG8aEU5NQkFQTkZJREVJLnByb3RvGhFPS05BRUxNUEtERi5wcm90",
+            "bxobR3JpZEZpZ2h0R2FtZUl0ZW1JbmZvLnByb3RvGhxHcmlkRmlnaHRQZW5k",
+            "aW5nQWN0aW9uLnByb3RvGhFDR0xFSVBBUE5LRC5wcm90bxoRS0JPTE1LQkZC",
+            "SkoucHJvdG8aEUdOR0FESExMTEtBLnByb3RvGhFNT0ZESkVEQ09LTy5wcm90",
+            "bxoRQkxDSkdHR0NLSUwucHJvdG8aEU5JQkVESUJOUElLLnByb3RvIsoLChFH",
+            "cmlkRmlnaHRTeW5jRGF0YRIkCgtDR0lKRk1ESExMSBiODCABKAsyDC5NT0ZE",
+            "SkVEQ09LT0gAEiQKC09HSERMQ0VBTUFDGP0JIAEoCzIMLk1PRkRKRURDT0tP",
+            "SAASFgoLQUdJTkFPSkFKR0wYnwYgASgNSAASJAoLUE1MT0NCSElEREwYiQcg",
+            "ASgLMgwuR0VIS0tGSUlPQkVIABIkCgtHS05BRElJT0pORBi5ASABKAsyDC5H",
+            "RUhLS0ZJSU9CRUgAEiQKC1BQTEhERklGT0dCGP8DIAEoCzIMLkdFSEtLRklJ",
+            "T0JFSAASFQoKaXRlbV92YWx1ZRj0CyABKA1IABIkCgtFT0RHQ05BRklBQxi6",
+            "CCABKAsyDC5DR0ZCQUdBRk1PR0gAEiQKC0tHQ0xERktKQ0NMGLoKIAEoCzIM",
+            "LkJMQ0pHR0dDS0lMSAASFgoLR0pFTEdIS0lFQkIY+gEgASgNSAASJAoLTkJK",
+            "SUNEQUpER0YY6wkgASgLMgwuSVBMQ0xDTFBFR0xIABIyCg5wZW5kaW5nX2Fj",
+            "dGlvbhjPByABKAsyFy5HcmlkRmlnaHRQZW5kaW5nQWN0aW9uSAASJAoLSEZH",
+            "SUlOREJDT0UYkQ4gASgLMgwuSk9BQU9QSFBNSEtIABIkCgtMQURGS0NEQkpO",
+            "RBjuCiABKAsyDC5HTkdBREhMTExLQUgAEiQKC0ZLSklPTElGTEtDGMYOIAEo",
+            "CzIMLk1BTkFBTkJJTkNCSAASJAoLQUxBRkpJTENPTU8YywMgASgLMgwuQUFC",
+            "SEJESk5DR0dIABIkCgtNUENDUEdKRkJESBjxASABKAsyDC5EQ0JMR0VBSE9F",
+            "R0gAEhYKC0NBREFERk5DTk1PGLoNIAEoDUgAEhYKC0VFUENKS01CUEpPGKEN",
+            "IAEoDUgAEhYKC0VIS05QR0VBRU1IGN0MIAEoDUgAEhYKC0NJTEdJRkdGQklI",
+            "GKwJIAEoDUgAEiQKC0xFQUhGTVBHQUJKGJoGIAEoCzIMLk5NQkFQTkZJREVJ",
+            "SAASKAoJbG9ja190eXBlGPYNIAEoDjISLkdyaWRGaWdodExvY2tUeXBlSAAS",
+            "JAoLR0FORklCRE1JTEgY6g4gASgLMgwuT0tOQUVMTVBLREZIABIWCgtHTkhL",
+            "REFNT0dCThiGAyABKA1IABIWCgtOSElPSUFFQ0RETBj0BSABKA1IABIWCgtE",
+            "TkRGTUVKQkxITxiuCiABKA1IABIkCgtESUxIRkVIQkdEThjDBCABKAsyDC5B",
+            "Q0hKR0VFS0NBSEgAEiQKC0dBQURNS0xMTE1HGOkPIAEoCzIMLktCT0xNS0JG",
+            "QkpKSAASJAoLSU9PQ01JRUlQR0QYkw0gASgLMgwuQ0dISkVGT05FQUtIABIk",
+            "CgtORUxMSkFKSkdIUBi+DSABKAsyDC5DR0hKRUZPTkVBS0gAEhYKC09MT0tM",
+            "TkZOSExNGLUBIAEoDUgAEiQKC0dOTkhDRE1KSEZOGK4MIAEoCzIMLk5NS0hD",
+            "Q0hITEpBSAASJAoLRklQSkVFTUNMQkIYhQIgASgLMgwuTk1LSENDSEhMSkFI",
+            "ABIWCgtLTFBFRUVQRUtFTRikBiABKA1IABIkCgtISkJBQ0pLTU1BTRiLASAB",
+            "KAsyDC5OSUJFRElCTlBJS0gAEiQKC0FIUEhLQ0hISUNPGKwEIAEoCzIMLkNH",
+            "TEVJUEFQTktESAASLgoLREJCTk9ERUlORE0YtQ8gASgLMhYuR3JpZEZpZ2h0",
+            "R2FtZUl0ZW1JbmZvSAASFgoLQ0dGQU1IR0FJQ0EY8wUgASgNSAASFQoLS1BO",
+            "QkZIRURET0YYWyABKA1IABIkCgtQT01FTEVNT1BBSxjEBSABKAsyDC5LTlBL",
+            "UE5FTEFHRkgAEiQKC0ZNTktNQ0dBTUpGGPgMIAEoCzIMLk9MRUlEQkxCSUxE",
+            "SAASFgoLSUtFR05ERUlQRkcYvQIgASgNSABCCwoJc3luY19pdGVtQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AABHBDJNCGGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.OLEIDBLBILDReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMKHCCHHLJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.MANAANBINCBReflection.Descriptor, global::EggLink.DanhengServer.Proto.ACHJGEEKCAHReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGLEIPAPNKDReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCBLGEAHOEGReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGFBAGAFMOGReflection.Descriptor, global::EggLink.DanhengServer.Proto.KBOLMKBFBJJReflection.Descriptor, global::EggLink.DanhengServer.Proto.KNPKPNELAGFReflection.Descriptor, global::EggLink.DanhengServer.Proto.GEHKKFIIOBEReflection.Descriptor, global::EggLink.DanhengServer.Proto.MOFDJEDCOKOReflection.Descriptor, global::EggLink.DanhengServer.Proto.IPLCLCLPEGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.DAFMNHMIEMAReflection.Descriptor, global::EggLink.DanhengServer.Proto.JOAAOPHPMHKReflection.Descriptor, global::EggLink.DanhengServer.Proto.GNGADHLLLKAReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMBAPNFIDEIReflection.Descriptor, global::EggLink.DanhengServer.Proto.NIBEDIBNPIKReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGHJEFONEAKReflection.Descriptor, global::EggLink.DanhengServer.Proto.BLCJGGGCKILReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.OKNAELMPKDFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AABHBDJNCGGReflection.Descriptor, global::EggLink.DanhengServer.Proto.JOAAOPHPMHKReflection.Descriptor, global::EggLink.DanhengServer.Proto.MANAANBINCBReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGFBAGAFMOGReflection.Descriptor, global::EggLink.DanhengServer.Proto.ACHJGEEKCAHReflection.Descriptor, global::EggLink.DanhengServer.Proto.IPLCLCLPEGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCBLGEAHOEGReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMKHCCHHLJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGHJEFONEAKReflection.Descriptor, global::EggLink.DanhengServer.Proto.GEHKKFIIOBEReflection.Descriptor, global::EggLink.DanhengServer.Proto.KNPKPNELAGFReflection.Descriptor, global::EggLink.DanhengServer.Proto.OLEIDBLBILDReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMBAPNFIDEIReflection.Descriptor, global::EggLink.DanhengServer.Proto.OKNAELMPKDFReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGLEIPAPNKDReflection.Descriptor, global::EggLink.DanhengServer.Proto.KBOLMKBFBJJReflection.Descriptor, global::EggLink.DanhengServer.Proto.GNGADHLLLKAReflection.Descriptor, global::EggLink.DanhengServer.Proto.MOFDJEDCOKOReflection.Descriptor, global::EggLink.DanhengServer.Proto.BLCJGGGCKILReflection.Descriptor, global::EggLink.DanhengServer.Proto.NIBEDIBNPIKReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSyncData), global::EggLink.DanhengServer.Proto.GridFightSyncData.Parser, new[]{ "CGIJFMDHLLH", "OGHDLCEAMAC", "AGINAOJAJGL", "PMLOCBHIDDL", "GKNADIIOJND", "PPLHDFIFOGB", "ItemValue", "EODGCNAFIAC", "KGCLDFKJCCL", "GJELGHKIEBB", "NBJICDAJDGF", "PendingAction", "HFGIINDBCOE", "LADFKCDBJND", "FKJIOLIFLKC", "ALAFJILCOMO", "MPCCPGJFBDH", "CADADFNCNMO", "EEPCJKMBPJO", "EHKNPGEAEMH", "CILGIFGFBIH", "LEAHFMPGABJ", "LockType", "GANFIBDMILH", "GNHKDAMOGBN", "NHIOIAECDDL", "DNDFMEJBLHO", "DILHFEHBGDN", "GAADMKLLLMG", "IOOCMIEIPGD", "NELLJAJJGHP", "OLOKLNFNHLM", "GNNHCDMJHFN", "FIPJEEMCLBB", "KLPEEEPEKEM", "HJBACJKMMAM", "AHPHKCHHICO", "DBBNODEINDM", "CGFAMHGAICA", "KPNBFHEDDOF", "POMELEMOPAK", "FMNKMCGAMJF", "IKEGNDEIPFG" }, new[]{ "SyncItem" }, null, null, null)
           }));
@@ -885,8 +885,8 @@ namespace EggLink.DanhengServer.Proto {
     public const int DBBNODEINDMFieldNumber = 1973;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.DAFMNHMIEMA DBBNODEINDM {
-      get { return syncItemCase_ == SyncItemOneofCase.DBBNODEINDM ? (global::EggLink.DanhengServer.Proto.DAFMNHMIEMA) syncItem_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightGameItemInfo DBBNODEINDM {
+      get { return syncItemCase_ == SyncItemOneofCase.DBBNODEINDM ? (global::EggLink.DanhengServer.Proto.GridFightGameItemInfo) syncItem_ : null; }
       set {
         syncItem_ = value;
         syncItemCase_ = value == null ? SyncItemOneofCase.None : SyncItemOneofCase.DBBNODEINDM;
@@ -1876,7 +1876,7 @@ namespace EggLink.DanhengServer.Proto {
           break;
         case SyncItemOneofCase.DBBNODEINDM:
           if (DBBNODEINDM == null) {
-            DBBNODEINDM = new global::EggLink.DanhengServer.Proto.DAFMNHMIEMA();
+            DBBNODEINDM = new global::EggLink.DanhengServer.Proto.GridFightGameItemInfo();
           }
           DBBNODEINDM.MergeFrom(other.DBBNODEINDM);
           break;
@@ -2209,7 +2209,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 15786: {
-            global::EggLink.DanhengServer.Proto.DAFMNHMIEMA subBuilder = new global::EggLink.DanhengServer.Proto.DAFMNHMIEMA();
+            global::EggLink.DanhengServer.Proto.GridFightGameItemInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightGameItemInfo();
             if (syncItemCase_ == SyncItemOneofCase.DBBNODEINDM) {
               subBuilder.MergeFrom(DBBNODEINDM);
             }
@@ -2532,7 +2532,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 15786: {
-            global::EggLink.DanhengServer.Proto.DAFMNHMIEMA subBuilder = new global::EggLink.DanhengServer.Proto.DAFMNHMIEMA();
+            global::EggLink.DanhengServer.Proto.GridFightGameItemInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightGameItemInfo();
             if (syncItemCase_ == SyncItemOneofCase.DBBNODEINDM) {
               subBuilder.MergeFrom(DBBNODEINDM);
             }

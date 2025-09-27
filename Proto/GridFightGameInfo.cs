@@ -24,11 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHcmlkRmlnaHRHYW1lSW5mby5wcm90bxoRQkdNTkVMT0xISUoucHJvdG8a",
-            "EUJOQ0NMUEZLSUFOLnByb3RvGhFLR0NKQ0VGTkVGUC5wcm90bxoRUEFPSklG",
-            "SEdBRUoucHJvdG8aEUdERk1OQ09FUENQLnByb3RvGhFJSUxETUZMSUpKSy5w",
-            "cm90bxoRSEhIRU9LUFBFQUQucHJvdG8aEUpLSURJTUlLSEdGLnByb3RvGhFJ",
-            "SkRHQkNJTUtLSy5wcm90byLyAgoRR3JpZEZpZ2h0R2FtZUluZm8SIwoLTE5C",
+            "ChdHcmlkRmlnaHRHYW1lSW5mby5wcm90bxoRSktJRElNSUtIR0YucHJvdG8a",
+            "EUlKREdCQ0lNS0tLLnByb3RvGhFCR01ORUxPTEhJSi5wcm90bxoRR0RGTU5D",
+            "T0VQQ1AucHJvdG8aEUlJTERNRkxJSkpLLnByb3RvGhFLR0NKQ0VGTkVGUC5w",
+            "cm90bxoRUEFPSklGSEdBRUoucHJvdG8aEUhISEVPS1BQRUFELnByb3RvGhFC",
+            "TkNDTFBGS0lBTi5wcm90byLyAgoRR3JpZEZpZ2h0R2FtZUluZm8SIwoLTE5C",
             "R01KQ05DQ0kYByABKAsyDC5ISEhFT0tQUEVBREgAEiMKC0VNS0RFT0VFTUVL",
             "GAUgASgLMgwuQk5DQ0xQRktJQU5IABIjCgtISUxPREFNSUlFTxgEIAEoCzIM",
             "LktHQ0pDRUZORUZQSAASIwoLUEhORUhHS0tPTEgYCSABKAsyDC5KS0lESU1J",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "TU5FTE9MSElKSABCEAoOZ3JpZF9nYW1lX2luZm9CHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BGMNELOLHIJReflection.Descriptor, global::EggLink.DanhengServer.Proto.BNCCLPFKIANReflection.Descriptor, global::EggLink.DanhengServer.Proto.KGCJCEFNEFPReflection.Descriptor, global::EggLink.DanhengServer.Proto.PAOJIFHGAEJReflection.Descriptor, global::EggLink.DanhengServer.Proto.GDFMNCOEPCPReflection.Descriptor, global::EggLink.DanhengServer.Proto.IILDMFLIJJKReflection.Descriptor, global::EggLink.DanhengServer.Proto.HHHEOKPPEADReflection.Descriptor, global::EggLink.DanhengServer.Proto.JKIDIMIKHGFReflection.Descriptor, global::EggLink.DanhengServer.Proto.IJDGBCIMKKKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JKIDIMIKHGFReflection.Descriptor, global::EggLink.DanhengServer.Proto.IJDGBCIMKKKReflection.Descriptor, global::EggLink.DanhengServer.Proto.BGMNELOLHIJReflection.Descriptor, global::EggLink.DanhengServer.Proto.GDFMNCOEPCPReflection.Descriptor, global::EggLink.DanhengServer.Proto.IILDMFLIJJKReflection.Descriptor, global::EggLink.DanhengServer.Proto.KGCJCEFNEFPReflection.Descriptor, global::EggLink.DanhengServer.Proto.PAOJIFHGAEJReflection.Descriptor, global::EggLink.DanhengServer.Proto.HHHEOKPPEADReflection.Descriptor, global::EggLink.DanhengServer.Proto.BNCCLPFKIANReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameInfo), global::EggLink.DanhengServer.Proto.GridFightGameInfo.Parser, new[]{ "LNBGMJCNCCI", "EMKDEOEEMEK", "HILODAMIIEO", "PHNEHGKKOLH", "IGDDGJGGHNJ", "DOLCKIIBIAE", "BCAEOLKBJFF", "MBFBGJIHGHH", "CPFODIEHFDL" }, new[]{ "GridGameInfo" }, null, null, null)
           }));

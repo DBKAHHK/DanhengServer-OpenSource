@@ -102,6 +102,15 @@ public static class GameData
 
     #endregion
 
+    #region GridFight
+
+    public static Dictionary<uint, GridFightRoleBasicInfoExcel> GridFightRoleBasicInfoData { get; private set; } = [];
+    public static Dictionary<uint, GridFightEquipmentExcel> GridFightEquipmentData { get; private set; } = [];
+    public static Dictionary<uint, GridFightConsumablesExcel> GridFightConsumablesData { get; private set; } = [];
+    public static Dictionary<uint, GridFightItemsExcel> GridFightItemsData { get; private set; } = [];
+
+    #endregion
+
     #region ChessRogue
 
     public static Dictionary<int, ActionPointOverdrawExcel> ActionPointOverdrawData { get; private set; } = [];

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueTournCurGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtSb2d1ZVRvdXJuQ3VyR2FtZUluZm8ucHJvdG8aG1JvZ3VlVG91cm5Gb3Jt",
-            "dWxhSW5mby5wcm90bxoRQ0dKTkhOTUFNREgucHJvdG8aIlJvZ3VlVG91cm5H",
-            "YW1lRGlmZmljdWx0eUluZm8ucHJvdG8aGEtleXdvcmRVbmxvY2tWYWx1ZS5w",
-            "cm90bxoZUm9ndWVUb3VybkxldmVsSW5mby5wcm90bxoYUm9ndWVHYW1lSXRl",
-            "bVZhbHVlLnByb3RvGhpSb2d1ZVRvdXJuTGluZXVwSW5mby5wcm90bxoYQ2hl",
-            "c3NSb2d1ZUJ1ZmZJbmZvLnByb3RvGhtDaGVzc1JvZ3VlTWlyYWNsZUluZm8u",
-            "cHJvdG8aGlJvZ3VlVG91cm5Nb2R1bGVJbmZvLnByb3RvGhxSb2d1ZVRvdXJu",
-            "R2FtZUFyZWFJbmZvLnByb3RvIosEChVSb2d1ZVRvdXJuQ3VyR2FtZUluZm8S",
+            "ChtSb2d1ZVRvdXJuQ3VyR2FtZUluZm8ucHJvdG8aGFJvZ3VlR2FtZUl0ZW1W",
+            "YWx1ZS5wcm90bxobUm9ndWVUb3VybkZvcm11bGFJbmZvLnByb3RvGiJSb2d1",
+            "ZVRvdXJuR2FtZURpZmZpY3VsdHlJbmZvLnByb3RvGhxSb2d1ZVRvdXJuR2Ft",
+            "ZUFyZWFJbmZvLnByb3RvGhFDR0pOSE5NQU1ESC5wcm90bxoaUm9ndWVUb3Vy",
+            "bk1vZHVsZUluZm8ucHJvdG8aGlJvZ3VlVG91cm5MaW5ldXBJbmZvLnByb3Rv",
+            "GhhLZXl3b3JkVW5sb2NrVmFsdWUucHJvdG8aG0NoZXNzUm9ndWVNaXJhY2xl",
+            "SW5mby5wcm90bxoYQ2hlc3NSb2d1ZUJ1ZmZJbmZvLnByb3RvGhlSb2d1ZVRv",
+            "dXJuTGV2ZWxJbmZvLnByb3RvIosEChVSb2d1ZVRvdXJuQ3VyR2FtZUluZm8S",
             "MgoSdG91cm5fZm9ybXVsYV9pbmZvGAwgASgLMhYuUm9ndWVUb3VybkZvcm11",
             "bGFJbmZvEiEKC0pNSURMTERLSkJJGA8gASgLMgwuQ0dKTkhOTUFNREgSJQoG",
             "bGluZXVwGAogASgLMhUuUm9ndWVUb3VybkxpbmV1cEluZm8SLAoMbWlyYWNs",
@@ -45,7 +45,7 @@ namespace EggLink.DanhengServer.Proto {
             "ZXZlbEluZm8SJwoKaXRlbV92YWx1ZRgNIAEoCzITLlJvZ3VlR2FtZUl0ZW1W",
             "YWx1ZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueTournFormulaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGJNHNMAMDHReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournGameDifficultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KeywordUnlockValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueGameItemValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournModuleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueGameItemValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournFormulaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournGameDifficultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournGameAreaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGJNHNMAMDHReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournModuleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KeywordUnlockValueReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueMiracleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueTournLevelInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournCurGameInfo), global::EggLink.DanhengServer.Proto.RogueTournCurGameInfo.Parser, new[]{ "TournFormulaInfo", "JMIDLLDKJBI", "Lineup", "MiracleInfo", "Buff", "TournModuleInfo", "UnlockValue", "GameDifficultyInfo", "RogueTournGameAreaInfo", "Level", "ItemValue" }, null, null, null, null)
           }));

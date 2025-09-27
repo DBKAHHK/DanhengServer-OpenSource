@@ -24,19 +24,20 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightCurrentInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpHcmlkRmlnaHRDdXJyZW50SW5mby5wcm90bxoXR3JpZEZpZ2h0R2FtZUlu",
-            "Zm8ucHJvdG8aHEdyaWRGaWdodFBlbmRpbmdBY3Rpb24ucHJvdG8aEUxFQUxG",
-            "UExBREpFLnByb3RvIuwBChRHcmlkRmlnaHRDdXJyZW50SW5mbxIvCg5wZW5k",
-            "aW5nX2FjdGlvbhgJIAEoCzIXLkdyaWRGaWdodFBlbmRpbmdBY3Rpb24SIQoL",
-            "R0NOQ05QTVBKQ0UYByABKAsyDC5MRUFMRlBMQURKRRIOCgZzZWFzb24YDyAB",
-            "KA0SMwoXcm9ndWVfY3VycmVudF9nYW1lX2luZm8YDCADKAsyEi5HcmlkRmln",
-            "aHRHYW1lSW5mbxIRCgl1bmlxdWVfaWQYDiABKA0SEwoLQUtOQ0xET0RMTUwY",
-            "CCABKAgSEwoLZGl2aXNpb25faWQYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
-            "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChpHcmlkRmlnaHRDdXJyZW50SW5mby5wcm90bxoXR3JpZEZpZ2h0R2FtZURh",
+            "dGEucHJvdG8aF0dyaWRGaWdodEdhbWVJbmZvLnByb3RvGhxHcmlkRmlnaHRQ",
+            "ZW5kaW5nQWN0aW9uLnByb3RvIoICChRHcmlkRmlnaHRDdXJyZW50SW5mbxIv",
+            "Cg5wZW5kaW5nX2FjdGlvbhgJIAEoCzIXLkdyaWRGaWdodFBlbmRpbmdBY3Rp",
+            "b24SMAoUZ3JpZF9maWdodF9nYW1lX2RhdGEYByABKAsyEi5HcmlkRmlnaHRH",
+            "YW1lRGF0YRIOCgZzZWFzb24YDyABKA0SMwoXcm9ndWVfY3VycmVudF9nYW1l",
+            "X2luZm8YDCADKAsyEi5HcmlkRmlnaHRHYW1lSW5mbxIRCgl1bmlxdWVfaWQY",
+            "DiABKA0SGgoSZ3JpZF9nYW1lX2ZpbmlzaGVkGAggASgIEhMKC2RpdmlzaW9u",
+            "X2lkGAMgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.LEALFPLADJEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightGameDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightCurrentInfo), global::EggLink.DanhengServer.Proto.GridFightCurrentInfo.Parser, new[]{ "PendingAction", "GCNCNPMPJCE", "Season", "RogueCurrentGameInfo", "UniqueId", "AKNCLDODLML", "DivisionId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightCurrentInfo), global::EggLink.DanhengServer.Proto.GridFightCurrentInfo.Parser, new[]{ "PendingAction", "GridFightGameData", "Season", "RogueCurrentGameInfo", "UniqueId", "GridGameFinished", "DivisionId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,11 +80,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightCurrentInfo(GridFightCurrentInfo other) : this() {
       pendingAction_ = other.pendingAction_ != null ? other.pendingAction_.Clone() : null;
-      gCNCNPMPJCE_ = other.gCNCNPMPJCE_ != null ? other.gCNCNPMPJCE_.Clone() : null;
+      gridFightGameData_ = other.gridFightGameData_ != null ? other.gridFightGameData_.Clone() : null;
       season_ = other.season_;
       rogueCurrentGameInfo_ = other.rogueCurrentGameInfo_.Clone();
       uniqueId_ = other.uniqueId_;
-      aKNCLDODLML_ = other.aKNCLDODLML_;
+      gridGameFinished_ = other.gridGameFinished_;
       divisionId_ = other.divisionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -106,15 +107,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GCNCNPMPJCE" field.</summary>
-    public const int GCNCNPMPJCEFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.LEALFPLADJE gCNCNPMPJCE_;
+    /// <summary>Field number for the "grid_fight_game_data" field.</summary>
+    public const int GridFightGameDataFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.GridFightGameData gridFightGameData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LEALFPLADJE GCNCNPMPJCE {
-      get { return gCNCNPMPJCE_; }
+    public global::EggLink.DanhengServer.Proto.GridFightGameData GridFightGameData {
+      get { return gridFightGameData_; }
       set {
-        gCNCNPMPJCE_ = value;
+        gridFightGameData_ = value;
       }
     }
 
@@ -153,15 +154,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AKNCLDODLML" field.</summary>
-    public const int AKNCLDODLMLFieldNumber = 8;
-    private bool aKNCLDODLML_;
+    /// <summary>Field number for the "grid_game_finished" field.</summary>
+    public const int GridGameFinishedFieldNumber = 8;
+    private bool gridGameFinished_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool AKNCLDODLML {
-      get { return aKNCLDODLML_; }
+    public bool GridGameFinished {
+      get { return gridGameFinished_; }
       set {
-        aKNCLDODLML_ = value;
+        gridGameFinished_ = value;
       }
     }
 
@@ -193,11 +194,11 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(PendingAction, other.PendingAction)) return false;
-      if (!object.Equals(GCNCNPMPJCE, other.GCNCNPMPJCE)) return false;
+      if (!object.Equals(GridFightGameData, other.GridFightGameData)) return false;
       if (Season != other.Season) return false;
       if(!rogueCurrentGameInfo_.Equals(other.rogueCurrentGameInfo_)) return false;
       if (UniqueId != other.UniqueId) return false;
-      if (AKNCLDODLML != other.AKNCLDODLML) return false;
+      if (GridGameFinished != other.GridGameFinished) return false;
       if (DivisionId != other.DivisionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -207,11 +208,11 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (pendingAction_ != null) hash ^= PendingAction.GetHashCode();
-      if (gCNCNPMPJCE_ != null) hash ^= GCNCNPMPJCE.GetHashCode();
+      if (gridFightGameData_ != null) hash ^= GridFightGameData.GetHashCode();
       if (Season != 0) hash ^= Season.GetHashCode();
       hash ^= rogueCurrentGameInfo_.GetHashCode();
       if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
-      if (AKNCLDODLML != false) hash ^= AKNCLDODLML.GetHashCode();
+      if (GridGameFinished != false) hash ^= GridGameFinished.GetHashCode();
       if (DivisionId != 0) hash ^= DivisionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -235,13 +236,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(DivisionId);
       }
-      if (gCNCNPMPJCE_ != null) {
+      if (gridFightGameData_ != null) {
         output.WriteRawTag(58);
-        output.WriteMessage(GCNCNPMPJCE);
+        output.WriteMessage(GridFightGameData);
       }
-      if (AKNCLDODLML != false) {
+      if (GridGameFinished != false) {
         output.WriteRawTag(64);
-        output.WriteBool(AKNCLDODLML);
+        output.WriteBool(GridGameFinished);
       }
       if (pendingAction_ != null) {
         output.WriteRawTag(74);
@@ -270,13 +271,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(DivisionId);
       }
-      if (gCNCNPMPJCE_ != null) {
+      if (gridFightGameData_ != null) {
         output.WriteRawTag(58);
-        output.WriteMessage(GCNCNPMPJCE);
+        output.WriteMessage(GridFightGameData);
       }
-      if (AKNCLDODLML != false) {
+      if (GridGameFinished != false) {
         output.WriteRawTag(64);
-        output.WriteBool(AKNCLDODLML);
+        output.WriteBool(GridGameFinished);
       }
       if (pendingAction_ != null) {
         output.WriteRawTag(74);
@@ -304,8 +305,8 @@ namespace EggLink.DanhengServer.Proto {
       if (pendingAction_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PendingAction);
       }
-      if (gCNCNPMPJCE_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GCNCNPMPJCE);
+      if (gridFightGameData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GridFightGameData);
       }
       if (Season != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Season);
@@ -314,7 +315,7 @@ namespace EggLink.DanhengServer.Proto {
       if (UniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
       }
-      if (AKNCLDODLML != false) {
+      if (GridGameFinished != false) {
         size += 1 + 1;
       }
       if (DivisionId != 0) {
@@ -338,11 +339,11 @@ namespace EggLink.DanhengServer.Proto {
         }
         PendingAction.MergeFrom(other.PendingAction);
       }
-      if (other.gCNCNPMPJCE_ != null) {
-        if (gCNCNPMPJCE_ == null) {
-          GCNCNPMPJCE = new global::EggLink.DanhengServer.Proto.LEALFPLADJE();
+      if (other.gridFightGameData_ != null) {
+        if (gridFightGameData_ == null) {
+          GridFightGameData = new global::EggLink.DanhengServer.Proto.GridFightGameData();
         }
-        GCNCNPMPJCE.MergeFrom(other.GCNCNPMPJCE);
+        GridFightGameData.MergeFrom(other.GridFightGameData);
       }
       if (other.Season != 0) {
         Season = other.Season;
@@ -351,8 +352,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.UniqueId != 0) {
         UniqueId = other.UniqueId;
       }
-      if (other.AKNCLDODLML != false) {
-        AKNCLDODLML = other.AKNCLDODLML;
+      if (other.GridGameFinished != false) {
+        GridGameFinished = other.GridGameFinished;
       }
       if (other.DivisionId != 0) {
         DivisionId = other.DivisionId;
@@ -377,14 +378,14 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            if (gCNCNPMPJCE_ == null) {
-              GCNCNPMPJCE = new global::EggLink.DanhengServer.Proto.LEALFPLADJE();
+            if (gridFightGameData_ == null) {
+              GridFightGameData = new global::EggLink.DanhengServer.Proto.GridFightGameData();
             }
-            input.ReadMessage(GCNCNPMPJCE);
+            input.ReadMessage(GridFightGameData);
             break;
           }
           case 64: {
-            AKNCLDODLML = input.ReadBool();
+            GridGameFinished = input.ReadBool();
             break;
           }
           case 74: {
@@ -426,14 +427,14 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            if (gCNCNPMPJCE_ == null) {
-              GCNCNPMPJCE = new global::EggLink.DanhengServer.Proto.LEALFPLADJE();
+            if (gridFightGameData_ == null) {
+              GridFightGameData = new global::EggLink.DanhengServer.Proto.GridFightGameData();
             }
-            input.ReadMessage(GCNCNPMPJCE);
+            input.ReadMessage(GridFightGameData);
             break;
           }
           case 64: {
-            AKNCLDODLML = input.ReadBool();
+            GridGameFinished = input.ReadBool();
             break;
           }
           case 74: {

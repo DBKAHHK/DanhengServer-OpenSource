@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetFriendBattleRecordDetailScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiZHZXRGcmllbmRCYXR0bGVSZWNvcmREZXRhaWxTY1JzcC5wcm90bxoVUm9n",
-            "dWVTdGF0aXN0aWNzLnByb3RvGhFPTEVHRURPRU1JSi5wcm90bxoiQ2hhbGxl",
-            "bmdlUGVha0dyb3VwU3RhdGlzdGljcy5wcm90bxoeQ2hhbGxlbmdlR3JvdXBT",
+            "CiZHZXRGcmllbmRCYXR0bGVSZWNvcmREZXRhaWxTY1JzcC5wcm90bxoRT0xF",
+            "R0VET0VNSUoucHJvdG8aHkNoYWxsZW5nZUdyb3VwU3RhdGlzdGljcy5wcm90",
+            "bxoVUm9ndWVTdGF0aXN0aWNzLnByb3RvGiJDaGFsbGVuZ2VQZWFrR3JvdXBT",
             "dGF0aXN0aWNzLnByb3RvIvQBCiBHZXRGcmllbmRCYXR0bGVSZWNvcmREZXRh",
             "aWxTY1JzcBIhCgtGTU9CR0dNRkJGQRgIIAEoCzIMLk9MRUdFRE9FTUlKEgsK",
             "A3VpZBgNIAEoDRIPCgdyZXRjb2RlGAkgASgNEjMKEGNoYWxsZW5nZV9yZWNv",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "DHJvZ3VlX3JlY29yZBgKIAEoCzIQLlJvZ3VlU3RhdGlzdGljc0IeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.OLEGEDOEMIJReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengePeakGroupStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeGroupStatisticsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OLEGEDOEMIJReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengeGroupStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengePeakGroupStatisticsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFriendBattleRecordDetailScRsp), global::EggLink.DanhengServer.Proto.GetFriendBattleRecordDetailScRsp.Parser, new[]{ "FMOBGGMFBFA", "Uid", "Retcode", "ChallengeRecord", "PeakRecord", "RogueRecord" }, null, null, null, null)
           }));

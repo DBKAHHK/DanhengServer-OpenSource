@@ -24,36 +24,36 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerSyncScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhQbGF5ZXJTeW5jU2NOb3RpZnkucHJvdG8aEUJBSExQQ0RESkdHLnByb3Rv",
-            "GhVXYWl0RGVsUmVzb3VyY2UucHJvdG8aC1JlbGljLnByb3RvGhBTeW5jU3Rh",
-            "dHVzLnByb3RvGhVCYXNpY01vZHVsZVN5bmMucHJvdG8aEU5LRE9ISE9ETk5I",
-            "LnByb3RvGgtRdWVzdC5wcm90bxoQQXZhdGFyU3luYy5wcm90bxoVUGxheWVy",
-            "QmFzaWNJbmZvLnByb3RvGg5NYXRlcmlhbC5wcm90bxobUGxheWVyQm9hcmRN",
-            "b2R1bGVTeW5jLnByb3RvGhFHS0RJSElGRkhGRC5wcm90bxoPRXF1aXBtZW50",
-            "LnByb3RvGhlNdWx0aVBhdGhBdmF0YXJJbmZvLnByb3RvGhFNaXNzaW9uU3lu",
-            "Yy5wcm90bxoRRE1CTVBBSEtITEEucHJvdG8aDkl0ZW1MaXN0LnByb3RvIrkG",
-            "ChJQbGF5ZXJTeW5jU2NOb3RpZnkSIgoLQ0dMRUtGT0RNQUcYtQUgAygLMgwu",
-            "TktET0hIT0ROTkgSIAoNbWF0ZXJpYWxfbGlzdBgIIAMoCzIJLk1hdGVyaWFs",
-            "Eh8KC01KT0tMSEZQR0FEGOwKIAEoCzIJLkl0ZW1MaXN0Eh4KFXRvdGFsX2Fj",
-            "aGlldmVtZW50X2V4cBjSBiABKA0SFgoOZGVsX3JlbGljX2xpc3QYDiADKA0S",
-            "IgoMbWlzc2lvbl9zeW5jGA0gASgLMgwuTWlzc2lvblN5bmMSGgoKcXVlc3Rf",
-            "bGlzdBgDIAMoCzIGLlF1ZXN0EiAKC2F2YXRhcl9zeW5jGAIgASgLMgsuQXZh",
-            "dGFyU3luYxIwChZ3YWl0X2RlbF9yZXNvdXJjZV9saXN0GA8gAygLMhAuV2Fp",
-            "dERlbFJlc291cmNlEiIKC0lHSVBFSU1HRUFBGIYOIAMoCzIMLkdLRElISUZG",
-            "SEZEEiIKC0VORktFSUJETExGGLQMIAEoCzIMLkJBSExQQ0RESkdHEhoKEmRl",
-            "bF9lcXVpcG1lbnRfbGlzdBgBIAMoDRIiCgtPTUpPUEtHSlBMRxj5DCABKAsy",
-            "DC5ETUJNUEFIS0hMQRI4ChdwbGF5ZXJib2FyZF9tb2R1bGVfc3luYxi4AiAB",
-            "KAsyFi5QbGF5ZXJCb2FyZE1vZHVsZVN5bmMSGwoSbmV3X2l0ZW1faGludF9s",
-            "aXN0GPoBIAMoDRIaCgpyZWxpY19saXN0GAUgAygLMgYuUmVsaWMSIgoOZXF1",
-            "aXBtZW50X2xpc3QYCyADKAsyCi5FcXVpcG1lbnQSIQoLc3luY19zdGF0dXMY",
-            "oQIgASgLMgsuU3luY1N0YXR1cxIrChFiYXNpY19tb2R1bGVfc3luYxgHIAEo",
-            "CzIQLkJhc2ljTW9kdWxlU3luYxIfCgtGQ09LRkZFQVBNSRiJAiADKAsyCS5N",
-            "YXRlcmlhbBIkCgpiYXNpY19pbmZvGAYgASgLMhAuUGxheWVyQmFzaWNJbmZv",
-            "EjoKG211bHRpX3BhdGhfYXZhdGFyX2luZm9fbGlzdBjtBiADKAsyFC5NdWx0",
-            "aVBhdGhBdmF0YXJJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
-            "dG9iBnByb3RvMw=="));
+            "ChhQbGF5ZXJTeW5jU2NOb3RpZnkucHJvdG8aFUJhc2ljTW9kdWxlU3luYy5w",
+            "cm90bxoZTXVsdGlQYXRoQXZhdGFySW5mby5wcm90bxobUGxheWVyQm9hcmRN",
+            "b2R1bGVTeW5jLnByb3RvGg9FcXVpcG1lbnQucHJvdG8aEU1pc3Npb25TeW5j",
+            "LnByb3RvGhVXYWl0RGVsUmVzb3VyY2UucHJvdG8aEURNQk1QQUhLSExBLnBy",
+            "b3RvGhZQbGF5ZXJPdXRmaXRJbmZvLnByb3RvGg5JdGVtTGlzdC5wcm90bxoV",
+            "UGxheWVyQmFzaWNJbmZvLnByb3RvGg5NYXRlcmlhbC5wcm90bxoQQXZhdGFy",
+            "U3luYy5wcm90bxoQU3luY1N0YXR1cy5wcm90bxoLUmVsaWMucHJvdG8aEU5L",
+            "RE9ISE9ETk5ILnByb3RvGgtRdWVzdC5wcm90bxoRR0tESUhJRkZIRkQucHJv",
+            "dG8ivgYKElBsYXllclN5bmNTY05vdGlmeRIiCgtDR0xFS0ZPRE1BRxi1BSAD",
+            "KAsyDC5OS0RPSEhPRE5OSBIgCg1tYXRlcmlhbF9saXN0GAggAygLMgkuTWF0",
+            "ZXJpYWwSHwoLTUpPS0xIRlBHQUQY7AogASgLMgkuSXRlbUxpc3QSHgoVdG90",
+            "YWxfYWNoaWV2ZW1lbnRfZXhwGNIGIAEoDRIWCg5kZWxfcmVsaWNfbGlzdBgO",
+            "IAMoDRIiCgxtaXNzaW9uX3N5bmMYDSABKAsyDC5NaXNzaW9uU3luYxIaCgpx",
+            "dWVzdF9saXN0GAMgAygLMgYuUXVlc3QSIAoLYXZhdGFyX3N5bmMYAiABKAsy",
+            "Cy5BdmF0YXJTeW5jEjAKFndhaXRfZGVsX3Jlc291cmNlX2xpc3QYDyADKAsy",
+            "EC5XYWl0RGVsUmVzb3VyY2USIgoLSUdJUEVJTUdFQUEYhg4gAygLMgwuR0tE",
+            "SUhJRkZIRkQSJwoLRU5GS0VJQkRMTEYYtAwgASgLMhEuUGxheWVyT3V0Zml0",
+            "SW5mbxIaChJkZWxfZXF1aXBtZW50X2xpc3QYASADKA0SIgoLT01KT1BLR0pQ",
+            "TEcY+QwgASgLMgwuRE1CTVBBSEtITEESOAoXcGxheWVyYm9hcmRfbW9kdWxl",
+            "X3N5bmMYuAIgASgLMhYuUGxheWVyQm9hcmRNb2R1bGVTeW5jEhsKEm5ld19p",
+            "dGVtX2hpbnRfbGlzdBj6ASADKA0SGgoKcmVsaWNfbGlzdBgFIAMoCzIGLlJl",
+            "bGljEiIKDmVxdWlwbWVudF9saXN0GAsgAygLMgouRXF1aXBtZW50EiEKC3N5",
+            "bmNfc3RhdHVzGKECIAEoCzILLlN5bmNTdGF0dXMSKwoRYmFzaWNfbW9kdWxl",
+            "X3N5bmMYByABKAsyEC5CYXNpY01vZHVsZVN5bmMSHwoLRkNPS0ZGRUFQTUkY",
+            "iQIgAygLMgkuTWF0ZXJpYWwSJAoKYmFzaWNfaW5mbxgGIAEoCzIQLlBsYXll",
+            "ckJhc2ljSW5mbxI6ChttdWx0aV9wYXRoX2F2YXRhcl9pbmZvX2xpc3QY7QYg",
+            "AygLMhQuTXVsdGlQYXRoQXZhdGFySW5mb0IeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BAHLPCDDJGGReflection.Descriptor, global::EggLink.DanhengServer.Proto.WaitDelResourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.SyncStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.BasicModuleSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKDOHHODNNHReflection.Descriptor, global::EggLink.DanhengServer.Proto.QuestReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MaterialReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerBoardModuleSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.GKDIHIFFHFDReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MissionSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.DMBMPAHKHLAReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BasicModuleSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerBoardModuleSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentReflection.Descriptor, global::EggLink.DanhengServer.Proto.MissionSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.WaitDelResourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.DMBMPAHKHLAReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerOutfitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MaterialReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSyncReflection.Descriptor, global::EggLink.DanhengServer.Proto.SyncStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.NKDOHHODNNHReflection.Descriptor, global::EggLink.DanhengServer.Proto.QuestReflection.Descriptor, global::EggLink.DanhengServer.Proto.GKDIHIFFHFDReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerSyncScNotify), global::EggLink.DanhengServer.Proto.PlayerSyncScNotify.Parser, new[]{ "CGLEKFODMAG", "MaterialList", "MJOKLHFPGAD", "TotalAchievementExp", "DelRelicList", "MissionSync", "QuestList", "AvatarSync", "WaitDelResourceList", "IGIPEIMGEAA", "ENFKEIBDLLF", "DelEquipmentList", "OMJOPKGJPLG", "PlayerboardModuleSync", "NewItemHintList", "RelicList", "EquipmentList", "SyncStatus", "BasicModuleSync", "FCOKFFEAPMI", "BasicInfo", "MultiPathAvatarInfoList" }, null, null, null, null)
           }));
@@ -244,10 +244,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "ENFKEIBDLLF" field.</summary>
     public const int ENFKEIBDLLFFieldNumber = 1588;
-    private global::EggLink.DanhengServer.Proto.BAHLPCDDJGG eNFKEIBDLLF_;
+    private global::EggLink.DanhengServer.Proto.PlayerOutfitInfo eNFKEIBDLLF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.BAHLPCDDJGG ENFKEIBDLLF {
+    public global::EggLink.DanhengServer.Proto.PlayerOutfitInfo ENFKEIBDLLF {
       get { return eNFKEIBDLLF_; }
       set {
         eNFKEIBDLLF_ = value;
@@ -671,7 +671,7 @@ namespace EggLink.DanhengServer.Proto {
       iGIPEIMGEAA_.Add(other.iGIPEIMGEAA_);
       if (other.eNFKEIBDLLF_ != null) {
         if (eNFKEIBDLLF_ == null) {
-          ENFKEIBDLLF = new global::EggLink.DanhengServer.Proto.BAHLPCDDJGG();
+          ENFKEIBDLLF = new global::EggLink.DanhengServer.Proto.PlayerOutfitInfo();
         }
         ENFKEIBDLLF.MergeFrom(other.ENFKEIBDLLF);
       }
@@ -828,7 +828,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 12706: {
             if (eNFKEIBDLLF_ == null) {
-              ENFKEIBDLLF = new global::EggLink.DanhengServer.Proto.BAHLPCDDJGG();
+              ENFKEIBDLLF = new global::EggLink.DanhengServer.Proto.PlayerOutfitInfo();
             }
             input.ReadMessage(ENFKEIBDLLF);
             break;
@@ -961,7 +961,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 12706: {
             if (eNFKEIBDLLF_ == null) {
-              ENFKEIBDLLF = new global::EggLink.DanhengServer.Proto.BAHLPCDDJGG();
+              ENFKEIBDLLF = new global::EggLink.DanhengServer.Proto.PlayerOutfitInfo();
             }
             input.ReadMessage(ENFKEIBDLLF);
             break;
