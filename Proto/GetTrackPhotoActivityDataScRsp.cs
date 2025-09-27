@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiRHZXRUcmFja1Bob3RvQWN0aXZpdHlEYXRhU2NSc3AucHJvdG8aEUNHTElH",
             "RUNHQUtOLnByb3RvIlQKHkdldFRyYWNrUGhvdG9BY3Rpdml0eURhdGFTY1Jz",
-            "cBIPCgdyZXRjb2RlGAggASgNEiEKC0VNR0ZMRE9QS0dMGAIgAygLMgwuQ0dM",
+            "cBIPCgdyZXRjb2RlGAwgASgNEiEKC0VNR0ZMRE9QS0dMGAIgAygLMgwuQ0dM",
             "SUdFQ0dBS05CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 12;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,7 +154,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       eMGFLDOPKGL_.WriteTo(output, _repeated_eMGFLDOPKGL_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       eMGFLDOPKGL_.WriteTo(ref output, _repeated_eMGFLDOPKGL_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(96);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -221,7 +221,7 @@ namespace EggLink.DanhengServer.Proto {
             eMGFLDOPKGL_.AddEntriesFrom(input, _repeated_eMGFLDOPKGL_codec);
             break;
           }
-          case 64: {
+          case 96: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -244,7 +244,7 @@ namespace EggLink.DanhengServer.Proto {
             eMGFLDOPKGL_.AddEntriesFrom(ref input, _repeated_eMGFLDOPKGL_codec);
             break;
           }
-          case 64: {
+          case 96: {
             Retcode = input.ReadUInt32();
             break;
           }

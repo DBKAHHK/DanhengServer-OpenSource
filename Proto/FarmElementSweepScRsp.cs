@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtGYXJtRWxlbWVudFN3ZWVwU2NSc3AucHJvdG8aDkl0ZW1MaXN0LnByb3Rv",
-            "ImQKFUZhcm1FbGVtZW50U3dlZXBTY1JzcBIlChJtdWx0aXBsZV9kcm9wX2Rh",
-            "dGEYCiABKAsyCS5JdGVtTGlzdBITCgtKREFOT0tOSE5ITBgJIAEoDRIPCgdy",
-            "ZXRjb2RlGAggASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "ImQKFUZhcm1FbGVtZW50U3dlZXBTY1JzcBITCgtKREFOT0tOSE5ITBgIIAEo",
+            "DRIPCgdyZXRjb2RlGA4gASgNEiUKEm11bHRpcGxlX2Ryb3BfZGF0YRgGIAEo",
+            "CzIJLkl0ZW1MaXN0Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FarmElementSweepScRsp), global::EggLink.DanhengServer.Proto.FarmElementSweepScRsp.Parser, new[]{ "MultipleDropData", "JDANOKNHNHL", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FarmElementSweepScRsp), global::EggLink.DanhengServer.Proto.FarmElementSweepScRsp.Parser, new[]{ "JDANOKNHNHL", "Retcode", "MultipleDropData" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FarmElementSweepScRsp(FarmElementSweepScRsp other) : this() {
-      multipleDropData_ = other.multipleDropData_ != null ? other.multipleDropData_.Clone() : null;
       jDANOKNHNHL_ = other.jDANOKNHNHL_;
       retcode_ = other.retcode_;
+      multipleDropData_ = other.multipleDropData_ != null ? other.multipleDropData_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new FarmElementSweepScRsp(this);
     }
 
-    /// <summary>Field number for the "multiple_drop_data" field.</summary>
-    public const int MultipleDropDataFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.ItemList multipleDropData_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemList MultipleDropData {
-      get { return multipleDropData_; }
-      set {
-        multipleDropData_ = value;
-      }
-    }
-
     /// <summary>Field number for the "JDANOKNHNHL" field.</summary>
-    public const int JDANOKNHNHLFieldNumber = 9;
+    public const int JDANOKNHNHLFieldNumber = 8;
     private uint jDANOKNHNHL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,6 +107,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "multiple_drop_data" field.</summary>
+    public const int MultipleDropDataFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.ItemList multipleDropData_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ItemList MultipleDropData {
+      get { return multipleDropData_; }
+      set {
+        multipleDropData_ = value;
       }
     }
 
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(MultipleDropData, other.MultipleDropData)) return false;
       if (JDANOKNHNHL != other.JDANOKNHNHL) return false;
       if (Retcode != other.Retcode) return false;
+      if (!object.Equals(MultipleDropData, other.MultipleDropData)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (multipleDropData_ != null) hash ^= MultipleDropData.GetHashCode();
       if (JDANOKNHNHL != 0) hash ^= JDANOKNHNHL.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (multipleDropData_ != null) hash ^= MultipleDropData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
+      if (multipleDropData_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MultipleDropData);
       }
       if (JDANOKNHNHL != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(JDANOKNHNHL);
       }
-      if (multipleDropData_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(MultipleDropData);
+      if (Retcode != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Retcode);
+      if (multipleDropData_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MultipleDropData);
       }
       if (JDANOKNHNHL != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(JDANOKNHNHL);
       }
-      if (multipleDropData_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(MultipleDropData);
+      if (Retcode != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (multipleDropData_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MultipleDropData);
-      }
       if (JDANOKNHNHL != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JDANOKNHNHL);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (multipleDropData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MultipleDropData);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,17 +233,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.multipleDropData_ != null) {
-        if (multipleDropData_ == null) {
-          MultipleDropData = new global::EggLink.DanhengServer.Proto.ItemList();
-        }
-        MultipleDropData.MergeFrom(other.MultipleDropData);
-      }
       if (other.JDANOKNHNHL != 0) {
         JDANOKNHNHL = other.JDANOKNHNHL;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
+      }
+      if (other.multipleDropData_ != null) {
+        if (multipleDropData_ == null) {
+          MultipleDropData = new global::EggLink.DanhengServer.Proto.ItemList();
+        }
+        MultipleDropData.MergeFrom(other.MultipleDropData);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,19 +260,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            JDANOKNHNHL = input.ReadUInt32();
-            break;
-          }
-          case 82: {
+          case 50: {
             if (multipleDropData_ == null) {
               MultipleDropData = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(MultipleDropData);
+            break;
+          }
+          case 64: {
+            JDANOKNHNHL = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -290,19 +290,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            JDANOKNHNHL = input.ReadUInt32();
-            break;
-          }
-          case 82: {
+          case 50: {
             if (multipleDropData_ == null) {
               MultipleDropData = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(MultipleDropData);
+            break;
+          }
+          case 64: {
+            JDANOKNHNHL = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

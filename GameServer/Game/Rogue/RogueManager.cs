@@ -61,7 +61,7 @@ public class RogueManager(PlayerInstance player) : BasePlayerManager(player)
         if (area == null || aeon == null) return;
 
         Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupRogue, baseAvatarIds);
-        await Player.LineupManager!.GainMp(5, false);
+        await Player.LineupManager!.GainMp(8, false);
         await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
 
         foreach (var id in baseAvatarIds)

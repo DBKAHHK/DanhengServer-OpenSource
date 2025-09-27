@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static FightMatch3SoloUseItemNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJGaWdodE1hdGNoM1NvbG9Vc2VJdGVtTm90aWZ5LnByb3RvGhFCQ0VLRElE",
-            "RkxDTS5wcm90bxoRTURPSEFGQkVFUEsucHJvdG8iZAocRmlnaHRNYXRjaDNT",
-            "b2xvVXNlSXRlbU5vdGlmeRIhCgtFSEVMR0FPQUJKShgKIAEoCzIMLk1ET0hB",
+            "CiJGaWdodE1hdGNoM1NvbG9Vc2VJdGVtTm90aWZ5LnByb3RvGhFNRE9IQUZC",
+            "RUVQSy5wcm90bxoRQkNFS0RJREZMQ00ucHJvdG8iZAocRmlnaHRNYXRjaDNT",
+            "b2xvVXNlSXRlbU5vdGlmeRIhCgtFSEVMR0FPQUJKShgLIAEoCzIMLk1ET0hB",
             "RkJFRVBLEiEKC01FREJPTkhBTE9EGAggASgLMgwuQkNFS0RJREZMQ01CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BCEKDIDFLCMReflection.Descriptor, global::EggLink.DanhengServer.Proto.MDOHAFBEEPKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MDOHAFBEEPKReflection.Descriptor, global::EggLink.DanhengServer.Proto.BCEKDIDFLCMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightMatch3SoloUseItemNotify), global::EggLink.DanhengServer.Proto.FightMatch3SoloUseItemNotify.Parser, new[]{ "EHELGAOABJJ", "MEDBONHALOD" }, null, null, null, null)
           }));
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "EHELGAOABJJ" field.</summary>
-    public const int EHELGAOABJJFieldNumber = 10;
+    public const int EHELGAOABJJFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.MDOHAFBEEPK eHELGAOABJJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(MEDBONHALOD);
       }
       if (eHELGAOABJJ_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(90);
         output.WriteMessage(EHELGAOABJJ);
       }
       if (_unknownFields != null) {
@@ -176,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(MEDBONHALOD);
       }
       if (eHELGAOABJJ_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(90);
         output.WriteMessage(EHELGAOABJJ);
       }
       if (_unknownFields != null) {
@@ -241,7 +241,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(MEDBONHALOD);
             break;
           }
-          case 82: {
+          case 90: {
             if (eHELGAOABJJ_ == null) {
               EHELGAOABJJ = new global::EggLink.DanhengServer.Proto.MDOHAFBEEPK();
             }
@@ -270,7 +270,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(MEDBONHALOD);
             break;
           }
-          case 82: {
+          case 90: {
             if (eHELGAOABJJ_ == null) {
               EHELGAOABJJ = new global::EggLink.DanhengServer.Proto.MDOHAFBEEPK();
             }

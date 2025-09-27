@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJHZXRMZXZlbFJld2FyZFRha2VuTGlzdFNjUnNwLnByb3RvIlAKHEdldExl",
             "dmVsUmV3YXJkVGFrZW5MaXN0U2NSc3ASHwoXbGV2ZWxfcmV3YXJkX3Rha2Vu",
-            "X2xpc3QYByADKA0SDwoHcmV0Y29kZRgJIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "X2xpc3QYDCADKA0SDwoHcmV0Y29kZRgFIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level_reward_taken_list" field.</summary>
-    public const int LevelRewardTakenListFieldNumber = 7;
+    public const int LevelRewardTakenListFieldNumber = 12;
     private static readonly pb::FieldCodec<uint> _repeated_levelRewardTakenList_codec
-        = pb::FieldCodec.ForUInt32(58);
+        = pb::FieldCodec.ForUInt32(98);
     private readonly pbc::RepeatedField<uint> levelRewardTakenList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      levelRewardTakenList_.WriteTo(output, _repeated_levelRewardTakenList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
+      levelRewardTakenList_.WriteTo(output, _repeated_levelRewardTakenList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      levelRewardTakenList_.WriteTo(ref output, _repeated_levelRewardTakenList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
+      levelRewardTakenList_.WriteTo(ref output, _repeated_levelRewardTakenList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58:
-          case 56: {
-            levelRewardTakenList_.AddEntriesFrom(input, _repeated_levelRewardTakenList_codec);
+          case 40: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 72: {
-            Retcode = input.ReadUInt32();
+          case 98:
+          case 96: {
+            levelRewardTakenList_.AddEntriesFrom(input, _repeated_levelRewardTakenList_codec);
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58:
-          case 56: {
-            levelRewardTakenList_.AddEntriesFrom(ref input, _repeated_levelRewardTakenList_codec);
+          case 40: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 72: {
-            Retcode = input.ReadUInt32();
+          case 98:
+          case 96: {
+            levelRewardTakenList_.AddEntriesFrom(ref input, _repeated_levelRewardTakenList_codec);
             break;
           }
         }

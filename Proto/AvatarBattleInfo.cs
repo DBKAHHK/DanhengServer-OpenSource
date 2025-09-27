@@ -24,50 +24,51 @@ namespace EggLink.DanhengServer.Proto {
     static AvatarBattleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZBdmF0YXJCYXR0bGVJbmZvLnByb3RvGhBBdmF0YXJUeXBlLnByb3RvGhpB",
-            "dHRhY2tEYW1hZ2VQcm9wZXJ0eS5wcm90bxoRQmF0dGxlUmVsaWMucHJvdG8a",
-            "EVNwQWRkU291cmNlLnByb3RvGhdFcXVpcG1lbnRQcm9wZXJ0eS5wcm90bxoV",
-            "QXZhdGFyU2tpbGxUcmVlLnByb3RvGhRBdmF0YXJQcm9wZXJ0eS5wcm90bxoT",
-            "QWJpbGl0eVVzZVN0dC5wcm90bxoWU2tpbGxVc2VQcm9wZXJ0eS5wcm90byLp",
-            "CwoQQXZhdGFyQmF0dGxlSW5mbxIgCgthdmF0YXJfdHlwZRgBIAEoDjILLkF2",
-            "YXRhclR5cGUSCgoCaWQYAiABKA0SFAoMYXZhdGFyX2xldmVsGAMgASgNEhMK",
-            "C2F2YXRhcl9yYW5rGAQgASgNEhgKEGF2YXRhcl9wcm9tb3Rpb24YBSABKA0S",
-            "JgoNYXZhdGFyX3N0YXR1cxgGIAEoCzIPLkF2YXRhclByb3BlcnR5EiYKDGF2",
-            "YXRhcl9za2lsbBgHIAMoCzIQLkF2YXRhclNraWxsVHJlZRIsChBhdmF0YXJf",
-            "ZXF1aXBtZW50GAggAygLMhIuRXF1aXBtZW50UHJvcGVydHkSEwoLdG90YWxf",
-            "dHVybnMYCSABKA0SFAoMdG90YWxfZGFtYWdlGAogASgBEhIKCnRvdGFsX2hl",
-            "YWwYCyABKAESGgoSdG90YWxfZGFtYWdlX3Rha2VuGAwgASgBEhgKEHRvdGFs",
-            "X2hwX3JlY292ZXIYDSABKAESFQoNdG90YWxfc3BfY29zdBgOIAEoARIQCghz",
-            "dGFnZV9pZBgPIAEoDRISCgpzdGFnZV90eXBlGBAgASgNEhoKEnRvdGFsX2Jy",
-            "ZWFrX2RhbWFnZRgRIAEoARIxChJhdHRhY2tfdHlwZV9kYW1hZ2UYEiADKAsy",
-            "FS5BdHRhY2tEYW1hZ2VQcm9wZXJ0eRI3ChhhdHRhY2tfdHlwZV9icmVha19k",
-            "YW1hZ2UYEyADKAsyFS5BdHRhY2tEYW1hZ2VQcm9wZXJ0eRI1ChZhdHRhY2tf",
-            "dHlwZV9tYXhfZGFtYWdlGBQgAygLMhUuQXR0YWNrRGFtYWdlUHJvcGVydHkS",
-            "JgoLc2tpbGxfdGltZXMYFSADKAsyES5Ta2lsbFVzZVByb3BlcnR5EhYKDmRl",
-            "bGF5X2N1bXVsYXRlGBYgASgBEhQKDHRvdGFsX3NwX2FkZBgXIAEoDRIjCg1z",
-            "cF9hZGRfc291cmNlGBggAygLMgwuU3BBZGRTb3VyY2USFQoNdG90YWxfYnBf",
-            "Y29zdBgZIAEoDRIRCglkaWVfdGltZXMYGiABKA0SFAoMcmV2aXZlX3RpbWVz",
-            "GBsgASgNEhMKC2JyZWFrX3RpbWVzGBwgASgNEhMKC2V4dHJhX3R1cm5zGB0g",
-            "ASgNEhQKDHRvdGFsX3NoaWVsZBgeIAEoARIaChJ0b3RhbF9zaGllbGRfdGFr",
-            "ZW4YHyABKAESGwoTdG90YWxfc2hpZWxkX2RhbWFnZRggIAEoARInCg5pbml0",
-            "aWFsX3N0YXR1cxghIAEoCzIPLkF2YXRhclByb3BlcnR5EhwKBnJlbGljcxgi",
-            "IAMoCzIMLkJhdHRsZVJlbGljEhIKCmFzc2lzdF91aWQYIyABKA0SKgoLQUFE",
-            "R0ZMUEJQREYYJCADKAsyFS5BdHRhY2tEYW1hZ2VQcm9wZXJ0eRITCgtGUEZC",
-            "TUlNQkJIShglIAEoARITCgtHR1BKT0hOT0NQQxgmIAEoARITCgtMQUNLQ0pI",
-            "SElNSxgnIAEoARITCgtGTU9ETEdPQk5QRRgoIAEoARIjCgtMSEtBQk5JQ0tK",
-            "ThgpIAMoCzIOLkFiaWxpdHlVc2VTdHQSEwoLTkNKSERKSkRKTkwYKiABKA0S",
-            "EwoLTEtNR0RJQURPUEIYKyABKA0SEwoLSUJMR01DSVBDS00YLCABKAESEwoL",
-            "SEFDSkRKSUdNR1AYLSABKAESEwoLSU1ESkFIQUpHQ0YYLiABKAESEwoLSkRP",
-            "TEtEQklDTEoYLyABKAESEwoLQ0FDQ09ERENKSEkYMCABKAESEwoLTExETUxP",
-            "SEJGTE8YMSABKA0SEwoLQ0hOSUtLQ0lCRUcYMiABKA0SEwoLTEJOSkhISExQ",
-            "TU8YMyABKA0SEwoLUERMSUxGSUNISUwYNCABKAESEwoLUE1LTFBISklPSEMY",
-            "NSABKA0SEwoLTVBGQUVORUtGREMYNiABKA0SGQoRYXZhdGFyX2VuaGFuY2Vf",
-            "aWQYNyABKA0SEwoLTERNSkRJTEJERk8YOCABKA1CHqoCG0VnZ0xpbmsuRGFu",
-            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChZBdmF0YXJCYXR0bGVJbmZvLnByb3RvGhVBdmF0YXJTa2lsbFRyZWUucHJv",
+            "dG8aEVBKTkJMTklQRklHLnByb3RvGhdFcXVpcG1lbnRQcm9wZXJ0eS5wcm90",
+            "bxoRU3BBZGRTb3VyY2UucHJvdG8aFEF2YXRhclByb3BlcnR5LnByb3RvGhpB",
+            "dHRhY2tEYW1hZ2VQcm9wZXJ0eS5wcm90bxoQQXZhdGFyVHlwZS5wcm90bxoR",
+            "QmF0dGxlUmVsaWMucHJvdG8aFlNraWxsVXNlUHJvcGVydHkucHJvdG8aE0Fi",
+            "aWxpdHlVc2VTdHQucHJvdG8ijAwKEEF2YXRhckJhdHRsZUluZm8SIAoLYXZh",
+            "dGFyX3R5cGUYASABKA4yCy5BdmF0YXJUeXBlEgoKAmlkGAIgASgNEhQKDGF2",
+            "YXRhcl9sZXZlbBgDIAEoDRITCgthdmF0YXJfcmFuaxgEIAEoDRIYChBhdmF0",
+            "YXJfcHJvbW90aW9uGAUgASgNEiYKDWF2YXRhcl9zdGF0dXMYBiABKAsyDy5B",
+            "dmF0YXJQcm9wZXJ0eRImCgxhdmF0YXJfc2tpbGwYByADKAsyEC5BdmF0YXJT",
+            "a2lsbFRyZWUSLAoQYXZhdGFyX2VxdWlwbWVudBgIIAMoCzISLkVxdWlwbWVu",
+            "dFByb3BlcnR5EhMKC3RvdGFsX3R1cm5zGAkgASgNEhQKDHRvdGFsX2RhbWFn",
+            "ZRgKIAEoARISCgp0b3RhbF9oZWFsGAsgASgBEhoKEnRvdGFsX2RhbWFnZV90",
+            "YWtlbhgMIAEoARIYChB0b3RhbF9ocF9yZWNvdmVyGA0gASgBEhUKDXRvdGFs",
+            "X3NwX2Nvc3QYDiABKAESEAoIc3RhZ2VfaWQYDyABKA0SEgoKc3RhZ2VfdHlw",
+            "ZRgQIAEoDRIaChJ0b3RhbF9icmVha19kYW1hZ2UYESABKAESMQoSYXR0YWNr",
+            "X3R5cGVfZGFtYWdlGBIgAygLMhUuQXR0YWNrRGFtYWdlUHJvcGVydHkSNwoY",
+            "YXR0YWNrX3R5cGVfYnJlYWtfZGFtYWdlGBMgAygLMhUuQXR0YWNrRGFtYWdl",
+            "UHJvcGVydHkSNQoWYXR0YWNrX3R5cGVfbWF4X2RhbWFnZRgUIAMoCzIVLkF0",
+            "dGFja0RhbWFnZVByb3BlcnR5EiYKC3NraWxsX3RpbWVzGBUgAygLMhEuU2tp",
+            "bGxVc2VQcm9wZXJ0eRIWCg5kZWxheV9jdW11bGF0ZRgWIAEoARIUCgx0b3Rh",
+            "bF9zcF9hZGQYFyABKA0SIwoNc3BfYWRkX3NvdXJjZRgYIAMoCzIMLlNwQWRk",
+            "U291cmNlEhUKDXRvdGFsX2JwX2Nvc3QYGSABKA0SEQoJZGllX3RpbWVzGBog",
+            "ASgNEhQKDHJldml2ZV90aW1lcxgbIAEoDRITCgticmVha190aW1lcxgcIAEo",
+            "DRITCgtleHRyYV90dXJucxgdIAEoDRIUCgx0b3RhbF9zaGllbGQYHiABKAES",
+            "GgoSdG90YWxfc2hpZWxkX3Rha2VuGB8gASgBEhsKE3RvdGFsX3NoaWVsZF9k",
+            "YW1hZ2UYICABKAESJwoOaW5pdGlhbF9zdGF0dXMYISABKAsyDy5BdmF0YXJQ",
+            "cm9wZXJ0eRIcCgZyZWxpY3MYIiADKAsyDC5CYXR0bGVSZWxpYxISCgphc3Np",
+            "c3RfdWlkGCMgASgNEioKC0FBREdGTFBCUERGGCQgAygLMhUuQXR0YWNrRGFt",
+            "YWdlUHJvcGVydHkSEwoLRlBGQk1JTUJCSEoYJSABKAESEwoLR0dQSk9ITk9D",
+            "UEMYJiABKAESEwoLTEFDS0NKSEhJTUsYJyABKAESEwoLRk1PRExHT0JOUEUY",
+            "KCABKAESIwoLTEhLQUJOSUNLSk4YKSADKAsyDi5BYmlsaXR5VXNlU3R0EhMK",
+            "C05DSkhESkpESk5MGCogASgNEhMKC0xLTUdESUFET1BCGCsgASgNEhMKC0lC",
+            "TEdNQ0lQQ0tNGCwgASgBEhMKC0hBQ0pESklHTUdQGC0gASgBEhMKC0lNREpB",
+            "SEFKR0NGGC4gASgBEhMKC0pET0xLREJJQ0xKGC8gASgBEhMKC0NBQ0NPRERD",
+            "SkhJGDAgASgBEhMKC0xMRE1MT0hCRkxPGDEgASgNEhMKC0NITklLS0NJQkVH",
+            "GDIgASgNEhMKC0xCTkpISEhMUE1PGDMgASgNEhMKC1BETElMRklDSElMGDQg",
+            "ASgBEhMKC1BNS0xQSEpJT0hDGDUgASgNEhMKC01QRkFFTkVLRkRDGDYgASgN",
+            "EhkKEWF2YXRhcl9lbmhhbmNlX2lkGDcgASgNEhMKC0xETUpESUxCREZPGDgg",
+            "ASgNEiEKC0pLSERMRUxKRklDGDkgASgLMgwuUEpOQkxOSVBGSUdCHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.AttackDamagePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleRelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.SpAddSourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AbilityUseSttReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillUsePropertyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.PJNBLNIPFIGReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.SpAddSourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AttackDamagePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleRelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillUsePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AbilityUseSttReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AvatarBattleInfo), global::EggLink.DanhengServer.Proto.AvatarBattleInfo.Parser, new[]{ "AvatarType", "Id", "AvatarLevel", "AvatarRank", "AvatarPromotion", "AvatarStatus", "AvatarSkill", "AvatarEquipment", "TotalTurns", "TotalDamage", "TotalHeal", "TotalDamageTaken", "TotalHpRecover", "TotalSpCost", "StageId", "StageType", "TotalBreakDamage", "AttackTypeDamage", "AttackTypeBreakDamage", "AttackTypeMaxDamage", "SkillTimes", "DelayCumulate", "TotalSpAdd", "SpAddSource", "TotalBpCost", "DieTimes", "ReviveTimes", "BreakTimes", "ExtraTurns", "TotalShield", "TotalShieldTaken", "TotalShieldDamage", "InitialStatus", "Relics", "AssistUid", "AADGFLPBPDF", "FPFBMIMBBHJ", "GGPJOHNOCPC", "LACKCJHHIMK", "FMODLGOBNPE", "LHKABNICKJN", "NCJHDJJDJNL", "LKMGDIADOPB", "IBLGMCIPCKM", "HACJDJIGMGP", "IMDJAHAJGCF", "JDOLKDBICLJ", "CACCODDCJHI", "LLDMLOHBFLO", "CHNIKKCIBEG", "LBNJHHHLPMO", "PDLILFICHIL", "PMKLPHJIOHC", "MPFAENEKFDC", "AvatarEnhanceId", "LDMJDILBDFO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AvatarBattleInfo), global::EggLink.DanhengServer.Proto.AvatarBattleInfo.Parser, new[]{ "AvatarType", "Id", "AvatarLevel", "AvatarRank", "AvatarPromotion", "AvatarStatus", "AvatarSkill", "AvatarEquipment", "TotalTurns", "TotalDamage", "TotalHeal", "TotalDamageTaken", "TotalHpRecover", "TotalSpCost", "StageId", "StageType", "TotalBreakDamage", "AttackTypeDamage", "AttackTypeBreakDamage", "AttackTypeMaxDamage", "SkillTimes", "DelayCumulate", "TotalSpAdd", "SpAddSource", "TotalBpCost", "DieTimes", "ReviveTimes", "BreakTimes", "ExtraTurns", "TotalShield", "TotalShieldTaken", "TotalShieldDamage", "InitialStatus", "Relics", "AssistUid", "AADGFLPBPDF", "FPFBMIMBBHJ", "GGPJOHNOCPC", "LACKCJHHIMK", "FMODLGOBNPE", "LHKABNICKJN", "NCJHDJJDJNL", "LKMGDIADOPB", "IBLGMCIPCKM", "HACJDJIGMGP", "IMDJAHAJGCF", "JDOLKDBICLJ", "CACCODDCJHI", "LLDMLOHBFLO", "CHNIKKCIBEG", "LBNJHHHLPMO", "PDLILFICHIL", "PMKLPHJIOHC", "MPFAENEKFDC", "AvatarEnhanceId", "LDMJDILBDFO", "JKHDLELJFIC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -165,6 +166,7 @@ namespace EggLink.DanhengServer.Proto {
       mPFAENEKFDC_ = other.mPFAENEKFDC_;
       avatarEnhanceId_ = other.avatarEnhanceId_;
       lDMJDILBDFO_ = other.lDMJDILBDFO_;
+      jKHDLELJFIC_ = other.jKHDLELJFIC_ != null ? other.jKHDLELJFIC_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -836,6 +838,18 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "JKHDLELJFIC" field.</summary>
+    public const int JKHDLELJFICFieldNumber = 57;
+    private global::EggLink.DanhengServer.Proto.PJNBLNIPFIG jKHDLELJFIC_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.PJNBLNIPFIG JKHDLELJFIC {
+      get { return jKHDLELJFIC_; }
+      set {
+        jKHDLELJFIC_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -907,6 +921,7 @@ namespace EggLink.DanhengServer.Proto {
       if (MPFAENEKFDC != other.MPFAENEKFDC) return false;
       if (AvatarEnhanceId != other.AvatarEnhanceId) return false;
       if (LDMJDILBDFO != other.LDMJDILBDFO) return false;
+      if (!object.Equals(JKHDLELJFIC, other.JKHDLELJFIC)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -970,6 +985,7 @@ namespace EggLink.DanhengServer.Proto {
       if (MPFAENEKFDC != 0) hash ^= MPFAENEKFDC.GetHashCode();
       if (AvatarEnhanceId != 0) hash ^= AvatarEnhanceId.GetHashCode();
       if (LDMJDILBDFO != 0) hash ^= LDMJDILBDFO.GetHashCode();
+      if (jKHDLELJFIC_ != null) hash ^= JKHDLELJFIC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1182,6 +1198,10 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(192, 3);
         output.WriteUInt32(LDMJDILBDFO);
       }
+      if (jKHDLELJFIC_ != null) {
+        output.WriteRawTag(202, 3);
+        output.WriteMessage(JKHDLELJFIC);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1386,6 +1406,10 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(192, 3);
         output.WriteUInt32(LDMJDILBDFO);
       }
+      if (jKHDLELJFIC_ != null) {
+        output.WriteRawTag(202, 3);
+        output.WriteMessage(JKHDLELJFIC);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1543,6 +1567,9 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (LDMJDILBDFO != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(LDMJDILBDFO);
+      }
+      if (jKHDLELJFIC_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(JKHDLELJFIC);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1709,6 +1736,12 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.LDMJDILBDFO != 0) {
         LDMJDILBDFO = other.LDMJDILBDFO;
+      }
+      if (other.jKHDLELJFIC_ != null) {
+        if (jKHDLELJFIC_ == null) {
+          JKHDLELJFIC = new global::EggLink.DanhengServer.Proto.PJNBLNIPFIG();
+        }
+        JKHDLELJFIC.MergeFrom(other.JKHDLELJFIC);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1955,6 +1988,13 @@ namespace EggLink.DanhengServer.Proto {
             LDMJDILBDFO = input.ReadUInt32();
             break;
           }
+          case 458: {
+            if (jKHDLELJFIC_ == null) {
+              JKHDLELJFIC = new global::EggLink.DanhengServer.Proto.PJNBLNIPFIG();
+            }
+            input.ReadMessage(JKHDLELJFIC);
+            break;
+          }
         }
       }
     #endif
@@ -2198,6 +2238,13 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 448: {
             LDMJDILBDFO = input.ReadUInt32();
+            break;
+          }
+          case 458: {
+            if (jKHDLELJFIC_ == null) {
+              JKHDLELJFIC = new global::EggLink.DanhengServer.Proto.PJNBLNIPFIG();
+            }
+            input.ReadMessage(JKHDLELJFIC);
             break;
           }
         }

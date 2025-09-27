@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFNTU9JQkFDQlBLQS5wcm90bxoRSERJSkpNRFBJTEUucHJvdG8iPwoLTU1P",
-            "SUJBQ0JQS0ESDQoFdmFsdWUYCiABKA0SIQoLUEpHQkZLTkpQTk8YBSABKA4y",
+            "SUJBQ0JQS0ESDQoFdmFsdWUYAyABKA0SIQoLUEpHQkZLTkpQTk8YBCABKA4y",
             "DC5IRElKSk1EUElMRUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "value" field.</summary>
-    public const int ValueFieldNumber = 10;
+    public const int ValueFieldNumber = 3;
     private uint value_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PJGBFKNJPNO" field.</summary>
-    public const int PJGBFKNJPNOFieldNumber = 5;
+    public const int PJGBFKNJPNOFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.HDIJJMDPILE pJGBFKNJPNO_ = global::EggLink.DanhengServer.Proto.HDIJJMDPILE.SwordTrainingStatusTypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.HDIJJMDPILE.SwordTrainingStatusTypeNone) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) PJGBFKNJPNO);
-      }
       if (Value != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(Value);
+      }
+      if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.HDIJJMDPILE.SwordTrainingStatusTypeNone) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) PJGBFKNJPNO);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.HDIJJMDPILE.SwordTrainingStatusTypeNone) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) PJGBFKNJPNO);
-      }
       if (Value != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(24);
         output.WriteUInt32(Value);
+      }
+      if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.HDIJJMDPILE.SwordTrainingStatusTypeNone) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) PJGBFKNJPNO);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            PJGBFKNJPNO = (global::EggLink.DanhengServer.Proto.HDIJJMDPILE) input.ReadEnum();
+          case 24: {
+            Value = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Value = input.ReadUInt32();
+          case 32: {
+            PJGBFKNJPNO = (global::EggLink.DanhengServer.Proto.HDIJJMDPILE) input.ReadEnum();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            PJGBFKNJPNO = (global::EggLink.DanhengServer.Proto.HDIJJMDPILE) input.ReadEnum();
+          case 24: {
+            Value = input.ReadUInt32();
             break;
           }
-          case 80: {
-            Value = input.ReadUInt32();
+          case 32: {
+            PJGBFKNJPNO = (global::EggLink.DanhengServer.Proto.HDIJJMDPILE) input.ReadEnum();
             break;
           }
         }

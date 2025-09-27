@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNFdm9sdmVCdWlsZFNob3BBYmlsaXR5VXBTY1JzcC5wcm90byJUCh1Fdm9s",
-            "dmVCdWlsZFNob3BBYmlsaXR5VXBTY1JzcBITCgtORUNJTEpPSkdBThgKIAEo",
-            "DRINCgVsZXZlbBgNIAEoDRIPCgdyZXRjb2RlGAQgASgNQh6qAhtFZ2dMaW5r",
+            "dmVCdWlsZFNob3BBYmlsaXR5VXBTY1JzcBINCgVsZXZlbBgJIAEoDRITCgtO",
+            "RUNJTEpPSkdBThgOIAEoDRIPCgdyZXRjb2RlGAQgASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityUpScRsp), global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityUpScRsp.Parser, new[]{ "NECILJOJGAN", "Level", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityUpScRsp), global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityUpScRsp.Parser, new[]{ "Level", "NECILJOJGAN", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EvolveBuildShopAbilityUpScRsp(EvolveBuildShopAbilityUpScRsp other) : this() {
-      nECILJOJGAN_ = other.nECILJOJGAN_;
       level_ = other.level_;
+      nECILJOJGAN_ = other.nECILJOJGAN_;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new EvolveBuildShopAbilityUpScRsp(this);
     }
 
-    /// <summary>Field number for the "NECILJOJGAN" field.</summary>
-    public const int NECILJOJGANFieldNumber = 10;
-    private uint nECILJOJGAN_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NECILJOJGAN {
-      get { return nECILJOJGAN_; }
-      set {
-        nECILJOJGAN_ = value;
-      }
-    }
-
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 13;
+    public const int LevelFieldNumber = 9;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return level_; }
       set {
         level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "NECILJOJGAN" field.</summary>
+    public const int NECILJOJGANFieldNumber = 14;
+    private uint nECILJOJGAN_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NECILJOJGAN {
+      get { return nECILJOJGAN_; }
+      set {
+        nECILJOJGAN_ = value;
       }
     }
 
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NECILJOJGAN != other.NECILJOJGAN) return false;
       if (Level != other.Level) return false;
+      if (NECILJOJGAN != other.NECILJOJGAN) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NECILJOJGAN != 0) hash ^= NECILJOJGAN.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
+      if (NECILJOJGAN != 0) hash ^= NECILJOJGAN.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
-      if (NECILJOJGAN != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(NECILJOJGAN);
-      }
       if (Level != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(Level);
+      }
+      if (NECILJOJGAN != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(NECILJOJGAN);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -193,13 +193,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
-      if (NECILJOJGAN != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(NECILJOJGAN);
-      }
       if (Level != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(72);
         output.WriteUInt32(Level);
+      }
+      if (NECILJOJGAN != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(NECILJOJGAN);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,11 +211,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NECILJOJGAN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NECILJOJGAN);
-      }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      }
+      if (NECILJOJGAN != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NECILJOJGAN);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -232,11 +232,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NECILJOJGAN != 0) {
-        NECILJOJGAN = other.NECILJOJGAN;
-      }
       if (other.Level != 0) {
         Level = other.Level;
+      }
+      if (other.NECILJOJGAN != 0) {
+        NECILJOJGAN = other.NECILJOJGAN;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -260,12 +260,12 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 80: {
-            NECILJOJGAN = input.ReadUInt32();
+          case 72: {
+            Level = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Level = input.ReadUInt32();
+          case 112: {
+            NECILJOJGAN = input.ReadUInt32();
             break;
           }
         }
@@ -287,12 +287,12 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 80: {
-            NECILJOJGAN = input.ReadUInt32();
+          case 72: {
+            Level = input.ReadUInt32();
             break;
           }
-          case 104: {
-            Level = input.ReadUInt32();
+          case 112: {
+            NECILJOJGAN = input.ReadUInt32();
             break;
           }
         }

@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg9Sb2d1ZUFyZWEucHJvdG8aEVJvZ3VlU3RhdHVzLnByb3RvGhVSb2d1ZUFy",
-            "ZWFTdGF0dXMucHJvdG8ipgEKCVJvZ3VlQXJlYRIiCgxyb2d1ZV9zdGF0dXMY",
-            "ASABKA4yDC5Sb2d1ZVN0YXR1cxIlCgthcmVhX3N0YXR1cxgKIAEoDjIQLlJv",
-            "Z3VlQXJlYVN0YXR1cxIPCgdhcmVhX2lkGAYgASgNEhgKEGhhc190YWtlbl9y",
-            "ZXdhcmQYCCABKAgSEwoLR01QSUlBRUdHRUsYDCABKA0SDgoGbWFwX2lkGA0g",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ZWFTdGF0dXMucHJvdG8ipgEKCVJvZ3VlQXJlYRITCgtHTVBJSUFFR0dFSxgO",
+            "IAEoDRIPCgdhcmVhX2lkGAMgASgNEg4KBm1hcF9pZBgGIAEoDRIiCgxyb2d1",
+            "ZV9zdGF0dXMYCSABKA4yDC5Sb2d1ZVN0YXR1cxIYChBoYXNfdGFrZW5fcmV3",
+            "YXJkGA8gASgIEiUKC2FyZWFfc3RhdHVzGAggASgOMhAuUm9ndWVBcmVhU3Rh",
+            "dHVzQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAreaStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueArea), global::EggLink.DanhengServer.Proto.RogueArea.Parser, new[]{ "RogueStatus", "AreaStatus", "AreaId", "HasTakenReward", "GMPIIAEGGEK", "MapId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueArea), global::EggLink.DanhengServer.Proto.RogueArea.Parser, new[]{ "GMPIIAEGGEK", "AreaId", "MapId", "RogueStatus", "HasTakenReward", "AreaStatus" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,12 +75,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueArea(RogueArea other) : this() {
-      rogueStatus_ = other.rogueStatus_;
-      areaStatus_ = other.areaStatus_;
-      areaId_ = other.areaId_;
-      hasTakenReward_ = other.hasTakenReward_;
       gMPIIAEGGEK_ = other.gMPIIAEGGEK_;
+      areaId_ = other.areaId_;
       mapId_ = other.mapId_;
+      rogueStatus_ = other.rogueStatus_;
+      hasTakenReward_ = other.hasTakenReward_;
+      areaStatus_ = other.areaStatus_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,56 +90,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueArea(this);
     }
 
-    /// <summary>Field number for the "rogue_status" field.</summary>
-    public const int RogueStatusFieldNumber = 1;
-    private global::EggLink.DanhengServer.Proto.RogueStatus rogueStatus_ = global::EggLink.DanhengServer.Proto.RogueStatus.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueStatus RogueStatus {
-      get { return rogueStatus_; }
-      set {
-        rogueStatus_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "area_status" field.</summary>
-    public const int AreaStatusFieldNumber = 10;
-    private global::EggLink.DanhengServer.Proto.RogueAreaStatus areaStatus_ = global::EggLink.DanhengServer.Proto.RogueAreaStatus.Lock;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueAreaStatus AreaStatus {
-      get { return areaStatus_; }
-      set {
-        areaStatus_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 6;
-    private uint areaId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AreaId {
-      get { return areaId_; }
-      set {
-        areaId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "has_taken_reward" field.</summary>
-    public const int HasTakenRewardFieldNumber = 8;
-    private bool hasTakenReward_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasTakenReward {
-      get { return hasTakenReward_; }
-      set {
-        hasTakenReward_ = value;
-      }
-    }
-
     /// <summary>Field number for the "GMPIIAEGGEK" field.</summary>
-    public const int GMPIIAEGGEKFieldNumber = 12;
+    public const int GMPIIAEGGEKFieldNumber = 14;
     private uint gMPIIAEGGEK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,8 +102,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "area_id" field.</summary>
+    public const int AreaIdFieldNumber = 3;
+    private uint areaId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AreaId {
+      get { return areaId_; }
+      set {
+        areaId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "map_id" field.</summary>
-    public const int MapIdFieldNumber = 13;
+    public const int MapIdFieldNumber = 6;
     private uint mapId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -159,6 +123,42 @@ namespace EggLink.DanhengServer.Proto {
       get { return mapId_; }
       set {
         mapId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rogue_status" field.</summary>
+    public const int RogueStatusFieldNumber = 9;
+    private global::EggLink.DanhengServer.Proto.RogueStatus rogueStatus_ = global::EggLink.DanhengServer.Proto.RogueStatus.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueStatus RogueStatus {
+      get { return rogueStatus_; }
+      set {
+        rogueStatus_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "has_taken_reward" field.</summary>
+    public const int HasTakenRewardFieldNumber = 15;
+    private bool hasTakenReward_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTakenReward {
+      get { return hasTakenReward_; }
+      set {
+        hasTakenReward_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "area_status" field.</summary>
+    public const int AreaStatusFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.RogueAreaStatus areaStatus_ = global::EggLink.DanhengServer.Proto.RogueAreaStatus.Lock;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueAreaStatus AreaStatus {
+      get { return areaStatus_; }
+      set {
+        areaStatus_ = value;
       }
     }
 
@@ -177,12 +177,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (RogueStatus != other.RogueStatus) return false;
-      if (AreaStatus != other.AreaStatus) return false;
-      if (AreaId != other.AreaId) return false;
-      if (HasTakenReward != other.HasTakenReward) return false;
       if (GMPIIAEGGEK != other.GMPIIAEGGEK) return false;
+      if (AreaId != other.AreaId) return false;
       if (MapId != other.MapId) return false;
+      if (RogueStatus != other.RogueStatus) return false;
+      if (HasTakenReward != other.HasTakenReward) return false;
+      if (AreaStatus != other.AreaStatus) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -190,12 +190,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (RogueStatus != global::EggLink.DanhengServer.Proto.RogueStatus.None) hash ^= RogueStatus.GetHashCode();
-      if (AreaStatus != global::EggLink.DanhengServer.Proto.RogueAreaStatus.Lock) hash ^= AreaStatus.GetHashCode();
-      if (AreaId != 0) hash ^= AreaId.GetHashCode();
-      if (HasTakenReward != false) hash ^= HasTakenReward.GetHashCode();
       if (GMPIIAEGGEK != 0) hash ^= GMPIIAEGGEK.GetHashCode();
+      if (AreaId != 0) hash ^= AreaId.GetHashCode();
       if (MapId != 0) hash ^= MapId.GetHashCode();
+      if (RogueStatus != global::EggLink.DanhengServer.Proto.RogueStatus.None) hash ^= RogueStatus.GetHashCode();
+      if (HasTakenReward != false) hash ^= HasTakenReward.GetHashCode();
+      if (AreaStatus != global::EggLink.DanhengServer.Proto.RogueAreaStatus.Lock) hash ^= AreaStatus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -214,29 +214,29 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RogueStatus != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) RogueStatus);
-      }
       if (AreaId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(24);
         output.WriteUInt32(AreaId);
       }
-      if (HasTakenReward != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(HasTakenReward);
+      if (MapId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(MapId);
       }
       if (AreaStatus != global::EggLink.DanhengServer.Proto.RogueAreaStatus.Lock) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteEnum((int) AreaStatus);
       }
+      if (RogueStatus != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) RogueStatus);
+      }
       if (GMPIIAEGGEK != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(GMPIIAEGGEK);
       }
-      if (MapId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(MapId);
+      if (HasTakenReward != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(HasTakenReward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -248,29 +248,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RogueStatus != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) RogueStatus);
-      }
       if (AreaId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(24);
         output.WriteUInt32(AreaId);
       }
-      if (HasTakenReward != false) {
-        output.WriteRawTag(64);
-        output.WriteBool(HasTakenReward);
+      if (MapId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(MapId);
       }
       if (AreaStatus != global::EggLink.DanhengServer.Proto.RogueAreaStatus.Lock) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteEnum((int) AreaStatus);
       }
+      if (RogueStatus != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) RogueStatus);
+      }
       if (GMPIIAEGGEK != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(112);
         output.WriteUInt32(GMPIIAEGGEK);
       }
-      if (MapId != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(MapId);
+      if (HasTakenReward != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(HasTakenReward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -282,23 +282,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (RogueStatus != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RogueStatus);
-      }
-      if (AreaStatus != global::EggLink.DanhengServer.Proto.RogueAreaStatus.Lock) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AreaStatus);
+      if (GMPIIAEGGEK != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GMPIIAEGGEK);
       }
       if (AreaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
       }
+      if (MapId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapId);
+      }
+      if (RogueStatus != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RogueStatus);
+      }
       if (HasTakenReward != false) {
         size += 1 + 1;
       }
-      if (GMPIIAEGGEK != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GMPIIAEGGEK);
-      }
-      if (MapId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapId);
+      if (AreaStatus != global::EggLink.DanhengServer.Proto.RogueAreaStatus.Lock) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AreaStatus);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -312,23 +312,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.RogueStatus != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        RogueStatus = other.RogueStatus;
-      }
-      if (other.AreaStatus != global::EggLink.DanhengServer.Proto.RogueAreaStatus.Lock) {
-        AreaStatus = other.AreaStatus;
+      if (other.GMPIIAEGGEK != 0) {
+        GMPIIAEGGEK = other.GMPIIAEGGEK;
       }
       if (other.AreaId != 0) {
         AreaId = other.AreaId;
       }
+      if (other.MapId != 0) {
+        MapId = other.MapId;
+      }
+      if (other.RogueStatus != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
+        RogueStatus = other.RogueStatus;
+      }
       if (other.HasTakenReward != false) {
         HasTakenReward = other.HasTakenReward;
       }
-      if (other.GMPIIAEGGEK != 0) {
-        GMPIIAEGGEK = other.GMPIIAEGGEK;
-      }
-      if (other.MapId != 0) {
-        MapId = other.MapId;
+      if (other.AreaStatus != global::EggLink.DanhengServer.Proto.RogueAreaStatus.Lock) {
+        AreaStatus = other.AreaStatus;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -345,28 +345,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            RogueStatus = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
-            break;
-          }
-          case 48: {
+          case 24: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            HasTakenReward = input.ReadBool();
+          case 48: {
+            MapId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 64: {
             AreaStatus = (global::EggLink.DanhengServer.Proto.RogueAreaStatus) input.ReadEnum();
             break;
           }
-          case 96: {
+          case 72: {
+            RogueStatus = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
+            break;
+          }
+          case 112: {
             GMPIIAEGGEK = input.ReadUInt32();
             break;
           }
-          case 104: {
-            MapId = input.ReadUInt32();
+          case 120: {
+            HasTakenReward = input.ReadBool();
             break;
           }
         }
@@ -384,28 +384,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            RogueStatus = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
-            break;
-          }
-          case 48: {
+          case 24: {
             AreaId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            HasTakenReward = input.ReadBool();
+          case 48: {
+            MapId = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 64: {
             AreaStatus = (global::EggLink.DanhengServer.Proto.RogueAreaStatus) input.ReadEnum();
             break;
           }
-          case 96: {
+          case 72: {
+            RogueStatus = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
+            break;
+          }
+          case 112: {
             GMPIIAEGGEK = input.ReadUInt32();
             break;
           }
-          case 104: {
-            MapId = input.ReadUInt32();
+          case 120: {
+            HasTakenReward = input.ReadBool();
             break;
           }
         }

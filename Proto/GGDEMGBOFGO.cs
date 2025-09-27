@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GGDEMGBOFGOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFHR0RFTUdCT0ZHTy5wcm90byJCCgtHR0RFTUdCT0ZHTxIMCgR0aW1lGAQg",
-            "ASgNEhAKCGxldmVsX2lkGAUgASgNEhMKC0tLRUhNQlBKT09DGAEgASgIQh6q",
+            "ChFHR0RFTUdCT0ZHTy5wcm90byJCCgtHR0RFTUdCT0ZHTxITCgtLS0VITUJQ",
+            "Sk9PQxgKIAEoCBIMCgR0aW1lGAUgASgNEhAKCGxldmVsX2lkGAsgASgNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GGDEMGBOFGO), global::EggLink.DanhengServer.Proto.GGDEMGBOFGO.Parser, new[]{ "Time", "LevelId", "KKEHMBPJOOC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GGDEMGBOFGO), global::EggLink.DanhengServer.Proto.GGDEMGBOFGO.Parser, new[]{ "KKEHMBPJOOC", "Time", "LevelId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GGDEMGBOFGO(GGDEMGBOFGO other) : this() {
+      kKEHMBPJOOC_ = other.kKEHMBPJOOC_;
       time_ = other.time_;
       levelId_ = other.levelId_;
-      kKEHMBPJOOC_ = other.kKEHMBPJOOC_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new GGDEMGBOFGO(this);
     }
 
+    /// <summary>Field number for the "KKEHMBPJOOC" field.</summary>
+    public const int KKEHMBPJOOCFieldNumber = 10;
+    private bool kKEHMBPJOOC_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool KKEHMBPJOOC {
+      get { return kKEHMBPJOOC_; }
+      set {
+        kKEHMBPJOOC_ = value;
+      }
+    }
+
     /// <summary>Field number for the "time" field.</summary>
-    public const int TimeFieldNumber = 4;
+    public const int TimeFieldNumber = 5;
     private uint time_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level_id" field.</summary>
-    public const int LevelIdFieldNumber = 5;
+    public const int LevelIdFieldNumber = 11;
     private uint levelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,18 +117,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return levelId_; }
       set {
         levelId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "KKEHMBPJOOC" field.</summary>
-    public const int KKEHMBPJOOCFieldNumber = 1;
-    private bool kKEHMBPJOOC_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool KKEHMBPJOOC {
-      get { return kKEHMBPJOOC_; }
-      set {
-        kKEHMBPJOOC_ = value;
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (KKEHMBPJOOC != other.KKEHMBPJOOC) return false;
       if (Time != other.Time) return false;
       if (LevelId != other.LevelId) return false;
-      if (KKEHMBPJOOC != other.KKEHMBPJOOC) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (KKEHMBPJOOC != false) hash ^= KKEHMBPJOOC.GetHashCode();
       if (Time != 0) hash ^= Time.GetHashCode();
       if (LevelId != 0) hash ^= LevelId.GetHashCode();
-      if (KKEHMBPJOOC != false) hash ^= KKEHMBPJOOC.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,16 +166,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (KKEHMBPJOOC != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(KKEHMBPJOOC);
-      }
       if (Time != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteUInt32(Time);
       }
+      if (KKEHMBPJOOC != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(KKEHMBPJOOC);
+      }
       if (LevelId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(88);
         output.WriteUInt32(LevelId);
       }
       if (_unknownFields != null) {
@@ -188,16 +188,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (KKEHMBPJOOC != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(KKEHMBPJOOC);
-      }
       if (Time != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteUInt32(Time);
       }
+      if (KKEHMBPJOOC != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(KKEHMBPJOOC);
+      }
       if (LevelId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(88);
         output.WriteUInt32(LevelId);
       }
       if (_unknownFields != null) {
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (KKEHMBPJOOC != false) {
+        size += 1 + 1;
+      }
       if (Time != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Time);
       }
       if (LevelId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelId);
-      }
-      if (KKEHMBPJOOC != false) {
-        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.KKEHMBPJOOC != false) {
+        KKEHMBPJOOC = other.KKEHMBPJOOC;
+      }
       if (other.Time != 0) {
         Time = other.Time;
       }
       if (other.LevelId != 0) {
         LevelId = other.LevelId;
-      }
-      if (other.KKEHMBPJOOC != false) {
-        KKEHMBPJOOC = other.KKEHMBPJOOC;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,15 +255,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            KKEHMBPJOOC = input.ReadBool();
-            break;
-          }
-          case 32: {
+          case 40: {
             Time = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 80: {
+            KKEHMBPJOOC = input.ReadBool();
+            break;
+          }
+          case 88: {
             LevelId = input.ReadUInt32();
             break;
           }
@@ -282,15 +282,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            KKEHMBPJOOC = input.ReadBool();
-            break;
-          }
-          case 32: {
+          case 40: {
             Time = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 80: {
+            KKEHMBPJOOC = input.ReadBool();
+            break;
+          }
+          case 88: {
             LevelId = input.ReadUInt32();
             break;
           }

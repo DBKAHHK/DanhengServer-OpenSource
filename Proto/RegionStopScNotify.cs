@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhSZWdpb25TdG9wU2NOb3RpZnkucHJvdG8iRAoSUmVnaW9uU3RvcFNjTm90",
-            "aWZ5EhUKDXN0b3BfZW5kX3RpbWUYDiABKAMSFwoPc3RvcF9iZWdpbl90aW1l",
-            "GAIgASgDQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "aWZ5EhUKDXN0b3BfZW5kX3RpbWUYAyABKAMSFwoPc3RvcF9iZWdpbl90aW1l",
+            "GAUgASgDQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stop_end_time" field.</summary>
-    public const int StopEndTimeFieldNumber = 14;
+    public const int StopEndTimeFieldNumber = 3;
     private long stopEndTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stop_begin_time" field.</summary>
-    public const int StopBeginTimeFieldNumber = 2;
+    public const int StopBeginTimeFieldNumber = 5;
     private long stopBeginTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (StopBeginTime != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(StopBeginTime);
-      }
       if (StopEndTime != 0L) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(24);
         output.WriteInt64(StopEndTime);
+      }
+      if (StopBeginTime != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(StopBeginTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (StopBeginTime != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(StopBeginTime);
-      }
       if (StopEndTime != 0L) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(24);
         output.WriteInt64(StopEndTime);
+      }
+      if (StopBeginTime != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(StopBeginTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            StopBeginTime = input.ReadInt64();
+          case 24: {
+            StopEndTime = input.ReadInt64();
             break;
           }
-          case 112: {
-            StopEndTime = input.ReadInt64();
+          case 40: {
+            StopBeginTime = input.ReadInt64();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            StopBeginTime = input.ReadInt64();
+          case 24: {
+            StopEndTime = input.ReadInt64();
             break;
           }
-          case 112: {
-            StopEndTime = input.ReadInt64();
+          case 40: {
+            StopBeginTime = input.ReadInt64();
             break;
           }
         }

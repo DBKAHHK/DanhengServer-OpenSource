@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFNQUtHRUVIR1BPSC5wcm90bxoRTkZLREFBR0JNUEoucHJvdG8iMAoLTUFL",
-            "R0VFSEdQT0gSIQoLR01NT1BESERGQ0kYDCADKAsyDC5ORktEQUFHQk1QSkIe",
+            "R0VFSEdQT0gSIQoLR01NT1BESERGQ0kYBSADKAsyDC5ORktEQUFHQk1QSkIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NFKDAAGBMPJReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GMMOPDHDFCI" field.</summary>
-    public const int GMMOPDHDFCIFieldNumber = 12;
+    public const int GMMOPDHDFCIFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ> _repeated_gMMOPDHDFCI_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ> gMMOPDHDFCI_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.NFKDAAGBMPJ>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98: {
+          case 42: {
             gMMOPDHDFCI_.AddEntriesFrom(input, _repeated_gMMOPDHDFCI_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98: {
+          case 42: {
             gMMOPDHDFCI_.AddEntriesFrom(ref input, _repeated_gMMOPDHDFCI_codec);
             break;
           }

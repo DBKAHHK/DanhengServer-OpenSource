@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1GaWdodE1hdGNoM0NoYXRTY05vdGlmeS5wcm90byJDChdGaWdodE1hdGNo",
             "M0NoYXRTY05vdGlmeRITCgtIQUJES0JGTUtFRRgGIAEoDRITCgtFR0tQRkdO",
-            "SkFIThgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "SkFIThgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "EGKPFGNJAHN" field.</summary>
-    public const int EGKPFGNJAHNFieldNumber = 9;
+    public const int EGKPFGNJAHNFieldNumber = 10;
     private uint eGKPFGNJAHN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(HABDKBFMKEE);
       }
       if (EGKPFGNJAHN != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(80);
         output.WriteUInt32(EGKPFGNJAHN);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(HABDKBFMKEE);
       }
       if (EGKPFGNJAHN != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(80);
         output.WriteUInt32(EGKPFGNJAHN);
       }
       if (_unknownFields != null) {
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             HABDKBFMKEE = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 80: {
             EGKPFGNJAHN = input.ReadUInt32();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             HABDKBFMKEE = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 80: {
             EGKPFGNJAHN = input.ReadUInt32();
             break;
           }

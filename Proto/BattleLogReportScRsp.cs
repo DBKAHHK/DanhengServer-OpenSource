@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpCYXR0bGVMb2dSZXBvcnRTY1JzcC5wcm90byJFChRCYXR0bGVMb2dSZXBv",
-            "cnRTY1JzcBIPCgdyZXRjb2RlGA4gASgNEhwKFGlzX2JhdHRsZV9sb2dfcmVw",
-            "b3J0GAwgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "cnRTY1JzcBIPCgdyZXRjb2RlGAUgASgNEhwKFGlzX2JhdHRsZV9sb2dfcmVw",
+            "b3J0GAMgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_battle_log_report" field.</summary>
-    public const int IsBattleLogReportFieldNumber = 12;
+    public const int IsBattleLogReportFieldNumber = 3;
     private bool isBattleLogReport_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsBattleLogReport != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteBool(IsBattleLogReport);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsBattleLogReport != false) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteBool(IsBattleLogReport);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 96: {
+          case 24: {
             IsBattleLogReport = input.ReadBool();
             break;
           }
-          case 112: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 96: {
+          case 24: {
             IsBattleLogReport = input.ReadBool();
             break;
           }
-          case 112: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }

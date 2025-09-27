@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtSb2d1ZVRvdXJuQ3VyQXJlYUluZm8ucHJvdG8aHlJvZ3VlQ29tbW9uUGVu",
-            "ZGluZ0FjdGlvbi5wcm90byLDAQoVUm9ndWVUb3VybkN1ckFyZWFJbmZvEjEK",
-            "DnBlbmRpbmdfYWN0aW9uGAkgASgLMhkuUm9ndWVDb21tb25QZW5kaW5nQWN0",
-            "aW9uEhYKDnJvZ3VlX3N1Yl9tb2RlGAogASgNEiAKGHJvZ3VlX21hZ2ljX2Jh",
-            "dHRsZV9jb25zdBgHIAEoDRITCgtzdWJfYXJlYV9pZBgOIAEoDRITCgtNRExO",
-            "REdJSk5NTBgMIAEoCRITCgtBR0VCQU1CS0tCQxgEIAEoDUIeqgIbRWdnTGlu",
+            "ZGluZ0FjdGlvbi5wcm90byLDAQoVUm9ndWVUb3VybkN1ckFyZWFJbmZvEhMK",
+            "C01ETE5ER0lKTk1MGAQgASgJEhMKC0FHRUJBTUJLS0JDGAIgASgNEhMKC3N1",
+            "Yl9hcmVhX2lkGAggASgNEhYKDnJvZ3VlX3N1Yl9tb2RlGAYgASgNEjEKDnBl",
+            "bmRpbmdfYWN0aW9uGAsgASgLMhkuUm9ndWVDb21tb25QZW5kaW5nQWN0aW9u",
+            "EiAKGHJvZ3VlX21hZ2ljX2JhdHRsZV9jb25zdBgBIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonPendingActionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournCurAreaInfo), global::EggLink.DanhengServer.Proto.RogueTournCurAreaInfo.Parser, new[]{ "PendingAction", "RogueSubMode", "RogueMagicBattleConst", "SubAreaId", "MDLNDGIJNML", "AGEBAMBKKBC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournCurAreaInfo), global::EggLink.DanhengServer.Proto.RogueTournCurAreaInfo.Parser, new[]{ "MDLNDGIJNML", "AGEBAMBKKBC", "SubAreaId", "RogueSubMode", "PendingAction", "RogueMagicBattleConst" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,12 +76,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournCurAreaInfo(RogueTournCurAreaInfo other) : this() {
-      pendingAction_ = other.pendingAction_ != null ? other.pendingAction_.Clone() : null;
-      rogueSubMode_ = other.rogueSubMode_;
-      rogueMagicBattleConst_ = other.rogueMagicBattleConst_;
-      subAreaId_ = other.subAreaId_;
       mDLNDGIJNML_ = other.mDLNDGIJNML_;
       aGEBAMBKKBC_ = other.aGEBAMBKKBC_;
+      subAreaId_ = other.subAreaId_;
+      rogueSubMode_ = other.rogueSubMode_;
+      pendingAction_ = other.pendingAction_ != null ? other.pendingAction_.Clone() : null;
+      rogueMagicBattleConst_ = other.rogueMagicBattleConst_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,56 +91,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournCurAreaInfo(this);
     }
 
-    /// <summary>Field number for the "pending_action" field.</summary>
-    public const int PendingActionFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.RogueCommonPendingAction pendingAction_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueCommonPendingAction PendingAction {
-      get { return pendingAction_; }
-      set {
-        pendingAction_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "rogue_sub_mode" field.</summary>
-    public const int RogueSubModeFieldNumber = 10;
-    private uint rogueSubMode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RogueSubMode {
-      get { return rogueSubMode_; }
-      set {
-        rogueSubMode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "rogue_magic_battle_const" field.</summary>
-    public const int RogueMagicBattleConstFieldNumber = 7;
-    private uint rogueMagicBattleConst_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RogueMagicBattleConst {
-      get { return rogueMagicBattleConst_; }
-      set {
-        rogueMagicBattleConst_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "sub_area_id" field.</summary>
-    public const int SubAreaIdFieldNumber = 14;
-    private uint subAreaId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SubAreaId {
-      get { return subAreaId_; }
-      set {
-        subAreaId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "MDLNDGIJNML" field.</summary>
-    public const int MDLNDGIJNMLFieldNumber = 12;
+    public const int MDLNDGIJNMLFieldNumber = 4;
     private string mDLNDGIJNML_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +104,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "AGEBAMBKKBC" field.</summary>
-    public const int AGEBAMBKKBCFieldNumber = 4;
+    public const int AGEBAMBKKBCFieldNumber = 2;
     private uint aGEBAMBKKBC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -160,6 +112,54 @@ namespace EggLink.DanhengServer.Proto {
       get { return aGEBAMBKKBC_; }
       set {
         aGEBAMBKKBC_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sub_area_id" field.</summary>
+    public const int SubAreaIdFieldNumber = 8;
+    private uint subAreaId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SubAreaId {
+      get { return subAreaId_; }
+      set {
+        subAreaId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rogue_sub_mode" field.</summary>
+    public const int RogueSubModeFieldNumber = 6;
+    private uint rogueSubMode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RogueSubMode {
+      get { return rogueSubMode_; }
+      set {
+        rogueSubMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "pending_action" field.</summary>
+    public const int PendingActionFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.RogueCommonPendingAction pendingAction_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueCommonPendingAction PendingAction {
+      get { return pendingAction_; }
+      set {
+        pendingAction_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rogue_magic_battle_const" field.</summary>
+    public const int RogueMagicBattleConstFieldNumber = 1;
+    private uint rogueMagicBattleConst_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RogueMagicBattleConst {
+      get { return rogueMagicBattleConst_; }
+      set {
+        rogueMagicBattleConst_ = value;
       }
     }
 
@@ -178,12 +178,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(PendingAction, other.PendingAction)) return false;
-      if (RogueSubMode != other.RogueSubMode) return false;
-      if (RogueMagicBattleConst != other.RogueMagicBattleConst) return false;
-      if (SubAreaId != other.SubAreaId) return false;
       if (MDLNDGIJNML != other.MDLNDGIJNML) return false;
       if (AGEBAMBKKBC != other.AGEBAMBKKBC) return false;
+      if (SubAreaId != other.SubAreaId) return false;
+      if (RogueSubMode != other.RogueSubMode) return false;
+      if (!object.Equals(PendingAction, other.PendingAction)) return false;
+      if (RogueMagicBattleConst != other.RogueMagicBattleConst) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -191,12 +191,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (pendingAction_ != null) hash ^= PendingAction.GetHashCode();
-      if (RogueSubMode != 0) hash ^= RogueSubMode.GetHashCode();
-      if (RogueMagicBattleConst != 0) hash ^= RogueMagicBattleConst.GetHashCode();
-      if (SubAreaId != 0) hash ^= SubAreaId.GetHashCode();
       if (MDLNDGIJNML.Length != 0) hash ^= MDLNDGIJNML.GetHashCode();
       if (AGEBAMBKKBC != 0) hash ^= AGEBAMBKKBC.GetHashCode();
+      if (SubAreaId != 0) hash ^= SubAreaId.GetHashCode();
+      if (RogueSubMode != 0) hash ^= RogueSubMode.GetHashCode();
+      if (pendingAction_ != null) hash ^= PendingAction.GetHashCode();
+      if (RogueMagicBattleConst != 0) hash ^= RogueMagicBattleConst.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -215,29 +215,29 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AGEBAMBKKBC != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(AGEBAMBKKBC);
-      }
       if (RogueMagicBattleConst != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteUInt32(RogueMagicBattleConst);
       }
-      if (pendingAction_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(PendingAction);
-      }
-      if (RogueSubMode != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(RogueSubMode);
+      if (AGEBAMBKKBC != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(AGEBAMBKKBC);
       }
       if (MDLNDGIJNML.Length != 0) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(34);
         output.WriteString(MDLNDGIJNML);
       }
+      if (RogueSubMode != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(RogueSubMode);
+      }
       if (SubAreaId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteUInt32(SubAreaId);
+      }
+      if (pendingAction_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(PendingAction);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -249,29 +249,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AGEBAMBKKBC != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(AGEBAMBKKBC);
-      }
       if (RogueMagicBattleConst != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteUInt32(RogueMagicBattleConst);
       }
-      if (pendingAction_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(PendingAction);
-      }
-      if (RogueSubMode != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(RogueSubMode);
+      if (AGEBAMBKKBC != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(AGEBAMBKKBC);
       }
       if (MDLNDGIJNML.Length != 0) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(34);
         output.WriteString(MDLNDGIJNML);
       }
+      if (RogueSubMode != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(RogueSubMode);
+      }
       if (SubAreaId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteUInt32(SubAreaId);
+      }
+      if (pendingAction_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(PendingAction);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -283,23 +283,23 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (pendingAction_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PendingAction);
-      }
-      if (RogueSubMode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueSubMode);
-      }
-      if (RogueMagicBattleConst != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueMagicBattleConst);
-      }
-      if (SubAreaId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SubAreaId);
-      }
       if (MDLNDGIJNML.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MDLNDGIJNML);
       }
       if (AGEBAMBKKBC != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AGEBAMBKKBC);
+      }
+      if (SubAreaId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SubAreaId);
+      }
+      if (RogueSubMode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueSubMode);
+      }
+      if (pendingAction_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PendingAction);
+      }
+      if (RogueMagicBattleConst != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueMagicBattleConst);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -313,26 +313,26 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.MDLNDGIJNML.Length != 0) {
+        MDLNDGIJNML = other.MDLNDGIJNML;
+      }
+      if (other.AGEBAMBKKBC != 0) {
+        AGEBAMBKKBC = other.AGEBAMBKKBC;
+      }
+      if (other.SubAreaId != 0) {
+        SubAreaId = other.SubAreaId;
+      }
+      if (other.RogueSubMode != 0) {
+        RogueSubMode = other.RogueSubMode;
+      }
       if (other.pendingAction_ != null) {
         if (pendingAction_ == null) {
           PendingAction = new global::EggLink.DanhengServer.Proto.RogueCommonPendingAction();
         }
         PendingAction.MergeFrom(other.PendingAction);
       }
-      if (other.RogueSubMode != 0) {
-        RogueSubMode = other.RogueSubMode;
-      }
       if (other.RogueMagicBattleConst != 0) {
         RogueMagicBattleConst = other.RogueMagicBattleConst;
-      }
-      if (other.SubAreaId != 0) {
-        SubAreaId = other.SubAreaId;
-      }
-      if (other.MDLNDGIJNML.Length != 0) {
-        MDLNDGIJNML = other.MDLNDGIJNML;
-      }
-      if (other.AGEBAMBKKBC != 0) {
-        AGEBAMBKKBC = other.AGEBAMBKKBC;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -349,31 +349,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            AGEBAMBKKBC = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 8: {
             RogueMagicBattleConst = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 16: {
+            AGEBAMBKKBC = input.ReadUInt32();
+            break;
+          }
+          case 34: {
+            MDLNDGIJNML = input.ReadString();
+            break;
+          }
+          case 48: {
+            RogueSubMode = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            SubAreaId = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (pendingAction_ == null) {
               PendingAction = new global::EggLink.DanhengServer.Proto.RogueCommonPendingAction();
             }
             input.ReadMessage(PendingAction);
-            break;
-          }
-          case 80: {
-            RogueSubMode = input.ReadUInt32();
-            break;
-          }
-          case 98: {
-            MDLNDGIJNML = input.ReadString();
-            break;
-          }
-          case 112: {
-            SubAreaId = input.ReadUInt32();
             break;
           }
         }
@@ -391,31 +391,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            AGEBAMBKKBC = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 8: {
             RogueMagicBattleConst = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 16: {
+            AGEBAMBKKBC = input.ReadUInt32();
+            break;
+          }
+          case 34: {
+            MDLNDGIJNML = input.ReadString();
+            break;
+          }
+          case 48: {
+            RogueSubMode = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            SubAreaId = input.ReadUInt32();
+            break;
+          }
+          case 90: {
             if (pendingAction_ == null) {
               PendingAction = new global::EggLink.DanhengServer.Proto.RogueCommonPendingAction();
             }
             input.ReadMessage(PendingAction);
-            break;
-          }
-          case 80: {
-            RogueSubMode = input.ReadUInt32();
-            break;
-          }
-          case 98: {
-            MDLNDGIJNML = input.ReadString();
-            break;
-          }
-          case 112: {
-            SubAreaId = input.ReadUInt32();
             break;
           }
         }

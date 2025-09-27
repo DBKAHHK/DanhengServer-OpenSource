@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNSb2d1ZVRvdXJuR2V0QWxsQnVpbGRSZWZTY1JzcC5wcm90bxoRQUJEQUJJ",
             "SUtPSkMucHJvdG8iUwodUm9ndWVUb3VybkdldEFsbEJ1aWxkUmVmU2NSc3AS",
-            "DwoHcmV0Y29kZRgIIAEoDRIhCgtJSUNDTkdPS0tMRhgGIAMoCzIMLkFCREFC",
+            "DwoHcmV0Y29kZRgJIAEoDRIhCgtJSUNDTkdPS0tMRhgNIAMoCzIMLkFCREFC",
             "SUlLT0pDQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 8;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IICCNGOKKLF" field.</summary>
-    public const int IICCNGOKKLFFieldNumber = 6;
+    public const int IICCNGOKKLFFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ABDABIIKOJC> _repeated_iICCNGOKKLF_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.ABDABIIKOJC.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.ABDABIIKOJC.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ABDABIIKOJC> iICCNGOKKLF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ABDABIIKOJC>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      iICCNGOKKLF_.WriteTo(output, _repeated_iICCNGOKKLF_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
+      iICCNGOKKLF_.WriteTo(output, _repeated_iICCNGOKKLF_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      iICCNGOKKLF_.WriteTo(ref output, _repeated_iICCNGOKKLF_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
+      iICCNGOKKLF_.WriteTo(ref output, _repeated_iICCNGOKKLF_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
-            iICCNGOKKLF_.AddEntriesFrom(input, _repeated_iICCNGOKKLF_codec);
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Retcode = input.ReadUInt32();
+          case 106: {
+            iICCNGOKKLF_.AddEntriesFrom(input, _repeated_iICCNGOKKLF_codec);
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
-            iICCNGOKKLF_.AddEntriesFrom(ref input, _repeated_iICCNGOKKLF_codec);
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Retcode = input.ReadUInt32();
+          case 106: {
+            iICCNGOKKLF_.AddEntriesFrom(ref input, _repeated_iICCNGOKKLF_codec);
             break;
           }
         }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1TeW5jUm9ndWVTdGF0dXNTY05vdGlmeS5wcm90bxoRUm9ndWVTdGF0dXMu",
-            "cHJvdG8iTAoXU3luY1JvZ3VlU3RhdHVzU2NOb3RpZnkSHAoGc3RhdHVzGAsg",
-            "ASgOMgwuUm9ndWVTdGF0dXMSEwoLSklFTkhIQUhGR0kYByABKAhCHqoCG0Vn",
+            "cHJvdG8iTAoXU3luY1JvZ3VlU3RhdHVzU2NOb3RpZnkSHAoGc3RhdHVzGAcg",
+            "ASgOMgwuUm9ndWVTdGF0dXMSEwoLSklFTkhIQUhGR0kYCyABKAhCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueStatusReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 11;
+    public const int StatusFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.RogueStatus status_ = global::EggLink.DanhengServer.Proto.RogueStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JIENHHAHFGI" field.</summary>
-    public const int JIENHHAHFGIFieldNumber = 7;
+    public const int JIENHHAHFGIFieldNumber = 11;
     private bool jIENHHAHFGI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (JIENHHAHFGI != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(JIENHHAHFGI);
-      }
       if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteEnum((int) Status);
+      }
+      if (JIENHHAHFGI != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(JIENHHAHFGI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (JIENHHAHFGI != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(JIENHHAHFGI);
-      }
       if (Status != global::EggLink.DanhengServer.Proto.RogueStatus.None) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteEnum((int) Status);
+      }
+      if (JIENHHAHFGI != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(JIENHHAHFGI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -228,11 +228,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 56: {
-            JIENHHAHFGI = input.ReadBool();
+            Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
             break;
           }
           case 88: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
+            JIENHHAHFGI = input.ReadBool();
             break;
           }
         }
@@ -251,11 +251,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 56: {
-            JIENHHAHFGI = input.ReadBool();
+            Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
             break;
           }
           case 88: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueStatus) input.ReadEnum();
+            JIENHHAHFGI = input.ReadBool();
             break;
           }
         }

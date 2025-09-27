@@ -27,7 +27,7 @@ namespace EggLink.DanhengServer.Proto {
             "CixTeW5jUm9ndWVDb21tb25WaXJ0dWFsSXRlbUluZm9TY05vdGlmeS5wcm90",
             "bxogUm9ndWVDb21tb25WaXJ0dWFsSXRlbUluZm8ucHJvdG8iXwomU3luY1Jv",
             "Z3VlQ29tbW9uVmlydHVhbEl0ZW1JbmZvU2NOb3RpZnkSNQoQY29tbW9uX2l0",
-            "ZW1faW5mbxgFIAMoCzIbLlJvZ3VlQ29tbW9uVmlydHVhbEl0ZW1JbmZvQh6q",
+            "ZW1faW5mbxgLIAMoCzIbLlJvZ3VlQ29tbW9uVmlydHVhbEl0ZW1JbmZvQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonVirtualItemInfoReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "common_item_info" field.</summary>
-    public const int CommonItemInfoFieldNumber = 5;
+    public const int CommonItemInfoFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueCommonVirtualItemInfo> _repeated_commonItemInfo_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.RogueCommonVirtualItemInfo.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.RogueCommonVirtualItemInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonVirtualItemInfo> commonItemInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueCommonVirtualItemInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 90: {
             commonItemInfo_.AddEntriesFrom(input, _repeated_commonItemInfo_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 90: {
             commonItemInfo_.AddEntriesFrom(ref input, _repeated_commonItemInfo_codec);
             break;
           }

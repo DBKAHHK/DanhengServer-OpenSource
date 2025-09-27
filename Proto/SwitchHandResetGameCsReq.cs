@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5Td2l0Y2hIYW5kUmVzZXRHYW1lQ3NSZXEucHJvdG8aDkhhbmRJbmZvLnBy",
             "b3RvIj4KGFN3aXRjaEhhbmRSZXNldEdhbWVDc1JlcRIiCg9yZXNldF9oYW5k",
-            "X2luZm8YBCABKAsyCS5IYW5kSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "X2luZm8YDSABKAsyCS5IYW5kSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HandInfoReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reset_hand_info" field.</summary>
-    public const int ResetHandInfoFieldNumber = 4;
+    public const int ResetHandInfoFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.HandInfo resetHandInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (resetHandInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(106);
         output.WriteMessage(ResetHandInfo);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (resetHandInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(106);
         output.WriteMessage(ResetHandInfo);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 106: {
             if (resetHandInfo_ == null) {
               ResetHandInfo = new global::EggLink.DanhengServer.Proto.HandInfo();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 106: {
             if (resetHandInfo_ == null) {
               ResetHandInfo = new global::EggLink.DanhengServer.Proto.HandInfo();
             }

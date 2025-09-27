@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5TZXRGcmllbmRSZW1hcmtOYW1lQ3NSZXEucHJvdG8iTAoYU2V0RnJpZW5k",
-            "UmVtYXJrTmFtZUNzUmVxEg4KBnJlYXNvbhgHIAEoDRITCgtyZW1hcmtfbmFt",
-            "ZRgDIAEoCRILCgN1aWQYDCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "UmVtYXJrTmFtZUNzUmVxEhMKC3JlbWFya19uYW1lGA4gASgJEgsKA3VpZBgL",
+            "IAEoDRIOCgZyZWFzb24YDCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetFriendRemarkNameCsReq), global::EggLink.DanhengServer.Proto.SetFriendRemarkNameCsReq.Parser, new[]{ "Reason", "RemarkName", "Uid" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetFriendRemarkNameCsReq), global::EggLink.DanhengServer.Proto.SetFriendRemarkNameCsReq.Parser, new[]{ "RemarkName", "Uid", "Reason" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetFriendRemarkNameCsReq(SetFriendRemarkNameCsReq other) : this() {
-      reason_ = other.reason_;
       remarkName_ = other.remarkName_;
       uid_ = other.uid_;
+      reason_ = other.reason_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new SetFriendRemarkNameCsReq(this);
     }
 
-    /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 7;
-    private uint reason_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Reason {
-      get { return reason_; }
-      set {
-        reason_ = value;
-      }
-    }
-
     /// <summary>Field number for the "remark_name" field.</summary>
-    public const int RemarkNameFieldNumber = 3;
+    public const int RemarkNameFieldNumber = 14;
     private string remarkName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 12;
+    public const int UidFieldNumber = 11;
     private uint uid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return uid_; }
       set {
         uid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reason" field.</summary>
+    public const int ReasonFieldNumber = 12;
+    private uint reason_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Reason {
+      get { return reason_; }
+      set {
+        reason_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Reason != other.Reason) return false;
       if (RemarkName != other.RemarkName) return false;
       if (Uid != other.Uid) return false;
+      if (Reason != other.Reason) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Reason != 0) hash ^= Reason.GetHashCode();
       if (RemarkName.Length != 0) hash ^= RemarkName.GetHashCode();
       if (Uid != 0) hash ^= Uid.GetHashCode();
+      if (Reason != 0) hash ^= Reason.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RemarkName.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(RemarkName);
+      if (Uid != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Uid);
       }
       if (Reason != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(96);
         output.WriteUInt32(Reason);
       }
-      if (Uid != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(Uid);
+      if (RemarkName.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(RemarkName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RemarkName.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(RemarkName);
+      if (Uid != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Uid);
       }
       if (Reason != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(96);
         output.WriteUInt32(Reason);
       }
-      if (Uid != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(Uid);
+      if (RemarkName.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(RemarkName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Reason != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Reason);
-      }
       if (RemarkName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RemarkName);
       }
       if (Uid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
+      }
+      if (Reason != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Reason);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Reason != 0) {
-        Reason = other.Reason;
-      }
       if (other.RemarkName.Length != 0) {
         RemarkName = other.RemarkName;
       }
       if (other.Uid != 0) {
         Uid = other.Uid;
+      }
+      if (other.Reason != 0) {
+        Reason = other.Reason;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
-            RemarkName = input.ReadString();
-            break;
-          }
-          case 56: {
-            Reason = input.ReadUInt32();
+          case 88: {
+            Uid = input.ReadUInt32();
             break;
           }
           case 96: {
-            Uid = input.ReadUInt32();
+            Reason = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            RemarkName = input.ReadString();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
-            RemarkName = input.ReadString();
-            break;
-          }
-          case 56: {
-            Reason = input.ReadUInt32();
+          case 88: {
+            Uid = input.ReadUInt32();
             break;
           }
           case 96: {
-            Uid = input.ReadUInt32();
+            Reason = input.ReadUInt32();
+            break;
+          }
+          case 114: {
+            RemarkName = input.ReadString();
             break;
           }
         }

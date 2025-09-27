@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJUcmFpblBhcnR5R2FtZVBsYXlTdGFydENzUmVxLnByb3RvIkgKHFRyYWlu",
-            "UGFydHlHYW1lUGxheVN0YXJ0Q3NSZXESEwoLS0JHRENFSElGRkoYDiADKA0S",
-            "EwoLR09ORUFLQkRHRUsYAiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "UGFydHlHYW1lUGxheVN0YXJ0Q3NSZXESEwoLS0JHRENFSElGRkoYDCADKA0S",
+            "EwoLR09ORUFLQkRHRUsYByABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KBGDCEHIFFJ" field.</summary>
-    public const int KBGDCEHIFFJFieldNumber = 14;
+    public const int KBGDCEHIFFJFieldNumber = 12;
     private static readonly pb::FieldCodec<uint> _repeated_kBGDCEHIFFJ_codec
-        = pb::FieldCodec.ForUInt32(114);
+        = pb::FieldCodec.ForUInt32(98);
     private readonly pbc::RepeatedField<uint> kBGDCEHIFFJ_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GONEAKBDGEK" field.</summary>
-    public const int GONEAKBDGEKFieldNumber = 2;
+    public const int GONEAKBDGEKFieldNumber = 7;
     private uint gONEAKBDGEK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (GONEAKBDGEK != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(GONEAKBDGEK);
       }
       kBGDCEHIFFJ_.WriteTo(output, _repeated_kBGDCEHIFFJ_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (GONEAKBDGEK != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(GONEAKBDGEK);
       }
       kBGDCEHIFFJ_.WriteTo(ref output, _repeated_kBGDCEHIFFJ_codec);
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 56: {
             GONEAKBDGEK = input.ReadUInt32();
             break;
           }
-          case 114:
-          case 112: {
+          case 98:
+          case 96: {
             kBGDCEHIFFJ_.AddEntriesFrom(input, _repeated_kBGDCEHIFFJ_codec);
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 56: {
             GONEAKBDGEK = input.ReadUInt32();
             break;
           }
-          case 114:
-          case 112: {
+          case 98:
+          case 96: {
             kBGDCEHIFFJ_.AddEntriesFrom(ref input, _repeated_kBGDCEHIFFJ_codec);
             break;
           }

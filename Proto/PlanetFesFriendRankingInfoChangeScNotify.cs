@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ci5QbGFuZXRGZXNGcmllbmRSYW5raW5nSW5mb0NoYW5nZVNjTm90aWZ5LnBy",
             "b3RvGhFFSUtBSUlEQUVQUC5wcm90byJNCihQbGFuZXRGZXNGcmllbmRSYW5r",
-            "aW5nSW5mb0NoYW5nZVNjTm90aWZ5EiEKC0NOSEVLTEtCTUhIGAggAygLMgwu",
+            "aW5nSW5mb0NoYW5nZVNjTm90aWZ5EiEKC0NOSEVLTEtCTUhIGA4gAygLMgwu",
             "RUlLQUlJREFFUFBCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CNHEKLKBMHH" field.</summary>
-    public const int CNHEKLKBMHHFieldNumber = 8;
+    public const int CNHEKLKBMHHFieldNumber = 14;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EIKAIIDAEPP> _repeated_cNHEKLKBMHH_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.EIKAIIDAEPP.Parser);
+        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.EIKAIIDAEPP.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EIKAIIDAEPP> cNHEKLKBMHH_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EIKAIIDAEPP>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 114: {
             cNHEKLKBMHH_.AddEntriesFrom(input, _repeated_cNHEKLKBMHH_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 114: {
             cNHEKLKBMHH_.AddEntriesFrom(ref input, _repeated_cNHEKLKBMHH_codec);
             break;
           }

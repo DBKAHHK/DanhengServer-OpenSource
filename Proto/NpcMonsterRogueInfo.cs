@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlOcGNNb25zdGVyUm9ndWVJbmZvLnByb3RvIoIBChNOcGNNb25zdGVyUm9n",
-            "dWVJbmZvEhMKC2VsaXRlX2dyb3VwGAYgASgNEg0KBWxldmVsGAogASgNEhgK",
-            "EHJvZ3VlX21vbnN0ZXJfaWQYDCABKA0SGAoQaGFyZF9sZXZlbF9ncm91cBgI",
-            "IAEoDRITCgtETkVBTVBMTEZNRRgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "dWVJbmZvEg0KBWxldmVsGAYgASgNEhMKC2VsaXRlX2dyb3VwGAkgASgNEhgK",
+            "EGhhcmRfbGV2ZWxfZ3JvdXAYCiABKA0SEwoLRE5FQU1QTExGTUUYDCABKA0S",
+            "GAoQcm9ndWVfbW9uc3Rlcl9pZBgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NpcMonsterRogueInfo), global::EggLink.DanhengServer.Proto.NpcMonsterRogueInfo.Parser, new[]{ "EliteGroup", "Level", "RogueMonsterId", "HardLevelGroup", "DNEAMPLLFME" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NpcMonsterRogueInfo), global::EggLink.DanhengServer.Proto.NpcMonsterRogueInfo.Parser, new[]{ "Level", "EliteGroup", "HardLevelGroup", "DNEAMPLLFME", "RogueMonsterId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +74,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NpcMonsterRogueInfo(NpcMonsterRogueInfo other) : this() {
-      eliteGroup_ = other.eliteGroup_;
       level_ = other.level_;
-      rogueMonsterId_ = other.rogueMonsterId_;
+      eliteGroup_ = other.eliteGroup_;
       hardLevelGroup_ = other.hardLevelGroup_;
       dNEAMPLLFME_ = other.dNEAMPLLFME_;
+      rogueMonsterId_ = other.rogueMonsterId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,20 +88,8 @@ namespace EggLink.DanhengServer.Proto {
       return new NpcMonsterRogueInfo(this);
     }
 
-    /// <summary>Field number for the "elite_group" field.</summary>
-    public const int EliteGroupFieldNumber = 6;
-    private uint eliteGroup_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EliteGroup {
-      get { return eliteGroup_; }
-      set {
-        eliteGroup_ = value;
-      }
-    }
-
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 10;
+    public const int LevelFieldNumber = 6;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,20 +100,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "rogue_monster_id" field.</summary>
-    public const int RogueMonsterIdFieldNumber = 12;
-    private uint rogueMonsterId_;
+    /// <summary>Field number for the "elite_group" field.</summary>
+    public const int EliteGroupFieldNumber = 9;
+    private uint eliteGroup_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RogueMonsterId {
-      get { return rogueMonsterId_; }
+    public uint EliteGroup {
+      get { return eliteGroup_; }
       set {
-        rogueMonsterId_ = value;
+        eliteGroup_ = value;
       }
     }
 
     /// <summary>Field number for the "hard_level_group" field.</summary>
-    public const int HardLevelGroupFieldNumber = 8;
+    public const int HardLevelGroupFieldNumber = 10;
     private uint hardLevelGroup_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,7 +125,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DNEAMPLLFME" field.</summary>
-    public const int DNEAMPLLFMEFieldNumber = 11;
+    public const int DNEAMPLLFMEFieldNumber = 12;
     private uint dNEAMPLLFME_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -145,6 +133,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return dNEAMPLLFME_; }
       set {
         dNEAMPLLFME_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rogue_monster_id" field.</summary>
+    public const int RogueMonsterIdFieldNumber = 5;
+    private uint rogueMonsterId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RogueMonsterId {
+      get { return rogueMonsterId_; }
+      set {
+        rogueMonsterId_ = value;
       }
     }
 
@@ -163,11 +163,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (EliteGroup != other.EliteGroup) return false;
       if (Level != other.Level) return false;
-      if (RogueMonsterId != other.RogueMonsterId) return false;
+      if (EliteGroup != other.EliteGroup) return false;
       if (HardLevelGroup != other.HardLevelGroup) return false;
       if (DNEAMPLLFME != other.DNEAMPLLFME) return false;
+      if (RogueMonsterId != other.RogueMonsterId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -175,11 +175,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (EliteGroup != 0) hash ^= EliteGroup.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
-      if (RogueMonsterId != 0) hash ^= RogueMonsterId.GetHashCode();
+      if (EliteGroup != 0) hash ^= EliteGroup.GetHashCode();
       if (HardLevelGroup != 0) hash ^= HardLevelGroup.GetHashCode();
       if (DNEAMPLLFME != 0) hash ^= DNEAMPLLFME.GetHashCode();
+      if (RogueMonsterId != 0) hash ^= RogueMonsterId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -198,25 +198,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EliteGroup != 0) {
+      if (RogueMonsterId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(RogueMonsterId);
+      }
+      if (Level != 0) {
         output.WriteRawTag(48);
+        output.WriteUInt32(Level);
+      }
+      if (EliteGroup != 0) {
+        output.WriteRawTag(72);
         output.WriteUInt32(EliteGroup);
       }
       if (HardLevelGroup != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteUInt32(HardLevelGroup);
       }
-      if (Level != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Level);
-      }
       if (DNEAMPLLFME != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(DNEAMPLLFME);
-      }
-      if (RogueMonsterId != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(RogueMonsterId);
+        output.WriteUInt32(DNEAMPLLFME);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -228,25 +228,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EliteGroup != 0) {
+      if (RogueMonsterId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(RogueMonsterId);
+      }
+      if (Level != 0) {
         output.WriteRawTag(48);
+        output.WriteUInt32(Level);
+      }
+      if (EliteGroup != 0) {
+        output.WriteRawTag(72);
         output.WriteUInt32(EliteGroup);
       }
       if (HardLevelGroup != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(80);
         output.WriteUInt32(HardLevelGroup);
       }
-      if (Level != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Level);
-      }
       if (DNEAMPLLFME != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(DNEAMPLLFME);
-      }
-      if (RogueMonsterId != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(RogueMonsterId);
+        output.WriteUInt32(DNEAMPLLFME);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -258,20 +258,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (EliteGroup != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EliteGroup);
-      }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
-      if (RogueMonsterId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueMonsterId);
+      if (EliteGroup != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EliteGroup);
       }
       if (HardLevelGroup != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HardLevelGroup);
       }
       if (DNEAMPLLFME != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DNEAMPLLFME);
+      }
+      if (RogueMonsterId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueMonsterId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.EliteGroup != 0) {
-        EliteGroup = other.EliteGroup;
-      }
       if (other.Level != 0) {
         Level = other.Level;
       }
-      if (other.RogueMonsterId != 0) {
-        RogueMonsterId = other.RogueMonsterId;
+      if (other.EliteGroup != 0) {
+        EliteGroup = other.EliteGroup;
       }
       if (other.HardLevelGroup != 0) {
         HardLevelGroup = other.HardLevelGroup;
       }
       if (other.DNEAMPLLFME != 0) {
         DNEAMPLLFME = other.DNEAMPLLFME;
+      }
+      if (other.RogueMonsterId != 0) {
+        RogueMonsterId = other.RogueMonsterId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -315,24 +315,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 40: {
+            RogueMonsterId = input.ReadUInt32();
+            break;
+          }
           case 48: {
-            EliteGroup = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            HardLevelGroup = input.ReadUInt32();
-            break;
-          }
-          case 80: {
             Level = input.ReadUInt32();
             break;
           }
-          case 88: {
-            DNEAMPLLFME = input.ReadUInt32();
+          case 72: {
+            EliteGroup = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            HardLevelGroup = input.ReadUInt32();
             break;
           }
           case 96: {
-            RogueMonsterId = input.ReadUInt32();
+            DNEAMPLLFME = input.ReadUInt32();
             break;
           }
         }
@@ -350,24 +350,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 40: {
+            RogueMonsterId = input.ReadUInt32();
+            break;
+          }
           case 48: {
-            EliteGroup = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            HardLevelGroup = input.ReadUInt32();
-            break;
-          }
-          case 80: {
             Level = input.ReadUInt32();
             break;
           }
-          case 88: {
-            DNEAMPLLFME = input.ReadUInt32();
+          case 72: {
+            EliteGroup = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            HardLevelGroup = input.ReadUInt32();
             break;
           }
           case 96: {
-            RogueMonsterId = input.ReadUInt32();
+            DNEAMPLLFME = input.ReadUInt32();
             break;
           }
         }

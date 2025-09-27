@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBHZXRQcml2YXRlQ2hhdEhpc3RvcnlTY1JzcC5wcm90bxoVQ2hhdE1lc3Nh",
-            "Z2VEYXRhLnByb3RvIoUBChpHZXRQcml2YXRlQ2hhdEhpc3RvcnlTY1JzcBIT",
-            "Cgt0YXJnZXRfc2lkZRgDIAEoDRIrChFjaGF0X21lc3NhZ2VfbGlzdBgFIAMo",
-            "CzIQLkNoYXRNZXNzYWdlRGF0YRIPCgdyZXRjb2RlGAogASgNEhQKDGNvbnRh",
-            "Y3Rfc2lkZRgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "Z2VEYXRhLnByb3RvIoUBChpHZXRQcml2YXRlQ2hhdEhpc3RvcnlTY1JzcBIP",
+            "CgdyZXRjb2RlGAggASgNEhQKDGNvbnRhY3Rfc2lkZRgGIAEoDRIrChFjaGF0",
+            "X21lc3NhZ2VfbGlzdBgPIAMoCzIQLkNoYXRNZXNzYWdlRGF0YRITCgt0YXJn",
+            "ZXRfc2lkZRgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChatMessageDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPrivateChatHistoryScRsp), global::EggLink.DanhengServer.Proto.GetPrivateChatHistoryScRsp.Parser, new[]{ "TargetSide", "ChatMessageList", "Retcode", "ContactSide" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPrivateChatHistoryScRsp), global::EggLink.DanhengServer.Proto.GetPrivateChatHistoryScRsp.Parser, new[]{ "Retcode", "ContactSide", "ChatMessageList", "TargetSide" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPrivateChatHistoryScRsp(GetPrivateChatHistoryScRsp other) : this() {
-      targetSide_ = other.targetSide_;
-      chatMessageList_ = other.chatMessageList_.Clone();
       retcode_ = other.retcode_;
       contactSide_ = other.contactSide_;
+      chatMessageList_ = other.chatMessageList_.Clone();
+      targetSide_ = other.targetSide_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,31 +88,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetPrivateChatHistoryScRsp(this);
     }
 
-    /// <summary>Field number for the "target_side" field.</summary>
-    public const int TargetSideFieldNumber = 3;
-    private uint targetSide_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TargetSide {
-      get { return targetSide_; }
-      set {
-        targetSide_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "chat_message_list" field.</summary>
-    public const int ChatMessageListFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChatMessageData> _repeated_chatMessageList_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.ChatMessageData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChatMessageData> chatMessageList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChatMessageData>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChatMessageData> ChatMessageList {
-      get { return chatMessageList_; }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 10;
+    public const int RetcodeFieldNumber = 8;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,7 +101,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "contact_side" field.</summary>
-    public const int ContactSideFieldNumber = 7;
+    public const int ContactSideFieldNumber = 6;
     private uint contactSide_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -132,6 +109,29 @@ namespace EggLink.DanhengServer.Proto {
       get { return contactSide_; }
       set {
         contactSide_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "chat_message_list" field.</summary>
+    public const int ChatMessageListFieldNumber = 15;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChatMessageData> _repeated_chatMessageList_codec
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.ChatMessageData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChatMessageData> chatMessageList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChatMessageData>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChatMessageData> ChatMessageList {
+      get { return chatMessageList_; }
+    }
+
+    /// <summary>Field number for the "target_side" field.</summary>
+    public const int TargetSideFieldNumber = 1;
+    private uint targetSide_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TargetSide {
+      get { return targetSide_; }
+      set {
+        targetSide_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TargetSide != other.TargetSide) return false;
-      if(!chatMessageList_.Equals(other.chatMessageList_)) return false;
       if (Retcode != other.Retcode) return false;
       if (ContactSide != other.ContactSide) return false;
+      if(!chatMessageList_.Equals(other.chatMessageList_)) return false;
+      if (TargetSide != other.TargetSide) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TargetSide != 0) hash ^= TargetSide.GetHashCode();
-      hash ^= chatMessageList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (ContactSide != 0) hash ^= ContactSide.GetHashCode();
+      hash ^= chatMessageList_.GetHashCode();
+      if (TargetSide != 0) hash ^= TargetSide.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,18 +184,18 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (TargetSide != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(TargetSide);
       }
-      chatMessageList_.WriteTo(output, _repeated_chatMessageList_codec);
       if (ContactSide != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteUInt32(ContactSide);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
+      chatMessageList_.WriteTo(output, _repeated_chatMessageList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -207,18 +207,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TargetSide != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(TargetSide);
       }
-      chatMessageList_.WriteTo(ref output, _repeated_chatMessageList_codec);
       if (ContactSide != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(48);
         output.WriteUInt32(ContactSide);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
+      chatMessageList_.WriteTo(ref output, _repeated_chatMessageList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -229,15 +229,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TargetSide != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TargetSide);
-      }
-      size += chatMessageList_.CalculateSize(_repeated_chatMessageList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (ContactSide != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ContactSide);
+      }
+      size += chatMessageList_.CalculateSize(_repeated_chatMessageList_codec);
+      if (TargetSide != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TargetSide);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -251,15 +251,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.TargetSide != 0) {
-        TargetSide = other.TargetSide;
-      }
-      chatMessageList_.Add(other.chatMessageList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
       if (other.ContactSide != 0) {
         ContactSide = other.ContactSide;
+      }
+      chatMessageList_.Add(other.chatMessageList_);
+      if (other.TargetSide != 0) {
+        TargetSide = other.TargetSide;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -276,20 +276,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 8: {
             TargetSide = input.ReadUInt32();
             break;
           }
-          case 42: {
-            chatMessageList_.AddEntriesFrom(input, _repeated_chatMessageList_codec);
-            break;
-          }
-          case 56: {
+          case 48: {
             ContactSide = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 64: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            chatMessageList_.AddEntriesFrom(input, _repeated_chatMessageList_codec);
             break;
           }
         }
@@ -307,20 +307,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 8: {
             TargetSide = input.ReadUInt32();
             break;
           }
-          case 42: {
-            chatMessageList_.AddEntriesFrom(ref input, _repeated_chatMessageList_codec);
-            break;
-          }
-          case 56: {
+          case 48: {
             ContactSide = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 64: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            chatMessageList_.AddEntriesFrom(ref input, _repeated_chatMessageList_codec);
             break;
           }
         }

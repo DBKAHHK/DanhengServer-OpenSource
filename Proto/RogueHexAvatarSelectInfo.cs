@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5Sb2d1ZUhleEF2YXRhclNlbGVjdEluZm8ucHJvdG8iRwoYUm9ndWVIZXhB",
-            "dmF0YXJTZWxlY3RJbmZvEhYKDnNlbGVjdF9oaW50X2lkGAsgASgNEhMKC0pM",
-            "SEZPSk9ET0tHGAYgAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dmF0YXJTZWxlY3RJbmZvEhMKC0pMSEZPSk9ET0tHGAYgAygNEhYKDnNlbGVj",
+            "dF9oaW50X2lkGAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
             "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueHexAvatarSelectInfo), global::EggLink.DanhengServer.Proto.RogueHexAvatarSelectInfo.Parser, new[]{ "SelectHintId", "JLHFOJODOKG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueHexAvatarSelectInfo), global::EggLink.DanhengServer.Proto.RogueHexAvatarSelectInfo.Parser, new[]{ "JLHFOJODOKG", "SelectHintId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueHexAvatarSelectInfo(RogueHexAvatarSelectInfo other) : this() {
-      selectHintId_ = other.selectHintId_;
       jLHFOJODOKG_ = other.jLHFOJODOKG_.Clone();
+      selectHintId_ = other.selectHintId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,18 +82,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueHexAvatarSelectInfo Clone() {
       return new RogueHexAvatarSelectInfo(this);
-    }
-
-    /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 11;
-    private uint selectHintId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SelectHintId {
-      get { return selectHintId_; }
-      set {
-        selectHintId_ = value;
-      }
     }
 
     /// <summary>Field number for the "JLHFOJODOKG" field.</summary>
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> JLHFOJODOKG {
       get { return jLHFOJODOKG_; }
+    }
+
+    /// <summary>Field number for the "select_hint_id" field.</summary>
+    public const int SelectHintIdFieldNumber = 7;
+    private uint selectHintId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SelectHintId {
+      get { return selectHintId_; }
+      set {
+        selectHintId_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SelectHintId != other.SelectHintId) return false;
       if(!jLHFOJODOKG_.Equals(other.jLHFOJODOKG_)) return false;
+      if (SelectHintId != other.SelectHintId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
       hash ^= jLHFOJODOKG_.GetHashCode();
+      if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       jLHFOJODOKG_.WriteTo(output, _repeated_jLHFOJODOKG_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(SelectHintId);
       }
       if (_unknownFields != null) {
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       jLHFOJODOKG_.WriteTo(ref output, _repeated_jLHFOJODOKG_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(SelectHintId);
       }
       if (_unknownFields != null) {
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += jLHFOJODOKG_.CalculateSize(_repeated_jLHFOJODOKG_codec);
       if (SelectHintId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectHintId);
       }
-      size += jLHFOJODOKG_.CalculateSize(_repeated_jLHFOJODOKG_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      jLHFOJODOKG_.Add(other.jLHFOJODOKG_);
       if (other.SelectHintId != 0) {
         SelectHintId = other.SelectHintId;
       }
-      jLHFOJODOKG_.Add(other.jLHFOJODOKG_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -221,7 +221,7 @@ namespace EggLink.DanhengServer.Proto {
             jLHFOJODOKG_.AddEntriesFrom(input, _repeated_jLHFOJODOKG_codec);
             break;
           }
-          case 88: {
+          case 56: {
             SelectHintId = input.ReadUInt32();
             break;
           }
@@ -245,7 +245,7 @@ namespace EggLink.DanhengServer.Proto {
             jLHFOJODOKG_.AddEntriesFrom(ref input, _repeated_jLHFOJODOKG_codec);
             break;
           }
-          case 88: {
+          case 56: {
             SelectHintId = input.ReadUInt32();
             break;
           }

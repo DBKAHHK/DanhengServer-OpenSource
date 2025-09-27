@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static DevelopmentTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVEZXZlbG9wbWVudFR5cGUucHJvdG8qiAQKD0RldmVsb3BtZW50VHlwZRIU",
+            "ChVEZXZlbG9wbWVudFR5cGUucHJvdG8q/wQKD0RldmVsb3BtZW50VHlwZRIU",
             "ChBERVZFTE9QTUVOVF9OT05FEAASHAoYREVWRUxPUE1FTlRfUk9HVUVfQ09T",
             "TU9TEAESGwoXREVWRUxPUE1FTlRfUk9HVUVfQ0hFU1MQAhIgChxERVZFTE9Q",
             "TUVOVF9ST0dVRV9DSEVTU19OT1VTEAMSIAocREVWRUxPUE1FTlRfTUVNT1JZ",
@@ -36,8 +36,10 @@ namespace EggLink.DanhengServer.Proto {
             "X1RPVVJOEAsSIAocREVWRUxPUE1FTlRfUk9HVUVfVE9VUk5fV0VFSxAMEhsK",
             "F0RFVkVMT1BNRU5UX1JPR1VFX01BR0lDEA0SHgoaREVWRUxPUE1FTlRfQ0hB",
             "TExFTkdFX1BFQUsQDhIkCiBERVZFTE9QTUVOVF9ST0dVRV9UT1VSTl9ESVZJ",
-            "U0lPThAPQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
-            "Mw=="));
+            "U0lPThAPEiMKH0RFVkVMT1BNRU5UX0dSSURfRklHSFRfRElWSVNJT04QEBIj",
+            "Ch9ERVZFTE9QTUVOVF9HUklEX0ZJR0hUX0dBTUVQTEFZEBESKwonREVWRUxP",
+            "UE1FTlRfR1JJRF9GSUdIVF9HQU1FUExBWV9PQ19NT0RFEBJCHqoCG0VnZ0xp",
+            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.DevelopmentType), }, null, null));
@@ -63,6 +65,9 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("DEVELOPMENT_ROGUE_MAGIC")] DevelopmentRogueMagic = 13,
     [pbr::OriginalName("DEVELOPMENT_CHALLENGE_PEAK")] DevelopmentChallengePeak = 14,
     [pbr::OriginalName("DEVELOPMENT_ROGUE_TOURN_DIVISION")] DevelopmentRogueTournDivision = 15,
+    [pbr::OriginalName("DEVELOPMENT_GRID_FIGHT_DIVISION")] DevelopmentGridFightDivision = 16,
+    [pbr::OriginalName("DEVELOPMENT_GRID_FIGHT_GAMEPLAY")] DevelopmentGridFightGameplay = 17,
+    [pbr::OriginalName("DEVELOPMENT_GRID_FIGHT_GAMEPLAY_OC_MODE")] DevelopmentGridFightGameplayOcMode = 18,
   }
 
   #endregion

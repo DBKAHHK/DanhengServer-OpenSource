@@ -118,7 +118,7 @@ public class LineupInfo
 
     public Proto.LineupInfo ToProto()
     {
-        Mp = Math.Max(5 + (LineupData?.ExtraMpCount ?? 0), Mp);
+        Mp = Math.Min(5 + (LineupData?.ExtraMpCount ?? 0), Mp);
         Proto.LineupInfo info = new()
         {
             Name = Name,

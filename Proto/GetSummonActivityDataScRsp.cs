@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBHZXRTdW1tb25BY3Rpdml0eURhdGFTY1JzcC5wcm90bxoRUEdCSE1PTEZC",
             "TU0ucHJvdG8iUAoaR2V0U3VtbW9uQWN0aXZpdHlEYXRhU2NSc3ASIQoLSkhP",
-            "TUtFTUNETUcYBCADKAsyDC5QR0JITU9MRkJNTRIPCgdyZXRjb2RlGAsgASgN",
+            "TUtFTUNETUcYDyADKAsyDC5QR0JITU9MRkJNTRIPCgdyZXRjb2RlGAEgASgN",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PGBHMOLFBMMReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JHOMKEMCDMG" field.</summary>
-    public const int JHOMKEMCDMGFieldNumber = 4;
+    public const int JHOMKEMCDMGFieldNumber = 15;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PGBHMOLFBMM> _repeated_jHOMKEMCDMG_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.PGBHMOLFBMM.Parser);
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.PGBHMOLFBMM.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PGBHMOLFBMM> jHOMKEMCDMG_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PGBHMOLFBMM>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    public const int RetcodeFieldNumber = 1;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      jHOMKEMCDMG_.WriteTo(output, _repeated_jHOMKEMCDMG_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
+      jHOMKEMCDMG_.WriteTo(output, _repeated_jHOMKEMCDMG_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      jHOMKEMCDMG_.WriteTo(ref output, _repeated_jHOMKEMCDMG_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteUInt32(Retcode);
       }
+      jHOMKEMCDMG_.WriteTo(ref output, _repeated_jHOMKEMCDMG_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
-            jHOMKEMCDMG_.AddEntriesFrom(input, _repeated_jHOMKEMCDMG_codec);
+          case 8: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 122: {
+            jHOMKEMCDMG_.AddEntriesFrom(input, _repeated_jHOMKEMCDMG_codec);
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
-            jHOMKEMCDMG_.AddEntriesFrom(ref input, _repeated_jHOMKEMCDMG_codec);
+          case 8: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 88: {
-            Retcode = input.ReadUInt32();
+          case 122: {
+            jHOMKEMCDMG_.AddEntriesFrom(ref input, _repeated_jHOMKEMCDMG_codec);
             break;
           }
         }

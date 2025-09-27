@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5CdXlSb2d1ZVNob3BNaXJhY2xlQ3NSZXEucHJvdG8iUQoYQnV5Um9ndWVT",
-            "aG9wTWlyYWNsZUNzUmVxEhIKCm1pcmFjbGVfaWQYCCABKA0SIQoZaW50ZXJh",
-            "Y3RlZF9wcm9wX2VudGl0eV9pZBgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "aG9wTWlyYWNsZUNzUmVxEiEKGWludGVyYWN0ZWRfcHJvcF9lbnRpdHlfaWQY",
+            "CyABKA0SEgoKbWlyYWNsZV9pZBgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BuyRogueShopMiracleCsReq), global::EggLink.DanhengServer.Proto.BuyRogueShopMiracleCsReq.Parser, new[]{ "MiracleId", "InteractedPropEntityId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BuyRogueShopMiracleCsReq), global::EggLink.DanhengServer.Proto.BuyRogueShopMiracleCsReq.Parser, new[]{ "InteractedPropEntityId", "MiracleId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuyRogueShopMiracleCsReq(BuyRogueShopMiracleCsReq other) : this() {
-      miracleId_ = other.miracleId_;
       interactedPropEntityId_ = other.interactedPropEntityId_;
+      miracleId_ = other.miracleId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new BuyRogueShopMiracleCsReq(this);
     }
 
-    /// <summary>Field number for the "miracle_id" field.</summary>
-    public const int MiracleIdFieldNumber = 8;
-    private uint miracleId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MiracleId {
-      get { return miracleId_; }
-      set {
-        miracleId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "interacted_prop_entity_id" field.</summary>
-    public const int InteractedPropEntityIdFieldNumber = 5;
+    public const int InteractedPropEntityIdFieldNumber = 11;
     private uint interactedPropEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return interactedPropEntityId_; }
       set {
         interactedPropEntityId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "miracle_id" field.</summary>
+    public const int MiracleIdFieldNumber = 1;
+    private uint miracleId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MiracleId {
+      get { return miracleId_; }
+      set {
+        miracleId_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MiracleId != other.MiracleId) return false;
       if (InteractedPropEntityId != other.InteractedPropEntityId) return false;
+      if (MiracleId != other.MiracleId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MiracleId != 0) hash ^= MiracleId.GetHashCode();
       if (InteractedPropEntityId != 0) hash ^= InteractedPropEntityId.GetHashCode();
+      if (MiracleId != 0) hash ^= MiracleId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(InteractedPropEntityId);
-      }
       if (MiracleId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteUInt32(MiracleId);
+      }
+      if (InteractedPropEntityId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(InteractedPropEntityId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (InteractedPropEntityId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(InteractedPropEntityId);
-      }
       if (MiracleId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteUInt32(MiracleId);
+      }
+      if (InteractedPropEntityId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(InteractedPropEntityId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MiracleId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MiracleId);
-      }
       if (InteractedPropEntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(InteractedPropEntityId);
+      }
+      if (MiracleId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MiracleId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MiracleId != 0) {
-        MiracleId = other.MiracleId;
-      }
       if (other.InteractedPropEntityId != 0) {
         InteractedPropEntityId = other.InteractedPropEntityId;
+      }
+      if (other.MiracleId != 0) {
+        MiracleId = other.MiracleId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            InteractedPropEntityId = input.ReadUInt32();
+          case 8: {
+            MiracleId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            MiracleId = input.ReadUInt32();
+          case 88: {
+            InteractedPropEntityId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            InteractedPropEntityId = input.ReadUInt32();
+          case 8: {
+            MiracleId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            MiracleId = input.ReadUInt32();
+          case 88: {
+            InteractedPropEntityId = input.ReadUInt32();
             break;
           }
         }

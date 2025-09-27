@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlCb3NzR3JvdXBTdGF0aXN0aWNzLnByb3RvGhhCb3NzU3RhdGlzdGljc0lu",
-            "Zm8ucHJvdG8iTwoTQm9zc0dyb3VwU3RhdGlzdGljcxIlCghzdHRfaW5mbxgM",
-            "IAEoCzITLkJvc3NTdGF0aXN0aWNzSW5mbxIRCglyZWNvcmRfaWQYAiABKA1C",
+            "Zm8ucHJvdG8iTwoTQm9zc0dyb3VwU3RhdGlzdGljcxIlCghzdHRfaW5mbxgK",
+            "IAEoCzITLkJvc3NTdGF0aXN0aWNzSW5mbxIRCglyZWNvcmRfaWQYDiABKA1C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BossStatisticsInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stt_info" field.</summary>
-    public const int SttInfoFieldNumber = 12;
+    public const int SttInfoFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.BossStatisticsInfo sttInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "record_id" field.</summary>
-    public const int RecordIdFieldNumber = 2;
+    public const int RecordIdFieldNumber = 14;
     private uint recordId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RecordId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(RecordId);
-      }
       if (sttInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(82);
         output.WriteMessage(SttInfo);
+      }
+      if (RecordId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(RecordId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RecordId != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(RecordId);
-      }
       if (sttInfo_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(82);
         output.WriteMessage(SttInfo);
+      }
+      if (RecordId != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(RecordId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            RecordId = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 82: {
             if (sttInfo_ == null) {
               SttInfo = new global::EggLink.DanhengServer.Proto.BossStatisticsInfo();
             }
             input.ReadMessage(SttInfo);
+            break;
+          }
+          case 112: {
+            RecordId = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            RecordId = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 82: {
             if (sttInfo_ == null) {
               SttInfo = new global::EggLink.DanhengServer.Proto.BossStatisticsInfo();
             }
             input.ReadMessage(SttInfo);
+            break;
+          }
+          case 112: {
+            RecordId = input.ReadUInt32();
             break;
           }
         }

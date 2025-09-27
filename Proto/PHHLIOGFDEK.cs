@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQSEhMSU9HRkRFSy5wcm90byJPCgtQSEhMSU9HRkRFSxITCgtDQVBJQ0ND",
-            "SUVCTxgCIAMoDRIWCg5kaXZpc2lvbl9sZXZlbBgKIAEoDRITCgtJSkhMT0pF",
+            "SUVCTxgJIAMoDRIWCg5kaXZpc2lvbl9sZXZlbBgFIAEoDRITCgtJSkhMT0pF",
             "RkNQTRgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CAPICCCIEBO" field.</summary>
-    public const int CAPICCCIEBOFieldNumber = 2;
+    public const int CAPICCCIEBOFieldNumber = 9;
     private static readonly pb::FieldCodec<uint> _repeated_cAPICCCIEBO_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(74);
     private readonly pbc::RepeatedField<uint> cAPICCCIEBO_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "division_level" field.</summary>
-    public const int DivisionLevelFieldNumber = 10;
+    public const int DivisionLevelFieldNumber = 5;
     private uint divisionLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      cAPICCCIEBO_.WriteTo(output, _repeated_cAPICCCIEBO_codec);
       if (DivisionLevel != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteUInt32(DivisionLevel);
       }
+      cAPICCCIEBO_.WriteTo(output, _repeated_cAPICCCIEBO_codec);
       if (IJHLOJEFCPM != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(IJHLOJEFCPM);
@@ -185,11 +185,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      cAPICCCIEBO_.WriteTo(ref output, _repeated_cAPICCCIEBO_codec);
       if (DivisionLevel != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteUInt32(DivisionLevel);
       }
+      cAPICCCIEBO_.WriteTo(ref output, _repeated_cAPICCCIEBO_codec);
       if (IJHLOJEFCPM != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(IJHLOJEFCPM);
@@ -245,13 +245,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
-            cAPICCCIEBO_.AddEntriesFrom(input, _repeated_cAPICCCIEBO_codec);
+          case 40: {
+            DivisionLevel = input.ReadUInt32();
             break;
           }
-          case 80: {
-            DivisionLevel = input.ReadUInt32();
+          case 74:
+          case 72: {
+            cAPICCCIEBO_.AddEntriesFrom(input, _repeated_cAPICCCIEBO_codec);
             break;
           }
           case 104: {
@@ -273,13 +273,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
-            cAPICCCIEBO_.AddEntriesFrom(ref input, _repeated_cAPICCCIEBO_codec);
+          case 40: {
+            DivisionLevel = input.ReadUInt32();
             break;
           }
-          case 80: {
-            DivisionLevel = input.ReadUInt32();
+          case 74:
+          case 72: {
+            cAPICCCIEBO_.AddEntriesFrom(ref input, _repeated_cAPICCCIEBO_codec);
             break;
           }
           case 104: {

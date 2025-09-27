@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZNYXJibGVTZWFsVmVjdG9yLnByb3RvIigKEE1hcmJsZVNlYWxWZWN0b3IS",
-            "CQoBeRgIIAEoAhIJCgF4GAEgASgCQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "CQoBeRgCIAEoAhIJCgF4GAkgASgCQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "y" field.</summary>
-    public const int YFieldNumber = 8;
+    public const int YFieldNumber = 2;
     private float y_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "x" field.</summary>
-    public const int XFieldNumber = 1;
+    public const int XFieldNumber = 9;
     private float x_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (X != 0F) {
-        output.WriteRawTag(13);
-        output.WriteFloat(X);
-      }
       if (Y != 0F) {
-        output.WriteRawTag(69);
+        output.WriteRawTag(21);
         output.WriteFloat(Y);
+      }
+      if (X != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(X);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (X != 0F) {
-        output.WriteRawTag(13);
-        output.WriteFloat(X);
-      }
       if (Y != 0F) {
-        output.WriteRawTag(69);
+        output.WriteRawTag(21);
         output.WriteFloat(Y);
+      }
+      if (X != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(X);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 13: {
-            X = input.ReadFloat();
+          case 21: {
+            Y = input.ReadFloat();
             break;
           }
-          case 69: {
-            Y = input.ReadFloat();
+          case 77: {
+            X = input.ReadFloat();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 13: {
-            X = input.ReadFloat();
+          case 21: {
+            Y = input.ReadFloat();
             break;
           }
-          case 69: {
-            Y = input.ReadFloat();
+          case 77: {
+            X = input.ReadFloat();
             break;
           }
         }

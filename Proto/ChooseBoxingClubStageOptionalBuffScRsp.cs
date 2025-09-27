@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CixDaG9vc2VCb3hpbmdDbHViU3RhZ2VPcHRpb25hbEJ1ZmZTY1JzcC5wcm90",
             "bxoRRkNJSElKTE9NR0EucHJvdG8iWgomQ2hvb3NlQm94aW5nQ2x1YlN0YWdl",
-            "T3B0aW9uYWxCdWZmU2NSc3ASHwoJY2hhbGxlbmdlGA8gASgLMgwuRkNJSElK",
-            "TE9NR0ESDwoHcmV0Y29kZRgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "T3B0aW9uYWxCdWZmU2NSc3ASDwoHcmV0Y29kZRgFIAEoDRIfCgljaGFsbGVu",
+            "Z2UYCyABKAsyDC5GQ0lISUpMT01HQUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FCIHIJLOMGAReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChooseBoxingClubStageOptionalBuffScRsp), global::EggLink.DanhengServer.Proto.ChooseBoxingClubStageOptionalBuffScRsp.Parser, new[]{ "Challenge", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChooseBoxingClubStageOptionalBuffScRsp), global::EggLink.DanhengServer.Proto.ChooseBoxingClubStageOptionalBuffScRsp.Parser, new[]{ "Retcode", "Challenge" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChooseBoxingClubStageOptionalBuffScRsp(ChooseBoxingClubStageOptionalBuffScRsp other) : this() {
-      challenge_ = other.challenge_ != null ? other.challenge_.Clone() : null;
       retcode_ = other.retcode_;
+      challenge_ = other.challenge_ != null ? other.challenge_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,18 +83,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChooseBoxingClubStageOptionalBuffScRsp Clone() {
       return new ChooseBoxingClubStageOptionalBuffScRsp(this);
-    }
-
-    /// <summary>Field number for the "challenge" field.</summary>
-    public const int ChallengeFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.FCIHIJLOMGA challenge_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FCIHIJLOMGA Challenge {
-      get { return challenge_; }
-      set {
-        challenge_ = value;
-      }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -106,6 +94,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "challenge" field.</summary>
+    public const int ChallengeFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.FCIHIJLOMGA challenge_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.FCIHIJLOMGA Challenge {
+      get { return challenge_; }
+      set {
+        challenge_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Challenge, other.Challenge)) return false;
       if (Retcode != other.Retcode) return false;
+      if (!object.Equals(Challenge, other.Challenge)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (challenge_ != null) hash ^= Challenge.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (challenge_ != null) hash ^= Challenge.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (challenge_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(90);
         output.WriteMessage(Challenge);
       }
       if (_unknownFields != null) {
@@ -176,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (challenge_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(90);
         output.WriteMessage(Challenge);
       }
       if (_unknownFields != null) {
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (challenge_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Challenge);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (challenge_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Challenge);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.challenge_ != null) {
         if (challenge_ == null) {
           Challenge = new global::EggLink.DanhengServer.Proto.FCIHIJLOMGA();
         }
         Challenge.MergeFrom(other.Challenge);
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -235,7 +235,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 90: {
             if (challenge_ == null) {
               Challenge = new global::EggLink.DanhengServer.Proto.FCIHIJLOMGA();
             }
@@ -261,7 +261,7 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 122: {
+          case 90: {
             if (challenge_ == null) {
               Challenge = new global::EggLink.DanhengServer.Proto.FCIHIJLOMGA();
             }

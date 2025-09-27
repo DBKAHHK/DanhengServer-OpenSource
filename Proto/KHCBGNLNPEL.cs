@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFLSENCR05MTlBFTC5wcm90bxoRQ09BSEdGTE9OQU4ucHJvdG8iQgoLS0hD",
-            "QkdOTE5QRUwSMwodcm9ndWVfbWFnaWNfc2NlcHRlcl9pbmZvX2xpc3QYCCAD",
+            "QkdOTE5QRUwSMwodcm9ndWVfbWFnaWNfc2NlcHRlcl9pbmZvX2xpc3QYDCAD",
             "KAsyDC5DT0FIR0ZMT05BTkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_magic_scepter_info_list" field.</summary>
-    public const int RogueMagicScepterInfoListFieldNumber = 8;
+    public const int RogueMagicScepterInfoListFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.COAHGFLONAN> _repeated_rogueMagicScepterInfoList_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.COAHGFLONAN.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.COAHGFLONAN.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.COAHGFLONAN> rogueMagicScepterInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.COAHGFLONAN>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 98: {
             rogueMagicScepterInfoList_.AddEntriesFrom(input, _repeated_rogueMagicScepterInfoList_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 98: {
             rogueMagicScepterInfoList_.AddEntriesFrom(ref input, _repeated_rogueMagicScepterInfoList_codec);
             break;
           }

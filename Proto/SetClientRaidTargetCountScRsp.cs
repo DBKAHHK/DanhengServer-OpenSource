@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNTZXRDbGllbnRSYWlkVGFyZ2V0Q291bnRTY1JzcC5wcm90byJXCh1TZXRD",
-            "bGllbnRSYWlkVGFyZ2V0Q291bnRTY1JzcBIPCgdyZXRjb2RlGAsgASgNEhMK",
-            "C0RNTVBQS01KUE1NGAMgASgNEhAKCHByb2dyZXNzGA8gASgNQh6qAhtFZ2dM",
+            "bGllbnRSYWlkVGFyZ2V0Q291bnRTY1JzcBIPCgdyZXRjb2RlGAcgASgNEhMK",
+            "C0RNTVBQS01KUE1NGAsgASgNEhAKCHByb2dyZXNzGAkgASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DMMPPKMJPMM" field.</summary>
-    public const int DMMPPKMJPMMFieldNumber = 3;
+    public const int DMMPPKMJPMMFieldNumber = 11;
     private uint dMMPPKMJPMM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "progress" field.</summary>
-    public const int ProgressFieldNumber = 15;
+    public const int ProgressFieldNumber = 9;
     private uint progress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DMMPPKMJPMM != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(DMMPPKMJPMM);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (Progress != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(72);
         output.WriteUInt32(Progress);
+      }
+      if (DMMPPKMJPMM != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(DMMPPKMJPMM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DMMPPKMJPMM != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(DMMPPKMJPMM);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
       if (Progress != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(72);
         output.WriteUInt32(Progress);
+      }
+      if (DMMPPKMJPMM != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(DMMPPKMJPMM);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            DMMPPKMJPMM = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 72: {
             Progress = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            DMMPPKMJPMM = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            DMMPPKMJPMM = input.ReadUInt32();
-            break;
-          }
-          case 88: {
+          case 56: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 72: {
             Progress = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            DMMPPKMJPMM = input.ReadUInt32();
             break;
           }
         }

@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNSb2d1ZUFlb25JbmZvLnByb3RvIngKDVJvZ3VlQWVvbkluZm8SIQoZdW5s",
-            "b2NrZWRfYWVvbl9lbmhhbmNlX251bRgKIAEoDRITCgtpc191bmxvY2tlZBgJ",
-            "IAEoCBIUCgxhZW9uX2lkX2xpc3QYDCADKA0SGQoRdW5sb2NrZWRfYWVvbl9u",
-            "dW0YBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "b2NrZWRfYWVvbl9lbmhhbmNlX251bRgPIAEoDRITCgtpc191bmxvY2tlZBgJ",
+            "IAEoCBIUCgxhZW9uX2lkX2xpc3QYDSADKA0SGQoRdW5sb2NrZWRfYWVvbl9u",
+            "dW0YCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "unlocked_aeon_enhance_num" field.</summary>
-    public const int UnlockedAeonEnhanceNumFieldNumber = 10;
+    public const int UnlockedAeonEnhanceNumFieldNumber = 15;
     private uint unlockedAeonEnhanceNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,9 +112,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "aeon_id_list" field.</summary>
-    public const int AeonIdListFieldNumber = 12;
+    public const int AeonIdListFieldNumber = 13;
     private static readonly pb::FieldCodec<uint> _repeated_aeonIdList_codec
-        = pb::FieldCodec.ForUInt32(98);
+        = pb::FieldCodec.ForUInt32(106);
     private readonly pbc::RepeatedField<uint> aeonIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "unlocked_aeon_num" field.</summary>
-    public const int UnlockedAeonNumFieldNumber = 6;
+    public const int UnlockedAeonNumFieldNumber = 10;
     private uint unlockedAeonNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -182,19 +182,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (UnlockedAeonNum != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(UnlockedAeonNum);
-      }
       if (IsUnlocked != false) {
         output.WriteRawTag(72);
         output.WriteBool(IsUnlocked);
       }
-      if (UnlockedAeonEnhanceNum != 0) {
+      if (UnlockedAeonNum != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(UnlockedAeonEnhanceNum);
+        output.WriteUInt32(UnlockedAeonNum);
       }
       aeonIdList_.WriteTo(output, _repeated_aeonIdList_codec);
+      if (UnlockedAeonEnhanceNum != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(UnlockedAeonEnhanceNum);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -205,19 +205,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (UnlockedAeonNum != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(UnlockedAeonNum);
-      }
       if (IsUnlocked != false) {
         output.WriteRawTag(72);
         output.WriteBool(IsUnlocked);
       }
-      if (UnlockedAeonEnhanceNum != 0) {
+      if (UnlockedAeonNum != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(UnlockedAeonEnhanceNum);
+        output.WriteUInt32(UnlockedAeonNum);
       }
       aeonIdList_.WriteTo(ref output, _repeated_aeonIdList_codec);
+      if (UnlockedAeonEnhanceNum != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(UnlockedAeonEnhanceNum);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -275,21 +275,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            UnlockedAeonNum = input.ReadUInt32();
-            break;
-          }
           case 72: {
             IsUnlocked = input.ReadBool();
             break;
           }
           case 80: {
-            UnlockedAeonEnhanceNum = input.ReadUInt32();
+            UnlockedAeonNum = input.ReadUInt32();
             break;
           }
-          case 98:
-          case 96: {
+          case 106:
+          case 104: {
             aeonIdList_.AddEntriesFrom(input, _repeated_aeonIdList_codec);
+            break;
+          }
+          case 120: {
+            UnlockedAeonEnhanceNum = input.ReadUInt32();
             break;
           }
         }
@@ -307,21 +307,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            UnlockedAeonNum = input.ReadUInt32();
-            break;
-          }
           case 72: {
             IsUnlocked = input.ReadBool();
             break;
           }
           case 80: {
-            UnlockedAeonEnhanceNum = input.ReadUInt32();
+            UnlockedAeonNum = input.ReadUInt32();
             break;
           }
-          case 98:
-          case 96: {
+          case 106:
+          case 104: {
             aeonIdList_.AddEntriesFrom(ref input, _repeated_aeonIdList_codec);
+            break;
+          }
+          case 120: {
+            UnlockedAeonEnhanceNum = input.ReadUInt32();
             break;
           }
         }

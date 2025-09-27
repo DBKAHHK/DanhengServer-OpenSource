@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5DbG9ja1BhcmtRdWl0U2NyaXB0Q3NSZXEucHJvdG8iQgoYQ2xvY2tQYXJr",
-            "UXVpdFNjcmlwdENzUmVxEhEKCXNjcmlwdF9pZBgJIAEoDRITCgtLSE5IUEdE",
-            "RUlNTRgDIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "UXVpdFNjcmlwdENzUmVxEhEKCXNjcmlwdF9pZBgNIAEoDRITCgtLSE5IUEdE",
+            "RUlNTRgIIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "script_id" field.</summary>
-    public const int ScriptIdFieldNumber = 9;
+    public const int ScriptIdFieldNumber = 13;
     private uint scriptId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KHNHPGDEIMM" field.</summary>
-    public const int KHNHPGDEIMMFieldNumber = 3;
+    public const int KHNHPGDEIMMFieldNumber = 8;
     private bool kHNHPGDEIMM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (KHNHPGDEIMM != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(64);
         output.WriteBool(KHNHPGDEIMM);
       }
       if (ScriptId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(104);
         output.WriteUInt32(ScriptId);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (KHNHPGDEIMM != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(64);
         output.WriteBool(KHNHPGDEIMM);
       }
       if (ScriptId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(104);
         output.WriteUInt32(ScriptId);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 64: {
             KHNHPGDEIMM = input.ReadBool();
             break;
           }
-          case 72: {
+          case 104: {
             ScriptId = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 64: {
             KHNHPGDEIMM = input.ReadBool();
             break;
           }
-          case 72: {
+          case 104: {
             ScriptId = input.ReadUInt32();
             break;
           }

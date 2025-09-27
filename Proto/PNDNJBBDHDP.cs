@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static PNDNJBBDHDPReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFQTkROSkJCREhEUC5wcm90byItCgtQTkROSkJCREhEUBIPCgdtYXplX2lk",
-            "GAUgASgNEg0KBWxldmVsGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "ChFQTkROSkJCREhEUC5wcm90byItCgtQTkROSkJCREhEUBINCgVsZXZlbBgF",
+            "IAEoDRIPCgdtYXplX2lkGAwgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PNDNJBBDHDP), global::EggLink.DanhengServer.Proto.PNDNJBBDHDP.Parser, new[]{ "MazeId", "Level" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PNDNJBBDHDP), global::EggLink.DanhengServer.Proto.PNDNJBBDHDP.Parser, new[]{ "Level", "MazeId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PNDNJBBDHDP(PNDNJBBDHDP other) : this() {
-      mazeId_ = other.mazeId_;
       level_ = other.level_;
+      mazeId_ = other.mazeId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new PNDNJBBDHDP(this);
     }
 
-    /// <summary>Field number for the "maze_id" field.</summary>
-    public const int MazeIdFieldNumber = 5;
-    private uint mazeId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MazeId {
-      get { return mazeId_; }
-      set {
-        mazeId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 14;
+    public const int LevelFieldNumber = 5;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return level_; }
       set {
         level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "maze_id" field.</summary>
+    public const int MazeIdFieldNumber = 12;
+    private uint mazeId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MazeId {
+      get { return mazeId_; }
+      set {
+        mazeId_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MazeId != other.MazeId) return false;
       if (Level != other.Level) return false;
+      if (MazeId != other.MazeId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MazeId != 0) hash ^= MazeId.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
+      if (MazeId != 0) hash ^= MazeId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MazeId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(MazeId);
-      }
       if (Level != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(40);
         output.WriteUInt32(Level);
+      }
+      if (MazeId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(MazeId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MazeId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(MazeId);
-      }
       if (Level != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(40);
         output.WriteUInt32(Level);
+      }
+      if (MazeId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(MazeId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MazeId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MazeId);
-      }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      }
+      if (MazeId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MazeId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MazeId != 0) {
-        MazeId = other.MazeId;
-      }
       if (other.Level != 0) {
         Level = other.Level;
+      }
+      if (other.MazeId != 0) {
+        MazeId = other.MazeId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 40: {
-            MazeId = input.ReadUInt32();
+            Level = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Level = input.ReadUInt32();
+          case 96: {
+            MazeId = input.ReadUInt32();
             break;
           }
         }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 40: {
-            MazeId = input.ReadUInt32();
+            Level = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Level = input.ReadUInt32();
+          case 96: {
+            MazeId = input.ReadUInt32();
             break;
           }
         }

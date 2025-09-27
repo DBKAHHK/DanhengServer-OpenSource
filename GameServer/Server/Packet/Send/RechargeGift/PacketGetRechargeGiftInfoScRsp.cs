@@ -20,7 +20,7 @@ public class PacketGetRechargeGiftInfoScRsp : BasePacket
                     {
                         x.GiftIDList.Select(h => new RechargeGiftData
                         {
-                            Status = RechargeGiftStatus.Received,
+                            Status = RechargeGiftData.Types.RechargeGiftStatus.Received,
                             Index = (uint)x.GiftIDList.IndexOf(h)
                         })
                     }

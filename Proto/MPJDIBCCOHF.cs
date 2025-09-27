@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFNUEpESUJDQ09IRi5wcm90byI3CgtNUEpESUJDQ09IRhITCgtPQkNQR09C",
-            "QUVERRgNIAMoDRITCgtNSUFJT1BHSVBISBgDIAEoDUIeqgIbRWdnTGluay5E",
+            "QUVERRgPIAMoDRITCgtNSUFJT1BHSVBISBgGIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "OBCPGOBAEDE" field.</summary>
-    public const int OBCPGOBAEDEFieldNumber = 13;
+    public const int OBCPGOBAEDEFieldNumber = 15;
     private static readonly pb::FieldCodec<uint> _repeated_oBCPGOBAEDE_codec
-        = pb::FieldCodec.ForUInt32(106);
+        = pb::FieldCodec.ForUInt32(122);
     private readonly pbc::RepeatedField<uint> oBCPGOBAEDE_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,7 +95,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MIAIOPGIPHH" field.</summary>
-    public const int MIAIOPGIPHHFieldNumber = 3;
+    public const int MIAIOPGIPHHFieldNumber = 6;
     private uint mIAIOPGIPHH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MIAIOPGIPHH != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteUInt32(MIAIOPGIPHH);
       }
       oBCPGOBAEDE_.WriteTo(output, _repeated_oBCPGOBAEDE_codec);
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MIAIOPGIPHH != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteUInt32(MIAIOPGIPHH);
       }
       oBCPGOBAEDE_.WriteTo(ref output, _repeated_oBCPGOBAEDE_codec);
@@ -215,12 +215,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 48: {
             MIAIOPGIPHH = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
+          case 122:
+          case 120: {
             oBCPGOBAEDE_.AddEntriesFrom(input, _repeated_oBCPGOBAEDE_codec);
             break;
           }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 48: {
             MIAIOPGIPHH = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
+          case 122:
+          case 120: {
             oBCPGOBAEDE_.AddEntriesFrom(ref input, _repeated_oBCPGOBAEDE_codec);
             break;
           }

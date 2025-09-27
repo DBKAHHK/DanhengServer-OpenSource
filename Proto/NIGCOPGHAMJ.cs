@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFOSUdDT1BHSEFNSi5wcm90byI3CgtOSUdDT1BHSEFNShITCgtCR0xFSE1L",
-            "TUFQRxgCIAEoDRITCgtISEdBUERGSU5ESRgBIAEoCEIeqgIbRWdnTGluay5E",
+            "TUFQRxgJIAEoDRITCgtISEdBUERGSU5ESRgLIAEoCEIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BGLEHMKMAPG" field.</summary>
-    public const int BGLEHMKMAPGFieldNumber = 2;
+    public const int BGLEHMKMAPGFieldNumber = 9;
     private uint bGLEHMKMAPG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HHGAPDFINDI" field.</summary>
-    public const int HHGAPDFINDIFieldNumber = 1;
+    public const int HHGAPDFINDIFieldNumber = 11;
     private bool hHGAPDFINDI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HHGAPDFINDI != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(HHGAPDFINDI);
-      }
       if (BGLEHMKMAPG != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(72);
         output.WriteUInt32(BGLEHMKMAPG);
+      }
+      if (HHGAPDFINDI != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(HHGAPDFINDI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HHGAPDFINDI != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(HHGAPDFINDI);
-      }
       if (BGLEHMKMAPG != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(72);
         output.WriteUInt32(BGLEHMKMAPG);
+      }
+      if (HHGAPDFINDI != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(HHGAPDFINDI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            HHGAPDFINDI = input.ReadBool();
+          case 72: {
+            BGLEHMKMAPG = input.ReadUInt32();
             break;
           }
-          case 16: {
-            BGLEHMKMAPG = input.ReadUInt32();
+          case 88: {
+            HHGAPDFINDI = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            HHGAPDFINDI = input.ReadBool();
+          case 72: {
+            BGLEHMKMAPG = input.ReadUInt32();
             break;
           }
-          case 16: {
-            BGLEHMKMAPG = input.ReadUInt32();
+          case 88: {
+            HHGAPDFINDI = input.ReadBool();
             break;
           }
         }

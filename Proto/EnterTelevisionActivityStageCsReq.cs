@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidFbnRlclRlbGV2aXNpb25BY3Rpdml0eVN0YWdlQ3NSZXEucHJvdG8aEURF",
             "UEVBSEpOS0dKLnByb3RvIm4KIUVudGVyVGVsZXZpc2lvbkFjdGl2aXR5U3Rh",
-            "Z2VDc1JlcRITCgtOSU5MRkJHTEJMTBgJIAEoDRIhCgthdmF0YXJfbGlzdBgO",
-            "IAMoCzIMLkRFUEVBSEpOS0dKEhEKCWJ1ZmZfbGlzdBgDIAMoDUIeqgIbRWdn",
+            "Z2VDc1JlcRITCgtOSU5MRkJHTEJMTBgEIAEoDRIRCglidWZmX2xpc3QYDyAD",
+            "KA0SIQoLYXZhdGFyX2xpc3QYBiADKAsyDC5ERVBFQUhKTktHSkIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DEPEAHJNKGJReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterTelevisionActivityStageCsReq), global::EggLink.DanhengServer.Proto.EnterTelevisionActivityStageCsReq.Parser, new[]{ "NINLFBGLBLL", "AvatarList", "BuffList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnterTelevisionActivityStageCsReq), global::EggLink.DanhengServer.Proto.EnterTelevisionActivityStageCsReq.Parser, new[]{ "NINLFBGLBLL", "BuffList", "AvatarList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnterTelevisionActivityStageCsReq(EnterTelevisionActivityStageCsReq other) : this() {
       nINLFBGLBLL_ = other.nINLFBGLBLL_;
-      avatarList_ = other.avatarList_.Clone();
       buffList_ = other.buffList_.Clone();
+      avatarList_ = other.avatarList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NINLFBGLBLL" field.</summary>
-    public const int NINLFBGLBLLFieldNumber = 9;
+    public const int NINLFBGLBLLFieldNumber = 4;
     private uint nINLFBGLBLL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,26 +98,26 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "avatar_list" field.</summary>
-    public const int AvatarListFieldNumber = 14;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DEPEAHJNKGJ> _repeated_avatarList_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.DEPEAHJNKGJ.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DEPEAHJNKGJ> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DEPEAHJNKGJ>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DEPEAHJNKGJ> AvatarList {
-      get { return avatarList_; }
-    }
-
     /// <summary>Field number for the "buff_list" field.</summary>
-    public const int BuffListFieldNumber = 3;
+    public const int BuffListFieldNumber = 15;
     private static readonly pb::FieldCodec<uint> _repeated_buffList_codec
-        = pb::FieldCodec.ForUInt32(26);
+        = pb::FieldCodec.ForUInt32(122);
     private readonly pbc::RepeatedField<uint> buffList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> BuffList {
       get { return buffList_; }
+    }
+
+    /// <summary>Field number for the "avatar_list" field.</summary>
+    public const int AvatarListFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.DEPEAHJNKGJ> _repeated_avatarList_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.DEPEAHJNKGJ.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DEPEAHJNKGJ> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DEPEAHJNKGJ>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.DEPEAHJNKGJ> AvatarList {
+      get { return avatarList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (NINLFBGLBLL != other.NINLFBGLBLL) return false;
-      if(!avatarList_.Equals(other.avatarList_)) return false;
       if(!buffList_.Equals(other.buffList_)) return false;
+      if(!avatarList_.Equals(other.avatarList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (NINLFBGLBLL != 0) hash ^= NINLFBGLBLL.GetHashCode();
-      hash ^= avatarList_.GetHashCode();
       hash ^= buffList_.GetHashCode();
+      hash ^= avatarList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,12 +166,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      buffList_.WriteTo(output, _repeated_buffList_codec);
       if (NINLFBGLBLL != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(NINLFBGLBLL);
       }
       avatarList_.WriteTo(output, _repeated_avatarList_codec);
+      buffList_.WriteTo(output, _repeated_buffList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -182,12 +182,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      buffList_.WriteTo(ref output, _repeated_buffList_codec);
       if (NINLFBGLBLL != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(NINLFBGLBLL);
       }
       avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
+      buffList_.WriteTo(ref output, _repeated_buffList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -201,8 +201,8 @@ namespace EggLink.DanhengServer.Proto {
       if (NINLFBGLBLL != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NINLFBGLBLL);
       }
-      size += avatarList_.CalculateSize(_repeated_avatarList_codec);
       size += buffList_.CalculateSize(_repeated_buffList_codec);
+      size += avatarList_.CalculateSize(_repeated_avatarList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -218,8 +218,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.NINLFBGLBLL != 0) {
         NINLFBGLBLL = other.NINLFBGLBLL;
       }
-      avatarList_.Add(other.avatarList_);
       buffList_.Add(other.buffList_);
+      avatarList_.Add(other.avatarList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -235,17 +235,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26:
-          case 24: {
-            buffList_.AddEntriesFrom(input, _repeated_buffList_codec);
-            break;
-          }
-          case 72: {
+          case 32: {
             NINLFBGLBLL = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 50: {
             avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
+            break;
+          }
+          case 122:
+          case 120: {
+            buffList_.AddEntriesFrom(input, _repeated_buffList_codec);
             break;
           }
         }
@@ -263,17 +263,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26:
-          case 24: {
-            buffList_.AddEntriesFrom(ref input, _repeated_buffList_codec);
-            break;
-          }
-          case 72: {
+          case 32: {
             NINLFBGLBLL = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 50: {
             avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
+            break;
+          }
+          case 122:
+          case 120: {
+            buffList_.AddEntriesFrom(ref input, _repeated_buffList_codec);
             break;
           }
         }

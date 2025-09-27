@@ -128,6 +128,11 @@ public class AdventureModifierConfig
                 ?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!))
                 .ToList() ?? [];
 
+        if (obj.ContainsKey(nameof(OnTeamLeaderChange)))
+            info.OnTeamLeaderChange = obj[nameof(OnTeamLeaderChange)]
+                ?.Select(x => TaskConfigInfo.LoadFromJsonObject((x as JObject)!))
+                .ToList() ?? [];
+
         // TODO: others
 
         return info;

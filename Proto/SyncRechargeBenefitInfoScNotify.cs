@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVTeW5jUmVjaGFyZ2VCZW5lZml0SW5mb1NjTm90aWZ5LnByb3RvGhlSZWNo",
             "YXJnZUJlbmVmaXRJbmZvLnByb3RvIlYKH1N5bmNSZWNoYXJnZUJlbmVmaXRJ",
-            "bmZvU2NOb3RpZnkSMwoVcmVjaGFyZ2VfYmVuZWZpdF9pbmZvGAcgASgLMhQu",
+            "bmZvU2NOb3RpZnkSMwoVcmVjaGFyZ2VfYmVuZWZpdF9pbmZvGAYgASgLMhQu",
             "UmVjaGFyZ2VCZW5lZml0SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "recharge_benefit_info" field.</summary>
-    public const int RechargeBenefitInfoFieldNumber = 7;
+    public const int RechargeBenefitInfoFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.RechargeBenefitInfo rechargeBenefitInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (rechargeBenefitInfo_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(50);
         output.WriteMessage(RechargeBenefitInfo);
       }
       if (_unknownFields != null) {
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rechargeBenefitInfo_ != null) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(50);
         output.WriteMessage(RechargeBenefitInfo);
       }
       if (_unknownFields != null) {
@@ -202,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 50: {
             if (rechargeBenefitInfo_ == null) {
               RechargeBenefitInfo = new global::EggLink.DanhengServer.Proto.RechargeBenefitInfo();
             }
@@ -224,7 +224,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 50: {
             if (rechargeBenefitInfo_ == null) {
               RechargeBenefitInfo = new global::EggLink.DanhengServer.Proto.RechargeBenefitInfo();
             }

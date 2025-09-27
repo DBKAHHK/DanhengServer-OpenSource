@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5IZWxpb2J1c0VudGVyQmF0dGxlQ3NSZXEucHJvdG8iVgoYSGVsaW9idXNF",
-            "bnRlckJhdHRsZUNzUmVxEhAKCGV2ZW50X2lkGAIgASgNEhAKCHNraWxsX2lk",
-            "GAMgASgNEhYKDmF2YXRhcl9pZF9saXN0GAwgAygNQh6qAhtFZ2dMaW5rLkRh",
+            "bnRlckJhdHRsZUNzUmVxEhAKCGV2ZW50X2lkGAcgASgNEhAKCHNraWxsX2lk",
+            "GAsgASgNEhYKDmF2YXRhcl9pZF9saXN0GAwgAygNQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "event_id" field.</summary>
-    public const int EventIdFieldNumber = 2;
+    public const int EventIdFieldNumber = 7;
     private uint eventId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "skill_id" field.</summary>
-    public const int SkillIdFieldNumber = 3;
+    public const int SkillIdFieldNumber = 11;
     private uint skillId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EventId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(EventId);
       }
       if (SkillId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(88);
         output.WriteUInt32(SkillId);
       }
       avatarIdList_.WriteTo(output, _repeated_avatarIdList_codec);
@@ -186,11 +186,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EventId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(56);
         output.WriteUInt32(EventId);
       }
       if (SkillId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(88);
         output.WriteUInt32(SkillId);
       }
       avatarIdList_.WriteTo(ref output, _repeated_avatarIdList_codec);
@@ -245,11 +245,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 56: {
             EventId = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 88: {
             SkillId = input.ReadUInt32();
             break;
           }
@@ -273,11 +273,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 56: {
             EventId = input.ReadUInt32();
             break;
           }
-          case 24: {
+          case 88: {
             SkillId = input.ReadUInt32();
             break;
           }

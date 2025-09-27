@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFOS0RPSEhPRE5OSC5wcm90bxoOUGlsZUl0ZW0ucHJvdG8iTQoLTktET0hI",
-            "T0ROTkgSHgoLSUNGTElISEJQTUcYDiABKAsyCS5QaWxlSXRlbRIeCgtGSVBI",
-            "SEJERUlERhgMIAMoCzIJLlBpbGVJdGVtQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "T0ROTkgSHgoLSUNGTElISEJQTUcYAyABKAsyCS5QaWxlSXRlbRIeCgtGSVBI",
+            "SEJERUlERhgNIAMoCzIJLlBpbGVJdGVtQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PileItemReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ICFLIHHBPMG" field.</summary>
-    public const int ICFLIHHBPMGFieldNumber = 14;
+    public const int ICFLIHHBPMGFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.PileItem iCFLIHHBPMG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FIPHHBDEIDF" field.</summary>
-    public const int FIPHHBDEIDFFieldNumber = 12;
+    public const int FIPHHBDEIDFFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PileItem> _repeated_fIPHHBDEIDF_codec
-        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.PileItem.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.PileItem.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PileItem> fIPHHBDEIDF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PileItem>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      fIPHHBDEIDF_.WriteTo(output, _repeated_fIPHHBDEIDF_codec);
       if (iCFLIHHBPMG_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(26);
         output.WriteMessage(ICFLIHHBPMG);
       }
+      fIPHHBDEIDF_.WriteTo(output, _repeated_fIPHHBDEIDF_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      fIPHHBDEIDF_.WriteTo(ref output, _repeated_fIPHHBDEIDF_codec);
       if (iCFLIHHBPMG_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(26);
         output.WriteMessage(ICFLIHHBPMG);
       }
+      fIPHHBDEIDF_.WriteTo(ref output, _repeated_fIPHHBDEIDF_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -219,15 +219,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 98: {
-            fIPHHBDEIDF_.AddEntriesFrom(input, _repeated_fIPHHBDEIDF_codec);
-            break;
-          }
-          case 114: {
+          case 26: {
             if (iCFLIHHBPMG_ == null) {
               ICFLIHHBPMG = new global::EggLink.DanhengServer.Proto.PileItem();
             }
             input.ReadMessage(ICFLIHHBPMG);
+            break;
+          }
+          case 106: {
+            fIPHHBDEIDF_.AddEntriesFrom(input, _repeated_fIPHHBDEIDF_codec);
             break;
           }
         }
@@ -245,15 +245,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 98: {
-            fIPHHBDEIDF_.AddEntriesFrom(ref input, _repeated_fIPHHBDEIDF_codec);
-            break;
-          }
-          case 114: {
+          case 26: {
             if (iCFLIHHBPMG_ == null) {
               ICFLIHHBPMG = new global::EggLink.DanhengServer.Proto.PileItem();
             }
             input.ReadMessage(ICFLIHHBPMG);
+            break;
+          }
+          case 106: {
+            fIPHHBDEIDF_.AddEntriesFrom(ref input, _repeated_fIPHHBDEIDF_codec);
             break;
           }
         }

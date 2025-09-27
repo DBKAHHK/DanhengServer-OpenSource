@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9GaWdodE1hdGNoM1NvbG9Td2FwTm90aWZ5LnByb3RvGhFNRE9IQUZCRUVQ",
             "Sy5wcm90bxoaRmlnaHRNYXRjaDNTd2FwQ3NSZXEucHJvdG8iagoZRmlnaHRN",
-            "YXRjaDNTb2xvU3dhcE5vdGlmeRIqCgtNRURCT05IQUxPRBgEIAEoCzIVLkZp",
-            "Z2h0TWF0Y2gzU3dhcENzUmVxEiEKC0VIRUxHQU9BQkpKGAUgASgLMgwuTURP",
+            "YXRjaDNTb2xvU3dhcE5vdGlmeRIqCgtNRURCT05IQUxPRBgKIAEoCzIVLkZp",
+            "Z2h0TWF0Y2gzU3dhcENzUmVxEiEKC0VIRUxHQU9BQkpKGAkgASgLMgwuTURP",
             "SEFGQkVFUEtCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MEDBONHALOD" field.</summary>
-    public const int MEDBONHALODFieldNumber = 4;
+    public const int MEDBONHALODFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.FightMatch3SwapCsReq mEDBONHALOD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "EHELGAOABJJ" field.</summary>
-    public const int EHELGAOABJJFieldNumber = 5;
+    public const int EHELGAOABJJFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.MDOHAFBEEPK eHELGAOABJJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,13 +154,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (mEDBONHALOD_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(MEDBONHALOD);
-      }
       if (eHELGAOABJJ_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(74);
         output.WriteMessage(EHELGAOABJJ);
+      }
+      if (mEDBONHALOD_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(MEDBONHALOD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -172,13 +172,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (mEDBONHALOD_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(MEDBONHALOD);
-      }
       if (eHELGAOABJJ_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(74);
         output.WriteMessage(EHELGAOABJJ);
+      }
+      if (mEDBONHALOD_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(MEDBONHALOD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,18 +235,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
-            if (mEDBONHALOD_ == null) {
-              MEDBONHALOD = new global::EggLink.DanhengServer.Proto.FightMatch3SwapCsReq();
-            }
-            input.ReadMessage(MEDBONHALOD);
-            break;
-          }
-          case 42: {
+          case 74: {
             if (eHELGAOABJJ_ == null) {
               EHELGAOABJJ = new global::EggLink.DanhengServer.Proto.MDOHAFBEEPK();
             }
             input.ReadMessage(EHELGAOABJJ);
+            break;
+          }
+          case 82: {
+            if (mEDBONHALOD_ == null) {
+              MEDBONHALOD = new global::EggLink.DanhengServer.Proto.FightMatch3SwapCsReq();
+            }
+            input.ReadMessage(MEDBONHALOD);
             break;
           }
         }
@@ -264,18 +264,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
-            if (mEDBONHALOD_ == null) {
-              MEDBONHALOD = new global::EggLink.DanhengServer.Proto.FightMatch3SwapCsReq();
-            }
-            input.ReadMessage(MEDBONHALOD);
-            break;
-          }
-          case 42: {
+          case 74: {
             if (eHELGAOABJJ_ == null) {
               EHELGAOABJJ = new global::EggLink.DanhengServer.Proto.MDOHAFBEEPK();
             }
             input.ReadMessage(EHELGAOABJJ);
+            break;
+          }
+          case 82: {
+            if (mEDBONHALOD_ == null) {
+              MEDBONHALOD = new global::EggLink.DanhengServer.Proto.FightMatch3SwapCsReq();
+            }
+            input.ReadMessage(MEDBONHALOD);
             break;
           }
         }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFBQUdGSUpNTU9LTC5wcm90bxoRTEZFR09JRlBESkoucHJvdG8iMAoLQUFH",
-            "RklKTU1PS0wSIQoLbGluZXVwX2xpc3QYDyADKAsyDC5MRkVHT0lGUERKSkIe",
+            "RklKTU1PS0wSIQoLbGluZXVwX2xpc3QYCSADKAsyDC5MRkVHT0lGUERKSkIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LFEGOIFPDJJReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "lineup_list" field.</summary>
-    public const int LineupListFieldNumber = 15;
+    public const int LineupListFieldNumber = 9;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LFEGOIFPDJJ> _repeated_lineupList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.LFEGOIFPDJJ.Parser);
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.LFEGOIFPDJJ.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LFEGOIFPDJJ> lineupList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LFEGOIFPDJJ>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 122: {
+          case 74: {
             lineupList_.AddEntriesFrom(input, _repeated_lineupList_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 122: {
+          case 74: {
             lineupList_.AddEntriesFrom(ref input, _repeated_lineupList_codec);
             break;
           }

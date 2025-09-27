@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxUZXh0Sm9pbkJhdGNoU2F2ZVNjUnNwLnByb3RvGhFJT01PUEVORU1CRi5w",
             "cm90byJMChZUZXh0Sm9pbkJhdGNoU2F2ZVNjUnNwEg8KB3JldGNvZGUYDyAB",
-            "KA0SIQoLTktLS09QQUNPS0cYBSADKAsyDC5JT01PUEVORU1CRkIeqgIbRWdn",
+            "KA0SIQoLTktLS09QQUNPS0cYCiADKAsyDC5JT01PUEVORU1CRkIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IOMOPENEMBFReflection.Descriptor, },
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NKKKOPACOKG" field.</summary>
-    public const int NKKKOPACOKGFieldNumber = 5;
+    public const int NKKKOPACOKGFieldNumber = 10;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.IOMOPENEMBF> _repeated_nKKKOPACOKG_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.IOMOPENEMBF.Parser);
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.IOMOPENEMBF.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IOMOPENEMBF> nKKKOPACOKG_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IOMOPENEMBF>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 82: {
             nKKKOPACOKG_.AddEntriesFrom(input, _repeated_nKKKOPACOKG_codec);
             break;
           }
@@ -239,7 +239,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 82: {
             nKKKOPACOKG_.AddEntriesFrom(ref input, _repeated_nKKKOPACOKG_codec);
             break;
           }

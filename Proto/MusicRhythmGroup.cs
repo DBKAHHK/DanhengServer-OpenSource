@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZNdXNpY1JoeXRobUdyb3VwLnByb3RvIm8KEE11c2ljUmh5dGhtR3JvdXAS",
-            "GQoRbXVzaWNfZ3JvdXBfcGhhc2UYCiABKA0SEwoLTkJCT0FCR0xDSkMYAyAD",
-            "KA0SFgoObXVzaWNfZ3JvdXBfaWQYCyABKA0SEwoLRE5LSkRKSkJDREsYAiAD",
+            "EwoLTkJCT0FCR0xDSkMYASADKA0SFgoObXVzaWNfZ3JvdXBfaWQYAiABKA0S",
+            "EwoLRE5LSkRKSkJDREsYCSADKA0SGQoRbXVzaWNfZ3JvdXBfcGhhc2UYCyAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmGroup), global::EggLink.DanhengServer.Proto.MusicRhythmGroup.Parser, new[]{ "MusicGroupPhase", "NBBOABGLCJC", "MusicGroupId", "DNKJDJJBCDK" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmGroup), global::EggLink.DanhengServer.Proto.MusicRhythmGroup.Parser, new[]{ "NBBOABGLCJC", "MusicGroupId", "DNKJDJJBCDK", "MusicGroupPhase" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmGroup(MusicRhythmGroup other) : this() {
-      musicGroupPhase_ = other.musicGroupPhase_;
       nBBOABGLCJC_ = other.nBBOABGLCJC_.Clone();
       musicGroupId_ = other.musicGroupId_;
       dNKJDJJBCDK_ = other.dNKJDJJBCDK_.Clone();
+      musicGroupPhase_ = other.musicGroupPhase_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,22 +86,10 @@ namespace EggLink.DanhengServer.Proto {
       return new MusicRhythmGroup(this);
     }
 
-    /// <summary>Field number for the "music_group_phase" field.</summary>
-    public const int MusicGroupPhaseFieldNumber = 10;
-    private uint musicGroupPhase_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MusicGroupPhase {
-      get { return musicGroupPhase_; }
-      set {
-        musicGroupPhase_ = value;
-      }
-    }
-
     /// <summary>Field number for the "NBBOABGLCJC" field.</summary>
-    public const int NBBOABGLCJCFieldNumber = 3;
+    public const int NBBOABGLCJCFieldNumber = 1;
     private static readonly pb::FieldCodec<uint> _repeated_nBBOABGLCJC_codec
-        = pb::FieldCodec.ForUInt32(26);
+        = pb::FieldCodec.ForUInt32(10);
     private readonly pbc::RepeatedField<uint> nBBOABGLCJC_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "music_group_id" field.</summary>
-    public const int MusicGroupIdFieldNumber = 11;
+    public const int MusicGroupIdFieldNumber = 2;
     private uint musicGroupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,14 +110,26 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "DNKJDJJBCDK" field.</summary>
-    public const int DNKJDJJBCDKFieldNumber = 2;
+    public const int DNKJDJJBCDKFieldNumber = 9;
     private static readonly pb::FieldCodec<uint> _repeated_dNKJDJJBCDK_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(74);
     private readonly pbc::RepeatedField<uint> dNKJDJJBCDK_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> DNKJDJJBCDK {
       get { return dNKJDJJBCDK_; }
+    }
+
+    /// <summary>Field number for the "music_group_phase" field.</summary>
+    public const int MusicGroupPhaseFieldNumber = 11;
+    private uint musicGroupPhase_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MusicGroupPhase {
+      get { return musicGroupPhase_; }
+      set {
+        musicGroupPhase_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -147,10 +147,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MusicGroupPhase != other.MusicGroupPhase) return false;
       if(!nBBOABGLCJC_.Equals(other.nBBOABGLCJC_)) return false;
       if (MusicGroupId != other.MusicGroupId) return false;
       if(!dNKJDJJBCDK_.Equals(other.dNKJDJJBCDK_)) return false;
+      if (MusicGroupPhase != other.MusicGroupPhase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -158,10 +158,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MusicGroupPhase != 0) hash ^= MusicGroupPhase.GetHashCode();
       hash ^= nBBOABGLCJC_.GetHashCode();
       if (MusicGroupId != 0) hash ^= MusicGroupId.GetHashCode();
       hash ^= dNKJDJJBCDK_.GetHashCode();
+      if (MusicGroupPhase != 0) hash ^= MusicGroupPhase.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -180,15 +180,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      dNKJDJJBCDK_.WriteTo(output, _repeated_dNKJDJJBCDK_codec);
       nBBOABGLCJC_.WriteTo(output, _repeated_nBBOABGLCJC_codec);
-      if (MusicGroupPhase != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MusicGroupPhase);
-      }
       if (MusicGroupId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(MusicGroupId);
+      }
+      dNKJDJJBCDK_.WriteTo(output, _repeated_dNKJDJJBCDK_codec);
+      if (MusicGroupPhase != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(MusicGroupPhase);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -200,15 +200,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      dNKJDJJBCDK_.WriteTo(ref output, _repeated_dNKJDJJBCDK_codec);
       nBBOABGLCJC_.WriteTo(ref output, _repeated_nBBOABGLCJC_codec);
-      if (MusicGroupPhase != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(MusicGroupPhase);
-      }
       if (MusicGroupId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(MusicGroupId);
+      }
+      dNKJDJJBCDK_.WriteTo(ref output, _repeated_dNKJDJJBCDK_codec);
+      if (MusicGroupPhase != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(MusicGroupPhase);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -220,14 +220,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MusicGroupPhase != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MusicGroupPhase);
-      }
       size += nBBOABGLCJC_.CalculateSize(_repeated_nBBOABGLCJC_codec);
       if (MusicGroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MusicGroupId);
       }
       size += dNKJDJJBCDK_.CalculateSize(_repeated_dNKJDJJBCDK_codec);
+      if (MusicGroupPhase != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MusicGroupPhase);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -240,14 +240,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MusicGroupPhase != 0) {
-        MusicGroupPhase = other.MusicGroupPhase;
-      }
       nBBOABGLCJC_.Add(other.nBBOABGLCJC_);
       if (other.MusicGroupId != 0) {
         MusicGroupId = other.MusicGroupId;
       }
       dNKJDJJBCDK_.Add(other.dNKJDJJBCDK_);
+      if (other.MusicGroupPhase != 0) {
+        MusicGroupPhase = other.MusicGroupPhase;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -263,22 +263,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
-            dNKJDJJBCDK_.AddEntriesFrom(input, _repeated_dNKJDJJBCDK_codec);
-            break;
-          }
-          case 26:
-          case 24: {
+          case 10:
+          case 8: {
             nBBOABGLCJC_.AddEntriesFrom(input, _repeated_nBBOABGLCJC_codec);
             break;
           }
-          case 80: {
-            MusicGroupPhase = input.ReadUInt32();
+          case 16: {
+            MusicGroupId = input.ReadUInt32();
+            break;
+          }
+          case 74:
+          case 72: {
+            dNKJDJJBCDK_.AddEntriesFrom(input, _repeated_dNKJDJJBCDK_codec);
             break;
           }
           case 88: {
-            MusicGroupId = input.ReadUInt32();
+            MusicGroupPhase = input.ReadUInt32();
             break;
           }
         }
@@ -296,22 +296,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
-            dNKJDJJBCDK_.AddEntriesFrom(ref input, _repeated_dNKJDJJBCDK_codec);
-            break;
-          }
-          case 26:
-          case 24: {
+          case 10:
+          case 8: {
             nBBOABGLCJC_.AddEntriesFrom(ref input, _repeated_nBBOABGLCJC_codec);
             break;
           }
-          case 80: {
-            MusicGroupPhase = input.ReadUInt32();
+          case 16: {
+            MusicGroupId = input.ReadUInt32();
+            break;
+          }
+          case 74:
+          case 72: {
+            dNKJDJJBCDK_.AddEntriesFrom(ref input, _repeated_dNKJDJJBCDK_codec);
             break;
           }
           case 88: {
-            MusicGroupId = input.ReadUInt32();
+            MusicGroupPhase = input.ReadUInt32();
             break;
           }
         }

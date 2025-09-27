@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static EGDGHFLLMGNReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFFR0RHSEZMTE1HTi5wcm90byKPAQoLRUdER0hGTExNR04SEwoLdG90YWxf",
-            "dHVybnMYBiABKA0SEwoLQ0ZJSklQQ0hIR08YCSABKA0SEQoJY29zdF90aW1l",
-            "GAQgASgNEhMKC0xDSkhHREpERU5HGAMgASgNEhgKEHRvdGFsX2F1dG9fdHVy",
-            "bnMYDSABKA0SFAoMdG90YWxfZGFtYWdlGAsgASgNQh6qAhtFZ2dMaW5rLkRh",
+            "ChFFR0RHSEZMTE1HTi5wcm90byKPAQoLRUdER0hGTExNR04SEwoLTENKSEdE",
+            "SkRFTkcYAiABKA0SEQoJY29zdF90aW1lGAsgASgNEhMKC0NGSUpJUENISEdP",
+            "GAggASgNEhMKC3RvdGFsX3R1cm5zGAcgASgNEhgKEHRvdGFsX2F1dG9fdHVy",
+            "bnMYDiABKA0SFAoMdG90YWxfZGFtYWdlGAMgASgNQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EGDGHFLLMGN), global::EggLink.DanhengServer.Proto.EGDGHFLLMGN.Parser, new[]{ "TotalTurns", "CFIJIPCHHGO", "CostTime", "LCJHGDJDENG", "TotalAutoTurns", "TotalDamage" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EGDGHFLLMGN), global::EggLink.DanhengServer.Proto.EGDGHFLLMGN.Parser, new[]{ "LCJHGDJDENG", "CostTime", "CFIJIPCHHGO", "TotalTurns", "TotalAutoTurns", "TotalDamage" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EGDGHFLLMGN(EGDGHFLLMGN other) : this() {
-      totalTurns_ = other.totalTurns_;
-      cFIJIPCHHGO_ = other.cFIJIPCHHGO_;
-      costTime_ = other.costTime_;
       lCJHGDJDENG_ = other.lCJHGDJDENG_;
+      costTime_ = other.costTime_;
+      cFIJIPCHHGO_ = other.cFIJIPCHHGO_;
+      totalTurns_ = other.totalTurns_;
       totalAutoTurns_ = other.totalAutoTurns_;
       totalDamage_ = other.totalDamage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -89,44 +89,8 @@ namespace EggLink.DanhengServer.Proto {
       return new EGDGHFLLMGN(this);
     }
 
-    /// <summary>Field number for the "total_turns" field.</summary>
-    public const int TotalTurnsFieldNumber = 6;
-    private uint totalTurns_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TotalTurns {
-      get { return totalTurns_; }
-      set {
-        totalTurns_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "CFIJIPCHHGO" field.</summary>
-    public const int CFIJIPCHHGOFieldNumber = 9;
-    private uint cFIJIPCHHGO_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CFIJIPCHHGO {
-      get { return cFIJIPCHHGO_; }
-      set {
-        cFIJIPCHHGO_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "cost_time" field.</summary>
-    public const int CostTimeFieldNumber = 4;
-    private uint costTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CostTime {
-      get { return costTime_; }
-      set {
-        costTime_ = value;
-      }
-    }
-
     /// <summary>Field number for the "LCJHGDJDENG" field.</summary>
-    public const int LCJHGDJDENGFieldNumber = 3;
+    public const int LCJHGDJDENGFieldNumber = 2;
     private uint lCJHGDJDENG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,8 +101,44 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "cost_time" field.</summary>
+    public const int CostTimeFieldNumber = 11;
+    private uint costTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CostTime {
+      get { return costTime_; }
+      set {
+        costTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CFIJIPCHHGO" field.</summary>
+    public const int CFIJIPCHHGOFieldNumber = 8;
+    private uint cFIJIPCHHGO_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CFIJIPCHHGO {
+      get { return cFIJIPCHHGO_; }
+      set {
+        cFIJIPCHHGO_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_turns" field.</summary>
+    public const int TotalTurnsFieldNumber = 7;
+    private uint totalTurns_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TotalTurns {
+      get { return totalTurns_; }
+      set {
+        totalTurns_ = value;
+      }
+    }
+
     /// <summary>Field number for the "total_auto_turns" field.</summary>
-    public const int TotalAutoTurnsFieldNumber = 13;
+    public const int TotalAutoTurnsFieldNumber = 14;
     private uint totalAutoTurns_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,7 +150,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "total_damage" field.</summary>
-    public const int TotalDamageFieldNumber = 11;
+    public const int TotalDamageFieldNumber = 3;
     private uint totalDamage_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -176,10 +176,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TotalTurns != other.TotalTurns) return false;
-      if (CFIJIPCHHGO != other.CFIJIPCHHGO) return false;
-      if (CostTime != other.CostTime) return false;
       if (LCJHGDJDENG != other.LCJHGDJDENG) return false;
+      if (CostTime != other.CostTime) return false;
+      if (CFIJIPCHHGO != other.CFIJIPCHHGO) return false;
+      if (TotalTurns != other.TotalTurns) return false;
       if (TotalAutoTurns != other.TotalAutoTurns) return false;
       if (TotalDamage != other.TotalDamage) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -189,10 +189,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TotalTurns != 0) hash ^= TotalTurns.GetHashCode();
-      if (CFIJIPCHHGO != 0) hash ^= CFIJIPCHHGO.GetHashCode();
-      if (CostTime != 0) hash ^= CostTime.GetHashCode();
       if (LCJHGDJDENG != 0) hash ^= LCJHGDJDENG.GetHashCode();
+      if (CostTime != 0) hash ^= CostTime.GetHashCode();
+      if (CFIJIPCHHGO != 0) hash ^= CFIJIPCHHGO.GetHashCode();
+      if (TotalTurns != 0) hash ^= TotalTurns.GetHashCode();
       if (TotalAutoTurns != 0) hash ^= TotalAutoTurns.GetHashCode();
       if (TotalDamage != 0) hash ^= TotalDamage.GetHashCode();
       if (_unknownFields != null) {
@@ -214,27 +214,27 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (LCJHGDJDENG != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteUInt32(LCJHGDJDENG);
       }
-      if (CostTime != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(CostTime);
+      if (TotalDamage != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(TotalDamage);
       }
       if (TotalTurns != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteUInt32(TotalTurns);
       }
       if (CFIJIPCHHGO != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(CFIJIPCHHGO);
       }
-      if (TotalDamage != 0) {
+      if (CostTime != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(TotalDamage);
+        output.WriteUInt32(CostTime);
       }
       if (TotalAutoTurns != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteUInt32(TotalAutoTurns);
       }
       if (_unknownFields != null) {
@@ -248,27 +248,27 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LCJHGDJDENG != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteUInt32(LCJHGDJDENG);
       }
-      if (CostTime != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(CostTime);
+      if (TotalDamage != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(TotalDamage);
       }
       if (TotalTurns != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteUInt32(TotalTurns);
       }
       if (CFIJIPCHHGO != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(CFIJIPCHHGO);
       }
-      if (TotalDamage != 0) {
+      if (CostTime != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(TotalDamage);
+        output.WriteUInt32(CostTime);
       }
       if (TotalAutoTurns != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(112);
         output.WriteUInt32(TotalAutoTurns);
       }
       if (_unknownFields != null) {
@@ -281,17 +281,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TotalTurns != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TotalTurns);
-      }
-      if (CFIJIPCHHGO != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CFIJIPCHHGO);
+      if (LCJHGDJDENG != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LCJHGDJDENG);
       }
       if (CostTime != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CostTime);
       }
-      if (LCJHGDJDENG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LCJHGDJDENG);
+      if (CFIJIPCHHGO != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CFIJIPCHHGO);
+      }
+      if (TotalTurns != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TotalTurns);
       }
       if (TotalAutoTurns != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TotalAutoTurns);
@@ -311,17 +311,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.TotalTurns != 0) {
-        TotalTurns = other.TotalTurns;
-      }
-      if (other.CFIJIPCHHGO != 0) {
-        CFIJIPCHHGO = other.CFIJIPCHHGO;
+      if (other.LCJHGDJDENG != 0) {
+        LCJHGDJDENG = other.LCJHGDJDENG;
       }
       if (other.CostTime != 0) {
         CostTime = other.CostTime;
       }
-      if (other.LCJHGDJDENG != 0) {
-        LCJHGDJDENG = other.LCJHGDJDENG;
+      if (other.CFIJIPCHHGO != 0) {
+        CFIJIPCHHGO = other.CFIJIPCHHGO;
+      }
+      if (other.TotalTurns != 0) {
+        TotalTurns = other.TotalTurns;
       }
       if (other.TotalAutoTurns != 0) {
         TotalAutoTurns = other.TotalAutoTurns;
@@ -344,27 +344,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 16: {
             LCJHGDJDENG = input.ReadUInt32();
             break;
           }
-          case 32: {
-            CostTime = input.ReadUInt32();
+          case 24: {
+            TotalDamage = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 56: {
             TotalTurns = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 64: {
             CFIJIPCHHGO = input.ReadUInt32();
             break;
           }
           case 88: {
-            TotalDamage = input.ReadUInt32();
+            CostTime = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 112: {
             TotalAutoTurns = input.ReadUInt32();
             break;
           }
@@ -383,27 +383,27 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 16: {
             LCJHGDJDENG = input.ReadUInt32();
             break;
           }
-          case 32: {
-            CostTime = input.ReadUInt32();
+          case 24: {
+            TotalDamage = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 56: {
             TotalTurns = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 64: {
             CFIJIPCHHGO = input.ReadUInt32();
             break;
           }
           case 88: {
-            TotalDamage = input.ReadUInt32();
+            CostTime = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 112: {
             TotalAutoTurns = input.ReadUInt32();
             break;
           }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CihTdG9yeUxpbmVUcmlhbEF2YXRhckNoYW5nZVNjTm90aWZ5LnByb3RvImMK",
             "IlN0b3J5TGluZVRyaWFsQXZhdGFyQ2hhbmdlU2NOb3RpZnkSEwoLQ0xJSUdN",
-            "Tk1ITkEYAyABKAgSEwoLSUJMQk5JQU5QSEQYCSADKA0SEwoLS0ZNRkZHR0pN",
+            "Tk1ITkEYDCABKAgSEwoLSUJMQk5JQU5QSEQYCCADKA0SEwoLS0ZNRkZHR0pN",
             "TkUYDSADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CLIIGMNMHNA" field.</summary>
-    public const int CLIIGMNMHNAFieldNumber = 3;
+    public const int CLIIGMNMHNAFieldNumber = 12;
     private bool cLIIGMNMHNA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,9 +99,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IBLBNIANPHD" field.</summary>
-    public const int IBLBNIANPHDFieldNumber = 9;
+    public const int IBLBNIANPHDFieldNumber = 8;
     private static readonly pb::FieldCodec<uint> _repeated_iBLBNIANPHD_codec
-        = pb::FieldCodec.ForUInt32(74);
+        = pb::FieldCodec.ForUInt32(66);
     private readonly pbc::RepeatedField<uint> iBLBNIANPHD_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      iBLBNIANPHD_.WriteTo(output, _repeated_iBLBNIANPHD_codec);
       if (CLIIGMNMHNA != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(96);
         output.WriteBool(CLIIGMNMHNA);
       }
-      iBLBNIANPHD_.WriteTo(output, _repeated_iBLBNIANPHD_codec);
       kFMFFGGJMNE_.WriteTo(output, _repeated_kFMFFGGJMNE_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -182,11 +182,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      iBLBNIANPHD_.WriteTo(ref output, _repeated_iBLBNIANPHD_codec);
       if (CLIIGMNMHNA != false) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(96);
         output.WriteBool(CLIIGMNMHNA);
       }
-      iBLBNIANPHD_.WriteTo(ref output, _repeated_iBLBNIANPHD_codec);
       kFMFFGGJMNE_.WriteTo(ref output, _repeated_kFMFFGGJMNE_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,13 +235,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            CLIIGMNMHNA = input.ReadBool();
+          case 66:
+          case 64: {
+            iBLBNIANPHD_.AddEntriesFrom(input, _repeated_iBLBNIANPHD_codec);
             break;
           }
-          case 74:
-          case 72: {
-            iBLBNIANPHD_.AddEntriesFrom(input, _repeated_iBLBNIANPHD_codec);
+          case 96: {
+            CLIIGMNMHNA = input.ReadBool();
             break;
           }
           case 106:
@@ -264,13 +264,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            CLIIGMNMHNA = input.ReadBool();
+          case 66:
+          case 64: {
+            iBLBNIANPHD_.AddEntriesFrom(ref input, _repeated_iBLBNIANPHD_codec);
             break;
           }
-          case 74:
-          case 72: {
-            iBLBNIANPHD_.AddEntriesFrom(ref input, _repeated_iBLBNIANPHD_codec);
+          case 96: {
+            CLIIGMNMHNA = input.ReadBool();
             break;
           }
           case 106:

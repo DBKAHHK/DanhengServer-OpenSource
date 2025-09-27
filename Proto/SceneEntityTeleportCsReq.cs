@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5TY2VuZUVudGl0eVRlbGVwb3J0Q3NSZXEucHJvdG8aEkVudGl0eU1vdGlv",
             "bi5wcm90byJSChhTY2VuZUVudGl0eVRlbGVwb3J0Q3NSZXESJAoNZW50aXR5",
-            "X21vdGlvbhgMIAEoCzINLkVudGl0eU1vdGlvbhIQCghlbnRyeV9pZBgLIAEo",
+            "X21vdGlvbhgGIAEoCzINLkVudGl0eU1vdGlvbhIQCghlbnRyeV9pZBgPIAEo",
             "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EntityMotionReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entity_motion" field.</summary>
-    public const int EntityMotionFieldNumber = 12;
+    public const int EntityMotionFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.EntityMotion entityMotion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "entry_id" field.</summary>
-    public const int EntryIdFieldNumber = 11;
+    public const int EntryIdFieldNumber = 15;
     private uint entryId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EntryId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(EntryId);
-      }
       if (entityMotion_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(50);
         output.WriteMessage(EntityMotion);
+      }
+      if (EntryId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(EntryId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EntryId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(EntryId);
-      }
       if (entityMotion_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(50);
         output.WriteMessage(EntityMotion);
+      }
+      if (EntryId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(EntryId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 88: {
-            EntryId = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 50: {
             if (entityMotion_ == null) {
               EntityMotion = new global::EggLink.DanhengServer.Proto.EntityMotion();
             }
             input.ReadMessage(EntityMotion);
+            break;
+          }
+          case 120: {
+            EntryId = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 88: {
-            EntryId = input.ReadUInt32();
-            break;
-          }
-          case 98: {
+          case 50: {
             if (entityMotion_ == null) {
               EntityMotion = new global::EggLink.DanhengServer.Proto.EntityMotion();
             }
             input.ReadMessage(EntityMotion);
+            break;
+          }
+          case 120: {
+            EntryId = input.ReadUInt32();
             break;
           }
         }

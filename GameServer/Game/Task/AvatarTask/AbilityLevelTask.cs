@@ -35,6 +35,10 @@ public class AbilityLevelTask(PlayerInstance player)
             {
                 "Caster" or "ModifierOwnerEntity" => [casterEntity],
                 "ParamEntity" or "AllEnemy" or "AbilityTargetEntity" => targetEntities,
+                "AdvTeamMembers" => Player.SceneInstance!.AvatarInfo.Values.ToList().OfType<BaseGameEntity>().ToList(),
+                "AdvLocalPlayer" => Player.SceneInstance!.AvatarInfo.Values
+                    .Where(x => x.AvatarInfo.BaseAvatarId == Player.LineupManager!.GetCurLineup()?.LeaderAvatarId)
+                    .OfType<BaseGameEntity>().ToList(),
                 _ => targetEntities
             };
 
@@ -218,13 +222,37 @@ public class AbilityLevelTask(PlayerInstance player)
 
             if (resp is not List<BaseGameEntity> target) return new AbilityLevelResult(instance, battleInfos);
 
+            var time = addMazeBuff.LifeTime.FixedValue.Value < -1 ? 20 :
+                addMazeBuff.LifeTime.FixedValue.Value is > 30 or < 10 ? -1 : addMazeBuff.LifeTime.FixedValue.Value;
+
             foreach (var entity in target)
                 await entity.AddBuff(new SceneBuff(addMazeBuff.ID, 1,
                     (param.CasterEntity as AvatarSceneInfo)?.AvatarInfo.BaseAvatarId ?? 0,
-                    addMazeBuff.LifeTime.FixedValue.Value < -1 ? 20 : -1)
+                    time)
                 {
                     DynamicValues = dynamic
                 });
+        }
+
+        return new AbilityLevelResult(instance, battleInfos);
+    }
+
+    public async ValueTask<object> RemoveMazeBuff(AbilityLevelParam param)
+    {
+        BattleInstance? instance = null;
+        List<HitMonsterInstance> battleInfos = [];
+
+        if (param.Act is RemoveMazeBuff removeMazeBuff)
+        {
+            var methodName = removeMazeBuff.TargetType.Type.Replace("RPG.GameCore.", "");
+            var method = GetOrCreateExecuteTask(methodName);
+            if (method == null) return new AbilityLevelResult();
+            var resp = await method(param with { TargetEvaluator = removeMazeBuff.TargetType });
+
+            if (resp is not List<BaseGameEntity> target) return new AbilityLevelResult(instance, battleInfos);
+
+            foreach (var entity in target.OfType<AvatarSceneInfo>())
+                await entity.RemoveBuff(removeMazeBuff.ID);
         }
 
         return new AbilityLevelResult(instance, battleInfos);

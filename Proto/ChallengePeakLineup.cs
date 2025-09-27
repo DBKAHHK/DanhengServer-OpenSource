@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlDaGFsbGVuZ2VQZWFrTGluZXVwLnByb3RvIk8KE0NoYWxsZW5nZVBlYWtM",
-            "aW5ldXASIQoZcGVha19sZXZlbF9hdmF0YXJfaWRfbGlzdBgCIAMoDRIVCg1w",
-            "ZWFrX2xldmVsX2lkGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "aW5ldXASIQoZcGVha19sZXZlbF9hdmF0YXJfaWRfbGlzdBgOIAMoDRIVCg1w",
+            "ZWFrX2xldmVsX2lkGAEgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "peak_level_avatar_id_list" field.</summary>
-    public const int PeakLevelAvatarIdListFieldNumber = 2;
+    public const int PeakLevelAvatarIdListFieldNumber = 14;
     private static readonly pb::FieldCodec<uint> _repeated_peakLevelAvatarIdList_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(114);
     private readonly pbc::RepeatedField<uint> peakLevelAvatarIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "peak_level_id" field.</summary>
-    public const int PeakLevelIdFieldNumber = 15;
+    public const int PeakLevelIdFieldNumber = 1;
     private uint peakLevelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      peakLevelAvatarIdList_.WriteTo(output, _repeated_peakLevelAvatarIdList_codec);
       if (PeakLevelId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(PeakLevelId);
       }
+      peakLevelAvatarIdList_.WriteTo(output, _repeated_peakLevelAvatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      peakLevelAvatarIdList_.WriteTo(ref output, _repeated_peakLevelAvatarIdList_codec);
       if (PeakLevelId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(PeakLevelId);
       }
+      peakLevelAvatarIdList_.WriteTo(ref output, _repeated_peakLevelAvatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
-            peakLevelAvatarIdList_.AddEntriesFrom(input, _repeated_peakLevelAvatarIdList_codec);
+          case 8: {
+            PeakLevelId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            PeakLevelId = input.ReadUInt32();
+          case 114:
+          case 112: {
+            peakLevelAvatarIdList_.AddEntriesFrom(input, _repeated_peakLevelAvatarIdList_codec);
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
-            peakLevelAvatarIdList_.AddEntriesFrom(ref input, _repeated_peakLevelAvatarIdList_codec);
+          case 8: {
+            PeakLevelId = input.ReadUInt32();
             break;
           }
-          case 120: {
-            PeakLevelId = input.ReadUInt32();
+          case 114:
+          case 112: {
+            peakLevelAvatarIdList_.AddEntriesFrom(ref input, _repeated_peakLevelAvatarIdList_codec);
             break;
           }
         }

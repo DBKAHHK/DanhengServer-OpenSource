@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9UYWtlUm9ndWVTY29yZVJld2FyZFNjUnNwLnByb3RvGg5JdGVtTGlzdC5w",
             "cm90bxoaUm9ndWVTY29yZVJld2FyZEluZm8ucHJvdG8ikAEKGVRha2VSb2d1",
-            "ZVNjb3JlUmV3YXJkU2NSc3ASNgoXcm9ndWVfc2NvcmVfcmV3YXJkX2luZm8Y",
-            "BSABKAsyFS5Sb2d1ZVNjb3JlUmV3YXJkSW5mbxIPCgdwb29sX2lkGAYgASgN",
-            "EhkKBnJld2FyZBgNIAEoCzIJLkl0ZW1MaXN0Eg8KB3JldGNvZGUYDiABKA1C",
+            "ZVNjb3JlUmV3YXJkU2NSc3ASDwoHcmV0Y29kZRgIIAEoDRI2Chdyb2d1ZV9z",
+            "Y29yZV9yZXdhcmRfaW5mbxgMIAEoCzIVLlJvZ3VlU2NvcmVSZXdhcmRJbmZv",
+            "Eg8KB3Bvb2xfaWQYByABKA0SGQoGcmV3YXJkGAYgASgLMgkuSXRlbUxpc3RC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueScoreRewardInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRogueScoreRewardScRsp), global::EggLink.DanhengServer.Proto.TakeRogueScoreRewardScRsp.Parser, new[]{ "RogueScoreRewardInfo", "PoolId", "Reward", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRogueScoreRewardScRsp), global::EggLink.DanhengServer.Proto.TakeRogueScoreRewardScRsp.Parser, new[]{ "Retcode", "RogueScoreRewardInfo", "PoolId", "Reward" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TakeRogueScoreRewardScRsp(TakeRogueScoreRewardScRsp other) : this() {
+      retcode_ = other.retcode_;
       rogueScoreRewardInfo_ = other.rogueScoreRewardInfo_ != null ? other.rogueScoreRewardInfo_.Clone() : null;
       poolId_ = other.poolId_;
       reward_ = other.reward_ != null ? other.reward_.Clone() : null;
-      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,8 +88,20 @@ namespace EggLink.DanhengServer.Proto {
       return new TakeRogueScoreRewardScRsp(this);
     }
 
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 8;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
     /// <summary>Field number for the "rogue_score_reward_info" field.</summary>
-    public const int RogueScoreRewardInfoFieldNumber = 5;
+    public const int RogueScoreRewardInfoFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo rogueScoreRewardInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -101,7 +113,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pool_id" field.</summary>
-    public const int PoolIdFieldNumber = 6;
+    public const int PoolIdFieldNumber = 7;
     private uint poolId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -113,7 +125,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 13;
+    public const int RewardFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -121,18 +133,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return reward_; }
       set {
         reward_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
       }
     }
 
@@ -151,10 +151,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Retcode != other.Retcode) return false;
       if (!object.Equals(RogueScoreRewardInfo, other.RogueScoreRewardInfo)) return false;
       if (PoolId != other.PoolId) return false;
       if (!object.Equals(Reward, other.Reward)) return false;
-      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,10 +162,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (rogueScoreRewardInfo_ != null) hash ^= RogueScoreRewardInfo.GetHashCode();
       if (PoolId != 0) hash ^= PoolId.GetHashCode();
       if (reward_ != null) hash ^= Reward.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,21 +184,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (rogueScoreRewardInfo_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(RogueScoreRewardInfo);
-      }
-      if (PoolId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(PoolId);
-      }
       if (reward_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(50);
         output.WriteMessage(Reward);
       }
+      if (PoolId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(PoolId);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
+      }
+      if (rogueScoreRewardInfo_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(RogueScoreRewardInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -210,21 +210,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (rogueScoreRewardInfo_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(RogueScoreRewardInfo);
-      }
-      if (PoolId != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(PoolId);
-      }
       if (reward_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(50);
         output.WriteMessage(Reward);
       }
+      if (PoolId != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(PoolId);
+      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
+      }
+      if (rogueScoreRewardInfo_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(RogueScoreRewardInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -236,6 +236,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
       if (rogueScoreRewardInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueScoreRewardInfo);
       }
@@ -244,9 +247,6 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (reward_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Reward);
-      }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,6 +259,9 @@ namespace EggLink.DanhengServer.Proto {
     public void MergeFrom(TakeRogueScoreRewardScRsp other) {
       if (other == null) {
         return;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       if (other.rogueScoreRewardInfo_ != null) {
         if (rogueScoreRewardInfo_ == null) {
@@ -275,9 +278,6 @@ namespace EggLink.DanhengServer.Proto {
         }
         Reward.MergeFrom(other.Reward);
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -293,26 +293,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
-            if (rogueScoreRewardInfo_ == null) {
-              RogueScoreRewardInfo = new global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo();
-            }
-            input.ReadMessage(RogueScoreRewardInfo);
-            break;
-          }
-          case 48: {
-            PoolId = input.ReadUInt32();
-            break;
-          }
-          case 106: {
+          case 50: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 112: {
+          case 56: {
+            PoolId = input.ReadUInt32();
+            break;
+          }
+          case 64: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 98: {
+            if (rogueScoreRewardInfo_ == null) {
+              RogueScoreRewardInfo = new global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo();
+            }
+            input.ReadMessage(RogueScoreRewardInfo);
             break;
           }
         }
@@ -330,26 +330,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
-            if (rogueScoreRewardInfo_ == null) {
-              RogueScoreRewardInfo = new global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo();
-            }
-            input.ReadMessage(RogueScoreRewardInfo);
-            break;
-          }
-          case 48: {
-            PoolId = input.ReadUInt32();
-            break;
-          }
-          case 106: {
+          case 50: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 112: {
+          case 56: {
+            PoolId = input.ReadUInt32();
+            break;
+          }
+          case 64: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 98: {
+            if (rogueScoreRewardInfo_ == null) {
+              RogueScoreRewardInfo = new global::EggLink.DanhengServer.Proto.RogueScoreRewardInfo();
+            }
+            input.ReadMessage(RogueScoreRewardInfo);
             break;
           }
         }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFSb2d1ZU1hZ2ljUmV2aXZlQXZhdGFyU2NSc3AucHJvdG8aEkl0ZW1Db3N0",
             "RGF0YS5wcm90byJYChtSb2d1ZU1hZ2ljUmV2aXZlQXZhdGFyU2NSc3ASDwoH",
-            "cmV0Y29kZRgGIAEoDRIoChFyb2d1ZV9yZXZpdmVfY29zdBgEIAEoCzINLkl0",
+            "cmV0Y29kZRgFIAEoDRIoChFyb2d1ZV9yZXZpdmVfY29zdBgGIAEoCzINLkl0",
             "ZW1Db3N0RGF0YUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_revive_cost" field.</summary>
-    public const int RogueReviveCostFieldNumber = 4;
+    public const int RogueReviveCostFieldNumber = 6;
     private global::EggLink.DanhengServer.Proto.ItemCostData rogueReviveCost_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (rogueReviveCost_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(RogueReviveCost);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
+      }
+      if (rogueReviveCost_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(RogueReviveCost);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (rogueReviveCost_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(RogueReviveCost);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
+      }
+      if (rogueReviveCost_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(RogueReviveCost);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 40: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 50: {
             if (rogueReviveCost_ == null) {
               RogueReviveCost = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(RogueReviveCost);
-            break;
-          }
-          case 48: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 40: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 50: {
             if (rogueReviveCost_ == null) {
               RogueReviveCost = new global::EggLink.DanhengServer.Proto.ItemCostData();
             }
             input.ReadMessage(RogueReviveCost);
-            break;
-          }
-          case 48: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

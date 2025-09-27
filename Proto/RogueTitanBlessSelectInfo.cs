@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9Sb2d1ZVRpdGFuQmxlc3NTZWxlY3RJbmZvLnByb3RvGhpUaXRhbkJsZXNz",
             "U2VsZWN0VHlwZS5wcm90byLLAQoZUm9ndWVUaXRhbkJsZXNzU2VsZWN0SW5m",
-            "bxITCgtOQ0xBRUhBSUpKQhgMIAEoDRIYChBjdXJfcmVyb2xsX2NvdW50GA0g",
-            "ASgNEhYKDnNlbGVjdF9oaW50X2lkGAsgASgNEhgKEG1heF9yZXJvbGxfY291",
-            "bnQYCCABKA0SGwoTdGl0YW5fYmxlc3NfaWRfbGlzdBgFIAMoDRIwChFibGVz",
-            "c19zZWxlY3RfdHlwZRgDIAEoDjIVLlRpdGFuQmxlc3NTZWxlY3RUeXBlQh6q",
+            "bxIWCg5zZWxlY3RfaGludF9pZBgJIAEoDRIbChN0aXRhbl9ibGVzc19pZF9s",
+            "aXN0GAggAygNEhgKEG1heF9yZXJvbGxfY291bnQYCiABKA0SMAoRYmxlc3Nf",
+            "c2VsZWN0X3R5cGUYDCABKA4yFS5UaXRhbkJsZXNzU2VsZWN0VHlwZRITCgtO",
+            "Q0xBRUhBSUpKQhgHIAEoDRIYChBjdXJfcmVyb2xsX2NvdW50GAUgASgNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TitanBlessSelectTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTitanBlessSelectInfo), global::EggLink.DanhengServer.Proto.RogueTitanBlessSelectInfo.Parser, new[]{ "NCLAEHAIJJB", "CurRerollCount", "SelectHintId", "MaxRerollCount", "TitanBlessIdList", "BlessSelectType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTitanBlessSelectInfo), global::EggLink.DanhengServer.Proto.RogueTitanBlessSelectInfo.Parser, new[]{ "SelectHintId", "TitanBlessIdList", "MaxRerollCount", "BlessSelectType", "NCLAEHAIJJB", "CurRerollCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,12 +76,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTitanBlessSelectInfo(RogueTitanBlessSelectInfo other) : this() {
+      selectHintId_ = other.selectHintId_;
+      titanBlessIdList_ = other.titanBlessIdList_.Clone();
+      maxRerollCount_ = other.maxRerollCount_;
+      blessSelectType_ = other.blessSelectType_;
       nCLAEHAIJJB_ = other.nCLAEHAIJJB_;
       curRerollCount_ = other.curRerollCount_;
-      selectHintId_ = other.selectHintId_;
-      maxRerollCount_ = other.maxRerollCount_;
-      titanBlessIdList_ = other.titanBlessIdList_.Clone();
-      blessSelectType_ = other.blessSelectType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -91,8 +91,55 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTitanBlessSelectInfo(this);
     }
 
+    /// <summary>Field number for the "select_hint_id" field.</summary>
+    public const int SelectHintIdFieldNumber = 9;
+    private uint selectHintId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SelectHintId {
+      get { return selectHintId_; }
+      set {
+        selectHintId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "titan_bless_id_list" field.</summary>
+    public const int TitanBlessIdListFieldNumber = 8;
+    private static readonly pb::FieldCodec<uint> _repeated_titanBlessIdList_codec
+        = pb::FieldCodec.ForUInt32(66);
+    private readonly pbc::RepeatedField<uint> titanBlessIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> TitanBlessIdList {
+      get { return titanBlessIdList_; }
+    }
+
+    /// <summary>Field number for the "max_reroll_count" field.</summary>
+    public const int MaxRerollCountFieldNumber = 10;
+    private uint maxRerollCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MaxRerollCount {
+      get { return maxRerollCount_; }
+      set {
+        maxRerollCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "bless_select_type" field.</summary>
+    public const int BlessSelectTypeFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.TitanBlessSelectType blessSelectType_ = global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.TitanBlessSelectType BlessSelectType {
+      get { return blessSelectType_; }
+      set {
+        blessSelectType_ = value;
+      }
+    }
+
     /// <summary>Field number for the "NCLAEHAIJJB" field.</summary>
-    public const int NCLAEHAIJJBFieldNumber = 12;
+    public const int NCLAEHAIJJBFieldNumber = 7;
     private uint nCLAEHAIJJB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_reroll_count" field.</summary>
-    public const int CurRerollCountFieldNumber = 13;
+    public const int CurRerollCountFieldNumber = 5;
     private uint curRerollCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,53 +159,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return curRerollCount_; }
       set {
         curRerollCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 11;
-    private uint selectHintId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SelectHintId {
-      get { return selectHintId_; }
-      set {
-        selectHintId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "max_reroll_count" field.</summary>
-    public const int MaxRerollCountFieldNumber = 8;
-    private uint maxRerollCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MaxRerollCount {
-      get { return maxRerollCount_; }
-      set {
-        maxRerollCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "titan_bless_id_list" field.</summary>
-    public const int TitanBlessIdListFieldNumber = 5;
-    private static readonly pb::FieldCodec<uint> _repeated_titanBlessIdList_codec
-        = pb::FieldCodec.ForUInt32(42);
-    private readonly pbc::RepeatedField<uint> titanBlessIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> TitanBlessIdList {
-      get { return titanBlessIdList_; }
-    }
-
-    /// <summary>Field number for the "bless_select_type" field.</summary>
-    public const int BlessSelectTypeFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.TitanBlessSelectType blessSelectType_ = global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.TitanBlessSelectType BlessSelectType {
-      get { return blessSelectType_; }
-      set {
-        blessSelectType_ = value;
       }
     }
 
@@ -177,12 +177,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (SelectHintId != other.SelectHintId) return false;
+      if(!titanBlessIdList_.Equals(other.titanBlessIdList_)) return false;
+      if (MaxRerollCount != other.MaxRerollCount) return false;
+      if (BlessSelectType != other.BlessSelectType) return false;
       if (NCLAEHAIJJB != other.NCLAEHAIJJB) return false;
       if (CurRerollCount != other.CurRerollCount) return false;
-      if (SelectHintId != other.SelectHintId) return false;
-      if (MaxRerollCount != other.MaxRerollCount) return false;
-      if(!titanBlessIdList_.Equals(other.titanBlessIdList_)) return false;
-      if (BlessSelectType != other.BlessSelectType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -190,12 +190,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
+      hash ^= titanBlessIdList_.GetHashCode();
+      if (MaxRerollCount != 0) hash ^= MaxRerollCount.GetHashCode();
+      if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) hash ^= BlessSelectType.GetHashCode();
       if (NCLAEHAIJJB != 0) hash ^= NCLAEHAIJJB.GetHashCode();
       if (CurRerollCount != 0) hash ^= CurRerollCount.GetHashCode();
-      if (SelectHintId != 0) hash ^= SelectHintId.GetHashCode();
-      if (MaxRerollCount != 0) hash ^= MaxRerollCount.GetHashCode();
-      hash ^= titanBlessIdList_.GetHashCode();
-      if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) hash ^= BlessSelectType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -214,26 +214,26 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) BlessSelectType);
-      }
-      titanBlessIdList_.WriteTo(output, _repeated_titanBlessIdList_codec);
-      if (MaxRerollCount != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(MaxRerollCount);
-      }
-      if (SelectHintId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(SelectHintId);
+      if (CurRerollCount != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(CurRerollCount);
       }
       if (NCLAEHAIJJB != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt32(NCLAEHAIJJB);
       }
-      if (CurRerollCount != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(CurRerollCount);
+      titanBlessIdList_.WriteTo(output, _repeated_titanBlessIdList_codec);
+      if (SelectHintId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(SelectHintId);
+      }
+      if (MaxRerollCount != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(MaxRerollCount);
+      }
+      if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) BlessSelectType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -245,26 +245,26 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) BlessSelectType);
-      }
-      titanBlessIdList_.WriteTo(ref output, _repeated_titanBlessIdList_codec);
-      if (MaxRerollCount != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(MaxRerollCount);
-      }
-      if (SelectHintId != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(SelectHintId);
+      if (CurRerollCount != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(CurRerollCount);
       }
       if (NCLAEHAIJJB != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(56);
         output.WriteUInt32(NCLAEHAIJJB);
       }
-      if (CurRerollCount != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(CurRerollCount);
+      titanBlessIdList_.WriteTo(ref output, _repeated_titanBlessIdList_codec);
+      if (SelectHintId != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(SelectHintId);
+      }
+      if (MaxRerollCount != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(MaxRerollCount);
+      }
+      if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) BlessSelectType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -276,21 +276,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (SelectHintId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectHintId);
+      }
+      size += titanBlessIdList_.CalculateSize(_repeated_titanBlessIdList_codec);
+      if (MaxRerollCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxRerollCount);
+      }
+      if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BlessSelectType);
+      }
       if (NCLAEHAIJJB != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NCLAEHAIJJB);
       }
       if (CurRerollCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurRerollCount);
-      }
-      if (SelectHintId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectHintId);
-      }
-      if (MaxRerollCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxRerollCount);
-      }
-      size += titanBlessIdList_.CalculateSize(_repeated_titanBlessIdList_codec);
-      if (BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BlessSelectType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -304,21 +304,21 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.SelectHintId != 0) {
+        SelectHintId = other.SelectHintId;
+      }
+      titanBlessIdList_.Add(other.titanBlessIdList_);
+      if (other.MaxRerollCount != 0) {
+        MaxRerollCount = other.MaxRerollCount;
+      }
+      if (other.BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
+        BlessSelectType = other.BlessSelectType;
+      }
       if (other.NCLAEHAIJJB != 0) {
         NCLAEHAIJJB = other.NCLAEHAIJJB;
       }
       if (other.CurRerollCount != 0) {
         CurRerollCount = other.CurRerollCount;
-      }
-      if (other.SelectHintId != 0) {
-        SelectHintId = other.SelectHintId;
-      }
-      if (other.MaxRerollCount != 0) {
-        MaxRerollCount = other.MaxRerollCount;
-      }
-      titanBlessIdList_.Add(other.titanBlessIdList_);
-      if (other.BlessSelectType != global::EggLink.DanhengServer.Proto.TitanBlessSelectType.KTitanBlessSelectNone) {
-        BlessSelectType = other.BlessSelectType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -335,29 +335,29 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            BlessSelectType = (global::EggLink.DanhengServer.Proto.TitanBlessSelectType) input.ReadEnum();
-            break;
-          }
-          case 42:
           case 40: {
-            titanBlessIdList_.AddEntriesFrom(input, _repeated_titanBlessIdList_codec);
+            CurRerollCount = input.ReadUInt32();
             break;
           }
-          case 64: {
-            MaxRerollCount = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            SelectHintId = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 56: {
             NCLAEHAIJJB = input.ReadUInt32();
             break;
           }
-          case 104: {
-            CurRerollCount = input.ReadUInt32();
+          case 66:
+          case 64: {
+            titanBlessIdList_.AddEntriesFrom(input, _repeated_titanBlessIdList_codec);
+            break;
+          }
+          case 72: {
+            SelectHintId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            MaxRerollCount = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            BlessSelectType = (global::EggLink.DanhengServer.Proto.TitanBlessSelectType) input.ReadEnum();
             break;
           }
         }
@@ -375,29 +375,29 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            BlessSelectType = (global::EggLink.DanhengServer.Proto.TitanBlessSelectType) input.ReadEnum();
-            break;
-          }
-          case 42:
           case 40: {
-            titanBlessIdList_.AddEntriesFrom(ref input, _repeated_titanBlessIdList_codec);
+            CurRerollCount = input.ReadUInt32();
             break;
           }
-          case 64: {
-            MaxRerollCount = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            SelectHintId = input.ReadUInt32();
-            break;
-          }
-          case 96: {
+          case 56: {
             NCLAEHAIJJB = input.ReadUInt32();
             break;
           }
-          case 104: {
-            CurRerollCount = input.ReadUInt32();
+          case 66:
+          case 64: {
+            titanBlessIdList_.AddEntriesFrom(ref input, _repeated_titanBlessIdList_codec);
+            break;
+          }
+          case 72: {
+            SelectHintId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            MaxRerollCount = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            BlessSelectType = (global::EggLink.DanhengServer.Proto.TitanBlessSelectType) input.ReadEnum();
             break;
           }
         }

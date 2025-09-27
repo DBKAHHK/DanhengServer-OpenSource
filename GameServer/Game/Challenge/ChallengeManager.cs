@@ -60,7 +60,7 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
             }
 
             // Set technique points to full
-            lineup.Mp = 5; // Max Mp
+            lineup.Mp = 8; // Max Mp
         }
 
         if (excel.StageNum >= 2)
@@ -83,7 +83,7 @@ public class ChallengeManager(PlayerInstance player) : BasePlayerManager(player)
             }
 
             // Set technique points to full
-            lineup.Mp = 5; // Max Mp
+            lineup.Mp = 8; // Max Mp
         }
 
         // Set challenge data for player

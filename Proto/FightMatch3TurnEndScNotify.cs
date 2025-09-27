@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBGaWdodE1hdGNoM1R1cm5FbmRTY05vdGlmeS5wcm90bxoRS0xETUpFTUlN",
             "Q04ucHJvdG8iYgoaRmlnaHRNYXRjaDNUdXJuRW5kU2NOb3RpZnkSIQoLQ0lO",
-            "TENNSEhLS08YAiABKAsyDC5LTERNSkVNSU1DThIhCgtISUtMT0JHSUNNUBgP",
+            "TENNSEhLS08YBSABKAsyDC5LTERNSkVNSU1DThIhCgtISUtMT0JHSUNNUBgI",
             "IAEoCzIMLktMRE1KRU1JTUNOQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CINLCMHHKKO" field.</summary>
-    public const int CINLCMHHKKOFieldNumber = 2;
+    public const int CINLCMHHKKOFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.KLDMJEMIMCN cINLCMHHKKO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HIKLOBGICMP" field.</summary>
-    public const int HIKLOBGICMPFieldNumber = 15;
+    public const int HIKLOBGICMPFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.KLDMJEMIMCN hIKLOBGICMP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (cINLCMHHKKO_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(42);
         output.WriteMessage(CINLCMHHKKO);
       }
       if (hIKLOBGICMP_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(66);
         output.WriteMessage(HIKLOBGICMP);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (cINLCMHHKKO_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(42);
         output.WriteMessage(CINLCMHHKKO);
       }
       if (hIKLOBGICMP_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(66);
         output.WriteMessage(HIKLOBGICMP);
       }
       if (_unknownFields != null) {
@@ -234,14 +234,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 42: {
             if (cINLCMHHKKO_ == null) {
               CINLCMHHKKO = new global::EggLink.DanhengServer.Proto.KLDMJEMIMCN();
             }
             input.ReadMessage(CINLCMHHKKO);
             break;
           }
-          case 122: {
+          case 66: {
             if (hIKLOBGICMP_ == null) {
               HIKLOBGICMP = new global::EggLink.DanhengServer.Proto.KLDMJEMIMCN();
             }
@@ -263,14 +263,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 42: {
             if (cINLCMHHKKO_ == null) {
               CINLCMHHKKO = new global::EggLink.DanhengServer.Proto.KLDMJEMIMCN();
             }
             input.ReadMessage(CINLCMHHKKO);
             break;
           }
-          case 122: {
+          case 66: {
             if (hIKLOBGICMP_ == null) {
               HIKLOBGICMP = new global::EggLink.DanhengServer.Proto.KLDMJEMIMCN();
             }

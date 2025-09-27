@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChBNb3Rpb25JbmZvLnByb3RvGgxWZWN0b3IucHJvdG8iOAoKTW90aW9uSW5m",
-            "bxIUCgNyb3QYDCABKAsyBy5WZWN0b3ISFAoDcG9zGAsgASgLMgcuVmVjdG9y",
+            "bxIUCgNyb3QYCCABKAsyBy5WZWN0b3ISFAoDcG9zGAEgASgLMgcuVmVjdG9y",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.VectorReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rot" field.</summary>
-    public const int RotFieldNumber = 12;
+    public const int RotFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.Vector rot_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pos" field.</summary>
-    public const int PosFieldNumber = 11;
+    public const int PosFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.Vector pos_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (pos_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(10);
         output.WriteMessage(Pos);
       }
       if (rot_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(66);
         output.WriteMessage(Rot);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (pos_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(10);
         output.WriteMessage(Pos);
       }
       if (rot_ != null) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(66);
         output.WriteMessage(Rot);
       }
       if (_unknownFields != null) {
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 10: {
             if (pos_ == null) {
               Pos = new global::EggLink.DanhengServer.Proto.Vector();
             }
             input.ReadMessage(Pos);
             break;
           }
-          case 98: {
+          case 66: {
             if (rot_ == null) {
               Rot = new global::EggLink.DanhengServer.Proto.Vector();
             }
@@ -261,14 +261,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 10: {
             if (pos_ == null) {
               Pos = new global::EggLink.DanhengServer.Proto.Vector();
             }
             input.ReadMessage(Pos);
             break;
           }
-          case 98: {
+          case 66: {
             if (rot_ == null) {
               Rot = new global::EggLink.DanhengServer.Proto.Vector();
             }

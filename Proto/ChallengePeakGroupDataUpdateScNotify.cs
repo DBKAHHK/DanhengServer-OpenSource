@@ -27,7 +27,7 @@ namespace EggLink.DanhengServer.Proto {
             "CipDaGFsbGVuZ2VQZWFrR3JvdXBEYXRhVXBkYXRlU2NOb3RpZnkucHJvdG8a",
             "HENoYWxsZW5nZVBlYWtMZXZlbEluZm8ucHJvdG8iWQokQ2hhbGxlbmdlUGVh",
             "a0dyb3VwRGF0YVVwZGF0ZVNjTm90aWZ5EjEKEHVwZGF0ZV9wZWFrX2RhdGEY",
-            "DSABKAsyFy5DaGFsbGVuZ2VQZWFrTGV2ZWxJbmZvQh6qAhtFZ2dMaW5rLkRh",
+            "DyABKAsyFy5DaGFsbGVuZ2VQZWFrTGV2ZWxJbmZvQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "update_peak_data" field.</summary>
-    public const int UpdatePeakDataFieldNumber = 13;
+    public const int UpdatePeakDataFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo updatePeakData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (updatePeakData_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(122);
         output.WriteMessage(UpdatePeakData);
       }
       if (_unknownFields != null) {
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (updatePeakData_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(122);
         output.WriteMessage(UpdatePeakData);
       }
       if (_unknownFields != null) {
@@ -202,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 122: {
             if (updatePeakData_ == null) {
               UpdatePeakData = new global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo();
             }
@@ -224,7 +224,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 122: {
             if (updatePeakData_ == null) {
               UpdatePeakData = new global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo();
             }

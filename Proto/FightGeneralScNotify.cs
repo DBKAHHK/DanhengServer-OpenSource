@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChpGaWdodEdlbmVyYWxTY05vdGlmeS5wcm90bxocRmlnaHRHZW5lcmFsU2Vy",
             "dmVySW5mby5wcm90byJlChRGaWdodEdlbmVyYWxTY05vdGlmeRIYChBuZXR3",
-            "b3JrX21zZ190eXBlGAUgASgNEjMKEmZpZ2h0X2dlbmVyYWxfaW5mbxgCIAEo",
+            "b3JrX21zZ190eXBlGAQgASgNEjMKEmZpZ2h0X2dlbmVyYWxfaW5mbxgNIAEo",
             "CzIXLkZpZ2h0R2VuZXJhbFNlcnZlckluZm9CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "network_msg_type" field.</summary>
-    public const int NetworkMsgTypeFieldNumber = 5;
+    public const int NetworkMsgTypeFieldNumber = 4;
     private uint networkMsgType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "fight_general_info" field.</summary>
-    public const int FightGeneralInfoFieldNumber = 2;
+    public const int FightGeneralInfoFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.FightGeneralServerInfo fightGeneralInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (fightGeneralInfo_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(FightGeneralInfo);
-      }
       if (NetworkMsgType != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(NetworkMsgType);
+      }
+      if (fightGeneralInfo_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FightGeneralInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (fightGeneralInfo_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(FightGeneralInfo);
-      }
       if (NetworkMsgType != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(NetworkMsgType);
+      }
+      if (fightGeneralInfo_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FightGeneralInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -231,15 +231,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 32: {
+            NetworkMsgType = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (fightGeneralInfo_ == null) {
               FightGeneralInfo = new global::EggLink.DanhengServer.Proto.FightGeneralServerInfo();
             }
             input.ReadMessage(FightGeneralInfo);
-            break;
-          }
-          case 40: {
-            NetworkMsgType = input.ReadUInt32();
             break;
           }
         }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 32: {
+            NetworkMsgType = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (fightGeneralInfo_ == null) {
               FightGeneralInfo = new global::EggLink.DanhengServer.Proto.FightGeneralServerInfo();
             }
             input.ReadMessage(FightGeneralInfo);
-            break;
-          }
-          case 40: {
-            NetworkMsgType = input.ReadUInt32();
             break;
           }
         }

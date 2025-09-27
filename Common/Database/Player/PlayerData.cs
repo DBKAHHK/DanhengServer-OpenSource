@@ -106,10 +106,10 @@ public class PlayerData : BaseDatabaseDataHelper
             OnlineStatus = status,
             HeadIcon = (uint)HeadIcon,
             Platform = PlatformType.Pc,
-            LastActiveTime = LastActiveTime,
-            ChatBubbleId = (uint)ChatBubble,
+            LogoutTime = LastActiveTime,
+            ChatBubble = (uint)ChatBubble,
             PersonalCard = (uint)PersonalCard,
-            HeadFrame = HeadFrame.ToProto()
+            HeadIconFrameInfo = HeadFrame.ToProto()
         };
 
         var pos = 0;
@@ -121,7 +121,7 @@ public class PlayerData : BaseDatabaseDataHelper
             if (Uid == serverProfile.Uid)
             {
                 info.OnlineStatus = FriendOnlineStatus.Online;
-                info.AssistSimpleInfoList.AddRange(
+                info.AssistInfoList.AddRange(
                     serverProfile.AssistInfo.Select((x, index) =>
                         new AssistSimpleInfo
                         {
@@ -138,7 +138,7 @@ public class PlayerData : BaseDatabaseDataHelper
         foreach (var avatar in instance.AssistAvatars.Select(
                      assist => instance.FormalAvatars.Find(x => x.AvatarId == assist)))
             if (avatar != null)
-                info.AssistSimpleInfoList.Add(new AssistSimpleInfo
+                info.AssistInfoList.Add(new AssistSimpleInfo
                 {
                     AvatarId = (uint)avatar.AvatarId,
                     Level = (uint)avatar.Level,

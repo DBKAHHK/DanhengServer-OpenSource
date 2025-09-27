@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static ExtraLineupTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVFeHRyYUxpbmV1cFR5cGUucHJvdG8qrwMKD0V4dHJhTGluZXVwVHlwZRIP",
+            "ChVFeHRyYUxpbmV1cFR5cGUucHJvdG8qxgMKD0V4dHJhTGluZXVwVHlwZRIP",
             "CgtMSU5FVVBfTk9ORRAAEhQKEExJTkVVUF9DSEFMTEVOR0UQARIQCgxMSU5F",
             "VVBfUk9HVUUQAhIWChJMSU5FVVBfQ0hBTExFTkdFXzIQAxIWChJMSU5FVVBf",
             "Q0hBTExFTkdFXzMQBBIaChZMSU5FVVBfUk9HVUVfQ0hBTExFTkdFEAUSFgoS",
@@ -34,8 +34,8 @@ namespace EggLink.DanhengServer.Proto {
             "Uk9HVUUQDBITCg9MSU5FVVBfSEVMSU9CVVMQDRIWChJMSU5FVVBfVE9VUk5f",
             "Uk9HVUUQDhIWChJMSU5FVVBfUkVMSUNfUk9HVUUQDxIXChNMSU5FVVBfQVJD",
             "QURFX1JPR1VFEBASFgoSTElORVVQX01BR0lDX1JPR1VFEBESDwoLTElORVVQ",
-            "X0ZBVEUQEkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "X0ZBVEUQEhIVChFMSU5FVVBfR1JJRF9GSUdIVBATQh6qAhtFZ2dMaW5rLkRh",
+            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.ExtraLineupType), }, null, null));
@@ -63,6 +63,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("LINEUP_ARCADE_ROGUE")] LineupArcadeRogue = 16,
     [pbr::OriginalName("LINEUP_MAGIC_ROGUE")] LineupMagicRogue = 17,
     [pbr::OriginalName("LINEUP_FATE")] LineupFate = 18,
+    [pbr::OriginalName("LINEUP_GRID_FIGHT")] LineupGridFight = 19,
   }
 
   #endregion

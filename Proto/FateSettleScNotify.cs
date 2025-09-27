@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static FateSettleScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhGYXRlU2V0dGxlU2NOb3RpZnkucHJvdG8aDkl0ZW1MaXN0LnByb3RvGhFD",
-            "S0ZLTkJNSE1ITS5wcm90byJkChJGYXRlU2V0dGxlU2NOb3RpZnkSIQoLT0tF",
-            "Q0dEREVNQkwYASABKAsyDC5DS0ZLTkJNSE1ITRIZCgZyZXdhcmQYCCABKAsy",
-            "CS5JdGVtTGlzdBIQCghzY29yZV9pZBgNIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "ChhGYXRlU2V0dGxlU2NOb3RpZnkucHJvdG8aEUNLRktOQk1ITUhNLnByb3Rv",
+            "Gg5JdGVtTGlzdC5wcm90byJkChJGYXRlU2V0dGxlU2NOb3RpZnkSIQoLT0tF",
+            "Q0dEREVNQkwYBCABKAsyDC5DS0ZLTkJNSE1ITRIZCgZyZXdhcmQYAyABKAsy",
+            "CS5JdGVtTGlzdBIQCghzY29yZV9pZBgHIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.CKFKNBMHMHMReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CKFKNBMHMHMReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FateSettleScNotify), global::EggLink.DanhengServer.Proto.FateSettleScNotify.Parser, new[]{ "OKECGDDEMBL", "Reward", "ScoreId" }, null, null, null, null)
           }));
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "OKECGDDEMBL" field.</summary>
-    public const int OKECGDDEMBLFieldNumber = 1;
+    public const int OKECGDDEMBLFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.CKFKNBMHMHM oKECGDDEMBL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reward" field.</summary>
-    public const int RewardFieldNumber = 8;
+    public const int RewardFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.ItemList reward_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "score_id" field.</summary>
-    public const int ScoreIdFieldNumber = 13;
+    public const int ScoreIdFieldNumber = 7;
     private uint scoreId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (oKECGDDEMBL_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(OKECGDDEMBL);
-      }
       if (reward_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteMessage(Reward);
       }
+      if (oKECGDDEMBL_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(OKECGDDEMBL);
+      }
       if (ScoreId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (oKECGDDEMBL_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(OKECGDDEMBL);
-      }
       if (reward_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteMessage(Reward);
       }
+      if (oKECGDDEMBL_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(OKECGDDEMBL);
+      }
       if (ScoreId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteUInt32(ScoreId);
       }
       if (_unknownFields != null) {
@@ -263,21 +263,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            if (oKECGDDEMBL_ == null) {
-              OKECGDDEMBL = new global::EggLink.DanhengServer.Proto.CKFKNBMHMHM();
-            }
-            input.ReadMessage(OKECGDDEMBL);
-            break;
-          }
-          case 66: {
+          case 26: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 104: {
+          case 34: {
+            if (oKECGDDEMBL_ == null) {
+              OKECGDDEMBL = new global::EggLink.DanhengServer.Proto.CKFKNBMHMHM();
+            }
+            input.ReadMessage(OKECGDDEMBL);
+            break;
+          }
+          case 56: {
             ScoreId = input.ReadUInt32();
             break;
           }
@@ -296,21 +296,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            if (oKECGDDEMBL_ == null) {
-              OKECGDDEMBL = new global::EggLink.DanhengServer.Proto.CKFKNBMHMHM();
-            }
-            input.ReadMessage(OKECGDDEMBL);
-            break;
-          }
-          case 66: {
+          case 26: {
             if (reward_ == null) {
               Reward = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(Reward);
             break;
           }
-          case 104: {
+          case 34: {
+            if (oKECGDDEMBL_ == null) {
+              OKECGDDEMBL = new global::EggLink.DanhengServer.Proto.CKFKNBMHMHM();
+            }
+            input.ReadMessage(OKECGDDEMBL);
+            break;
+          }
+          case 56: {
             ScoreId = input.ReadUInt32();
             break;
           }

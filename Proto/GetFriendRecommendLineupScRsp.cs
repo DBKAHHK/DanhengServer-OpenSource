@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNHZXRGcmllbmRSZWNvbW1lbmRMaW5ldXBTY1JzcC5wcm90bxoRRExMTEVB",
             "TkRBSUgucHJvdG8aEUtFSE1HS0lIRUZOLnByb3RvIp4BCh1HZXRGcmllbmRS",
-            "ZWNvbW1lbmRMaW5ldXBTY1JzcBILCgNrZXkYASABKA0SDwoHcmV0Y29kZRgO",
-            "IAEoDRIaCgR0eXBlGAcgASgOMgwuRExMTEVBTkRBSUgSLgoYY2hhbGxlbmdl",
-            "X3JlY29tbWVuZF9saXN0GAMgAygLMgwuS0VITUdLSUhFRk4SEwoLT05PQ0pF",
-            "RUJGQ0kYDCABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "ZWNvbW1lbmRMaW5ldXBTY1JzcBIPCgdyZXRjb2RlGAUgASgNEgsKA2tleRgB",
+            "IAEoDRIuChhjaGFsbGVuZ2VfcmVjb21tZW5kX2xpc3QYBiADKAsyDC5LRUhN",
+            "R0tJSEVGThIaCgR0eXBlGAMgASgOMgwuRExMTEVBTkRBSUgSEwoLT05PQ0pF",
+            "RUJGQ0kYDyABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DLLLEANDAIHReflection.Descriptor, global::EggLink.DanhengServer.Proto.KEHMGKIHEFNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFriendRecommendLineupScRsp), global::EggLink.DanhengServer.Proto.GetFriendRecommendLineupScRsp.Parser, new[]{ "Key", "Retcode", "Type", "ChallengeRecommendList", "ONOCJEEBFCI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetFriendRecommendLineupScRsp), global::EggLink.DanhengServer.Proto.GetFriendRecommendLineupScRsp.Parser, new[]{ "Retcode", "Key", "ChallengeRecommendList", "Type", "ONOCJEEBFCI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,10 +76,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetFriendRecommendLineupScRsp(GetFriendRecommendLineupScRsp other) : this() {
-      key_ = other.key_;
       retcode_ = other.retcode_;
-      type_ = other.type_;
+      key_ = other.key_;
       challengeRecommendList_ = other.challengeRecommendList_.Clone();
+      type_ = other.type_;
       oNOCJEEBFCI_ = other.oNOCJEEBFCI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -88,6 +88,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetFriendRecommendLineupScRsp Clone() {
       return new GetFriendRecommendLineupScRsp(this);
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 5;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
     }
 
     /// <summary>Field number for the "key" field.</summary>
@@ -102,20 +114,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
-    private uint retcode_;
+    /// <summary>Field number for the "challenge_recommend_list" field.</summary>
+    public const int ChallengeRecommendListFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KEHMGKIHEFN> _repeated_challengeRecommendList_codec
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.KEHMGKIHEFN.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KEHMGKIHEFN> challengeRecommendList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KEHMGKIHEFN>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KEHMGKIHEFN> ChallengeRecommendList {
+      get { return challengeRecommendList_; }
     }
 
     /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 7;
+    public const int TypeFieldNumber = 3;
     private global::EggLink.DanhengServer.Proto.DLLLEANDAIH type_ = global::EggLink.DanhengServer.Proto.DLLLEANDAIH.FriendRecommendLineupTypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,19 +137,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "challenge_recommend_list" field.</summary>
-    public const int ChallengeRecommendListFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KEHMGKIHEFN> _repeated_challengeRecommendList_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.KEHMGKIHEFN.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KEHMGKIHEFN> challengeRecommendList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KEHMGKIHEFN>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KEHMGKIHEFN> ChallengeRecommendList {
-      get { return challengeRecommendList_; }
-    }
-
     /// <summary>Field number for the "ONOCJEEBFCI" field.</summary>
-    public const int ONOCJEEBFCIFieldNumber = 12;
+    public const int ONOCJEEBFCIFieldNumber = 15;
     private bool oNOCJEEBFCI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -164,10 +164,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Key != other.Key) return false;
       if (Retcode != other.Retcode) return false;
-      if (Type != other.Type) return false;
+      if (Key != other.Key) return false;
       if(!challengeRecommendList_.Equals(other.challengeRecommendList_)) return false;
+      if (Type != other.Type) return false;
       if (ONOCJEEBFCI != other.ONOCJEEBFCI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -176,10 +176,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Key != 0) hash ^= Key.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (Type != global::EggLink.DanhengServer.Proto.DLLLEANDAIH.FriendRecommendLineupTypeNone) hash ^= Type.GetHashCode();
+      if (Key != 0) hash ^= Key.GetHashCode();
       hash ^= challengeRecommendList_.GetHashCode();
+      if (Type != global::EggLink.DanhengServer.Proto.DLLLEANDAIH.FriendRecommendLineupTypeNone) hash ^= Type.GetHashCode();
       if (ONOCJEEBFCI != false) hash ^= ONOCJEEBFCI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -203,18 +203,18 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Key);
       }
-      challengeRecommendList_.WriteTo(output, _repeated_challengeRecommendList_codec);
       if (Type != global::EggLink.DanhengServer.Proto.DLLLEANDAIH.FriendRecommendLineupTypeNone) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
-      if (ONOCJEEBFCI != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(ONOCJEEBFCI);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
+      }
+      challengeRecommendList_.WriteTo(output, _repeated_challengeRecommendList_codec);
+      if (ONOCJEEBFCI != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(ONOCJEEBFCI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -230,18 +230,18 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(Key);
       }
-      challengeRecommendList_.WriteTo(ref output, _repeated_challengeRecommendList_codec);
       if (Type != global::EggLink.DanhengServer.Proto.DLLLEANDAIH.FriendRecommendLineupTypeNone) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(24);
         output.WriteEnum((int) Type);
       }
-      if (ONOCJEEBFCI != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(ONOCJEEBFCI);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
+      }
+      challengeRecommendList_.WriteTo(ref output, _repeated_challengeRecommendList_codec);
+      if (ONOCJEEBFCI != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(ONOCJEEBFCI);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -253,16 +253,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Key != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Key);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
+      if (Key != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Key);
+      }
+      size += challengeRecommendList_.CalculateSize(_repeated_challengeRecommendList_codec);
       if (Type != global::EggLink.DanhengServer.Proto.DLLLEANDAIH.FriendRecommendLineupTypeNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
-      size += challengeRecommendList_.CalculateSize(_repeated_challengeRecommendList_codec);
       if (ONOCJEEBFCI != false) {
         size += 1 + 1;
       }
@@ -278,16 +278,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Key != 0) {
-        Key = other.Key;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      if (other.Key != 0) {
+        Key = other.Key;
+      }
+      challengeRecommendList_.Add(other.challengeRecommendList_);
       if (other.Type != global::EggLink.DanhengServer.Proto.DLLLEANDAIH.FriendRecommendLineupTypeNone) {
         Type = other.Type;
       }
-      challengeRecommendList_.Add(other.challengeRecommendList_);
       if (other.ONOCJEEBFCI != false) {
         ONOCJEEBFCI = other.ONOCJEEBFCI;
       }
@@ -310,20 +310,20 @@ namespace EggLink.DanhengServer.Proto {
             Key = input.ReadUInt32();
             break;
           }
-          case 26: {
-            challengeRecommendList_.AddEntriesFrom(input, _repeated_challengeRecommendList_codec);
-            break;
-          }
-          case 56: {
+          case 24: {
             Type = (global::EggLink.DanhengServer.Proto.DLLLEANDAIH) input.ReadEnum();
             break;
           }
-          case 96: {
-            ONOCJEEBFCI = input.ReadBool();
+          case 40: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 50: {
+            challengeRecommendList_.AddEntriesFrom(input, _repeated_challengeRecommendList_codec);
+            break;
+          }
+          case 120: {
+            ONOCJEEBFCI = input.ReadBool();
             break;
           }
         }
@@ -345,20 +345,20 @@ namespace EggLink.DanhengServer.Proto {
             Key = input.ReadUInt32();
             break;
           }
-          case 26: {
-            challengeRecommendList_.AddEntriesFrom(ref input, _repeated_challengeRecommendList_codec);
-            break;
-          }
-          case 56: {
+          case 24: {
             Type = (global::EggLink.DanhengServer.Proto.DLLLEANDAIH) input.ReadEnum();
             break;
           }
-          case 96: {
-            ONOCJEEBFCI = input.ReadBool();
+          case 40: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 50: {
+            challengeRecommendList_.AddEntriesFrom(ref input, _repeated_challengeRecommendList_codec);
+            break;
+          }
+          case 120: {
+            ONOCJEEBFCI = input.ReadBool();
             break;
           }
         }

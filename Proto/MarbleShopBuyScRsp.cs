@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhNYXJibGVTaG9wQnV5U2NSc3AucHJvdG8iPwoSTWFyYmxlU2hvcEJ1eVNj",
-            "UnNwEhgKEG1hcmJsZV9zZWFsX2xpc3QYAyADKA0SDwoHcmV0Y29kZRgBIAEo",
+            "UnNwEg8KB3JldGNvZGUYBiABKA0SGAoQbWFyYmxlX3NlYWxfbGlzdBgOIAMo",
             "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleShopBuyScRsp), global::EggLink.DanhengServer.Proto.MarbleShopBuyScRsp.Parser, new[]{ "MarbleSealList", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleShopBuyScRsp), global::EggLink.DanhengServer.Proto.MarbleShopBuyScRsp.Parser, new[]{ "Retcode", "MarbleSealList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarbleShopBuyScRsp(MarbleShopBuyScRsp other) : this() {
-      marbleSealList_ = other.marbleSealList_.Clone();
       retcode_ = other.retcode_;
+      marbleSealList_ = other.marbleSealList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,19 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MarbleShopBuyScRsp(this);
     }
 
-    /// <summary>Field number for the "marble_seal_list" field.</summary>
-    public const int MarbleSealListFieldNumber = 3;
-    private static readonly pb::FieldCodec<uint> _repeated_marbleSealList_codec
-        = pb::FieldCodec.ForUInt32(26);
-    private readonly pbc::RepeatedField<uint> marbleSealList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> MarbleSealList {
-      get { return marbleSealList_; }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +93,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
+    }
+
+    /// <summary>Field number for the "marble_seal_list" field.</summary>
+    public const int MarbleSealListFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_marbleSealList_codec
+        = pb::FieldCodec.ForUInt32(114);
+    private readonly pbc::RepeatedField<uint> marbleSealList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> MarbleSealList {
+      get { return marbleSealList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -121,8 +121,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!marbleSealList_.Equals(other.marbleSealList_)) return false;
       if (Retcode != other.Retcode) return false;
+      if(!marbleSealList_.Equals(other.marbleSealList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -130,8 +130,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= marbleSealList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      hash ^= marbleSealList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       marbleSealList_.WriteTo(output, _repeated_marbleSealList_codec);
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
       }
       marbleSealList_.WriteTo(ref output, _repeated_marbleSealList_codec);
@@ -180,10 +180,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += marbleSealList_.CalculateSize(_repeated_marbleSealList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
+      size += marbleSealList_.CalculateSize(_repeated_marbleSealList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -196,10 +196,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      marbleSealList_.Add(other.marbleSealList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
+      marbleSealList_.Add(other.marbleSealList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -215,12 +215,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 26:
-          case 24: {
+          case 114:
+          case 112: {
             marbleSealList_.AddEntriesFrom(input, _repeated_marbleSealList_codec);
             break;
           }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 48: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 26:
-          case 24: {
+          case 114:
+          case 112: {
             marbleSealList_.AddEntriesFrom(ref input, _repeated_marbleSealList_codec);
             break;
           }

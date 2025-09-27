@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChVGcmllbmRBcHBseUluZm8ucHJvdG8aFlBsYXllclNpbXBsZUluZm8ucHJv",
-            "dG8iTQoPRnJpZW5kQXBwbHlJbmZvEhIKCmFwcGx5X3RpbWUYAiABKAMSJgoL",
-            "cGxheWVyX2luZm8YBSABKAsyES5QbGF5ZXJTaW1wbGVJbmZvQh6qAhtFZ2dM",
+            "dG8iTQoPRnJpZW5kQXBwbHlJbmZvEhIKCmFwcGx5X3RpbWUYDiABKAMSJgoL",
+            "cGxheWVyX2luZm8YASABKAsyES5QbGF5ZXJTaW1wbGVJbmZvQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerSimpleInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "apply_time" field.</summary>
-    public const int ApplyTimeFieldNumber = 2;
+    public const int ApplyTimeFieldNumber = 14;
     private long applyTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "player_info" field.</summary>
-    public const int PlayerInfoFieldNumber = 5;
+    public const int PlayerInfoFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.PlayerSimpleInfo playerInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ApplyTime != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(ApplyTime);
-      }
       if (playerInfo_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(10);
         output.WriteMessage(PlayerInfo);
+      }
+      if (ApplyTime != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(ApplyTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ApplyTime != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(ApplyTime);
-      }
       if (playerInfo_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(10);
         output.WriteMessage(PlayerInfo);
+      }
+      if (ApplyTime != 0L) {
+        output.WriteRawTag(112);
+        output.WriteInt64(ApplyTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            ApplyTime = input.ReadInt64();
-            break;
-          }
-          case 42: {
+          case 10: {
             if (playerInfo_ == null) {
               PlayerInfo = new global::EggLink.DanhengServer.Proto.PlayerSimpleInfo();
             }
             input.ReadMessage(PlayerInfo);
+            break;
+          }
+          case 112: {
+            ApplyTime = input.ReadInt64();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            ApplyTime = input.ReadInt64();
-            break;
-          }
-          case 42: {
+          case 10: {
             if (playerInfo_ == null) {
               PlayerInfo = new global::EggLink.DanhengServer.Proto.PlayerSimpleInfo();
             }
             input.ReadMessage(PlayerInfo);
+            break;
+          }
+          case 112: {
+            ApplyTime = input.ReadInt64();
             break;
           }
         }

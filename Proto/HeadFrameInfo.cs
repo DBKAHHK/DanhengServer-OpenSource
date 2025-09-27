@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNIZWFkRnJhbWVJbmZvLnByb3RvIkYKDUhlYWRGcmFtZUluZm8SHgoWaGVh",
-            "ZF9mcmFtZV9leHBpcmVfdGltZRgNIAEoAxIVCg1oZWFkX2ZyYW1lX2lkGA8g",
+            "ZF9mcmFtZV9leHBpcmVfdGltZRgPIAEoAxIVCg1oZWFkX2ZyYW1lX2lkGAUg",
             "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "head_frame_expire_time" field.</summary>
-    public const int HeadFrameExpireTimeFieldNumber = 13;
+    public const int HeadFrameExpireTimeFieldNumber = 15;
     private long headFrameExpireTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "head_frame_id" field.</summary>
-    public const int HeadFrameIdFieldNumber = 15;
+    public const int HeadFrameIdFieldNumber = 5;
     private uint headFrameId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HeadFrameExpireTime != 0L) {
-        output.WriteRawTag(104);
-        output.WriteInt64(HeadFrameExpireTime);
-      }
       if (HeadFrameId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(40);
         output.WriteUInt32(HeadFrameId);
+      }
+      if (HeadFrameExpireTime != 0L) {
+        output.WriteRawTag(120);
+        output.WriteInt64(HeadFrameExpireTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HeadFrameExpireTime != 0L) {
-        output.WriteRawTag(104);
-        output.WriteInt64(HeadFrameExpireTime);
-      }
       if (HeadFrameId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(40);
         output.WriteUInt32(HeadFrameId);
+      }
+      if (HeadFrameExpireTime != 0L) {
+        output.WriteRawTag(120);
+        output.WriteInt64(HeadFrameExpireTime);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 104: {
-            HeadFrameExpireTime = input.ReadInt64();
+          case 40: {
+            HeadFrameId = input.ReadUInt32();
             break;
           }
           case 120: {
-            HeadFrameId = input.ReadUInt32();
+            HeadFrameExpireTime = input.ReadInt64();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 104: {
-            HeadFrameExpireTime = input.ReadInt64();
+          case 40: {
+            HeadFrameId = input.ReadUInt32();
             break;
           }
           case 120: {
-            HeadFrameId = input.ReadUInt32();
+            HeadFrameExpireTime = input.ReadInt64();
             break;
           }
         }

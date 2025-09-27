@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPRE5OS0JJTUVGSC5wcm90bxoRQUFDT0ZJS0RDUEwucHJvdG8iMAoLT0RO",
-            "TktCSU1FRkgSIQoLS0VFRFBMUEFDTFAYCCADKAsyDC5BQUNPRklLRENQTEIe",
+            "TktCSU1FRkgSIQoLS0VFRFBMUEFDTFAYDCADKAsyDC5BQUNPRklLRENQTEIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AACOFIKDCPLReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KEEDPLPACLP" field.</summary>
-    public const int KEEDPLPACLPFieldNumber = 8;
+    public const int KEEDPLPACLPFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AACOFIKDCPL> _repeated_kEEDPLPACLP_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.AACOFIKDCPL.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.AACOFIKDCPL.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AACOFIKDCPL> kEEDPLPACLP_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AACOFIKDCPL>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 98: {
             kEEDPLPACLP_.AddEntriesFrom(input, _repeated_kEEDPLPACLP_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 98: {
             kEEDPLPACLP_.AddEntriesFrom(ref input, _repeated_kEEDPLPACLP_codec);
             break;
           }

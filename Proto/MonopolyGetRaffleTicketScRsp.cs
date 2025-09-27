@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJNb25vcG9seUdldFJhZmZsZVRpY2tldFNjUnNwLnByb3RvGhFMQUlMTklH",
-            "RlBPTy5wcm90byJjChxNb25vcG9seUdldFJhZmZsZVRpY2tldFNjUnNwEg8K",
-            "B3Bvb2xfaWQYBSABKA0SIQoLQkxNRURMTk9LRUkYBiADKAsyDC5MQUlMTklH",
-            "RlBPTxIPCgdyZXRjb2RlGAEgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "RlBPTy5wcm90byJjChxNb25vcG9seUdldFJhZmZsZVRpY2tldFNjUnNwEiEK",
+            "C0JMTUVETE5PS0VJGAQgAygLMgwuTEFJTE5JR0ZQT08SDwoHcG9vbF9pZBgD",
+            "IAEoDRIPCgdyZXRjb2RlGAEgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LAILNIGFPOOReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyGetRaffleTicketScRsp), global::EggLink.DanhengServer.Proto.MonopolyGetRaffleTicketScRsp.Parser, new[]{ "PoolId", "BLMEDLNOKEI", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolyGetRaffleTicketScRsp), global::EggLink.DanhengServer.Proto.MonopolyGetRaffleTicketScRsp.Parser, new[]{ "BLMEDLNOKEI", "PoolId", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MonopolyGetRaffleTicketScRsp(MonopolyGetRaffleTicketScRsp other) : this() {
-      poolId_ = other.poolId_;
       bLMEDLNOKEI_ = other.bLMEDLNOKEI_.Clone();
+      poolId_ = other.poolId_;
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,8 +86,19 @@ namespace EggLink.DanhengServer.Proto {
       return new MonopolyGetRaffleTicketScRsp(this);
     }
 
+    /// <summary>Field number for the "BLMEDLNOKEI" field.</summary>
+    public const int BLMEDLNOKEIFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LAILNIGFPOO> _repeated_bLMEDLNOKEI_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.LAILNIGFPOO.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LAILNIGFPOO> bLMEDLNOKEI_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LAILNIGFPOO>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LAILNIGFPOO> BLMEDLNOKEI {
+      get { return bLMEDLNOKEI_; }
+    }
+
     /// <summary>Field number for the "pool_id" field.</summary>
-    public const int PoolIdFieldNumber = 5;
+    public const int PoolIdFieldNumber = 3;
     private uint poolId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,17 +107,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         poolId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "BLMEDLNOKEI" field.</summary>
-    public const int BLMEDLNOKEIFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LAILNIGFPOO> _repeated_bLMEDLNOKEI_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.LAILNIGFPOO.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LAILNIGFPOO> bLMEDLNOKEI_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LAILNIGFPOO>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LAILNIGFPOO> BLMEDLNOKEI {
-      get { return bLMEDLNOKEI_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PoolId != other.PoolId) return false;
       if(!bLMEDLNOKEI_.Equals(other.bLMEDLNOKEI_)) return false;
+      if (PoolId != other.PoolId) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (PoolId != 0) hash ^= PoolId.GetHashCode();
       hash ^= bLMEDLNOKEI_.GetHashCode();
+      if (PoolId != 0) hash ^= PoolId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -172,7 +172,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (PoolId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(PoolId);
       }
       bLMEDLNOKEI_.WriteTo(output, _repeated_bLMEDLNOKEI_codec);
@@ -191,7 +191,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(Retcode);
       }
       if (PoolId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(PoolId);
       }
       bLMEDLNOKEI_.WriteTo(ref output, _repeated_bLMEDLNOKEI_codec);
@@ -205,10 +205,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += bLMEDLNOKEI_.CalculateSize(_repeated_bLMEDLNOKEI_codec);
       if (PoolId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PoolId);
       }
-      size += bLMEDLNOKEI_.CalculateSize(_repeated_bLMEDLNOKEI_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -224,10 +224,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      bLMEDLNOKEI_.Add(other.bLMEDLNOKEI_);
       if (other.PoolId != 0) {
         PoolId = other.PoolId;
       }
-      bLMEDLNOKEI_.Add(other.bLMEDLNOKEI_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 24: {
             PoolId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 34: {
             bLMEDLNOKEI_.AddEntriesFrom(input, _repeated_bLMEDLNOKEI_codec);
             break;
           }
@@ -277,11 +277,11 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 24: {
             PoolId = input.ReadUInt32();
             break;
           }
-          case 50: {
+          case 34: {
             bLMEDLNOKEI_.AddEntriesFrom(ref input, _repeated_bLMEDLNOKEI_codec);
             break;
           }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFHYW1lcGxheUNvdW50ZXJSZWNvdmVyQ3NSZXEucHJvdG8iRwobR2FtZXBs",
-            "YXlDb3VudGVyUmVjb3ZlckNzUmVxEhMKC05NR0xOSFBBTkFIGAUgASgNEhMK",
+            "YXlDb3VudGVyUmVjb3ZlckNzUmVxEhMKC05NR0xOSFBBTkFIGAogASgNEhMK",
             "C0xBQk9PRERBTE9FGAEgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NMGLNHPANAH" field.</summary>
-    public const int NMGLNHPANAHFieldNumber = 5;
+    public const int NMGLNHPANAHFieldNumber = 10;
     private uint nMGLNHPANAH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(LABOODDALOE);
       }
       if (NMGLNHPANAH != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(80);
         output.WriteUInt32(NMGLNHPANAH);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(LABOODDALOE);
       }
       if (NMGLNHPANAH != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(80);
         output.WriteUInt32(NMGLNHPANAH);
       }
       if (_unknownFields != null) {
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             LABOODDALOE = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 80: {
             NMGLNHPANAH = input.ReadUInt32();
             break;
           }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             LABOODDALOE = input.ReadUInt32();
             break;
           }
-          case 40: {
+          case 80: {
             NMGLNHPANAH = input.ReadUInt32();
             break;
           }

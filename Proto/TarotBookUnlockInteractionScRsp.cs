@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVUYXJvdEJvb2tVbmxvY2tJbnRlcmFjdGlvblNjUnNwLnByb3RvIkcKH1Rh",
-            "cm90Qm9va1VubG9ja0ludGVyYWN0aW9uU2NSc3ASDwoHcmV0Y29kZRgGIAEo",
-            "DRITCgtPSEtIUE9MRklCUBgPIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "cm90Qm9va1VubG9ja0ludGVyYWN0aW9uU2NSc3ASDwoHcmV0Y29kZRgPIAEo",
+            "DRITCgtPSEtIUE9MRklCUBgJIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 15;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "OHKHPOLFIBP" field.</summary>
-    public const int OHKHPOLFIBPFieldNumber = 15;
+    public const int OHKHPOLFIBPFieldNumber = 9;
     private static readonly pb::FieldCodec<uint> _repeated_oHKHPOLFIBP_codec
-        = pb::FieldCodec.ForUInt32(122);
+        = pb::FieldCodec.ForUInt32(74);
     private readonly pbc::RepeatedField<uint> oHKHPOLFIBP_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      oHKHPOLFIBP_.WriteTo(output, _repeated_oHKHPOLFIBP_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
-      oHKHPOLFIBP_.WriteTo(output, _repeated_oHKHPOLFIBP_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      oHKHPOLFIBP_.WriteTo(ref output, _repeated_oHKHPOLFIBP_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
-      oHKHPOLFIBP_.WriteTo(ref output, _repeated_oHKHPOLFIBP_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            Retcode = input.ReadUInt32();
+          case 74:
+          case 72: {
+            oHKHPOLFIBP_.AddEntriesFrom(input, _repeated_oHKHPOLFIBP_codec);
             break;
           }
-          case 122:
           case 120: {
-            oHKHPOLFIBP_.AddEntriesFrom(input, _repeated_oHKHPOLFIBP_codec);
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            Retcode = input.ReadUInt32();
+          case 74:
+          case 72: {
+            oHKHPOLFIBP_.AddEntriesFrom(ref input, _repeated_oHKHPOLFIBP_codec);
             break;
           }
-          case 122:
           case 120: {
-            oHKHPOLFIBP_.AddEntriesFrom(ref input, _repeated_oHKHPOLFIBP_codec);
+            Retcode = input.ReadUInt32();
             break;
           }
         }

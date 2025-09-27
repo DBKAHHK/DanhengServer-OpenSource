@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFJTk5OSUNGT0xJSS5wcm90byI4CgtJTk5OSUNGT0xJSRIUCgxnYWNoYV9y",
-            "YW5kb20YByABKA0SEwoLSkNOT0RBTUZGRkMYDSABKAhCHqoCG0VnZ0xpbmsu",
+            "YW5kb20YBSABKA0SEwoLSkNOT0RBTUZGRkMYDyABKAhCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gacha_random" field.</summary>
-    public const int GachaRandomFieldNumber = 7;
+    public const int GachaRandomFieldNumber = 5;
     private uint gachaRandom_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JCNODAMFFFC" field.</summary>
-    public const int JCNODAMFFFCFieldNumber = 13;
+    public const int JCNODAMFFFCFieldNumber = 15;
     private bool jCNODAMFFFC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (GachaRandom != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteUInt32(GachaRandom);
       }
       if (JCNODAMFFFC != false) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteBool(JCNODAMFFFC);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (GachaRandom != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteUInt32(GachaRandom);
       }
       if (JCNODAMFFFC != false) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(120);
         output.WriteBool(JCNODAMFFFC);
       }
       if (_unknownFields != null) {
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
+          case 40: {
             GachaRandom = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 120: {
             JCNODAMFFFC = input.ReadBool();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
+          case 40: {
             GachaRandom = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 120: {
             JCNODAMFFFC = input.ReadBool();
             break;
           }

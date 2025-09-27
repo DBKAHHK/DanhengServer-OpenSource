@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVGcmllbmRSb2d1ZVRvdXJuRGV2ZWxvcG1lbnRJbmZvLnByb3RvIlMKH0Zy",
             "aWVuZFJvZ3VlVG91cm5EZXZlbG9wbWVudEluZm8SHwoXZmluaXNoX3RvdXJu",
-            "X2RpZmZpY3VsdHkYCiABKA0SDwoHYXJlYV9pZBgFIAEoDUIeqgIbRWdnTGlu",
+            "X2RpZmZpY3VsdHkYBCABKA0SDwoHYXJlYV9pZBgNIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "finish_tourn_difficulty" field.</summary>
-    public const int FinishTournDifficultyFieldNumber = 10;
+    public const int FinishTournDifficultyFieldNumber = 4;
     private uint finishTournDifficulty_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 5;
+    public const int AreaIdFieldNumber = 13;
     private uint areaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AreaId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(AreaId);
-      }
       if (FinishTournDifficulty != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(32);
         output.WriteUInt32(FinishTournDifficulty);
+      }
+      if (AreaId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(AreaId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AreaId != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(AreaId);
-      }
       if (FinishTournDifficulty != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(32);
         output.WriteUInt32(FinishTournDifficulty);
+      }
+      if (AreaId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(AreaId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            AreaId = input.ReadUInt32();
+          case 32: {
+            FinishTournDifficulty = input.ReadUInt32();
             break;
           }
-          case 80: {
-            FinishTournDifficulty = input.ReadUInt32();
+          case 104: {
+            AreaId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            AreaId = input.ReadUInt32();
+          case 32: {
+            FinishTournDifficulty = input.ReadUInt32();
             break;
           }
-          case 80: {
-            FinishTournDifficulty = input.ReadUInt32();
+          case 104: {
+            AreaId = input.ReadUInt32();
             break;
           }
         }

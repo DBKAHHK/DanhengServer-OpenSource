@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidTZXRDaGFsbGVuZ2VQZWFrQm9zc0hhcmRNb2RlU2NSc3AucHJvdG8iXAoh",
             "U2V0Q2hhbGxlbmdlUGVha0Jvc3NIYXJkTW9kZVNjUnNwEg8KB3JldGNvZGUY",
-            "CyABKA0SFQoNcGVha19ncm91cF9pZBgEIAEoDRIPCgdpc19oYXJkGAIgASgI",
+            "CSABKA0SFQoNcGVha19ncm91cF9pZBgIIAEoDRIPCgdpc19oYXJkGAwgASgI",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "peak_group_id" field.</summary>
-    public const int PeakGroupIdFieldNumber = 4;
+    public const int PeakGroupIdFieldNumber = 8;
     private uint peakGroupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_hard" field.</summary>
-    public const int IsHardFieldNumber = 2;
+    public const int IsHardFieldNumber = 12;
     private bool isHard_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsHard != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsHard);
-      }
       if (PeakGroupId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(64);
         output.WriteUInt32(PeakGroupId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
+      }
+      if (IsHard != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsHard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsHard != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(IsHard);
-      }
       if (PeakGroupId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(64);
         output.WriteUInt32(PeakGroupId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
+      }
+      if (IsHard != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IsHard);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            IsHard = input.ReadBool();
-            break;
-          }
-          case 32: {
+          case 64: {
             PeakGroupId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 72: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            IsHard = input.ReadBool();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            IsHard = input.ReadBool();
-            break;
-          }
-          case 32: {
+          case 64: {
             PeakGroupId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 72: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            IsHard = input.ReadBool();
             break;
           }
         }

@@ -24,16 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static LobbyCreateScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZMb2JieUNyZWF0ZVNjUnNwLnByb3RvGhRMb2JieUJhc2ljSW5mby5wcm90",
-            "bxoTRmlnaHRHYW1lTW9kZS5wcm90byKcAQoQTG9iYnlDcmVhdGVTY1JzcBIP",
-            "CgdyZXRjb2RlGAcgASgNEg8KB3Jvb21faWQYCiABKAQSJwoPZmlnaHRfZ2Ft",
-            "ZV9tb2RlGA8gASgOMg4uRmlnaHRHYW1lTW9kZRISCgpsb2JieV9tb2RlGAYg",
-            "ASgNEikKEGxvYmJ5X2Jhc2ljX2luZm8YAiADKAsyDy5Mb2JieUJhc2ljSW5m",
-            "b0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChZMb2JieUNyZWF0ZVNjUnNwLnByb3RvGhFFS0hNREhDSE9KTi5wcm90bxoT",
+            "RmlnaHRHYW1lTW9kZS5wcm90bxoUTG9iYnlCYXNpY0luZm8ucHJvdG8ivwEK",
+            "EExvYmJ5Q3JlYXRlU2NSc3ASKQoQbG9iYnlfYmFzaWNfaW5mbxgEIAMoCzIP",
+            "LkxvYmJ5QmFzaWNJbmZvEhIKCmxvYmJ5X21vZGUYDyABKA0SDwoHcm9vbV9p",
+            "ZBgLIAEoBBIhCgtIRlBPSENGRk1HUBgGIAEoCzIMLkVLSE1ESENIT0pOEg8K",
+            "B3JldGNvZGUYCiABKA0SJwoPZmlnaHRfZ2FtZV9tb2RlGAggASgOMg4uRmln",
+            "aHRHYW1lTW9kZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LobbyBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FightGameModeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EKHMDHCHOJNReflection.Descriptor, global::EggLink.DanhengServer.Proto.FightGameModeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyBasicInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LobbyCreateScRsp), global::EggLink.DanhengServer.Proto.LobbyCreateScRsp.Parser, new[]{ "Retcode", "RoomId", "FightGameMode", "LobbyMode", "LobbyBasicInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LobbyCreateScRsp), global::EggLink.DanhengServer.Proto.LobbyCreateScRsp.Parser, new[]{ "LobbyBasicInfo", "LobbyMode", "RoomId", "HFPOHCFFMGP", "Retcode", "FightGameMode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,11 +77,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LobbyCreateScRsp(LobbyCreateScRsp other) : this() {
-      retcode_ = other.retcode_;
-      roomId_ = other.roomId_;
-      fightGameMode_ = other.fightGameMode_;
-      lobbyMode_ = other.lobbyMode_;
       lobbyBasicInfo_ = other.lobbyBasicInfo_.Clone();
+      lobbyMode_ = other.lobbyMode_;
+      roomId_ = other.roomId_;
+      hFPOHCFFMGP_ = other.hFPOHCFFMGP_ != null ? other.hFPOHCFFMGP_.Clone() : null;
+      retcode_ = other.retcode_;
+      fightGameMode_ = other.fightGameMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,44 +92,19 @@ namespace EggLink.DanhengServer.Proto {
       return new LobbyCreateScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
-    private uint retcode_;
+    /// <summary>Field number for the "lobby_basic_info" field.</summary>
+    public const int LobbyBasicInfoFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> _repeated_lobbyBasicInfo_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.LobbyBasicInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> lobbyBasicInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "room_id" field.</summary>
-    public const int RoomIdFieldNumber = 10;
-    private ulong roomId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong RoomId {
-      get { return roomId_; }
-      set {
-        roomId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "fight_game_mode" field.</summary>
-    public const int FightGameModeFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.FightGameMode fightGameMode_ = global::EggLink.DanhengServer.Proto.FightGameMode.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FightGameMode FightGameMode {
-      get { return fightGameMode_; }
-      set {
-        fightGameMode_ = value;
-      }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> LobbyBasicInfo {
+      get { return lobbyBasicInfo_; }
     }
 
     /// <summary>Field number for the "lobby_mode" field.</summary>
-    public const int LobbyModeFieldNumber = 6;
+    public const int LobbyModeFieldNumber = 15;
     private uint lobbyMode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -137,15 +115,52 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "lobby_basic_info" field.</summary>
-    public const int LobbyBasicInfoFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> _repeated_lobbyBasicInfo_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.LobbyBasicInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> lobbyBasicInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo>();
+    /// <summary>Field number for the "room_id" field.</summary>
+    public const int RoomIdFieldNumber = 11;
+    private ulong roomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> LobbyBasicInfo {
-      get { return lobbyBasicInfo_; }
+    public ulong RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "HFPOHCFFMGP" field.</summary>
+    public const int HFPOHCFFMGPFieldNumber = 6;
+    private global::EggLink.DanhengServer.Proto.EKHMDHCHOJN hFPOHCFFMGP_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.EKHMDHCHOJN HFPOHCFFMGP {
+      get { return hFPOHCFFMGP_; }
+      set {
+        hFPOHCFFMGP_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 10;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "fight_game_mode" field.</summary>
+    public const int FightGameModeFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.FightGameMode fightGameMode_ = global::EggLink.DanhengServer.Proto.FightGameMode.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.FightGameMode FightGameMode {
+      get { return fightGameMode_; }
+      set {
+        fightGameMode_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -163,11 +178,12 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if (RoomId != other.RoomId) return false;
-      if (FightGameMode != other.FightGameMode) return false;
-      if (LobbyMode != other.LobbyMode) return false;
       if(!lobbyBasicInfo_.Equals(other.lobbyBasicInfo_)) return false;
+      if (LobbyMode != other.LobbyMode) return false;
+      if (RoomId != other.RoomId) return false;
+      if (!object.Equals(HFPOHCFFMGP, other.HFPOHCFFMGP)) return false;
+      if (Retcode != other.Retcode) return false;
+      if (FightGameMode != other.FightGameMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -175,11 +191,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (RoomId != 0UL) hash ^= RoomId.GetHashCode();
-      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) hash ^= FightGameMode.GetHashCode();
-      if (LobbyMode != 0) hash ^= LobbyMode.GetHashCode();
       hash ^= lobbyBasicInfo_.GetHashCode();
+      if (LobbyMode != 0) hash ^= LobbyMode.GetHashCode();
+      if (RoomId != 0UL) hash ^= RoomId.GetHashCode();
+      if (hFPOHCFFMGP_ != null) hash ^= HFPOHCFFMGP.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) hash ^= FightGameMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -199,21 +216,25 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       lobbyBasicInfo_.WriteTo(output, _repeated_lobbyBasicInfo_codec);
-      if (LobbyMode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(LobbyMode);
+      if (hFPOHCFFMGP_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(HFPOHCFFMGP);
+      }
+      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) FightGameMode);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
       if (RoomId != 0UL) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(88);
         output.WriteUInt64(RoomId);
       }
-      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
+      if (LobbyMode != 0) {
         output.WriteRawTag(120);
-        output.WriteEnum((int) FightGameMode);
+        output.WriteUInt32(LobbyMode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -226,21 +247,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       lobbyBasicInfo_.WriteTo(ref output, _repeated_lobbyBasicInfo_codec);
-      if (LobbyMode != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(LobbyMode);
+      if (hFPOHCFFMGP_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(HFPOHCFFMGP);
+      }
+      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) FightGameMode);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(80);
         output.WriteUInt32(Retcode);
       }
       if (RoomId != 0UL) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(88);
         output.WriteUInt64(RoomId);
       }
-      if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
+      if (LobbyMode != 0) {
         output.WriteRawTag(120);
-        output.WriteEnum((int) FightGameMode);
+        output.WriteUInt32(LobbyMode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -252,19 +277,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      size += lobbyBasicInfo_.CalculateSize(_repeated_lobbyBasicInfo_codec);
+      if (LobbyMode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LobbyMode);
       }
       if (RoomId != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(RoomId);
       }
+      if (hFPOHCFFMGP_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HFPOHCFFMGP);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
       if (FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FightGameMode);
       }
-      if (LobbyMode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LobbyMode);
-      }
-      size += lobbyBasicInfo_.CalculateSize(_repeated_lobbyBasicInfo_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -277,19 +305,25 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
+      lobbyBasicInfo_.Add(other.lobbyBasicInfo_);
+      if (other.LobbyMode != 0) {
+        LobbyMode = other.LobbyMode;
       }
       if (other.RoomId != 0UL) {
         RoomId = other.RoomId;
       }
+      if (other.hFPOHCFFMGP_ != null) {
+        if (hFPOHCFFMGP_ == null) {
+          HFPOHCFFMGP = new global::EggLink.DanhengServer.Proto.EKHMDHCHOJN();
+        }
+        HFPOHCFFMGP.MergeFrom(other.HFPOHCFFMGP);
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
+      }
       if (other.FightGameMode != global::EggLink.DanhengServer.Proto.FightGameMode.None) {
         FightGameMode = other.FightGameMode;
       }
-      if (other.LobbyMode != 0) {
-        LobbyMode = other.LobbyMode;
-      }
-      lobbyBasicInfo_.Add(other.lobbyBasicInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -305,24 +339,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 34: {
             lobbyBasicInfo_.AddEntriesFrom(input, _repeated_lobbyBasicInfo_codec);
             break;
           }
-          case 48: {
-            LobbyMode = input.ReadUInt32();
+          case 50: {
+            if (hFPOHCFFMGP_ == null) {
+              HFPOHCFFMGP = new global::EggLink.DanhengServer.Proto.EKHMDHCHOJN();
+            }
+            input.ReadMessage(HFPOHCFFMGP);
             break;
           }
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 64: {
+            FightGameMode = (global::EggLink.DanhengServer.Proto.FightGameMode) input.ReadEnum();
             break;
           }
           case 80: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             RoomId = input.ReadUInt64();
             break;
           }
           case 120: {
-            FightGameMode = (global::EggLink.DanhengServer.Proto.FightGameMode) input.ReadEnum();
+            LobbyMode = input.ReadUInt32();
             break;
           }
         }
@@ -340,24 +381,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 34: {
             lobbyBasicInfo_.AddEntriesFrom(ref input, _repeated_lobbyBasicInfo_codec);
             break;
           }
-          case 48: {
-            LobbyMode = input.ReadUInt32();
+          case 50: {
+            if (hFPOHCFFMGP_ == null) {
+              HFPOHCFFMGP = new global::EggLink.DanhengServer.Proto.EKHMDHCHOJN();
+            }
+            input.ReadMessage(HFPOHCFFMGP);
             break;
           }
-          case 56: {
-            Retcode = input.ReadUInt32();
+          case 64: {
+            FightGameMode = (global::EggLink.DanhengServer.Proto.FightGameMode) input.ReadEnum();
             break;
           }
           case 80: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             RoomId = input.ReadUInt64();
             break;
           }
           case 120: {
-            FightGameMode = (global::EggLink.DanhengServer.Proto.FightGameMode) input.ReadEnum();
+            LobbyMode = input.ReadUInt32();
             break;
           }
         }

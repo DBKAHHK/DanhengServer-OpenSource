@@ -25,12 +25,12 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlXb3JrYmVuY2hGdW5jSWRJbmZvLnByb3RvIjgKE1dvcmtiZW5jaEZ1bmNJ",
-            "ZEluZm8SEAoIaXNfdmFsaWQYCiABKAgSDwoHZnVuY19pZBgMIAEoDUIeqgIb",
+            "ZEluZm8SDwoHZnVuY19pZBgEIAEoDRIQCghpc192YWxpZBgLIAEoCEIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WorkbenchFuncIdInfo), global::EggLink.DanhengServer.Proto.WorkbenchFuncIdInfo.Parser, new[]{ "IsValid", "FuncId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.WorkbenchFuncIdInfo), global::EggLink.DanhengServer.Proto.WorkbenchFuncIdInfo.Parser, new[]{ "FuncId", "IsValid" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkbenchFuncIdInfo(WorkbenchFuncIdInfo other) : this() {
-      isValid_ = other.isValid_;
       funcId_ = other.funcId_;
+      isValid_ = other.isValid_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new WorkbenchFuncIdInfo(this);
     }
 
-    /// <summary>Field number for the "is_valid" field.</summary>
-    public const int IsValidFieldNumber = 10;
-    private bool isValid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsValid {
-      get { return isValid_; }
-      set {
-        isValid_ = value;
-      }
-    }
-
     /// <summary>Field number for the "func_id" field.</summary>
-    public const int FuncIdFieldNumber = 12;
+    public const int FuncIdFieldNumber = 4;
     private uint funcId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return funcId_; }
       set {
         funcId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_valid" field.</summary>
+    public const int IsValidFieldNumber = 11;
+    private bool isValid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsValid {
+      get { return isValid_; }
+      set {
+        isValid_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsValid != other.IsValid) return false;
       if (FuncId != other.FuncId) return false;
+      if (IsValid != other.IsValid) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsValid != false) hash ^= IsValid.GetHashCode();
       if (FuncId != 0) hash ^= FuncId.GetHashCode();
+      if (IsValid != false) hash ^= IsValid.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsValid != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(IsValid);
-      }
       if (FuncId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(32);
         output.WriteUInt32(FuncId);
+      }
+      if (IsValid != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(IsValid);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsValid != false) {
-        output.WriteRawTag(80);
-        output.WriteBool(IsValid);
-      }
       if (FuncId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(32);
         output.WriteUInt32(FuncId);
+      }
+      if (IsValid != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(IsValid);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsValid != false) {
-        size += 1 + 1;
-      }
       if (FuncId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FuncId);
+      }
+      if (IsValid != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsValid != false) {
-        IsValid = other.IsValid;
-      }
       if (other.FuncId != 0) {
         FuncId = other.FuncId;
+      }
+      if (other.IsValid != false) {
+        IsValid = other.IsValid;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
-            IsValid = input.ReadBool();
+          case 32: {
+            FuncId = input.ReadUInt32();
             break;
           }
-          case 96: {
-            FuncId = input.ReadUInt32();
+          case 88: {
+            IsValid = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
-            IsValid = input.ReadBool();
+          case 32: {
+            FuncId = input.ReadUInt32();
             break;
           }
-          case 96: {
-            FuncId = input.ReadUInt32();
+          case 88: {
+            IsValid = input.ReadBool();
             break;
           }
         }

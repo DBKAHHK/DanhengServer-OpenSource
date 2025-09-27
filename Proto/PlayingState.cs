@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static PlayingStateReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJQbGF5aW5nU3RhdGUucHJvdG8q+AEKDFBsYXlpbmdTdGF0ZRIWChJQTEFZ",
+            "ChJQbGF5aW5nU3RhdGUucHJvdG8qnAIKDFBsYXlpbmdTdGF0ZRIWChJQTEFZ",
             "SU5HX1NUQVRFX05PTkUQABIYChRQTEFZSU5HX1JPR1VFX0NPU01PUxABEhcK",
             "E1BMQVlJTkdfUk9HVUVfQ0hFU1MQAhIcChhQTEFZSU5HX1JPR1VFX0NIRVNT",
-            "X05PVVMQAxIcChhQTEFZSU5HX0NIQUxMRU5HRV9NRU1PUlkQBBIXChNQTEFZ",
-            "SU5HX3N0b3J5X2dyb3VwEAUSFgoSUExBWUlOR19ib3NzX2dyb3VwEAYSFwoT",
-            "UExBWUlOR19ST0dVRV9UT1VSThAHEhcKE1BMQVlJTkdfUk9HVUVfTUFHSUMQ",
-            "CEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "X05PVVMQAxIcChhQTEFZSU5HX0NIQUxMRU5HRV9NRU1PUlkQBBIbChdQTEFZ",
+            "SU5HX0NIQUxMRU5HRV9TVE9SWRAFEhoKFlBMQVlJTkdfQ0hBTExFTkdFX0JP",
+            "U1MQBhIXChNQTEFZSU5HX1JPR1VFX1RPVVJOEAcSFwoTUExBWUlOR19ST0dV",
+            "RV9NQUdJQxAIEhoKFlBMQVlJTkdfQ0hBTExFTkdFX1BFQUsQCUIeqgIbRWdn",
+            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.PlayingState), }, null, null));
@@ -45,10 +46,11 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("PLAYING_ROGUE_CHESS")] PlayingRogueChess = 2,
     [pbr::OriginalName("PLAYING_ROGUE_CHESS_NOUS")] PlayingRogueChessNous = 3,
     [pbr::OriginalName("PLAYING_CHALLENGE_MEMORY")] PlayingChallengeMemory = 4,
-    [pbr::OriginalName("PLAYING_story_group")] PlayingStoryGroup = 5,
-    [pbr::OriginalName("PLAYING_boss_group")] PlayingBossGroup = 6,
+    [pbr::OriginalName("PLAYING_CHALLENGE_STORY")] PlayingChallengeStory = 5,
+    [pbr::OriginalName("PLAYING_CHALLENGE_BOSS")] PlayingChallengeBoss = 6,
     [pbr::OriginalName("PLAYING_ROGUE_TOURN")] PlayingRogueTourn = 7,
     [pbr::OriginalName("PLAYING_ROGUE_MAGIC")] PlayingRogueMagic = 8,
+    [pbr::OriginalName("PLAYING_CHALLENGE_PEAK")] PlayingChallengePeak = 9,
   }
 
   #endregion

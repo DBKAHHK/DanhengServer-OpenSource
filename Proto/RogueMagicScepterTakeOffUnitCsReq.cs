@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidSb2d1ZU1hZ2ljU2NlcHRlclRha2VPZmZVbml0Q3NSZXEucHJvdG8iUwoh",
             "Um9ndWVNYWdpY1NjZXB0ZXJUYWtlT2ZmVW5pdENzUmVxEhoKEm1hZ2ljX3Vu",
-            "aXRfaWRfbGlzdBgDIAMoDRISCgpzY2VwdGVyX2lkGAggASgNQh6qAhtFZ2dM",
+            "aXRfaWRfbGlzdBgPIAMoDRISCgpzY2VwdGVyX2lkGAIgASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "magic_unit_id_list" field.</summary>
-    public const int MagicUnitIdListFieldNumber = 3;
+    public const int MagicUnitIdListFieldNumber = 15;
     private static readonly pb::FieldCodec<uint> _repeated_magicUnitIdList_codec
-        = pb::FieldCodec.ForUInt32(26);
+        = pb::FieldCodec.ForUInt32(122);
     private readonly pbc::RepeatedField<uint> magicUnitIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "scepter_id" field.</summary>
-    public const int ScepterIdFieldNumber = 8;
+    public const int ScepterIdFieldNumber = 2;
     private uint scepterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      magicUnitIdList_.WriteTo(output, _repeated_magicUnitIdList_codec);
       if (ScepterId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(16);
         output.WriteUInt32(ScepterId);
       }
+      magicUnitIdList_.WriteTo(output, _repeated_magicUnitIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      magicUnitIdList_.WriteTo(ref output, _repeated_magicUnitIdList_codec);
       if (ScepterId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(16);
         output.WriteUInt32(ScepterId);
       }
+      magicUnitIdList_.WriteTo(ref output, _repeated_magicUnitIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26:
-          case 24: {
-            magicUnitIdList_.AddEntriesFrom(input, _repeated_magicUnitIdList_codec);
+          case 16: {
+            ScepterId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            ScepterId = input.ReadUInt32();
+          case 122:
+          case 120: {
+            magicUnitIdList_.AddEntriesFrom(input, _repeated_magicUnitIdList_codec);
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26:
-          case 24: {
-            magicUnitIdList_.AddEntriesFrom(ref input, _repeated_magicUnitIdList_codec);
+          case 16: {
+            ScepterId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            ScepterId = input.ReadUInt32();
+          case 122:
+          case 120: {
+            magicUnitIdList_.AddEntriesFrom(ref input, _repeated_magicUnitIdList_codec);
             break;
           }
         }

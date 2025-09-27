@@ -2,7 +2,7 @@
 
 public static class GameConstants
 {
-    public const string GAME_VERSION = "3.5.52";
+    public const string GAME_VERSION = "3.6.51";
     public const string AvatarDbVersion = "20250430";
     public const int GameVersionInt = 3200;
     public const int MAX_STAMINA = 300;
@@ -27,6 +27,10 @@ public static class GameConstants
     public const uint CHALLENGE_PEAK_ULTRA_FRAME_ID = 226004;
 
     public const uint CHALLENGE_PEAK_CUR_GROUP_ID = 1;
+    public static Dictionary<uint, List<uint>> CHALLENGE_PEAK_TARGET_ENTRY_ID = new()
+    {
+        {1, [3013501, 8]}
+    };
 
     public static readonly List<int> UpgradeWorldLevel = [20, 30, 40, 50, 60, 65];
     public static readonly List<int> AllowedChessRogueEntranceId = [8020701, 8020901, 8020401, 8020201];

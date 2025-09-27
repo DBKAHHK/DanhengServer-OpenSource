@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQTURKQk9KS0ROSy5wcm90bxoRQU5DQ0dMTU1ESkoucHJvdG8iZwoLUE1E",
-            "SkJPSktETksSIQoLSkNDRkVBQ0hNQlAYBSABKA4yDC5BTkNDR0xNTURKShIZ",
-            "ChFpbnNpZGVfcmVsaWNfbGlzdBgIIAMoDRIaChJvdXRzaWRlX3JlbGljX2xp",
-            "c3QYCSADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "SkJPSktETksSGgoSb3V0c2lkZV9yZWxpY19saXN0GAYgAygNEhkKEWluc2lk",
+            "ZV9yZWxpY19saXN0GAggAygNEiEKC0pDQ0ZFQUNITUJQGAEgASgOMgwuQU5D",
+            "Q0dMTU1ESkpCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ANCCGLMMDJJReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PMDJBOJKDNK), global::EggLink.DanhengServer.Proto.PMDJBOJKDNK.Parser, new[]{ "JCCFEACHMBP", "InsideRelicList", "OutsideRelicList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PMDJBOJKDNK), global::EggLink.DanhengServer.Proto.PMDJBOJKDNK.Parser, new[]{ "OutsideRelicList", "InsideRelicList", "JCCFEACHMBP" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PMDJBOJKDNK(PMDJBOJKDNK other) : this() {
-      jCCFEACHMBP_ = other.jCCFEACHMBP_;
-      insideRelicList_ = other.insideRelicList_.Clone();
       outsideRelicList_ = other.outsideRelicList_.Clone();
+      insideRelicList_ = other.insideRelicList_.Clone();
+      jCCFEACHMBP_ = other.jCCFEACHMBP_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,16 +86,15 @@ namespace EggLink.DanhengServer.Proto {
       return new PMDJBOJKDNK(this);
     }
 
-    /// <summary>Field number for the "JCCFEACHMBP" field.</summary>
-    public const int JCCFEACHMBPFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ jCCFEACHMBP_ = global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ.RelicSmartWearPlanTypeNone;
+    /// <summary>Field number for the "outside_relic_list" field.</summary>
+    public const int OutsideRelicListFieldNumber = 6;
+    private static readonly pb::FieldCodec<uint> _repeated_outsideRelicList_codec
+        = pb::FieldCodec.ForUInt32(50);
+    private readonly pbc::RepeatedField<uint> outsideRelicList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ JCCFEACHMBP {
-      get { return jCCFEACHMBP_; }
-      set {
-        jCCFEACHMBP_ = value;
-      }
+    public pbc::RepeatedField<uint> OutsideRelicList {
+      get { return outsideRelicList_; }
     }
 
     /// <summary>Field number for the "inside_relic_list" field.</summary>
@@ -109,15 +108,16 @@ namespace EggLink.DanhengServer.Proto {
       get { return insideRelicList_; }
     }
 
-    /// <summary>Field number for the "outside_relic_list" field.</summary>
-    public const int OutsideRelicListFieldNumber = 9;
-    private static readonly pb::FieldCodec<uint> _repeated_outsideRelicList_codec
-        = pb::FieldCodec.ForUInt32(74);
-    private readonly pbc::RepeatedField<uint> outsideRelicList_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "JCCFEACHMBP" field.</summary>
+    public const int JCCFEACHMBPFieldNumber = 1;
+    private global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ jCCFEACHMBP_ = global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ.RelicSmartWearPlanTypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> OutsideRelicList {
-      get { return outsideRelicList_; }
+    public global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ JCCFEACHMBP {
+      get { return jCCFEACHMBP_; }
+      set {
+        jCCFEACHMBP_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (JCCFEACHMBP != other.JCCFEACHMBP) return false;
-      if(!insideRelicList_.Equals(other.insideRelicList_)) return false;
       if(!outsideRelicList_.Equals(other.outsideRelicList_)) return false;
+      if(!insideRelicList_.Equals(other.insideRelicList_)) return false;
+      if (JCCFEACHMBP != other.JCCFEACHMBP) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (JCCFEACHMBP != global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ.RelicSmartWearPlanTypeNone) hash ^= JCCFEACHMBP.GetHashCode();
-      hash ^= insideRelicList_.GetHashCode();
       hash ^= outsideRelicList_.GetHashCode();
+      hash ^= insideRelicList_.GetHashCode();
+      if (JCCFEACHMBP != global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ.RelicSmartWearPlanTypeNone) hash ^= JCCFEACHMBP.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (JCCFEACHMBP != global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ.RelicSmartWearPlanTypeNone) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(8);
         output.WriteEnum((int) JCCFEACHMBP);
       }
-      insideRelicList_.WriteTo(output, _repeated_insideRelicList_codec);
       outsideRelicList_.WriteTo(output, _repeated_outsideRelicList_codec);
+      insideRelicList_.WriteTo(output, _repeated_insideRelicList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -183,11 +183,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (JCCFEACHMBP != global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ.RelicSmartWearPlanTypeNone) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(8);
         output.WriteEnum((int) JCCFEACHMBP);
       }
-      insideRelicList_.WriteTo(ref output, _repeated_insideRelicList_codec);
       outsideRelicList_.WriteTo(ref output, _repeated_outsideRelicList_codec);
+      insideRelicList_.WriteTo(ref output, _repeated_insideRelicList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -198,11 +198,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += outsideRelicList_.CalculateSize(_repeated_outsideRelicList_codec);
+      size += insideRelicList_.CalculateSize(_repeated_insideRelicList_codec);
       if (JCCFEACHMBP != global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ.RelicSmartWearPlanTypeNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) JCCFEACHMBP);
       }
-      size += insideRelicList_.CalculateSize(_repeated_insideRelicList_codec);
-      size += outsideRelicList_.CalculateSize(_repeated_outsideRelicList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -215,11 +215,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      outsideRelicList_.Add(other.outsideRelicList_);
+      insideRelicList_.Add(other.insideRelicList_);
       if (other.JCCFEACHMBP != global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ.RelicSmartWearPlanTypeNone) {
         JCCFEACHMBP = other.JCCFEACHMBP;
       }
-      insideRelicList_.Add(other.insideRelicList_);
-      outsideRelicList_.Add(other.outsideRelicList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -235,18 +235,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 8: {
             JCCFEACHMBP = (global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ) input.ReadEnum();
+            break;
+          }
+          case 50:
+          case 48: {
+            outsideRelicList_.AddEntriesFrom(input, _repeated_outsideRelicList_codec);
             break;
           }
           case 66:
           case 64: {
             insideRelicList_.AddEntriesFrom(input, _repeated_insideRelicList_codec);
-            break;
-          }
-          case 74:
-          case 72: {
-            outsideRelicList_.AddEntriesFrom(input, _repeated_outsideRelicList_codec);
             break;
           }
         }
@@ -264,18 +264,18 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 8: {
             JCCFEACHMBP = (global::EggLink.DanhengServer.Proto.ANCCGLMMDJJ) input.ReadEnum();
+            break;
+          }
+          case 50:
+          case 48: {
+            outsideRelicList_.AddEntriesFrom(ref input, _repeated_outsideRelicList_codec);
             break;
           }
           case 66:
           case 64: {
             insideRelicList_.AddEntriesFrom(ref input, _repeated_insideRelicList_codec);
-            break;
-          }
-          case 74:
-          case 72: {
-            outsideRelicList_.AddEntriesFrom(ref input, _repeated_outsideRelicList_codec);
             break;
           }
         }

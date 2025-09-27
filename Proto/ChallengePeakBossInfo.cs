@@ -24,17 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static ChallengePeakBossInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtDaGFsbGVuZ2VQZWFrQm9zc0luZm8ucHJvdG8iywEKFUNoYWxsZW5nZVBl",
-            "YWtCb3NzSW5mbxITCgtpc19maW5pc2hlZBgLIAEoCBIaChJsZWFzdF9yb3Vu",
-            "ZHNfY291bnQYCiABKA0SEwoLSkJPTEFBRkRLQU4YByABKA0SDwoHYnVmZl9p",
-            "ZBgPIAEoDRIjChtib3NzX2Rpc3BsYXlfYXZhdGFyX2lkX2xpc3QYCCADKA0S",
-            "EwoLRkFNS0hPSUtHRkoYDCABKA0SIQoZcGVha19sZXZlbF9hdmF0YXJfaWRf",
-            "bGlzdBgBIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "ChtDaGFsbGVuZ2VQZWFrQm9zc0luZm8ucHJvdG8aEUpOTExPTkJLTkVJLnBy",
+            "b3RvIu4BChVDaGFsbGVuZ2VQZWFrQm9zc0luZm8SIQoLTkJBTU5KQ0dPSUsY",
+            "ASADKAsyDC5KTkxMT05CS05FSRITCgtGQU1LSE9JS0dGShgDIAEoDRIjChti",
+            "b3NzX2Rpc3BsYXlfYXZhdGFyX2lkX2xpc3QYCSADKA0SIQoZcGVha19sZXZl",
+            "bF9hdmF0YXJfaWRfbGlzdBgHIAMoDRITCgtpc19maW5pc2hlZBgPIAEoCBIP",
+            "CgdidWZmX2lkGAQgASgNEhMKC0pCT0xBQUZES0FOGA0gASgNEhoKEmxlYXN0",
+            "X3JvdW5kc19jb3VudBgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JNLLONBKNEIReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengePeakBossInfo), global::EggLink.DanhengServer.Proto.ChallengePeakBossInfo.Parser, new[]{ "IsFinished", "LeastRoundsCount", "JBOLAAFDKAN", "BuffId", "BossDisplayAvatarIdList", "FAMKHOIKGFJ", "PeakLevelAvatarIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengePeakBossInfo), global::EggLink.DanhengServer.Proto.ChallengePeakBossInfo.Parser, new[]{ "NBAMNJCGOIK", "FAMKHOIKGFJ", "BossDisplayAvatarIdList", "PeakLevelAvatarIdList", "IsFinished", "BuffId", "JBOLAAFDKAN", "LeastRoundsCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,13 +77,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengePeakBossInfo(ChallengePeakBossInfo other) : this() {
-      isFinished_ = other.isFinished_;
-      leastRoundsCount_ = other.leastRoundsCount_;
-      jBOLAAFDKAN_ = other.jBOLAAFDKAN_;
-      buffId_ = other.buffId_;
-      bossDisplayAvatarIdList_ = other.bossDisplayAvatarIdList_.Clone();
+      nBAMNJCGOIK_ = other.nBAMNJCGOIK_.Clone();
       fAMKHOIKGFJ_ = other.fAMKHOIKGFJ_;
+      bossDisplayAvatarIdList_ = other.bossDisplayAvatarIdList_.Clone();
       peakLevelAvatarIdList_ = other.peakLevelAvatarIdList_.Clone();
+      isFinished_ = other.isFinished_;
+      buffId_ = other.buffId_;
+      jBOLAAFDKAN_ = other.jBOLAAFDKAN_;
+      leastRoundsCount_ = other.leastRoundsCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -92,67 +94,19 @@ namespace EggLink.DanhengServer.Proto {
       return new ChallengePeakBossInfo(this);
     }
 
-    /// <summary>Field number for the "is_finished" field.</summary>
-    public const int IsFinishedFieldNumber = 11;
-    private bool isFinished_;
+    /// <summary>Field number for the "NBAMNJCGOIK" field.</summary>
+    public const int NBAMNJCGOIKFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.JNLLONBKNEI> _repeated_nBAMNJCGOIK_codec
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.JNLLONBKNEI.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JNLLONBKNEI> nBAMNJCGOIK_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JNLLONBKNEI>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsFinished {
-      get { return isFinished_; }
-      set {
-        isFinished_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "least_rounds_count" field.</summary>
-    public const int LeastRoundsCountFieldNumber = 10;
-    private uint leastRoundsCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LeastRoundsCount {
-      get { return leastRoundsCount_; }
-      set {
-        leastRoundsCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "JBOLAAFDKAN" field.</summary>
-    public const int JBOLAAFDKANFieldNumber = 7;
-    private uint jBOLAAFDKAN_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint JBOLAAFDKAN {
-      get { return jBOLAAFDKAN_; }
-      set {
-        jBOLAAFDKAN_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "buff_id" field.</summary>
-    public const int BuffIdFieldNumber = 15;
-    private uint buffId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BuffId {
-      get { return buffId_; }
-      set {
-        buffId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "boss_display_avatar_id_list" field.</summary>
-    public const int BossDisplayAvatarIdListFieldNumber = 8;
-    private static readonly pb::FieldCodec<uint> _repeated_bossDisplayAvatarIdList_codec
-        = pb::FieldCodec.ForUInt32(66);
-    private readonly pbc::RepeatedField<uint> bossDisplayAvatarIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> BossDisplayAvatarIdList {
-      get { return bossDisplayAvatarIdList_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JNLLONBKNEI> NBAMNJCGOIK {
+      get { return nBAMNJCGOIK_; }
     }
 
     /// <summary>Field number for the "FAMKHOIKGFJ" field.</summary>
-    public const int FAMKHOIKGFJFieldNumber = 12;
+    public const int FAMKHOIKGFJFieldNumber = 3;
     private uint fAMKHOIKGFJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -163,15 +117,74 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "boss_display_avatar_id_list" field.</summary>
+    public const int BossDisplayAvatarIdListFieldNumber = 9;
+    private static readonly pb::FieldCodec<uint> _repeated_bossDisplayAvatarIdList_codec
+        = pb::FieldCodec.ForUInt32(74);
+    private readonly pbc::RepeatedField<uint> bossDisplayAvatarIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> BossDisplayAvatarIdList {
+      get { return bossDisplayAvatarIdList_; }
+    }
+
     /// <summary>Field number for the "peak_level_avatar_id_list" field.</summary>
-    public const int PeakLevelAvatarIdListFieldNumber = 1;
+    public const int PeakLevelAvatarIdListFieldNumber = 7;
     private static readonly pb::FieldCodec<uint> _repeated_peakLevelAvatarIdList_codec
-        = pb::FieldCodec.ForUInt32(10);
+        = pb::FieldCodec.ForUInt32(58);
     private readonly pbc::RepeatedField<uint> peakLevelAvatarIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> PeakLevelAvatarIdList {
       get { return peakLevelAvatarIdList_; }
+    }
+
+    /// <summary>Field number for the "is_finished" field.</summary>
+    public const int IsFinishedFieldNumber = 15;
+    private bool isFinished_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsFinished {
+      get { return isFinished_; }
+      set {
+        isFinished_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "buff_id" field.</summary>
+    public const int BuffIdFieldNumber = 4;
+    private uint buffId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint BuffId {
+      get { return buffId_; }
+      set {
+        buffId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "JBOLAAFDKAN" field.</summary>
+    public const int JBOLAAFDKANFieldNumber = 13;
+    private uint jBOLAAFDKAN_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint JBOLAAFDKAN {
+      get { return jBOLAAFDKAN_; }
+      set {
+        jBOLAAFDKAN_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "least_rounds_count" field.</summary>
+    public const int LeastRoundsCountFieldNumber = 2;
+    private uint leastRoundsCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LeastRoundsCount {
+      get { return leastRoundsCount_; }
+      set {
+        leastRoundsCount_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -189,13 +202,14 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsFinished != other.IsFinished) return false;
-      if (LeastRoundsCount != other.LeastRoundsCount) return false;
-      if (JBOLAAFDKAN != other.JBOLAAFDKAN) return false;
-      if (BuffId != other.BuffId) return false;
-      if(!bossDisplayAvatarIdList_.Equals(other.bossDisplayAvatarIdList_)) return false;
+      if(!nBAMNJCGOIK_.Equals(other.nBAMNJCGOIK_)) return false;
       if (FAMKHOIKGFJ != other.FAMKHOIKGFJ) return false;
+      if(!bossDisplayAvatarIdList_.Equals(other.bossDisplayAvatarIdList_)) return false;
       if(!peakLevelAvatarIdList_.Equals(other.peakLevelAvatarIdList_)) return false;
+      if (IsFinished != other.IsFinished) return false;
+      if (BuffId != other.BuffId) return false;
+      if (JBOLAAFDKAN != other.JBOLAAFDKAN) return false;
+      if (LeastRoundsCount != other.LeastRoundsCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -203,13 +217,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsFinished != false) hash ^= IsFinished.GetHashCode();
-      if (LeastRoundsCount != 0) hash ^= LeastRoundsCount.GetHashCode();
-      if (JBOLAAFDKAN != 0) hash ^= JBOLAAFDKAN.GetHashCode();
-      if (BuffId != 0) hash ^= BuffId.GetHashCode();
-      hash ^= bossDisplayAvatarIdList_.GetHashCode();
+      hash ^= nBAMNJCGOIK_.GetHashCode();
       if (FAMKHOIKGFJ != 0) hash ^= FAMKHOIKGFJ.GetHashCode();
+      hash ^= bossDisplayAvatarIdList_.GetHashCode();
       hash ^= peakLevelAvatarIdList_.GetHashCode();
+      if (IsFinished != false) hash ^= IsFinished.GetHashCode();
+      if (BuffId != 0) hash ^= BuffId.GetHashCode();
+      if (JBOLAAFDKAN != 0) hash ^= JBOLAAFDKAN.GetHashCode();
+      if (LeastRoundsCount != 0) hash ^= LeastRoundsCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -228,27 +243,28 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      peakLevelAvatarIdList_.WriteTo(output, _repeated_peakLevelAvatarIdList_codec);
-      if (JBOLAAFDKAN != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(JBOLAAFDKAN);
-      }
-      bossDisplayAvatarIdList_.WriteTo(output, _repeated_bossDisplayAvatarIdList_codec);
+      nBAMNJCGOIK_.WriteTo(output, _repeated_nBAMNJCGOIK_codec);
       if (LeastRoundsCount != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(16);
         output.WriteUInt32(LeastRoundsCount);
       }
-      if (IsFinished != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(IsFinished);
-      }
       if (FAMKHOIKGFJ != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(FAMKHOIKGFJ);
       }
       if (BuffId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(32);
         output.WriteUInt32(BuffId);
+      }
+      peakLevelAvatarIdList_.WriteTo(output, _repeated_peakLevelAvatarIdList_codec);
+      bossDisplayAvatarIdList_.WriteTo(output, _repeated_bossDisplayAvatarIdList_codec);
+      if (JBOLAAFDKAN != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(JBOLAAFDKAN);
+      }
+      if (IsFinished != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(IsFinished);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -260,27 +276,28 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      peakLevelAvatarIdList_.WriteTo(ref output, _repeated_peakLevelAvatarIdList_codec);
-      if (JBOLAAFDKAN != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(JBOLAAFDKAN);
-      }
-      bossDisplayAvatarIdList_.WriteTo(ref output, _repeated_bossDisplayAvatarIdList_codec);
+      nBAMNJCGOIK_.WriteTo(ref output, _repeated_nBAMNJCGOIK_codec);
       if (LeastRoundsCount != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(16);
         output.WriteUInt32(LeastRoundsCount);
       }
-      if (IsFinished != false) {
-        output.WriteRawTag(88);
-        output.WriteBool(IsFinished);
-      }
       if (FAMKHOIKGFJ != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(FAMKHOIKGFJ);
       }
       if (BuffId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(32);
         output.WriteUInt32(BuffId);
+      }
+      peakLevelAvatarIdList_.WriteTo(ref output, _repeated_peakLevelAvatarIdList_codec);
+      bossDisplayAvatarIdList_.WriteTo(ref output, _repeated_bossDisplayAvatarIdList_codec);
+      if (JBOLAAFDKAN != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(JBOLAAFDKAN);
+      }
+      if (IsFinished != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(IsFinished);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -292,23 +309,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += nBAMNJCGOIK_.CalculateSize(_repeated_nBAMNJCGOIK_codec);
+      if (FAMKHOIKGFJ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FAMKHOIKGFJ);
+      }
+      size += bossDisplayAvatarIdList_.CalculateSize(_repeated_bossDisplayAvatarIdList_codec);
+      size += peakLevelAvatarIdList_.CalculateSize(_repeated_peakLevelAvatarIdList_codec);
       if (IsFinished != false) {
         size += 1 + 1;
-      }
-      if (LeastRoundsCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LeastRoundsCount);
-      }
-      if (JBOLAAFDKAN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JBOLAAFDKAN);
       }
       if (BuffId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffId);
       }
-      size += bossDisplayAvatarIdList_.CalculateSize(_repeated_bossDisplayAvatarIdList_codec);
-      if (FAMKHOIKGFJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FAMKHOIKGFJ);
+      if (JBOLAAFDKAN != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JBOLAAFDKAN);
       }
-      size += peakLevelAvatarIdList_.CalculateSize(_repeated_peakLevelAvatarIdList_codec);
+      if (LeastRoundsCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LeastRoundsCount);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -321,23 +339,24 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      nBAMNJCGOIK_.Add(other.nBAMNJCGOIK_);
+      if (other.FAMKHOIKGFJ != 0) {
+        FAMKHOIKGFJ = other.FAMKHOIKGFJ;
+      }
+      bossDisplayAvatarIdList_.Add(other.bossDisplayAvatarIdList_);
+      peakLevelAvatarIdList_.Add(other.peakLevelAvatarIdList_);
       if (other.IsFinished != false) {
         IsFinished = other.IsFinished;
-      }
-      if (other.LeastRoundsCount != 0) {
-        LeastRoundsCount = other.LeastRoundsCount;
-      }
-      if (other.JBOLAAFDKAN != 0) {
-        JBOLAAFDKAN = other.JBOLAAFDKAN;
       }
       if (other.BuffId != 0) {
         BuffId = other.BuffId;
       }
-      bossDisplayAvatarIdList_.Add(other.bossDisplayAvatarIdList_);
-      if (other.FAMKHOIKGFJ != 0) {
-        FAMKHOIKGFJ = other.FAMKHOIKGFJ;
+      if (other.JBOLAAFDKAN != 0) {
+        JBOLAAFDKAN = other.JBOLAAFDKAN;
       }
-      peakLevelAvatarIdList_.Add(other.peakLevelAvatarIdList_);
+      if (other.LeastRoundsCount != 0) {
+        LeastRoundsCount = other.LeastRoundsCount;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -353,34 +372,38 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
-            peakLevelAvatarIdList_.AddEntriesFrom(input, _repeated_peakLevelAvatarIdList_codec);
+          case 10: {
+            nBAMNJCGOIK_.AddEntriesFrom(input, _repeated_nBAMNJCGOIK_codec);
             break;
           }
-          case 56: {
-            JBOLAAFDKAN = input.ReadUInt32();
-            break;
-          }
-          case 66:
-          case 64: {
-            bossDisplayAvatarIdList_.AddEntriesFrom(input, _repeated_bossDisplayAvatarIdList_codec);
-            break;
-          }
-          case 80: {
+          case 16: {
             LeastRoundsCount = input.ReadUInt32();
             break;
           }
-          case 88: {
-            IsFinished = input.ReadBool();
-            break;
-          }
-          case 96: {
+          case 24: {
             FAMKHOIKGFJ = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 32: {
             BuffId = input.ReadUInt32();
+            break;
+          }
+          case 58:
+          case 56: {
+            peakLevelAvatarIdList_.AddEntriesFrom(input, _repeated_peakLevelAvatarIdList_codec);
+            break;
+          }
+          case 74:
+          case 72: {
+            bossDisplayAvatarIdList_.AddEntriesFrom(input, _repeated_bossDisplayAvatarIdList_codec);
+            break;
+          }
+          case 104: {
+            JBOLAAFDKAN = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            IsFinished = input.ReadBool();
             break;
           }
         }
@@ -398,34 +421,38 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
-            peakLevelAvatarIdList_.AddEntriesFrom(ref input, _repeated_peakLevelAvatarIdList_codec);
+          case 10: {
+            nBAMNJCGOIK_.AddEntriesFrom(ref input, _repeated_nBAMNJCGOIK_codec);
             break;
           }
-          case 56: {
-            JBOLAAFDKAN = input.ReadUInt32();
-            break;
-          }
-          case 66:
-          case 64: {
-            bossDisplayAvatarIdList_.AddEntriesFrom(ref input, _repeated_bossDisplayAvatarIdList_codec);
-            break;
-          }
-          case 80: {
+          case 16: {
             LeastRoundsCount = input.ReadUInt32();
             break;
           }
-          case 88: {
-            IsFinished = input.ReadBool();
-            break;
-          }
-          case 96: {
+          case 24: {
             FAMKHOIKGFJ = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 32: {
             BuffId = input.ReadUInt32();
+            break;
+          }
+          case 58:
+          case 56: {
+            peakLevelAvatarIdList_.AddEntriesFrom(ref input, _repeated_peakLevelAvatarIdList_codec);
+            break;
+          }
+          case 74:
+          case 72: {
+            bossDisplayAvatarIdList_.AddEntriesFrom(ref input, _repeated_bossDisplayAvatarIdList_codec);
+            break;
+          }
+          case 104: {
+            JBOLAAFDKAN = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            IsFinished = input.ReadBool();
             break;
           }
         }

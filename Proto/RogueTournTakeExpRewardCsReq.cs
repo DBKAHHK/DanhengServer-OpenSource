@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJSb2d1ZVRvdXJuVGFrZUV4cFJld2FyZENzUmVxLnByb3RvIkkKHFJvZ3Vl",
-            "VG91cm5UYWtlRXhwUmV3YXJkQ3NSZXESEwoLTE9QTUhKRkJISU0YBiADKA0S",
-            "FAoMc3ViX3RvdXJuX2lkGAQgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "VG91cm5UYWtlRXhwUmV3YXJkQ3NSZXESEwoLTE9QTUhKRkJISU0YCyADKA0S",
+            "FAoMc3ViX3RvdXJuX2lkGAEgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LOPMHJFBHIM" field.</summary>
-    public const int LOPMHJFBHIMFieldNumber = 6;
+    public const int LOPMHJFBHIMFieldNumber = 11;
     private static readonly pb::FieldCodec<uint> _repeated_lOPMHJFBHIM_codec
-        = pb::FieldCodec.ForUInt32(50);
+        = pb::FieldCodec.ForUInt32(90);
     private readonly pbc::RepeatedField<uint> lOPMHJFBHIM_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "sub_tourn_id" field.</summary>
-    public const int SubTournIdFieldNumber = 4;
+    public const int SubTournIdFieldNumber = 1;
     private uint subTournId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (SubTournId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(8);
         output.WriteUInt32(SubTournId);
       }
       lOPMHJFBHIM_.WriteTo(output, _repeated_lOPMHJFBHIM_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SubTournId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(8);
         output.WriteUInt32(SubTournId);
       }
       lOPMHJFBHIM_.WriteTo(ref output, _repeated_lOPMHJFBHIM_codec);
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 8: {
             SubTournId = input.ReadUInt32();
             break;
           }
-          case 50:
-          case 48: {
+          case 90:
+          case 88: {
             lOPMHJFBHIM_.AddEntriesFrom(input, _repeated_lOPMHJFBHIM_codec);
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 8: {
             SubTournId = input.ReadUInt32();
             break;
           }
-          case 50:
-          case 48: {
+          case 90:
+          case 88: {
             lOPMHJFBHIM_.AddEntriesFrom(ref input, _repeated_lOPMHJFBHIM_codec);
             break;
           }

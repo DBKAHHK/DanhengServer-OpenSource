@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static MusicDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9NdXNpY0RhdGEucHJvdG8iPAoJTXVzaWNEYXRhEhEKCWlzX3BsYXllZBgB",
-            "IAEoCBIQCghncm91cF9pZBgEIAEoDRIKCgJpZBgIIAEoDUIeqgIbRWdnTGlu",
+            "Cg9NdXNpY0RhdGEucHJvdG8iPAoJTXVzaWNEYXRhEhEKCWlzX3BsYXllZBgP",
+            "IAEoCBIQCghncm91cF9pZBgDIAEoDRIKCgJpZBgJIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_played" field.</summary>
-    public const int IsPlayedFieldNumber = 1;
+    public const int IsPlayedFieldNumber = 15;
     private bool isPlayed_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 4;
+    public const int GroupIdFieldNumber = 3;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 8;
+    public const int IdFieldNumber = 9;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsPlayed != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(IsPlayed);
-      }
       if (GroupId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(GroupId);
       }
       if (Id != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(Id);
+      }
+      if (IsPlayed != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(IsPlayed);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsPlayed != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(IsPlayed);
-      }
       if (GroupId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(GroupId);
       }
       if (Id != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(Id);
+      }
+      if (IsPlayed != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(IsPlayed);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            IsPlayed = input.ReadBool();
-            break;
-          }
-          case 32: {
+          case 24: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 72: {
             Id = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            IsPlayed = input.ReadBool();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            IsPlayed = input.ReadBool();
-            break;
-          }
-          case 32: {
+          case 24: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 72: {
             Id = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            IsPlayed = input.ReadBool();
             break;
           }
         }

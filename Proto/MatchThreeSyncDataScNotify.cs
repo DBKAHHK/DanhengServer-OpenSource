@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBNYXRjaFRocmVlU3luY0RhdGFTY05vdGlmeS5wcm90bxoUTWF0Y2hUaHJl",
             "ZURhdGEucHJvdG8iRwoaTWF0Y2hUaHJlZVN5bmNEYXRhU2NOb3RpZnkSKQoQ",
-            "bWF0Y2hfdGhyZWVfZGF0YRgNIAEoCzIPLk1hdGNoVGhyZWVEYXRhQh6qAhtF",
+            "bWF0Y2hfdGhyZWVfZGF0YRgHIAEoCzIPLk1hdGNoVGhyZWVEYXRhQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MatchThreeDataReflection.Descriptor, },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "match_three_data" field.</summary>
-    public const int MatchThreeDataFieldNumber = 13;
+    public const int MatchThreeDataFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.MatchThreeData matchThreeData_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (matchThreeData_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(58);
         output.WriteMessage(MatchThreeData);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (matchThreeData_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(58);
         output.WriteMessage(MatchThreeData);
       }
       if (_unknownFields != null) {
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 58: {
             if (matchThreeData_ == null) {
               MatchThreeData = new global::EggLink.DanhengServer.Proto.MatchThreeData();
             }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 58: {
             if (matchThreeData_ == null) {
               MatchThreeData = new global::EggLink.DanhengServer.Proto.MatchThreeData();
             }

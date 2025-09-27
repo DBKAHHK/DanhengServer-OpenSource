@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static FateQueryScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRGYXRlUXVlcnlTY1JzcC5wcm90bxoRTUdDRUhDTVBBSEUucHJvdG8aE0Zh",
-            "dGVMZXZlbEluZm8ucHJvdG8iawoORmF0ZVF1ZXJ5U2NSc3ASDwoHcmV0Y29k",
-            "ZRgOIAEoDRIiCgpsZXZlbF9pbmZvGAQgASgLMg4uRmF0ZUxldmVsSW5mbxIk",
-            "Cg5yb2d1ZV9nZXRfaW5mbxgGIAEoCzIMLk1HQ0VIQ01QQUhFQh6qAhtFZ2dM",
+            "ChRGYXRlUXVlcnlTY1JzcC5wcm90bxoTRmF0ZUxldmVsSW5mby5wcm90bxoR",
+            "TUdDRUhDTVBBSEUucHJvdG8iawoORmF0ZVF1ZXJ5U2NSc3ASJAoOcm9ndWVf",
+            "Z2V0X2luZm8YDSABKAsyDC5NR0NFSENNUEFIRRIPCgdyZXRjb2RlGAcgASgN",
+            "EiIKCmxldmVsX2luZm8YCSABKAsyDi5GYXRlTGV2ZWxJbmZvQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MGCEHCMPAHEReflection.Descriptor, global::EggLink.DanhengServer.Proto.FateLevelInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FateLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MGCEHCMPAHEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FateQueryScRsp), global::EggLink.DanhengServer.Proto.FateQueryScRsp.Parser, new[]{ "Retcode", "LevelInfo", "RogueGetInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FateQueryScRsp), global::EggLink.DanhengServer.Proto.FateQueryScRsp.Parser, new[]{ "RogueGetInfo", "Retcode", "LevelInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FateQueryScRsp(FateQueryScRsp other) : this() {
+      rogueGetInfo_ = other.rogueGetInfo_ != null ? other.rogueGetInfo_.Clone() : null;
       retcode_ = other.retcode_;
       levelInfo_ = other.levelInfo_ != null ? other.levelInfo_.Clone() : null;
-      rogueGetInfo_ = other.rogueGetInfo_ != null ? other.rogueGetInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,8 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new FateQueryScRsp(this);
     }
 
+    /// <summary>Field number for the "rogue_get_info" field.</summary>
+    public const int RogueGetInfoFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.MGCEHCMPAHE rogueGetInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MGCEHCMPAHE RogueGetInfo {
+      get { return rogueGetInfo_; }
+      set {
+        rogueGetInfo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level_info" field.</summary>
-    public const int LevelInfoFieldNumber = 4;
+    public const int LevelInfoFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.FateLevelInfo levelInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -107,18 +119,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return levelInfo_; }
       set {
         levelInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "rogue_get_info" field.</summary>
-    public const int RogueGetInfoFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.MGCEHCMPAHE rogueGetInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MGCEHCMPAHE RogueGetInfo {
-      get { return rogueGetInfo_; }
-      set {
-        rogueGetInfo_ = value;
       }
     }
 
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(RogueGetInfo, other.RogueGetInfo)) return false;
       if (Retcode != other.Retcode) return false;
       if (!object.Equals(LevelInfo, other.LevelInfo)) return false;
-      if (!object.Equals(RogueGetInfo, other.RogueGetInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (rogueGetInfo_ != null) hash ^= RogueGetInfo.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (levelInfo_ != null) hash ^= LevelInfo.GetHashCode();
-      if (rogueGetInfo_ != null) hash ^= RogueGetInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Retcode != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Retcode);
+      }
       if (levelInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(74);
         output.WriteMessage(LevelInfo);
       }
       if (rogueGetInfo_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(106);
         output.WriteMessage(RogueGetInfo);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Retcode != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(Retcode);
+      }
       if (levelInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(74);
         output.WriteMessage(LevelInfo);
       }
       if (rogueGetInfo_ != null) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(106);
         output.WriteMessage(RogueGetInfo);
-      }
-      if (Retcode != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (rogueGetInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueGetInfo);
+      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (levelInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LevelInfo);
-      }
-      if (rogueGetInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueGetInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,6 +233,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.rogueGetInfo_ != null) {
+        if (rogueGetInfo_ == null) {
+          RogueGetInfo = new global::EggLink.DanhengServer.Proto.MGCEHCMPAHE();
+        }
+        RogueGetInfo.MergeFrom(other.RogueGetInfo);
+      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -241,12 +247,6 @@ namespace EggLink.DanhengServer.Proto {
           LevelInfo = new global::EggLink.DanhengServer.Proto.FateLevelInfo();
         }
         LevelInfo.MergeFrom(other.LevelInfo);
-      }
-      if (other.rogueGetInfo_ != null) {
-        if (rogueGetInfo_ == null) {
-          RogueGetInfo = new global::EggLink.DanhengServer.Proto.MGCEHCMPAHE();
-        }
-        RogueGetInfo.MergeFrom(other.RogueGetInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -263,22 +263,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 56: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             if (levelInfo_ == null) {
               LevelInfo = new global::EggLink.DanhengServer.Proto.FateLevelInfo();
             }
             input.ReadMessage(LevelInfo);
             break;
           }
-          case 50: {
+          case 106: {
             if (rogueGetInfo_ == null) {
               RogueGetInfo = new global::EggLink.DanhengServer.Proto.MGCEHCMPAHE();
             }
             input.ReadMessage(RogueGetInfo);
-            break;
-          }
-          case 112: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -296,22 +296,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 56: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 74: {
             if (levelInfo_ == null) {
               LevelInfo = new global::EggLink.DanhengServer.Proto.FateLevelInfo();
             }
             input.ReadMessage(LevelInfo);
             break;
           }
-          case 50: {
+          case 106: {
             if (rogueGetInfo_ == null) {
               RogueGetInfo = new global::EggLink.DanhengServer.Proto.MGCEHCMPAHE();
             }
             input.ReadMessage(RogueGetInfo);
-            break;
-          }
-          case 112: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

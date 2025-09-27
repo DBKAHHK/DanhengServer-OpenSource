@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZDb21wb3NlSXRlbVNjUnNwLnByb3RvGg5JdGVtTGlzdC5wcm90byJrChBD",
-            "b21wb3NlSXRlbVNjUnNwEhIKCmNvbXBvc2VfaWQYBCABKA0SDwoHcmV0Y29k",
-            "ZRgBIAEoDRINCgVjb3VudBgGIAEoDRIjChByZXR1cm5faXRlbV9saXN0GA4g",
-            "ASgLMgkuSXRlbUxpc3RCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b21wb3NlSXRlbVNjUnNwEiMKEHJldHVybl9pdGVtX2xpc3QYCyABKAsyCS5J",
+            "dGVtTGlzdBIPCgdyZXRjb2RlGA0gASgNEg0KBWNvdW50GAcgASgNEhIKCmNv",
+            "bXBvc2VfaWQYDyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ComposeItemScRsp), global::EggLink.DanhengServer.Proto.ComposeItemScRsp.Parser, new[]{ "ComposeId", "Retcode", "Count", "ReturnItemList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ComposeItemScRsp), global::EggLink.DanhengServer.Proto.ComposeItemScRsp.Parser, new[]{ "ReturnItemList", "Retcode", "Count", "ComposeId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ComposeItemScRsp(ComposeItemScRsp other) : this() {
-      composeId_ = other.composeId_;
+      returnItemList_ = other.returnItemList_ != null ? other.returnItemList_.Clone() : null;
       retcode_ = other.retcode_;
       count_ = other.count_;
-      returnItemList_ = other.returnItemList_ != null ? other.returnItemList_.Clone() : null;
+      composeId_ = other.composeId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,20 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new ComposeItemScRsp(this);
     }
 
-    /// <summary>Field number for the "compose_id" field.</summary>
-    public const int ComposeIdFieldNumber = 4;
-    private uint composeId_;
+    /// <summary>Field number for the "return_item_list" field.</summary>
+    public const int ReturnItemListFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.ItemList returnItemList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ComposeId {
-      get { return composeId_; }
+    public global::EggLink.DanhengServer.Proto.ItemList ReturnItemList {
+      get { return returnItemList_; }
       set {
-        composeId_ = value;
+        returnItemList_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 13;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "count" field.</summary>
-    public const int CountFieldNumber = 6;
+    public const int CountFieldNumber = 7;
     private uint count_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,15 +123,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "return_item_list" field.</summary>
-    public const int ReturnItemListFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.ItemList returnItemList_;
+    /// <summary>Field number for the "compose_id" field.</summary>
+    public const int ComposeIdFieldNumber = 15;
+    private uint composeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ItemList ReturnItemList {
-      get { return returnItemList_; }
+    public uint ComposeId {
+      get { return composeId_; }
       set {
-        returnItemList_ = value;
+        composeId_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ComposeId != other.ComposeId) return false;
+      if (!object.Equals(ReturnItemList, other.ReturnItemList)) return false;
       if (Retcode != other.Retcode) return false;
       if (Count != other.Count) return false;
-      if (!object.Equals(ReturnItemList, other.ReturnItemList)) return false;
+      if (ComposeId != other.ComposeId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ComposeId != 0) hash ^= ComposeId.GetHashCode();
+      if (returnItemList_ != null) hash ^= ReturnItemList.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (Count != 0) hash ^= Count.GetHashCode();
-      if (returnItemList_ != null) hash ^= ReturnItemList.GetHashCode();
+      if (ComposeId != 0) hash ^= ComposeId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Retcode);
-      }
-      if (ComposeId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(ComposeId);
-      }
       if (Count != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteUInt32(Count);
       }
       if (returnItemList_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(90);
         output.WriteMessage(ReturnItemList);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Retcode);
+      }
+      if (ComposeId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(ComposeId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(Retcode);
-      }
-      if (ComposeId != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(ComposeId);
-      }
       if (Count != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteUInt32(Count);
       }
       if (returnItemList_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(90);
         output.WriteMessage(ReturnItemList);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(Retcode);
+      }
+      if (ComposeId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(ComposeId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -235,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ComposeId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ComposeId);
+      if (returnItemList_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReturnItemList);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
@@ -244,8 +244,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Count != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Count);
       }
-      if (returnItemList_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ReturnItemList);
+      if (ComposeId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ComposeId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,8 +259,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ComposeId != 0) {
-        ComposeId = other.ComposeId;
+      if (other.returnItemList_ != null) {
+        if (returnItemList_ == null) {
+          ReturnItemList = new global::EggLink.DanhengServer.Proto.ItemList();
+        }
+        ReturnItemList.MergeFrom(other.ReturnItemList);
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
@@ -268,11 +271,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Count != 0) {
         Count = other.Count;
       }
-      if (other.returnItemList_ != null) {
-        if (returnItemList_ == null) {
-          ReturnItemList = new global::EggLink.DanhengServer.Proto.ItemList();
-        }
-        ReturnItemList.MergeFrom(other.ReturnItemList);
+      if (other.ComposeId != 0) {
+        ComposeId = other.ComposeId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -289,23 +289,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            ComposeId = input.ReadUInt32();
-            break;
-          }
-          case 48: {
+          case 56: {
             Count = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 90: {
             if (returnItemList_ == null) {
               ReturnItemList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(ReturnItemList);
+            break;
+          }
+          case 104: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            ComposeId = input.ReadUInt32();
             break;
           }
         }
@@ -323,23 +323,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 32: {
-            ComposeId = input.ReadUInt32();
-            break;
-          }
-          case 48: {
+          case 56: {
             Count = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 90: {
             if (returnItemList_ == null) {
               ReturnItemList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(ReturnItemList);
+            break;
+          }
+          case 104: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            ComposeId = input.ReadUInt32();
             break;
           }
         }

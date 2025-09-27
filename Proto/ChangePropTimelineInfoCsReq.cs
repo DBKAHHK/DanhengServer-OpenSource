@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFDaGFuZ2VQcm9wVGltZWxpbmVJbmZvQ3NSZXEucHJvdG8aFlByb3BUaW1l",
             "bGluZUluZm8ucHJvdG8igwEKG0NoYW5nZVByb3BUaW1lbGluZUluZm9Dc1Jl",
-            "cRIUCgxpc19jbG9zZV9tYXAYCiABKAgSKAoNdGltZWxpbmVfaW5mbxgEIAEo",
-            "CzIRLlByb3BUaW1lbGluZUluZm8SDAoEdXVpZBgMIAEoBBIWCg5wcm9wX2Vu",
-            "dGl0eV9pZBgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "cRIWCg5wcm9wX2VudGl0eV9pZBgDIAEoDRIoCg10aW1lbGluZV9pbmZvGAIg",
+            "ASgLMhEuUHJvcFRpbWVsaW5lSW5mbxIMCgR1dWlkGA8gASgEEhQKDGlzX2Ns",
+            "b3NlX21hcBgKIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PropTimelineInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChangePropTimelineInfoCsReq), global::EggLink.DanhengServer.Proto.ChangePropTimelineInfoCsReq.Parser, new[]{ "IsCloseMap", "TimelineInfo", "Uuid", "PropEntityId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChangePropTimelineInfoCsReq), global::EggLink.DanhengServer.Proto.ChangePropTimelineInfoCsReq.Parser, new[]{ "PropEntityId", "TimelineInfo", "Uuid", "IsCloseMap" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChangePropTimelineInfoCsReq(ChangePropTimelineInfoCsReq other) : this() {
-      isCloseMap_ = other.isCloseMap_;
+      propEntityId_ = other.propEntityId_;
       timelineInfo_ = other.timelineInfo_ != null ? other.timelineInfo_.Clone() : null;
       uuid_ = other.uuid_;
-      propEntityId_ = other.propEntityId_;
+      isCloseMap_ = other.isCloseMap_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,20 +88,20 @@ namespace EggLink.DanhengServer.Proto {
       return new ChangePropTimelineInfoCsReq(this);
     }
 
-    /// <summary>Field number for the "is_close_map" field.</summary>
-    public const int IsCloseMapFieldNumber = 10;
-    private bool isCloseMap_;
+    /// <summary>Field number for the "prop_entity_id" field.</summary>
+    public const int PropEntityIdFieldNumber = 3;
+    private uint propEntityId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsCloseMap {
-      get { return isCloseMap_; }
+    public uint PropEntityId {
+      get { return propEntityId_; }
       set {
-        isCloseMap_ = value;
+        propEntityId_ = value;
       }
     }
 
     /// <summary>Field number for the "timeline_info" field.</summary>
-    public const int TimelineInfoFieldNumber = 4;
+    public const int TimelineInfoFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.PropTimelineInfo timelineInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -113,7 +113,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "uuid" field.</summary>
-    public const int UuidFieldNumber = 12;
+    public const int UuidFieldNumber = 15;
     private ulong uuid_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,15 +124,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "prop_entity_id" field.</summary>
-    public const int PropEntityIdFieldNumber = 1;
-    private uint propEntityId_;
+    /// <summary>Field number for the "is_close_map" field.</summary>
+    public const int IsCloseMapFieldNumber = 10;
+    private bool isCloseMap_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PropEntityId {
-      get { return propEntityId_; }
+    public bool IsCloseMap {
+      get { return isCloseMap_; }
       set {
-        propEntityId_ = value;
+        isCloseMap_ = value;
       }
     }
 
@@ -151,10 +151,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsCloseMap != other.IsCloseMap) return false;
+      if (PropEntityId != other.PropEntityId) return false;
       if (!object.Equals(TimelineInfo, other.TimelineInfo)) return false;
       if (Uuid != other.Uuid) return false;
-      if (PropEntityId != other.PropEntityId) return false;
+      if (IsCloseMap != other.IsCloseMap) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,10 +162,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsCloseMap != false) hash ^= IsCloseMap.GetHashCode();
+      if (PropEntityId != 0) hash ^= PropEntityId.GetHashCode();
       if (timelineInfo_ != null) hash ^= TimelineInfo.GetHashCode();
       if (Uuid != 0UL) hash ^= Uuid.GetHashCode();
-      if (PropEntityId != 0) hash ^= PropEntityId.GetHashCode();
+      if (IsCloseMap != false) hash ^= IsCloseMap.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,20 +184,20 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PropEntityId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(PropEntityId);
-      }
       if (timelineInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(18);
         output.WriteMessage(TimelineInfo);
+      }
+      if (PropEntityId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(PropEntityId);
       }
       if (IsCloseMap != false) {
         output.WriteRawTag(80);
         output.WriteBool(IsCloseMap);
       }
       if (Uuid != 0UL) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteUInt64(Uuid);
       }
       if (_unknownFields != null) {
@@ -210,20 +210,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PropEntityId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(PropEntityId);
-      }
       if (timelineInfo_ != null) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(18);
         output.WriteMessage(TimelineInfo);
+      }
+      if (PropEntityId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(PropEntityId);
       }
       if (IsCloseMap != false) {
         output.WriteRawTag(80);
         output.WriteBool(IsCloseMap);
       }
       if (Uuid != 0UL) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteUInt64(Uuid);
       }
       if (_unknownFields != null) {
@@ -236,8 +236,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsCloseMap != false) {
-        size += 1 + 1;
+      if (PropEntityId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PropEntityId);
       }
       if (timelineInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimelineInfo);
@@ -245,8 +245,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Uuid != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Uuid);
       }
-      if (PropEntityId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PropEntityId);
+      if (IsCloseMap != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -260,8 +260,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsCloseMap != false) {
-        IsCloseMap = other.IsCloseMap;
+      if (other.PropEntityId != 0) {
+        PropEntityId = other.PropEntityId;
       }
       if (other.timelineInfo_ != null) {
         if (timelineInfo_ == null) {
@@ -272,8 +272,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Uuid != 0UL) {
         Uuid = other.Uuid;
       }
-      if (other.PropEntityId != 0) {
-        PropEntityId = other.PropEntityId;
+      if (other.IsCloseMap != false) {
+        IsCloseMap = other.IsCloseMap;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -290,22 +290,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            PropEntityId = input.ReadUInt32();
-            break;
-          }
-          case 34: {
+          case 18: {
             if (timelineInfo_ == null) {
               TimelineInfo = new global::EggLink.DanhengServer.Proto.PropTimelineInfo();
             }
             input.ReadMessage(TimelineInfo);
             break;
           }
+          case 24: {
+            PropEntityId = input.ReadUInt32();
+            break;
+          }
           case 80: {
             IsCloseMap = input.ReadBool();
             break;
           }
-          case 96: {
+          case 120: {
             Uuid = input.ReadUInt64();
             break;
           }
@@ -324,22 +324,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            PropEntityId = input.ReadUInt32();
-            break;
-          }
-          case 34: {
+          case 18: {
             if (timelineInfo_ == null) {
               TimelineInfo = new global::EggLink.DanhengServer.Proto.PropTimelineInfo();
             }
             input.ReadMessage(TimelineInfo);
             break;
           }
+          case 24: {
+            PropEntityId = input.ReadUInt32();
+            break;
+          }
           case 80: {
             IsCloseMap = input.ReadBool();
             break;
           }
-          case 96: {
+          case 120: {
             Uuid = input.ReadUInt64();
             break;
           }

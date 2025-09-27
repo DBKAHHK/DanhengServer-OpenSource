@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxEaXJlY3REZWxpdmVyeVNjTm90aWZ5LnByb3RvGg5JdGVtTGlzdC5wcm90",
-            "byJNChZEaXJlY3REZWxpdmVyeVNjTm90aWZ5Eh4KC3Jld2FyZF9saXN0GAEg",
-            "AygLMgkuSXRlbUxpc3QSEwoLTURESk5DS01KSEcYCyABKA1CHqoCG0VnZ0xp",
+            "byJNChZEaXJlY3REZWxpdmVyeVNjTm90aWZ5Eh4KC3Jld2FyZF9saXN0GAUg",
+            "AygLMgkuSXRlbUxpc3QSEwoLTURESk5DS01KSEcYBiABKA1CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reward_list" field.</summary>
-    public const int RewardListFieldNumber = 1;
+    public const int RewardListFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ItemList> _repeated_rewardList_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.ItemList.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.ItemList.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemList> rewardList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemList>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MDDJNCKMJHG" field.</summary>
-    public const int MDDJNCKMJHGFieldNumber = 11;
+    public const int MDDJNCKMJHGFieldNumber = 6;
     private uint mDDJNCKMJHG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       rewardList_.WriteTo(output, _repeated_rewardList_codec);
       if (MDDJNCKMJHG != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(MDDJNCKMJHG);
       }
       if (_unknownFields != null) {
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       rewardList_.WriteTo(ref output, _repeated_rewardList_codec);
       if (MDDJNCKMJHG != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(48);
         output.WriteUInt32(MDDJNCKMJHG);
       }
       if (_unknownFields != null) {
@@ -216,11 +216,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 42: {
             rewardList_.AddEntriesFrom(input, _repeated_rewardList_codec);
             break;
           }
-          case 88: {
+          case 48: {
             MDDJNCKMJHG = input.ReadUInt32();
             break;
           }
@@ -239,11 +239,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 42: {
             rewardList_.AddEntriesFrom(ref input, _repeated_rewardList_codec);
             break;
           }
-          case 88: {
+          case 48: {
             MDDJNCKMJHG = input.ReadUInt32();
             break;
           }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChhDb250ZW50UGFja2FnZUluZm8ucHJvdG8aGkNvbnRlbnRQYWNrYWdlU3Rh",
             "dHVzLnByb3RvIk8KEkNvbnRlbnRQYWNrYWdlSW5mbxISCgpjb250ZW50X2lk",
-            "GA4gASgNEiUKBnN0YXR1cxgKIAEoDjIVLkNvbnRlbnRQYWNrYWdlU3RhdHVz",
+            "GAEgASgNEiUKBnN0YXR1cxgJIAEoDjIVLkNvbnRlbnRQYWNrYWdlU3RhdHVz",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ContentPackageStatusReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "content_id" field.</summary>
-    public const int ContentIdFieldNumber = 14;
+    public const int ContentIdFieldNumber = 1;
     private uint contentId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 10;
+    public const int StatusFieldNumber = 9;
     private global::EggLink.DanhengServer.Proto.ContentPackageStatus status_ = global::EggLink.DanhengServer.Proto.ContentPackageStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Status != global::EggLink.DanhengServer.Proto.ContentPackageStatus.None) {
-        output.WriteRawTag(80);
-        output.WriteEnum((int) Status);
-      }
       if (ContentId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(8);
         output.WriteUInt32(ContentId);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.ContentPackageStatus.None) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Status != global::EggLink.DanhengServer.Proto.ContentPackageStatus.None) {
-        output.WriteRawTag(80);
-        output.WriteEnum((int) Status);
-      }
       if (ContentId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(8);
         output.WriteUInt32(ContentId);
+      }
+      if (Status != global::EggLink.DanhengServer.Proto.ContentPackageStatus.None) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
-            Status = (global::EggLink.DanhengServer.Proto.ContentPackageStatus) input.ReadEnum();
+          case 8: {
+            ContentId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            ContentId = input.ReadUInt32();
+          case 72: {
+            Status = (global::EggLink.DanhengServer.Proto.ContentPackageStatus) input.ReadEnum();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
-            Status = (global::EggLink.DanhengServer.Proto.ContentPackageStatus) input.ReadEnum();
+          case 8: {
+            ContentId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            ContentId = input.ReadUInt32();
+          case 72: {
+            Status = (global::EggLink.DanhengServer.Proto.ContentPackageStatus) input.ReadEnum();
             break;
           }
         }

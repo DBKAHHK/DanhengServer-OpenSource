@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJFbnRpdHlNb3Rpb24ucHJvdG8aEE1vdGlvbkluZm8ucHJvdG8iZgoMRW50",
-            "aXR5TW90aW9uEhMKC05GT1BJS0RLUEdHGAUgASgIEhEKCW1hcF9sYXllchgE",
-            "IAEoDRIRCgllbnRpdHlfaWQYCSABKA0SGwoGbW90aW9uGAwgASgLMgsuTW90",
-            "aW9uSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "aXR5TW90aW9uEhMKC05GT1BJS0RLUEdHGA8gASgIEhEKCWVudGl0eV9pZBgJ",
+            "IAEoDRIbCgZtb3Rpb24YDCABKAsyCy5Nb3Rpb25JbmZvEhEKCW1hcF9sYXll",
+            "chgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EntityMotion), global::EggLink.DanhengServer.Proto.EntityMotion.Parser, new[]{ "NFOPIKDKPGG", "MapLayer", "EntityId", "Motion" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EntityMotion), global::EggLink.DanhengServer.Proto.EntityMotion.Parser, new[]{ "NFOPIKDKPGG", "EntityId", "Motion", "MapLayer" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,9 +75,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EntityMotion(EntityMotion other) : this() {
       nFOPIKDKPGG_ = other.nFOPIKDKPGG_;
-      mapLayer_ = other.mapLayer_;
       entityId_ = other.entityId_;
       motion_ = other.motion_ != null ? other.motion_.Clone() : null;
+      mapLayer_ = other.mapLayer_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NFOPIKDKPGG" field.</summary>
-    public const int NFOPIKDKPGGFieldNumber = 5;
+    public const int NFOPIKDKPGGFieldNumber = 15;
     private bool nFOPIKDKPGG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,18 +96,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return nFOPIKDKPGG_; }
       set {
         nFOPIKDKPGG_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "map_layer" field.</summary>
-    public const int MapLayerFieldNumber = 4;
-    private uint mapLayer_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MapLayer {
-      get { return mapLayer_; }
-      set {
-        mapLayer_ = value;
       }
     }
 
@@ -135,6 +123,18 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "map_layer" field.</summary>
+    public const int MapLayerFieldNumber = 10;
+    private uint mapLayer_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MapLayer {
+      get { return mapLayer_; }
+      set {
+        mapLayer_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (NFOPIKDKPGG != other.NFOPIKDKPGG) return false;
-      if (MapLayer != other.MapLayer) return false;
       if (EntityId != other.EntityId) return false;
       if (!object.Equals(Motion, other.Motion)) return false;
+      if (MapLayer != other.MapLayer) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,9 +162,9 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (NFOPIKDKPGG != false) hash ^= NFOPIKDKPGG.GetHashCode();
-      if (MapLayer != 0) hash ^= MapLayer.GetHashCode();
       if (EntityId != 0) hash ^= EntityId.GetHashCode();
       if (motion_ != null) hash ^= Motion.GetHashCode();
+      if (MapLayer != 0) hash ^= MapLayer.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MapLayer != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(MapLayer);
-      }
-      if (NFOPIKDKPGG != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(NFOPIKDKPGG);
-      }
       if (EntityId != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(EntityId);
       }
+      if (MapLayer != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(MapLayer);
+      }
       if (motion_ != null) {
         output.WriteRawTag(98);
         output.WriteMessage(Motion);
+      }
+      if (NFOPIKDKPGG != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(NFOPIKDKPGG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MapLayer != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(MapLayer);
-      }
-      if (NFOPIKDKPGG != false) {
-        output.WriteRawTag(40);
-        output.WriteBool(NFOPIKDKPGG);
-      }
       if (EntityId != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(EntityId);
       }
+      if (MapLayer != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(MapLayer);
+      }
       if (motion_ != null) {
         output.WriteRawTag(98);
         output.WriteMessage(Motion);
+      }
+      if (NFOPIKDKPGG != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(NFOPIKDKPGG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -238,14 +238,14 @@ namespace EggLink.DanhengServer.Proto {
       if (NFOPIKDKPGG != false) {
         size += 1 + 1;
       }
-      if (MapLayer != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapLayer);
-      }
       if (EntityId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EntityId);
       }
       if (motion_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Motion);
+      }
+      if (MapLayer != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MapLayer);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -262,9 +262,6 @@ namespace EggLink.DanhengServer.Proto {
       if (other.NFOPIKDKPGG != false) {
         NFOPIKDKPGG = other.NFOPIKDKPGG;
       }
-      if (other.MapLayer != 0) {
-        MapLayer = other.MapLayer;
-      }
       if (other.EntityId != 0) {
         EntityId = other.EntityId;
       }
@@ -273,6 +270,9 @@ namespace EggLink.DanhengServer.Proto {
           Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
         }
         Motion.MergeFrom(other.Motion);
+      }
+      if (other.MapLayer != 0) {
+        MapLayer = other.MapLayer;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -289,16 +289,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            MapLayer = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            NFOPIKDKPGG = input.ReadBool();
-            break;
-          }
           case 72: {
             EntityId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            MapLayer = input.ReadUInt32();
             break;
           }
           case 98: {
@@ -306,6 +302,10 @@ namespace EggLink.DanhengServer.Proto {
               Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(Motion);
+            break;
+          }
+          case 120: {
+            NFOPIKDKPGG = input.ReadBool();
             break;
           }
         }
@@ -323,16 +323,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            MapLayer = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            NFOPIKDKPGG = input.ReadBool();
-            break;
-          }
           case 72: {
             EntityId = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            MapLayer = input.ReadUInt32();
             break;
           }
           case 98: {
@@ -340,6 +336,10 @@ namespace EggLink.DanhengServer.Proto {
               Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(Motion);
+            break;
+          }
+          case 120: {
+            NFOPIKDKPGG = input.ReadBool();
             break;
           }
         }

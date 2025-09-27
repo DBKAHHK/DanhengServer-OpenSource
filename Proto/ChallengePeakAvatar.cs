@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlDaGFsbGVuZ2VQZWFrQXZhdGFyLnByb3RvGhBFcXVpcFJlbGljLnByb3Rv",
-            "ImYKE0NoYWxsZW5nZVBlYWtBdmF0YXISGwoTZXF1aXBtZW50X3VuaXF1ZV9p",
-            "ZBgCIAEoDRIfCgpyZWxpY19saXN0GAggAygLMgsuRXF1aXBSZWxpYxIRCglh",
-            "dmF0YXJfaWQYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "InsKE0NoYWxsZW5nZVBlYWtBdmF0YXISHwoKcmVsaWNfbGlzdBgIIAMoCzIL",
+            "LkVxdWlwUmVsaWMSEwoLR0dESUlCQ0RPQkIYAiABKA0SEQoJYXZhdGFyX2lk",
+            "GA8gASgNEhsKE2VxdWlwbWVudF91bmlxdWVfaWQYDSABKA1CHqoCG0VnZ0xp",
+            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EquipRelicReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengePeakAvatar), global::EggLink.DanhengServer.Proto.ChallengePeakAvatar.Parser, new[]{ "EquipmentUniqueId", "RelicList", "AvatarId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengePeakAvatar), global::EggLink.DanhengServer.Proto.ChallengePeakAvatar.Parser, new[]{ "RelicList", "GGDIIBCDOBB", "AvatarId", "EquipmentUniqueId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengePeakAvatar(ChallengePeakAvatar other) : this() {
-      equipmentUniqueId_ = other.equipmentUniqueId_;
       relicList_ = other.relicList_.Clone();
+      gGDIIBCDOBB_ = other.gGDIIBCDOBB_;
       avatarId_ = other.avatarId_;
+      equipmentUniqueId_ = other.equipmentUniqueId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,18 +85,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengePeakAvatar Clone() {
       return new ChallengePeakAvatar(this);
-    }
-
-    /// <summary>Field number for the "equipment_unique_id" field.</summary>
-    public const int EquipmentUniqueIdFieldNumber = 2;
-    private uint equipmentUniqueId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EquipmentUniqueId {
-      get { return equipmentUniqueId_; }
-      set {
-        equipmentUniqueId_ = value;
-      }
     }
 
     /// <summary>Field number for the "relic_list" field.</summary>
@@ -109,8 +98,20 @@ namespace EggLink.DanhengServer.Proto {
       get { return relicList_; }
     }
 
+    /// <summary>Field number for the "GGDIIBCDOBB" field.</summary>
+    public const int GGDIIBCDOBBFieldNumber = 2;
+    private uint gGDIIBCDOBB_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GGDIIBCDOBB {
+      get { return gGDIIBCDOBB_; }
+      set {
+        gGDIIBCDOBB_ = value;
+      }
+    }
+
     /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 9;
+    public const int AvatarIdFieldNumber = 15;
     private uint avatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +119,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return avatarId_; }
       set {
         avatarId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "equipment_unique_id" field.</summary>
+    public const int EquipmentUniqueIdFieldNumber = 13;
+    private uint equipmentUniqueId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint EquipmentUniqueId {
+      get { return equipmentUniqueId_; }
+      set {
+        equipmentUniqueId_ = value;
       }
     }
 
@@ -136,9 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (EquipmentUniqueId != other.EquipmentUniqueId) return false;
       if(!relicList_.Equals(other.relicList_)) return false;
+      if (GGDIIBCDOBB != other.GGDIIBCDOBB) return false;
       if (AvatarId != other.AvatarId) return false;
+      if (EquipmentUniqueId != other.EquipmentUniqueId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (EquipmentUniqueId != 0) hash ^= EquipmentUniqueId.GetHashCode();
       hash ^= relicList_.GetHashCode();
+      if (GGDIIBCDOBB != 0) hash ^= GGDIIBCDOBB.GetHashCode();
       if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
+      if (EquipmentUniqueId != 0) hash ^= EquipmentUniqueId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,13 +182,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (EquipmentUniqueId != 0) {
+      if (GGDIIBCDOBB != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(EquipmentUniqueId);
+        output.WriteUInt32(GGDIIBCDOBB);
       }
       relicList_.WriteTo(output, _repeated_relicList_codec);
+      if (EquipmentUniqueId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(EquipmentUniqueId);
+      }
       if (AvatarId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(120);
         output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
@@ -186,13 +205,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (EquipmentUniqueId != 0) {
+      if (GGDIIBCDOBB != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(EquipmentUniqueId);
+        output.WriteUInt32(GGDIIBCDOBB);
       }
       relicList_.WriteTo(ref output, _repeated_relicList_codec);
+      if (EquipmentUniqueId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(EquipmentUniqueId);
+      }
       if (AvatarId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(120);
         output.WriteUInt32(AvatarId);
       }
       if (_unknownFields != null) {
@@ -205,12 +228,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (EquipmentUniqueId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EquipmentUniqueId);
-      }
       size += relicList_.CalculateSize(_repeated_relicList_codec);
+      if (GGDIIBCDOBB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GGDIIBCDOBB);
+      }
       if (AvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
+      }
+      if (EquipmentUniqueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EquipmentUniqueId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -224,12 +250,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.EquipmentUniqueId != 0) {
-        EquipmentUniqueId = other.EquipmentUniqueId;
-      }
       relicList_.Add(other.relicList_);
+      if (other.GGDIIBCDOBB != 0) {
+        GGDIIBCDOBB = other.GGDIIBCDOBB;
+      }
       if (other.AvatarId != 0) {
         AvatarId = other.AvatarId;
+      }
+      if (other.EquipmentUniqueId != 0) {
+        EquipmentUniqueId = other.EquipmentUniqueId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -247,14 +276,18 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            EquipmentUniqueId = input.ReadUInt32();
+            GGDIIBCDOBB = input.ReadUInt32();
             break;
           }
           case 66: {
             relicList_.AddEntriesFrom(input, _repeated_relicList_codec);
             break;
           }
-          case 72: {
+          case 104: {
+            EquipmentUniqueId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
             AvatarId = input.ReadUInt32();
             break;
           }
@@ -274,14 +307,18 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            EquipmentUniqueId = input.ReadUInt32();
+            GGDIIBCDOBB = input.ReadUInt32();
             break;
           }
           case 66: {
             relicList_.AddEntriesFrom(ref input, _repeated_relicList_codec);
             break;
           }
-          case 72: {
+          case 104: {
+            EquipmentUniqueId = input.ReadUInt32();
+            break;
+          }
+          case 120: {
             AvatarId = input.ReadUInt32();
             break;
           }

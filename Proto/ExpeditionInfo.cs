@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRFeHBlZGl0aW9uSW5mby5wcm90byJrCg5FeHBlZGl0aW9uSW5mbxIWCg50",
-            "b3RhbF9kdXJhdGlvbhgNIAEoDRIKCgJpZBgMIAEoDRIdChVzdGFydF9leHBl",
-            "ZGl0aW9uX3RpbWUYBCABKAMSFgoOYXZhdGFyX2lkX2xpc3QYAyADKA1CHqoC",
+            "b3RhbF9kdXJhdGlvbhgLIAEoDRIKCgJpZBgIIAEoDRIdChVzdGFydF9leHBl",
+            "ZGl0aW9uX3RpbWUYByABKAMSFgoOYXZhdGFyX2lkX2xpc3QYDyADKA1CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "total_duration" field.</summary>
-    public const int TotalDurationFieldNumber = 13;
+    public const int TotalDurationFieldNumber = 11;
     private uint totalDuration_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 12;
+    public const int IdFieldNumber = 8;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "start_expedition_time" field.</summary>
-    public const int StartExpeditionTimeFieldNumber = 4;
+    public const int StartExpeditionTimeFieldNumber = 7;
     private long startExpeditionTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,9 +123,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_id_list" field.</summary>
-    public const int AvatarIdListFieldNumber = 3;
+    public const int AvatarIdListFieldNumber = 15;
     private static readonly pb::FieldCodec<uint> _repeated_avatarIdList_codec
-        = pb::FieldCodec.ForUInt32(26);
+        = pb::FieldCodec.ForUInt32(122);
     private readonly pbc::RepeatedField<uint> avatarIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -181,19 +181,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      avatarIdList_.WriteTo(output, _repeated_avatarIdList_codec);
       if (StartExpeditionTime != 0L) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteInt64(StartExpeditionTime);
       }
       if (Id != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(Id);
       }
       if (TotalDuration != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(TotalDuration);
       }
+      avatarIdList_.WriteTo(output, _repeated_avatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -204,19 +204,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      avatarIdList_.WriteTo(ref output, _repeated_avatarIdList_codec);
       if (StartExpeditionTime != 0L) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteInt64(StartExpeditionTime);
       }
       if (Id != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(Id);
       }
       if (TotalDuration != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(TotalDuration);
       }
+      avatarIdList_.WriteTo(ref output, _repeated_avatarIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -274,21 +274,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26:
-          case 24: {
-            avatarIdList_.AddEntriesFrom(input, _repeated_avatarIdList_codec);
-            break;
-          }
-          case 32: {
+          case 56: {
             StartExpeditionTime = input.ReadInt64();
             break;
           }
-          case 96: {
+          case 64: {
             Id = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 88: {
             TotalDuration = input.ReadUInt32();
+            break;
+          }
+          case 122:
+          case 120: {
+            avatarIdList_.AddEntriesFrom(input, _repeated_avatarIdList_codec);
             break;
           }
         }
@@ -306,21 +306,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26:
-          case 24: {
-            avatarIdList_.AddEntriesFrom(ref input, _repeated_avatarIdList_codec);
-            break;
-          }
-          case 32: {
+          case 56: {
             StartExpeditionTime = input.ReadInt64();
             break;
           }
-          case 96: {
+          case 64: {
             Id = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 88: {
             TotalDuration = input.ReadUInt32();
+            break;
+          }
+          case 122:
+          case 120: {
+            avatarIdList_.AddEntriesFrom(ref input, _repeated_avatarIdList_codec);
             break;
           }
         }

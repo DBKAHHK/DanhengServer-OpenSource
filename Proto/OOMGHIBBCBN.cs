@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFPT01HSElCQkNCTi5wcm90bxoRQk1QQ0pERUFJSUgucHJvdG8isQEKC09P",
-            "TUdISUJCQ0JOEhMKC01LQUlGSklCSklLGAEgAygNEiEKC0hHQ0dJTEFCTkRM",
-            "GAQgAygLMgwuQk1QQ0pERUFJSUgSFQoNbWFpbl90b3Vybl9pZBgPIAEoDRIT",
-            "CgtITUpGQ0RMQ0lGRBgFIAMoDRITCgtBTUxEQUlMQk1CTxgJIAMoDRITCgtK",
-            "TkNCUERIQ0FISRgCIAMoDRIUCgxzdWJfdG91cm5faWQYByABKA1CHqoCG0Vn",
+            "TUdISUJCQ0JOEhMKC01LQUlGSklCSklLGAogAygNEiEKC0hHQ0dJTEFCTkRM",
+            "GAMgAygLMgwuQk1QQ0pERUFJSUgSEwoLQU1MREFJTEJNQk8YDyADKA0SEwoL",
+            "SE1KRkNETENJRkQYBiADKA0SEwoLSk5DQlBESENBSEkYDiADKA0SFQoNbWFp",
+            "bl90b3Vybl9pZBgCIAEoDRIUCgxzdWJfdG91cm5faWQYCSABKA1CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BMPCJDEAIIHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OOMGHIBBCBN), global::EggLink.DanhengServer.Proto.OOMGHIBBCBN.Parser, new[]{ "MKAIFJIBJIK", "HGCGILABNDL", "MainTournId", "HMJFCDLCIFD", "AMLDAILBMBO", "JNCBPDHCAHI", "SubTournId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OOMGHIBBCBN), global::EggLink.DanhengServer.Proto.OOMGHIBBCBN.Parser, new[]{ "MKAIFJIBJIK", "HGCGILABNDL", "AMLDAILBMBO", "HMJFCDLCIFD", "JNCBPDHCAHI", "MainTournId", "SubTournId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,10 +77,10 @@ namespace EggLink.DanhengServer.Proto {
     public OOMGHIBBCBN(OOMGHIBBCBN other) : this() {
       mKAIFJIBJIK_ = other.mKAIFJIBJIK_.Clone();
       hGCGILABNDL_ = other.hGCGILABNDL_.Clone();
-      mainTournId_ = other.mainTournId_;
-      hMJFCDLCIFD_ = other.hMJFCDLCIFD_.Clone();
       aMLDAILBMBO_ = other.aMLDAILBMBO_.Clone();
+      hMJFCDLCIFD_ = other.hMJFCDLCIFD_.Clone();
       jNCBPDHCAHI_ = other.jNCBPDHCAHI_.Clone();
+      mainTournId_ = other.mainTournId_;
       subTournId_ = other.subTournId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -92,9 +92,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MKAIFJIBJIK" field.</summary>
-    public const int MKAIFJIBJIKFieldNumber = 1;
+    public const int MKAIFJIBJIKFieldNumber = 10;
     private static readonly pb::FieldCodec<uint> _repeated_mKAIFJIBJIK_codec
-        = pb::FieldCodec.ForUInt32(10);
+        = pb::FieldCodec.ForUInt32(82);
     private readonly pbc::RepeatedField<uint> mKAIFJIBJIK_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -103,9 +103,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HGCGILABNDL" field.</summary>
-    public const int HGCGILABNDLFieldNumber = 4;
+    public const int HGCGILABNDLFieldNumber = 3;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BMPCJDEAIIH> _repeated_hGCGILABNDL_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.BMPCJDEAIIH.Parser);
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.BMPCJDEAIIH.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BMPCJDEAIIH> hGCGILABNDL_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BMPCJDEAIIH>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -113,8 +113,41 @@ namespace EggLink.DanhengServer.Proto {
       get { return hGCGILABNDL_; }
     }
 
+    /// <summary>Field number for the "AMLDAILBMBO" field.</summary>
+    public const int AMLDAILBMBOFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_aMLDAILBMBO_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> aMLDAILBMBO_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> AMLDAILBMBO {
+      get { return aMLDAILBMBO_; }
+    }
+
+    /// <summary>Field number for the "HMJFCDLCIFD" field.</summary>
+    public const int HMJFCDLCIFDFieldNumber = 6;
+    private static readonly pb::FieldCodec<uint> _repeated_hMJFCDLCIFD_codec
+        = pb::FieldCodec.ForUInt32(50);
+    private readonly pbc::RepeatedField<uint> hMJFCDLCIFD_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> HMJFCDLCIFD {
+      get { return hMJFCDLCIFD_; }
+    }
+
+    /// <summary>Field number for the "JNCBPDHCAHI" field.</summary>
+    public const int JNCBPDHCAHIFieldNumber = 14;
+    private static readonly pb::FieldCodec<uint> _repeated_jNCBPDHCAHI_codec
+        = pb::FieldCodec.ForUInt32(114);
+    private readonly pbc::RepeatedField<uint> jNCBPDHCAHI_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> JNCBPDHCAHI {
+      get { return jNCBPDHCAHI_; }
+    }
+
     /// <summary>Field number for the "main_tourn_id" field.</summary>
-    public const int MainTournIdFieldNumber = 15;
+    public const int MainTournIdFieldNumber = 2;
     private uint mainTournId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -125,41 +158,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HMJFCDLCIFD" field.</summary>
-    public const int HMJFCDLCIFDFieldNumber = 5;
-    private static readonly pb::FieldCodec<uint> _repeated_hMJFCDLCIFD_codec
-        = pb::FieldCodec.ForUInt32(42);
-    private readonly pbc::RepeatedField<uint> hMJFCDLCIFD_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> HMJFCDLCIFD {
-      get { return hMJFCDLCIFD_; }
-    }
-
-    /// <summary>Field number for the "AMLDAILBMBO" field.</summary>
-    public const int AMLDAILBMBOFieldNumber = 9;
-    private static readonly pb::FieldCodec<uint> _repeated_aMLDAILBMBO_codec
-        = pb::FieldCodec.ForUInt32(74);
-    private readonly pbc::RepeatedField<uint> aMLDAILBMBO_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AMLDAILBMBO {
-      get { return aMLDAILBMBO_; }
-    }
-
-    /// <summary>Field number for the "JNCBPDHCAHI" field.</summary>
-    public const int JNCBPDHCAHIFieldNumber = 2;
-    private static readonly pb::FieldCodec<uint> _repeated_jNCBPDHCAHI_codec
-        = pb::FieldCodec.ForUInt32(18);
-    private readonly pbc::RepeatedField<uint> jNCBPDHCAHI_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JNCBPDHCAHI {
-      get { return jNCBPDHCAHI_; }
-    }
-
     /// <summary>Field number for the "sub_tourn_id" field.</summary>
-    public const int SubTournIdFieldNumber = 7;
+    public const int SubTournIdFieldNumber = 9;
     private uint subTournId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,10 +187,10 @@ namespace EggLink.DanhengServer.Proto {
       }
       if(!mKAIFJIBJIK_.Equals(other.mKAIFJIBJIK_)) return false;
       if(!hGCGILABNDL_.Equals(other.hGCGILABNDL_)) return false;
-      if (MainTournId != other.MainTournId) return false;
-      if(!hMJFCDLCIFD_.Equals(other.hMJFCDLCIFD_)) return false;
       if(!aMLDAILBMBO_.Equals(other.aMLDAILBMBO_)) return false;
+      if(!hMJFCDLCIFD_.Equals(other.hMJFCDLCIFD_)) return false;
       if(!jNCBPDHCAHI_.Equals(other.jNCBPDHCAHI_)) return false;
+      if (MainTournId != other.MainTournId) return false;
       if (SubTournId != other.SubTournId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -201,10 +201,10 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       hash ^= mKAIFJIBJIK_.GetHashCode();
       hash ^= hGCGILABNDL_.GetHashCode();
-      if (MainTournId != 0) hash ^= MainTournId.GetHashCode();
-      hash ^= hMJFCDLCIFD_.GetHashCode();
       hash ^= aMLDAILBMBO_.GetHashCode();
+      hash ^= hMJFCDLCIFD_.GetHashCode();
       hash ^= jNCBPDHCAHI_.GetHashCode();
+      if (MainTournId != 0) hash ^= MainTournId.GetHashCode();
       if (SubTournId != 0) hash ^= SubTournId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -224,19 +224,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      mKAIFJIBJIK_.WriteTo(output, _repeated_mKAIFJIBJIK_codec);
-      jNCBPDHCAHI_.WriteTo(output, _repeated_jNCBPDHCAHI_codec);
+      if (MainTournId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(MainTournId);
+      }
       hGCGILABNDL_.WriteTo(output, _repeated_hGCGILABNDL_codec);
       hMJFCDLCIFD_.WriteTo(output, _repeated_hMJFCDLCIFD_codec);
       if (SubTournId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(SubTournId);
       }
+      mKAIFJIBJIK_.WriteTo(output, _repeated_mKAIFJIBJIK_codec);
+      jNCBPDHCAHI_.WriteTo(output, _repeated_jNCBPDHCAHI_codec);
       aMLDAILBMBO_.WriteTo(output, _repeated_aMLDAILBMBO_codec);
-      if (MainTournId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(MainTournId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -247,19 +247,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      mKAIFJIBJIK_.WriteTo(ref output, _repeated_mKAIFJIBJIK_codec);
-      jNCBPDHCAHI_.WriteTo(ref output, _repeated_jNCBPDHCAHI_codec);
+      if (MainTournId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(MainTournId);
+      }
       hGCGILABNDL_.WriteTo(ref output, _repeated_hGCGILABNDL_codec);
       hMJFCDLCIFD_.WriteTo(ref output, _repeated_hMJFCDLCIFD_codec);
       if (SubTournId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(SubTournId);
       }
+      mKAIFJIBJIK_.WriteTo(ref output, _repeated_mKAIFJIBJIK_codec);
+      jNCBPDHCAHI_.WriteTo(ref output, _repeated_jNCBPDHCAHI_codec);
       aMLDAILBMBO_.WriteTo(ref output, _repeated_aMLDAILBMBO_codec);
-      if (MainTournId != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(MainTournId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -272,12 +272,12 @@ namespace EggLink.DanhengServer.Proto {
       int size = 0;
       size += mKAIFJIBJIK_.CalculateSize(_repeated_mKAIFJIBJIK_codec);
       size += hGCGILABNDL_.CalculateSize(_repeated_hGCGILABNDL_codec);
+      size += aMLDAILBMBO_.CalculateSize(_repeated_aMLDAILBMBO_codec);
+      size += hMJFCDLCIFD_.CalculateSize(_repeated_hMJFCDLCIFD_codec);
+      size += jNCBPDHCAHI_.CalculateSize(_repeated_jNCBPDHCAHI_codec);
       if (MainTournId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MainTournId);
       }
-      size += hMJFCDLCIFD_.CalculateSize(_repeated_hMJFCDLCIFD_codec);
-      size += aMLDAILBMBO_.CalculateSize(_repeated_aMLDAILBMBO_codec);
-      size += jNCBPDHCAHI_.CalculateSize(_repeated_jNCBPDHCAHI_codec);
       if (SubTournId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SubTournId);
       }
@@ -295,12 +295,12 @@ namespace EggLink.DanhengServer.Proto {
       }
       mKAIFJIBJIK_.Add(other.mKAIFJIBJIK_);
       hGCGILABNDL_.Add(other.hGCGILABNDL_);
+      aMLDAILBMBO_.Add(other.aMLDAILBMBO_);
+      hMJFCDLCIFD_.Add(other.hMJFCDLCIFD_);
+      jNCBPDHCAHI_.Add(other.jNCBPDHCAHI_);
       if (other.MainTournId != 0) {
         MainTournId = other.MainTournId;
       }
-      hMJFCDLCIFD_.Add(other.hMJFCDLCIFD_);
-      aMLDAILBMBO_.Add(other.aMLDAILBMBO_);
-      jNCBPDHCAHI_.Add(other.jNCBPDHCAHI_);
       if (other.SubTournId != 0) {
         SubTournId = other.SubTournId;
       }
@@ -319,36 +319,36 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
-            mKAIFJIBJIK_.AddEntriesFrom(input, _repeated_mKAIFJIBJIK_codec);
-            break;
-          }
-          case 18:
           case 16: {
-            jNCBPDHCAHI_.AddEntriesFrom(input, _repeated_jNCBPDHCAHI_codec);
+            MainTournId = input.ReadUInt32();
             break;
           }
-          case 34: {
+          case 26: {
             hGCGILABNDL_.AddEntriesFrom(input, _repeated_hGCGILABNDL_codec);
             break;
           }
-          case 42:
-          case 40: {
+          case 50:
+          case 48: {
             hMJFCDLCIFD_.AddEntriesFrom(input, _repeated_hMJFCDLCIFD_codec);
             break;
           }
-          case 56: {
+          case 72: {
             SubTournId = input.ReadUInt32();
             break;
           }
-          case 74:
-          case 72: {
-            aMLDAILBMBO_.AddEntriesFrom(input, _repeated_aMLDAILBMBO_codec);
+          case 82:
+          case 80: {
+            mKAIFJIBJIK_.AddEntriesFrom(input, _repeated_mKAIFJIBJIK_codec);
             break;
           }
+          case 114:
+          case 112: {
+            jNCBPDHCAHI_.AddEntriesFrom(input, _repeated_jNCBPDHCAHI_codec);
+            break;
+          }
+          case 122:
           case 120: {
-            MainTournId = input.ReadUInt32();
+            aMLDAILBMBO_.AddEntriesFrom(input, _repeated_aMLDAILBMBO_codec);
             break;
           }
         }
@@ -366,36 +366,36 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
-            mKAIFJIBJIK_.AddEntriesFrom(ref input, _repeated_mKAIFJIBJIK_codec);
-            break;
-          }
-          case 18:
           case 16: {
-            jNCBPDHCAHI_.AddEntriesFrom(ref input, _repeated_jNCBPDHCAHI_codec);
+            MainTournId = input.ReadUInt32();
             break;
           }
-          case 34: {
+          case 26: {
             hGCGILABNDL_.AddEntriesFrom(ref input, _repeated_hGCGILABNDL_codec);
             break;
           }
-          case 42:
-          case 40: {
+          case 50:
+          case 48: {
             hMJFCDLCIFD_.AddEntriesFrom(ref input, _repeated_hMJFCDLCIFD_codec);
             break;
           }
-          case 56: {
+          case 72: {
             SubTournId = input.ReadUInt32();
             break;
           }
-          case 74:
-          case 72: {
-            aMLDAILBMBO_.AddEntriesFrom(ref input, _repeated_aMLDAILBMBO_codec);
+          case 82:
+          case 80: {
+            mKAIFJIBJIK_.AddEntriesFrom(ref input, _repeated_mKAIFJIBJIK_codec);
             break;
           }
+          case 114:
+          case 112: {
+            jNCBPDHCAHI_.AddEntriesFrom(ref input, _repeated_jNCBPDHCAHI_codec);
+            break;
+          }
+          case 122:
           case 120: {
-            MainTournId = input.ReadUInt32();
+            aMLDAILBMBO_.AddEntriesFrom(ref input, _repeated_aMLDAILBMBO_codec);
             break;
           }
         }

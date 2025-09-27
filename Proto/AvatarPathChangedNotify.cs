@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1BdmF0YXJQYXRoQ2hhbmdlZE5vdGlmeS5wcm90bxoZTXVsdGlQYXRoQXZh",
             "dGFyVHlwZS5wcm90byJrChdBdmF0YXJQYXRoQ2hhbmdlZE5vdGlmeRI4Chpj",
-            "dXJfbXVsdGlfcGF0aF9hdmF0YXJfdHlwZRgDIAEoDjIULk11bHRpUGF0aEF2",
-            "YXRhclR5cGUSFgoOYmFzZV9hdmF0YXJfaWQYByABKA1CHqoCG0VnZ0xpbmsu",
+            "dXJfbXVsdGlfcGF0aF9hdmF0YXJfdHlwZRgMIAEoDjIULk11bHRpUGF0aEF2",
+            "YXRhclR5cGUSFgoOYmFzZV9hdmF0YXJfaWQYCiABKA1CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_multi_path_avatar_type" field.</summary>
-    public const int CurMultiPathAvatarTypeFieldNumber = 3;
+    public const int CurMultiPathAvatarTypeFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.MultiPathAvatarType curMultiPathAvatarType_ = global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "base_avatar_id" field.</summary>
-    public const int BaseAvatarIdFieldNumber = 7;
+    public const int BaseAvatarIdFieldNumber = 10;
     private uint baseAvatarId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CurMultiPathAvatarType != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) CurMultiPathAvatarType);
-      }
       if (BaseAvatarId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(80);
         output.WriteUInt32(BaseAvatarId);
+      }
+      if (CurMultiPathAvatarType != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) CurMultiPathAvatarType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CurMultiPathAvatarType != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
-        output.WriteRawTag(24);
-        output.WriteEnum((int) CurMultiPathAvatarType);
-      }
       if (BaseAvatarId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(80);
         output.WriteUInt32(BaseAvatarId);
+      }
+      if (CurMultiPathAvatarType != global::EggLink.DanhengServer.Proto.MultiPathAvatarType.None) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) CurMultiPathAvatarType);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -228,12 +228,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            CurMultiPathAvatarType = (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) input.ReadEnum();
+          case 80: {
+            BaseAvatarId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            BaseAvatarId = input.ReadUInt32();
+          case 96: {
+            CurMultiPathAvatarType = (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) input.ReadEnum();
             break;
           }
         }
@@ -251,12 +251,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            CurMultiPathAvatarType = (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) input.ReadEnum();
+          case 80: {
+            BaseAvatarId = input.ReadUInt32();
             break;
           }
-          case 56: {
-            BaseAvatarId = input.ReadUInt32();
+          case 96: {
+            CurMultiPathAvatarType = (global::EggLink.DanhengServer.Proto.MultiPathAvatarType) input.ReadEnum();
             break;
           }
         }

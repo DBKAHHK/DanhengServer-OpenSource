@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtIZWFydERpYWxEaWFsb2d1ZUluZm8ucHJvdG8iQQoVSGVhcnREaWFsRGlh",
-            "bG9ndWVJbmZvEhMKC0ZCS0VLQ0dFTEJFGAMgASgIEhMKC2RpYWxvZ3VlX2lk",
+            "bG9ndWVJbmZvEhMKC0ZCS0VLQ0dFTEJFGA4gASgIEhMKC2RpYWxvZ3VlX2lk",
             "GAggASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FBKEKCGELBE" field.</summary>
-    public const int FBKEKCGELBEFieldNumber = 3;
+    public const int FBKEKCGELBEFieldNumber = 14;
     private bool fBKEKCGELBE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (FBKEKCGELBE != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(FBKEKCGELBE);
-      }
       if (DialogueId != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(DialogueId);
+      }
+      if (FBKEKCGELBE != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(FBKEKCGELBE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (FBKEKCGELBE != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(FBKEKCGELBE);
-      }
       if (DialogueId != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(DialogueId);
+      }
+      if (FBKEKCGELBE != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(FBKEKCGELBE);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            FBKEKCGELBE = input.ReadBool();
-            break;
-          }
           case 64: {
             DialogueId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            FBKEKCGELBE = input.ReadBool();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            FBKEKCGELBE = input.ReadBool();
-            break;
-          }
           case 64: {
             DialogueId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            FBKEKCGELBE = input.ReadBool();
             break;
           }
         }

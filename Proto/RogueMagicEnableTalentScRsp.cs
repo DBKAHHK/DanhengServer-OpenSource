@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFSb2d1ZU1hZ2ljRW5hYmxlVGFsZW50U2NSc3AucHJvdG8aGlJvZ3VlTWFn",
             "aWNUYWxlbnRJbmZvLnByb3RvImYKG1JvZ3VlTWFnaWNFbmFibGVUYWxlbnRT",
-            "Y1JzcBIPCgdyZXRjb2RlGAsgASgNEjYKF3JvZ3VlX21hZ2ljX3RhbGVudF9p",
+            "Y1JzcBIPCgdyZXRjb2RlGA4gASgNEjYKF3JvZ3VlX21hZ2ljX3RhbGVudF9p",
             "bmZvGAggASgLMhUuUm9ndWVNYWdpY1RhbGVudEluZm9CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 11;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(RogueMagicTalentInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -176,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(RogueMagicTalentInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -238,7 +238,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RogueMagicTalentInfo);
             break;
           }
-          case 88: {
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -264,7 +264,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(RogueMagicTalentInfo);
             break;
           }
-          case 88: {
+          case 112: {
             Retcode = input.ReadUInt32();
             break;
           }

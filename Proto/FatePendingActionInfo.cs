@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtGYXRlUGVuZGluZ0FjdGlvbkluZm8ucHJvdG8aEVBFQUpMQURJTkZLLnBy",
-            "b3RvIlIKFUZhdGVQZW5kaW5nQWN0aW9uSW5mbxIWCg5xdWV1ZV9wb3NpdGlv",
-            "bhgMIAEoDRIhCgtLSUFCQ0ZIREdCSxgCIAEoCzIMLlBFQUpMQURJTkZLQh6q",
+            "b3RvIlIKFUZhdGVQZW5kaW5nQWN0aW9uSW5mbxIhCgtLSUFCQ0ZIREdCSxgK",
+            "IAEoCzIMLlBFQUpMQURJTkZLEhYKDnF1ZXVlX3Bvc2l0aW9uGAIgASgNQh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PEAJLADINFKReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FatePendingActionInfo), global::EggLink.DanhengServer.Proto.FatePendingActionInfo.Parser, new[]{ "QueuePosition", "KIABCFHDGBK" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FatePendingActionInfo), global::EggLink.DanhengServer.Proto.FatePendingActionInfo.Parser, new[]{ "KIABCFHDGBK", "QueuePosition" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FatePendingActionInfo(FatePendingActionInfo other) : this() {
-      queuePosition_ = other.queuePosition_;
       kIABCFHDGBK_ = other.kIABCFHDGBK_ != null ? other.kIABCFHDGBK_.Clone() : null;
+      queuePosition_ = other.queuePosition_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new FatePendingActionInfo(this);
     }
 
-    /// <summary>Field number for the "queue_position" field.</summary>
-    public const int QueuePositionFieldNumber = 12;
-    private uint queuePosition_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint QueuePosition {
-      get { return queuePosition_; }
-      set {
-        queuePosition_ = value;
-      }
-    }
-
     /// <summary>Field number for the "KIABCFHDGBK" field.</summary>
-    public const int KIABCFHDGBKFieldNumber = 2;
+    public const int KIABCFHDGBKFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.PEAJLADINFK kIABCFHDGBK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return kIABCFHDGBK_; }
       set {
         kIABCFHDGBK_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "queue_position" field.</summary>
+    public const int QueuePositionFieldNumber = 2;
+    private uint queuePosition_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint QueuePosition {
+      get { return queuePosition_; }
+      set {
+        queuePosition_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (QueuePosition != other.QueuePosition) return false;
       if (!object.Equals(KIABCFHDGBK, other.KIABCFHDGBK)) return false;
+      if (QueuePosition != other.QueuePosition) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (QueuePosition != 0) hash ^= QueuePosition.GetHashCode();
       if (kIABCFHDGBK_ != null) hash ^= KIABCFHDGBK.GetHashCode();
+      if (QueuePosition != 0) hash ^= QueuePosition.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (kIABCFHDGBK_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(KIABCFHDGBK);
-      }
       if (QueuePosition != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(16);
         output.WriteUInt32(QueuePosition);
+      }
+      if (kIABCFHDGBK_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(KIABCFHDGBK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (kIABCFHDGBK_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(KIABCFHDGBK);
-      }
       if (QueuePosition != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(16);
         output.WriteUInt32(QueuePosition);
+      }
+      if (kIABCFHDGBK_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(KIABCFHDGBK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (QueuePosition != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(QueuePosition);
-      }
       if (kIABCFHDGBK_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(KIABCFHDGBK);
+      }
+      if (QueuePosition != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(QueuePosition);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.QueuePosition != 0) {
-        QueuePosition = other.QueuePosition;
-      }
       if (other.kIABCFHDGBK_ != null) {
         if (kIABCFHDGBK_ == null) {
           KIABCFHDGBK = new global::EggLink.DanhengServer.Proto.PEAJLADINFK();
         }
         KIABCFHDGBK.MergeFrom(other.KIABCFHDGBK);
+      }
+      if (other.QueuePosition != 0) {
+        QueuePosition = other.QueuePosition;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 16: {
+            QueuePosition = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             if (kIABCFHDGBK_ == null) {
               KIABCFHDGBK = new global::EggLink.DanhengServer.Proto.PEAJLADINFK();
             }
             input.ReadMessage(KIABCFHDGBK);
-            break;
-          }
-          case 96: {
-            QueuePosition = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 16: {
+            QueuePosition = input.ReadUInt32();
+            break;
+          }
+          case 82: {
             if (kIABCFHDGBK_ == null) {
               KIABCFHDGBK = new global::EggLink.DanhengServer.Proto.PEAJLADINFK();
             }
             input.ReadMessage(KIABCFHDGBK);
-            break;
-          }
-          case 96: {
-            QueuePosition = input.ReadUInt32();
             break;
           }
         }

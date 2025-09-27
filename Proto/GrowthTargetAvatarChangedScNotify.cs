@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidHcm93dGhUYXJnZXRBdmF0YXJDaGFuZ2VkU2NOb3RpZnkucHJvdG8aG0dy",
             "b3d0aFRhcnRnZXRGdW5jVHlwZS5wcm90byJxCiFHcm93dGhUYXJnZXRBdmF0",
-            "YXJDaGFuZ2VkU2NOb3RpZnkSEwoLSlBOTFBPUE1LRUoYBCABKA0SNwoXZ3Jv",
-            "d3RoX3RhcmdldF90eXBlX2xpc3QYDCADKA4yFi5Hcm93dGhUYXJ0Z2V0RnVu",
-            "Y1R5cGVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "YXJDaGFuZ2VkU2NOb3RpZnkSNwoXZ3Jvd3RoX3RhcmdldF90eXBlX2xpc3QY",
+            "CiADKA4yFi5Hcm93dGhUYXJ0Z2V0RnVuY1R5cGUSEwoLSlBOTFBPUE1LRUoY",
+            "BiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GrowthTartgetFuncTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GrowthTargetAvatarChangedScNotify), global::EggLink.DanhengServer.Proto.GrowthTargetAvatarChangedScNotify.Parser, new[]{ "JPNLPOPMKEJ", "GrowthTargetTypeList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GrowthTargetAvatarChangedScNotify), global::EggLink.DanhengServer.Proto.GrowthTargetAvatarChangedScNotify.Parser, new[]{ "GrowthTargetTypeList", "JPNLPOPMKEJ" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GrowthTargetAvatarChangedScNotify(GrowthTargetAvatarChangedScNotify other) : this() {
-      jPNLPOPMKEJ_ = other.jPNLPOPMKEJ_;
       growthTargetTypeList_ = other.growthTargetTypeList_.Clone();
+      jPNLPOPMKEJ_ = other.jPNLPOPMKEJ_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +85,19 @@ namespace EggLink.DanhengServer.Proto {
       return new GrowthTargetAvatarChangedScNotify(this);
     }
 
+    /// <summary>Field number for the "growth_target_type_list" field.</summary>
+    public const int GrowthTargetTypeListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> _repeated_growthTargetTypeList_codec
+        = pb::FieldCodec.ForEnum(82, x => (int) x, x => (global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType) x);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> growthTargetTypeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> GrowthTargetTypeList {
+      get { return growthTargetTypeList_; }
+    }
+
     /// <summary>Field number for the "JPNLPOPMKEJ" field.</summary>
-    public const int JPNLPOPMKEJFieldNumber = 4;
+    public const int JPNLPOPMKEJFieldNumber = 6;
     private uint jPNLPOPMKEJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,17 +106,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         jPNLPOPMKEJ_ = value;
       }
-    }
-
-    /// <summary>Field number for the "growth_target_type_list" field.</summary>
-    public const int GrowthTargetTypeListFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> _repeated_growthTargetTypeList_codec
-        = pb::FieldCodec.ForEnum(98, x => (int) x, x => (global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType) x);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> growthTargetTypeList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GrowthTartgetFuncType> GrowthTargetTypeList {
-      get { return growthTargetTypeList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (JPNLPOPMKEJ != other.JPNLPOPMKEJ) return false;
       if(!growthTargetTypeList_.Equals(other.growthTargetTypeList_)) return false;
+      if (JPNLPOPMKEJ != other.JPNLPOPMKEJ) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (JPNLPOPMKEJ != 0) hash ^= JPNLPOPMKEJ.GetHashCode();
       hash ^= growthTargetTypeList_.GetHashCode();
+      if (JPNLPOPMKEJ != 0) hash ^= JPNLPOPMKEJ.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (JPNLPOPMKEJ != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(48);
         output.WriteUInt32(JPNLPOPMKEJ);
       }
       growthTargetTypeList_.WriteTo(output, _repeated_growthTargetTypeList_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (JPNLPOPMKEJ != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(48);
         output.WriteUInt32(JPNLPOPMKEJ);
       }
       growthTargetTypeList_.WriteTo(ref output, _repeated_growthTargetTypeList_codec);
@@ -182,10 +182,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += growthTargetTypeList_.CalculateSize(_repeated_growthTargetTypeList_codec);
       if (JPNLPOPMKEJ != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JPNLPOPMKEJ);
       }
-      size += growthTargetTypeList_.CalculateSize(_repeated_growthTargetTypeList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -198,10 +198,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      growthTargetTypeList_.Add(other.growthTargetTypeList_);
       if (other.JPNLPOPMKEJ != 0) {
         JPNLPOPMKEJ = other.JPNLPOPMKEJ;
       }
-      growthTargetTypeList_.Add(other.growthTargetTypeList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 48: {
             JPNLPOPMKEJ = input.ReadUInt32();
             break;
           }
-          case 98:
-          case 96: {
+          case 82:
+          case 80: {
             growthTargetTypeList_.AddEntriesFrom(input, _repeated_growthTargetTypeList_codec);
             break;
           }
@@ -241,12 +241,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 48: {
             JPNLPOPMKEJ = input.ReadUInt32();
             break;
           }
-          case 98:
-          case 96: {
+          case 82:
+          case 80: {
             growthTargetTypeList_.AddEntriesFrom(ref input, _repeated_growthTargetTypeList_codec);
             break;
           }

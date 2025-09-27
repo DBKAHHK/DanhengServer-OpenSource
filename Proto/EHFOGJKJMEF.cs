@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFFSEZPR0pLSk1FRi5wcm90bxoURmF0ZVNvdXJjZVR5cGUucHJvdG8iUQoL",
-            "RUhGT0dKS0pNRUYSEwoLSU1GQ0lNS01KUEwYAiABKA0SLQoUbW9kaWZpZXJf",
-            "c291cmNlX3R5cGUYASABKA4yDy5GYXRlU291cmNlVHlwZUIeqgIbRWdnTGlu",
+            "RUhGT0dKS0pNRUYSLQoUbW9kaWZpZXJfc291cmNlX3R5cGUYBSABKA4yDy5G",
+            "YXRlU291cmNlVHlwZRITCgtJTUZDSU1LTUpQTBgIIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FateSourceTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EHFOGJKJMEF), global::EggLink.DanhengServer.Proto.EHFOGJKJMEF.Parser, new[]{ "IMFCIMKMJPL", "ModifierSourceType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EHFOGJKJMEF), global::EggLink.DanhengServer.Proto.EHFOGJKJMEF.Parser, new[]{ "ModifierSourceType", "IMFCIMKMJPL" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EHFOGJKJMEF(EHFOGJKJMEF other) : this() {
-      iMFCIMKMJPL_ = other.iMFCIMKMJPL_;
       modifierSourceType_ = other.modifierSourceType_;
+      iMFCIMKMJPL_ = other.iMFCIMKMJPL_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new EHFOGJKJMEF(this);
     }
 
-    /// <summary>Field number for the "IMFCIMKMJPL" field.</summary>
-    public const int IMFCIMKMJPLFieldNumber = 2;
-    private uint iMFCIMKMJPL_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IMFCIMKMJPL {
-      get { return iMFCIMKMJPL_; }
-      set {
-        iMFCIMKMJPL_ = value;
-      }
-    }
-
     /// <summary>Field number for the "modifier_source_type" field.</summary>
-    public const int ModifierSourceTypeFieldNumber = 1;
+    public const int ModifierSourceTypeFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.FateSourceType modifierSourceType_ = global::EggLink.DanhengServer.Proto.FateSourceType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return modifierSourceType_; }
       set {
         modifierSourceType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "IMFCIMKMJPL" field.</summary>
+    public const int IMFCIMKMJPLFieldNumber = 8;
+    private uint iMFCIMKMJPL_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint IMFCIMKMJPL {
+      get { return iMFCIMKMJPL_; }
+      set {
+        iMFCIMKMJPL_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IMFCIMKMJPL != other.IMFCIMKMJPL) return false;
       if (ModifierSourceType != other.ModifierSourceType) return false;
+      if (IMFCIMKMJPL != other.IMFCIMKMJPL) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IMFCIMKMJPL != 0) hash ^= IMFCIMKMJPL.GetHashCode();
       if (ModifierSourceType != global::EggLink.DanhengServer.Proto.FateSourceType.None) hash ^= ModifierSourceType.GetHashCode();
+      if (IMFCIMKMJPL != 0) hash ^= IMFCIMKMJPL.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ModifierSourceType != global::EggLink.DanhengServer.Proto.FateSourceType.None) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(40);
         output.WriteEnum((int) ModifierSourceType);
       }
       if (IMFCIMKMJPL != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(64);
         output.WriteUInt32(IMFCIMKMJPL);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ModifierSourceType != global::EggLink.DanhengServer.Proto.FateSourceType.None) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(40);
         output.WriteEnum((int) ModifierSourceType);
       }
       if (IMFCIMKMJPL != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(64);
         output.WriteUInt32(IMFCIMKMJPL);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IMFCIMKMJPL != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IMFCIMKMJPL);
-      }
       if (ModifierSourceType != global::EggLink.DanhengServer.Proto.FateSourceType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ModifierSourceType);
+      }
+      if (IMFCIMKMJPL != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IMFCIMKMJPL);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IMFCIMKMJPL != 0) {
-        IMFCIMKMJPL = other.IMFCIMKMJPL;
-      }
       if (other.ModifierSourceType != global::EggLink.DanhengServer.Proto.FateSourceType.None) {
         ModifierSourceType = other.ModifierSourceType;
+      }
+      if (other.IMFCIMKMJPL != 0) {
+        IMFCIMKMJPL = other.IMFCIMKMJPL;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 40: {
             ModifierSourceType = (global::EggLink.DanhengServer.Proto.FateSourceType) input.ReadEnum();
             break;
           }
-          case 16: {
+          case 64: {
             IMFCIMKMJPL = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 40: {
             ModifierSourceType = (global::EggLink.DanhengServer.Proto.FateSourceType) input.ReadEnum();
             break;
           }
-          case 16: {
+          case 64: {
             IMFCIMKMJPL = input.ReadUInt32();
             break;
           }

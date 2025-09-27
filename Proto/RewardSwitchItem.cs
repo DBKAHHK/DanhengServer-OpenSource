@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChZSZXdhcmRTd2l0Y2hJdGVtLnByb3RvGg5JdGVtTGlzdC5wcm90byJaChBS",
             "ZXdhcmRTd2l0Y2hJdGVtEhMKC0VJTkZCR0tFTkRIGA0gASgIEhMKC2RhaWx5",
-            "X2luZGV4GAYgASgNEhwKCWl0ZW1fbGlzdBgJIAEoCzIJLkl0ZW1MaXN0Qh6q",
+            "X2luZGV4GAggASgNEhwKCWl0ZW1fbGlzdBgJIAEoCzIJLkl0ZW1MaXN0Qh6q",
             "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "daily_index" field.</summary>
-    public const int DailyIndexFieldNumber = 6;
+    public const int DailyIndexFieldNumber = 8;
     private uint dailyIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (DailyIndex != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(DailyIndex);
       }
       if (itemList_ != null) {
@@ -190,7 +190,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DailyIndex != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(DailyIndex);
       }
       if (itemList_ != null) {
@@ -259,7 +259,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 64: {
             DailyIndex = input.ReadUInt32();
             break;
           }
@@ -289,7 +289,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 64: {
             DailyIndex = input.ReadUInt32();
             break;
           }

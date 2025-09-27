@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFERENFTENPSkdOUC5wcm90byJHCgtERENFTENPSkdOUBIQCghldmVudF9p",
-            "ZBgBIAEoDRITCgtMR0lJQUhJRExNRxgEIAEoDRIRCglvcHRpb25faWQYCiAB",
+            "ZBgBIAEoDRITCgtMR0lJQUhJRExNRxgDIAEoDRIRCglvcHRpb25faWQYCiAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "LGIIAHIDLMG" field.</summary>
-    public const int LGIIAHIDLMGFieldNumber = 4;
+    public const int LGIIAHIDLMGFieldNumber = 3;
     private uint lGIIAHIDLMG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(EventId);
       }
       if (LGIIAHIDLMG != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(LGIIAHIDLMG);
       }
       if (OptionId != 0) {
@@ -193,7 +193,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(EventId);
       }
       if (LGIIAHIDLMG != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteUInt32(LGIIAHIDLMG);
       }
       if (OptionId != 0) {
@@ -259,7 +259,7 @@ namespace EggLink.DanhengServer.Proto {
             EventId = input.ReadUInt32();
             break;
           }
-          case 32: {
+          case 24: {
             LGIIAHIDLMG = input.ReadUInt32();
             break;
           }
@@ -286,7 +286,7 @@ namespace EggLink.DanhengServer.Proto {
             EventId = input.ReadUInt32();
             break;
           }
-          case 32: {
+          case 24: {
             LGIIAHIDLMG = input.ReadUInt32();
             break;
           }

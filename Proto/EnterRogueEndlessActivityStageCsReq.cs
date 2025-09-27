@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CilFbnRlclJvZ3VlRW5kbGVzc0FjdGl2aXR5U3RhZ2VDc1JlcS5wcm90bxoY",
             "Um9ndWVFbmRsZXNzQXZhdGFyLnByb3RvImQKI0VudGVyUm9ndWVFbmRsZXNz",
-            "QWN0aXZpdHlTdGFnZUNzUmVxEhMKC01HSUdEQ01MRU9HGAogASgNEigKC2F2",
-            "YXRhcl9saXN0GAcgAygLMhMuUm9ndWVFbmRsZXNzQXZhdGFyQh6qAhtFZ2dM",
+            "QWN0aXZpdHlTdGFnZUNzUmVxEhMKC01HSUdEQ01MRU9HGAUgASgNEigKC2F2",
+            "YXRhcl9saXN0GAEgAygLMhMuUm9ndWVFbmRsZXNzQXZhdGFyQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueEndlessAvatarReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MGIGDCMLEOG" field.</summary>
-    public const int MGIGDCMLEOGFieldNumber = 10;
+    public const int MGIGDCMLEOGFieldNumber = 5;
     private uint mGIGDCMLEOG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_list" field.</summary>
-    public const int AvatarListFieldNumber = 7;
+    public const int AvatarListFieldNumber = 1;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueEndlessAvatar> _repeated_avatarList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.RogueEndlessAvatar.Parser);
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.RogueEndlessAvatar.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueEndlessAvatar> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueEndlessAvatar>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,7 +154,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       avatarList_.WriteTo(output, _repeated_avatarList_codec);
       if (MGIGDCMLEOG != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteUInt32(MGIGDCMLEOG);
       }
       if (_unknownFields != null) {
@@ -169,7 +169,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       if (MGIGDCMLEOG != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(40);
         output.WriteUInt32(MGIGDCMLEOG);
       }
       if (_unknownFields != null) {
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 10: {
             avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
             break;
           }
-          case 80: {
+          case 40: {
             MGIGDCMLEOG = input.ReadUInt32();
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 10: {
             avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
             break;
           }
-          case 80: {
+          case 40: {
             MGIGDCMLEOG = input.ReadUInt32();
             break;
           }

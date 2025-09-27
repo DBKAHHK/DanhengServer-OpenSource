@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFBQ0tOQ0FBQU1KTS5wcm90bxoOSXRlbUxpc3QucHJvdG8iVQoLQUNLTkNB",
-            "QUFNSk0SEwoLUFBDTEJEQkpMTU8YDyABKA0SEwoLR0lBQ0ZDRERKTk0YDCAB",
-            "KA0SHAoJaXRlbV9saXN0GAcgASgLMgkuSXRlbUxpc3RCHqoCG0VnZ0xpbmsu",
+            "QUFNSk0SEwoLUFBDTEJEQkpMTU8YCiABKA0SEwoLR0lBQ0ZDRERKTk0YCCAB",
+            "KA0SHAoJaXRlbV9saXN0GA0gASgLMgkuSXRlbUxpc3RCHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PPCLBDBJLMO" field.</summary>
-    public const int PPCLBDBJLMOFieldNumber = 15;
+    public const int PPCLBDBJLMOFieldNumber = 10;
     private uint pPCLBDBJLMO_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GIACFCDDJNM" field.</summary>
-    public const int GIACFCDDJNMFieldNumber = 12;
+    public const int GIACFCDDJNMFieldNumber = 8;
     private uint gIACFCDDJNM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_list" field.</summary>
-    public const int ItemListFieldNumber = 7;
+    public const int ItemListFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.ItemList itemList_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (itemList_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(ItemList);
-      }
       if (GIACFCDDJNM != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(GIACFCDDJNM);
       }
       if (PPCLBDBJLMO != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(80);
         output.WriteUInt32(PPCLBDBJLMO);
+      }
+      if (itemList_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ItemList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (itemList_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(ItemList);
-      }
       if (GIACFCDDJNM != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(GIACFCDDJNM);
       }
       if (PPCLBDBJLMO != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(80);
         output.WriteUInt32(PPCLBDBJLMO);
+      }
+      if (itemList_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ItemList);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -259,19 +259,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 64: {
+            GIACFCDDJNM = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            PPCLBDBJLMO = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (itemList_ == null) {
               ItemList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(ItemList);
-            break;
-          }
-          case 96: {
-            GIACFCDDJNM = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            PPCLBDBJLMO = input.ReadUInt32();
             break;
           }
         }
@@ -289,19 +289,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 64: {
+            GIACFCDDJNM = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            PPCLBDBJLMO = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (itemList_ == null) {
               ItemList = new global::EggLink.DanhengServer.Proto.ItemList();
             }
             input.ReadMessage(ItemList);
-            break;
-          }
-          case 96: {
-            GIACFCDDJNM = input.ReadUInt32();
-            break;
-          }
-          case 120: {
-            PPCLBDBJLMO = input.ReadUInt32();
             break;
           }
         }

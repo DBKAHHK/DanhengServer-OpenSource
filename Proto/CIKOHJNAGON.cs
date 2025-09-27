@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFDSUtPSEpOQUdPTi5wcm90bxoVQXJlYUR5bmFtaWNJbmZvLnByb3RvIkUK",
-            "C0NJS09ISk5BR09OEg8KB2FyZWFfaWQYDSABKA0SJQoLS0NKQk1LSkxGQkEY",
-            "ASABKAsyEC5BcmVhRHluYW1pY0luZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "C0NJS09ISk5BR09OEg8KB2FyZWFfaWQYBCABKA0SJQoLS0NKQk1LSkxGQkEY",
+            "DCABKAsyEC5BcmVhRHluYW1pY0luZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AreaDynamicInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 13;
+    public const int AreaIdFieldNumber = 4;
     private uint areaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KCJBMKJLFBA" field.</summary>
-    public const int KCJBMKJLFBAFieldNumber = 1;
+    public const int KCJBMKJLFBAFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.AreaDynamicInfo kCJBMKJLFBA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (kCJBMKJLFBA_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(KCJBMKJLFBA);
-      }
       if (AreaId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(32);
         output.WriteUInt32(AreaId);
+      }
+      if (kCJBMKJLFBA_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(KCJBMKJLFBA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (kCJBMKJLFBA_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(KCJBMKJLFBA);
-      }
       if (AreaId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(32);
         output.WriteUInt32(AreaId);
+      }
+      if (kCJBMKJLFBA_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(KCJBMKJLFBA);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
+          case 32: {
+            AreaId = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             if (kCJBMKJLFBA_ == null) {
               KCJBMKJLFBA = new global::EggLink.DanhengServer.Proto.AreaDynamicInfo();
             }
             input.ReadMessage(KCJBMKJLFBA);
-            break;
-          }
-          case 104: {
-            AreaId = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
+          case 32: {
+            AreaId = input.ReadUInt32();
+            break;
+          }
+          case 98: {
             if (kCJBMKJLFBA_ == null) {
               KCJBMKJLFBA = new global::EggLink.DanhengServer.Proto.AreaDynamicInfo();
             }
             input.ReadMessage(KCJBMKJLFBA);
-            break;
-          }
-          case 104: {
-            AreaId = input.ReadUInt32();
             break;
           }
         }

@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9HZXRDaGFsbGVuZ2VQZWFrRGF0YVNjUnNwLnByb3RvGhxDaGFsbGVuZ2VQ",
             "ZWFrTGV2ZWxJbmZvLnByb3RvIoMBChlHZXRDaGFsbGVuZ2VQZWFrRGF0YVNj",
-            "UnNwEhkKEWN1cl9wZWFrX2dyb3VwX2lkGAYgASgNEg8KB3JldGNvZGUYBSAB",
-            "KA0SOgoZY2hhbGxlbmdlX3BlYWtfbGV2ZWxfbGlzdBgEIAMoCzIXLkNoYWxs",
-            "ZW5nZVBlYWtMZXZlbEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "UnNwEjoKGWNoYWxsZW5nZV9wZWFrX2xldmVsX2xpc3QYByADKAsyFy5DaGFs",
+            "bGVuZ2VQZWFrTGV2ZWxJbmZvEhkKEWN1cl9wZWFrX2dyb3VwX2lkGAggASgN",
+            "Eg8KB3JldGNvZGUYDyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChallengePeakDataScRsp), global::EggLink.DanhengServer.Proto.GetChallengePeakDataScRsp.Parser, new[]{ "CurPeakGroupId", "Retcode", "ChallengePeakLevelList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChallengePeakDataScRsp), global::EggLink.DanhengServer.Proto.GetChallengePeakDataScRsp.Parser, new[]{ "ChallengePeakLevelList", "CurPeakGroupId", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,9 +75,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetChallengePeakDataScRsp(GetChallengePeakDataScRsp other) : this() {
+      challengePeakLevelList_ = other.challengePeakLevelList_.Clone();
       curPeakGroupId_ = other.curPeakGroupId_;
       retcode_ = other.retcode_;
-      challengePeakLevelList_ = other.challengePeakLevelList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,8 +87,19 @@ namespace EggLink.DanhengServer.Proto {
       return new GetChallengePeakDataScRsp(this);
     }
 
+    /// <summary>Field number for the "challenge_peak_level_list" field.</summary>
+    public const int ChallengePeakLevelListFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo> _repeated_challengePeakLevelList_codec
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo> challengePeakLevelList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo> ChallengePeakLevelList {
+      get { return challengePeakLevelList_; }
+    }
+
     /// <summary>Field number for the "cur_peak_group_id" field.</summary>
-    public const int CurPeakGroupIdFieldNumber = 6;
+    public const int CurPeakGroupIdFieldNumber = 8;
     private uint curPeakGroupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 15;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,17 +120,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "challenge_peak_level_list" field.</summary>
-    public const int ChallengePeakLevelListFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo> _repeated_challengePeakLevelList_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo> challengePeakLevelList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo> ChallengePeakLevelList {
-      get { return challengePeakLevelList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!challengePeakLevelList_.Equals(other.challengePeakLevelList_)) return false;
       if (CurPeakGroupId != other.CurPeakGroupId) return false;
       if (Retcode != other.Retcode) return false;
-      if(!challengePeakLevelList_.Equals(other.challengePeakLevelList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= challengePeakLevelList_.GetHashCode();
       if (CurPeakGroupId != 0) hash ^= CurPeakGroupId.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      hash ^= challengePeakLevelList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       challengePeakLevelList_.WriteTo(output, _repeated_challengePeakLevelList_codec);
-      if (Retcode != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(Retcode);
-      }
       if (CurPeakGroupId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(CurPeakGroupId);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,13 +188,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       challengePeakLevelList_.WriteTo(ref output, _repeated_challengePeakLevelList_codec);
-      if (Retcode != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(Retcode);
-      }
       if (CurPeakGroupId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(64);
         output.WriteUInt32(CurPeakGroupId);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -206,13 +206,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += challengePeakLevelList_.CalculateSize(_repeated_challengePeakLevelList_codec);
       if (CurPeakGroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurPeakGroupId);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += challengePeakLevelList_.CalculateSize(_repeated_challengePeakLevelList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -225,13 +225,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      challengePeakLevelList_.Add(other.challengePeakLevelList_);
       if (other.CurPeakGroupId != 0) {
         CurPeakGroupId = other.CurPeakGroupId;
       }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      challengePeakLevelList_.Add(other.challengePeakLevelList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -247,16 +247,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 58: {
             challengePeakLevelList_.AddEntriesFrom(input, _repeated_challengePeakLevelList_codec);
             break;
           }
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 64: {
+            CurPeakGroupId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            CurPeakGroupId = input.ReadUInt32();
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -274,16 +274,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 58: {
             challengePeakLevelList_.AddEntriesFrom(ref input, _repeated_challengePeakLevelList_codec);
             break;
           }
-          case 40: {
-            Retcode = input.ReadUInt32();
+          case 64: {
+            CurPeakGroupId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            CurPeakGroupId = input.ReadUInt32();
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

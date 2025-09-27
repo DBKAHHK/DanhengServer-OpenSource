@@ -27,8 +27,8 @@ namespace EggLink.DanhengServer.Proto {
             "CiJDaGFsbGVuZ2VQZWFrR3JvdXBTdGF0aXN0aWNzLnByb3RvGhhQcmVMZXZl",
             "bFN0YXRpc3RpY3MucHJvdG8aGUJvc3NMZXZlbFN0YXRpc3RpY3MucHJvdG8i",
             "jwEKHENoYWxsZW5nZVBlYWtHcm91cFN0YXRpc3RpY3MSLwoScHJlX2xldmVs",
-            "X3N0dF9saXN0GAMgAygLMhMuUHJlTGV2ZWxTdGF0aXN0aWNzEiwKDmJvc3Nf",
-            "bGV2ZWxfc3R0GA0gASgLMhQuQm9zc0xldmVsU3RhdGlzdGljcxIQCghncm91",
+            "X3N0dF9saXN0GAUgAygLMhMuUHJlTGV2ZWxTdGF0aXN0aWNzEiwKDmJvc3Nf",
+            "bGV2ZWxfc3R0GAcgASgLMhQuQm9zc0xldmVsU3RhdGlzdGljcxIQCghncm91",
             "cF9pZBgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -89,9 +89,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pre_level_stt_list" field.</summary>
-    public const int PreLevelSttListFieldNumber = 3;
+    public const int PreLevelSttListFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PreLevelStatistics> _repeated_preLevelSttList_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.PreLevelStatistics.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.PreLevelStatistics.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PreLevelStatistics> preLevelSttList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PreLevelStatistics>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "boss_level_stt" field.</summary>
-    public const int BossLevelSttFieldNumber = 13;
+    public const int BossLevelSttFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.BossLevelStatistics bossLevelStt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       preLevelSttList_.WriteTo(output, _repeated_preLevelSttList_codec);
       if (bossLevelStt_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(58);
         output.WriteMessage(BossLevelStt);
       }
       if (_unknownFields != null) {
@@ -194,7 +194,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       preLevelSttList_.WriteTo(ref output, _repeated_preLevelSttList_codec);
       if (bossLevelStt_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(58);
         output.WriteMessage(BossLevelStt);
       }
       if (_unknownFields != null) {
@@ -255,11 +255,11 @@ namespace EggLink.DanhengServer.Proto {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 42: {
             preLevelSttList_.AddEntriesFrom(input, _repeated_preLevelSttList_codec);
             break;
           }
-          case 106: {
+          case 58: {
             if (bossLevelStt_ == null) {
               BossLevelStt = new global::EggLink.DanhengServer.Proto.BossLevelStatistics();
             }
@@ -285,11 +285,11 @@ namespace EggLink.DanhengServer.Proto {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 42: {
             preLevelSttList_.AddEntriesFrom(ref input, _repeated_preLevelSttList_codec);
             break;
           }
-          case 106: {
+          case 58: {
             if (bossLevelStt_ == null) {
               BossLevelStt = new global::EggLink.DanhengServer.Proto.BossLevelStatistics();
             }

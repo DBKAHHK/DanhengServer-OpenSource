@@ -24,22 +24,22 @@ namespace EggLink.DanhengServer.Proto {
     static SceneEntityInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVTY2VuZUVudGl0eUluZm8ucHJvdG8aFFNjZW5lQWN0b3JJbmZvLnByb3Rv",
-            "GhlTY2VuZU5wY01vbnN0ZXJJbmZvLnByb3RvGhJTY2VuZU5wY0luZm8ucHJv",
-            "dG8aGVNjZW5lU3VtbW9uVW5pdEluZm8ucHJvdG8aEE1vdGlvbkluZm8ucHJv",
-            "dG8aE1NjZW5lUHJvcEluZm8ucHJvdG8irAIKD1NjZW5lRW50aXR5SW5mbxIb",
-            "CgZNb3Rpb24YAyABKAsyCy5Nb3Rpb25JbmZvEg8KB0dyb3VwSWQYCCABKA0S",
-            "DgoGSW5zdElkGAYgASgNEhAKCEVudGl0eUlkGAogASgNEiAKBUFjdG9yGA8g",
-            "ASgLMg8uU2NlbmVBY3RvckluZm9IABIqCgpOcGNNb25zdGVyGAsgASgLMhQu",
-            "U2NlbmVOcGNNb25zdGVySW5mb0gAEhwKA05wYxgCIAEoCzINLlNjZW5lTnBj",
-            "SW5mb0gAEh4KBFByb3AYBSABKAsyDi5TY2VuZVByb3BJbmZvSAASKgoKU3Vt",
-            "bW9uVW5pdBgEIAEoCzIULlNjZW5lU3VtbW9uVW5pdEluZm9IAEIRCg9FbnRp",
+            "ChVTY2VuZUVudGl0eUluZm8ucHJvdG8aE1NjZW5lUHJvcEluZm8ucHJvdG8a",
+            "FFNjZW5lQWN0b3JJbmZvLnByb3RvGhBNb3Rpb25JbmZvLnByb3RvGhJTY2Vu",
+            "ZU5wY0luZm8ucHJvdG8aGVNjZW5lTnBjTW9uc3RlckluZm8ucHJvdG8aGVNj",
+            "ZW5lU3VtbW9uVW5pdEluZm8ucHJvdG8irAIKD1NjZW5lRW50aXR5SW5mbxIg",
+            "CgVBY3RvchgIIAEoCzIPLlNjZW5lQWN0b3JJbmZvSAASKgoKTnBjTW9uc3Rl",
+            "chgDIAEoCzIULlNjZW5lTnBjTW9uc3RlckluZm9IABIcCgNOcGMYDiABKAsy",
+            "DS5TY2VuZU5wY0luZm9IABIeCgRQcm9wGAogASgLMg4uU2NlbmVQcm9wSW5m",
+            "b0gAEioKClN1bW1vblVuaXQYCyABKAsyFC5TY2VuZVN1bW1vblVuaXRJbmZv",
+            "SAASDgoGSW5zdElkGAEgASgNEhAKCEVudGl0eUlkGAUgASgNEhsKBk1vdGlv",
+            "bhgMIAEoCzILLk1vdGlvbkluZm8SDwoHR3JvdXBJZBgPIAEoDUIRCg9FbnRp",
             "dHlPbmVvZkNhc2VCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneActorInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneNpcInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneSummonUnitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ScenePropInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ScenePropInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneActorInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneNpcInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneSummonUnitInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityInfo), global::EggLink.DanhengServer.Proto.SceneEntityInfo.Parser, new[]{ "Motion", "GroupId", "InstId", "EntityId", "Actor", "NpcMonster", "Npc", "Prop", "SummonUnit" }, new[]{ "EntityOneofCase" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityInfo), global::EggLink.DanhengServer.Proto.SceneEntityInfo.Parser, new[]{ "Actor", "NpcMonster", "Npc", "Prop", "SummonUnit", "InstId", "EntityId", "Motion", "GroupId" }, new[]{ "EntityOneofCase" }, null, null, null)
           }));
     }
     #endregion
@@ -81,10 +81,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneEntityInfo(SceneEntityInfo other) : this() {
-      motion_ = other.motion_ != null ? other.motion_.Clone() : null;
-      groupId_ = other.groupId_;
       instId_ = other.instId_;
       entityId_ = other.entityId_;
+      motion_ = other.motion_ != null ? other.motion_.Clone() : null;
+      groupId_ = other.groupId_;
       switch (other.EntityOneofCaseCase) {
         case EntityOneofCaseOneofCase.Actor:
           Actor = other.Actor.Clone();
@@ -112,56 +112,8 @@ namespace EggLink.DanhengServer.Proto {
       return new SceneEntityInfo(this);
     }
 
-    /// <summary>Field number for the "Motion" field.</summary>
-    public const int MotionFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.MotionInfo motion_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MotionInfo Motion {
-      get { return motion_; }
-      set {
-        motion_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "GroupId" field.</summary>
-    public const int GroupIdFieldNumber = 8;
-    private uint groupId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GroupId {
-      get { return groupId_; }
-      set {
-        groupId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "InstId" field.</summary>
-    public const int InstIdFieldNumber = 6;
-    private uint instId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint InstId {
-      get { return instId_; }
-      set {
-        instId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "EntityId" field.</summary>
-    public const int EntityIdFieldNumber = 10;
-    private uint entityId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EntityId {
-      get { return entityId_; }
-      set {
-        entityId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "Actor" field.</summary>
-    public const int ActorFieldNumber = 15;
+    public const int ActorFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.SceneActorInfo Actor {
@@ -173,7 +125,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NpcMonster" field.</summary>
-    public const int NpcMonsterFieldNumber = 11;
+    public const int NpcMonsterFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfo NpcMonster {
@@ -185,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "Npc" field.</summary>
-    public const int NpcFieldNumber = 2;
+    public const int NpcFieldNumber = 14;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.SceneNpcInfo Npc {
@@ -197,7 +149,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "Prop" field.</summary>
-    public const int PropFieldNumber = 5;
+    public const int PropFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.ScenePropInfo Prop {
@@ -209,7 +161,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "SummonUnit" field.</summary>
-    public const int SummonUnitFieldNumber = 4;
+    public const int SummonUnitFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.SceneSummonUnitInfo SummonUnit {
@@ -220,15 +172,63 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "InstId" field.</summary>
+    public const int InstIdFieldNumber = 1;
+    private uint instId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint InstId {
+      get { return instId_; }
+      set {
+        instId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "EntityId" field.</summary>
+    public const int EntityIdFieldNumber = 5;
+    private uint entityId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint EntityId {
+      get { return entityId_; }
+      set {
+        entityId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Motion" field.</summary>
+    public const int MotionFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.MotionInfo motion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MotionInfo Motion {
+      get { return motion_; }
+      set {
+        motion_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "GroupId" field.</summary>
+    public const int GroupIdFieldNumber = 15;
+    private uint groupId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GroupId {
+      get { return groupId_; }
+      set {
+        groupId_ = value;
+      }
+    }
+
     private object entityOneofCase_;
     /// <summary>Enum of possible cases for the "EntityOneofCase" oneof.</summary>
     public enum EntityOneofCaseOneofCase {
       None = 0,
-      Actor = 15,
-      NpcMonster = 11,
-      Npc = 2,
-      Prop = 5,
-      SummonUnit = 4,
+      Actor = 8,
+      NpcMonster = 3,
+      Npc = 14,
+      Prop = 10,
+      SummonUnit = 11,
     }
     private EntityOneofCaseOneofCase entityOneofCaseCase_ = EntityOneofCaseOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -259,15 +259,15 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Motion, other.Motion)) return false;
-      if (GroupId != other.GroupId) return false;
-      if (InstId != other.InstId) return false;
-      if (EntityId != other.EntityId) return false;
       if (!object.Equals(Actor, other.Actor)) return false;
       if (!object.Equals(NpcMonster, other.NpcMonster)) return false;
       if (!object.Equals(Npc, other.Npc)) return false;
       if (!object.Equals(Prop, other.Prop)) return false;
       if (!object.Equals(SummonUnit, other.SummonUnit)) return false;
+      if (InstId != other.InstId) return false;
+      if (EntityId != other.EntityId) return false;
+      if (!object.Equals(Motion, other.Motion)) return false;
+      if (GroupId != other.GroupId) return false;
       if (EntityOneofCaseCase != other.EntityOneofCaseCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -276,15 +276,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (motion_ != null) hash ^= Motion.GetHashCode();
-      if (GroupId != 0) hash ^= GroupId.GetHashCode();
-      if (InstId != 0) hash ^= InstId.GetHashCode();
-      if (EntityId != 0) hash ^= EntityId.GetHashCode();
       if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Actor) hash ^= Actor.GetHashCode();
       if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.NpcMonster) hash ^= NpcMonster.GetHashCode();
       if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Npc) hash ^= Npc.GetHashCode();
       if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Prop) hash ^= Prop.GetHashCode();
       if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.SummonUnit) hash ^= SummonUnit.GetHashCode();
+      if (InstId != 0) hash ^= InstId.GetHashCode();
+      if (EntityId != 0) hash ^= EntityId.GetHashCode();
+      if (motion_ != null) hash ^= Motion.GetHashCode();
+      if (GroupId != 0) hash ^= GroupId.GetHashCode();
       hash ^= (int) entityOneofCaseCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -304,41 +304,41 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Npc) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Npc);
-      }
-      if (motion_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Motion);
-      }
-      if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.SummonUnit) {
-        output.WriteRawTag(34);
-        output.WriteMessage(SummonUnit);
-      }
-      if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Prop) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Prop);
-      }
       if (InstId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(8);
         output.WriteUInt32(InstId);
       }
-      if (GroupId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(GroupId);
-      }
-      if (EntityId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(EntityId);
-      }
       if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.NpcMonster) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(26);
         output.WriteMessage(NpcMonster);
       }
+      if (EntityId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(EntityId);
+      }
       if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Actor) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(66);
         output.WriteMessage(Actor);
+      }
+      if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Prop) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Prop);
+      }
+      if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.SummonUnit) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SummonUnit);
+      }
+      if (motion_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Motion);
+      }
+      if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Npc) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Npc);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -350,41 +350,41 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Npc) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Npc);
-      }
-      if (motion_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Motion);
-      }
-      if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.SummonUnit) {
-        output.WriteRawTag(34);
-        output.WriteMessage(SummonUnit);
-      }
-      if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Prop) {
-        output.WriteRawTag(42);
-        output.WriteMessage(Prop);
-      }
       if (InstId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(8);
         output.WriteUInt32(InstId);
       }
-      if (GroupId != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(GroupId);
-      }
-      if (EntityId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(EntityId);
-      }
       if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.NpcMonster) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(26);
         output.WriteMessage(NpcMonster);
       }
+      if (EntityId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(EntityId);
+      }
       if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Actor) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(66);
         output.WriteMessage(Actor);
+      }
+      if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Prop) {
+        output.WriteRawTag(82);
+        output.WriteMessage(Prop);
+      }
+      if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.SummonUnit) {
+        output.WriteRawTag(90);
+        output.WriteMessage(SummonUnit);
+      }
+      if (motion_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Motion);
+      }
+      if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Npc) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Npc);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -396,18 +396,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (motion_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Motion);
-      }
-      if (GroupId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
-      }
-      if (InstId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(InstId);
-      }
-      if (EntityId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EntityId);
-      }
       if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Actor) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Actor);
       }
@@ -423,6 +411,18 @@ namespace EggLink.DanhengServer.Proto {
       if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.SummonUnit) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SummonUnit);
       }
+      if (InstId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(InstId);
+      }
+      if (EntityId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EntityId);
+      }
+      if (motion_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Motion);
+      }
+      if (GroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -435,6 +435,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.InstId != 0) {
+        InstId = other.InstId;
+      }
+      if (other.EntityId != 0) {
+        EntityId = other.EntityId;
+      }
       if (other.motion_ != null) {
         if (motion_ == null) {
           Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
@@ -443,12 +449,6 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
-      }
-      if (other.InstId != 0) {
-        InstId = other.InstId;
-      }
-      if (other.EntityId != 0) {
-        EntityId = other.EntityId;
       }
       switch (other.EntityOneofCaseCase) {
         case EntityOneofCaseOneofCase.Actor:
@@ -498,53 +498,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            global::EggLink.DanhengServer.Proto.SceneNpcInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneNpcInfo();
-            if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Npc) {
-              subBuilder.MergeFrom(Npc);
-            }
-            input.ReadMessage(subBuilder);
-            Npc = subBuilder;
-            break;
-          }
-          case 26: {
-            if (motion_ == null) {
-              Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
-            }
-            input.ReadMessage(Motion);
-            break;
-          }
-          case 34: {
-            global::EggLink.DanhengServer.Proto.SceneSummonUnitInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneSummonUnitInfo();
-            if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.SummonUnit) {
-              subBuilder.MergeFrom(SummonUnit);
-            }
-            input.ReadMessage(subBuilder);
-            SummonUnit = subBuilder;
-            break;
-          }
-          case 42: {
-            global::EggLink.DanhengServer.Proto.ScenePropInfo subBuilder = new global::EggLink.DanhengServer.Proto.ScenePropInfo();
-            if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Prop) {
-              subBuilder.MergeFrom(Prop);
-            }
-            input.ReadMessage(subBuilder);
-            Prop = subBuilder;
-            break;
-          }
-          case 48: {
+          case 8: {
             InstId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            GroupId = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            EntityId = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 26: {
             global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfo();
             if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.NpcMonster) {
               subBuilder.MergeFrom(NpcMonster);
@@ -553,13 +511,55 @@ namespace EggLink.DanhengServer.Proto {
             NpcMonster = subBuilder;
             break;
           }
-          case 122: {
+          case 40: {
+            EntityId = input.ReadUInt32();
+            break;
+          }
+          case 66: {
             global::EggLink.DanhengServer.Proto.SceneActorInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneActorInfo();
             if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Actor) {
               subBuilder.MergeFrom(Actor);
             }
             input.ReadMessage(subBuilder);
             Actor = subBuilder;
+            break;
+          }
+          case 82: {
+            global::EggLink.DanhengServer.Proto.ScenePropInfo subBuilder = new global::EggLink.DanhengServer.Proto.ScenePropInfo();
+            if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Prop) {
+              subBuilder.MergeFrom(Prop);
+            }
+            input.ReadMessage(subBuilder);
+            Prop = subBuilder;
+            break;
+          }
+          case 90: {
+            global::EggLink.DanhengServer.Proto.SceneSummonUnitInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneSummonUnitInfo();
+            if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.SummonUnit) {
+              subBuilder.MergeFrom(SummonUnit);
+            }
+            input.ReadMessage(subBuilder);
+            SummonUnit = subBuilder;
+            break;
+          }
+          case 98: {
+            if (motion_ == null) {
+              Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
+            }
+            input.ReadMessage(Motion);
+            break;
+          }
+          case 114: {
+            global::EggLink.DanhengServer.Proto.SceneNpcInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneNpcInfo();
+            if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Npc) {
+              subBuilder.MergeFrom(Npc);
+            }
+            input.ReadMessage(subBuilder);
+            Npc = subBuilder;
+            break;
+          }
+          case 120: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }
@@ -577,53 +577,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
-            global::EggLink.DanhengServer.Proto.SceneNpcInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneNpcInfo();
-            if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Npc) {
-              subBuilder.MergeFrom(Npc);
-            }
-            input.ReadMessage(subBuilder);
-            Npc = subBuilder;
-            break;
-          }
-          case 26: {
-            if (motion_ == null) {
-              Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
-            }
-            input.ReadMessage(Motion);
-            break;
-          }
-          case 34: {
-            global::EggLink.DanhengServer.Proto.SceneSummonUnitInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneSummonUnitInfo();
-            if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.SummonUnit) {
-              subBuilder.MergeFrom(SummonUnit);
-            }
-            input.ReadMessage(subBuilder);
-            SummonUnit = subBuilder;
-            break;
-          }
-          case 42: {
-            global::EggLink.DanhengServer.Proto.ScenePropInfo subBuilder = new global::EggLink.DanhengServer.Proto.ScenePropInfo();
-            if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Prop) {
-              subBuilder.MergeFrom(Prop);
-            }
-            input.ReadMessage(subBuilder);
-            Prop = subBuilder;
-            break;
-          }
-          case 48: {
+          case 8: {
             InstId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            GroupId = input.ReadUInt32();
-            break;
-          }
-          case 80: {
-            EntityId = input.ReadUInt32();
-            break;
-          }
-          case 90: {
+          case 26: {
             global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfo();
             if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.NpcMonster) {
               subBuilder.MergeFrom(NpcMonster);
@@ -632,13 +590,55 @@ namespace EggLink.DanhengServer.Proto {
             NpcMonster = subBuilder;
             break;
           }
-          case 122: {
+          case 40: {
+            EntityId = input.ReadUInt32();
+            break;
+          }
+          case 66: {
             global::EggLink.DanhengServer.Proto.SceneActorInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneActorInfo();
             if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Actor) {
               subBuilder.MergeFrom(Actor);
             }
             input.ReadMessage(subBuilder);
             Actor = subBuilder;
+            break;
+          }
+          case 82: {
+            global::EggLink.DanhengServer.Proto.ScenePropInfo subBuilder = new global::EggLink.DanhengServer.Proto.ScenePropInfo();
+            if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Prop) {
+              subBuilder.MergeFrom(Prop);
+            }
+            input.ReadMessage(subBuilder);
+            Prop = subBuilder;
+            break;
+          }
+          case 90: {
+            global::EggLink.DanhengServer.Proto.SceneSummonUnitInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneSummonUnitInfo();
+            if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.SummonUnit) {
+              subBuilder.MergeFrom(SummonUnit);
+            }
+            input.ReadMessage(subBuilder);
+            SummonUnit = subBuilder;
+            break;
+          }
+          case 98: {
+            if (motion_ == null) {
+              Motion = new global::EggLink.DanhengServer.Proto.MotionInfo();
+            }
+            input.ReadMessage(Motion);
+            break;
+          }
+          case 114: {
+            global::EggLink.DanhengServer.Proto.SceneNpcInfo subBuilder = new global::EggLink.DanhengServer.Proto.SceneNpcInfo();
+            if (entityOneofCaseCase_ == EntityOneofCaseOneofCase.Npc) {
+              subBuilder.MergeFrom(Npc);
+            }
+            input.ReadMessage(subBuilder);
+            Npc = subBuilder;
+            break;
+          }
+          case 120: {
+            GroupId = input.ReadUInt32();
             break;
           }
         }

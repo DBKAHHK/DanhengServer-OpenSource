@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpNYXJibGVHYW1lTGF1bmNoSW5mby5wcm90bxoWTWFyYmxlU2VhbFZlY3Rv",
-            "ci5wcm90byJYChRNYXJibGVHYW1lTGF1bmNoSW5mbxIPCgdpdGVtX2lkGAkg",
-            "ASgNEi8KFHNlYWxfdGFyZ2V0X3JvdGF0aW9uGAggASgLMhEuTWFyYmxlU2Vh",
-            "bFZlY3RvckIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "ci5wcm90byJYChRNYXJibGVHYW1lTGF1bmNoSW5mbxIvChRzZWFsX3Rhcmdl",
+            "dF9yb3RhdGlvbhgDIAEoCzIRLk1hcmJsZVNlYWxWZWN0b3ISDwoHaXRlbV9p",
+            "ZBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleSealVectorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGameLaunchInfo), global::EggLink.DanhengServer.Proto.MarbleGameLaunchInfo.Parser, new[]{ "ItemId", "SealTargetRotation" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGameLaunchInfo), global::EggLink.DanhengServer.Proto.MarbleGameLaunchInfo.Parser, new[]{ "SealTargetRotation", "ItemId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarbleGameLaunchInfo(MarbleGameLaunchInfo other) : this() {
-      itemId_ = other.itemId_;
       sealTargetRotation_ = other.sealTargetRotation_ != null ? other.sealTargetRotation_.Clone() : null;
+      itemId_ = other.itemId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,6 +83,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarbleGameLaunchInfo Clone() {
       return new MarbleGameLaunchInfo(this);
+    }
+
+    /// <summary>Field number for the "seal_target_rotation" field.</summary>
+    public const int SealTargetRotationFieldNumber = 3;
+    private global::EggLink.DanhengServer.Proto.MarbleSealVector sealTargetRotation_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MarbleSealVector SealTargetRotation {
+      get { return sealTargetRotation_; }
+      set {
+        sealTargetRotation_ = value;
+      }
     }
 
     /// <summary>Field number for the "item_id" field.</summary>
@@ -94,18 +106,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return itemId_; }
       set {
         itemId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "seal_target_rotation" field.</summary>
-    public const int SealTargetRotationFieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.MarbleSealVector sealTargetRotation_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MarbleSealVector SealTargetRotation {
-      get { return sealTargetRotation_; }
-      set {
-        sealTargetRotation_ = value;
       }
     }
 
@@ -124,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ItemId != other.ItemId) return false;
       if (!object.Equals(SealTargetRotation, other.SealTargetRotation)) return false;
+      if (ItemId != other.ItemId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ItemId != 0) hash ^= ItemId.GetHashCode();
       if (sealTargetRotation_ != null) hash ^= SealTargetRotation.GetHashCode();
+      if (ItemId != 0) hash ^= ItemId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -154,7 +154,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (sealTargetRotation_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteMessage(SealTargetRotation);
       }
       if (ItemId != 0) {
@@ -172,7 +172,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (sealTargetRotation_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteMessage(SealTargetRotation);
       }
       if (ItemId != 0) {
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ItemId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
-      }
       if (sealTargetRotation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SealTargetRotation);
+      }
+      if (ItemId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -207,14 +207,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ItemId != 0) {
-        ItemId = other.ItemId;
-      }
       if (other.sealTargetRotation_ != null) {
         if (sealTargetRotation_ == null) {
           SealTargetRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
         }
         SealTargetRotation.MergeFrom(other.SealTargetRotation);
+      }
+      if (other.ItemId != 0) {
+        ItemId = other.ItemId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 26: {
             if (sealTargetRotation_ == null) {
               SealTargetRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }
@@ -257,7 +257,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 26: {
             if (sealTargetRotation_ == null) {
               SealTargetRotation = new global::EggLink.DanhengServer.Proto.MarbleSealVector();
             }

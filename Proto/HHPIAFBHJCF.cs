@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static HHPIAFBHJCFReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFISFBJQUZCSEpDRi5wcm90byIxCgtISFBJQUZCSEpDRhIRCglvcHRpb25f",
-            "aWQYBSABKA0SDwoHY29uZmlybRgLIAEoCEIeqgIbRWdnTGluay5EYW5oZW5n",
+            "ChFISFBJQUZCSEpDRi5wcm90byIxCgtISFBJQUZCSEpDRhIPCgdjb25maXJt",
+            "GAkgASgIEhEKCW9wdGlvbl9pZBgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HHPIAFBHJCF), global::EggLink.DanhengServer.Proto.HHPIAFBHJCF.Parser, new[]{ "OptionId", "Confirm" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HHPIAFBHJCF), global::EggLink.DanhengServer.Proto.HHPIAFBHJCF.Parser, new[]{ "Confirm", "OptionId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HHPIAFBHJCF(HHPIAFBHJCF other) : this() {
-      optionId_ = other.optionId_;
       confirm_ = other.confirm_;
+      optionId_ = other.optionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new HHPIAFBHJCF(this);
     }
 
-    /// <summary>Field number for the "option_id" field.</summary>
-    public const int OptionIdFieldNumber = 5;
-    private uint optionId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OptionId {
-      get { return optionId_; }
-      set {
-        optionId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "confirm" field.</summary>
-    public const int ConfirmFieldNumber = 11;
+    public const int ConfirmFieldNumber = 9;
     private bool confirm_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return confirm_; }
       set {
         confirm_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "option_id" field.</summary>
+    public const int OptionIdFieldNumber = 3;
+    private uint optionId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint OptionId {
+      get { return optionId_; }
+      set {
+        optionId_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (OptionId != other.OptionId) return false;
       if (Confirm != other.Confirm) return false;
+      if (OptionId != other.OptionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (OptionId != 0) hash ^= OptionId.GetHashCode();
       if (Confirm != false) hash ^= Confirm.GetHashCode();
+      if (OptionId != 0) hash ^= OptionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (OptionId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(OptionId);
       }
       if (Confirm != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteBool(Confirm);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (OptionId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(OptionId);
       }
       if (Confirm != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteBool(Confirm);
       }
       if (_unknownFields != null) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (OptionId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OptionId);
-      }
       if (Confirm != false) {
         size += 1 + 1;
+      }
+      if (OptionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OptionId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.OptionId != 0) {
-        OptionId = other.OptionId;
-      }
       if (other.Confirm != false) {
         Confirm = other.Confirm;
+      }
+      if (other.OptionId != 0) {
+        OptionId = other.OptionId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 24: {
             OptionId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 72: {
             Confirm = input.ReadBool();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 24: {
             OptionId = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 72: {
             Confirm = input.ReadBool();
             break;
           }

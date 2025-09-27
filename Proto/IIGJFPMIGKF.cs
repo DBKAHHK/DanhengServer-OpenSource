@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFJSUdKRlBNSUdLRi5wcm90bxoRT0lMUElBQ0VOTkgucHJvdG8ihwEKC0lJ",
-            "R0pGUE1JR0tGEhgKEHBlYWtfdGFyZ2V0X2xpc3QYAiADKA0SDwoHaXNfaGFy",
-            "ZBgDIAEoCBIhCgthdmF0YXJfbGlzdBgKIAMoCzIMLk9JTFBJQUNFTk5IEg8K",
-            "B2J1ZmZfaWQYCCABKA0SGQoRaXNfdWx0cmFfYm9zc193aW4YASABKAhCHqoC",
+            "R0pGUE1JR0tGEhgKEHBlYWtfdGFyZ2V0X2xpc3QYDCADKA0SDwoHYnVmZl9p",
+            "ZBgGIAEoDRIZChFpc191bHRyYV9ib3NzX3dpbhgCIAEoCBIPCgdpc19oYXJk",
+            "GAcgASgIEiEKC2F2YXRhcl9saXN0GA0gAygLMgwuT0lMUElBQ0VOTkhCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OILPIACENNHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IIGJFPMIGKF), global::EggLink.DanhengServer.Proto.IIGJFPMIGKF.Parser, new[]{ "PeakTargetList", "IsHard", "AvatarList", "BuffId", "IsUltraBossWin" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IIGJFPMIGKF), global::EggLink.DanhengServer.Proto.IIGJFPMIGKF.Parser, new[]{ "PeakTargetList", "BuffId", "IsUltraBossWin", "IsHard", "AvatarList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +75,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IIGJFPMIGKF(IIGJFPMIGKF other) : this() {
       peakTargetList_ = other.peakTargetList_.Clone();
-      isHard_ = other.isHard_;
-      avatarList_ = other.avatarList_.Clone();
       buffId_ = other.buffId_;
       isUltraBossWin_ = other.isUltraBossWin_;
+      isHard_ = other.isHard_;
+      avatarList_ = other.avatarList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,9 +89,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "peak_target_list" field.</summary>
-    public const int PeakTargetListFieldNumber = 2;
+    public const int PeakTargetListFieldNumber = 12;
     private static readonly pb::FieldCodec<uint> _repeated_peakTargetList_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(98);
     private readonly pbc::RepeatedField<uint> peakTargetList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,31 +99,8 @@ namespace EggLink.DanhengServer.Proto {
       get { return peakTargetList_; }
     }
 
-    /// <summary>Field number for the "is_hard" field.</summary>
-    public const int IsHardFieldNumber = 3;
-    private bool isHard_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsHard {
-      get { return isHard_; }
-      set {
-        isHard_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "avatar_list" field.</summary>
-    public const int AvatarListFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OILPIACENNH> _repeated_avatarList_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.OILPIACENNH.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH> AvatarList {
-      get { return avatarList_; }
-    }
-
     /// <summary>Field number for the "buff_id" field.</summary>
-    public const int BuffIdFieldNumber = 8;
+    public const int BuffIdFieldNumber = 6;
     private uint buffId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_ultra_boss_win" field.</summary>
-    public const int IsUltraBossWinFieldNumber = 1;
+    public const int IsUltraBossWinFieldNumber = 2;
     private bool isUltraBossWin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -144,6 +121,29 @@ namespace EggLink.DanhengServer.Proto {
       set {
         isUltraBossWin_ = value;
       }
+    }
+
+    /// <summary>Field number for the "is_hard" field.</summary>
+    public const int IsHardFieldNumber = 7;
+    private bool isHard_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsHard {
+      get { return isHard_; }
+      set {
+        isHard_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avatar_list" field.</summary>
+    public const int AvatarListFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OILPIACENNH> _repeated_avatarList_codec
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.OILPIACENNH.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH> AvatarList {
+      get { return avatarList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -162,10 +162,10 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!peakTargetList_.Equals(other.peakTargetList_)) return false;
-      if (IsHard != other.IsHard) return false;
-      if(!avatarList_.Equals(other.avatarList_)) return false;
       if (BuffId != other.BuffId) return false;
       if (IsUltraBossWin != other.IsUltraBossWin) return false;
+      if (IsHard != other.IsHard) return false;
+      if(!avatarList_.Equals(other.avatarList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -174,10 +174,10 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= peakTargetList_.GetHashCode();
-      if (IsHard != false) hash ^= IsHard.GetHashCode();
-      hash ^= avatarList_.GetHashCode();
       if (BuffId != 0) hash ^= BuffId.GetHashCode();
       if (IsUltraBossWin != false) hash ^= IsUltraBossWin.GetHashCode();
+      if (IsHard != false) hash ^= IsHard.GetHashCode();
+      hash ^= avatarList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -197,18 +197,18 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsUltraBossWin != false) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteBool(IsUltraBossWin);
       }
-      peakTargetList_.WriteTo(output, _repeated_peakTargetList_codec);
-      if (IsHard != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(IsHard);
-      }
       if (BuffId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(48);
         output.WriteUInt32(BuffId);
       }
+      if (IsHard != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsHard);
+      }
+      peakTargetList_.WriteTo(output, _repeated_peakTargetList_codec);
       avatarList_.WriteTo(output, _repeated_avatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -221,18 +221,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsUltraBossWin != false) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteBool(IsUltraBossWin);
       }
-      peakTargetList_.WriteTo(ref output, _repeated_peakTargetList_codec);
-      if (IsHard != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(IsHard);
-      }
       if (BuffId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(48);
         output.WriteUInt32(BuffId);
       }
+      if (IsHard != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsHard);
+      }
+      peakTargetList_.WriteTo(ref output, _repeated_peakTargetList_codec);
       avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -245,16 +245,16 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += peakTargetList_.CalculateSize(_repeated_peakTargetList_codec);
-      if (IsHard != false) {
-        size += 1 + 1;
-      }
-      size += avatarList_.CalculateSize(_repeated_avatarList_codec);
       if (BuffId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffId);
       }
       if (IsUltraBossWin != false) {
         size += 1 + 1;
       }
+      if (IsHard != false) {
+        size += 1 + 1;
+      }
+      size += avatarList_.CalculateSize(_repeated_avatarList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -268,16 +268,16 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       peakTargetList_.Add(other.peakTargetList_);
-      if (other.IsHard != false) {
-        IsHard = other.IsHard;
-      }
-      avatarList_.Add(other.avatarList_);
       if (other.BuffId != 0) {
         BuffId = other.BuffId;
       }
       if (other.IsUltraBossWin != false) {
         IsUltraBossWin = other.IsUltraBossWin;
       }
+      if (other.IsHard != false) {
+        IsHard = other.IsHard;
+      }
+      avatarList_.Add(other.avatarList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -293,24 +293,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 16: {
             IsUltraBossWin = input.ReadBool();
             break;
           }
-          case 18:
-          case 16: {
-            peakTargetList_.AddEntriesFrom(input, _repeated_peakTargetList_codec);
-            break;
-          }
-          case 24: {
-            IsHard = input.ReadBool();
-            break;
-          }
-          case 64: {
+          case 48: {
             BuffId = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 56: {
+            IsHard = input.ReadBool();
+            break;
+          }
+          case 98:
+          case 96: {
+            peakTargetList_.AddEntriesFrom(input, _repeated_peakTargetList_codec);
+            break;
+          }
+          case 106: {
             avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
             break;
           }
@@ -329,24 +329,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 16: {
             IsUltraBossWin = input.ReadBool();
             break;
           }
-          case 18:
-          case 16: {
-            peakTargetList_.AddEntriesFrom(ref input, _repeated_peakTargetList_codec);
-            break;
-          }
-          case 24: {
-            IsHard = input.ReadBool();
-            break;
-          }
-          case 64: {
+          case 48: {
             BuffId = input.ReadUInt32();
             break;
           }
-          case 82: {
+          case 56: {
+            IsHard = input.ReadBool();
+            break;
+          }
+          case 98:
+          case 96: {
+            peakTargetList_.AddEntriesFrom(ref input, _repeated_peakTargetList_codec);
+            break;
+          }
+          case 106: {
             avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
             break;
           }

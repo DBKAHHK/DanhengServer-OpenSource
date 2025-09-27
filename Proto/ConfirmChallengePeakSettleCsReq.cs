@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVDb25maXJtQ2hhbGxlbmdlUGVha1NldHRsZUNzUmVxLnByb3RvIksKH0Nv",
-            "bmZpcm1DaGFsbGVuZ2VQZWFrU2V0dGxlQ3NSZXESFQoNcGVha19sZXZlbF9p",
-            "ZBgJIAEoDRIRCglzYXZlX3BlYWsYBCABKAhCHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "bmZpcm1DaGFsbGVuZ2VQZWFrU2V0dGxlQ3NSZXESEQoJc2F2ZV9wZWFrGAsg",
+            "ASgIEhUKDXBlYWtfbGV2ZWxfaWQYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ConfirmChallengePeakSettleCsReq), global::EggLink.DanhengServer.Proto.ConfirmChallengePeakSettleCsReq.Parser, new[]{ "PeakLevelId", "SavePeak" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ConfirmChallengePeakSettleCsReq), global::EggLink.DanhengServer.Proto.ConfirmChallengePeakSettleCsReq.Parser, new[]{ "SavePeak", "PeakLevelId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfirmChallengePeakSettleCsReq(ConfirmChallengePeakSettleCsReq other) : this() {
-      peakLevelId_ = other.peakLevelId_;
       savePeak_ = other.savePeak_;
+      peakLevelId_ = other.peakLevelId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ConfirmChallengePeakSettleCsReq(this);
     }
 
-    /// <summary>Field number for the "peak_level_id" field.</summary>
-    public const int PeakLevelIdFieldNumber = 9;
-    private uint peakLevelId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PeakLevelId {
-      get { return peakLevelId_; }
-      set {
-        peakLevelId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "save_peak" field.</summary>
-    public const int SavePeakFieldNumber = 4;
+    public const int SavePeakFieldNumber = 11;
     private bool savePeak_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return savePeak_; }
       set {
         savePeak_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "peak_level_id" field.</summary>
+    public const int PeakLevelIdFieldNumber = 6;
+    private uint peakLevelId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PeakLevelId {
+      get { return peakLevelId_; }
+      set {
+        peakLevelId_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PeakLevelId != other.PeakLevelId) return false;
       if (SavePeak != other.SavePeak) return false;
+      if (PeakLevelId != other.PeakLevelId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (PeakLevelId != 0) hash ^= PeakLevelId.GetHashCode();
       if (SavePeak != false) hash ^= SavePeak.GetHashCode();
+      if (PeakLevelId != 0) hash ^= PeakLevelId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SavePeak != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(SavePeak);
-      }
       if (PeakLevelId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt32(PeakLevelId);
+      }
+      if (SavePeak != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(SavePeak);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SavePeak != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(SavePeak);
-      }
       if (PeakLevelId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(48);
         output.WriteUInt32(PeakLevelId);
+      }
+      if (SavePeak != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(SavePeak);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (PeakLevelId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakLevelId);
-      }
       if (SavePeak != false) {
         size += 1 + 1;
+      }
+      if (PeakLevelId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakLevelId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.PeakLevelId != 0) {
-        PeakLevelId = other.PeakLevelId;
-      }
       if (other.SavePeak != false) {
         SavePeak = other.SavePeak;
+      }
+      if (other.PeakLevelId != 0) {
+        PeakLevelId = other.PeakLevelId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            SavePeak = input.ReadBool();
+          case 48: {
+            PeakLevelId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            PeakLevelId = input.ReadUInt32();
+          case 88: {
+            SavePeak = input.ReadBool();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            SavePeak = input.ReadBool();
+          case 48: {
+            PeakLevelId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            PeakLevelId = input.ReadUInt32();
+          case 88: {
+            SavePeak = input.ReadBool();
             break;
           }
         }

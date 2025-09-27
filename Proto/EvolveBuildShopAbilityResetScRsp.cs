@@ -24,16 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static EvolveBuildShopAbilityResetScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiZFdm9sdmVCdWlsZFNob3BBYmlsaXR5UmVzZXRTY1JzcC5wcm90bxoRS0xO",
-            "SVBOSkNOTUoucHJvdG8aEUlNR0pJRUJGR1BGLnByb3RvIo0BCiBFdm9sdmVC",
-            "dWlsZFNob3BBYmlsaXR5UmVzZXRTY1JzcBIhCgtNRENKRk9BRkRKSxgGIAEo",
-            "DjIMLktMTklQTkpDTk1KEg8KB3JldGNvZGUYAiABKA0SIQoLQ09LRE5QRUVN",
-            "QUcYCCADKAsyDC5JTUdKSUVCRkdQRhISCgppdGVtX3ZhbHVlGAUgASgNQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiZFdm9sdmVCdWlsZFNob3BBYmlsaXR5UmVzZXRTY1JzcC5wcm90bxoRSU1H",
+            "SklFQkZHUEYucHJvdG8aEUtMTklQTkpDTk1KLnByb3RvIp0BCiBFdm9sdmVC",
+            "dWlsZFNob3BBYmlsaXR5UmVzZXRTY1JzcBIxChtncmlkX2ZpZ2h0X3N0YXRp",
+            "Y19nYW1lX2luZm8YDiABKA4yDC5LTE5JUE5KQ05NShIhCgtDT0tETlBFRU1B",
+            "RxgIIAMoCzIMLklNR0pJRUJGR1BGEhIKCml0ZW1fdmFsdWUYCSABKA0SDwoH",
+            "cmV0Y29kZRgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KLNIPNJCNMJReflection.Descriptor, global::EggLink.DanhengServer.Proto.IMGJIEBFGPFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IMGJIEBFGPFReflection.Descriptor, global::EggLink.DanhengServer.Proto.KLNIPNJCNMJReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityResetScRsp), global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityResetScRsp.Parser, new[]{ "MDCJFOAFDJK", "Retcode", "COKDNPEEMAG", "ItemValue" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityResetScRsp), global::EggLink.DanhengServer.Proto.EvolveBuildShopAbilityResetScRsp.Parser, new[]{ "GridFightStaticGameInfo", "COKDNPEEMAG", "ItemValue", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +76,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EvolveBuildShopAbilityResetScRsp(EvolveBuildShopAbilityResetScRsp other) : this() {
-      mDCJFOAFDJK_ = other.mDCJFOAFDJK_;
-      retcode_ = other.retcode_;
+      gridFightStaticGameInfo_ = other.gridFightStaticGameInfo_;
       cOKDNPEEMAG_ = other.cOKDNPEEMAG_.Clone();
       itemValue_ = other.itemValue_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,27 +89,15 @@ namespace EggLink.DanhengServer.Proto {
       return new EvolveBuildShopAbilityResetScRsp(this);
     }
 
-    /// <summary>Field number for the "MDCJFOAFDJK" field.</summary>
-    public const int MDCJFOAFDJKFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ mDCJFOAFDJK_ = global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ.EvolveBuildSeasonNone;
+    /// <summary>Field number for the "grid_fight_static_game_info" field.</summary>
+    public const int GridFightStaticGameInfoFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ gridFightStaticGameInfo_ = global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ.EvolveBuildSeasonNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ MDCJFOAFDJK {
-      get { return mDCJFOAFDJK_; }
+    public global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ GridFightStaticGameInfo {
+      get { return gridFightStaticGameInfo_; }
       set {
-        mDCJFOAFDJK_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 2;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
+        gridFightStaticGameInfo_ = value;
       }
     }
 
@@ -124,7 +113,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_value" field.</summary>
-    public const int ItemValueFieldNumber = 5;
+    public const int ItemValueFieldNumber = 9;
     private uint itemValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -132,6 +121,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return itemValue_; }
       set {
         itemValue_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 4;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -150,10 +151,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MDCJFOAFDJK != other.MDCJFOAFDJK) return false;
-      if (Retcode != other.Retcode) return false;
+      if (GridFightStaticGameInfo != other.GridFightStaticGameInfo) return false;
       if(!cOKDNPEEMAG_.Equals(other.cOKDNPEEMAG_)) return false;
       if (ItemValue != other.ItemValue) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +162,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MDCJFOAFDJK != global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ.EvolveBuildSeasonNone) hash ^= MDCJFOAFDJK.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (GridFightStaticGameInfo != global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ.EvolveBuildSeasonNone) hash ^= GridFightStaticGameInfo.GetHashCode();
       hash ^= cOKDNPEEMAG_.GetHashCode();
       if (ItemValue != 0) hash ^= ItemValue.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,18 +185,18 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
+      cOKDNPEEMAG_.WriteTo(output, _repeated_cOKDNPEEMAG_codec);
       if (ItemValue != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(72);
         output.WriteUInt32(ItemValue);
       }
-      if (MDCJFOAFDJK != global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ.EvolveBuildSeasonNone) {
-        output.WriteRawTag(48);
-        output.WriteEnum((int) MDCJFOAFDJK);
+      if (GridFightStaticGameInfo != global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ.EvolveBuildSeasonNone) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) GridFightStaticGameInfo);
       }
-      cOKDNPEEMAG_.WriteTo(output, _repeated_cOKDNPEEMAG_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -207,18 +208,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(Retcode);
       }
+      cOKDNPEEMAG_.WriteTo(ref output, _repeated_cOKDNPEEMAG_codec);
       if (ItemValue != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(72);
         output.WriteUInt32(ItemValue);
       }
-      if (MDCJFOAFDJK != global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ.EvolveBuildSeasonNone) {
-        output.WriteRawTag(48);
-        output.WriteEnum((int) MDCJFOAFDJK);
+      if (GridFightStaticGameInfo != global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ.EvolveBuildSeasonNone) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) GridFightStaticGameInfo);
       }
-      cOKDNPEEMAG_.WriteTo(ref output, _repeated_cOKDNPEEMAG_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -229,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MDCJFOAFDJK != global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ.EvolveBuildSeasonNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MDCJFOAFDJK);
-      }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      if (GridFightStaticGameInfo != global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ.EvolveBuildSeasonNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GridFightStaticGameInfo);
       }
       size += cOKDNPEEMAG_.CalculateSize(_repeated_cOKDNPEEMAG_codec);
       if (ItemValue != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemValue);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -251,15 +252,15 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MDCJFOAFDJK != global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ.EvolveBuildSeasonNone) {
-        MDCJFOAFDJK = other.MDCJFOAFDJK;
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
+      if (other.GridFightStaticGameInfo != global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ.EvolveBuildSeasonNone) {
+        GridFightStaticGameInfo = other.GridFightStaticGameInfo;
       }
       cOKDNPEEMAG_.Add(other.cOKDNPEEMAG_);
       if (other.ItemValue != 0) {
         ItemValue = other.ItemValue;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -276,20 +277,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 32: {
             Retcode = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            ItemValue = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            MDCJFOAFDJK = (global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ) input.ReadEnum();
             break;
           }
           case 66: {
             cOKDNPEEMAG_.AddEntriesFrom(input, _repeated_cOKDNPEEMAG_codec);
+            break;
+          }
+          case 72: {
+            ItemValue = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            GridFightStaticGameInfo = (global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ) input.ReadEnum();
             break;
           }
         }
@@ -307,20 +308,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 32: {
             Retcode = input.ReadUInt32();
-            break;
-          }
-          case 40: {
-            ItemValue = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            MDCJFOAFDJK = (global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ) input.ReadEnum();
             break;
           }
           case 66: {
             cOKDNPEEMAG_.AddEntriesFrom(ref input, _repeated_cOKDNPEEMAG_codec);
+            break;
+          }
+          case 72: {
+            ItemValue = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            GridFightStaticGameInfo = (global::EggLink.DanhengServer.Proto.KLNIPNJCNMJ) input.ReadEnum();
             break;
           }
         }

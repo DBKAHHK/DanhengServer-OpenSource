@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static ChessRogueStartScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpDaGVzc1JvZ3VlU3RhcnRTY1JzcC5wcm90bxoUQ2hlc3NSb2d1ZUluZm8u",
-            "cHJvdG8aGENoZXNzUm9ndWVHYW1lSW5mby5wcm90bxolQ2hlc3NSb2d1ZUxh",
-            "eWVySW5pdGlhbEV2ZW50SW5mby5wcm90byKrAQoUQ2hlc3NSb2d1ZVN0YXJ0",
-            "U2NSc3ASOgoQYm9hcmRfZXZlbnRfaW5mbxgIIAEoCzIgLkNoZXNzUm9ndWVM",
-            "YXllckluaXRpYWxFdmVudEluZm8SIQoEaW5mbxgKIAEoCzITLkNoZXNzUm9n",
-            "dWVHYW1lSW5mbxIjCgpzdGFnZV9pbmZvGAIgASgLMg8uQ2hlc3NSb2d1ZUlu",
-            "Zm8SDwoHcmV0Y29kZRgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "ChpDaGVzc1JvZ3VlU3RhcnRTY1JzcC5wcm90bxoYQ2hlc3NSb2d1ZUdhbWVJ",
+            "bmZvLnByb3RvGiVDaGVzc1JvZ3VlTGF5ZXJJbml0aWFsRXZlbnRJbmZvLnBy",
+            "b3RvGhRDaGVzc1JvZ3VlSW5mby5wcm90byKrAQoUQ2hlc3NSb2d1ZVN0YXJ0",
+            "U2NSc3ASDwoHcmV0Y29kZRgIIAEoDRIhCgRpbmZvGAwgASgLMhMuQ2hlc3NS",
+            "b2d1ZUdhbWVJbmZvEjoKEGJvYXJkX2V2ZW50X2luZm8YDyABKAsyIC5DaGVz",
+            "c1JvZ3VlTGF5ZXJJbml0aWFsRXZlbnRJbmZvEiMKCnN0YWdlX2luZm8YBCAB",
+            "KAsyDy5DaGVzc1JvZ3VlSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueLayerInitialEventInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueLayerInitialEventInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueStartScRsp), global::EggLink.DanhengServer.Proto.ChessRogueStartScRsp.Parser, new[]{ "BoardEventInfo", "Info", "StageInfo", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueStartScRsp), global::EggLink.DanhengServer.Proto.ChessRogueStartScRsp.Parser, new[]{ "Retcode", "Info", "BoardEventInfo", "StageInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,10 +77,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueStartScRsp(ChessRogueStartScRsp other) : this() {
-      boardEventInfo_ = other.boardEventInfo_ != null ? other.boardEventInfo_.Clone() : null;
-      info_ = other.info_ != null ? other.info_.Clone() : null;
-      stageInfo_ = other.stageInfo_ != null ? other.stageInfo_.Clone() : null;
       retcode_ = other.retcode_;
+      info_ = other.info_ != null ? other.info_.Clone() : null;
+      boardEventInfo_ = other.boardEventInfo_ != null ? other.boardEventInfo_.Clone() : null;
+      stageInfo_ = other.stageInfo_ != null ? other.stageInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,20 +90,20 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueStartScRsp(this);
     }
 
-    /// <summary>Field number for the "board_event_info" field.</summary>
-    public const int BoardEventInfoFieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.ChessRogueLayerInitialEventInfo boardEventInfo_;
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 8;
+    private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ChessRogueLayerInitialEventInfo BoardEventInfo {
-      get { return boardEventInfo_; }
+    public uint Retcode {
+      get { return retcode_; }
       set {
-        boardEventInfo_ = value;
+        retcode_ = value;
       }
     }
 
     /// <summary>Field number for the "info" field.</summary>
-    public const int InfoFieldNumber = 10;
+    public const int InfoFieldNumber = 12;
     private global::EggLink.DanhengServer.Proto.ChessRogueGameInfo info_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -114,8 +114,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "board_event_info" field.</summary>
+    public const int BoardEventInfoFieldNumber = 15;
+    private global::EggLink.DanhengServer.Proto.ChessRogueLayerInitialEventInfo boardEventInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ChessRogueLayerInitialEventInfo BoardEventInfo {
+      get { return boardEventInfo_; }
+      set {
+        boardEventInfo_ = value;
+      }
+    }
+
     /// <summary>Field number for the "stage_info" field.</summary>
-    public const int StageInfoFieldNumber = 2;
+    public const int StageInfoFieldNumber = 4;
     private global::EggLink.DanhengServer.Proto.ChessRogueInfo stageInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,18 +135,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return stageInfo_; }
       set {
         stageInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
       }
     }
 
@@ -153,10 +153,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(BoardEventInfo, other.BoardEventInfo)) return false;
-      if (!object.Equals(Info, other.Info)) return false;
-      if (!object.Equals(StageInfo, other.StageInfo)) return false;
       if (Retcode != other.Retcode) return false;
+      if (!object.Equals(Info, other.Info)) return false;
+      if (!object.Equals(BoardEventInfo, other.BoardEventInfo)) return false;
+      if (!object.Equals(StageInfo, other.StageInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -164,10 +164,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (boardEventInfo_ != null) hash ^= BoardEventInfo.GetHashCode();
-      if (info_ != null) hash ^= Info.GetHashCode();
-      if (stageInfo_ != null) hash ^= StageInfo.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (info_ != null) hash ^= Info.GetHashCode();
+      if (boardEventInfo_ != null) hash ^= BoardEventInfo.GetHashCode();
+      if (stageInfo_ != null) hash ^= StageInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -187,20 +187,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (stageInfo_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(34);
         output.WriteMessage(StageInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      if (boardEventInfo_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(BoardEventInfo);
-      }
       if (info_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(98);
         output.WriteMessage(Info);
+      }
+      if (boardEventInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(BoardEventInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -213,20 +213,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (stageInfo_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(34);
         output.WriteMessage(StageInfo);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(64);
         output.WriteUInt32(Retcode);
       }
-      if (boardEventInfo_ != null) {
-        output.WriteRawTag(66);
-        output.WriteMessage(BoardEventInfo);
-      }
       if (info_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(98);
         output.WriteMessage(Info);
+      }
+      if (boardEventInfo_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(BoardEventInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -238,17 +238,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (boardEventInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoardEventInfo);
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (info_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Info);
       }
+      if (boardEventInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoardEventInfo);
+      }
       if (stageInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StageInfo);
-      }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -262,11 +262,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.boardEventInfo_ != null) {
-        if (boardEventInfo_ == null) {
-          BoardEventInfo = new global::EggLink.DanhengServer.Proto.ChessRogueLayerInitialEventInfo();
-        }
-        BoardEventInfo.MergeFrom(other.BoardEventInfo);
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       if (other.info_ != null) {
         if (info_ == null) {
@@ -274,14 +271,17 @@ namespace EggLink.DanhengServer.Proto {
         }
         Info.MergeFrom(other.Info);
       }
+      if (other.boardEventInfo_ != null) {
+        if (boardEventInfo_ == null) {
+          BoardEventInfo = new global::EggLink.DanhengServer.Proto.ChessRogueLayerInitialEventInfo();
+        }
+        BoardEventInfo.MergeFrom(other.BoardEventInfo);
+      }
       if (other.stageInfo_ != null) {
         if (stageInfo_ == null) {
           StageInfo = new global::EggLink.DanhengServer.Proto.ChessRogueInfo();
         }
         StageInfo.MergeFrom(other.StageInfo);
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -298,29 +298,29 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 34: {
             if (stageInfo_ == null) {
               StageInfo = new global::EggLink.DanhengServer.Proto.ChessRogueInfo();
             }
             input.ReadMessage(StageInfo);
             break;
           }
-          case 40: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 66: {
-            if (boardEventInfo_ == null) {
-              BoardEventInfo = new global::EggLink.DanhengServer.Proto.ChessRogueLayerInitialEventInfo();
-            }
-            input.ReadMessage(BoardEventInfo);
-            break;
-          }
-          case 82: {
+          case 98: {
             if (info_ == null) {
               Info = new global::EggLink.DanhengServer.Proto.ChessRogueGameInfo();
             }
             input.ReadMessage(Info);
+            break;
+          }
+          case 122: {
+            if (boardEventInfo_ == null) {
+              BoardEventInfo = new global::EggLink.DanhengServer.Proto.ChessRogueLayerInitialEventInfo();
+            }
+            input.ReadMessage(BoardEventInfo);
             break;
           }
         }
@@ -338,29 +338,29 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 34: {
             if (stageInfo_ == null) {
               StageInfo = new global::EggLink.DanhengServer.Proto.ChessRogueInfo();
             }
             input.ReadMessage(StageInfo);
             break;
           }
-          case 40: {
+          case 64: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 66: {
-            if (boardEventInfo_ == null) {
-              BoardEventInfo = new global::EggLink.DanhengServer.Proto.ChessRogueLayerInitialEventInfo();
-            }
-            input.ReadMessage(BoardEventInfo);
-            break;
-          }
-          case 82: {
+          case 98: {
             if (info_ == null) {
               Info = new global::EggLink.DanhengServer.Proto.ChessRogueGameInfo();
             }
             input.ReadMessage(Info);
+            break;
+          }
+          case 122: {
+            if (boardEventInfo_ == null) {
+              BoardEventInfo = new global::EggLink.DanhengServer.Proto.ChessRogueLayerInitialEventInfo();
+            }
+            input.ReadMessage(BoardEventInfo);
             break;
           }
         }

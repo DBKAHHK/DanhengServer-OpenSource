@@ -24,13 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static MonopolySocialEventEffectScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CidNb25vcG9seVNvY2lhbEV2ZW50RWZmZWN0U2NOb3RpZnkucHJvdG8aHFNv",
-            "Y2lhbEV2ZW50U2VydmVyQ2FjaGUucHJvdG8iUQohTW9ub3BvbHlTb2NpYWxF",
-            "dmVudEVmZmVjdFNjTm90aWZ5EiwKC01JQUVBRkZER01IGAUgAygLMhcuU29j",
-            "aWFsRXZlbnRTZXJ2ZXJDYWNoZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "CidNb25vcG9seVNvY2lhbEV2ZW50RWZmZWN0U2NOb3RpZnkucHJvdG8aEUdE",
+            "QUVQQ0NHREhHLnByb3RvIkYKIU1vbm9wb2x5U29jaWFsRXZlbnRFZmZlY3RT",
+            "Y05vdGlmeRIhCgtNSUFFQUZGREdNSBgJIAMoCzIMLkdEQUVQQ0NHREhHQh6q",
+            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SocialEventServerCacheReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GDAEPCCGDHGReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MonopolySocialEventEffectScNotify), global::EggLink.DanhengServer.Proto.MonopolySocialEventEffectScNotify.Parser, new[]{ "MIAEAFFDGMH" }, null, null, null, null)
           }));
@@ -85,13 +84,13 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MIAEAFFDGMH" field.</summary>
-    public const int MIAEAFFDGMHFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.SocialEventServerCache> _repeated_mIAEAFFDGMH_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.SocialEventServerCache.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache> mIAEAFFDGMH_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache>();
+    public const int MIAEAFFDGMHFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GDAEPCCGDHG> _repeated_mIAEAFFDGMH_codec
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.GDAEPCCGDHG.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GDAEPCCGDHG> mIAEAFFDGMH_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GDAEPCCGDHG>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.SocialEventServerCache> MIAEAFFDGMH {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GDAEPCCGDHG> MIAEAFFDGMH {
       get { return mIAEAFFDGMH_; }
     }
 
@@ -188,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 74: {
             mIAEAFFDGMH_.AddEntriesFrom(input, _repeated_mIAEAFFDGMH_codec);
             break;
           }
@@ -207,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 74: {
             mIAEAFFDGMH_.AddEntriesFrom(ref input, _repeated_mIAEAFFDGMH_codec);
             break;
           }

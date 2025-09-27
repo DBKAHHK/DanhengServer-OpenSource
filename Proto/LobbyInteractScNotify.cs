@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtMb2JieUludGVyYWN0U2NOb3RpZnkucHJvdG8aEUlNQU9OTUhJTE5FLnBy",
-            "b3RvIk0KFUxvYmJ5SW50ZXJhY3RTY05vdGlmeRIRCglzZW5kZXJfaWQYDyAB",
-            "KA0SIQoLSUhDSUxOSEtMTUMYBCABKA4yDC5JTUFPTk1ISUxORUIeqgIbRWdn",
+            "b3RvIk0KFUxvYmJ5SW50ZXJhY3RTY05vdGlmeRIRCglzZW5kZXJfaWQYASAB",
+            "KA0SIQoLSUhDSUxOSEtMTUMYDyABKA4yDC5JTUFPTk1ISUxORUIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IMAONMHILNEReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "sender_id" field.</summary>
-    public const int SenderIdFieldNumber = 15;
+    public const int SenderIdFieldNumber = 1;
     private uint senderId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IHCILNHKLMC" field.</summary>
-    public const int IHCILNHKLMCFieldNumber = 4;
+    public const int IHCILNHKLMCFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.IMAONMHILNE iHCILNHKLMC_ = global::EggLink.DanhengServer.Proto.IMAONMHILNE.LobbyInteractTypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IHCILNHKLMC != global::EggLink.DanhengServer.Proto.IMAONMHILNE.LobbyInteractTypeNone) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) IHCILNHKLMC);
-      }
       if (SenderId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(SenderId);
+      }
+      if (IHCILNHKLMC != global::EggLink.DanhengServer.Proto.IMAONMHILNE.LobbyInteractTypeNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) IHCILNHKLMC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IHCILNHKLMC != global::EggLink.DanhengServer.Proto.IMAONMHILNE.LobbyInteractTypeNone) {
-        output.WriteRawTag(32);
-        output.WriteEnum((int) IHCILNHKLMC);
-      }
       if (SenderId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(SenderId);
+      }
+      if (IHCILNHKLMC != global::EggLink.DanhengServer.Proto.IMAONMHILNE.LobbyInteractTypeNone) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) IHCILNHKLMC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            IHCILNHKLMC = (global::EggLink.DanhengServer.Proto.IMAONMHILNE) input.ReadEnum();
+          case 8: {
+            SenderId = input.ReadUInt32();
             break;
           }
           case 120: {
-            SenderId = input.ReadUInt32();
+            IHCILNHKLMC = (global::EggLink.DanhengServer.Proto.IMAONMHILNE) input.ReadEnum();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            IHCILNHKLMC = (global::EggLink.DanhengServer.Proto.IMAONMHILNE) input.ReadEnum();
+          case 8: {
+            SenderId = input.ReadUInt32();
             break;
           }
           case 120: {
-            SenderId = input.ReadUInt32();
+            IHCILNHKLMC = (global::EggLink.DanhengServer.Proto.IMAONMHILNE) input.ReadEnum();
             break;
           }
         }

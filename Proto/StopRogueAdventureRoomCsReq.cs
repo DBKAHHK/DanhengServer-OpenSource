@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFTdG9wUm9ndWVBZHZlbnR1cmVSb29tQ3NSZXEucHJvdG8iVQobU3RvcFJv",
             "Z3VlQWR2ZW50dXJlUm9vbUNzUmVxEh0KFWhpdF90YXJnZXRfaW5kZXhfbGlz",
-            "dBgKIAMoDRIXCg9hZHZlbnR1cmVfc2NvcmUYByABKA1CHqoCG0VnZ0xpbmsu",
+            "dBgJIAMoDRIXCg9hZHZlbnR1cmVfc2NvcmUYDiABKA1CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "hit_target_index_list" field.</summary>
-    public const int HitTargetIndexListFieldNumber = 10;
+    public const int HitTargetIndexListFieldNumber = 9;
     private static readonly pb::FieldCodec<uint> _repeated_hitTargetIndexList_codec
-        = pb::FieldCodec.ForUInt32(82);
+        = pb::FieldCodec.ForUInt32(74);
     private readonly pbc::RepeatedField<uint> hitTargetIndexList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "adventure_score" field.</summary>
-    public const int AdventureScoreFieldNumber = 7;
+    public const int AdventureScoreFieldNumber = 14;
     private uint adventureScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      hitTargetIndexList_.WriteTo(output, _repeated_hitTargetIndexList_codec);
       if (AdventureScore != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(112);
         output.WriteUInt32(AdventureScore);
       }
-      hitTargetIndexList_.WriteTo(output, _repeated_hitTargetIndexList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      hitTargetIndexList_.WriteTo(ref output, _repeated_hitTargetIndexList_codec);
       if (AdventureScore != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(112);
         output.WriteUInt32(AdventureScore);
       }
-      hitTargetIndexList_.WriteTo(ref output, _repeated_hitTargetIndexList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            AdventureScore = input.ReadUInt32();
+          case 74:
+          case 72: {
+            hitTargetIndexList_.AddEntriesFrom(input, _repeated_hitTargetIndexList_codec);
             break;
           }
-          case 82:
-          case 80: {
-            hitTargetIndexList_.AddEntriesFrom(input, _repeated_hitTargetIndexList_codec);
+          case 112: {
+            AdventureScore = input.ReadUInt32();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            AdventureScore = input.ReadUInt32();
+          case 74:
+          case 72: {
+            hitTargetIndexList_.AddEntriesFrom(ref input, _repeated_hitTargetIndexList_codec);
             break;
           }
-          case 82:
-          case 80: {
-            hitTargetIndexList_.AddEntriesFrom(ref input, _repeated_hitTargetIndexList_codec);
+          case 112: {
+            AdventureScore = input.ReadUInt32();
             break;
           }
         }

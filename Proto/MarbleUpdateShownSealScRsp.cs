@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBNYXJibGVVcGRhdGVTaG93blNlYWxTY1JzcC5wcm90byJHChpNYXJibGVV",
-            "cGRhdGVTaG93blNlYWxTY1JzcBIYChB1cGRhdGVfc2VhbF9saXN0GAMgAygN",
-            "Eg8KB3JldGNvZGUYASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cGRhdGVTaG93blNlYWxTY1JzcBIYChB1cGRhdGVfc2VhbF9saXN0GAUgAygN",
+            "Eg8KB3JldGNvZGUYDyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "update_seal_list" field.</summary>
-    public const int UpdateSealListFieldNumber = 3;
+    public const int UpdateSealListFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_updateSealList_codec
-        = pb::FieldCodec.ForUInt32(26);
+        = pb::FieldCodec.ForUInt32(42);
     private readonly pbc::RepeatedField<uint> updateSealList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 15;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      updateSealList_.WriteTo(output, _repeated_updateSealList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
-      updateSealList_.WriteTo(output, _repeated_updateSealList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      updateSealList_.WriteTo(ref output, _repeated_updateSealList_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(120);
         output.WriteUInt32(Retcode);
       }
-      updateSealList_.WriteTo(ref output, _repeated_updateSealList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
+          case 42:
+          case 40: {
+            updateSealList_.AddEntriesFrom(input, _repeated_updateSealList_codec);
             break;
           }
-          case 26:
-          case 24: {
-            updateSealList_.AddEntriesFrom(input, _repeated_updateSealList_codec);
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Retcode = input.ReadUInt32();
+          case 42:
+          case 40: {
+            updateSealList_.AddEntriesFrom(ref input, _repeated_updateSealList_codec);
             break;
           }
-          case 26:
-          case 24: {
-            updateSealList_.AddEntriesFrom(ref input, _repeated_updateSealList_codec);
+          case 120: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

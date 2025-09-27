@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxSb2d1ZVRvdXJuRGl2aXNpb25JbmZvLnByb3RvIksKFlJvZ3VlVG91cm5E",
-            "aXZpc2lvbkluZm8SFgoOZGl2aXNpb25fbGV2ZWwYCiABKA0SGQoRZGl2aXNp",
-            "b25fcHJvZ3Jlc3MYDCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "aXZpc2lvbkluZm8SGQoRZGl2aXNpb25fcHJvZ3Jlc3MYAyABKA0SFgoOZGl2",
+            "aXNpb25fbGV2ZWwYBCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournDivisionInfo), global::EggLink.DanhengServer.Proto.RogueTournDivisionInfo.Parser, new[]{ "DivisionLevel", "DivisionProgress" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournDivisionInfo), global::EggLink.DanhengServer.Proto.RogueTournDivisionInfo.Parser, new[]{ "DivisionProgress", "DivisionLevel" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueTournDivisionInfo(RogueTournDivisionInfo other) : this() {
-      divisionLevel_ = other.divisionLevel_;
       divisionProgress_ = other.divisionProgress_;
+      divisionLevel_ = other.divisionLevel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueTournDivisionInfo(this);
     }
 
-    /// <summary>Field number for the "division_level" field.</summary>
-    public const int DivisionLevelFieldNumber = 10;
-    private uint divisionLevel_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DivisionLevel {
-      get { return divisionLevel_; }
-      set {
-        divisionLevel_ = value;
-      }
-    }
-
     /// <summary>Field number for the "division_progress" field.</summary>
-    public const int DivisionProgressFieldNumber = 12;
+    public const int DivisionProgressFieldNumber = 3;
     private uint divisionProgress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return divisionProgress_; }
       set {
         divisionProgress_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "division_level" field.</summary>
+    public const int DivisionLevelFieldNumber = 4;
+    private uint divisionLevel_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint DivisionLevel {
+      get { return divisionLevel_; }
+      set {
+        divisionLevel_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DivisionLevel != other.DivisionLevel) return false;
       if (DivisionProgress != other.DivisionProgress) return false;
+      if (DivisionLevel != other.DivisionLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DivisionLevel != 0) hash ^= DivisionLevel.GetHashCode();
       if (DivisionProgress != 0) hash ^= DivisionProgress.GetHashCode();
+      if (DivisionLevel != 0) hash ^= DivisionLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DivisionLevel != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(DivisionLevel);
-      }
       if (DivisionProgress != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(DivisionProgress);
+      }
+      if (DivisionLevel != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(DivisionLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DivisionLevel != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(DivisionLevel);
-      }
       if (DivisionProgress != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(24);
         output.WriteUInt32(DivisionProgress);
+      }
+      if (DivisionLevel != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(DivisionLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DivisionLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DivisionLevel);
-      }
       if (DivisionProgress != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DivisionProgress);
+      }
+      if (DivisionLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DivisionLevel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DivisionLevel != 0) {
-        DivisionLevel = other.DivisionLevel;
-      }
       if (other.DivisionProgress != 0) {
         DivisionProgress = other.DivisionProgress;
+      }
+      if (other.DivisionLevel != 0) {
+        DivisionLevel = other.DivisionLevel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
-            DivisionLevel = input.ReadUInt32();
+          case 24: {
+            DivisionProgress = input.ReadUInt32();
             break;
           }
-          case 96: {
-            DivisionProgress = input.ReadUInt32();
+          case 32: {
+            DivisionLevel = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
-            DivisionLevel = input.ReadUInt32();
+          case 24: {
+            DivisionProgress = input.ReadUInt32();
             break;
           }
-          case 96: {
-            DivisionProgress = input.ReadUInt32();
+          case 32: {
+            DivisionLevel = input.ReadUInt32();
             break;
           }
         }

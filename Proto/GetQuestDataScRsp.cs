@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdHZXRRdWVzdERhdGFTY1JzcC5wcm90bxoLUXVlc3QucHJvdG8iXwoRR2V0",
-            "UXVlc3REYXRhU2NSc3ASDwoHcmV0Y29kZRgOIAEoDRIdChV0b3RhbF9hY2hp",
-            "ZXZlbWVudF9leHAYAyABKA0SGgoKcXVlc3RfbGlzdBgJIAMoCzIGLlF1ZXN0",
+            "UXVlc3REYXRhU2NSc3ASDwoHcmV0Y29kZRgBIAEoDRIdChV0b3RhbF9hY2hp",
+            "ZXZlbWVudF9leHAYCiABKA0SGgoKcXVlc3RfbGlzdBgEIAMoCzIGLlF1ZXN0",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.QuestReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
+    public const int RetcodeFieldNumber = 1;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "total_achievement_exp" field.</summary>
-    public const int TotalAchievementExpFieldNumber = 3;
+    public const int TotalAchievementExpFieldNumber = 10;
     private uint totalAchievementExp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,9 +110,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "quest_list" field.</summary>
-    public const int QuestListFieldNumber = 9;
+    public const int QuestListFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.Quest> _repeated_questList_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.Quest.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.Quest.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Quest> questList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.Quest>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,14 +166,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TotalAchievementExp != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(TotalAchievementExp);
+      if (Retcode != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Retcode);
       }
       questList_.WriteTo(output, _repeated_questList_codec);
-      if (Retcode != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(Retcode);
+      if (TotalAchievementExp != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(TotalAchievementExp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -185,14 +185,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TotalAchievementExp != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(TotalAchievementExp);
+      if (Retcode != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Retcode);
       }
       questList_.WriteTo(ref output, _repeated_questList_codec);
-      if (Retcode != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(Retcode);
+      if (TotalAchievementExp != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(TotalAchievementExp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -245,16 +245,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            TotalAchievementExp = input.ReadUInt32();
+          case 8: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 34: {
             questList_.AddEntriesFrom(input, _repeated_questList_codec);
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 80: {
+            TotalAchievementExp = input.ReadUInt32();
             break;
           }
         }
@@ -272,16 +272,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            TotalAchievementExp = input.ReadUInt32();
+          case 8: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 74: {
+          case 34: {
             questList_.AddEntriesFrom(ref input, _repeated_questList_codec);
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 80: {
+            TotalAchievementExp = input.ReadUInt32();
             break;
           }
         }

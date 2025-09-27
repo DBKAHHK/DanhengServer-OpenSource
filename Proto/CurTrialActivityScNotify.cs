@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch5DdXJUcmlhbEFjdGl2aXR5U2NOb3RpZnkucHJvdG8aGVRyaWFsQWN0aXZp",
             "dHlTdGF0dXMucHJvdG8iWwoYQ3VyVHJpYWxBY3Rpdml0eVNjTm90aWZ5EiQK",
-            "BnN0YXR1cxgMIAEoDjIULlRyaWFsQWN0aXZpdHlTdGF0dXMSGQoRYWN0aXZp",
+            "BnN0YXR1cxgPIAEoDjIULlRyaWFsQWN0aXZpdHlTdGF0dXMSGQoRYWN0aXZp",
             "dHlfc3RhZ2VfaWQYCyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 12;
+    public const int StatusFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.TrialActivityStatus status_ = global::EggLink.DanhengServer.Proto.TrialActivityStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(ActivityStageId);
       }
       if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
@@ -176,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(ActivityStageId);
       }
       if (Status != global::EggLink.DanhengServer.Proto.TrialActivityStatus.None) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(120);
         output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
@@ -232,7 +232,7 @@ namespace EggLink.DanhengServer.Proto {
             ActivityStageId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 120: {
             Status = (global::EggLink.DanhengServer.Proto.TrialActivityStatus) input.ReadEnum();
             break;
           }
@@ -255,7 +255,7 @@ namespace EggLink.DanhengServer.Proto {
             ActivityStageId = input.ReadUInt32();
             break;
           }
-          case 96: {
+          case 120: {
             Status = (global::EggLink.DanhengServer.Proto.TrialActivityStatus) input.ReadEnum();
             break;
           }

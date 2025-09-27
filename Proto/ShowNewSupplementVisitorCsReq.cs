@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNTaG93TmV3U3VwcGxlbWVudFZpc2l0b3JDc1JlcS5wcm90byI0Ch1TaG93",
-            "TmV3U3VwcGxlbWVudFZpc2l0b3JDc1JlcRITCgtGQU1IUE1GT0lKSBgGIAMo",
+            "TmV3U3VwcGxlbWVudFZpc2l0b3JDc1JlcRITCgtGQU1IUE1GT0lKSBgFIAMo",
             "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FAMHPMFOIJH" field.</summary>
-    public const int FAMHPMFOIJHFieldNumber = 6;
+    public const int FAMHPMFOIJHFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_fAMHPMFOIJH_codec
-        = pb::FieldCodec.ForUInt32(50);
+        = pb::FieldCodec.ForUInt32(42);
     private readonly pbc::RepeatedField<uint> fAMHPMFOIJH_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,8 +186,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50:
-          case 48: {
+          case 42:
+          case 40: {
             fAMHPMFOIJH_.AddEntriesFrom(input, _repeated_fAMHPMFOIJH_codec);
             break;
           }
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50:
-          case 48: {
+          case 42:
+          case 40: {
             fAMHPMFOIJH_.AddEntriesFrom(ref input, _repeated_fAMHPMFOIJH_codec);
             break;
           }

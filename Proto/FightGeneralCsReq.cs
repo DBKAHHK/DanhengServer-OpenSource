@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdGaWdodEdlbmVyYWxDc1JlcS5wcm90byJJChFGaWdodEdlbmVyYWxDc1Jl",
-            "cRIaChJmaWdodF9nZW5lcmFsX2luZm8YByABKAwSGAoQbmV0d29ya19tc2df",
-            "dHlwZRgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cRIaChJmaWdodF9nZW5lcmFsX2luZm8YBCABKAwSGAoQbmV0d29ya19tc2df",
+            "dHlwZRgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "fight_general_info" field.</summary>
-    public const int FightGeneralInfoFieldNumber = 7;
+    public const int FightGeneralInfoFieldNumber = 4;
     private pb::ByteString fightGeneralInfo_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "network_msg_type" field.</summary>
-    public const int NetworkMsgTypeFieldNumber = 10;
+    public const int NetworkMsgTypeFieldNumber = 8;
     private uint networkMsgType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (FightGeneralInfo.Length != 0) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(34);
         output.WriteBytes(FightGeneralInfo);
       }
       if (NetworkMsgType != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(NetworkMsgType);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FightGeneralInfo.Length != 0) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(34);
         output.WriteBytes(FightGeneralInfo);
       }
       if (NetworkMsgType != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(64);
         output.WriteUInt32(NetworkMsgType);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 34: {
             FightGeneralInfo = input.ReadBytes();
             break;
           }
-          case 80: {
+          case 64: {
             NetworkMsgType = input.ReadUInt32();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 34: {
             FightGeneralInfo = input.ReadBytes();
             break;
           }
-          case 80: {
+          case 64: {
             NetworkMsgType = input.ReadUInt32();
             break;
           }

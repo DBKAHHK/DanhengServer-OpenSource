@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static LAILNIGFPOOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFMQUlMTklHRlBPTy5wcm90byJQCgtMQUlMTklHRlBPTxIXCg9pc190YWtl",
-            "bl9yZXdhcmQYCiABKAgSEwoLQUVMUEZFQkdOT0sYBSABKAgSEwoLS0hHUEZI",
-            "Qk9FTEUYASABKARCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "ChFMQUlMTklHRlBPTy5wcm90byJQCgtMQUlMTklHRlBPTxITCgtBRUxQRkVC",
+            "R05PSxgDIAEoCBIXCg9pc190YWtlbl9yZXdhcmQYDyABKAgSEwoLS0hHUEZI",
+            "Qk9FTEUYBCABKARCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LAILNIGFPOO), global::EggLink.DanhengServer.Proto.LAILNIGFPOO.Parser, new[]{ "IsTakenReward", "AELPFEBGNOK", "KHGPFHBOELE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LAILNIGFPOO), global::EggLink.DanhengServer.Proto.LAILNIGFPOO.Parser, new[]{ "AELPFEBGNOK", "IsTakenReward", "KHGPFHBOELE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LAILNIGFPOO(LAILNIGFPOO other) : this() {
-      isTakenReward_ = other.isTakenReward_;
       aELPFEBGNOK_ = other.aELPFEBGNOK_;
+      isTakenReward_ = other.isTakenReward_;
       kHGPFHBOELE_ = other.kHGPFHBOELE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new LAILNIGFPOO(this);
     }
 
-    /// <summary>Field number for the "is_taken_reward" field.</summary>
-    public const int IsTakenRewardFieldNumber = 10;
-    private bool isTakenReward_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsTakenReward {
-      get { return isTakenReward_; }
-      set {
-        isTakenReward_ = value;
-      }
-    }
-
     /// <summary>Field number for the "AELPFEBGNOK" field.</summary>
-    public const int AELPFEBGNOKFieldNumber = 5;
+    public const int AELPFEBGNOKFieldNumber = 3;
     private bool aELPFEBGNOK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,8 +97,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "is_taken_reward" field.</summary>
+    public const int IsTakenRewardFieldNumber = 15;
+    private bool isTakenReward_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsTakenReward {
+      get { return isTakenReward_; }
+      set {
+        isTakenReward_ = value;
+      }
+    }
+
     /// <summary>Field number for the "KHGPFHBOELE" field.</summary>
-    public const int KHGPFHBOELEFieldNumber = 1;
+    public const int KHGPFHBOELEFieldNumber = 4;
     private ulong kHGPFHBOELE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsTakenReward != other.IsTakenReward) return false;
       if (AELPFEBGNOK != other.AELPFEBGNOK) return false;
+      if (IsTakenReward != other.IsTakenReward) return false;
       if (KHGPFHBOELE != other.KHGPFHBOELE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsTakenReward != false) hash ^= IsTakenReward.GetHashCode();
       if (AELPFEBGNOK != false) hash ^= AELPFEBGNOK.GetHashCode();
+      if (IsTakenReward != false) hash ^= IsTakenReward.GetHashCode();
       if (KHGPFHBOELE != 0UL) hash ^= KHGPFHBOELE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (KHGPFHBOELE != 0UL) {
-        output.WriteRawTag(8);
-        output.WriteUInt64(KHGPFHBOELE);
-      }
       if (AELPFEBGNOK != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteBool(AELPFEBGNOK);
       }
+      if (KHGPFHBOELE != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(KHGPFHBOELE);
+      }
       if (IsTakenReward != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteBool(IsTakenReward);
       }
       if (_unknownFields != null) {
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (KHGPFHBOELE != 0UL) {
-        output.WriteRawTag(8);
-        output.WriteUInt64(KHGPFHBOELE);
-      }
       if (AELPFEBGNOK != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteBool(AELPFEBGNOK);
       }
+      if (KHGPFHBOELE != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(KHGPFHBOELE);
+      }
       if (IsTakenReward != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(120);
         output.WriteBool(IsTakenReward);
       }
       if (_unknownFields != null) {
@@ -211,10 +211,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsTakenReward != false) {
+      if (AELPFEBGNOK != false) {
         size += 1 + 1;
       }
-      if (AELPFEBGNOK != false) {
+      if (IsTakenReward != false) {
         size += 1 + 1;
       }
       if (KHGPFHBOELE != 0UL) {
@@ -232,11 +232,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsTakenReward != false) {
-        IsTakenReward = other.IsTakenReward;
-      }
       if (other.AELPFEBGNOK != false) {
         AELPFEBGNOK = other.AELPFEBGNOK;
+      }
+      if (other.IsTakenReward != false) {
+        IsTakenReward = other.IsTakenReward;
       }
       if (other.KHGPFHBOELE != 0UL) {
         KHGPFHBOELE = other.KHGPFHBOELE;
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            KHGPFHBOELE = input.ReadUInt64();
-            break;
-          }
-          case 40: {
+          case 24: {
             AELPFEBGNOK = input.ReadBool();
             break;
           }
-          case 80: {
+          case 32: {
+            KHGPFHBOELE = input.ReadUInt64();
+            break;
+          }
+          case 120: {
             IsTakenReward = input.ReadBool();
             break;
           }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            KHGPFHBOELE = input.ReadUInt64();
-            break;
-          }
-          case 40: {
+          case 24: {
             AELPFEBGNOK = input.ReadBool();
             break;
           }
-          case 80: {
+          case 32: {
+            KHGPFHBOELE = input.ReadUInt64();
+            break;
+          }
+          case 120: {
             IsTakenReward = input.ReadBool();
             break;
           }

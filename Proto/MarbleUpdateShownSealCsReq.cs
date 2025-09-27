@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBNYXJibGVVcGRhdGVTaG93blNlYWxDc1JlcS5wcm90byI2ChpNYXJibGVV",
-            "cGRhdGVTaG93blNlYWxDc1JlcRIYChB1cGRhdGVfc2VhbF9saXN0GA4gAygN",
+            "cGRhdGVTaG93blNlYWxDc1JlcRIYChB1cGRhdGVfc2VhbF9saXN0GAUgAygN",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "update_seal_list" field.</summary>
-    public const int UpdateSealListFieldNumber = 14;
+    public const int UpdateSealListFieldNumber = 5;
     private static readonly pb::FieldCodec<uint> _repeated_updateSealList_codec
-        = pb::FieldCodec.ForUInt32(114);
+        = pb::FieldCodec.ForUInt32(42);
     private readonly pbc::RepeatedField<uint> updateSealList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,8 +186,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114:
-          case 112: {
+          case 42:
+          case 40: {
             updateSealList_.AddEntriesFrom(input, _repeated_updateSealList_codec);
             break;
           }
@@ -206,8 +206,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114:
-          case 112: {
+          case 42:
+          case 40: {
             updateSealList_.AddEntriesFrom(ref input, _repeated_updateSealList_codec);
             break;
           }

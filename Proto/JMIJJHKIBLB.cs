@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFKTUlKSkhLSUJMQi5wcm90byJGCgtKTUlKSkhLSUJMQhIUCgxjaGFsbGVu",
-            "Z2VfaWQYByABKA0SDAoEc3RhchgIIAEoDRITCgtHSklFQUhEQk5OSRgNIAEo",
+            "Z2VfaWQYCyABKA0SDAoEc3RhchgNIAEoDRITCgtHSklFQUhEQk5OSRgJIAEo",
             "CEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "challenge_id" field.</summary>
-    public const int ChallengeIdFieldNumber = 7;
+    public const int ChallengeIdFieldNumber = 11;
     private uint challengeId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "star" field.</summary>
-    public const int StarFieldNumber = 8;
+    public const int StarFieldNumber = 13;
     private uint star_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GJIEAHDBNNI" field.</summary>
-    public const int GJIEAHDBNNIFieldNumber = 13;
+    public const int GJIEAHDBNNIFieldNumber = 9;
     private bool gJIEAHDBNNI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (GJIEAHDBNNI != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(GJIEAHDBNNI);
+      }
       if (ChallengeId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(ChallengeId);
       }
       if (Star != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Star);
-      }
-      if (GJIEAHDBNNI != false) {
         output.WriteRawTag(104);
-        output.WriteBool(GJIEAHDBNNI);
+        output.WriteUInt32(Star);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GJIEAHDBNNI != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(GJIEAHDBNNI);
+      }
       if (ChallengeId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(ChallengeId);
       }
       if (Star != 0) {
-        output.WriteRawTag(64);
-        output.WriteUInt32(Star);
-      }
-      if (GJIEAHDBNNI != false) {
         output.WriteRawTag(104);
-        output.WriteBool(GJIEAHDBNNI);
+        output.WriteUInt32(Star);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
+          case 72: {
+            GJIEAHDBNNI = input.ReadBool();
+            break;
+          }
+          case 88: {
             ChallengeId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Star = input.ReadUInt32();
-            break;
-          }
           case 104: {
-            GJIEAHDBNNI = input.ReadBool();
+            Star = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
+          case 72: {
+            GJIEAHDBNNI = input.ReadBool();
+            break;
+          }
+          case 88: {
             ChallengeId = input.ReadUInt32();
             break;
           }
-          case 64: {
-            Star = input.ReadUInt32();
-            break;
-          }
           case 104: {
-            GJIEAHDBNNI = input.ReadBool();
+            Star = input.ReadUInt32();
             break;
           }
         }

@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static DJIAEMANGCGReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFESklBRU1BTkdDRy5wcm90bxoRT0hESFBDTElKTkgucHJvdG8aEUNFT0RE",
-            "Q0VJRERMLnByb3RvIlgKC0RKSUFFTUFOR0NHEigKEnRyYW5zZmVyX2l0ZW1f",
-            "bGlzdBgPIAMoCzIMLk9IREhQQ0xJSk5IEh8KCWl0ZW1fbGlzdBgNIAMoCzIM",
+            "ChFESklBRU1BTkdDRy5wcm90bxoRQ0VPRERDRUlEREwucHJvdG8aEU9IREhQ",
+            "Q0xJSk5ILnByb3RvIlgKC0RKSUFFTUFOR0NHEigKEnRyYW5zZmVyX2l0ZW1f",
+            "bGlzdBgFIAMoCzIMLk9IREhQQ0xJSk5IEh8KCWl0ZW1fbGlzdBgDIAMoCzIM",
             "LkNFT0REQ0VJRERMQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OHDHPCLIJNHReflection.Descriptor, global::EggLink.DanhengServer.Proto.CEODDCEIDDLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.CEODDCEIDDLReflection.Descriptor, global::EggLink.DanhengServer.Proto.OHDHPCLIJNHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DJIAEMANGCG), global::EggLink.DanhengServer.Proto.DJIAEMANGCG.Parser, new[]{ "TransferItemList", "ItemList" }, null, null, null, null)
           }));
@@ -86,9 +86,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "transfer_item_list" field.</summary>
-    public const int TransferItemListFieldNumber = 15;
+    public const int TransferItemListFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OHDHPCLIJNH> _repeated_transferItemList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.OHDHPCLIJNH.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.OHDHPCLIJNH.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OHDHPCLIJNH> transferItemList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OHDHPCLIJNH>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "item_list" field.</summary>
-    public const int ItemListFieldNumber = 13;
+    public const int ItemListFieldNumber = 3;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.CEODDCEIDDL> _repeated_itemList_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.CEODDCEIDDL.Parser);
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.CEODDCEIDDL.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CEODDCEIDDL> itemList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CEODDCEIDDL>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 26: {
             itemList_.AddEntriesFrom(input, _repeated_itemList_codec);
             break;
           }
-          case 122: {
+          case 42: {
             transferItemList_.AddEntriesFrom(input, _repeated_transferItemList_codec);
             break;
           }
@@ -229,11 +229,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 26: {
             itemList_.AddEntriesFrom(ref input, _repeated_itemList_codec);
             break;
           }
-          case 122: {
+          case 42: {
             transferItemList_.AddEntriesFrom(ref input, _repeated_transferItemList_codec);
             break;
           }

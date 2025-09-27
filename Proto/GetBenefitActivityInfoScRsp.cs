@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFHZXRCZW5lZml0QWN0aXZpdHlJbmZvU2NSc3AucHJvdG8aEUJlbmVmaXRE",
-            "YXRhLnByb3RvImgKG0dldEJlbmVmaXRBY3Rpdml0eUluZm9TY1JzcBInChFi",
-            "ZW5lZml0X2RhdGFfbGlzdBgGIAMoCzIMLkJlbmVmaXREYXRhEg8KB2lzX29w",
-            "ZW4YASABKAgSDwoHcmV0Y29kZRgFIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "YXRhLnByb3RvImgKG0dldEJlbmVmaXRBY3Rpdml0eUluZm9TY1JzcBIPCgdp",
+            "c19vcGVuGAQgASgIEicKEWJlbmVmaXRfZGF0YV9saXN0GAEgAygLMgwuQmVu",
+            "ZWZpdERhdGESDwoHcmV0Y29kZRgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BenefitDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBenefitActivityInfoScRsp), global::EggLink.DanhengServer.Proto.GetBenefitActivityInfoScRsp.Parser, new[]{ "BenefitDataList", "IsOpen", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBenefitActivityInfoScRsp), global::EggLink.DanhengServer.Proto.GetBenefitActivityInfoScRsp.Parser, new[]{ "IsOpen", "BenefitDataList", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBenefitActivityInfoScRsp(GetBenefitActivityInfoScRsp other) : this() {
-      benefitDataList_ = other.benefitDataList_.Clone();
       isOpen_ = other.isOpen_;
+      benefitDataList_ = other.benefitDataList_.Clone();
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,19 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetBenefitActivityInfoScRsp(this);
     }
 
-    /// <summary>Field number for the "benefit_data_list" field.</summary>
-    public const int BenefitDataListFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BenefitData> _repeated_benefitDataList_codec
-        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.BenefitData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BenefitData> benefitDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BenefitData>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BenefitData> BenefitDataList {
-      get { return benefitDataList_; }
-    }
-
     /// <summary>Field number for the "is_open" field.</summary>
-    public const int IsOpenFieldNumber = 1;
+    public const int IsOpenFieldNumber = 4;
     private bool isOpen_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,8 +98,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "benefit_data_list" field.</summary>
+    public const int BenefitDataListFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BenefitData> _repeated_benefitDataList_codec
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.BenefitData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BenefitData> benefitDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BenefitData>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BenefitData> BenefitDataList {
+      get { return benefitDataList_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 14;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,8 +136,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!benefitDataList_.Equals(other.benefitDataList_)) return false;
       if (IsOpen != other.IsOpen) return false;
+      if(!benefitDataList_.Equals(other.benefitDataList_)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -146,8 +146,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= benefitDataList_.GetHashCode();
       if (IsOpen != false) hash ^= IsOpen.GetHashCode();
+      hash ^= benefitDataList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      benefitDataList_.WriteTo(output, _repeated_benefitDataList_codec);
       if (IsOpen != false) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteBool(IsOpen);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
-      benefitDataList_.WriteTo(output, _repeated_benefitDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,15 +186,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      benefitDataList_.WriteTo(ref output, _repeated_benefitDataList_codec);
       if (IsOpen != false) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(32);
         output.WriteBool(IsOpen);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(112);
         output.WriteUInt32(Retcode);
       }
-      benefitDataList_.WriteTo(ref output, _repeated_benefitDataList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,10 +205,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += benefitDataList_.CalculateSize(_repeated_benefitDataList_codec);
       if (IsOpen != false) {
         size += 1 + 1;
       }
+      size += benefitDataList_.CalculateSize(_repeated_benefitDataList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -224,10 +224,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      benefitDataList_.Add(other.benefitDataList_);
       if (other.IsOpen != false) {
         IsOpen = other.IsOpen;
       }
+      benefitDataList_.Add(other.benefitDataList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 10: {
+            benefitDataList_.AddEntriesFrom(input, _repeated_benefitDataList_codec);
+            break;
+          }
+          case 32: {
             IsOpen = input.ReadBool();
             break;
           }
-          case 40: {
+          case 112: {
             Retcode = input.ReadUInt32();
-            break;
-          }
-          case 50: {
-            benefitDataList_.AddEntriesFrom(input, _repeated_benefitDataList_codec);
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 10: {
+            benefitDataList_.AddEntriesFrom(ref input, _repeated_benefitDataList_codec);
+            break;
+          }
+          case 32: {
             IsOpen = input.ReadBool();
             break;
           }
-          case 40: {
+          case 112: {
             Retcode = input.ReadUInt32();
-            break;
-          }
-          case 50: {
-            benefitDataList_.AddEntriesFrom(ref input, _repeated_benefitDataList_codec);
             break;
           }
         }

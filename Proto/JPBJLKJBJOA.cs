@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFKUEJKTEtKQkpPQS5wcm90bxoRR0tJQ09DQ0xQTUcucHJvdG8iRQoLSlBC",
-            "SkxLSkJKT0ESIQoLSUpPTUJIQkNHTk4YBCADKAsyDC5HS0lDT0NDTFBNRxIT",
-            "CgtJTkJBRENGTkpJRhgOIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "SkxLSkJKT0ESIQoLSUpPTUJIQkNHTk4YASADKAsyDC5HS0lDT0NDTFBNRxIT",
+            "CgtJTkJBRENGTkpJRhgDIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GKICOCCLPMGReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IJOMBHBCGNN" field.</summary>
-    public const int IJOMBHBCGNNFieldNumber = 4;
+    public const int IJOMBHBCGNNFieldNumber = 1;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GKICOCCLPMG> _repeated_iJOMBHBCGNN_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.GKICOCCLPMG.Parser);
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.GKICOCCLPMG.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GKICOCCLPMG> iJOMBHBCGNN_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GKICOCCLPMG>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,9 +96,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "INBADCFNJIF" field.</summary>
-    public const int INBADCFNJIFFieldNumber = 14;
+    public const int INBADCFNJIFFieldNumber = 3;
     private static readonly pb::FieldCodec<uint> _repeated_iNBADCFNJIF_codec
-        = pb::FieldCodec.ForUInt32(114);
+        = pb::FieldCodec.ForUInt32(26);
     private readonly pbc::RepeatedField<uint> iNBADCFNJIF_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -205,12 +205,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
+          case 10: {
             iJOMBHBCGNN_.AddEntriesFrom(input, _repeated_iJOMBHBCGNN_codec);
             break;
           }
-          case 114:
-          case 112: {
+          case 26:
+          case 24: {
             iNBADCFNJIF_.AddEntriesFrom(input, _repeated_iNBADCFNJIF_codec);
             break;
           }
@@ -229,12 +229,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
+          case 10: {
             iJOMBHBCGNN_.AddEntriesFrom(ref input, _repeated_iJOMBHBCGNN_codec);
             break;
           }
-          case 114:
-          case 112: {
+          case 26:
+          case 24: {
             iNBADCFNJIF_.AddEntriesFrom(ref input, _repeated_iNBADCFNJIF_codec);
             break;
           }

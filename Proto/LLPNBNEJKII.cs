@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChFMTFBOQk5FSktJSS5wcm90bxoYUm9ndWVNYXBSb3RhdGVJbmZvLnByb3Rv",
             "Gg9TY2VuZUluZm8ucHJvdG8aEExpbmV1cEluZm8ucHJvdG8ibwoLTExQTkJO",
-            "RUpLSUkSGQoFc2NlbmUYAiABKAsyCi5TY2VuZUluZm8SGwoGbGluZXVwGAog",
-            "ASgLMgsuTGluZXVwSW5mbxIoCgtyb3RhdGVfaW5mbxgNIAEoCzITLlJvZ3Vl",
-            "TWFwUm90YXRlSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "RUpLSUkSKAoLcm90YXRlX2luZm8YDCABKAsyEy5Sb2d1ZU1hcFJvdGF0ZUlu",
+            "Zm8SGQoFc2NlbmUYAiABKAsyCi5TY2VuZUluZm8SGwoGbGluZXVwGAcgASgL",
+            "MgsuTGluZXVwSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMapRotateInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LineupInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LLPNBNEJKII), global::EggLink.DanhengServer.Proto.LLPNBNEJKII.Parser, new[]{ "Scene", "Lineup", "RotateInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LLPNBNEJKII), global::EggLink.DanhengServer.Proto.LLPNBNEJKII.Parser, new[]{ "RotateInfo", "Scene", "Lineup" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,9 +75,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LLPNBNEJKII(LLPNBNEJKII other) : this() {
+      rotateInfo_ = other.rotateInfo_ != null ? other.rotateInfo_.Clone() : null;
       scene_ = other.scene_ != null ? other.scene_.Clone() : null;
       lineup_ = other.lineup_ != null ? other.lineup_.Clone() : null;
-      rotateInfo_ = other.rotateInfo_ != null ? other.rotateInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,6 +85,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LLPNBNEJKII Clone() {
       return new LLPNBNEJKII(this);
+    }
+
+    /// <summary>Field number for the "rotate_info" field.</summary>
+    public const int RotateInfoFieldNumber = 12;
+    private global::EggLink.DanhengServer.Proto.RogueMapRotateInfo rotateInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueMapRotateInfo RotateInfo {
+      get { return rotateInfo_; }
+      set {
+        rotateInfo_ = value;
+      }
     }
 
     /// <summary>Field number for the "scene" field.</summary>
@@ -100,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "lineup" field.</summary>
-    public const int LineupFieldNumber = 10;
+    public const int LineupFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.LineupInfo lineup_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -108,18 +120,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return lineup_; }
       set {
         lineup_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "rotate_info" field.</summary>
-    public const int RotateInfoFieldNumber = 13;
-    private global::EggLink.DanhengServer.Proto.RogueMapRotateInfo rotateInfo_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueMapRotateInfo RotateInfo {
-      get { return rotateInfo_; }
-      set {
-        rotateInfo_ = value;
       }
     }
 
@@ -138,9 +138,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(RotateInfo, other.RotateInfo)) return false;
       if (!object.Equals(Scene, other.Scene)) return false;
       if (!object.Equals(Lineup, other.Lineup)) return false;
-      if (!object.Equals(RotateInfo, other.RotateInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,9 +148,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (rotateInfo_ != null) hash ^= RotateInfo.GetHashCode();
       if (scene_ != null) hash ^= Scene.GetHashCode();
       if (lineup_ != null) hash ^= Lineup.GetHashCode();
-      if (rotateInfo_ != null) hash ^= RotateInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -174,11 +174,11 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(Scene);
       }
       if (lineup_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(58);
         output.WriteMessage(Lineup);
       }
       if (rotateInfo_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(98);
         output.WriteMessage(RotateInfo);
       }
       if (_unknownFields != null) {
@@ -196,11 +196,11 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(Scene);
       }
       if (lineup_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(58);
         output.WriteMessage(Lineup);
       }
       if (rotateInfo_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(98);
         output.WriteMessage(RotateInfo);
       }
       if (_unknownFields != null) {
@@ -213,14 +213,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (rotateInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RotateInfo);
+      }
       if (scene_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Scene);
       }
       if (lineup_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Lineup);
-      }
-      if (rotateInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RotateInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -234,6 +234,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.rotateInfo_ != null) {
+        if (rotateInfo_ == null) {
+          RotateInfo = new global::EggLink.DanhengServer.Proto.RogueMapRotateInfo();
+        }
+        RotateInfo.MergeFrom(other.RotateInfo);
+      }
       if (other.scene_ != null) {
         if (scene_ == null) {
           Scene = new global::EggLink.DanhengServer.Proto.SceneInfo();
@@ -245,12 +251,6 @@ namespace EggLink.DanhengServer.Proto {
           Lineup = new global::EggLink.DanhengServer.Proto.LineupInfo();
         }
         Lineup.MergeFrom(other.Lineup);
-      }
-      if (other.rotateInfo_ != null) {
-        if (rotateInfo_ == null) {
-          RotateInfo = new global::EggLink.DanhengServer.Proto.RogueMapRotateInfo();
-        }
-        RotateInfo.MergeFrom(other.RotateInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -274,14 +274,14 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Scene);
             break;
           }
-          case 82: {
+          case 58: {
             if (lineup_ == null) {
               Lineup = new global::EggLink.DanhengServer.Proto.LineupInfo();
             }
             input.ReadMessage(Lineup);
             break;
           }
-          case 106: {
+          case 98: {
             if (rotateInfo_ == null) {
               RotateInfo = new global::EggLink.DanhengServer.Proto.RogueMapRotateInfo();
             }
@@ -310,14 +310,14 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(Scene);
             break;
           }
-          case 82: {
+          case 58: {
             if (lineup_ == null) {
               Lineup = new global::EggLink.DanhengServer.Proto.LineupInfo();
             }
             input.ReadMessage(Lineup);
             break;
           }
-          case 106: {
+          case 98: {
             if (rotateInfo_ == null) {
               RotateInfo = new global::EggLink.DanhengServer.Proto.RogueMapRotateInfo();
             }

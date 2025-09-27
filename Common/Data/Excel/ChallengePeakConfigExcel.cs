@@ -1,3 +1,4 @@
+using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
 
 namespace EggLink.DanhengServer.Data.Excel;
@@ -6,14 +7,10 @@ namespace EggLink.DanhengServer.Data.Excel;
 public class ChallengePeakConfigExcel : ExcelResource
 {
     public int ID { get; set; }
-    public int MazeGroupID { get; set; }
-    public int MapEntranceID { get; set; }
     public List<int> TagList { get; set; } = [];
     public List<int> HPProgressValueList { get; set; } = [];
     public List<int> ProgressValueList { get; set; } = [];
-    public List<int> ConfigIDList { get; set; } = [];
     public List<int> EventIDList { get; set; } = [];
-    public List<int> NpcMonsterIDList { get; set; } = [];
     public List<int> NormalTargetList { get; set; } = [];
 
     [JsonIgnore]
@@ -29,11 +26,28 @@ public class ChallengePeakConfigExcel : ExcelResource
     public override void Loaded()
     {
         GameData.ChallengePeakConfigData.TryAdd(ID, this);
+    }
 
-        ChallengeMonsters.Add(MazeGroupID, []);
-        for (var i = 0; i < ConfigIDList.Count; i++)
-            ChallengeMonsters[MazeGroupID]
-                .Add(new ChallengeConfigExcel.ChallengeMonsterInfo(ConfigIDList[i], NpcMonsterIDList[i],
-                    EventIDList[i]));
+    public override void AfterAllDone()
+    {
+        var groupId = (int)GameConstants.CHALLENGE_PEAK_TARGET_ENTRY_ID[GameConstants.CHALLENGE_PEAK_CUR_GROUP_ID][1];
+        ChallengeMonsters.Add(groupId, []);
+
+        var curConfId = 200000;
+        foreach (var eventId in EventIDList)
+        {
+            // get from stage id
+            if (!GameData.StageConfigData.TryGetValue(eventId, out var stage)) continue;
+
+            var monsterId = stage.MonsterList.LastOrDefault()?.Monster0 ?? 0;
+            if (!GameData.MonsterConfigData.TryGetValue(monsterId, out var monsterConf)) continue;
+            if (!GameData.MonsterTemplateConfigData.TryGetValue(monsterConf.MonsterTemplateID, out var template)) continue;
+
+            var npcMonsterId = template.NPCMonsterList.Take(2).LastOrDefault(0);
+
+            ChallengeMonsters[groupId]
+                .Add(new ChallengeConfigExcel.ChallengeMonsterInfo(++curConfId, npcMonsterId,
+                    eventId));
+        }
     }
 }

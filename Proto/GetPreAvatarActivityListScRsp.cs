@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNHZXRQcmVBdmF0YXJBY3Rpdml0eUxpc3RTY1JzcC5wcm90byJFCh1HZXRQ",
-            "cmVBdmF0YXJBY3Rpdml0eUxpc3RTY1JzcBITCgtQSEhOQ0pKUEtJQxgBIAMo",
-            "DRIPCgdyZXRjb2RlGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "cmVBdmF0YXJBY3Rpdml0eUxpc3RTY1JzcBITCgtQSEhOQ0pKUEtJQxgMIAMo",
+            "DRIPCgdyZXRjb2RlGAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PHHNCJJPKIC" field.</summary>
-    public const int PHHNCJJPKICFieldNumber = 1;
+    public const int PHHNCJJPKICFieldNumber = 12;
     private static readonly pb::FieldCodec<uint> _repeated_pHHNCJJPKIC_codec
-        = pb::FieldCodec.ForUInt32(10);
+        = pb::FieldCodec.ForUInt32(98);
     private readonly pbc::RepeatedField<uint> pHHNCJJPKIC_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 6;
+    public const int RetcodeFieldNumber = 7;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      pHHNCJJPKIC_.WriteTo(output, _repeated_pHHNCJJPKIC_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
+      pHHNCJJPKIC_.WriteTo(output, _repeated_pHHNCJJPKIC_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      pHHNCJJPKIC_.WriteTo(ref output, _repeated_pHHNCJJPKIC_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteUInt32(Retcode);
       }
+      pHHNCJJPKIC_.WriteTo(ref output, _repeated_pHHNCJJPKIC_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10:
-          case 8: {
-            pHHNCJJPKIC_.AddEntriesFrom(input, _repeated_pHHNCJJPKIC_codec);
+          case 56: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 48: {
-            Retcode = input.ReadUInt32();
+          case 98:
+          case 96: {
+            pHHNCJJPKIC_.AddEntriesFrom(input, _repeated_pHHNCJJPKIC_codec);
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10:
-          case 8: {
-            pHHNCJJPKIC_.AddEntriesFrom(ref input, _repeated_pHHNCJJPKIC_codec);
+          case 56: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 48: {
-            Retcode = input.ReadUInt32();
+          case 98:
+          case 96: {
+            pHHNCJJPKIC_.AddEntriesFrom(ref input, _repeated_pHHNCJJPKIC_codec);
             break;
           }
         }

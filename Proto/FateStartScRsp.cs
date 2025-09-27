@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRGYXRlU3RhcnRTY1JzcC5wcm90bxoTRmF0ZUxldmVsSW5mby5wcm90byJF",
-            "Cg5GYXRlU3RhcnRTY1JzcBIPCgdyZXRjb2RlGA0gASgNEiIKCmxldmVsX2lu",
-            "Zm8YCiABKAsyDi5GYXRlTGV2ZWxJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "Cg5GYXRlU3RhcnRTY1JzcBIPCgdyZXRjb2RlGAYgASgNEiIKCmxldmVsX2lu",
+            "Zm8YByABKAsyDi5GYXRlTGV2ZWxJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FateLevelInfoReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 13;
+    public const int RetcodeFieldNumber = 6;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level_info" field.</summary>
-    public const int LevelInfoFieldNumber = 10;
+    public const int LevelInfoFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.FateLevelInfo levelInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (levelInfo_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(LevelInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (levelInfo_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(LevelInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (levelInfo_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(LevelInfo);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (levelInfo_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(LevelInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             if (levelInfo_ == null) {
               LevelInfo = new global::EggLink.DanhengServer.Proto.FateLevelInfo();
             }
             input.ReadMessage(LevelInfo);
-            break;
-          }
-          case 104: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 48: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             if (levelInfo_ == null) {
               LevelInfo = new global::EggLink.DanhengServer.Proto.FateLevelInfo();
             }
             input.ReadMessage(LevelInfo);
-            break;
-          }
-          case 104: {
-            Retcode = input.ReadUInt32();
             break;
           }
         }

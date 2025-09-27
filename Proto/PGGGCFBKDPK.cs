@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static PGGGCFBKDPKReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFQR0dHQ0ZCS0RQSy5wcm90byI+CgtQR0dHQ0ZCS0RQSxITCgtDTkJDS0VG",
-            "TkZHRRgNIAMoDRIaChJnYW1lX3N0b3J5X2xpbmVfaWQYCSABKA1CHqoCG0Vn",
+            "ChFQR0dHQ0ZCS0RQSy5wcm90byI+CgtQR0dHQ0ZCS0RQSxIaChJnYW1lX3N0",
+            "b3J5X2xpbmVfaWQYBCABKA0SEwoLQ05CQ0tFRk5GR0UYDyADKA1CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PGGGCFBKDPK), global::EggLink.DanhengServer.Proto.PGGGCFBKDPK.Parser, new[]{ "CNBCKEFNFGE", "GameStoryLineId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PGGGCFBKDPK), global::EggLink.DanhengServer.Proto.PGGGCFBKDPK.Parser, new[]{ "GameStoryLineId", "CNBCKEFNFGE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PGGGCFBKDPK(PGGGCFBKDPK other) : this() {
-      cNBCKEFNFGE_ = other.cNBCKEFNFGE_.Clone();
       gameStoryLineId_ = other.gameStoryLineId_;
+      cNBCKEFNFGE_ = other.cNBCKEFNFGE_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,19 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new PGGGCFBKDPK(this);
     }
 
-    /// <summary>Field number for the "CNBCKEFNFGE" field.</summary>
-    public const int CNBCKEFNFGEFieldNumber = 13;
-    private static readonly pb::FieldCodec<uint> _repeated_cNBCKEFNFGE_codec
-        = pb::FieldCodec.ForUInt32(106);
-    private readonly pbc::RepeatedField<uint> cNBCKEFNFGE_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> CNBCKEFNFGE {
-      get { return cNBCKEFNFGE_; }
-    }
-
     /// <summary>Field number for the "game_story_line_id" field.</summary>
-    public const int GameStoryLineIdFieldNumber = 9;
+    public const int GameStoryLineIdFieldNumber = 4;
     private uint gameStoryLineId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +93,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         gameStoryLineId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "CNBCKEFNFGE" field.</summary>
+    public const int CNBCKEFNFGEFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_cNBCKEFNFGE_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> cNBCKEFNFGE_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> CNBCKEFNFGE {
+      get { return cNBCKEFNFGE_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -121,8 +121,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!cNBCKEFNFGE_.Equals(other.cNBCKEFNFGE_)) return false;
       if (GameStoryLineId != other.GameStoryLineId) return false;
+      if(!cNBCKEFNFGE_.Equals(other.cNBCKEFNFGE_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -130,8 +130,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= cNBCKEFNFGE_.GetHashCode();
       if (GameStoryLineId != 0) hash ^= GameStoryLineId.GetHashCode();
+      hash ^= cNBCKEFNFGE_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (GameStoryLineId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(GameStoryLineId);
       }
       cNBCKEFNFGE_.WriteTo(output, _repeated_cNBCKEFNFGE_codec);
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (GameStoryLineId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(GameStoryLineId);
       }
       cNBCKEFNFGE_.WriteTo(ref output, _repeated_cNBCKEFNFGE_codec);
@@ -180,10 +180,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += cNBCKEFNFGE_.CalculateSize(_repeated_cNBCKEFNFGE_codec);
       if (GameStoryLineId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameStoryLineId);
       }
+      size += cNBCKEFNFGE_.CalculateSize(_repeated_cNBCKEFNFGE_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -196,10 +196,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      cNBCKEFNFGE_.Add(other.cNBCKEFNFGE_);
       if (other.GameStoryLineId != 0) {
         GameStoryLineId = other.GameStoryLineId;
       }
+      cNBCKEFNFGE_.Add(other.cNBCKEFNFGE_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -215,12 +215,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 32: {
             GameStoryLineId = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
+          case 122:
+          case 120: {
             cNBCKEFNFGE_.AddEntriesFrom(input, _repeated_cNBCKEFNFGE_codec);
             break;
           }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 32: {
             GameStoryLineId = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
+          case 122:
+          case 120: {
             cNBCKEFNFGE_.AddEntriesFrom(ref input, _repeated_cNBCKEFNFGE_codec);
             break;
           }

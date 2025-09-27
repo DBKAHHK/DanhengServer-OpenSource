@@ -24,28 +24,30 @@ namespace EggLink.DanhengServer.Proto {
     static FriendDevelopmentInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtGcmllbmREZXZlbG9wbWVudEluZm8ucHJvdG8aJEZyaWVuZENoYWxsZW5n",
-            "ZURldmVsb3BtZW50SW5mby5wcm90bxooRnJpZW5kQ2hhbGxlbmdlUGVha0Rl",
-            "dmVsb3BtZW50SW5mby5wcm90bxoRTkxDQ0VERUhFSEUucHJvdG8aIEZyaWVu",
-            "ZFJvZ3VlRGV2ZWxvcG1lbnRJbmZvLnByb3RvGiVGcmllbmRSb2d1ZVRvdXJu",
-            "RGV2ZWxvcG1lbnRJbmZvLnByb3RvGhVEZXZlbG9wbWVudFR5cGUucHJvdG8i",
-            "iwQKFUZyaWVuZERldmVsb3BtZW50SW5mbxIMCgR0aW1lGAkgASgDEioKEGRl",
-            "dmVsb3BtZW50X3R5cGUYDiABKA4yEC5EZXZlbG9wbWVudFR5cGUSPgoWcm9n",
-            "dWVfZGV2ZWxvcG1lbnRfaW5mbxizBSABKAsyGy5GcmllbmRSb2d1ZURldmVs",
-            "b3BtZW50SW5mb0gAEkYKGmNoYWxsZW5nZV9kZXZlbG9wbWVudF9pbmZvGP4D",
-            "IAEoCzIfLkZyaWVuZENoYWxsZW5nZURldmVsb3BtZW50SW5mb0gAEhQKCWF2",
-            "YXRhcl9pZBjwAiABKA1IABIYCg1lcXVpcG1lbnRfdGlkGMQNIAEoDUgAEhYK",
-            "C0NLS05OSE1EQ09HGJQGIAEoDUgAEkkKHHJvZ3VlX3RvdXJuX2RldmVsb3Bt",
-            "ZW50X2luZm8YswQgASgLMiAuRnJpZW5kUm9ndWVUb3VybkRldmVsb3BtZW50",
-            "SW5mb0gAEhMKCHBhbmVsX2lkGOgPIAEoDUgAEk8KH2NoYWxsZW5nZV9wZWFr",
-            "X2RldmVsb3BtZW50X2luZm8YjQkgASgLMiMuRnJpZW5kQ2hhbGxlbmdlUGVh",
-            "a0RldmVsb3BtZW50SW5mb0gAEiQKC1BLRU9BUExJT0JIGMUBIAEoCzIMLk5M",
-            "Q0NFREVIRUhFSABCEQoPRGV2ZWxvcG1lbnRJbmZvQh6qAhtFZ2dMaW5rLkRh",
-            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChtGcmllbmREZXZlbG9wbWVudEluZm8ucHJvdG8aIEZyaWVuZFJvZ3VlRGV2",
+            "ZWxvcG1lbnRJbmZvLnByb3RvGihGcmllbmRDaGFsbGVuZ2VQZWFrRGV2ZWxv",
+            "cG1lbnRJbmZvLnByb3RvGiRGcmllbmRDaGFsbGVuZ2VEZXZlbG9wbWVudElu",
+            "Zm8ucHJvdG8aFURldmVsb3BtZW50VHlwZS5wcm90bxoRTkxDQ0VERUhFSEUu",
+            "cHJvdG8aEUpQSk9MSkZJQkNCLnByb3RvGiVGcmllbmRSb2d1ZVRvdXJuRGV2",
+            "ZWxvcG1lbnRJbmZvLnByb3RvGhFBRUFHSkNJT05GRS5wcm90byLRBAoVRnJp",
+            "ZW5kRGV2ZWxvcG1lbnRJbmZvEj4KFnJvZ3VlX2RldmVsb3BtZW50X2luZm8Y",
+            "hAEgASgLMhsuRnJpZW5kUm9ndWVEZXZlbG9wbWVudEluZm9IABJGChpjaGFs",
+            "bGVuZ2VfZGV2ZWxvcG1lbnRfaW5mbxj5ASABKAsyHy5GcmllbmRDaGFsbGVu",
+            "Z2VEZXZlbG9wbWVudEluZm9IABIUCglhdmF0YXJfaWQY3w8gASgNSAASFwoN",
+            "ZXF1aXBtZW50X3RpZBhpIAEoDUgAEhYKC0NLS05OSE1EQ09HGIgJIAEoDUgA",
+            "EkkKHHJvZ3VlX3RvdXJuX2RldmVsb3BtZW50X2luZm8Y+w8gASgLMiAuRnJp",
+            "ZW5kUm9ndWVUb3VybkRldmVsb3BtZW50SW5mb0gAEhMKCHBhbmVsX2lkGM8G",
+            "IAEoDUgAEk8KH2NoYWxsZW5nZV9wZWFrX2RldmVsb3BtZW50X2luZm8YkwQg",
+            "ASgLMiMuRnJpZW5kQ2hhbGxlbmdlUGVha0RldmVsb3BtZW50SW5mb0gAEiQK",
+            "C1BLRU9BUExJT0JIGJsLIAEoCzIMLk5MQ0NFREVIRUhFSAASIwoLTktQQ0RN",
+            "TUFORUUYTiABKAsyDC5BRUFHSkNJT05GRUgAEiQKC0tPTEtHQ05DSEFIGNkM",
+            "IAEoCzIMLkpQSk9MSkZJQkNCSAASDAoEdGltZRgMIAEoAxIqChBkZXZlbG9w",
+            "bWVudF90eXBlGAsgASgOMhAuRGV2ZWxvcG1lbnRUeXBlQg0KC0ZNSkRETkVE",
+            "S0dGQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FriendChallengePeakDevelopmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NLCCEDEHEHEReflection.Descriptor, global::EggLink.DanhengServer.Proto.FriendRogueDevelopmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DevelopmentTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FriendRogueDevelopmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FriendChallengePeakDevelopmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DevelopmentTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.NLCCEDEHEHEReflection.Descriptor, global::EggLink.DanhengServer.Proto.JPJOLJFIBCBReflection.Descriptor, global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AEAGJCIONFEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo), global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo.Parser, new[]{ "Time", "DevelopmentType", "RogueDevelopmentInfo", "ChallengeDevelopmentInfo", "AvatarId", "EquipmentTid", "CKKNNHMDCOG", "RogueTournDevelopmentInfo", "PanelId", "ChallengePeakDevelopmentInfo", "PKEOAPLIOBH" }, new[]{ "DevelopmentInfo" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo), global::EggLink.DanhengServer.Proto.FriendDevelopmentInfo.Parser, new[]{ "RogueDevelopmentInfo", "ChallengeDevelopmentInfo", "AvatarId", "EquipmentTid", "CKKNNHMDCOG", "RogueTournDevelopmentInfo", "PanelId", "ChallengePeakDevelopmentInfo", "PKEOAPLIOBH", "NKPCDMMANEE", "KOLKGCNCHAH", "Time", "DevelopmentType" }, new[]{ "FMJDDNEDKGF" }, null, null, null)
           }));
     }
     #endregion
@@ -89,33 +91,39 @@ namespace EggLink.DanhengServer.Proto {
     public FriendDevelopmentInfo(FriendDevelopmentInfo other) : this() {
       time_ = other.time_;
       developmentType_ = other.developmentType_;
-      switch (other.DevelopmentInfoCase) {
-        case DevelopmentInfoOneofCase.RogueDevelopmentInfo:
+      switch (other.FMJDDNEDKGFCase) {
+        case FMJDDNEDKGFOneofCase.RogueDevelopmentInfo:
           RogueDevelopmentInfo = other.RogueDevelopmentInfo.Clone();
           break;
-        case DevelopmentInfoOneofCase.ChallengeDevelopmentInfo:
+        case FMJDDNEDKGFOneofCase.ChallengeDevelopmentInfo:
           ChallengeDevelopmentInfo = other.ChallengeDevelopmentInfo.Clone();
           break;
-        case DevelopmentInfoOneofCase.AvatarId:
+        case FMJDDNEDKGFOneofCase.AvatarId:
           AvatarId = other.AvatarId;
           break;
-        case DevelopmentInfoOneofCase.EquipmentTid:
+        case FMJDDNEDKGFOneofCase.EquipmentTid:
           EquipmentTid = other.EquipmentTid;
           break;
-        case DevelopmentInfoOneofCase.CKKNNHMDCOG:
+        case FMJDDNEDKGFOneofCase.CKKNNHMDCOG:
           CKKNNHMDCOG = other.CKKNNHMDCOG;
           break;
-        case DevelopmentInfoOneofCase.RogueTournDevelopmentInfo:
+        case FMJDDNEDKGFOneofCase.RogueTournDevelopmentInfo:
           RogueTournDevelopmentInfo = other.RogueTournDevelopmentInfo.Clone();
           break;
-        case DevelopmentInfoOneofCase.PanelId:
+        case FMJDDNEDKGFOneofCase.PanelId:
           PanelId = other.PanelId;
           break;
-        case DevelopmentInfoOneofCase.ChallengePeakDevelopmentInfo:
+        case FMJDDNEDKGFOneofCase.ChallengePeakDevelopmentInfo:
           ChallengePeakDevelopmentInfo = other.ChallengePeakDevelopmentInfo.Clone();
           break;
-        case DevelopmentInfoOneofCase.PKEOAPLIOBH:
+        case FMJDDNEDKGFOneofCase.PKEOAPLIOBH:
           PKEOAPLIOBH = other.PKEOAPLIOBH.Clone();
+          break;
+        case FMJDDNEDKGFOneofCase.NKPCDMMANEE:
+          NKPCDMMANEE = other.NKPCDMMANEE.Clone();
+          break;
+        case FMJDDNEDKGFOneofCase.KOLKGCNCHAH:
+          KOLKGCNCHAH = other.KOLKGCNCHAH.Clone();
           break;
       }
 
@@ -128,8 +136,196 @@ namespace EggLink.DanhengServer.Proto {
       return new FriendDevelopmentInfo(this);
     }
 
+    /// <summary>Field number for the "rogue_development_info" field.</summary>
+    public const int RogueDevelopmentInfoFieldNumber = 132;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.FriendRogueDevelopmentInfo RogueDevelopmentInfo {
+      get { return fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueDevelopmentInfo ? (global::EggLink.DanhengServer.Proto.FriendRogueDevelopmentInfo) fMJDDNEDKGF_ : null; }
+      set {
+        fMJDDNEDKGF_ = value;
+        fMJDDNEDKGFCase_ = value == null ? FMJDDNEDKGFOneofCase.None : FMJDDNEDKGFOneofCase.RogueDevelopmentInfo;
+      }
+    }
+
+    /// <summary>Field number for the "challenge_development_info" field.</summary>
+    public const int ChallengeDevelopmentInfoFieldNumber = 249;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfo ChallengeDevelopmentInfo {
+      get { return fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengeDevelopmentInfo ? (global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfo) fMJDDNEDKGF_ : null; }
+      set {
+        fMJDDNEDKGF_ = value;
+        fMJDDNEDKGFCase_ = value == null ? FMJDDNEDKGFOneofCase.None : FMJDDNEDKGFOneofCase.ChallengeDevelopmentInfo;
+      }
+    }
+
+    /// <summary>Field number for the "avatar_id" field.</summary>
+    public const int AvatarIdFieldNumber = 2015;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AvatarId {
+      get { return HasAvatarId ? (uint) fMJDDNEDKGF_ : 0; }
+      set {
+        fMJDDNEDKGF_ = value;
+        fMJDDNEDKGFCase_ = FMJDDNEDKGFOneofCase.AvatarId;
+      }
+    }
+    /// <summary>Gets whether the "avatar_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAvatarId {
+      get { return fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.AvatarId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "avatar_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAvatarId() {
+      if (HasAvatarId) {
+        ClearFMJDDNEDKGF();
+      }
+    }
+
+    /// <summary>Field number for the "equipment_tid" field.</summary>
+    public const int EquipmentTidFieldNumber = 105;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint EquipmentTid {
+      get { return HasEquipmentTid ? (uint) fMJDDNEDKGF_ : 0; }
+      set {
+        fMJDDNEDKGF_ = value;
+        fMJDDNEDKGFCase_ = FMJDDNEDKGFOneofCase.EquipmentTid;
+      }
+    }
+    /// <summary>Gets whether the "equipment_tid" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEquipmentTid {
+      get { return fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.EquipmentTid; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "equipment_tid" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEquipmentTid() {
+      if (HasEquipmentTid) {
+        ClearFMJDDNEDKGF();
+      }
+    }
+
+    /// <summary>Field number for the "CKKNNHMDCOG" field.</summary>
+    public const int CKKNNHMDCOGFieldNumber = 1160;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CKKNNHMDCOG {
+      get { return HasCKKNNHMDCOG ? (uint) fMJDDNEDKGF_ : 0; }
+      set {
+        fMJDDNEDKGF_ = value;
+        fMJDDNEDKGFCase_ = FMJDDNEDKGFOneofCase.CKKNNHMDCOG;
+      }
+    }
+    /// <summary>Gets whether the "CKKNNHMDCOG" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCKKNNHMDCOG {
+      get { return fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.CKKNNHMDCOG; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "CKKNNHMDCOG" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCKKNNHMDCOG() {
+      if (HasCKKNNHMDCOG) {
+        ClearFMJDDNEDKGF();
+      }
+    }
+
+    /// <summary>Field number for the "rogue_tourn_development_info" field.</summary>
+    public const int RogueTournDevelopmentInfoFieldNumber = 2043;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfo RogueTournDevelopmentInfo {
+      get { return fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueTournDevelopmentInfo ? (global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfo) fMJDDNEDKGF_ : null; }
+      set {
+        fMJDDNEDKGF_ = value;
+        fMJDDNEDKGFCase_ = value == null ? FMJDDNEDKGFOneofCase.None : FMJDDNEDKGFOneofCase.RogueTournDevelopmentInfo;
+      }
+    }
+
+    /// <summary>Field number for the "panel_id" field.</summary>
+    public const int PanelIdFieldNumber = 847;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PanelId {
+      get { return HasPanelId ? (uint) fMJDDNEDKGF_ : 0; }
+      set {
+        fMJDDNEDKGF_ = value;
+        fMJDDNEDKGFCase_ = FMJDDNEDKGFOneofCase.PanelId;
+      }
+    }
+    /// <summary>Gets whether the "panel_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPanelId {
+      get { return fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.PanelId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "panel_id" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPanelId() {
+      if (HasPanelId) {
+        ClearFMJDDNEDKGF();
+      }
+    }
+
+    /// <summary>Field number for the "challenge_peak_development_info" field.</summary>
+    public const int ChallengePeakDevelopmentInfoFieldNumber = 531;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.FriendChallengePeakDevelopmentInfo ChallengePeakDevelopmentInfo {
+      get { return fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengePeakDevelopmentInfo ? (global::EggLink.DanhengServer.Proto.FriendChallengePeakDevelopmentInfo) fMJDDNEDKGF_ : null; }
+      set {
+        fMJDDNEDKGF_ = value;
+        fMJDDNEDKGFCase_ = value == null ? FMJDDNEDKGFOneofCase.None : FMJDDNEDKGFOneofCase.ChallengePeakDevelopmentInfo;
+      }
+    }
+
+    /// <summary>Field number for the "PKEOAPLIOBH" field.</summary>
+    public const int PKEOAPLIOBHFieldNumber = 1435;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.NLCCEDEHEHE PKEOAPLIOBH {
+      get { return fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.PKEOAPLIOBH ? (global::EggLink.DanhengServer.Proto.NLCCEDEHEHE) fMJDDNEDKGF_ : null; }
+      set {
+        fMJDDNEDKGF_ = value;
+        fMJDDNEDKGFCase_ = value == null ? FMJDDNEDKGFOneofCase.None : FMJDDNEDKGFOneofCase.PKEOAPLIOBH;
+      }
+    }
+
+    /// <summary>Field number for the "NKPCDMMANEE" field.</summary>
+    public const int NKPCDMMANEEFieldNumber = 78;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.AEAGJCIONFE NKPCDMMANEE {
+      get { return fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.NKPCDMMANEE ? (global::EggLink.DanhengServer.Proto.AEAGJCIONFE) fMJDDNEDKGF_ : null; }
+      set {
+        fMJDDNEDKGF_ = value;
+        fMJDDNEDKGFCase_ = value == null ? FMJDDNEDKGFOneofCase.None : FMJDDNEDKGFOneofCase.NKPCDMMANEE;
+      }
+    }
+
+    /// <summary>Field number for the "KOLKGCNCHAH" field.</summary>
+    public const int KOLKGCNCHAHFieldNumber = 1625;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.JPJOLJFIBCB KOLKGCNCHAH {
+      get { return fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.KOLKGCNCHAH ? (global::EggLink.DanhengServer.Proto.JPJOLJFIBCB) fMJDDNEDKGF_ : null; }
+      set {
+        fMJDDNEDKGF_ = value;
+        fMJDDNEDKGFCase_ = value == null ? FMJDDNEDKGFOneofCase.None : FMJDDNEDKGFOneofCase.KOLKGCNCHAH;
+      }
+    }
+
     /// <summary>Field number for the "time" field.</summary>
-    public const int TimeFieldNumber = 9;
+    public const int TimeFieldNumber = 12;
     private long time_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -141,7 +337,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "development_type" field.</summary>
-    public const int DevelopmentTypeFieldNumber = 14;
+    public const int DevelopmentTypeFieldNumber = 11;
     private global::EggLink.DanhengServer.Proto.DevelopmentType developmentType_ = global::EggLink.DanhengServer.Proto.DevelopmentType.DevelopmentNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,196 +348,34 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "rogue_development_info" field.</summary>
-    public const int RogueDevelopmentInfoFieldNumber = 691;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FriendRogueDevelopmentInfo RogueDevelopmentInfo {
-      get { return developmentInfoCase_ == DevelopmentInfoOneofCase.RogueDevelopmentInfo ? (global::EggLink.DanhengServer.Proto.FriendRogueDevelopmentInfo) developmentInfo_ : null; }
-      set {
-        developmentInfo_ = value;
-        developmentInfoCase_ = value == null ? DevelopmentInfoOneofCase.None : DevelopmentInfoOneofCase.RogueDevelopmentInfo;
-      }
-    }
-
-    /// <summary>Field number for the "challenge_development_info" field.</summary>
-    public const int ChallengeDevelopmentInfoFieldNumber = 510;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfo ChallengeDevelopmentInfo {
-      get { return developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengeDevelopmentInfo ? (global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfo) developmentInfo_ : null; }
-      set {
-        developmentInfo_ = value;
-        developmentInfoCase_ = value == null ? DevelopmentInfoOneofCase.None : DevelopmentInfoOneofCase.ChallengeDevelopmentInfo;
-      }
-    }
-
-    /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 368;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AvatarId {
-      get { return HasAvatarId ? (uint) developmentInfo_ : 0; }
-      set {
-        developmentInfo_ = value;
-        developmentInfoCase_ = DevelopmentInfoOneofCase.AvatarId;
-      }
-    }
-    /// <summary>Gets whether the "avatar_id" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasAvatarId {
-      get { return developmentInfoCase_ == DevelopmentInfoOneofCase.AvatarId; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "avatar_id" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearAvatarId() {
-      if (HasAvatarId) {
-        ClearDevelopmentInfo();
-      }
-    }
-
-    /// <summary>Field number for the "equipment_tid" field.</summary>
-    public const int EquipmentTidFieldNumber = 1732;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EquipmentTid {
-      get { return HasEquipmentTid ? (uint) developmentInfo_ : 0; }
-      set {
-        developmentInfo_ = value;
-        developmentInfoCase_ = DevelopmentInfoOneofCase.EquipmentTid;
-      }
-    }
-    /// <summary>Gets whether the "equipment_tid" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasEquipmentTid {
-      get { return developmentInfoCase_ == DevelopmentInfoOneofCase.EquipmentTid; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "equipment_tid" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearEquipmentTid() {
-      if (HasEquipmentTid) {
-        ClearDevelopmentInfo();
-      }
-    }
-
-    /// <summary>Field number for the "CKKNNHMDCOG" field.</summary>
-    public const int CKKNNHMDCOGFieldNumber = 788;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CKKNNHMDCOG {
-      get { return HasCKKNNHMDCOG ? (uint) developmentInfo_ : 0; }
-      set {
-        developmentInfo_ = value;
-        developmentInfoCase_ = DevelopmentInfoOneofCase.CKKNNHMDCOG;
-      }
-    }
-    /// <summary>Gets whether the "CKKNNHMDCOG" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasCKKNNHMDCOG {
-      get { return developmentInfoCase_ == DevelopmentInfoOneofCase.CKKNNHMDCOG; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "CKKNNHMDCOG" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearCKKNNHMDCOG() {
-      if (HasCKKNNHMDCOG) {
-        ClearDevelopmentInfo();
-      }
-    }
-
-    /// <summary>Field number for the "rogue_tourn_development_info" field.</summary>
-    public const int RogueTournDevelopmentInfoFieldNumber = 563;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfo RogueTournDevelopmentInfo {
-      get { return developmentInfoCase_ == DevelopmentInfoOneofCase.RogueTournDevelopmentInfo ? (global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfo) developmentInfo_ : null; }
-      set {
-        developmentInfo_ = value;
-        developmentInfoCase_ = value == null ? DevelopmentInfoOneofCase.None : DevelopmentInfoOneofCase.RogueTournDevelopmentInfo;
-      }
-    }
-
-    /// <summary>Field number for the "panel_id" field.</summary>
-    public const int PanelIdFieldNumber = 2024;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PanelId {
-      get { return HasPanelId ? (uint) developmentInfo_ : 0; }
-      set {
-        developmentInfo_ = value;
-        developmentInfoCase_ = DevelopmentInfoOneofCase.PanelId;
-      }
-    }
-    /// <summary>Gets whether the "panel_id" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasPanelId {
-      get { return developmentInfoCase_ == DevelopmentInfoOneofCase.PanelId; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "panel_id" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearPanelId() {
-      if (HasPanelId) {
-        ClearDevelopmentInfo();
-      }
-    }
-
-    /// <summary>Field number for the "challenge_peak_development_info" field.</summary>
-    public const int ChallengePeakDevelopmentInfoFieldNumber = 1165;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FriendChallengePeakDevelopmentInfo ChallengePeakDevelopmentInfo {
-      get { return developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengePeakDevelopmentInfo ? (global::EggLink.DanhengServer.Proto.FriendChallengePeakDevelopmentInfo) developmentInfo_ : null; }
-      set {
-        developmentInfo_ = value;
-        developmentInfoCase_ = value == null ? DevelopmentInfoOneofCase.None : DevelopmentInfoOneofCase.ChallengePeakDevelopmentInfo;
-      }
-    }
-
-    /// <summary>Field number for the "PKEOAPLIOBH" field.</summary>
-    public const int PKEOAPLIOBHFieldNumber = 197;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.NLCCEDEHEHE PKEOAPLIOBH {
-      get { return developmentInfoCase_ == DevelopmentInfoOneofCase.PKEOAPLIOBH ? (global::EggLink.DanhengServer.Proto.NLCCEDEHEHE) developmentInfo_ : null; }
-      set {
-        developmentInfo_ = value;
-        developmentInfoCase_ = value == null ? DevelopmentInfoOneofCase.None : DevelopmentInfoOneofCase.PKEOAPLIOBH;
-      }
-    }
-
-    private object developmentInfo_;
-    /// <summary>Enum of possible cases for the "DevelopmentInfo" oneof.</summary>
-    public enum DevelopmentInfoOneofCase {
+    private object fMJDDNEDKGF_;
+    /// <summary>Enum of possible cases for the "FMJDDNEDKGF" oneof.</summary>
+    public enum FMJDDNEDKGFOneofCase {
       None = 0,
-      RogueDevelopmentInfo = 691,
-      ChallengeDevelopmentInfo = 510,
-      AvatarId = 368,
-      EquipmentTid = 1732,
-      CKKNNHMDCOG = 788,
-      RogueTournDevelopmentInfo = 563,
-      PanelId = 2024,
-      ChallengePeakDevelopmentInfo = 1165,
-      PKEOAPLIOBH = 197,
+      RogueDevelopmentInfo = 132,
+      ChallengeDevelopmentInfo = 249,
+      AvatarId = 2015,
+      EquipmentTid = 105,
+      CKKNNHMDCOG = 1160,
+      RogueTournDevelopmentInfo = 2043,
+      PanelId = 847,
+      ChallengePeakDevelopmentInfo = 531,
+      PKEOAPLIOBH = 1435,
+      NKPCDMMANEE = 78,
+      KOLKGCNCHAH = 1625,
     }
-    private DevelopmentInfoOneofCase developmentInfoCase_ = DevelopmentInfoOneofCase.None;
+    private FMJDDNEDKGFOneofCase fMJDDNEDKGFCase_ = FMJDDNEDKGFOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DevelopmentInfoOneofCase DevelopmentInfoCase {
-      get { return developmentInfoCase_; }
+    public FMJDDNEDKGFOneofCase FMJDDNEDKGFCase {
+      get { return fMJDDNEDKGFCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearDevelopmentInfo() {
-      developmentInfoCase_ = DevelopmentInfoOneofCase.None;
-      developmentInfo_ = null;
+    public void ClearFMJDDNEDKGF() {
+      fMJDDNEDKGFCase_ = FMJDDNEDKGFOneofCase.None;
+      fMJDDNEDKGF_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -359,8 +393,6 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Time != other.Time) return false;
-      if (DevelopmentType != other.DevelopmentType) return false;
       if (!object.Equals(RogueDevelopmentInfo, other.RogueDevelopmentInfo)) return false;
       if (!object.Equals(ChallengeDevelopmentInfo, other.ChallengeDevelopmentInfo)) return false;
       if (AvatarId != other.AvatarId) return false;
@@ -370,7 +402,11 @@ namespace EggLink.DanhengServer.Proto {
       if (PanelId != other.PanelId) return false;
       if (!object.Equals(ChallengePeakDevelopmentInfo, other.ChallengePeakDevelopmentInfo)) return false;
       if (!object.Equals(PKEOAPLIOBH, other.PKEOAPLIOBH)) return false;
-      if (DevelopmentInfoCase != other.DevelopmentInfoCase) return false;
+      if (!object.Equals(NKPCDMMANEE, other.NKPCDMMANEE)) return false;
+      if (!object.Equals(KOLKGCNCHAH, other.KOLKGCNCHAH)) return false;
+      if (Time != other.Time) return false;
+      if (DevelopmentType != other.DevelopmentType) return false;
+      if (FMJDDNEDKGFCase != other.FMJDDNEDKGFCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -378,18 +414,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Time != 0L) hash ^= Time.GetHashCode();
-      if (DevelopmentType != global::EggLink.DanhengServer.Proto.DevelopmentType.DevelopmentNone) hash ^= DevelopmentType.GetHashCode();
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.RogueDevelopmentInfo) hash ^= RogueDevelopmentInfo.GetHashCode();
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengeDevelopmentInfo) hash ^= ChallengeDevelopmentInfo.GetHashCode();
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueDevelopmentInfo) hash ^= RogueDevelopmentInfo.GetHashCode();
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengeDevelopmentInfo) hash ^= ChallengeDevelopmentInfo.GetHashCode();
       if (HasAvatarId) hash ^= AvatarId.GetHashCode();
       if (HasEquipmentTid) hash ^= EquipmentTid.GetHashCode();
       if (HasCKKNNHMDCOG) hash ^= CKKNNHMDCOG.GetHashCode();
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.RogueTournDevelopmentInfo) hash ^= RogueTournDevelopmentInfo.GetHashCode();
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueTournDevelopmentInfo) hash ^= RogueTournDevelopmentInfo.GetHashCode();
       if (HasPanelId) hash ^= PanelId.GetHashCode();
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengePeakDevelopmentInfo) hash ^= ChallengePeakDevelopmentInfo.GetHashCode();
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.PKEOAPLIOBH) hash ^= PKEOAPLIOBH.GetHashCode();
-      hash ^= (int) developmentInfoCase_;
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengePeakDevelopmentInfo) hash ^= ChallengePeakDevelopmentInfo.GetHashCode();
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.PKEOAPLIOBH) hash ^= PKEOAPLIOBH.GetHashCode();
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.NKPCDMMANEE) hash ^= NKPCDMMANEE.GetHashCode();
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.KOLKGCNCHAH) hash ^= KOLKGCNCHAH.GetHashCode();
+      if (Time != 0L) hash ^= Time.GetHashCode();
+      if (DevelopmentType != global::EggLink.DanhengServer.Proto.DevelopmentType.DevelopmentNone) hash ^= DevelopmentType.GetHashCode();
+      hash ^= (int) fMJDDNEDKGFCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -408,49 +446,57 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Time != 0L) {
-        output.WriteRawTag(72);
-        output.WriteInt64(Time);
-      }
       if (DevelopmentType != global::EggLink.DanhengServer.Proto.DevelopmentType.DevelopmentNone) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteEnum((int) DevelopmentType);
       }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.PKEOAPLIOBH) {
-        output.WriteRawTag(170, 12);
-        output.WriteMessage(PKEOAPLIOBH);
+      if (Time != 0L) {
+        output.WriteRawTag(96);
+        output.WriteInt64(Time);
       }
-      if (HasAvatarId) {
-        output.WriteRawTag(128, 23);
-        output.WriteUInt32(AvatarId);
-      }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengeDevelopmentInfo) {
-        output.WriteRawTag(242, 31);
-        output.WriteMessage(ChallengeDevelopmentInfo);
-      }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.RogueTournDevelopmentInfo) {
-        output.WriteRawTag(154, 35);
-        output.WriteMessage(RogueTournDevelopmentInfo);
-      }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.RogueDevelopmentInfo) {
-        output.WriteRawTag(154, 43);
-        output.WriteMessage(RogueDevelopmentInfo);
-      }
-      if (HasCKKNNHMDCOG) {
-        output.WriteRawTag(160, 49);
-        output.WriteUInt32(CKKNNHMDCOG);
-      }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengePeakDevelopmentInfo) {
-        output.WriteRawTag(234, 72);
-        output.WriteMessage(ChallengePeakDevelopmentInfo);
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.NKPCDMMANEE) {
+        output.WriteRawTag(242, 4);
+        output.WriteMessage(NKPCDMMANEE);
       }
       if (HasEquipmentTid) {
-        output.WriteRawTag(160, 108);
+        output.WriteRawTag(200, 6);
         output.WriteUInt32(EquipmentTid);
       }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueDevelopmentInfo) {
+        output.WriteRawTag(162, 8);
+        output.WriteMessage(RogueDevelopmentInfo);
+      }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengeDevelopmentInfo) {
+        output.WriteRawTag(202, 15);
+        output.WriteMessage(ChallengeDevelopmentInfo);
+      }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengePeakDevelopmentInfo) {
+        output.WriteRawTag(154, 33);
+        output.WriteMessage(ChallengePeakDevelopmentInfo);
+      }
       if (HasPanelId) {
-        output.WriteRawTag(192, 126);
+        output.WriteRawTag(248, 52);
         output.WriteUInt32(PanelId);
+      }
+      if (HasCKKNNHMDCOG) {
+        output.WriteRawTag(192, 72);
+        output.WriteUInt32(CKKNNHMDCOG);
+      }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.PKEOAPLIOBH) {
+        output.WriteRawTag(218, 89);
+        output.WriteMessage(PKEOAPLIOBH);
+      }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.KOLKGCNCHAH) {
+        output.WriteRawTag(202, 101);
+        output.WriteMessage(KOLKGCNCHAH);
+      }
+      if (HasAvatarId) {
+        output.WriteRawTag(248, 125);
+        output.WriteUInt32(AvatarId);
+      }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueTournDevelopmentInfo) {
+        output.WriteRawTag(218, 127);
+        output.WriteMessage(RogueTournDevelopmentInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -462,49 +508,57 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Time != 0L) {
-        output.WriteRawTag(72);
-        output.WriteInt64(Time);
-      }
       if (DevelopmentType != global::EggLink.DanhengServer.Proto.DevelopmentType.DevelopmentNone) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(88);
         output.WriteEnum((int) DevelopmentType);
       }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.PKEOAPLIOBH) {
-        output.WriteRawTag(170, 12);
-        output.WriteMessage(PKEOAPLIOBH);
+      if (Time != 0L) {
+        output.WriteRawTag(96);
+        output.WriteInt64(Time);
       }
-      if (HasAvatarId) {
-        output.WriteRawTag(128, 23);
-        output.WriteUInt32(AvatarId);
-      }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengeDevelopmentInfo) {
-        output.WriteRawTag(242, 31);
-        output.WriteMessage(ChallengeDevelopmentInfo);
-      }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.RogueTournDevelopmentInfo) {
-        output.WriteRawTag(154, 35);
-        output.WriteMessage(RogueTournDevelopmentInfo);
-      }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.RogueDevelopmentInfo) {
-        output.WriteRawTag(154, 43);
-        output.WriteMessage(RogueDevelopmentInfo);
-      }
-      if (HasCKKNNHMDCOG) {
-        output.WriteRawTag(160, 49);
-        output.WriteUInt32(CKKNNHMDCOG);
-      }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengePeakDevelopmentInfo) {
-        output.WriteRawTag(234, 72);
-        output.WriteMessage(ChallengePeakDevelopmentInfo);
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.NKPCDMMANEE) {
+        output.WriteRawTag(242, 4);
+        output.WriteMessage(NKPCDMMANEE);
       }
       if (HasEquipmentTid) {
-        output.WriteRawTag(160, 108);
+        output.WriteRawTag(200, 6);
         output.WriteUInt32(EquipmentTid);
       }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueDevelopmentInfo) {
+        output.WriteRawTag(162, 8);
+        output.WriteMessage(RogueDevelopmentInfo);
+      }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengeDevelopmentInfo) {
+        output.WriteRawTag(202, 15);
+        output.WriteMessage(ChallengeDevelopmentInfo);
+      }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengePeakDevelopmentInfo) {
+        output.WriteRawTag(154, 33);
+        output.WriteMessage(ChallengePeakDevelopmentInfo);
+      }
       if (HasPanelId) {
-        output.WriteRawTag(192, 126);
+        output.WriteRawTag(248, 52);
         output.WriteUInt32(PanelId);
+      }
+      if (HasCKKNNHMDCOG) {
+        output.WriteRawTag(192, 72);
+        output.WriteUInt32(CKKNNHMDCOG);
+      }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.PKEOAPLIOBH) {
+        output.WriteRawTag(218, 89);
+        output.WriteMessage(PKEOAPLIOBH);
+      }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.KOLKGCNCHAH) {
+        output.WriteRawTag(202, 101);
+        output.WriteMessage(KOLKGCNCHAH);
+      }
+      if (HasAvatarId) {
+        output.WriteRawTag(248, 125);
+        output.WriteUInt32(AvatarId);
+      }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueTournDevelopmentInfo) {
+        output.WriteRawTag(218, 127);
+        output.WriteMessage(RogueTournDevelopmentInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -516,16 +570,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Time != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Time);
-      }
-      if (DevelopmentType != global::EggLink.DanhengServer.Proto.DevelopmentType.DevelopmentNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DevelopmentType);
-      }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.RogueDevelopmentInfo) {
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueDevelopmentInfo) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(RogueDevelopmentInfo);
       }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengeDevelopmentInfo) {
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengeDevelopmentInfo) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ChallengeDevelopmentInfo);
       }
       if (HasAvatarId) {
@@ -537,17 +585,29 @@ namespace EggLink.DanhengServer.Proto {
       if (HasCKKNNHMDCOG) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(CKKNNHMDCOG);
       }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.RogueTournDevelopmentInfo) {
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueTournDevelopmentInfo) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(RogueTournDevelopmentInfo);
       }
       if (HasPanelId) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
       }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengePeakDevelopmentInfo) {
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengePeakDevelopmentInfo) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ChallengePeakDevelopmentInfo);
       }
-      if (developmentInfoCase_ == DevelopmentInfoOneofCase.PKEOAPLIOBH) {
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.PKEOAPLIOBH) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(PKEOAPLIOBH);
+      }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.NKPCDMMANEE) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(NKPCDMMANEE);
+      }
+      if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.KOLKGCNCHAH) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(KOLKGCNCHAH);
+      }
+      if (Time != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Time);
+      }
+      if (DevelopmentType != global::EggLink.DanhengServer.Proto.DevelopmentType.DevelopmentNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DevelopmentType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -567,48 +627,60 @@ namespace EggLink.DanhengServer.Proto {
       if (other.DevelopmentType != global::EggLink.DanhengServer.Proto.DevelopmentType.DevelopmentNone) {
         DevelopmentType = other.DevelopmentType;
       }
-      switch (other.DevelopmentInfoCase) {
-        case DevelopmentInfoOneofCase.RogueDevelopmentInfo:
+      switch (other.FMJDDNEDKGFCase) {
+        case FMJDDNEDKGFOneofCase.RogueDevelopmentInfo:
           if (RogueDevelopmentInfo == null) {
             RogueDevelopmentInfo = new global::EggLink.DanhengServer.Proto.FriendRogueDevelopmentInfo();
           }
           RogueDevelopmentInfo.MergeFrom(other.RogueDevelopmentInfo);
           break;
-        case DevelopmentInfoOneofCase.ChallengeDevelopmentInfo:
+        case FMJDDNEDKGFOneofCase.ChallengeDevelopmentInfo:
           if (ChallengeDevelopmentInfo == null) {
             ChallengeDevelopmentInfo = new global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfo();
           }
           ChallengeDevelopmentInfo.MergeFrom(other.ChallengeDevelopmentInfo);
           break;
-        case DevelopmentInfoOneofCase.AvatarId:
+        case FMJDDNEDKGFOneofCase.AvatarId:
           AvatarId = other.AvatarId;
           break;
-        case DevelopmentInfoOneofCase.EquipmentTid:
+        case FMJDDNEDKGFOneofCase.EquipmentTid:
           EquipmentTid = other.EquipmentTid;
           break;
-        case DevelopmentInfoOneofCase.CKKNNHMDCOG:
+        case FMJDDNEDKGFOneofCase.CKKNNHMDCOG:
           CKKNNHMDCOG = other.CKKNNHMDCOG;
           break;
-        case DevelopmentInfoOneofCase.RogueTournDevelopmentInfo:
+        case FMJDDNEDKGFOneofCase.RogueTournDevelopmentInfo:
           if (RogueTournDevelopmentInfo == null) {
             RogueTournDevelopmentInfo = new global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfo();
           }
           RogueTournDevelopmentInfo.MergeFrom(other.RogueTournDevelopmentInfo);
           break;
-        case DevelopmentInfoOneofCase.PanelId:
+        case FMJDDNEDKGFOneofCase.PanelId:
           PanelId = other.PanelId;
           break;
-        case DevelopmentInfoOneofCase.ChallengePeakDevelopmentInfo:
+        case FMJDDNEDKGFOneofCase.ChallengePeakDevelopmentInfo:
           if (ChallengePeakDevelopmentInfo == null) {
             ChallengePeakDevelopmentInfo = new global::EggLink.DanhengServer.Proto.FriendChallengePeakDevelopmentInfo();
           }
           ChallengePeakDevelopmentInfo.MergeFrom(other.ChallengePeakDevelopmentInfo);
           break;
-        case DevelopmentInfoOneofCase.PKEOAPLIOBH:
+        case FMJDDNEDKGFOneofCase.PKEOAPLIOBH:
           if (PKEOAPLIOBH == null) {
             PKEOAPLIOBH = new global::EggLink.DanhengServer.Proto.NLCCEDEHEHE();
           }
           PKEOAPLIOBH.MergeFrom(other.PKEOAPLIOBH);
+          break;
+        case FMJDDNEDKGFOneofCase.NKPCDMMANEE:
+          if (NKPCDMMANEE == null) {
+            NKPCDMMANEE = new global::EggLink.DanhengServer.Proto.AEAGJCIONFE();
+          }
+          NKPCDMMANEE.MergeFrom(other.NKPCDMMANEE);
+          break;
+        case FMJDDNEDKGFOneofCase.KOLKGCNCHAH:
+          if (KOLKGCNCHAH == null) {
+            KOLKGCNCHAH = new global::EggLink.DanhengServer.Proto.JPJOLJFIBCB();
+          }
+          KOLKGCNCHAH.MergeFrom(other.KOLKGCNCHAH);
           break;
       }
 
@@ -627,73 +699,91 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
-            Time = input.ReadInt64();
-            break;
-          }
-          case 112: {
+          case 88: {
             DevelopmentType = (global::EggLink.DanhengServer.Proto.DevelopmentType) input.ReadEnum();
             break;
           }
-          case 1578: {
-            global::EggLink.DanhengServer.Proto.NLCCEDEHEHE subBuilder = new global::EggLink.DanhengServer.Proto.NLCCEDEHEHE();
-            if (developmentInfoCase_ == DevelopmentInfoOneofCase.PKEOAPLIOBH) {
-              subBuilder.MergeFrom(PKEOAPLIOBH);
+          case 96: {
+            Time = input.ReadInt64();
+            break;
+          }
+          case 626: {
+            global::EggLink.DanhengServer.Proto.AEAGJCIONFE subBuilder = new global::EggLink.DanhengServer.Proto.AEAGJCIONFE();
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.NKPCDMMANEE) {
+              subBuilder.MergeFrom(NKPCDMMANEE);
             }
             input.ReadMessage(subBuilder);
-            PKEOAPLIOBH = subBuilder;
+            NKPCDMMANEE = subBuilder;
             break;
           }
-          case 2944: {
-            AvatarId = input.ReadUInt32();
+          case 840: {
+            EquipmentTid = input.ReadUInt32();
             break;
           }
-          case 4082: {
-            global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfo subBuilder = new global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfo();
-            if (developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengeDevelopmentInfo) {
-              subBuilder.MergeFrom(ChallengeDevelopmentInfo);
-            }
-            input.ReadMessage(subBuilder);
-            ChallengeDevelopmentInfo = subBuilder;
-            break;
-          }
-          case 4506: {
-            global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfo subBuilder = new global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfo();
-            if (developmentInfoCase_ == DevelopmentInfoOneofCase.RogueTournDevelopmentInfo) {
-              subBuilder.MergeFrom(RogueTournDevelopmentInfo);
-            }
-            input.ReadMessage(subBuilder);
-            RogueTournDevelopmentInfo = subBuilder;
-            break;
-          }
-          case 5530: {
+          case 1058: {
             global::EggLink.DanhengServer.Proto.FriendRogueDevelopmentInfo subBuilder = new global::EggLink.DanhengServer.Proto.FriendRogueDevelopmentInfo();
-            if (developmentInfoCase_ == DevelopmentInfoOneofCase.RogueDevelopmentInfo) {
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueDevelopmentInfo) {
               subBuilder.MergeFrom(RogueDevelopmentInfo);
             }
             input.ReadMessage(subBuilder);
             RogueDevelopmentInfo = subBuilder;
             break;
           }
-          case 6304: {
-            CKKNNHMDCOG = input.ReadUInt32();
+          case 1994: {
+            global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfo subBuilder = new global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfo();
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengeDevelopmentInfo) {
+              subBuilder.MergeFrom(ChallengeDevelopmentInfo);
+            }
+            input.ReadMessage(subBuilder);
+            ChallengeDevelopmentInfo = subBuilder;
             break;
           }
-          case 9322: {
+          case 4250: {
             global::EggLink.DanhengServer.Proto.FriendChallengePeakDevelopmentInfo subBuilder = new global::EggLink.DanhengServer.Proto.FriendChallengePeakDevelopmentInfo();
-            if (developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengePeakDevelopmentInfo) {
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengePeakDevelopmentInfo) {
               subBuilder.MergeFrom(ChallengePeakDevelopmentInfo);
             }
             input.ReadMessage(subBuilder);
             ChallengePeakDevelopmentInfo = subBuilder;
             break;
           }
-          case 13856: {
-            EquipmentTid = input.ReadUInt32();
+          case 6776: {
+            PanelId = input.ReadUInt32();
             break;
           }
-          case 16192: {
-            PanelId = input.ReadUInt32();
+          case 9280: {
+            CKKNNHMDCOG = input.ReadUInt32();
+            break;
+          }
+          case 11482: {
+            global::EggLink.DanhengServer.Proto.NLCCEDEHEHE subBuilder = new global::EggLink.DanhengServer.Proto.NLCCEDEHEHE();
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.PKEOAPLIOBH) {
+              subBuilder.MergeFrom(PKEOAPLIOBH);
+            }
+            input.ReadMessage(subBuilder);
+            PKEOAPLIOBH = subBuilder;
+            break;
+          }
+          case 13002: {
+            global::EggLink.DanhengServer.Proto.JPJOLJFIBCB subBuilder = new global::EggLink.DanhengServer.Proto.JPJOLJFIBCB();
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.KOLKGCNCHAH) {
+              subBuilder.MergeFrom(KOLKGCNCHAH);
+            }
+            input.ReadMessage(subBuilder);
+            KOLKGCNCHAH = subBuilder;
+            break;
+          }
+          case 16120: {
+            AvatarId = input.ReadUInt32();
+            break;
+          }
+          case 16346: {
+            global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfo subBuilder = new global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfo();
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueTournDevelopmentInfo) {
+              subBuilder.MergeFrom(RogueTournDevelopmentInfo);
+            }
+            input.ReadMessage(subBuilder);
+            RogueTournDevelopmentInfo = subBuilder;
             break;
           }
         }
@@ -711,73 +801,91 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
-            Time = input.ReadInt64();
-            break;
-          }
-          case 112: {
+          case 88: {
             DevelopmentType = (global::EggLink.DanhengServer.Proto.DevelopmentType) input.ReadEnum();
             break;
           }
-          case 1578: {
-            global::EggLink.DanhengServer.Proto.NLCCEDEHEHE subBuilder = new global::EggLink.DanhengServer.Proto.NLCCEDEHEHE();
-            if (developmentInfoCase_ == DevelopmentInfoOneofCase.PKEOAPLIOBH) {
-              subBuilder.MergeFrom(PKEOAPLIOBH);
+          case 96: {
+            Time = input.ReadInt64();
+            break;
+          }
+          case 626: {
+            global::EggLink.DanhengServer.Proto.AEAGJCIONFE subBuilder = new global::EggLink.DanhengServer.Proto.AEAGJCIONFE();
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.NKPCDMMANEE) {
+              subBuilder.MergeFrom(NKPCDMMANEE);
             }
             input.ReadMessage(subBuilder);
-            PKEOAPLIOBH = subBuilder;
+            NKPCDMMANEE = subBuilder;
             break;
           }
-          case 2944: {
-            AvatarId = input.ReadUInt32();
+          case 840: {
+            EquipmentTid = input.ReadUInt32();
             break;
           }
-          case 4082: {
-            global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfo subBuilder = new global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfo();
-            if (developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengeDevelopmentInfo) {
-              subBuilder.MergeFrom(ChallengeDevelopmentInfo);
-            }
-            input.ReadMessage(subBuilder);
-            ChallengeDevelopmentInfo = subBuilder;
-            break;
-          }
-          case 4506: {
-            global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfo subBuilder = new global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfo();
-            if (developmentInfoCase_ == DevelopmentInfoOneofCase.RogueTournDevelopmentInfo) {
-              subBuilder.MergeFrom(RogueTournDevelopmentInfo);
-            }
-            input.ReadMessage(subBuilder);
-            RogueTournDevelopmentInfo = subBuilder;
-            break;
-          }
-          case 5530: {
+          case 1058: {
             global::EggLink.DanhengServer.Proto.FriendRogueDevelopmentInfo subBuilder = new global::EggLink.DanhengServer.Proto.FriendRogueDevelopmentInfo();
-            if (developmentInfoCase_ == DevelopmentInfoOneofCase.RogueDevelopmentInfo) {
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueDevelopmentInfo) {
               subBuilder.MergeFrom(RogueDevelopmentInfo);
             }
             input.ReadMessage(subBuilder);
             RogueDevelopmentInfo = subBuilder;
             break;
           }
-          case 6304: {
-            CKKNNHMDCOG = input.ReadUInt32();
+          case 1994: {
+            global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfo subBuilder = new global::EggLink.DanhengServer.Proto.FriendChallengeDevelopmentInfo();
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengeDevelopmentInfo) {
+              subBuilder.MergeFrom(ChallengeDevelopmentInfo);
+            }
+            input.ReadMessage(subBuilder);
+            ChallengeDevelopmentInfo = subBuilder;
             break;
           }
-          case 9322: {
+          case 4250: {
             global::EggLink.DanhengServer.Proto.FriendChallengePeakDevelopmentInfo subBuilder = new global::EggLink.DanhengServer.Proto.FriendChallengePeakDevelopmentInfo();
-            if (developmentInfoCase_ == DevelopmentInfoOneofCase.ChallengePeakDevelopmentInfo) {
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.ChallengePeakDevelopmentInfo) {
               subBuilder.MergeFrom(ChallengePeakDevelopmentInfo);
             }
             input.ReadMessage(subBuilder);
             ChallengePeakDevelopmentInfo = subBuilder;
             break;
           }
-          case 13856: {
-            EquipmentTid = input.ReadUInt32();
+          case 6776: {
+            PanelId = input.ReadUInt32();
             break;
           }
-          case 16192: {
-            PanelId = input.ReadUInt32();
+          case 9280: {
+            CKKNNHMDCOG = input.ReadUInt32();
+            break;
+          }
+          case 11482: {
+            global::EggLink.DanhengServer.Proto.NLCCEDEHEHE subBuilder = new global::EggLink.DanhengServer.Proto.NLCCEDEHEHE();
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.PKEOAPLIOBH) {
+              subBuilder.MergeFrom(PKEOAPLIOBH);
+            }
+            input.ReadMessage(subBuilder);
+            PKEOAPLIOBH = subBuilder;
+            break;
+          }
+          case 13002: {
+            global::EggLink.DanhengServer.Proto.JPJOLJFIBCB subBuilder = new global::EggLink.DanhengServer.Proto.JPJOLJFIBCB();
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.KOLKGCNCHAH) {
+              subBuilder.MergeFrom(KOLKGCNCHAH);
+            }
+            input.ReadMessage(subBuilder);
+            KOLKGCNCHAH = subBuilder;
+            break;
+          }
+          case 16120: {
+            AvatarId = input.ReadUInt32();
+            break;
+          }
+          case 16346: {
+            global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfo subBuilder = new global::EggLink.DanhengServer.Proto.FriendRogueTournDevelopmentInfo();
+            if (fMJDDNEDKGFCase_ == FMJDDNEDKGFOneofCase.RogueTournDevelopmentInfo) {
+              subBuilder.MergeFrom(RogueTournDevelopmentInfo);
+            }
+            input.ReadMessage(subBuilder);
+            RogueTournDevelopmentInfo = subBuilder;
             break;
           }
         }

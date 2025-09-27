@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9TY2VuZUdyb3VwUmVmcmVzaFNjTm90aWZ5LnByb3RvGhZHcm91cFJlZnJl",
             "c2hJbmZvLnByb3RvInIKGVNjZW5lR3JvdXBSZWZyZXNoU2NOb3RpZnkSFAoM",
-            "ZGltZW5zaW9uX2lkGA8gASgNEi0KEmdyb3VwX3JlZnJlc2hfbGlzdBgBIAMo",
-            "CzIRLkdyb3VwUmVmcmVzaEluZm8SEAoIZmxvb3JfaWQYDCABKA1CHqoCG0Vn",
+            "ZGltZW5zaW9uX2lkGAsgASgNEi0KEmdyb3VwX3JlZnJlc2hfbGlzdBgPIAMo",
+            "CzIRLkdyb3VwUmVmcmVzaEluZm8SEAoIZmxvb3JfaWQYCCABKA1CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GroupRefreshInfoReflection.Descriptor, },
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "dimension_id" field.</summary>
-    public const int DimensionIdFieldNumber = 15;
+    public const int DimensionIdFieldNumber = 11;
     private uint dimensionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,9 +99,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_refresh_list" field.</summary>
-    public const int GroupRefreshListFieldNumber = 1;
+    public const int GroupRefreshListFieldNumber = 15;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GroupRefreshInfo> _repeated_groupRefreshList_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.GroupRefreshInfo.Parser);
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.GroupRefreshInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GroupRefreshInfo> groupRefreshList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GroupRefreshInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "floor_id" field.</summary>
-    public const int FloorIdFieldNumber = 12;
+    public const int FloorIdFieldNumber = 8;
     private uint floorId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,15 +167,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      groupRefreshList_.WriteTo(output, _repeated_groupRefreshList_codec);
       if (FloorId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(FloorId);
       }
       if (DimensionId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(DimensionId);
       }
+      groupRefreshList_.WriteTo(output, _repeated_groupRefreshList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -186,15 +186,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      groupRefreshList_.WriteTo(ref output, _repeated_groupRefreshList_codec);
       if (FloorId != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(64);
         output.WriteUInt32(FloorId);
       }
       if (DimensionId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(88);
         output.WriteUInt32(DimensionId);
       }
+      groupRefreshList_.WriteTo(ref output, _repeated_groupRefreshList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -246,16 +246,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            groupRefreshList_.AddEntriesFrom(input, _repeated_groupRefreshList_codec);
-            break;
-          }
-          case 96: {
+          case 64: {
             FloorId = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 88: {
             DimensionId = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            groupRefreshList_.AddEntriesFrom(input, _repeated_groupRefreshList_codec);
             break;
           }
         }
@@ -273,16 +273,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            groupRefreshList_.AddEntriesFrom(ref input, _repeated_groupRefreshList_codec);
-            break;
-          }
-          case 96: {
+          case 64: {
             FloorId = input.ReadUInt32();
             break;
           }
-          case 120: {
+          case 88: {
             DimensionId = input.ReadUInt32();
+            break;
+          }
+          case 122: {
+            groupRefreshList_.AddEntriesFrom(ref input, _repeated_groupRefreshList_codec);
             break;
           }
         }

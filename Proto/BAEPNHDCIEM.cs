@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFCQUVQTkhEQ0lFTS5wcm90byI3CgtCQUVQTkhEQ0lFTRITCgtJSkZJSEdD",
-            "S05IRxgJIAEoDRITCgtzd2l0Y2hfbGlzdBgPIAMoDUIeqgIbRWdnTGluay5E",
+            "S05IRxgEIAEoDRITCgtzd2l0Y2hfbGlzdBgHIAMoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IJFIHGCKNHG" field.</summary>
-    public const int IJFIHGCKNHGFieldNumber = 9;
+    public const int IJFIHGCKNHGFieldNumber = 4;
     private uint iJFIHGCKNHG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,9 +96,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "switch_list" field.</summary>
-    public const int SwitchListFieldNumber = 15;
+    public const int SwitchListFieldNumber = 7;
     private static readonly pb::FieldCodec<uint> _repeated_switchList_codec
-        = pb::FieldCodec.ForUInt32(122);
+        = pb::FieldCodec.ForUInt32(58);
     private readonly pbc::RepeatedField<uint> switchList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IJFIHGCKNHG != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(IJFIHGCKNHG);
       }
       switchList_.WriteTo(output, _repeated_switchList_codec);
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IJFIHGCKNHG != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(32);
         output.WriteUInt32(IJFIHGCKNHG);
       }
       switchList_.WriteTo(ref output, _repeated_switchList_codec);
@@ -215,12 +215,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 32: {
             IJFIHGCKNHG = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
+          case 58:
+          case 56: {
             switchList_.AddEntriesFrom(input, _repeated_switchList_codec);
             break;
           }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 32: {
             IJFIHGCKNHG = input.ReadUInt32();
             break;
           }
-          case 122:
-          case 120: {
+          case 58:
+          case 56: {
             switchList_.AddEntriesFrom(ref input, _repeated_switchList_codec);
             break;
           }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg9DaGVzdEluZm8ucHJvdG8aD0NoZXN0VHlwZS5wcm90byJSCglDaGVzdElu",
-            "Zm8SHgoKY2hlc3RfdHlwZRgGIAEoDjIKLkNoZXN0VHlwZRISCgpvcGVuZWRf",
-            "bnVtGAkgASgNEhEKCWV4aXN0X251bRgCIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "Zm8SHgoKY2hlc3RfdHlwZRgFIAEoDjIKLkNoZXN0VHlwZRISCgpvcGVuZWRf",
+            "bnVtGA4gASgNEhEKCWV4aXN0X251bRgEIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChestTypeReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "chest_type" field.</summary>
-    public const int ChestTypeFieldNumber = 6;
+    public const int ChestTypeFieldNumber = 5;
     private global::EggLink.DanhengServer.Proto.ChestType chestType_ = global::EggLink.DanhengServer.Proto.ChestType.MapInfoChestTypeNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "opened_num" field.</summary>
-    public const int OpenedNumFieldNumber = 9;
+    public const int OpenedNumFieldNumber = 14;
     private uint openedNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "exist_num" field.</summary>
-    public const int ExistNumFieldNumber = 2;
+    public const int ExistNumFieldNumber = 4;
     private uint existNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,15 +168,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ExistNum != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(ExistNum);
       }
       if (ChestType != global::EggLink.DanhengServer.Proto.ChestType.MapInfoChestTypeNone) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteEnum((int) ChestType);
       }
       if (OpenedNum != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteUInt32(OpenedNum);
       }
       if (_unknownFields != null) {
@@ -190,15 +190,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ExistNum != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(ExistNum);
       }
       if (ChestType != global::EggLink.DanhengServer.Proto.ChestType.MapInfoChestTypeNone) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(40);
         output.WriteEnum((int) ChestType);
       }
       if (OpenedNum != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(112);
         output.WriteUInt32(OpenedNum);
       }
       if (_unknownFields != null) {
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 32: {
             ExistNum = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 40: {
             ChestType = (global::EggLink.DanhengServer.Proto.ChestType) input.ReadEnum();
             break;
           }
-          case 72: {
+          case 112: {
             OpenedNum = input.ReadUInt32();
             break;
           }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 32: {
             ExistNum = input.ReadUInt32();
             break;
           }
-          case 48: {
+          case 40: {
             ChestType = (global::EggLink.DanhengServer.Proto.ChestType) input.ReadEnum();
             break;
           }
-          case 72: {
+          case 112: {
             OpenedNum = input.ReadUInt32();
             break;
           }

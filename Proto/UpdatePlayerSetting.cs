@@ -25,21 +25,22 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlVcGRhdGVQbGF5ZXJTZXR0aW5nLnByb3RvGh1QbGF5ZXJFeHRyYVNldHRp",
-            "bmdzSW5mby5wcm90byKmAwoTVXBkYXRlUGxheWVyU2V0dGluZxIVCgtLQVBE",
-            "SU1HSkxORhgDIAEoCEgAEhUKC01NTU5KQ0hFTUZOGAogASgISAASFQoLTktF",
-            "S0lCTkpNUEEYBSABKAhIABIfChVkaXNwbGF5X2JhdHRsZV9yZWNvcmQYBCAB",
-            "KAhIABIcChJkaXNwbGF5X2NvbGxlY3Rpb24YDSABKAhIABIgChZkaXNwbGF5",
-            "X3JlY2VudGx5X3N0YXRlGAggASgISAASIgoYZGlzcGxheV9jaGFsbGVuZ2Vf",
-            "bGluZXVwGAIgASgISAASHgoUZGlzcGxheV9hY3RpdmVfc3RhdGUYBiABKAhI",
-            "ABIVCgtHTUpBTk9KTUtDRRgBIAEoCEgAEjcKE2V4dHJhX3NldHRpbmdzX2lu",
-            "Zm8YByABKAsyGC5QbGF5ZXJFeHRyYVNldHRpbmdzSW5mb0gAEhUKC0FBTUVM",
-            "T0hQQkhMGAwgASgISAASFgoLTUNDSkxCRU1LQ04Y/QwgASgISAASFgoLT0VH",
-            "SUZPREVBS0sY6gEgASgISABCDgoMc2V0dGluZ19jYXNlQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "bmdzSW5mby5wcm90byK+AwoTVXBkYXRlUGxheWVyU2V0dGluZxIVCgtLQVBE",
+            "SU1HSkxORhgJIAEoCEgAEhUKC01NTU5KQ0hFTUZOGAsgASgISAASFQoLTktF",
+            "S0lCTkpNUEEYDCABKAhIABIfChVkaXNwbGF5X2JhdHRsZV9yZWNvcmQYDyAB",
+            "KAhIABIcChJkaXNwbGF5X2NvbGxlY3Rpb24YByABKAhIABIgChZkaXNwbGF5",
+            "X3JlY2VudGx5X3N0YXRlGAIgASgISAASIgoYZGlzcGxheV9jaGFsbGVuZ2Vf",
+            "bGluZXVwGAogASgISAASHgoUZGlzcGxheV9hY3RpdmVfc3RhdGUYBiABKAhI",
+            "ABIVCgtHTUpBTk9KTUtDRRgFIAEoCEgAEjcKE2V4dHJhX3NldHRpbmdzX2lu",
+            "Zm8YCCABKAsyGC5QbGF5ZXJFeHRyYVNldHRpbmdzSW5mb0gAEhYKC01DQ0pM",
+            "QkVNS0NOGJsIIAEoCEgAEhYKC09FR0lGT0RFQUtLGPcIIAEoCEgAEhYKC0dQ",
+            "SVBKTENMSUlIGOMCIAEoCEgAEhYKC0pOQUdMQ0RLS0VKGN4EIAEoCEgAQg0K",
+            "C0xOTElOSEFORU5CQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdatePlayerSetting), global::EggLink.DanhengServer.Proto.UpdatePlayerSetting.Parser, new[]{ "KAPDIMGJLNF", "MMMNJCHEMFN", "NKEKIBNJMPA", "DisplayBattleRecord", "DisplayCollection", "DisplayRecentlyState", "DisplayChallengeLineup", "DisplayActiveState", "GMJANOJMKCE", "ExtraSettingsInfo", "AAMELOHPBHL", "MCCJLBEMKCN", "OEGIFODEAKK" }, new[]{ "SettingCase" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdatePlayerSetting), global::EggLink.DanhengServer.Proto.UpdatePlayerSetting.Parser, new[]{ "KAPDIMGJLNF", "MMMNJCHEMFN", "NKEKIBNJMPA", "DisplayBattleRecord", "DisplayCollection", "DisplayRecentlyState", "DisplayChallengeLineup", "DisplayActiveState", "GMJANOJMKCE", "ExtraSettingsInfo", "MCCJLBEMKCN", "OEGIFODEAKK", "GPIPJLCLIIH", "JNAGLCDKKEJ" }, new[]{ "LNLINHANENB" }, null, null, null)
           }));
     }
     #endregion
@@ -81,45 +82,48 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdatePlayerSetting(UpdatePlayerSetting other) : this() {
-      switch (other.SettingCaseCase) {
-        case SettingCaseOneofCase.KAPDIMGJLNF:
+      switch (other.LNLINHANENBCase) {
+        case LNLINHANENBOneofCase.KAPDIMGJLNF:
           KAPDIMGJLNF = other.KAPDIMGJLNF;
           break;
-        case SettingCaseOneofCase.MMMNJCHEMFN:
+        case LNLINHANENBOneofCase.MMMNJCHEMFN:
           MMMNJCHEMFN = other.MMMNJCHEMFN;
           break;
-        case SettingCaseOneofCase.NKEKIBNJMPA:
+        case LNLINHANENBOneofCase.NKEKIBNJMPA:
           NKEKIBNJMPA = other.NKEKIBNJMPA;
           break;
-        case SettingCaseOneofCase.DisplayBattleRecord:
+        case LNLINHANENBOneofCase.DisplayBattleRecord:
           DisplayBattleRecord = other.DisplayBattleRecord;
           break;
-        case SettingCaseOneofCase.DisplayCollection:
+        case LNLINHANENBOneofCase.DisplayCollection:
           DisplayCollection = other.DisplayCollection;
           break;
-        case SettingCaseOneofCase.DisplayRecentlyState:
+        case LNLINHANENBOneofCase.DisplayRecentlyState:
           DisplayRecentlyState = other.DisplayRecentlyState;
           break;
-        case SettingCaseOneofCase.DisplayChallengeLineup:
+        case LNLINHANENBOneofCase.DisplayChallengeLineup:
           DisplayChallengeLineup = other.DisplayChallengeLineup;
           break;
-        case SettingCaseOneofCase.DisplayActiveState:
+        case LNLINHANENBOneofCase.DisplayActiveState:
           DisplayActiveState = other.DisplayActiveState;
           break;
-        case SettingCaseOneofCase.GMJANOJMKCE:
+        case LNLINHANENBOneofCase.GMJANOJMKCE:
           GMJANOJMKCE = other.GMJANOJMKCE;
           break;
-        case SettingCaseOneofCase.ExtraSettingsInfo:
+        case LNLINHANENBOneofCase.ExtraSettingsInfo:
           ExtraSettingsInfo = other.ExtraSettingsInfo.Clone();
           break;
-        case SettingCaseOneofCase.AAMELOHPBHL:
-          AAMELOHPBHL = other.AAMELOHPBHL;
-          break;
-        case SettingCaseOneofCase.MCCJLBEMKCN:
+        case LNLINHANENBOneofCase.MCCJLBEMKCN:
           MCCJLBEMKCN = other.MCCJLBEMKCN;
           break;
-        case SettingCaseOneofCase.OEGIFODEAKK:
+        case LNLINHANENBOneofCase.OEGIFODEAKK:
           OEGIFODEAKK = other.OEGIFODEAKK;
+          break;
+        case LNLINHANENBOneofCase.GPIPJLCLIIH:
+          GPIPJLCLIIH = other.GPIPJLCLIIH;
+          break;
+        case LNLINHANENBOneofCase.JNAGLCDKKEJ:
+          JNAGLCDKKEJ = other.JNAGLCDKKEJ;
           break;
       }
 
@@ -133,184 +137,184 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KAPDIMGJLNF" field.</summary>
-    public const int KAPDIMGJLNFFieldNumber = 3;
+    public const int KAPDIMGJLNFFieldNumber = 9;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool KAPDIMGJLNF {
-      get { return HasKAPDIMGJLNF ? (bool) settingCase_ : false; }
+      get { return HasKAPDIMGJLNF ? (bool) lNLINHANENB_ : false; }
       set {
-        settingCase_ = value;
-        settingCaseCase_ = SettingCaseOneofCase.KAPDIMGJLNF;
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = LNLINHANENBOneofCase.KAPDIMGJLNF;
       }
     }
     /// <summary>Gets whether the "KAPDIMGJLNF" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasKAPDIMGJLNF {
-      get { return settingCaseCase_ == SettingCaseOneofCase.KAPDIMGJLNF; }
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.KAPDIMGJLNF; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "KAPDIMGJLNF" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearKAPDIMGJLNF() {
       if (HasKAPDIMGJLNF) {
-        ClearSettingCase();
+        ClearLNLINHANENB();
       }
     }
 
     /// <summary>Field number for the "MMMNJCHEMFN" field.</summary>
-    public const int MMMNJCHEMFNFieldNumber = 10;
+    public const int MMMNJCHEMFNFieldNumber = 11;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool MMMNJCHEMFN {
-      get { return HasMMMNJCHEMFN ? (bool) settingCase_ : false; }
+      get { return HasMMMNJCHEMFN ? (bool) lNLINHANENB_ : false; }
       set {
-        settingCase_ = value;
-        settingCaseCase_ = SettingCaseOneofCase.MMMNJCHEMFN;
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = LNLINHANENBOneofCase.MMMNJCHEMFN;
       }
     }
     /// <summary>Gets whether the "MMMNJCHEMFN" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasMMMNJCHEMFN {
-      get { return settingCaseCase_ == SettingCaseOneofCase.MMMNJCHEMFN; }
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.MMMNJCHEMFN; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "MMMNJCHEMFN" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearMMMNJCHEMFN() {
       if (HasMMMNJCHEMFN) {
-        ClearSettingCase();
+        ClearLNLINHANENB();
       }
     }
 
     /// <summary>Field number for the "NKEKIBNJMPA" field.</summary>
-    public const int NKEKIBNJMPAFieldNumber = 5;
+    public const int NKEKIBNJMPAFieldNumber = 12;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool NKEKIBNJMPA {
-      get { return HasNKEKIBNJMPA ? (bool) settingCase_ : false; }
+      get { return HasNKEKIBNJMPA ? (bool) lNLINHANENB_ : false; }
       set {
-        settingCase_ = value;
-        settingCaseCase_ = SettingCaseOneofCase.NKEKIBNJMPA;
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = LNLINHANENBOneofCase.NKEKIBNJMPA;
       }
     }
     /// <summary>Gets whether the "NKEKIBNJMPA" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasNKEKIBNJMPA {
-      get { return settingCaseCase_ == SettingCaseOneofCase.NKEKIBNJMPA; }
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.NKEKIBNJMPA; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "NKEKIBNJMPA" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearNKEKIBNJMPA() {
       if (HasNKEKIBNJMPA) {
-        ClearSettingCase();
+        ClearLNLINHANENB();
       }
     }
 
     /// <summary>Field number for the "display_battle_record" field.</summary>
-    public const int DisplayBattleRecordFieldNumber = 4;
+    public const int DisplayBattleRecordFieldNumber = 15;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisplayBattleRecord {
-      get { return HasDisplayBattleRecord ? (bool) settingCase_ : false; }
+      get { return HasDisplayBattleRecord ? (bool) lNLINHANENB_ : false; }
       set {
-        settingCase_ = value;
-        settingCaseCase_ = SettingCaseOneofCase.DisplayBattleRecord;
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = LNLINHANENBOneofCase.DisplayBattleRecord;
       }
     }
     /// <summary>Gets whether the "display_battle_record" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasDisplayBattleRecord {
-      get { return settingCaseCase_ == SettingCaseOneofCase.DisplayBattleRecord; }
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.DisplayBattleRecord; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "display_battle_record" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDisplayBattleRecord() {
       if (HasDisplayBattleRecord) {
-        ClearSettingCase();
+        ClearLNLINHANENB();
       }
     }
 
     /// <summary>Field number for the "display_collection" field.</summary>
-    public const int DisplayCollectionFieldNumber = 13;
+    public const int DisplayCollectionFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisplayCollection {
-      get { return HasDisplayCollection ? (bool) settingCase_ : false; }
+      get { return HasDisplayCollection ? (bool) lNLINHANENB_ : false; }
       set {
-        settingCase_ = value;
-        settingCaseCase_ = SettingCaseOneofCase.DisplayCollection;
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = LNLINHANENBOneofCase.DisplayCollection;
       }
     }
     /// <summary>Gets whether the "display_collection" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasDisplayCollection {
-      get { return settingCaseCase_ == SettingCaseOneofCase.DisplayCollection; }
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.DisplayCollection; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "display_collection" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDisplayCollection() {
       if (HasDisplayCollection) {
-        ClearSettingCase();
+        ClearLNLINHANENB();
       }
     }
 
     /// <summary>Field number for the "display_recently_state" field.</summary>
-    public const int DisplayRecentlyStateFieldNumber = 8;
+    public const int DisplayRecentlyStateFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisplayRecentlyState {
-      get { return HasDisplayRecentlyState ? (bool) settingCase_ : false; }
+      get { return HasDisplayRecentlyState ? (bool) lNLINHANENB_ : false; }
       set {
-        settingCase_ = value;
-        settingCaseCase_ = SettingCaseOneofCase.DisplayRecentlyState;
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = LNLINHANENBOneofCase.DisplayRecentlyState;
       }
     }
     /// <summary>Gets whether the "display_recently_state" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasDisplayRecentlyState {
-      get { return settingCaseCase_ == SettingCaseOneofCase.DisplayRecentlyState; }
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.DisplayRecentlyState; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "display_recently_state" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDisplayRecentlyState() {
       if (HasDisplayRecentlyState) {
-        ClearSettingCase();
+        ClearLNLINHANENB();
       }
     }
 
     /// <summary>Field number for the "display_challenge_lineup" field.</summary>
-    public const int DisplayChallengeLineupFieldNumber = 2;
+    public const int DisplayChallengeLineupFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisplayChallengeLineup {
-      get { return HasDisplayChallengeLineup ? (bool) settingCase_ : false; }
+      get { return HasDisplayChallengeLineup ? (bool) lNLINHANENB_ : false; }
       set {
-        settingCase_ = value;
-        settingCaseCase_ = SettingCaseOneofCase.DisplayChallengeLineup;
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = LNLINHANENBOneofCase.DisplayChallengeLineup;
       }
     }
     /// <summary>Gets whether the "display_challenge_lineup" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasDisplayChallengeLineup {
-      get { return settingCaseCase_ == SettingCaseOneofCase.DisplayChallengeLineup; }
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.DisplayChallengeLineup; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "display_challenge_lineup" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDisplayChallengeLineup() {
       if (HasDisplayChallengeLineup) {
-        ClearSettingCase();
+        ClearLNLINHANENB();
       }
     }
 
@@ -319,173 +323,200 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisplayActiveState {
-      get { return HasDisplayActiveState ? (bool) settingCase_ : false; }
+      get { return HasDisplayActiveState ? (bool) lNLINHANENB_ : false; }
       set {
-        settingCase_ = value;
-        settingCaseCase_ = SettingCaseOneofCase.DisplayActiveState;
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = LNLINHANENBOneofCase.DisplayActiveState;
       }
     }
     /// <summary>Gets whether the "display_active_state" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasDisplayActiveState {
-      get { return settingCaseCase_ == SettingCaseOneofCase.DisplayActiveState; }
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.DisplayActiveState; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "display_active_state" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDisplayActiveState() {
       if (HasDisplayActiveState) {
-        ClearSettingCase();
+        ClearLNLINHANENB();
       }
     }
 
     /// <summary>Field number for the "GMJANOJMKCE" field.</summary>
-    public const int GMJANOJMKCEFieldNumber = 1;
+    public const int GMJANOJMKCEFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool GMJANOJMKCE {
-      get { return HasGMJANOJMKCE ? (bool) settingCase_ : false; }
+      get { return HasGMJANOJMKCE ? (bool) lNLINHANENB_ : false; }
       set {
-        settingCase_ = value;
-        settingCaseCase_ = SettingCaseOneofCase.GMJANOJMKCE;
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = LNLINHANENBOneofCase.GMJANOJMKCE;
       }
     }
     /// <summary>Gets whether the "GMJANOJMKCE" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasGMJANOJMKCE {
-      get { return settingCaseCase_ == SettingCaseOneofCase.GMJANOJMKCE; }
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.GMJANOJMKCE; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "GMJANOJMKCE" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearGMJANOJMKCE() {
       if (HasGMJANOJMKCE) {
-        ClearSettingCase();
+        ClearLNLINHANENB();
       }
     }
 
     /// <summary>Field number for the "extra_settings_info" field.</summary>
-    public const int ExtraSettingsInfoFieldNumber = 7;
+    public const int ExtraSettingsInfoFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo ExtraSettingsInfo {
-      get { return settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo ? (global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo) settingCase_ : null; }
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.ExtraSettingsInfo ? (global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo) lNLINHANENB_ : null; }
       set {
-        settingCase_ = value;
-        settingCaseCase_ = value == null ? SettingCaseOneofCase.None : SettingCaseOneofCase.ExtraSettingsInfo;
-      }
-    }
-
-    /// <summary>Field number for the "AAMELOHPBHL" field.</summary>
-    public const int AAMELOHPBHLFieldNumber = 12;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool AAMELOHPBHL {
-      get { return HasAAMELOHPBHL ? (bool) settingCase_ : false; }
-      set {
-        settingCase_ = value;
-        settingCaseCase_ = SettingCaseOneofCase.AAMELOHPBHL;
-      }
-    }
-    /// <summary>Gets whether the "AAMELOHPBHL" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasAAMELOHPBHL {
-      get { return settingCaseCase_ == SettingCaseOneofCase.AAMELOHPBHL; }
-    }
-    /// <summary> Clears the value of the oneof if it's currently set to "AAMELOHPBHL" </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearAAMELOHPBHL() {
-      if (HasAAMELOHPBHL) {
-        ClearSettingCase();
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = value == null ? LNLINHANENBOneofCase.None : LNLINHANENBOneofCase.ExtraSettingsInfo;
       }
     }
 
     /// <summary>Field number for the "MCCJLBEMKCN" field.</summary>
-    public const int MCCJLBEMKCNFieldNumber = 1661;
+    public const int MCCJLBEMKCNFieldNumber = 1051;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool MCCJLBEMKCN {
-      get { return HasMCCJLBEMKCN ? (bool) settingCase_ : false; }
+      get { return HasMCCJLBEMKCN ? (bool) lNLINHANENB_ : false; }
       set {
-        settingCase_ = value;
-        settingCaseCase_ = SettingCaseOneofCase.MCCJLBEMKCN;
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = LNLINHANENBOneofCase.MCCJLBEMKCN;
       }
     }
     /// <summary>Gets whether the "MCCJLBEMKCN" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasMCCJLBEMKCN {
-      get { return settingCaseCase_ == SettingCaseOneofCase.MCCJLBEMKCN; }
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.MCCJLBEMKCN; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "MCCJLBEMKCN" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearMCCJLBEMKCN() {
       if (HasMCCJLBEMKCN) {
-        ClearSettingCase();
+        ClearLNLINHANENB();
       }
     }
 
     /// <summary>Field number for the "OEGIFODEAKK" field.</summary>
-    public const int OEGIFODEAKKFieldNumber = 234;
+    public const int OEGIFODEAKKFieldNumber = 1143;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool OEGIFODEAKK {
-      get { return HasOEGIFODEAKK ? (bool) settingCase_ : false; }
+      get { return HasOEGIFODEAKK ? (bool) lNLINHANENB_ : false; }
       set {
-        settingCase_ = value;
-        settingCaseCase_ = SettingCaseOneofCase.OEGIFODEAKK;
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = LNLINHANENBOneofCase.OEGIFODEAKK;
       }
     }
     /// <summary>Gets whether the "OEGIFODEAKK" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasOEGIFODEAKK {
-      get { return settingCaseCase_ == SettingCaseOneofCase.OEGIFODEAKK; }
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.OEGIFODEAKK; }
     }
     /// <summary> Clears the value of the oneof if it's currently set to "OEGIFODEAKK" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearOEGIFODEAKK() {
       if (HasOEGIFODEAKK) {
-        ClearSettingCase();
+        ClearLNLINHANENB();
       }
     }
 
-    private object settingCase_;
-    /// <summary>Enum of possible cases for the "setting_case" oneof.</summary>
-    public enum SettingCaseOneofCase {
-      None = 0,
-      KAPDIMGJLNF = 3,
-      MMMNJCHEMFN = 10,
-      NKEKIBNJMPA = 5,
-      DisplayBattleRecord = 4,
-      DisplayCollection = 13,
-      DisplayRecentlyState = 8,
-      DisplayChallengeLineup = 2,
-      DisplayActiveState = 6,
-      GMJANOJMKCE = 1,
-      ExtraSettingsInfo = 7,
-      AAMELOHPBHL = 12,
-      MCCJLBEMKCN = 1661,
-      OEGIFODEAKK = 234,
-    }
-    private SettingCaseOneofCase settingCaseCase_ = SettingCaseOneofCase.None;
+    /// <summary>Field number for the "GPIPJLCLIIH" field.</summary>
+    public const int GPIPJLCLIIHFieldNumber = 355;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SettingCaseOneofCase SettingCaseCase {
-      get { return settingCaseCase_; }
+    public bool GPIPJLCLIIH {
+      get { return HasGPIPJLCLIIH ? (bool) lNLINHANENB_ : false; }
+      set {
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = LNLINHANENBOneofCase.GPIPJLCLIIH;
+      }
+    }
+    /// <summary>Gets whether the "GPIPJLCLIIH" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGPIPJLCLIIH {
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.GPIPJLCLIIH; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "GPIPJLCLIIH" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGPIPJLCLIIH() {
+      if (HasGPIPJLCLIIH) {
+        ClearLNLINHANENB();
+      }
+    }
+
+    /// <summary>Field number for the "JNAGLCDKKEJ" field.</summary>
+    public const int JNAGLCDKKEJFieldNumber = 606;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool JNAGLCDKKEJ {
+      get { return HasJNAGLCDKKEJ ? (bool) lNLINHANENB_ : false; }
+      set {
+        lNLINHANENB_ = value;
+        lNLINHANENBCase_ = LNLINHANENBOneofCase.JNAGLCDKKEJ;
+      }
+    }
+    /// <summary>Gets whether the "JNAGLCDKKEJ" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasJNAGLCDKKEJ {
+      get { return lNLINHANENBCase_ == LNLINHANENBOneofCase.JNAGLCDKKEJ; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "JNAGLCDKKEJ" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearJNAGLCDKKEJ() {
+      if (HasJNAGLCDKKEJ) {
+        ClearLNLINHANENB();
+      }
+    }
+
+    private object lNLINHANENB_;
+    /// <summary>Enum of possible cases for the "LNLINHANENB" oneof.</summary>
+    public enum LNLINHANENBOneofCase {
+      None = 0,
+      KAPDIMGJLNF = 9,
+      MMMNJCHEMFN = 11,
+      NKEKIBNJMPA = 12,
+      DisplayBattleRecord = 15,
+      DisplayCollection = 7,
+      DisplayRecentlyState = 2,
+      DisplayChallengeLineup = 10,
+      DisplayActiveState = 6,
+      GMJANOJMKCE = 5,
+      ExtraSettingsInfo = 8,
+      MCCJLBEMKCN = 1051,
+      OEGIFODEAKK = 1143,
+      GPIPJLCLIIH = 355,
+      JNAGLCDKKEJ = 606,
+    }
+    private LNLINHANENBOneofCase lNLINHANENBCase_ = LNLINHANENBOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LNLINHANENBOneofCase LNLINHANENBCase {
+      get { return lNLINHANENBCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearSettingCase() {
-      settingCaseCase_ = SettingCaseOneofCase.None;
-      settingCase_ = null;
+    public void ClearLNLINHANENB() {
+      lNLINHANENBCase_ = LNLINHANENBOneofCase.None;
+      lNLINHANENB_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -513,10 +544,11 @@ namespace EggLink.DanhengServer.Proto {
       if (DisplayActiveState != other.DisplayActiveState) return false;
       if (GMJANOJMKCE != other.GMJANOJMKCE) return false;
       if (!object.Equals(ExtraSettingsInfo, other.ExtraSettingsInfo)) return false;
-      if (AAMELOHPBHL != other.AAMELOHPBHL) return false;
       if (MCCJLBEMKCN != other.MCCJLBEMKCN) return false;
       if (OEGIFODEAKK != other.OEGIFODEAKK) return false;
-      if (SettingCaseCase != other.SettingCaseCase) return false;
+      if (GPIPJLCLIIH != other.GPIPJLCLIIH) return false;
+      if (JNAGLCDKKEJ != other.JNAGLCDKKEJ) return false;
+      if (LNLINHANENBCase != other.LNLINHANENBCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -533,11 +565,12 @@ namespace EggLink.DanhengServer.Proto {
       if (HasDisplayChallengeLineup) hash ^= DisplayChallengeLineup.GetHashCode();
       if (HasDisplayActiveState) hash ^= DisplayActiveState.GetHashCode();
       if (HasGMJANOJMKCE) hash ^= GMJANOJMKCE.GetHashCode();
-      if (settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo) hash ^= ExtraSettingsInfo.GetHashCode();
-      if (HasAAMELOHPBHL) hash ^= AAMELOHPBHL.GetHashCode();
+      if (lNLINHANENBCase_ == LNLINHANENBOneofCase.ExtraSettingsInfo) hash ^= ExtraSettingsInfo.GetHashCode();
       if (HasMCCJLBEMKCN) hash ^= MCCJLBEMKCN.GetHashCode();
       if (HasOEGIFODEAKK) hash ^= OEGIFODEAKK.GetHashCode();
-      hash ^= (int) settingCaseCase_;
+      if (HasGPIPJLCLIIH) hash ^= GPIPJLCLIIH.GetHashCode();
+      if (HasJNAGLCDKKEJ) hash ^= JNAGLCDKKEJ.GetHashCode();
+      hash ^= (int) lNLINHANENBCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -556,57 +589,61 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HasGMJANOJMKCE) {
-        output.WriteRawTag(8);
-        output.WriteBool(GMJANOJMKCE);
-      }
-      if (HasDisplayChallengeLineup) {
+      if (HasDisplayRecentlyState) {
         output.WriteRawTag(16);
-        output.WriteBool(DisplayChallengeLineup);
+        output.WriteBool(DisplayRecentlyState);
       }
-      if (HasKAPDIMGJLNF) {
-        output.WriteRawTag(24);
-        output.WriteBool(KAPDIMGJLNF);
-      }
-      if (HasDisplayBattleRecord) {
-        output.WriteRawTag(32);
-        output.WriteBool(DisplayBattleRecord);
-      }
-      if (HasNKEKIBNJMPA) {
+      if (HasGMJANOJMKCE) {
         output.WriteRawTag(40);
-        output.WriteBool(NKEKIBNJMPA);
+        output.WriteBool(GMJANOJMKCE);
       }
       if (HasDisplayActiveState) {
         output.WriteRawTag(48);
         output.WriteBool(DisplayActiveState);
       }
-      if (settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo) {
-        output.WriteRawTag(58);
-        output.WriteMessage(ExtraSettingsInfo);
-      }
-      if (HasDisplayRecentlyState) {
-        output.WriteRawTag(64);
-        output.WriteBool(DisplayRecentlyState);
-      }
-      if (HasMMMNJCHEMFN) {
-        output.WriteRawTag(80);
-        output.WriteBool(MMMNJCHEMFN);
-      }
-      if (HasAAMELOHPBHL) {
-        output.WriteRawTag(96);
-        output.WriteBool(AAMELOHPBHL);
-      }
       if (HasDisplayCollection) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteBool(DisplayCollection);
       }
-      if (HasOEGIFODEAKK) {
-        output.WriteRawTag(208, 14);
-        output.WriteBool(OEGIFODEAKK);
+      if (lNLINHANENBCase_ == LNLINHANENBOneofCase.ExtraSettingsInfo) {
+        output.WriteRawTag(66);
+        output.WriteMessage(ExtraSettingsInfo);
+      }
+      if (HasKAPDIMGJLNF) {
+        output.WriteRawTag(72);
+        output.WriteBool(KAPDIMGJLNF);
+      }
+      if (HasDisplayChallengeLineup) {
+        output.WriteRawTag(80);
+        output.WriteBool(DisplayChallengeLineup);
+      }
+      if (HasMMMNJCHEMFN) {
+        output.WriteRawTag(88);
+        output.WriteBool(MMMNJCHEMFN);
+      }
+      if (HasNKEKIBNJMPA) {
+        output.WriteRawTag(96);
+        output.WriteBool(NKEKIBNJMPA);
+      }
+      if (HasDisplayBattleRecord) {
+        output.WriteRawTag(120);
+        output.WriteBool(DisplayBattleRecord);
+      }
+      if (HasGPIPJLCLIIH) {
+        output.WriteRawTag(152, 22);
+        output.WriteBool(GPIPJLCLIIH);
+      }
+      if (HasJNAGLCDKKEJ) {
+        output.WriteRawTag(240, 37);
+        output.WriteBool(JNAGLCDKKEJ);
       }
       if (HasMCCJLBEMKCN) {
-        output.WriteRawTag(232, 103);
+        output.WriteRawTag(216, 65);
         output.WriteBool(MCCJLBEMKCN);
+      }
+      if (HasOEGIFODEAKK) {
+        output.WriteRawTag(184, 71);
+        output.WriteBool(OEGIFODEAKK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -618,57 +655,61 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasGMJANOJMKCE) {
-        output.WriteRawTag(8);
-        output.WriteBool(GMJANOJMKCE);
-      }
-      if (HasDisplayChallengeLineup) {
+      if (HasDisplayRecentlyState) {
         output.WriteRawTag(16);
-        output.WriteBool(DisplayChallengeLineup);
+        output.WriteBool(DisplayRecentlyState);
       }
-      if (HasKAPDIMGJLNF) {
-        output.WriteRawTag(24);
-        output.WriteBool(KAPDIMGJLNF);
-      }
-      if (HasDisplayBattleRecord) {
-        output.WriteRawTag(32);
-        output.WriteBool(DisplayBattleRecord);
-      }
-      if (HasNKEKIBNJMPA) {
+      if (HasGMJANOJMKCE) {
         output.WriteRawTag(40);
-        output.WriteBool(NKEKIBNJMPA);
+        output.WriteBool(GMJANOJMKCE);
       }
       if (HasDisplayActiveState) {
         output.WriteRawTag(48);
         output.WriteBool(DisplayActiveState);
       }
-      if (settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo) {
-        output.WriteRawTag(58);
-        output.WriteMessage(ExtraSettingsInfo);
-      }
-      if (HasDisplayRecentlyState) {
-        output.WriteRawTag(64);
-        output.WriteBool(DisplayRecentlyState);
-      }
-      if (HasMMMNJCHEMFN) {
-        output.WriteRawTag(80);
-        output.WriteBool(MMMNJCHEMFN);
-      }
-      if (HasAAMELOHPBHL) {
-        output.WriteRawTag(96);
-        output.WriteBool(AAMELOHPBHL);
-      }
       if (HasDisplayCollection) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(56);
         output.WriteBool(DisplayCollection);
       }
-      if (HasOEGIFODEAKK) {
-        output.WriteRawTag(208, 14);
-        output.WriteBool(OEGIFODEAKK);
+      if (lNLINHANENBCase_ == LNLINHANENBOneofCase.ExtraSettingsInfo) {
+        output.WriteRawTag(66);
+        output.WriteMessage(ExtraSettingsInfo);
+      }
+      if (HasKAPDIMGJLNF) {
+        output.WriteRawTag(72);
+        output.WriteBool(KAPDIMGJLNF);
+      }
+      if (HasDisplayChallengeLineup) {
+        output.WriteRawTag(80);
+        output.WriteBool(DisplayChallengeLineup);
+      }
+      if (HasMMMNJCHEMFN) {
+        output.WriteRawTag(88);
+        output.WriteBool(MMMNJCHEMFN);
+      }
+      if (HasNKEKIBNJMPA) {
+        output.WriteRawTag(96);
+        output.WriteBool(NKEKIBNJMPA);
+      }
+      if (HasDisplayBattleRecord) {
+        output.WriteRawTag(120);
+        output.WriteBool(DisplayBattleRecord);
+      }
+      if (HasGPIPJLCLIIH) {
+        output.WriteRawTag(152, 22);
+        output.WriteBool(GPIPJLCLIIH);
+      }
+      if (HasJNAGLCDKKEJ) {
+        output.WriteRawTag(240, 37);
+        output.WriteBool(JNAGLCDKKEJ);
       }
       if (HasMCCJLBEMKCN) {
-        output.WriteRawTag(232, 103);
+        output.WriteRawTag(216, 65);
         output.WriteBool(MCCJLBEMKCN);
+      }
+      if (HasOEGIFODEAKK) {
+        output.WriteRawTag(184, 71);
+        output.WriteBool(OEGIFODEAKK);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -707,16 +748,19 @@ namespace EggLink.DanhengServer.Proto {
       if (HasGMJANOJMKCE) {
         size += 1 + 1;
       }
-      if (settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo) {
+      if (lNLINHANENBCase_ == LNLINHANENBOneofCase.ExtraSettingsInfo) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExtraSettingsInfo);
-      }
-      if (HasAAMELOHPBHL) {
-        size += 1 + 1;
       }
       if (HasMCCJLBEMKCN) {
         size += 2 + 1;
       }
       if (HasOEGIFODEAKK) {
+        size += 2 + 1;
+      }
+      if (HasGPIPJLCLIIH) {
+        size += 2 + 1;
+      }
+      if (HasJNAGLCDKKEJ) {
         size += 2 + 1;
       }
       if (_unknownFields != null) {
@@ -731,48 +775,51 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      switch (other.SettingCaseCase) {
-        case SettingCaseOneofCase.KAPDIMGJLNF:
+      switch (other.LNLINHANENBCase) {
+        case LNLINHANENBOneofCase.KAPDIMGJLNF:
           KAPDIMGJLNF = other.KAPDIMGJLNF;
           break;
-        case SettingCaseOneofCase.MMMNJCHEMFN:
+        case LNLINHANENBOneofCase.MMMNJCHEMFN:
           MMMNJCHEMFN = other.MMMNJCHEMFN;
           break;
-        case SettingCaseOneofCase.NKEKIBNJMPA:
+        case LNLINHANENBOneofCase.NKEKIBNJMPA:
           NKEKIBNJMPA = other.NKEKIBNJMPA;
           break;
-        case SettingCaseOneofCase.DisplayBattleRecord:
+        case LNLINHANENBOneofCase.DisplayBattleRecord:
           DisplayBattleRecord = other.DisplayBattleRecord;
           break;
-        case SettingCaseOneofCase.DisplayCollection:
+        case LNLINHANENBOneofCase.DisplayCollection:
           DisplayCollection = other.DisplayCollection;
           break;
-        case SettingCaseOneofCase.DisplayRecentlyState:
+        case LNLINHANENBOneofCase.DisplayRecentlyState:
           DisplayRecentlyState = other.DisplayRecentlyState;
           break;
-        case SettingCaseOneofCase.DisplayChallengeLineup:
+        case LNLINHANENBOneofCase.DisplayChallengeLineup:
           DisplayChallengeLineup = other.DisplayChallengeLineup;
           break;
-        case SettingCaseOneofCase.DisplayActiveState:
+        case LNLINHANENBOneofCase.DisplayActiveState:
           DisplayActiveState = other.DisplayActiveState;
           break;
-        case SettingCaseOneofCase.GMJANOJMKCE:
+        case LNLINHANENBOneofCase.GMJANOJMKCE:
           GMJANOJMKCE = other.GMJANOJMKCE;
           break;
-        case SettingCaseOneofCase.ExtraSettingsInfo:
+        case LNLINHANENBOneofCase.ExtraSettingsInfo:
           if (ExtraSettingsInfo == null) {
             ExtraSettingsInfo = new global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo();
           }
           ExtraSettingsInfo.MergeFrom(other.ExtraSettingsInfo);
           break;
-        case SettingCaseOneofCase.AAMELOHPBHL:
-          AAMELOHPBHL = other.AAMELOHPBHL;
-          break;
-        case SettingCaseOneofCase.MCCJLBEMKCN:
+        case LNLINHANENBOneofCase.MCCJLBEMKCN:
           MCCJLBEMKCN = other.MCCJLBEMKCN;
           break;
-        case SettingCaseOneofCase.OEGIFODEAKK:
+        case LNLINHANENBOneofCase.OEGIFODEAKK:
           OEGIFODEAKK = other.OEGIFODEAKK;
+          break;
+        case LNLINHANENBOneofCase.GPIPJLCLIIH:
+          GPIPJLCLIIH = other.GPIPJLCLIIH;
+          break;
+        case LNLINHANENBOneofCase.JNAGLCDKKEJ:
+          JNAGLCDKKEJ = other.JNAGLCDKKEJ;
           break;
       }
 
@@ -791,61 +838,65 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            GMJANOJMKCE = input.ReadBool();
-            break;
-          }
           case 16: {
-            DisplayChallengeLineup = input.ReadBool();
-            break;
-          }
-          case 24: {
-            KAPDIMGJLNF = input.ReadBool();
-            break;
-          }
-          case 32: {
-            DisplayBattleRecord = input.ReadBool();
+            DisplayRecentlyState = input.ReadBool();
             break;
           }
           case 40: {
-            NKEKIBNJMPA = input.ReadBool();
+            GMJANOJMKCE = input.ReadBool();
             break;
           }
           case 48: {
             DisplayActiveState = input.ReadBool();
             break;
           }
-          case 58: {
+          case 56: {
+            DisplayCollection = input.ReadBool();
+            break;
+          }
+          case 66: {
             global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo subBuilder = new global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo();
-            if (settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo) {
+            if (lNLINHANENBCase_ == LNLINHANENBOneofCase.ExtraSettingsInfo) {
               subBuilder.MergeFrom(ExtraSettingsInfo);
             }
             input.ReadMessage(subBuilder);
             ExtraSettingsInfo = subBuilder;
             break;
           }
-          case 64: {
-            DisplayRecentlyState = input.ReadBool();
+          case 72: {
+            KAPDIMGJLNF = input.ReadBool();
             break;
           }
           case 80: {
+            DisplayChallengeLineup = input.ReadBool();
+            break;
+          }
+          case 88: {
             MMMNJCHEMFN = input.ReadBool();
             break;
           }
           case 96: {
-            AAMELOHPBHL = input.ReadBool();
+            NKEKIBNJMPA = input.ReadBool();
             break;
           }
-          case 104: {
-            DisplayCollection = input.ReadBool();
+          case 120: {
+            DisplayBattleRecord = input.ReadBool();
             break;
           }
-          case 1872: {
-            OEGIFODEAKK = input.ReadBool();
+          case 2840: {
+            GPIPJLCLIIH = input.ReadBool();
             break;
           }
-          case 13288: {
+          case 4848: {
+            JNAGLCDKKEJ = input.ReadBool();
+            break;
+          }
+          case 8408: {
             MCCJLBEMKCN = input.ReadBool();
+            break;
+          }
+          case 9144: {
+            OEGIFODEAKK = input.ReadBool();
             break;
           }
         }
@@ -863,61 +914,65 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            GMJANOJMKCE = input.ReadBool();
-            break;
-          }
           case 16: {
-            DisplayChallengeLineup = input.ReadBool();
-            break;
-          }
-          case 24: {
-            KAPDIMGJLNF = input.ReadBool();
-            break;
-          }
-          case 32: {
-            DisplayBattleRecord = input.ReadBool();
+            DisplayRecentlyState = input.ReadBool();
             break;
           }
           case 40: {
-            NKEKIBNJMPA = input.ReadBool();
+            GMJANOJMKCE = input.ReadBool();
             break;
           }
           case 48: {
             DisplayActiveState = input.ReadBool();
             break;
           }
-          case 58: {
+          case 56: {
+            DisplayCollection = input.ReadBool();
+            break;
+          }
+          case 66: {
             global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo subBuilder = new global::EggLink.DanhengServer.Proto.PlayerExtraSettingsInfo();
-            if (settingCaseCase_ == SettingCaseOneofCase.ExtraSettingsInfo) {
+            if (lNLINHANENBCase_ == LNLINHANENBOneofCase.ExtraSettingsInfo) {
               subBuilder.MergeFrom(ExtraSettingsInfo);
             }
             input.ReadMessage(subBuilder);
             ExtraSettingsInfo = subBuilder;
             break;
           }
-          case 64: {
-            DisplayRecentlyState = input.ReadBool();
+          case 72: {
+            KAPDIMGJLNF = input.ReadBool();
             break;
           }
           case 80: {
+            DisplayChallengeLineup = input.ReadBool();
+            break;
+          }
+          case 88: {
             MMMNJCHEMFN = input.ReadBool();
             break;
           }
           case 96: {
-            AAMELOHPBHL = input.ReadBool();
+            NKEKIBNJMPA = input.ReadBool();
             break;
           }
-          case 104: {
-            DisplayCollection = input.ReadBool();
+          case 120: {
+            DisplayBattleRecord = input.ReadBool();
             break;
           }
-          case 1872: {
-            OEGIFODEAKK = input.ReadBool();
+          case 2840: {
+            GPIPJLCLIIH = input.ReadBool();
             break;
           }
-          case 13288: {
+          case 4848: {
+            JNAGLCDKKEJ = input.ReadBool();
+            break;
+          }
+          case 8408: {
             MCCJLBEMKCN = input.ReadBool();
+            break;
+          }
+          case 9144: {
+            OEGIFODEAKK = input.ReadBool();
             break;
           }
         }

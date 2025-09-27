@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiFVcGRhdGVGZWF0dXJlU3dpdGNoU2NOb3RpZnkucHJvdG8aEUhQSU9GRENH",
             "TUVKLnByb3RvIkMKG1VwZGF0ZUZlYXR1cmVTd2l0Y2hTY05vdGlmeRIkCg5T",
-            "d2l0Y2hJbmZvTGlzdBgPIAMoCzIMLkhQSU9GRENHTUVKQh6qAhtFZ2dMaW5r",
+            "d2l0Y2hJbmZvTGlzdBgNIAMoCzIMLkhQSU9GRENHTUVKQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HPIOFDCGMEJReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "SwitchInfoList" field.</summary>
-    public const int SwitchInfoListFieldNumber = 15;
+    public const int SwitchInfoListFieldNumber = 13;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HPIOFDCGMEJ> _repeated_switchInfoList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.HPIOFDCGMEJ.Parser);
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.HPIOFDCGMEJ.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HPIOFDCGMEJ> switchInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HPIOFDCGMEJ>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 122: {
+          case 106: {
             switchInfoList_.AddEntriesFrom(input, _repeated_switchInfoList_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 122: {
+          case 106: {
             switchInfoList_.AddEntriesFrom(ref input, _repeated_switchInfoList_codec);
             break;
           }

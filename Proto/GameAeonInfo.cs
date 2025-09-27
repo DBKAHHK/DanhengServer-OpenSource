@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJHYW1lQWVvbkluZm8ucHJvdG8iXAoMR2FtZUFlb25JbmZvEiEKGXVubG9j",
-            "a2VkX2Flb25fZW5oYW5jZV9udW0YAiABKA0SEwoLaXNfdW5sb2NrZWQYCiAB",
-            "KAgSFAoMZ2FtZV9hZW9uX2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "a2VkX2Flb25fZW5oYW5jZV9udW0YBiABKA0SFAoMZ2FtZV9hZW9uX2lkGAMg",
+            "ASgNEhMKC2lzX3VubG9ja2VkGAIgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GameAeonInfo), global::EggLink.DanhengServer.Proto.GameAeonInfo.Parser, new[]{ "UnlockedAeonEnhanceNum", "IsUnlocked", "GameAeonId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GameAeonInfo), global::EggLink.DanhengServer.Proto.GameAeonInfo.Parser, new[]{ "UnlockedAeonEnhanceNum", "GameAeonId", "IsUnlocked" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GameAeonInfo(GameAeonInfo other) : this() {
       unlockedAeonEnhanceNum_ = other.unlockedAeonEnhanceNum_;
-      isUnlocked_ = other.isUnlocked_;
       gameAeonId_ = other.gameAeonId_;
+      isUnlocked_ = other.isUnlocked_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "unlocked_aeon_enhance_num" field.</summary>
-    public const int UnlockedAeonEnhanceNumFieldNumber = 2;
+    public const int UnlockedAeonEnhanceNumFieldNumber = 6;
     private uint unlockedAeonEnhanceNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,20 +97,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "is_unlocked" field.</summary>
-    public const int IsUnlockedFieldNumber = 10;
-    private bool isUnlocked_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsUnlocked {
-      get { return isUnlocked_; }
-      set {
-        isUnlocked_ = value;
-      }
-    }
-
     /// <summary>Field number for the "game_aeon_id" field.</summary>
-    public const int GameAeonIdFieldNumber = 13;
+    public const int GameAeonIdFieldNumber = 3;
     private uint gameAeonId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return gameAeonId_; }
       set {
         gameAeonId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_unlocked" field.</summary>
+    public const int IsUnlockedFieldNumber = 2;
+    private bool isUnlocked_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsUnlocked {
+      get { return isUnlocked_; }
+      set {
+        isUnlocked_ = value;
       }
     }
 
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (UnlockedAeonEnhanceNum != other.UnlockedAeonEnhanceNum) return false;
-      if (IsUnlocked != other.IsUnlocked) return false;
       if (GameAeonId != other.GameAeonId) return false;
+      if (IsUnlocked != other.IsUnlocked) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (UnlockedAeonEnhanceNum != 0) hash ^= UnlockedAeonEnhanceNum.GetHashCode();
-      if (IsUnlocked != false) hash ^= IsUnlocked.GetHashCode();
       if (GameAeonId != 0) hash ^= GameAeonId.GetHashCode();
+      if (IsUnlocked != false) hash ^= IsUnlocked.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (UnlockedAeonEnhanceNum != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(UnlockedAeonEnhanceNum);
-      }
       if (IsUnlocked != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(16);
         output.WriteBool(IsUnlocked);
       }
       if (GameAeonId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(24);
         output.WriteUInt32(GameAeonId);
+      }
+      if (UnlockedAeonEnhanceNum != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(UnlockedAeonEnhanceNum);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (UnlockedAeonEnhanceNum != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(UnlockedAeonEnhanceNum);
-      }
       if (IsUnlocked != false) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(16);
         output.WriteBool(IsUnlocked);
       }
       if (GameAeonId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(24);
         output.WriteUInt32(GameAeonId);
+      }
+      if (UnlockedAeonEnhanceNum != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(UnlockedAeonEnhanceNum);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -214,11 +214,11 @@ namespace EggLink.DanhengServer.Proto {
       if (UnlockedAeonEnhanceNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UnlockedAeonEnhanceNum);
       }
-      if (IsUnlocked != false) {
-        size += 1 + 1;
-      }
       if (GameAeonId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameAeonId);
+      }
+      if (IsUnlocked != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -235,11 +235,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.UnlockedAeonEnhanceNum != 0) {
         UnlockedAeonEnhanceNum = other.UnlockedAeonEnhanceNum;
       }
-      if (other.IsUnlocked != false) {
-        IsUnlocked = other.IsUnlocked;
-      }
       if (other.GameAeonId != 0) {
         GameAeonId = other.GameAeonId;
+      }
+      if (other.IsUnlocked != false) {
+        IsUnlocked = other.IsUnlocked;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -257,15 +257,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            UnlockedAeonEnhanceNum = input.ReadUInt32();
-            break;
-          }
-          case 80: {
             IsUnlocked = input.ReadBool();
             break;
           }
-          case 104: {
+          case 24: {
             GameAeonId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            UnlockedAeonEnhanceNum = input.ReadUInt32();
             break;
           }
         }
@@ -284,15 +284,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            UnlockedAeonEnhanceNum = input.ReadUInt32();
-            break;
-          }
-          case 80: {
             IsUnlocked = input.ReadBool();
             break;
           }
-          case 104: {
+          case 24: {
             GameAeonId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            UnlockedAeonEnhanceNum = input.ReadUInt32();
             break;
           }
         }

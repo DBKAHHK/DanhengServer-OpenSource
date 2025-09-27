@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBSb2d1ZU1pcmFjbGVEcm9wU2VsZWN0SW5mby5wcm90byJPChpSb2d1ZU1p",
             "cmFjbGVEcm9wU2VsZWN0SW5mbxIZChFkcm9wX21pcmFjbGVfbGlzdBgCIAMo",
-            "DRIWCg5zZWxlY3RfaGludF9pZBgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "DRIWCg5zZWxlY3RfaGludF9pZBgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 7;
+    public const int SelectHintIdFieldNumber = 1;
     private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      dropMiracleList_.WriteTo(output, _repeated_dropMiracleList_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteUInt32(SelectHintId);
       }
+      dropMiracleList_.WriteTo(output, _repeated_dropMiracleList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      dropMiracleList_.WriteTo(ref output, _repeated_dropMiracleList_codec);
       if (SelectHintId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(8);
         output.WriteUInt32(SelectHintId);
       }
+      dropMiracleList_.WriteTo(ref output, _repeated_dropMiracleList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -216,13 +216,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 8: {
+            SelectHintId = input.ReadUInt32();
+            break;
+          }
           case 18:
           case 16: {
             dropMiracleList_.AddEntriesFrom(input, _repeated_dropMiracleList_codec);
-            break;
-          }
-          case 56: {
-            SelectHintId = input.ReadUInt32();
             break;
           }
         }
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 8: {
+            SelectHintId = input.ReadUInt32();
+            break;
+          }
           case 18:
           case 16: {
             dropMiracleList_.AddEntriesFrom(ref input, _repeated_dropMiracleList_codec);
-            break;
-          }
-          case 56: {
-            SelectHintId = input.ReadUInt32();
             break;
           }
         }

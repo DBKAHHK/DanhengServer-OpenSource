@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhGYXJtU3RhZ2VHYWNoYUluZm8ucHJvdG8iTAoSRmFybVN0YWdlR2FjaGFJ",
-            "bmZvEhIKCmJlZ2luX3RpbWUYDSABKAMSEAoIZW5kX3RpbWUYBCABKAMSEAoI",
-            "Z2FjaGFfaWQYByABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "bmZvEhIKCmJlZ2luX3RpbWUYDCABKAMSEAoIZW5kX3RpbWUYByABKAMSEAoI",
+            "Z2FjaGFfaWQYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "begin_time" field.</summary>
-    public const int BeginTimeFieldNumber = 13;
+    public const int BeginTimeFieldNumber = 12;
     private long beginTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "end_time" field.</summary>
-    public const int EndTimeFieldNumber = 4;
+    public const int EndTimeFieldNumber = 7;
     private long endTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "gacha_id" field.</summary>
-    public const int GachaIdFieldNumber = 7;
+    public const int GachaIdFieldNumber = 9;
     private uint gachaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -168,15 +168,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EndTime != 0L) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteInt64(EndTime);
       }
       if (GachaId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(GachaId);
       }
       if (BeginTime != 0L) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteInt64(BeginTime);
       }
       if (_unknownFields != null) {
@@ -190,15 +190,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EndTime != 0L) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteInt64(EndTime);
       }
       if (GachaId != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(72);
         output.WriteUInt32(GachaId);
       }
       if (BeginTime != 0L) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteInt64(BeginTime);
       }
       if (_unknownFields != null) {
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 56: {
             EndTime = input.ReadInt64();
             break;
           }
-          case 56: {
+          case 72: {
             GachaId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 96: {
             BeginTime = input.ReadInt64();
             break;
           }
@@ -283,15 +283,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 56: {
             EndTime = input.ReadInt64();
             break;
           }
-          case 56: {
+          case 72: {
             GachaId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 96: {
             BeginTime = input.ReadInt64();
             break;
           }

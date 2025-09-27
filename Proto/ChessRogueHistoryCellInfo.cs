@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9DaGVzc1JvZ3VlSGlzdG9yeUNlbGxJbmZvLnByb3RvIj0KGUNoZXNzUm9n",
-            "dWVIaXN0b3J5Q2VsbEluZm8SDwoHY2VsbF9pZBgHIAEoDRIPCgdyb29tX2lk",
-            "GA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
+            "dWVIaXN0b3J5Q2VsbEluZm8SDwoHY2VsbF9pZBgGIAEoDRIPCgdyb29tX2lk",
+            "GAMgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cell_id" field.</summary>
-    public const int CellIdFieldNumber = 7;
+    public const int CellIdFieldNumber = 6;
     private uint cellId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "room_id" field.</summary>
-    public const int RoomIdFieldNumber = 14;
+    public const int RoomIdFieldNumber = 3;
     private uint roomId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CellId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(CellId);
-      }
       if (RoomId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(24);
         output.WriteUInt32(RoomId);
+      }
+      if (CellId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(CellId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CellId != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(CellId);
-      }
       if (RoomId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(24);
         output.WriteUInt32(RoomId);
+      }
+      if (CellId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(CellId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            CellId = input.ReadUInt32();
+          case 24: {
+            RoomId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            RoomId = input.ReadUInt32();
+          case 48: {
+            CellId = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            CellId = input.ReadUInt32();
+          case 24: {
+            RoomId = input.ReadUInt32();
             break;
           }
-          case 112: {
-            RoomId = input.ReadUInt32();
+          case 48: {
+            CellId = input.ReadUInt32();
             break;
           }
         }

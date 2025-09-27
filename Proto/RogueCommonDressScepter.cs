@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch1Sb2d1ZUNvbW1vbkRyZXNzU2NlcHRlci5wcm90bxofUm9ndWVNYWdpY0dh",
             "bWVTY2VwdGVySW5mby5wcm90byJSChdSb2d1ZUNvbW1vbkRyZXNzU2NlcHRl",
-            "chI3ChN1cGRhdGVfc2NlcHRlcl9pbmZvGA4gASgLMhouUm9ndWVNYWdpY0dh",
+            "chI3ChN1cGRhdGVfc2NlcHRlcl9pbmZvGAogASgLMhouUm9ndWVNYWdpY0dh",
             "bWVTY2VwdGVySW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "update_scepter_info" field.</summary>
-    public const int UpdateScepterInfoFieldNumber = 14;
+    public const int UpdateScepterInfoFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.RogueMagicGameScepterInfo updateScepterInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (updateScepterInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(82);
         output.WriteMessage(UpdateScepterInfo);
       }
       if (_unknownFields != null) {
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (updateScepterInfo_ != null) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(82);
         output.WriteMessage(UpdateScepterInfo);
       }
       if (_unknownFields != null) {
@@ -202,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 114: {
+          case 82: {
             if (updateScepterInfo_ == null) {
               UpdateScepterInfo = new global::EggLink.DanhengServer.Proto.RogueMagicGameScepterInfo();
             }
@@ -224,7 +224,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 114: {
+          case 82: {
             if (updateScepterInfo_ == null) {
               UpdateScepterInfo = new global::EggLink.DanhengServer.Proto.RogueMagicGameScepterInfo();
             }

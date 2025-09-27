@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GIADLHEEPHDReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFHSUFETEhFRVBIRC5wcm90byI8CgtHSUFETEhFRVBIRBIYChBoYXNfdGFr",
-            "ZW5fcmV3YXJkGAwgASgIEhMKC0ZISEdEUENFQ0VFGAkgASgNQh6qAhtFZ2dM",
+            "ChFHSUFETEhFRVBIRC5wcm90byI8CgtHSUFETEhFRVBIRBITCgtGSEhHRFBD",
+            "RUNFRRgBIAEoDRIYChBoYXNfdGFrZW5fcmV3YXJkGAwgASgIQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GIADLHEEPHD), global::EggLink.DanhengServer.Proto.GIADLHEEPHD.Parser, new[]{ "HasTakenReward", "FHHGDPCECEE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GIADLHEEPHD), global::EggLink.DanhengServer.Proto.GIADLHEEPHD.Parser, new[]{ "FHHGDPCECEE", "HasTakenReward" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GIADLHEEPHD(GIADLHEEPHD other) : this() {
-      hasTakenReward_ = other.hasTakenReward_;
       fHHGDPCECEE_ = other.fHHGDPCECEE_;
+      hasTakenReward_ = other.hasTakenReward_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -81,6 +81,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GIADLHEEPHD Clone() {
       return new GIADLHEEPHD(this);
+    }
+
+    /// <summary>Field number for the "FHHGDPCECEE" field.</summary>
+    public const int FHHGDPCECEEFieldNumber = 1;
+    private uint fHHGDPCECEE_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FHHGDPCECEE {
+      get { return fHHGDPCECEE_; }
+      set {
+        fHHGDPCECEE_ = value;
+      }
     }
 
     /// <summary>Field number for the "has_taken_reward" field.</summary>
@@ -92,18 +104,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return hasTakenReward_; }
       set {
         hasTakenReward_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "FHHGDPCECEE" field.</summary>
-    public const int FHHGDPCECEEFieldNumber = 9;
-    private uint fHHGDPCECEE_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FHHGDPCECEE {
-      get { return fHHGDPCECEE_; }
-      set {
-        fHHGDPCECEE_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (HasTakenReward != other.HasTakenReward) return false;
       if (FHHGDPCECEE != other.FHHGDPCECEE) return false;
+      if (HasTakenReward != other.HasTakenReward) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HasTakenReward != false) hash ^= HasTakenReward.GetHashCode();
       if (FHHGDPCECEE != 0) hash ^= FHHGDPCECEE.GetHashCode();
+      if (HasTakenReward != false) hash ^= HasTakenReward.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (FHHGDPCECEE != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(8);
         output.WriteUInt32(FHHGDPCECEE);
       }
       if (HasTakenReward != false) {
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FHHGDPCECEE != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(8);
         output.WriteUInt32(FHHGDPCECEE);
       }
       if (HasTakenReward != false) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HasTakenReward != false) {
-        size += 1 + 1;
-      }
       if (FHHGDPCECEE != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FHHGDPCECEE);
+      }
+      if (HasTakenReward != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.HasTakenReward != false) {
-        HasTakenReward = other.HasTakenReward;
-      }
       if (other.FHHGDPCECEE != 0) {
         FHHGDPCECEE = other.FHHGDPCECEE;
+      }
+      if (other.HasTakenReward != false) {
+        HasTakenReward = other.HasTakenReward;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,7 +226,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 8: {
             FHHGDPCECEE = input.ReadUInt32();
             break;
           }
@@ -249,7 +249,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 8: {
             FHHGDPCECEE = input.ReadUInt32();
             break;
           }

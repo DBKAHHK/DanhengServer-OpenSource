@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBHZXRQcml2YXRlQ2hhdEhpc3RvcnlDc1JlcS5wcm90byJHChpHZXRQcml2",
-            "YXRlQ2hhdEhpc3RvcnlDc1JlcRIUCgxjb250YWN0X3NpZGUYBSABKA0SEwoL",
-            "dGFyZ2V0X3NpZGUYCSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "YXRlQ2hhdEhpc3RvcnlDc1JlcRITCgt0YXJnZXRfc2lkZRgJIAEoDRIUCgxj",
+            "b250YWN0X3NpZGUYBCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPrivateChatHistoryCsReq), global::EggLink.DanhengServer.Proto.GetPrivateChatHistoryCsReq.Parser, new[]{ "ContactSide", "TargetSide" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetPrivateChatHistoryCsReq), global::EggLink.DanhengServer.Proto.GetPrivateChatHistoryCsReq.Parser, new[]{ "TargetSide", "ContactSide" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPrivateChatHistoryCsReq(GetPrivateChatHistoryCsReq other) : this() {
-      contactSide_ = other.contactSide_;
       targetSide_ = other.targetSide_;
+      contactSide_ = other.contactSide_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,18 +82,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetPrivateChatHistoryCsReq Clone() {
       return new GetPrivateChatHistoryCsReq(this);
-    }
-
-    /// <summary>Field number for the "contact_side" field.</summary>
-    public const int ContactSideFieldNumber = 5;
-    private uint contactSide_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ContactSide {
-      get { return contactSide_; }
-      set {
-        contactSide_ = value;
-      }
     }
 
     /// <summary>Field number for the "target_side" field.</summary>
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return targetSide_; }
       set {
         targetSide_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "contact_side" field.</summary>
+    public const int ContactSideFieldNumber = 4;
+    private uint contactSide_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ContactSide {
+      get { return contactSide_; }
+      set {
+        contactSide_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ContactSide != other.ContactSide) return false;
       if (TargetSide != other.TargetSide) return false;
+      if (ContactSide != other.ContactSide) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ContactSide != 0) hash ^= ContactSide.GetHashCode();
       if (TargetSide != 0) hash ^= TargetSide.GetHashCode();
+      if (ContactSide != 0) hash ^= ContactSide.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ContactSide != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(ContactSide);
       }
       if (TargetSide != 0) {
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ContactSide != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteUInt32(ContactSide);
       }
       if (TargetSide != 0) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ContactSide != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ContactSide);
-      }
       if (TargetSide != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TargetSide);
+      }
+      if (ContactSide != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ContactSide);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ContactSide != 0) {
-        ContactSide = other.ContactSide;
-      }
       if (other.TargetSide != 0) {
         TargetSide = other.TargetSide;
+      }
+      if (other.ContactSide != 0) {
+        ContactSide = other.ContactSide;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,7 +227,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 32: {
             ContactSide = input.ReadUInt32();
             break;
           }
@@ -250,7 +250,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 32: {
             ContactSide = input.ReadUInt32();
             break;
           }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQSUlJUEhFRkRKTy5wcm90bxoRS05ORlBGS0NBQkUucHJvdG8iMAoLUElJ",
-            "SVBIRUZESk8SIQoLQVBGRUNPT1BOS04YAyADKAsyDC5LTk5GUEZLQ0FCRUIe",
+            "SVBIRUZESk8SIQoLQVBGRUNPT1BOS04YCCADKAsyDC5LTk5GUEZLQ0FCRUIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KNNFPFKCABEReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "APFECOOPNKN" field.</summary>
-    public const int APFECOOPNKNFieldNumber = 3;
+    public const int APFECOOPNKNFieldNumber = 8;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KNNFPFKCABE> _repeated_aPFECOOPNKN_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.KNNFPFKCABE.Parser);
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.KNNFPFKCABE.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KNNFPFKCABE> aPFECOOPNKN_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KNNFPFKCABE>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 66: {
             aPFECOOPNKN_.AddEntriesFrom(input, _repeated_aPFECOOPNKN_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 66: {
             aPFECOOPNKN_.AddEntriesFrom(ref input, _repeated_aPFECOOPNKN_codec);
             break;
           }

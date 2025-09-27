@@ -25,5 +25,6 @@ public enum ConditionTypeEnum
     RealFinishMainMission = 22,
     RogueTournExpLevel = 23,
     ElfProgress = 24,
-    ElfProgressDay = 25
+    ElfProgressDay = 25,
+    HeroRoomOpen = 26
 }

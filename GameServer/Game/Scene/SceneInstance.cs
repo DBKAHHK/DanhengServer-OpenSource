@@ -452,11 +452,25 @@ public class SceneInstance
         foreach (var entity in Entities.Values.OfType<AvatarSceneInfo>())
         {
             if (!GameData.AvatarConfigData.TryGetValue(entity.AvatarInfo.AvatarId, out var excel)) continue;
+            GameData.AdventureAbilityConfigListData.TryGetValue(excel.AdventurePlayerID, out var avatarAbility);
+            if (avatarAbility == null) continue;
+
+            // change team leader
+            foreach (var modifier in entity.Modifiers.ToArray())
+            {
+                // get modifier info
+                if (!GameData.AdventureModifierData.TryGetValue(modifier, out var config)) continue;
+                if (config.OnTeamLeaderChange.Count > 0)
+                    await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility,
+                        config.OnTeamLeaderChange, entity, [], new SceneCastSkillCsReq
+                        {
+                            CastEntityId = (uint)entity.EntityId
+                        }, modifier);
+            }
+
             if (curBaseAvatarId == entity.AvatarInfo.BaseAvatarId) continue;
 
             // unstage modifier
-            GameData.AdventureAbilityConfigListData.TryGetValue(excel.AdventurePlayerID, out var avatarAbility);
-            if (avatarAbility == null) continue;
             foreach (var modifier in entity.Modifiers.ToArray())
             {
                 // get modifier info
@@ -757,6 +771,16 @@ public class AvatarSceneInfo : BaseGameEntity, IGameModifier
         if (modifier == null || avatarAbility == null) return;
 
         await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnCreate, this, [],
+            new SceneCastSkillCsReq
+            {
+                TargetMotion = new MotionInfo
+                {
+                    Pos = Player.Data.Pos?.ToProto() ?? new Vector(),
+                    Rot = Player.Data.Rot?.ToProto() ?? new Vector()
+                }
+            });
+
+        await Player.TaskManager!.AbilityLevelTask.TriggerTasks(avatarAbility, modifier.OnStack, this, [],
             new SceneCastSkillCsReq
             {
                 TargetMotion = new MotionInfo

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFLSkJNTEJHSUJKRi5wcm90byI3CgtLSkJNTEJHSUJKRhITCgtKSUhDSElM",
-            "RkpQSRgDIAMoDRITCgtPQ0NNTklERUJCShgCIAMoDUIeqgIbRWdnTGluay5E",
+            "RkpQSRgNIAMoDRITCgtPQ0NNTklERUJCShgHIAMoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JIHCHILFJPI" field.</summary>
-    public const int JIHCHILFJPIFieldNumber = 3;
+    public const int JIHCHILFJPIFieldNumber = 13;
     private static readonly pb::FieldCodec<uint> _repeated_jIHCHILFJPI_codec
-        = pb::FieldCodec.ForUInt32(26);
+        = pb::FieldCodec.ForUInt32(106);
     private readonly pbc::RepeatedField<uint> jIHCHILFJPI_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,9 +95,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "OCCMNIDEBBJ" field.</summary>
-    public const int OCCMNIDEBBJFieldNumber = 2;
+    public const int OCCMNIDEBBJFieldNumber = 7;
     private static readonly pb::FieldCodec<uint> _repeated_oCCMNIDEBBJ_codec
-        = pb::FieldCodec.ForUInt32(18);
+        = pb::FieldCodec.ForUInt32(58);
     private readonly pbc::RepeatedField<uint> oCCMNIDEBBJ_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -204,13 +204,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
+          case 58:
+          case 56: {
             oCCMNIDEBBJ_.AddEntriesFrom(input, _repeated_oCCMNIDEBBJ_codec);
             break;
           }
-          case 26:
-          case 24: {
+          case 106:
+          case 104: {
             jIHCHILFJPI_.AddEntriesFrom(input, _repeated_jIHCHILFJPI_codec);
             break;
           }
@@ -229,13 +229,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
+          case 58:
+          case 56: {
             oCCMNIDEBBJ_.AddEntriesFrom(ref input, _repeated_oCCMNIDEBBJ_codec);
             break;
           }
-          case 26:
-          case 24: {
+          case 106:
+          case 104: {
             jIHCHILFJPI_.AddEntriesFrom(ref input, _repeated_jIHCHILFJPI_codec);
             break;
           }

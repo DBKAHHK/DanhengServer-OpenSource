@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static RechargeGiftDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZSZWNoYXJnZUdpZnREYXRhLnByb3RvGhhSZWNoYXJnZUdpZnRTdGF0dXMu",
-            "cHJvdG8iRgoQUmVjaGFyZ2VHaWZ0RGF0YRINCgVpbmRleBgEIAEoDRIjCgZz",
-            "dGF0dXMYDyABKA4yEy5SZWNoYXJnZUdpZnRTdGF0dXNCHqoCG0VnZ0xpbmsu",
-            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChZSZWNoYXJnZUdpZnREYXRhLnByb3RvIpkBChBSZWNoYXJnZUdpZnREYXRh",
+            "EjQKBnN0YXR1cxgIIAEoDjIkLlJlY2hhcmdlR2lmdERhdGEuUmVjaGFyZ2VH",
+            "aWZ0U3RhdHVzEg0KBWluZGV4GAwgASgNIkAKElJlY2hhcmdlR2lmdFN0YXR1",
+            "cxIMCghOb3RSZWFjaBAAEgwKCFJlY2VpdmVkEAESDgoKQ2FuUmVjZWl2ZRAC",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RechargeGiftStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RechargeGiftData), global::EggLink.DanhengServer.Proto.RechargeGiftData.Parser, new[]{ "Index", "Status" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RechargeGiftData), global::EggLink.DanhengServer.Proto.RechargeGiftData.Parser, new[]{ "Status", "Index" }, null, new[]{ typeof(global::EggLink.DanhengServer.Proto.RechargeGiftData.Types.RechargeGiftStatus) }, null, null)
           }));
     }
     #endregion
@@ -73,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RechargeGiftData(RechargeGiftData other) : this() {
-      index_ = other.index_;
       status_ = other.status_;
+      index_ = other.index_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +85,20 @@ namespace EggLink.DanhengServer.Proto {
       return new RechargeGiftData(this);
     }
 
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.RechargeGiftData.Types.RechargeGiftStatus status_ = global::EggLink.DanhengServer.Proto.RechargeGiftData.Types.RechargeGiftStatus.NotReach;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RechargeGiftData.Types.RechargeGiftStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
     /// <summary>Field number for the "index" field.</summary>
-    public const int IndexFieldNumber = 4;
+    public const int IndexFieldNumber = 12;
     private uint index_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -93,18 +106,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return index_; }
       set {
         index_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 15;
-    private global::EggLink.DanhengServer.Proto.RechargeGiftStatus status_ = global::EggLink.DanhengServer.Proto.RechargeGiftStatus.NotReach;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RechargeGiftStatus Status {
-      get { return status_; }
-      set {
-        status_ = value;
       }
     }
 
@@ -123,8 +124,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Index != other.Index) return false;
       if (Status != other.Status) return false;
+      if (Index != other.Index) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +133,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (Status != global::EggLink.DanhengServer.Proto.RechargeGiftData.Types.RechargeGiftStatus.NotReach) hash ^= Status.GetHashCode();
       if (Index != 0) hash ^= Index.GetHashCode();
-      if (Status != global::EggLink.DanhengServer.Proto.RechargeGiftStatus.NotReach) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Index != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Index);
-      }
-      if (Status != global::EggLink.DanhengServer.Proto.RechargeGiftStatus.NotReach) {
-        output.WriteRawTag(120);
+      if (Status != global::EggLink.DanhengServer.Proto.RechargeGiftData.Types.RechargeGiftStatus.NotReach) {
+        output.WriteRawTag(64);
         output.WriteEnum((int) Status);
+      }
+      if (Index != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Index);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Index != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Index);
-      }
-      if (Status != global::EggLink.DanhengServer.Proto.RechargeGiftStatus.NotReach) {
-        output.WriteRawTag(120);
+      if (Status != global::EggLink.DanhengServer.Proto.RechargeGiftData.Types.RechargeGiftStatus.NotReach) {
+        output.WriteRawTag(64);
         output.WriteEnum((int) Status);
+      }
+      if (Index != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(Index);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (Status != global::EggLink.DanhengServer.Proto.RechargeGiftData.Types.RechargeGiftStatus.NotReach) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
       if (Index != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Index);
-      }
-      if (Status != global::EggLink.DanhengServer.Proto.RechargeGiftStatus.NotReach) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +207,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Status != global::EggLink.DanhengServer.Proto.RechargeGiftData.Types.RechargeGiftStatus.NotReach) {
+        Status = other.Status;
+      }
       if (other.Index != 0) {
         Index = other.Index;
-      }
-      if (other.Status != global::EggLink.DanhengServer.Proto.RechargeGiftStatus.NotReach) {
-        Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +228,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            Index = input.ReadUInt32();
+          case 64: {
+            Status = (global::EggLink.DanhengServer.Proto.RechargeGiftData.Types.RechargeGiftStatus) input.ReadEnum();
             break;
           }
-          case 120: {
-            Status = (global::EggLink.DanhengServer.Proto.RechargeGiftStatus) input.ReadEnum();
+          case 96: {
+            Index = input.ReadUInt32();
             break;
           }
         }
@@ -250,18 +251,32 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            Index = input.ReadUInt32();
+          case 64: {
+            Status = (global::EggLink.DanhengServer.Proto.RechargeGiftData.Types.RechargeGiftStatus) input.ReadEnum();
             break;
           }
-          case 120: {
-            Status = (global::EggLink.DanhengServer.Proto.RechargeGiftStatus) input.ReadEnum();
+          case 96: {
+            Index = input.ReadUInt32();
             break;
           }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RechargeGiftData message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      public enum RechargeGiftStatus {
+        [pbr::OriginalName("NotReach")] NotReach = 0,
+        [pbr::OriginalName("Received")] Received = 1,
+        [pbr::OriginalName("CanReceive")] CanReceive = 2,
+      }
+
+    }
+    #endregion
 
   }
 

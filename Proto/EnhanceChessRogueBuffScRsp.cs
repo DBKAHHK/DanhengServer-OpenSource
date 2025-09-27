@@ -26,15 +26,15 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiBFbmhhbmNlQ2hlc3NSb2d1ZUJ1ZmZTY1JzcC5wcm90bxofQ2hlc3NSb2d1",
             "ZUJ1ZmZFbmhhbmNlTGlzdC5wcm90bxoVUm9ndWVDb21tb25CdWZmLnByb3Rv",
-            "IpsBChpFbmhhbmNlQ2hlc3NSb2d1ZUJ1ZmZTY1JzcBIkCgpyb2d1ZV9idWZm",
-            "GAMgASgLMhAuUm9ndWVDb21tb25CdWZmEg8KB3JldGNvZGUYDiABKA0SNQoR",
-            "YnVmZl9lbmhhbmNlX2luZm8YCiABKAsyGi5DaGVzc1JvZ3VlQnVmZkVuaGFu",
-            "Y2VMaXN0Eg8KB2lzX3N1Y2MYBiABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "IpsBChpFbmhhbmNlQ2hlc3NSb2d1ZUJ1ZmZTY1JzcBI1ChFidWZmX2VuaGFu",
+            "Y2VfaW5mbxgHIAEoCzIaLkNoZXNzUm9ndWVCdWZmRW5oYW5jZUxpc3QSDwoH",
+            "aXNfc3VjYxgBIAEoCBIkCgpyb2d1ZV9idWZmGA4gASgLMhAuUm9ndWVDb21t",
+            "b25CdWZmEg8KB3JldGNvZGUYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueBuffEnhanceListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnhanceChessRogueBuffScRsp), global::EggLink.DanhengServer.Proto.EnhanceChessRogueBuffScRsp.Parser, new[]{ "RogueBuff", "Retcode", "BuffEnhanceInfo", "IsSucc" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EnhanceChessRogueBuffScRsp), global::EggLink.DanhengServer.Proto.EnhanceChessRogueBuffScRsp.Parser, new[]{ "BuffEnhanceInfo", "IsSucc", "RogueBuff", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,10 +76,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnhanceChessRogueBuffScRsp(EnhanceChessRogueBuffScRsp other) : this() {
-      rogueBuff_ = other.rogueBuff_ != null ? other.rogueBuff_.Clone() : null;
-      retcode_ = other.retcode_;
       buffEnhanceInfo_ = other.buffEnhanceInfo_ != null ? other.buffEnhanceInfo_.Clone() : null;
       isSucc_ = other.isSucc_;
+      rogueBuff_ = other.rogueBuff_ != null ? other.rogueBuff_.Clone() : null;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -89,32 +89,8 @@ namespace EggLink.DanhengServer.Proto {
       return new EnhanceChessRogueBuffScRsp(this);
     }
 
-    /// <summary>Field number for the "rogue_buff" field.</summary>
-    public const int RogueBuffFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.RogueCommonBuff rogueBuff_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueCommonBuff RogueBuff {
-      get { return rogueBuff_; }
-      set {
-        rogueBuff_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
     /// <summary>Field number for the "buff_enhance_info" field.</summary>
-    public const int BuffEnhanceInfoFieldNumber = 10;
+    public const int BuffEnhanceInfoFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.ChessRogueBuffEnhanceList buffEnhanceInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -126,7 +102,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_succ" field.</summary>
-    public const int IsSuccFieldNumber = 6;
+    public const int IsSuccFieldNumber = 1;
     private bool isSucc_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -134,6 +110,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return isSucc_; }
       set {
         isSucc_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rogue_buff" field.</summary>
+    public const int RogueBuffFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.RogueCommonBuff rogueBuff_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.RogueCommonBuff RogueBuff {
+      get { return rogueBuff_; }
+      set {
+        rogueBuff_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 3;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
       }
     }
 
@@ -152,10 +152,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(RogueBuff, other.RogueBuff)) return false;
-      if (Retcode != other.Retcode) return false;
       if (!object.Equals(BuffEnhanceInfo, other.BuffEnhanceInfo)) return false;
       if (IsSucc != other.IsSucc) return false;
+      if (!object.Equals(RogueBuff, other.RogueBuff)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -163,10 +163,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (rogueBuff_ != null) hash ^= RogueBuff.GetHashCode();
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (buffEnhanceInfo_ != null) hash ^= BuffEnhanceInfo.GetHashCode();
       if (IsSucc != false) hash ^= IsSucc.GetHashCode();
+      if (rogueBuff_ != null) hash ^= RogueBuff.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -185,21 +185,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (rogueBuff_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(RogueBuff);
-      }
       if (IsSucc != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(8);
         output.WriteBool(IsSucc);
       }
+      if (Retcode != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Retcode);
+      }
       if (buffEnhanceInfo_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(58);
         output.WriteMessage(BuffEnhanceInfo);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(Retcode);
+      if (rogueBuff_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(RogueBuff);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -211,21 +211,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (rogueBuff_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(RogueBuff);
-      }
       if (IsSucc != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(8);
         output.WriteBool(IsSucc);
       }
+      if (Retcode != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(Retcode);
+      }
       if (buffEnhanceInfo_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(58);
         output.WriteMessage(BuffEnhanceInfo);
       }
-      if (Retcode != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(Retcode);
+      if (rogueBuff_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(RogueBuff);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -237,17 +237,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (rogueBuff_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueBuff);
-      }
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
       if (buffEnhanceInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BuffEnhanceInfo);
       }
       if (IsSucc != false) {
         size += 1 + 1;
+      }
+      if (rogueBuff_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RogueBuff);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -261,15 +261,6 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.rogueBuff_ != null) {
-        if (rogueBuff_ == null) {
-          RogueBuff = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
-        }
-        RogueBuff.MergeFrom(other.RogueBuff);
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.buffEnhanceInfo_ != null) {
         if (buffEnhanceInfo_ == null) {
           BuffEnhanceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueBuffEnhanceList();
@@ -278,6 +269,15 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.IsSucc != false) {
         IsSucc = other.IsSucc;
+      }
+      if (other.rogueBuff_ != null) {
+        if (rogueBuff_ == null) {
+          RogueBuff = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
+        }
+        RogueBuff.MergeFrom(other.RogueBuff);
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -294,26 +294,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
-            if (rogueBuff_ == null) {
-              RogueBuff = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
-            }
-            input.ReadMessage(RogueBuff);
-            break;
-          }
-          case 48: {
+          case 8: {
             IsSucc = input.ReadBool();
             break;
           }
-          case 82: {
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             if (buffEnhanceInfo_ == null) {
               BuffEnhanceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueBuffEnhanceList();
             }
             input.ReadMessage(BuffEnhanceInfo);
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 114: {
+            if (rogueBuff_ == null) {
+              RogueBuff = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
+            }
+            input.ReadMessage(RogueBuff);
             break;
           }
         }
@@ -331,26 +331,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
-            if (rogueBuff_ == null) {
-              RogueBuff = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
-            }
-            input.ReadMessage(RogueBuff);
-            break;
-          }
-          case 48: {
+          case 8: {
             IsSucc = input.ReadBool();
             break;
           }
-          case 82: {
+          case 24: {
+            Retcode = input.ReadUInt32();
+            break;
+          }
+          case 58: {
             if (buffEnhanceInfo_ == null) {
               BuffEnhanceInfo = new global::EggLink.DanhengServer.Proto.ChessRogueBuffEnhanceList();
             }
             input.ReadMessage(BuffEnhanceInfo);
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 114: {
+            if (rogueBuff_ == null) {
+              RogueBuff = new global::EggLink.DanhengServer.Proto.RogueCommonBuff();
+            }
+            input.ReadMessage(RogueBuff);
             break;
           }
         }

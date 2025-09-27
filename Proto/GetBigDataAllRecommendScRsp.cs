@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static GetBigDataAllRecommendScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFHZXRCaWdEYXRhQWxsUmVjb21tZW5kU2NSc3AucHJvdG8aEVBJSUlQSEVG",
-            "REpPLnByb3RvGhpCaWdEYXRhUmVjb21tZW5kVHlwZS5wcm90bxoRTUtKQUxN",
-            "S01QR0wucHJvdG8ivwEKG0dldEJpZ0RhdGFBbGxSZWNvbW1lbmRTY1JzcBIP",
-            "CgdyZXRjb2RlGAwgASgNEjYKF2JpZ19kYXRhX3JlY29tbWVuZF90eXBlGAgg",
-            "ASgOMhUuQmlnRGF0YVJlY29tbWVuZFR5cGUSIwoLREtMQk5CRFBNUE8YBSAB",
-            "KAsyDC5QSUlJUEhFRkRKT0gAEiMKC1BGT1BKUEpLS0xLGAsgASgLMgwuTUtK",
-            "QUxNS01QR0xIAEINCgtOSk5JT05NQk1LRUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "CiFHZXRCaWdEYXRhQWxsUmVjb21tZW5kU2NSc3AucHJvdG8aGkJpZ0RhdGFS",
+            "ZWNvbW1lbmRUeXBlLnByb3RvGhFQSUlJUEhFRkRKTy5wcm90bxoRTUtKQUxN",
+            "S01QR0wucHJvdG8ivwEKG0dldEJpZ0RhdGFBbGxSZWNvbW1lbmRTY1JzcBIj",
+            "CgtES0xCTkJEUE1QTxgPIAEoCzIMLlBJSUlQSEVGREpPSAASIwoLUEZPUEpQ",
+            "SktLTEsYCiABKAsyDC5NS0pBTE1LTVBHTEgAEg8KB3JldGNvZGUYCyABKA0S",
+            "NgoXYmlnX2RhdGFfcmVjb21tZW5kX3R5cGUYDSABKA4yFS5CaWdEYXRhUmVj",
+            "b21tZW5kVHlwZUINCgtOSk5JT05NQk1LRUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PIIIPHEFDJOReflection.Descriptor, global::EggLink.DanhengServer.Proto.BigDataRecommendTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MKJALMKMPGLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BigDataRecommendTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.PIIIPHEFDJOReflection.Descriptor, global::EggLink.DanhengServer.Proto.MKJALMKMPGLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBigDataAllRecommendScRsp), global::EggLink.DanhengServer.Proto.GetBigDataAllRecommendScRsp.Parser, new[]{ "Retcode", "BigDataRecommendType", "DKLBNBDPMPO", "PFOPJPJKKLK" }, new[]{ "NJNIONMBMKE" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBigDataAllRecommendScRsp), global::EggLink.DanhengServer.Proto.GetBigDataAllRecommendScRsp.Parser, new[]{ "DKLBNBDPMPO", "PFOPJPJKKLK", "Retcode", "BigDataRecommendType" }, new[]{ "NJNIONMBMKE" }, null, null, null)
           }));
     }
     #endregion
@@ -97,32 +97,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetBigDataAllRecommendScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 12;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "big_data_recommend_type" field.</summary>
-    public const int BigDataRecommendTypeFieldNumber = 8;
-    private global::EggLink.DanhengServer.Proto.BigDataRecommendType bigDataRecommendType_ = global::EggLink.DanhengServer.Proto.BigDataRecommendType.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.BigDataRecommendType BigDataRecommendType {
-      get { return bigDataRecommendType_; }
-      set {
-        bigDataRecommendType_ = value;
-      }
-    }
-
     /// <summary>Field number for the "DKLBNBDPMPO" field.</summary>
-    public const int DKLBNBDPMPOFieldNumber = 5;
+    public const int DKLBNBDPMPOFieldNumber = 15;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.PIIIPHEFDJO DKLBNBDPMPO {
@@ -134,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PFOPJPJKKLK" field.</summary>
-    public const int PFOPJPJKKLKFieldNumber = 11;
+    public const int PFOPJPJKKLKFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.MKJALMKMPGL PFOPJPJKKLK {
@@ -145,12 +121,36 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 11;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "big_data_recommend_type" field.</summary>
+    public const int BigDataRecommendTypeFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.BigDataRecommendType bigDataRecommendType_ = global::EggLink.DanhengServer.Proto.BigDataRecommendType.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.BigDataRecommendType BigDataRecommendType {
+      get { return bigDataRecommendType_; }
+      set {
+        bigDataRecommendType_ = value;
+      }
+    }
+
     private object nJNIONMBMKE_;
     /// <summary>Enum of possible cases for the "NJNIONMBMKE" oneof.</summary>
     public enum NJNIONMBMKEOneofCase {
       None = 0,
-      DKLBNBDPMPO = 5,
-      PFOPJPJKKLK = 11,
+      DKLBNBDPMPO = 15,
+      PFOPJPJKKLK = 10,
     }
     private NJNIONMBMKEOneofCase nJNIONMBMKECase_ = NJNIONMBMKEOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if (BigDataRecommendType != other.BigDataRecommendType) return false;
       if (!object.Equals(DKLBNBDPMPO, other.DKLBNBDPMPO)) return false;
       if (!object.Equals(PFOPJPJKKLK, other.PFOPJPJKKLK)) return false;
+      if (Retcode != other.Retcode) return false;
+      if (BigDataRecommendType != other.BigDataRecommendType) return false;
       if (NJNIONMBMKECase != other.NJNIONMBMKECase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -193,10 +193,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (BigDataRecommendType != global::EggLink.DanhengServer.Proto.BigDataRecommendType.None) hash ^= BigDataRecommendType.GetHashCode();
       if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) hash ^= DKLBNBDPMPO.GetHashCode();
       if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.PFOPJPJKKLK) hash ^= PFOPJPJKKLK.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (BigDataRecommendType != global::EggLink.DanhengServer.Proto.BigDataRecommendType.None) hash ^= BigDataRecommendType.GetHashCode();
       hash ^= (int) nJNIONMBMKECase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -216,21 +216,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
-        output.WriteRawTag(42);
-        output.WriteMessage(DKLBNBDPMPO);
-      }
-      if (BigDataRecommendType != global::EggLink.DanhengServer.Proto.BigDataRecommendType.None) {
-        output.WriteRawTag(64);
-        output.WriteEnum((int) BigDataRecommendType);
-      }
       if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.PFOPJPJKKLK) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(82);
         output.WriteMessage(PFOPJPJKKLK);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
+      }
+      if (BigDataRecommendType != global::EggLink.DanhengServer.Proto.BigDataRecommendType.None) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) BigDataRecommendType);
+      }
+      if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
+        output.WriteRawTag(122);
+        output.WriteMessage(DKLBNBDPMPO);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -242,21 +242,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
-        output.WriteRawTag(42);
-        output.WriteMessage(DKLBNBDPMPO);
-      }
-      if (BigDataRecommendType != global::EggLink.DanhengServer.Proto.BigDataRecommendType.None) {
-        output.WriteRawTag(64);
-        output.WriteEnum((int) BigDataRecommendType);
-      }
       if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.PFOPJPJKKLK) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(82);
         output.WriteMessage(PFOPJPJKKLK);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
+      }
+      if (BigDataRecommendType != global::EggLink.DanhengServer.Proto.BigDataRecommendType.None) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) BigDataRecommendType);
+      }
+      if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
+        output.WriteRawTag(122);
+        output.WriteMessage(DKLBNBDPMPO);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -268,17 +268,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      if (BigDataRecommendType != global::EggLink.DanhengServer.Proto.BigDataRecommendType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BigDataRecommendType);
-      }
       if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DKLBNBDPMPO);
       }
       if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.PFOPJPJKKLK) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PFOPJPJKKLK);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (BigDataRecommendType != global::EggLink.DanhengServer.Proto.BigDataRecommendType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BigDataRecommendType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -328,20 +328,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
-            global::EggLink.DanhengServer.Proto.PIIIPHEFDJO subBuilder = new global::EggLink.DanhengServer.Proto.PIIIPHEFDJO();
-            if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
-              subBuilder.MergeFrom(DKLBNBDPMPO);
-            }
-            input.ReadMessage(subBuilder);
-            DKLBNBDPMPO = subBuilder;
-            break;
-          }
-          case 64: {
-            BigDataRecommendType = (global::EggLink.DanhengServer.Proto.BigDataRecommendType) input.ReadEnum();
-            break;
-          }
-          case 90: {
+          case 82: {
             global::EggLink.DanhengServer.Proto.MKJALMKMPGL subBuilder = new global::EggLink.DanhengServer.Proto.MKJALMKMPGL();
             if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.PFOPJPJKKLK) {
               subBuilder.MergeFrom(PFOPJPJKKLK);
@@ -350,8 +337,21 @@ namespace EggLink.DanhengServer.Proto {
             PFOPJPJKKLK = subBuilder;
             break;
           }
-          case 96: {
+          case 88: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            BigDataRecommendType = (global::EggLink.DanhengServer.Proto.BigDataRecommendType) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            global::EggLink.DanhengServer.Proto.PIIIPHEFDJO subBuilder = new global::EggLink.DanhengServer.Proto.PIIIPHEFDJO();
+            if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
+              subBuilder.MergeFrom(DKLBNBDPMPO);
+            }
+            input.ReadMessage(subBuilder);
+            DKLBNBDPMPO = subBuilder;
             break;
           }
         }
@@ -369,20 +369,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
-            global::EggLink.DanhengServer.Proto.PIIIPHEFDJO subBuilder = new global::EggLink.DanhengServer.Proto.PIIIPHEFDJO();
-            if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
-              subBuilder.MergeFrom(DKLBNBDPMPO);
-            }
-            input.ReadMessage(subBuilder);
-            DKLBNBDPMPO = subBuilder;
-            break;
-          }
-          case 64: {
-            BigDataRecommendType = (global::EggLink.DanhengServer.Proto.BigDataRecommendType) input.ReadEnum();
-            break;
-          }
-          case 90: {
+          case 82: {
             global::EggLink.DanhengServer.Proto.MKJALMKMPGL subBuilder = new global::EggLink.DanhengServer.Proto.MKJALMKMPGL();
             if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.PFOPJPJKKLK) {
               subBuilder.MergeFrom(PFOPJPJKKLK);
@@ -391,8 +378,21 @@ namespace EggLink.DanhengServer.Proto {
             PFOPJPJKKLK = subBuilder;
             break;
           }
-          case 96: {
+          case 88: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            BigDataRecommendType = (global::EggLink.DanhengServer.Proto.BigDataRecommendType) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            global::EggLink.DanhengServer.Proto.PIIIPHEFDJO subBuilder = new global::EggLink.DanhengServer.Proto.PIIIPHEFDJO();
+            if (nJNIONMBMKECase_ == NJNIONMBMKEOneofCase.DKLBNBDPMPO) {
+              subBuilder.MergeFrom(DKLBNBDPMPO);
+            }
+            input.ReadMessage(subBuilder);
+            DKLBNBDPMPO = subBuilder;
             break;
           }
         }

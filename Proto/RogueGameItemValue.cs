@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhSb2d1ZUdhbWVJdGVtVmFsdWUucHJvdG8ihAEKElJvZ3VlR2FtZUl0ZW1W",
-            "YWx1ZRI6Cgx2aXJ0dWFsX2l0ZW0YByADKAsyJC5Sb2d1ZUdhbWVJdGVtVmFs",
+            "YWx1ZRI6Cgx2aXJ0dWFsX2l0ZW0YCiADKAsyJC5Sb2d1ZUdhbWVJdGVtVmFs",
             "dWUuVmlydHVhbEl0ZW1FbnRyeRoyChBWaXJ0dWFsSXRlbUVudHJ5EgsKA2tl",
             "eRgBIAEoDRINCgV2YWx1ZRgCIAEoDToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "virtual_item" field.</summary>
-    public const int VirtualItemFieldNumber = 7;
+    public const int VirtualItemFieldNumber = 10;
     private static readonly pbc::MapField<uint, uint>.Codec _map_virtualItem_codec
-        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 58);
+        = new pbc::MapField<uint, uint>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForUInt32(16, 0), 82);
     private readonly pbc::MapField<uint, uint> virtualItem_ = new pbc::MapField<uint, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 82: {
             virtualItem_.AddEntriesFrom(input, _map_virtualItem_codec);
             break;
           }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 82: {
             virtualItem_.AddEntriesFrom(ref input, _map_virtualItem_codec);
             break;
           }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFBQkRBQklJS09KQy5wcm90bxoRT09NR0hJQkJDQk4ucHJvdG8iXwoLQUJE",
-            "QUJJSUtPSkMSIQoLR05ESU9ER09HUEkYCyABKAsyDC5PT01HSElCQkNCThIM",
-            "CgRuYW1lGAggASgJEgwKBHRpbWUYCSABKAMSEQoJbWF4X3RpbWVzGAMgASgN",
+            "QUJJSUtPSkMSDAoEdGltZRgJIAEoAxIRCgltYXhfdGltZXMYCiABKA0SIQoL",
+            "R05ESU9ER09HUEkYDSABKAsyDC5PT01HSElCQkNCThIMCgRuYW1lGAMgASgJ",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OOMGHIBBCBNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ABDABIIKOJC), global::EggLink.DanhengServer.Proto.ABDABIIKOJC.Parser, new[]{ "GNDIODGOGPI", "Name", "Time", "MaxTimes" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ABDABIIKOJC), global::EggLink.DanhengServer.Proto.ABDABIIKOJC.Parser, new[]{ "Time", "MaxTimes", "GNDIODGOGPI", "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ABDABIIKOJC(ABDABIIKOJC other) : this() {
-      gNDIODGOGPI_ = other.gNDIODGOGPI_ != null ? other.gNDIODGOGPI_.Clone() : null;
-      name_ = other.name_;
       time_ = other.time_;
       maxTimes_ = other.maxTimes_;
+      gNDIODGOGPI_ = other.gNDIODGOGPI_ != null ? other.gNDIODGOGPI_.Clone() : null;
+      name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,30 +84,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ABDABIIKOJC Clone() {
       return new ABDABIIKOJC(this);
-    }
-
-    /// <summary>Field number for the "GNDIODGOGPI" field.</summary>
-    public const int GNDIODGOGPIFieldNumber = 11;
-    private global::EggLink.DanhengServer.Proto.OOMGHIBBCBN gNDIODGOGPI_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.OOMGHIBBCBN GNDIODGOGPI {
-      get { return gNDIODGOGPI_; }
-      set {
-        gNDIODGOGPI_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 8;
-    private string name_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     /// <summary>Field number for the "time" field.</summary>
@@ -123,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "max_times" field.</summary>
-    public const int MaxTimesFieldNumber = 3;
+    public const int MaxTimesFieldNumber = 10;
     private uint maxTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +107,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return maxTimes_; }
       set {
         maxTimes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "GNDIODGOGPI" field.</summary>
+    public const int GNDIODGOGPIFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.OOMGHIBBCBN gNDIODGOGPI_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.OOMGHIBBCBN GNDIODGOGPI {
+      get { return gNDIODGOGPI_; }
+      set {
+        gNDIODGOGPI_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 3;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(GNDIODGOGPI, other.GNDIODGOGPI)) return false;
-      if (Name != other.Name) return false;
       if (Time != other.Time) return false;
       if (MaxTimes != other.MaxTimes) return false;
+      if (!object.Equals(GNDIODGOGPI, other.GNDIODGOGPI)) return false;
+      if (Name != other.Name) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (gNDIODGOGPI_ != null) hash ^= GNDIODGOGPI.GetHashCode();
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Time != 0L) hash ^= Time.GetHashCode();
       if (MaxTimes != 0) hash ^= MaxTimes.GetHashCode();
+      if (gNDIODGOGPI_ != null) hash ^= GNDIODGOGPI.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,20 +182,20 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MaxTimes != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MaxTimes);
-      }
       if (Name.Length != 0) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteString(Name);
       }
       if (Time != 0L) {
         output.WriteRawTag(72);
         output.WriteInt64(Time);
       }
+      if (MaxTimes != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(MaxTimes);
+      }
       if (gNDIODGOGPI_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(106);
         output.WriteMessage(GNDIODGOGPI);
       }
       if (_unknownFields != null) {
@@ -208,20 +208,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MaxTimes != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(MaxTimes);
-      }
       if (Name.Length != 0) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteString(Name);
       }
       if (Time != 0L) {
         output.WriteRawTag(72);
         output.WriteInt64(Time);
       }
+      if (MaxTimes != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(MaxTimes);
+      }
       if (gNDIODGOGPI_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(106);
         output.WriteMessage(GNDIODGOGPI);
       }
       if (_unknownFields != null) {
@@ -234,17 +234,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (gNDIODGOGPI_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GNDIODGOGPI);
-      }
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
       if (Time != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Time);
       }
       if (MaxTimes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxTimes);
+      }
+      if (gNDIODGOGPI_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GNDIODGOGPI);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,6 +258,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.Time != 0L) {
+        Time = other.Time;
+      }
+      if (other.MaxTimes != 0) {
+        MaxTimes = other.MaxTimes;
+      }
       if (other.gNDIODGOGPI_ != null) {
         if (gNDIODGOGPI_ == null) {
           GNDIODGOGPI = new global::EggLink.DanhengServer.Proto.OOMGHIBBCBN();
@@ -266,12 +272,6 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
-      }
-      if (other.Time != 0L) {
-        Time = other.Time;
-      }
-      if (other.MaxTimes != 0) {
-        MaxTimes = other.MaxTimes;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -288,11 +288,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            MaxTimes = input.ReadUInt32();
-            break;
-          }
-          case 66: {
+          case 26: {
             Name = input.ReadString();
             break;
           }
@@ -300,7 +296,11 @@ namespace EggLink.DanhengServer.Proto {
             Time = input.ReadInt64();
             break;
           }
-          case 90: {
+          case 80: {
+            MaxTimes = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (gNDIODGOGPI_ == null) {
               GNDIODGOGPI = new global::EggLink.DanhengServer.Proto.OOMGHIBBCBN();
             }
@@ -322,11 +322,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            MaxTimes = input.ReadUInt32();
-            break;
-          }
-          case 66: {
+          case 26: {
             Name = input.ReadString();
             break;
           }
@@ -334,7 +330,11 @@ namespace EggLink.DanhengServer.Proto {
             Time = input.ReadInt64();
             break;
           }
-          case 90: {
+          case 80: {
+            MaxTimes = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (gNDIODGOGPI_ == null) {
               GNDIODGOGPI = new global::EggLink.DanhengServer.Proto.OOMGHIBBCBN();
             }

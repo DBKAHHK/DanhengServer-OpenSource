@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CihNdXNpY1JoeXRobVNhdmVTb25nQ29uZmlnRGF0YUNzUmVxLnByb3RvGhZN",
             "dXNpY1JoeXRobUdyb3VwLnByb3RvIkwKIk11c2ljUmh5dGhtU2F2ZVNvbmdD",
-            "b25maWdEYXRhQ3NSZXESJgoLQ0dFREFCT0FCT0gYCCABKAsyES5NdXNpY1Jo",
+            "b25maWdEYXRhQ3NSZXESJgoLQ0dFREFCT0FCT0gYCiABKAsyES5NdXNpY1Jo",
             "eXRobUdyb3VwQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CGEDABOABOH" field.</summary>
-    public const int CGEDABOABOHFieldNumber = 8;
+    public const int CGEDABOABOHFieldNumber = 10;
     private global::EggLink.DanhengServer.Proto.MusicRhythmGroup cGEDABOABOH_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (cGEDABOABOH_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(82);
         output.WriteMessage(CGEDABOABOH);
       }
       if (_unknownFields != null) {
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (cGEDABOABOH_ != null) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(82);
         output.WriteMessage(CGEDABOABOH);
       }
       if (_unknownFields != null) {
@@ -202,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
+          case 82: {
             if (cGEDABOABOH_ == null) {
               CGEDABOABOH = new global::EggLink.DanhengServer.Proto.MusicRhythmGroup();
             }
@@ -224,7 +224,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
+          case 82: {
             if (cGEDABOABOH_ == null) {
               CGEDABOABOH = new global::EggLink.DanhengServer.Proto.MusicRhythmGroup();
             }

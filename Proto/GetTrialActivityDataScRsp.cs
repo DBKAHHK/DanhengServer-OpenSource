@@ -25,14 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9HZXRUcmlhbEFjdGl2aXR5RGF0YVNjUnNwLnByb3RvGhdUcmlhbEFjdGl2",
-            "aXR5SW5mby5wcm90byJ9ChlHZXRUcmlhbEFjdGl2aXR5RGF0YVNjUnNwEg8K",
-            "B3JldGNvZGUYASABKA0SNAoYdHJpYWxfYWN0aXZpdHlfaW5mb19saXN0GAMg",
-            "AygLMhIuVHJpYWxBY3Rpdml0eUluZm8SGQoRYWN0aXZpdHlfc3RhZ2VfaWQY",
-            "CCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "aXR5SW5mby5wcm90byKSAQoZR2V0VHJpYWxBY3Rpdml0eURhdGFTY1JzcBIT",
+            "CgtCSkNBTlBQQkpIRBgKIAMoDRIPCgdyZXRjb2RlGAIgASgNEjQKGHRyaWFs",
+            "X2FjdGl2aXR5X2luZm9fbGlzdBgGIAMoCzISLlRyaWFsQWN0aXZpdHlJbmZv",
+            "EhkKEWFjdGl2aXR5X3N0YWdlX2lkGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.TrialActivityInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetTrialActivityDataScRsp), global::EggLink.DanhengServer.Proto.GetTrialActivityDataScRsp.Parser, new[]{ "Retcode", "TrialActivityInfoList", "ActivityStageId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetTrialActivityDataScRsp), global::EggLink.DanhengServer.Proto.GetTrialActivityDataScRsp.Parser, new[]{ "BJCANPPBJHD", "Retcode", "TrialActivityInfoList", "ActivityStageId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,6 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetTrialActivityDataScRsp(GetTrialActivityDataScRsp other) : this() {
+      bJCANPPBJHD_ = other.bJCANPPBJHD_.Clone();
       retcode_ = other.retcode_;
       trialActivityInfoList_ = other.trialActivityInfoList_.Clone();
       activityStageId_ = other.activityStageId_;
@@ -86,8 +88,19 @@ namespace EggLink.DanhengServer.Proto {
       return new GetTrialActivityDataScRsp(this);
     }
 
+    /// <summary>Field number for the "BJCANPPBJHD" field.</summary>
+    public const int BJCANPPBJHDFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_bJCANPPBJHD_codec
+        = pb::FieldCodec.ForUInt32(82);
+    private readonly pbc::RepeatedField<uint> bJCANPPBJHD_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> BJCANPPBJHD {
+      get { return bJCANPPBJHD_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 1;
+    public const int RetcodeFieldNumber = 2;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,9 +112,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "trial_activity_info_list" field.</summary>
-    public const int TrialActivityInfoListFieldNumber = 3;
+    public const int TrialActivityInfoListFieldNumber = 6;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.TrialActivityInfo> _repeated_trialActivityInfoList_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.TrialActivityInfo.Parser);
+        = pb::FieldCodec.ForMessage(50, global::EggLink.DanhengServer.Proto.TrialActivityInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrialActivityInfo> trialActivityInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.TrialActivityInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "activity_stage_id" field.</summary>
-    public const int ActivityStageIdFieldNumber = 8;
+    public const int ActivityStageIdFieldNumber = 9;
     private uint activityStageId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,6 +149,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!bJCANPPBJHD_.Equals(other.bJCANPPBJHD_)) return false;
       if (Retcode != other.Retcode) return false;
       if(!trialActivityInfoList_.Equals(other.trialActivityInfoList_)) return false;
       if (ActivityStageId != other.ActivityStageId) return false;
@@ -146,6 +160,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= bJCANPPBJHD_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= trialActivityInfoList_.GetHashCode();
       if (ActivityStageId != 0) hash ^= ActivityStageId.GetHashCode();
@@ -168,14 +183,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
       trialActivityInfoList_.WriteTo(output, _repeated_trialActivityInfoList_codec);
       if (ActivityStageId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(ActivityStageId);
       }
+      bJCANPPBJHD_.WriteTo(output, _repeated_bJCANPPBJHD_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -187,14 +203,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Retcode != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(16);
         output.WriteUInt32(Retcode);
       }
       trialActivityInfoList_.WriteTo(ref output, _repeated_trialActivityInfoList_codec);
       if (ActivityStageId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(72);
         output.WriteUInt32(ActivityStageId);
       }
+      bJCANPPBJHD_.WriteTo(ref output, _repeated_bJCANPPBJHD_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,6 +222,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += bJCANPPBJHD_.CalculateSize(_repeated_bJCANPPBJHD_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -224,6 +242,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      bJCANPPBJHD_.Add(other.bJCANPPBJHD_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -246,16 +265,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 50: {
             trialActivityInfoList_.AddEntriesFrom(input, _repeated_trialActivityInfoList_codec);
             break;
           }
-          case 64: {
+          case 72: {
             ActivityStageId = input.ReadUInt32();
+            break;
+          }
+          case 82:
+          case 80: {
+            bJCANPPBJHD_.AddEntriesFrom(input, _repeated_bJCANPPBJHD_codec);
             break;
           }
         }
@@ -273,16 +297,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 16: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 26: {
+          case 50: {
             trialActivityInfoList_.AddEntriesFrom(ref input, _repeated_trialActivityInfoList_codec);
             break;
           }
-          case 64: {
+          case 72: {
             ActivityStageId = input.ReadUInt32();
+            break;
+          }
+          case 82:
+          case 80: {
+            bJCANPPBJHD_.AddEntriesFrom(ref input, _repeated_bJCANPPBJHD_codec);
             break;
           }
         }

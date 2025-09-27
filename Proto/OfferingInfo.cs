@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChJPZmZlcmluZ0luZm8ucHJvdG8aE09mZmVyaW5nU3RhdGUucHJvdG8iqwEK",
             "DE9mZmVyaW5nSW5mbxIgChhoYXNfdGFrZW5fcmV3YXJkX2lkX2xpc3QYBCAD",
-            "KA0SEQoJbGV2ZWxfZXhwGAEgASgNEhYKDm9mZmVyaW5nX2xldmVsGA8gASgN",
-            "EhMKC29mZmVyaW5nX2lkGA4gASgNEiYKDm9mZmVyaW5nX3N0YXRlGAwgASgO",
-            "Mg4uT2ZmZXJpbmdTdGF0ZRIRCgl0b3RhbF9leHAYCiABKA1CHqoCG0VnZ0xp",
+            "KA0SFgoOb2ZmZXJpbmdfbGV2ZWwYBiABKA0SJgoOb2ZmZXJpbmdfc3RhdGUY",
+            "BSABKA4yDi5PZmZlcmluZ1N0YXRlEhMKC29mZmVyaW5nX2lkGA4gASgNEhEK",
+            "CXRvdGFsX2V4cBgPIAEoDRIRCglsZXZlbF9leHAYCSABKA1CHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OfferingStateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OfferingInfo), global::EggLink.DanhengServer.Proto.OfferingInfo.Parser, new[]{ "HasTakenRewardIdList", "LevelExp", "OfferingLevel", "OfferingId", "OfferingState", "TotalExp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OfferingInfo), global::EggLink.DanhengServer.Proto.OfferingInfo.Parser, new[]{ "HasTakenRewardIdList", "OfferingLevel", "OfferingState", "OfferingId", "TotalExp", "LevelExp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,11 +76,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OfferingInfo(OfferingInfo other) : this() {
       hasTakenRewardIdList_ = other.hasTakenRewardIdList_.Clone();
-      levelExp_ = other.levelExp_;
       offeringLevel_ = other.offeringLevel_;
-      offeringId_ = other.offeringId_;
       offeringState_ = other.offeringState_;
+      offeringId_ = other.offeringId_;
       totalExp_ = other.totalExp_;
+      levelExp_ = other.levelExp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -101,20 +101,8 @@ namespace EggLink.DanhengServer.Proto {
       get { return hasTakenRewardIdList_; }
     }
 
-    /// <summary>Field number for the "level_exp" field.</summary>
-    public const int LevelExpFieldNumber = 1;
-    private uint levelExp_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LevelExp {
-      get { return levelExp_; }
-      set {
-        levelExp_ = value;
-      }
-    }
-
     /// <summary>Field number for the "offering_level" field.</summary>
-    public const int OfferingLevelFieldNumber = 15;
+    public const int OfferingLevelFieldNumber = 6;
     private uint offeringLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,6 +110,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return offeringLevel_; }
       set {
         offeringLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "offering_state" field.</summary>
+    public const int OfferingStateFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.OfferingState offeringState_ = global::EggLink.DanhengServer.Proto.OfferingState.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.OfferingState OfferingState {
+      get { return offeringState_; }
+      set {
+        offeringState_ = value;
       }
     }
 
@@ -137,20 +137,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "offering_state" field.</summary>
-    public const int OfferingStateFieldNumber = 12;
-    private global::EggLink.DanhengServer.Proto.OfferingState offeringState_ = global::EggLink.DanhengServer.Proto.OfferingState.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.OfferingState OfferingState {
-      get { return offeringState_; }
-      set {
-        offeringState_ = value;
-      }
-    }
-
     /// <summary>Field number for the "total_exp" field.</summary>
-    public const int TotalExpFieldNumber = 10;
+    public const int TotalExpFieldNumber = 15;
     private uint totalExp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -158,6 +146,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return totalExp_; }
       set {
         totalExp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "level_exp" field.</summary>
+    public const int LevelExpFieldNumber = 9;
+    private uint levelExp_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LevelExp {
+      get { return levelExp_; }
+      set {
+        levelExp_ = value;
       }
     }
 
@@ -177,11 +177,11 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!hasTakenRewardIdList_.Equals(other.hasTakenRewardIdList_)) return false;
-      if (LevelExp != other.LevelExp) return false;
       if (OfferingLevel != other.OfferingLevel) return false;
-      if (OfferingId != other.OfferingId) return false;
       if (OfferingState != other.OfferingState) return false;
+      if (OfferingId != other.OfferingId) return false;
       if (TotalExp != other.TotalExp) return false;
+      if (LevelExp != other.LevelExp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -190,11 +190,11 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= hasTakenRewardIdList_.GetHashCode();
-      if (LevelExp != 0) hash ^= LevelExp.GetHashCode();
       if (OfferingLevel != 0) hash ^= OfferingLevel.GetHashCode();
-      if (OfferingId != 0) hash ^= OfferingId.GetHashCode();
       if (OfferingState != global::EggLink.DanhengServer.Proto.OfferingState.None) hash ^= OfferingState.GetHashCode();
+      if (OfferingId != 0) hash ^= OfferingId.GetHashCode();
       if (TotalExp != 0) hash ^= TotalExp.GetHashCode();
+      if (LevelExp != 0) hash ^= LevelExp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -213,26 +213,26 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LevelExp != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(LevelExp);
-      }
       hasTakenRewardIdList_.WriteTo(output, _repeated_hasTakenRewardIdList_codec);
-      if (TotalExp != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(TotalExp);
-      }
       if (OfferingState != global::EggLink.DanhengServer.Proto.OfferingState.None) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteEnum((int) OfferingState);
+      }
+      if (OfferingLevel != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(OfferingLevel);
+      }
+      if (LevelExp != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(LevelExp);
       }
       if (OfferingId != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(OfferingId);
       }
-      if (OfferingLevel != 0) {
+      if (TotalExp != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(OfferingLevel);
+        output.WriteUInt32(TotalExp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -244,26 +244,26 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LevelExp != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(LevelExp);
-      }
       hasTakenRewardIdList_.WriteTo(ref output, _repeated_hasTakenRewardIdList_codec);
-      if (TotalExp != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(TotalExp);
-      }
       if (OfferingState != global::EggLink.DanhengServer.Proto.OfferingState.None) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(40);
         output.WriteEnum((int) OfferingState);
+      }
+      if (OfferingLevel != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(OfferingLevel);
+      }
+      if (LevelExp != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(LevelExp);
       }
       if (OfferingId != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(OfferingId);
       }
-      if (OfferingLevel != 0) {
+      if (TotalExp != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(OfferingLevel);
+        output.WriteUInt32(TotalExp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -276,20 +276,20 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += hasTakenRewardIdList_.CalculateSize(_repeated_hasTakenRewardIdList_codec);
-      if (LevelExp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelExp);
-      }
       if (OfferingLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OfferingLevel);
-      }
-      if (OfferingId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OfferingId);
       }
       if (OfferingState != global::EggLink.DanhengServer.Proto.OfferingState.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OfferingState);
       }
+      if (OfferingId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OfferingId);
+      }
       if (TotalExp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TotalExp);
+      }
+      if (LevelExp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelExp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -304,20 +304,20 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       hasTakenRewardIdList_.Add(other.hasTakenRewardIdList_);
-      if (other.LevelExp != 0) {
-        LevelExp = other.LevelExp;
-      }
       if (other.OfferingLevel != 0) {
         OfferingLevel = other.OfferingLevel;
-      }
-      if (other.OfferingId != 0) {
-        OfferingId = other.OfferingId;
       }
       if (other.OfferingState != global::EggLink.DanhengServer.Proto.OfferingState.None) {
         OfferingState = other.OfferingState;
       }
+      if (other.OfferingId != 0) {
+        OfferingId = other.OfferingId;
+      }
       if (other.TotalExp != 0) {
         TotalExp = other.TotalExp;
+      }
+      if (other.LevelExp != 0) {
+        LevelExp = other.LevelExp;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -334,21 +334,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            LevelExp = input.ReadUInt32();
-            break;
-          }
           case 34:
           case 32: {
             hasTakenRewardIdList_.AddEntriesFrom(input, _repeated_hasTakenRewardIdList_codec);
             break;
           }
-          case 80: {
-            TotalExp = input.ReadUInt32();
+          case 40: {
+            OfferingState = (global::EggLink.DanhengServer.Proto.OfferingState) input.ReadEnum();
             break;
           }
-          case 96: {
-            OfferingState = (global::EggLink.DanhengServer.Proto.OfferingState) input.ReadEnum();
+          case 48: {
+            OfferingLevel = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            LevelExp = input.ReadUInt32();
             break;
           }
           case 112: {
@@ -356,7 +356,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 120: {
-            OfferingLevel = input.ReadUInt32();
+            TotalExp = input.ReadUInt32();
             break;
           }
         }
@@ -374,21 +374,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            LevelExp = input.ReadUInt32();
-            break;
-          }
           case 34:
           case 32: {
             hasTakenRewardIdList_.AddEntriesFrom(ref input, _repeated_hasTakenRewardIdList_codec);
             break;
           }
-          case 80: {
-            TotalExp = input.ReadUInt32();
+          case 40: {
+            OfferingState = (global::EggLink.DanhengServer.Proto.OfferingState) input.ReadEnum();
             break;
           }
-          case 96: {
-            OfferingState = (global::EggLink.DanhengServer.Proto.OfferingState) input.ReadEnum();
+          case 48: {
+            OfferingLevel = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            LevelExp = input.ReadUInt32();
             break;
           }
           case 112: {
@@ -396,7 +396,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 120: {
-            OfferingLevel = input.ReadUInt32();
+            TotalExp = input.ReadUInt32();
             break;
           }
         }

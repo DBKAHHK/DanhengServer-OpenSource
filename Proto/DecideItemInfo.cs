@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChREZWNpZGVJdGVtSW5mby5wcm90byJqCg5EZWNpZGVJdGVtSW5mbxIZChFk",
-            "ZWNpZGVfaXRlbV9vcmRlchgEIAMoDRITCgtDSERPSUJGRUhMUBgCIAEoDRIT",
-            "CgtJSU5DREpQT09NQxgDIAEoDRITCgtKSUdPTkVBTENQQxgGIAMoDUIeqgIb",
+            "ZWNpZGVfaXRlbV9vcmRlchgBIAMoDRITCgtKSUdPTkVBTENQQxgMIAMoDRIT",
+            "CgtDSERPSUJGRUhMUBgFIAEoDRITCgtJSU5DREpQT09NQxgOIAEoDUIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DecideItemInfo), global::EggLink.DanhengServer.Proto.DecideItemInfo.Parser, new[]{ "DecideItemOrder", "CHDOIBFEHLP", "IINCDJPOOMC", "JIGONEALCPC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DecideItemInfo), global::EggLink.DanhengServer.Proto.DecideItemInfo.Parser, new[]{ "DecideItemOrder", "JIGONEALCPC", "CHDOIBFEHLP", "IINCDJPOOMC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DecideItemInfo(DecideItemInfo other) : this() {
       decideItemOrder_ = other.decideItemOrder_.Clone();
+      jIGONEALCPC_ = other.jIGONEALCPC_.Clone();
       cHDOIBFEHLP_ = other.cHDOIBFEHLP_;
       iINCDJPOOMC_ = other.iINCDJPOOMC_;
-      jIGONEALCPC_ = other.jIGONEALCPC_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,9 +87,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "decide_item_order" field.</summary>
-    public const int DecideItemOrderFieldNumber = 4;
+    public const int DecideItemOrderFieldNumber = 1;
     private static readonly pb::FieldCodec<uint> _repeated_decideItemOrder_codec
-        = pb::FieldCodec.ForUInt32(34);
+        = pb::FieldCodec.ForUInt32(10);
     private readonly pbc::RepeatedField<uint> decideItemOrder_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,8 +97,19 @@ namespace EggLink.DanhengServer.Proto {
       get { return decideItemOrder_; }
     }
 
+    /// <summary>Field number for the "JIGONEALCPC" field.</summary>
+    public const int JIGONEALCPCFieldNumber = 12;
+    private static readonly pb::FieldCodec<uint> _repeated_jIGONEALCPC_codec
+        = pb::FieldCodec.ForUInt32(98);
+    private readonly pbc::RepeatedField<uint> jIGONEALCPC_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> JIGONEALCPC {
+      get { return jIGONEALCPC_; }
+    }
+
     /// <summary>Field number for the "CHDOIBFEHLP" field.</summary>
-    public const int CHDOIBFEHLPFieldNumber = 2;
+    public const int CHDOIBFEHLPFieldNumber = 5;
     private uint cHDOIBFEHLP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +121,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IINCDJPOOMC" field.</summary>
-    public const int IINCDJPOOMCFieldNumber = 3;
+    public const int IINCDJPOOMCFieldNumber = 14;
     private uint iINCDJPOOMC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,17 +130,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         iINCDJPOOMC_ = value;
       }
-    }
-
-    /// <summary>Field number for the "JIGONEALCPC" field.</summary>
-    public const int JIGONEALCPCFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_jIGONEALCPC_codec
-        = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> jIGONEALCPC_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JIGONEALCPC {
-      get { return jIGONEALCPC_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -148,9 +148,9 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!decideItemOrder_.Equals(other.decideItemOrder_)) return false;
+      if(!jIGONEALCPC_.Equals(other.jIGONEALCPC_)) return false;
       if (CHDOIBFEHLP != other.CHDOIBFEHLP) return false;
       if (IINCDJPOOMC != other.IINCDJPOOMC) return false;
-      if(!jIGONEALCPC_.Equals(other.jIGONEALCPC_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -159,9 +159,9 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= decideItemOrder_.GetHashCode();
+      hash ^= jIGONEALCPC_.GetHashCode();
       if (CHDOIBFEHLP != 0) hash ^= CHDOIBFEHLP.GetHashCode();
       if (IINCDJPOOMC != 0) hash ^= IINCDJPOOMC.GetHashCode();
-      hash ^= jIGONEALCPC_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -180,16 +180,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      decideItemOrder_.WriteTo(output, _repeated_decideItemOrder_codec);
       if (CHDOIBFEHLP != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(CHDOIBFEHLP);
       }
+      jIGONEALCPC_.WriteTo(output, _repeated_jIGONEALCPC_codec);
       if (IINCDJPOOMC != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(112);
         output.WriteUInt32(IINCDJPOOMC);
       }
-      decideItemOrder_.WriteTo(output, _repeated_decideItemOrder_codec);
-      jIGONEALCPC_.WriteTo(output, _repeated_jIGONEALCPC_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -200,16 +200,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      decideItemOrder_.WriteTo(ref output, _repeated_decideItemOrder_codec);
       if (CHDOIBFEHLP != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(40);
         output.WriteUInt32(CHDOIBFEHLP);
       }
+      jIGONEALCPC_.WriteTo(ref output, _repeated_jIGONEALCPC_codec);
       if (IINCDJPOOMC != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(112);
         output.WriteUInt32(IINCDJPOOMC);
       }
-      decideItemOrder_.WriteTo(ref output, _repeated_decideItemOrder_codec);
-      jIGONEALCPC_.WriteTo(ref output, _repeated_jIGONEALCPC_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -221,13 +221,13 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += decideItemOrder_.CalculateSize(_repeated_decideItemOrder_codec);
+      size += jIGONEALCPC_.CalculateSize(_repeated_jIGONEALCPC_codec);
       if (CHDOIBFEHLP != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CHDOIBFEHLP);
       }
       if (IINCDJPOOMC != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IINCDJPOOMC);
       }
-      size += jIGONEALCPC_.CalculateSize(_repeated_jIGONEALCPC_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -241,13 +241,13 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       decideItemOrder_.Add(other.decideItemOrder_);
+      jIGONEALCPC_.Add(other.jIGONEALCPC_);
       if (other.CHDOIBFEHLP != 0) {
         CHDOIBFEHLP = other.CHDOIBFEHLP;
       }
       if (other.IINCDJPOOMC != 0) {
         IINCDJPOOMC = other.IINCDJPOOMC;
       }
-      jIGONEALCPC_.Add(other.jIGONEALCPC_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -263,22 +263,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            CHDOIBFEHLP = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            IINCDJPOOMC = input.ReadUInt32();
-            break;
-          }
-          case 34:
-          case 32: {
+          case 10:
+          case 8: {
             decideItemOrder_.AddEntriesFrom(input, _repeated_decideItemOrder_codec);
             break;
           }
-          case 50:
-          case 48: {
+          case 40: {
+            CHDOIBFEHLP = input.ReadUInt32();
+            break;
+          }
+          case 98:
+          case 96: {
             jIGONEALCPC_.AddEntriesFrom(input, _repeated_jIGONEALCPC_codec);
+            break;
+          }
+          case 112: {
+            IINCDJPOOMC = input.ReadUInt32();
             break;
           }
         }
@@ -296,22 +296,22 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            CHDOIBFEHLP = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            IINCDJPOOMC = input.ReadUInt32();
-            break;
-          }
-          case 34:
-          case 32: {
+          case 10:
+          case 8: {
             decideItemOrder_.AddEntriesFrom(ref input, _repeated_decideItemOrder_codec);
             break;
           }
-          case 50:
-          case 48: {
+          case 40: {
+            CHDOIBFEHLP = input.ReadUInt32();
+            break;
+          }
+          case 98:
+          case 96: {
             jIGONEALCPC_.AddEntriesFrom(ref input, _repeated_jIGONEALCPC_codec);
+            break;
+          }
+          case 112: {
+            IINCDJPOOMC = input.ReadUInt32();
             break;
           }
         }

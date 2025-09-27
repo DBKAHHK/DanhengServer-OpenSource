@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdMb2dpbkFjdGl2aXR5RGF0YS5wcm90byJaChFMb2dpbkFjdGl2aXR5RGF0",
-            "YRITCgtKTEhPR0dESE1IRxgLIAMoDRIKCgJpZBgMIAEoDRIQCghwYW5lbF9p",
-            "ZBgKIAEoDRISCgpsb2dpbl9kYXlzGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "YRIKCgJpZBgGIAEoDRITCgtKTEhPR0dESE1IRxgIIAMoDRIQCghwYW5lbF9p",
+            "ZBgPIAEoDRISCgpsb2dpbl9kYXlzGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LoginActivityData), global::EggLink.DanhengServer.Proto.LoginActivityData.Parser, new[]{ "JLHOGGDHMHG", "Id", "PanelId", "LoginDays" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LoginActivityData), global::EggLink.DanhengServer.Proto.LoginActivityData.Parser, new[]{ "Id", "JLHOGGDHMHG", "PanelId", "LoginDays" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LoginActivityData(LoginActivityData other) : this() {
-      jLHOGGDHMHG_ = other.jLHOGGDHMHG_.Clone();
       id_ = other.id_;
+      jLHOGGDHMHG_ = other.jLHOGGDHMHG_.Clone();
       panelId_ = other.panelId_;
       loginDays_ = other.loginDays_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -86,19 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new LoginActivityData(this);
     }
 
-    /// <summary>Field number for the "JLHOGGDHMHG" field.</summary>
-    public const int JLHOGGDHMHGFieldNumber = 11;
-    private static readonly pb::FieldCodec<uint> _repeated_jLHOGGDHMHG_codec
-        = pb::FieldCodec.ForUInt32(90);
-    private readonly pbc::RepeatedField<uint> jLHOGGDHMHG_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JLHOGGDHMHG {
-      get { return jLHOGGDHMHG_; }
-    }
-
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 12;
+    public const int IdFieldNumber = 6;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,8 +98,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "JLHOGGDHMHG" field.</summary>
+    public const int JLHOGGDHMHGFieldNumber = 8;
+    private static readonly pb::FieldCodec<uint> _repeated_jLHOGGDHMHG_codec
+        = pb::FieldCodec.ForUInt32(66);
+    private readonly pbc::RepeatedField<uint> jLHOGGDHMHG_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> JLHOGGDHMHG {
+      get { return jLHOGGDHMHG_; }
+    }
+
     /// <summary>Field number for the "panel_id" field.</summary>
-    public const int PanelIdFieldNumber = 10;
+    public const int PanelIdFieldNumber = 15;
     private uint panelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "login_days" field.</summary>
-    public const int LoginDaysFieldNumber = 13;
+    public const int LoginDaysFieldNumber = 11;
     private uint loginDays_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -148,8 +148,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!jLHOGGDHMHG_.Equals(other.jLHOGGDHMHG_)) return false;
       if (Id != other.Id) return false;
+      if(!jLHOGGDHMHG_.Equals(other.jLHOGGDHMHG_)) return false;
       if (PanelId != other.PanelId) return false;
       if (LoginDays != other.LoginDays) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -159,8 +159,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= jLHOGGDHMHG_.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
+      hash ^= jLHOGGDHMHG_.GetHashCode();
       if (PanelId != 0) hash ^= PanelId.GetHashCode();
       if (LoginDays != 0) hash ^= LoginDays.GetHashCode();
       if (_unknownFields != null) {
@@ -181,18 +181,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PanelId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(PanelId);
-      }
-      jLHOGGDHMHG_.WriteTo(output, _repeated_jLHOGGDHMHG_codec);
       if (Id != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(48);
         output.WriteUInt32(Id);
       }
+      jLHOGGDHMHG_.WriteTo(output, _repeated_jLHOGGDHMHG_codec);
       if (LoginDays != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(LoginDays);
+      }
+      if (PanelId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(PanelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -204,18 +204,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PanelId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(PanelId);
-      }
-      jLHOGGDHMHG_.WriteTo(ref output, _repeated_jLHOGGDHMHG_codec);
       if (Id != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(48);
         output.WriteUInt32(Id);
       }
+      jLHOGGDHMHG_.WriteTo(ref output, _repeated_jLHOGGDHMHG_codec);
       if (LoginDays != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(88);
         output.WriteUInt32(LoginDays);
+      }
+      if (PanelId != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(PanelId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -227,10 +227,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += jLHOGGDHMHG_.CalculateSize(_repeated_jLHOGGDHMHG_codec);
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
+      size += jLHOGGDHMHG_.CalculateSize(_repeated_jLHOGGDHMHG_codec);
       if (PanelId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PanelId);
       }
@@ -249,10 +249,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      jLHOGGDHMHG_.Add(other.jLHOGGDHMHG_);
       if (other.Id != 0) {
         Id = other.Id;
       }
+      jLHOGGDHMHG_.Add(other.jLHOGGDHMHG_);
       if (other.PanelId != 0) {
         PanelId = other.PanelId;
       }
@@ -274,21 +274,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
-            PanelId = input.ReadUInt32();
-            break;
-          }
-          case 90:
-          case 88: {
-            jLHOGGDHMHG_.AddEntriesFrom(input, _repeated_jLHOGGDHMHG_codec);
-            break;
-          }
-          case 96: {
+          case 48: {
             Id = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 66:
+          case 64: {
+            jLHOGGDHMHG_.AddEntriesFrom(input, _repeated_jLHOGGDHMHG_codec);
+            break;
+          }
+          case 88: {
             LoginDays = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            PanelId = input.ReadUInt32();
             break;
           }
         }
@@ -306,21 +306,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
-            PanelId = input.ReadUInt32();
-            break;
-          }
-          case 90:
-          case 88: {
-            jLHOGGDHMHG_.AddEntriesFrom(ref input, _repeated_jLHOGGDHMHG_codec);
-            break;
-          }
-          case 96: {
+          case 48: {
             Id = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 66:
+          case 64: {
+            jLHOGGDHMHG_.AddEntriesFrom(ref input, _repeated_jLHOGGDHMHG_codec);
+            break;
+          }
+          case 88: {
             LoginDays = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            PanelId = input.ReadUInt32();
             break;
           }
         }

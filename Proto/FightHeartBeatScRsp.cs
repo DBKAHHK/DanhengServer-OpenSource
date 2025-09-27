@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlGaWdodEhlYXJ0QmVhdFNjUnNwLnByb3RvIlYKE0ZpZ2h0SGVhcnRCZWF0",
-            "U2NSc3ASFgoOc2VydmVyX3RpbWVfbXMYCyABKAQSDwoHcmV0Y29kZRgEIAEo",
-            "DRIWCg5jbGllbnRfdGltZV9tcxgCIAEoBEIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2NSc3ASDwoHcmV0Y29kZRgJIAEoDRIWCg5jbGllbnRfdGltZV9tcxgIIAEo",
+            "BBIWCg5zZXJ2ZXJfdGltZV9tcxgBIAEoBEIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightHeartBeatScRsp), global::EggLink.DanhengServer.Proto.FightHeartBeatScRsp.Parser, new[]{ "ServerTimeMs", "Retcode", "ClientTimeMs" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightHeartBeatScRsp), global::EggLink.DanhengServer.Proto.FightHeartBeatScRsp.Parser, new[]{ "Retcode", "ClientTimeMs", "ServerTimeMs" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FightHeartBeatScRsp(FightHeartBeatScRsp other) : this() {
-      serverTimeMs_ = other.serverTimeMs_;
       retcode_ = other.retcode_;
       clientTimeMs_ = other.clientTimeMs_;
+      serverTimeMs_ = other.serverTimeMs_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,20 +85,8 @@ namespace EggLink.DanhengServer.Proto {
       return new FightHeartBeatScRsp(this);
     }
 
-    /// <summary>Field number for the "server_time_ms" field.</summary>
-    public const int ServerTimeMsFieldNumber = 11;
-    private ulong serverTimeMs_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public ulong ServerTimeMs {
-      get { return serverTimeMs_; }
-      set {
-        serverTimeMs_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 4;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "client_time_ms" field.</summary>
-    public const int ClientTimeMsFieldNumber = 2;
+    public const int ClientTimeMsFieldNumber = 8;
     private ulong clientTimeMs_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return clientTimeMs_; }
       set {
         clientTimeMs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "server_time_ms" field.</summary>
+    public const int ServerTimeMsFieldNumber = 1;
+    private ulong serverTimeMs_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong ServerTimeMs {
+      get { return serverTimeMs_; }
+      set {
+        serverTimeMs_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ServerTimeMs != other.ServerTimeMs) return false;
       if (Retcode != other.Retcode) return false;
       if (ClientTimeMs != other.ClientTimeMs) return false;
+      if (ServerTimeMs != other.ServerTimeMs) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ServerTimeMs != 0UL) hash ^= ServerTimeMs.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (ClientTimeMs != 0UL) hash ^= ClientTimeMs.GetHashCode();
+      if (ServerTimeMs != 0UL) hash ^= ServerTimeMs.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (ServerTimeMs != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(ServerTimeMs);
+      }
       if (ClientTimeMs != 0UL) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(64);
         output.WriteUInt64(ClientTimeMs);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
-      }
-      if (ServerTimeMs != 0UL) {
-        output.WriteRawTag(88);
-        output.WriteUInt64(ServerTimeMs);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ServerTimeMs != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(ServerTimeMs);
+      }
       if (ClientTimeMs != 0UL) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(64);
         output.WriteUInt64(ClientTimeMs);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
-      }
-      if (ServerTimeMs != 0UL) {
-        output.WriteRawTag(88);
-        output.WriteUInt64(ServerTimeMs);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ServerTimeMs != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(ServerTimeMs);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (ClientTimeMs != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(ClientTimeMs);
+      }
+      if (ServerTimeMs != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(ServerTimeMs);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ServerTimeMs != 0UL) {
-        ServerTimeMs = other.ServerTimeMs;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
       if (other.ClientTimeMs != 0UL) {
         ClientTimeMs = other.ClientTimeMs;
+      }
+      if (other.ServerTimeMs != 0UL) {
+        ServerTimeMs = other.ServerTimeMs;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 8: {
+            ServerTimeMs = input.ReadUInt64();
+            break;
+          }
+          case 64: {
             ClientTimeMs = input.ReadUInt64();
             break;
           }
-          case 32: {
+          case 72: {
             Retcode = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            ServerTimeMs = input.ReadUInt64();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 8: {
+            ServerTimeMs = input.ReadUInt64();
+            break;
+          }
+          case 64: {
             ClientTimeMs = input.ReadUInt64();
             break;
           }
-          case 32: {
+          case 72: {
             Retcode = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            ServerTimeMs = input.ReadUInt64();
             break;
           }
         }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFLT0ZPTExBQ0lHTy5wcm90bxoRT0ZHQk1DS05MREoucHJvdG8iMAoLS09G",
-            "T0xMQUNJR08SIQoLSU5MTEVLQU1OUEYYBSADKAsyDC5PRkdCTUNLTkxESkIe",
+            "T0xMQUNJR08SIQoLSU5MTEVLQU1OUEYYBCADKAsyDC5PRkdCTUNLTkxESkIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OFGBMCKNLDJReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "INLLEKAMNPF" field.</summary>
-    public const int INLLEKAMNPFFieldNumber = 5;
+    public const int INLLEKAMNPFFieldNumber = 4;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OFGBMCKNLDJ> _repeated_iNLLEKAMNPF_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.OFGBMCKNLDJ.Parser);
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.OFGBMCKNLDJ.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OFGBMCKNLDJ> iNLLEKAMNPF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OFGBMCKNLDJ>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 34: {
             iNLLEKAMNPF_.AddEntriesFrom(input, _repeated_iNLLEKAMNPF_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 34: {
             iNLLEKAMNPF_.AddEntriesFrom(ref input, _repeated_iNLLEKAMNPF_codec);
             break;
           }

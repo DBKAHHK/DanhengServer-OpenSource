@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlUYWtlVGFsa1Jld2FyZENzUmVxLnByb3RvGgxWZWN0b3IucHJvdG8iSAoT",
-            "VGFrZVRhbGtSZXdhcmRDc1JlcRITCgtJRU1PRU9JTUhNQRgMIAEoDRIcCgtP",
-            "TENPTkNOSk1NUBgKIAEoCzIHLlZlY3RvckIeqgIbRWdnTGluay5EYW5oZW5n",
+            "VGFrZVRhbGtSZXdhcmRDc1JlcRITCgtJRU1PRU9JTUhNQRgEIAEoDRIcCgtP",
+            "TENPTkNOSk1NUBgNIAEoCzIHLlZlY3RvckIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.VectorReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IEMOEOIMHMA" field.</summary>
-    public const int IEMOEOIMHMAFieldNumber = 12;
+    public const int IEMOEOIMHMAFieldNumber = 4;
     private uint iEMOEOIMHMA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "OLCONCNJMMP" field.</summary>
-    public const int OLCONCNJMMPFieldNumber = 10;
+    public const int OLCONCNJMMPFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.Vector oLCONCNJMMP_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (oLCONCNJMMP_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(OLCONCNJMMP);
-      }
       if (IEMOEOIMHMA != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(32);
         output.WriteUInt32(IEMOEOIMHMA);
+      }
+      if (oLCONCNJMMP_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(OLCONCNJMMP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (oLCONCNJMMP_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(OLCONCNJMMP);
-      }
       if (IEMOEOIMHMA != 0) {
-        output.WriteRawTag(96);
+        output.WriteRawTag(32);
         output.WriteUInt32(IEMOEOIMHMA);
+      }
+      if (oLCONCNJMMP_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(OLCONCNJMMP);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -230,15 +230,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82: {
+          case 32: {
+            IEMOEOIMHMA = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (oLCONCNJMMP_ == null) {
               OLCONCNJMMP = new global::EggLink.DanhengServer.Proto.Vector();
             }
             input.ReadMessage(OLCONCNJMMP);
-            break;
-          }
-          case 96: {
-            IEMOEOIMHMA = input.ReadUInt32();
             break;
           }
         }
@@ -256,15 +256,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82: {
+          case 32: {
+            IEMOEOIMHMA = input.ReadUInt32();
+            break;
+          }
+          case 106: {
             if (oLCONCNJMMP_ == null) {
               OLCONCNJMMP = new global::EggLink.DanhengServer.Proto.Vector();
             }
             input.ReadMessage(OLCONCNJMMP);
-            break;
-          }
-          case 96: {
-            IEMOEOIMHMA = input.ReadUInt32();
             break;
           }
         }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhMb2NrRXF1aXBtZW50Q3NSZXEucHJvdG8iRQoSTG9ja0VxdWlwbWVudENz",
-            "UmVxEhkKEWVxdWlwbWVudF9pZF9saXN0GA0gAygNEhQKDGlzX3Byb3RlY3Rl",
-            "ZBgFIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "UmVxEhkKEWVxdWlwbWVudF9pZF9saXN0GAwgAygNEhQKDGlzX3Byb3RlY3Rl",
+            "ZBgLIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "equipment_id_list" field.</summary>
-    public const int EquipmentIdListFieldNumber = 13;
+    public const int EquipmentIdListFieldNumber = 12;
     private static readonly pb::FieldCodec<uint> _repeated_equipmentIdList_codec
-        = pb::FieldCodec.ForUInt32(106);
+        = pb::FieldCodec.ForUInt32(98);
     private readonly pbc::RepeatedField<uint> equipmentIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_protected" field.</summary>
-    public const int IsProtectedFieldNumber = 5;
+    public const int IsProtectedFieldNumber = 11;
     private bool isProtected_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IsProtected != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(88);
         output.WriteBool(IsProtected);
       }
       equipmentIdList_.WriteTo(output, _repeated_equipmentIdList_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IsProtected != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(88);
         output.WriteBool(IsProtected);
       }
       equipmentIdList_.WriteTo(ref output, _repeated_equipmentIdList_codec);
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 88: {
             IsProtected = input.ReadBool();
             break;
           }
-          case 106:
-          case 104: {
+          case 98:
+          case 96: {
             equipmentIdList_.AddEntriesFrom(input, _repeated_equipmentIdList_codec);
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 88: {
             IsProtected = input.ReadBool();
             break;
           }
-          case 106:
-          case 104: {
+          case 98:
+          case 96: {
             equipmentIdList_.AddEntriesFrom(ref input, _repeated_equipmentIdList_codec);
             break;
           }

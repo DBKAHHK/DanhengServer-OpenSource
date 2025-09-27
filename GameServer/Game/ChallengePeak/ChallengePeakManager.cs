@@ -56,7 +56,6 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
                     if (avatar == null) continue;
 
                     levelProto.PeakAvatarInfoList.Add(avatar.ToPeakAvatarProto());
-                    proto.PeakAvatarInfoList.Add(avatar.ToPeakAvatarProto());
                 }
 
                 proto.FinishedPreNum++;
@@ -76,14 +75,13 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
 
         var bossProto = new ChallengePeakBossLevel
         {
-            PeakLevelId = (uint)bossLevelId,
-            IsFinished = true,
+            PeakBossLevelId = (uint)bossLevelId,
+            IsUltraBossWin = true,
             PeakEasyBoss = new ChallengePeakBossInfo(),
             PeakHardBoss = new ChallengePeakBossInfo()
         };
 
         HashSet<uint> targetIds = [];
-        HashSet<uint> avatarIds = [];
         if (Player.ChallengeManager!.ChallengeData.PeakBossLevelDatas.TryGetValue((bossLevelId << 2) | 0,
                 out var bossPbData)) // easy (is hard = 0)
         {
@@ -95,8 +93,6 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
             bossProto.PeakEasyBoss.BuffId = bossPbData.BuffId;
 
             foreach (var targetId in bossPbData.FinishedTargetList) targetIds.Add(targetId);
-
-            foreach (var avatarId in bossPbData.BaseAvatarList) avatarIds.Add(avatarId);
         }
 
         if (Player.ChallengeManager!.ChallengeData.PeakBossLevelDatas.TryGetValue((bossLevelId << 2) | 1,
@@ -111,15 +107,6 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
             bossProto.PeakHardBoss.BuffId = bossHardPbData.BuffId;
 
             foreach (var targetId in bossHardPbData.FinishedTargetList) targetIds.Add(targetId);
-
-            foreach (var avatarId in bossHardPbData.BaseAvatarList) avatarIds.Add(avatarId);
-        }
-
-        foreach (var avatarId in avatarIds)
-        {
-            var avatar = Player.AvatarManager!.GetFormalAvatar((int)avatarId);
-            if (avatar == null) continue;
-            proto.PeakAvatarInfoList.Add(avatar.ToPeakAvatarProto());
         }
 
         bossProto.PeakTargetList.AddRange(targetIds);
@@ -257,7 +244,7 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
                 }).ToList() ?? [];
 
         // Set technique points to full
-        lineup.Mp = 5; // Max Mp
+        lineup.Mp = 8; // Max Mp
 
         // Make sure this lineup has avatars set
         if (Player.AvatarManager!.AvatarData.FormalAvatars.Count == 0)
@@ -301,7 +288,7 @@ public class ChallengePeakManager(PlayerInstance player) : BasePlayerManager(pla
         // Enter scene
         try
         {
-            await Player.EnterScene(excel.MapEntranceID, 0, true);
+            await Player.EnterScene((int)GameConstants.CHALLENGE_PEAK_TARGET_ENTRY_ID[GameConstants.CHALLENGE_PEAK_CUR_GROUP_ID][0], 0, true);
         }
         catch
         {

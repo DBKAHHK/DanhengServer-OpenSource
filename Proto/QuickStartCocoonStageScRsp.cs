@@ -25,14 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBRdWlja1N0YXJ0Q29jb29uU3RhZ2VTY1JzcC5wcm90bxoVU2NlbmVCYXR0",
-            "bGVJbmZvLnByb3RvInUKGlF1aWNrU3RhcnRDb2Nvb25TdGFnZVNjUnNwEiUK",
-            "C2JhdHRsZV9pbmZvGAIgASgLMhAuU2NlbmVCYXR0bGVJbmZvEhEKCWNvY29v",
-            "bl9pZBgBIAEoDRIMCgR3YXZlGAYgASgNEg8KB3JldGNvZGUYByABKA1CHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "bGVJbmZvLnByb3RvIooBChpRdWlja1N0YXJ0Q29jb29uU3RhZ2VTY1JzcBIT",
+            "CgtLTUZGQUhFTkNLQhgDIAEoDRIRCgljb2Nvb25faWQYCCABKA0SJQoLYmF0",
+            "dGxlX2luZm8YCiABKAsyEC5TY2VuZUJhdHRsZUluZm8SDwoHcmV0Y29kZRgL",
+            "IAEoDRIMCgR3YXZlGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneBattleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QuickStartCocoonStageScRsp), global::EggLink.DanhengServer.Proto.QuickStartCocoonStageScRsp.Parser, new[]{ "BattleInfo", "CocoonId", "Wave", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QuickStartCocoonStageScRsp), global::EggLink.DanhengServer.Proto.QuickStartCocoonStageScRsp.Parser, new[]{ "KMFFAHENCKB", "CocoonId", "BattleInfo", "Retcode", "Wave" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuickStartCocoonStageScRsp(QuickStartCocoonStageScRsp other) : this() {
-      battleInfo_ = other.battleInfo_ != null ? other.battleInfo_.Clone() : null;
+      kMFFAHENCKB_ = other.kMFFAHENCKB_;
       cocoonId_ = other.cocoonId_;
-      wave_ = other.wave_;
+      battleInfo_ = other.battleInfo_ != null ? other.battleInfo_.Clone() : null;
       retcode_ = other.retcode_;
+      wave_ = other.wave_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,20 +89,20 @@ namespace EggLink.DanhengServer.Proto {
       return new QuickStartCocoonStageScRsp(this);
     }
 
-    /// <summary>Field number for the "battle_info" field.</summary>
-    public const int BattleInfoFieldNumber = 2;
-    private global::EggLink.DanhengServer.Proto.SceneBattleInfo battleInfo_;
+    /// <summary>Field number for the "KMFFAHENCKB" field.</summary>
+    public const int KMFFAHENCKBFieldNumber = 3;
+    private uint kMFFAHENCKB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.SceneBattleInfo BattleInfo {
-      get { return battleInfo_; }
+    public uint KMFFAHENCKB {
+      get { return kMFFAHENCKB_; }
       set {
-        battleInfo_ = value;
+        kMFFAHENCKB_ = value;
       }
     }
 
     /// <summary>Field number for the "cocoon_id" field.</summary>
-    public const int CocoonIdFieldNumber = 1;
+    public const int CocoonIdFieldNumber = 8;
     private uint cocoonId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,20 +113,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "wave" field.</summary>
-    public const int WaveFieldNumber = 6;
-    private uint wave_;
+    /// <summary>Field number for the "battle_info" field.</summary>
+    public const int BattleInfoFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.SceneBattleInfo battleInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Wave {
-      get { return wave_; }
+    public global::EggLink.DanhengServer.Proto.SceneBattleInfo BattleInfo {
+      get { return battleInfo_; }
       set {
-        wave_ = value;
+        battleInfo_ = value;
       }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 7;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -132,6 +134,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "wave" field.</summary>
+    public const int WaveFieldNumber = 5;
+    private uint wave_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Wave {
+      get { return wave_; }
+      set {
+        wave_ = value;
       }
     }
 
@@ -150,10 +164,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(BattleInfo, other.BattleInfo)) return false;
+      if (KMFFAHENCKB != other.KMFFAHENCKB) return false;
       if (CocoonId != other.CocoonId) return false;
-      if (Wave != other.Wave) return false;
+      if (!object.Equals(BattleInfo, other.BattleInfo)) return false;
       if (Retcode != other.Retcode) return false;
+      if (Wave != other.Wave) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +176,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (battleInfo_ != null) hash ^= BattleInfo.GetHashCode();
+      if (KMFFAHENCKB != 0) hash ^= KMFFAHENCKB.GetHashCode();
       if (CocoonId != 0) hash ^= CocoonId.GetHashCode();
-      if (Wave != 0) hash ^= Wave.GetHashCode();
+      if (battleInfo_ != null) hash ^= BattleInfo.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (Wave != 0) hash ^= Wave.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,20 +199,24 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (KMFFAHENCKB != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(KMFFAHENCKB);
+      }
+      if (Wave != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Wave);
+      }
       if (CocoonId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(64);
         output.WriteUInt32(CocoonId);
       }
       if (battleInfo_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(82);
         output.WriteMessage(BattleInfo);
       }
-      if (Wave != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Wave);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -209,20 +229,24 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (KMFFAHENCKB != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(KMFFAHENCKB);
+      }
+      if (Wave != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(Wave);
+      }
       if (CocoonId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(64);
         output.WriteUInt32(CocoonId);
       }
       if (battleInfo_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(82);
         output.WriteMessage(BattleInfo);
       }
-      if (Wave != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(Wave);
-      }
       if (Retcode != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
@@ -235,17 +259,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (battleInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BattleInfo);
+      if (KMFFAHENCKB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KMFFAHENCKB);
       }
       if (CocoonId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CocoonId);
       }
-      if (Wave != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Wave);
+      if (battleInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BattleInfo);
       }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (Wave != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Wave);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,20 +286,23 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.KMFFAHENCKB != 0) {
+        KMFFAHENCKB = other.KMFFAHENCKB;
+      }
+      if (other.CocoonId != 0) {
+        CocoonId = other.CocoonId;
+      }
       if (other.battleInfo_ != null) {
         if (battleInfo_ == null) {
           BattleInfo = new global::EggLink.DanhengServer.Proto.SceneBattleInfo();
         }
         BattleInfo.MergeFrom(other.BattleInfo);
       }
-      if (other.CocoonId != 0) {
-        CocoonId = other.CocoonId;
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       if (other.Wave != 0) {
         Wave = other.Wave;
-      }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -289,22 +319,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 24: {
+            KMFFAHENCKB = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            Wave = input.ReadUInt32();
+            break;
+          }
+          case 64: {
             CocoonId = input.ReadUInt32();
             break;
           }
-          case 18: {
+          case 82: {
             if (battleInfo_ == null) {
               BattleInfo = new global::EggLink.DanhengServer.Proto.SceneBattleInfo();
             }
             input.ReadMessage(BattleInfo);
             break;
           }
-          case 48: {
-            Wave = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }
@@ -323,22 +357,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 24: {
+            KMFFAHENCKB = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            Wave = input.ReadUInt32();
+            break;
+          }
+          case 64: {
             CocoonId = input.ReadUInt32();
             break;
           }
-          case 18: {
+          case 82: {
             if (battleInfo_ == null) {
               BattleInfo = new global::EggLink.DanhengServer.Proto.SceneBattleInfo();
             }
             input.ReadMessage(BattleInfo);
             break;
           }
-          case 48: {
-            Wave = input.ReadUInt32();
-            break;
-          }
-          case 56: {
+          case 88: {
             Retcode = input.ReadUInt32();
             break;
           }

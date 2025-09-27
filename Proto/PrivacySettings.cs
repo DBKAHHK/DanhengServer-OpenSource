@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static PrivacySettingsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVQcml2YWN5U2V0dGluZ3MucHJvdG8iwQEKD1ByaXZhY3lTZXR0aW5ncxIg",
-            "ChhkaXNwbGF5X2NoYWxsZW5nZV9saW5ldXAYByABKAgSHAoUZGlzcGxheV9h",
-            "Y3RpdmVfc3RhdGUYASABKAgSEwoLQUFNRUxPSFBCSEwYBCABKAgSHgoWZGlz",
-            "cGxheV9yZWNlbnRseV9zdGF0ZRgGIAEoCBIdChVkaXNwbGF5X2JhdHRsZV9y",
-            "ZWNvcmQYCyABKAgSGgoSZGlzcGxheV9jb2xsZWN0aW9uGAkgASgIQh6qAhtF",
-            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChVQcml2YWN5U2V0dGluZ3MucHJvdG8irAEKD1ByaXZhY3lTZXR0aW5ncxIc",
+            "ChRkaXNwbGF5X2FjdGl2ZV9zdGF0ZRgMIAEoCBIdChVkaXNwbGF5X2JhdHRs",
+            "ZV9yZWNvcmQYBSABKAgSGgoSZGlzcGxheV9jb2xsZWN0aW9uGAMgASgIEh4K",
+            "FmRpc3BsYXlfcmVjZW50bHlfc3RhdGUYByABKAgSIAoYZGlzcGxheV9jaGFs",
+            "bGVuZ2VfbGluZXVwGAkgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PrivacySettings), global::EggLink.DanhengServer.Proto.PrivacySettings.Parser, new[]{ "DisplayChallengeLineup", "DisplayActiveState", "AAMELOHPBHL", "DisplayRecentlyState", "DisplayBattleRecord", "DisplayCollection" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PrivacySettings), global::EggLink.DanhengServer.Proto.PrivacySettings.Parser, new[]{ "DisplayActiveState", "DisplayBattleRecord", "DisplayCollection", "DisplayRecentlyState", "DisplayChallengeLineup" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,12 +75,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivacySettings(PrivacySettings other) : this() {
-      displayChallengeLineup_ = other.displayChallengeLineup_;
       displayActiveState_ = other.displayActiveState_;
-      aAMELOHPBHL_ = other.aAMELOHPBHL_;
-      displayRecentlyState_ = other.displayRecentlyState_;
       displayBattleRecord_ = other.displayBattleRecord_;
       displayCollection_ = other.displayCollection_;
+      displayRecentlyState_ = other.displayRecentlyState_;
+      displayChallengeLineup_ = other.displayChallengeLineup_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -90,20 +89,8 @@ namespace EggLink.DanhengServer.Proto {
       return new PrivacySettings(this);
     }
 
-    /// <summary>Field number for the "display_challenge_lineup" field.</summary>
-    public const int DisplayChallengeLineupFieldNumber = 7;
-    private bool displayChallengeLineup_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool DisplayChallengeLineup {
-      get { return displayChallengeLineup_; }
-      set {
-        displayChallengeLineup_ = value;
-      }
-    }
-
     /// <summary>Field number for the "display_active_state" field.</summary>
-    public const int DisplayActiveStateFieldNumber = 1;
+    public const int DisplayActiveStateFieldNumber = 12;
     private bool displayActiveState_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -114,32 +101,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AAMELOHPBHL" field.</summary>
-    public const int AAMELOHPBHLFieldNumber = 4;
-    private bool aAMELOHPBHL_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool AAMELOHPBHL {
-      get { return aAMELOHPBHL_; }
-      set {
-        aAMELOHPBHL_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "display_recently_state" field.</summary>
-    public const int DisplayRecentlyStateFieldNumber = 6;
-    private bool displayRecentlyState_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool DisplayRecentlyState {
-      get { return displayRecentlyState_; }
-      set {
-        displayRecentlyState_ = value;
-      }
-    }
-
     /// <summary>Field number for the "display_battle_record" field.</summary>
-    public const int DisplayBattleRecordFieldNumber = 11;
+    public const int DisplayBattleRecordFieldNumber = 5;
     private bool displayBattleRecord_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,7 +114,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "display_collection" field.</summary>
-    public const int DisplayCollectionFieldNumber = 9;
+    public const int DisplayCollectionFieldNumber = 3;
     private bool displayCollection_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -159,6 +122,30 @@ namespace EggLink.DanhengServer.Proto {
       get { return displayCollection_; }
       set {
         displayCollection_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "display_recently_state" field.</summary>
+    public const int DisplayRecentlyStateFieldNumber = 7;
+    private bool displayRecentlyState_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DisplayRecentlyState {
+      get { return displayRecentlyState_; }
+      set {
+        displayRecentlyState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "display_challenge_lineup" field.</summary>
+    public const int DisplayChallengeLineupFieldNumber = 9;
+    private bool displayChallengeLineup_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DisplayChallengeLineup {
+      get { return displayChallengeLineup_; }
+      set {
+        displayChallengeLineup_ = value;
       }
     }
 
@@ -177,12 +164,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DisplayChallengeLineup != other.DisplayChallengeLineup) return false;
       if (DisplayActiveState != other.DisplayActiveState) return false;
-      if (AAMELOHPBHL != other.AAMELOHPBHL) return false;
-      if (DisplayRecentlyState != other.DisplayRecentlyState) return false;
       if (DisplayBattleRecord != other.DisplayBattleRecord) return false;
       if (DisplayCollection != other.DisplayCollection) return false;
+      if (DisplayRecentlyState != other.DisplayRecentlyState) return false;
+      if (DisplayChallengeLineup != other.DisplayChallengeLineup) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -190,12 +176,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DisplayChallengeLineup != false) hash ^= DisplayChallengeLineup.GetHashCode();
       if (DisplayActiveState != false) hash ^= DisplayActiveState.GetHashCode();
-      if (AAMELOHPBHL != false) hash ^= AAMELOHPBHL.GetHashCode();
-      if (DisplayRecentlyState != false) hash ^= DisplayRecentlyState.GetHashCode();
       if (DisplayBattleRecord != false) hash ^= DisplayBattleRecord.GetHashCode();
       if (DisplayCollection != false) hash ^= DisplayCollection.GetHashCode();
+      if (DisplayRecentlyState != false) hash ^= DisplayRecentlyState.GetHashCode();
+      if (DisplayChallengeLineup != false) hash ^= DisplayChallengeLineup.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -214,29 +199,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DisplayActiveState != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(DisplayActiveState);
-      }
-      if (AAMELOHPBHL != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(AAMELOHPBHL);
-      }
-      if (DisplayRecentlyState != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(DisplayRecentlyState);
-      }
-      if (DisplayChallengeLineup != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(DisplayChallengeLineup);
-      }
       if (DisplayCollection != false) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(24);
         output.WriteBool(DisplayCollection);
       }
       if (DisplayBattleRecord != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteBool(DisplayBattleRecord);
+      }
+      if (DisplayRecentlyState != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(DisplayRecentlyState);
+      }
+      if (DisplayChallengeLineup != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(DisplayChallengeLineup);
+      }
+      if (DisplayActiveState != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(DisplayActiveState);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -248,29 +229,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DisplayActiveState != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(DisplayActiveState);
-      }
-      if (AAMELOHPBHL != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(AAMELOHPBHL);
-      }
-      if (DisplayRecentlyState != false) {
-        output.WriteRawTag(48);
-        output.WriteBool(DisplayRecentlyState);
-      }
-      if (DisplayChallengeLineup != false) {
-        output.WriteRawTag(56);
-        output.WriteBool(DisplayChallengeLineup);
-      }
       if (DisplayCollection != false) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(24);
         output.WriteBool(DisplayCollection);
       }
       if (DisplayBattleRecord != false) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(40);
         output.WriteBool(DisplayBattleRecord);
+      }
+      if (DisplayRecentlyState != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(DisplayRecentlyState);
+      }
+      if (DisplayChallengeLineup != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(DisplayChallengeLineup);
+      }
+      if (DisplayActiveState != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(DisplayActiveState);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -282,22 +259,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DisplayChallengeLineup != false) {
-        size += 1 + 1;
-      }
       if (DisplayActiveState != false) {
-        size += 1 + 1;
-      }
-      if (AAMELOHPBHL != false) {
-        size += 1 + 1;
-      }
-      if (DisplayRecentlyState != false) {
         size += 1 + 1;
       }
       if (DisplayBattleRecord != false) {
         size += 1 + 1;
       }
       if (DisplayCollection != false) {
+        size += 1 + 1;
+      }
+      if (DisplayRecentlyState != false) {
+        size += 1 + 1;
+      }
+      if (DisplayChallengeLineup != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -312,23 +286,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DisplayChallengeLineup != false) {
-        DisplayChallengeLineup = other.DisplayChallengeLineup;
-      }
       if (other.DisplayActiveState != false) {
         DisplayActiveState = other.DisplayActiveState;
-      }
-      if (other.AAMELOHPBHL != false) {
-        AAMELOHPBHL = other.AAMELOHPBHL;
-      }
-      if (other.DisplayRecentlyState != false) {
-        DisplayRecentlyState = other.DisplayRecentlyState;
       }
       if (other.DisplayBattleRecord != false) {
         DisplayBattleRecord = other.DisplayBattleRecord;
       }
       if (other.DisplayCollection != false) {
         DisplayCollection = other.DisplayCollection;
+      }
+      if (other.DisplayRecentlyState != false) {
+        DisplayRecentlyState = other.DisplayRecentlyState;
+      }
+      if (other.DisplayChallengeLineup != false) {
+        DisplayChallengeLineup = other.DisplayChallengeLineup;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -345,28 +316,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            DisplayActiveState = input.ReadBool();
-            break;
-          }
-          case 32: {
-            AAMELOHPBHL = input.ReadBool();
-            break;
-          }
-          case 48: {
-            DisplayRecentlyState = input.ReadBool();
-            break;
-          }
-          case 56: {
-            DisplayChallengeLineup = input.ReadBool();
-            break;
-          }
-          case 72: {
+          case 24: {
             DisplayCollection = input.ReadBool();
             break;
           }
-          case 88: {
+          case 40: {
             DisplayBattleRecord = input.ReadBool();
+            break;
+          }
+          case 56: {
+            DisplayRecentlyState = input.ReadBool();
+            break;
+          }
+          case 72: {
+            DisplayChallengeLineup = input.ReadBool();
+            break;
+          }
+          case 96: {
+            DisplayActiveState = input.ReadBool();
             break;
           }
         }
@@ -384,28 +351,24 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            DisplayActiveState = input.ReadBool();
-            break;
-          }
-          case 32: {
-            AAMELOHPBHL = input.ReadBool();
-            break;
-          }
-          case 48: {
-            DisplayRecentlyState = input.ReadBool();
-            break;
-          }
-          case 56: {
-            DisplayChallengeLineup = input.ReadBool();
-            break;
-          }
-          case 72: {
+          case 24: {
             DisplayCollection = input.ReadBool();
             break;
           }
-          case 88: {
+          case 40: {
             DisplayBattleRecord = input.ReadBool();
+            break;
+          }
+          case 56: {
+            DisplayRecentlyState = input.ReadBool();
+            break;
+          }
+          case 72: {
+            DisplayChallengeLineup = input.ReadBool();
+            break;
+          }
+          case 96: {
+            DisplayActiveState = input.ReadBool();
             break;
           }
         }

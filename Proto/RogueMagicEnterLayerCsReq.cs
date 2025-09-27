@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9Sb2d1ZU1hZ2ljRW50ZXJMYXllckNzUmVxLnByb3RvIkwKGVJvZ3VlTWFn",
-            "aWNFbnRlckxheWVyQ3NSZXESFwoPY3VyX2xldmVsX2luZGV4GAsgASgNEhYK",
-            "Dm5leHRfcm9vbV90eXBlGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "aWNFbnRlckxheWVyQ3NSZXESFgoObmV4dF9yb29tX3R5cGUYBiABKA0SFwoP",
+            "Y3VyX2xldmVsX2luZGV4GAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicEnterLayerCsReq), global::EggLink.DanhengServer.Proto.RogueMagicEnterLayerCsReq.Parser, new[]{ "CurLevelIndex", "NextRoomType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicEnterLayerCsReq), global::EggLink.DanhengServer.Proto.RogueMagicEnterLayerCsReq.Parser, new[]{ "NextRoomType", "CurLevelIndex" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicEnterLayerCsReq(RogueMagicEnterLayerCsReq other) : this() {
-      curLevelIndex_ = other.curLevelIndex_;
       nextRoomType_ = other.nextRoomType_;
+      curLevelIndex_ = other.curLevelIndex_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,18 +82,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueMagicEnterLayerCsReq Clone() {
       return new RogueMagicEnterLayerCsReq(this);
-    }
-
-    /// <summary>Field number for the "cur_level_index" field.</summary>
-    public const int CurLevelIndexFieldNumber = 11;
-    private uint curLevelIndex_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CurLevelIndex {
-      get { return curLevelIndex_; }
-      set {
-        curLevelIndex_ = value;
-      }
     }
 
     /// <summary>Field number for the "next_room_type" field.</summary>
@@ -105,6 +93,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return nextRoomType_; }
       set {
         nextRoomType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cur_level_index" field.</summary>
+    public const int CurLevelIndexFieldNumber = 5;
+    private uint curLevelIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CurLevelIndex {
+      get { return curLevelIndex_; }
+      set {
+        curLevelIndex_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CurLevelIndex != other.CurLevelIndex) return false;
       if (NextRoomType != other.NextRoomType) return false;
+      if (CurLevelIndex != other.CurLevelIndex) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CurLevelIndex != 0) hash ^= CurLevelIndex.GetHashCode();
       if (NextRoomType != 0) hash ^= NextRoomType.GetHashCode();
+      if (CurLevelIndex != 0) hash ^= CurLevelIndex.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,13 +152,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (CurLevelIndex != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(CurLevelIndex);
+      }
       if (NextRoomType != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(NextRoomType);
-      }
-      if (CurLevelIndex != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(CurLevelIndex);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -170,13 +170,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CurLevelIndex != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(CurLevelIndex);
+      }
       if (NextRoomType != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(NextRoomType);
-      }
-      if (CurLevelIndex != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(CurLevelIndex);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CurLevelIndex != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurLevelIndex);
-      }
       if (NextRoomType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NextRoomType);
+      }
+      if (CurLevelIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurLevelIndex);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CurLevelIndex != 0) {
-        CurLevelIndex = other.CurLevelIndex;
-      }
       if (other.NextRoomType != 0) {
         NextRoomType = other.NextRoomType;
+      }
+      if (other.CurLevelIndex != 0) {
+        CurLevelIndex = other.CurLevelIndex;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
-            NextRoomType = input.ReadUInt32();
+          case 40: {
+            CurLevelIndex = input.ReadUInt32();
             break;
           }
-          case 88: {
-            CurLevelIndex = input.ReadUInt32();
+          case 48: {
+            NextRoomType = input.ReadUInt32();
             break;
           }
         }
@@ -250,12 +250,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
-            NextRoomType = input.ReadUInt32();
+          case 40: {
+            CurLevelIndex = input.ReadUInt32();
             break;
           }
-          case 88: {
-            CurLevelIndex = input.ReadUInt32();
+          case 48: {
+            NextRoomType = input.ReadUInt32();
             break;
           }
         }

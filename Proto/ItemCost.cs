@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg5JdGVtQ29zdC5wcm90bxoOUGlsZUl0ZW0ucHJvdG8icAoISXRlbUNvc3QS",
-            "HQoIUGlsZUl0ZW0YCCABKAsyCS5QaWxlSXRlbUgAEhsKEUVxdWlwbWVudFVu",
-            "aXF1ZUlkGAsgASgNSAASFwoNUmVsaWNVbmlxdWVJZBgEIAEoDUgAQg8KDUl0",
+            "HQoIUGlsZUl0ZW0YAyABKAsyCS5QaWxlSXRlbUgAEhsKEUVxdWlwbWVudFVu",
+            "aXF1ZUlkGAogASgNSAASFwoNUmVsaWNVbmlxdWVJZBgOIAEoDUgAQg8KDUl0",
             "ZW1PbmVvZkNhc2VCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PileItem" field.</summary>
-    public const int PileItemFieldNumber = 8;
+    public const int PileItemFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.PileItem PileItem {
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "EquipmentUniqueId" field.</summary>
-    public const int EquipmentUniqueIdFieldNumber = 11;
+    public const int EquipmentUniqueIdFieldNumber = 10;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint EquipmentUniqueId {
@@ -134,7 +134,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "RelicUniqueId" field.</summary>
-    public const int RelicUniqueIdFieldNumber = 4;
+    public const int RelicUniqueIdFieldNumber = 14;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public uint RelicUniqueId {
@@ -163,9 +163,9 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "ItemOneofCase" oneof.</summary>
     public enum ItemOneofCaseOneofCase {
       None = 0,
-      PileItem = 8,
-      EquipmentUniqueId = 11,
-      RelicUniqueId = 4,
+      PileItem = 3,
+      EquipmentUniqueId = 10,
+      RelicUniqueId = 14,
     }
     private ItemOneofCaseOneofCase itemOneofCaseCase_ = ItemOneofCaseOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -229,17 +229,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HasRelicUniqueId) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(RelicUniqueId);
-      }
       if (itemOneofCaseCase_ == ItemOneofCaseOneofCase.PileItem) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteMessage(PileItem);
       }
       if (HasEquipmentUniqueId) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(80);
         output.WriteUInt32(EquipmentUniqueId);
+      }
+      if (HasRelicUniqueId) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(RelicUniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -251,17 +251,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HasRelicUniqueId) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(RelicUniqueId);
-      }
       if (itemOneofCaseCase_ == ItemOneofCaseOneofCase.PileItem) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteMessage(PileItem);
       }
       if (HasEquipmentUniqueId) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(80);
         output.WriteUInt32(EquipmentUniqueId);
+      }
+      if (HasRelicUniqueId) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(RelicUniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -324,11 +324,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            RelicUniqueId = input.ReadUInt32();
-            break;
-          }
-          case 66: {
+          case 26: {
             global::EggLink.DanhengServer.Proto.PileItem subBuilder = new global::EggLink.DanhengServer.Proto.PileItem();
             if (itemOneofCaseCase_ == ItemOneofCaseOneofCase.PileItem) {
               subBuilder.MergeFrom(PileItem);
@@ -337,8 +333,12 @@ namespace EggLink.DanhengServer.Proto {
             PileItem = subBuilder;
             break;
           }
-          case 88: {
+          case 80: {
             EquipmentUniqueId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            RelicUniqueId = input.ReadUInt32();
             break;
           }
         }
@@ -356,11 +356,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            RelicUniqueId = input.ReadUInt32();
-            break;
-          }
-          case 66: {
+          case 26: {
             global::EggLink.DanhengServer.Proto.PileItem subBuilder = new global::EggLink.DanhengServer.Proto.PileItem();
             if (itemOneofCaseCase_ == ItemOneofCaseOneofCase.PileItem) {
               subBuilder.MergeFrom(PileItem);
@@ -369,8 +365,12 @@ namespace EggLink.DanhengServer.Proto {
             PileItem = subBuilder;
             break;
           }
-          case 88: {
+          case 80: {
             EquipmentUniqueId = input.ReadUInt32();
+            break;
+          }
+          case 112: {
+            RelicUniqueId = input.ReadUInt32();
             break;
           }
         }

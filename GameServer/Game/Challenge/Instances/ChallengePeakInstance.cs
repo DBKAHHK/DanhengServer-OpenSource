@@ -24,10 +24,26 @@ public class ChallengePeakInstance(PlayerInstance player, ChallengeDataPb data) 
 
         Dictionary<int, List<ChallengeConfigExcel.ChallengeMonsterInfo>> monsters = [];
 
-        monsters.Add(Config.MazeGroupID, []);
-        for (var i = 0; i < Config.ConfigIDList.Count; i++)
-            monsters[Config.MazeGroupID].Add(new ChallengeConfigExcel.ChallengeMonsterInfo(Config.ConfigIDList[i],
-                Config.NpcMonsterIDList[i], Config.BossExcel.HardEventIDList[i]));
+        var groupId = (int)GameConstants.CHALLENGE_PEAK_TARGET_ENTRY_ID[GameConstants.CHALLENGE_PEAK_CUR_GROUP_ID][1];
+        monsters.Add(groupId, []);
+
+
+        var curConfId = 200000;
+        foreach (var eventId in Config.BossExcel.HardEventIDList)
+        {
+            // get from stage id
+            if (!GameData.StageConfigData.TryGetValue(eventId, out var stage)) continue;
+
+            var monsterId = stage.MonsterList.LastOrDefault()?.Monster0 ?? 0;
+            if (!GameData.MonsterConfigData.TryGetValue(monsterId, out var monsterConf)) continue;
+            if (!GameData.MonsterTemplateConfigData.TryGetValue(monsterConf.MonsterTemplateID, out var template)) continue;
+
+            var npcMonsterId = template.NPCMonsterList.Take(2).LastOrDefault(0);
+            if (!GameData.NpcMonsterDataData.ContainsKey(npcMonsterId)) continue;
+
+            monsters[groupId].Add(new ChallengeConfigExcel.ChallengeMonsterInfo(++curConfId, npcMonsterId,
+                    eventId));
+        }
 
         return monsters;
     }

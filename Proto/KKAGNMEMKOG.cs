@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFLS0FHTk1FTUtPRy5wcm90bxocUm9ndWVNYWdpY0dhbWVVbml0SW5mby5w",
-            "cm90byJaCgtLS0FHTk1FTUtPRxIWCg5zZWxlY3RfaGludF9pZBgCIAEoDRIz",
-            "ChJzZWxlY3RfbWFnaWNfdW5pdHMYDiADKAsyFy5Sb2d1ZU1hZ2ljR2FtZVVu",
+            "cm90byJaCgtLS0FHTk1FTUtPRxIWCg5zZWxlY3RfaGludF9pZBgEIAEoDRIz",
+            "ChJzZWxlY3RfbWFnaWNfdW5pdHMYDCADKAsyFy5Sb2d1ZU1hZ2ljR2FtZVVu",
             "aXRJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_hint_id" field.</summary>
-    public const int SelectHintIdFieldNumber = 2;
+    public const int SelectHintIdFieldNumber = 4;
     private uint selectHintId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_magic_units" field.</summary>
-    public const int SelectMagicUnitsFieldNumber = 14;
+    public const int SelectMagicUnitsFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo> _repeated_selectMagicUnits_codec
-        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo> selectMagicUnits_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueMagicGameUnitInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (SelectHintId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(SelectHintId);
       }
       selectMagicUnits_.WriteTo(output, _repeated_selectMagicUnits_codec);
@@ -168,7 +168,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SelectHintId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(SelectHintId);
       }
       selectMagicUnits_.WriteTo(ref output, _repeated_selectMagicUnits_codec);
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 32: {
             SelectHintId = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 98: {
             selectMagicUnits_.AddEntriesFrom(input, _repeated_selectMagicUnits_codec);
             break;
           }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 32: {
             SelectHintId = input.ReadUInt32();
             break;
           }
-          case 114: {
+          case 98: {
             selectMagicUnits_.AddEntriesFrom(ref input, _repeated_selectMagicUnits_codec);
             break;
           }

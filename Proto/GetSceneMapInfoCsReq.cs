@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpHZXRTY2VuZU1hcEluZm9Dc1JlcS5wcm90byKKAQoUR2V0U2NlbmVNYXBJ",
-            "bmZvQ3NSZXESFQoNZmxvb3JfaWRfbGlzdBgDIAMoDRITCgtJR0ZJS0dITExO",
-            "TxgEIAEoCBIbChNlbnRyeV9zdG9yeV9saW5lX2lkGA4gASgNEhIKCmNvbnRl",
-            "bnRfaWQYCyABKA0SFQoNZW50cnlfaWRfbGlzdBgNIAMoDUIeqgIbRWdnTGlu",
+            "bmZvQ3NSZXESFQoNZW50cnlfaWRfbGlzdBgNIAMoDRIbChNlbnRyeV9zdG9y",
+            "eV9saW5lX2lkGAYgASgNEhUKDWZsb29yX2lkX2xpc3QYCiADKA0SEwoLSUdG",
+            "SUtHSExMTk8YDCABKAgSEgoKY29udGVudF9pZBgCIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSceneMapInfoCsReq), global::EggLink.DanhengServer.Proto.GetSceneMapInfoCsReq.Parser, new[]{ "FloorIdList", "IGFIKGHLLNO", "EntryStoryLineId", "ContentId", "EntryIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetSceneMapInfoCsReq), global::EggLink.DanhengServer.Proto.GetSceneMapInfoCsReq.Parser, new[]{ "EntryIdList", "EntryStoryLineId", "FloorIdList", "IGFIKGHLLNO", "ContentId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,11 +74,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSceneMapInfoCsReq(GetSceneMapInfoCsReq other) : this() {
+      entryIdList_ = other.entryIdList_.Clone();
+      entryStoryLineId_ = other.entryStoryLineId_;
       floorIdList_ = other.floorIdList_.Clone();
       iGFIKGHLLNO_ = other.iGFIKGHLLNO_;
-      entryStoryLineId_ = other.entryStoryLineId_;
       contentId_ = other.contentId_;
-      entryIdList_ = other.entryIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,53 +86,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSceneMapInfoCsReq Clone() {
       return new GetSceneMapInfoCsReq(this);
-    }
-
-    /// <summary>Field number for the "floor_id_list" field.</summary>
-    public const int FloorIdListFieldNumber = 3;
-    private static readonly pb::FieldCodec<uint> _repeated_floorIdList_codec
-        = pb::FieldCodec.ForUInt32(26);
-    private readonly pbc::RepeatedField<uint> floorIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> FloorIdList {
-      get { return floorIdList_; }
-    }
-
-    /// <summary>Field number for the "IGFIKGHLLNO" field.</summary>
-    public const int IGFIKGHLLNOFieldNumber = 4;
-    private bool iGFIKGHLLNO_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IGFIKGHLLNO {
-      get { return iGFIKGHLLNO_; }
-      set {
-        iGFIKGHLLNO_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "entry_story_line_id" field.</summary>
-    public const int EntryStoryLineIdFieldNumber = 14;
-    private uint entryStoryLineId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EntryStoryLineId {
-      get { return entryStoryLineId_; }
-      set {
-        entryStoryLineId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "content_id" field.</summary>
-    public const int ContentIdFieldNumber = 11;
-    private uint contentId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ContentId {
-      get { return contentId_; }
-      set {
-        contentId_ = value;
-      }
     }
 
     /// <summary>Field number for the "entry_id_list" field.</summary>
@@ -144,6 +97,53 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<uint> EntryIdList {
       get { return entryIdList_; }
+    }
+
+    /// <summary>Field number for the "entry_story_line_id" field.</summary>
+    public const int EntryStoryLineIdFieldNumber = 6;
+    private uint entryStoryLineId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint EntryStoryLineId {
+      get { return entryStoryLineId_; }
+      set {
+        entryStoryLineId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "floor_id_list" field.</summary>
+    public const int FloorIdListFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_floorIdList_codec
+        = pb::FieldCodec.ForUInt32(82);
+    private readonly pbc::RepeatedField<uint> floorIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> FloorIdList {
+      get { return floorIdList_; }
+    }
+
+    /// <summary>Field number for the "IGFIKGHLLNO" field.</summary>
+    public const int IGFIKGHLLNOFieldNumber = 12;
+    private bool iGFIKGHLLNO_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IGFIKGHLLNO {
+      get { return iGFIKGHLLNO_; }
+      set {
+        iGFIKGHLLNO_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "content_id" field.</summary>
+    public const int ContentIdFieldNumber = 2;
+    private uint contentId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ContentId {
+      get { return contentId_; }
+      set {
+        contentId_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -161,11 +161,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!entryIdList_.Equals(other.entryIdList_)) return false;
+      if (EntryStoryLineId != other.EntryStoryLineId) return false;
       if(!floorIdList_.Equals(other.floorIdList_)) return false;
       if (IGFIKGHLLNO != other.IGFIKGHLLNO) return false;
-      if (EntryStoryLineId != other.EntryStoryLineId) return false;
       if (ContentId != other.ContentId) return false;
-      if(!entryIdList_.Equals(other.entryIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -173,11 +173,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= entryIdList_.GetHashCode();
+      if (EntryStoryLineId != 0) hash ^= EntryStoryLineId.GetHashCode();
       hash ^= floorIdList_.GetHashCode();
       if (IGFIKGHLLNO != false) hash ^= IGFIKGHLLNO.GetHashCode();
-      if (EntryStoryLineId != 0) hash ^= EntryStoryLineId.GetHashCode();
       if (ContentId != 0) hash ^= ContentId.GetHashCode();
-      hash ^= entryIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -196,20 +196,20 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      floorIdList_.WriteTo(output, _repeated_floorIdList_codec);
-      if (IGFIKGHLLNO != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IGFIKGHLLNO);
-      }
       if (ContentId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(ContentId);
       }
-      entryIdList_.WriteTo(output, _repeated_entryIdList_codec);
       if (EntryStoryLineId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteUInt32(EntryStoryLineId);
       }
+      floorIdList_.WriteTo(output, _repeated_floorIdList_codec);
+      if (IGFIKGHLLNO != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IGFIKGHLLNO);
+      }
+      entryIdList_.WriteTo(output, _repeated_entryIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -220,20 +220,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      floorIdList_.WriteTo(ref output, _repeated_floorIdList_codec);
-      if (IGFIKGHLLNO != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(IGFIKGHLLNO);
-      }
       if (ContentId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteUInt32(ContentId);
       }
-      entryIdList_.WriteTo(ref output, _repeated_entryIdList_codec);
       if (EntryStoryLineId != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(48);
         output.WriteUInt32(EntryStoryLineId);
       }
+      floorIdList_.WriteTo(ref output, _repeated_floorIdList_codec);
+      if (IGFIKGHLLNO != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(IGFIKGHLLNO);
+      }
+      entryIdList_.WriteTo(ref output, _repeated_entryIdList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -244,17 +244,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += entryIdList_.CalculateSize(_repeated_entryIdList_codec);
+      if (EntryStoryLineId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EntryStoryLineId);
+      }
       size += floorIdList_.CalculateSize(_repeated_floorIdList_codec);
       if (IGFIKGHLLNO != false) {
         size += 1 + 1;
       }
-      if (EntryStoryLineId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EntryStoryLineId);
-      }
       if (ContentId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ContentId);
       }
-      size += entryIdList_.CalculateSize(_repeated_entryIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -267,17 +267,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      entryIdList_.Add(other.entryIdList_);
+      if (other.EntryStoryLineId != 0) {
+        EntryStoryLineId = other.EntryStoryLineId;
+      }
       floorIdList_.Add(other.floorIdList_);
       if (other.IGFIKGHLLNO != false) {
         IGFIKGHLLNO = other.IGFIKGHLLNO;
       }
-      if (other.EntryStoryLineId != 0) {
-        EntryStoryLineId = other.EntryStoryLineId;
-      }
       if (other.ContentId != 0) {
         ContentId = other.ContentId;
       }
-      entryIdList_.Add(other.entryIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -293,26 +293,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26:
-          case 24: {
+          case 16: {
+            ContentId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            EntryStoryLineId = input.ReadUInt32();
+            break;
+          }
+          case 82:
+          case 80: {
             floorIdList_.AddEntriesFrom(input, _repeated_floorIdList_codec);
             break;
           }
-          case 32: {
+          case 96: {
             IGFIKGHLLNO = input.ReadBool();
-            break;
-          }
-          case 88: {
-            ContentId = input.ReadUInt32();
             break;
           }
           case 106:
           case 104: {
             entryIdList_.AddEntriesFrom(input, _repeated_entryIdList_codec);
-            break;
-          }
-          case 112: {
-            EntryStoryLineId = input.ReadUInt32();
             break;
           }
         }
@@ -330,26 +330,26 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26:
-          case 24: {
+          case 16: {
+            ContentId = input.ReadUInt32();
+            break;
+          }
+          case 48: {
+            EntryStoryLineId = input.ReadUInt32();
+            break;
+          }
+          case 82:
+          case 80: {
             floorIdList_.AddEntriesFrom(ref input, _repeated_floorIdList_codec);
             break;
           }
-          case 32: {
+          case 96: {
             IGFIKGHLLNO = input.ReadBool();
-            break;
-          }
-          case 88: {
-            ContentId = input.ReadUInt32();
             break;
           }
           case 106:
           case 104: {
             entryIdList_.AddEntriesFrom(ref input, _repeated_entryIdList_codec);
-            break;
-          }
-          case 112: {
-            EntryStoryLineId = input.ReadUInt32();
             break;
           }
         }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChlTdGFtaW5hSW5mb1NjTm90aWZ5LnByb3RvIm8KE1N0YW1pbmFJbmZvU2NO",
-            "b3RpZnkSGQoRbmV4dF9yZWNvdmVyX3RpbWUYCCABKAMSDwoHc3RhbWluYRgC",
-            "IAEoDRITCgtEUElNSEVNSktPRRgOIAEoAxIXCg9yZXNlcnZlX3N0YW1pbmEY",
-            "CSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "b3RpZnkSGQoRbmV4dF9yZWNvdmVyX3RpbWUYBiABKAMSDwoHc3RhbWluYRgD",
+            "IAEoDRIXCg9yZXNlcnZlX3N0YW1pbmEYDSABKA0SEwoLRFBJTUhFTUpLT0UY",
+            "DCABKANCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StaminaInfoScNotify), global::EggLink.DanhengServer.Proto.StaminaInfoScNotify.Parser, new[]{ "NextRecoverTime", "Stamina", "DPIMHEMJKOE", "ReserveStamina" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StaminaInfoScNotify), global::EggLink.DanhengServer.Proto.StaminaInfoScNotify.Parser, new[]{ "NextRecoverTime", "Stamina", "ReserveStamina", "DPIMHEMJKOE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     public StaminaInfoScNotify(StaminaInfoScNotify other) : this() {
       nextRecoverTime_ = other.nextRecoverTime_;
       stamina_ = other.stamina_;
-      dPIMHEMJKOE_ = other.dPIMHEMJKOE_;
       reserveStamina_ = other.reserveStamina_;
+      dPIMHEMJKOE_ = other.dPIMHEMJKOE_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "next_recover_time" field.</summary>
-    public const int NextRecoverTimeFieldNumber = 8;
+    public const int NextRecoverTimeFieldNumber = 6;
     private long nextRecoverTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "stamina" field.</summary>
-    public const int StaminaFieldNumber = 2;
+    public const int StaminaFieldNumber = 3;
     private uint stamina_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,20 +110,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "DPIMHEMJKOE" field.</summary>
-    public const int DPIMHEMJKOEFieldNumber = 14;
-    private long dPIMHEMJKOE_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long DPIMHEMJKOE {
-      get { return dPIMHEMJKOE_; }
-      set {
-        dPIMHEMJKOE_ = value;
-      }
-    }
-
     /// <summary>Field number for the "reserve_stamina" field.</summary>
-    public const int ReserveStaminaFieldNumber = 9;
+    public const int ReserveStaminaFieldNumber = 13;
     private uint reserveStamina_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +119,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return reserveStamina_; }
       set {
         reserveStamina_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "DPIMHEMJKOE" field.</summary>
+    public const int DPIMHEMJKOEFieldNumber = 12;
+    private long dPIMHEMJKOE_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long DPIMHEMJKOE {
+      get { return dPIMHEMJKOE_; }
+      set {
+        dPIMHEMJKOE_ = value;
       }
     }
 
@@ -151,8 +151,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (NextRecoverTime != other.NextRecoverTime) return false;
       if (Stamina != other.Stamina) return false;
-      if (DPIMHEMJKOE != other.DPIMHEMJKOE) return false;
       if (ReserveStamina != other.ReserveStamina) return false;
+      if (DPIMHEMJKOE != other.DPIMHEMJKOE) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,8 +162,8 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (NextRecoverTime != 0L) hash ^= NextRecoverTime.GetHashCode();
       if (Stamina != 0) hash ^= Stamina.GetHashCode();
-      if (DPIMHEMJKOE != 0L) hash ^= DPIMHEMJKOE.GetHashCode();
       if (ReserveStamina != 0) hash ^= ReserveStamina.GetHashCode();
+      if (DPIMHEMJKOE != 0L) hash ^= DPIMHEMJKOE.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,20 +183,20 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Stamina != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt32(Stamina);
       }
       if (NextRecoverTime != 0L) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(48);
         output.WriteInt64(NextRecoverTime);
       }
-      if (ReserveStamina != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(ReserveStamina);
-      }
       if (DPIMHEMJKOE != 0L) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(96);
         output.WriteInt64(DPIMHEMJKOE);
+      }
+      if (ReserveStamina != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(ReserveStamina);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,20 +209,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Stamina != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteUInt32(Stamina);
       }
       if (NextRecoverTime != 0L) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(48);
         output.WriteInt64(NextRecoverTime);
       }
-      if (ReserveStamina != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(ReserveStamina);
-      }
       if (DPIMHEMJKOE != 0L) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(96);
         output.WriteInt64(DPIMHEMJKOE);
+      }
+      if (ReserveStamina != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(ReserveStamina);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
       if (Stamina != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Stamina);
       }
-      if (DPIMHEMJKOE != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DPIMHEMJKOE);
-      }
       if (ReserveStamina != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ReserveStamina);
+      }
+      if (DPIMHEMJKOE != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DPIMHEMJKOE);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -264,11 +264,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Stamina != 0) {
         Stamina = other.Stamina;
       }
-      if (other.DPIMHEMJKOE != 0L) {
-        DPIMHEMJKOE = other.DPIMHEMJKOE;
-      }
       if (other.ReserveStamina != 0) {
         ReserveStamina = other.ReserveStamina;
+      }
+      if (other.DPIMHEMJKOE != 0L) {
+        DPIMHEMJKOE = other.DPIMHEMJKOE;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 24: {
             Stamina = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 48: {
             NextRecoverTime = input.ReadInt64();
             break;
           }
-          case 72: {
-            ReserveStamina = input.ReadUInt32();
+          case 96: {
+            DPIMHEMJKOE = input.ReadInt64();
             break;
           }
-          case 112: {
-            DPIMHEMJKOE = input.ReadInt64();
+          case 104: {
+            ReserveStamina = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 24: {
             Stamina = input.ReadUInt32();
             break;
           }
-          case 64: {
+          case 48: {
             NextRecoverTime = input.ReadInt64();
             break;
           }
-          case 72: {
-            ReserveStamina = input.ReadUInt32();
+          case 96: {
+            DPIMHEMJKOE = input.ReadInt64();
             break;
           }
-          case 112: {
-            DPIMHEMJKOE = input.ReadInt64();
+          case 104: {
+            ReserveStamina = input.ReadUInt32();
             break;
           }
         }

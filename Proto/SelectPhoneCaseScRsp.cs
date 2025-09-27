@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpTZWxlY3RQaG9uZUNhc2VTY1JzcC5wcm90byJUChRTZWxlY3RQaG9uZUNh",
-            "c2VTY1JzcBIWCg5jdXJfcGhvbmVfY2FzZRgJIAEoDRITCgtQREFDSkRJRU9K",
-            "RxgGIAEoDRIPCgdyZXRjb2RlGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "c2VTY1JzcBIWCg5jdXJfcGhvbmVfY2FzZRgIIAEoDRIPCgdyZXRjb2RlGAsg",
+            "ASgNEhMKC1BEQUNKRElFT0pHGAEgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SelectPhoneCaseScRsp), global::EggLink.DanhengServer.Proto.SelectPhoneCaseScRsp.Parser, new[]{ "CurPhoneCase", "PDACJDIEOJG", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SelectPhoneCaseScRsp), global::EggLink.DanhengServer.Proto.SelectPhoneCaseScRsp.Parser, new[]{ "CurPhoneCase", "Retcode", "PDACJDIEOJG" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SelectPhoneCaseScRsp(SelectPhoneCaseScRsp other) : this() {
       curPhoneCase_ = other.curPhoneCase_;
-      pDACJDIEOJG_ = other.pDACJDIEOJG_;
       retcode_ = other.retcode_;
+      pDACJDIEOJG_ = other.pDACJDIEOJG_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "cur_phone_case" field.</summary>
-    public const int CurPhoneCaseFieldNumber = 9;
+    public const int CurPhoneCaseFieldNumber = 8;
     private uint curPhoneCase_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,20 +97,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PDACJDIEOJG" field.</summary>
-    public const int PDACJDIEOJGFieldNumber = 6;
-    private uint pDACJDIEOJG_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PDACJDIEOJG {
-      get { return pDACJDIEOJG_; }
-      set {
-        pDACJDIEOJG_ = value;
-      }
-    }
-
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 5;
+    public const int RetcodeFieldNumber = 11;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +106,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return retcode_; }
       set {
         retcode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PDACJDIEOJG" field.</summary>
+    public const int PDACJDIEOJGFieldNumber = 1;
+    private uint pDACJDIEOJG_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PDACJDIEOJG {
+      get { return pDACJDIEOJG_; }
+      set {
+        pDACJDIEOJG_ = value;
       }
     }
 
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (CurPhoneCase != other.CurPhoneCase) return false;
-      if (PDACJDIEOJG != other.PDACJDIEOJG) return false;
       if (Retcode != other.Retcode) return false;
+      if (PDACJDIEOJG != other.PDACJDIEOJG) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (CurPhoneCase != 0) hash ^= CurPhoneCase.GetHashCode();
-      if (PDACJDIEOJG != 0) hash ^= PDACJDIEOJG.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (PDACJDIEOJG != 0) hash ^= PDACJDIEOJG.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +167,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Retcode != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(Retcode);
-      }
       if (PDACJDIEOJG != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(8);
         output.WriteUInt32(PDACJDIEOJG);
       }
       if (CurPhoneCase != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(CurPhoneCase);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +189,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Retcode != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(Retcode);
-      }
       if (PDACJDIEOJG != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(8);
         output.WriteUInt32(PDACJDIEOJG);
       }
       if (CurPhoneCase != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(64);
         output.WriteUInt32(CurPhoneCase);
+      }
+      if (Retcode != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(Retcode);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -214,11 +214,11 @@ namespace EggLink.DanhengServer.Proto {
       if (CurPhoneCase != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurPhoneCase);
       }
-      if (PDACJDIEOJG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PDACJDIEOJG);
-      }
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      }
+      if (PDACJDIEOJG != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PDACJDIEOJG);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -235,11 +235,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.CurPhoneCase != 0) {
         CurPhoneCase = other.CurPhoneCase;
       }
-      if (other.PDACJDIEOJG != 0) {
-        PDACJDIEOJG = other.PDACJDIEOJG;
-      }
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
+      }
+      if (other.PDACJDIEOJG != 0) {
+        PDACJDIEOJG = other.PDACJDIEOJG;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 48: {
+          case 8: {
             PDACJDIEOJG = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 64: {
             CurPhoneCase = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            Retcode = input.ReadUInt32();
-            break;
-          }
-          case 48: {
+          case 8: {
             PDACJDIEOJG = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 64: {
             CurPhoneCase = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            Retcode = input.ReadUInt32();
             break;
           }
         }

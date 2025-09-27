@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static CCLGLPABGHDReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFDQ0xHTFBBQkdIRC5wcm90byI5CgtDQ0xHTFBBQkdIRBIbChNyZXdhcmRf",
-            "ZGlzcGxheV90eXBlGAUgASgNEg0KBWxldmVsGAQgASgNQh6qAhtFZ2dMaW5r",
+            "ChFDQ0xHTFBBQkdIRC5wcm90byI5CgtDQ0xHTFBBQkdIRBINCgVsZXZlbBgI",
+            "IAEoDRIbChNyZXdhcmRfZGlzcGxheV90eXBlGAcgASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CCLGLPABGHD), global::EggLink.DanhengServer.Proto.CCLGLPABGHD.Parser, new[]{ "RewardDisplayType", "Level" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CCLGLPABGHD), global::EggLink.DanhengServer.Proto.CCLGLPABGHD.Parser, new[]{ "Level", "RewardDisplayType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CCLGLPABGHD(CCLGLPABGHD other) : this() {
-      rewardDisplayType_ = other.rewardDisplayType_;
       level_ = other.level_;
+      rewardDisplayType_ = other.rewardDisplayType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new CCLGLPABGHD(this);
     }
 
-    /// <summary>Field number for the "reward_display_type" field.</summary>
-    public const int RewardDisplayTypeFieldNumber = 5;
-    private uint rewardDisplayType_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RewardDisplayType {
-      get { return rewardDisplayType_; }
-      set {
-        rewardDisplayType_ = value;
-      }
-    }
-
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 4;
+    public const int LevelFieldNumber = 8;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return level_; }
       set {
         level_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reward_display_type" field.</summary>
+    public const int RewardDisplayTypeFieldNumber = 7;
+    private uint rewardDisplayType_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RewardDisplayType {
+      get { return rewardDisplayType_; }
+      set {
+        rewardDisplayType_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (RewardDisplayType != other.RewardDisplayType) return false;
       if (Level != other.Level) return false;
+      if (RewardDisplayType != other.RewardDisplayType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (RewardDisplayType != 0) hash ^= RewardDisplayType.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
+      if (RewardDisplayType != 0) hash ^= RewardDisplayType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Level != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Level);
-      }
       if (RewardDisplayType != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(56);
         output.WriteUInt32(RewardDisplayType);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Level != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(Level);
-      }
       if (RewardDisplayType != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(56);
         output.WriteUInt32(RewardDisplayType);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(Level);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (RewardDisplayType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RewardDisplayType);
-      }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
+      }
+      if (RewardDisplayType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RewardDisplayType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.RewardDisplayType != 0) {
-        RewardDisplayType = other.RewardDisplayType;
-      }
       if (other.Level != 0) {
         Level = other.Level;
+      }
+      if (other.RewardDisplayType != 0) {
+        RewardDisplayType = other.RewardDisplayType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
-            Level = input.ReadUInt32();
+          case 56: {
+            RewardDisplayType = input.ReadUInt32();
             break;
           }
-          case 40: {
-            RewardDisplayType = input.ReadUInt32();
+          case 64: {
+            Level = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
-            Level = input.ReadUInt32();
+          case 56: {
+            RewardDisplayType = input.ReadUInt32();
             break;
           }
-          case 40: {
-            RewardDisplayType = input.ReadUInt32();
+          case 64: {
+            Level = input.ReadUInt32();
             break;
           }
         }

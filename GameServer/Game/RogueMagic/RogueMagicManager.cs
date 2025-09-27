@@ -32,7 +32,7 @@ public class RogueMagicManager(PlayerInstance player) : BasePlayerManager(player
         }
 
         Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupMagicRogue, baseAvatarIds);
-        await Player.LineupManager!.GainMp(5, false);
+        await Player.LineupManager!.GainMp(8, false);
         await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
 
         var instance = new RogueMagicInstance(Player, area, difficulty, styleType);

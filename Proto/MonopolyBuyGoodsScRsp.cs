@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtNb25vcG9seUJ1eUdvb2RzU2NSc3AucHJvdG8iSwoVTW9ub3BvbHlCdXlH",
-            "b29kc1NjUnNwEg8KB3JldGNvZGUYCSABKA0SDwoHc2hvcF9pZBgBIAEoDRIQ",
-            "Cghnb29kc19pZBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "b29kc1NjUnNwEg8KB3JldGNvZGUYBSABKA0SDwoHc2hvcF9pZBgBIAEoDRIQ",
+            "Cghnb29kc19pZBgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 9;
+    public const int RetcodeFieldNumber = 5;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "goods_id" field.</summary>
-    public const int GoodsIdFieldNumber = 10;
+    public const int GoodsIdFieldNumber = 12;
     private uint goodsId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(ShopId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       if (GoodsId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(GoodsId);
       }
       if (_unknownFields != null) {
@@ -194,11 +194,11 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(ShopId);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(Retcode);
       }
       if (GoodsId != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(96);
         output.WriteUInt32(GoodsId);
       }
       if (_unknownFields != null) {
@@ -260,11 +260,11 @@ namespace EggLink.DanhengServer.Proto {
             ShopId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 96: {
             GoodsId = input.ReadUInt32();
             break;
           }
@@ -287,11 +287,11 @@ namespace EggLink.DanhengServer.Proto {
             ShopId = input.ReadUInt32();
             break;
           }
-          case 72: {
+          case 40: {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 96: {
             GoodsId = input.ReadUInt32();
             break;
           }

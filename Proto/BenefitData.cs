@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFCZW5lZml0RGF0YS5wcm90bxoXQmVuZWZpdEl0ZW1Db25maWcucHJvdG8i",
-            "ZQoLQmVuZWZpdERhdGESIgoGY29uZmlnGA8gASgLMhIuQmVuZWZpdEl0ZW1D",
-            "b25maWcSDgoGc3RhdHVzGA0gASgNEhMKC2RhaWx5X2luZGV4GAMgASgNEg0K",
-            "BWxldmVsGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "ZQoLQmVuZWZpdERhdGESIgoGY29uZmlnGAcgASgLMhIuQmVuZWZpdEl0ZW1D",
+            "b25maWcSDgoGc3RhdHVzGA8gASgNEhMKC2RhaWx5X2luZGV4GAwgASgNEg0K",
+            "BWxldmVsGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BenefitItemConfigReflection.Descriptor, },
@@ -88,7 +88,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "config" field.</summary>
-    public const int ConfigFieldNumber = 15;
+    public const int ConfigFieldNumber = 7;
     private global::EggLink.DanhengServer.Proto.BenefitItemConfig config_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -100,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 13;
+    public const int StatusFieldNumber = 15;
     private uint status_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "daily_index" field.</summary>
-    public const int DailyIndexFieldNumber = 3;
+    public const int DailyIndexFieldNumber = 12;
     private uint dailyIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 11;
+    public const int LevelFieldNumber = 9;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -183,21 +183,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DailyIndex != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(DailyIndex);
+      if (config_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Config);
       }
       if (Level != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(Level);
       }
-      if (Status != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Status);
+      if (DailyIndex != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(DailyIndex);
       }
-      if (config_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(Config);
+      if (Status != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -209,21 +209,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DailyIndex != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(DailyIndex);
+      if (config_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Config);
       }
       if (Level != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(72);
         output.WriteUInt32(Level);
       }
-      if (Status != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(Status);
+      if (DailyIndex != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(DailyIndex);
       }
-      if (config_ != null) {
-        output.WriteRawTag(122);
-        output.WriteMessage(Config);
+      if (Status != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -289,23 +289,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            DailyIndex = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            Status = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 58: {
             if (config_ == null) {
               Config = new global::EggLink.DanhengServer.Proto.BenefitItemConfig();
             }
             input.ReadMessage(Config);
+            break;
+          }
+          case 72: {
+            Level = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            DailyIndex = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            Status = input.ReadUInt32();
             break;
           }
         }
@@ -323,23 +323,23 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            DailyIndex = input.ReadUInt32();
-            break;
-          }
-          case 88: {
-            Level = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            Status = input.ReadUInt32();
-            break;
-          }
-          case 122: {
+          case 58: {
             if (config_ == null) {
               Config = new global::EggLink.DanhengServer.Proto.BenefitItemConfig();
             }
             input.ReadMessage(Config);
+            break;
+          }
+          case 72: {
+            Level = input.ReadUInt32();
+            break;
+          }
+          case 96: {
+            DailyIndex = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            Status = input.ReadUInt32();
             break;
           }
         }

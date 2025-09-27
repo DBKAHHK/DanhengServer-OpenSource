@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static FeatureSwitchTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byq4FgoRRmVhdHVyZVN3aXRjaFR5",
+            "ChdGZWF0dXJlU3dpdGNoVHlwZS5wcm90byqCGAoRRmVhdHVyZVN3aXRjaFR5",
             "cGUSFwoTRkVBVFVSRV9TV0lUQ0hfTk9ORRAAEhcKE0ZFQVRVUkVfU1dJVENI",
             "X1NIT1AQARIeChpGRUFUVVJFX1NXSVRDSF9MSU5FVVBfTkFNRRACEiAKHEZF",
             "QVRVUkVfU1dJVENIX1JFQ0hBUkdFX1NIT1AQAxIbChdGRUFUVVJFX1NXSVRD",
@@ -88,8 +88,12 @@ namespace EggLink.DanhengServer.Proto {
             "UkVTVEFVUkFOVBBNEicKI0ZFQVRVUkVfU1dJVENIX0JBVFRMRV9USU1FT1VU",
             "X0xFR0FMEE4SGgoWRkVBVFVSRV9TV0lUQ0hfSElQUExFThBPEiEKHUZFQVRV",
             "UkVfU1dJVENIX0hJUFBMRU5fRUZGRUNUEFASJQohRkVBVFVSRV9TV0lUQ0hf",
-            "UkVQTEFZX1BFUkZPUk1BTkNFEFFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "UkVQTEFZX1BFUkZPUk1BTkNFEFESIQodRkVBVFVSRV9TV0lUQ0hfR1JJRF9G",
+            "SUdIVF9SRUYQUhIcChhGRUFUVVJFX1NXSVRDSF9SRUxJQ19CT1gQUxItCilG",
+            "RUFUVVJFX1NXSVRDSF9HUklEX0ZJR0hUX1NUQVJUX0dBTUVfUExBWRBUEikK",
+            "JUZFQVRVUkVfU1dJVENIX0dSSURfRklHSFRfQkFOX0FVR01FTlQQVRItCilG",
+            "RUFUVVJFX1NXSVRDSF9HUklEX0ZJR0hUX0JBTl9QT1JUQUxfQlVGRhBWQh6q",
+            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.FeatureSwitchType), }, null, null));
@@ -179,6 +183,11 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("FEATURE_SWITCH_HIPPLEN")] FeatureSwitchHipplen = 79,
     [pbr::OriginalName("FEATURE_SWITCH_HIPPLEN_EFFECT")] FeatureSwitchHipplenEffect = 80,
     [pbr::OriginalName("FEATURE_SWITCH_REPLAY_PERFORMANCE")] FeatureSwitchReplayPerformance = 81,
+    [pbr::OriginalName("FEATURE_SWITCH_GRID_FIGHT_REF")] FeatureSwitchGridFightRef = 82,
+    [pbr::OriginalName("FEATURE_SWITCH_RELIC_BOX")] FeatureSwitchRelicBox = 83,
+    [pbr::OriginalName("FEATURE_SWITCH_GRID_FIGHT_START_GAME_PLAY")] FeatureSwitchGridFightStartGamePlay = 84,
+    [pbr::OriginalName("FEATURE_SWITCH_GRID_FIGHT_BAN_AUGMENT")] FeatureSwitchGridFightBanAugment = 85,
+    [pbr::OriginalName("FEATURE_SWITCH_GRID_FIGHT_BAN_PORTAL_BUFF")] FeatureSwitchGridFightBanPortalBuff = 86,
   }
 
   #endregion

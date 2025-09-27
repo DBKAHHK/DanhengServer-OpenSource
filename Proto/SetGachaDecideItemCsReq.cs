@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1TZXRHYWNoYURlY2lkZUl0ZW1Dc1JlcS5wcm90byJbChdTZXRHYWNoYURl",
-            "Y2lkZUl0ZW1Dc1JlcRIQCghnYWNoYV9pZBgPIAEoDRITCgtDSERPSUJGRUhM",
-            "UBgCIAEoDRIZChFkZWNpZGVfaXRlbV9vcmRlchgNIAMoDUIeqgIbRWdnTGlu",
+            "Y2lkZUl0ZW1Dc1JlcRIZChFkZWNpZGVfaXRlbV9vcmRlchgPIAMoDRITCgtD",
+            "SERPSUJGRUhMUBgCIAEoDRIQCghnYWNoYV9pZBgMIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetGachaDecideItemCsReq), global::EggLink.DanhengServer.Proto.SetGachaDecideItemCsReq.Parser, new[]{ "GachaId", "CHDOIBFEHLP", "DecideItemOrder" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetGachaDecideItemCsReq), global::EggLink.DanhengServer.Proto.SetGachaDecideItemCsReq.Parser, new[]{ "DecideItemOrder", "CHDOIBFEHLP", "GachaId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetGachaDecideItemCsReq(SetGachaDecideItemCsReq other) : this() {
-      gachaId_ = other.gachaId_;
-      cHDOIBFEHLP_ = other.cHDOIBFEHLP_;
       decideItemOrder_ = other.decideItemOrder_.Clone();
+      cHDOIBFEHLP_ = other.cHDOIBFEHLP_;
+      gachaId_ = other.gachaId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,16 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SetGachaDecideItemCsReq(this);
     }
 
-    /// <summary>Field number for the "gacha_id" field.</summary>
-    public const int GachaIdFieldNumber = 15;
-    private uint gachaId_;
+    /// <summary>Field number for the "decide_item_order" field.</summary>
+    public const int DecideItemOrderFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_decideItemOrder_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> decideItemOrder_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GachaId {
-      get { return gachaId_; }
-      set {
-        gachaId_ = value;
-      }
+    public pbc::RepeatedField<uint> DecideItemOrder {
+      get { return decideItemOrder_; }
     }
 
     /// <summary>Field number for the "CHDOIBFEHLP" field.</summary>
@@ -109,15 +108,16 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "decide_item_order" field.</summary>
-    public const int DecideItemOrderFieldNumber = 13;
-    private static readonly pb::FieldCodec<uint> _repeated_decideItemOrder_codec
-        = pb::FieldCodec.ForUInt32(106);
-    private readonly pbc::RepeatedField<uint> decideItemOrder_ = new pbc::RepeatedField<uint>();
+    /// <summary>Field number for the "gacha_id" field.</summary>
+    public const int GachaIdFieldNumber = 12;
+    private uint gachaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> DecideItemOrder {
-      get { return decideItemOrder_; }
+    public uint GachaId {
+      get { return gachaId_; }
+      set {
+        gachaId_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GachaId != other.GachaId) return false;
-      if (CHDOIBFEHLP != other.CHDOIBFEHLP) return false;
       if(!decideItemOrder_.Equals(other.decideItemOrder_)) return false;
+      if (CHDOIBFEHLP != other.CHDOIBFEHLP) return false;
+      if (GachaId != other.GachaId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GachaId != 0) hash ^= GachaId.GetHashCode();
-      if (CHDOIBFEHLP != 0) hash ^= CHDOIBFEHLP.GetHashCode();
       hash ^= decideItemOrder_.GetHashCode();
+      if (CHDOIBFEHLP != 0) hash ^= CHDOIBFEHLP.GetHashCode();
+      if (GachaId != 0) hash ^= GachaId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(CHDOIBFEHLP);
       }
-      decideItemOrder_.WriteTo(output, _repeated_decideItemOrder_codec);
       if (GachaId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteUInt32(GachaId);
       }
+      decideItemOrder_.WriteTo(output, _repeated_decideItemOrder_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -189,11 +189,11 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(CHDOIBFEHLP);
       }
-      decideItemOrder_.WriteTo(ref output, _repeated_decideItemOrder_codec);
       if (GachaId != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(96);
         output.WriteUInt32(GachaId);
       }
+      decideItemOrder_.WriteTo(ref output, _repeated_decideItemOrder_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -204,13 +204,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GachaId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaId);
-      }
+      size += decideItemOrder_.CalculateSize(_repeated_decideItemOrder_codec);
       if (CHDOIBFEHLP != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CHDOIBFEHLP);
       }
-      size += decideItemOrder_.CalculateSize(_repeated_decideItemOrder_codec);
+      if (GachaId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GachaId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -223,13 +223,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GachaId != 0) {
-        GachaId = other.GachaId;
-      }
+      decideItemOrder_.Add(other.decideItemOrder_);
       if (other.CHDOIBFEHLP != 0) {
         CHDOIBFEHLP = other.CHDOIBFEHLP;
       }
-      decideItemOrder_.Add(other.decideItemOrder_);
+      if (other.GachaId != 0) {
+        GachaId = other.GachaId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -249,13 +249,13 @@ namespace EggLink.DanhengServer.Proto {
             CHDOIBFEHLP = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
-            decideItemOrder_.AddEntriesFrom(input, _repeated_decideItemOrder_codec);
+          case 96: {
+            GachaId = input.ReadUInt32();
             break;
           }
+          case 122:
           case 120: {
-            GachaId = input.ReadUInt32();
+            decideItemOrder_.AddEntriesFrom(input, _repeated_decideItemOrder_codec);
             break;
           }
         }
@@ -277,13 +277,13 @@ namespace EggLink.DanhengServer.Proto {
             CHDOIBFEHLP = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
-            decideItemOrder_.AddEntriesFrom(ref input, _repeated_decideItemOrder_codec);
+          case 96: {
+            GachaId = input.ReadUInt32();
             break;
           }
+          case 122:
           case 120: {
-            GachaId = input.ReadUInt32();
+            decideItemOrder_.AddEntriesFrom(ref input, _repeated_decideItemOrder_codec);
             break;
           }
         }

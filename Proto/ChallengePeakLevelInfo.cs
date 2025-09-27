@@ -24,23 +24,21 @@ namespace EggLink.DanhengServer.Proto {
     static ChallengePeakLevelInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxDaGFsbGVuZ2VQZWFrTGV2ZWxJbmZvLnByb3RvGhxDaGFsbGVuZ2VQZWFr",
-            "Qm9zc0xldmVsLnByb3RvGhlDaGFsbGVuZ2VQZWFrQXZhdGFyLnByb3RvGhFE",
-            "R0ZGTk9QRkxORS5wcm90bxobQ2hhbGxlbmdlUGVha1ByZUxldmVsLnByb3Rv",
-            "IuwCChZDaGFsbGVuZ2VQZWFrTGV2ZWxJbmZvEhgKEGZpbmlzaGVkX3ByZV9u",
-            "dW0YAiABKA0SMAoPcGVha19ib3NzX2xldmVsGAogASgLMhcuQ2hhbGxlbmdl",
-            "UGVha0Jvc3NMZXZlbBIVCg1wZWFrX2dyb3VwX2lkGAMgASgNEjMKFXBlYWtf",
-            "YXZhdGFyX2luZm9fbGlzdBgPIAMoCzIULkNoYWxsZW5nZVBlYWtBdmF0YXIS",
-            "DwoHaXNfZWFzeRgHIAEoCBITCgtPRUxFRUZHQU9OUBgGIAMoDRIeChZhbGxv",
-            "d19jaGFuZ2VfYm9zc19tb2RlGAwgASgIEjgKGHBlYWtfcHJlX2xldmVsX2lu",
-            "Zm9fbGlzdBgBIAMoCzIWLkNoYWxsZW5nZVBlYWtQcmVMZXZlbBIXCg9wcmVf",
-            "bGV2ZWxfc3RhcnMYCyABKA0SIQoLQVBHRUZPRk1LQkcYBSABKAsyDC5ER0ZG",
-            "Tk9QRkxORUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "ChxDaGFsbGVuZ2VQZWFrTGV2ZWxJbmZvLnByb3RvGhtDaGFsbGVuZ2VQZWFr",
+            "UHJlTGV2ZWwucHJvdG8aEU9FR01FUE9IUE1BLnByb3RvGhxDaGFsbGVuZ2VQ",
+            "ZWFrQm9zc0xldmVsLnByb3RvGhFER0ZGTk9QRkxORS5wcm90byK6AgoWQ2hh",
+            "bGxlbmdlUGVha0xldmVsSW5mbxIhCgtFRklQSUdFTkZOSRgNIAEoCzIMLk9F",
+            "R01FUE9IUE1BEjgKGHBlYWtfcHJlX2xldmVsX2luZm9fbGlzdBgPIAMoCzIW",
+            "LkNoYWxsZW5nZVBlYWtQcmVMZXZlbBIwCg9wZWFrX2Jvc3NfbGV2ZWwYCCAB",
+            "KAsyFy5DaGFsbGVuZ2VQZWFrQm9zc0xldmVsEhcKD3ByZV9sZXZlbF9zdGFy",
+            "cxgHIAEoDRITCgtPRUxFRUZHQU9OUBgJIAMoDRIVCg1wZWFrX2dyb3VwX2lk",
+            "GAUgASgNEhgKEGZpbmlzaGVkX3ByZV9udW0YCiABKA0SIQoLQVBHRUZPRk1L",
+            "QkcYDiABKAsyDC5ER0ZGTk9QRkxORRIPCgdpc19lYXN5GAIgASgIQh6qAhtF",
+            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengePeakBossLevelReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengePeakAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.DGFFNOPFLNEReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengePeakPreLevelReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengePeakPreLevelReflection.Descriptor, global::EggLink.DanhengServer.Proto.OEGMEPOHPMAReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChallengePeakBossLevelReflection.Descriptor, global::EggLink.DanhengServer.Proto.DGFFNOPFLNEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo), global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo.Parser, new[]{ "FinishedPreNum", "PeakBossLevel", "PeakGroupId", "PeakAvatarInfoList", "IsEasy", "OELEEFGAONP", "AllowChangeBossMode", "PeakPreLevelInfoList", "PreLevelStars", "APGEFOFMKBG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo), global::EggLink.DanhengServer.Proto.ChallengePeakLevelInfo.Parser, new[]{ "EFIPIGENFNI", "PeakPreLevelInfoList", "PeakBossLevel", "PreLevelStars", "OELEEFGAONP", "PeakGroupId", "FinishedPreNum", "APGEFOFMKBG", "IsEasy" }, null, null, null, null)
           }));
     }
     #endregion
@@ -82,16 +80,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChallengePeakLevelInfo(ChallengePeakLevelInfo other) : this() {
-      finishedPreNum_ = other.finishedPreNum_;
-      peakBossLevel_ = other.peakBossLevel_ != null ? other.peakBossLevel_.Clone() : null;
-      peakGroupId_ = other.peakGroupId_;
-      peakAvatarInfoList_ = other.peakAvatarInfoList_.Clone();
-      isEasy_ = other.isEasy_;
-      oELEEFGAONP_ = other.oELEEFGAONP_.Clone();
-      allowChangeBossMode_ = other.allowChangeBossMode_;
+      eFIPIGENFNI_ = other.eFIPIGENFNI_ != null ? other.eFIPIGENFNI_.Clone() : null;
       peakPreLevelInfoList_ = other.peakPreLevelInfoList_.Clone();
+      peakBossLevel_ = other.peakBossLevel_ != null ? other.peakBossLevel_.Clone() : null;
       preLevelStars_ = other.preLevelStars_;
+      oELEEFGAONP_ = other.oELEEFGAONP_.Clone();
+      peakGroupId_ = other.peakGroupId_;
+      finishedPreNum_ = other.finishedPreNum_;
       aPGEFOFMKBG_ = other.aPGEFOFMKBG_ != null ? other.aPGEFOFMKBG_.Clone() : null;
+      isEasy_ = other.isEasy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -101,20 +98,31 @@ namespace EggLink.DanhengServer.Proto {
       return new ChallengePeakLevelInfo(this);
     }
 
-    /// <summary>Field number for the "finished_pre_num" field.</summary>
-    public const int FinishedPreNumFieldNumber = 2;
-    private uint finishedPreNum_;
+    /// <summary>Field number for the "EFIPIGENFNI" field.</summary>
+    public const int EFIPIGENFNIFieldNumber = 13;
+    private global::EggLink.DanhengServer.Proto.OEGMEPOHPMA eFIPIGENFNI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FinishedPreNum {
-      get { return finishedPreNum_; }
+    public global::EggLink.DanhengServer.Proto.OEGMEPOHPMA EFIPIGENFNI {
+      get { return eFIPIGENFNI_; }
       set {
-        finishedPreNum_ = value;
+        eFIPIGENFNI_ = value;
       }
     }
 
+    /// <summary>Field number for the "peak_pre_level_info_list" field.</summary>
+    public const int PeakPreLevelInfoListFieldNumber = 15;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChallengePeakPreLevel> _repeated_peakPreLevelInfoList_codec
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.ChallengePeakPreLevel.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakPreLevel> peakPreLevelInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakPreLevel>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakPreLevel> PeakPreLevelInfoList {
+      get { return peakPreLevelInfoList_; }
+    }
+
     /// <summary>Field number for the "peak_boss_level" field.</summary>
-    public const int PeakBossLevelFieldNumber = 10;
+    public const int PeakBossLevelFieldNumber = 8;
     private global::EggLink.DanhengServer.Proto.ChallengePeakBossLevel peakBossLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -125,77 +133,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "peak_group_id" field.</summary>
-    public const int PeakGroupIdFieldNumber = 3;
-    private uint peakGroupId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PeakGroupId {
-      get { return peakGroupId_; }
-      set {
-        peakGroupId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "peak_avatar_info_list" field.</summary>
-    public const int PeakAvatarInfoListFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChallengePeakAvatar> _repeated_peakAvatarInfoList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.ChallengePeakAvatar.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakAvatar> peakAvatarInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakAvatar>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakAvatar> PeakAvatarInfoList {
-      get { return peakAvatarInfoList_; }
-    }
-
-    /// <summary>Field number for the "is_easy" field.</summary>
-    public const int IsEasyFieldNumber = 7;
-    private bool isEasy_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsEasy {
-      get { return isEasy_; }
-      set {
-        isEasy_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "OELEEFGAONP" field.</summary>
-    public const int OELEEFGAONPFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_oELEEFGAONP_codec
-        = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> oELEEFGAONP_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> OELEEFGAONP {
-      get { return oELEEFGAONP_; }
-    }
-
-    /// <summary>Field number for the "allow_change_boss_mode" field.</summary>
-    public const int AllowChangeBossModeFieldNumber = 12;
-    private bool allowChangeBossMode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool AllowChangeBossMode {
-      get { return allowChangeBossMode_; }
-      set {
-        allowChangeBossMode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "peak_pre_level_info_list" field.</summary>
-    public const int PeakPreLevelInfoListFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChallengePeakPreLevel> _repeated_peakPreLevelInfoList_codec
-        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.ChallengePeakPreLevel.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakPreLevel> peakPreLevelInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakPreLevel>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakPreLevel> PeakPreLevelInfoList {
-      get { return peakPreLevelInfoList_; }
-    }
-
     /// <summary>Field number for the "pre_level_stars" field.</summary>
-    public const int PreLevelStarsFieldNumber = 11;
+    public const int PreLevelStarsFieldNumber = 7;
     private uint preLevelStars_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -206,8 +145,43 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "OELEEFGAONP" field.</summary>
+    public const int OELEEFGAONPFieldNumber = 9;
+    private static readonly pb::FieldCodec<uint> _repeated_oELEEFGAONP_codec
+        = pb::FieldCodec.ForUInt32(74);
+    private readonly pbc::RepeatedField<uint> oELEEFGAONP_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> OELEEFGAONP {
+      get { return oELEEFGAONP_; }
+    }
+
+    /// <summary>Field number for the "peak_group_id" field.</summary>
+    public const int PeakGroupIdFieldNumber = 5;
+    private uint peakGroupId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PeakGroupId {
+      get { return peakGroupId_; }
+      set {
+        peakGroupId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "finished_pre_num" field.</summary>
+    public const int FinishedPreNumFieldNumber = 10;
+    private uint finishedPreNum_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FinishedPreNum {
+      get { return finishedPreNum_; }
+      set {
+        finishedPreNum_ = value;
+      }
+    }
+
     /// <summary>Field number for the "APGEFOFMKBG" field.</summary>
-    public const int APGEFOFMKBGFieldNumber = 5;
+    public const int APGEFOFMKBGFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.DGFFNOPFLNE aPGEFOFMKBG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -215,6 +189,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return aPGEFOFMKBG_; }
       set {
         aPGEFOFMKBG_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_easy" field.</summary>
+    public const int IsEasyFieldNumber = 2;
+    private bool isEasy_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsEasy {
+      get { return isEasy_; }
+      set {
+        isEasy_ = value;
       }
     }
 
@@ -233,16 +219,15 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FinishedPreNum != other.FinishedPreNum) return false;
-      if (!object.Equals(PeakBossLevel, other.PeakBossLevel)) return false;
-      if (PeakGroupId != other.PeakGroupId) return false;
-      if(!peakAvatarInfoList_.Equals(other.peakAvatarInfoList_)) return false;
-      if (IsEasy != other.IsEasy) return false;
-      if(!oELEEFGAONP_.Equals(other.oELEEFGAONP_)) return false;
-      if (AllowChangeBossMode != other.AllowChangeBossMode) return false;
+      if (!object.Equals(EFIPIGENFNI, other.EFIPIGENFNI)) return false;
       if(!peakPreLevelInfoList_.Equals(other.peakPreLevelInfoList_)) return false;
+      if (!object.Equals(PeakBossLevel, other.PeakBossLevel)) return false;
       if (PreLevelStars != other.PreLevelStars) return false;
+      if(!oELEEFGAONP_.Equals(other.oELEEFGAONP_)) return false;
+      if (PeakGroupId != other.PeakGroupId) return false;
+      if (FinishedPreNum != other.FinishedPreNum) return false;
       if (!object.Equals(APGEFOFMKBG, other.APGEFOFMKBG)) return false;
+      if (IsEasy != other.IsEasy) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -250,16 +235,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FinishedPreNum != 0) hash ^= FinishedPreNum.GetHashCode();
-      if (peakBossLevel_ != null) hash ^= PeakBossLevel.GetHashCode();
-      if (PeakGroupId != 0) hash ^= PeakGroupId.GetHashCode();
-      hash ^= peakAvatarInfoList_.GetHashCode();
-      if (IsEasy != false) hash ^= IsEasy.GetHashCode();
-      hash ^= oELEEFGAONP_.GetHashCode();
-      if (AllowChangeBossMode != false) hash ^= AllowChangeBossMode.GetHashCode();
+      if (eFIPIGENFNI_ != null) hash ^= EFIPIGENFNI.GetHashCode();
       hash ^= peakPreLevelInfoList_.GetHashCode();
+      if (peakBossLevel_ != null) hash ^= PeakBossLevel.GetHashCode();
       if (PreLevelStars != 0) hash ^= PreLevelStars.GetHashCode();
+      hash ^= oELEEFGAONP_.GetHashCode();
+      if (PeakGroupId != 0) hash ^= PeakGroupId.GetHashCode();
+      if (FinishedPreNum != 0) hash ^= FinishedPreNum.GetHashCode();
       if (aPGEFOFMKBG_ != null) hash ^= APGEFOFMKBG.GetHashCode();
+      if (IsEasy != false) hash ^= IsEasy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -278,37 +262,36 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      peakPreLevelInfoList_.WriteTo(output, _repeated_peakPreLevelInfoList_codec);
-      if (FinishedPreNum != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(FinishedPreNum);
-      }
-      if (PeakGroupId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(PeakGroupId);
-      }
-      if (aPGEFOFMKBG_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(APGEFOFMKBG);
-      }
-      oELEEFGAONP_.WriteTo(output, _repeated_oELEEFGAONP_codec);
       if (IsEasy != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteBool(IsEasy);
       }
-      if (peakBossLevel_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(PeakBossLevel);
+      if (PeakGroupId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(PeakGroupId);
       }
       if (PreLevelStars != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(PreLevelStars);
       }
-      if (AllowChangeBossMode != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(AllowChangeBossMode);
+      if (peakBossLevel_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(PeakBossLevel);
       }
-      peakAvatarInfoList_.WriteTo(output, _repeated_peakAvatarInfoList_codec);
+      oELEEFGAONP_.WriteTo(output, _repeated_oELEEFGAONP_codec);
+      if (FinishedPreNum != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(FinishedPreNum);
+      }
+      if (eFIPIGENFNI_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(EFIPIGENFNI);
+      }
+      if (aPGEFOFMKBG_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(APGEFOFMKBG);
+      }
+      peakPreLevelInfoList_.WriteTo(output, _repeated_peakPreLevelInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -319,37 +302,36 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      peakPreLevelInfoList_.WriteTo(ref output, _repeated_peakPreLevelInfoList_codec);
-      if (FinishedPreNum != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(FinishedPreNum);
-      }
-      if (PeakGroupId != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(PeakGroupId);
-      }
-      if (aPGEFOFMKBG_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(APGEFOFMKBG);
-      }
-      oELEEFGAONP_.WriteTo(ref output, _repeated_oELEEFGAONP_codec);
       if (IsEasy != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(16);
         output.WriteBool(IsEasy);
       }
-      if (peakBossLevel_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(PeakBossLevel);
+      if (PeakGroupId != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(PeakGroupId);
       }
       if (PreLevelStars != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(56);
         output.WriteUInt32(PreLevelStars);
       }
-      if (AllowChangeBossMode != false) {
-        output.WriteRawTag(96);
-        output.WriteBool(AllowChangeBossMode);
+      if (peakBossLevel_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(PeakBossLevel);
       }
-      peakAvatarInfoList_.WriteTo(ref output, _repeated_peakAvatarInfoList_codec);
+      oELEEFGAONP_.WriteTo(ref output, _repeated_oELEEFGAONP_codec);
+      if (FinishedPreNum != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(FinishedPreNum);
+      }
+      if (eFIPIGENFNI_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(EFIPIGENFNI);
+      }
+      if (aPGEFOFMKBG_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(APGEFOFMKBG);
+      }
+      peakPreLevelInfoList_.WriteTo(ref output, _repeated_peakPreLevelInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -360,29 +342,28 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FinishedPreNum != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishedPreNum);
+      if (eFIPIGENFNI_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EFIPIGENFNI);
       }
+      size += peakPreLevelInfoList_.CalculateSize(_repeated_peakPreLevelInfoList_codec);
       if (peakBossLevel_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PeakBossLevel);
       }
-      if (PeakGroupId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakGroupId);
-      }
-      size += peakAvatarInfoList_.CalculateSize(_repeated_peakAvatarInfoList_codec);
-      if (IsEasy != false) {
-        size += 1 + 1;
-      }
-      size += oELEEFGAONP_.CalculateSize(_repeated_oELEEFGAONP_codec);
-      if (AllowChangeBossMode != false) {
-        size += 1 + 1;
-      }
-      size += peakPreLevelInfoList_.CalculateSize(_repeated_peakPreLevelInfoList_codec);
       if (PreLevelStars != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PreLevelStars);
       }
+      size += oELEEFGAONP_.CalculateSize(_repeated_oELEEFGAONP_codec);
+      if (PeakGroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakGroupId);
+      }
+      if (FinishedPreNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishedPreNum);
+      }
       if (aPGEFOFMKBG_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(APGEFOFMKBG);
+      }
+      if (IsEasy != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -396,35 +377,37 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FinishedPreNum != 0) {
-        FinishedPreNum = other.FinishedPreNum;
+      if (other.eFIPIGENFNI_ != null) {
+        if (eFIPIGENFNI_ == null) {
+          EFIPIGENFNI = new global::EggLink.DanhengServer.Proto.OEGMEPOHPMA();
+        }
+        EFIPIGENFNI.MergeFrom(other.EFIPIGENFNI);
       }
+      peakPreLevelInfoList_.Add(other.peakPreLevelInfoList_);
       if (other.peakBossLevel_ != null) {
         if (peakBossLevel_ == null) {
           PeakBossLevel = new global::EggLink.DanhengServer.Proto.ChallengePeakBossLevel();
         }
         PeakBossLevel.MergeFrom(other.PeakBossLevel);
       }
+      if (other.PreLevelStars != 0) {
+        PreLevelStars = other.PreLevelStars;
+      }
+      oELEEFGAONP_.Add(other.oELEEFGAONP_);
       if (other.PeakGroupId != 0) {
         PeakGroupId = other.PeakGroupId;
       }
-      peakAvatarInfoList_.Add(other.peakAvatarInfoList_);
-      if (other.IsEasy != false) {
-        IsEasy = other.IsEasy;
-      }
-      oELEEFGAONP_.Add(other.oELEEFGAONP_);
-      if (other.AllowChangeBossMode != false) {
-        AllowChangeBossMode = other.AllowChangeBossMode;
-      }
-      peakPreLevelInfoList_.Add(other.peakPreLevelInfoList_);
-      if (other.PreLevelStars != 0) {
-        PreLevelStars = other.PreLevelStars;
+      if (other.FinishedPreNum != 0) {
+        FinishedPreNum = other.FinishedPreNum;
       }
       if (other.aPGEFOFMKBG_ != null) {
         if (aPGEFOFMKBG_ == null) {
           APGEFOFMKBG = new global::EggLink.DanhengServer.Proto.DGFFNOPFLNE();
         }
         APGEFOFMKBG.MergeFrom(other.APGEFOFMKBG);
+      }
+      if (other.IsEasy != false) {
+        IsEasy = other.IsEasy;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -441,51 +424,50 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            peakPreLevelInfoList_.AddEntriesFrom(input, _repeated_peakPreLevelInfoList_codec);
-            break;
-          }
           case 16: {
-            FinishedPreNum = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            PeakGroupId = input.ReadUInt32();
-            break;
-          }
-          case 42: {
-            if (aPGEFOFMKBG_ == null) {
-              APGEFOFMKBG = new global::EggLink.DanhengServer.Proto.DGFFNOPFLNE();
-            }
-            input.ReadMessage(APGEFOFMKBG);
-            break;
-          }
-          case 50:
-          case 48: {
-            oELEEFGAONP_.AddEntriesFrom(input, _repeated_oELEEFGAONP_codec);
-            break;
-          }
-          case 56: {
             IsEasy = input.ReadBool();
             break;
           }
-          case 82: {
+          case 40: {
+            PeakGroupId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            PreLevelStars = input.ReadUInt32();
+            break;
+          }
+          case 66: {
             if (peakBossLevel_ == null) {
               PeakBossLevel = new global::EggLink.DanhengServer.Proto.ChallengePeakBossLevel();
             }
             input.ReadMessage(PeakBossLevel);
             break;
           }
-          case 88: {
-            PreLevelStars = input.ReadUInt32();
+          case 74:
+          case 72: {
+            oELEEFGAONP_.AddEntriesFrom(input, _repeated_oELEEFGAONP_codec);
             break;
           }
-          case 96: {
-            AllowChangeBossMode = input.ReadBool();
+          case 80: {
+            FinishedPreNum = input.ReadUInt32();
+            break;
+          }
+          case 106: {
+            if (eFIPIGENFNI_ == null) {
+              EFIPIGENFNI = new global::EggLink.DanhengServer.Proto.OEGMEPOHPMA();
+            }
+            input.ReadMessage(EFIPIGENFNI);
+            break;
+          }
+          case 114: {
+            if (aPGEFOFMKBG_ == null) {
+              APGEFOFMKBG = new global::EggLink.DanhengServer.Proto.DGFFNOPFLNE();
+            }
+            input.ReadMessage(APGEFOFMKBG);
             break;
           }
           case 122: {
-            peakAvatarInfoList_.AddEntriesFrom(input, _repeated_peakAvatarInfoList_codec);
+            peakPreLevelInfoList_.AddEntriesFrom(input, _repeated_peakPreLevelInfoList_codec);
             break;
           }
         }
@@ -503,51 +485,50 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            peakPreLevelInfoList_.AddEntriesFrom(ref input, _repeated_peakPreLevelInfoList_codec);
-            break;
-          }
           case 16: {
-            FinishedPreNum = input.ReadUInt32();
-            break;
-          }
-          case 24: {
-            PeakGroupId = input.ReadUInt32();
-            break;
-          }
-          case 42: {
-            if (aPGEFOFMKBG_ == null) {
-              APGEFOFMKBG = new global::EggLink.DanhengServer.Proto.DGFFNOPFLNE();
-            }
-            input.ReadMessage(APGEFOFMKBG);
-            break;
-          }
-          case 50:
-          case 48: {
-            oELEEFGAONP_.AddEntriesFrom(ref input, _repeated_oELEEFGAONP_codec);
-            break;
-          }
-          case 56: {
             IsEasy = input.ReadBool();
             break;
           }
-          case 82: {
+          case 40: {
+            PeakGroupId = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            PreLevelStars = input.ReadUInt32();
+            break;
+          }
+          case 66: {
             if (peakBossLevel_ == null) {
               PeakBossLevel = new global::EggLink.DanhengServer.Proto.ChallengePeakBossLevel();
             }
             input.ReadMessage(PeakBossLevel);
             break;
           }
-          case 88: {
-            PreLevelStars = input.ReadUInt32();
+          case 74:
+          case 72: {
+            oELEEFGAONP_.AddEntriesFrom(ref input, _repeated_oELEEFGAONP_codec);
             break;
           }
-          case 96: {
-            AllowChangeBossMode = input.ReadBool();
+          case 80: {
+            FinishedPreNum = input.ReadUInt32();
+            break;
+          }
+          case 106: {
+            if (eFIPIGENFNI_ == null) {
+              EFIPIGENFNI = new global::EggLink.DanhengServer.Proto.OEGMEPOHPMA();
+            }
+            input.ReadMessage(EFIPIGENFNI);
+            break;
+          }
+          case 114: {
+            if (aPGEFOFMKBG_ == null) {
+              APGEFOFMKBG = new global::EggLink.DanhengServer.Proto.DGFFNOPFLNE();
+            }
+            input.ReadMessage(APGEFOFMKBG);
             break;
           }
           case 122: {
-            peakAvatarInfoList_.AddEntriesFrom(ref input, _repeated_peakAvatarInfoList_codec);
+            peakPreLevelInfoList_.AddEntriesFrom(ref input, _repeated_peakPreLevelInfoList_codec);
             break;
           }
         }

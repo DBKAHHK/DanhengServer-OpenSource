@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static DGFFNOPFLNEReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFER0ZGTk9QRkxORS5wcm90byJzCgtER0ZGTk9QRkxORRIZChFwZWFrX3Jv",
-            "dW5kc19jb3VudBgOIAEoDRIYChBwZWFrX3RhcmdldF9saXN0GAYgAygNEhUK",
-            "DXBlYWtfbGV2ZWxfaWQYAiABKA0SGAoQaXNfc2NvcmVfY2hhbmdlZBgNIAEo",
+            "ChFER0ZGTk9QRkxORS5wcm90byJzCgtER0ZGTk9QRkxORRIVCg1wZWFrX2xl",
+            "dmVsX2lkGAEgASgNEhgKEHBlYWtfdGFyZ2V0X2xpc3QYDyADKA0SGQoRcGVh",
+            "a19yb3VuZHNfY291bnQYAyABKA0SGAoQaXNfc2NvcmVfY2hhbmdlZBgNIAEo",
             "CEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DGFFNOPFLNE), global::EggLink.DanhengServer.Proto.DGFFNOPFLNE.Parser, new[]{ "PeakRoundsCount", "PeakTargetList", "PeakLevelId", "IsScoreChanged" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DGFFNOPFLNE), global::EggLink.DanhengServer.Proto.DGFFNOPFLNE.Parser, new[]{ "PeakLevelId", "PeakTargetList", "PeakRoundsCount", "IsScoreChanged" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DGFFNOPFLNE(DGFFNOPFLNE other) : this() {
-      peakRoundsCount_ = other.peakRoundsCount_;
-      peakTargetList_ = other.peakTargetList_.Clone();
       peakLevelId_ = other.peakLevelId_;
+      peakTargetList_ = other.peakTargetList_.Clone();
+      peakRoundsCount_ = other.peakRoundsCount_;
       isScoreChanged_ = other.isScoreChanged_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,31 +86,8 @@ namespace EggLink.DanhengServer.Proto {
       return new DGFFNOPFLNE(this);
     }
 
-    /// <summary>Field number for the "peak_rounds_count" field.</summary>
-    public const int PeakRoundsCountFieldNumber = 14;
-    private uint peakRoundsCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PeakRoundsCount {
-      get { return peakRoundsCount_; }
-      set {
-        peakRoundsCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "peak_target_list" field.</summary>
-    public const int PeakTargetListFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_peakTargetList_codec
-        = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> peakTargetList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> PeakTargetList {
-      get { return peakTargetList_; }
-    }
-
     /// <summary>Field number for the "peak_level_id" field.</summary>
-    public const int PeakLevelIdFieldNumber = 2;
+    public const int PeakLevelIdFieldNumber = 1;
     private uint peakLevelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -118,6 +95,29 @@ namespace EggLink.DanhengServer.Proto {
       get { return peakLevelId_; }
       set {
         peakLevelId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "peak_target_list" field.</summary>
+    public const int PeakTargetListFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_peakTargetList_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> peakTargetList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> PeakTargetList {
+      get { return peakTargetList_; }
+    }
+
+    /// <summary>Field number for the "peak_rounds_count" field.</summary>
+    public const int PeakRoundsCountFieldNumber = 3;
+    private uint peakRoundsCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PeakRoundsCount {
+      get { return peakRoundsCount_; }
+      set {
+        peakRoundsCount_ = value;
       }
     }
 
@@ -148,9 +148,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PeakRoundsCount != other.PeakRoundsCount) return false;
-      if(!peakTargetList_.Equals(other.peakTargetList_)) return false;
       if (PeakLevelId != other.PeakLevelId) return false;
+      if(!peakTargetList_.Equals(other.peakTargetList_)) return false;
+      if (PeakRoundsCount != other.PeakRoundsCount) return false;
       if (IsScoreChanged != other.IsScoreChanged) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -159,9 +159,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (PeakRoundsCount != 0) hash ^= PeakRoundsCount.GetHashCode();
-      hash ^= peakTargetList_.GetHashCode();
       if (PeakLevelId != 0) hash ^= PeakLevelId.GetHashCode();
+      hash ^= peakTargetList_.GetHashCode();
+      if (PeakRoundsCount != 0) hash ^= PeakRoundsCount.GetHashCode();
       if (IsScoreChanged != false) hash ^= IsScoreChanged.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -182,18 +182,18 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PeakLevelId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt32(PeakLevelId);
       }
-      peakTargetList_.WriteTo(output, _repeated_peakTargetList_codec);
+      if (PeakRoundsCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(PeakRoundsCount);
+      }
       if (IsScoreChanged != false) {
         output.WriteRawTag(104);
         output.WriteBool(IsScoreChanged);
       }
-      if (PeakRoundsCount != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(PeakRoundsCount);
-      }
+      peakTargetList_.WriteTo(output, _repeated_peakTargetList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -205,18 +205,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PeakLevelId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteUInt32(PeakLevelId);
       }
-      peakTargetList_.WriteTo(ref output, _repeated_peakTargetList_codec);
+      if (PeakRoundsCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(PeakRoundsCount);
+      }
       if (IsScoreChanged != false) {
         output.WriteRawTag(104);
         output.WriteBool(IsScoreChanged);
       }
-      if (PeakRoundsCount != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(PeakRoundsCount);
-      }
+      peakTargetList_.WriteTo(ref output, _repeated_peakTargetList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -227,12 +227,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (PeakRoundsCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakRoundsCount);
-      }
-      size += peakTargetList_.CalculateSize(_repeated_peakTargetList_codec);
       if (PeakLevelId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakLevelId);
+      }
+      size += peakTargetList_.CalculateSize(_repeated_peakTargetList_codec);
+      if (PeakRoundsCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakRoundsCount);
       }
       if (IsScoreChanged != false) {
         size += 1 + 1;
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.PeakRoundsCount != 0) {
-        PeakRoundsCount = other.PeakRoundsCount;
-      }
-      peakTargetList_.Add(other.peakTargetList_);
       if (other.PeakLevelId != 0) {
         PeakLevelId = other.PeakLevelId;
+      }
+      peakTargetList_.Add(other.peakTargetList_);
+      if (other.PeakRoundsCount != 0) {
+        PeakRoundsCount = other.PeakRoundsCount;
       }
       if (other.IsScoreChanged != false) {
         IsScoreChanged = other.IsScoreChanged;
@@ -274,21 +274,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
+          case 8: {
             PeakLevelId = input.ReadUInt32();
             break;
           }
-          case 50:
-          case 48: {
-            peakTargetList_.AddEntriesFrom(input, _repeated_peakTargetList_codec);
+          case 24: {
+            PeakRoundsCount = input.ReadUInt32();
             break;
           }
           case 104: {
             IsScoreChanged = input.ReadBool();
             break;
           }
-          case 112: {
-            PeakRoundsCount = input.ReadUInt32();
+          case 122:
+          case 120: {
+            peakTargetList_.AddEntriesFrom(input, _repeated_peakTargetList_codec);
             break;
           }
         }
@@ -306,21 +306,21 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
+          case 8: {
             PeakLevelId = input.ReadUInt32();
             break;
           }
-          case 50:
-          case 48: {
-            peakTargetList_.AddEntriesFrom(ref input, _repeated_peakTargetList_codec);
+          case 24: {
+            PeakRoundsCount = input.ReadUInt32();
             break;
           }
           case 104: {
             IsScoreChanged = input.ReadBool();
             break;
           }
-          case 112: {
-            PeakRoundsCount = input.ReadUInt32();
+          case 122:
+          case 120: {
+            peakTargetList_.AddEntriesFrom(ref input, _repeated_peakTargetList_codec);
             break;
           }
         }

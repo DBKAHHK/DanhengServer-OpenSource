@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdIYW5kT3BlcmF0aW9uSW5mby5wcm90bxoSSGFuZFByb3BUeXBlLnByb3Rv",
-            "Im8KEUhhbmRPcGVyYXRpb25JbmZvEhAKCGdyb3VwX2lkGAYgASgNEhMKC0lF",
-            "Rk1BREpHQURCGA0gASgNEh4KB29wX3R5cGUYAyABKA4yDS5IYW5kUHJvcFR5",
-            "cGUSEwoLS0RMUEVJR0hKQUsYDyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "Im8KEUhhbmRPcGVyYXRpb25JbmZvEhMKC0lFRk1BREpHQURCGAwgASgNEhAK",
+            "CGdyb3VwX2lkGAkgASgNEhMKC0tETFBFSUdISkFLGA8gASgNEh4KB29wX3R5",
+            "cGUYBCABKA4yDS5IYW5kUHJvcFR5cGVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HandPropTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HandOperationInfo), global::EggLink.DanhengServer.Proto.HandOperationInfo.Parser, new[]{ "GroupId", "IEFMADJGADB", "OpType", "KDLPEIGHJAK" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HandOperationInfo), global::EggLink.DanhengServer.Proto.HandOperationInfo.Parser, new[]{ "IEFMADJGADB", "GroupId", "KDLPEIGHJAK", "OpType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HandOperationInfo(HandOperationInfo other) : this() {
-      groupId_ = other.groupId_;
       iEFMADJGADB_ = other.iEFMADJGADB_;
-      opType_ = other.opType_;
+      groupId_ = other.groupId_;
       kDLPEIGHJAK_ = other.kDLPEIGHJAK_;
+      opType_ = other.opType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,20 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new HandOperationInfo(this);
     }
 
-    /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 6;
-    private uint groupId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GroupId {
-      get { return groupId_; }
-      set {
-        groupId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "IEFMADJGADB" field.</summary>
-    public const int IEFMADJGADBFieldNumber = 13;
+    public const int IEFMADJGADBFieldNumber = 12;
     private uint iEFMADJGADB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,15 +99,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "op_type" field.</summary>
-    public const int OpTypeFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.HandPropType opType_ = global::EggLink.DanhengServer.Proto.HandPropType.SwitchHandOpPropTypeNone;
+    /// <summary>Field number for the "group_id" field.</summary>
+    public const int GroupIdFieldNumber = 9;
+    private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HandPropType OpType {
-      get { return opType_; }
+    public uint GroupId {
+      get { return groupId_; }
       set {
-        opType_ = value;
+        groupId_ = value;
       }
     }
 
@@ -132,6 +120,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return kDLPEIGHJAK_; }
       set {
         kDLPEIGHJAK_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "op_type" field.</summary>
+    public const int OpTypeFieldNumber = 4;
+    private global::EggLink.DanhengServer.Proto.HandPropType opType_ = global::EggLink.DanhengServer.Proto.HandPropType.SwitchHandOpPropTypeNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.HandPropType OpType {
+      get { return opType_; }
+      set {
+        opType_ = value;
       }
     }
 
@@ -150,10 +150,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GroupId != other.GroupId) return false;
       if (IEFMADJGADB != other.IEFMADJGADB) return false;
-      if (OpType != other.OpType) return false;
+      if (GroupId != other.GroupId) return false;
       if (KDLPEIGHJAK != other.KDLPEIGHJAK) return false;
+      if (OpType != other.OpType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,10 +161,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (IEFMADJGADB != 0) hash ^= IEFMADJGADB.GetHashCode();
-      if (OpType != global::EggLink.DanhengServer.Proto.HandPropType.SwitchHandOpPropTypeNone) hash ^= OpType.GetHashCode();
+      if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (KDLPEIGHJAK != 0) hash ^= KDLPEIGHJAK.GetHashCode();
+      if (OpType != global::EggLink.DanhengServer.Proto.HandPropType.SwitchHandOpPropTypeNone) hash ^= OpType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,15 +184,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (OpType != global::EggLink.DanhengServer.Proto.HandPropType.SwitchHandOpPropTypeNone) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteEnum((int) OpType);
       }
       if (GroupId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(72);
         output.WriteUInt32(GroupId);
       }
       if (IEFMADJGADB != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(IEFMADJGADB);
       }
       if (KDLPEIGHJAK != 0) {
@@ -210,15 +210,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (OpType != global::EggLink.DanhengServer.Proto.HandPropType.SwitchHandOpPropTypeNone) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(32);
         output.WriteEnum((int) OpType);
       }
       if (GroupId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(72);
         output.WriteUInt32(GroupId);
       }
       if (IEFMADJGADB != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(IEFMADJGADB);
       }
       if (KDLPEIGHJAK != 0) {
@@ -235,17 +235,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GroupId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
-      }
       if (IEFMADJGADB != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IEFMADJGADB);
       }
-      if (OpType != global::EggLink.DanhengServer.Proto.HandPropType.SwitchHandOpPropTypeNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OpType);
+      if (GroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
       }
       if (KDLPEIGHJAK != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KDLPEIGHJAK);
+      }
+      if (OpType != global::EggLink.DanhengServer.Proto.HandPropType.SwitchHandOpPropTypeNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OpType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -259,17 +259,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GroupId != 0) {
-        GroupId = other.GroupId;
-      }
       if (other.IEFMADJGADB != 0) {
         IEFMADJGADB = other.IEFMADJGADB;
       }
-      if (other.OpType != global::EggLink.DanhengServer.Proto.HandPropType.SwitchHandOpPropTypeNone) {
-        OpType = other.OpType;
+      if (other.GroupId != 0) {
+        GroupId = other.GroupId;
       }
       if (other.KDLPEIGHJAK != 0) {
         KDLPEIGHJAK = other.KDLPEIGHJAK;
+      }
+      if (other.OpType != global::EggLink.DanhengServer.Proto.HandPropType.SwitchHandOpPropTypeNone) {
+        OpType = other.OpType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -286,15 +286,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
+          case 32: {
             OpType = (global::EggLink.DanhengServer.Proto.HandPropType) input.ReadEnum();
             break;
           }
-          case 48: {
+          case 72: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 96: {
             IEFMADJGADB = input.ReadUInt32();
             break;
           }
@@ -317,15 +317,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
+          case 32: {
             OpType = (global::EggLink.DanhengServer.Proto.HandPropType) input.ReadEnum();
             break;
           }
-          case 48: {
+          case 72: {
             GroupId = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 96: {
             IEFMADJGADB = input.ReadUInt32();
             break;
           }

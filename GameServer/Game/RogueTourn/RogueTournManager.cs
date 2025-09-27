@@ -33,7 +33,7 @@ public class RogueTournManager(PlayerInstance player) : BasePlayerManager(player
         }
 
         Player.LineupManager!.SetExtraLineup(ExtraLineupType.LineupTournRogue, baseAvatarIds);
-        await Player.LineupManager!.GainMp(5, false);
+        await Player.LineupManager!.GainMp(8, false);
         await Player.SendPacket(new PacketSyncLineupNotify(Player.LineupManager!.GetCurLineup()!));
 
         var instance = new RogueTournInstance(Player, area);

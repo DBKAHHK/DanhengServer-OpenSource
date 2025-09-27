@@ -24,19 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static GetChallengeGroupStatisticsScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiZHZXRDaGFsbGVuZ2VHcm91cFN0YXRpc3RpY3NTY1JzcC5wcm90bxoZQm9z",
-            "c0dyb3VwU3RhdGlzdGljcy5wcm90bxoaU3RvcnlHcm91cFN0YXRpc3RpY3Mu",
+            "CiZHZXRDaGFsbGVuZ2VHcm91cFN0YXRpc3RpY3NTY1JzcC5wcm90bxoaU3Rv",
+            "cnlHcm91cFN0YXRpc3RpY3MucHJvdG8aGUJvc3NHcm91cFN0YXRpc3RpY3Mu",
             "cHJvdG8aG01lbW9yeUdyb3VwU3RhdGlzdGljcy5wcm90byLeAQogR2V0Q2hh",
-            "bGxlbmdlR3JvdXBTdGF0aXN0aWNzU2NSc3ASDwoHcmV0Y29kZRgPIAEoDRIQ",
-            "Cghncm91cF9pZBgBIAEoDRIuCgxtZW1vcnlfZ3JvdXAYAiABKAsyFi5NZW1v",
-            "cnlHcm91cFN0YXRpc3RpY3NIABIsCgtzdG9yeV9ncm91cBgOIAEoCzIVLlN0",
-            "b3J5R3JvdXBTdGF0aXN0aWNzSAASKgoKYm9zc19ncm91cBgDIAEoCzIULkJv",
-            "c3NHcm91cFN0YXRpc3RpY3NIAEINCgtMQ0RKQkFBS0lIQkIeqgIbRWdnTGlu",
+            "bGxlbmdlR3JvdXBTdGF0aXN0aWNzU2NSc3ASLgoMbWVtb3J5X2dyb3VwGAcg",
+            "ASgLMhYuTWVtb3J5R3JvdXBTdGF0aXN0aWNzSAASLAoLc3RvcnlfZ3JvdXAY",
+            "BCABKAsyFS5TdG9yeUdyb3VwU3RhdGlzdGljc0gAEioKCmJvc3NfZ3JvdXAY",
+            "AiABKAsyFC5Cb3NzR3JvdXBTdGF0aXN0aWNzSAASEAoIZ3JvdXBfaWQYAyAB",
+            "KA0SDwoHcmV0Y29kZRgGIAEoDUINCgtMQ0RKQkFBS0lIQkIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BossGroupStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.StoryGroupStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.MemoryGroupStatisticsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.StoryGroupStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.BossGroupStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.MemoryGroupStatisticsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChallengeGroupStatisticsScRsp), global::EggLink.DanhengServer.Proto.GetChallengeGroupStatisticsScRsp.Parser, new[]{ "Retcode", "GroupId", "MemoryGroup", "StoryGroup", "BossGroup" }, new[]{ "LCDJBAAKIHB" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetChallengeGroupStatisticsScRsp), global::EggLink.DanhengServer.Proto.GetChallengeGroupStatisticsScRsp.Parser, new[]{ "MemoryGroup", "StoryGroup", "BossGroup", "GroupId", "Retcode" }, new[]{ "LCDJBAAKIHB" }, null, null, null)
           }));
     }
     #endregion
@@ -78,8 +78,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetChallengeGroupStatisticsScRsp(GetChallengeGroupStatisticsScRsp other) : this() {
-      retcode_ = other.retcode_;
       groupId_ = other.groupId_;
+      retcode_ = other.retcode_;
       switch (other.LCDJBAAKIHBCase) {
         case LCDJBAAKIHBOneofCase.MemoryGroup:
           MemoryGroup = other.MemoryGroup.Clone();
@@ -101,32 +101,8 @@ namespace EggLink.DanhengServer.Proto {
       return new GetChallengeGroupStatisticsScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 15;
-    private uint retcode_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
-      set {
-        retcode_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 1;
-    private uint groupId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GroupId {
-      get { return groupId_; }
-      set {
-        groupId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "memory_group" field.</summary>
-    public const int MemoryGroupFieldNumber = 2;
+    public const int MemoryGroupFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.MemoryGroupStatistics MemoryGroup {
@@ -138,7 +114,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "story_group" field.</summary>
-    public const int StoryGroupFieldNumber = 14;
+    public const int StoryGroupFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.StoryGroupStatistics StoryGroup {
@@ -150,7 +126,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "boss_group" field.</summary>
-    public const int BossGroupFieldNumber = 3;
+    public const int BossGroupFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.BossGroupStatistics BossGroup {
@@ -161,13 +137,37 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "group_id" field.</summary>
+    public const int GroupIdFieldNumber = 3;
+    private uint groupId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint GroupId {
+      get { return groupId_; }
+      set {
+        groupId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 6;
+    private uint retcode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Retcode {
+      get { return retcode_; }
+      set {
+        retcode_ = value;
+      }
+    }
+
     private object lCDJBAAKIHB_;
     /// <summary>Enum of possible cases for the "LCDJBAAKIHB" oneof.</summary>
     public enum LCDJBAAKIHBOneofCase {
       None = 0,
-      MemoryGroup = 2,
-      StoryGroup = 14,
-      BossGroup = 3,
+      MemoryGroup = 7,
+      StoryGroup = 4,
+      BossGroup = 2,
     }
     private LCDJBAAKIHBOneofCase lCDJBAAKIHBCase_ = LCDJBAAKIHBOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -198,11 +198,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
-      if (GroupId != other.GroupId) return false;
       if (!object.Equals(MemoryGroup, other.MemoryGroup)) return false;
       if (!object.Equals(StoryGroup, other.StoryGroup)) return false;
       if (!object.Equals(BossGroup, other.BossGroup)) return false;
+      if (GroupId != other.GroupId) return false;
+      if (Retcode != other.Retcode) return false;
       if (LCDJBAAKIHBCase != other.LCDJBAAKIHBCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -211,11 +211,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
-      if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.MemoryGroup) hash ^= MemoryGroup.GetHashCode();
       if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.StoryGroup) hash ^= StoryGroup.GetHashCode();
       if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.BossGroup) hash ^= BossGroup.GetHashCode();
+      if (GroupId != 0) hash ^= GroupId.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= (int) lCDJBAAKIHBCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -235,25 +235,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GroupId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(GroupId);
-      }
-      if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.MemoryGroup) {
-        output.WriteRawTag(18);
-        output.WriteMessage(MemoryGroup);
-      }
       if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.BossGroup) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(BossGroup);
       }
+      if (GroupId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(GroupId);
+      }
       if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.StoryGroup) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(34);
         output.WriteMessage(StoryGroup);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.MemoryGroup) {
+        output.WriteRawTag(58);
+        output.WriteMessage(MemoryGroup);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -265,25 +265,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GroupId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(GroupId);
-      }
-      if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.MemoryGroup) {
-        output.WriteRawTag(18);
-        output.WriteMessage(MemoryGroup);
-      }
       if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.BossGroup) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(BossGroup);
       }
+      if (GroupId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(GroupId);
+      }
       if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.StoryGroup) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(34);
         output.WriteMessage(StoryGroup);
       }
       if (Retcode != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(48);
         output.WriteUInt32(Retcode);
+      }
+      if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.MemoryGroup) {
+        output.WriteRawTag(58);
+        output.WriteMessage(MemoryGroup);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -295,12 +295,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
-      }
-      if (GroupId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
-      }
       if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.MemoryGroup) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MemoryGroup);
       }
@@ -309,6 +303,12 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.BossGroup) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BossGroup);
+      }
+      if (GroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
+      }
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -322,11 +322,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
-      }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
+      }
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       switch (other.LCDJBAAKIHBCase) {
         case LCDJBAAKIHBOneofCase.MemoryGroup:
@@ -364,20 +364,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            GroupId = input.ReadUInt32();
-            break;
-          }
           case 18: {
-            global::EggLink.DanhengServer.Proto.MemoryGroupStatistics subBuilder = new global::EggLink.DanhengServer.Proto.MemoryGroupStatistics();
-            if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.MemoryGroup) {
-              subBuilder.MergeFrom(MemoryGroup);
-            }
-            input.ReadMessage(subBuilder);
-            MemoryGroup = subBuilder;
-            break;
-          }
-          case 26: {
             global::EggLink.DanhengServer.Proto.BossGroupStatistics subBuilder = new global::EggLink.DanhengServer.Proto.BossGroupStatistics();
             if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.BossGroup) {
               subBuilder.MergeFrom(BossGroup);
@@ -386,7 +373,11 @@ namespace EggLink.DanhengServer.Proto {
             BossGroup = subBuilder;
             break;
           }
-          case 114: {
+          case 24: {
+            GroupId = input.ReadUInt32();
+            break;
+          }
+          case 34: {
             global::EggLink.DanhengServer.Proto.StoryGroupStatistics subBuilder = new global::EggLink.DanhengServer.Proto.StoryGroupStatistics();
             if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.StoryGroup) {
               subBuilder.MergeFrom(StoryGroup);
@@ -395,8 +386,17 @@ namespace EggLink.DanhengServer.Proto {
             StoryGroup = subBuilder;
             break;
           }
-          case 120: {
+          case 48: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 58: {
+            global::EggLink.DanhengServer.Proto.MemoryGroupStatistics subBuilder = new global::EggLink.DanhengServer.Proto.MemoryGroupStatistics();
+            if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.MemoryGroup) {
+              subBuilder.MergeFrom(MemoryGroup);
+            }
+            input.ReadMessage(subBuilder);
+            MemoryGroup = subBuilder;
             break;
           }
         }
@@ -414,20 +414,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            GroupId = input.ReadUInt32();
-            break;
-          }
           case 18: {
-            global::EggLink.DanhengServer.Proto.MemoryGroupStatistics subBuilder = new global::EggLink.DanhengServer.Proto.MemoryGroupStatistics();
-            if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.MemoryGroup) {
-              subBuilder.MergeFrom(MemoryGroup);
-            }
-            input.ReadMessage(subBuilder);
-            MemoryGroup = subBuilder;
-            break;
-          }
-          case 26: {
             global::EggLink.DanhengServer.Proto.BossGroupStatistics subBuilder = new global::EggLink.DanhengServer.Proto.BossGroupStatistics();
             if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.BossGroup) {
               subBuilder.MergeFrom(BossGroup);
@@ -436,7 +423,11 @@ namespace EggLink.DanhengServer.Proto {
             BossGroup = subBuilder;
             break;
           }
-          case 114: {
+          case 24: {
+            GroupId = input.ReadUInt32();
+            break;
+          }
+          case 34: {
             global::EggLink.DanhengServer.Proto.StoryGroupStatistics subBuilder = new global::EggLink.DanhengServer.Proto.StoryGroupStatistics();
             if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.StoryGroup) {
               subBuilder.MergeFrom(StoryGroup);
@@ -445,8 +436,17 @@ namespace EggLink.DanhengServer.Proto {
             StoryGroup = subBuilder;
             break;
           }
-          case 120: {
+          case 48: {
             Retcode = input.ReadUInt32();
+            break;
+          }
+          case 58: {
+            global::EggLink.DanhengServer.Proto.MemoryGroupStatistics subBuilder = new global::EggLink.DanhengServer.Proto.MemoryGroupStatistics();
+            if (lCDJBAAKIHBCase_ == LCDJBAAKIHBOneofCase.MemoryGroup) {
+              subBuilder.MergeFrom(MemoryGroup);
+            }
+            input.ReadMessage(subBuilder);
+            MemoryGroup = subBuilder;
             break;
           }
         }

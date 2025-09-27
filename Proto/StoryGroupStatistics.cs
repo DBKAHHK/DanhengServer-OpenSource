@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpTdG9yeUdyb3VwU3RhdGlzdGljcy5wcm90bxoZU3RvcnlTdGF0aXN0aWNz",
-            "SW5mby5wcm90byJRChRTdG9yeUdyb3VwU3RhdGlzdGljcxImCghzdHRfaW5m",
-            "bxgHIAEoCzIULlN0b3J5U3RhdGlzdGljc0luZm8SEQoJcmVjb3JkX2lkGA0g",
-            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "SW5mby5wcm90byJRChRTdG9yeUdyb3VwU3RhdGlzdGljcxIRCglyZWNvcmRf",
+            "aWQYDCABKA0SJgoIc3R0X2luZm8YByABKAsyFC5TdG9yeVN0YXRpc3RpY3NJ",
+            "bmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.StoryStatisticsInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StoryGroupStatistics), global::EggLink.DanhengServer.Proto.StoryGroupStatistics.Parser, new[]{ "SttInfo", "RecordId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StoryGroupStatistics), global::EggLink.DanhengServer.Proto.StoryGroupStatistics.Parser, new[]{ "RecordId", "SttInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StoryGroupStatistics(StoryGroupStatistics other) : this() {
-      sttInfo_ = other.sttInfo_ != null ? other.sttInfo_.Clone() : null;
       recordId_ = other.recordId_;
+      sttInfo_ = other.sttInfo_ != null ? other.sttInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,6 +82,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StoryGroupStatistics Clone() {
       return new StoryGroupStatistics(this);
+    }
+
+    /// <summary>Field number for the "record_id" field.</summary>
+    public const int RecordIdFieldNumber = 12;
+    private uint recordId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RecordId {
+      get { return recordId_; }
+      set {
+        recordId_ = value;
+      }
     }
 
     /// <summary>Field number for the "stt_info" field.</summary>
@@ -93,18 +105,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return sttInfo_; }
       set {
         sttInfo_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "record_id" field.</summary>
-    public const int RecordIdFieldNumber = 13;
-    private uint recordId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RecordId {
-      get { return recordId_; }
-      set {
-        recordId_ = value;
       }
     }
 
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(SttInfo, other.SttInfo)) return false;
       if (RecordId != other.RecordId) return false;
+      if (!object.Equals(SttInfo, other.SttInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (sttInfo_ != null) hash ^= SttInfo.GetHashCode();
       if (RecordId != 0) hash ^= RecordId.GetHashCode();
+      if (sttInfo_ != null) hash ^= SttInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(SttInfo);
       }
       if (RecordId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(RecordId);
       }
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteMessage(SttInfo);
       }
       if (RecordId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(96);
         output.WriteUInt32(RecordId);
       }
       if (_unknownFields != null) {
@@ -188,11 +188,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (sttInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SttInfo);
-      }
       if (RecordId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RecordId);
+      }
+      if (sttInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SttInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -206,14 +206,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.RecordId != 0) {
+        RecordId = other.RecordId;
+      }
       if (other.sttInfo_ != null) {
         if (sttInfo_ == null) {
           SttInfo = new global::EggLink.DanhengServer.Proto.StoryStatisticsInfo();
         }
         SttInfo.MergeFrom(other.SttInfo);
-      }
-      if (other.RecordId != 0) {
-        RecordId = other.RecordId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -237,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(SttInfo);
             break;
           }
-          case 104: {
+          case 96: {
             RecordId = input.ReadUInt32();
             break;
           }
@@ -263,7 +263,7 @@ namespace EggLink.DanhengServer.Proto {
             input.ReadMessage(SttInfo);
             break;
           }
-          case 104: {
+          case 96: {
             RecordId = input.ReadUInt32();
             break;
           }

@@ -24,23 +24,23 @@ namespace EggLink.DanhengServer.Proto {
     static MarbleGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRNYXJibGVHYW1lSW5mby5wcm90bxoUTG9iYnlCYXNpY0luZm8ucHJvdG8a",
-            "FE1hcmJsZVRlYW1UeXBlLnByb3RvIsIDCg5NYXJibGVHYW1lSW5mbxIpChBw",
-            "bGF5ZXJfdGVhbV90eXBlGAYgASgOMg8uTWFyYmxlVGVhbVR5cGUSEAoIbGV2",
-            "ZWxfaWQYDyABKA0SGAoQdGVhbV9hX3NlYWxfbGlzdBgOIAMoDRIVCg10ZWFt",
-            "X2FfcGxheWVyGA0gASgNEhkKEWNvbnRyb2xfYnlfc2VydmVyGAkgASgIEhYK",
-            "DnBsYXllcl9iX3Njb3JlGAMgASgNEhMKC0xJS0hDTFBNSEpLGAQgASgIEhUK",
-            "DXRlYW1fYl9wbGF5ZXIYByABKA0SKgoQbG9iYnlfYmFzaWNfaW5mbxiFAiAD",
-            "KAsyDy5Mb2JieUJhc2ljSW5mbxIXCg9tYXJibGVfbGV2ZWxfaWQYASABKA0S",
-            "FgoOcGxheWVyX2Ffc2NvcmUYBSABKA0SGAoQdGVhbV9iX3NlYWxfbGlzdBgL",
-            "IAMoDRITCgt0ZWFtX2FfcmFuaxgMIAEoDRITCgtQQkZBSU9KSkdOTBgKIAEo",
-            "DRITCgt0ZWFtX2JfcmFuaxgIIAEoDRItChRjdXJfYWN0aW9uX3RlYW1fdHlw",
-            "ZRgCIAEoDjIPLk1hcmJsZVRlYW1UeXBlQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ChRNYXJibGVHYW1lSW5mby5wcm90bxoUTWFyYmxlVGVhbVR5cGUucHJvdG8a",
+            "FExvYmJ5QmFzaWNJbmZvLnByb3RvIsIDCg5NYXJibGVHYW1lSW5mbxIYChB0",
+            "ZWFtX2Jfc2VhbF9saXN0GAkgAygNEhMKC3RlYW1fYV9yYW5rGAUgASgNEikK",
+            "EHBsYXllcl90ZWFtX3R5cGUYCCABKA4yDy5NYXJibGVUZWFtVHlwZRIXCg9t",
+            "YXJibGVfbGV2ZWxfaWQYDyABKA0SFgoOcGxheWVyX2Jfc2NvcmUYASABKA0S",
+            "EAoIbGV2ZWxfaWQYCyABKA0SEwoLdGVhbV9iX3JhbmsYDCABKA0SGQoRY29u",
+            "dHJvbF9ieV9zZXJ2ZXIYDSABKAgSEwoLUEJGQUlPSkpHTkwYByABKA0SFQoN",
+            "dGVhbV9hX3BsYXllchgCIAEoDRItChRjdXJfYWN0aW9uX3RlYW1fdHlwZRgO",
+            "IAEoDjIPLk1hcmJsZVRlYW1UeXBlEhgKEHRlYW1fYV9zZWFsX2xpc3QYBiAD",
+            "KA0SFgoOcGxheWVyX2Ffc2NvcmUYAyABKA0SEwoLTElLSENMUE1ISksYCiAB",
+            "KAgSKgoQbG9iYnlfYmFzaWNfaW5mbxjMDyADKAsyDy5Mb2JieUJhc2ljSW5m",
+            "bxIVCg10ZWFtX2JfcGxheWVyGAQgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LobbyBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleTeamTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleTeamTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyBasicInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGameInfo), global::EggLink.DanhengServer.Proto.MarbleGameInfo.Parser, new[]{ "PlayerTeamType", "LevelId", "TeamASealList", "TeamAPlayer", "ControlByServer", "PlayerBScore", "LIKHCLPMHJK", "TeamBPlayer", "LobbyBasicInfo", "MarbleLevelId", "PlayerAScore", "TeamBSealList", "TeamARank", "PBFAIOJJGNL", "TeamBRank", "CurActionTeamType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MarbleGameInfo), global::EggLink.DanhengServer.Proto.MarbleGameInfo.Parser, new[]{ "TeamBSealList", "TeamARank", "PlayerTeamType", "MarbleLevelId", "PlayerBScore", "LevelId", "TeamBRank", "ControlByServer", "PBFAIOJJGNL", "TeamAPlayer", "CurActionTeamType", "TeamASealList", "PlayerAScore", "LIKHCLPMHJK", "LobbyBasicInfo", "TeamBPlayer" }, null, null, null, null)
           }));
     }
     #endregion
@@ -82,22 +82,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MarbleGameInfo(MarbleGameInfo other) : this() {
-      playerTeamType_ = other.playerTeamType_;
-      levelId_ = other.levelId_;
-      teamASealList_ = other.teamASealList_.Clone();
-      teamAPlayer_ = other.teamAPlayer_;
-      controlByServer_ = other.controlByServer_;
-      playerBScore_ = other.playerBScore_;
-      lIKHCLPMHJK_ = other.lIKHCLPMHJK_;
-      teamBPlayer_ = other.teamBPlayer_;
-      lobbyBasicInfo_ = other.lobbyBasicInfo_.Clone();
-      marbleLevelId_ = other.marbleLevelId_;
-      playerAScore_ = other.playerAScore_;
       teamBSealList_ = other.teamBSealList_.Clone();
       teamARank_ = other.teamARank_;
-      pBFAIOJJGNL_ = other.pBFAIOJJGNL_;
+      playerTeamType_ = other.playerTeamType_;
+      marbleLevelId_ = other.marbleLevelId_;
+      playerBScore_ = other.playerBScore_;
+      levelId_ = other.levelId_;
       teamBRank_ = other.teamBRank_;
+      controlByServer_ = other.controlByServer_;
+      pBFAIOJJGNL_ = other.pBFAIOJJGNL_;
+      teamAPlayer_ = other.teamAPlayer_;
       curActionTeamType_ = other.curActionTeamType_;
+      teamASealList_ = other.teamASealList_.Clone();
+      playerAScore_ = other.playerAScore_;
+      lIKHCLPMHJK_ = other.lIKHCLPMHJK_;
+      lobbyBasicInfo_ = other.lobbyBasicInfo_.Clone();
+      teamBPlayer_ = other.teamBPlayer_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -107,140 +107,10 @@ namespace EggLink.DanhengServer.Proto {
       return new MarbleGameInfo(this);
     }
 
-    /// <summary>Field number for the "player_team_type" field.</summary>
-    public const int PlayerTeamTypeFieldNumber = 6;
-    private global::EggLink.DanhengServer.Proto.MarbleTeamType playerTeamType_ = global::EggLink.DanhengServer.Proto.MarbleTeamType.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MarbleTeamType PlayerTeamType {
-      get { return playerTeamType_; }
-      set {
-        playerTeamType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "level_id" field.</summary>
-    public const int LevelIdFieldNumber = 15;
-    private uint levelId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LevelId {
-      get { return levelId_; }
-      set {
-        levelId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "team_a_seal_list" field.</summary>
-    public const int TeamASealListFieldNumber = 14;
-    private static readonly pb::FieldCodec<uint> _repeated_teamASealList_codec
-        = pb::FieldCodec.ForUInt32(114);
-    private readonly pbc::RepeatedField<uint> teamASealList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> TeamASealList {
-      get { return teamASealList_; }
-    }
-
-    /// <summary>Field number for the "team_a_player" field.</summary>
-    public const int TeamAPlayerFieldNumber = 13;
-    private uint teamAPlayer_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TeamAPlayer {
-      get { return teamAPlayer_; }
-      set {
-        teamAPlayer_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "control_by_server" field.</summary>
-    public const int ControlByServerFieldNumber = 9;
-    private bool controlByServer_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool ControlByServer {
-      get { return controlByServer_; }
-      set {
-        controlByServer_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "player_b_score" field.</summary>
-    public const int PlayerBScoreFieldNumber = 3;
-    private uint playerBScore_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PlayerBScore {
-      get { return playerBScore_; }
-      set {
-        playerBScore_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "LIKHCLPMHJK" field.</summary>
-    public const int LIKHCLPMHJKFieldNumber = 4;
-    private bool lIKHCLPMHJK_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool LIKHCLPMHJK {
-      get { return lIKHCLPMHJK_; }
-      set {
-        lIKHCLPMHJK_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "team_b_player" field.</summary>
-    public const int TeamBPlayerFieldNumber = 7;
-    private uint teamBPlayer_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TeamBPlayer {
-      get { return teamBPlayer_; }
-      set {
-        teamBPlayer_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "lobby_basic_info" field.</summary>
-    public const int LobbyBasicInfoFieldNumber = 261;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> _repeated_lobbyBasicInfo_codec
-        = pb::FieldCodec.ForMessage(2090, global::EggLink.DanhengServer.Proto.LobbyBasicInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> lobbyBasicInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> LobbyBasicInfo {
-      get { return lobbyBasicInfo_; }
-    }
-
-    /// <summary>Field number for the "marble_level_id" field.</summary>
-    public const int MarbleLevelIdFieldNumber = 1;
-    private uint marbleLevelId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MarbleLevelId {
-      get { return marbleLevelId_; }
-      set {
-        marbleLevelId_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "player_a_score" field.</summary>
-    public const int PlayerAScoreFieldNumber = 5;
-    private uint playerAScore_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PlayerAScore {
-      get { return playerAScore_; }
-      set {
-        playerAScore_ = value;
-      }
-    }
-
     /// <summary>Field number for the "team_b_seal_list" field.</summary>
-    public const int TeamBSealListFieldNumber = 11;
+    public const int TeamBSealListFieldNumber = 9;
     private static readonly pb::FieldCodec<uint> _repeated_teamBSealList_codec
-        = pb::FieldCodec.ForUInt32(90);
+        = pb::FieldCodec.ForUInt32(74);
     private readonly pbc::RepeatedField<uint> teamBSealList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -249,7 +119,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "team_a_rank" field.</summary>
-    public const int TeamARankFieldNumber = 12;
+    public const int TeamARankFieldNumber = 5;
     private uint teamARank_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -260,20 +130,56 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PBFAIOJJGNL" field.</summary>
-    public const int PBFAIOJJGNLFieldNumber = 10;
-    private uint pBFAIOJJGNL_;
+    /// <summary>Field number for the "player_team_type" field.</summary>
+    public const int PlayerTeamTypeFieldNumber = 8;
+    private global::EggLink.DanhengServer.Proto.MarbleTeamType playerTeamType_ = global::EggLink.DanhengServer.Proto.MarbleTeamType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PBFAIOJJGNL {
-      get { return pBFAIOJJGNL_; }
+    public global::EggLink.DanhengServer.Proto.MarbleTeamType PlayerTeamType {
+      get { return playerTeamType_; }
       set {
-        pBFAIOJJGNL_ = value;
+        playerTeamType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "marble_level_id" field.</summary>
+    public const int MarbleLevelIdFieldNumber = 15;
+    private uint marbleLevelId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MarbleLevelId {
+      get { return marbleLevelId_; }
+      set {
+        marbleLevelId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "player_b_score" field.</summary>
+    public const int PlayerBScoreFieldNumber = 1;
+    private uint playerBScore_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PlayerBScore {
+      get { return playerBScore_; }
+      set {
+        playerBScore_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "level_id" field.</summary>
+    public const int LevelIdFieldNumber = 11;
+    private uint levelId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LevelId {
+      get { return levelId_; }
+      set {
+        levelId_ = value;
       }
     }
 
     /// <summary>Field number for the "team_b_rank" field.</summary>
-    public const int TeamBRankFieldNumber = 8;
+    public const int TeamBRankFieldNumber = 12;
     private uint teamBRank_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -284,8 +190,44 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "control_by_server" field.</summary>
+    public const int ControlByServerFieldNumber = 13;
+    private bool controlByServer_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ControlByServer {
+      get { return controlByServer_; }
+      set {
+        controlByServer_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PBFAIOJJGNL" field.</summary>
+    public const int PBFAIOJJGNLFieldNumber = 7;
+    private uint pBFAIOJJGNL_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PBFAIOJJGNL {
+      get { return pBFAIOJJGNL_; }
+      set {
+        pBFAIOJJGNL_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "team_a_player" field.</summary>
+    public const int TeamAPlayerFieldNumber = 2;
+    private uint teamAPlayer_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TeamAPlayer {
+      get { return teamAPlayer_; }
+      set {
+        teamAPlayer_ = value;
+      }
+    }
+
     /// <summary>Field number for the "cur_action_team_type" field.</summary>
-    public const int CurActionTeamTypeFieldNumber = 2;
+    public const int CurActionTeamTypeFieldNumber = 14;
     private global::EggLink.DanhengServer.Proto.MarbleTeamType curActionTeamType_ = global::EggLink.DanhengServer.Proto.MarbleTeamType.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -293,6 +235,64 @@ namespace EggLink.DanhengServer.Proto {
       get { return curActionTeamType_; }
       set {
         curActionTeamType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "team_a_seal_list" field.</summary>
+    public const int TeamASealListFieldNumber = 6;
+    private static readonly pb::FieldCodec<uint> _repeated_teamASealList_codec
+        = pb::FieldCodec.ForUInt32(50);
+    private readonly pbc::RepeatedField<uint> teamASealList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> TeamASealList {
+      get { return teamASealList_; }
+    }
+
+    /// <summary>Field number for the "player_a_score" field.</summary>
+    public const int PlayerAScoreFieldNumber = 3;
+    private uint playerAScore_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PlayerAScore {
+      get { return playerAScore_; }
+      set {
+        playerAScore_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "LIKHCLPMHJK" field.</summary>
+    public const int LIKHCLPMHJKFieldNumber = 10;
+    private bool lIKHCLPMHJK_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool LIKHCLPMHJK {
+      get { return lIKHCLPMHJK_; }
+      set {
+        lIKHCLPMHJK_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "lobby_basic_info" field.</summary>
+    public const int LobbyBasicInfoFieldNumber = 1996;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> _repeated_lobbyBasicInfo_codec
+        = pb::FieldCodec.ForMessage(15970, global::EggLink.DanhengServer.Proto.LobbyBasicInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> lobbyBasicInfo_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LobbyBasicInfo> LobbyBasicInfo {
+      get { return lobbyBasicInfo_; }
+    }
+
+    /// <summary>Field number for the "team_b_player" field.</summary>
+    public const int TeamBPlayerFieldNumber = 4;
+    private uint teamBPlayer_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint TeamBPlayer {
+      get { return teamBPlayer_; }
+      set {
+        teamBPlayer_ = value;
       }
     }
 
@@ -311,22 +311,22 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (PlayerTeamType != other.PlayerTeamType) return false;
-      if (LevelId != other.LevelId) return false;
-      if(!teamASealList_.Equals(other.teamASealList_)) return false;
-      if (TeamAPlayer != other.TeamAPlayer) return false;
-      if (ControlByServer != other.ControlByServer) return false;
-      if (PlayerBScore != other.PlayerBScore) return false;
-      if (LIKHCLPMHJK != other.LIKHCLPMHJK) return false;
-      if (TeamBPlayer != other.TeamBPlayer) return false;
-      if(!lobbyBasicInfo_.Equals(other.lobbyBasicInfo_)) return false;
-      if (MarbleLevelId != other.MarbleLevelId) return false;
-      if (PlayerAScore != other.PlayerAScore) return false;
       if(!teamBSealList_.Equals(other.teamBSealList_)) return false;
       if (TeamARank != other.TeamARank) return false;
-      if (PBFAIOJJGNL != other.PBFAIOJJGNL) return false;
+      if (PlayerTeamType != other.PlayerTeamType) return false;
+      if (MarbleLevelId != other.MarbleLevelId) return false;
+      if (PlayerBScore != other.PlayerBScore) return false;
+      if (LevelId != other.LevelId) return false;
       if (TeamBRank != other.TeamBRank) return false;
+      if (ControlByServer != other.ControlByServer) return false;
+      if (PBFAIOJJGNL != other.PBFAIOJJGNL) return false;
+      if (TeamAPlayer != other.TeamAPlayer) return false;
       if (CurActionTeamType != other.CurActionTeamType) return false;
+      if(!teamASealList_.Equals(other.teamASealList_)) return false;
+      if (PlayerAScore != other.PlayerAScore) return false;
+      if (LIKHCLPMHJK != other.LIKHCLPMHJK) return false;
+      if(!lobbyBasicInfo_.Equals(other.lobbyBasicInfo_)) return false;
+      if (TeamBPlayer != other.TeamBPlayer) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -334,22 +334,22 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (PlayerTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) hash ^= PlayerTeamType.GetHashCode();
-      if (LevelId != 0) hash ^= LevelId.GetHashCode();
-      hash ^= teamASealList_.GetHashCode();
-      if (TeamAPlayer != 0) hash ^= TeamAPlayer.GetHashCode();
-      if (ControlByServer != false) hash ^= ControlByServer.GetHashCode();
-      if (PlayerBScore != 0) hash ^= PlayerBScore.GetHashCode();
-      if (LIKHCLPMHJK != false) hash ^= LIKHCLPMHJK.GetHashCode();
-      if (TeamBPlayer != 0) hash ^= TeamBPlayer.GetHashCode();
-      hash ^= lobbyBasicInfo_.GetHashCode();
-      if (MarbleLevelId != 0) hash ^= MarbleLevelId.GetHashCode();
-      if (PlayerAScore != 0) hash ^= PlayerAScore.GetHashCode();
       hash ^= teamBSealList_.GetHashCode();
       if (TeamARank != 0) hash ^= TeamARank.GetHashCode();
-      if (PBFAIOJJGNL != 0) hash ^= PBFAIOJJGNL.GetHashCode();
+      if (PlayerTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) hash ^= PlayerTeamType.GetHashCode();
+      if (MarbleLevelId != 0) hash ^= MarbleLevelId.GetHashCode();
+      if (PlayerBScore != 0) hash ^= PlayerBScore.GetHashCode();
+      if (LevelId != 0) hash ^= LevelId.GetHashCode();
       if (TeamBRank != 0) hash ^= TeamBRank.GetHashCode();
+      if (ControlByServer != false) hash ^= ControlByServer.GetHashCode();
+      if (PBFAIOJJGNL != 0) hash ^= PBFAIOJJGNL.GetHashCode();
+      if (TeamAPlayer != 0) hash ^= TeamAPlayer.GetHashCode();
       if (CurActionTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) hash ^= CurActionTeamType.GetHashCode();
+      hash ^= teamASealList_.GetHashCode();
+      if (PlayerAScore != 0) hash ^= PlayerAScore.GetHashCode();
+      if (LIKHCLPMHJK != false) hash ^= LIKHCLPMHJK.GetHashCode();
+      hash ^= lobbyBasicInfo_.GetHashCode();
+      if (TeamBPlayer != 0) hash ^= TeamBPlayer.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -368,59 +368,59 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MarbleLevelId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(MarbleLevelId);
-      }
-      if (CurActionTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) CurActionTeamType);
-      }
       if (PlayerBScore != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(PlayerBScore);
       }
-      if (LIKHCLPMHJK != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(LIKHCLPMHJK);
+      if (TeamAPlayer != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(TeamAPlayer);
       }
       if (PlayerAScore != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(PlayerAScore);
       }
-      if (PlayerTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
-        output.WriteRawTag(48);
-        output.WriteEnum((int) PlayerTeamType);
-      }
       if (TeamBPlayer != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(32);
         output.WriteUInt32(TeamBPlayer);
       }
-      if (TeamBRank != 0) {
+      if (TeamARank != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(TeamARank);
+      }
+      teamASealList_.WriteTo(output, _repeated_teamASealList_codec);
+      if (PBFAIOJJGNL != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(PBFAIOJJGNL);
+      }
+      if (PlayerTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
         output.WriteRawTag(64);
+        output.WriteEnum((int) PlayerTeamType);
+      }
+      teamBSealList_.WriteTo(output, _repeated_teamBSealList_codec);
+      if (LIKHCLPMHJK != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(LIKHCLPMHJK);
+      }
+      if (LevelId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(LevelId);
+      }
+      if (TeamBRank != 0) {
+        output.WriteRawTag(96);
         output.WriteUInt32(TeamBRank);
       }
       if (ControlByServer != false) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(104);
         output.WriteBool(ControlByServer);
       }
-      if (PBFAIOJJGNL != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(PBFAIOJJGNL);
+      if (CurActionTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) CurActionTeamType);
       }
-      teamBSealList_.WriteTo(output, _repeated_teamBSealList_codec);
-      if (TeamARank != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(TeamARank);
-      }
-      if (TeamAPlayer != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(TeamAPlayer);
-      }
-      teamASealList_.WriteTo(output, _repeated_teamASealList_codec);
-      if (LevelId != 0) {
+      if (MarbleLevelId != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(LevelId);
+        output.WriteUInt32(MarbleLevelId);
       }
       lobbyBasicInfo_.WriteTo(output, _repeated_lobbyBasicInfo_codec);
       if (_unknownFields != null) {
@@ -433,59 +433,59 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MarbleLevelId != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(MarbleLevelId);
-      }
-      if (CurActionTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
-        output.WriteRawTag(16);
-        output.WriteEnum((int) CurActionTeamType);
-      }
       if (PlayerBScore != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteUInt32(PlayerBScore);
       }
-      if (LIKHCLPMHJK != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(LIKHCLPMHJK);
+      if (TeamAPlayer != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(TeamAPlayer);
       }
       if (PlayerAScore != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(PlayerAScore);
       }
-      if (PlayerTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
-        output.WriteRawTag(48);
-        output.WriteEnum((int) PlayerTeamType);
-      }
       if (TeamBPlayer != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(32);
         output.WriteUInt32(TeamBPlayer);
       }
-      if (TeamBRank != 0) {
+      if (TeamARank != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(TeamARank);
+      }
+      teamASealList_.WriteTo(ref output, _repeated_teamASealList_codec);
+      if (PBFAIOJJGNL != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(PBFAIOJJGNL);
+      }
+      if (PlayerTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
         output.WriteRawTag(64);
+        output.WriteEnum((int) PlayerTeamType);
+      }
+      teamBSealList_.WriteTo(ref output, _repeated_teamBSealList_codec);
+      if (LIKHCLPMHJK != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(LIKHCLPMHJK);
+      }
+      if (LevelId != 0) {
+        output.WriteRawTag(88);
+        output.WriteUInt32(LevelId);
+      }
+      if (TeamBRank != 0) {
+        output.WriteRawTag(96);
         output.WriteUInt32(TeamBRank);
       }
       if (ControlByServer != false) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(104);
         output.WriteBool(ControlByServer);
       }
-      if (PBFAIOJJGNL != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(PBFAIOJJGNL);
+      if (CurActionTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) CurActionTeamType);
       }
-      teamBSealList_.WriteTo(ref output, _repeated_teamBSealList_codec);
-      if (TeamARank != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(TeamARank);
-      }
-      if (TeamAPlayer != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(TeamAPlayer);
-      }
-      teamASealList_.WriteTo(ref output, _repeated_teamASealList_codec);
-      if (LevelId != 0) {
+      if (MarbleLevelId != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(LevelId);
+        output.WriteUInt32(MarbleLevelId);
       }
       lobbyBasicInfo_.WriteTo(ref output, _repeated_lobbyBasicInfo_codec);
       if (_unknownFields != null) {
@@ -498,47 +498,47 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (PlayerTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PlayerTeamType);
-      }
-      if (LevelId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelId);
-      }
-      size += teamASealList_.CalculateSize(_repeated_teamASealList_codec);
-      if (TeamAPlayer != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TeamAPlayer);
-      }
-      if (ControlByServer != false) {
-        size += 1 + 1;
-      }
-      if (PlayerBScore != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerBScore);
-      }
-      if (LIKHCLPMHJK != false) {
-        size += 1 + 1;
-      }
-      if (TeamBPlayer != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TeamBPlayer);
-      }
-      size += lobbyBasicInfo_.CalculateSize(_repeated_lobbyBasicInfo_codec);
-      if (MarbleLevelId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MarbleLevelId);
-      }
-      if (PlayerAScore != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerAScore);
-      }
       size += teamBSealList_.CalculateSize(_repeated_teamBSealList_codec);
       if (TeamARank != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TeamARank);
       }
-      if (PBFAIOJJGNL != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PBFAIOJJGNL);
+      if (PlayerTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PlayerTeamType);
+      }
+      if (MarbleLevelId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MarbleLevelId);
+      }
+      if (PlayerBScore != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerBScore);
+      }
+      if (LevelId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LevelId);
       }
       if (TeamBRank != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TeamBRank);
       }
+      if (ControlByServer != false) {
+        size += 1 + 1;
+      }
+      if (PBFAIOJJGNL != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PBFAIOJJGNL);
+      }
+      if (TeamAPlayer != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TeamAPlayer);
+      }
       if (CurActionTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CurActionTeamType);
+      }
+      size += teamASealList_.CalculateSize(_repeated_teamASealList_codec);
+      if (PlayerAScore != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlayerAScore);
+      }
+      if (LIKHCLPMHJK != false) {
+        size += 1 + 1;
+      }
+      size += lobbyBasicInfo_.CalculateSize(_repeated_lobbyBasicInfo_codec);
+      if (TeamBPlayer != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TeamBPlayer);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -552,47 +552,47 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.PlayerTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
-        PlayerTeamType = other.PlayerTeamType;
-      }
-      if (other.LevelId != 0) {
-        LevelId = other.LevelId;
-      }
-      teamASealList_.Add(other.teamASealList_);
-      if (other.TeamAPlayer != 0) {
-        TeamAPlayer = other.TeamAPlayer;
-      }
-      if (other.ControlByServer != false) {
-        ControlByServer = other.ControlByServer;
-      }
-      if (other.PlayerBScore != 0) {
-        PlayerBScore = other.PlayerBScore;
-      }
-      if (other.LIKHCLPMHJK != false) {
-        LIKHCLPMHJK = other.LIKHCLPMHJK;
-      }
-      if (other.TeamBPlayer != 0) {
-        TeamBPlayer = other.TeamBPlayer;
-      }
-      lobbyBasicInfo_.Add(other.lobbyBasicInfo_);
-      if (other.MarbleLevelId != 0) {
-        MarbleLevelId = other.MarbleLevelId;
-      }
-      if (other.PlayerAScore != 0) {
-        PlayerAScore = other.PlayerAScore;
-      }
       teamBSealList_.Add(other.teamBSealList_);
       if (other.TeamARank != 0) {
         TeamARank = other.TeamARank;
       }
-      if (other.PBFAIOJJGNL != 0) {
-        PBFAIOJJGNL = other.PBFAIOJJGNL;
+      if (other.PlayerTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
+        PlayerTeamType = other.PlayerTeamType;
+      }
+      if (other.MarbleLevelId != 0) {
+        MarbleLevelId = other.MarbleLevelId;
+      }
+      if (other.PlayerBScore != 0) {
+        PlayerBScore = other.PlayerBScore;
+      }
+      if (other.LevelId != 0) {
+        LevelId = other.LevelId;
       }
       if (other.TeamBRank != 0) {
         TeamBRank = other.TeamBRank;
       }
+      if (other.ControlByServer != false) {
+        ControlByServer = other.ControlByServer;
+      }
+      if (other.PBFAIOJJGNL != 0) {
+        PBFAIOJJGNL = other.PBFAIOJJGNL;
+      }
+      if (other.TeamAPlayer != 0) {
+        TeamAPlayer = other.TeamAPlayer;
+      }
       if (other.CurActionTeamType != global::EggLink.DanhengServer.Proto.MarbleTeamType.None) {
         CurActionTeamType = other.CurActionTeamType;
+      }
+      teamASealList_.Add(other.teamASealList_);
+      if (other.PlayerAScore != 0) {
+        PlayerAScore = other.PlayerAScore;
+      }
+      if (other.LIKHCLPMHJK != false) {
+        LIKHCLPMHJK = other.LIKHCLPMHJK;
+      }
+      lobbyBasicInfo_.Add(other.lobbyBasicInfo_);
+      if (other.TeamBPlayer != 0) {
+        TeamBPlayer = other.TeamBPlayer;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -610,68 +610,68 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            MarbleLevelId = input.ReadUInt32();
-            break;
-          }
-          case 16: {
-            CurActionTeamType = (global::EggLink.DanhengServer.Proto.MarbleTeamType) input.ReadEnum();
-            break;
-          }
-          case 24: {
             PlayerBScore = input.ReadUInt32();
             break;
           }
-          case 32: {
-            LIKHCLPMHJK = input.ReadBool();
-            break;
-          }
-          case 40: {
-            PlayerAScore = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            PlayerTeamType = (global::EggLink.DanhengServer.Proto.MarbleTeamType) input.ReadEnum();
-            break;
-          }
-          case 56: {
-            TeamBPlayer = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            TeamBRank = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            ControlByServer = input.ReadBool();
-            break;
-          }
-          case 80: {
-            PBFAIOJJGNL = input.ReadUInt32();
-            break;
-          }
-          case 90:
-          case 88: {
-            teamBSealList_.AddEntriesFrom(input, _repeated_teamBSealList_codec);
-            break;
-          }
-          case 96: {
-            TeamARank = input.ReadUInt32();
-            break;
-          }
-          case 104: {
+          case 16: {
             TeamAPlayer = input.ReadUInt32();
             break;
           }
-          case 114:
-          case 112: {
+          case 24: {
+            PlayerAScore = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            TeamBPlayer = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            TeamARank = input.ReadUInt32();
+            break;
+          }
+          case 50:
+          case 48: {
             teamASealList_.AddEntriesFrom(input, _repeated_teamASealList_codec);
             break;
           }
-          case 120: {
+          case 56: {
+            PBFAIOJJGNL = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            PlayerTeamType = (global::EggLink.DanhengServer.Proto.MarbleTeamType) input.ReadEnum();
+            break;
+          }
+          case 74:
+          case 72: {
+            teamBSealList_.AddEntriesFrom(input, _repeated_teamBSealList_codec);
+            break;
+          }
+          case 80: {
+            LIKHCLPMHJK = input.ReadBool();
+            break;
+          }
+          case 88: {
             LevelId = input.ReadUInt32();
             break;
           }
-          case 2090: {
+          case 96: {
+            TeamBRank = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            ControlByServer = input.ReadBool();
+            break;
+          }
+          case 112: {
+            CurActionTeamType = (global::EggLink.DanhengServer.Proto.MarbleTeamType) input.ReadEnum();
+            break;
+          }
+          case 120: {
+            MarbleLevelId = input.ReadUInt32();
+            break;
+          }
+          case 15970: {
             lobbyBasicInfo_.AddEntriesFrom(input, _repeated_lobbyBasicInfo_codec);
             break;
           }
@@ -691,68 +691,68 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            MarbleLevelId = input.ReadUInt32();
-            break;
-          }
-          case 16: {
-            CurActionTeamType = (global::EggLink.DanhengServer.Proto.MarbleTeamType) input.ReadEnum();
-            break;
-          }
-          case 24: {
             PlayerBScore = input.ReadUInt32();
             break;
           }
-          case 32: {
-            LIKHCLPMHJK = input.ReadBool();
-            break;
-          }
-          case 40: {
-            PlayerAScore = input.ReadUInt32();
-            break;
-          }
-          case 48: {
-            PlayerTeamType = (global::EggLink.DanhengServer.Proto.MarbleTeamType) input.ReadEnum();
-            break;
-          }
-          case 56: {
-            TeamBPlayer = input.ReadUInt32();
-            break;
-          }
-          case 64: {
-            TeamBRank = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            ControlByServer = input.ReadBool();
-            break;
-          }
-          case 80: {
-            PBFAIOJJGNL = input.ReadUInt32();
-            break;
-          }
-          case 90:
-          case 88: {
-            teamBSealList_.AddEntriesFrom(ref input, _repeated_teamBSealList_codec);
-            break;
-          }
-          case 96: {
-            TeamARank = input.ReadUInt32();
-            break;
-          }
-          case 104: {
+          case 16: {
             TeamAPlayer = input.ReadUInt32();
             break;
           }
-          case 114:
-          case 112: {
+          case 24: {
+            PlayerAScore = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            TeamBPlayer = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            TeamARank = input.ReadUInt32();
+            break;
+          }
+          case 50:
+          case 48: {
             teamASealList_.AddEntriesFrom(ref input, _repeated_teamASealList_codec);
             break;
           }
-          case 120: {
+          case 56: {
+            PBFAIOJJGNL = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            PlayerTeamType = (global::EggLink.DanhengServer.Proto.MarbleTeamType) input.ReadEnum();
+            break;
+          }
+          case 74:
+          case 72: {
+            teamBSealList_.AddEntriesFrom(ref input, _repeated_teamBSealList_codec);
+            break;
+          }
+          case 80: {
+            LIKHCLPMHJK = input.ReadBool();
+            break;
+          }
+          case 88: {
             LevelId = input.ReadUInt32();
             break;
           }
-          case 2090: {
+          case 96: {
+            TeamBRank = input.ReadUInt32();
+            break;
+          }
+          case 104: {
+            ControlByServer = input.ReadBool();
+            break;
+          }
+          case 112: {
+            CurActionTeamType = (global::EggLink.DanhengServer.Proto.MarbleTeamType) input.ReadEnum();
+            break;
+          }
+          case 120: {
+            MarbleLevelId = input.ReadUInt32();
+            break;
+          }
+          case 15970: {
             lobbyBasicInfo_.AddEntriesFrom(ref input, _repeated_lobbyBasicInfo_codec);
             break;
           }

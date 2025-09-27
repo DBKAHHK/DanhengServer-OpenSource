@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFOTEZES09JT0RNRC5wcm90bxoRSURNRExPS0hFQkoucHJvdG8iMAoLTkxG",
-            "REtPSU9ETUQSIQoLSVBNQUpPSktCREIYCSADKAsyDC5JRE1ETE9LSEVCSkIe",
+            "REtPSU9ETUQSIQoLSVBNQUpPSktCREIYDCADKAsyDC5JRE1ETE9LSEVCSkIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IDMDLOKHEBJReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IPMAJOJKBDB" field.</summary>
-    public const int IPMAJOJKBDBFieldNumber = 9;
+    public const int IPMAJOJKBDBFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.IDMDLOKHEBJ> _repeated_iPMAJOJKBDB_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.IDMDLOKHEBJ.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.IDMDLOKHEBJ.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IDMDLOKHEBJ> iPMAJOJKBDB_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.IDMDLOKHEBJ>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 74: {
+          case 98: {
             iPMAJOJKBDB_.AddEntriesFrom(input, _repeated_iPMAJOJKBDB_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 74: {
+          case 98: {
             iPMAJOJKBDB_.AddEntriesFrom(ref input, _repeated_iPMAJOJKBDB_codec);
             break;
           }

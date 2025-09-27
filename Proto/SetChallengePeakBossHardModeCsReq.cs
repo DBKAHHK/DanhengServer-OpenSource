@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CidTZXRDaGFsbGVuZ2VQZWFrQm9zc0hhcmRNb2RlQ3NSZXEucHJvdG8iSwoh",
             "U2V0Q2hhbGxlbmdlUGVha0Jvc3NIYXJkTW9kZUNzUmVxEhUKDXBlYWtfZ3Jv",
-            "dXBfaWQYBSABKA0SDwoHaXNfaGFyZBgHIAEoCEIeqgIbRWdnTGluay5EYW5o",
+            "dXBfaWQYAyABKA0SDwoHaXNfaGFyZBgFIAEoCEIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "peak_group_id" field.</summary>
-    public const int PeakGroupIdFieldNumber = 5;
+    public const int PeakGroupIdFieldNumber = 3;
     private uint peakGroupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_hard" field.</summary>
-    public const int IsHardFieldNumber = 7;
+    public const int IsHardFieldNumber = 5;
     private bool isHard_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,11 +153,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PeakGroupId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(PeakGroupId);
       }
       if (IsHard != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteBool(IsHard);
       }
       if (_unknownFields != null) {
@@ -171,11 +171,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PeakGroupId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(PeakGroupId);
       }
       if (IsHard != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(40);
         output.WriteBool(IsHard);
       }
       if (_unknownFields != null) {
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 24: {
             PeakGroupId = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 40: {
             IsHard = input.ReadBool();
             break;
           }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 24: {
             PeakGroupId = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 40: {
             IsHard = input.ReadBool();
             break;
           }

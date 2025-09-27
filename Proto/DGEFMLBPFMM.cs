@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static DGEFMLBPFMMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFER0VGTUxCUEZNTS5wcm90byI8CgtER0VGTUxCUEZNTRIMCgR0aW1lGAcg",
-            "ASgNEgoKAmlkGAogASgNEhMKC0xQQkhPTUZDTE9OGA0gASgNQh6qAhtFZ2dM",
+            "ChFER0VGTUxCUEZNTS5wcm90byI8CgtER0VGTUxCUEZNTRITCgtMUEJIT01G",
+            "Q0xPThgIIAEoDRIMCgR0aW1lGAYgASgNEgoKAmlkGAQgASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DGEFMLBPFMM), global::EggLink.DanhengServer.Proto.DGEFMLBPFMM.Parser, new[]{ "Time", "Id", "LPBHOMFCLON" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DGEFMLBPFMM), global::EggLink.DanhengServer.Proto.DGEFMLBPFMM.Parser, new[]{ "LPBHOMFCLON", "Time", "Id" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DGEFMLBPFMM(DGEFMLBPFMM other) : this() {
+      lPBHOMFCLON_ = other.lPBHOMFCLON_;
       time_ = other.time_;
       id_ = other.id_;
-      lPBHOMFCLON_ = other.lPBHOMFCLON_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,8 +84,20 @@ namespace EggLink.DanhengServer.Proto {
       return new DGEFMLBPFMM(this);
     }
 
+    /// <summary>Field number for the "LPBHOMFCLON" field.</summary>
+    public const int LPBHOMFCLONFieldNumber = 8;
+    private uint lPBHOMFCLON_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint LPBHOMFCLON {
+      get { return lPBHOMFCLON_; }
+      set {
+        lPBHOMFCLON_ = value;
+      }
+    }
+
     /// <summary>Field number for the "time" field.</summary>
-    public const int TimeFieldNumber = 7;
+    public const int TimeFieldNumber = 6;
     private uint time_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 10;
+    public const int IdFieldNumber = 4;
     private uint id_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,18 +117,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return id_; }
       set {
         id_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "LPBHOMFCLON" field.</summary>
-    public const int LPBHOMFCLONFieldNumber = 13;
-    private uint lPBHOMFCLON_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LPBHOMFCLON {
-      get { return lPBHOMFCLON_; }
-      set {
-        lPBHOMFCLON_ = value;
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (LPBHOMFCLON != other.LPBHOMFCLON) return false;
       if (Time != other.Time) return false;
       if (Id != other.Id) return false;
-      if (LPBHOMFCLON != other.LPBHOMFCLON) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (LPBHOMFCLON != 0) hash ^= LPBHOMFCLON.GetHashCode();
       if (Time != 0) hash ^= Time.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
-      if (LPBHOMFCLON != 0) hash ^= LPBHOMFCLON.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,16 +166,16 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Time != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Time);
-      }
       if (Id != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(32);
         output.WriteUInt32(Id);
       }
+      if (Time != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Time);
+      }
       if (LPBHOMFCLON != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(64);
         output.WriteUInt32(LPBHOMFCLON);
       }
       if (_unknownFields != null) {
@@ -188,16 +188,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Time != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(Time);
-      }
       if (Id != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(32);
         output.WriteUInt32(Id);
       }
+      if (Time != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(Time);
+      }
       if (LPBHOMFCLON != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(64);
         output.WriteUInt32(LPBHOMFCLON);
       }
       if (_unknownFields != null) {
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (LPBHOMFCLON != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LPBHOMFCLON);
+      }
       if (Time != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Time);
       }
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
-      }
-      if (LPBHOMFCLON != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LPBHOMFCLON);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.LPBHOMFCLON != 0) {
+        LPBHOMFCLON = other.LPBHOMFCLON;
+      }
       if (other.Time != 0) {
         Time = other.Time;
       }
       if (other.Id != 0) {
         Id = other.Id;
-      }
-      if (other.LPBHOMFCLON != 0) {
-        LPBHOMFCLON = other.LPBHOMFCLON;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,15 +255,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            Time = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 32: {
             Id = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 48: {
+            Time = input.ReadUInt32();
+            break;
+          }
+          case 64: {
             LPBHOMFCLON = input.ReadUInt32();
             break;
           }
@@ -282,15 +282,15 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            Time = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 32: {
             Id = input.ReadUInt32();
             break;
           }
-          case 104: {
+          case 48: {
+            Time = input.ReadUInt32();
+            break;
+          }
+          case 64: {
             LPBHOMFCLON = input.ReadUInt32();
             break;
           }

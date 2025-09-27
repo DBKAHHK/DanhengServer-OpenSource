@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static MAAOLKGLLBIReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFNQUFPTEtHTExCSS5wcm90byJyCgtNQUFPTEtHTExCSRIQCghhZmZpeF9p",
-            "ZBgGIAEoDRITCgtISEVORkdKUEZPQRgCIAEoCBITCgtLS0VBRUJBR01LRRgE",
-            "IAEoCBIRCgl1bmlxdWVfaWQYCyABKA0SFAoMbW9uc3Rlcl9saXN0GAggAygN",
+            "ChFNQUFPTEtHTExCSS5wcm90byJyCgtNQUFPTEtHTExCSRITCgtISEVORkdK",
+            "UEZPQRgNIAEoCBITCgtLS0VBRUJBR01LRRgKIAEoCBIQCghhZmZpeF9pZBgC",
+            "IAEoDRIRCgl1bmlxdWVfaWQYDiABKA0SFAoMbW9uc3Rlcl9saXN0GAsgAygN",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MAAOLKGLLBI), global::EggLink.DanhengServer.Proto.MAAOLKGLLBI.Parser, new[]{ "AffixId", "HHENFGJPFOA", "KKEAEBAGMKE", "UniqueId", "MonsterList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MAAOLKGLLBI), global::EggLink.DanhengServer.Proto.MAAOLKGLLBI.Parser, new[]{ "HHENFGJPFOA", "KKEAEBAGMKE", "AffixId", "UniqueId", "MonsterList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MAAOLKGLLBI(MAAOLKGLLBI other) : this() {
-      affixId_ = other.affixId_;
       hHENFGJPFOA_ = other.hHENFGJPFOA_;
       kKEAEBAGMKE_ = other.kKEAEBAGMKE_;
+      affixId_ = other.affixId_;
       uniqueId_ = other.uniqueId_;
       monsterList_ = other.monsterList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -87,20 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MAAOLKGLLBI(this);
     }
 
-    /// <summary>Field number for the "affix_id" field.</summary>
-    public const int AffixIdFieldNumber = 6;
-    private uint affixId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AffixId {
-      get { return affixId_; }
-      set {
-        affixId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "HHENFGJPFOA" field.</summary>
-    public const int HHENFGJPFOAFieldNumber = 2;
+    public const int HHENFGJPFOAFieldNumber = 13;
     private bool hHENFGJPFOA_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KKEAEBAGMKE" field.</summary>
-    public const int KKEAEBAGMKEFieldNumber = 4;
+    public const int KKEAEBAGMKEFieldNumber = 10;
     private bool kKEAEBAGMKE_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -123,8 +111,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "affix_id" field.</summary>
+    public const int AffixIdFieldNumber = 2;
+    private uint affixId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AffixId {
+      get { return affixId_; }
+      set {
+        affixId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "unique_id" field.</summary>
-    public const int UniqueIdFieldNumber = 11;
+    public const int UniqueIdFieldNumber = 14;
     private uint uniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "monster_list" field.</summary>
-    public const int MonsterListFieldNumber = 8;
+    public const int MonsterListFieldNumber = 11;
     private static readonly pb::FieldCodec<uint> _repeated_monsterList_codec
-        = pb::FieldCodec.ForUInt32(66);
+        = pb::FieldCodec.ForUInt32(90);
     private readonly pbc::RepeatedField<uint> monsterList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -161,9 +161,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (AffixId != other.AffixId) return false;
       if (HHENFGJPFOA != other.HHENFGJPFOA) return false;
       if (KKEAEBAGMKE != other.KKEAEBAGMKE) return false;
+      if (AffixId != other.AffixId) return false;
       if (UniqueId != other.UniqueId) return false;
       if(!monsterList_.Equals(other.monsterList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -173,9 +173,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (AffixId != 0) hash ^= AffixId.GetHashCode();
       if (HHENFGJPFOA != false) hash ^= HHENFGJPFOA.GetHashCode();
       if (KKEAEBAGMKE != false) hash ^= KKEAEBAGMKE.GetHashCode();
+      if (AffixId != 0) hash ^= AffixId.GetHashCode();
       if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
       hash ^= monsterList_.GetHashCode();
       if (_unknownFields != null) {
@@ -196,21 +196,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HHENFGJPFOA != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(HHENFGJPFOA);
-      }
-      if (KKEAEBAGMKE != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(KKEAEBAGMKE);
-      }
       if (AffixId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(16);
         output.WriteUInt32(AffixId);
       }
+      if (KKEAEBAGMKE != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(KKEAEBAGMKE);
+      }
       monsterList_.WriteTo(output, _repeated_monsterList_codec);
+      if (HHENFGJPFOA != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(HHENFGJPFOA);
+      }
       if (UniqueId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(112);
         output.WriteUInt32(UniqueId);
       }
       if (_unknownFields != null) {
@@ -223,21 +223,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HHENFGJPFOA != false) {
-        output.WriteRawTag(16);
-        output.WriteBool(HHENFGJPFOA);
-      }
-      if (KKEAEBAGMKE != false) {
-        output.WriteRawTag(32);
-        output.WriteBool(KKEAEBAGMKE);
-      }
       if (AffixId != 0) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(16);
         output.WriteUInt32(AffixId);
       }
+      if (KKEAEBAGMKE != false) {
+        output.WriteRawTag(80);
+        output.WriteBool(KKEAEBAGMKE);
+      }
       monsterList_.WriteTo(ref output, _repeated_monsterList_codec);
+      if (HHENFGJPFOA != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(HHENFGJPFOA);
+      }
       if (UniqueId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(112);
         output.WriteUInt32(UniqueId);
       }
       if (_unknownFields != null) {
@@ -250,14 +250,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (AffixId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AffixId);
-      }
       if (HHENFGJPFOA != false) {
         size += 1 + 1;
       }
       if (KKEAEBAGMKE != false) {
         size += 1 + 1;
+      }
+      if (AffixId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AffixId);
       }
       if (UniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
@@ -275,14 +275,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.AffixId != 0) {
-        AffixId = other.AffixId;
-      }
       if (other.HHENFGJPFOA != false) {
         HHENFGJPFOA = other.HHENFGJPFOA;
       }
       if (other.KKEAEBAGMKE != false) {
         KKEAEBAGMKE = other.KKEAEBAGMKE;
+      }
+      if (other.AffixId != 0) {
+        AffixId = other.AffixId;
       }
       if (other.UniqueId != 0) {
         UniqueId = other.UniqueId;
@@ -304,23 +304,23 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            HHENFGJPFOA = input.ReadBool();
-            break;
-          }
-          case 32: {
-            KKEAEBAGMKE = input.ReadBool();
-            break;
-          }
-          case 48: {
             AffixId = input.ReadUInt32();
             break;
           }
-          case 66:
-          case 64: {
+          case 80: {
+            KKEAEBAGMKE = input.ReadBool();
+            break;
+          }
+          case 90:
+          case 88: {
             monsterList_.AddEntriesFrom(input, _repeated_monsterList_codec);
             break;
           }
-          case 88: {
+          case 104: {
+            HHENFGJPFOA = input.ReadBool();
+            break;
+          }
+          case 112: {
             UniqueId = input.ReadUInt32();
             break;
           }
@@ -340,23 +340,23 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            HHENFGJPFOA = input.ReadBool();
-            break;
-          }
-          case 32: {
-            KKEAEBAGMKE = input.ReadBool();
-            break;
-          }
-          case 48: {
             AffixId = input.ReadUInt32();
             break;
           }
-          case 66:
-          case 64: {
+          case 80: {
+            KKEAEBAGMKE = input.ReadBool();
+            break;
+          }
+          case 90:
+          case 88: {
             monsterList_.AddEntriesFrom(ref input, _repeated_monsterList_codec);
             break;
           }
-          case 88: {
+          case 104: {
+            HHENFGJPFOA = input.ReadBool();
+            break;
+          }
+          case 112: {
             UniqueId = input.ReadUInt32();
             break;
           }

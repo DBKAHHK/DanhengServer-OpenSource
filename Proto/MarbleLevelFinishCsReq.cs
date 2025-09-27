@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxNYXJibGVMZXZlbEZpbmlzaENzUmVxLnByb3RvIksKFk1hcmJsZUxldmVs",
-            "RmluaXNoQ3NSZXESGAoQbWFyYmxlX3NlYWxfbGlzdBgNIAMoDRIXCg9tYXJi",
-            "bGVfbGV2ZWxfaWQYBSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "RmluaXNoQ3NSZXESGAoQbWFyYmxlX3NlYWxfbGlzdBgIIAMoDRIXCg9tYXJi",
+            "bGVfbGV2ZWxfaWQYAiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "marble_seal_list" field.</summary>
-    public const int MarbleSealListFieldNumber = 13;
+    public const int MarbleSealListFieldNumber = 8;
     private static readonly pb::FieldCodec<uint> _repeated_marbleSealList_codec
-        = pb::FieldCodec.ForUInt32(106);
+        = pb::FieldCodec.ForUInt32(66);
     private readonly pbc::RepeatedField<uint> marbleSealList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "marble_level_id" field.</summary>
-    public const int MarbleLevelIdFieldNumber = 5;
+    public const int MarbleLevelIdFieldNumber = 2;
     private uint marbleLevelId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (MarbleLevelId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(MarbleLevelId);
       }
       marbleSealList_.WriteTo(output, _repeated_marbleSealList_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MarbleLevelId != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(16);
         output.WriteUInt32(MarbleLevelId);
       }
       marbleSealList_.WriteTo(ref output, _repeated_marbleSealList_codec);
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
+          case 16: {
             MarbleLevelId = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
+          case 66:
+          case 64: {
             marbleSealList_.AddEntriesFrom(input, _repeated_marbleSealList_codec);
             break;
           }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
+          case 16: {
             MarbleLevelId = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
+          case 66:
+          case 64: {
             marbleSealList_.AddEntriesFrom(ref input, _repeated_marbleSealList_codec);
             break;
           }

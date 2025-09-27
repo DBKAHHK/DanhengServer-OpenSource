@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CjJSb2d1ZU1hZ2ljQXV0b0RyZXNzSW5NYWdpY1VuaXRDaGFuZ2VTY05vdGlm",
             "eS5wcm90byJJCixSb2d1ZU1hZ2ljQXV0b0RyZXNzSW5NYWdpY1VuaXRDaGFu",
-            "Z2VTY05vdGlmeRIZChFlbmFibGVfYXV0b19kcmVzcxgGIAEoCEIeqgIbRWdn",
+            "Z2VTY05vdGlmeRIZChFlbmFibGVfYXV0b19kcmVzcxgPIAEoCEIeqgIbRWdn",
             "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "enable_auto_dress" field.</summary>
-    public const int EnableAutoDressFieldNumber = 6;
+    public const int EnableAutoDressFieldNumber = 15;
     private bool enableAutoDress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (EnableAutoDress != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(120);
         output.WriteBool(EnableAutoDress);
       }
       if (_unknownFields != null) {
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EnableAutoDress != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(120);
         output.WriteBool(EnableAutoDress);
       }
       if (_unknownFields != null) {
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 48: {
+          case 120: {
             EnableAutoDress = input.ReadBool();
             break;
           }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 48: {
+          case 120: {
             EnableAutoDress = input.ReadBool();
             break;
           }

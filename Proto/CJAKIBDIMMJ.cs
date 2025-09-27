@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFDSkFLSUJESU1NSi5wcm90bxoRTUVOUEJHR09HTUMucHJvdG8igAEKC0NK",
-            "QUtJQkRJTU1KEhYKC0lBSE9QRk5QRkxOGLMLIAEoCEgAEiQKC0FNQUxKRk9L",
-            "Q0JBGJwOIAEoCzIMLk1FTlBCR0dPR01DSAASJAoLT0VDQkVMR0RMRlAYhg4g",
+            "QUtJQkRJTU1KEhYKC0lBSE9QRk5QRkxOGKAGIAEoCEgAEiQKC0FNQUxKRk9L",
+            "Q0JBGJ0MIAEoCzIMLk1FTlBCR0dPR01DSAASJAoLT0VDQkVMR0RMRlAY7gsg",
             "ASgLMgwuTUVOUEJHR09HTUNIAEINCgtNQ0dFR1BLRURPT0IeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "IAHOPFNPFLN" field.</summary>
-    public const int IAHOPFNPFLNFieldNumber = 1459;
+    public const int IAHOPFNPFLNFieldNumber = 800;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IAHOPFNPFLN {
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "AMALJFOKCBA" field.</summary>
-    public const int AMALJFOKCBAFieldNumber = 1820;
+    public const int AMALJFOKCBAFieldNumber = 1565;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.MENPBGGOGMC AMALJFOKCBA {
@@ -134,7 +134,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "OECBELGDLFP" field.</summary>
-    public const int OECBELGDLFPFieldNumber = 1798;
+    public const int OECBELGDLFPFieldNumber = 1518;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.MENPBGGOGMC OECBELGDLFP {
@@ -149,9 +149,9 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "MCGEGPKEDOO" oneof.</summary>
     public enum MCGEGPKEDOOOneofCase {
       None = 0,
-      IAHOPFNPFLN = 1459,
-      AMALJFOKCBA = 1820,
-      OECBELGDLFP = 1798,
+      IAHOPFNPFLN = 800,
+      AMALJFOKCBA = 1565,
+      OECBELGDLFP = 1518,
     }
     private MCGEGPKEDOOOneofCase mCGEGPKEDOOCase_ = MCGEGPKEDOOOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -216,15 +216,15 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (HasIAHOPFNPFLN) {
-        output.WriteRawTag(152, 91);
+        output.WriteRawTag(128, 50);
         output.WriteBool(IAHOPFNPFLN);
       }
       if (mCGEGPKEDOOCase_ == MCGEGPKEDOOOneofCase.OECBELGDLFP) {
-        output.WriteRawTag(178, 112);
+        output.WriteRawTag(242, 94);
         output.WriteMessage(OECBELGDLFP);
       }
       if (mCGEGPKEDOOCase_ == MCGEGPKEDOOOneofCase.AMALJFOKCBA) {
-        output.WriteRawTag(226, 113);
+        output.WriteRawTag(234, 97);
         output.WriteMessage(AMALJFOKCBA);
       }
       if (_unknownFields != null) {
@@ -238,15 +238,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (HasIAHOPFNPFLN) {
-        output.WriteRawTag(152, 91);
+        output.WriteRawTag(128, 50);
         output.WriteBool(IAHOPFNPFLN);
       }
       if (mCGEGPKEDOOCase_ == MCGEGPKEDOOOneofCase.OECBELGDLFP) {
-        output.WriteRawTag(178, 112);
+        output.WriteRawTag(242, 94);
         output.WriteMessage(OECBELGDLFP);
       }
       if (mCGEGPKEDOOCase_ == MCGEGPKEDOOOneofCase.AMALJFOKCBA) {
-        output.WriteRawTag(226, 113);
+        output.WriteRawTag(234, 97);
         output.WriteMessage(AMALJFOKCBA);
       }
       if (_unknownFields != null) {
@@ -313,11 +313,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 11672: {
+          case 6400: {
             IAHOPFNPFLN = input.ReadBool();
             break;
           }
-          case 14386: {
+          case 12146: {
             global::EggLink.DanhengServer.Proto.MENPBGGOGMC subBuilder = new global::EggLink.DanhengServer.Proto.MENPBGGOGMC();
             if (mCGEGPKEDOOCase_ == MCGEGPKEDOOOneofCase.OECBELGDLFP) {
               subBuilder.MergeFrom(OECBELGDLFP);
@@ -326,7 +326,7 @@ namespace EggLink.DanhengServer.Proto {
             OECBELGDLFP = subBuilder;
             break;
           }
-          case 14562: {
+          case 12522: {
             global::EggLink.DanhengServer.Proto.MENPBGGOGMC subBuilder = new global::EggLink.DanhengServer.Proto.MENPBGGOGMC();
             if (mCGEGPKEDOOCase_ == MCGEGPKEDOOOneofCase.AMALJFOKCBA) {
               subBuilder.MergeFrom(AMALJFOKCBA);
@@ -350,11 +350,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 11672: {
+          case 6400: {
             IAHOPFNPFLN = input.ReadBool();
             break;
           }
-          case 14386: {
+          case 12146: {
             global::EggLink.DanhengServer.Proto.MENPBGGOGMC subBuilder = new global::EggLink.DanhengServer.Proto.MENPBGGOGMC();
             if (mCGEGPKEDOOCase_ == MCGEGPKEDOOOneofCase.OECBELGDLFP) {
               subBuilder.MergeFrom(OECBELGDLFP);
@@ -363,7 +363,7 @@ namespace EggLink.DanhengServer.Proto {
             OECBELGDLFP = subBuilder;
             break;
           }
-          case 14562: {
+          case 12522: {
             global::EggLink.DanhengServer.Proto.MENPBGGOGMC subBuilder = new global::EggLink.DanhengServer.Proto.MENPBGGOGMC();
             if (mCGEGPKEDOOCase_ == MCGEGPKEDOOOneofCase.AMALJFOKCBA) {
               subBuilder.MergeFrom(AMALJFOKCBA);

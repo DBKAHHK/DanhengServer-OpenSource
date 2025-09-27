@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFLQU1DSU9QQlBHQS5wcm90bxoRT0lMUElBQ0VOTkgucHJvdG8iSgoLS0FN",
-            "Q0lPUEJQR0ESGAoQcGVha190YXJnZXRfbGlzdBgKIAMoDRIhCgthdmF0YXJf",
-            "bGlzdBgIIAMoCzIMLk9JTFBJQUNFTk5IQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "Q0lPUEJQR0ESGAoQcGVha190YXJnZXRfbGlzdBgIIAMoDRIhCgthdmF0YXJf",
+            "bGlzdBgKIAMoCzIMLk9JTFBJQUNFTk5IQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OILPIACENNHReflection.Descriptor, },
@@ -85,9 +85,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "peak_target_list" field.</summary>
-    public const int PeakTargetListFieldNumber = 10;
+    public const int PeakTargetListFieldNumber = 8;
     private static readonly pb::FieldCodec<uint> _repeated_peakTargetList_codec
-        = pb::FieldCodec.ForUInt32(82);
+        = pb::FieldCodec.ForUInt32(66);
     private readonly pbc::RepeatedField<uint> peakTargetList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,9 +96,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "avatar_list" field.</summary>
-    public const int AvatarListFieldNumber = 8;
+    public const int AvatarListFieldNumber = 10;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OILPIACENNH> _repeated_avatarList_codec
-        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.OILPIACENNH.Parser);
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.OILPIACENNH.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH> avatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OILPIACENNH>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -150,8 +150,8 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      avatarList_.WriteTo(output, _repeated_avatarList_codec);
       peakTargetList_.WriteTo(output, _repeated_peakTargetList_codec);
+      avatarList_.WriteTo(output, _repeated_avatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -162,8 +162,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       peakTargetList_.WriteTo(ref output, _repeated_peakTargetList_codec);
+      avatarList_.WriteTo(ref output, _repeated_avatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,13 +205,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 66: {
-            avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
+          case 66:
+          case 64: {
+            peakTargetList_.AddEntriesFrom(input, _repeated_peakTargetList_codec);
             break;
           }
-          case 82:
-          case 80: {
-            peakTargetList_.AddEntriesFrom(input, _repeated_peakTargetList_codec);
+          case 82: {
+            avatarList_.AddEntriesFrom(input, _repeated_avatarList_codec);
             break;
           }
         }
@@ -229,13 +229,13 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 66: {
-            avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
+          case 66:
+          case 64: {
+            peakTargetList_.AddEntriesFrom(ref input, _repeated_peakTargetList_codec);
             break;
           }
-          case 82:
-          case 80: {
-            peakTargetList_.AddEntriesFrom(ref input, _repeated_peakTargetList_codec);
+          case 82: {
+            avatarList_.AddEntriesFrom(ref input, _repeated_avatarList_codec);
             break;
           }
         }

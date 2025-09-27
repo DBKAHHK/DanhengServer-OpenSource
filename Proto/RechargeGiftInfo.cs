@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZSZWNoYXJnZUdpZnRJbmZvLnByb3RvGhZSZWNoYXJnZUdpZnREYXRhLnBy",
-            "b3RvIncKEFJlY2hhcmdlR2lmdEluZm8SEwoLQ09JRkhGUEVHUEgYDiABKAMS",
-            "EAoIZW5kX3RpbWUYCyABKAMSKQoOZ2lmdF9kYXRhX2xpc3QYByADKAsyES5S",
-            "ZWNoYXJnZUdpZnREYXRhEhEKCWdpZnRfdHlwZRgNIAEoDUIeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "b3RvIn4KEFJlY2hhcmdlR2lmdEluZm8SEAoIZW5kX3RpbWUYAiABKAMSEQoJ",
+            "Z2lmdF90eXBlGA0gASgNEhoKEmZlYXR1cmVfYmVnaW5fdGltZRgGIAEoAxIp",
+            "Cg5naWZ0X2RhdGFfbGlzdBgMIAMoCzIRLlJlY2hhcmdlR2lmdERhdGFCHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RechargeGiftDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RechargeGiftInfo), global::EggLink.DanhengServer.Proto.RechargeGiftInfo.Parser, new[]{ "COIFHFPEGPH", "EndTime", "GiftDataList", "GiftType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RechargeGiftInfo), global::EggLink.DanhengServer.Proto.RechargeGiftInfo.Parser, new[]{ "EndTime", "GiftType", "FeatureBeginTime", "GiftDataList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RechargeGiftInfo(RechargeGiftInfo other) : this() {
-      cOIFHFPEGPH_ = other.cOIFHFPEGPH_;
       endTime_ = other.endTime_;
-      giftDataList_ = other.giftDataList_.Clone();
       giftType_ = other.giftType_;
+      featureBeginTime_ = other.featureBeginTime_;
+      giftDataList_ = other.giftDataList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,20 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new RechargeGiftInfo(this);
     }
 
-    /// <summary>Field number for the "COIFHFPEGPH" field.</summary>
-    public const int COIFHFPEGPHFieldNumber = 14;
-    private long cOIFHFPEGPH_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long COIFHFPEGPH {
-      get { return cOIFHFPEGPH_; }
-      set {
-        cOIFHFPEGPH_ = value;
-      }
-    }
-
     /// <summary>Field number for the "end_time" field.</summary>
-    public const int EndTimeFieldNumber = 11;
+    public const int EndTimeFieldNumber = 2;
     private long endTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,17 +97,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         endTime_ = value;
       }
-    }
-
-    /// <summary>Field number for the "gift_data_list" field.</summary>
-    public const int GiftDataListFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RechargeGiftData> _repeated_giftDataList_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.RechargeGiftData.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeGiftData> giftDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeGiftData>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeGiftData> GiftDataList {
-      get { return giftDataList_; }
     }
 
     /// <summary>Field number for the "gift_type" field.</summary>
@@ -132,6 +109,29 @@ namespace EggLink.DanhengServer.Proto {
       set {
         giftType_ = value;
       }
+    }
+
+    /// <summary>Field number for the "feature_begin_time" field.</summary>
+    public const int FeatureBeginTimeFieldNumber = 6;
+    private long featureBeginTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long FeatureBeginTime {
+      get { return featureBeginTime_; }
+      set {
+        featureBeginTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gift_data_list" field.</summary>
+    public const int GiftDataListFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RechargeGiftData> _repeated_giftDataList_codec
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.RechargeGiftData.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeGiftData> giftDataList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeGiftData>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RechargeGiftData> GiftDataList {
+      get { return giftDataList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (COIFHFPEGPH != other.COIFHFPEGPH) return false;
       if (EndTime != other.EndTime) return false;
-      if(!giftDataList_.Equals(other.giftDataList_)) return false;
       if (GiftType != other.GiftType) return false;
+      if (FeatureBeginTime != other.FeatureBeginTime) return false;
+      if(!giftDataList_.Equals(other.giftDataList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (COIFHFPEGPH != 0L) hash ^= COIFHFPEGPH.GetHashCode();
       if (EndTime != 0L) hash ^= EndTime.GetHashCode();
-      hash ^= giftDataList_.GetHashCode();
       if (GiftType != 0) hash ^= GiftType.GetHashCode();
+      if (FeatureBeginTime != 0L) hash ^= FeatureBeginTime.GetHashCode();
+      hash ^= giftDataList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,18 +182,18 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      giftDataList_.WriteTo(output, _repeated_giftDataList_codec);
       if (EndTime != 0L) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteInt64(EndTime);
       }
+      if (FeatureBeginTime != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(FeatureBeginTime);
+      }
+      giftDataList_.WriteTo(output, _repeated_giftDataList_codec);
       if (GiftType != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(GiftType);
-      }
-      if (COIFHFPEGPH != 0L) {
-        output.WriteRawTag(112);
-        output.WriteInt64(COIFHFPEGPH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -205,18 +205,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      giftDataList_.WriteTo(ref output, _repeated_giftDataList_codec);
       if (EndTime != 0L) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(16);
         output.WriteInt64(EndTime);
       }
+      if (FeatureBeginTime != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(FeatureBeginTime);
+      }
+      giftDataList_.WriteTo(ref output, _repeated_giftDataList_codec);
       if (GiftType != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(GiftType);
-      }
-      if (COIFHFPEGPH != 0L) {
-        output.WriteRawTag(112);
-        output.WriteInt64(COIFHFPEGPH);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -228,16 +228,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (COIFHFPEGPH != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(COIFHFPEGPH);
-      }
       if (EndTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
       }
-      size += giftDataList_.CalculateSize(_repeated_giftDataList_codec);
       if (GiftType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GiftType);
       }
+      if (FeatureBeginTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(FeatureBeginTime);
+      }
+      size += giftDataList_.CalculateSize(_repeated_giftDataList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -250,16 +250,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.COIFHFPEGPH != 0L) {
-        COIFHFPEGPH = other.COIFHFPEGPH;
-      }
       if (other.EndTime != 0L) {
         EndTime = other.EndTime;
       }
-      giftDataList_.Add(other.giftDataList_);
       if (other.GiftType != 0) {
         GiftType = other.GiftType;
       }
+      if (other.FeatureBeginTime != 0L) {
+        FeatureBeginTime = other.FeatureBeginTime;
+      }
+      giftDataList_.Add(other.giftDataList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -275,20 +275,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
-            giftDataList_.AddEntriesFrom(input, _repeated_giftDataList_codec);
+          case 16: {
+            EndTime = input.ReadInt64();
             break;
           }
-          case 88: {
-            EndTime = input.ReadInt64();
+          case 48: {
+            FeatureBeginTime = input.ReadInt64();
+            break;
+          }
+          case 98: {
+            giftDataList_.AddEntriesFrom(input, _repeated_giftDataList_codec);
             break;
           }
           case 104: {
             GiftType = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            COIFHFPEGPH = input.ReadInt64();
             break;
           }
         }
@@ -306,20 +306,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
-            giftDataList_.AddEntriesFrom(ref input, _repeated_giftDataList_codec);
+          case 16: {
+            EndTime = input.ReadInt64();
             break;
           }
-          case 88: {
-            EndTime = input.ReadInt64();
+          case 48: {
+            FeatureBeginTime = input.ReadInt64();
+            break;
+          }
+          case 98: {
+            giftDataList_.AddEntriesFrom(ref input, _repeated_giftDataList_codec);
             break;
           }
           case 104: {
             GiftType = input.ReadUInt32();
-            break;
-          }
-          case 112: {
-            COIFHFPEGPH = input.ReadInt64();
             break;
           }
         }

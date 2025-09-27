@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZSb2d1ZVZpcnR1YWxJdGVtLnByb3RvImYKEFJvZ3VlVmlydHVhbEl0ZW0S",
-            "EwoLREFGQUxBT0FPT0kYASABKA0SEwoLQlBKT0FQRkFGS0sYByABKA0SEwoL",
-            "cm9ndWVfbW9uZXkYAyABKA0SEwoLQU1OS01CTUhLREYYAiABKA1CHqoCG0Vn",
+            "EwoLQU1OS01CTUhLREYYCCABKA0SEwoLQlBKT0FQRkFGS0sYCyABKA0SEwoL",
+            "cm9ndWVfbW9uZXkYBiABKA0SEwoLREFGQUxBT0FPT0kYBSABKA1CHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueVirtualItem), global::EggLink.DanhengServer.Proto.RogueVirtualItem.Parser, new[]{ "DAFALAOAOOI", "BPJOAPFAFKK", "RogueMoney", "AMNKMBMHKDF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueVirtualItem), global::EggLink.DanhengServer.Proto.RogueVirtualItem.Parser, new[]{ "AMNKMBMHKDF", "BPJOAPFAFKK", "RogueMoney", "DAFALAOAOOI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,10 +73,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueVirtualItem(RogueVirtualItem other) : this() {
-      dAFALAOAOOI_ = other.dAFALAOAOOI_;
+      aMNKMBMHKDF_ = other.aMNKMBMHKDF_;
       bPJOAPFAFKK_ = other.bPJOAPFAFKK_;
       rogueMoney_ = other.rogueMoney_;
-      aMNKMBMHKDF_ = other.aMNKMBMHKDF_;
+      dAFALAOAOOI_ = other.dAFALAOAOOI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,20 +86,20 @@ namespace EggLink.DanhengServer.Proto {
       return new RogueVirtualItem(this);
     }
 
-    /// <summary>Field number for the "DAFALAOAOOI" field.</summary>
-    public const int DAFALAOAOOIFieldNumber = 1;
-    private uint dAFALAOAOOI_;
+    /// <summary>Field number for the "AMNKMBMHKDF" field.</summary>
+    public const int AMNKMBMHKDFFieldNumber = 8;
+    private uint aMNKMBMHKDF_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DAFALAOAOOI {
-      get { return dAFALAOAOOI_; }
+    public uint AMNKMBMHKDF {
+      get { return aMNKMBMHKDF_; }
       set {
-        dAFALAOAOOI_ = value;
+        aMNKMBMHKDF_ = value;
       }
     }
 
     /// <summary>Field number for the "BPJOAPFAFKK" field.</summary>
-    public const int BPJOAPFAFKKFieldNumber = 7;
+    public const int BPJOAPFAFKKFieldNumber = 11;
     private uint bPJOAPFAFKK_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "rogue_money" field.</summary>
-    public const int RogueMoneyFieldNumber = 3;
+    public const int RogueMoneyFieldNumber = 6;
     private uint rogueMoney_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,15 +122,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AMNKMBMHKDF" field.</summary>
-    public const int AMNKMBMHKDFFieldNumber = 2;
-    private uint aMNKMBMHKDF_;
+    /// <summary>Field number for the "DAFALAOAOOI" field.</summary>
+    public const int DAFALAOAOOIFieldNumber = 5;
+    private uint dAFALAOAOOI_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AMNKMBMHKDF {
-      get { return aMNKMBMHKDF_; }
+    public uint DAFALAOAOOI {
+      get { return dAFALAOAOOI_; }
       set {
-        aMNKMBMHKDF_ = value;
+        dAFALAOAOOI_ = value;
       }
     }
 
@@ -149,10 +149,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DAFALAOAOOI != other.DAFALAOAOOI) return false;
+      if (AMNKMBMHKDF != other.AMNKMBMHKDF) return false;
       if (BPJOAPFAFKK != other.BPJOAPFAFKK) return false;
       if (RogueMoney != other.RogueMoney) return false;
-      if (AMNKMBMHKDF != other.AMNKMBMHKDF) return false;
+      if (DAFALAOAOOI != other.DAFALAOAOOI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -160,10 +160,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DAFALAOAOOI != 0) hash ^= DAFALAOAOOI.GetHashCode();
+      if (AMNKMBMHKDF != 0) hash ^= AMNKMBMHKDF.GetHashCode();
       if (BPJOAPFAFKK != 0) hash ^= BPJOAPFAFKK.GetHashCode();
       if (RogueMoney != 0) hash ^= RogueMoney.GetHashCode();
-      if (AMNKMBMHKDF != 0) hash ^= AMNKMBMHKDF.GetHashCode();
+      if (DAFALAOAOOI != 0) hash ^= DAFALAOAOOI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -183,19 +183,19 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (DAFALAOAOOI != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(40);
         output.WriteUInt32(DAFALAOAOOI);
       }
-      if (AMNKMBMHKDF != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(AMNKMBMHKDF);
-      }
       if (RogueMoney != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteUInt32(RogueMoney);
       }
+      if (AMNKMBMHKDF != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(AMNKMBMHKDF);
+      }
       if (BPJOAPFAFKK != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(BPJOAPFAFKK);
       }
       if (_unknownFields != null) {
@@ -209,19 +209,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DAFALAOAOOI != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(40);
         output.WriteUInt32(DAFALAOAOOI);
       }
-      if (AMNKMBMHKDF != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(AMNKMBMHKDF);
-      }
       if (RogueMoney != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(48);
         output.WriteUInt32(RogueMoney);
       }
+      if (AMNKMBMHKDF != 0) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(AMNKMBMHKDF);
+      }
       if (BPJOAPFAFKK != 0) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(88);
         output.WriteUInt32(BPJOAPFAFKK);
       }
       if (_unknownFields != null) {
@@ -234,8 +234,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DAFALAOAOOI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DAFALAOAOOI);
+      if (AMNKMBMHKDF != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AMNKMBMHKDF);
       }
       if (BPJOAPFAFKK != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BPJOAPFAFKK);
@@ -243,8 +243,8 @@ namespace EggLink.DanhengServer.Proto {
       if (RogueMoney != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RogueMoney);
       }
-      if (AMNKMBMHKDF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AMNKMBMHKDF);
+      if (DAFALAOAOOI != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DAFALAOAOOI);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,8 +258,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DAFALAOAOOI != 0) {
-        DAFALAOAOOI = other.DAFALAOAOOI;
+      if (other.AMNKMBMHKDF != 0) {
+        AMNKMBMHKDF = other.AMNKMBMHKDF;
       }
       if (other.BPJOAPFAFKK != 0) {
         BPJOAPFAFKK = other.BPJOAPFAFKK;
@@ -267,8 +267,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.RogueMoney != 0) {
         RogueMoney = other.RogueMoney;
       }
-      if (other.AMNKMBMHKDF != 0) {
-        AMNKMBMHKDF = other.AMNKMBMHKDF;
+      if (other.DAFALAOAOOI != 0) {
+        DAFALAOAOOI = other.DAFALAOAOOI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,19 +285,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
+          case 40: {
             DAFALAOAOOI = input.ReadUInt32();
             break;
           }
-          case 16: {
-            AMNKMBMHKDF = input.ReadUInt32();
-            break;
-          }
-          case 24: {
+          case 48: {
             RogueMoney = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 64: {
+            AMNKMBMHKDF = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             BPJOAPFAFKK = input.ReadUInt32();
             break;
           }
@@ -316,19 +316,19 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
+          case 40: {
             DAFALAOAOOI = input.ReadUInt32();
             break;
           }
-          case 16: {
-            AMNKMBMHKDF = input.ReadUInt32();
-            break;
-          }
-          case 24: {
+          case 48: {
             RogueMoney = input.ReadUInt32();
             break;
           }
-          case 56: {
+          case 64: {
+            AMNKMBMHKDF = input.ReadUInt32();
+            break;
+          }
+          case 88: {
             BPJOAPFAFKK = input.ReadUInt32();
             break;
           }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxTcGFjZVpvb0RlbGV0ZUNhdFNjUnNwLnByb3RvIj4KFlNwYWNlWm9vRGVs",
-            "ZXRlQ2F0U2NSc3ASDwoHcmV0Y29kZRgGIAEoDRITCgtORkhFQUdFTElDSRgK",
+            "ZXRlQ2F0U2NSc3ASDwoHcmV0Y29kZRgGIAEoDRITCgtORkhFQUdFTElDSRgI",
             "IAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -96,9 +96,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NFHEAGELICI" field.</summary>
-    public const int NFHEAGELICIFieldNumber = 10;
+    public const int NFHEAGELICIFieldNumber = 8;
     private static readonly pb::FieldCodec<uint> _repeated_nFHEAGELICI_codec
-        = pb::FieldCodec.ForUInt32(82);
+        = pb::FieldCodec.ForUInt32(66);
     private readonly pbc::RepeatedField<uint> nFHEAGELICI_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -219,8 +219,8 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 82:
-          case 80: {
+          case 66:
+          case 64: {
             nFHEAGELICI_.AddEntriesFrom(input, _repeated_nFHEAGELICI_codec);
             break;
           }
@@ -243,8 +243,8 @@ namespace EggLink.DanhengServer.Proto {
             Retcode = input.ReadUInt32();
             break;
           }
-          case 82:
-          case 80: {
+          case 66:
+          case 64: {
             nFHEAGELICI_.AddEntriesFrom(ref input, _repeated_nFHEAGELICI_codec);
             break;
           }

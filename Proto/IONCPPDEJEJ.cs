@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFJT05DUFBERUpFSi5wcm90byJGCgtJT05DUFBERUpFShITCgtGRU9ORUhI",
-            "Q0pKTRgNIAEoDRIRCgl1bmlxdWVfaWQYCiABKAQSDwoHYnVmZl9pZBgIIAEo",
+            "Q0pKTRgCIAEoDRIRCgl1bmlxdWVfaWQYCyABKAQSDwoHYnVmZl9pZBgBIAEo",
             "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FEONEHHCJJM" field.</summary>
-    public const int FEONEHHCJJMFieldNumber = 13;
+    public const int FEONEHHCJJMFieldNumber = 2;
     private uint fEONEHHCJJM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "unique_id" field.</summary>
-    public const int UniqueIdFieldNumber = 10;
+    public const int UniqueIdFieldNumber = 11;
     private ulong uniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "buff_id" field.</summary>
-    public const int BuffIdFieldNumber = 8;
+    public const int BuffIdFieldNumber = 1;
     private uint buffId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,16 +167,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (BuffId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteUInt32(BuffId);
       }
-      if (UniqueId != 0UL) {
-        output.WriteRawTag(80);
-        output.WriteUInt64(UniqueId);
-      }
       if (FEONEHHCJJM != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(16);
         output.WriteUInt32(FEONEHHCJJM);
+      }
+      if (UniqueId != 0UL) {
+        output.WriteRawTag(88);
+        output.WriteUInt64(UniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,16 +189,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BuffId != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(8);
         output.WriteUInt32(BuffId);
       }
-      if (UniqueId != 0UL) {
-        output.WriteRawTag(80);
-        output.WriteUInt64(UniqueId);
-      }
       if (FEONEHHCJJM != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(16);
         output.WriteUInt32(FEONEHHCJJM);
+      }
+      if (UniqueId != 0UL) {
+        output.WriteRawTag(88);
+        output.WriteUInt64(UniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 8: {
             BuffId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            UniqueId = input.ReadUInt64();
+          case 16: {
+            FEONEHHCJJM = input.ReadUInt32();
             break;
           }
-          case 104: {
-            FEONEHHCJJM = input.ReadUInt32();
+          case 88: {
+            UniqueId = input.ReadUInt64();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 8: {
             BuffId = input.ReadUInt32();
             break;
           }
-          case 80: {
-            UniqueId = input.ReadUInt64();
+          case 16: {
+            FEONEHHCJJM = input.ReadUInt32();
             break;
           }
-          case 104: {
-            FEONEHHCJJM = input.ReadUInt32();
+          case 88: {
+            UniqueId = input.ReadUInt64();
             break;
           }
         }

@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFJSEtHTkpETkFMSi5wcm90byJkCgtJSEtHTkpETkFMShITCgtKR01JUE1E",
-            "UFBJShgDIAEoDRIZChFncm91cF90b3RhbF9zdGFycxgEIAEoDRITCgtGQ0NE",
-            "SUxHR09DSRgOIAEoDRIQCghncm91cF9pZBgKIAEoDUIeqgIbRWdnTGluay5E",
+            "UFBJShgNIAEoDRIZChFncm91cF90b3RhbF9zdGFycxgOIAEoDRIQCghncm91",
+            "cF9pZBgGIAEoDRITCgtGQ0NESUxHR09DSRgFIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IHKGNJDNALJ), global::EggLink.DanhengServer.Proto.IHKGNJDNALJ.Parser, new[]{ "JGMIPMDPPIJ", "GroupTotalStars", "FCCDILGGOCI", "GroupId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IHKGNJDNALJ), global::EggLink.DanhengServer.Proto.IHKGNJDNALJ.Parser, new[]{ "JGMIPMDPPIJ", "GroupTotalStars", "GroupId", "FCCDILGGOCI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,8 +75,8 @@ namespace EggLink.DanhengServer.Proto {
     public IHKGNJDNALJ(IHKGNJDNALJ other) : this() {
       jGMIPMDPPIJ_ = other.jGMIPMDPPIJ_;
       groupTotalStars_ = other.groupTotalStars_;
-      fCCDILGGOCI_ = other.fCCDILGGOCI_;
       groupId_ = other.groupId_;
+      fCCDILGGOCI_ = other.fCCDILGGOCI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "JGMIPMDPPIJ" field.</summary>
-    public const int JGMIPMDPPIJFieldNumber = 3;
+    public const int JGMIPMDPPIJFieldNumber = 13;
     private uint jGMIPMDPPIJ_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -99,7 +99,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "group_total_stars" field.</summary>
-    public const int GroupTotalStarsFieldNumber = 4;
+    public const int GroupTotalStarsFieldNumber = 14;
     private uint groupTotalStars_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,20 +110,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "FCCDILGGOCI" field.</summary>
-    public const int FCCDILGGOCIFieldNumber = 14;
-    private uint fCCDILGGOCI_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FCCDILGGOCI {
-      get { return fCCDILGGOCI_; }
-      set {
-        fCCDILGGOCI_ = value;
-      }
-    }
-
     /// <summary>Field number for the "group_id" field.</summary>
-    public const int GroupIdFieldNumber = 10;
+    public const int GroupIdFieldNumber = 6;
     private uint groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -131,6 +119,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return groupId_; }
       set {
         groupId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "FCCDILGGOCI" field.</summary>
+    public const int FCCDILGGOCIFieldNumber = 5;
+    private uint fCCDILGGOCI_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint FCCDILGGOCI {
+      get { return fCCDILGGOCI_; }
+      set {
+        fCCDILGGOCI_ = value;
       }
     }
 
@@ -151,8 +151,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (JGMIPMDPPIJ != other.JGMIPMDPPIJ) return false;
       if (GroupTotalStars != other.GroupTotalStars) return false;
-      if (FCCDILGGOCI != other.FCCDILGGOCI) return false;
       if (GroupId != other.GroupId) return false;
+      if (FCCDILGGOCI != other.FCCDILGGOCI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,8 +162,8 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (JGMIPMDPPIJ != 0) hash ^= JGMIPMDPPIJ.GetHashCode();
       if (GroupTotalStars != 0) hash ^= GroupTotalStars.GetHashCode();
-      if (FCCDILGGOCI != 0) hash ^= FCCDILGGOCI.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
+      if (FCCDILGGOCI != 0) hash ^= FCCDILGGOCI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (FCCDILGGOCI != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(FCCDILGGOCI);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(GroupId);
+      }
       if (JGMIPMDPPIJ != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(104);
         output.WriteUInt32(JGMIPMDPPIJ);
       }
       if (GroupTotalStars != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(GroupTotalStars);
-      }
-      if (GroupId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(GroupId);
-      }
-      if (FCCDILGGOCI != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(FCCDILGGOCI);
+        output.WriteUInt32(GroupTotalStars);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FCCDILGGOCI != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(FCCDILGGOCI);
+      }
+      if (GroupId != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(GroupId);
+      }
       if (JGMIPMDPPIJ != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(104);
         output.WriteUInt32(JGMIPMDPPIJ);
       }
       if (GroupTotalStars != 0) {
-        output.WriteRawTag(32);
-        output.WriteUInt32(GroupTotalStars);
-      }
-      if (GroupId != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(GroupId);
-      }
-      if (FCCDILGGOCI != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(FCCDILGGOCI);
+        output.WriteUInt32(GroupTotalStars);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
       if (GroupTotalStars != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupTotalStars);
       }
-      if (FCCDILGGOCI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FCCDILGGOCI);
-      }
       if (GroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GroupId);
+      }
+      if (FCCDILGGOCI != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FCCDILGGOCI);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -264,11 +264,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GroupTotalStars != 0) {
         GroupTotalStars = other.GroupTotalStars;
       }
-      if (other.FCCDILGGOCI != 0) {
-        FCCDILGGOCI = other.FCCDILGGOCI;
-      }
       if (other.GroupId != 0) {
         GroupId = other.GroupId;
+      }
+      if (other.FCCDILGGOCI != 0) {
+        FCCDILGGOCI = other.FCCDILGGOCI;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            JGMIPMDPPIJ = input.ReadUInt32();
+          case 40: {
+            FCCDILGGOCI = input.ReadUInt32();
             break;
           }
-          case 32: {
-            GroupTotalStars = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 48: {
             GroupId = input.ReadUInt32();
             break;
           }
+          case 104: {
+            JGMIPMDPPIJ = input.ReadUInt32();
+            break;
+          }
           case 112: {
-            FCCDILGGOCI = input.ReadUInt32();
+            GroupTotalStars = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            JGMIPMDPPIJ = input.ReadUInt32();
+          case 40: {
+            FCCDILGGOCI = input.ReadUInt32();
             break;
           }
-          case 32: {
-            GroupTotalStars = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 48: {
             GroupId = input.ReadUInt32();
             break;
           }
+          case 104: {
+            JGMIPMDPPIJ = input.ReadUInt32();
+            break;
+          }
           case 112: {
-            FCCDILGGOCI = input.ReadUInt32();
+            GroupTotalStars = input.ReadUInt32();
             break;
           }
         }

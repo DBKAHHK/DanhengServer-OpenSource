@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFNSUlBSU9ETEVPQS5wcm90bxoRT0NNSE9GRU1OSEkucHJvdG8iRgoLTUlJ",
-            "QUlPRExFT0ESIQoLR0FOQUtGQUlCRkMYCiADKAsyDC5PQ01IT0ZFTU5ISRIU",
-            "CgxwYXNzZW5nZXJfaWQYASABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "QUlPRExFT0ESFAoMcGFzc2VuZ2VyX2lkGAkgASgNEiEKC0dBTkFLRkFJQkZD",
+            "GAEgAygLMgwuT0NNSE9GRU1OSElCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
             "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OCMHOFEMNHIReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MIIAIODLEOA), global::EggLink.DanhengServer.Proto.MIIAIODLEOA.Parser, new[]{ "GANAKFAIBFC", "PassengerId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MIIAIODLEOA), global::EggLink.DanhengServer.Proto.MIIAIODLEOA.Parser, new[]{ "PassengerId", "GANAKFAIBFC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MIIAIODLEOA(MIIAIODLEOA other) : this() {
-      gANAKFAIBFC_ = other.gANAKFAIBFC_.Clone();
       passengerId_ = other.passengerId_;
+      gANAKFAIBFC_ = other.gANAKFAIBFC_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,19 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new MIIAIODLEOA(this);
     }
 
-    /// <summary>Field number for the "GANAKFAIBFC" field.</summary>
-    public const int GANAKFAIBFCFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OCMHOFEMNHI> _repeated_gANAKFAIBFC_codec
-        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.OCMHOFEMNHI.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OCMHOFEMNHI> gANAKFAIBFC_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OCMHOFEMNHI>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OCMHOFEMNHI> GANAKFAIBFC {
-      get { return gANAKFAIBFC_; }
-    }
-
     /// <summary>Field number for the "passenger_id" field.</summary>
-    public const int PassengerIdFieldNumber = 1;
+    public const int PassengerIdFieldNumber = 9;
     private uint passengerId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -105,6 +94,17 @@ namespace EggLink.DanhengServer.Proto {
       set {
         passengerId_ = value;
       }
+    }
+
+    /// <summary>Field number for the "GANAKFAIBFC" field.</summary>
+    public const int GANAKFAIBFCFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.OCMHOFEMNHI> _repeated_gANAKFAIBFC_codec
+        = pb::FieldCodec.ForMessage(10, global::EggLink.DanhengServer.Proto.OCMHOFEMNHI.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OCMHOFEMNHI> gANAKFAIBFC_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OCMHOFEMNHI>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.OCMHOFEMNHI> GANAKFAIBFC {
+      get { return gANAKFAIBFC_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!gANAKFAIBFC_.Equals(other.gANAKFAIBFC_)) return false;
       if (PassengerId != other.PassengerId) return false;
+      if(!gANAKFAIBFC_.Equals(other.gANAKFAIBFC_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= gANAKFAIBFC_.GetHashCode();
       if (PassengerId != 0) hash ^= PassengerId.GetHashCode();
+      hash ^= gANAKFAIBFC_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      gANAKFAIBFC_.WriteTo(output, _repeated_gANAKFAIBFC_codec);
       if (PassengerId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(72);
         output.WriteUInt32(PassengerId);
       }
-      gANAKFAIBFC_.WriteTo(output, _repeated_gANAKFAIBFC_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      gANAKFAIBFC_.WriteTo(ref output, _repeated_gANAKFAIBFC_codec);
       if (PassengerId != 0) {
-        output.WriteRawTag(8);
+        output.WriteRawTag(72);
         output.WriteUInt32(PassengerId);
       }
-      gANAKFAIBFC_.WriteTo(ref output, _repeated_gANAKFAIBFC_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,10 +181,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += gANAKFAIBFC_.CalculateSize(_repeated_gANAKFAIBFC_codec);
       if (PassengerId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PassengerId);
       }
+      size += gANAKFAIBFC_.CalculateSize(_repeated_gANAKFAIBFC_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,10 +197,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      gANAKFAIBFC_.Add(other.gANAKFAIBFC_);
       if (other.PassengerId != 0) {
         PassengerId = other.PassengerId;
       }
+      gANAKFAIBFC_.Add(other.gANAKFAIBFC_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -216,12 +216,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            PassengerId = input.ReadUInt32();
+          case 10: {
+            gANAKFAIBFC_.AddEntriesFrom(input, _repeated_gANAKFAIBFC_codec);
             break;
           }
-          case 82: {
-            gANAKFAIBFC_.AddEntriesFrom(input, _repeated_gANAKFAIBFC_codec);
+          case 72: {
+            PassengerId = input.ReadUInt32();
             break;
           }
         }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            PassengerId = input.ReadUInt32();
+          case 10: {
+            gANAKFAIBFC_.AddEntriesFrom(ref input, _repeated_gANAKFAIBFC_codec);
             break;
           }
-          case 82: {
-            gANAKFAIBFC_.AddEntriesFrom(ref input, _repeated_gANAKFAIBFC_codec);
+          case 72: {
+            PassengerId = input.ReadUInt32();
             break;
           }
         }

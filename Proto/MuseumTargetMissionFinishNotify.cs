@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVNdXNldW1UYXJnZXRNaXNzaW9uRmluaXNoTm90aWZ5LnByb3RvImAKH011",
             "c2V1bVRhcmdldE1pc3Npb25GaW5pc2hOb3RpZnkSEwoLRlBCR0FEQk1FQUQY",
-            "DiABKAgSEwoLQkVMRU9EQUlJTkIYCiADKA0SEwoLUE5HREROQUpDR0cYCyAB",
+            "DSABKAgSEwoLQkVMRU9EQUlJTkIYAyADKA0SEwoLUE5HREROQUpDR0cYDiAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FPBGADBMEAD" field.</summary>
-    public const int FPBGADBMEADFieldNumber = 14;
+    public const int FPBGADBMEADFieldNumber = 13;
     private bool fPBGADBMEAD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,9 +98,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "BELEODAIINB" field.</summary>
-    public const int BELEODAIINBFieldNumber = 10;
+    public const int BELEODAIINBFieldNumber = 3;
     private static readonly pb::FieldCodec<uint> _repeated_bELEODAIINB_codec
-        = pb::FieldCodec.ForUInt32(82);
+        = pb::FieldCodec.ForUInt32(26);
     private readonly pbc::RepeatedField<uint> bELEODAIINB_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PNGDDNAJCGG" field.</summary>
-    public const int PNGDDNAJCGGFieldNumber = 11;
+    public const int PNGDDNAJCGGFieldNumber = 14;
     private uint pNGDDNAJCGG_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,13 +167,13 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       bELEODAIINB_.WriteTo(output, _repeated_bELEODAIINB_codec);
-      if (PNGDDNAJCGG != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(PNGDDNAJCGG);
-      }
       if (FPBGADBMEAD != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(104);
         output.WriteBool(FPBGADBMEAD);
+      }
+      if (PNGDDNAJCGG != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(PNGDDNAJCGG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -186,13 +186,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       bELEODAIINB_.WriteTo(ref output, _repeated_bELEODAIINB_codec);
-      if (PNGDDNAJCGG != 0) {
-        output.WriteRawTag(88);
-        output.WriteUInt32(PNGDDNAJCGG);
-      }
       if (FPBGADBMEAD != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(104);
         output.WriteBool(FPBGADBMEAD);
+      }
+      if (PNGDDNAJCGG != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(PNGDDNAJCGG);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 82:
-          case 80: {
+          case 26:
+          case 24: {
             bELEODAIINB_.AddEntriesFrom(input, _repeated_bELEODAIINB_codec);
             break;
           }
-          case 88: {
-            PNGDDNAJCGG = input.ReadUInt32();
+          case 104: {
+            FPBGADBMEAD = input.ReadBool();
             break;
           }
           case 112: {
-            FPBGADBMEAD = input.ReadBool();
+            PNGDDNAJCGG = input.ReadUInt32();
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 82:
-          case 80: {
+          case 26:
+          case 24: {
             bELEODAIINB_.AddEntriesFrom(ref input, _repeated_bELEODAIINB_codec);
             break;
           }
-          case 88: {
-            PNGDDNAJCGG = input.ReadUInt32();
+          case 104: {
+            FPBGADBMEAD = input.ReadBool();
             break;
           }
           case 112: {
-            FPBGADBMEAD = input.ReadBool();
+            PNGDDNAJCGG = input.ReadUInt32();
             break;
           }
         }

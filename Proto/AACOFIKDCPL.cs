@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static AACOFIKDCPLReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFBQUNPRklLRENQTC5wcm90byI0CgtBQUNPRklLRENQTBITCgtJRU5QRUxC",
-            "UEhEUBgKIAEoDRIQCghwcm9ncmVzcxgLIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "ChFBQUNPRklLRENQTC5wcm90byI0CgtBQUNPRklLRENQTBIQCghwcm9ncmVz",
+            "cxgOIAEoDRITCgtJRU5QRUxCUEhEUBgJIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AACOFIKDCPL), global::EggLink.DanhengServer.Proto.AACOFIKDCPL.Parser, new[]{ "IENPELBPHDP", "Progress" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AACOFIKDCPL), global::EggLink.DanhengServer.Proto.AACOFIKDCPL.Parser, new[]{ "Progress", "IENPELBPHDP" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AACOFIKDCPL(AACOFIKDCPL other) : this() {
-      iENPELBPHDP_ = other.iENPELBPHDP_;
       progress_ = other.progress_;
+      iENPELBPHDP_ = other.iENPELBPHDP_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new AACOFIKDCPL(this);
     }
 
-    /// <summary>Field number for the "IENPELBPHDP" field.</summary>
-    public const int IENPELBPHDPFieldNumber = 10;
-    private uint iENPELBPHDP_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IENPELBPHDP {
-      get { return iENPELBPHDP_; }
-      set {
-        iENPELBPHDP_ = value;
-      }
-    }
-
     /// <summary>Field number for the "progress" field.</summary>
-    public const int ProgressFieldNumber = 11;
+    public const int ProgressFieldNumber = 14;
     private uint progress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return progress_; }
       set {
         progress_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "IENPELBPHDP" field.</summary>
+    public const int IENPELBPHDPFieldNumber = 9;
+    private uint iENPELBPHDP_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint IENPELBPHDP {
+      get { return iENPELBPHDP_; }
+      set {
+        iENPELBPHDP_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IENPELBPHDP != other.IENPELBPHDP) return false;
       if (Progress != other.Progress) return false;
+      if (IENPELBPHDP != other.IENPELBPHDP) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IENPELBPHDP != 0) hash ^= IENPELBPHDP.GetHashCode();
       if (Progress != 0) hash ^= Progress.GetHashCode();
+      if (IENPELBPHDP != 0) hash ^= IENPELBPHDP.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (IENPELBPHDP != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteUInt32(IENPELBPHDP);
       }
       if (Progress != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(112);
         output.WriteUInt32(Progress);
       }
       if (_unknownFields != null) {
@@ -170,11 +170,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IENPELBPHDP != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(72);
         output.WriteUInt32(IENPELBPHDP);
       }
       if (Progress != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(112);
         output.WriteUInt32(Progress);
       }
       if (_unknownFields != null) {
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IENPELBPHDP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IENPELBPHDP);
-      }
       if (Progress != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Progress);
+      }
+      if (IENPELBPHDP != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IENPELBPHDP);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IENPELBPHDP != 0) {
-        IENPELBPHDP = other.IENPELBPHDP;
-      }
       if (other.Progress != 0) {
         Progress = other.Progress;
+      }
+      if (other.IENPELBPHDP != 0) {
+        IENPELBPHDP = other.IENPELBPHDP;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,11 +226,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 80: {
+          case 72: {
             IENPELBPHDP = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 112: {
             Progress = input.ReadUInt32();
             break;
           }
@@ -249,11 +249,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 80: {
+          case 72: {
             IENPELBPHDP = input.ReadUInt32();
             break;
           }
-          case 88: {
+          case 112: {
             Progress = input.ReadUInt32();
             break;
           }

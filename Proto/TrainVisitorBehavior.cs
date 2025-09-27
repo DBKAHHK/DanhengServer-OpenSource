@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpUcmFpblZpc2l0b3JCZWhhdmlvci5wcm90byI7ChRUcmFpblZpc2l0b3JC",
-            "ZWhhdmlvchISCgp2aXNpdG9yX2lkGAkgASgNEg8KB2lzX21lZXQYAyABKAhC",
+            "ZWhhdmlvchISCgp2aXNpdG9yX2lkGAIgASgNEg8KB2lzX21lZXQYCyABKAhC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "visitor_id" field.</summary>
-    public const int VisitorIdFieldNumber = 9;
+    public const int VisitorIdFieldNumber = 2;
     private uint visitorId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "is_meet" field.</summary>
-    public const int IsMeetFieldNumber = 3;
+    public const int IsMeetFieldNumber = 11;
     private bool isMeet_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (IsMeet != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(IsMeet);
-      }
       if (VisitorId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteUInt32(VisitorId);
+      }
+      if (IsMeet != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(IsMeet);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (IsMeet != false) {
-        output.WriteRawTag(24);
-        output.WriteBool(IsMeet);
-      }
       if (VisitorId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(16);
         output.WriteUInt32(VisitorId);
+      }
+      if (IsMeet != false) {
+        output.WriteRawTag(88);
+        output.WriteBool(IsMeet);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 24: {
-            IsMeet = input.ReadBool();
+          case 16: {
+            VisitorId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            VisitorId = input.ReadUInt32();
+          case 88: {
+            IsMeet = input.ReadBool();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 24: {
-            IsMeet = input.ReadBool();
+          case 16: {
+            VisitorId = input.ReadUInt32();
             break;
           }
-          case 72: {
-            VisitorId = input.ReadUInt32();
+          case 88: {
+            IsMeet = input.ReadBool();
             break;
           }
         }

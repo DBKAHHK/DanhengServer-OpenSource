@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg5IYW5kSW5mby5wcm90bxoQTW90aW9uSW5mby5wcm90byKDAQoISGFuZElu",
-            "Zm8SIAoLaGFuZF9tb3Rpb24YDSABKAsyCy5Nb3Rpb25JbmZvEhIKCmhhbmRf",
-            "c3RhdGUYByABKA0SFwoPaGFuZF9ieXRlX3ZhbHVlGAQgASgMEhUKDWhhbmRf",
-            "Y29pbl9udW0YCCABKA0SEQoJY29uZmlnX2lkGAEgASgNQh6qAhtFZ2dMaW5r",
+            "Zm8SFQoNaGFuZF9jb2luX251bRgIIAEoDRIgCgtoYW5kX21vdGlvbhgKIAEo",
+            "CzILLk1vdGlvbkluZm8SFwoPaGFuZF9ieXRlX3ZhbHVlGAMgASgMEhIKCmhh",
+            "bmRfc3RhdGUYASABKA0SEQoJY29uZmlnX2lkGAwgASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HandInfo), global::EggLink.DanhengServer.Proto.HandInfo.Parser, new[]{ "HandMotion", "HandState", "HandByteValue", "HandCoinNum", "ConfigId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HandInfo), global::EggLink.DanhengServer.Proto.HandInfo.Parser, new[]{ "HandCoinNum", "HandMotion", "HandByteValue", "HandState", "ConfigId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HandInfo(HandInfo other) : this() {
-      handMotion_ = other.handMotion_ != null ? other.handMotion_.Clone() : null;
-      handState_ = other.handState_;
-      handByteValue_ = other.handByteValue_;
       handCoinNum_ = other.handCoinNum_;
+      handMotion_ = other.handMotion_ != null ? other.handMotion_.Clone() : null;
+      handByteValue_ = other.handByteValue_;
+      handState_ = other.handState_;
       configId_ = other.configId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,42 +86,6 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HandInfo Clone() {
       return new HandInfo(this);
-    }
-
-    /// <summary>Field number for the "hand_motion" field.</summary>
-    public const int HandMotionFieldNumber = 13;
-    private global::EggLink.DanhengServer.Proto.MotionInfo handMotion_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.MotionInfo HandMotion {
-      get { return handMotion_; }
-      set {
-        handMotion_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "hand_state" field.</summary>
-    public const int HandStateFieldNumber = 7;
-    private uint handState_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HandState {
-      get { return handState_; }
-      set {
-        handState_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "hand_byte_value" field.</summary>
-    public const int HandByteValueFieldNumber = 4;
-    private pb::ByteString handByteValue_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString HandByteValue {
-      get { return handByteValue_; }
-      set {
-        handByteValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     /// <summary>Field number for the "hand_coin_num" field.</summary>
@@ -136,8 +100,44 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "hand_motion" field.</summary>
+    public const int HandMotionFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.MotionInfo handMotion_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.MotionInfo HandMotion {
+      get { return handMotion_; }
+      set {
+        handMotion_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "hand_byte_value" field.</summary>
+    public const int HandByteValueFieldNumber = 3;
+    private pb::ByteString handByteValue_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString HandByteValue {
+      get { return handByteValue_; }
+      set {
+        handByteValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "hand_state" field.</summary>
+    public const int HandStateFieldNumber = 1;
+    private uint handState_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint HandState {
+      get { return handState_; }
+      set {
+        handState_ = value;
+      }
+    }
+
     /// <summary>Field number for the "config_id" field.</summary>
-    public const int ConfigIdFieldNumber = 1;
+    public const int ConfigIdFieldNumber = 12;
     private uint configId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -163,10 +163,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(HandMotion, other.HandMotion)) return false;
-      if (HandState != other.HandState) return false;
-      if (HandByteValue != other.HandByteValue) return false;
       if (HandCoinNum != other.HandCoinNum) return false;
+      if (!object.Equals(HandMotion, other.HandMotion)) return false;
+      if (HandByteValue != other.HandByteValue) return false;
+      if (HandState != other.HandState) return false;
       if (ConfigId != other.ConfigId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -175,10 +175,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (handMotion_ != null) hash ^= HandMotion.GetHashCode();
-      if (HandState != 0) hash ^= HandState.GetHashCode();
-      if (HandByteValue.Length != 0) hash ^= HandByteValue.GetHashCode();
       if (HandCoinNum != 0) hash ^= HandCoinNum.GetHashCode();
+      if (handMotion_ != null) hash ^= HandMotion.GetHashCode();
+      if (HandByteValue.Length != 0) hash ^= HandByteValue.GetHashCode();
+      if (HandState != 0) hash ^= HandState.GetHashCode();
       if (ConfigId != 0) hash ^= ConfigId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -198,25 +198,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ConfigId != 0) {
+      if (HandState != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ConfigId);
+        output.WriteUInt32(HandState);
       }
       if (HandByteValue.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteBytes(HandByteValue);
-      }
-      if (HandState != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(HandState);
       }
       if (HandCoinNum != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(HandCoinNum);
       }
       if (handMotion_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(82);
         output.WriteMessage(HandMotion);
+      }
+      if (ConfigId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(ConfigId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -228,25 +228,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ConfigId != 0) {
+      if (HandState != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ConfigId);
+        output.WriteUInt32(HandState);
       }
       if (HandByteValue.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteBytes(HandByteValue);
-      }
-      if (HandState != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(HandState);
       }
       if (HandCoinNum != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(HandCoinNum);
       }
       if (handMotion_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(82);
         output.WriteMessage(HandMotion);
+      }
+      if (ConfigId != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(ConfigId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -258,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (HandCoinNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HandCoinNum);
+      }
       if (handMotion_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(HandMotion);
-      }
-      if (HandState != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HandState);
       }
       if (HandByteValue.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(HandByteValue);
       }
-      if (HandCoinNum != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HandCoinNum);
+      if (HandState != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HandState);
       }
       if (ConfigId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ConfigId);
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.HandCoinNum != 0) {
+        HandCoinNum = other.HandCoinNum;
+      }
       if (other.handMotion_ != null) {
         if (handMotion_ == null) {
           HandMotion = new global::EggLink.DanhengServer.Proto.MotionInfo();
         }
         HandMotion.MergeFrom(other.HandMotion);
       }
-      if (other.HandState != 0) {
-        HandState = other.HandState;
-      }
       if (other.HandByteValue.Length != 0) {
         HandByteValue = other.HandByteValue;
       }
-      if (other.HandCoinNum != 0) {
-        HandCoinNum = other.HandCoinNum;
+      if (other.HandState != 0) {
+        HandState = other.HandState;
       }
       if (other.ConfigId != 0) {
         ConfigId = other.ConfigId;
@@ -319,26 +319,26 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            ConfigId = input.ReadUInt32();
-            break;
-          }
-          case 34: {
-            HandByteValue = input.ReadBytes();
-            break;
-          }
-          case 56: {
             HandState = input.ReadUInt32();
+            break;
+          }
+          case 26: {
+            HandByteValue = input.ReadBytes();
             break;
           }
           case 64: {
             HandCoinNum = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 82: {
             if (handMotion_ == null) {
               HandMotion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(HandMotion);
+            break;
+          }
+          case 96: {
+            ConfigId = input.ReadUInt32();
             break;
           }
         }
@@ -357,26 +357,26 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            ConfigId = input.ReadUInt32();
-            break;
-          }
-          case 34: {
-            HandByteValue = input.ReadBytes();
-            break;
-          }
-          case 56: {
             HandState = input.ReadUInt32();
+            break;
+          }
+          case 26: {
+            HandByteValue = input.ReadBytes();
             break;
           }
           case 64: {
             HandCoinNum = input.ReadUInt32();
             break;
           }
-          case 106: {
+          case 82: {
             if (handMotion_ == null) {
               HandMotion = new global::EggLink.DanhengServer.Proto.MotionInfo();
             }
             input.ReadMessage(HandMotion);
+            break;
+          }
+          case 96: {
+            ConfigId = input.ReadUInt32();
             break;
           }
         }

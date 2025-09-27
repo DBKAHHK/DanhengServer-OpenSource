@@ -26,13 +26,13 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CilHZXRUcmVhc3VyZUR1bmdlb25BY3Rpdml0eURhdGFTY1JzcC5wcm90bxoR",
             "QUJIRkFCRkdQT0YucHJvdG8iWQojR2V0VHJlYXN1cmVEdW5nZW9uQWN0aXZp",
-            "dHlEYXRhU2NSc3ASDwoHcmV0Y29kZRgOIAEoDRIhCgtISU9PS01PQU5EThgD",
-            "IAMoCzIMLkFCSEZBQkZHUE9GQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "dHlEYXRhU2NSc3ASIQoLSElPT0tNT0FORE4YDiADKAsyDC5BQkhGQUJGR1BP",
+            "RhIPCgdyZXRjb2RlGAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ABHFABFGPOFReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetTreasureDungeonActivityDataScRsp), global::EggLink.DanhengServer.Proto.GetTreasureDungeonActivityDataScRsp.Parser, new[]{ "Retcode", "HIOOKMOANDN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetTreasureDungeonActivityDataScRsp), global::EggLink.DanhengServer.Proto.GetTreasureDungeonActivityDataScRsp.Parser, new[]{ "HIOOKMOANDN", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetTreasureDungeonActivityDataScRsp(GetTreasureDungeonActivityDataScRsp other) : this() {
-      retcode_ = other.retcode_;
       hIOOKMOANDN_ = other.hIOOKMOANDN_.Clone();
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +85,19 @@ namespace EggLink.DanhengServer.Proto {
       return new GetTreasureDungeonActivityDataScRsp(this);
     }
 
+    /// <summary>Field number for the "HIOOKMOANDN" field.</summary>
+    public const int HIOOKMOANDNFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ABHFABFGPOF> _repeated_hIOOKMOANDN_codec
+        = pb::FieldCodec.ForMessage(114, global::EggLink.DanhengServer.Proto.ABHFABFGPOF.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ABHFABFGPOF> hIOOKMOANDN_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ABHFABFGPOF>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ABHFABFGPOF> HIOOKMOANDN {
+      get { return hIOOKMOANDN_; }
+    }
+
     /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 14;
+    public const int RetcodeFieldNumber = 9;
     private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -95,17 +106,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         retcode_ = value;
       }
-    }
-
-    /// <summary>Field number for the "HIOOKMOANDN" field.</summary>
-    public const int HIOOKMOANDNFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ABHFABFGPOF> _repeated_hIOOKMOANDN_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.ABHFABFGPOF.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ABHFABFGPOF> hIOOKMOANDN_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ABHFABFGPOF>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ABHFABFGPOF> HIOOKMOANDN {
-      get { return hIOOKMOANDN_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
       if(!hIOOKMOANDN_.Equals(other.hIOOKMOANDN_)) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       hash ^= hIOOKMOANDN_.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      hIOOKMOANDN_.WriteTo(output, _repeated_hIOOKMOANDN_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
+      hIOOKMOANDN_.WriteTo(output, _repeated_hIOOKMOANDN_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      hIOOKMOANDN_.WriteTo(ref output, _repeated_hIOOKMOANDN_codec);
       if (Retcode != 0) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(72);
         output.WriteUInt32(Retcode);
       }
+      hIOOKMOANDN_.WriteTo(ref output, _repeated_hIOOKMOANDN_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -182,10 +182,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += hIOOKMOANDN_.CalculateSize(_repeated_hIOOKMOANDN_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
-      size += hIOOKMOANDN_.CalculateSize(_repeated_hIOOKMOANDN_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -198,10 +198,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      hIOOKMOANDN_.Add(other.hIOOKMOANDN_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
-      hIOOKMOANDN_.Add(other.hIOOKMOANDN_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -217,12 +217,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
-            hIOOKMOANDN_.AddEntriesFrom(input, _repeated_hIOOKMOANDN_codec);
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 114: {
+            hIOOKMOANDN_.AddEntriesFrom(input, _repeated_hIOOKMOANDN_codec);
             break;
           }
         }
@@ -240,12 +240,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
-            hIOOKMOANDN_.AddEntriesFrom(ref input, _repeated_hIOOKMOANDN_codec);
+          case 72: {
+            Retcode = input.ReadUInt32();
             break;
           }
-          case 112: {
-            Retcode = input.ReadUInt32();
+          case 114: {
+            hIOOKMOANDN_.AddEntriesFrom(ref input, _repeated_hIOOKMOANDN_codec);
             break;
           }
         }

@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg1Qcm9kdWN0LnByb3RvGhVQcm9kdWN0R2lmdFR5cGUucHJvdG8i0gEKB1By",
-            "b2R1Y3QSIwoJZ2lmdF90eXBlGAcgASgOMhAuUHJvZHVjdEdpZnRUeXBlEhIK",
-            "CmJlZ2luX3RpbWUYDiABKAMSEgoKcHJpY2VfdGllchgEIAEoCRITCgtJT0dM",
-            "UEVCSk1EQhgDIAEoDRITCgtHQ0JPQkFNQ0FMSxgJIAEoDRIVCg1kb3VibGVf",
-            "cmV3YXJkGAEgASgIEhMKC0lFQ0FFQUJBQ0RNGA0gASgNEhAKCGVuZF90aW1l",
-            "GAYgASgDEhIKCnByb2R1Y3RfaWQYAiABKAlCHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "b2R1Y3QSEwoLSUVDQUVBQkFDRE0YDSABKA0SEgoKcHJvZHVjdF9pZBgGIAEo",
+            "CRIVCg1kb3VibGVfcmV3YXJkGA8gASgIEhMKC0lPR0xQRUJKTURCGAIgASgN",
+            "EhIKCnByaWNlX3RpZXIYASABKAkSEAoIZW5kX3RpbWUYCCABKAMSIwoJZ2lm",
+            "dF90eXBlGAsgASgOMhAuUHJvZHVjdEdpZnRUeXBlEhMKC0dDQk9CQU1DQUxL",
+            "GAkgASgNEhIKCmJlZ2luX3RpbWUYDiABKANCHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ProductGiftTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Product), global::EggLink.DanhengServer.Proto.Product.Parser, new[]{ "GiftType", "BeginTime", "PriceTier", "IOGLPEBJMDB", "GCBOBAMCALK", "DoubleReward", "IECAEABACDM", "EndTime", "ProductId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.Product), global::EggLink.DanhengServer.Proto.Product.Parser, new[]{ "IECAEABACDM", "ProductId", "DoubleReward", "IOGLPEBJMDB", "PriceTier", "EndTime", "GiftType", "GCBOBAMCALK", "BeginTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,15 +76,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Product(Product other) : this() {
-      giftType_ = other.giftType_;
-      beginTime_ = other.beginTime_;
-      priceTier_ = other.priceTier_;
-      iOGLPEBJMDB_ = other.iOGLPEBJMDB_;
-      gCBOBAMCALK_ = other.gCBOBAMCALK_;
-      doubleReward_ = other.doubleReward_;
       iECAEABACDM_ = other.iECAEABACDM_;
-      endTime_ = other.endTime_;
       productId_ = other.productId_;
+      doubleReward_ = other.doubleReward_;
+      iOGLPEBJMDB_ = other.iOGLPEBJMDB_;
+      priceTier_ = other.priceTier_;
+      endTime_ = other.endTime_;
+      giftType_ = other.giftType_;
+      gCBOBAMCALK_ = other.gCBOBAMCALK_;
+      beginTime_ = other.beginTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -94,32 +94,56 @@ namespace EggLink.DanhengServer.Proto {
       return new Product(this);
     }
 
-    /// <summary>Field number for the "gift_type" field.</summary>
-    public const int GiftTypeFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.ProductGiftType giftType_ = global::EggLink.DanhengServer.Proto.ProductGiftType.ProductGiftNone;
+    /// <summary>Field number for the "IECAEABACDM" field.</summary>
+    public const int IECAEABACDMFieldNumber = 13;
+    private uint iECAEABACDM_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ProductGiftType GiftType {
-      get { return giftType_; }
+    public uint IECAEABACDM {
+      get { return iECAEABACDM_; }
       set {
-        giftType_ = value;
+        iECAEABACDM_ = value;
       }
     }
 
-    /// <summary>Field number for the "begin_time" field.</summary>
-    public const int BeginTimeFieldNumber = 14;
-    private long beginTime_;
+    /// <summary>Field number for the "product_id" field.</summary>
+    public const int ProductIdFieldNumber = 6;
+    private string productId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long BeginTime {
-      get { return beginTime_; }
+    public string ProductId {
+      get { return productId_; }
       set {
-        beginTime_ = value;
+        productId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "double_reward" field.</summary>
+    public const int DoubleRewardFieldNumber = 15;
+    private bool doubleReward_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool DoubleReward {
+      get { return doubleReward_; }
+      set {
+        doubleReward_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "IOGLPEBJMDB" field.</summary>
+    public const int IOGLPEBJMDBFieldNumber = 2;
+    private uint iOGLPEBJMDB_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint IOGLPEBJMDB {
+      get { return iOGLPEBJMDB_; }
+      set {
+        iOGLPEBJMDB_ = value;
       }
     }
 
     /// <summary>Field number for the "price_tier" field.</summary>
-    public const int PriceTierFieldNumber = 4;
+    public const int PriceTierFieldNumber = 1;
     private string priceTier_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -130,15 +154,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IOGLPEBJMDB" field.</summary>
-    public const int IOGLPEBJMDBFieldNumber = 3;
-    private uint iOGLPEBJMDB_;
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 8;
+    private long endTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IOGLPEBJMDB {
-      get { return iOGLPEBJMDB_; }
+    public long EndTime {
+      get { return endTime_; }
       set {
-        iOGLPEBJMDB_ = value;
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gift_type" field.</summary>
+    public const int GiftTypeFieldNumber = 11;
+    private global::EggLink.DanhengServer.Proto.ProductGiftType giftType_ = global::EggLink.DanhengServer.Proto.ProductGiftType.ProductGiftNone;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ProductGiftType GiftType {
+      get { return giftType_; }
+      set {
+        giftType_ = value;
       }
     }
 
@@ -154,51 +190,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "double_reward" field.</summary>
-    public const int DoubleRewardFieldNumber = 1;
-    private bool doubleReward_;
+    /// <summary>Field number for the "begin_time" field.</summary>
+    public const int BeginTimeFieldNumber = 14;
+    private long beginTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool DoubleReward {
-      get { return doubleReward_; }
+    public long BeginTime {
+      get { return beginTime_; }
       set {
-        doubleReward_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "IECAEABACDM" field.</summary>
-    public const int IECAEABACDMFieldNumber = 13;
-    private uint iECAEABACDM_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IECAEABACDM {
-      get { return iECAEABACDM_; }
-      set {
-        iECAEABACDM_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "end_time" field.</summary>
-    public const int EndTimeFieldNumber = 6;
-    private long endTime_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public long EndTime {
-      get { return endTime_; }
-      set {
-        endTime_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "product_id" field.</summary>
-    public const int ProductIdFieldNumber = 2;
-    private string productId_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string ProductId {
-      get { return productId_; }
-      set {
-        productId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        beginTime_ = value;
       }
     }
 
@@ -217,15 +217,15 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GiftType != other.GiftType) return false;
-      if (BeginTime != other.BeginTime) return false;
-      if (PriceTier != other.PriceTier) return false;
-      if (IOGLPEBJMDB != other.IOGLPEBJMDB) return false;
-      if (GCBOBAMCALK != other.GCBOBAMCALK) return false;
-      if (DoubleReward != other.DoubleReward) return false;
       if (IECAEABACDM != other.IECAEABACDM) return false;
-      if (EndTime != other.EndTime) return false;
       if (ProductId != other.ProductId) return false;
+      if (DoubleReward != other.DoubleReward) return false;
+      if (IOGLPEBJMDB != other.IOGLPEBJMDB) return false;
+      if (PriceTier != other.PriceTier) return false;
+      if (EndTime != other.EndTime) return false;
+      if (GiftType != other.GiftType) return false;
+      if (GCBOBAMCALK != other.GCBOBAMCALK) return false;
+      if (BeginTime != other.BeginTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -233,15 +233,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GiftType != global::EggLink.DanhengServer.Proto.ProductGiftType.ProductGiftNone) hash ^= GiftType.GetHashCode();
-      if (BeginTime != 0L) hash ^= BeginTime.GetHashCode();
-      if (PriceTier.Length != 0) hash ^= PriceTier.GetHashCode();
-      if (IOGLPEBJMDB != 0) hash ^= IOGLPEBJMDB.GetHashCode();
-      if (GCBOBAMCALK != 0) hash ^= GCBOBAMCALK.GetHashCode();
-      if (DoubleReward != false) hash ^= DoubleReward.GetHashCode();
       if (IECAEABACDM != 0) hash ^= IECAEABACDM.GetHashCode();
-      if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       if (ProductId.Length != 0) hash ^= ProductId.GetHashCode();
+      if (DoubleReward != false) hash ^= DoubleReward.GetHashCode();
+      if (IOGLPEBJMDB != 0) hash ^= IOGLPEBJMDB.GetHashCode();
+      if (PriceTier.Length != 0) hash ^= PriceTier.GetHashCode();
+      if (EndTime != 0L) hash ^= EndTime.GetHashCode();
+      if (GiftType != global::EggLink.DanhengServer.Proto.ProductGiftType.ProductGiftNone) hash ^= GiftType.GetHashCode();
+      if (GCBOBAMCALK != 0) hash ^= GCBOBAMCALK.GetHashCode();
+      if (BeginTime != 0L) hash ^= BeginTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -260,33 +260,29 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DoubleReward != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(DoubleReward);
-      }
-      if (ProductId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(ProductId);
-      }
-      if (IOGLPEBJMDB != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(IOGLPEBJMDB);
-      }
       if (PriceTier.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(10);
         output.WriteString(PriceTier);
       }
-      if (EndTime != 0L) {
-        output.WriteRawTag(48);
-        output.WriteInt64(EndTime);
+      if (IOGLPEBJMDB != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(IOGLPEBJMDB);
       }
-      if (GiftType != global::EggLink.DanhengServer.Proto.ProductGiftType.ProductGiftNone) {
-        output.WriteRawTag(56);
-        output.WriteEnum((int) GiftType);
+      if (ProductId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ProductId);
+      }
+      if (EndTime != 0L) {
+        output.WriteRawTag(64);
+        output.WriteInt64(EndTime);
       }
       if (GCBOBAMCALK != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(GCBOBAMCALK);
+      }
+      if (GiftType != global::EggLink.DanhengServer.Proto.ProductGiftType.ProductGiftNone) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) GiftType);
       }
       if (IECAEABACDM != 0) {
         output.WriteRawTag(104);
@@ -295,6 +291,10 @@ namespace EggLink.DanhengServer.Proto {
       if (BeginTime != 0L) {
         output.WriteRawTag(112);
         output.WriteInt64(BeginTime);
+      }
+      if (DoubleReward != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(DoubleReward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -306,33 +306,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DoubleReward != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(DoubleReward);
-      }
-      if (ProductId.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(ProductId);
-      }
-      if (IOGLPEBJMDB != 0) {
-        output.WriteRawTag(24);
-        output.WriteUInt32(IOGLPEBJMDB);
-      }
       if (PriceTier.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(10);
         output.WriteString(PriceTier);
       }
-      if (EndTime != 0L) {
-        output.WriteRawTag(48);
-        output.WriteInt64(EndTime);
+      if (IOGLPEBJMDB != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(IOGLPEBJMDB);
       }
-      if (GiftType != global::EggLink.DanhengServer.Proto.ProductGiftType.ProductGiftNone) {
-        output.WriteRawTag(56);
-        output.WriteEnum((int) GiftType);
+      if (ProductId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ProductId);
+      }
+      if (EndTime != 0L) {
+        output.WriteRawTag(64);
+        output.WriteInt64(EndTime);
       }
       if (GCBOBAMCALK != 0) {
         output.WriteRawTag(72);
         output.WriteUInt32(GCBOBAMCALK);
+      }
+      if (GiftType != global::EggLink.DanhengServer.Proto.ProductGiftType.ProductGiftNone) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) GiftType);
       }
       if (IECAEABACDM != 0) {
         output.WriteRawTag(104);
@@ -341,6 +337,10 @@ namespace EggLink.DanhengServer.Proto {
       if (BeginTime != 0L) {
         output.WriteRawTag(112);
         output.WriteInt64(BeginTime);
+      }
+      if (DoubleReward != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(DoubleReward);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -352,32 +352,32 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GiftType != global::EggLink.DanhengServer.Proto.ProductGiftType.ProductGiftNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GiftType);
+      if (IECAEABACDM != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IECAEABACDM);
       }
-      if (BeginTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(BeginTime);
-      }
-      if (PriceTier.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(PriceTier);
-      }
-      if (IOGLPEBJMDB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IOGLPEBJMDB);
-      }
-      if (GCBOBAMCALK != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GCBOBAMCALK);
+      if (ProductId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProductId);
       }
       if (DoubleReward != false) {
         size += 1 + 1;
       }
-      if (IECAEABACDM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IECAEABACDM);
+      if (IOGLPEBJMDB != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IOGLPEBJMDB);
+      }
+      if (PriceTier.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PriceTier);
       }
       if (EndTime != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
       }
-      if (ProductId.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ProductId);
+      if (GiftType != global::EggLink.DanhengServer.Proto.ProductGiftType.ProductGiftNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GiftType);
+      }
+      if (GCBOBAMCALK != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GCBOBAMCALK);
+      }
+      if (BeginTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(BeginTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -391,32 +391,32 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GiftType != global::EggLink.DanhengServer.Proto.ProductGiftType.ProductGiftNone) {
-        GiftType = other.GiftType;
+      if (other.IECAEABACDM != 0) {
+        IECAEABACDM = other.IECAEABACDM;
       }
-      if (other.BeginTime != 0L) {
-        BeginTime = other.BeginTime;
-      }
-      if (other.PriceTier.Length != 0) {
-        PriceTier = other.PriceTier;
-      }
-      if (other.IOGLPEBJMDB != 0) {
-        IOGLPEBJMDB = other.IOGLPEBJMDB;
-      }
-      if (other.GCBOBAMCALK != 0) {
-        GCBOBAMCALK = other.GCBOBAMCALK;
+      if (other.ProductId.Length != 0) {
+        ProductId = other.ProductId;
       }
       if (other.DoubleReward != false) {
         DoubleReward = other.DoubleReward;
       }
-      if (other.IECAEABACDM != 0) {
-        IECAEABACDM = other.IECAEABACDM;
+      if (other.IOGLPEBJMDB != 0) {
+        IOGLPEBJMDB = other.IOGLPEBJMDB;
+      }
+      if (other.PriceTier.Length != 0) {
+        PriceTier = other.PriceTier;
       }
       if (other.EndTime != 0L) {
         EndTime = other.EndTime;
       }
-      if (other.ProductId.Length != 0) {
-        ProductId = other.ProductId;
+      if (other.GiftType != global::EggLink.DanhengServer.Proto.ProductGiftType.ProductGiftNone) {
+        GiftType = other.GiftType;
+      }
+      if (other.GCBOBAMCALK != 0) {
+        GCBOBAMCALK = other.GCBOBAMCALK;
+      }
+      if (other.BeginTime != 0L) {
+        BeginTime = other.BeginTime;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -433,32 +433,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            DoubleReward = input.ReadBool();
-            break;
-          }
-          case 18: {
-            ProductId = input.ReadString();
-            break;
-          }
-          case 24: {
-            IOGLPEBJMDB = input.ReadUInt32();
-            break;
-          }
-          case 34: {
+          case 10: {
             PriceTier = input.ReadString();
             break;
           }
-          case 48: {
-            EndTime = input.ReadInt64();
+          case 16: {
+            IOGLPEBJMDB = input.ReadUInt32();
             break;
           }
-          case 56: {
-            GiftType = (global::EggLink.DanhengServer.Proto.ProductGiftType) input.ReadEnum();
+          case 50: {
+            ProductId = input.ReadString();
+            break;
+          }
+          case 64: {
+            EndTime = input.ReadInt64();
             break;
           }
           case 72: {
             GCBOBAMCALK = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            GiftType = (global::EggLink.DanhengServer.Proto.ProductGiftType) input.ReadEnum();
             break;
           }
           case 104: {
@@ -467,6 +463,10 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 112: {
             BeginTime = input.ReadInt64();
+            break;
+          }
+          case 120: {
+            DoubleReward = input.ReadBool();
             break;
           }
         }
@@ -484,32 +484,28 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            DoubleReward = input.ReadBool();
-            break;
-          }
-          case 18: {
-            ProductId = input.ReadString();
-            break;
-          }
-          case 24: {
-            IOGLPEBJMDB = input.ReadUInt32();
-            break;
-          }
-          case 34: {
+          case 10: {
             PriceTier = input.ReadString();
             break;
           }
-          case 48: {
-            EndTime = input.ReadInt64();
+          case 16: {
+            IOGLPEBJMDB = input.ReadUInt32();
             break;
           }
-          case 56: {
-            GiftType = (global::EggLink.DanhengServer.Proto.ProductGiftType) input.ReadEnum();
+          case 50: {
+            ProductId = input.ReadString();
+            break;
+          }
+          case 64: {
+            EndTime = input.ReadInt64();
             break;
           }
           case 72: {
             GCBOBAMCALK = input.ReadUInt32();
+            break;
+          }
+          case 88: {
+            GiftType = (global::EggLink.DanhengServer.Proto.ProductGiftType) input.ReadEnum();
             break;
           }
           case 104: {
@@ -518,6 +514,10 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 112: {
             BeginTime = input.ReadInt64();
+            break;
+          }
+          case 120: {
+            DoubleReward = input.ReadBool();
             break;
           }
         }

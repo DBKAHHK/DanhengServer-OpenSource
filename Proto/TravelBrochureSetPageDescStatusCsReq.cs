@@ -27,7 +27,7 @@ namespace EggLink.DanhengServer.Proto {
             "CipUcmF2ZWxCcm9jaHVyZVNldFBhZ2VEZXNjU3RhdHVzQ3NSZXEucHJvdG8a",
             "EURDSkFPUERJTk9JLnByb3RvIl4KJFRyYXZlbEJyb2NodXJlU2V0UGFnZURl",
             "c2NTdGF0dXNDc1JlcRIhCgtHRUlCR0ZERU5KQRgHIAEoDjIMLkRDSkFPUERJ",
-            "Tk9JEhMKC0NQT0RFSk9GUEREGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "Tk9JEhMKC0NQT0RFSk9GUEREGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DCJAOPDINOIReflection.Descriptor, },
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CPODEJOFPDD" field.</summary>
-    public const int CPODEJOFPDDFieldNumber = 14;
+    public const int CPODEJOFPDDFieldNumber = 5;
     private uint cPODEJOFPDD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -153,13 +153,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (CPODEJOFPDD != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(CPODEJOFPDD);
+      }
       if (GEIBGFDENJA != global::EggLink.DanhengServer.Proto.DCJAOPDINOI.PageDescNone) {
         output.WriteRawTag(56);
         output.WriteEnum((int) GEIBGFDENJA);
-      }
-      if (CPODEJOFPDD != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(CPODEJOFPDD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -171,13 +171,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CPODEJOFPDD != 0) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(CPODEJOFPDD);
+      }
       if (GEIBGFDENJA != global::EggLink.DanhengServer.Proto.DCJAOPDINOI.PageDescNone) {
         output.WriteRawTag(56);
         output.WriteEnum((int) GEIBGFDENJA);
-      }
-      if (CPODEJOFPDD != 0) {
-        output.WriteRawTag(112);
-        output.WriteUInt32(CPODEJOFPDD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -228,12 +228,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            GEIBGFDENJA = (global::EggLink.DanhengServer.Proto.DCJAOPDINOI) input.ReadEnum();
+          case 40: {
+            CPODEJOFPDD = input.ReadUInt32();
             break;
           }
-          case 112: {
-            CPODEJOFPDD = input.ReadUInt32();
+          case 56: {
+            GEIBGFDENJA = (global::EggLink.DanhengServer.Proto.DCJAOPDINOI) input.ReadEnum();
             break;
           }
         }
@@ -251,12 +251,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            GEIBGFDENJA = (global::EggLink.DanhengServer.Proto.DCJAOPDINOI) input.ReadEnum();
+          case 40: {
+            CPODEJOFPDD = input.ReadUInt32();
             break;
           }
-          case 112: {
-            CPODEJOFPDD = input.ReadUInt32();
+          case 56: {
+            GEIBGFDENJA = (global::EggLink.DanhengServer.Proto.DCJAOPDINOI) input.ReadEnum();
             break;
           }
         }

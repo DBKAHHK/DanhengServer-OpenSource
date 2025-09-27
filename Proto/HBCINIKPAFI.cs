@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFIQkNJTklLUEFGSS5wcm90bxoRRlBMTURFTE1KS0IucHJvdG8iMAoLSEJD",
-            "SU5JS1BBRkkSIQoLRk9EUERNUEJBTkQYDSADKAsyDC5GUExNREVMTUpLQkIe",
+            "SU5JS1BBRkkSIQoLRk9EUERNUEJBTkQYCSADKAsyDC5GUExNREVMTUpLQkIe",
             "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FPLMDELMJKBReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "FODPDMPBAND" field.</summary>
-    public const int FODPDMPBANDFieldNumber = 13;
+    public const int FODPDMPBANDFieldNumber = 9;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.FPLMDELMJKB> _repeated_fODPDMPBAND_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.FPLMDELMJKB.Parser);
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.FPLMDELMJKB.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FPLMDELMJKB> fODPDMPBAND_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.FPLMDELMJKB>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 106: {
+          case 74: {
             fODPDMPBAND_.AddEntriesFrom(input, _repeated_fODPDMPBAND_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 106: {
+          case 74: {
             fODPDMPBAND_.AddEntriesFrom(ref input, _repeated_fODPDMPBAND_codec);
             break;
           }

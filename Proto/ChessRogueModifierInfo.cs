@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxDaGVzc1JvZ3VlTW9kaWZpZXJJbmZvLnByb3RvImcKFkNoZXNzUm9ndWVN",
-            "b2RpZmllckluZm8SDwoHY29uZmlybRgNIAEoCBIWCg5zZWxlY3RfY2VsbF9p",
-            "ZBgLIAEoDRIkChxtb2RpZmllcl9lZmZlY3RfY2VsbF9pZF9saXN0GAcgAygN",
+            "b2RpZmllckluZm8SJAocbW9kaWZpZXJfZWZmZWN0X2NlbGxfaWRfbGlzdBgM",
+            "IAMoDRIPCgdjb25maXJtGAQgASgIEhYKDnNlbGVjdF9jZWxsX2lkGA8gASgN",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo), global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo.Parser, new[]{ "Confirm", "SelectCellId", "ModifierEffectCellIdList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo), global::EggLink.DanhengServer.Proto.ChessRogueModifierInfo.Parser, new[]{ "ModifierEffectCellIdList", "Confirm", "SelectCellId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChessRogueModifierInfo(ChessRogueModifierInfo other) : this() {
+      modifierEffectCellIdList_ = other.modifierEffectCellIdList_.Clone();
       confirm_ = other.confirm_;
       selectCellId_ = other.selectCellId_;
-      modifierEffectCellIdList_ = other.modifierEffectCellIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,8 +85,19 @@ namespace EggLink.DanhengServer.Proto {
       return new ChessRogueModifierInfo(this);
     }
 
+    /// <summary>Field number for the "modifier_effect_cell_id_list" field.</summary>
+    public const int ModifierEffectCellIdListFieldNumber = 12;
+    private static readonly pb::FieldCodec<uint> _repeated_modifierEffectCellIdList_codec
+        = pb::FieldCodec.ForUInt32(98);
+    private readonly pbc::RepeatedField<uint> modifierEffectCellIdList_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> ModifierEffectCellIdList {
+      get { return modifierEffectCellIdList_; }
+    }
+
     /// <summary>Field number for the "confirm" field.</summary>
-    public const int ConfirmFieldNumber = 13;
+    public const int ConfirmFieldNumber = 4;
     private bool confirm_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "select_cell_id" field.</summary>
-    public const int SelectCellIdFieldNumber = 11;
+    public const int SelectCellIdFieldNumber = 15;
     private uint selectCellId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -107,17 +118,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         selectCellId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "modifier_effect_cell_id_list" field.</summary>
-    public const int ModifierEffectCellIdListFieldNumber = 7;
-    private static readonly pb::FieldCodec<uint> _repeated_modifierEffectCellIdList_codec
-        = pb::FieldCodec.ForUInt32(58);
-    private readonly pbc::RepeatedField<uint> modifierEffectCellIdList_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> ModifierEffectCellIdList {
-      get { return modifierEffectCellIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if(!modifierEffectCellIdList_.Equals(other.modifierEffectCellIdList_)) return false;
       if (Confirm != other.Confirm) return false;
       if (SelectCellId != other.SelectCellId) return false;
-      if(!modifierEffectCellIdList_.Equals(other.modifierEffectCellIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      hash ^= modifierEffectCellIdList_.GetHashCode();
       if (Confirm != false) hash ^= Confirm.GetHashCode();
       if (SelectCellId != 0) hash ^= SelectCellId.GetHashCode();
-      hash ^= modifierEffectCellIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,14 +166,14 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (Confirm != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Confirm);
+      }
       modifierEffectCellIdList_.WriteTo(output, _repeated_modifierEffectCellIdList_codec);
       if (SelectCellId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(120);
         output.WriteUInt32(SelectCellId);
-      }
-      if (Confirm != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(Confirm);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -185,14 +185,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Confirm != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Confirm);
+      }
       modifierEffectCellIdList_.WriteTo(ref output, _repeated_modifierEffectCellIdList_codec);
       if (SelectCellId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(120);
         output.WriteUInt32(SelectCellId);
-      }
-      if (Confirm != false) {
-        output.WriteRawTag(104);
-        output.WriteBool(Confirm);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -204,13 +204,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += modifierEffectCellIdList_.CalculateSize(_repeated_modifierEffectCellIdList_codec);
       if (Confirm != false) {
         size += 1 + 1;
       }
       if (SelectCellId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SelectCellId);
       }
-      size += modifierEffectCellIdList_.CalculateSize(_repeated_modifierEffectCellIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -223,13 +223,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      modifierEffectCellIdList_.Add(other.modifierEffectCellIdList_);
       if (other.Confirm != false) {
         Confirm = other.Confirm;
       }
       if (other.SelectCellId != 0) {
         SelectCellId = other.SelectCellId;
       }
-      modifierEffectCellIdList_.Add(other.modifierEffectCellIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -245,17 +245,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58:
-          case 56: {
+          case 32: {
+            Confirm = input.ReadBool();
+            break;
+          }
+          case 98:
+          case 96: {
             modifierEffectCellIdList_.AddEntriesFrom(input, _repeated_modifierEffectCellIdList_codec);
             break;
           }
-          case 88: {
+          case 120: {
             SelectCellId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            Confirm = input.ReadBool();
             break;
           }
         }
@@ -273,17 +273,17 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58:
-          case 56: {
+          case 32: {
+            Confirm = input.ReadBool();
+            break;
+          }
+          case 98:
+          case 96: {
             modifierEffectCellIdList_.AddEntriesFrom(ref input, _repeated_modifierEffectCellIdList_codec);
             break;
           }
-          case 88: {
+          case 120: {
             SelectCellId = input.ReadUInt32();
-            break;
-          }
-          case 104: {
-            Confirm = input.ReadBool();
             break;
           }
         }

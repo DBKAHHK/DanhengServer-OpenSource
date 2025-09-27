@@ -26,8 +26,8 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiVGaWdodE1hdGNoM1NvbG9EYXRhVXBkYXRlTm90aWZ5LnByb3RvGhFBQkJE",
             "SkJNSUlCRS5wcm90bxoRSU9JSkVQR01KQUYucHJvdG8iWwofRmlnaHRNYXRj",
-            "aDNTb2xvRGF0YVVwZGF0ZU5vdGlmeRIcCgZyZWFzb24YDiABKA4yDC5BQkJE",
-            "SkJNSUlCRRIaCgRkYXRhGAsgASgLMgwuSU9JSkVQR01KQUZCHqoCG0VnZ0xp",
+            "aDNTb2xvRGF0YVVwZGF0ZU5vdGlmeRIcCgZyZWFzb24YDyABKA4yDC5BQkJE",
+            "SkJNSUlCRRIaCgRkYXRhGAEgASgLMgwuSU9JSkVQR01KQUZCHqoCG0VnZ0xp",
             "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ABBDJBMIIBEReflection.Descriptor, global::EggLink.DanhengServer.Proto.IOIJEPGMJAFReflection.Descriptor, },
@@ -86,7 +86,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "reason" field.</summary>
-    public const int ReasonFieldNumber = 14;
+    public const int ReasonFieldNumber = 15;
     private global::EggLink.DanhengServer.Proto.ABBDJBMIIBE reason_ = global::EggLink.DanhengServer.Proto.ABBDJBMIIBE.Match3SoloUpdateReasonDefault;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 11;
+    public const int DataFieldNumber = 1;
     private global::EggLink.DanhengServer.Proto.IOIJEPGMJAF data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -154,11 +154,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (data_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(10);
         output.WriteMessage(Data);
       }
       if (Reason != global::EggLink.DanhengServer.Proto.ABBDJBMIIBE.Match3SoloUpdateReasonDefault) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteEnum((int) Reason);
       }
       if (_unknownFields != null) {
@@ -172,11 +172,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (data_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(10);
         output.WriteMessage(Data);
       }
       if (Reason != global::EggLink.DanhengServer.Proto.ABBDJBMIIBE.Match3SoloUpdateReasonDefault) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(120);
         output.WriteEnum((int) Reason);
       }
       if (_unknownFields != null) {
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 10: {
             if (data_ == null) {
               Data = new global::EggLink.DanhengServer.Proto.IOIJEPGMJAF();
             }
             input.ReadMessage(Data);
             break;
           }
-          case 112: {
+          case 120: {
             Reason = (global::EggLink.DanhengServer.Proto.ABBDJBMIIBE) input.ReadEnum();
             break;
           }
@@ -257,14 +257,14 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 10: {
             if (data_ == null) {
               Data = new global::EggLink.DanhengServer.Proto.IOIJEPGMJAF();
             }
             input.ReadMessage(Data);
             break;
           }
-          case 112: {
+          case 120: {
             Reason = (global::EggLink.DanhengServer.Proto.ABBDJBMIIBE) input.ReadEnum();
             break;
           }

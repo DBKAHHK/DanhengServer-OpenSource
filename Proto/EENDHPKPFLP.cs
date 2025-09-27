@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFFRU5ESFBLUEZMUC5wcm90bxoTUm9ndWVNb2RpZmllci5wcm90byIyCgtF",
-            "RU5ESFBLUEZMUBIjCgtNRUJKQ0xFTlBJTxgCIAMoCzIOLlJvZ3VlTW9kaWZp",
+            "RU5ESFBLUEZMUBIjCgtNRUJKQ0xFTlBJTxgFIAMoCzIOLlJvZ3VlTW9kaWZp",
             "ZXJCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueModifierReflection.Descriptor, },
@@ -83,9 +83,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "MEBJCLENPIO" field.</summary>
-    public const int MEBJCLENPIOFieldNumber = 2;
+    public const int MEBJCLENPIOFieldNumber = 5;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RogueModifier> _repeated_mEBJCLENPIO_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.RogueModifier.Parser);
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.RogueModifier.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueModifier> mEBJCLENPIO_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RogueModifier>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -186,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
+          case 42: {
             mEBJCLENPIO_.AddEntriesFrom(input, _repeated_mEBJCLENPIO_codec);
             break;
           }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18: {
+          case 42: {
             mEBJCLENPIO_.AddEntriesFrom(ref input, _repeated_mEBJCLENPIO_codec);
             break;
           }

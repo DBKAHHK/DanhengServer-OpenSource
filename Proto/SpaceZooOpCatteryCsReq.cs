@@ -25,13 +25,13 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxTcGFjZVpvb09wQ2F0dGVyeUNzUmVxLnByb3RvIlMKFlNwYWNlWm9vT3BD",
-            "YXR0ZXJ5Q3NSZXESEwoLTklMRUVESkxHSU4YDiABKA0SDwoHb3BfdHlwZRgI",
-            "IAEoDRITCgtBTEdFSUVOSU9BThgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "YXR0ZXJ5Q3NSZXESEwoLQUxHRUlFTklPQU4YDyABKA0SEwoLTklMRUVESkxH",
+            "SU4YDiABKA0SDwoHb3BfdHlwZRgNIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
             "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SpaceZooOpCatteryCsReq), global::EggLink.DanhengServer.Proto.SpaceZooOpCatteryCsReq.Parser, new[]{ "NILEEDJLGIN", "OpType", "ALGEIENIOAN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SpaceZooOpCatteryCsReq), global::EggLink.DanhengServer.Proto.SpaceZooOpCatteryCsReq.Parser, new[]{ "ALGEIENIOAN", "NILEEDJLGIN", "OpType" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +73,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpaceZooOpCatteryCsReq(SpaceZooOpCatteryCsReq other) : this() {
+      aLGEIENIOAN_ = other.aLGEIENIOAN_;
       nILEEDJLGIN_ = other.nILEEDJLGIN_;
       opType_ = other.opType_;
-      aLGEIENIOAN_ = other.aLGEIENIOAN_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,6 +83,18 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpaceZooOpCatteryCsReq Clone() {
       return new SpaceZooOpCatteryCsReq(this);
+    }
+
+    /// <summary>Field number for the "ALGEIENIOAN" field.</summary>
+    public const int ALGEIENIOANFieldNumber = 15;
+    private uint aLGEIENIOAN_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ALGEIENIOAN {
+      get { return aLGEIENIOAN_; }
+      set {
+        aLGEIENIOAN_ = value;
+      }
     }
 
     /// <summary>Field number for the "NILEEDJLGIN" field.</summary>
@@ -98,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "op_type" field.</summary>
-    public const int OpTypeFieldNumber = 8;
+    public const int OpTypeFieldNumber = 13;
     private uint opType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -106,18 +118,6 @@ namespace EggLink.DanhengServer.Proto {
       get { return opType_; }
       set {
         opType_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "ALGEIENIOAN" field.</summary>
-    public const int ALGEIENIOANFieldNumber = 9;
-    private uint aLGEIENIOAN_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ALGEIENIOAN {
-      get { return aLGEIENIOAN_; }
-      set {
-        aLGEIENIOAN_ = value;
       }
     }
 
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (ALGEIENIOAN != other.ALGEIENIOAN) return false;
       if (NILEEDJLGIN != other.NILEEDJLGIN) return false;
       if (OpType != other.OpType) return false;
-      if (ALGEIENIOAN != other.ALGEIENIOAN) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +146,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (ALGEIENIOAN != 0) hash ^= ALGEIENIOAN.GetHashCode();
       if (NILEEDJLGIN != 0) hash ^= NILEEDJLGIN.GetHashCode();
       if (OpType != 0) hash ^= OpType.GetHashCode();
-      if (ALGEIENIOAN != 0) hash ^= ALGEIENIOAN.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,16 +168,16 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (OpType != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(OpType);
-      }
-      if (ALGEIENIOAN != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(ALGEIENIOAN);
       }
       if (NILEEDJLGIN != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(NILEEDJLGIN);
+      }
+      if (ALGEIENIOAN != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(ALGEIENIOAN);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,16 +190,16 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (OpType != 0) {
-        output.WriteRawTag(64);
+        output.WriteRawTag(104);
         output.WriteUInt32(OpType);
-      }
-      if (ALGEIENIOAN != 0) {
-        output.WriteRawTag(72);
-        output.WriteUInt32(ALGEIENIOAN);
       }
       if (NILEEDJLGIN != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(NILEEDJLGIN);
+      }
+      if (ALGEIENIOAN != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(ALGEIENIOAN);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +211,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (ALGEIENIOAN != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ALGEIENIOAN);
+      }
       if (NILEEDJLGIN != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NILEEDJLGIN);
       }
       if (OpType != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OpType);
-      }
-      if (ALGEIENIOAN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ALGEIENIOAN);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +232,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      if (other.ALGEIENIOAN != 0) {
+        ALGEIENIOAN = other.ALGEIENIOAN;
+      }
       if (other.NILEEDJLGIN != 0) {
         NILEEDJLGIN = other.NILEEDJLGIN;
       }
       if (other.OpType != 0) {
         OpType = other.OpType;
-      }
-      if (other.ALGEIENIOAN != 0) {
-        ALGEIENIOAN = other.ALGEIENIOAN;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -256,16 +256,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 64: {
+          case 104: {
             OpType = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            ALGEIENIOAN = input.ReadUInt32();
             break;
           }
           case 112: {
             NILEEDJLGIN = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            ALGEIENIOAN = input.ReadUInt32();
             break;
           }
         }
@@ -283,16 +283,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 64: {
+          case 104: {
             OpType = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            ALGEIENIOAN = input.ReadUInt32();
             break;
           }
           case 112: {
             NILEEDJLGIN = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            ALGEIENIOAN = input.ReadUInt32();
             break;
           }
         }

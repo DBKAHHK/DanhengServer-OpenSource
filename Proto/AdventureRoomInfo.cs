@@ -27,15 +27,15 @@ namespace EggLink.DanhengServer.Proto {
             "ChdBZHZlbnR1cmVSb29tSW5mby5wcm90bxorUm9ndWVBZHZlbnR1cmVSb29t",
             "R2FtZXBsYXlXb2xmR3VuSW5mby5wcm90bxoeUm9ndWVBZHZlbnR1cmVSb29t",
             "U3RhdHVzLnByb3RvItEBChFBZHZlbnR1cmVSb29tSW5mbxIQCghzY29yZV9p",
-            "ZBgLIAEoDRIaChJjYXVnaHRfbW9uc3Rlcl9udW0YBSABKA0SGgoScmVtYWlu",
-            "X21vbnN0ZXJfbnVtGA8gASgNEgsKA3N1cxgMIAEoARIpCgZzdGF0dXMYCSAB",
-            "KA4yGS5Sb2d1ZUFkdmVudHVyZVJvb21TdGF0dXMSOgoKcXVlcnlfaW5mbxgD",
-            "IAEoCzImLlJvZ3VlQWR2ZW50dXJlUm9vbUdhbWVwbGF5V29sZkd1bkluZm9C",
+            "ZBgLIAEoDRI6CgpxdWVyeV9pbmZvGAogASgLMiYuUm9ndWVBZHZlbnR1cmVS",
+            "b29tR2FtZXBsYXlXb2xmR3VuSW5mbxIaChJyZW1haW5fbW9uc3Rlcl9udW0Y",
+            "ASABKA0SCwoDc3VzGAUgASgBEikKBnN0YXR1cxgNIAEoDjIZLlJvZ3VlQWR2",
+            "ZW50dXJlUm9vbVN0YXR1cxIaChJjYXVnaHRfbW9uc3Rlcl9udW0YAyABKA1C",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AdventureRoomInfo), global::EggLink.DanhengServer.Proto.AdventureRoomInfo.Parser, new[]{ "ScoreId", "CaughtMonsterNum", "RemainMonsterNum", "Sus", "Status", "QueryInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AdventureRoomInfo), global::EggLink.DanhengServer.Proto.AdventureRoomInfo.Parser, new[]{ "ScoreId", "QueryInfo", "RemainMonsterNum", "Sus", "Status", "CaughtMonsterNum" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,11 +78,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdventureRoomInfo(AdventureRoomInfo other) : this() {
       scoreId_ = other.scoreId_;
-      caughtMonsterNum_ = other.caughtMonsterNum_;
+      queryInfo_ = other.queryInfo_ != null ? other.queryInfo_.Clone() : null;
       remainMonsterNum_ = other.remainMonsterNum_;
       sus_ = other.sus_;
       status_ = other.status_;
-      queryInfo_ = other.queryInfo_ != null ? other.queryInfo_.Clone() : null;
+      caughtMonsterNum_ = other.caughtMonsterNum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -104,20 +104,20 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "caught_monster_num" field.</summary>
-    public const int CaughtMonsterNumFieldNumber = 5;
-    private uint caughtMonsterNum_;
+    /// <summary>Field number for the "query_info" field.</summary>
+    public const int QueryInfoFieldNumber = 10;
+    private global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfo queryInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CaughtMonsterNum {
-      get { return caughtMonsterNum_; }
+    public global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfo QueryInfo {
+      get { return queryInfo_; }
       set {
-        caughtMonsterNum_ = value;
+        queryInfo_ = value;
       }
     }
 
     /// <summary>Field number for the "remain_monster_num" field.</summary>
-    public const int RemainMonsterNumFieldNumber = 15;
+    public const int RemainMonsterNumFieldNumber = 1;
     private uint remainMonsterNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -129,7 +129,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "sus" field.</summary>
-    public const int SusFieldNumber = 12;
+    public const int SusFieldNumber = 5;
     private double sus_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -141,7 +141,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 9;
+    public const int StatusFieldNumber = 13;
     private global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus status_ = global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,15 +152,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "query_info" field.</summary>
-    public const int QueryInfoFieldNumber = 3;
-    private global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfo queryInfo_;
+    /// <summary>Field number for the "caught_monster_num" field.</summary>
+    public const int CaughtMonsterNumFieldNumber = 3;
+    private uint caughtMonsterNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfo QueryInfo {
-      get { return queryInfo_; }
+    public uint CaughtMonsterNum {
+      get { return caughtMonsterNum_; }
       set {
-        queryInfo_ = value;
+        caughtMonsterNum_ = value;
       }
     }
 
@@ -180,11 +180,11 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (ScoreId != other.ScoreId) return false;
-      if (CaughtMonsterNum != other.CaughtMonsterNum) return false;
+      if (!object.Equals(QueryInfo, other.QueryInfo)) return false;
       if (RemainMonsterNum != other.RemainMonsterNum) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Sus, other.Sus)) return false;
       if (Status != other.Status) return false;
-      if (!object.Equals(QueryInfo, other.QueryInfo)) return false;
+      if (CaughtMonsterNum != other.CaughtMonsterNum) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -193,11 +193,11 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
-      if (CaughtMonsterNum != 0) hash ^= CaughtMonsterNum.GetHashCode();
+      if (queryInfo_ != null) hash ^= QueryInfo.GetHashCode();
       if (RemainMonsterNum != 0) hash ^= RemainMonsterNum.GetHashCode();
       if (Sus != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Sus);
       if (Status != global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None) hash ^= Status.GetHashCode();
-      if (queryInfo_ != null) hash ^= QueryInfo.GetHashCode();
+      if (CaughtMonsterNum != 0) hash ^= CaughtMonsterNum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -216,29 +216,29 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (queryInfo_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(QueryInfo);
+      if (RemainMonsterNum != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RemainMonsterNum);
       }
       if (CaughtMonsterNum != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(CaughtMonsterNum);
       }
-      if (Status != global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None) {
-        output.WriteRawTag(72);
-        output.WriteEnum((int) Status);
+      if (Sus != 0D) {
+        output.WriteRawTag(41);
+        output.WriteDouble(Sus);
+      }
+      if (queryInfo_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(QueryInfo);
       }
       if (ScoreId != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(ScoreId);
       }
-      if (Sus != 0D) {
-        output.WriteRawTag(97);
-        output.WriteDouble(Sus);
-      }
-      if (RemainMonsterNum != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(RemainMonsterNum);
+      if (Status != global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -250,29 +250,29 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (queryInfo_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(QueryInfo);
+      if (RemainMonsterNum != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RemainMonsterNum);
       }
       if (CaughtMonsterNum != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(24);
         output.WriteUInt32(CaughtMonsterNum);
       }
-      if (Status != global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None) {
-        output.WriteRawTag(72);
-        output.WriteEnum((int) Status);
+      if (Sus != 0D) {
+        output.WriteRawTag(41);
+        output.WriteDouble(Sus);
+      }
+      if (queryInfo_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(QueryInfo);
       }
       if (ScoreId != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(ScoreId);
       }
-      if (Sus != 0D) {
-        output.WriteRawTag(97);
-        output.WriteDouble(Sus);
-      }
-      if (RemainMonsterNum != 0) {
-        output.WriteRawTag(120);
-        output.WriteUInt32(RemainMonsterNum);
+      if (Status != global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) Status);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -287,8 +287,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ScoreId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScoreId);
       }
-      if (CaughtMonsterNum != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CaughtMonsterNum);
+      if (queryInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryInfo);
       }
       if (RemainMonsterNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RemainMonsterNum);
@@ -299,8 +299,8 @@ namespace EggLink.DanhengServer.Proto {
       if (Status != global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
-      if (queryInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(QueryInfo);
+      if (CaughtMonsterNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CaughtMonsterNum);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -317,8 +317,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ScoreId != 0) {
         ScoreId = other.ScoreId;
       }
-      if (other.CaughtMonsterNum != 0) {
-        CaughtMonsterNum = other.CaughtMonsterNum;
+      if (other.queryInfo_ != null) {
+        if (queryInfo_ == null) {
+          QueryInfo = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfo();
+        }
+        QueryInfo.MergeFrom(other.QueryInfo);
       }
       if (other.RemainMonsterNum != 0) {
         RemainMonsterNum = other.RemainMonsterNum;
@@ -329,11 +332,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Status != global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus.None) {
         Status = other.Status;
       }
-      if (other.queryInfo_ != null) {
-        if (queryInfo_ == null) {
-          QueryInfo = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfo();
-        }
-        QueryInfo.MergeFrom(other.QueryInfo);
+      if (other.CaughtMonsterNum != 0) {
+        CaughtMonsterNum = other.CaughtMonsterNum;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -350,31 +350,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 8: {
+            RemainMonsterNum = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            CaughtMonsterNum = input.ReadUInt32();
+            break;
+          }
+          case 41: {
+            Sus = input.ReadDouble();
+            break;
+          }
+          case 82: {
             if (queryInfo_ == null) {
               QueryInfo = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfo();
             }
             input.ReadMessage(QueryInfo);
             break;
           }
-          case 40: {
-            CaughtMonsterNum = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus) input.ReadEnum();
-            break;
-          }
           case 88: {
             ScoreId = input.ReadUInt32();
             break;
           }
-          case 97: {
-            Sus = input.ReadDouble();
-            break;
-          }
-          case 120: {
-            RemainMonsterNum = input.ReadUInt32();
+          case 104: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus) input.ReadEnum();
             break;
           }
         }
@@ -392,31 +392,31 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 8: {
+            RemainMonsterNum = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            CaughtMonsterNum = input.ReadUInt32();
+            break;
+          }
+          case 41: {
+            Sus = input.ReadDouble();
+            break;
+          }
+          case 82: {
             if (queryInfo_ == null) {
               QueryInfo = new global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunInfo();
             }
             input.ReadMessage(QueryInfo);
             break;
           }
-          case 40: {
-            CaughtMonsterNum = input.ReadUInt32();
-            break;
-          }
-          case 72: {
-            Status = (global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus) input.ReadEnum();
-            break;
-          }
           case 88: {
             ScoreId = input.ReadUInt32();
             break;
           }
-          case 97: {
-            Sus = input.ReadDouble();
-            break;
-          }
-          case 120: {
-            RemainMonsterNum = input.ReadUInt32();
+          case 104: {
+            Status = (global::EggLink.DanhengServer.Proto.RogueAdventureRoomStatus) input.ReadEnum();
             break;
           }
         }

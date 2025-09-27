@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static OEPANDOKEJDReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFPRVBBTkRPS0VKRC5wcm90byI0CgtPRVBBTkRPS0VKRBIQCghzdGFnZV9p",
-            "ZBgNIAEoDRITCgtJRk9FRFBMSktPQRgCIAMoDUIeqgIbRWdnTGluay5EYW5o",
+            "ChFPRVBBTkRPS0VKRC5wcm90byI0CgtPRVBBTkRPS0VKRBITCgtJRk9FRFBM",
+            "SktPQRgBIAMoDRIQCghzdGFnZV9pZBgGIAEoDUIeqgIbRWdnTGluay5EYW5o",
             "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OEPANDOKEJD), global::EggLink.DanhengServer.Proto.OEPANDOKEJD.Parser, new[]{ "StageId", "IFOEDPLJKOA" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OEPANDOKEJD), global::EggLink.DanhengServer.Proto.OEPANDOKEJD.Parser, new[]{ "IFOEDPLJKOA", "StageId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OEPANDOKEJD(OEPANDOKEJD other) : this() {
-      stageId_ = other.stageId_;
       iFOEDPLJKOA_ = other.iFOEDPLJKOA_.Clone();
+      stageId_ = other.stageId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,8 +83,19 @@ namespace EggLink.DanhengServer.Proto {
       return new OEPANDOKEJD(this);
     }
 
+    /// <summary>Field number for the "IFOEDPLJKOA" field.</summary>
+    public const int IFOEDPLJKOAFieldNumber = 1;
+    private static readonly pb::FieldCodec<uint> _repeated_iFOEDPLJKOA_codec
+        = pb::FieldCodec.ForUInt32(10);
+    private readonly pbc::RepeatedField<uint> iFOEDPLJKOA_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> IFOEDPLJKOA {
+      get { return iFOEDPLJKOA_; }
+    }
+
     /// <summary>Field number for the "stage_id" field.</summary>
-    public const int StageIdFieldNumber = 13;
+    public const int StageIdFieldNumber = 6;
     private uint stageId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -93,17 +104,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         stageId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "IFOEDPLJKOA" field.</summary>
-    public const int IFOEDPLJKOAFieldNumber = 2;
-    private static readonly pb::FieldCodec<uint> _repeated_iFOEDPLJKOA_codec
-        = pb::FieldCodec.ForUInt32(18);
-    private readonly pbc::RepeatedField<uint> iFOEDPLJKOA_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> IFOEDPLJKOA {
-      get { return iFOEDPLJKOA_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -121,8 +121,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (StageId != other.StageId) return false;
       if(!iFOEDPLJKOA_.Equals(other.iFOEDPLJKOA_)) return false;
+      if (StageId != other.StageId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -130,8 +130,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (StageId != 0) hash ^= StageId.GetHashCode();
       hash ^= iFOEDPLJKOA_.GetHashCode();
+      if (StageId != 0) hash ^= StageId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     #else
       iFOEDPLJKOA_.WriteTo(output, _repeated_iFOEDPLJKOA_codec);
       if (StageId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(48);
         output.WriteUInt32(StageId);
       }
       if (_unknownFields != null) {
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       iFOEDPLJKOA_.WriteTo(ref output, _repeated_iFOEDPLJKOA_codec);
       if (StageId != 0) {
-        output.WriteRawTag(104);
+        output.WriteRawTag(48);
         output.WriteUInt32(StageId);
       }
       if (_unknownFields != null) {
@@ -180,10 +180,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      size += iFOEDPLJKOA_.CalculateSize(_repeated_iFOEDPLJKOA_codec);
       if (StageId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(StageId);
       }
-      size += iFOEDPLJKOA_.CalculateSize(_repeated_iFOEDPLJKOA_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -196,10 +196,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
+      iFOEDPLJKOA_.Add(other.iFOEDPLJKOA_);
       if (other.StageId != 0) {
         StageId = other.StageId;
       }
-      iFOEDPLJKOA_.Add(other.iFOEDPLJKOA_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -215,12 +215,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18:
-          case 16: {
+          case 10:
+          case 8: {
             iFOEDPLJKOA_.AddEntriesFrom(input, _repeated_iFOEDPLJKOA_codec);
             break;
           }
-          case 104: {
+          case 48: {
             StageId = input.ReadUInt32();
             break;
           }
@@ -239,12 +239,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 18:
-          case 16: {
+          case 10:
+          case 8: {
             iFOEDPLJKOA_.AddEntriesFrom(ref input, _repeated_iFOEDPLJKOA_codec);
             break;
           }
-          case 104: {
+          case 48: {
             StageId = input.ReadUInt32();
             break;
           }

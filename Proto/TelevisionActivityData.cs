@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChxUZWxldmlzaW9uQWN0aXZpdHlEYXRhLnByb3RvIlUKFlRlbGV2aXNpb25B",
             "Y3Rpdml0eURhdGESEwoLS0VHQ0pQUE9LQksYDiABKA0SEwoLTklOTEZCR0xC",
-            "TEwYCSABKA0SEQoJbWF4X3Njb3JlGAUgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "TEwYAyABKA0SEQoJbWF4X3Njb3JlGAwgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
             "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -98,7 +98,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "NINLFBGLBLL" field.</summary>
-    public const int NINLFBGLBLLFieldNumber = 9;
+    public const int NINLFBGLBLLFieldNumber = 3;
     private uint nINLFBGLBLL_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -110,7 +110,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "max_score" field.</summary>
-    public const int MaxScoreFieldNumber = 5;
+    public const int MaxScoreFieldNumber = 12;
     private uint maxScore_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -167,13 +167,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MaxScore != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(MaxScore);
-      }
       if (NINLFBGLBLL != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(24);
         output.WriteUInt32(NINLFBGLBLL);
+      }
+      if (MaxScore != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(MaxScore);
       }
       if (KEGCJPPOKBK != 0) {
         output.WriteRawTag(112);
@@ -189,13 +189,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MaxScore != 0) {
-        output.WriteRawTag(40);
-        output.WriteUInt32(MaxScore);
-      }
       if (NINLFBGLBLL != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(24);
         output.WriteUInt32(NINLFBGLBLL);
+      }
+      if (MaxScore != 0) {
+        output.WriteRawTag(96);
+        output.WriteUInt32(MaxScore);
       }
       if (KEGCJPPOKBK != 0) {
         output.WriteRawTag(112);
@@ -256,12 +256,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 40: {
-            MaxScore = input.ReadUInt32();
+          case 24: {
+            NINLFBGLBLL = input.ReadUInt32();
             break;
           }
-          case 72: {
-            NINLFBGLBLL = input.ReadUInt32();
+          case 96: {
+            MaxScore = input.ReadUInt32();
             break;
           }
           case 112: {
@@ -283,12 +283,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 40: {
-            MaxScore = input.ReadUInt32();
+          case 24: {
+            NINLFBGLBLL = input.ReadUInt32();
             break;
           }
-          case 72: {
-            NINLFBGLBLL = input.ReadUInt32();
+          case 96: {
+            MaxScore = input.ReadUInt32();
             break;
           }
           case 112: {

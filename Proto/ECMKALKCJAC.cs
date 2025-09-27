@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static ECMKALKCJACReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFFQ01LQUxLQ0pBQy5wcm90byJKCgtFQ01LQUxLQ0pBQxITCgtNUEJQT05H",
-            "SUdJRBgFIAEoCRIRCgloZWFkX2ljb24YDSABKA0SEwoLQ01BTUVET0xMSkwY",
-            "CiABKAlCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChFFQ01LQUxLQ0pBQy5wcm90byJKCgtFQ01LQUxLQ0pBQxIRCgloZWFkX2lj",
+            "b24YBCABKA0SEwoLQ01BTUVET0xMSkwYDyABKAkSEwoLTVBCUE9OR0lHSUQY",
+            "BiABKAlCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ECMKALKCJAC), global::EggLink.DanhengServer.Proto.ECMKALKCJAC.Parser, new[]{ "MPBPONGIGID", "HeadIcon", "CMAMEDOLLJL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ECMKALKCJAC), global::EggLink.DanhengServer.Proto.ECMKALKCJAC.Parser, new[]{ "HeadIcon", "CMAMEDOLLJL", "MPBPONGIGID" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,9 +72,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ECMKALKCJAC(ECMKALKCJAC other) : this() {
-      mPBPONGIGID_ = other.mPBPONGIGID_;
       headIcon_ = other.headIcon_;
       cMAMEDOLLJL_ = other.cMAMEDOLLJL_;
+      mPBPONGIGID_ = other.mPBPONGIGID_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,20 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       return new ECMKALKCJAC(this);
     }
 
-    /// <summary>Field number for the "MPBPONGIGID" field.</summary>
-    public const int MPBPONGIGIDFieldNumber = 5;
-    private string mPBPONGIGID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string MPBPONGIGID {
-      get { return mPBPONGIGID_; }
-      set {
-        mPBPONGIGID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "head_icon" field.</summary>
-    public const int HeadIconFieldNumber = 13;
+    public const int HeadIconFieldNumber = 4;
     private uint headIcon_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -109,7 +97,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "CMAMEDOLLJL" field.</summary>
-    public const int CMAMEDOLLJLFieldNumber = 10;
+    public const int CMAMEDOLLJLFieldNumber = 15;
     private string cMAMEDOLLJL_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -117,6 +105,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return cMAMEDOLLJL_; }
       set {
         cMAMEDOLLJL_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "MPBPONGIGID" field.</summary>
+    public const int MPBPONGIGIDFieldNumber = 6;
+    private string mPBPONGIGID_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MPBPONGIGID {
+      get { return mPBPONGIGID_; }
+      set {
+        mPBPONGIGID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -135,9 +135,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (MPBPONGIGID != other.MPBPONGIGID) return false;
       if (HeadIcon != other.HeadIcon) return false;
       if (CMAMEDOLLJL != other.CMAMEDOLLJL) return false;
+      if (MPBPONGIGID != other.MPBPONGIGID) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,9 +145,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MPBPONGIGID.Length != 0) hash ^= MPBPONGIGID.GetHashCode();
       if (HeadIcon != 0) hash ^= HeadIcon.GetHashCode();
       if (CMAMEDOLLJL.Length != 0) hash ^= CMAMEDOLLJL.GetHashCode();
+      if (MPBPONGIGID.Length != 0) hash ^= MPBPONGIGID.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -166,17 +166,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (HeadIcon != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(HeadIcon);
+      }
       if (MPBPONGIGID.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteString(MPBPONGIGID);
       }
       if (CMAMEDOLLJL.Length != 0) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(122);
         output.WriteString(CMAMEDOLLJL);
-      }
-      if (HeadIcon != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(HeadIcon);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +188,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HeadIcon != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(HeadIcon);
+      }
       if (MPBPONGIGID.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(50);
         output.WriteString(MPBPONGIGID);
       }
       if (CMAMEDOLLJL.Length != 0) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(122);
         output.WriteString(CMAMEDOLLJL);
-      }
-      if (HeadIcon != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(HeadIcon);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -210,14 +210,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MPBPONGIGID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(MPBPONGIGID);
-      }
       if (HeadIcon != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HeadIcon);
       }
       if (CMAMEDOLLJL.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CMAMEDOLLJL);
+      }
+      if (MPBPONGIGID.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MPBPONGIGID);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -231,14 +231,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.MPBPONGIGID.Length != 0) {
-        MPBPONGIGID = other.MPBPONGIGID;
-      }
       if (other.HeadIcon != 0) {
         HeadIcon = other.HeadIcon;
       }
       if (other.CMAMEDOLLJL.Length != 0) {
         CMAMEDOLLJL = other.CMAMEDOLLJL;
+      }
+      if (other.MPBPONGIGID.Length != 0) {
+        MPBPONGIGID = other.MPBPONGIGID;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -255,16 +255,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 42: {
+          case 32: {
+            HeadIcon = input.ReadUInt32();
+            break;
+          }
+          case 50: {
             MPBPONGIGID = input.ReadString();
             break;
           }
-          case 82: {
+          case 122: {
             CMAMEDOLLJL = input.ReadString();
-            break;
-          }
-          case 104: {
-            HeadIcon = input.ReadUInt32();
             break;
           }
         }
@@ -282,16 +282,16 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 42: {
+          case 32: {
+            HeadIcon = input.ReadUInt32();
+            break;
+          }
+          case 50: {
             MPBPONGIGID = input.ReadString();
             break;
           }
-          case 82: {
+          case 122: {
             CMAMEDOLLJL = input.ReadString();
-            break;
-          }
-          case 104: {
-            HeadIcon = input.ReadUInt32();
             break;
           }
         }

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZBbGxleVBsYWNpbmdTaGlwLnByb3RvGhFLR0NBTkxKSUtDUC5wcm90byJD",
-            "ChBBbGxleVBsYWNpbmdTaGlwEg4KBlNoaXBJZBgEIAEoDRIfCglHb29kc0xp",
-            "c3QYCyADKAsyDC5LR0NBTkxKSUtDUEIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "ChBBbGxleVBsYWNpbmdTaGlwEg4KBlNoaXBJZBgIIAEoDRIfCglHb29kc0xp",
+            "c3QYCiADKAsyDC5LR0NBTkxKSUtDUEIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
             "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KGCANLJIKCPReflection.Descriptor, },
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "ShipId" field.</summary>
-    public const int ShipIdFieldNumber = 4;
+    public const int ShipIdFieldNumber = 8;
     private uint shipId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -97,9 +97,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GoodsList" field.</summary>
-    public const int GoodsListFieldNumber = 11;
+    public const int GoodsListFieldNumber = 10;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KGCANLJIKCP> _repeated_goodsList_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.KGCANLJIKCP.Parser);
+        = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.KGCANLJIKCP.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KGCANLJIKCP> goodsList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KGCANLJIKCP>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (ShipId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(64);
         output.WriteUInt32(ShipId);
       }
       goodsList_.WriteTo(output, _repeated_goodsList_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ShipId != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(64);
         output.WriteUInt32(ShipId);
       }
       goodsList_.WriteTo(ref output, _repeated_goodsList_codec);
@@ -216,11 +216,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 64: {
             ShipId = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 82: {
             goodsList_.AddEntriesFrom(input, _repeated_goodsList_codec);
             break;
           }
@@ -239,11 +239,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 64: {
             ShipId = input.ReadUInt32();
             break;
           }
-          case 90: {
+          case 82: {
             goodsList_.AddEntriesFrom(ref input, _repeated_goodsList_codec);
             break;
           }

@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFDTEZBQ0JDR0lGTC5wcm90byI3CgtDTEZBQ0JDR0lGTBITCgtJTkNBR05M",
-            "REpNThgPIAEoDRITCgtLTEZDTk9BR0dQQxgNIAEoDUIeqgIbRWdnTGluay5E",
+            "REpNThgBIAEoDRITCgtLTEZDTk9BR0dQQxgJIAEoDUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "INCAGNLDJMN" field.</summary>
-    public const int INCAGNLDJMNFieldNumber = 15;
+    public const int INCAGNLDJMNFieldNumber = 1;
     private uint iNCAGNLDJMN_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "KLFCNOAGGPC" field.</summary>
-    public const int KLFCNOAGGPCFieldNumber = 13;
+    public const int KLFCNOAGGPCFieldNumber = 9;
     private uint kLFCNOAGGPC_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (KLFCNOAGGPC != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(KLFCNOAGGPC);
-      }
       if (INCAGNLDJMN != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(INCAGNLDJMN);
+      }
+      if (KLFCNOAGGPC != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(KLFCNOAGGPC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (KLFCNOAGGPC != 0) {
-        output.WriteRawTag(104);
-        output.WriteUInt32(KLFCNOAGGPC);
-      }
       if (INCAGNLDJMN != 0) {
-        output.WriteRawTag(120);
+        output.WriteRawTag(8);
         output.WriteUInt32(INCAGNLDJMN);
+      }
+      if (KLFCNOAGGPC != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(KLFCNOAGGPC);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 104: {
-            KLFCNOAGGPC = input.ReadUInt32();
+          case 8: {
+            INCAGNLDJMN = input.ReadUInt32();
             break;
           }
-          case 120: {
-            INCAGNLDJMN = input.ReadUInt32();
+          case 72: {
+            KLFCNOAGGPC = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 104: {
-            KLFCNOAGGPC = input.ReadUInt32();
+          case 8: {
+            INCAGNLDJMN = input.ReadUInt32();
             break;
           }
-          case 120: {
-            INCAGNLDJMN = input.ReadUInt32();
+          case 72: {
+            KLFCNOAGGPC = input.ReadUInt32();
             break;
           }
         }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiNSb2d1ZVRpdGFuQmxlc3NSZXJvbGxDYWxsYmFjay5wcm90bxofUm9ndWVU",
             "aXRhbkJsZXNzU2VsZWN0SW5mby5wcm90byJWCh1Sb2d1ZVRpdGFuQmxlc3NS",
-            "ZXJvbGxDYWxsYmFjaxI1ChF0aXRhbl9yZXJvbGxfaW5mbxgLIAEoCzIaLlJv",
+            "ZXJvbGxDYWxsYmFjaxI1ChF0aXRhbl9yZXJvbGxfaW5mbxgCIAEoCzIaLlJv",
             "Z3VlVGl0YW5CbGVzc1NlbGVjdEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
             "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "titan_reroll_info" field.</summary>
-    public const int TitanRerollInfoFieldNumber = 11;
+    public const int TitanRerollInfoFieldNumber = 2;
     private global::EggLink.DanhengServer.Proto.RogueTitanBlessSelectInfo titanRerollInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -139,7 +139,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (titanRerollInfo_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(18);
         output.WriteMessage(TitanRerollInfo);
       }
       if (_unknownFields != null) {
@@ -153,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (titanRerollInfo_ != null) {
-        output.WriteRawTag(90);
+        output.WriteRawTag(18);
         output.WriteMessage(TitanRerollInfo);
       }
       if (_unknownFields != null) {
@@ -202,7 +202,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 90: {
+          case 18: {
             if (titanRerollInfo_ == null) {
               TitanRerollInfo = new global::EggLink.DanhengServer.Proto.RogueTitanBlessSelectInfo();
             }
@@ -224,7 +224,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 90: {
+          case 18: {
             if (titanRerollInfo_ == null) {
               TitanRerollInfo = new global::EggLink.DanhengServer.Proto.RogueTitanBlessSelectInfo();
             }

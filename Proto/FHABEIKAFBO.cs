@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFGSEFCRUlLQUZCTy5wcm90bxocTWlzc2lvbkN1c3RvbVZhbHVlTGlzdC5w",
-            "cm90byJfCgtGSEFCRUlLQUZCTxIKCgJpZBgEIAEoDRI1ChFjdXN0b21fdmFs",
-            "dWVfbGlzdBj+DCABKAsyFy5NaXNzaW9uQ3VzdG9tVmFsdWVMaXN0SABCDQoL",
+            "cm90byJfCgtGSEFCRUlLQUZCTxI1ChFjdXN0b21fdmFsdWVfbGlzdBjcCyAB",
+            "KAsyFy5NaXNzaW9uQ3VzdG9tVmFsdWVMaXN0SAASCgoCaWQYDyABKA1CDQoL",
             "SUNBSUJFQUlBR0NCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MissionCustomValueListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FHABEIKAFBO), global::EggLink.DanhengServer.Proto.FHABEIKAFBO.Parser, new[]{ "Id", "CustomValueList" }, new[]{ "ICAIBEAIAGC" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FHABEIKAFBO), global::EggLink.DanhengServer.Proto.FHABEIKAFBO.Parser, new[]{ "CustomValueList", "Id" }, new[]{ "ICAIBEAIAGC" }, null, null, null)
           }));
     }
     #endregion
@@ -90,20 +90,8 @@ namespace EggLink.DanhengServer.Proto {
       return new FHABEIKAFBO(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 4;
-    private uint id_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
-    }
-
     /// <summary>Field number for the "custom_value_list" field.</summary>
-    public const int CustomValueListFieldNumber = 1662;
+    public const int CustomValueListFieldNumber = 1500;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.MissionCustomValueList CustomValueList {
@@ -114,11 +102,23 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 15;
+    private uint id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
     private object iCAIBEAIAGC_;
     /// <summary>Enum of possible cases for the "ICAIBEAIAGC" oneof.</summary>
     public enum ICAIBEAIAGCOneofCase {
       None = 0,
-      CustomValueList = 1662,
+      CustomValueList = 1500,
     }
     private ICAIBEAIAGCOneofCase iCAIBEAIAGCCase_ = ICAIBEAIAGCOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -149,8 +149,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
       if (!object.Equals(CustomValueList, other.CustomValueList)) return false;
+      if (Id != other.Id) return false;
       if (ICAIBEAIAGCCase != other.ICAIBEAIAGCCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -159,8 +159,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
       if (iCAIBEAIAGCCase_ == ICAIBEAIAGCOneofCase.CustomValueList) hash ^= CustomValueList.GetHashCode();
+      if (Id != 0) hash ^= Id.GetHashCode();
       hash ^= (int) iCAIBEAIAGCCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -181,11 +181,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (Id != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(120);
         output.WriteUInt32(Id);
       }
       if (iCAIBEAIAGCCase_ == ICAIBEAIAGCOneofCase.CustomValueList) {
-        output.WriteRawTag(242, 103);
+        output.WriteRawTag(226, 93);
         output.WriteMessage(CustomValueList);
       }
       if (_unknownFields != null) {
@@ -199,11 +199,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(120);
         output.WriteUInt32(Id);
       }
       if (iCAIBEAIAGCCase_ == ICAIBEAIAGCOneofCase.CustomValueList) {
-        output.WriteRawTag(242, 103);
+        output.WriteRawTag(226, 93);
         output.WriteMessage(CustomValueList);
       }
       if (_unknownFields != null) {
@@ -216,11 +216,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
-      }
       if (iCAIBEAIAGCCase_ == ICAIBEAIAGCOneofCase.CustomValueList) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(CustomValueList);
+      }
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -261,11 +261,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 32: {
+          case 120: {
             Id = input.ReadUInt32();
             break;
           }
-          case 13298: {
+          case 12002: {
             global::EggLink.DanhengServer.Proto.MissionCustomValueList subBuilder = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
             if (iCAIBEAIAGCCase_ == ICAIBEAIAGCOneofCase.CustomValueList) {
               subBuilder.MergeFrom(CustomValueList);
@@ -289,11 +289,11 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 32: {
+          case 120: {
             Id = input.ReadUInt32();
             break;
           }
-          case 13298: {
+          case 12002: {
             global::EggLink.DanhengServer.Proto.MissionCustomValueList subBuilder = new global::EggLink.DanhengServer.Proto.MissionCustomValueList();
             if (iCAIBEAIAGCCase_ == ICAIBEAIAGCOneofCase.CustomValueList) {
               subBuilder.MergeFrom(CustomValueList);

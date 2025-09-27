@@ -24,12 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static AvatarTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBBdmF0YXJUeXBlLnByb3RvKsIBCgpBdmF0YXJUeXBlEhQKEEFWQVRBUl9U",
+            "ChBBdmF0YXJUeXBlLnByb3RvKt4BCgpBdmF0YXJUeXBlEhQKEEFWQVRBUl9U",
             "WVBFX05PTkUQABIVChFBVkFUQVJfVFJJQUxfVFlQRRABEhUKEUFWQVRBUl9M",
             "SU1JVF9UWVBFEAISFgoSQVZBVEFSX0ZPUk1BTF9UWVBFEAMSFgoSQVZBVEFS",
             "X0FTU0lTVF9UWVBFEAQSHQoZQVZBVEFSX0FFVEhFUl9ESVZJREVfVFlQRRAF",
-            "EiEKHUFWQVRBUl9VUEdSQURFX0FWQUlMQUJMRV9UWVBFEAZCHqoCG0VnZ0xp",
-            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "EiEKHUFWQVRBUl9VUEdSQURFX0FWQUlMQUJMRV9UWVBFEAYSGgoWQVZBVEFS",
+            "X0dSSURfRklHSFRfVFlQRRAHQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.AvatarType), }, null, null));
@@ -46,6 +47,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("AVATAR_ASSIST_TYPE")] AvatarAssistType = 4,
     [pbr::OriginalName("AVATAR_AETHER_DIVIDE_TYPE")] AvatarAetherDivideType = 5,
     [pbr::OriginalName("AVATAR_UPGRADE_AVAILABLE_TYPE")] AvatarUpgradeAvailableType = 6,
+    [pbr::OriginalName("AVATAR_GRID_FIGHT_TYPE")] AvatarGridFightType = 7,
   }
 
   #endregion

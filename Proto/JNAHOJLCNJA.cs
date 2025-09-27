@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFKTkFIT0pMQ05KQS5wcm90bxoRUFBLRFBBSlBBR0YucHJvdG8iaAoLSk5B",
-            "SE9KTENOSkESIQoLQ0dGSUhKQ0NHQ0QYBCADKAsyDC5QUEtEUEFKUEFHRhIP",
-            "CgdhcmVhX2lkGAsgASgNEhAKCHByb2dyZXNzGAogASgNEhMKC0hFSURDSUtF",
-            "RFBEGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "SE9KTENOSkESDwoHYXJlYV9pZBgBIAEoDRIQCghwcm9ncmVzcxgCIAEoDRIh",
+            "CgtDR0ZJSEpDQ0dDRBgIIAMoCzIMLlBQS0RQQUpQQUdGEhMKC0hFSURDSUtF",
+            "RFBEGAQgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PPKDPAJPAGFReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JNAHOJLCNJA), global::EggLink.DanhengServer.Proto.JNAHOJLCNJA.Parser, new[]{ "CGFIHJCCGCD", "AreaId", "Progress", "HEIDCIKEDPD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JNAHOJLCNJA), global::EggLink.DanhengServer.Proto.JNAHOJLCNJA.Parser, new[]{ "AreaId", "Progress", "CGFIHJCCGCD", "HEIDCIKEDPD" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JNAHOJLCNJA(JNAHOJLCNJA other) : this() {
-      cGFIHJCCGCD_ = other.cGFIHJCCGCD_.Clone();
       areaId_ = other.areaId_;
       progress_ = other.progress_;
+      cGFIHJCCGCD_ = other.cGFIHJCCGCD_.Clone();
       hEIDCIKEDPD_ = other.hEIDCIKEDPD_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,19 +87,8 @@ namespace EggLink.DanhengServer.Proto {
       return new JNAHOJLCNJA(this);
     }
 
-    /// <summary>Field number for the "CGFIHJCCGCD" field.</summary>
-    public const int CGFIHJCCGCDFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PPKDPAJPAGF> _repeated_cGFIHJCCGCD_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.PPKDPAJPAGF.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPKDPAJPAGF> cGFIHJCCGCD_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPKDPAJPAGF>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPKDPAJPAGF> CGFIHJCCGCD {
-      get { return cGFIHJCCGCD_; }
-    }
-
     /// <summary>Field number for the "area_id" field.</summary>
-    public const int AreaIdFieldNumber = 11;
+    public const int AreaIdFieldNumber = 1;
     private uint areaId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -111,7 +100,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "progress" field.</summary>
-    public const int ProgressFieldNumber = 10;
+    public const int ProgressFieldNumber = 2;
     private uint progress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -122,8 +111,19 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
+    /// <summary>Field number for the "CGFIHJCCGCD" field.</summary>
+    public const int CGFIHJCCGCDFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PPKDPAJPAGF> _repeated_cGFIHJCCGCD_codec
+        = pb::FieldCodec.ForMessage(66, global::EggLink.DanhengServer.Proto.PPKDPAJPAGF.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPKDPAJPAGF> cGFIHJCCGCD_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPKDPAJPAGF>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPKDPAJPAGF> CGFIHJCCGCD {
+      get { return cGFIHJCCGCD_; }
+    }
+
     /// <summary>Field number for the "HEIDCIKEDPD" field.</summary>
-    public const int HEIDCIKEDPDFieldNumber = 6;
+    public const int HEIDCIKEDPDFieldNumber = 4;
     private uint hEIDCIKEDPD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -149,9 +149,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!cGFIHJCCGCD_.Equals(other.cGFIHJCCGCD_)) return false;
       if (AreaId != other.AreaId) return false;
       if (Progress != other.Progress) return false;
+      if(!cGFIHJCCGCD_.Equals(other.cGFIHJCCGCD_)) return false;
       if (HEIDCIKEDPD != other.HEIDCIKEDPD) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -160,9 +160,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= cGFIHJCCGCD_.GetHashCode();
       if (AreaId != 0) hash ^= AreaId.GetHashCode();
       if (Progress != 0) hash ^= Progress.GetHashCode();
+      hash ^= cGFIHJCCGCD_.GetHashCode();
       if (HEIDCIKEDPD != 0) hash ^= HEIDCIKEDPD.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -182,19 +182,19 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      cGFIHJCCGCD_.WriteTo(output, _repeated_cGFIHJCCGCD_codec);
-      if (HEIDCIKEDPD != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(HEIDCIKEDPD);
-      }
-      if (Progress != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Progress);
-      }
       if (AreaId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteUInt32(AreaId);
       }
+      if (Progress != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Progress);
+      }
+      if (HEIDCIKEDPD != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(HEIDCIKEDPD);
+      }
+      cGFIHJCCGCD_.WriteTo(output, _repeated_cGFIHJCCGCD_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -205,19 +205,19 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      cGFIHJCCGCD_.WriteTo(ref output, _repeated_cGFIHJCCGCD_codec);
-      if (HEIDCIKEDPD != 0) {
-        output.WriteRawTag(48);
-        output.WriteUInt32(HEIDCIKEDPD);
-      }
-      if (Progress != 0) {
-        output.WriteRawTag(80);
-        output.WriteUInt32(Progress);
-      }
       if (AreaId != 0) {
-        output.WriteRawTag(88);
+        output.WriteRawTag(8);
         output.WriteUInt32(AreaId);
       }
+      if (Progress != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Progress);
+      }
+      if (HEIDCIKEDPD != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(HEIDCIKEDPD);
+      }
+      cGFIHJCCGCD_.WriteTo(ref output, _repeated_cGFIHJCCGCD_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -228,13 +228,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += cGFIHJCCGCD_.CalculateSize(_repeated_cGFIHJCCGCD_codec);
       if (AreaId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AreaId);
       }
       if (Progress != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Progress);
       }
+      size += cGFIHJCCGCD_.CalculateSize(_repeated_cGFIHJCCGCD_codec);
       if (HEIDCIKEDPD != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HEIDCIKEDPD);
       }
@@ -250,13 +250,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      cGFIHJCCGCD_.Add(other.cGFIHJCCGCD_);
       if (other.AreaId != 0) {
         AreaId = other.AreaId;
       }
       if (other.Progress != 0) {
         Progress = other.Progress;
       }
+      cGFIHJCCGCD_.Add(other.cGFIHJCCGCD_);
       if (other.HEIDCIKEDPD != 0) {
         HEIDCIKEDPD = other.HEIDCIKEDPD;
       }
@@ -275,20 +275,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 34: {
-            cGFIHJCCGCD_.AddEntriesFrom(input, _repeated_cGFIHJCCGCD_codec);
+          case 8: {
+            AreaId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            HEIDCIKEDPD = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 16: {
             Progress = input.ReadUInt32();
             break;
           }
-          case 88: {
-            AreaId = input.ReadUInt32();
+          case 32: {
+            HEIDCIKEDPD = input.ReadUInt32();
+            break;
+          }
+          case 66: {
+            cGFIHJCCGCD_.AddEntriesFrom(input, _repeated_cGFIHJCCGCD_codec);
             break;
           }
         }
@@ -306,20 +306,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 34: {
-            cGFIHJCCGCD_.AddEntriesFrom(ref input, _repeated_cGFIHJCCGCD_codec);
+          case 8: {
+            AreaId = input.ReadUInt32();
             break;
           }
-          case 48: {
-            HEIDCIKEDPD = input.ReadUInt32();
-            break;
-          }
-          case 80: {
+          case 16: {
             Progress = input.ReadUInt32();
             break;
           }
-          case 88: {
-            AreaId = input.ReadUInt32();
+          case 32: {
+            HEIDCIKEDPD = input.ReadUInt32();
+            break;
+          }
+          case 66: {
+            cGFIHJCCGCD_.AddEntriesFrom(ref input, _repeated_cGFIHJCCGCD_codec);
             break;
           }
         }

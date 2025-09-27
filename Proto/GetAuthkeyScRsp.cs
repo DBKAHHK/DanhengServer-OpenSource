@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GetAuthkeyScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVHZXRBdXRoa2V5U2NSc3AucHJvdG8ibwoPR2V0QXV0aGtleVNjUnNwEg8K",
-            "B3JldGNvZGUYDyABKA0SEgoKYXV0aF9hcHBpZBgIIAEoCRIPCgdhdXRoa2V5",
-            "GAkgASgJEhMKC2F1dGhrZXlfdmVyGAogASgNEhEKCXNpZ25fdHlwZRgBIAEo",
+            "ChVHZXRBdXRoa2V5U2NSc3AucHJvdG8ibwoPR2V0QXV0aGtleVNjUnNwEhEK",
+            "CXNpZ25fdHlwZRgKIAEoDRISCgphdXRoX2FwcGlkGAMgASgJEg8KB2F1dGhr",
+            "ZXkYCCABKAkSEwoLYXV0aGtleV92ZXIYAiABKA0SDwoHcmV0Y29kZRgPIAEo",
             "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAuthkeyScRsp), global::EggLink.DanhengServer.Proto.GetAuthkeyScRsp.Parser, new[]{ "Retcode", "AuthAppid", "Authkey", "AuthkeyVer", "SignType" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAuthkeyScRsp), global::EggLink.DanhengServer.Proto.GetAuthkeyScRsp.Parser, new[]{ "SignType", "AuthAppid", "Authkey", "AuthkeyVer", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,11 +73,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAuthkeyScRsp(GetAuthkeyScRsp other) : this() {
-      retcode_ = other.retcode_;
+      signType_ = other.signType_;
       authAppid_ = other.authAppid_;
       authkey_ = other.authkey_;
       authkeyVer_ = other.authkeyVer_;
-      signType_ = other.signType_;
+      retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -87,20 +87,20 @@ namespace EggLink.DanhengServer.Proto {
       return new GetAuthkeyScRsp(this);
     }
 
-    /// <summary>Field number for the "retcode" field.</summary>
-    public const int RetcodeFieldNumber = 15;
-    private uint retcode_;
+    /// <summary>Field number for the "sign_type" field.</summary>
+    public const int SignTypeFieldNumber = 10;
+    private uint signType_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Retcode {
-      get { return retcode_; }
+    public uint SignType {
+      get { return signType_; }
       set {
-        retcode_ = value;
+        signType_ = value;
       }
     }
 
     /// <summary>Field number for the "auth_appid" field.</summary>
-    public const int AuthAppidFieldNumber = 8;
+    public const int AuthAppidFieldNumber = 3;
     private string authAppid_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -112,7 +112,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "authkey" field.</summary>
-    public const int AuthkeyFieldNumber = 9;
+    public const int AuthkeyFieldNumber = 8;
     private string authkey_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "authkey_ver" field.</summary>
-    public const int AuthkeyVerFieldNumber = 10;
+    public const int AuthkeyVerFieldNumber = 2;
     private uint authkeyVer_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -135,15 +135,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "sign_type" field.</summary>
-    public const int SignTypeFieldNumber = 1;
-    private uint signType_;
+    /// <summary>Field number for the "retcode" field.</summary>
+    public const int RetcodeFieldNumber = 15;
+    private uint retcode_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint SignType {
-      get { return signType_; }
+    public uint Retcode {
+      get { return retcode_; }
       set {
-        signType_ = value;
+        retcode_ = value;
       }
     }
 
@@ -162,11 +162,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Retcode != other.Retcode) return false;
+      if (SignType != other.SignType) return false;
       if (AuthAppid != other.AuthAppid) return false;
       if (Authkey != other.Authkey) return false;
       if (AuthkeyVer != other.AuthkeyVer) return false;
-      if (SignType != other.SignType) return false;
+      if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -174,11 +174,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Retcode != 0) hash ^= Retcode.GetHashCode();
+      if (SignType != 0) hash ^= SignType.GetHashCode();
       if (AuthAppid.Length != 0) hash ^= AuthAppid.GetHashCode();
       if (Authkey.Length != 0) hash ^= Authkey.GetHashCode();
       if (AuthkeyVer != 0) hash ^= AuthkeyVer.GetHashCode();
-      if (SignType != 0) hash ^= SignType.GetHashCode();
+      if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -197,21 +197,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SignType != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(SignType);
+      if (AuthkeyVer != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(AuthkeyVer);
       }
       if (AuthAppid.Length != 0) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteString(AuthAppid);
       }
       if (Authkey.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(66);
         output.WriteString(Authkey);
       }
-      if (AuthkeyVer != 0) {
+      if (SignType != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(AuthkeyVer);
+        output.WriteUInt32(SignType);
       }
       if (Retcode != 0) {
         output.WriteRawTag(120);
@@ -227,21 +227,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SignType != 0) {
-        output.WriteRawTag(8);
-        output.WriteUInt32(SignType);
+      if (AuthkeyVer != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(AuthkeyVer);
       }
       if (AuthAppid.Length != 0) {
-        output.WriteRawTag(66);
+        output.WriteRawTag(26);
         output.WriteString(AuthAppid);
       }
       if (Authkey.Length != 0) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(66);
         output.WriteString(Authkey);
       }
-      if (AuthkeyVer != 0) {
+      if (SignType != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(AuthkeyVer);
+        output.WriteUInt32(SignType);
       }
       if (Retcode != 0) {
         output.WriteRawTag(120);
@@ -257,8 +257,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Retcode != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
+      if (SignType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SignType);
       }
       if (AuthAppid.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthAppid);
@@ -269,8 +269,8 @@ namespace EggLink.DanhengServer.Proto {
       if (AuthkeyVer != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AuthkeyVer);
       }
-      if (SignType != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SignType);
+      if (Retcode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -284,8 +284,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.Retcode != 0) {
-        Retcode = other.Retcode;
+      if (other.SignType != 0) {
+        SignType = other.SignType;
       }
       if (other.AuthAppid.Length != 0) {
         AuthAppid = other.AuthAppid;
@@ -296,8 +296,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.AuthkeyVer != 0) {
         AuthkeyVer = other.AuthkeyVer;
       }
-      if (other.SignType != 0) {
-        SignType = other.SignType;
+      if (other.Retcode != 0) {
+        Retcode = other.Retcode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -314,20 +314,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            SignType = input.ReadUInt32();
+          case 16: {
+            AuthkeyVer = input.ReadUInt32();
             break;
           }
-          case 66: {
+          case 26: {
             AuthAppid = input.ReadString();
             break;
           }
-          case 74: {
+          case 66: {
             Authkey = input.ReadString();
             break;
           }
           case 80: {
-            AuthkeyVer = input.ReadUInt32();
+            SignType = input.ReadUInt32();
             break;
           }
           case 120: {
@@ -349,20 +349,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            SignType = input.ReadUInt32();
+          case 16: {
+            AuthkeyVer = input.ReadUInt32();
             break;
           }
-          case 66: {
+          case 26: {
             AuthAppid = input.ReadString();
             break;
           }
-          case 74: {
+          case 66: {
             Authkey = input.ReadString();
             break;
           }
           case 80: {
-            AuthkeyVer = input.ReadUInt32();
+            SignType = input.ReadUInt32();
             break;
           }
           case 120: {

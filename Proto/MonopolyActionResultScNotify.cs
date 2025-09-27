@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiJNb25vcG9seUFjdGlvblJlc3VsdFNjTm90aWZ5LnByb3RvGhpNb25vcG9s",
             "eUFjdGlvblJlc3VsdC5wcm90byJKChxNb25vcG9seUFjdGlvblJlc3VsdFNj",
-            "Tm90aWZ5EioKC1BGTk9LTkNEUEdFGAMgAygLMhUuTW9ub3BvbHlBY3Rpb25S",
+            "Tm90aWZ5EioKC1BGTk9LTkNEUEdFGAsgAygLMhUuTW9ub3BvbHlBY3Rpb25S",
             "ZXN1bHRCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MonopolyActionResultReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "PFNOKNCDPGE" field.</summary>
-    public const int PFNOKNCDPGEFieldNumber = 3;
+    public const int PFNOKNCDPGEFieldNumber = 11;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MonopolyActionResult> _repeated_pFNOKNCDPGE_codec
-        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.MonopolyActionResult.Parser);
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.MonopolyActionResult.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MonopolyActionResult> pFNOKNCDPGE_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MonopolyActionResult>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
+          case 90: {
             pFNOKNCDPGE_.AddEntriesFrom(input, _repeated_pFNOKNCDPGE_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 26: {
+          case 90: {
             pFNOKNCDPGE_.AddEntriesFrom(ref input, _repeated_pFNOKNCDPGE_codec);
             break;
           }

@@ -26,7 +26,7 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "Ch9IZWxpb2J1c1Nuc1VwZGF0ZVNjTm90aWZ5LnByb3RvGhFHQkpLS0ZIUEZG",
             "Ti5wcm90byI+ChlIZWxpb2J1c1Nuc1VwZGF0ZVNjTm90aWZ5EiEKC0dLRkhN",
-            "R01CSUtBGAcgAygLMgwuR0JKS0tGSFBGRk5CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "R01CSUtBGA8gAygLMgwuR0JKS0tGSFBGRk5CHqoCG0VnZ0xpbmsuRGFuaGVu",
             "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GBJKKFHPFFNReflection.Descriptor, },
@@ -84,9 +84,9 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "GKFHMGMBIKA" field.</summary>
-    public const int GKFHMGMBIKAFieldNumber = 7;
+    public const int GKFHMGMBIKAFieldNumber = 15;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GBJKKFHPFFN> _repeated_gKFHMGMBIKA_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.GBJKKFHPFFN.Parser);
+        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.GBJKKFHPFFN.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GBJKKFHPFFN> gKFHMGMBIKA_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GBJKKFHPFFN>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
+          case 122: {
             gKFHMGMBIKA_.AddEntriesFrom(input, _repeated_gKFHMGMBIKA_codec);
             break;
           }
@@ -206,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
+          case 122: {
             gKFHMGMBIKA_.AddEntriesFrom(ref input, _repeated_gKFHMGMBIKA_codec);
             break;
           }

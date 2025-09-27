@@ -25,7 +25,7 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9UYWtlUm9ndWVTY29yZVJld2FyZENzUmVxLnByb3RvIkEKGVRha2VSb2d1",
-            "ZVNjb3JlUmV3YXJkQ3NSZXESDwoHcG9vbF9pZBgJIAEoDRITCgtMTU1GUENP",
+            "ZVNjb3JlUmV3YXJkQ3NSZXESDwoHcG9vbF9pZBgFIAEoDRITCgtMTU1GUENP",
             "S0hFRRgMIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -85,7 +85,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "pool_id" field.</summary>
-    public const int PoolIdFieldNumber = 9;
+    public const int PoolIdFieldNumber = 5;
     private uint poolId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (PoolId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(PoolId);
       }
       lMMFPCOKHEE_.WriteTo(output, _repeated_lMMFPCOKHEE_codec);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PoolId != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(40);
         output.WriteUInt32(PoolId);
       }
       lMMFPCOKHEE_.WriteTo(ref output, _repeated_lMMFPCOKHEE_codec);
@@ -216,7 +216,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 72: {
+          case 40: {
             PoolId = input.ReadUInt32();
             break;
           }
@@ -240,7 +240,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 72: {
+          case 40: {
             PoolId = input.ReadUInt32();
             break;
           }

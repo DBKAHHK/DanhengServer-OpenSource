@@ -27,9 +27,9 @@ namespace EggLink.DanhengServer.Proto {
             "CilSb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uUmVzdWx0SW5mby5wcm90bxov",
             "Um9ndWVDb21tb25EaWFsb2d1ZU9wdGlvbkJhdHRsZVJlc3VsdEluZm8ucHJv",
             "dG8aEU5FQlBHSERERVBDLnByb3RvIqMBCiNSb2d1ZUNvbW1vbkRpYWxvZ3Vl",
-            "T3B0aW9uUmVzdWx0SW5mbxJIChJiYXR0bGVfcmVzdWx0X2luZm8YByABKAsy",
+            "T3B0aW9uUmVzdWx0SW5mbxJIChJiYXR0bGVfcmVzdWx0X2luZm8YBSABKAsy",
             "Ki5Sb2d1ZUNvbW1vbkRpYWxvZ3VlT3B0aW9uQmF0dGxlUmVzdWx0SW5mb0gA",
-            "EiMKC0hNTENFSElLRkZLGAYgASgLMgwuTkVCUEdIRERFUENIAEINCgtDTU1K",
+            "EiMKC0hNTENFSElLRkZLGAIgASgLMgwuTkVCUEdIRERFUENIAEINCgtDTU1K",
             "SUdOT0NMTUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -96,7 +96,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "battle_result_info" field.</summary>
-    public const int BattleResultInfoFieldNumber = 7;
+    public const int BattleResultInfoFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionBattleResultInfo BattleResultInfo {
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "HMLCEHIKFFK" field.</summary>
-    public const int HMLCEHIKFFKFieldNumber = 6;
+    public const int HMLCEHIKFFKFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::EggLink.DanhengServer.Proto.NEBPGHDDEPC HMLCEHIKFFK {
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "CMMJIGNOCLM" oneof.</summary>
     public enum CMMJIGNOCLMOneofCase {
       None = 0,
-      BattleResultInfo = 7,
-      HMLCEHIKFFK = 6,
+      BattleResultInfo = 5,
+      HMLCEHIKFFK = 2,
     }
     private CMMJIGNOCLMOneofCase cMMJIGNOCLMCase_ = CMMJIGNOCLMOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       if (cMMJIGNOCLMCase_ == CMMJIGNOCLMOneofCase.HMLCEHIKFFK) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(18);
         output.WriteMessage(HMLCEHIKFFK);
       }
       if (cMMJIGNOCLMCase_ == CMMJIGNOCLMOneofCase.BattleResultInfo) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(42);
         output.WriteMessage(BattleResultInfo);
       }
       if (_unknownFields != null) {
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (cMMJIGNOCLMCase_ == CMMJIGNOCLMOneofCase.HMLCEHIKFFK) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(18);
         output.WriteMessage(HMLCEHIKFFK);
       }
       if (cMMJIGNOCLMCase_ == CMMJIGNOCLMOneofCase.BattleResultInfo) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(42);
         output.WriteMessage(BattleResultInfo);
       }
       if (_unknownFields != null) {
@@ -270,7 +270,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 50: {
+          case 18: {
             global::EggLink.DanhengServer.Proto.NEBPGHDDEPC subBuilder = new global::EggLink.DanhengServer.Proto.NEBPGHDDEPC();
             if (cMMJIGNOCLMCase_ == CMMJIGNOCLMOneofCase.HMLCEHIKFFK) {
               subBuilder.MergeFrom(HMLCEHIKFFK);
@@ -279,7 +279,7 @@ namespace EggLink.DanhengServer.Proto {
             HMLCEHIKFFK = subBuilder;
             break;
           }
-          case 58: {
+          case 42: {
             global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionBattleResultInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionBattleResultInfo();
             if (cMMJIGNOCLMCase_ == CMMJIGNOCLMOneofCase.BattleResultInfo) {
               subBuilder.MergeFrom(BattleResultInfo);
@@ -303,7 +303,7 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 50: {
+          case 18: {
             global::EggLink.DanhengServer.Proto.NEBPGHDDEPC subBuilder = new global::EggLink.DanhengServer.Proto.NEBPGHDDEPC();
             if (cMMJIGNOCLMCase_ == CMMJIGNOCLMOneofCase.HMLCEHIKFFK) {
               subBuilder.MergeFrom(HMLCEHIKFFK);
@@ -312,7 +312,7 @@ namespace EggLink.DanhengServer.Proto {
             HMLCEHIKFFK = subBuilder;
             break;
           }
-          case 58: {
+          case 42: {
             global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionBattleResultInfo subBuilder = new global::EggLink.DanhengServer.Proto.RogueCommonDialogueOptionBattleResultInfo();
             if (cMMJIGNOCLMCase_ == CMMJIGNOCLMOneofCase.BattleResultInfo) {
               subBuilder.MergeFrom(BattleResultInfo);

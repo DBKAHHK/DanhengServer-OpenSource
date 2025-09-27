@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static EOAEGAEFPFHReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFFT0FFR0FFRlBGSC5wcm90byJaCgtFT0FFR0FFRlBGSBINCgVsZXZlbBgM",
-            "IAEoDRIRCglhdmF0YXJfaWQYDiABKA0SEwoLUEFFSEFNSkhOREQYAiABKA0S",
+            "ChFFT0FFR0FFRlBGSC5wcm90byJaCgtFT0FFR0FFRlBGSBINCgVsZXZlbBgJ",
+            "IAEoDRITCgtQQUVIQU1KSE5ERBgOIAEoDRIRCglhdmF0YXJfaWQYAyABKA0S",
             "FAoMZmluaXNoX2xldmVsGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EOAEGAEFPFH), global::EggLink.DanhengServer.Proto.EOAEGAEFPFH.Parser, new[]{ "Level", "AvatarId", "PAEHAMJHNDD", "FinishLevel" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EOAEGAEFPFH), global::EggLink.DanhengServer.Proto.EOAEGAEFPFH.Parser, new[]{ "Level", "PAEHAMJHNDD", "AvatarId", "FinishLevel" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EOAEGAEFPFH(EOAEGAEFPFH other) : this() {
       level_ = other.level_;
-      avatarId_ = other.avatarId_;
       pAEHAMJHNDD_ = other.pAEHAMJHNDD_;
+      avatarId_ = other.avatarId_;
       finishLevel_ = other.finishLevel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -87,7 +87,7 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 12;
+    public const int LevelFieldNumber = 9;
     private uint level_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -98,20 +98,8 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "avatar_id" field.</summary>
-    public const int AvatarIdFieldNumber = 14;
-    private uint avatarId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint AvatarId {
-      get { return avatarId_; }
-      set {
-        avatarId_ = value;
-      }
-    }
-
     /// <summary>Field number for the "PAEHAMJHNDD" field.</summary>
-    public const int PAEHAMJHNDDFieldNumber = 2;
+    public const int PAEHAMJHNDDFieldNumber = 14;
     private uint pAEHAMJHNDD_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -119,6 +107,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return pAEHAMJHNDD_; }
       set {
         pAEHAMJHNDD_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "avatar_id" field.</summary>
+    public const int AvatarIdFieldNumber = 3;
+    private uint avatarId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint AvatarId {
+      get { return avatarId_; }
+      set {
+        avatarId_ = value;
       }
     }
 
@@ -150,8 +150,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (Level != other.Level) return false;
-      if (AvatarId != other.AvatarId) return false;
       if (PAEHAMJHNDD != other.PAEHAMJHNDD) return false;
+      if (AvatarId != other.AvatarId) return false;
       if (FinishLevel != other.FinishLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -161,8 +161,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (Level != 0) hash ^= Level.GetHashCode();
-      if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
       if (PAEHAMJHNDD != 0) hash ^= PAEHAMJHNDD.GetHashCode();
+      if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
       if (FinishLevel != 0) hash ^= FinishLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -182,21 +182,21 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (PAEHAMJHNDD != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(PAEHAMJHNDD);
+      if (AvatarId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(AvatarId);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Level);
       }
       if (FinishLevel != 0) {
         output.WriteRawTag(80);
         output.WriteUInt32(FinishLevel);
       }
-      if (Level != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(Level);
-      }
-      if (AvatarId != 0) {
+      if (PAEHAMJHNDD != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(AvatarId);
+        output.WriteUInt32(PAEHAMJHNDD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -208,21 +208,21 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (PAEHAMJHNDD != 0) {
-        output.WriteRawTag(16);
-        output.WriteUInt32(PAEHAMJHNDD);
+      if (AvatarId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(AvatarId);
+      }
+      if (Level != 0) {
+        output.WriteRawTag(72);
+        output.WriteUInt32(Level);
       }
       if (FinishLevel != 0) {
         output.WriteRawTag(80);
         output.WriteUInt32(FinishLevel);
       }
-      if (Level != 0) {
-        output.WriteRawTag(96);
-        output.WriteUInt32(Level);
-      }
-      if (AvatarId != 0) {
+      if (PAEHAMJHNDD != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(AvatarId);
+        output.WriteUInt32(PAEHAMJHNDD);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -237,11 +237,11 @@ namespace EggLink.DanhengServer.Proto {
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
       }
-      if (AvatarId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
-      }
       if (PAEHAMJHNDD != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PAEHAMJHNDD);
+      }
+      if (AvatarId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
       }
       if (FinishLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishLevel);
@@ -261,11 +261,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Level != 0) {
         Level = other.Level;
       }
-      if (other.AvatarId != 0) {
-        AvatarId = other.AvatarId;
-      }
       if (other.PAEHAMJHNDD != 0) {
         PAEHAMJHNDD = other.PAEHAMJHNDD;
+      }
+      if (other.AvatarId != 0) {
+        AvatarId = other.AvatarId;
       }
       if (other.FinishLevel != 0) {
         FinishLevel = other.FinishLevel;
@@ -285,20 +285,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 16: {
-            PAEHAMJHNDD = input.ReadUInt32();
+          case 24: {
+            AvatarId = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            Level = input.ReadUInt32();
             break;
           }
           case 80: {
             FinishLevel = input.ReadUInt32();
             break;
           }
-          case 96: {
-            Level = input.ReadUInt32();
-            break;
-          }
           case 112: {
-            AvatarId = input.ReadUInt32();
+            PAEHAMJHNDD = input.ReadUInt32();
             break;
           }
         }
@@ -316,20 +316,20 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 16: {
-            PAEHAMJHNDD = input.ReadUInt32();
+          case 24: {
+            AvatarId = input.ReadUInt32();
+            break;
+          }
+          case 72: {
+            Level = input.ReadUInt32();
             break;
           }
           case 80: {
             FinishLevel = input.ReadUInt32();
             break;
           }
-          case 96: {
-            Level = input.ReadUInt32();
-            break;
-          }
           case 112: {
-            AvatarId = input.ReadUInt32();
+            PAEHAMJHNDD = input.ReadUInt32();
             break;
           }
         }

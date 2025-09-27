@@ -26,14 +26,14 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CipTZXRDaGFsbGVuZ2VQZWFrTW9iTGluZXVwQXZhdGFyQ3NSZXEucHJvdG8a",
             "GUNoYWxsZW5nZVBlYWtMaW5ldXAucHJvdG8ifQokU2V0Q2hhbGxlbmdlUGVh",
-            "a01vYkxpbmV1cEF2YXRhckNzUmVxEikKC2xpbmV1cF9saXN0GA8gAygLMhQu",
-            "Q2hhbGxlbmdlUGVha0xpbmV1cBIVCg1wZWFrX2dyb3VwX2lkGAsgASgNEhMK",
-            "C0NISENDR0xHRkZGGA0gAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "a01vYkxpbmV1cEF2YXRhckNzUmVxEikKC2xpbmV1cF9saXN0GAwgAygLMhQu",
+            "Q2hhbGxlbmdlUGVha0xpbmV1cBITCgtDSEhDQ0dMR0ZGRhgPIAMoDRIVCg1w",
+            "ZWFrX2dyb3VwX2lkGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChallengePeakLineupReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetChallengePeakMobLineupAvatarCsReq), global::EggLink.DanhengServer.Proto.SetChallengePeakMobLineupAvatarCsReq.Parser, new[]{ "LineupList", "PeakGroupId", "CHHCCGLGFFF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SetChallengePeakMobLineupAvatarCsReq), global::EggLink.DanhengServer.Proto.SetChallengePeakMobLineupAvatarCsReq.Parser, new[]{ "LineupList", "CHHCCGLGFFF", "PeakGroupId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,8 +76,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SetChallengePeakMobLineupAvatarCsReq(SetChallengePeakMobLineupAvatarCsReq other) : this() {
       lineupList_ = other.lineupList_.Clone();
-      peakGroupId_ = other.peakGroupId_;
       cHHCCGLGFFF_ = other.cHHCCGLGFFF_.Clone();
+      peakGroupId_ = other.peakGroupId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,14 +88,25 @@ namespace EggLink.DanhengServer.Proto {
     }
 
     /// <summary>Field number for the "lineup_list" field.</summary>
-    public const int LineupListFieldNumber = 15;
+    public const int LineupListFieldNumber = 12;
     private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ChallengePeakLineup> _repeated_lineupList_codec
-        = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.ChallengePeakLineup.Parser);
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.ChallengePeakLineup.Parser);
     private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakLineup> lineupList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakLineup>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ChallengePeakLineup> LineupList {
       get { return lineupList_; }
+    }
+
+    /// <summary>Field number for the "CHHCCGLGFFF" field.</summary>
+    public const int CHHCCGLGFFFFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_cHHCCGLGFFF_codec
+        = pb::FieldCodec.ForUInt32(122);
+    private readonly pbc::RepeatedField<uint> cHHCCGLGFFF_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> CHHCCGLGFFF {
+      get { return cHHCCGLGFFF_; }
     }
 
     /// <summary>Field number for the "peak_group_id" field.</summary>
@@ -108,17 +119,6 @@ namespace EggLink.DanhengServer.Proto {
       set {
         peakGroupId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "CHHCCGLGFFF" field.</summary>
-    public const int CHHCCGLGFFFFieldNumber = 13;
-    private static readonly pb::FieldCodec<uint> _repeated_cHHCCGLGFFF_codec
-        = pb::FieldCodec.ForUInt32(106);
-    private readonly pbc::RepeatedField<uint> cHHCCGLGFFF_ = new pbc::RepeatedField<uint>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> CHHCCGLGFFF {
-      get { return cHHCCGLGFFF_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -137,8 +137,8 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!lineupList_.Equals(other.lineupList_)) return false;
-      if (PeakGroupId != other.PeakGroupId) return false;
       if(!cHHCCGLGFFF_.Equals(other.cHHCCGLGFFF_)) return false;
+      if (PeakGroupId != other.PeakGroupId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,8 +147,8 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= lineupList_.GetHashCode();
-      if (PeakGroupId != 0) hash ^= PeakGroupId.GetHashCode();
       hash ^= cHHCCGLGFFF_.GetHashCode();
+      if (PeakGroupId != 0) hash ^= PeakGroupId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -171,8 +171,8 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(88);
         output.WriteUInt32(PeakGroupId);
       }
-      cHHCCGLGFFF_.WriteTo(output, _repeated_cHHCCGLGFFF_codec);
       lineupList_.WriteTo(output, _repeated_lineupList_codec);
+      cHHCCGLGFFF_.WriteTo(output, _repeated_cHHCCGLGFFF_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(88);
         output.WriteUInt32(PeakGroupId);
       }
-      cHHCCGLGFFF_.WriteTo(ref output, _repeated_cHHCCGLGFFF_codec);
       lineupList_.WriteTo(ref output, _repeated_lineupList_codec);
+      cHHCCGLGFFF_.WriteTo(ref output, _repeated_cHHCCGLGFFF_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -200,10 +200,10 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += lineupList_.CalculateSize(_repeated_lineupList_codec);
+      size += cHHCCGLGFFF_.CalculateSize(_repeated_cHHCCGLGFFF_codec);
       if (PeakGroupId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PeakGroupId);
       }
-      size += cHHCCGLGFFF_.CalculateSize(_repeated_cHHCCGLGFFF_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -217,10 +217,10 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       lineupList_.Add(other.lineupList_);
+      cHHCCGLGFFF_.Add(other.cHHCCGLGFFF_);
       if (other.PeakGroupId != 0) {
         PeakGroupId = other.PeakGroupId;
       }
-      cHHCCGLGFFF_.Add(other.cHHCCGLGFFF_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -240,13 +240,13 @@ namespace EggLink.DanhengServer.Proto {
             PeakGroupId = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
-            cHHCCGLGFFF_.AddEntriesFrom(input, _repeated_cHHCCGLGFFF_codec);
+          case 98: {
+            lineupList_.AddEntriesFrom(input, _repeated_lineupList_codec);
             break;
           }
-          case 122: {
-            lineupList_.AddEntriesFrom(input, _repeated_lineupList_codec);
+          case 122:
+          case 120: {
+            cHHCCGLGFFF_.AddEntriesFrom(input, _repeated_cHHCCGLGFFF_codec);
             break;
           }
         }
@@ -268,13 +268,13 @@ namespace EggLink.DanhengServer.Proto {
             PeakGroupId = input.ReadUInt32();
             break;
           }
-          case 106:
-          case 104: {
-            cHHCCGLGFFF_.AddEntriesFrom(ref input, _repeated_cHHCCGLGFFF_codec);
+          case 98: {
+            lineupList_.AddEntriesFrom(ref input, _repeated_lineupList_codec);
             break;
           }
-          case 122: {
-            lineupList_.AddEntriesFrom(ref input, _repeated_lineupList_codec);
+          case 122:
+          case 120: {
+            cHHCCGLGFFF_.AddEntriesFrom(ref input, _repeated_cHHCCGLGFFF_codec);
             break;
           }
         }

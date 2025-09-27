@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static PANAIJBJMENReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFQQU5BSUpCSk1FTi5wcm90byI1CgtQQU5BSUpCSk1FThIRCglpc19maW5p",
-            "c2gYDiABKAgSEwoLQkVMRU9EQUlJTkIYByABKA1CHqoCG0VnZ0xpbmsuRGFu",
+            "ChFQQU5BSUpCSk1FTi5wcm90byI1CgtQQU5BSUpCSk1FThITCgtCRUxFT0RB",
+            "SUlOQhgPIAEoDRIRCglpc19maW5pc2gYDSABKAhCHqoCG0VnZ0xpbmsuRGFu",
             "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PANAIJBJMEN), global::EggLink.DanhengServer.Proto.PANAIJBJMEN.Parser, new[]{ "IsFinish", "BELEODAIINB" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PANAIJBJMEN), global::EggLink.DanhengServer.Proto.PANAIJBJMEN.Parser, new[]{ "BELEODAIINB", "IsFinish" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PANAIJBJMEN(PANAIJBJMEN other) : this() {
-      isFinish_ = other.isFinish_;
       bELEODAIINB_ = other.bELEODAIINB_;
+      isFinish_ = other.isFinish_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,20 +83,8 @@ namespace EggLink.DanhengServer.Proto {
       return new PANAIJBJMEN(this);
     }
 
-    /// <summary>Field number for the "is_finish" field.</summary>
-    public const int IsFinishFieldNumber = 14;
-    private bool isFinish_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool IsFinish {
-      get { return isFinish_; }
-      set {
-        isFinish_ = value;
-      }
-    }
-
     /// <summary>Field number for the "BELEODAIINB" field.</summary>
-    public const int BELEODAIINBFieldNumber = 7;
+    public const int BELEODAIINBFieldNumber = 15;
     private uint bELEODAIINB_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -104,6 +92,18 @@ namespace EggLink.DanhengServer.Proto {
       get { return bELEODAIINB_; }
       set {
         bELEODAIINB_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "is_finish" field.</summary>
+    public const int IsFinishFieldNumber = 13;
+    private bool isFinish_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsFinish {
+      get { return isFinish_; }
+      set {
+        isFinish_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IsFinish != other.IsFinish) return false;
       if (BELEODAIINB != other.BELEODAIINB) return false;
+      if (IsFinish != other.IsFinish) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IsFinish != false) hash ^= IsFinish.GetHashCode();
       if (BELEODAIINB != 0) hash ^= BELEODAIINB.GetHashCode();
+      if (IsFinish != false) hash ^= IsFinish.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BELEODAIINB != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(BELEODAIINB);
-      }
       if (IsFinish != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(104);
         output.WriteBool(IsFinish);
+      }
+      if (BELEODAIINB != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(BELEODAIINB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BELEODAIINB != 0) {
-        output.WriteRawTag(56);
-        output.WriteUInt32(BELEODAIINB);
-      }
       if (IsFinish != false) {
-        output.WriteRawTag(112);
+        output.WriteRawTag(104);
         output.WriteBool(IsFinish);
+      }
+      if (BELEODAIINB != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(BELEODAIINB);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IsFinish != false) {
-        size += 1 + 1;
-      }
       if (BELEODAIINB != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BELEODAIINB);
+      }
+      if (IsFinish != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IsFinish != false) {
-        IsFinish = other.IsFinish;
-      }
       if (other.BELEODAIINB != 0) {
         BELEODAIINB = other.BELEODAIINB;
+      }
+      if (other.IsFinish != false) {
+        IsFinish = other.IsFinish;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -226,12 +226,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 56: {
-            BELEODAIINB = input.ReadUInt32();
+          case 104: {
+            IsFinish = input.ReadBool();
             break;
           }
-          case 112: {
-            IsFinish = input.ReadBool();
+          case 120: {
+            BELEODAIINB = input.ReadUInt32();
             break;
           }
         }
@@ -249,12 +249,12 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 56: {
-            BELEODAIINB = input.ReadUInt32();
+          case 104: {
+            IsFinish = input.ReadBool();
             break;
           }
-          case 112: {
-            IsFinish = input.ReadBool();
+          case 120: {
+            BELEODAIINB = input.ReadUInt32();
             break;
           }
         }
