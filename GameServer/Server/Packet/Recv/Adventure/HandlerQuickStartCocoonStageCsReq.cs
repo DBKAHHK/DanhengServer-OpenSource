@@ -11,12 +11,12 @@ public class HandlerQuickStartCocoonStageCsReq : Handler
     {
         var req = QuickStartCocoonStageCsReq.Parser.ParseFrom(data);
         var battle =
-            await connection.Player!.BattleManager!.StartCocoonStage((int)req.CocoonId, (int)req.Wave,
+            await connection.Player!.BattleManager!.StartCocoonStage((int)req.CocoonId, (int)req.CocoonChallengeTimes,
                 (int)req.WorldLevel);
         connection.Player.SceneInstance?.OnEnterStage();
 
         if (battle != null)
-            await connection.SendPacket(new PacketQuickStartCocoonStageScRsp(battle, (int)req.CocoonId, (int)req.Wave));
+            await connection.SendPacket(new PacketQuickStartCocoonStageScRsp(battle, (int)req.CocoonId, (int)req.CocoonChallengeTimes));
         else
             await connection.SendPacket(new PacketQuickStartCocoonStageScRsp());
     }

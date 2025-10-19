@@ -10,9 +10,11 @@ public class PacketGridFightGetDataScRsp : BasePacket
     {
         var proto = new GridFightGetDataScRsp
         {
-            RogueGetInfo = player.GridFightManager!.ToProto(),
-            //FightCurrentInfo = player.GridFightManager!.ToCurrentInfo()
+            RogueGetInfo = player.GridFightManager!.ToProto()
         };
+
+        if (player.GridFightManager!.GridFightInstance != null)
+            proto.FightCurrentInfo = player.GridFightManager!.GridFightInstance.ToProto();
 
         SetData(proto);
     }

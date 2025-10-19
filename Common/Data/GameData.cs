@@ -105,9 +105,17 @@ public static class GameData
     #region GridFight
 
     public static Dictionary<uint, GridFightRoleBasicInfoExcel> GridFightRoleBasicInfoData { get; private set; } = [];
+    public static Dictionary<uint, GridFightDivisionInfoExcel> GridFightDivisionInfoData { get; private set; } = [];
     public static Dictionary<uint, GridFightEquipmentExcel> GridFightEquipmentData { get; private set; } = [];
     public static Dictionary<uint, GridFightConsumablesExcel> GridFightConsumablesData { get; private set; } = [];
+    public static Dictionary<uint, GridFightCampExcel> GridFightCampData { get; private set; } = [];
+    public static Dictionary<uint, GridFightMonsterExcel> GridFightMonsterData { get; private set; } = [];
+    public static Dictionary<uint, GridFightAugmentExcel> GridFightAugmentData { get; private set; } = [];
+    public static Dictionary<uint, GridFightPortalBuffExcel> GridFightPortalBuffData { get; private set; } = [];
     public static Dictionary<uint, GridFightItemsExcel> GridFightItemsData { get; private set; } = [];
+    public static Dictionary<uint, GridFightTalentExcel> GridFightTalentData { get; private set; } = [];
+    public static Dictionary<uint, GridFightSeasonTalentExcel> GridFightSeasonTalentData { get; private set; } = [];
+    public static Dictionary<uint, Dictionary<uint, GridFightStageRouteExcel>> GridFightStageRouteData { get; private set; } = [];
 
     #endregion
 

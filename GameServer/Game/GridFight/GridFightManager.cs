@@ -7,24 +7,38 @@ namespace EggLink.DanhengServer.GameServer.Game.GridFight;
 
 public class GridFightManager(PlayerInstance player) : BasePlayerManager(player)
 {
+    public const uint CurSeasonId = 1;
+    public uint CurUniqueId { get; set; }
+    public GridFightInstance? GridFightInstance { get; set; }
+
+    #region Game
+
+    public async ValueTask<(Retcode code, GridFightInstance? inst)> StartGamePlay(uint season, uint divisionId, bool isOverLock)
+    {
+        if (season != CurSeasonId)
+            return (Retcode.RetGridFightConfMiss, null);
+
+        if (GridFightInstance != null)
+            return (Retcode.RetGridFightAlreadyInGameplay, GridFightInstance);
+
+        GridFightInstance = new GridFightInstance(season, divisionId, isOverLock, ++CurUniqueId);
+        GridFightInstance.InitializeComponents();
+
+        await ValueTask.CompletedTask;
+        return (Retcode.RetSucc, GridFightInstance);
+    }
+
+    #endregion
+
+
+    #region Serialization
+
     public GridFightQueryInfo ToProto()
     {
         return new GridFightQueryInfo
         {
             GridFightRewardInfo = ToRewardInfo(),
             GridFightStaticGameInfo = ToGameInfo()
-        };
-    }
-
-    public GridFightCurrentInfo ToCurrentInfo()
-    {
-        return new GridFightCurrentInfo
-        {
-            GridFightGameData = new GridFightGameData(),
-            Season = 1,
-            DivisionId = 1,
-            UniqueId = 1,
-            PendingAction = new GridFightPendingAction()
         };
     }
 
@@ -36,12 +50,13 @@ public class GridFightManager(PlayerInstance player) : BasePlayerManager(player)
         {
             GridFightTalentInfo = new GridFightTalentInfo
             {
-                JMOJEOALCLO = { 1011 }
+                DeployIdList = { GameData.GridFightTalentData.Keys }
             },
-            //GridFightWeeklyReward = new GridFightTakeWeeklyRewardInfo
-            //{
-            //    EndTime = time.Item2,
-            //}
+            GridFightWeeklyReward = new GridFightTakeWeeklyRewardInfo
+            {
+                EndTime = time.Item2,
+                //FeatureBeginTime = time.Item1
+            }
         };
     }
 
@@ -51,18 +66,18 @@ public class GridFightManager(PlayerInstance player) : BasePlayerManager(player)
         {
             GridFightTalentInfo = new GridFightTalentInfo
             {
-                JMOJEOALCLO = { }
+                DeployIdList = { GameData.GridFightSeasonTalentData.Keys }
             },
-            DivisionId = 10920,
+            DivisionId = GameData.GridFightDivisionInfoData.Where(x => x.Value.SeasonID == CurSeasonId)
+                .Select(x => x.Key).Max(),
             GridFightGameValueInfo = ToFightGameValueInfo(),
-            Exp = new ()
+            Exp = new GridFightExpInfo
             {
-                BNCBPJIBHGI = 1,
-                GDDHBECJECP = 1
+                GridFightLevel = 1,
+                GridWeeklyExtraExp = 1
             },
             MGGGAJJBAMN = 1,
-            ECMBJBBGHGG = 1,
-            IFEHBIMEMEC = 10
+            SubSeasonId = 1
         };
     }
 
@@ -78,9 +93,21 @@ public class GridFightManager(PlayerInstance player) : BasePlayerManager(player)
             {
                 GridFightItemList = { GameData.GridFightItemsData.Keys }
             },
-            IADIEGJKNHA = new(),
-            OCKCODILEOP = new(),
-            PJBEPNCFGDJ = new()
+            GridFightCampInfo = new GridFightCampInfo
+            {
+                GridFightCampList = { GameData.GridFightCampData.Keys }
+            },
+            GridFightAugmentInfo = new GridFightAugmentInfo
+            {
+                GridFightAugmentList = { GameData.GridFightAugmentData.Keys }
+            },
+            GridFightPortalBuffInfo = new GridFightPortalBuffInfo
+            {
+                GridFightPortalBuffList =
+                    { GameData.GridFightPortalBuffData.Values.Where(x => x.IfInBook).Select(x => x.ID) }
+            }
         };
     }
+
+    #endregion
 }

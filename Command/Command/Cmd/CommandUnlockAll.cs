@@ -45,6 +45,27 @@ public class CommandUnlockAll : ICommand
         arg.Target!.Stop();
     }
 
+    [CommandMethod("0 quest")]
+    public async ValueTask UnlockAllQuests(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        var player = arg.Target!.Player!;
+        var questManager = player.QuestManager!;
+
+        foreach (var quest in GameData.QuestDataData.Values)
+            await questManager.FinishQuest(quest.QuestID, false);
+
+        await questManager.SyncQuest();
+
+        await arg.SendMsg(I18NManager.Translate("Game.Command.UnlockAll.UnlockedAll",
+            I18NManager.Translate("Word.Quest")));
+    }
+
     [CommandMethod("0 tutorial")]
     public async ValueTask UnlockAllTutorial(CommandArg arg)
     {

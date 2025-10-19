@@ -215,7 +215,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         GameData.CocoonConfigData.TryGetValue(cocoonId * 100 + worldLevel, out var config);
         if (config == null) return null;
 
-        wave = Math.Min(Math.Max(wave, 1), config.MaxWave);
+        wave = Math.Max(wave, 1);
 
         var cost = config.StaminaCost * wave;
         if (Player.Data.Stamina < cost) return null;
