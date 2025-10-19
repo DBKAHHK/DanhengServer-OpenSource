@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static JGMIHLGPICMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFKR01JSExHUElDTS5wcm90byJgCgtKR01JSExHUElDTRISCgpzZWN0aW9u",
-            "X2lkGA0gASgNEhMKC0tJRUtKRUZGUEhLGA8gASgNEhMKC0NFUERQQU1EQUlC",
-            "GAkgASgNEhMKC0JLTURHS0NNR1BGGA4gASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChFKR01JSExHUElDTS5wcm90byJfCgtKR01JSExHUElDTRISCgpzZWN0aW9u",
+            "X2lkGA0gASgNEhIKCmNoYXB0ZXJfaWQYDyABKA0SEwoLQ0VQRFBBTURBSUIY",
+            "CSABKA0SEwoLQktNREdLQ01HUEYYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JGMIHLGPICM), global::EggLink.DanhengServer.Proto.JGMIHLGPICM.Parser, new[]{ "SectionId", "KIEKJEFFPHK", "CEPDPAMDAIB", "BKMDGKCMGPF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JGMIHLGPICM), global::EggLink.DanhengServer.Proto.JGMIHLGPICM.Parser, new[]{ "SectionId", "ChapterId", "CEPDPAMDAIB", "BKMDGKCMGPF" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JGMIHLGPICM(JGMIHLGPICM other) : this() {
       sectionId_ = other.sectionId_;
-      kIEKJEFFPHK_ = other.kIEKJEFFPHK_;
+      chapterId_ = other.chapterId_;
       cEPDPAMDAIB_ = other.cEPDPAMDAIB_;
       bKMDGKCMGPF_ = other.bKMDGKCMGPF_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -98,15 +98,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KIEKJEFFPHK" field.</summary>
-    public const int KIEKJEFFPHKFieldNumber = 15;
-    private uint kIEKJEFFPHK_;
+    /// <summary>Field number for the "chapter_id" field.</summary>
+    public const int ChapterIdFieldNumber = 15;
+    private uint chapterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KIEKJEFFPHK {
-      get { return kIEKJEFFPHK_; }
+    public uint ChapterId {
+      get { return chapterId_; }
       set {
-        kIEKJEFFPHK_ = value;
+        chapterId_ = value;
       }
     }
 
@@ -150,7 +150,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (SectionId != other.SectionId) return false;
-      if (KIEKJEFFPHK != other.KIEKJEFFPHK) return false;
+      if (ChapterId != other.ChapterId) return false;
       if (CEPDPAMDAIB != other.CEPDPAMDAIB) return false;
       if (BKMDGKCMGPF != other.BKMDGKCMGPF) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -161,7 +161,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (SectionId != 0) hash ^= SectionId.GetHashCode();
-      if (KIEKJEFFPHK != 0) hash ^= KIEKJEFFPHK.GetHashCode();
+      if (ChapterId != 0) hash ^= ChapterId.GetHashCode();
       if (CEPDPAMDAIB != 0) hash ^= CEPDPAMDAIB.GetHashCode();
       if (BKMDGKCMGPF != 0) hash ^= BKMDGKCMGPF.GetHashCode();
       if (_unknownFields != null) {
@@ -194,9 +194,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(112);
         output.WriteUInt32(BKMDGKCMGPF);
       }
-      if (KIEKJEFFPHK != 0) {
+      if (ChapterId != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(KIEKJEFFPHK);
+        output.WriteUInt32(ChapterId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -220,9 +220,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(112);
         output.WriteUInt32(BKMDGKCMGPF);
       }
-      if (KIEKJEFFPHK != 0) {
+      if (ChapterId != 0) {
         output.WriteRawTag(120);
-        output.WriteUInt32(KIEKJEFFPHK);
+        output.WriteUInt32(ChapterId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -237,8 +237,8 @@ namespace EggLink.DanhengServer.Proto {
       if (SectionId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SectionId);
       }
-      if (KIEKJEFFPHK != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KIEKJEFFPHK);
+      if (ChapterId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChapterId);
       }
       if (CEPDPAMDAIB != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CEPDPAMDAIB);
@@ -261,8 +261,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.SectionId != 0) {
         SectionId = other.SectionId;
       }
-      if (other.KIEKJEFFPHK != 0) {
-        KIEKJEFFPHK = other.KIEKJEFFPHK;
+      if (other.ChapterId != 0) {
+        ChapterId = other.ChapterId;
       }
       if (other.CEPDPAMDAIB != 0) {
         CEPDPAMDAIB = other.CEPDPAMDAIB;
@@ -298,7 +298,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 120: {
-            KIEKJEFFPHK = input.ReadUInt32();
+            ChapterId = input.ReadUInt32();
             break;
           }
         }
@@ -329,7 +329,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 120: {
-            KIEKJEFFPHK = input.ReadUInt32();
+            ChapterId = input.ReadUInt32();
             break;
           }
         }

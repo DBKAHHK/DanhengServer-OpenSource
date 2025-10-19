@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static QuickStartCocoonStageCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBRdWlja1N0YXJ0Q29jb29uU3RhZ2VDc1JlcS5wcm90byJnChpRdWlja1N0",
-            "YXJ0Q29jb29uU3RhZ2VDc1JlcRITCgtLTUZGQUhFTkNLQhgNIAEoDRITCgt3",
-            "b3JsZF9sZXZlbBgBIAEoDRIMCgR3YXZlGAogASgNEhEKCWNvY29vbl9pZBgH",
-            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CiBRdWlja1N0YXJ0Q29jb29uU3RhZ2VDc1JlcS5wcm90byJyChpRdWlja1N0",
+            "YXJ0Q29jb29uU3RhZ2VDc1JlcRIeChZjb2Nvb25fY2hhbGxlbmdlX3RpbWVz",
+            "GA0gASgNEhMKC3dvcmxkX2xldmVsGAEgASgNEgwKBHdhdmUYCiABKA0SEQoJ",
+            "Y29jb29uX2lkGAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QuickStartCocoonStageCsReq), global::EggLink.DanhengServer.Proto.QuickStartCocoonStageCsReq.Parser, new[]{ "KMFFAHENCKB", "WorldLevel", "Wave", "CocoonId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QuickStartCocoonStageCsReq), global::EggLink.DanhengServer.Proto.QuickStartCocoonStageCsReq.Parser, new[]{ "CocoonChallengeTimes", "WorldLevel", "Wave", "CocoonId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuickStartCocoonStageCsReq(QuickStartCocoonStageCsReq other) : this() {
-      kMFFAHENCKB_ = other.kMFFAHENCKB_;
+      cocoonChallengeTimes_ = other.cocoonChallengeTimes_;
       worldLevel_ = other.worldLevel_;
       wave_ = other.wave_;
       cocoonId_ = other.cocoonId_;
@@ -86,15 +87,15 @@ namespace EggLink.DanhengServer.Proto {
       return new QuickStartCocoonStageCsReq(this);
     }
 
-    /// <summary>Field number for the "KMFFAHENCKB" field.</summary>
-    public const int KMFFAHENCKBFieldNumber = 13;
-    private uint kMFFAHENCKB_;
+    /// <summary>Field number for the "cocoon_challenge_times" field.</summary>
+    public const int CocoonChallengeTimesFieldNumber = 13;
+    private uint cocoonChallengeTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KMFFAHENCKB {
-      get { return kMFFAHENCKB_; }
+    public uint CocoonChallengeTimes {
+      get { return cocoonChallengeTimes_; }
       set {
-        kMFFAHENCKB_ = value;
+        cocoonChallengeTimes_ = value;
       }
     }
 
@@ -149,7 +150,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (KMFFAHENCKB != other.KMFFAHENCKB) return false;
+      if (CocoonChallengeTimes != other.CocoonChallengeTimes) return false;
       if (WorldLevel != other.WorldLevel) return false;
       if (Wave != other.Wave) return false;
       if (CocoonId != other.CocoonId) return false;
@@ -160,7 +161,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (KMFFAHENCKB != 0) hash ^= KMFFAHENCKB.GetHashCode();
+      if (CocoonChallengeTimes != 0) hash ^= CocoonChallengeTimes.GetHashCode();
       if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
       if (Wave != 0) hash ^= Wave.GetHashCode();
       if (CocoonId != 0) hash ^= CocoonId.GetHashCode();
@@ -194,9 +195,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(80);
         output.WriteUInt32(Wave);
       }
-      if (KMFFAHENCKB != 0) {
+      if (CocoonChallengeTimes != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(KMFFAHENCKB);
+        output.WriteUInt32(CocoonChallengeTimes);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -220,9 +221,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(80);
         output.WriteUInt32(Wave);
       }
-      if (KMFFAHENCKB != 0) {
+      if (CocoonChallengeTimes != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(KMFFAHENCKB);
+        output.WriteUInt32(CocoonChallengeTimes);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -234,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (KMFFAHENCKB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KMFFAHENCKB);
+      if (CocoonChallengeTimes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CocoonChallengeTimes);
       }
       if (WorldLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
@@ -258,8 +259,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.KMFFAHENCKB != 0) {
-        KMFFAHENCKB = other.KMFFAHENCKB;
+      if (other.CocoonChallengeTimes != 0) {
+        CocoonChallengeTimes = other.CocoonChallengeTimes;
       }
       if (other.WorldLevel != 0) {
         WorldLevel = other.WorldLevel;
@@ -298,7 +299,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            KMFFAHENCKB = input.ReadUInt32();
+            CocoonChallengeTimes = input.ReadUInt32();
             break;
           }
         }
@@ -329,7 +330,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            KMFFAHENCKB = input.ReadUInt32();
+            CocoonChallengeTimes = input.ReadUInt32();
             break;
           }
         }

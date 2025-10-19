@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static FHHDICEEHOEReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFGSEhESUNFRUhPRS5wcm90byKNAQoLRkhIRElDRUVIT0USEwoLQU9FRklI",
+            "ChFGSEhESUNFRUhPRS5wcm90byKFAQoLRkhIRElDRUVIT0USEwoLQU9FRklI",
             "QkJBR0UYASADKA0SEwoLRE9FS1BHTE5LRkIYDCABKAgSEwoLTElCS0xEQUxI",
             "SlAYDSABKA0SFAoMdG90YWxfZGFtYWdlGAkgASgBEhMKC0lBRkZMTkZQTEpD",
-            "GAogASgIEhQKDGZpbmlzaF9sZXZlbBgDIAEoDUIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "GAogASgIEgwKBHRpZXIYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
+            "ci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FHHDICEEHOE), global::EggLink.DanhengServer.Proto.FHHDICEEHOE.Parser, new[]{ "AOEFIHBBAGE", "DOEKPGLNKFB", "LIBKLDALHJP", "TotalDamage", "IAFFLNFPLJC", "FinishLevel" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FHHDICEEHOE), global::EggLink.DanhengServer.Proto.FHHDICEEHOE.Parser, new[]{ "AOEFIHBBAGE", "DOEKPGLNKFB", "LIBKLDALHJP", "TotalDamage", "IAFFLNFPLJC", "Tier" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,7 +79,7 @@ namespace EggLink.DanhengServer.Proto {
       lIBKLDALHJP_ = other.lIBKLDALHJP_;
       totalDamage_ = other.totalDamage_;
       iAFFLNFPLJC_ = other.iAFFLNFPLJC_;
-      finishLevel_ = other.finishLevel_;
+      tier_ = other.tier_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -148,15 +148,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "finish_level" field.</summary>
-    public const int FinishLevelFieldNumber = 3;
-    private uint finishLevel_;
+    /// <summary>Field number for the "tier" field.</summary>
+    public const int TierFieldNumber = 3;
+    private uint tier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FinishLevel {
-      get { return finishLevel_; }
+    public uint Tier {
+      get { return tier_; }
       set {
-        finishLevel_ = value;
+        tier_ = value;
       }
     }
 
@@ -180,7 +180,7 @@ namespace EggLink.DanhengServer.Proto {
       if (LIBKLDALHJP != other.LIBKLDALHJP) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TotalDamage, other.TotalDamage)) return false;
       if (IAFFLNFPLJC != other.IAFFLNFPLJC) return false;
-      if (FinishLevel != other.FinishLevel) return false;
+      if (Tier != other.Tier) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -193,7 +193,7 @@ namespace EggLink.DanhengServer.Proto {
       if (LIBKLDALHJP != 0) hash ^= LIBKLDALHJP.GetHashCode();
       if (TotalDamage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TotalDamage);
       if (IAFFLNFPLJC != false) hash ^= IAFFLNFPLJC.GetHashCode();
-      if (FinishLevel != 0) hash ^= FinishLevel.GetHashCode();
+      if (Tier != 0) hash ^= Tier.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -213,9 +213,9 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       aOEFIHBBAGE_.WriteTo(output, _repeated_aOEFIHBBAGE_codec);
-      if (FinishLevel != 0) {
+      if (Tier != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(FinishLevel);
+        output.WriteUInt32(Tier);
       }
       if (TotalDamage != 0D) {
         output.WriteRawTag(73);
@@ -244,9 +244,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       aOEFIHBBAGE_.WriteTo(ref output, _repeated_aOEFIHBBAGE_codec);
-      if (FinishLevel != 0) {
+      if (Tier != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(FinishLevel);
+        output.WriteUInt32(Tier);
       }
       if (TotalDamage != 0D) {
         output.WriteRawTag(73);
@@ -287,8 +287,8 @@ namespace EggLink.DanhengServer.Proto {
       if (IAFFLNFPLJC != false) {
         size += 1 + 1;
       }
-      if (FinishLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishLevel);
+      if (Tier != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Tier);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -315,8 +315,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IAFFLNFPLJC != false) {
         IAFFLNFPLJC = other.IAFFLNFPLJC;
       }
-      if (other.FinishLevel != 0) {
-        FinishLevel = other.FinishLevel;
+      if (other.Tier != 0) {
+        Tier = other.Tier;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -339,7 +339,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
-            FinishLevel = input.ReadUInt32();
+            Tier = input.ReadUInt32();
             break;
           }
           case 73: {
@@ -379,7 +379,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
-            FinishLevel = input.ReadUInt32();
+            Tier = input.ReadUInt32();
             break;
           }
           case 73: {

@@ -24,20 +24,20 @@ namespace EggLink.DanhengServer.Proto {
     static OCIJDCFOMDNReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFPQ0lKRENGT01ETi5wcm90bxoRSEtFSUNNS01JQksucHJvdG8i3gIKC09D",
-            "SUpEQ0ZPTUROEhMKC0xJQktMREFMSEpQGAEgASgNEhQKDGZpbmlzaF9sZXZl",
-            "bBgCIAEoDRILCgNwb3MYAyABKA0SIQoLQkxMUEtIR01JSEgYByADKAsyDC5I",
-            "S0VJQ01LTUlCSxIRCglhdmF0YXJfaWQYCCABKA0SMgoLS0ZPS0FJS0dPS0YY",
-            "CSADKAsyHS5PQ0lKRENGT01ETi5LRk9LQUlLR09LRkVudHJ5EjIKC0lNTU5O",
-            "R01NREFJGAogAygLMh0uT0NJSkRDRk9NRE4uSU1NTk5HTU1EQUlFbnRyeRIR",
-            "Cgl1bmlxdWVfaWQYCyABKA0aMgoQS0ZPS0FJS0dPS0ZFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKA06AjgBGjIKEElNTU5OR01NREFJRW50cnkS",
-            "CwoDa2V5GAEgASgNEg0KBXZhbHVlGAIgASgNOgI4AUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFPQ0lKRENGT01ETi5wcm90bxoRSEtFSUNNS01JQksucHJvdG8i1gIKC09D",
+            "SUpEQ0ZPTUROEhMKC0xJQktMREFMSEpQGAEgASgNEgwKBHRpZXIYAiABKA0S",
+            "CwoDcG9zGAMgASgNEiEKC0JMTFBLSEdNSUhIGAcgAygLMgwuSEtFSUNNS01J",
+            "QksSEQoJYXZhdGFyX2lkGAggASgNEjIKC0tGT0tBSUtHT0tGGAkgAygLMh0u",
+            "T0NJSkRDRk9NRE4uS0ZPS0FJS0dPS0ZFbnRyeRIyCgtJTU1OTkdNTURBSRgK",
+            "IAMoCzIdLk9DSUpEQ0ZPTUROLklNTU5OR01NREFJRW50cnkSEQoJdW5pcXVl",
+            "X2lkGAsgASgNGjIKEEtGT0tBSUtHT0tGRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgNOgI4ARoyChBJTU1OTkdNTURBSUVudHJ5EgsKA2tleRgB",
+            "IAEoDRINCgV2YWx1ZRgCIAEoDToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HKEICMKMIBKReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OCIJDCFOMDN), global::EggLink.DanhengServer.Proto.OCIJDCFOMDN.Parser, new[]{ "LIBKLDALHJP", "FinishLevel", "Pos", "BLLPKHGMIHH", "AvatarId", "KFOKAIKGOKF", "IMMNNGMMDAI", "UniqueId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OCIJDCFOMDN), global::EggLink.DanhengServer.Proto.OCIJDCFOMDN.Parser, new[]{ "LIBKLDALHJP", "Tier", "Pos", "BLLPKHGMIHH", "AvatarId", "KFOKAIKGOKF", "IMMNNGMMDAI", "UniqueId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -80,7 +80,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OCIJDCFOMDN(OCIJDCFOMDN other) : this() {
       lIBKLDALHJP_ = other.lIBKLDALHJP_;
-      finishLevel_ = other.finishLevel_;
+      tier_ = other.tier_;
       pos_ = other.pos_;
       bLLPKHGMIHH_ = other.bLLPKHGMIHH_.Clone();
       avatarId_ = other.avatarId_;
@@ -108,15 +108,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "finish_level" field.</summary>
-    public const int FinishLevelFieldNumber = 2;
-    private uint finishLevel_;
+    /// <summary>Field number for the "tier" field.</summary>
+    public const int TierFieldNumber = 2;
+    private uint tier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FinishLevel {
-      get { return finishLevel_; }
+    public uint Tier {
+      get { return tier_; }
       set {
-        finishLevel_ = value;
+        tier_ = value;
       }
     }
 
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (LIBKLDALHJP != other.LIBKLDALHJP) return false;
-      if (FinishLevel != other.FinishLevel) return false;
+      if (Tier != other.Tier) return false;
       if (Pos != other.Pos) return false;
       if(!bLLPKHGMIHH_.Equals(other.bLLPKHGMIHH_)) return false;
       if (AvatarId != other.AvatarId) return false;
@@ -220,7 +220,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (LIBKLDALHJP != 0) hash ^= LIBKLDALHJP.GetHashCode();
-      if (FinishLevel != 0) hash ^= FinishLevel.GetHashCode();
+      if (Tier != 0) hash ^= Tier.GetHashCode();
       if (Pos != 0) hash ^= Pos.GetHashCode();
       hash ^= bLLPKHGMIHH_.GetHashCode();
       if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
@@ -249,9 +249,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(LIBKLDALHJP);
       }
-      if (FinishLevel != 0) {
+      if (Tier != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(FinishLevel);
+        output.WriteUInt32(Tier);
       }
       if (Pos != 0) {
         output.WriteRawTag(24);
@@ -282,9 +282,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(LIBKLDALHJP);
       }
-      if (FinishLevel != 0) {
+      if (Tier != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(FinishLevel);
+        output.WriteUInt32(Tier);
       }
       if (Pos != 0) {
         output.WriteRawTag(24);
@@ -314,8 +314,8 @@ namespace EggLink.DanhengServer.Proto {
       if (LIBKLDALHJP != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LIBKLDALHJP);
       }
-      if (FinishLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishLevel);
+      if (Tier != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Tier);
       }
       if (Pos != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pos);
@@ -344,8 +344,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.LIBKLDALHJP != 0) {
         LIBKLDALHJP = other.LIBKLDALHJP;
       }
-      if (other.FinishLevel != 0) {
-        FinishLevel = other.FinishLevel;
+      if (other.Tier != 0) {
+        Tier = other.Tier;
       }
       if (other.Pos != 0) {
         Pos = other.Pos;
@@ -379,7 +379,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 16: {
-            FinishLevel = input.ReadUInt32();
+            Tier = input.ReadUInt32();
             break;
           }
           case 24: {
@@ -426,7 +426,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 16: {
-            FinishLevel = input.ReadUInt32();
+            Tier = input.ReadUInt32();
             break;
           }
           case 24: {

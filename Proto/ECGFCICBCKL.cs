@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static ECGFCICBCKLReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFFQ0dGQ0lDQkNLTC5wcm90bxoRSklPQ0hJTEhMR0QucHJvdG8irQEKC0VD",
-            "R0ZDSUNCQ0tMEhMKC0dDUEZJQkdQQU5HGAEgASgNEhMKC3N3aXRjaF9saXN0",
-            "GAIgAygNEjIKC05ORUxGQUxDRE9MGAUgAygLMh0uRUNHRkNJQ0JDS0wuTk5F",
-            "TEZBTENET0xFbnRyeRpAChBOTkVMRkFMQ0RPTEVudHJ5EgsKA2tleRgBIAEo",
-            "DRIbCgV2YWx1ZRgCIAEoCzIMLkpJT0NISUxITEdEOgI4AUIeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFFQ0dGQ0lDQkNLTC5wcm90bxoXR3JpZEZpZ2h0RHJvcEluZm8ucHJvdG8i",
+            "swEKC0VDR0ZDSUNCQ0tMEhMKC0dDUEZJQkdQQU5HGAEgASgNEhMKC3N3aXRj",
+            "aF9saXN0GAIgAygNEjIKC05ORUxGQUxDRE9MGAUgAygLMh0uRUNHRkNJQ0JD",
+            "S0wuTk5FTEZBTENET0xFbnRyeRpGChBOTkVMRkFMQ0RPTEVudHJ5EgsKA2tl",
+            "eRgBIAEoDRIhCgV2YWx1ZRgCIAEoCzISLkdyaWRGaWdodERyb3BJbmZvOgI4",
+            "AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JIOCHILHLGDReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightDropInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ECGFCICBCKL), global::EggLink.DanhengServer.Proto.ECGFCICBCKL.Parser, new[]{ "GCPFIBGPANG", "SwitchList", "NNELFALCDOL" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
@@ -112,12 +112,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "NNELFALCDOL" field.</summary>
     public const int NNELFALCDOLFieldNumber = 5;
-    private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.JIOCHILHLGD>.Codec _map_nNELFALCDOL_codec
-        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.JIOCHILHLGD>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.JIOCHILHLGD.Parser), 42);
-    private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.JIOCHILHLGD> nNELFALCDOL_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.JIOCHILHLGD>();
+    private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo>.Codec _map_nNELFALCDOL_codec
+        = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.GridFightDropInfo.Parser), 42);
+    private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo> nNELFALCDOL_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, global::EggLink.DanhengServer.Proto.JIOCHILHLGD> NNELFALCDOL {
+    public pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo> NNELFALCDOL {
       get { return nNELFALCDOL_; }
     }
 

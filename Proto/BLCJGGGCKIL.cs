@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static BLCJGGGCKILReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFCTENKR0dHQ0tJTC5wcm90byI3CgtCTENKR0dHQ0tJTBITCgtLR0NMREZL",
-            "SkNDTBgHIAEoDRITCgtQRklIR0hESU9BRBgKIAEoDUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFCTENKR0dHQ0tJTC5wcm90byJACgtCTENKR0dHQ0tJTBIcChRncmlkX2Zp",
+            "Z2h0X2xpbmV1cF9ocBgHIAEoDRITCgtQRklIR0hESU9BRBgKIAEoDUIeqgIb",
+            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BLCJGGGCKIL), global::EggLink.DanhengServer.Proto.BLCJGGGCKIL.Parser, new[]{ "KGCLDFKJCCL", "PFIHGHDIOAD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BLCJGGGCKIL), global::EggLink.DanhengServer.Proto.BLCJGGGCKIL.Parser, new[]{ "GridFightLineupHp", "PFIHGHDIOAD" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BLCJGGGCKIL(BLCJGGGCKIL other) : this() {
-      kGCLDFKJCCL_ = other.kGCLDFKJCCL_;
+      gridFightLineupHp_ = other.gridFightLineupHp_;
       pFIHGHDIOAD_ = other.pFIHGHDIOAD_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new BLCJGGGCKIL(this);
     }
 
-    /// <summary>Field number for the "KGCLDFKJCCL" field.</summary>
-    public const int KGCLDFKJCCLFieldNumber = 7;
-    private uint kGCLDFKJCCL_;
+    /// <summary>Field number for the "grid_fight_lineup_hp" field.</summary>
+    public const int GridFightLineupHpFieldNumber = 7;
+    private uint gridFightLineupHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KGCLDFKJCCL {
-      get { return kGCLDFKJCCL_; }
+    public uint GridFightLineupHp {
+      get { return gridFightLineupHp_; }
       set {
-        kGCLDFKJCCL_ = value;
+        gridFightLineupHp_ = value;
       }
     }
 
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (KGCLDFKJCCL != other.KGCLDFKJCCL) return false;
+      if (GridFightLineupHp != other.GridFightLineupHp) return false;
       if (PFIHGHDIOAD != other.PFIHGHDIOAD) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (KGCLDFKJCCL != 0) hash ^= KGCLDFKJCCL.GetHashCode();
+      if (GridFightLineupHp != 0) hash ^= GridFightLineupHp.GetHashCode();
       if (PFIHGHDIOAD != 0) hash ^= PFIHGHDIOAD.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (KGCLDFKJCCL != 0) {
+      if (GridFightLineupHp != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(KGCLDFKJCCL);
+        output.WriteUInt32(GridFightLineupHp);
       }
       if (PFIHGHDIOAD != 0) {
         output.WriteRawTag(80);
@@ -169,9 +169,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (KGCLDFKJCCL != 0) {
+      if (GridFightLineupHp != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(KGCLDFKJCCL);
+        output.WriteUInt32(GridFightLineupHp);
       }
       if (PFIHGHDIOAD != 0) {
         output.WriteRawTag(80);
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (KGCLDFKJCCL != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KGCLDFKJCCL);
+      if (GridFightLineupHp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightLineupHp);
       }
       if (PFIHGHDIOAD != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PFIHGHDIOAD);
@@ -205,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.KGCLDFKJCCL != 0) {
-        KGCLDFKJCCL = other.KGCLDFKJCCL;
+      if (other.GridFightLineupHp != 0) {
+        GridFightLineupHp = other.GridFightLineupHp;
       }
       if (other.PFIHGHDIOAD != 0) {
         PFIHGHDIOAD = other.PFIHGHDIOAD;
@@ -227,7 +227,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 56: {
-            KGCLDFKJCCL = input.ReadUInt32();
+            GridFightLineupHp = input.ReadUInt32();
             break;
           }
           case 80: {
@@ -250,7 +250,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 56: {
-            KGCLDFKJCCL = input.ReadUInt32();
+            GridFightLineupHp = input.ReadUInt32();
             break;
           }
           case 80: {

@@ -24,17 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static SceneMonsterWaveReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZTY2VuZU1vbnN0ZXJXYXZlLnByb3RvGg5JdGVtTGlzdC5wcm90bxoSU2Nl",
-            "bmVNb25zdGVyLnByb3RvGhtTY2VuZU1vbnN0ZXJXYXZlUGFyYW0ucHJvdG8i",
-            "twEKEFNjZW5lTW9uc3RlcldhdmUSHgoLSkNETEpHSEhBT0YYBSADKAsyCS5J",
-            "dGVtTGlzdBIWCg5iYXR0bGVfd2F2ZV9pZBgPIAEoDRIXCg9iYXR0bGVfc3Rh",
-            "Z2VfaWQYAyABKA0SIwoMbW9uc3Rlcl9saXN0GAIgAygLMg0uU2NlbmVNb25z",
-            "dGVyEi0KDW1vbnN0ZXJfcGFyYW0YDCABKAsyFi5TY2VuZU1vbnN0ZXJXYXZl",
-            "UGFyYW1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChZTY2VuZU1vbnN0ZXJXYXZlLnByb3RvGhtTY2VuZU1vbnN0ZXJXYXZlUGFy",
+            "YW0ucHJvdG8aDkl0ZW1MaXN0LnByb3RvGhJTY2VuZU1vbnN0ZXIucHJvdG8i",
+            "ugEKEFNjZW5lTW9uc3RlcldhdmUSIQoOZHJvcF9pdGVtX2xpc3QYBSADKAsy",
+            "CS5JdGVtTGlzdBIWCg5iYXR0bGVfd2F2ZV9pZBgPIAEoDRIXCg9iYXR0bGVf",
+            "c3RhZ2VfaWQYAyABKA0SIwoMbW9uc3Rlcl9saXN0GAIgAygLMg0uU2NlbmVN",
+            "b25zdGVyEi0KDW1vbnN0ZXJfcGFyYW0YDCABKAsyFi5TY2VuZU1vbnN0ZXJX",
+            "YXZlUGFyYW1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneMonsterReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneMonsterWaveParamReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneMonsterWaveParamReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneMonsterReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMonsterWave), global::EggLink.DanhengServer.Proto.SceneMonsterWave.Parser, new[]{ "JCDLJGHHAOF", "BattleWaveId", "BattleStageId", "MonsterList", "MonsterParam" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMonsterWave), global::EggLink.DanhengServer.Proto.SceneMonsterWave.Parser, new[]{ "DropItemList", "BattleWaveId", "BattleStageId", "MonsterList", "MonsterParam" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneMonsterWave(SceneMonsterWave other) : this() {
-      jCDLJGHHAOF_ = other.jCDLJGHHAOF_.Clone();
+      dropItemList_ = other.dropItemList_.Clone();
       battleWaveId_ = other.battleWaveId_;
       battleStageId_ = other.battleStageId_;
       monsterList_ = other.monsterList_.Clone();
@@ -90,15 +91,15 @@ namespace EggLink.DanhengServer.Proto {
       return new SceneMonsterWave(this);
     }
 
-    /// <summary>Field number for the "JCDLJGHHAOF" field.</summary>
-    public const int JCDLJGHHAOFFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ItemList> _repeated_jCDLJGHHAOF_codec
+    /// <summary>Field number for the "drop_item_list" field.</summary>
+    public const int DropItemListFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ItemList> _repeated_dropItemList_codec
         = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.ItemList.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemList> jCDLJGHHAOF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemList>();
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemList> dropItemList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemList>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemList> JCDLJGHHAOF {
-      get { return jCDLJGHHAOF_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ItemList> DropItemList {
+      get { return dropItemList_; }
     }
 
     /// <summary>Field number for the "battle_wave_id" field.</summary>
@@ -163,7 +164,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!jCDLJGHHAOF_.Equals(other.jCDLJGHHAOF_)) return false;
+      if(!dropItemList_.Equals(other.dropItemList_)) return false;
       if (BattleWaveId != other.BattleWaveId) return false;
       if (BattleStageId != other.BattleStageId) return false;
       if(!monsterList_.Equals(other.monsterList_)) return false;
@@ -175,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= jCDLJGHHAOF_.GetHashCode();
+      hash ^= dropItemList_.GetHashCode();
       if (BattleWaveId != 0) hash ^= BattleWaveId.GetHashCode();
       if (BattleStageId != 0) hash ^= BattleStageId.GetHashCode();
       hash ^= monsterList_.GetHashCode();
@@ -203,7 +204,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(BattleStageId);
       }
-      jCDLJGHHAOF_.WriteTo(output, _repeated_jCDLJGHHAOF_codec);
+      dropItemList_.WriteTo(output, _repeated_dropItemList_codec);
       if (monsterParam_ != null) {
         output.WriteRawTag(98);
         output.WriteMessage(MonsterParam);
@@ -227,7 +228,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(BattleStageId);
       }
-      jCDLJGHHAOF_.WriteTo(ref output, _repeated_jCDLJGHHAOF_codec);
+      dropItemList_.WriteTo(ref output, _repeated_dropItemList_codec);
       if (monsterParam_ != null) {
         output.WriteRawTag(98);
         output.WriteMessage(MonsterParam);
@@ -246,7 +247,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += jCDLJGHHAOF_.CalculateSize(_repeated_jCDLJGHHAOF_codec);
+      size += dropItemList_.CalculateSize(_repeated_dropItemList_codec);
       if (BattleWaveId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BattleWaveId);
       }
@@ -269,7 +270,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      jCDLJGHHAOF_.Add(other.jCDLJGHHAOF_);
+      dropItemList_.Add(other.dropItemList_);
       if (other.BattleWaveId != 0) {
         BattleWaveId = other.BattleWaveId;
       }
@@ -307,7 +308,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 42: {
-            jCDLJGHHAOF_.AddEntriesFrom(input, _repeated_jCDLJGHHAOF_codec);
+            dropItemList_.AddEntriesFrom(input, _repeated_dropItemList_codec);
             break;
           }
           case 98: {
@@ -345,7 +346,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 42: {
-            jCDLJGHHAOF_.AddEntriesFrom(ref input, _repeated_jCDLJGHHAOF_codec);
+            dropItemList_.AddEntriesFrom(ref input, _repeated_dropItemList_codec);
             break;
           }
           case 98: {

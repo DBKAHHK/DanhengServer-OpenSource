@@ -24,19 +24,20 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightStaticGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HcmlkRmlnaHRTdGF0aWNHYW1lSW5mby5wcm90bxoRSE1DRERMR0NFSk8u",
-            "cHJvdG8aHEdyaWRGaWdodEdhbWVWYWx1ZUluZm8ucHJvdG8aGUdyaWRGaWdo",
-            "dFRhbGVudEluZm8ucHJvdG8i+wEKF0dyaWRGaWdodFN0YXRpY0dhbWVJbmZv",
-            "EjQKFmdyaWRfZmlnaHRfdGFsZW50X2luZm8YByABKAsyFC5HcmlkRmlnaHRU",
-            "YWxlbnRJbmZvEhMKC01HR0dBSkpCQU1OGAIgASgNEhMKC2RpdmlzaW9uX2lk",
-            "GAogASgNEjsKGmdyaWRfZmlnaHRfZ2FtZV92YWx1ZV9pbmZvGA8gASgLMhcu",
-            "R3JpZEZpZ2h0R2FtZVZhbHVlSW5mbxIZCgNleHAYBCABKAsyDC5ITUNERExH",
-            "Q0VKTxITCgtFQ01CSkJCR0hHRxgFIAEoDRITCgtJRkVIQklNRU1FQxgDIAEo",
-            "DUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch1HcmlkRmlnaHRTdGF0aWNHYW1lSW5mby5wcm90bxoZR3JpZEZpZ2h0VGFs",
+            "ZW50SW5mby5wcm90bxoWR3JpZEZpZ2h0RXhwSW5mby5wcm90bxocR3JpZEZp",
+            "Z2h0R2FtZVZhbHVlSW5mby5wcm90byKDAgoXR3JpZEZpZ2h0U3RhdGljR2Ft",
+            "ZUluZm8SNAoWZ3JpZF9maWdodF90YWxlbnRfaW5mbxgHIAEoCzIULkdyaWRG",
+            "aWdodFRhbGVudEluZm8SEwoLTUdHR0FKSkJBTU4YAiABKA0SEwoLZGl2aXNp",
+            "b25faWQYCiABKA0SOwoaZ3JpZF9maWdodF9nYW1lX3ZhbHVlX2luZm8YDyAB",
+            "KAsyFy5HcmlkRmlnaHRHYW1lVmFsdWVJbmZvEh4KA2V4cBgEIAEoCzIRLkdy",
+            "aWRGaWdodEV4cEluZm8SFQoNc3ViX3NlYXNvbl9pZBgFIAEoDRIUCgx0YWxl",
+            "bnRfcG9pbnQYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HMCDDLGCEJOReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameValueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTalentInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightTalentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightExpInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameValueInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightStaticGameInfo), global::EggLink.DanhengServer.Proto.GridFightStaticGameInfo.Parser, new[]{ "GridFightTalentInfo", "MGGGAJJBAMN", "DivisionId", "GridFightGameValueInfo", "Exp", "ECMBJBBGHGG", "IFEHBIMEMEC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightStaticGameInfo), global::EggLink.DanhengServer.Proto.GridFightStaticGameInfo.Parser, new[]{ "GridFightTalentInfo", "MGGGAJJBAMN", "DivisionId", "GridFightGameValueInfo", "Exp", "SubSeasonId", "TalentPoint" }, null, null, null, null)
           }));
     }
     #endregion
@@ -83,8 +84,8 @@ namespace EggLink.DanhengServer.Proto {
       divisionId_ = other.divisionId_;
       gridFightGameValueInfo_ = other.gridFightGameValueInfo_ != null ? other.gridFightGameValueInfo_.Clone() : null;
       exp_ = other.exp_ != null ? other.exp_.Clone() : null;
-      eCMBJBBGHGG_ = other.eCMBJBBGHGG_;
-      iFEHBIMEMEC_ = other.iFEHBIMEMEC_;
+      subSeasonId_ = other.subSeasonId_;
+      talentPoint_ = other.talentPoint_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -144,37 +145,37 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "exp" field.</summary>
     public const int ExpFieldNumber = 4;
-    private global::EggLink.DanhengServer.Proto.HMCDDLGCEJO exp_;
+    private global::EggLink.DanhengServer.Proto.GridFightExpInfo exp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HMCDDLGCEJO Exp {
+    public global::EggLink.DanhengServer.Proto.GridFightExpInfo Exp {
       get { return exp_; }
       set {
         exp_ = value;
       }
     }
 
-    /// <summary>Field number for the "ECMBJBBGHGG" field.</summary>
-    public const int ECMBJBBGHGGFieldNumber = 5;
-    private uint eCMBJBBGHGG_;
+    /// <summary>Field number for the "sub_season_id" field.</summary>
+    public const int SubSeasonIdFieldNumber = 5;
+    private uint subSeasonId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ECMBJBBGHGG {
-      get { return eCMBJBBGHGG_; }
+    public uint SubSeasonId {
+      get { return subSeasonId_; }
       set {
-        eCMBJBBGHGG_ = value;
+        subSeasonId_ = value;
       }
     }
 
-    /// <summary>Field number for the "IFEHBIMEMEC" field.</summary>
-    public const int IFEHBIMEMECFieldNumber = 3;
-    private uint iFEHBIMEMEC_;
+    /// <summary>Field number for the "talent_point" field.</summary>
+    public const int TalentPointFieldNumber = 3;
+    private uint talentPoint_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IFEHBIMEMEC {
-      get { return iFEHBIMEMEC_; }
+    public uint TalentPoint {
+      get { return talentPoint_; }
       set {
-        iFEHBIMEMEC_ = value;
+        talentPoint_ = value;
       }
     }
 
@@ -198,8 +199,8 @@ namespace EggLink.DanhengServer.Proto {
       if (DivisionId != other.DivisionId) return false;
       if (!object.Equals(GridFightGameValueInfo, other.GridFightGameValueInfo)) return false;
       if (!object.Equals(Exp, other.Exp)) return false;
-      if (ECMBJBBGHGG != other.ECMBJBBGHGG) return false;
-      if (IFEHBIMEMEC != other.IFEHBIMEMEC) return false;
+      if (SubSeasonId != other.SubSeasonId) return false;
+      if (TalentPoint != other.TalentPoint) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -212,8 +213,8 @@ namespace EggLink.DanhengServer.Proto {
       if (DivisionId != 0) hash ^= DivisionId.GetHashCode();
       if (gridFightGameValueInfo_ != null) hash ^= GridFightGameValueInfo.GetHashCode();
       if (exp_ != null) hash ^= Exp.GetHashCode();
-      if (ECMBJBBGHGG != 0) hash ^= ECMBJBBGHGG.GetHashCode();
-      if (IFEHBIMEMEC != 0) hash ^= IFEHBIMEMEC.GetHashCode();
+      if (SubSeasonId != 0) hash ^= SubSeasonId.GetHashCode();
+      if (TalentPoint != 0) hash ^= TalentPoint.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -236,17 +237,17 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(MGGGAJJBAMN);
       }
-      if (IFEHBIMEMEC != 0) {
+      if (TalentPoint != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(IFEHBIMEMEC);
+        output.WriteUInt32(TalentPoint);
       }
       if (exp_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(Exp);
       }
-      if (ECMBJBBGHGG != 0) {
+      if (SubSeasonId != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(ECMBJBBGHGG);
+        output.WriteUInt32(SubSeasonId);
       }
       if (gridFightTalentInfo_ != null) {
         output.WriteRawTag(58);
@@ -274,17 +275,17 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(MGGGAJJBAMN);
       }
-      if (IFEHBIMEMEC != 0) {
+      if (TalentPoint != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(IFEHBIMEMEC);
+        output.WriteUInt32(TalentPoint);
       }
       if (exp_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(Exp);
       }
-      if (ECMBJBBGHGG != 0) {
+      if (SubSeasonId != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(ECMBJBBGHGG);
+        output.WriteUInt32(SubSeasonId);
       }
       if (gridFightTalentInfo_ != null) {
         output.WriteRawTag(58);
@@ -323,11 +324,11 @@ namespace EggLink.DanhengServer.Proto {
       if (exp_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Exp);
       }
-      if (ECMBJBBGHGG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ECMBJBBGHGG);
+      if (SubSeasonId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SubSeasonId);
       }
-      if (IFEHBIMEMEC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IFEHBIMEMEC);
+      if (TalentPoint != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TalentPoint);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -361,15 +362,15 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.exp_ != null) {
         if (exp_ == null) {
-          Exp = new global::EggLink.DanhengServer.Proto.HMCDDLGCEJO();
+          Exp = new global::EggLink.DanhengServer.Proto.GridFightExpInfo();
         }
         Exp.MergeFrom(other.Exp);
       }
-      if (other.ECMBJBBGHGG != 0) {
-        ECMBJBBGHGG = other.ECMBJBBGHGG;
+      if (other.SubSeasonId != 0) {
+        SubSeasonId = other.SubSeasonId;
       }
-      if (other.IFEHBIMEMEC != 0) {
-        IFEHBIMEMEC = other.IFEHBIMEMEC;
+      if (other.TalentPoint != 0) {
+        TalentPoint = other.TalentPoint;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -391,18 +392,18 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
-            IFEHBIMEMEC = input.ReadUInt32();
+            TalentPoint = input.ReadUInt32();
             break;
           }
           case 34: {
             if (exp_ == null) {
-              Exp = new global::EggLink.DanhengServer.Proto.HMCDDLGCEJO();
+              Exp = new global::EggLink.DanhengServer.Proto.GridFightExpInfo();
             }
             input.ReadMessage(Exp);
             break;
           }
           case 40: {
-            ECMBJBBGHGG = input.ReadUInt32();
+            SubSeasonId = input.ReadUInt32();
             break;
           }
           case 58: {
@@ -443,18 +444,18 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
-            IFEHBIMEMEC = input.ReadUInt32();
+            TalentPoint = input.ReadUInt32();
             break;
           }
           case 34: {
             if (exp_ == null) {
-              Exp = new global::EggLink.DanhengServer.Proto.HMCDDLGCEJO();
+              Exp = new global::EggLink.DanhengServer.Proto.GridFightExpInfo();
             }
             input.ReadMessage(Exp);
             break;
           }
           case 40: {
-            ECMBJBBGHGG = input.ReadUInt32();
+            SubSeasonId = input.ReadUInt32();
             break;
           }
           case 58: {

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static HJFMCAAJKDLReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFISkZNQ0FBSktETC5wcm90bxoRUFBKSU9CSElGSFAucHJvdG8iRgoLSEpG",
-            "TUNBQUpLREwSIQoLTkNESExJTkpJSUkYBSADKAsyDC5QUEpJT0JISUZIUBIU",
-            "CgxmaW5pc2hfbGV2ZWwYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZl",
-            "ci5Qcm90b2IGcHJvdG8z"));
+            "ChFISkZNQ0FBSktETC5wcm90bxobR3JpZEZpZ2h0RHJvcEl0ZW1JbmZvLnBy",
+            "b3RvIkgKC0hKRk1DQUFKS0RMEisKC05DREhMSU5KSUlJGAUgAygLMhYuR3Jp",
+            "ZEZpZ2h0RHJvcEl0ZW1JbmZvEgwKBHRpZXIYBiABKA1CHqoCG0VnZ0xpbmsu",
+            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PPJIOBHIFHPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightDropItemInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HJFMCAAJKDL), global::EggLink.DanhengServer.Proto.HJFMCAAJKDL.Parser, new[]{ "NCDHLINJIII", "FinishLevel" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HJFMCAAJKDL), global::EggLink.DanhengServer.Proto.HJFMCAAJKDL.Parser, new[]{ "NCDHLINJIII", "Tier" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HJFMCAAJKDL(HJFMCAAJKDL other) : this() {
       nCDHLINJIII_ = other.nCDHLINJIII_.Clone();
-      finishLevel_ = other.finishLevel_;
+      tier_ = other.tier_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,24 +86,24 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "NCDHLINJIII" field.</summary>
     public const int NCDHLINJIIIFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PPJIOBHIFHP> _repeated_nCDHLINJIII_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.PPJIOBHIFHP.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPJIOBHIFHP> nCDHLINJIII_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPJIOBHIFHP>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GridFightDropItemInfo> _repeated_nCDHLINJIII_codec
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.GridFightDropItemInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightDropItemInfo> nCDHLINJIII_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightDropItemInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPJIOBHIFHP> NCDHLINJIII {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightDropItemInfo> NCDHLINJIII {
       get { return nCDHLINJIII_; }
     }
 
-    /// <summary>Field number for the "finish_level" field.</summary>
-    public const int FinishLevelFieldNumber = 6;
-    private uint finishLevel_;
+    /// <summary>Field number for the "tier" field.</summary>
+    public const int TierFieldNumber = 6;
+    private uint tier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FinishLevel {
-      get { return finishLevel_; }
+    public uint Tier {
+      get { return tier_; }
       set {
-        finishLevel_ = value;
+        tier_ = value;
       }
     }
 
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if(!nCDHLINJIII_.Equals(other.nCDHLINJIII_)) return false;
-      if (FinishLevel != other.FinishLevel) return false;
+      if (Tier != other.Tier) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= nCDHLINJIII_.GetHashCode();
-      if (FinishLevel != 0) hash ^= FinishLevel.GetHashCode();
+      if (Tier != 0) hash ^= Tier.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       nCDHLINJIII_.WriteTo(output, _repeated_nCDHLINJIII_codec);
-      if (FinishLevel != 0) {
+      if (Tier != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(FinishLevel);
+        output.WriteUInt32(Tier);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -167,9 +167,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       nCDHLINJIII_.WriteTo(ref output, _repeated_nCDHLINJIII_codec);
-      if (FinishLevel != 0) {
+      if (Tier != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(FinishLevel);
+        output.WriteUInt32(Tier);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -182,8 +182,8 @@ namespace EggLink.DanhengServer.Proto {
     public int CalculateSize() {
       int size = 0;
       size += nCDHLINJIII_.CalculateSize(_repeated_nCDHLINJIII_codec);
-      if (FinishLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishLevel);
+      if (Tier != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Tier);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -198,8 +198,8 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       nCDHLINJIII_.Add(other.nCDHLINJIII_);
-      if (other.FinishLevel != 0) {
-        FinishLevel = other.FinishLevel;
+      if (other.Tier != 0) {
+        Tier = other.Tier;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -221,7 +221,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 48: {
-            FinishLevel = input.ReadUInt32();
+            Tier = input.ReadUInt32();
             break;
           }
         }
@@ -244,7 +244,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 48: {
-            FinishLevel = input.ReadUInt32();
+            Tier = input.ReadUInt32();
             break;
           }
         }

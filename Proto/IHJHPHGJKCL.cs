@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static IHJHPHGJKCLReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFJSEpIUEhHSktDTC5wcm90byJmCgtJSEpIUEhHSktDTBITCgtESkhBUEhL",
-            "RUVHSBgGIAMoDRIYChBtYXhfcmVyb2xsX2NvdW50GA0gASgNEhMKC0VMRk5D",
-            "R0tHS0FOGAQgASgNEhMKC0JBQU9JTk5FQUFJGAUgASgNQh6qAhtFZ2dMaW5r",
-            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChFJSEpIUEhHSktDTC5wcm90byJ2CgtJSEpIUEhHSktDTBIjChtncmlkX2Zp",
+            "Z2h0X3BvcnRhbF9idWZmX2xpc3QYBiADKA0SGAoQbWF4X3Jlcm9sbF9jb3Vu",
+            "dBgNIAEoDRITCgtFTEZOQ0dLR0tBThgEIAEoDRITCgtCQUFPSU5ORUFBSRgF",
+            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IHJHPHGJKCL), global::EggLink.DanhengServer.Proto.IHJHPHGJKCL.Parser, new[]{ "DJHAPHKEEGH", "MaxRerollCount", "ELFNCGKGKAN", "BAAOINNEAAI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IHJHPHGJKCL), global::EggLink.DanhengServer.Proto.IHJHPHGJKCL.Parser, new[]{ "GridFightPortalBuffList", "MaxRerollCount", "ELFNCGKGKAN", "BAAOINNEAAI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IHJHPHGJKCL(IHJHPHGJKCL other) : this() {
-      dJHAPHKEEGH_ = other.dJHAPHKEEGH_.Clone();
+      gridFightPortalBuffList_ = other.gridFightPortalBuffList_.Clone();
       maxRerollCount_ = other.maxRerollCount_;
       eLFNCGKGKAN_ = other.eLFNCGKGKAN_;
       bAAOINNEAAI_ = other.bAAOINNEAAI_;
@@ -86,15 +86,15 @@ namespace EggLink.DanhengServer.Proto {
       return new IHJHPHGJKCL(this);
     }
 
-    /// <summary>Field number for the "DJHAPHKEEGH" field.</summary>
-    public const int DJHAPHKEEGHFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_dJHAPHKEEGH_codec
+    /// <summary>Field number for the "grid_fight_portal_buff_list" field.</summary>
+    public const int GridFightPortalBuffListFieldNumber = 6;
+    private static readonly pb::FieldCodec<uint> _repeated_gridFightPortalBuffList_codec
         = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> dJHAPHKEEGH_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> gridFightPortalBuffList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> DJHAPHKEEGH {
-      get { return dJHAPHKEEGH_; }
+    public pbc::RepeatedField<uint> GridFightPortalBuffList {
+      get { return gridFightPortalBuffList_; }
     }
 
     /// <summary>Field number for the "max_reroll_count" field.</summary>
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!dJHAPHKEEGH_.Equals(other.dJHAPHKEEGH_)) return false;
+      if(!gridFightPortalBuffList_.Equals(other.gridFightPortalBuffList_)) return false;
       if (MaxRerollCount != other.MaxRerollCount) return false;
       if (ELFNCGKGKAN != other.ELFNCGKGKAN) return false;
       if (BAAOINNEAAI != other.BAAOINNEAAI) return false;
@@ -159,7 +159,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= dJHAPHKEEGH_.GetHashCode();
+      hash ^= gridFightPortalBuffList_.GetHashCode();
       if (MaxRerollCount != 0) hash ^= MaxRerollCount.GetHashCode();
       if (ELFNCGKGKAN != 0) hash ^= ELFNCGKGKAN.GetHashCode();
       if (BAAOINNEAAI != 0) hash ^= BAAOINNEAAI.GetHashCode();
@@ -189,7 +189,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(BAAOINNEAAI);
       }
-      dJHAPHKEEGH_.WriteTo(output, _repeated_dJHAPHKEEGH_codec);
+      gridFightPortalBuffList_.WriteTo(output, _repeated_gridFightPortalBuffList_codec);
       if (MaxRerollCount != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(MaxRerollCount);
@@ -212,7 +212,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(BAAOINNEAAI);
       }
-      dJHAPHKEEGH_.WriteTo(ref output, _repeated_dJHAPHKEEGH_codec);
+      gridFightPortalBuffList_.WriteTo(ref output, _repeated_gridFightPortalBuffList_codec);
       if (MaxRerollCount != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(MaxRerollCount);
@@ -227,7 +227,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += dJHAPHKEEGH_.CalculateSize(_repeated_dJHAPHKEEGH_codec);
+      size += gridFightPortalBuffList_.CalculateSize(_repeated_gridFightPortalBuffList_codec);
       if (MaxRerollCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxRerollCount);
       }
@@ -249,7 +249,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      dJHAPHKEEGH_.Add(other.dJHAPHKEEGH_);
+      gridFightPortalBuffList_.Add(other.gridFightPortalBuffList_);
       if (other.MaxRerollCount != 0) {
         MaxRerollCount = other.MaxRerollCount;
       }
@@ -284,7 +284,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 50:
           case 48: {
-            dJHAPHKEEGH_.AddEntriesFrom(input, _repeated_dJHAPHKEEGH_codec);
+            gridFightPortalBuffList_.AddEntriesFrom(input, _repeated_gridFightPortalBuffList_codec);
             break;
           }
           case 104: {
@@ -316,7 +316,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 50:
           case 48: {
-            dJHAPHKEEGH_.AddEntriesFrom(ref input, _repeated_dJHAPHKEEGH_codec);
+            gridFightPortalBuffList_.AddEntriesFrom(ref input, _repeated_gridFightPortalBuffList_codec);
             break;
           }
           case 104: {

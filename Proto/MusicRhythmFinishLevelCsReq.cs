@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static MusicRhythmFinishLevelCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFNdXNpY1JoeXRobUZpbmlzaExldmVsQ3NSZXEucHJvdG8iWQobTXVzaWNS",
-            "aHl0aG1GaW5pc2hMZXZlbENzUmVxEhQKDGZpbmlzaF9sZXZlbBgLIAEoDRIS",
-            "CgpmdWxsX2NvbWJvGAUgASgIEhAKCHNjb3JlX2lkGAggASgNQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiFNdXNpY1JoeXRobUZpbmlzaExldmVsQ3NSZXEucHJvdG8iUQobTXVzaWNS",
+            "aHl0aG1GaW5pc2hMZXZlbENzUmVxEgwKBHRpZXIYCyABKA0SEgoKZnVsbF9j",
+            "b21ibxgFIAEoCBIQCghzY29yZV9pZBgIIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq), global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq.Parser, new[]{ "FinishLevel", "FullCombo", "ScoreId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq), global::EggLink.DanhengServer.Proto.MusicRhythmFinishLevelCsReq.Parser, new[]{ "Tier", "FullCombo", "ScoreId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MusicRhythmFinishLevelCsReq(MusicRhythmFinishLevelCsReq other) : this() {
-      finishLevel_ = other.finishLevel_;
+      tier_ = other.tier_;
       fullCombo_ = other.fullCombo_;
       scoreId_ = other.scoreId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new MusicRhythmFinishLevelCsReq(this);
     }
 
-    /// <summary>Field number for the "finish_level" field.</summary>
-    public const int FinishLevelFieldNumber = 11;
-    private uint finishLevel_;
+    /// <summary>Field number for the "tier" field.</summary>
+    public const int TierFieldNumber = 11;
+    private uint tier_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FinishLevel {
-      get { return finishLevel_; }
+    public uint Tier {
+      get { return tier_; }
       set {
-        finishLevel_ = value;
+        tier_ = value;
       }
     }
 
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (FinishLevel != other.FinishLevel) return false;
+      if (Tier != other.Tier) return false;
       if (FullCombo != other.FullCombo) return false;
       if (ScoreId != other.ScoreId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (FinishLevel != 0) hash ^= FinishLevel.GetHashCode();
+      if (Tier != 0) hash ^= Tier.GetHashCode();
       if (FullCombo != false) hash ^= FullCombo.GetHashCode();
       if (ScoreId != 0) hash ^= ScoreId.GetHashCode();
       if (_unknownFields != null) {
@@ -175,9 +175,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteUInt32(ScoreId);
       }
-      if (FinishLevel != 0) {
+      if (Tier != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(FinishLevel);
+        output.WriteUInt32(Tier);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -197,9 +197,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteUInt32(ScoreId);
       }
-      if (FinishLevel != 0) {
+      if (Tier != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(FinishLevel);
+        output.WriteUInt32(Tier);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,8 +211,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (FinishLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishLevel);
+      if (Tier != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Tier);
       }
       if (FullCombo != false) {
         size += 1 + 1;
@@ -232,8 +232,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.FinishLevel != 0) {
-        FinishLevel = other.FinishLevel;
+      if (other.Tier != 0) {
+        Tier = other.Tier;
       }
       if (other.FullCombo != false) {
         FullCombo = other.FullCombo;
@@ -265,7 +265,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 88: {
-            FinishLevel = input.ReadUInt32();
+            Tier = input.ReadUInt32();
             break;
           }
         }
@@ -292,7 +292,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 88: {
-            FinishLevel = input.ReadUInt32();
+            Tier = input.ReadUInt32();
             break;
           }
         }

@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static OJADKCLOKNLReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFPSkFES0NMT0tOTC5wcm90bxoRSEpGTUNBQUpLREwucHJvdG8iQgoLT0pB",
-            "REtDTE9LTkwSJAoLTEdNQkxGSERDTFAY0gsgASgLMgwuSEpGTUNBQUpLRExI",
-            "AEINCgtNQ0JOTUdKUEpJQkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "ChFPSkFES0NMT0tOTC5wcm90bxoRSEpGTUNBQUpLREwucHJvdG8iTQoLT0pB",
+            "REtDTE9LTkwSLwoWYmF0dGxlX2dyaWRfZmlnaHRfaW5mbxjSCyABKAsyDC5I",
+            "SkZNQ0FBSktETEgAQg0KC01DQk5NR0pQSklCQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HJFMCAAJKDLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OJADKCLOKNL), global::EggLink.DanhengServer.Proto.OJADKCLOKNL.Parser, new[]{ "LGMBLFHDCLP" }, new[]{ "MCBNMGJPJIB" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OJADKCLOKNL), global::EggLink.DanhengServer.Proto.OJADKCLOKNL.Parser, new[]{ "BattleGridFightInfo" }, new[]{ "MCBNMGJPJIB" }, null, null, null)
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OJADKCLOKNL(OJADKCLOKNL other) : this() {
       switch (other.MCBNMGJPJIBCase) {
-        case MCBNMGJPJIBOneofCase.LGMBLFHDCLP:
-          LGMBLFHDCLP = other.LGMBLFHDCLP.Clone();
+        case MCBNMGJPJIBOneofCase.BattleGridFightInfo:
+          BattleGridFightInfo = other.BattleGridFightInfo.Clone();
           break;
       }
 
@@ -88,15 +88,15 @@ namespace EggLink.DanhengServer.Proto {
       return new OJADKCLOKNL(this);
     }
 
-    /// <summary>Field number for the "LGMBLFHDCLP" field.</summary>
-    public const int LGMBLFHDCLPFieldNumber = 1490;
+    /// <summary>Field number for the "battle_grid_fight_info" field.</summary>
+    public const int BattleGridFightInfoFieldNumber = 1490;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HJFMCAAJKDL LGMBLFHDCLP {
-      get { return mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.LGMBLFHDCLP ? (global::EggLink.DanhengServer.Proto.HJFMCAAJKDL) mCBNMGJPJIB_ : null; }
+    public global::EggLink.DanhengServer.Proto.HJFMCAAJKDL BattleGridFightInfo {
+      get { return mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.BattleGridFightInfo ? (global::EggLink.DanhengServer.Proto.HJFMCAAJKDL) mCBNMGJPJIB_ : null; }
       set {
         mCBNMGJPJIB_ = value;
-        mCBNMGJPJIBCase_ = value == null ? MCBNMGJPJIBOneofCase.None : MCBNMGJPJIBOneofCase.LGMBLFHDCLP;
+        mCBNMGJPJIBCase_ = value == null ? MCBNMGJPJIBOneofCase.None : MCBNMGJPJIBOneofCase.BattleGridFightInfo;
       }
     }
 
@@ -104,7 +104,7 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "MCBNMGJPJIB" oneof.</summary>
     public enum MCBNMGJPJIBOneofCase {
       None = 0,
-      LGMBLFHDCLP = 1490,
+      BattleGridFightInfo = 1490,
     }
     private MCBNMGJPJIBOneofCase mCBNMGJPJIBCase_ = MCBNMGJPJIBOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(LGMBLFHDCLP, other.LGMBLFHDCLP)) return false;
+      if (!object.Equals(BattleGridFightInfo, other.BattleGridFightInfo)) return false;
       if (MCBNMGJPJIBCase != other.MCBNMGJPJIBCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -144,7 +144,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.LGMBLFHDCLP) hash ^= LGMBLFHDCLP.GetHashCode();
+      if (mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.BattleGridFightInfo) hash ^= BattleGridFightInfo.GetHashCode();
       hash ^= (int) mCBNMGJPJIBCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -164,9 +164,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.LGMBLFHDCLP) {
+      if (mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.BattleGridFightInfo) {
         output.WriteRawTag(146, 93);
-        output.WriteMessage(LGMBLFHDCLP);
+        output.WriteMessage(BattleGridFightInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -178,9 +178,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.LGMBLFHDCLP) {
+      if (mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.BattleGridFightInfo) {
         output.WriteRawTag(146, 93);
-        output.WriteMessage(LGMBLFHDCLP);
+        output.WriteMessage(BattleGridFightInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -192,8 +192,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.LGMBLFHDCLP) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(LGMBLFHDCLP);
+      if (mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.BattleGridFightInfo) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BattleGridFightInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -208,11 +208,11 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       switch (other.MCBNMGJPJIBCase) {
-        case MCBNMGJPJIBOneofCase.LGMBLFHDCLP:
-          if (LGMBLFHDCLP == null) {
-            LGMBLFHDCLP = new global::EggLink.DanhengServer.Proto.HJFMCAAJKDL();
+        case MCBNMGJPJIBOneofCase.BattleGridFightInfo:
+          if (BattleGridFightInfo == null) {
+            BattleGridFightInfo = new global::EggLink.DanhengServer.Proto.HJFMCAAJKDL();
           }
-          LGMBLFHDCLP.MergeFrom(other.LGMBLFHDCLP);
+          BattleGridFightInfo.MergeFrom(other.BattleGridFightInfo);
           break;
       }
 
@@ -233,11 +233,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 11922: {
             global::EggLink.DanhengServer.Proto.HJFMCAAJKDL subBuilder = new global::EggLink.DanhengServer.Proto.HJFMCAAJKDL();
-            if (mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.LGMBLFHDCLP) {
-              subBuilder.MergeFrom(LGMBLFHDCLP);
+            if (mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.BattleGridFightInfo) {
+              subBuilder.MergeFrom(BattleGridFightInfo);
             }
             input.ReadMessage(subBuilder);
-            LGMBLFHDCLP = subBuilder;
+            BattleGridFightInfo = subBuilder;
             break;
           }
         }
@@ -257,11 +257,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 11922: {
             global::EggLink.DanhengServer.Proto.HJFMCAAJKDL subBuilder = new global::EggLink.DanhengServer.Proto.HJFMCAAJKDL();
-            if (mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.LGMBLFHDCLP) {
-              subBuilder.MergeFrom(LGMBLFHDCLP);
+            if (mCBNMGJPJIBCase_ == MCBNMGJPJIBOneofCase.BattleGridFightInfo) {
+              subBuilder.MergeFrom(BattleGridFightInfo);
             }
             input.ReadMessage(subBuilder);
-            LGMBLFHDCLP = subBuilder;
+            BattleGridFightInfo = subBuilder;
             break;
           }
         }

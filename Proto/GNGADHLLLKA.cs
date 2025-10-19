@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GNGADHLLLKAReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFHTkdBREhMTExLQS5wcm90bxoRSkxJSU9QQklKTUkucHJvdG8iWQoLR05H",
-            "QURITExMS0ESEwoLS0lFS0pFRkZQSEsYAyABKA0SEgoKc2VjdGlvbl9pZBgK",
-            "IAEoDRIhCgtGTktKTEpERklMRBgFIAEoCzIMLkpMSUlPUEJJSk1JQh6qAhtF",
-            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChFHTkdBREhMTExLQS5wcm90bxoYR3JpZEZpZ2h0TGF5ZXJJbmZvLnByb3Rv",
+            "ImkKC0dOR0FESExMTEtBEhIKCmNoYXB0ZXJfaWQYAyABKA0SEgoKc2VjdGlv",
+            "bl9pZBgKIAEoDRIyChVncmlkX2ZpZ2h0X2xheWVyX2luZm8YBSABKAsyEy5H",
+            "cmlkRmlnaHRMYXllckluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JLIIOPBIJMIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightLayerInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GNGADHLLLKA), global::EggLink.DanhengServer.Proto.GNGADHLLLKA.Parser, new[]{ "KIEKJEFFPHK", "SectionId", "FNKJLJDFILD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GNGADHLLLKA), global::EggLink.DanhengServer.Proto.GNGADHLLLKA.Parser, new[]{ "ChapterId", "SectionId", "GridFightLayerInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GNGADHLLLKA(GNGADHLLLKA other) : this() {
-      kIEKJEFFPHK_ = other.kIEKJEFFPHK_;
+      chapterId_ = other.chapterId_;
       sectionId_ = other.sectionId_;
-      fNKJLJDFILD_ = other.fNKJLJDFILD_ != null ? other.fNKJLJDFILD_.Clone() : null;
+      gridFightLayerInfo_ = other.gridFightLayerInfo_ != null ? other.gridFightLayerInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,15 +86,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GNGADHLLLKA(this);
     }
 
-    /// <summary>Field number for the "KIEKJEFFPHK" field.</summary>
-    public const int KIEKJEFFPHKFieldNumber = 3;
-    private uint kIEKJEFFPHK_;
+    /// <summary>Field number for the "chapter_id" field.</summary>
+    public const int ChapterIdFieldNumber = 3;
+    private uint chapterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KIEKJEFFPHK {
-      get { return kIEKJEFFPHK_; }
+    public uint ChapterId {
+      get { return chapterId_; }
       set {
-        kIEKJEFFPHK_ = value;
+        chapterId_ = value;
       }
     }
 
@@ -109,15 +110,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "FNKJLJDFILD" field.</summary>
-    public const int FNKJLJDFILDFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.JLIIOPBIJMI fNKJLJDFILD_;
+    /// <summary>Field number for the "grid_fight_layer_info" field.</summary>
+    public const int GridFightLayerInfoFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.GridFightLayerInfo gridFightLayerInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.JLIIOPBIJMI FNKJLJDFILD {
-      get { return fNKJLJDFILD_; }
+    public global::EggLink.DanhengServer.Proto.GridFightLayerInfo GridFightLayerInfo {
+      get { return gridFightLayerInfo_; }
       set {
-        fNKJLJDFILD_ = value;
+        gridFightLayerInfo_ = value;
       }
     }
 
@@ -136,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (KIEKJEFFPHK != other.KIEKJEFFPHK) return false;
+      if (ChapterId != other.ChapterId) return false;
       if (SectionId != other.SectionId) return false;
-      if (!object.Equals(FNKJLJDFILD, other.FNKJLJDFILD)) return false;
+      if (!object.Equals(GridFightLayerInfo, other.GridFightLayerInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (KIEKJEFFPHK != 0) hash ^= KIEKJEFFPHK.GetHashCode();
+      if (ChapterId != 0) hash ^= ChapterId.GetHashCode();
       if (SectionId != 0) hash ^= SectionId.GetHashCode();
-      if (fNKJLJDFILD_ != null) hash ^= FNKJLJDFILD.GetHashCode();
+      if (gridFightLayerInfo_ != null) hash ^= GridFightLayerInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,13 +168,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (KIEKJEFFPHK != 0) {
+      if (ChapterId != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(KIEKJEFFPHK);
+        output.WriteUInt32(ChapterId);
       }
-      if (fNKJLJDFILD_ != null) {
+      if (gridFightLayerInfo_ != null) {
         output.WriteRawTag(42);
-        output.WriteMessage(FNKJLJDFILD);
+        output.WriteMessage(GridFightLayerInfo);
       }
       if (SectionId != 0) {
         output.WriteRawTag(80);
@@ -189,13 +190,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (KIEKJEFFPHK != 0) {
+      if (ChapterId != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(KIEKJEFFPHK);
+        output.WriteUInt32(ChapterId);
       }
-      if (fNKJLJDFILD_ != null) {
+      if (gridFightLayerInfo_ != null) {
         output.WriteRawTag(42);
-        output.WriteMessage(FNKJLJDFILD);
+        output.WriteMessage(GridFightLayerInfo);
       }
       if (SectionId != 0) {
         output.WriteRawTag(80);
@@ -211,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (KIEKJEFFPHK != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KIEKJEFFPHK);
+      if (ChapterId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChapterId);
       }
       if (SectionId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SectionId);
       }
-      if (fNKJLJDFILD_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FNKJLJDFILD);
+      if (gridFightLayerInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GridFightLayerInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,17 +233,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.KIEKJEFFPHK != 0) {
-        KIEKJEFFPHK = other.KIEKJEFFPHK;
+      if (other.ChapterId != 0) {
+        ChapterId = other.ChapterId;
       }
       if (other.SectionId != 0) {
         SectionId = other.SectionId;
       }
-      if (other.fNKJLJDFILD_ != null) {
-        if (fNKJLJDFILD_ == null) {
-          FNKJLJDFILD = new global::EggLink.DanhengServer.Proto.JLIIOPBIJMI();
+      if (other.gridFightLayerInfo_ != null) {
+        if (gridFightLayerInfo_ == null) {
+          GridFightLayerInfo = new global::EggLink.DanhengServer.Proto.GridFightLayerInfo();
         }
-        FNKJLJDFILD.MergeFrom(other.FNKJLJDFILD);
+        GridFightLayerInfo.MergeFrom(other.GridFightLayerInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -260,14 +261,14 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 24: {
-            KIEKJEFFPHK = input.ReadUInt32();
+            ChapterId = input.ReadUInt32();
             break;
           }
           case 42: {
-            if (fNKJLJDFILD_ == null) {
-              FNKJLJDFILD = new global::EggLink.DanhengServer.Proto.JLIIOPBIJMI();
+            if (gridFightLayerInfo_ == null) {
+              GridFightLayerInfo = new global::EggLink.DanhengServer.Proto.GridFightLayerInfo();
             }
-            input.ReadMessage(FNKJLJDFILD);
+            input.ReadMessage(GridFightLayerInfo);
             break;
           }
           case 80: {
@@ -290,14 +291,14 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 24: {
-            KIEKJEFFPHK = input.ReadUInt32();
+            ChapterId = input.ReadUInt32();
             break;
           }
           case 42: {
-            if (fNKJLJDFILD_ == null) {
-              FNKJLJDFILD = new global::EggLink.DanhengServer.Proto.JLIIOPBIJMI();
+            if (gridFightLayerInfo_ == null) {
+              GridFightLayerInfo = new global::EggLink.DanhengServer.Proto.GridFightLayerInfo();
             }
-            input.ReadMessage(FNKJLJDFILD);
+            input.ReadMessage(GridFightLayerInfo);
             break;
           }
           case 80: {

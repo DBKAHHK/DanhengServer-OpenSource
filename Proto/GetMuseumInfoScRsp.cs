@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetMuseumInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhHZXRNdXNldW1JbmZvU2NSc3AucHJvdG8aEUpOQkNQTkNOT0hPLnByb3Rv",
-            "GhFPTEtNTEZFRUZDSi5wcm90bxoRSk1FQU9DUEZFT0wucHJvdG8aEURPTEdG",
-            "TkxIRUFFLnByb3RvItsCChJHZXRNdXNldW1JbmZvU2NSc3ASEAoIY3VyX2Z1",
+            "ChhHZXRNdXNldW1JbmZvU2NSc3AucHJvdG8aEURPTEdGTkxIRUFFLnByb3Rv",
+            "GhFKTkJDUE5DTk9ITy5wcm90bxoRT0xLTUxGRUVGQ0oucHJvdG8aEUpNRUFP",
+            "Q1BGRU9MLnByb3RvItsCChJHZXRNdXNldW1JbmZvU2NSc3ASEAoIY3VyX2Z1",
             "bmQYBSABKA0SDwoHcmV0Y29kZRgJIAEoDRITCgtKQkpMRFBQREJCQxgMIAEo",
             "DRITCgtLTkRNRFBFRkFEQxgOIAMoDRIfCglhcmVhX2xpc3QYASADKAsyDC5K",
             "TUVBT0NQRkVPTBITCgtLTkRKQVBOUEFQSxgNIAMoDRIhCgtKUElCTUJCS0dO",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "CgVsZXZlbBgKIAEoDRITCgtFSk5LTUtGRkNDTBgEIAEoDRILCgNleHAYCCAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JNBCPNCNOHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.OLKMLFEEFCJReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMEAOCPFEOLReflection.Descriptor, global::EggLink.DanhengServer.Proto.DOLGFNLHEAEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DOLGFNLHEAEReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNBCPNCNOHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.OLKMLFEEFCJReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMEAOCPFEOLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp), global::EggLink.DanhengServer.Proto.GetMuseumInfoScRsp.Parser, new[]{ "CurFund", "Retcode", "JBJLDPPDBBC", "KNDMDPEFADC", "AreaList", "KNDJAPNPAPK", "JPIBMBBKGND", "HPNMPDOCJMA", "EJKGHBEMOOB", "EKKOLCCCNNK", "BOJMNAFDJKH", "Level", "EJNKMKFFCCL", "Exp" }, null, null, null, null)
           }));

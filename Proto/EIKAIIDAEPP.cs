@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static EIKAIIDAEPPReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFFSUtBSUlEQUVQUC5wcm90bxoRSUlLTkdOSERNRkkucHJvdG8ipgEKC0VJ",
-            "S0FJSURBRVBQEhMKC0hEQ0JFSkRFTkxBGAEgASgNEiEKC0hISk9DR09NRUNP",
-            "GAcgASgLMgwuSUlLTkdOSERNRkkSCwoDdWlkGAUgASgNEhMKC0JLTUFNR0FQ",
-            "RUdIGA0gASgNEhMKC1BKT0xFTUhMR05MGA4gASgNEhMKC0RHSkRNT0NCQklJ",
-            "GAkgASgNEhMKC0xOSklJSEhQTUVEGAIgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChFFSUtBSUlEQUVQUC5wcm90bxoRSUlLTkdOSERNRkkucHJvdG8irgEKC0VJ",
+            "S0FJSURBRVBQEhMKC0hEQ0JFSkRFTkxBGAEgASgNEikKE2dyaWRfZmlnaHRf",
+            "Y3VyX2dvbGQYByABKAsyDC5JSUtOR05IRE1GSRILCgN1aWQYBSABKA0SEwoL",
+            "QktNQU1HQVBFR0gYDSABKA0SEwoLUEpPTEVNSExHTkwYDiABKA0SEwoLREdK",
+            "RE1PQ0JCSUkYCSABKA0SEwoLTE5KSUlISFBNRUQYAiABKA1CHqoCG0VnZ0xp",
+            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IIKNGNHDMFIReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EIKAIIDAEPP), global::EggLink.DanhengServer.Proto.EIKAIIDAEPP.Parser, new[]{ "HDCBEJDENLA", "HHJOCGOMECO", "Uid", "BKMAMGAPEGH", "PJOLEMHLGNL", "DGJDMOCBBII", "LNJIIHHPMED" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EIKAIIDAEPP), global::EggLink.DanhengServer.Proto.EIKAIIDAEPP.Parser, new[]{ "HDCBEJDENLA", "GridFightCurGold", "Uid", "BKMAMGAPEGH", "PJOLEMHLGNL", "DGJDMOCBBII", "LNJIIHHPMED" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EIKAIIDAEPP(EIKAIIDAEPP other) : this() {
       hDCBEJDENLA_ = other.hDCBEJDENLA_;
-      hHJOCGOMECO_ = other.hHJOCGOMECO_ != null ? other.hHJOCGOMECO_.Clone() : null;
+      gridFightCurGold_ = other.gridFightCurGold_ != null ? other.gridFightCurGold_.Clone() : null;
       uid_ = other.uid_;
       bKMAMGAPEGH_ = other.bKMAMGAPEGH_;
       pJOLEMHLGNL_ = other.pJOLEMHLGNL_;
@@ -103,15 +103,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HHJOCGOMECO" field.</summary>
-    public const int HHJOCGOMECOFieldNumber = 7;
-    private global::EggLink.DanhengServer.Proto.IIKNGNHDMFI hHJOCGOMECO_;
+    /// <summary>Field number for the "grid_fight_cur_gold" field.</summary>
+    public const int GridFightCurGoldFieldNumber = 7;
+    private global::EggLink.DanhengServer.Proto.IIKNGNHDMFI gridFightCurGold_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.IIKNGNHDMFI HHJOCGOMECO {
-      get { return hHJOCGOMECO_; }
+    public global::EggLink.DanhengServer.Proto.IIKNGNHDMFI GridFightCurGold {
+      get { return gridFightCurGold_; }
       set {
-        hHJOCGOMECO_ = value;
+        gridFightCurGold_ = value;
       }
     }
 
@@ -191,7 +191,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (HDCBEJDENLA != other.HDCBEJDENLA) return false;
-      if (!object.Equals(HHJOCGOMECO, other.HHJOCGOMECO)) return false;
+      if (!object.Equals(GridFightCurGold, other.GridFightCurGold)) return false;
       if (Uid != other.Uid) return false;
       if (BKMAMGAPEGH != other.BKMAMGAPEGH) return false;
       if (PJOLEMHLGNL != other.PJOLEMHLGNL) return false;
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (HDCBEJDENLA != 0) hash ^= HDCBEJDENLA.GetHashCode();
-      if (hHJOCGOMECO_ != null) hash ^= HHJOCGOMECO.GetHashCode();
+      if (gridFightCurGold_ != null) hash ^= GridFightCurGold.GetHashCode();
       if (Uid != 0) hash ^= Uid.GetHashCode();
       if (BKMAMGAPEGH != 0) hash ^= BKMAMGAPEGH.GetHashCode();
       if (PJOLEMHLGNL != 0) hash ^= PJOLEMHLGNL.GetHashCode();
@@ -241,9 +241,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(Uid);
       }
-      if (hHJOCGOMECO_ != null) {
+      if (gridFightCurGold_ != null) {
         output.WriteRawTag(58);
-        output.WriteMessage(HHJOCGOMECO);
+        output.WriteMessage(GridFightCurGold);
       }
       if (DGJDMOCBBII != 0) {
         output.WriteRawTag(72);
@@ -279,9 +279,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(Uid);
       }
-      if (hHJOCGOMECO_ != null) {
+      if (gridFightCurGold_ != null) {
         output.WriteRawTag(58);
-        output.WriteMessage(HHJOCGOMECO);
+        output.WriteMessage(GridFightCurGold);
       }
       if (DGJDMOCBBII != 0) {
         output.WriteRawTag(72);
@@ -308,8 +308,8 @@ namespace EggLink.DanhengServer.Proto {
       if (HDCBEJDENLA != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HDCBEJDENLA);
       }
-      if (hHJOCGOMECO_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(HHJOCGOMECO);
+      if (gridFightCurGold_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GridFightCurGold);
       }
       if (Uid != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Uid);
@@ -341,11 +341,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.HDCBEJDENLA != 0) {
         HDCBEJDENLA = other.HDCBEJDENLA;
       }
-      if (other.hHJOCGOMECO_ != null) {
-        if (hHJOCGOMECO_ == null) {
-          HHJOCGOMECO = new global::EggLink.DanhengServer.Proto.IIKNGNHDMFI();
+      if (other.gridFightCurGold_ != null) {
+        if (gridFightCurGold_ == null) {
+          GridFightCurGold = new global::EggLink.DanhengServer.Proto.IIKNGNHDMFI();
         }
-        HHJOCGOMECO.MergeFrom(other.HHJOCGOMECO);
+        GridFightCurGold.MergeFrom(other.GridFightCurGold);
       }
       if (other.Uid != 0) {
         Uid = other.Uid;
@@ -390,10 +390,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            if (hHJOCGOMECO_ == null) {
-              HHJOCGOMECO = new global::EggLink.DanhengServer.Proto.IIKNGNHDMFI();
+            if (gridFightCurGold_ == null) {
+              GridFightCurGold = new global::EggLink.DanhengServer.Proto.IIKNGNHDMFI();
             }
-            input.ReadMessage(HHJOCGOMECO);
+            input.ReadMessage(GridFightCurGold);
             break;
           }
           case 72: {
@@ -436,10 +436,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            if (hHJOCGOMECO_ == null) {
-              HHJOCGOMECO = new global::EggLink.DanhengServer.Proto.IIKNGNHDMFI();
+            if (gridFightCurGold_ == null) {
+              GridFightCurGold = new global::EggLink.DanhengServer.Proto.IIKNGNHDMFI();
             }
-            input.ReadMessage(HHJOCGOMECO);
+            input.ReadMessage(GridFightCurGold);
             break;
           }
           case 72: {

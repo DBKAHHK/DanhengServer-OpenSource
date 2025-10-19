@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static ClockParkStartScriptCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9DbG9ja1BhcmtTdGFydFNjcmlwdENzUmVxLnByb3RvIkMKGUNsb2NrUGFy",
-            "a1N0YXJ0U2NyaXB0Q3NSZXESEwoLSk1PSkVPQUxDTE8YCCADKA0SEQoJc2Ny",
-            "aXB0X2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
-            "BnByb3RvMw=="));
+            "Ch9DbG9ja1BhcmtTdGFydFNjcmlwdENzUmVxLnByb3RvIkYKGUNsb2NrUGFy",
+            "a1N0YXJ0U2NyaXB0Q3NSZXESFgoOZGVwbG95X2lkX2xpc3QYCCADKA0SEQoJ",
+            "c2NyaXB0X2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClockParkStartScriptCsReq), global::EggLink.DanhengServer.Proto.ClockParkStartScriptCsReq.Parser, new[]{ "JMOJEOALCLO", "ScriptId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClockParkStartScriptCsReq), global::EggLink.DanhengServer.Proto.ClockParkStartScriptCsReq.Parser, new[]{ "DeployIdList", "ScriptId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClockParkStartScriptCsReq(ClockParkStartScriptCsReq other) : this() {
-      jMOJEOALCLO_ = other.jMOJEOALCLO_.Clone();
+      deployIdList_ = other.deployIdList_.Clone();
       scriptId_ = other.scriptId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new ClockParkStartScriptCsReq(this);
     }
 
-    /// <summary>Field number for the "JMOJEOALCLO" field.</summary>
-    public const int JMOJEOALCLOFieldNumber = 8;
-    private static readonly pb::FieldCodec<uint> _repeated_jMOJEOALCLO_codec
+    /// <summary>Field number for the "deploy_id_list" field.</summary>
+    public const int DeployIdListFieldNumber = 8;
+    private static readonly pb::FieldCodec<uint> _repeated_deployIdList_codec
         = pb::FieldCodec.ForUInt32(66);
-    private readonly pbc::RepeatedField<uint> jMOJEOALCLO_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> deployIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JMOJEOALCLO {
-      get { return jMOJEOALCLO_; }
+    public pbc::RepeatedField<uint> DeployIdList {
+      get { return deployIdList_; }
     }
 
     /// <summary>Field number for the "script_id" field.</summary>
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!jMOJEOALCLO_.Equals(other.jMOJEOALCLO_)) return false;
+      if(!deployIdList_.Equals(other.deployIdList_)) return false;
       if (ScriptId != other.ScriptId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= jMOJEOALCLO_.GetHashCode();
+      hash ^= deployIdList_.GetHashCode();
       if (ScriptId != 0) hash ^= ScriptId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -151,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      jMOJEOALCLO_.WriteTo(output, _repeated_jMOJEOALCLO_codec);
+      deployIdList_.WriteTo(output, _repeated_deployIdList_codec);
       if (ScriptId != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(ScriptId);
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      jMOJEOALCLO_.WriteTo(ref output, _repeated_jMOJEOALCLO_codec);
+      deployIdList_.WriteTo(ref output, _repeated_deployIdList_codec);
       if (ScriptId != 0) {
         output.WriteRawTag(104);
         output.WriteUInt32(ScriptId);
@@ -181,7 +181,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += jMOJEOALCLO_.CalculateSize(_repeated_jMOJEOALCLO_codec);
+      size += deployIdList_.CalculateSize(_repeated_deployIdList_codec);
       if (ScriptId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ScriptId);
       }
@@ -197,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      jMOJEOALCLO_.Add(other.jMOJEOALCLO_);
+      deployIdList_.Add(other.deployIdList_);
       if (other.ScriptId != 0) {
         ScriptId = other.ScriptId;
       }
@@ -218,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 66:
           case 64: {
-            jMOJEOALCLO_.AddEntriesFrom(input, _repeated_jMOJEOALCLO_codec);
+            deployIdList_.AddEntriesFrom(input, _repeated_deployIdList_codec);
             break;
           }
           case 104: {
@@ -242,7 +242,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 66:
           case 64: {
-            jMOJEOALCLO_.AddEntriesFrom(ref input, _repeated_jMOJEOALCLO_codec);
+            deployIdList_.AddEntriesFrom(ref input, _repeated_deployIdList_codec);
             break;
           }
           case 104: {

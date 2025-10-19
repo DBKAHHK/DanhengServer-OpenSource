@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CipSb2d1ZVRvdXJuR2V0Q3VyUm9ndWVDb2Nvb25JbmZvU2NSc3AucHJvdG8i",
-            "kAEKJFJvZ3VlVG91cm5HZXRDdXJSb2d1ZUNvY29vbkluZm9TY1JzcBIPCgdy",
+            "mwEKJFJvZ3VlVG91cm5HZXRDdXJSb2d1ZUNvY29vbkluZm9TY1JzcBIPCgdy",
             "ZXRjb2RlGAIgASgNEhgKEGRpZmZpY3VsdHlfbGV2ZWwYBiABKA0SEwoLUElM",
-            "TUtIQ0tNRUQYDCABKA0SEwoLS01GRkFIRU5DS0IYByABKA0SEwoLSUJHTkxC",
-            "T0VCQ0cYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
-            "cHJvdG8z"));
+            "TUtIQ0tNRUQYDCABKA0SHgoWY29jb29uX2NoYWxsZW5nZV90aW1lcxgHIAEo",
+            "DRITCgtJQkdOTEJPRUJDRxgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGetCurRogueCocoonInfoScRsp), global::EggLink.DanhengServer.Proto.RogueTournGetCurRogueCocoonInfoScRsp.Parser, new[]{ "Retcode", "DifficultyLevel", "PILMKHCKMED", "KMFFAHENCKB", "IBGNLBOEBCG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueTournGetCurRogueCocoonInfoScRsp), global::EggLink.DanhengServer.Proto.RogueTournGetCurRogueCocoonInfoScRsp.Parser, new[]{ "Retcode", "DifficultyLevel", "PILMKHCKMED", "CocoonChallengeTimes", "IBGNLBOEBCG" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,7 +78,7 @@ namespace EggLink.DanhengServer.Proto {
       retcode_ = other.retcode_;
       difficultyLevel_ = other.difficultyLevel_;
       pILMKHCKMED_ = other.pILMKHCKMED_;
-      kMFFAHENCKB_ = other.kMFFAHENCKB_;
+      cocoonChallengeTimes_ = other.cocoonChallengeTimes_;
       iBGNLBOEBCG_ = other.iBGNLBOEBCG_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -125,15 +125,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KMFFAHENCKB" field.</summary>
-    public const int KMFFAHENCKBFieldNumber = 7;
-    private uint kMFFAHENCKB_;
+    /// <summary>Field number for the "cocoon_challenge_times" field.</summary>
+    public const int CocoonChallengeTimesFieldNumber = 7;
+    private uint cocoonChallengeTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KMFFAHENCKB {
-      get { return kMFFAHENCKB_; }
+    public uint CocoonChallengeTimes {
+      get { return cocoonChallengeTimes_; }
       set {
-        kMFFAHENCKB_ = value;
+        cocoonChallengeTimes_ = value;
       }
     }
 
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != other.Retcode) return false;
       if (DifficultyLevel != other.DifficultyLevel) return false;
       if (PILMKHCKMED != other.PILMKHCKMED) return false;
-      if (KMFFAHENCKB != other.KMFFAHENCKB) return false;
+      if (CocoonChallengeTimes != other.CocoonChallengeTimes) return false;
       if (IBGNLBOEBCG != other.IBGNLBOEBCG) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -179,7 +179,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (DifficultyLevel != 0) hash ^= DifficultyLevel.GetHashCode();
       if (PILMKHCKMED != 0) hash ^= PILMKHCKMED.GetHashCode();
-      if (KMFFAHENCKB != 0) hash ^= KMFFAHENCKB.GetHashCode();
+      if (CocoonChallengeTimes != 0) hash ^= CocoonChallengeTimes.GetHashCode();
       if (IBGNLBOEBCG != 0) hash ^= IBGNLBOEBCG.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -207,9 +207,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(DifficultyLevel);
       }
-      if (KMFFAHENCKB != 0) {
+      if (CocoonChallengeTimes != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(KMFFAHENCKB);
+        output.WriteUInt32(CocoonChallengeTimes);
       }
       if (IBGNLBOEBCG != 0) {
         output.WriteRawTag(64);
@@ -237,9 +237,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(DifficultyLevel);
       }
-      if (KMFFAHENCKB != 0) {
+      if (CocoonChallengeTimes != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(KMFFAHENCKB);
+        output.WriteUInt32(CocoonChallengeTimes);
       }
       if (IBGNLBOEBCG != 0) {
         output.WriteRawTag(64);
@@ -268,8 +268,8 @@ namespace EggLink.DanhengServer.Proto {
       if (PILMKHCKMED != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PILMKHCKMED);
       }
-      if (KMFFAHENCKB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KMFFAHENCKB);
+      if (CocoonChallengeTimes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CocoonChallengeTimes);
       }
       if (IBGNLBOEBCG != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IBGNLBOEBCG);
@@ -295,8 +295,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.PILMKHCKMED != 0) {
         PILMKHCKMED = other.PILMKHCKMED;
       }
-      if (other.KMFFAHENCKB != 0) {
-        KMFFAHENCKB = other.KMFFAHENCKB;
+      if (other.CocoonChallengeTimes != 0) {
+        CocoonChallengeTimes = other.CocoonChallengeTimes;
       }
       if (other.IBGNLBOEBCG != 0) {
         IBGNLBOEBCG = other.IBGNLBOEBCG;
@@ -325,7 +325,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            KMFFAHENCKB = input.ReadUInt32();
+            CocoonChallengeTimes = input.ReadUInt32();
             break;
           }
           case 64: {
@@ -360,7 +360,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            KMFFAHENCKB = input.ReadUInt32();
+            CocoonChallengeTimes = input.ReadUInt32();
             break;
           }
           case 64: {

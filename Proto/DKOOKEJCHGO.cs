@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static DKOOKEJCHGOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFES09PS0VKQ0hHTy5wcm90byI3CgtES09PS0VKQ0hHTxITCgtDSEJKS0tN",
-            "SU9GRBgBIAEoDRITCgtIR0ZMUEVOS0lJSRgCIAEoAUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFES09PS0VKQ0hHTy5wcm90byI6CgtES09PS0VKQ0hHTxIWCg5lbmNvdW50",
+            "ZXJfd2F2ZRgBIAEoDRITCgtIR0ZMUEVOS0lJSRgCIAEoAUIeqgIbRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DKOOKEJCHGO), global::EggLink.DanhengServer.Proto.DKOOKEJCHGO.Parser, new[]{ "CHBJKKMIOFD", "HGFLPENKIII" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.DKOOKEJCHGO), global::EggLink.DanhengServer.Proto.DKOOKEJCHGO.Parser, new[]{ "EncounterWave", "HGFLPENKIII" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DKOOKEJCHGO(DKOOKEJCHGO other) : this() {
-      cHBJKKMIOFD_ = other.cHBJKKMIOFD_;
+      encounterWave_ = other.encounterWave_;
       hGFLPENKIII_ = other.hGFLPENKIII_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new DKOOKEJCHGO(this);
     }
 
-    /// <summary>Field number for the "CHBJKKMIOFD" field.</summary>
-    public const int CHBJKKMIOFDFieldNumber = 1;
-    private uint cHBJKKMIOFD_;
+    /// <summary>Field number for the "encounter_wave" field.</summary>
+    public const int EncounterWaveFieldNumber = 1;
+    private uint encounterWave_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CHBJKKMIOFD {
-      get { return cHBJKKMIOFD_; }
+    public uint EncounterWave {
+      get { return encounterWave_; }
       set {
-        cHBJKKMIOFD_ = value;
+        encounterWave_ = value;
       }
     }
 
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CHBJKKMIOFD != other.CHBJKKMIOFD) return false;
+      if (EncounterWave != other.EncounterWave) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(HGFLPENKIII, other.HGFLPENKIII)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CHBJKKMIOFD != 0) hash ^= CHBJKKMIOFD.GetHashCode();
+      if (EncounterWave != 0) hash ^= EncounterWave.GetHashCode();
       if (HGFLPENKIII != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(HGFLPENKIII);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CHBJKKMIOFD != 0) {
+      if (EncounterWave != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(CHBJKKMIOFD);
+        output.WriteUInt32(EncounterWave);
       }
       if (HGFLPENKIII != 0D) {
         output.WriteRawTag(17);
@@ -169,9 +169,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CHBJKKMIOFD != 0) {
+      if (EncounterWave != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(CHBJKKMIOFD);
+        output.WriteUInt32(EncounterWave);
       }
       if (HGFLPENKIII != 0D) {
         output.WriteRawTag(17);
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CHBJKKMIOFD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CHBJKKMIOFD);
+      if (EncounterWave != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EncounterWave);
       }
       if (HGFLPENKIII != 0D) {
         size += 1 + 8;
@@ -205,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CHBJKKMIOFD != 0) {
-        CHBJKKMIOFD = other.CHBJKKMIOFD;
+      if (other.EncounterWave != 0) {
+        EncounterWave = other.EncounterWave;
       }
       if (other.HGFLPENKIII != 0D) {
         HGFLPENKIII = other.HGFLPENKIII;
@@ -227,7 +227,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            CHBJKKMIOFD = input.ReadUInt32();
+            EncounterWave = input.ReadUInt32();
             break;
           }
           case 17: {
@@ -250,7 +250,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            CHBJKKMIOFD = input.ReadUInt32();
+            EncounterWave = input.ReadUInt32();
             break;
           }
           case 17: {

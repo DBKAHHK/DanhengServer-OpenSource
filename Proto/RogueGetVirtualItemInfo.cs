@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueGetVirtualItemInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1Sb2d1ZUdldFZpcnR1YWxJdGVtSW5mby5wcm90byJYChdSb2d1ZUdldFZp",
-            "cnR1YWxJdGVtSW5mbxITCgtES0FCR0hIT09EUBgJIAEoDRITCgtJRkVIQklN",
-            "RU1FQxgMIAEoDRITCgtCSUxFT09QSEpFRhgDIAEoDUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch1Sb2d1ZUdldFZpcnR1YWxJdGVtSW5mby5wcm90byJZChdSb2d1ZUdldFZp",
+            "cnR1YWxJdGVtSW5mbxITCgtES0FCR0hIT09EUBgJIAEoDRIUCgx0YWxlbnRf",
+            "cG9pbnQYDCABKA0SEwoLQklMRU9PUEhKRUYYAyABKA1CHqoCG0VnZ0xpbmsu",
+            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGetVirtualItemInfo), global::EggLink.DanhengServer.Proto.RogueGetVirtualItemInfo.Parser, new[]{ "DKABGHHOODP", "IFEHBIMEMEC", "BILEOOPHJEF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueGetVirtualItemInfo), global::EggLink.DanhengServer.Proto.RogueGetVirtualItemInfo.Parser, new[]{ "DKABGHHOODP", "TalentPoint", "BILEOOPHJEF" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RogueGetVirtualItemInfo(RogueGetVirtualItemInfo other) : this() {
       dKABGHHOODP_ = other.dKABGHHOODP_;
-      iFEHBIMEMEC_ = other.iFEHBIMEMEC_;
+      talentPoint_ = other.talentPoint_;
       bILEOOPHJEF_ = other.bILEOOPHJEF_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -97,15 +97,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IFEHBIMEMEC" field.</summary>
-    public const int IFEHBIMEMECFieldNumber = 12;
-    private uint iFEHBIMEMEC_;
+    /// <summary>Field number for the "talent_point" field.</summary>
+    public const int TalentPointFieldNumber = 12;
+    private uint talentPoint_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IFEHBIMEMEC {
-      get { return iFEHBIMEMEC_; }
+    public uint TalentPoint {
+      get { return talentPoint_; }
       set {
-        iFEHBIMEMEC_ = value;
+        talentPoint_ = value;
       }
     }
 
@@ -137,7 +137,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (DKABGHHOODP != other.DKABGHHOODP) return false;
-      if (IFEHBIMEMEC != other.IFEHBIMEMEC) return false;
+      if (TalentPoint != other.TalentPoint) return false;
       if (BILEOOPHJEF != other.BILEOOPHJEF) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (DKABGHHOODP != 0) hash ^= DKABGHHOODP.GetHashCode();
-      if (IFEHBIMEMEC != 0) hash ^= IFEHBIMEMEC.GetHashCode();
+      if (TalentPoint != 0) hash ^= TalentPoint.GetHashCode();
       if (BILEOOPHJEF != 0) hash ^= BILEOOPHJEF.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -175,9 +175,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(DKABGHHOODP);
       }
-      if (IFEHBIMEMEC != 0) {
+      if (TalentPoint != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(IFEHBIMEMEC);
+        output.WriteUInt32(TalentPoint);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -197,9 +197,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(DKABGHHOODP);
       }
-      if (IFEHBIMEMEC != 0) {
+      if (TalentPoint != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(IFEHBIMEMEC);
+        output.WriteUInt32(TalentPoint);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -214,8 +214,8 @@ namespace EggLink.DanhengServer.Proto {
       if (DKABGHHOODP != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DKABGHHOODP);
       }
-      if (IFEHBIMEMEC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IFEHBIMEMEC);
+      if (TalentPoint != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TalentPoint);
       }
       if (BILEOOPHJEF != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BILEOOPHJEF);
@@ -235,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.DKABGHHOODP != 0) {
         DKABGHHOODP = other.DKABGHHOODP;
       }
-      if (other.IFEHBIMEMEC != 0) {
-        IFEHBIMEMEC = other.IFEHBIMEMEC;
+      if (other.TalentPoint != 0) {
+        TalentPoint = other.TalentPoint;
       }
       if (other.BILEOOPHJEF != 0) {
         BILEOOPHJEF = other.BILEOOPHJEF;
@@ -265,7 +265,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 96: {
-            IFEHBIMEMEC = input.ReadUInt32();
+            TalentPoint = input.ReadUInt32();
             break;
           }
         }
@@ -292,7 +292,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 96: {
-            IFEHBIMEMEC = input.ReadUInt32();
+            TalentPoint = input.ReadUInt32();
             break;
           }
         }

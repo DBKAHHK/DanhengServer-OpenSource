@@ -24,21 +24,21 @@ namespace EggLink.DanhengServer.Proto {
     static LGEKFEKKLFHReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFMR0VLRkVLS0xGSC5wcm90bxoRUFBKSU9CSElGSFAucHJvdG8aEUpEQUhF",
-            "UExHSkRHLnByb3RvGhFJSkFQR0RNSE1LSC5wcm90bxoRS0JFRktJRUROQ00u",
-            "cHJvdG8aEUVPQUJQTkVFSk1GLnByb3RvGhFNTkVETE5NTUVPSy5wcm90byLy",
-            "AgoLTEdFS0ZFS0tMRkgSEwoLRUNCQUxNQUVCSkMYASABKA0SEwoLTklISEVK",
-            "TElDRUQYAiABKA0SIQoLQk5FUEJNSE5DUEwYAyADKAsyDC5KREFIRVBMR0pE",
-            "RxIhCgtDSEJJSkNDTUVBQxgEIAMoCzIMLk1ORURMTk1NRU9LEiEKC1BMRUZG",
-            "T0lLQU5IGAUgAygLMgwuUFBKSU9CSElGSFASIQoLRUhGQktKUEZOREgYBiAD",
-            "KAsyDC5FT0FCUE5FRUpNRhIhCgtKRkFFQ0NFS09KUBgIIAMoCzIMLktCRUZL",
-            "SUVETkNNEhMKC0FEQk1MRU9PSENKGAkgASgNEiEKC1BFREZMUE1KRUVGGAog",
-            "AygLMgwuSUpBUEdETUhNS0gSEwoLSElMR0tHTUFMSEIYCyABKAESEwoLT0dI",
-            "T0RITU5FR0sYDCABKAESEwoLRExBUEtGQkxHSU0YDSABKAESEwoLSUZHSklF",
-            "Tk1OTEwYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
-            "cHJvdG8z"));
+            "ChFMR0VLRkVLS0xGSC5wcm90bxoRSUpBUEdETUhNS0gucHJvdG8aEUVPQUJQ",
+            "TkVFSk1GLnByb3RvGhFKREFIRVBMR0pERy5wcm90bxoRS0JFRktJRUROQ00u",
+            "cHJvdG8aEU1ORURMTk1NRU9LLnByb3RvGhtHcmlkRmlnaHREcm9wSXRlbUlu",
+            "Zm8ucHJvdG8i/AIKC0xHRUtGRUtLTEZIEhMKC0VDQkFMTUFFQkpDGAEgASgN",
+            "EhMKC05JSEhFSkxJQ0VEGAIgASgNEiEKC0JORVBCTUhOQ1BMGAMgAygLMgwu",
+            "SkRBSEVQTEdKREcSIQoLQ0hCSUpDQ01FQUMYBCADKAsyDC5NTkVETE5NTUVP",
+            "SxIrCgtQTEVGRk9JS0FOSBgFIAMoCzIWLkdyaWRGaWdodERyb3BJdGVtSW5m",
+            "bxIhCgtFSEZCS0pQRk5ESBgGIAMoCzIMLkVPQUJQTkVFSk1GEiEKC0pGQUVD",
+            "Q0VLT0pQGAggAygLMgwuS0JFRktJRUROQ00SEwoLQURCTUxFT09IQ0oYCSAB",
+            "KA0SIQoLUEVERkxQTUpFRUYYCiADKAsyDC5JSkFQR0RNSE1LSBITCgtISUxH",
+            "S0dNQUxIQhgLIAEoARITCgtPR0hPREhNTkVHSxgMIAEoARITCgtETEFQS0ZC",
+            "TEdJTRgNIAEoARITCgtJRkdKSUVOTU5MTBgOIAEoDUIeqgIbRWdnTGluay5E",
+            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PPJIOBHIFHPReflection.Descriptor, global::EggLink.DanhengServer.Proto.JDAHEPLGJDGReflection.Descriptor, global::EggLink.DanhengServer.Proto.IJAPGDMHMKHReflection.Descriptor, global::EggLink.DanhengServer.Proto.KBEFKIEDNCMReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOABPNEEJMFReflection.Descriptor, global::EggLink.DanhengServer.Proto.MNEDLNMMEOKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IJAPGDMHMKHReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOABPNEEJMFReflection.Descriptor, global::EggLink.DanhengServer.Proto.JDAHEPLGJDGReflection.Descriptor, global::EggLink.DanhengServer.Proto.KBEFKIEDNCMReflection.Descriptor, global::EggLink.DanhengServer.Proto.MNEDLNMMEOKReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDropItemInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LGEKFEKKLFH), global::EggLink.DanhengServer.Proto.LGEKFEKKLFH.Parser, new[]{ "ECBALMAEBJC", "NIHHEJLICED", "BNEPBMHNCPL", "CHBIJCCMEAC", "PLEFFOIKANH", "EHFBKJPFNDH", "JFAECCEKOJP", "ADBMLEOOHCJ", "PEDFLPMJEEF", "HILGKGMALHB", "OGHODHMNEGK", "DLAPKFBLGIM", "IFGJIENMNLL" }, null, null, null, null)
           }));
@@ -152,12 +152,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "PLEFFOIKANH" field.</summary>
     public const int PLEFFOIKANHFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.PPJIOBHIFHP> _repeated_pLEFFOIKANH_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.PPJIOBHIFHP.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPJIOBHIFHP> pLEFFOIKANH_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPJIOBHIFHP>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GridFightDropItemInfo> _repeated_pLEFFOIKANH_codec
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.GridFightDropItemInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightDropItemInfo> pLEFFOIKANH_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightDropItemInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.PPJIOBHIFHP> PLEFFOIKANH {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightDropItemInfo> PLEFFOIKANH {
       get { return pLEFFOIKANH_; }
     }
 

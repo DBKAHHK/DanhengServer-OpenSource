@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static QuickStartFarmElementCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBRdWlja1N0YXJ0RmFybUVsZW1lbnRDc1JlcS5wcm90byJbChpRdWlja1N0",
+            "CiBRdWlja1N0YXJ0RmFybUVsZW1lbnRDc1JlcS5wcm90byJmChpRdWlja1N0",
             "YXJ0RmFybUVsZW1lbnRDc1JlcRITCgtKREFOT0tOSE5ITBgJIAEoDRITCgt3",
-            "b3JsZF9sZXZlbBgPIAEoDRITCgtLTUZGQUhFTkNLQhgNIAEoDUIeqgIbRWdn",
-            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "b3JsZF9sZXZlbBgPIAEoDRIeChZjb2Nvb25fY2hhbGxlbmdlX3RpbWVzGA0g",
+            "ASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QuickStartFarmElementCsReq), global::EggLink.DanhengServer.Proto.QuickStartFarmElementCsReq.Parser, new[]{ "JDANOKNHNHL", "WorldLevel", "KMFFAHENCKB" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.QuickStartFarmElementCsReq), global::EggLink.DanhengServer.Proto.QuickStartFarmElementCsReq.Parser, new[]{ "JDANOKNHNHL", "WorldLevel", "CocoonChallengeTimes" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     public QuickStartFarmElementCsReq(QuickStartFarmElementCsReq other) : this() {
       jDANOKNHNHL_ = other.jDANOKNHNHL_;
       worldLevel_ = other.worldLevel_;
-      kMFFAHENCKB_ = other.kMFFAHENCKB_;
+      cocoonChallengeTimes_ = other.cocoonChallengeTimes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -109,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KMFFAHENCKB" field.</summary>
-    public const int KMFFAHENCKBFieldNumber = 13;
-    private uint kMFFAHENCKB_;
+    /// <summary>Field number for the "cocoon_challenge_times" field.</summary>
+    public const int CocoonChallengeTimesFieldNumber = 13;
+    private uint cocoonChallengeTimes_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KMFFAHENCKB {
-      get { return kMFFAHENCKB_; }
+    public uint CocoonChallengeTimes {
+      get { return cocoonChallengeTimes_; }
       set {
-        kMFFAHENCKB_ = value;
+        cocoonChallengeTimes_ = value;
       }
     }
 
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (JDANOKNHNHL != other.JDANOKNHNHL) return false;
       if (WorldLevel != other.WorldLevel) return false;
-      if (KMFFAHENCKB != other.KMFFAHENCKB) return false;
+      if (CocoonChallengeTimes != other.CocoonChallengeTimes) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (JDANOKNHNHL != 0) hash ^= JDANOKNHNHL.GetHashCode();
       if (WorldLevel != 0) hash ^= WorldLevel.GetHashCode();
-      if (KMFFAHENCKB != 0) hash ^= KMFFAHENCKB.GetHashCode();
+      if (CocoonChallengeTimes != 0) hash ^= CocoonChallengeTimes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -171,9 +171,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(JDANOKNHNHL);
       }
-      if (KMFFAHENCKB != 0) {
+      if (CocoonChallengeTimes != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(KMFFAHENCKB);
+        output.WriteUInt32(CocoonChallengeTimes);
       }
       if (WorldLevel != 0) {
         output.WriteRawTag(120);
@@ -193,9 +193,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(JDANOKNHNHL);
       }
-      if (KMFFAHENCKB != 0) {
+      if (CocoonChallengeTimes != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(KMFFAHENCKB);
+        output.WriteUInt32(CocoonChallengeTimes);
       }
       if (WorldLevel != 0) {
         output.WriteRawTag(120);
@@ -217,8 +217,8 @@ namespace EggLink.DanhengServer.Proto {
       if (WorldLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(WorldLevel);
       }
-      if (KMFFAHENCKB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KMFFAHENCKB);
+      if (CocoonChallengeTimes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CocoonChallengeTimes);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -238,8 +238,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.WorldLevel != 0) {
         WorldLevel = other.WorldLevel;
       }
-      if (other.KMFFAHENCKB != 0) {
-        KMFFAHENCKB = other.KMFFAHENCKB;
+      if (other.CocoonChallengeTimes != 0) {
+        CocoonChallengeTimes = other.CocoonChallengeTimes;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -261,7 +261,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            KMFFAHENCKB = input.ReadUInt32();
+            CocoonChallengeTimes = input.ReadUInt32();
             break;
           }
           case 120: {
@@ -288,7 +288,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            KMFFAHENCKB = input.ReadUInt32();
+            CocoonChallengeTimes = input.ReadUInt32();
             break;
           }
           case 120: {

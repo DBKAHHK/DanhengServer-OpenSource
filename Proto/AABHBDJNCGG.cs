@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static AABHBDJNCGGReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFBQUJIQkRKTkNHRy5wcm90bxoRTkFETUhLTURJTk0ucHJvdG8igAEKC0FB",
-            "QkhCREpOQ0dHEiQKC0xCTEpQTEJQSUJJGLcGIAEoCzIMLk5BRE1IS01ESU5N",
-            "SAASEwoLS0lFS0pFRkZQSEsYCiABKA0SEwoLQ0VQRFBBTURBSUIYAyABKA0S",
-            "EgoKc2VjdGlvbl9pZBgGIAEoDUINCgtOQk1OUEFQT05IUEIeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFBQUJIQkRKTkNHRy5wcm90bxoRTkFETUhLTURJTk0ucHJvdG8ifwoLQUFC",
+            "SEJESk5DR0cSJAoLTEJMSlBMQlBJQkkYtwYgASgLMgwuTkFETUhLTURJTk1I",
+            "ABISCgpjaGFwdGVyX2lkGAogASgNEhMKC0NFUERQQU1EQUlCGAMgASgNEhIK",
+            "CnNlY3Rpb25faWQYBiABKA1CDQoLTkJNTlBBUE9OSFBCHqoCG0VnZ0xpbmsu",
+            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NADMHKMDINMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AABHBDJNCGG), global::EggLink.DanhengServer.Proto.AABHBDJNCGG.Parser, new[]{ "LBLJPLBPIBI", "KIEKJEFFPHK", "CEPDPAMDAIB", "SectionId" }, new[]{ "NBMNPAPONHP" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AABHBDJNCGG), global::EggLink.DanhengServer.Proto.AABHBDJNCGG.Parser, new[]{ "LBLJPLBPIBI", "ChapterId", "CEPDPAMDAIB", "SectionId" }, new[]{ "NBMNPAPONHP" }, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AABHBDJNCGG(AABHBDJNCGG other) : this() {
-      kIEKJEFFPHK_ = other.kIEKJEFFPHK_;
+      chapterId_ = other.chapterId_;
       cEPDPAMDAIB_ = other.cEPDPAMDAIB_;
       sectionId_ = other.sectionId_;
       switch (other.NBMNPAPONHPCase) {
@@ -104,15 +104,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KIEKJEFFPHK" field.</summary>
-    public const int KIEKJEFFPHKFieldNumber = 10;
-    private uint kIEKJEFFPHK_;
+    /// <summary>Field number for the "chapter_id" field.</summary>
+    public const int ChapterIdFieldNumber = 10;
+    private uint chapterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KIEKJEFFPHK {
-      get { return kIEKJEFFPHK_; }
+    public uint ChapterId {
+      get { return chapterId_; }
       set {
-        kIEKJEFFPHK_ = value;
+        chapterId_ = value;
       }
     }
 
@@ -176,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(LBLJPLBPIBI, other.LBLJPLBPIBI)) return false;
-      if (KIEKJEFFPHK != other.KIEKJEFFPHK) return false;
+      if (ChapterId != other.ChapterId) return false;
       if (CEPDPAMDAIB != other.CEPDPAMDAIB) return false;
       if (SectionId != other.SectionId) return false;
       if (NBMNPAPONHPCase != other.NBMNPAPONHPCase) return false;
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (nBMNPAPONHPCase_ == NBMNPAPONHPOneofCase.LBLJPLBPIBI) hash ^= LBLJPLBPIBI.GetHashCode();
-      if (KIEKJEFFPHK != 0) hash ^= KIEKJEFFPHK.GetHashCode();
+      if (ChapterId != 0) hash ^= ChapterId.GetHashCode();
       if (CEPDPAMDAIB != 0) hash ^= CEPDPAMDAIB.GetHashCode();
       if (SectionId != 0) hash ^= SectionId.GetHashCode();
       hash ^= (int) nBMNPAPONHPCase_;
@@ -218,9 +218,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(SectionId);
       }
-      if (KIEKJEFFPHK != 0) {
+      if (ChapterId != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(KIEKJEFFPHK);
+        output.WriteUInt32(ChapterId);
       }
       if (nBMNPAPONHPCase_ == NBMNPAPONHPOneofCase.LBLJPLBPIBI) {
         output.WriteRawTag(186, 51);
@@ -244,9 +244,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(SectionId);
       }
-      if (KIEKJEFFPHK != 0) {
+      if (ChapterId != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(KIEKJEFFPHK);
+        output.WriteUInt32(ChapterId);
       }
       if (nBMNPAPONHPCase_ == NBMNPAPONHPOneofCase.LBLJPLBPIBI) {
         output.WriteRawTag(186, 51);
@@ -265,8 +265,8 @@ namespace EggLink.DanhengServer.Proto {
       if (nBMNPAPONHPCase_ == NBMNPAPONHPOneofCase.LBLJPLBPIBI) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(LBLJPLBPIBI);
       }
-      if (KIEKJEFFPHK != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KIEKJEFFPHK);
+      if (ChapterId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChapterId);
       }
       if (CEPDPAMDAIB != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CEPDPAMDAIB);
@@ -286,8 +286,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.KIEKJEFFPHK != 0) {
-        KIEKJEFFPHK = other.KIEKJEFFPHK;
+      if (other.ChapterId != 0) {
+        ChapterId = other.ChapterId;
       }
       if (other.CEPDPAMDAIB != 0) {
         CEPDPAMDAIB = other.CEPDPAMDAIB;
@@ -328,7 +328,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            KIEKJEFFPHK = input.ReadUInt32();
+            ChapterId = input.ReadUInt32();
             break;
           }
           case 6586: {
@@ -364,7 +364,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            KIEKJEFFPHK = input.ReadUInt32();
+            ChapterId = input.ReadUInt32();
             break;
           }
           case 6586: {

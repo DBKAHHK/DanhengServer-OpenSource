@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static NHJGHOKBDPKReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFOSEpHSE9LQkRQSy5wcm90byJgCgtOSEpHSE9LQkRQSxITCgtJSVBERUZD",
-            "RURNQxgJIAEoDRITCgtOQ0lBREJBS01BRRgNIAEoDRITCgtKREFLS09GREdF",
-            "UBgBIAEoDRISCgpjb250ZW50X2lkGAcgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChFOSEpHSE9LQkRQSy5wcm90byJpCgtOSEpHSE9LQkRQSxITCgtJSVBERUZD",
+            "RURNQxgJIAEoDRIcChRncmlkX2ZpZ2h0X2N1cl9sZXZlbBgNIAEoDRITCgtK",
+            "REFLS09GREdFUBgBIAEoDRISCgpjb250ZW50X2lkGAcgASgNQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NHJGHOKBDPK), global::EggLink.DanhengServer.Proto.NHJGHOKBDPK.Parser, new[]{ "IIPDEFCEDMC", "NCIADBAKMAE", "JDAKKOFDGEP", "ContentId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NHJGHOKBDPK), global::EggLink.DanhengServer.Proto.NHJGHOKBDPK.Parser, new[]{ "IIPDEFCEDMC", "GridFightCurLevel", "JDAKKOFDGEP", "ContentId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NHJGHOKBDPK(NHJGHOKBDPK other) : this() {
       iIPDEFCEDMC_ = other.iIPDEFCEDMC_;
-      nCIADBAKMAE_ = other.nCIADBAKMAE_;
+      gridFightCurLevel_ = other.gridFightCurLevel_;
       jDAKKOFDGEP_ = other.jDAKKOFDGEP_;
       contentId_ = other.contentId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -98,15 +98,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NCIADBAKMAE" field.</summary>
-    public const int NCIADBAKMAEFieldNumber = 13;
-    private uint nCIADBAKMAE_;
+    /// <summary>Field number for the "grid_fight_cur_level" field.</summary>
+    public const int GridFightCurLevelFieldNumber = 13;
+    private uint gridFightCurLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NCIADBAKMAE {
-      get { return nCIADBAKMAE_; }
+    public uint GridFightCurLevel {
+      get { return gridFightCurLevel_; }
       set {
-        nCIADBAKMAE_ = value;
+        gridFightCurLevel_ = value;
       }
     }
 
@@ -150,7 +150,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (IIPDEFCEDMC != other.IIPDEFCEDMC) return false;
-      if (NCIADBAKMAE != other.NCIADBAKMAE) return false;
+      if (GridFightCurLevel != other.GridFightCurLevel) return false;
       if (JDAKKOFDGEP != other.JDAKKOFDGEP) return false;
       if (ContentId != other.ContentId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -161,7 +161,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (IIPDEFCEDMC != 0) hash ^= IIPDEFCEDMC.GetHashCode();
-      if (NCIADBAKMAE != 0) hash ^= NCIADBAKMAE.GetHashCode();
+      if (GridFightCurLevel != 0) hash ^= GridFightCurLevel.GetHashCode();
       if (JDAKKOFDGEP != 0) hash ^= JDAKKOFDGEP.GetHashCode();
       if (ContentId != 0) hash ^= ContentId.GetHashCode();
       if (_unknownFields != null) {
@@ -194,9 +194,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(IIPDEFCEDMC);
       }
-      if (NCIADBAKMAE != 0) {
+      if (GridFightCurLevel != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(NCIADBAKMAE);
+        output.WriteUInt32(GridFightCurLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -220,9 +220,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(IIPDEFCEDMC);
       }
-      if (NCIADBAKMAE != 0) {
+      if (GridFightCurLevel != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(NCIADBAKMAE);
+        output.WriteUInt32(GridFightCurLevel);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -237,8 +237,8 @@ namespace EggLink.DanhengServer.Proto {
       if (IIPDEFCEDMC != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IIPDEFCEDMC);
       }
-      if (NCIADBAKMAE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NCIADBAKMAE);
+      if (GridFightCurLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightCurLevel);
       }
       if (JDAKKOFDGEP != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JDAKKOFDGEP);
@@ -261,8 +261,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IIPDEFCEDMC != 0) {
         IIPDEFCEDMC = other.IIPDEFCEDMC;
       }
-      if (other.NCIADBAKMAE != 0) {
-        NCIADBAKMAE = other.NCIADBAKMAE;
+      if (other.GridFightCurLevel != 0) {
+        GridFightCurLevel = other.GridFightCurLevel;
       }
       if (other.JDAKKOFDGEP != 0) {
         JDAKKOFDGEP = other.JDAKKOFDGEP;
@@ -298,7 +298,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            NCIADBAKMAE = input.ReadUInt32();
+            GridFightCurLevel = input.ReadUInt32();
             break;
           }
         }
@@ -329,7 +329,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            NCIADBAKMAE = input.ReadUInt32();
+            GridFightCurLevel = input.ReadUInt32();
             break;
           }
         }

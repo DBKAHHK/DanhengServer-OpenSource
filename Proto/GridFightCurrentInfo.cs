@@ -26,18 +26,17 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "ChpHcmlkRmlnaHRDdXJyZW50SW5mby5wcm90bxoXR3JpZEZpZ2h0R2FtZURh",
             "dGEucHJvdG8aF0dyaWRGaWdodEdhbWVJbmZvLnByb3RvGhxHcmlkRmlnaHRQ",
-            "ZW5kaW5nQWN0aW9uLnByb3RvIoICChRHcmlkRmlnaHRDdXJyZW50SW5mbxIv",
+            "ZW5kaW5nQWN0aW9uLnByb3RvIvsBChRHcmlkRmlnaHRDdXJyZW50SW5mbxIv",
             "Cg5wZW5kaW5nX2FjdGlvbhgJIAEoCzIXLkdyaWRGaWdodFBlbmRpbmdBY3Rp",
             "b24SMAoUZ3JpZF9maWdodF9nYW1lX2RhdGEYByABKAsyEi5HcmlkRmlnaHRH",
             "YW1lRGF0YRIOCgZzZWFzb24YDyABKA0SMwoXcm9ndWVfY3VycmVudF9nYW1l",
             "X2luZm8YDCADKAsyEi5HcmlkRmlnaHRHYW1lSW5mbxIRCgl1bmlxdWVfaWQY",
-            "DiABKA0SGgoSZ3JpZF9nYW1lX2ZpbmlzaGVkGAggASgIEhMKC2RpdmlzaW9u",
-            "X2lkGAMgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
-            "b3RvMw=="));
+            "DiABKA0SEwoLaXNfb3ZlcmxvY2sYCCABKAgSEwoLZGl2aXNpb25faWQYAyAB",
+            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightGameDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightCurrentInfo), global::EggLink.DanhengServer.Proto.GridFightCurrentInfo.Parser, new[]{ "PendingAction", "GridFightGameData", "Season", "RogueCurrentGameInfo", "UniqueId", "GridGameFinished", "DivisionId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightCurrentInfo), global::EggLink.DanhengServer.Proto.GridFightCurrentInfo.Parser, new[]{ "PendingAction", "GridFightGameData", "Season", "RogueCurrentGameInfo", "UniqueId", "IsOverlock", "DivisionId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -84,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
       season_ = other.season_;
       rogueCurrentGameInfo_ = other.rogueCurrentGameInfo_.Clone();
       uniqueId_ = other.uniqueId_;
-      gridGameFinished_ = other.gridGameFinished_;
+      isOverlock_ = other.isOverlock_;
       divisionId_ = other.divisionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -154,15 +153,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "grid_game_finished" field.</summary>
-    public const int GridGameFinishedFieldNumber = 8;
-    private bool gridGameFinished_;
+    /// <summary>Field number for the "is_overlock" field.</summary>
+    public const int IsOverlockFieldNumber = 8;
+    private bool isOverlock_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool GridGameFinished {
-      get { return gridGameFinished_; }
+    public bool IsOverlock {
+      get { return isOverlock_; }
       set {
-        gridGameFinished_ = value;
+        isOverlock_ = value;
       }
     }
 
@@ -198,7 +197,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Season != other.Season) return false;
       if(!rogueCurrentGameInfo_.Equals(other.rogueCurrentGameInfo_)) return false;
       if (UniqueId != other.UniqueId) return false;
-      if (GridGameFinished != other.GridGameFinished) return false;
+      if (IsOverlock != other.IsOverlock) return false;
       if (DivisionId != other.DivisionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -212,7 +211,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Season != 0) hash ^= Season.GetHashCode();
       hash ^= rogueCurrentGameInfo_.GetHashCode();
       if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
-      if (GridGameFinished != false) hash ^= GridGameFinished.GetHashCode();
+      if (IsOverlock != false) hash ^= IsOverlock.GetHashCode();
       if (DivisionId != 0) hash ^= DivisionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -240,9 +239,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(58);
         output.WriteMessage(GridFightGameData);
       }
-      if (GridGameFinished != false) {
+      if (IsOverlock != false) {
         output.WriteRawTag(64);
-        output.WriteBool(GridGameFinished);
+        output.WriteBool(IsOverlock);
       }
       if (pendingAction_ != null) {
         output.WriteRawTag(74);
@@ -275,9 +274,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(58);
         output.WriteMessage(GridFightGameData);
       }
-      if (GridGameFinished != false) {
+      if (IsOverlock != false) {
         output.WriteRawTag(64);
-        output.WriteBool(GridGameFinished);
+        output.WriteBool(IsOverlock);
       }
       if (pendingAction_ != null) {
         output.WriteRawTag(74);
@@ -315,7 +314,7 @@ namespace EggLink.DanhengServer.Proto {
       if (UniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
       }
-      if (GridGameFinished != false) {
+      if (IsOverlock != false) {
         size += 1 + 1;
       }
       if (DivisionId != 0) {
@@ -352,8 +351,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.UniqueId != 0) {
         UniqueId = other.UniqueId;
       }
-      if (other.GridGameFinished != false) {
-        GridGameFinished = other.GridGameFinished;
+      if (other.IsOverlock != false) {
+        IsOverlock = other.IsOverlock;
       }
       if (other.DivisionId != 0) {
         DivisionId = other.DivisionId;
@@ -385,7 +384,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            GridGameFinished = input.ReadBool();
+            IsOverlock = input.ReadBool();
             break;
           }
           case 74: {
@@ -434,7 +433,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 64: {
-            GridGameFinished = input.ReadBool();
+            IsOverlock = input.ReadBool();
             break;
           }
           case 74: {

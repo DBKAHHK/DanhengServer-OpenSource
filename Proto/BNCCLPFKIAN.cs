@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static BNCCLPFKIANReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFCTkNDTFBGS0lBTi5wcm90bxoRTU9GREpFRENPS08ucHJvdG8iMAoLQk5D",
-            "Q0xQRktJQU4SIQoLUEJMRE1LSUZGTk8YCyADKAsyDC5NT0ZESkVEQ09LT0Ie",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFCTkNDTFBGS0lBTi5wcm90bxoYR3JpZEdhbWVBdmF0YXJJbmZvLnByb3Rv",
+            "IkEKC0JOQ0NMUEZLSUFOEjIKFWdyaWRfZ2FtZV9hdmF0YXJfbGlzdBgLIAMo",
+            "CzITLkdyaWRHYW1lQXZhdGFySW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
+            "dmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MOFDJEDCOKOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridGameAvatarInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BNCCLPFKIAN), global::EggLink.DanhengServer.Proto.BNCCLPFKIAN.Parser, new[]{ "PBLDMKIFFNO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BNCCLPFKIAN), global::EggLink.DanhengServer.Proto.BNCCLPFKIAN.Parser, new[]{ "GridGameAvatarList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BNCCLPFKIAN(BNCCLPFKIAN other) : this() {
-      pBLDMKIFFNO_ = other.pBLDMKIFFNO_.Clone();
+      gridGameAvatarList_ = other.gridGameAvatarList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new BNCCLPFKIAN(this);
     }
 
-    /// <summary>Field number for the "PBLDMKIFFNO" field.</summary>
-    public const int PBLDMKIFFNOFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.MOFDJEDCOKO> _repeated_pBLDMKIFFNO_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.MOFDJEDCOKO.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MOFDJEDCOKO> pBLDMKIFFNO_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MOFDJEDCOKO>();
+    /// <summary>Field number for the "grid_game_avatar_list" field.</summary>
+    public const int GridGameAvatarListFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GridGameAvatarInfo> _repeated_gridGameAvatarList_codec
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.GridGameAvatarInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridGameAvatarInfo> gridGameAvatarList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridGameAvatarInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.MOFDJEDCOKO> PBLDMKIFFNO {
-      get { return pBLDMKIFFNO_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridGameAvatarInfo> GridGameAvatarList {
+      get { return gridGameAvatarList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!pBLDMKIFFNO_.Equals(other.pBLDMKIFFNO_)) return false;
+      if(!gridGameAvatarList_.Equals(other.gridGameAvatarList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= pBLDMKIFFNO_.GetHashCode();
+      hash ^= gridGameAvatarList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      pBLDMKIFFNO_.WriteTo(output, _repeated_pBLDMKIFFNO_codec);
+      gridGameAvatarList_.WriteTo(output, _repeated_gridGameAvatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      pBLDMKIFFNO_.WriteTo(ref output, _repeated_pBLDMKIFFNO_codec);
+      gridGameAvatarList_.WriteTo(ref output, _repeated_gridGameAvatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += pBLDMKIFFNO_.CalculateSize(_repeated_pBLDMKIFFNO_codec);
+      size += gridGameAvatarList_.CalculateSize(_repeated_gridGameAvatarList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      pBLDMKIFFNO_.Add(other.pBLDMKIFFNO_);
+      gridGameAvatarList_.Add(other.gridGameAvatarList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -187,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 90: {
-            pBLDMKIFFNO_.AddEntriesFrom(input, _repeated_pBLDMKIFFNO_codec);
+            gridGameAvatarList_.AddEntriesFrom(input, _repeated_gridGameAvatarList_codec);
             break;
           }
         }
@@ -206,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 90: {
-            pBLDMKIFFNO_.AddEntriesFrom(ref input, _repeated_pBLDMKIFFNO_codec);
+            gridGameAvatarList_.AddEntriesFrom(ref input, _repeated_gridGameAvatarList_codec);
             break;
           }
         }

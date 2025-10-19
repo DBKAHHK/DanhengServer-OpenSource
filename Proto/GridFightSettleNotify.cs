@@ -25,17 +25,17 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHcmlkRmlnaHRTZXR0bGVOb3RpZnkucHJvdG8aGUdyaWRGaWdodEZpbmlz",
-            "aEluZm8ucHJvdG8i+QEKFUdyaWRGaWdodFNldHRsZU5vdGlmeRIUCgtJQUJK",
-            "Qk9DREFCQhjXDCABKA0SEwoLTEZFTU9IREtNQ0kYDiABKA0SEwoLQk5DQlBK",
-            "SUJIR0kYAiABKA0SEwoLRkRFTEFDQk5BR0kYBSABKA0SEwoLUEFHRkFER0lN",
-            "Q0YYByABKA0SGQoRZ3JpZF93ZWVrbHlfc2NvcmUYAyABKA0SMAoRdG91cm5f",
-            "ZmluaXNoX2luZm8YpwcgASgLMhQuR3JpZEZpZ2h0RmluaXNoSW5mbxIUCgtN",
-            "QkVJREhCTUdKRRjoBSABKA0SEwoLSUZFSEJJTUVNRUMYBiABKA1CHqoCG0Vn",
-            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "aEluZm8ucHJvdG8i/wEKFUdyaWRGaWdodFNldHRsZU5vdGlmeRIUCgtJQUJK",
+            "Qk9DREFCQhjXDCABKA0SEwoLTEZFTU9IREtNQ0kYDiABKA0SGAoQZ3JpZF9m",
+            "aWdodF9sZXZlbBgCIAEoDRITCgtGREVMQUNCTkFHSRgFIAEoDRITCgtQQUdG",
+            "QURHSU1DRhgHIAEoDRIZChFncmlkX3dlZWtseV9zY29yZRgDIAEoDRIwChF0",
+            "b3Vybl9maW5pc2hfaW5mbxinByABKAsyFC5HcmlkRmlnaHRGaW5pc2hJbmZv",
+            "EhQKC01CRUlESEJNR0pFGOgFIAEoDRIUCgx0YWxlbnRfcG9pbnQYBiABKA1C",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightFinishInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSettleNotify), global::EggLink.DanhengServer.Proto.GridFightSettleNotify.Parser, new[]{ "IABJBOCDABB", "LFEMOHDKMCI", "BNCBPJIBHGI", "FDELACBNAGI", "PAGFADGIMCF", "GridWeeklyScore", "TournFinishInfo", "MBEIDHBMGJE", "IFEHBIMEMEC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSettleNotify), global::EggLink.DanhengServer.Proto.GridFightSettleNotify.Parser, new[]{ "IABJBOCDABB", "LFEMOHDKMCI", "GridFightLevel", "FDELACBNAGI", "PAGFADGIMCF", "GridWeeklyScore", "TournFinishInfo", "MBEIDHBMGJE", "TalentPoint" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,13 +79,13 @@ namespace EggLink.DanhengServer.Proto {
     public GridFightSettleNotify(GridFightSettleNotify other) : this() {
       iABJBOCDABB_ = other.iABJBOCDABB_;
       lFEMOHDKMCI_ = other.lFEMOHDKMCI_;
-      bNCBPJIBHGI_ = other.bNCBPJIBHGI_;
+      gridFightLevel_ = other.gridFightLevel_;
       fDELACBNAGI_ = other.fDELACBNAGI_;
       pAGFADGIMCF_ = other.pAGFADGIMCF_;
       gridWeeklyScore_ = other.gridWeeklyScore_;
       tournFinishInfo_ = other.tournFinishInfo_ != null ? other.tournFinishInfo_.Clone() : null;
       mBEIDHBMGJE_ = other.mBEIDHBMGJE_;
-      iFEHBIMEMEC_ = other.iFEHBIMEMEC_;
+      talentPoint_ = other.talentPoint_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -119,15 +119,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BNCBPJIBHGI" field.</summary>
-    public const int BNCBPJIBHGIFieldNumber = 2;
-    private uint bNCBPJIBHGI_;
+    /// <summary>Field number for the "grid_fight_level" field.</summary>
+    public const int GridFightLevelFieldNumber = 2;
+    private uint gridFightLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BNCBPJIBHGI {
-      get { return bNCBPJIBHGI_; }
+    public uint GridFightLevel {
+      get { return gridFightLevel_; }
       set {
-        bNCBPJIBHGI_ = value;
+        gridFightLevel_ = value;
       }
     }
 
@@ -191,15 +191,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IFEHBIMEMEC" field.</summary>
-    public const int IFEHBIMEMECFieldNumber = 6;
-    private uint iFEHBIMEMEC_;
+    /// <summary>Field number for the "talent_point" field.</summary>
+    public const int TalentPointFieldNumber = 6;
+    private uint talentPoint_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IFEHBIMEMEC {
-      get { return iFEHBIMEMEC_; }
+    public uint TalentPoint {
+      get { return talentPoint_; }
       set {
-        iFEHBIMEMEC_ = value;
+        talentPoint_ = value;
       }
     }
 
@@ -220,13 +220,13 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (IABJBOCDABB != other.IABJBOCDABB) return false;
       if (LFEMOHDKMCI != other.LFEMOHDKMCI) return false;
-      if (BNCBPJIBHGI != other.BNCBPJIBHGI) return false;
+      if (GridFightLevel != other.GridFightLevel) return false;
       if (FDELACBNAGI != other.FDELACBNAGI) return false;
       if (PAGFADGIMCF != other.PAGFADGIMCF) return false;
       if (GridWeeklyScore != other.GridWeeklyScore) return false;
       if (!object.Equals(TournFinishInfo, other.TournFinishInfo)) return false;
       if (MBEIDHBMGJE != other.MBEIDHBMGJE) return false;
-      if (IFEHBIMEMEC != other.IFEHBIMEMEC) return false;
+      if (TalentPoint != other.TalentPoint) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -236,13 +236,13 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (IABJBOCDABB != 0) hash ^= IABJBOCDABB.GetHashCode();
       if (LFEMOHDKMCI != 0) hash ^= LFEMOHDKMCI.GetHashCode();
-      if (BNCBPJIBHGI != 0) hash ^= BNCBPJIBHGI.GetHashCode();
+      if (GridFightLevel != 0) hash ^= GridFightLevel.GetHashCode();
       if (FDELACBNAGI != 0) hash ^= FDELACBNAGI.GetHashCode();
       if (PAGFADGIMCF != 0) hash ^= PAGFADGIMCF.GetHashCode();
       if (GridWeeklyScore != 0) hash ^= GridWeeklyScore.GetHashCode();
       if (tournFinishInfo_ != null) hash ^= TournFinishInfo.GetHashCode();
       if (MBEIDHBMGJE != 0) hash ^= MBEIDHBMGJE.GetHashCode();
-      if (IFEHBIMEMEC != 0) hash ^= IFEHBIMEMEC.GetHashCode();
+      if (TalentPoint != 0) hash ^= TalentPoint.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -261,9 +261,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BNCBPJIBHGI != 0) {
+      if (GridFightLevel != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(BNCBPJIBHGI);
+        output.WriteUInt32(GridFightLevel);
       }
       if (GridWeeklyScore != 0) {
         output.WriteRawTag(24);
@@ -273,9 +273,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(FDELACBNAGI);
       }
-      if (IFEHBIMEMEC != 0) {
+      if (TalentPoint != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(IFEHBIMEMEC);
+        output.WriteUInt32(TalentPoint);
       }
       if (PAGFADGIMCF != 0) {
         output.WriteRawTag(56);
@@ -307,9 +307,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BNCBPJIBHGI != 0) {
+      if (GridFightLevel != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(BNCBPJIBHGI);
+        output.WriteUInt32(GridFightLevel);
       }
       if (GridWeeklyScore != 0) {
         output.WriteRawTag(24);
@@ -319,9 +319,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(FDELACBNAGI);
       }
-      if (IFEHBIMEMEC != 0) {
+      if (TalentPoint != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(IFEHBIMEMEC);
+        output.WriteUInt32(TalentPoint);
       }
       if (PAGFADGIMCF != 0) {
         output.WriteRawTag(56);
@@ -359,8 +359,8 @@ namespace EggLink.DanhengServer.Proto {
       if (LFEMOHDKMCI != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LFEMOHDKMCI);
       }
-      if (BNCBPJIBHGI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BNCBPJIBHGI);
+      if (GridFightLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightLevel);
       }
       if (FDELACBNAGI != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FDELACBNAGI);
@@ -377,8 +377,8 @@ namespace EggLink.DanhengServer.Proto {
       if (MBEIDHBMGJE != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(MBEIDHBMGJE);
       }
-      if (IFEHBIMEMEC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IFEHBIMEMEC);
+      if (TalentPoint != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TalentPoint);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -398,8 +398,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.LFEMOHDKMCI != 0) {
         LFEMOHDKMCI = other.LFEMOHDKMCI;
       }
-      if (other.BNCBPJIBHGI != 0) {
-        BNCBPJIBHGI = other.BNCBPJIBHGI;
+      if (other.GridFightLevel != 0) {
+        GridFightLevel = other.GridFightLevel;
       }
       if (other.FDELACBNAGI != 0) {
         FDELACBNAGI = other.FDELACBNAGI;
@@ -419,8 +419,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.MBEIDHBMGJE != 0) {
         MBEIDHBMGJE = other.MBEIDHBMGJE;
       }
-      if (other.IFEHBIMEMEC != 0) {
-        IFEHBIMEMEC = other.IFEHBIMEMEC;
+      if (other.TalentPoint != 0) {
+        TalentPoint = other.TalentPoint;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -438,7 +438,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            BNCBPJIBHGI = input.ReadUInt32();
+            GridFightLevel = input.ReadUInt32();
             break;
           }
           case 24: {
@@ -450,7 +450,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 48: {
-            IFEHBIMEMEC = input.ReadUInt32();
+            TalentPoint = input.ReadUInt32();
             break;
           }
           case 56: {
@@ -492,7 +492,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            BNCBPJIBHGI = input.ReadUInt32();
+            GridFightLevel = input.ReadUInt32();
             break;
           }
           case 24: {
@@ -504,7 +504,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 48: {
-            IFEHBIMEMEC = input.ReadUInt32();
+            TalentPoint = input.ReadUInt32();
             break;
           }
           case 56: {

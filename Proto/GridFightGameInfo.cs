@@ -24,24 +24,26 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHcmlkRmlnaHRHYW1lSW5mby5wcm90bxoRSktJRElNSUtIR0YucHJvdG8a",
-            "EUlKREdCQ0lNS0tLLnByb3RvGhFCR01ORUxPTEhJSi5wcm90bxoRR0RGTU5D",
-            "T0VQQ1AucHJvdG8aEUlJTERNRkxJSkpLLnByb3RvGhFLR0NKQ0VGTkVGUC5w",
-            "cm90bxoRUEFPSklGSEdBRUoucHJvdG8aEUhISEVPS1BQRUFELnByb3RvGhFC",
-            "TkNDTFBGS0lBTi5wcm90byLyAgoRR3JpZEZpZ2h0R2FtZUluZm8SIwoLTE5C",
-            "R01KQ05DQ0kYByABKAsyDC5ISEhFT0tQUEVBREgAEiMKC0VNS0RFT0VFTUVL",
+            "ChdHcmlkRmlnaHRHYW1lSW5mby5wcm90bxoRR0RGTU5DT0VQQ1AucHJvdG8a",
+            "HUdyaWRGaWdodEdhbWVBdmF0YXJJbmZvLnByb3RvGhhHcmlkRmlnaHRMZXZl",
+            "bEluZm8ucHJvdG8aEVBBT0pJRkhHQUVKLnByb3RvGhFCTkNDTFBGS0lBTi5w",
+            "cm90bxoRSUlMRE1GTElKSksucHJvdG8aEUpLSURJTUlLSEdGLnByb3RvGhxH",
+            "cmlkRmlnaHRHYW1lQmFzaWNJbmZvLnByb3RvGhFLR0NKQ0VGTkVGUC5wcm90",
+            "byKiAwoRR3JpZEZpZ2h0R2FtZUluZm8SMgoPZ3JpZF9iYXNpY19pbmZvGAcg",
+            "ASgLMhcuR3JpZEZpZ2h0R2FtZUJhc2ljSW5mb0gAEiMKC0VNS0RFT0VFTUVL",
             "GAUgASgLMgwuQk5DQ0xQRktJQU5IABIjCgtISUxPREFNSUlFTxgEIAEoCzIM",
             "LktHQ0pDRUZORUZQSAASIwoLUEhORUhHS0tPTEgYCSABKAsyDC5KS0lESU1J",
-            "S0hHRkgAEiMKC0lHRERHSkdHSE5KGA4gASgLMgwuSUpER0JDSU1LS0tIABIj",
-            "CgtET0xDS0lJQklBRRgBIAEoCzIMLlBBT0pJRkhHQUVKSAASIwoLQkNBRU9M",
-            "S0JKRkYYCyABKAsyDC5HREZNTkNPRVBDUEgAEiMKC01CRkJHSklIR0hIGAgg",
-            "ASgLMgwuSUlMRE1GTElKSktIABIjCgtDUEZPRElFSEZETBgMIAEoCzIMLkJH",
-            "TU5FTE9MSElKSABCEAoOZ3JpZF9nYW1lX2luZm9CHqoCG0VnZ0xpbmsuRGFu",
-            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "S0hHRkgAEi4KD2dyaWRfbGV2ZWxfaW5mbxgOIAEoCzITLkdyaWRGaWdodExl",
+            "dmVsSW5mb0gAEiMKC0RPTENLSUlCSUFFGAEgASgLMgwuUEFPSklGSEdBRUpI",
+            "ABIjCgtCQ0FFT0xLQkpGRhgLIAEoCzIMLkdERk1OQ09FUENQSAASIwoLTUJG",
+            "QkdKSUhHSEgYCCABKAsyDC5JSUxETUZMSUpKS0gAEjkKFWdyaWRfYXZhdGFy",
+            "X2dhbWVfaW5mbxgMIAEoCzIYLkdyaWRGaWdodEdhbWVBdmF0YXJJbmZvSABC",
+            "EAoOZ3JpZF9nYW1lX2luZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JKIDIMIKHGFReflection.Descriptor, global::EggLink.DanhengServer.Proto.IJDGBCIMKKKReflection.Descriptor, global::EggLink.DanhengServer.Proto.BGMNELOLHIJReflection.Descriptor, global::EggLink.DanhengServer.Proto.GDFMNCOEPCPReflection.Descriptor, global::EggLink.DanhengServer.Proto.IILDMFLIJJKReflection.Descriptor, global::EggLink.DanhengServer.Proto.KGCJCEFNEFPReflection.Descriptor, global::EggLink.DanhengServer.Proto.PAOJIFHGAEJReflection.Descriptor, global::EggLink.DanhengServer.Proto.HHHEOKPPEADReflection.Descriptor, global::EggLink.DanhengServer.Proto.BNCCLPFKIANReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GDFMNCOEPCPReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PAOJIFHGAEJReflection.Descriptor, global::EggLink.DanhengServer.Proto.BNCCLPFKIANReflection.Descriptor, global::EggLink.DanhengServer.Proto.IILDMFLIJJKReflection.Descriptor, global::EggLink.DanhengServer.Proto.JKIDIMIKHGFReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KGCJCEFNEFPReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameInfo), global::EggLink.DanhengServer.Proto.GridFightGameInfo.Parser, new[]{ "LNBGMJCNCCI", "EMKDEOEEMEK", "HILODAMIIEO", "PHNEHGKKOLH", "IGDDGJGGHNJ", "DOLCKIIBIAE", "BCAEOLKBJFF", "MBFBGJIHGHH", "CPFODIEHFDL" }, new[]{ "GridGameInfo" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameInfo), global::EggLink.DanhengServer.Proto.GridFightGameInfo.Parser, new[]{ "GridBasicInfo", "EMKDEOEEMEK", "HILODAMIIEO", "PHNEHGKKOLH", "GridLevelInfo", "DOLCKIIBIAE", "BCAEOLKBJFF", "MBFBGJIHGHH", "GridAvatarGameInfo" }, new[]{ "GridGameInfo" }, null, null, null)
           }));
     }
     #endregion
@@ -84,8 +86,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightGameInfo(GridFightGameInfo other) : this() {
       switch (other.GridGameInfoCase) {
-        case GridGameInfoOneofCase.LNBGMJCNCCI:
-          LNBGMJCNCCI = other.LNBGMJCNCCI.Clone();
+        case GridGameInfoOneofCase.GridBasicInfo:
+          GridBasicInfo = other.GridBasicInfo.Clone();
           break;
         case GridGameInfoOneofCase.EMKDEOEEMEK:
           EMKDEOEEMEK = other.EMKDEOEEMEK.Clone();
@@ -96,8 +98,8 @@ namespace EggLink.DanhengServer.Proto {
         case GridGameInfoOneofCase.PHNEHGKKOLH:
           PHNEHGKKOLH = other.PHNEHGKKOLH.Clone();
           break;
-        case GridGameInfoOneofCase.IGDDGJGGHNJ:
-          IGDDGJGGHNJ = other.IGDDGJGGHNJ.Clone();
+        case GridGameInfoOneofCase.GridLevelInfo:
+          GridLevelInfo = other.GridLevelInfo.Clone();
           break;
         case GridGameInfoOneofCase.DOLCKIIBIAE:
           DOLCKIIBIAE = other.DOLCKIIBIAE.Clone();
@@ -108,8 +110,8 @@ namespace EggLink.DanhengServer.Proto {
         case GridGameInfoOneofCase.MBFBGJIHGHH:
           MBFBGJIHGHH = other.MBFBGJIHGHH.Clone();
           break;
-        case GridGameInfoOneofCase.CPFODIEHFDL:
-          CPFODIEHFDL = other.CPFODIEHFDL.Clone();
+        case GridGameInfoOneofCase.GridAvatarGameInfo:
+          GridAvatarGameInfo = other.GridAvatarGameInfo.Clone();
           break;
       }
 
@@ -122,15 +124,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightGameInfo(this);
     }
 
-    /// <summary>Field number for the "LNBGMJCNCCI" field.</summary>
-    public const int LNBGMJCNCCIFieldNumber = 7;
+    /// <summary>Field number for the "grid_basic_info" field.</summary>
+    public const int GridBasicInfoFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HHHEOKPPEAD LNBGMJCNCCI {
-      get { return gridGameInfoCase_ == GridGameInfoOneofCase.LNBGMJCNCCI ? (global::EggLink.DanhengServer.Proto.HHHEOKPPEAD) gridGameInfo_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo GridBasicInfo {
+      get { return gridGameInfoCase_ == GridGameInfoOneofCase.GridBasicInfo ? (global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo) gridGameInfo_ : null; }
       set {
         gridGameInfo_ = value;
-        gridGameInfoCase_ = value == null ? GridGameInfoOneofCase.None : GridGameInfoOneofCase.LNBGMJCNCCI;
+        gridGameInfoCase_ = value == null ? GridGameInfoOneofCase.None : GridGameInfoOneofCase.GridBasicInfo;
       }
     }
 
@@ -170,15 +172,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "IGDDGJGGHNJ" field.</summary>
-    public const int IGDDGJGGHNJFieldNumber = 14;
+    /// <summary>Field number for the "grid_level_info" field.</summary>
+    public const int GridLevelInfoFieldNumber = 14;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.IJDGBCIMKKK IGDDGJGGHNJ {
-      get { return gridGameInfoCase_ == GridGameInfoOneofCase.IGDDGJGGHNJ ? (global::EggLink.DanhengServer.Proto.IJDGBCIMKKK) gridGameInfo_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightLevelInfo GridLevelInfo {
+      get { return gridGameInfoCase_ == GridGameInfoOneofCase.GridLevelInfo ? (global::EggLink.DanhengServer.Proto.GridFightLevelInfo) gridGameInfo_ : null; }
       set {
         gridGameInfo_ = value;
-        gridGameInfoCase_ = value == null ? GridGameInfoOneofCase.None : GridGameInfoOneofCase.IGDDGJGGHNJ;
+        gridGameInfoCase_ = value == null ? GridGameInfoOneofCase.None : GridGameInfoOneofCase.GridLevelInfo;
       }
     }
 
@@ -218,15 +220,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CPFODIEHFDL" field.</summary>
-    public const int CPFODIEHFDLFieldNumber = 12;
+    /// <summary>Field number for the "grid_avatar_game_info" field.</summary>
+    public const int GridAvatarGameInfoFieldNumber = 12;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.BGMNELOLHIJ CPFODIEHFDL {
-      get { return gridGameInfoCase_ == GridGameInfoOneofCase.CPFODIEHFDL ? (global::EggLink.DanhengServer.Proto.BGMNELOLHIJ) gridGameInfo_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightGameAvatarInfo GridAvatarGameInfo {
+      get { return gridGameInfoCase_ == GridGameInfoOneofCase.GridAvatarGameInfo ? (global::EggLink.DanhengServer.Proto.GridFightGameAvatarInfo) gridGameInfo_ : null; }
       set {
         gridGameInfo_ = value;
-        gridGameInfoCase_ = value == null ? GridGameInfoOneofCase.None : GridGameInfoOneofCase.CPFODIEHFDL;
+        gridGameInfoCase_ = value == null ? GridGameInfoOneofCase.None : GridGameInfoOneofCase.GridAvatarGameInfo;
       }
     }
 
@@ -234,15 +236,15 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "grid_game_info" oneof.</summary>
     public enum GridGameInfoOneofCase {
       None = 0,
-      LNBGMJCNCCI = 7,
+      GridBasicInfo = 7,
       EMKDEOEEMEK = 5,
       HILODAMIIEO = 4,
       PHNEHGKKOLH = 9,
-      IGDDGJGGHNJ = 14,
+      GridLevelInfo = 14,
       DOLCKIIBIAE = 1,
       BCAEOLKBJFF = 11,
       MBFBGJIHGHH = 8,
-      CPFODIEHFDL = 12,
+      GridAvatarGameInfo = 12,
     }
     private GridGameInfoOneofCase gridGameInfoCase_ = GridGameInfoOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -273,15 +275,15 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(LNBGMJCNCCI, other.LNBGMJCNCCI)) return false;
+      if (!object.Equals(GridBasicInfo, other.GridBasicInfo)) return false;
       if (!object.Equals(EMKDEOEEMEK, other.EMKDEOEEMEK)) return false;
       if (!object.Equals(HILODAMIIEO, other.HILODAMIIEO)) return false;
       if (!object.Equals(PHNEHGKKOLH, other.PHNEHGKKOLH)) return false;
-      if (!object.Equals(IGDDGJGGHNJ, other.IGDDGJGGHNJ)) return false;
+      if (!object.Equals(GridLevelInfo, other.GridLevelInfo)) return false;
       if (!object.Equals(DOLCKIIBIAE, other.DOLCKIIBIAE)) return false;
       if (!object.Equals(BCAEOLKBJFF, other.BCAEOLKBJFF)) return false;
       if (!object.Equals(MBFBGJIHGHH, other.MBFBGJIHGHH)) return false;
-      if (!object.Equals(CPFODIEHFDL, other.CPFODIEHFDL)) return false;
+      if (!object.Equals(GridAvatarGameInfo, other.GridAvatarGameInfo)) return false;
       if (GridGameInfoCase != other.GridGameInfoCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -290,15 +292,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (gridGameInfoCase_ == GridGameInfoOneofCase.LNBGMJCNCCI) hash ^= LNBGMJCNCCI.GetHashCode();
+      if (gridGameInfoCase_ == GridGameInfoOneofCase.GridBasicInfo) hash ^= GridBasicInfo.GetHashCode();
       if (gridGameInfoCase_ == GridGameInfoOneofCase.EMKDEOEEMEK) hash ^= EMKDEOEEMEK.GetHashCode();
       if (gridGameInfoCase_ == GridGameInfoOneofCase.HILODAMIIEO) hash ^= HILODAMIIEO.GetHashCode();
       if (gridGameInfoCase_ == GridGameInfoOneofCase.PHNEHGKKOLH) hash ^= PHNEHGKKOLH.GetHashCode();
-      if (gridGameInfoCase_ == GridGameInfoOneofCase.IGDDGJGGHNJ) hash ^= IGDDGJGGHNJ.GetHashCode();
+      if (gridGameInfoCase_ == GridGameInfoOneofCase.GridLevelInfo) hash ^= GridLevelInfo.GetHashCode();
       if (gridGameInfoCase_ == GridGameInfoOneofCase.DOLCKIIBIAE) hash ^= DOLCKIIBIAE.GetHashCode();
       if (gridGameInfoCase_ == GridGameInfoOneofCase.BCAEOLKBJFF) hash ^= BCAEOLKBJFF.GetHashCode();
       if (gridGameInfoCase_ == GridGameInfoOneofCase.MBFBGJIHGHH) hash ^= MBFBGJIHGHH.GetHashCode();
-      if (gridGameInfoCase_ == GridGameInfoOneofCase.CPFODIEHFDL) hash ^= CPFODIEHFDL.GetHashCode();
+      if (gridGameInfoCase_ == GridGameInfoOneofCase.GridAvatarGameInfo) hash ^= GridAvatarGameInfo.GetHashCode();
       hash ^= (int) gridGameInfoCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -330,9 +332,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(42);
         output.WriteMessage(EMKDEOEEMEK);
       }
-      if (gridGameInfoCase_ == GridGameInfoOneofCase.LNBGMJCNCCI) {
+      if (gridGameInfoCase_ == GridGameInfoOneofCase.GridBasicInfo) {
         output.WriteRawTag(58);
-        output.WriteMessage(LNBGMJCNCCI);
+        output.WriteMessage(GridBasicInfo);
       }
       if (gridGameInfoCase_ == GridGameInfoOneofCase.MBFBGJIHGHH) {
         output.WriteRawTag(66);
@@ -346,13 +348,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(90);
         output.WriteMessage(BCAEOLKBJFF);
       }
-      if (gridGameInfoCase_ == GridGameInfoOneofCase.CPFODIEHFDL) {
+      if (gridGameInfoCase_ == GridGameInfoOneofCase.GridAvatarGameInfo) {
         output.WriteRawTag(98);
-        output.WriteMessage(CPFODIEHFDL);
+        output.WriteMessage(GridAvatarGameInfo);
       }
-      if (gridGameInfoCase_ == GridGameInfoOneofCase.IGDDGJGGHNJ) {
+      if (gridGameInfoCase_ == GridGameInfoOneofCase.GridLevelInfo) {
         output.WriteRawTag(114);
-        output.WriteMessage(IGDDGJGGHNJ);
+        output.WriteMessage(GridLevelInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -376,9 +378,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(42);
         output.WriteMessage(EMKDEOEEMEK);
       }
-      if (gridGameInfoCase_ == GridGameInfoOneofCase.LNBGMJCNCCI) {
+      if (gridGameInfoCase_ == GridGameInfoOneofCase.GridBasicInfo) {
         output.WriteRawTag(58);
-        output.WriteMessage(LNBGMJCNCCI);
+        output.WriteMessage(GridBasicInfo);
       }
       if (gridGameInfoCase_ == GridGameInfoOneofCase.MBFBGJIHGHH) {
         output.WriteRawTag(66);
@@ -392,13 +394,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(90);
         output.WriteMessage(BCAEOLKBJFF);
       }
-      if (gridGameInfoCase_ == GridGameInfoOneofCase.CPFODIEHFDL) {
+      if (gridGameInfoCase_ == GridGameInfoOneofCase.GridAvatarGameInfo) {
         output.WriteRawTag(98);
-        output.WriteMessage(CPFODIEHFDL);
+        output.WriteMessage(GridAvatarGameInfo);
       }
-      if (gridGameInfoCase_ == GridGameInfoOneofCase.IGDDGJGGHNJ) {
+      if (gridGameInfoCase_ == GridGameInfoOneofCase.GridLevelInfo) {
         output.WriteRawTag(114);
-        output.WriteMessage(IGDDGJGGHNJ);
+        output.WriteMessage(GridLevelInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -410,8 +412,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (gridGameInfoCase_ == GridGameInfoOneofCase.LNBGMJCNCCI) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LNBGMJCNCCI);
+      if (gridGameInfoCase_ == GridGameInfoOneofCase.GridBasicInfo) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GridBasicInfo);
       }
       if (gridGameInfoCase_ == GridGameInfoOneofCase.EMKDEOEEMEK) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EMKDEOEEMEK);
@@ -422,8 +424,8 @@ namespace EggLink.DanhengServer.Proto {
       if (gridGameInfoCase_ == GridGameInfoOneofCase.PHNEHGKKOLH) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PHNEHGKKOLH);
       }
-      if (gridGameInfoCase_ == GridGameInfoOneofCase.IGDDGJGGHNJ) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IGDDGJGGHNJ);
+      if (gridGameInfoCase_ == GridGameInfoOneofCase.GridLevelInfo) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GridLevelInfo);
       }
       if (gridGameInfoCase_ == GridGameInfoOneofCase.DOLCKIIBIAE) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DOLCKIIBIAE);
@@ -434,8 +436,8 @@ namespace EggLink.DanhengServer.Proto {
       if (gridGameInfoCase_ == GridGameInfoOneofCase.MBFBGJIHGHH) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(MBFBGJIHGHH);
       }
-      if (gridGameInfoCase_ == GridGameInfoOneofCase.CPFODIEHFDL) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CPFODIEHFDL);
+      if (gridGameInfoCase_ == GridGameInfoOneofCase.GridAvatarGameInfo) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GridAvatarGameInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -450,11 +452,11 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       switch (other.GridGameInfoCase) {
-        case GridGameInfoOneofCase.LNBGMJCNCCI:
-          if (LNBGMJCNCCI == null) {
-            LNBGMJCNCCI = new global::EggLink.DanhengServer.Proto.HHHEOKPPEAD();
+        case GridGameInfoOneofCase.GridBasicInfo:
+          if (GridBasicInfo == null) {
+            GridBasicInfo = new global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo();
           }
-          LNBGMJCNCCI.MergeFrom(other.LNBGMJCNCCI);
+          GridBasicInfo.MergeFrom(other.GridBasicInfo);
           break;
         case GridGameInfoOneofCase.EMKDEOEEMEK:
           if (EMKDEOEEMEK == null) {
@@ -474,11 +476,11 @@ namespace EggLink.DanhengServer.Proto {
           }
           PHNEHGKKOLH.MergeFrom(other.PHNEHGKKOLH);
           break;
-        case GridGameInfoOneofCase.IGDDGJGGHNJ:
-          if (IGDDGJGGHNJ == null) {
-            IGDDGJGGHNJ = new global::EggLink.DanhengServer.Proto.IJDGBCIMKKK();
+        case GridGameInfoOneofCase.GridLevelInfo:
+          if (GridLevelInfo == null) {
+            GridLevelInfo = new global::EggLink.DanhengServer.Proto.GridFightLevelInfo();
           }
-          IGDDGJGGHNJ.MergeFrom(other.IGDDGJGGHNJ);
+          GridLevelInfo.MergeFrom(other.GridLevelInfo);
           break;
         case GridGameInfoOneofCase.DOLCKIIBIAE:
           if (DOLCKIIBIAE == null) {
@@ -498,11 +500,11 @@ namespace EggLink.DanhengServer.Proto {
           }
           MBFBGJIHGHH.MergeFrom(other.MBFBGJIHGHH);
           break;
-        case GridGameInfoOneofCase.CPFODIEHFDL:
-          if (CPFODIEHFDL == null) {
-            CPFODIEHFDL = new global::EggLink.DanhengServer.Proto.BGMNELOLHIJ();
+        case GridGameInfoOneofCase.GridAvatarGameInfo:
+          if (GridAvatarGameInfo == null) {
+            GridAvatarGameInfo = new global::EggLink.DanhengServer.Proto.GridFightGameAvatarInfo();
           }
-          CPFODIEHFDL.MergeFrom(other.CPFODIEHFDL);
+          GridAvatarGameInfo.MergeFrom(other.GridAvatarGameInfo);
           break;
       }
 
@@ -549,12 +551,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            global::EggLink.DanhengServer.Proto.HHHEOKPPEAD subBuilder = new global::EggLink.DanhengServer.Proto.HHHEOKPPEAD();
-            if (gridGameInfoCase_ == GridGameInfoOneofCase.LNBGMJCNCCI) {
-              subBuilder.MergeFrom(LNBGMJCNCCI);
+            global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo();
+            if (gridGameInfoCase_ == GridGameInfoOneofCase.GridBasicInfo) {
+              subBuilder.MergeFrom(GridBasicInfo);
             }
             input.ReadMessage(subBuilder);
-            LNBGMJCNCCI = subBuilder;
+            GridBasicInfo = subBuilder;
             break;
           }
           case 66: {
@@ -585,21 +587,21 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 98: {
-            global::EggLink.DanhengServer.Proto.BGMNELOLHIJ subBuilder = new global::EggLink.DanhengServer.Proto.BGMNELOLHIJ();
-            if (gridGameInfoCase_ == GridGameInfoOneofCase.CPFODIEHFDL) {
-              subBuilder.MergeFrom(CPFODIEHFDL);
+            global::EggLink.DanhengServer.Proto.GridFightGameAvatarInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightGameAvatarInfo();
+            if (gridGameInfoCase_ == GridGameInfoOneofCase.GridAvatarGameInfo) {
+              subBuilder.MergeFrom(GridAvatarGameInfo);
             }
             input.ReadMessage(subBuilder);
-            CPFODIEHFDL = subBuilder;
+            GridAvatarGameInfo = subBuilder;
             break;
           }
           case 114: {
-            global::EggLink.DanhengServer.Proto.IJDGBCIMKKK subBuilder = new global::EggLink.DanhengServer.Proto.IJDGBCIMKKK();
-            if (gridGameInfoCase_ == GridGameInfoOneofCase.IGDDGJGGHNJ) {
-              subBuilder.MergeFrom(IGDDGJGGHNJ);
+            global::EggLink.DanhengServer.Proto.GridFightLevelInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightLevelInfo();
+            if (gridGameInfoCase_ == GridGameInfoOneofCase.GridLevelInfo) {
+              subBuilder.MergeFrom(GridLevelInfo);
             }
             input.ReadMessage(subBuilder);
-            IGDDGJGGHNJ = subBuilder;
+            GridLevelInfo = subBuilder;
             break;
           }
         }
@@ -645,12 +647,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            global::EggLink.DanhengServer.Proto.HHHEOKPPEAD subBuilder = new global::EggLink.DanhengServer.Proto.HHHEOKPPEAD();
-            if (gridGameInfoCase_ == GridGameInfoOneofCase.LNBGMJCNCCI) {
-              subBuilder.MergeFrom(LNBGMJCNCCI);
+            global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo();
+            if (gridGameInfoCase_ == GridGameInfoOneofCase.GridBasicInfo) {
+              subBuilder.MergeFrom(GridBasicInfo);
             }
             input.ReadMessage(subBuilder);
-            LNBGMJCNCCI = subBuilder;
+            GridBasicInfo = subBuilder;
             break;
           }
           case 66: {
@@ -681,21 +683,21 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 98: {
-            global::EggLink.DanhengServer.Proto.BGMNELOLHIJ subBuilder = new global::EggLink.DanhengServer.Proto.BGMNELOLHIJ();
-            if (gridGameInfoCase_ == GridGameInfoOneofCase.CPFODIEHFDL) {
-              subBuilder.MergeFrom(CPFODIEHFDL);
+            global::EggLink.DanhengServer.Proto.GridFightGameAvatarInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightGameAvatarInfo();
+            if (gridGameInfoCase_ == GridGameInfoOneofCase.GridAvatarGameInfo) {
+              subBuilder.MergeFrom(GridAvatarGameInfo);
             }
             input.ReadMessage(subBuilder);
-            CPFODIEHFDL = subBuilder;
+            GridAvatarGameInfo = subBuilder;
             break;
           }
           case 114: {
-            global::EggLink.DanhengServer.Proto.IJDGBCIMKKK subBuilder = new global::EggLink.DanhengServer.Proto.IJDGBCIMKKK();
-            if (gridGameInfoCase_ == GridGameInfoOneofCase.IGDDGJGGHNJ) {
-              subBuilder.MergeFrom(IGDDGJGGHNJ);
+            global::EggLink.DanhengServer.Proto.GridFightLevelInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightLevelInfo();
+            if (gridGameInfoCase_ == GridGameInfoOneofCase.GridLevelInfo) {
+              subBuilder.MergeFrom(GridLevelInfo);
             }
             input.ReadMessage(subBuilder);
-            IGDDGJGGHNJ = subBuilder;
+            GridLevelInfo = subBuilder;
             break;
           }
         }
