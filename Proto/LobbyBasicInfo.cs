@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static LobbyBasicInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRMb2JieUJhc2ljSW5mby5wcm90bxoVTG9iYnlQbGF5ZXJJbmZvLnByb3Rv",
-            "GhNMb2JieUdhbWVJbmZvLnByb3RvGhpMb2JieVBsYXllckJhc2ljSW5mby5w",
+            "ChRMb2JieUJhc2ljSW5mby5wcm90bxoTTG9iYnlHYW1lSW5mby5wcm90bxoa",
+            "TG9iYnlQbGF5ZXJCYXNpY0luZm8ucHJvdG8aFUxvYmJ5UGxheWVySW5mby5w",
             "cm90byKMAQoOTG9iYnlCYXNpY0luZm8SKQoKYmFzaWNfaW5mbxgBIAEoCzIV",
             "LkxvYmJ5UGxheWVyQmFzaWNJbmZvEisKEXBsYXllcl9sb2JieV9pbmZvGAIg",
             "ASgLMhAuTG9iYnlQbGF5ZXJJbmZvEiIKCnN0YWdlX2luZm8YAyABKAsyDi5M",
             "b2JieUdhbWVJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LobbyPlayerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyPlayerBasicInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LobbyGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyPlayerBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyPlayerInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.LobbyBasicInfo), global::EggLink.DanhengServer.Proto.LobbyBasicInfo.Parser, new[]{ "BasicInfo", "PlayerLobbyInfo", "StageInfo" }, null, null, null, null)
           }));

@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNVcGRhdGVNYXBSb3RhdGlvbkRhdGFTY05vdGlmeS5wcm90bxoRSUNJTUFL",
-            "QkFKR0IucHJvdG8aF1JvdGF0ZXJFbmVyZ3lJbmZvLnByb3RvGhFDaGFyZ2Vy",
-            "SW5mby5wcm90bxoRUm90YXRlckRhdGEucHJvdG8i/wEKHVVwZGF0ZU1hcFJv",
+            "QkFKR0IucHJvdG8aEVJvdGF0ZXJEYXRhLnByb3RvGhFDaGFyZ2VySW5mby5w",
+            "cm90bxoXUm90YXRlckVuZXJneUluZm8ucHJvdG8i/wEKHVVwZGF0ZU1hcFJv",
             "dGF0aW9uRGF0YVNjTm90aWZ5EhMKC05GTEJPTkRKQUlFGAogASgNEicKEXJv",
             "dGF0ZXJfZGF0YV9saXN0GAYgAygLMgwuUm90YXRlckRhdGESHQoVZXJhX2Zs",
             "aXBwZXJfcmVnaW9uX2lkGAEgASgFEicKC2VuZXJneV9pbmZvGAwgASgLMhIu",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "AygLMgwuQ2hhcmdlckluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ICIMAKBAJGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChargerInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.UpdateMapRotationDataScNotify), global::EggLink.DanhengServer.Proto.UpdateMapRotationDataScNotify.Parser, new[]{ "NFLBONDJAIE", "RotaterDataList", "EraFlipperRegionId", "EnergyInfo", "RogueMap", "OMEJLLMNPCN", "ChargerInfo" }, null, null, null, null)
           }));

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static ChallengeGroupStatisticsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5DaGFsbGVuZ2VHcm91cFN0YXRpc3RpY3MucHJvdG8aG01lbW9yeUdyb3Vw",
-            "U3RhdGlzdGljcy5wcm90bxoZQm9zc0dyb3VwU3RhdGlzdGljcy5wcm90bxoa",
-            "U3RvcnlHcm91cFN0YXRpc3RpY3MucHJvdG8i4wEKGENoYWxsZW5nZUdyb3Vw",
+            "Ch5DaGFsbGVuZ2VHcm91cFN0YXRpc3RpY3MucHJvdG8aGlN0b3J5R3JvdXBT",
+            "dGF0aXN0aWNzLnByb3RvGhlCb3NzR3JvdXBTdGF0aXN0aWNzLnByb3RvGhtN",
+            "ZW1vcnlHcm91cFN0YXRpc3RpY3MucHJvdG8i4wEKGENoYWxsZW5nZUdyb3Vw",
             "U3RhdGlzdGljcxIvCgxtZW1vcnlfZ3JvdXAYiA8gASgLMhYuTWVtb3J5R3Jv",
             "dXBTdGF0aXN0aWNzSAASLQoLc3RvcnlfZ3JvdXAY7QQgASgLMhUuU3RvcnlH",
             "cm91cFN0YXRpc3RpY3NIABIrCgpib3NzX2dyb3VwGOEMIAEoCzIULkJvc3NH",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "Cghncm91cF9pZBgEIAEoDUINCgtJSEFHR0lMREFOTEIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MemoryGroupStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.BossGroupStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.StoryGroupStatisticsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.StoryGroupStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.BossGroupStatisticsReflection.Descriptor, global::EggLink.DanhengServer.Proto.MemoryGroupStatisticsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChallengeGroupStatistics), global::EggLink.DanhengServer.Proto.ChallengeGroupStatistics.Parser, new[]{ "MemoryGroup", "StoryGroup", "BossGroup", "GroupTotalStars", "GroupId" }, new[]{ "IHAGGILDANL" }, null, null, null)
           }));

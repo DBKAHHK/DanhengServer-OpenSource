@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightGameBasicInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHcmlkRmlnaHRHYW1lQmFzaWNJbmZvLnByb3RvGhFPUElCQlBDSEZJSS5w",
-            "cm90bxoRT0xFSURCTEJJTEQucHJvdG8aEUNGQkNKSElBTU5OLnByb3RvGhdH",
-            "cmlkRmlnaHRMb2NrVHlwZS5wcm90byLSBAoWR3JpZEZpZ2h0R2FtZUJhc2lj",
+            "ChxHcmlkRmlnaHRHYW1lQmFzaWNJbmZvLnByb3RvGhFPTEVJREJMQklMRC5w",
+            "cm90bxoRQ0ZCQ0pISUFNTk4ucHJvdG8aF0dyaWRGaWdodExvY2tUeXBlLnBy",
+            "b3RvGhFPUElCQlBDSEZJSS5wcm90byLSBAoWR3JpZEZpZ2h0R2FtZUJhc2lj",
             "SW5mbxIcChRncmlkX2ZpZ2h0X2xpbmV1cF9ocBgDIAEoDRIlCglsb2NrX3R5",
             "cGUYBiABKA4yEi5HcmlkRmlnaHRMb2NrVHlwZRIiCgtPQ01HTUVIRUNCQhj0",
             "DCABKAsyDC5PUElCQlBDSEZJSRIjChtncmlkX2ZpZ2h0X21heF9hdmF0YXJf",
@@ -42,7 +42,7 @@ namespace EggLink.DanhengServer.Proto {
             "EiAKGGdyaWRfZmlnaHRfY3VyX2xldmVsX2V4cBgIIAEoDUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OPIBBPCHFIIReflection.Descriptor, global::EggLink.DanhengServer.Proto.OLEIDBLBILDReflection.Descriptor, global::EggLink.DanhengServer.Proto.CFBCJHIAMNNReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OLEIDBLBILDReflection.Descriptor, global::EggLink.DanhengServer.Proto.CFBCJHIAMNNReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPIBBPCHFIIReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo), global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo.Parser, new[]{ "GridFightLineupHp", "LockType", "OCMGMEHECBB", "GridFightMaxAvatarCount", "GridFightCurGold", "PFIHGHDIOAD", "LPEMPKFNNOL", "GridFightCurLevel", "JAHJHADAOGN", "EJAOLAHNKPC", "GridFightLevelCost", "GNHKDAMOGBN", "ACEFIPPNNPN", "CALCJMHAKPF", "GridFightMaxGold", "HLLIJICGONN", "GridFightOffFieldMaxCount", "GridFightMaxFieldCount", "GridFightCurLevelExp" }, null, null, null, null)
           }));

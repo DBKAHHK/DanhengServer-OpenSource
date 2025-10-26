@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static KKKFLPDOEPOReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFLS0tGTFBET0VQTy5wcm90byJhCgtLS0tGTFBET0VQTxITCgtKSE5LTU9I",
-            "TEJQShgEIAEoDRITCgtJQU5LTk5PTkZDUBgDIAMoDRITCgtFRUlKREhGTkVE",
-            "TRgGIAEoCBITCgtHQ1BGSUJHUEFORxgLIAEoDUIeqgIbRWdnTGluay5EYW5o",
-            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFLS0tGTFBET0VQTy5wcm90byJeCgtLS0tGTFBET0VQTxIQCgh0cmFpdF9p",
+            "ZBgEIAEoDRITCgtJQU5LTk5PTkZDUBgDIAMoDRITCgtFRUlKREhGTkVETRgG",
+            "IAEoCBITCgtHQ1BGSUJHUEFORxgLIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KKKFLPDOEPO), global::EggLink.DanhengServer.Proto.KKKFLPDOEPO.Parser, new[]{ "JHNKMOHLBPJ", "IANKNNONFCP", "EEIJDHFNEDM", "GCPFIBGPANG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KKKFLPDOEPO), global::EggLink.DanhengServer.Proto.KKKFLPDOEPO.Parser, new[]{ "TraitId", "IANKNNONFCP", "EEIJDHFNEDM", "GCPFIBGPANG" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KKKFLPDOEPO(KKKFLPDOEPO other) : this() {
-      jHNKMOHLBPJ_ = other.jHNKMOHLBPJ_;
+      traitId_ = other.traitId_;
       iANKNNONFCP_ = other.iANKNNONFCP_.Clone();
       eEIJDHFNEDM_ = other.eEIJDHFNEDM_;
       gCPFIBGPANG_ = other.gCPFIBGPANG_;
@@ -86,15 +86,15 @@ namespace EggLink.DanhengServer.Proto {
       return new KKKFLPDOEPO(this);
     }
 
-    /// <summary>Field number for the "JHNKMOHLBPJ" field.</summary>
-    public const int JHNKMOHLBPJFieldNumber = 4;
-    private uint jHNKMOHLBPJ_;
+    /// <summary>Field number for the "trait_id" field.</summary>
+    public const int TraitIdFieldNumber = 4;
+    private uint traitId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint JHNKMOHLBPJ {
-      get { return jHNKMOHLBPJ_; }
+    public uint TraitId {
+      get { return traitId_; }
       set {
-        jHNKMOHLBPJ_ = value;
+        traitId_ = value;
       }
     }
 
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (JHNKMOHLBPJ != other.JHNKMOHLBPJ) return false;
+      if (TraitId != other.TraitId) return false;
       if(!iANKNNONFCP_.Equals(other.iANKNNONFCP_)) return false;
       if (EEIJDHFNEDM != other.EEIJDHFNEDM) return false;
       if (GCPFIBGPANG != other.GCPFIBGPANG) return false;
@@ -159,7 +159,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (JHNKMOHLBPJ != 0) hash ^= JHNKMOHLBPJ.GetHashCode();
+      if (TraitId != 0) hash ^= TraitId.GetHashCode();
       hash ^= iANKNNONFCP_.GetHashCode();
       if (EEIJDHFNEDM != false) hash ^= EEIJDHFNEDM.GetHashCode();
       if (GCPFIBGPANG != 0) hash ^= GCPFIBGPANG.GetHashCode();
@@ -182,9 +182,9 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       iANKNNONFCP_.WriteTo(output, _repeated_iANKNNONFCP_codec);
-      if (JHNKMOHLBPJ != 0) {
+      if (TraitId != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(JHNKMOHLBPJ);
+        output.WriteUInt32(TraitId);
       }
       if (EEIJDHFNEDM != false) {
         output.WriteRawTag(48);
@@ -205,9 +205,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       iANKNNONFCP_.WriteTo(ref output, _repeated_iANKNNONFCP_codec);
-      if (JHNKMOHLBPJ != 0) {
+      if (TraitId != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(JHNKMOHLBPJ);
+        output.WriteUInt32(TraitId);
       }
       if (EEIJDHFNEDM != false) {
         output.WriteRawTag(48);
@@ -227,8 +227,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (JHNKMOHLBPJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JHNKMOHLBPJ);
+      if (TraitId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitId);
       }
       size += iANKNNONFCP_.CalculateSize(_repeated_iANKNNONFCP_codec);
       if (EEIJDHFNEDM != false) {
@@ -249,8 +249,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.JHNKMOHLBPJ != 0) {
-        JHNKMOHLBPJ = other.JHNKMOHLBPJ;
+      if (other.TraitId != 0) {
+        TraitId = other.TraitId;
       }
       iANKNNONFCP_.Add(other.iANKNNONFCP_);
       if (other.EEIJDHFNEDM != false) {
@@ -280,7 +280,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 32: {
-            JHNKMOHLBPJ = input.ReadUInt32();
+            TraitId = input.ReadUInt32();
             break;
           }
           case 48: {
@@ -312,7 +312,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 32: {
-            JHNKMOHLBPJ = input.ReadUInt32();
+            TraitId = input.ReadUInt32();
             break;
           }
           case 48: {

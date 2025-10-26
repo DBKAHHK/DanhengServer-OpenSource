@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static KDGDHPPIMPMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFLREdESFBQSU1QTS5wcm90byI3CgtLREdESFBQSU1QTRITCgtJRkVFTE5D",
-            "UEJLRhgPIAEoDRITCgtMSUJLTERBTEhKUBgGIAEoDUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFLREdESFBQSU1QTS5wcm90byI5CgtLREdESFBQSU1QTRITCgtJRkVFTE5D",
+            "UEJLRhgPIAEoDRIVCg1yb2xlX2Jhc2ljX2lkGAYgASgNQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KDGDHPPIMPM), global::EggLink.DanhengServer.Proto.KDGDHPPIMPM.Parser, new[]{ "IFEELNCPBKF", "LIBKLDALHJP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KDGDHPPIMPM), global::EggLink.DanhengServer.Proto.KDGDHPPIMPM.Parser, new[]{ "IFEELNCPBKF", "RoleBasicId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KDGDHPPIMPM(KDGDHPPIMPM other) : this() {
       iFEELNCPBKF_ = other.iFEELNCPBKF_;
-      lIBKLDALHJP_ = other.lIBKLDALHJP_;
+      roleBasicId_ = other.roleBasicId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -95,15 +95,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LIBKLDALHJP" field.</summary>
-    public const int LIBKLDALHJPFieldNumber = 6;
-    private uint lIBKLDALHJP_;
+    /// <summary>Field number for the "role_basic_id" field.</summary>
+    public const int RoleBasicIdFieldNumber = 6;
+    private uint roleBasicId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LIBKLDALHJP {
-      get { return lIBKLDALHJP_; }
+    public uint RoleBasicId {
+      get { return roleBasicId_; }
       set {
-        lIBKLDALHJP_ = value;
+        roleBasicId_ = value;
       }
     }
 
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (IFEELNCPBKF != other.IFEELNCPBKF) return false;
-      if (LIBKLDALHJP != other.LIBKLDALHJP) return false;
+      if (RoleBasicId != other.RoleBasicId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (IFEELNCPBKF != 0) hash ^= IFEELNCPBKF.GetHashCode();
-      if (LIBKLDALHJP != 0) hash ^= LIBKLDALHJP.GetHashCode();
+      if (RoleBasicId != 0) hash ^= RoleBasicId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LIBKLDALHJP != 0) {
+      if (RoleBasicId != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(LIBKLDALHJP);
+        output.WriteUInt32(RoleBasicId);
       }
       if (IFEELNCPBKF != 0) {
         output.WriteRawTag(120);
@@ -169,9 +169,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LIBKLDALHJP != 0) {
+      if (RoleBasicId != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(LIBKLDALHJP);
+        output.WriteUInt32(RoleBasicId);
       }
       if (IFEELNCPBKF != 0) {
         output.WriteRawTag(120);
@@ -190,8 +190,8 @@ namespace EggLink.DanhengServer.Proto {
       if (IFEELNCPBKF != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IFEELNCPBKF);
       }
-      if (LIBKLDALHJP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LIBKLDALHJP);
+      if (RoleBasicId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RoleBasicId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -208,8 +208,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IFEELNCPBKF != 0) {
         IFEELNCPBKF = other.IFEELNCPBKF;
       }
-      if (other.LIBKLDALHJP != 0) {
-        LIBKLDALHJP = other.LIBKLDALHJP;
+      if (other.RoleBasicId != 0) {
+        RoleBasicId = other.RoleBasicId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,7 +227,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 48: {
-            LIBKLDALHJP = input.ReadUInt32();
+            RoleBasicId = input.ReadUInt32();
             break;
           }
           case 120: {
@@ -250,7 +250,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 48: {
-            LIBKLDALHJP = input.ReadUInt32();
+            RoleBasicId = input.ReadUInt32();
             break;
           }
           case 120: {

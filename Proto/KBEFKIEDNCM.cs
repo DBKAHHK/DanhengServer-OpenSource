@@ -25,19 +25,19 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFLQkVGS0lFRE5DTS5wcm90bxoXR3JpZEZpZ2h0RHJvcEluZm8ucHJvdG8i",
-            "wwIKC0tCRUZLSUVETkNNEhMKC0xJQktMREFMSEpQGAEgASgNEg4KBmRhbWFn",
-            "ZRgCIAEoARIyCgtLRk9LQUlLR09LRhgDIAMoCzIdLktCRUZLSUVETkNNLktG",
-            "T0tBSUtHT0tGRW50cnkSKgoOZHJvcF9pdGVtX2xpc3QYBCABKAsyEi5Hcmlk",
-            "RmlnaHREcm9wSW5mbxITCgtCQ0RGRkxPRkVORxgFIAEoARIyCgtLREhLS1BF",
-            "SkpNRhgGIAMoCzIdLktCRUZLSUVETkNNLktESEtLUEVKSk1GRW50cnkaMgoQ",
-            "S0ZPS0FJS0dPS0ZFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKA06",
-            "AjgBGjIKEEtESEtLUEVKSk1GRW50cnkSCwoDa2V5GAEgASgNEg0KBXZhbHVl",
-            "GAIgASgBOgI4AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "2gIKC0tCRUZLSUVETkNNEhUKDXJvbGVfYmFzaWNfaWQYASABKA0SDgoGZGFt",
+            "YWdlGAIgASgBEkEKFGdhbWVfc2F2ZWRfdmFsdWVfbWFwGAMgAygLMiMuS0JF",
+            "RktJRUROQ00uR2FtZVNhdmVkVmFsdWVNYXBFbnRyeRIqCg5kcm9wX2l0ZW1f",
+            "bGlzdBgEIAEoCzISLkdyaWRGaWdodERyb3BJbmZvEhMKC0JDREZGTE9GRU5H",
+            "GAUgASgBEjIKC0tESEtLUEVKSk1GGAYgAygLMh0uS0JFRktJRUROQ00uS0RI",
+            "S0tQRUpKTUZFbnRyeRo4ChZHYW1lU2F2ZWRWYWx1ZU1hcEVudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoDToCOAEaMgoQS0RIS0tQRUpKTUZFbnRy",
+            "eRILCgNrZXkYASABKA0SDQoFdmFsdWUYAiABKAE6AjgBQh6qAhtFZ2dMaW5r",
+            "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightDropInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KBEFKIEDNCM), global::EggLink.DanhengServer.Proto.KBEFKIEDNCM.Parser, new[]{ "LIBKLDALHJP", "Damage", "KFOKAIKGOKF", "DropItemList", "BCDFFLOFENG", "KDHKKPEJJMF" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.KBEFKIEDNCM), global::EggLink.DanhengServer.Proto.KBEFKIEDNCM.Parser, new[]{ "RoleBasicId", "Damage", "GameSavedValueMap", "DropItemList", "BCDFFLOFENG", "KDHKKPEJJMF" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -79,9 +79,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KBEFKIEDNCM(KBEFKIEDNCM other) : this() {
-      lIBKLDALHJP_ = other.lIBKLDALHJP_;
+      roleBasicId_ = other.roleBasicId_;
       damage_ = other.damage_;
-      kFOKAIKGOKF_ = other.kFOKAIKGOKF_.Clone();
+      gameSavedValueMap_ = other.gameSavedValueMap_.Clone();
       dropItemList_ = other.dropItemList_ != null ? other.dropItemList_.Clone() : null;
       bCDFFLOFENG_ = other.bCDFFLOFENG_;
       kDHKKPEJJMF_ = other.kDHKKPEJJMF_.Clone();
@@ -94,15 +94,15 @@ namespace EggLink.DanhengServer.Proto {
       return new KBEFKIEDNCM(this);
     }
 
-    /// <summary>Field number for the "LIBKLDALHJP" field.</summary>
-    public const int LIBKLDALHJPFieldNumber = 1;
-    private uint lIBKLDALHJP_;
+    /// <summary>Field number for the "role_basic_id" field.</summary>
+    public const int RoleBasicIdFieldNumber = 1;
+    private uint roleBasicId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LIBKLDALHJP {
-      get { return lIBKLDALHJP_; }
+    public uint RoleBasicId {
+      get { return roleBasicId_; }
       set {
-        lIBKLDALHJP_ = value;
+        roleBasicId_ = value;
       }
     }
 
@@ -118,15 +118,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KFOKAIKGOKF" field.</summary>
-    public const int KFOKAIKGOKFFieldNumber = 3;
-    private static readonly pbc::MapField<string, uint>.Codec _map_kFOKAIKGOKF_codec
+    /// <summary>Field number for the "game_saved_value_map" field.</summary>
+    public const int GameSavedValueMapFieldNumber = 3;
+    private static readonly pbc::MapField<string, uint>.Codec _map_gameSavedValueMap_codec
         = new pbc::MapField<string, uint>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForUInt32(16, 0), 26);
-    private readonly pbc::MapField<string, uint> kFOKAIKGOKF_ = new pbc::MapField<string, uint>();
+    private readonly pbc::MapField<string, uint> gameSavedValueMap_ = new pbc::MapField<string, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, uint> KFOKAIKGOKF {
-      get { return kFOKAIKGOKF_; }
+    public pbc::MapField<string, uint> GameSavedValueMap {
+      get { return gameSavedValueMap_; }
     }
 
     /// <summary>Field number for the "drop_item_list" field.</summary>
@@ -179,9 +179,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LIBKLDALHJP != other.LIBKLDALHJP) return false;
+      if (RoleBasicId != other.RoleBasicId) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Damage, other.Damage)) return false;
-      if (!KFOKAIKGOKF.Equals(other.KFOKAIKGOKF)) return false;
+      if (!GameSavedValueMap.Equals(other.GameSavedValueMap)) return false;
       if (!object.Equals(DropItemList, other.DropItemList)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(BCDFFLOFENG, other.BCDFFLOFENG)) return false;
       if (!KDHKKPEJJMF.Equals(other.KDHKKPEJJMF)) return false;
@@ -192,9 +192,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LIBKLDALHJP != 0) hash ^= LIBKLDALHJP.GetHashCode();
+      if (RoleBasicId != 0) hash ^= RoleBasicId.GetHashCode();
       if (Damage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Damage);
-      hash ^= KFOKAIKGOKF.GetHashCode();
+      hash ^= GameSavedValueMap.GetHashCode();
       if (dropItemList_ != null) hash ^= DropItemList.GetHashCode();
       if (BCDFFLOFENG != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BCDFFLOFENG);
       hash ^= KDHKKPEJJMF.GetHashCode();
@@ -216,15 +216,15 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LIBKLDALHJP != 0) {
+      if (RoleBasicId != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(LIBKLDALHJP);
+        output.WriteUInt32(RoleBasicId);
       }
       if (Damage != 0D) {
         output.WriteRawTag(17);
         output.WriteDouble(Damage);
       }
-      kFOKAIKGOKF_.WriteTo(output, _map_kFOKAIKGOKF_codec);
+      gameSavedValueMap_.WriteTo(output, _map_gameSavedValueMap_codec);
       if (dropItemList_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(DropItemList);
@@ -244,15 +244,15 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LIBKLDALHJP != 0) {
+      if (RoleBasicId != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(LIBKLDALHJP);
+        output.WriteUInt32(RoleBasicId);
       }
       if (Damage != 0D) {
         output.WriteRawTag(17);
         output.WriteDouble(Damage);
       }
-      kFOKAIKGOKF_.WriteTo(ref output, _map_kFOKAIKGOKF_codec);
+      gameSavedValueMap_.WriteTo(ref output, _map_gameSavedValueMap_codec);
       if (dropItemList_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(DropItemList);
@@ -272,13 +272,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LIBKLDALHJP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LIBKLDALHJP);
+      if (RoleBasicId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RoleBasicId);
       }
       if (Damage != 0D) {
         size += 1 + 8;
       }
-      size += kFOKAIKGOKF_.CalculateSize(_map_kFOKAIKGOKF_codec);
+      size += gameSavedValueMap_.CalculateSize(_map_gameSavedValueMap_codec);
       if (dropItemList_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DropItemList);
       }
@@ -298,13 +298,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LIBKLDALHJP != 0) {
-        LIBKLDALHJP = other.LIBKLDALHJP;
+      if (other.RoleBasicId != 0) {
+        RoleBasicId = other.RoleBasicId;
       }
       if (other.Damage != 0D) {
         Damage = other.Damage;
       }
-      kFOKAIKGOKF_.MergeFrom(other.kFOKAIKGOKF_);
+      gameSavedValueMap_.MergeFrom(other.gameSavedValueMap_);
       if (other.dropItemList_ != null) {
         if (dropItemList_ == null) {
           DropItemList = new global::EggLink.DanhengServer.Proto.GridFightDropInfo();
@@ -331,7 +331,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            LIBKLDALHJP = input.ReadUInt32();
+            RoleBasicId = input.ReadUInt32();
             break;
           }
           case 17: {
@@ -339,7 +339,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 26: {
-            kFOKAIKGOKF_.AddEntriesFrom(input, _map_kFOKAIKGOKF_codec);
+            gameSavedValueMap_.AddEntriesFrom(input, _map_gameSavedValueMap_codec);
             break;
           }
           case 34: {
@@ -373,7 +373,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            LIBKLDALHJP = input.ReadUInt32();
+            RoleBasicId = input.ReadUInt32();
             break;
           }
           case 17: {
@@ -381,7 +381,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 26: {
-            kFOKAIKGOKF_.AddEntriesFrom(ref input, _map_kFOKAIKGOKF_codec);
+            gameSavedValueMap_.AddEntriesFrom(ref input, _map_gameSavedValueMap_codec);
             break;
           }
           case 34: {

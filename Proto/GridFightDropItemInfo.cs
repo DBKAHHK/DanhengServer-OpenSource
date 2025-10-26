@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightDropItemInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHcmlkRmlnaHREcm9wSXRlbUluZm8ucHJvdG8aF0dyaWRGaWdodERyb3BU",
-            "eXBlLnByb3RvGh1HcmlkRHJvcEl0ZW1EaXNwbGF5SW5mby5wcm90byKSAQoV",
+            "ChtHcmlkRmlnaHREcm9wSXRlbUluZm8ucHJvdG8aHUdyaWREcm9wSXRlbURp",
+            "c3BsYXlJbmZvLnByb3RvGhdHcmlkRmlnaHREcm9wVHlwZS5wcm90byKSAQoV",
             "R3JpZEZpZ2h0RHJvcEl0ZW1JbmZvEiUKCWRyb3BfdHlwZRgBIAEoDjISLkdy",
             "aWRGaWdodERyb3BUeXBlEhQKDGRyb3BfaXRlbV9pZBgCIAEoDRILCgNudW0Y",
             "AyABKA0SLwoNZGlzcGxheV92YWx1ZRgFIAEoCzIYLkdyaWREcm9wSXRlbURp",
             "c3BsYXlJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightDropTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridDropItemDisplayInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridDropItemDisplayInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDropTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightDropItemInfo), global::EggLink.DanhengServer.Proto.GridFightDropItemInfo.Parser, new[]{ "DropType", "DropItemId", "Num", "DisplayValue" }, null, null, null, null)
           }));

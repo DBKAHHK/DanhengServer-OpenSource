@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9HcmlkRmlnaHRUcmFpdFVwZGF0ZUNzUmVxLnByb3RvGhFPQUFNRUtNQ09I",
-            "SC5wcm90byJ6ChlHcmlkRmlnaHRUcmFpdFVwZGF0ZUNzUmVxEiQKC0RMTEdP",
-            "SkxJSE1MGJADIAEoCzIMLk9BQU1FS01DT0hISAASEwoLSkhOS01PSExCUEoY",
-            "BiABKA0SEwoLR0NQRklCR1BBTkcYCiABKA1CDQoLRVBJSklKQ0VLSE9CHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "SC5wcm90byJ3ChlHcmlkRmlnaHRUcmFpdFVwZGF0ZUNzUmVxEiQKC0RMTEdP",
+            "SkxJSE1MGJADIAEoCzIMLk9BQU1FS01DT0hISAASEAoIdHJhaXRfaWQYBiAB",
+            "KA0SEwoLR0NQRklCR1BBTkcYCiABKA1CDQoLRVBJSklKQ0VLSE9CHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OAAMEKMCOHHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitUpdateCsReq), global::EggLink.DanhengServer.Proto.GridFightTraitUpdateCsReq.Parser, new[]{ "DLLGOJLIHML", "JHNKMOHLBPJ", "GCPFIBGPANG" }, new[]{ "EPIJIJCEKHO" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitUpdateCsReq), global::EggLink.DanhengServer.Proto.GridFightTraitUpdateCsReq.Parser, new[]{ "DLLGOJLIHML", "TraitId", "GCPFIBGPANG" }, new[]{ "EPIJIJCEKHO" }, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightTraitUpdateCsReq(GridFightTraitUpdateCsReq other) : this() {
-      jHNKMOHLBPJ_ = other.jHNKMOHLBPJ_;
+      traitId_ = other.traitId_;
       gCPFIBGPANG_ = other.gCPFIBGPANG_;
       switch (other.EPIJIJCEKHOCase) {
         case EPIJIJCEKHOOneofCase.DLLGOJLIHML:
@@ -103,15 +103,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "JHNKMOHLBPJ" field.</summary>
-    public const int JHNKMOHLBPJFieldNumber = 6;
-    private uint jHNKMOHLBPJ_;
+    /// <summary>Field number for the "trait_id" field.</summary>
+    public const int TraitIdFieldNumber = 6;
+    private uint traitId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint JHNKMOHLBPJ {
-      get { return jHNKMOHLBPJ_; }
+    public uint TraitId {
+      get { return traitId_; }
       set {
-        jHNKMOHLBPJ_ = value;
+        traitId_ = value;
       }
     }
 
@@ -163,7 +163,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(DLLGOJLIHML, other.DLLGOJLIHML)) return false;
-      if (JHNKMOHLBPJ != other.JHNKMOHLBPJ) return false;
+      if (TraitId != other.TraitId) return false;
       if (GCPFIBGPANG != other.GCPFIBGPANG) return false;
       if (EPIJIJCEKHOCase != other.EPIJIJCEKHOCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -174,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.DLLGOJLIHML) hash ^= DLLGOJLIHML.GetHashCode();
-      if (JHNKMOHLBPJ != 0) hash ^= JHNKMOHLBPJ.GetHashCode();
+      if (TraitId != 0) hash ^= TraitId.GetHashCode();
       if (GCPFIBGPANG != 0) hash ^= GCPFIBGPANG.GetHashCode();
       hash ^= (int) ePIJIJCEKHOCase_;
       if (_unknownFields != null) {
@@ -195,9 +195,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (JHNKMOHLBPJ != 0) {
+      if (TraitId != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(JHNKMOHLBPJ);
+        output.WriteUInt32(TraitId);
       }
       if (GCPFIBGPANG != 0) {
         output.WriteRawTag(80);
@@ -217,9 +217,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (JHNKMOHLBPJ != 0) {
+      if (TraitId != 0) {
         output.WriteRawTag(48);
-        output.WriteUInt32(JHNKMOHLBPJ);
+        output.WriteUInt32(TraitId);
       }
       if (GCPFIBGPANG != 0) {
         output.WriteRawTag(80);
@@ -242,8 +242,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.DLLGOJLIHML) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DLLGOJLIHML);
       }
-      if (JHNKMOHLBPJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JHNKMOHLBPJ);
+      if (TraitId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitId);
       }
       if (GCPFIBGPANG != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GCPFIBGPANG);
@@ -260,8 +260,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.JHNKMOHLBPJ != 0) {
-        JHNKMOHLBPJ = other.JHNKMOHLBPJ;
+      if (other.TraitId != 0) {
+        TraitId = other.TraitId;
       }
       if (other.GCPFIBGPANG != 0) {
         GCPFIBGPANG = other.GCPFIBGPANG;
@@ -291,7 +291,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 48: {
-            JHNKMOHLBPJ = input.ReadUInt32();
+            TraitId = input.ReadUInt32();
             break;
           }
           case 80: {
@@ -323,7 +323,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 48: {
-            JHNKMOHLBPJ = input.ReadUInt32();
+            TraitId = input.ReadUInt32();
             break;
           }
           case 80: {

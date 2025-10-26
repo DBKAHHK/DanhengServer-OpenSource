@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9GYXRlU2hvcFJlZnJlc2hHb29kc1NjUnNwLnByb3RvGhFFTU5NTElJTEtL",
-            "RS5wcm90byJkChlGYXRlU2hvcFJlZnJlc2hHb29kc1NjUnNwEiEKC1BQSUJC",
-            "S0hMTUpDGAogAygLMgwuRU1OTUxJSUxLS0USDwoHcmV0Y29kZRgDIAEoDRIT",
-            "CgtESVBKT0lBQ0xIThgBIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "RS5wcm90byJoChlGYXRlU2hvcFJlZnJlc2hHb29kc1NjUnNwEiUKD3Nob3Bf",
+            "Z29vZHNfbGlzdBgKIAMoCzIMLkVNTk1MSUlMS0tFEg8KB3JldGNvZGUYAyAB",
+            "KA0SEwoLRElQSk9JQUNMSE4YASABKAhCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EMNMLIILKKEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FateShopRefreshGoodsScRsp), global::EggLink.DanhengServer.Proto.FateShopRefreshGoodsScRsp.Parser, new[]{ "PPIBBKHLMJC", "Retcode", "DIPJOIACLHN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FateShopRefreshGoodsScRsp), global::EggLink.DanhengServer.Proto.FateShopRefreshGoodsScRsp.Parser, new[]{ "ShopGoodsList", "Retcode", "DIPJOIACLHN" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FateShopRefreshGoodsScRsp(FateShopRefreshGoodsScRsp other) : this() {
-      pPIBBKHLMJC_ = other.pPIBBKHLMJC_.Clone();
+      shopGoodsList_ = other.shopGoodsList_.Clone();
       retcode_ = other.retcode_;
       dIPJOIACLHN_ = other.dIPJOIACLHN_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -86,15 +86,15 @@ namespace EggLink.DanhengServer.Proto {
       return new FateShopRefreshGoodsScRsp(this);
     }
 
-    /// <summary>Field number for the "PPIBBKHLMJC" field.</summary>
-    public const int PPIBBKHLMJCFieldNumber = 10;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EMNMLIILKKE> _repeated_pPIBBKHLMJC_codec
+    /// <summary>Field number for the "shop_goods_list" field.</summary>
+    public const int ShopGoodsListFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EMNMLIILKKE> _repeated_shopGoodsList_codec
         = pb::FieldCodec.ForMessage(82, global::EggLink.DanhengServer.Proto.EMNMLIILKKE.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EMNMLIILKKE> pPIBBKHLMJC_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EMNMLIILKKE>();
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EMNMLIILKKE> shopGoodsList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EMNMLIILKKE>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EMNMLIILKKE> PPIBBKHLMJC {
-      get { return pPIBBKHLMJC_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EMNMLIILKKE> ShopGoodsList {
+      get { return shopGoodsList_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!pPIBBKHLMJC_.Equals(other.pPIBBKHLMJC_)) return false;
+      if(!shopGoodsList_.Equals(other.shopGoodsList_)) return false;
       if (Retcode != other.Retcode) return false;
       if (DIPJOIACLHN != other.DIPJOIACLHN) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= pPIBBKHLMJC_.GetHashCode();
+      hash ^= shopGoodsList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (DIPJOIACLHN != false) hash ^= DIPJOIACLHN.GetHashCode();
       if (_unknownFields != null) {
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      pPIBBKHLMJC_.WriteTo(output, _repeated_pPIBBKHLMJC_codec);
+      shopGoodsList_.WriteTo(output, _repeated_shopGoodsList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -194,7 +194,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      pPIBBKHLMJC_.WriteTo(ref output, _repeated_pPIBBKHLMJC_codec);
+      shopGoodsList_.WriteTo(ref output, _repeated_shopGoodsList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -205,7 +205,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += pPIBBKHLMJC_.CalculateSize(_repeated_pPIBBKHLMJC_codec);
+      size += shopGoodsList_.CalculateSize(_repeated_shopGoodsList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -224,7 +224,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      pPIBBKHLMJC_.Add(other.pPIBBKHLMJC_);
+      shopGoodsList_.Add(other.shopGoodsList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -255,7 +255,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 82: {
-            pPIBBKHLMJC_.AddEntriesFrom(input, _repeated_pPIBBKHLMJC_codec);
+            shopGoodsList_.AddEntriesFrom(input, _repeated_shopGoodsList_codec);
             break;
           }
         }
@@ -282,7 +282,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 82: {
-            pPIBBKHLMJC_.AddEntriesFrom(ref input, _repeated_pPIBBKHLMJC_codec);
+            shopGoodsList_.AddEntriesFrom(ref input, _repeated_shopGoodsList_codec);
             break;
           }
         }

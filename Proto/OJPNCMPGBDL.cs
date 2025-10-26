@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static OJPNCMPGBDLReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFPSlBOQ01QR0JETC5wcm90byI3CgtPSlBOQ01QR0JETBITCgtMSUJLTERB",
-            "TEhKUBgCIAEoDRITCgtDREZHS0dMREtMRxgDIAEoDUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFPSlBOQ01QR0JETC5wcm90byI+CgtPSlBOQ01QR0JETBIVCg1yb2xlX2Jh",
+            "c2ljX2lkGAIgASgNEhgKEHNob3BfaXRlbV93ZWlnaHQYAyABKA1CHqoCG0Vn",
+            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OJPNCMPGBDL), global::EggLink.DanhengServer.Proto.OJPNCMPGBDL.Parser, new[]{ "LIBKLDALHJP", "CDFGKGLDKLG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.OJPNCMPGBDL), global::EggLink.DanhengServer.Proto.OJPNCMPGBDL.Parser, new[]{ "RoleBasicId", "ShopItemWeight" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OJPNCMPGBDL(OJPNCMPGBDL other) : this() {
-      lIBKLDALHJP_ = other.lIBKLDALHJP_;
-      cDFGKGLDKLG_ = other.cDFGKGLDKLG_;
+      roleBasicId_ = other.roleBasicId_;
+      shopItemWeight_ = other.shopItemWeight_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,27 +83,27 @@ namespace EggLink.DanhengServer.Proto {
       return new OJPNCMPGBDL(this);
     }
 
-    /// <summary>Field number for the "LIBKLDALHJP" field.</summary>
-    public const int LIBKLDALHJPFieldNumber = 2;
-    private uint lIBKLDALHJP_;
+    /// <summary>Field number for the "role_basic_id" field.</summary>
+    public const int RoleBasicIdFieldNumber = 2;
+    private uint roleBasicId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LIBKLDALHJP {
-      get { return lIBKLDALHJP_; }
+    public uint RoleBasicId {
+      get { return roleBasicId_; }
       set {
-        lIBKLDALHJP_ = value;
+        roleBasicId_ = value;
       }
     }
 
-    /// <summary>Field number for the "CDFGKGLDKLG" field.</summary>
-    public const int CDFGKGLDKLGFieldNumber = 3;
-    private uint cDFGKGLDKLG_;
+    /// <summary>Field number for the "shop_item_weight" field.</summary>
+    public const int ShopItemWeightFieldNumber = 3;
+    private uint shopItemWeight_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CDFGKGLDKLG {
-      get { return cDFGKGLDKLG_; }
+    public uint ShopItemWeight {
+      get { return shopItemWeight_; }
       set {
-        cDFGKGLDKLG_ = value;
+        shopItemWeight_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LIBKLDALHJP != other.LIBKLDALHJP) return false;
-      if (CDFGKGLDKLG != other.CDFGKGLDKLG) return false;
+      if (RoleBasicId != other.RoleBasicId) return false;
+      if (ShopItemWeight != other.ShopItemWeight) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LIBKLDALHJP != 0) hash ^= LIBKLDALHJP.GetHashCode();
-      if (CDFGKGLDKLG != 0) hash ^= CDFGKGLDKLG.GetHashCode();
+      if (RoleBasicId != 0) hash ^= RoleBasicId.GetHashCode();
+      if (ShopItemWeight != 0) hash ^= ShopItemWeight.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LIBKLDALHJP != 0) {
+      if (RoleBasicId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(LIBKLDALHJP);
+        output.WriteUInt32(RoleBasicId);
       }
-      if (CDFGKGLDKLG != 0) {
+      if (ShopItemWeight != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(CDFGKGLDKLG);
+        output.WriteUInt32(ShopItemWeight);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LIBKLDALHJP != 0) {
+      if (RoleBasicId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(LIBKLDALHJP);
+        output.WriteUInt32(RoleBasicId);
       }
-      if (CDFGKGLDKLG != 0) {
+      if (ShopItemWeight != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(CDFGKGLDKLG);
+        output.WriteUInt32(ShopItemWeight);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LIBKLDALHJP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LIBKLDALHJP);
+      if (RoleBasicId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RoleBasicId);
       }
-      if (CDFGKGLDKLG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CDFGKGLDKLG);
+      if (ShopItemWeight != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ShopItemWeight);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LIBKLDALHJP != 0) {
-        LIBKLDALHJP = other.LIBKLDALHJP;
+      if (other.RoleBasicId != 0) {
+        RoleBasicId = other.RoleBasicId;
       }
-      if (other.CDFGKGLDKLG != 0) {
-        CDFGKGLDKLG = other.CDFGKGLDKLG;
+      if (other.ShopItemWeight != 0) {
+        ShopItemWeight = other.ShopItemWeight;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            LIBKLDALHJP = input.ReadUInt32();
+            RoleBasicId = input.ReadUInt32();
             break;
           }
           case 24: {
-            CDFGKGLDKLG = input.ReadUInt32();
+            ShopItemWeight = input.ReadUInt32();
             break;
           }
         }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            LIBKLDALHJP = input.ReadUInt32();
+            RoleBasicId = input.ReadUInt32();
             break;
           }
           case 24: {
-            CDFGKGLDKLG = input.ReadUInt32();
+            ShopItemWeight = input.ReadUInt32();
             break;
           }
         }

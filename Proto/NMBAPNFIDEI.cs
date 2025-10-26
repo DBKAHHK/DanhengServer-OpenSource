@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static NMBAPNFIDEIReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFOTUJBUE5GSURFSS5wcm90bxoRUE1EUEFHQ1BFRk4ucHJvdG8iWgoLTk1C",
-            "QVBORklERUkSEwoLSkhOS01PSExCUEoYAiABKA0SIQoLSkFQTUpNT05QSUEY",
-            "DCABKAsyDC5QTURQQUdDUEVGThITCgtNQ0pPTEFKUEhPQxgIIAEoCEIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFOTUJBUE5GSURFSS5wcm90bxoRUE1EUEFHQ1BFRk4ucHJvdG8iVwoLTk1C",
+            "QVBORklERUkSEAoIdHJhaXRfaWQYAiABKA0SIQoLSkFQTUpNT05QSUEYDCAB",
+            "KAsyDC5QTURQQUdDUEVGThITCgtNQ0pPTEFKUEhPQxgIIAEoCEIeqgIbRWdn",
+            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PMDPAGCPEFNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NMBAPNFIDEI), global::EggLink.DanhengServer.Proto.NMBAPNFIDEI.Parser, new[]{ "JHNKMOHLBPJ", "JAPMJMONPIA", "MCJOLAJPHOC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NMBAPNFIDEI), global::EggLink.DanhengServer.Proto.NMBAPNFIDEI.Parser, new[]{ "TraitId", "JAPMJMONPIA", "MCJOLAJPHOC" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NMBAPNFIDEI(NMBAPNFIDEI other) : this() {
-      jHNKMOHLBPJ_ = other.jHNKMOHLBPJ_;
+      traitId_ = other.traitId_;
       jAPMJMONPIA_ = other.jAPMJMONPIA_ != null ? other.jAPMJMONPIA_.Clone() : null;
       mCJOLAJPHOC_ = other.mCJOLAJPHOC_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new NMBAPNFIDEI(this);
     }
 
-    /// <summary>Field number for the "JHNKMOHLBPJ" field.</summary>
-    public const int JHNKMOHLBPJFieldNumber = 2;
-    private uint jHNKMOHLBPJ_;
+    /// <summary>Field number for the "trait_id" field.</summary>
+    public const int TraitIdFieldNumber = 2;
+    private uint traitId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint JHNKMOHLBPJ {
-      get { return jHNKMOHLBPJ_; }
+    public uint TraitId {
+      get { return traitId_; }
       set {
-        jHNKMOHLBPJ_ = value;
+        traitId_ = value;
       }
     }
 
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (JHNKMOHLBPJ != other.JHNKMOHLBPJ) return false;
+      if (TraitId != other.TraitId) return false;
       if (!object.Equals(JAPMJMONPIA, other.JAPMJMONPIA)) return false;
       if (MCJOLAJPHOC != other.MCJOLAJPHOC) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (JHNKMOHLBPJ != 0) hash ^= JHNKMOHLBPJ.GetHashCode();
+      if (TraitId != 0) hash ^= TraitId.GetHashCode();
       if (jAPMJMONPIA_ != null) hash ^= JAPMJMONPIA.GetHashCode();
       if (MCJOLAJPHOC != false) hash ^= MCJOLAJPHOC.GetHashCode();
       if (_unknownFields != null) {
@@ -167,9 +167,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (JHNKMOHLBPJ != 0) {
+      if (TraitId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(JHNKMOHLBPJ);
+        output.WriteUInt32(TraitId);
       }
       if (MCJOLAJPHOC != false) {
         output.WriteRawTag(64);
@@ -189,9 +189,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (JHNKMOHLBPJ != 0) {
+      if (TraitId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(JHNKMOHLBPJ);
+        output.WriteUInt32(TraitId);
       }
       if (MCJOLAJPHOC != false) {
         output.WriteRawTag(64);
@@ -211,8 +211,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (JHNKMOHLBPJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JHNKMOHLBPJ);
+      if (TraitId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitId);
       }
       if (jAPMJMONPIA_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(JAPMJMONPIA);
@@ -232,8 +232,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.JHNKMOHLBPJ != 0) {
-        JHNKMOHLBPJ = other.JHNKMOHLBPJ;
+      if (other.TraitId != 0) {
+        TraitId = other.TraitId;
       }
       if (other.jAPMJMONPIA_ != null) {
         if (jAPMJMONPIA_ == null) {
@@ -260,7 +260,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            JHNKMOHLBPJ = input.ReadUInt32();
+            TraitId = input.ReadUInt32();
             break;
           }
           case 64: {
@@ -290,7 +290,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            JHNKMOHLBPJ = input.ReadUInt32();
+            TraitId = input.ReadUInt32();
             break;
           }
           case 64: {

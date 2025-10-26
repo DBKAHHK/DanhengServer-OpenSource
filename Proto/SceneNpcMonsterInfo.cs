@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static SceneNpcMonsterInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlTY2VuZU5wY01vbnN0ZXJJbmZvLnByb3RvGhlOcGNNb25zdGVyRXh0cmFJ",
-            "bmZvLnByb3RvGhFPRVBBTkRPS0VKRC5wcm90byLHAQoTU2NlbmVOcGNNb25z",
+            "ChlTY2VuZU5wY01vbnN0ZXJJbmZvLnByb3RvGhFPRVBBTkRPS0VKRC5wcm90",
+            "bxoZTnBjTW9uc3RlckV4dHJhSW5mby5wcm90byLHAQoTU2NlbmVOcGNNb25z",
             "dGVySW5mbxITCgt3b3JsZF9sZXZlbBgOIAEoDRIhCgtHRUlGUERIQktCRhgH",
             "IAEoCzIMLk9FUEFORE9LRUpEEhAKCGV2ZW50X2lkGAYgASgNEhMKC01QRkVE",
             "RkJLS0RGGAwgASgIEhIKCm1vbnN0ZXJfaWQYCyABKA0SEwoLSURQSklETkxF",
             "SEgYCiABKAgSKAoKZXh0cmFfaW5mbxgIIAEoCzIULk5wY01vbnN0ZXJFeHRy",
             "YUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NpcMonsterExtraInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OEPANDOKEJDReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OEPANDOKEJDReflection.Descriptor, global::EggLink.DanhengServer.Proto.NpcMonsterExtraInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfo), global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfo.Parser, new[]{ "WorldLevel", "GEIFPDHBKBF", "EventId", "MPFEDFBKKDF", "MonsterId", "IDPJIDNLEHH", "ExtraInfo" }, null, null, null, null)
           }));

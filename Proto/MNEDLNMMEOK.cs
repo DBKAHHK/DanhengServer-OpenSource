@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static MNEDLNMMEOKReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFNTkVETE5NTUVPSy5wcm90byKKAQoLTU5FRExOTU1FT0sSEwoLSEJFS0VG",
-            "S0pBR0EYASABKA0SMgoLS0ZPS0FJS0dPS0YYAiADKAsyHS5NTkVETE5NTUVP",
-            "Sy5LRk9LQUlLR09LRkVudHJ5GjIKEEtGT0tBSUtHT0tGRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgNOgI4AUIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFNTkVETE5NTUVPSy5wcm90byKeAQoLTU5FRExOTU1FT0sSEgoKYXVnbWVu",
+            "dF9pZBgBIAEoDRJBChRnYW1lX3NhdmVkX3ZhbHVlX21hcBgCIAMoCzIjLk1O",
+            "RURMTk1NRU9LLkdhbWVTYXZlZFZhbHVlTWFwRW50cnkaOAoWR2FtZVNhdmVk",
+            "VmFsdWVNYXBFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKA06AjgB",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MNEDLNMMEOK), global::EggLink.DanhengServer.Proto.MNEDLNMMEOK.Parser, new[]{ "HBEKEFKJAGA", "KFOKAIKGOKF" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MNEDLNMMEOK), global::EggLink.DanhengServer.Proto.MNEDLNMMEOK.Parser, new[]{ "AugmentId", "GameSavedValueMap" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -74,8 +74,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MNEDLNMMEOK(MNEDLNMMEOK other) : this() {
-      hBEKEFKJAGA_ = other.hBEKEFKJAGA_;
-      kFOKAIKGOKF_ = other.kFOKAIKGOKF_.Clone();
+      augmentId_ = other.augmentId_;
+      gameSavedValueMap_ = other.gameSavedValueMap_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,27 +85,27 @@ namespace EggLink.DanhengServer.Proto {
       return new MNEDLNMMEOK(this);
     }
 
-    /// <summary>Field number for the "HBEKEFKJAGA" field.</summary>
-    public const int HBEKEFKJAGAFieldNumber = 1;
-    private uint hBEKEFKJAGA_;
+    /// <summary>Field number for the "augment_id" field.</summary>
+    public const int AugmentIdFieldNumber = 1;
+    private uint augmentId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HBEKEFKJAGA {
-      get { return hBEKEFKJAGA_; }
+    public uint AugmentId {
+      get { return augmentId_; }
       set {
-        hBEKEFKJAGA_ = value;
+        augmentId_ = value;
       }
     }
 
-    /// <summary>Field number for the "KFOKAIKGOKF" field.</summary>
-    public const int KFOKAIKGOKFFieldNumber = 2;
-    private static readonly pbc::MapField<string, uint>.Codec _map_kFOKAIKGOKF_codec
+    /// <summary>Field number for the "game_saved_value_map" field.</summary>
+    public const int GameSavedValueMapFieldNumber = 2;
+    private static readonly pbc::MapField<string, uint>.Codec _map_gameSavedValueMap_codec
         = new pbc::MapField<string, uint>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForUInt32(16, 0), 18);
-    private readonly pbc::MapField<string, uint> kFOKAIKGOKF_ = new pbc::MapField<string, uint>();
+    private readonly pbc::MapField<string, uint> gameSavedValueMap_ = new pbc::MapField<string, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, uint> KFOKAIKGOKF {
-      get { return kFOKAIKGOKF_; }
+    public pbc::MapField<string, uint> GameSavedValueMap {
+      get { return gameSavedValueMap_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,8 +123,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (HBEKEFKJAGA != other.HBEKEFKJAGA) return false;
-      if (!KFOKAIKGOKF.Equals(other.KFOKAIKGOKF)) return false;
+      if (AugmentId != other.AugmentId) return false;
+      if (!GameSavedValueMap.Equals(other.GameSavedValueMap)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,8 +132,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HBEKEFKJAGA != 0) hash ^= HBEKEFKJAGA.GetHashCode();
-      hash ^= KFOKAIKGOKF.GetHashCode();
+      if (AugmentId != 0) hash ^= AugmentId.GetHashCode();
+      hash ^= GameSavedValueMap.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,11 +152,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (HBEKEFKJAGA != 0) {
+      if (AugmentId != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(HBEKEFKJAGA);
+        output.WriteUInt32(AugmentId);
       }
-      kFOKAIKGOKF_.WriteTo(output, _map_kFOKAIKGOKF_codec);
+      gameSavedValueMap_.WriteTo(output, _map_gameSavedValueMap_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -167,11 +167,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (HBEKEFKJAGA != 0) {
+      if (AugmentId != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(HBEKEFKJAGA);
+        output.WriteUInt32(AugmentId);
       }
-      kFOKAIKGOKF_.WriteTo(ref output, _map_kFOKAIKGOKF_codec);
+      gameSavedValueMap_.WriteTo(ref output, _map_gameSavedValueMap_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -182,10 +182,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HBEKEFKJAGA != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HBEKEFKJAGA);
+      if (AugmentId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AugmentId);
       }
-      size += kFOKAIKGOKF_.CalculateSize(_map_kFOKAIKGOKF_codec);
+      size += gameSavedValueMap_.CalculateSize(_map_gameSavedValueMap_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -198,10 +198,10 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.HBEKEFKJAGA != 0) {
-        HBEKEFKJAGA = other.HBEKEFKJAGA;
+      if (other.AugmentId != 0) {
+        AugmentId = other.AugmentId;
       }
-      kFOKAIKGOKF_.MergeFrom(other.kFOKAIKGOKF_);
+      gameSavedValueMap_.MergeFrom(other.gameSavedValueMap_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -218,11 +218,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            HBEKEFKJAGA = input.ReadUInt32();
+            AugmentId = input.ReadUInt32();
             break;
           }
           case 18: {
-            kFOKAIKGOKF_.AddEntriesFrom(input, _map_kFOKAIKGOKF_codec);
+            gameSavedValueMap_.AddEntriesFrom(input, _map_gameSavedValueMap_codec);
             break;
           }
         }
@@ -241,11 +241,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            HBEKEFKJAGA = input.ReadUInt32();
+            AugmentId = input.ReadUInt32();
             break;
           }
           case 18: {
-            kFOKAIKGOKF_.AddEntriesFrom(ref input, _map_kFOKAIKGOKF_codec);
+            gameSavedValueMap_.AddEntriesFrom(ref input, _map_gameSavedValueMap_codec);
             break;
           }
         }

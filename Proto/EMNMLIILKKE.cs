@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static EMNMLIILKKEReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFFTU5NTElJTEtLRS5wcm90byJVCgtFTU5NTElJTEtLRRITCgtLSENLRkJI",
-            "Q0ZQTBgNIAEoDRIPCgdidWZmX2lkGAYgASgNEgsKA2NudBgPIAEoDRITCgtI",
-            "REJCQkdHTUZKUBgEIAEoCEIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "ChFFTU5NTElJTEtLRS5wcm90byJaCgtFTU5NTElJTEtLRRIYChBzaG9wX2dv",
+            "b2RzX3ByaWNlGA0gASgNEg8KB2J1ZmZfaWQYBiABKA0SCwoDY250GA8gASgN",
+            "EhMKC0hEQkJCR0dNRkpQGAQgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EMNMLIILKKE), global::EggLink.DanhengServer.Proto.EMNMLIILKKE.Parser, new[]{ "KHCKFBHCFPL", "BuffId", "Cnt", "HDBBBGGMFJP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EMNMLIILKKE), global::EggLink.DanhengServer.Proto.EMNMLIILKKE.Parser, new[]{ "ShopGoodsPrice", "BuffId", "Cnt", "HDBBBGGMFJP" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EMNMLIILKKE(EMNMLIILKKE other) : this() {
-      kHCKFBHCFPL_ = other.kHCKFBHCFPL_;
+      shopGoodsPrice_ = other.shopGoodsPrice_;
       buffId_ = other.buffId_;
       cnt_ = other.cnt_;
       hDBBBGGMFJP_ = other.hDBBBGGMFJP_;
@@ -86,15 +86,15 @@ namespace EggLink.DanhengServer.Proto {
       return new EMNMLIILKKE(this);
     }
 
-    /// <summary>Field number for the "KHCKFBHCFPL" field.</summary>
-    public const int KHCKFBHCFPLFieldNumber = 13;
-    private uint kHCKFBHCFPL_;
+    /// <summary>Field number for the "shop_goods_price" field.</summary>
+    public const int ShopGoodsPriceFieldNumber = 13;
+    private uint shopGoodsPrice_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint KHCKFBHCFPL {
-      get { return kHCKFBHCFPL_; }
+    public uint ShopGoodsPrice {
+      get { return shopGoodsPrice_; }
       set {
-        kHCKFBHCFPL_ = value;
+        shopGoodsPrice_ = value;
       }
     }
 
@@ -149,7 +149,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (KHCKFBHCFPL != other.KHCKFBHCFPL) return false;
+      if (ShopGoodsPrice != other.ShopGoodsPrice) return false;
       if (BuffId != other.BuffId) return false;
       if (Cnt != other.Cnt) return false;
       if (HDBBBGGMFJP != other.HDBBBGGMFJP) return false;
@@ -160,7 +160,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (KHCKFBHCFPL != 0) hash ^= KHCKFBHCFPL.GetHashCode();
+      if (ShopGoodsPrice != 0) hash ^= ShopGoodsPrice.GetHashCode();
       if (BuffId != 0) hash ^= BuffId.GetHashCode();
       if (Cnt != 0) hash ^= Cnt.GetHashCode();
       if (HDBBBGGMFJP != false) hash ^= HDBBBGGMFJP.GetHashCode();
@@ -190,9 +190,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(BuffId);
       }
-      if (KHCKFBHCFPL != 0) {
+      if (ShopGoodsPrice != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(KHCKFBHCFPL);
+        output.WriteUInt32(ShopGoodsPrice);
       }
       if (Cnt != 0) {
         output.WriteRawTag(120);
@@ -216,9 +216,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(BuffId);
       }
-      if (KHCKFBHCFPL != 0) {
+      if (ShopGoodsPrice != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(KHCKFBHCFPL);
+        output.WriteUInt32(ShopGoodsPrice);
       }
       if (Cnt != 0) {
         output.WriteRawTag(120);
@@ -234,8 +234,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (KHCKFBHCFPL != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(KHCKFBHCFPL);
+      if (ShopGoodsPrice != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ShopGoodsPrice);
       }
       if (BuffId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BuffId);
@@ -258,8 +258,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.KHCKFBHCFPL != 0) {
-        KHCKFBHCFPL = other.KHCKFBHCFPL;
+      if (other.ShopGoodsPrice != 0) {
+        ShopGoodsPrice = other.ShopGoodsPrice;
       }
       if (other.BuffId != 0) {
         BuffId = other.BuffId;
@@ -294,7 +294,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            KHCKFBHCFPL = input.ReadUInt32();
+            ShopGoodsPrice = input.ReadUInt32();
             break;
           }
           case 120: {
@@ -325,7 +325,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 104: {
-            KHCKFBHCFPL = input.ReadUInt32();
+            ShopGoodsPrice = input.ReadUInt32();
             break;
           }
           case 120: {

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static MuseumInfoChangedScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9NdXNldW1JbmZvQ2hhbmdlZFNjTm90aWZ5LnByb3RvGhFKTUVBT0NQRkVP",
-            "TC5wcm90bxoRSk5CQ1BOQ05PSE8ucHJvdG8aEU9MS01MRkVFRkNKLnByb3Rv",
-            "GhFET0xHRk5MSEVBRS5wcm90byLRAgoZTXVzZXVtSW5mb0NoYW5nZWRTY05v",
+            "Ch9NdXNldW1JbmZvQ2hhbmdlZFNjTm90aWZ5LnByb3RvGhFET0xHRk5MSEVB",
+            "RS5wcm90bxoRT0xLTUxGRUVGQ0oucHJvdG8aEUpOQkNQTkNOT0hPLnByb3Rv",
+            "GhFKTUVBT0NQRkVPTC5wcm90byLRAgoZTXVzZXVtSW5mb0NoYW5nZWRTY05v",
             "dGlmeRIQCghjdXJfZnVuZBgNIAEoDRITCgtFSk5LTUtGRkNDTBgFIAEoDRIh",
             "CgtCT0pNTkFGREpLSBgBIAMoCzIMLk9MS01MRkVFRkNKEg0KBWxldmVsGAsg",
             "ASgNEhMKC0tORE1EUEVGQURDGAwgAygNEhMKC0hQTk1QRE9DSk1BGAYgASgN",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "RU1PT0IYDyABKA0SHwoJYXJlYV9saXN0GAggAygLMgwuSk1FQU9DUEZFT0xC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JMEAOCPFEOLReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNBCPNCNOHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.OLKMLFEEFCJReflection.Descriptor, global::EggLink.DanhengServer.Proto.DOLGFNLHEAEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DOLGFNLHEAEReflection.Descriptor, global::EggLink.DanhengServer.Proto.OLKMLFEEFCJReflection.Descriptor, global::EggLink.DanhengServer.Proto.JNBCPNCNOHOReflection.Descriptor, global::EggLink.DanhengServer.Proto.JMEAOCPFEOLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MuseumInfoChangedScNotify), global::EggLink.DanhengServer.Proto.MuseumInfoChangedScNotify.Parser, new[]{ "CurFund", "EJNKMKFFCCL", "BOJMNAFDJKH", "Level", "KNDMDPEFADC", "HPNMPDOCJMA", "KNDJAPNPAPK", "JPIBMBBKGND", "JBJLDPPDBBC", "EKKOLCCCNNK", "Exp", "EJKGHBEMOOB", "AreaList" }, null, null, null, null)
           }));

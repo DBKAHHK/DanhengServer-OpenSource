@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static RogueCommonBuffSelectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Sb2d1ZUNvbW1vbkJ1ZmZTZWxlY3RJbmZvLnByb3RvGhVSb2d1ZUNvbW1v",
-            "bkJ1ZmYucHJvdG8aJVJvZ3VlQ29tbW9uQnVmZlNlbGVjdFNvdXJjZVR5cGUu",
+            "Ch9Sb2d1ZUNvbW1vbkJ1ZmZTZWxlY3RJbmZvLnByb3RvGiVSb2d1ZUNvbW1v",
+            "bkJ1ZmZTZWxlY3RTb3VyY2VUeXBlLnByb3RvGhVSb2d1ZUNvbW1vbkJ1ZmYu",
             "cHJvdG8aEkl0ZW1Db3N0RGF0YS5wcm90byLHAwoZUm9ndWVDb21tb25CdWZm",
             "U2VsZWN0SW5mbxIbChNyb2xsX2J1ZmZfbWF4X2NvdW50GAIgASgNEj4KFG1v",
             "ZGlmaWVyX3NvdXJjZV90eXBlGAEgASgOMiAuUm9ndWVDb21tb25CdWZmU2Vs",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "bW9uQnVmZhIYChBzb3VyY2VfY3VyX2NvdW50GA4gASgNQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectSourceTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueCommonBuffReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemCostDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo), global::EggLink.DanhengServer.Proto.RogueCommonBuffSelectInfo.Parser, new[]{ "RollBuffMaxCount", "ModifierSourceType", "FirstBuffTypeList", "CanRoll", "RollBuffFreeCount", "RollBuffCostData", "HandbookUnlockBuffIdList", "CertainSelectBuffId", "RollBuffCount", "SourceTotalCount", "SourceHintId", "SelectBuffs", "SourceCurCount" }, null, null, null, null)
           }));

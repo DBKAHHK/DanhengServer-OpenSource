@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightBuyGoodsCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHcmlkRmlnaHRCdXlHb29kc0NzUmVxLnByb3RvIi0KFkdyaWRGaWdodEJ1",
-            "eUdvb2RzQ3NSZXESEwoLUEVCTElLSEVDRkkYDCADKA1CHqoCG0VnZ0xpbmsu",
-            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChxHcmlkRmlnaHRCdXlHb29kc0NzUmVxLnByb3RvIjYKFkdyaWRGaWdodEJ1",
+            "eUdvb2RzQ3NSZXESHAoUYnV5X2dvb2RzX2luZGV4X2xpc3QYDCADKA1CHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightBuyGoodsCsReq), global::EggLink.DanhengServer.Proto.GridFightBuyGoodsCsReq.Parser, new[]{ "PEBLIKHECFI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightBuyGoodsCsReq), global::EggLink.DanhengServer.Proto.GridFightBuyGoodsCsReq.Parser, new[]{ "BuyGoodsIndexList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightBuyGoodsCsReq(GridFightBuyGoodsCsReq other) : this() {
-      pEBLIKHECFI_ = other.pEBLIKHECFI_.Clone();
+      buyGoodsIndexList_ = other.buyGoodsIndexList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightBuyGoodsCsReq(this);
     }
 
-    /// <summary>Field number for the "PEBLIKHECFI" field.</summary>
-    public const int PEBLIKHECFIFieldNumber = 12;
-    private static readonly pb::FieldCodec<uint> _repeated_pEBLIKHECFI_codec
+    /// <summary>Field number for the "buy_goods_index_list" field.</summary>
+    public const int BuyGoodsIndexListFieldNumber = 12;
+    private static readonly pb::FieldCodec<uint> _repeated_buyGoodsIndexList_codec
         = pb::FieldCodec.ForUInt32(98);
-    private readonly pbc::RepeatedField<uint> pEBLIKHECFI_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> buyGoodsIndexList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> PEBLIKHECFI {
-      get { return pEBLIKHECFI_; }
+    public pbc::RepeatedField<uint> BuyGoodsIndexList {
+      get { return buyGoodsIndexList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!pEBLIKHECFI_.Equals(other.pEBLIKHECFI_)) return false;
+      if(!buyGoodsIndexList_.Equals(other.buyGoodsIndexList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= pEBLIKHECFI_.GetHashCode();
+      hash ^= buyGoodsIndexList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      pEBLIKHECFI_.WriteTo(output, _repeated_pEBLIKHECFI_codec);
+      buyGoodsIndexList_.WriteTo(output, _repeated_buyGoodsIndexList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      pEBLIKHECFI_.WriteTo(ref output, _repeated_pEBLIKHECFI_codec);
+      buyGoodsIndexList_.WriteTo(ref output, _repeated_buyGoodsIndexList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += pEBLIKHECFI_.CalculateSize(_repeated_pEBLIKHECFI_codec);
+      size += buyGoodsIndexList_.CalculateSize(_repeated_buyGoodsIndexList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      pEBLIKHECFI_.Add(other.pEBLIKHECFI_);
+      buyGoodsIndexList_.Add(other.buyGoodsIndexList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 98:
           case 96: {
-            pEBLIKHECFI_.AddEntriesFrom(input, _repeated_pEBLIKHECFI_codec);
+            buyGoodsIndexList_.AddEntriesFrom(input, _repeated_buyGoodsIndexList_codec);
             break;
           }
         }
@@ -208,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 98:
           case 96: {
-            pEBLIKHECFI_.AddEntriesFrom(ref input, _repeated_pEBLIKHECFI_codec);
+            buyGoodsIndexList_.AddEntriesFrom(ref input, _repeated_buyGoodsIndexList_codec);
             break;
           }
         }

@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightUpdatePosScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HcmlkRmlnaHRVcGRhdGVQb3NTY1JzcC5wcm90bxoRS0lER0tBQkhJSkMu",
-            "cHJvdG8iTQoXR3JpZEZpZ2h0VXBkYXRlUG9zU2NSc3ASIQoLS0hIR0ZBRElC",
-            "S0YYDSADKAsyDC5LSURHS0FCSElKQxIPCgdyZXRjb2RlGAMgASgNQh6qAhtF",
-            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Ch1HcmlkRmlnaHRVcGRhdGVQb3NTY1JzcC5wcm90bxoWR3JpZEZpZ2h0UG9z",
+            "SW5mby5wcm90byJfChdHcmlkRmlnaHRVcGRhdGVQb3NTY1JzcBIzChhncmlk",
+            "X2ZpZ2h0X3Bvc19pbmZvX2xpc3QYDSADKAsyES5HcmlkRmlnaHRQb3NJbmZv",
+            "Eg8KB3JldGNvZGUYAyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KIDGKABHIJCReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightPosInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUpdatePosScRsp), global::EggLink.DanhengServer.Proto.GridFightUpdatePosScRsp.Parser, new[]{ "KHHGFADIBKF", "Retcode" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUpdatePosScRsp), global::EggLink.DanhengServer.Proto.GridFightUpdatePosScRsp.Parser, new[]{ "GridFightPosInfoList", "Retcode" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightUpdatePosScRsp(GridFightUpdatePosScRsp other) : this() {
-      kHHGFADIBKF_ = other.kHHGFADIBKF_.Clone();
+      gridFightPosInfoList_ = other.gridFightPosInfoList_.Clone();
       retcode_ = other.retcode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -84,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightUpdatePosScRsp(this);
     }
 
-    /// <summary>Field number for the "KHHGFADIBKF" field.</summary>
-    public const int KHHGFADIBKFFieldNumber = 13;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KIDGKABHIJC> _repeated_kHHGFADIBKF_codec
-        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.KIDGKABHIJC.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KIDGKABHIJC> kHHGFADIBKF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KIDGKABHIJC>();
+    /// <summary>Field number for the "grid_fight_pos_info_list" field.</summary>
+    public const int GridFightPosInfoListFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GridFightPosInfo> _repeated_gridFightPosInfoList_codec
+        = pb::FieldCodec.ForMessage(106, global::EggLink.DanhengServer.Proto.GridFightPosInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightPosInfo> gridFightPosInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightPosInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KIDGKABHIJC> KHHGFADIBKF {
-      get { return kHHGFADIBKF_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightPosInfo> GridFightPosInfoList {
+      get { return gridFightPosInfoList_; }
     }
 
     /// <summary>Field number for the "retcode" field.</summary>
@@ -122,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!kHHGFADIBKF_.Equals(other.kHHGFADIBKF_)) return false;
+      if(!gridFightPosInfoList_.Equals(other.gridFightPosInfoList_)) return false;
       if (Retcode != other.Retcode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= kHHGFADIBKF_.GetHashCode();
+      hash ^= gridFightPosInfoList_.GetHashCode();
       if (Retcode != 0) hash ^= Retcode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -155,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      kHHGFADIBKF_.WriteTo(output, _repeated_kHHGFADIBKF_codec);
+      gridFightPosInfoList_.WriteTo(output, _repeated_gridFightPosInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -170,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(Retcode);
       }
-      kHHGFADIBKF_.WriteTo(ref output, _repeated_kHHGFADIBKF_codec);
+      gridFightPosInfoList_.WriteTo(ref output, _repeated_gridFightPosInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += kHHGFADIBKF_.CalculateSize(_repeated_kHHGFADIBKF_codec);
+      size += gridFightPosInfoList_.CalculateSize(_repeated_gridFightPosInfoList_codec);
       if (Retcode != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Retcode);
       }
@@ -197,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      kHHGFADIBKF_.Add(other.kHHGFADIBKF_);
+      gridFightPosInfoList_.Add(other.gridFightPosInfoList_);
       if (other.Retcode != 0) {
         Retcode = other.Retcode;
       }
@@ -221,7 +222,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 106: {
-            kHHGFADIBKF_.AddEntriesFrom(input, _repeated_kHHGFADIBKF_codec);
+            gridFightPosInfoList_.AddEntriesFrom(input, _repeated_gridFightPosInfoList_codec);
             break;
           }
         }
@@ -244,7 +245,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 106: {
-            kHHGFADIBKF_.AddEntriesFrom(ref input, _repeated_kHHGFADIBKF_codec);
+            gridFightPosInfoList_.AddEntriesFrom(ref input, _repeated_gridFightPosInfoList_codec);
             break;
           }
         }

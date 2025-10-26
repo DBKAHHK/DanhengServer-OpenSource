@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightUpdatePosCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HcmlkRmlnaHRVcGRhdGVQb3NDc1JlcS5wcm90bxoRS0lER0tBQkhJSkMu",
-            "cHJvdG8iPAoXR3JpZEZpZ2h0VXBkYXRlUG9zQ3NSZXESIQoLS0hIR0ZBRElC",
-            "S0YYAiADKAsyDC5LSURHS0FCSElKQ0IeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "Ch1HcmlkRmlnaHRVcGRhdGVQb3NDc1JlcS5wcm90bxoWR3JpZEZpZ2h0UG9z",
+            "SW5mby5wcm90byJOChdHcmlkRmlnaHRVcGRhdGVQb3NDc1JlcRIzChhncmlk",
+            "X2ZpZ2h0X3Bvc19pbmZvX2xpc3QYAiADKAsyES5HcmlkRmlnaHRQb3NJbmZv",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KIDGKABHIJCReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightPosInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUpdatePosCsReq), global::EggLink.DanhengServer.Proto.GridFightUpdatePosCsReq.Parser, new[]{ "KHHGFADIBKF" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUpdatePosCsReq), global::EggLink.DanhengServer.Proto.GridFightUpdatePosCsReq.Parser, new[]{ "GridFightPosInfoList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightUpdatePosCsReq(GridFightUpdatePosCsReq other) : this() {
-      kHHGFADIBKF_ = other.kHHGFADIBKF_.Clone();
+      gridFightPosInfoList_ = other.gridFightPosInfoList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightUpdatePosCsReq(this);
     }
 
-    /// <summary>Field number for the "KHHGFADIBKF" field.</summary>
-    public const int KHHGFADIBKFFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KIDGKABHIJC> _repeated_kHHGFADIBKF_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.KIDGKABHIJC.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KIDGKABHIJC> kHHGFADIBKF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KIDGKABHIJC>();
+    /// <summary>Field number for the "grid_fight_pos_info_list" field.</summary>
+    public const int GridFightPosInfoListFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GridFightPosInfo> _repeated_gridFightPosInfoList_codec
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.GridFightPosInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightPosInfo> gridFightPosInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightPosInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KIDGKABHIJC> KHHGFADIBKF {
-      get { return kHHGFADIBKF_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightPosInfo> GridFightPosInfoList {
+      get { return gridFightPosInfoList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!kHHGFADIBKF_.Equals(other.kHHGFADIBKF_)) return false;
+      if(!gridFightPosInfoList_.Equals(other.gridFightPosInfoList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= kHHGFADIBKF_.GetHashCode();
+      hash ^= gridFightPosInfoList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      kHHGFADIBKF_.WriteTo(output, _repeated_kHHGFADIBKF_codec);
+      gridFightPosInfoList_.WriteTo(output, _repeated_gridFightPosInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -147,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      kHHGFADIBKF_.WriteTo(ref output, _repeated_kHHGFADIBKF_codec);
+      gridFightPosInfoList_.WriteTo(ref output, _repeated_gridFightPosInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -158,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += kHHGFADIBKF_.CalculateSize(_repeated_kHHGFADIBKF_codec);
+      size += gridFightPosInfoList_.CalculateSize(_repeated_gridFightPosInfoList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      kHHGFADIBKF_.Add(other.kHHGFADIBKF_);
+      gridFightPosInfoList_.Add(other.gridFightPosInfoList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 18: {
-            kHHGFADIBKF_.AddEntriesFrom(input, _repeated_kHHGFADIBKF_codec);
+            gridFightPosInfoList_.AddEntriesFrom(input, _repeated_gridFightPosInfoList_codec);
             break;
           }
         }
@@ -207,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 18: {
-            kHHGFADIBKF_.AddEntriesFrom(ref input, _repeated_kHHGFADIBKF_codec);
+            gridFightPosInfoList_.AddEntriesFrom(ref input, _repeated_gridFightPosInfoList_codec);
             break;
           }
         }

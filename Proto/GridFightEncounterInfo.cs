@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightEncounterInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHcmlkRmlnaHRFbmNvdW50ZXJJbmZvLnByb3RvGh5HcmlkRW5jb3VudGVy",
-            "TW9uc3RlcldhdmUucHJvdG8aF0dyaWRGaWdodERyb3BJbmZvLnByb3RvIsIB",
+            "ChxHcmlkRmlnaHRFbmNvdW50ZXJJbmZvLnByb3RvGhdHcmlkRmlnaHREcm9w",
+            "SW5mby5wcm90bxoeR3JpZEVuY291bnRlck1vbnN0ZXJXYXZlLnByb3RvIsIB",
             "ChZHcmlkRmlnaHRFbmNvdW50ZXJJbmZvEjQKEW1vbnN0ZXJfd2F2ZV9saXN0",
             "GAkgAygLMhkuR3JpZEVuY291bnRlck1vbnN0ZXJXYXZlEigKIGVuY291bnRl",
             "cl9leHRyYV9kaWZmaWN1bHR5X2xldmVsGAggASgNEhcKD2VuY291bnRlcl9p",
@@ -33,7 +33,7 @@ namespace EggLink.DanhengServer.Proto {
             "ZEZpZ2h0RHJvcEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridEncounterMonsterWaveReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDropInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightDropInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridEncounterMonsterWaveReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightEncounterInfo), global::EggLink.DanhengServer.Proto.GridFightEncounterInfo.Parser, new[]{ "MonsterWaveList", "EncounterExtraDifficultyLevel", "EncounterIndex", "EncounterDropInfo" }, null, null, null, null)
           }));

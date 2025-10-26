@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightRoleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHcmlkRmlnaHRSb2xlSW5mby5wcm90byJ2ChFHcmlkRmlnaHRSb2xlSW5m",
+            "ChdHcmlkRmlnaHRSb2xlSW5mby5wcm90byJ4ChFHcmlkRmlnaHRSb2xlSW5m",
             "bxILCgNwb3MYBCABKA0SEwoLSkREQ0dFQ0hHREUYAiABKAgSDAoEdGllchgF",
-            "IAEoDRIcChRncmlkX2ZpZ2h0X2l0ZW1fbGlzdBgLIAMoDRITCgtMSUJLTERB",
-            "TEhKUBgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "IAEoDRIcChRncmlkX2ZpZ2h0X2l0ZW1fbGlzdBgLIAMoDRIVCg1yb2xlX2Jh",
+            "c2ljX2lkGAMgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightRoleInfo), global::EggLink.DanhengServer.Proto.GridFightRoleInfo.Parser, new[]{ "Pos", "JDDCGECHGDE", "Tier", "GridFightItemList", "LIBKLDALHJP" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightRoleInfo), global::EggLink.DanhengServer.Proto.GridFightRoleInfo.Parser, new[]{ "Pos", "JDDCGECHGDE", "Tier", "GridFightItemList", "RoleBasicId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,7 +78,7 @@ namespace EggLink.DanhengServer.Proto {
       jDDCGECHGDE_ = other.jDDCGECHGDE_;
       tier_ = other.tier_;
       gridFightItemList_ = other.gridFightItemList_.Clone();
-      lIBKLDALHJP_ = other.lIBKLDALHJP_;
+      roleBasicId_ = other.roleBasicId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -135,15 +135,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return gridFightItemList_; }
     }
 
-    /// <summary>Field number for the "LIBKLDALHJP" field.</summary>
-    public const int LIBKLDALHJPFieldNumber = 3;
-    private uint lIBKLDALHJP_;
+    /// <summary>Field number for the "role_basic_id" field.</summary>
+    public const int RoleBasicIdFieldNumber = 3;
+    private uint roleBasicId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LIBKLDALHJP {
-      get { return lIBKLDALHJP_; }
+    public uint RoleBasicId {
+      get { return roleBasicId_; }
       set {
-        lIBKLDALHJP_ = value;
+        roleBasicId_ = value;
       }
     }
 
@@ -166,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
       if (JDDCGECHGDE != other.JDDCGECHGDE) return false;
       if (Tier != other.Tier) return false;
       if(!gridFightItemList_.Equals(other.gridFightItemList_)) return false;
-      if (LIBKLDALHJP != other.LIBKLDALHJP) return false;
+      if (RoleBasicId != other.RoleBasicId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -178,7 +178,7 @@ namespace EggLink.DanhengServer.Proto {
       if (JDDCGECHGDE != false) hash ^= JDDCGECHGDE.GetHashCode();
       if (Tier != 0) hash ^= Tier.GetHashCode();
       hash ^= gridFightItemList_.GetHashCode();
-      if (LIBKLDALHJP != 0) hash ^= LIBKLDALHJP.GetHashCode();
+      if (RoleBasicId != 0) hash ^= RoleBasicId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -201,9 +201,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteBool(JDDCGECHGDE);
       }
-      if (LIBKLDALHJP != 0) {
+      if (RoleBasicId != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(LIBKLDALHJP);
+        output.WriteUInt32(RoleBasicId);
       }
       if (Pos != 0) {
         output.WriteRawTag(32);
@@ -228,9 +228,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteBool(JDDCGECHGDE);
       }
-      if (LIBKLDALHJP != 0) {
+      if (RoleBasicId != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(LIBKLDALHJP);
+        output.WriteUInt32(RoleBasicId);
       }
       if (Pos != 0) {
         output.WriteRawTag(32);
@@ -261,8 +261,8 @@ namespace EggLink.DanhengServer.Proto {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Tier);
       }
       size += gridFightItemList_.CalculateSize(_repeated_gridFightItemList_codec);
-      if (LIBKLDALHJP != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LIBKLDALHJP);
+      if (RoleBasicId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RoleBasicId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -286,8 +286,8 @@ namespace EggLink.DanhengServer.Proto {
         Tier = other.Tier;
       }
       gridFightItemList_.Add(other.gridFightItemList_);
-      if (other.LIBKLDALHJP != 0) {
-        LIBKLDALHJP = other.LIBKLDALHJP;
+      if (other.RoleBasicId != 0) {
+        RoleBasicId = other.RoleBasicId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -309,7 +309,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
-            LIBKLDALHJP = input.ReadUInt32();
+            RoleBasicId = input.ReadUInt32();
             break;
           }
           case 32: {
@@ -345,7 +345,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
-            LIBKLDALHJP = input.ReadUInt32();
+            RoleBasicId = input.ReadUInt32();
             break;
           }
           case 32: {

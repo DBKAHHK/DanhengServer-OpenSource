@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChJTY2VuZU1hcEluZm8ucHJvdG8aE01hemVQcm9wU3RhdGUucHJvdG8aD0No",
-            "ZXN0SW5mby5wcm90bxoPTWF6ZUdyb3VwLnByb3RvGhhNYXplUHJvcFN0YXRl",
-            "RXh0cmEucHJvdG8aEU5QQU9HS0ZLQUFFLnByb3RvIuYDCgxTY2VuZU1hcElu",
+            "ZXN0SW5mby5wcm90bxoYTWF6ZVByb3BTdGF0ZUV4dHJhLnByb3RvGhFOUEFP",
+            "R0tGS0FBRS5wcm90bxoPTWF6ZUdyb3VwLnByb3RvIuYDCgxTY2VuZU1hcElu",
             "Zm8SOwoQZmxvb3Jfc2F2ZWRfZGF0YRgIIAMoCzIhLlNjZW5lTWFwSW5mby5G",
             "bG9vclNhdmVkRGF0YUVudHJ5EiYKDm1hemVfcHJvcF9saXN0GAwgAygLMg4u",
             "TWF6ZVByb3BTdGF0ZRIhCgtKTUxETU9DTk1ITRgGIAMoCzIMLk5QQU9HS0ZL",
@@ -40,7 +40,7 @@ namespace EggLink.DanhengServer.Proto {
             "ASABKAkSDQoFdmFsdWUYAiABKAU6AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateExtraReflection.Descriptor, global::EggLink.DanhengServer.Proto.NPAOGKFKAAEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MazePropStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChestInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazePropStateExtraReflection.Descriptor, global::EggLink.DanhengServer.Proto.NPAOGKFKAAEReflection.Descriptor, global::EggLink.DanhengServer.Proto.MazeGroupReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMapInfo), global::EggLink.DanhengServer.Proto.SceneMapInfo.Parser, new[]{ "FloorSavedData", "MazePropList", "JMLDMOCNMHM", "MazePropExtraList", "EntryId", "FloorId", "ChestList", "MazeGroupList", "DimensionId", "Retcode", "LightenSectionList", "CurMapEntryId", "UnlockTeleportList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

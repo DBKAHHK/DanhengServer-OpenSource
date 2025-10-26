@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static HAEAJBCOHNCReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFIQUVBSkJDT0hOQy5wcm90byKKAQoLSEFFQUpCQ09ITkMSEwoLQUZEREVP",
-            "Q09NSE0YASABKA0SMgoLS0ZPS0FJS0dPS0YYAiADKAsyHS5IQUVBSkJDT0hO",
-            "Qy5LRk9LQUlLR09LRkVudHJ5GjIKEEtGT0tBSUtHT0tGRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgNOgI4AUIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFIQUVBSkJDT0hOQy5wcm90byKfAQoLSEFFQUpCQ09ITkMSEwoLQUZEREVP",
+            "Q09NSE0YASABKA0SQQoUZ2FtZV9zYXZlZF92YWx1ZV9tYXAYAiADKAsyIy5I",
+            "QUVBSkJDT0hOQy5HYW1lU2F2ZWRWYWx1ZU1hcEVudHJ5GjgKFkdhbWVTYXZl",
+            "ZFZhbHVlTWFwRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgNOgI4",
+            "AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HAEAJBCOHNC), global::EggLink.DanhengServer.Proto.HAEAJBCOHNC.Parser, new[]{ "AFDDEOCOMHM", "KFOKAIKGOKF" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HAEAJBCOHNC), global::EggLink.DanhengServer.Proto.HAEAJBCOHNC.Parser, new[]{ "AFDDEOCOMHM", "GameSavedValueMap" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HAEAJBCOHNC(HAEAJBCOHNC other) : this() {
       aFDDEOCOMHM_ = other.aFDDEOCOMHM_;
-      kFOKAIKGOKF_ = other.kFOKAIKGOKF_.Clone();
+      gameSavedValueMap_ = other.gameSavedValueMap_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -97,15 +97,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "KFOKAIKGOKF" field.</summary>
-    public const int KFOKAIKGOKFFieldNumber = 2;
-    private static readonly pbc::MapField<string, uint>.Codec _map_kFOKAIKGOKF_codec
+    /// <summary>Field number for the "game_saved_value_map" field.</summary>
+    public const int GameSavedValueMapFieldNumber = 2;
+    private static readonly pbc::MapField<string, uint>.Codec _map_gameSavedValueMap_codec
         = new pbc::MapField<string, uint>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForUInt32(16, 0), 18);
-    private readonly pbc::MapField<string, uint> kFOKAIKGOKF_ = new pbc::MapField<string, uint>();
+    private readonly pbc::MapField<string, uint> gameSavedValueMap_ = new pbc::MapField<string, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, uint> KFOKAIKGOKF {
-      get { return kFOKAIKGOKF_; }
+    public pbc::MapField<string, uint> GameSavedValueMap {
+      get { return gameSavedValueMap_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (AFDDEOCOMHM != other.AFDDEOCOMHM) return false;
-      if (!KFOKAIKGOKF.Equals(other.KFOKAIKGOKF)) return false;
+      if (!GameSavedValueMap.Equals(other.GameSavedValueMap)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (AFDDEOCOMHM != 0) hash ^= AFDDEOCOMHM.GetHashCode();
-      hash ^= KFOKAIKGOKF.GetHashCode();
+      hash ^= GameSavedValueMap.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -156,7 +156,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(AFDDEOCOMHM);
       }
-      kFOKAIKGOKF_.WriteTo(output, _map_kFOKAIKGOKF_codec);
+      gameSavedValueMap_.WriteTo(output, _map_gameSavedValueMap_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(AFDDEOCOMHM);
       }
-      kFOKAIKGOKF_.WriteTo(ref output, _map_kFOKAIKGOKF_codec);
+      gameSavedValueMap_.WriteTo(ref output, _map_gameSavedValueMap_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -185,7 +185,7 @@ namespace EggLink.DanhengServer.Proto {
       if (AFDDEOCOMHM != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AFDDEOCOMHM);
       }
-      size += kFOKAIKGOKF_.CalculateSize(_map_kFOKAIKGOKF_codec);
+      size += gameSavedValueMap_.CalculateSize(_map_gameSavedValueMap_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -201,7 +201,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.AFDDEOCOMHM != 0) {
         AFDDEOCOMHM = other.AFDDEOCOMHM;
       }
-      kFOKAIKGOKF_.MergeFrom(other.kFOKAIKGOKF_);
+      gameSavedValueMap_.MergeFrom(other.gameSavedValueMap_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -222,7 +222,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 18: {
-            kFOKAIKGOKF_.AddEntriesFrom(input, _map_kFOKAIKGOKF_codec);
+            gameSavedValueMap_.AddEntriesFrom(input, _map_gameSavedValueMap_codec);
             break;
           }
         }
@@ -245,7 +245,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 18: {
-            kFOKAIKGOKF_.AddEntriesFrom(ref input, _map_kFOKAIKGOKF_codec);
+            gameSavedValueMap_.AddEntriesFrom(ref input, _map_gameSavedValueMap_codec);
             break;
           }
         }

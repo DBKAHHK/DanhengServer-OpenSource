@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static JOAAOPHPMHKReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFKT0FBT1BIUE1ISy5wcm90byKKAQoLSk9BQU9QSFBNSEsSMgoLS0ZPS0FJ",
-            "S0dPS0YYCiADKAsyHS5KT0FBT1BIUE1ISy5LRk9LQUlLR09LRkVudHJ5EhMK",
-            "C0FGRERFT0NPTUhNGAsgASgNGjIKEEtGT0tBSUtHT0tGRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgNOgI4AUIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFKT0FBT1BIUE1ISy5wcm90byKfAQoLSk9BQU9QSFBNSEsSQQoUZ2FtZV9z",
+            "YXZlZF92YWx1ZV9tYXAYCiADKAsyIy5KT0FBT1BIUE1ISy5HYW1lU2F2ZWRW",
+            "YWx1ZU1hcEVudHJ5EhMKC0FGRERFT0NPTUhNGAsgASgNGjgKFkdhbWVTYXZl",
+            "ZFZhbHVlTWFwRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgNOgI4",
+            "AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JOAAOPHPMHK), global::EggLink.DanhengServer.Proto.JOAAOPHPMHK.Parser, new[]{ "KFOKAIKGOKF", "AFDDEOCOMHM" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JOAAOPHPMHK), global::EggLink.DanhengServer.Proto.JOAAOPHPMHK.Parser, new[]{ "GameSavedValueMap", "AFDDEOCOMHM" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JOAAOPHPMHK(JOAAOPHPMHK other) : this() {
-      kFOKAIKGOKF_ = other.kFOKAIKGOKF_.Clone();
+      gameSavedValueMap_ = other.gameSavedValueMap_.Clone();
       aFDDEOCOMHM_ = other.aFDDEOCOMHM_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new JOAAOPHPMHK(this);
     }
 
-    /// <summary>Field number for the "KFOKAIKGOKF" field.</summary>
-    public const int KFOKAIKGOKFFieldNumber = 10;
-    private static readonly pbc::MapField<string, uint>.Codec _map_kFOKAIKGOKF_codec
+    /// <summary>Field number for the "game_saved_value_map" field.</summary>
+    public const int GameSavedValueMapFieldNumber = 10;
+    private static readonly pbc::MapField<string, uint>.Codec _map_gameSavedValueMap_codec
         = new pbc::MapField<string, uint>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForUInt32(16, 0), 82);
-    private readonly pbc::MapField<string, uint> kFOKAIKGOKF_ = new pbc::MapField<string, uint>();
+    private readonly pbc::MapField<string, uint> gameSavedValueMap_ = new pbc::MapField<string, uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, uint> KFOKAIKGOKF {
-      get { return kFOKAIKGOKF_; }
+    public pbc::MapField<string, uint> GameSavedValueMap {
+      get { return gameSavedValueMap_; }
     }
 
     /// <summary>Field number for the "AFDDEOCOMHM" field.</summary>
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!KFOKAIKGOKF.Equals(other.KFOKAIKGOKF)) return false;
+      if (!GameSavedValueMap.Equals(other.GameSavedValueMap)) return false;
       if (AFDDEOCOMHM != other.AFDDEOCOMHM) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= KFOKAIKGOKF.GetHashCode();
+      hash ^= GameSavedValueMap.GetHashCode();
       if (AFDDEOCOMHM != 0) hash ^= AFDDEOCOMHM.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      kFOKAIKGOKF_.WriteTo(output, _map_kFOKAIKGOKF_codec);
+      gameSavedValueMap_.WriteTo(output, _map_gameSavedValueMap_codec);
       if (AFDDEOCOMHM != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(AFDDEOCOMHM);
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      kFOKAIKGOKF_.WriteTo(ref output, _map_kFOKAIKGOKF_codec);
+      gameSavedValueMap_.WriteTo(ref output, _map_gameSavedValueMap_codec);
       if (AFDDEOCOMHM != 0) {
         output.WriteRawTag(88);
         output.WriteUInt32(AFDDEOCOMHM);
@@ -182,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += kFOKAIKGOKF_.CalculateSize(_map_kFOKAIKGOKF_codec);
+      size += gameSavedValueMap_.CalculateSize(_map_gameSavedValueMap_codec);
       if (AFDDEOCOMHM != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AFDDEOCOMHM);
       }
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      kFOKAIKGOKF_.MergeFrom(other.kFOKAIKGOKF_);
+      gameSavedValueMap_.MergeFrom(other.gameSavedValueMap_);
       if (other.AFDDEOCOMHM != 0) {
         AFDDEOCOMHM = other.AFDDEOCOMHM;
       }
@@ -218,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 82: {
-            kFOKAIKGOKF_.AddEntriesFrom(input, _map_kFOKAIKGOKF_codec);
+            gameSavedValueMap_.AddEntriesFrom(input, _map_gameSavedValueMap_codec);
             break;
           }
           case 88: {
@@ -241,7 +241,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 82: {
-            kFOKAIKGOKF_.AddEntriesFrom(ref input, _map_kFOKAIKGOKF_codec);
+            gameSavedValueMap_.AddEntriesFrom(ref input, _map_gameSavedValueMap_codec);
             break;
           }
           case 88: {

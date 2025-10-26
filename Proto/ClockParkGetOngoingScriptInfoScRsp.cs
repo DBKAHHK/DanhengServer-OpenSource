@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static ClockParkGetOngoingScriptInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CihDbG9ja1BhcmtHZXRPbmdvaW5nU2NyaXB0SW5mb1NjUnNwLnByb3RvGhFM",
-            "S0JCS09KRERQRC5wcm90bxoRQk1MT0ZQQ05HS04ucHJvdG8aEUVDTUlMSENL",
-            "T01PLnByb3RvIscCCiJDbG9ja1BhcmtHZXRPbmdvaW5nU2NyaXB0SW5mb1Nj",
+            "CihDbG9ja1BhcmtHZXRPbmdvaW5nU2NyaXB0SW5mb1NjUnNwLnByb3RvGhFF",
+            "Q01JTEhDS09NTy5wcm90bxoRTEtCQktPSkREUEQucHJvdG8aEUJNTE9GUENO",
+            "R0tOLnByb3RvIscCCiJDbG9ja1BhcmtHZXRPbmdvaW5nU2NyaXB0SW5mb1Nj",
             "UnNwEiEKC01KRE9HUEJPSklQGAcgASgLMgwuQk1MT0ZQQ05HS04SEwoLQ01H",
             "S0VPTENCSVAYCiABKAkSEwoLQUlHRUhITkhLUE0YDyABKA0SEwoLRUlETExF",
             "T0xGR00YBiADKA0SEgoKY2hhcHRlcl9pZBgLIAEoDRITCgtPQlBGQkxOQkZL",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "QU5HTBgNIAEoCzIMLkxLQkJLT0pERFBEQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LKBBKOJDDPDReflection.Descriptor, global::EggLink.DanhengServer.Proto.BMLOFPCNGKNReflection.Descriptor, global::EggLink.DanhengServer.Proto.ECMILHCKOMOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ECMILHCKOMOReflection.Descriptor, global::EggLink.DanhengServer.Proto.LKBBKOJDDPDReflection.Descriptor, global::EggLink.DanhengServer.Proto.BMLOFPCNGKNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClockParkGetOngoingScriptInfoScRsp), global::EggLink.DanhengServer.Proto.ClockParkGetOngoingScriptInfoScRsp.Parser, new[]{ "MJDOGPBOJIP", "CMGKEOLCBIP", "AIGEHHNHKPM", "EIDLLEOLFGM", "ChapterId", "OBPFBLNBFKI", "ScriptId", "BLHGBEDNFIB", "CHOBAOGMLFN", "Retcode", "RogueBuffInfo", "IENPHEFANGL" }, null, null, null, null)
           }));
