@@ -4,6 +4,7 @@ using EggLink.DanhengServer.Database;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Enums.Avatar;
+using EggLink.DanhengServer.GameServer.Game.Battle.Custom;
 using EggLink.DanhengServer.GameServer.Game.Lineup;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.Scene;
@@ -67,6 +68,7 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
     public Dictionary<int, BattleTargetList> BattleTargets { get; set; } = [];
     public BattleCollegeConfigExcel? CollegeConfigExcel { get; set; }
     public PVEBattleResultCsReq? BattleResult { get; set; }
+    public BattleGridFightOptions? GridFightOptions { get; set; }
     public bool IsTournRogue { get; set; }
 
     public ItemList GetDropItemList()
@@ -214,61 +216,68 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
             LogicRandomSeed = (uint)Random.Shared.Next()
         };
 
-        if (MagicInfo != null) proto.BattleRogueMagicInfo = MagicInfo;
-
-        foreach (var protoWave in Stages.Select(wave => wave.ToProto()))
+        if (GridFightOptions != null)
         {
-            if (CustomLevel > 0)
-                foreach (var item in protoWave)
-                    item.MonsterParam.Level = (uint)CustomLevel;
-
-            proto.MonsterWaveList.AddRange(protoWave);
+            GridFightOptions.HandleProto(proto, this);  // grid fight will handle the proto itself
         }
-
-        if (Player.BattleManager!.NextBattleMonsterIds.Count > 0)
+        else
         {
-            var ids = Player.BattleManager!.NextBattleMonsterIds;
-            // split every 5
-            for (var i = 0; i < (ids.Count - 1) / 5 + 1; i++)
+            if (MagicInfo != null) proto.BattleRogueMagicInfo = MagicInfo;
+
+            foreach (var protoWave in Stages.Select(wave => wave.ToProto()))
             {
-                var count = Math.Min(5, ids.Count - i * 5);
-                var waveIds = ids.GetRange(i * 5, count);
+                if (CustomLevel > 0)
+                    foreach (var item in protoWave)
+                        item.MonsterParam.Level = (uint)CustomLevel;
 
-                proto.MonsterWaveList.Add(new SceneMonsterWave
-                {
-                    BattleStageId = (uint)(Stages.FirstOrDefault()?.StageID ?? 0),
-                    BattleWaveId = (uint)(proto.MonsterWaveList.Count + 1),
-                    MonsterParam = new SceneMonsterWaveParam(),
-                    MonsterList =
-                    {
-                        waveIds.Select(x => new SceneMonster
-                        {
-                            MonsterId = (uint)x
-                        })
-                    }
-                });
+                proto.MonsterWaveList.AddRange(protoWave);
             }
+
+            if (Player.BattleManager!.NextBattleMonsterIds.Count > 0)
+            {
+                var ids = Player.BattleManager!.NextBattleMonsterIds;
+                // split every 5
+                for (var i = 0; i < (ids.Count - 1) / 5 + 1; i++)
+                {
+                    var count = Math.Min(5, ids.Count - i * 5);
+                    var waveIds = ids.GetRange(i * 5, count);
+
+                    proto.MonsterWaveList.Add(new SceneMonsterWave
+                    {
+                        BattleStageId = (uint)(Stages.FirstOrDefault()?.StageID ?? 0),
+                        BattleWaveId = (uint)(proto.MonsterWaveList.Count + 1),
+                        MonsterParam = new SceneMonsterWaveParam(),
+                        MonsterList =
+                        {
+                            waveIds.Select(x => new SceneMonster
+                            {
+                                MonsterId = (uint)x
+                            })
+                        }
+                    });
+                }
+            }
+
+            var avatars = GetBattleAvatars();
+            foreach (var avatar in avatars)
+                proto.BattleAvatarList.Add(avatar.AvatarInfo.ToBattleProto(
+                    new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, Lineup), avatar.AvatarType));
+
+            System.Threading.Tasks.Task.Run(async () =>
+            {
+                foreach (var monster in EntityMonsters) await monster.ApplyBuff(this);
+
+                foreach (var avatar in AvatarInfo)
+                    if (avatars.Select(x => x.AvatarInfo).FirstOrDefault(x =>
+                            x.BaseAvatarId == avatar.AvatarInfo.BaseAvatarId) !=
+                        null) // if avatar is in lineup
+                        await avatar.ApplyBuff(this);
+            }).Wait();
+
+            foreach (var buff in Buffs.Clone())
+                if (Enum.IsDefined(typeof(DamageTypeEnum), buff.BuffID))
+                    Buffs.RemoveAll(x => x.BuffID == buff.BuffID && x.DynamicValues.Count == 0);
         }
-
-        var avatars = GetBattleAvatars();
-        foreach (var avatar in avatars)
-            proto.BattleAvatarList.Add(avatar.AvatarInfo.ToBattleProto(
-                new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, Lineup), avatar.AvatarType));
-
-        System.Threading.Tasks.Task.Run(async () =>
-        {
-            foreach (var monster in EntityMonsters) await monster.ApplyBuff(this);
-
-            foreach (var avatar in AvatarInfo)
-                if (avatars.Select(x => x.AvatarInfo).FirstOrDefault(x =>
-                        x.BaseAvatarId == avatar.AvatarInfo.BaseAvatarId) !=
-                    null) // if avatar is in lineup
-                    await avatar.ApplyBuff(this);
-        }).Wait();
-
-        foreach (var buff in Buffs.Clone())
-            if (Enum.IsDefined(typeof(DamageTypeEnum), buff.BuffID))
-                Buffs.RemoveAll(x => x.BuffID == buff.BuffID && x.DynamicValues.Count == 0);
 
         foreach (var eventInstance in BattleEvents.Values) proto.BattleEvent.Add(eventInstance.ToProto());
 

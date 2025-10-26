@@ -1,0 +1,73 @@
+using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.GameServer.Game.GridFight.Component;
+using EggLink.DanhengServer.Internationalization;
+using EggLink.DanhengServer.Proto;
+
+namespace EggLink.DanhengServer.Command.Command.Cmd;
+
+[CommandInfo("grid", "Game.Command.Grid.Desc", "Game.Command.Grid.Usage")]
+public class CommandGrid : ICommand
+{
+    [CommandMethod("role")]
+    public async ValueTask AddRole(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        var inst = arg.Target.Player!.GridFightManager?.GridFightInstance;
+        if (inst == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.NotInGame"));
+            return;
+        }
+
+        if (arg.BasicArgs.Count < 2)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
+            return;
+        }
+
+        var roleId = (uint)arg.GetInt(0);
+        var tier = (uint)arg.GetInt(1);
+
+        if (!GameData.GridFightRoleStarData.ContainsKey(roleId << 2 | tier))
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.InvalidRole"));
+            return;
+        }
+
+        await inst.GetComponent<GridFightAvatarComponent>().AddAvatar(roleId, tier);
+        await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.AddedRole"));
+    }
+
+    [CommandMethod("gold")]
+    public async ValueTask UpdateGold(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        var inst = arg.Target.Player!.GridFightManager?.GridFightInstance;
+        if (inst == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.NotInGame"));
+            return;
+        }
+
+        if (arg.BasicArgs.Count < 1)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
+            return;
+        }
+
+        var gold = arg.GetInt(0);
+
+        await inst.GetComponent<GridFightBasicComponent>().UpdateGoldNum(gold, true, GridFightSrc.KGridFightSrcNone);
+        await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.UpdateGold", gold.ToString()));
+    }
+}

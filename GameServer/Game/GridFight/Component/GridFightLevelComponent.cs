@@ -1,6 +1,8 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.GridFight;
+using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
 
@@ -34,6 +36,34 @@ public class GridFightLevelComponent : BaseGridFightComponent
             // create section infos
             Sections[(uint)chapterId] = [..select.Values.Select(x => new GridFightGameSectionInfo(x, camp))];
         }
+    }
+
+    public async ValueTask<List<BaseGridFightSyncData>> EnterNextSection(bool sendPacket = true)
+    {
+        // if last section of chapter
+        if (_curSectionId >= Sections[_curChapterId].Count)
+        {
+            if (_curChapterId >= Sections.Count)
+            {
+                // end of game
+                return [];
+            }
+
+            _curChapterId++;
+            _curSectionId = 1;
+        }
+        else
+        {
+            _curSectionId++;
+        }
+
+        List<BaseGridFightSyncData> syncs = [new GridFightLevelSyncData(GridFightSrc.KGridFightSrcBattleEnd, this)];
+        if (sendPacket)
+        {
+            await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
+        }
+
+        return syncs;
     }
 
     public List<GridFightMonsterInfo> GetBossMonsters()
@@ -91,9 +121,8 @@ public class GridFightLevelComponent : BaseGridFightComponent
                         Sections.Values.SelectMany(x => x).Select(s => s.ToProto())
                     }
                 },
-                CGAIJCCLKBH = new()
+                LevelSttInfo = new GridFightLevelSttInfo
                 {
-                    DILHFEHBGDN = new ACHJGEEKCAH()
                 }
             }
         };

@@ -2,6 +2,9 @@
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Inventory;
+using EggLink.DanhengServer.GameServer.Game.Battle.Custom;
+using EggLink.DanhengServer.GameServer.Game.GridFight;
+using EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Game.RogueMagic;
 using EggLink.DanhengServer.GameServer.Game.Scene;
@@ -292,6 +295,34 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
         return (Retcode.RetSucc, battleInstance);
     }
 
+    public BattleInstance? StartGridFightBattle(GridFightInstance inst)
+    {
+        if (Player.BattleInstance != null) return null;
+
+        var levelComponent = inst.GetComponent<GridFightLevelComponent>();
+
+        var curSection = levelComponent.CurrentSection;
+
+        var stageConfigId = curSection.Excel.StageID;
+        GameData.StageConfigData.TryGetValue((int)stageConfigId, out var stageConfig);
+        if (stageConfig == null) return null;
+
+        BattleInstance battleInstance = new(Player, Player.LineupManager!.GetCurLineup()!, [stageConfig])
+        {
+            WorldLevel = Player.Data.WorldLevel,
+            AvatarInfo = [],
+            GridFightOptions = new BattleGridFightOptions(curSection, inst, Player)
+        };
+
+        Player.BattleInstance = battleInstance;
+
+        Player.QuestManager!.OnBattleStart(battleInstance);
+
+        InvokeOnPlayerEnterBattle(Player, battleInstance);
+
+        return battleInstance;
+    }
+
     public async ValueTask EndBattle(PVEBattleResultCsReq req)
     {
         InvokeOnPlayerQuitBattle(Player, req);
@@ -382,6 +413,12 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
         if (Player.ActivityManager!.TrialActivityInstance != null && req.EndStatus == BattleEndStatus.BattleEndWin)
             await Player.ActivityManager.TrialActivityInstance.EndActivity(TrialActivityStatus.Finish);
+
+        if (Player.GridFightManager?.GridFightInstance != null &&
+            battle.GridFightOptions != null)
+        {
+            await Player.GridFightManager!.GridFightInstance!.EndBattle(battle);
+        }
 
         await Player.SendPacket(new PacketPVEBattleResultScRsp(req, Player, battle));
     }

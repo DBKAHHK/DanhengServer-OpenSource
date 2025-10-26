@@ -21,7 +21,7 @@ public class GridFightManager(PlayerInstance player) : BasePlayerManager(player)
         if (GridFightInstance != null)
             return (Retcode.RetGridFightAlreadyInGameplay, GridFightInstance);
 
-        GridFightInstance = new GridFightInstance(season, divisionId, isOverLock, ++CurUniqueId);
+        GridFightInstance = new GridFightInstance(Player, season, divisionId, isOverLock, ++CurUniqueId);
         GridFightInstance.InitializeComponents();
 
         await ValueTask.CompletedTask;

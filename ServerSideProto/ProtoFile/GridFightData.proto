@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+option csharp_namespace = "EggLink.DanhengServer.Proto.ServerSide";
+
+message GridFightShopRoleItemPb {
+    uint32 RoleId = 1;
+    uint32 Tier = 2;
+}
+
+message GridFightShopItemPb {
+    oneof ItemType {
+        GridFightShopRoleItemPb RoleItem = 1;
+    }
+    uint32 Rarity = 2;
+}
+
+message GridFightShopInfoPb {
+    bool ShopLocked = 1;
+    uint32 FreeRefreshCount = 2;
+    uint32 RefreshCost = 3;
+    repeated GridFightShopItemPb ShopItems = 4;
+}
+
+message GridFightGameInfoPb {
+    uint32 UniqueId = 1;
+    uint32 DivisionId = 2;
+    bool IsOverLock = 3;
+    uint32 Season = 4;
+    repeated GridFightComponentPb Components = 5;
+}
+
+message GridFightBasicInfoPb {
+    uint32 CurGold = 1;
+    uint32 CurLevel = 2;
+    uint32 LevelExp = 3;
+    uint32 BuyLevelCost = 4;
+    uint32 CurHp = 5;
+    uint32 CurOnGroundAvatarCount = 6;
+}
+
+message GridFightRoleInfoPb {
+    uint32 RoleId = 1;
+    uint32 Tier = 2;
+    uint32 Pos = 3;
+    uint32 UniqueId = 4;
+}
+
+message GridFightAvatarInfoPb {
+    repeated GridFightRoleInfoPb Roles = 1;
+    uint32 CurUniqueId = 2;
+}
+
+message GridFightComponentPb {
+    oneof ComponentType {
+        GridFightShopInfoPb ShopInfo = 1;
+        GridFightBasicInfoPb BasicInfo = 2;
+        GridFightAvatarInfoPb AvatarInfo = 3;
+    }
+}

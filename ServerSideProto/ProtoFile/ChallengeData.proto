@@ -3,10 +3,10 @@ syntax = "proto3";
 option csharp_namespace = "EggLink.DanhengServer.Proto.ServerSide";
 
 enum ChallengeLineupTypePb {
-    None = 0;
-    Challenge1 = 1;
-    Challenge2 = 3;
-    Challenge3 = 4;
+    ChallengeLineupTypePb_None = 0;
+    ChallengeLineupTypePb_Challenge1 = 1;
+    ChallengeLineupTypePb_Challenge2 = 3;
+    ChallengeLineupTypePb_Challenge3 = 4;
 }
 
 message Vector3Pb {

@@ -55,10 +55,12 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             "Q2hhbGxlbmdlTWVtb3J5RGF0YVBiSAASJgoFc3RvcnkYAiABKAsyFS5DaGFs",
             "bGVuZ2VTdG9yeURhdGFQYkgAEiQKBGJvc3MYAyABKAsyFC5DaGFsbGVuZ2VC",
             "b3NzRGF0YVBiSAASJAoEcGVhaxgEIAEoCzIULkNoYWxsZW5nZVBlYWtEYXRh",
-            "UGJIAEIQCg5jaGFsbGVuZ2VfdHlwZSpRChVDaGFsbGVuZ2VMaW5ldXBUeXBl",
-            "UGISCAoETm9uZRAAEg4KCkNoYWxsZW5nZTEQARIOCgpDaGFsbGVuZ2UyEAMS",
-            "DgoKQ2hhbGxlbmdlMxAEQimqAiZFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
-            "dG8uU2VydmVyU2lkZWIGcHJvdG8z"));
+            "UGJIAEIQCg5jaGFsbGVuZ2VfdHlwZSqpAQoVQ2hhbGxlbmdlTGluZXVwVHlw",
+            "ZVBiEh4KGkNoYWxsZW5nZUxpbmV1cFR5cGVQYl9Ob25lEAASJAogQ2hhbGxl",
+            "bmdlTGluZXVwVHlwZVBiX0NoYWxsZW5nZTEQARIkCiBDaGFsbGVuZ2VMaW5l",
+            "dXBUeXBlUGJfQ2hhbGxlbmdlMhADEiQKIENoYWxsZW5nZUxpbmV1cFR5cGVQ",
+            "Yl9DaGFsbGVuZ2UzEARCKaoCJkVnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "by5TZXJ2ZXJTaWRlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.ServerSide.ChallengeLineupTypePb), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -75,10 +77,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
   }
   #region Enums
   public enum ChallengeLineupTypePb {
-    [pbr::OriginalName("None")] None = 0,
-    [pbr::OriginalName("Challenge1")] Challenge1 = 1,
-    [pbr::OriginalName("Challenge2")] Challenge2 = 3,
-    [pbr::OriginalName("Challenge3")] Challenge3 = 4,
+    [pbr::OriginalName("ChallengeLineupTypePb_None")] None = 0,
+    [pbr::OriginalName("ChallengeLineupTypePb_Challenge1")] Challenge1 = 1,
+    [pbr::OriginalName("ChallengeLineupTypePb_Challenge2")] Challenge2 = 3,
+    [pbr::OriginalName("ChallengeLineupTypePb_Challenge3")] Challenge3 = 4,
   }
 
   #endregion
