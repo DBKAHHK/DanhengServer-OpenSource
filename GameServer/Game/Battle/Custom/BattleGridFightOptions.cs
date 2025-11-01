@@ -1,10 +1,12 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Avatar;
+using EggLink.DanhengServer.Database.Lineup;
 using EggLink.DanhengServer.GameServer.Game.GridFight;
 using EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
 
 namespace EggLink.DanhengServer.GameServer.Game.Battle.Custom;
 
@@ -12,21 +14,28 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
 {
     public GridFightGameEncounterInfo Encounter { get; set; } = curSection.Encounters.RandomElement();
     public GridFightInstance Inst { get; set; } = inst;
-    public GridFightAvatarComponent AvatarComponent { get; set; } = inst.GetComponent<GridFightAvatarComponent>();
+    public GridFightRoleComponent AvatarComponent { get; set; } = inst.GetComponent<GridFightRoleComponent>();
     public GridFightBasicComponent BasicComponent { get; set; } = inst.GetComponent<GridFightBasicComponent>();
     public GridFightGameSectionInfo CurSection { get; set; } = curSection;
     public PlayerInstance Player { get; set; } = player;
 
     public void HandleProto(SceneBattleInfo proto, BattleInstance battle)
     {
-        var avatars = AvatarComponent.GetForegroundAvatarInfos();
+        var avatars = AvatarComponent.GetForegroundAvatarInfos(4 + BasicComponent.GetFieldCount());
+
+        var tempLineup = new LineupInfo
+        {
+            BaseAvatars = avatars.Select(y => new LineupAvatarInfo
+            {
+                BaseAvatarId = y.BaseAvatarId
+            }).ToList()
+        };
 
         var formatted = avatars.Select(x =>
             x.ToBattleProto(
-                new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data,
-                    Player.LineupManager!.GetCurLineup()!), AvatarType.AvatarGridFightType)).ToList();
+                new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, tempLineup), AvatarType.AvatarGridFightType)).ToList();
 
-        proto.BattleAvatarList.Add(formatted);
+        proto.BattleAvatarList.Add(formatted.Take(4));
 
         foreach (var wave in Encounter.MonsterWaves)
         {
@@ -58,7 +67,7 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
         {
             GridGameAvatarList =
             {
-                AvatarComponent.Data.Roles.Where(x => x.Pos <= 4).Select(x => x.ToBattleInfo())
+                AvatarComponent.Data.Roles.Where(x => x.Pos <= 4 + BasicComponent.GetFieldCount()).Select(x => x.ToBattleInfo())
             },
             BattleWaveId = 1,
             GridFightCurLevel = BasicComponent.Data.CurLevel,

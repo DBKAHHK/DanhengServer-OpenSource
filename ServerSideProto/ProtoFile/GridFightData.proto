@@ -36,6 +36,7 @@ message GridFightBasicInfoPb {
     uint32 BuyLevelCost = 4;
     uint32 CurHp = 5;
     uint32 CurOnGroundAvatarCount = 6;
+    uint32 ComboNum = 7;
 }
 
 message GridFightRoleInfoPb {

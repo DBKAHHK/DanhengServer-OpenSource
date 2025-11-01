@@ -14,6 +14,7 @@ public class GridFightLevelComponent : BaseGridFightComponent
     private uint _curSectionId = 1;
     public Dictionary<uint, List<GridFightGameSectionInfo>> Sections { get; } = [];
     public GridFightGameSectionInfo CurrentSection => Sections[_curChapterId][(int)(_curSectionId - 1)];
+    public List<GridFightRoleDamageSttInfo> RoleDamageSttInfos { get; } = [];
 
     public GridFightLevelComponent(GridFightInstance inst) : base(inst)
     {
@@ -36,6 +37,51 @@ public class GridFightLevelComponent : BaseGridFightComponent
             // create section infos
             Sections[(uint)chapterId] = [..select.Values.Select(x => new GridFightGameSectionInfo(x, camp))];
         }
+    }
+
+    public async ValueTask<(Retcode, GridFightRoleDamageSttInfo?)> AddRoleDamageStt(uint roleId, double damage, bool sendPacket = true)
+    {
+        var roleComp = Inst.GetComponent<GridFightRoleComponent>();
+
+        var role = roleComp.Data.Roles.OrderBy(x => x.Pos).FirstOrDefault(x => x.RoleId == roleId);
+        if (role == null)
+            return (Retcode.RetGridFightRoleNotExist, null);
+
+        var info = RoleDamageSttInfos.FirstOrDefault(x => x.RoleId == roleId && x.Tier == role.Tier);
+        GridFightRoleDamageSttInfo res;
+        if (info == null)
+        {
+            res = info = new GridFightRoleDamageSttInfo
+            {
+                RoleId = roleId,
+                Tier = role.Tier,
+                TotalDamage = damage,
+                IsTrialAvatar = false,
+                IsUpgrade = false
+            };
+
+            RoleDamageSttInfos.Add(info);
+        }
+        else
+        {
+            res = new GridFightRoleDamageSttInfo
+            {
+                RoleId = info.RoleId,
+                IsTrialAvatar = info.IsTrialAvatar,
+                IsUpgrade = info.IsUpgrade,
+                Tier = info.Tier,
+                TotalDamage = damage
+            };
+
+            info.TotalDamage += damage;
+        }
+
+        if (sendPacket)
+        {
+            await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(new GridFightRoleDamageSttSyncData(GridFightSrc.KGridFightSrcBattleEnd, this)));
+        }
+
+        return (Retcode.RetSucc, res);
     }
 
     public async ValueTask<List<BaseGridFightSyncData>> EnterNextSection(bool sendPacket = true)
@@ -123,8 +169,38 @@ public class GridFightLevelComponent : BaseGridFightComponent
                 },
                 LevelSttInfo = new GridFightLevelSttInfo
                 {
+                    GridFightDamageSttInfo = ToDamageSttInfo()
                 }
             }
+        };
+    }
+
+    public GridFightDamageSttInfo ToDamageSttInfo()
+    {
+        return new GridFightDamageSttInfo
+        {
+            RoleDamageSttList = { RoleDamageSttInfos.Select(x => x.ToProto()) }
+        };
+    }
+}
+
+public class GridFightRoleDamageSttInfo
+{
+    public uint RoleId { get; set; }
+    public uint Tier { get; set; }
+    public double TotalDamage { get; set; }
+    public bool IsTrialAvatar { get; set; }
+    public bool IsUpgrade { get; set; }
+
+    public GridFightRoleDamageStt ToProto()
+    {
+        return new GridFightRoleDamageStt
+        {
+            RoleBasicId = RoleId,
+            Tier = Tier,
+            IsTrialAvatar = IsTrialAvatar,
+            IsUpgrade = IsUpgrade,
+            TotalDamage = TotalDamage
         };
     }
 }

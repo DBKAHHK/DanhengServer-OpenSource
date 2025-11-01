@@ -33,19 +33,20 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             "U2hvcEl0ZW1zGAQgAygLMhQuR3JpZEZpZ2h0U2hvcEl0ZW1QYiKKAQoTR3Jp",
             "ZEZpZ2h0R2FtZUluZm9QYhIQCghVbmlxdWVJZBgBIAEoDRISCgpEaXZpc2lv",
             "bklkGAIgASgNEhIKCklzT3ZlckxvY2sYAyABKAgSDgoGU2Vhc29uGAQgASgN",
-            "EikKCkNvbXBvbmVudHMYBSADKAsyFS5HcmlkRmlnaHRDb21wb25lbnRQYiKQ",
+            "EikKCkNvbXBvbmVudHMYBSADKAsyFS5HcmlkRmlnaHRDb21wb25lbnRQYiKi",
             "AQoUR3JpZEZpZ2h0QmFzaWNJbmZvUGISDwoHQ3VyR29sZBgBIAEoDRIQCghD",
             "dXJMZXZlbBgCIAEoDRIQCghMZXZlbEV4cBgDIAEoDRIUCgxCdXlMZXZlbENv",
             "c3QYBCABKA0SDQoFQ3VySHAYBSABKA0SHgoWQ3VyT25Hcm91bmRBdmF0YXJD",
-            "b3VudBgGIAEoDSJSChNHcmlkRmlnaHRSb2xlSW5mb1BiEg4KBlJvbGVJZBgB",
-            "IAEoDRIMCgRUaWVyGAIgASgNEgsKA1BvcxgDIAEoDRIQCghVbmlxdWVJZBgE",
-            "IAEoDSJRChVHcmlkRmlnaHRBdmF0YXJJbmZvUGISIwoFUm9sZXMYASADKAsy",
-            "FC5HcmlkRmlnaHRSb2xlSW5mb1BiEhMKC0N1clVuaXF1ZUlkGAIgASgNIqsB",
-            "ChRHcmlkRmlnaHRDb21wb25lbnRQYhIoCghTaG9wSW5mbxgBIAEoCzIULkdy",
-            "aWRGaWdodFNob3BJbmZvUGJIABIqCglCYXNpY0luZm8YAiABKAsyFS5Hcmlk",
-            "RmlnaHRCYXNpY0luZm9QYkgAEiwKCkF2YXRhckluZm8YAyABKAsyFi5Hcmlk",
-            "RmlnaHRBdmF0YXJJbmZvUGJIAEIPCg1Db21wb25lbnRUeXBlQimqAiZFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG8uU2VydmVyU2lkZWIGcHJvdG8z"));
+            "b3VudBgGIAEoDRIQCghDb21ib051bRgHIAEoDSJSChNHcmlkRmlnaHRSb2xl",
+            "SW5mb1BiEg4KBlJvbGVJZBgBIAEoDRIMCgRUaWVyGAIgASgNEgsKA1BvcxgD",
+            "IAEoDRIQCghVbmlxdWVJZBgEIAEoDSJRChVHcmlkRmlnaHRBdmF0YXJJbmZv",
+            "UGISIwoFUm9sZXMYASADKAsyFC5HcmlkRmlnaHRSb2xlSW5mb1BiEhMKC0N1",
+            "clVuaXF1ZUlkGAIgASgNIqsBChRHcmlkRmlnaHRDb21wb25lbnRQYhIoCghT",
+            "aG9wSW5mbxgBIAEoCzIULkdyaWRGaWdodFNob3BJbmZvUGJIABIqCglCYXNp",
+            "Y0luZm8YAiABKAsyFS5HcmlkRmlnaHRCYXNpY0luZm9QYkgAEiwKCkF2YXRh",
+            "ckluZm8YAyABKAsyFi5HcmlkRmlnaHRBdmF0YXJJbmZvUGJIAEIPCg1Db21w",
+            "b25lbnRUeXBlQimqAiZFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG8uU2Vy",
+            "dmVyU2lkZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -53,7 +54,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopItemPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopItemPb.Parser, new[]{ "RoleItem", "Rarity" }, new[]{ "ItemType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopInfoPb.Parser, new[]{ "ShopLocked", "FreeRefreshCount", "RefreshCost", "ShopItems" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameInfoPb.Parser, new[]{ "UniqueId", "DivisionId", "IsOverLock", "Season", "Components" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb.Parser, new[]{ "CurGold", "CurLevel", "LevelExp", "BuyLevelCost", "CurHp", "CurOnGroundAvatarCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb.Parser, new[]{ "CurGold", "CurLevel", "LevelExp", "BuyLevelCost", "CurHp", "CurOnGroundAvatarCount", "ComboNum" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightRoleInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightRoleInfoPb.Parser, new[]{ "RoleId", "Tier", "Pos", "UniqueId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightAvatarInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightAvatarInfoPb.Parser, new[]{ "Roles", "CurUniqueId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightComponentPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightComponentPb.Parser, new[]{ "ShopInfo", "BasicInfo", "AvatarInfo" }, new[]{ "ComponentType" }, null, null, null)
@@ -1218,6 +1219,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       buyLevelCost_ = other.buyLevelCost_;
       curHp_ = other.curHp_;
       curOnGroundAvatarCount_ = other.curOnGroundAvatarCount_;
+      comboNum_ = other.comboNum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1299,6 +1301,18 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
     }
 
+    /// <summary>Field number for the "ComboNum" field.</summary>
+    public const int ComboNumFieldNumber = 7;
+    private uint comboNum_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ComboNum {
+      get { return comboNum_; }
+      set {
+        comboNum_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1320,6 +1334,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (BuyLevelCost != other.BuyLevelCost) return false;
       if (CurHp != other.CurHp) return false;
       if (CurOnGroundAvatarCount != other.CurOnGroundAvatarCount) return false;
+      if (ComboNum != other.ComboNum) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1333,6 +1348,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (BuyLevelCost != 0) hash ^= BuyLevelCost.GetHashCode();
       if (CurHp != 0) hash ^= CurHp.GetHashCode();
       if (CurOnGroundAvatarCount != 0) hash ^= CurOnGroundAvatarCount.GetHashCode();
+      if (ComboNum != 0) hash ^= ComboNum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1375,6 +1391,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(48);
         output.WriteUInt32(CurOnGroundAvatarCount);
       }
+      if (ComboNum != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ComboNum);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1409,6 +1429,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(48);
         output.WriteUInt32(CurOnGroundAvatarCount);
       }
+      if (ComboNum != 0) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(ComboNum);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1436,6 +1460,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
       if (CurOnGroundAvatarCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurOnGroundAvatarCount);
+      }
+      if (ComboNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ComboNum);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1466,6 +1493,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
       if (other.CurOnGroundAvatarCount != 0) {
         CurOnGroundAvatarCount = other.CurOnGroundAvatarCount;
+      }
+      if (other.ComboNum != 0) {
+        ComboNum = other.ComboNum;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1506,6 +1536,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             CurOnGroundAvatarCount = input.ReadUInt32();
             break;
           }
+          case 56: {
+            ComboNum = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1543,6 +1577,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
           }
           case 48: {
             CurOnGroundAvatarCount = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            ComboNum = input.ReadUInt32();
             break;
           }
         }

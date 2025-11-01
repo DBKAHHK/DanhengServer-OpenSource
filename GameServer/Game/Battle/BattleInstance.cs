@@ -71,6 +71,16 @@ public class BattleInstance(PlayerInstance player, LineupInfo lineup, List<Stage
     public BattleGridFightOptions? GridFightOptions { get; set; }
     public bool IsTournRogue { get; set; }
 
+    public delegate ValueTask OnBattleEndDelegate(BattleInstance battle, PVEBattleResultCsReq req);
+
+    public event OnBattleEndDelegate? OnBattleEnd;
+
+    public async ValueTask TriggerOnBattleEnd()
+    {
+        if (OnBattleEnd != null)
+            await OnBattleEnd(this, BattleResult!);
+    }
+
     public ItemList GetDropItemList()
     {
         if (BattleEndStatus != BattleEndStatus.BattleEndWin) return new ItemList();

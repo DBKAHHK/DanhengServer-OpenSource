@@ -20,7 +20,7 @@ public class HandlerGridFightUpdatePosCsReq : Handler
         }
 
         var gridFight = connection.Player.GridFightManager.GridFightInstance;
-        await gridFight.GetComponent<GridFightAvatarComponent>().UpdatePos(req.GridFightPosInfoList.ToList());
+        await gridFight.GetComponent<GridFightRoleComponent>().UpdatePos(req.GridFightPosInfoList.ToList());
 
         await connection.SendPacket(
             new PacketGridFightUpdatePosScRsp(Retcode.RetSucc, req.GridFightPosInfoList));

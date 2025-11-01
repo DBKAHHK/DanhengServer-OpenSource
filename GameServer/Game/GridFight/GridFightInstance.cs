@@ -21,19 +21,63 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         return Player.BattleManager!.StartGridFightBattle(this);
     }
 
-    public async ValueTask EndBattle(BattleInstance battle)
+    public async ValueTask EndBattle(BattleInstance battle, PVEBattleResultCsReq req)
     {
-        if (battle.BattleEndStatus != BattleEndStatus.BattleEndWin) return;
+        if (battle.BattleEndStatus == BattleEndStatus.BattleEndQuit) return;
 
         List<BaseGridFightSyncData> syncs = [];
 
-        await Player.SendPacket(new PacketGridFightEndBattleStageNotify(this));
-
         var basicComp = GetComponent<GridFightBasicComponent>();
-        await basicComp.UpdateGoldNum(5, false, GridFightSrc.KGridFightSrcNone);
+        var levelComp = GetComponent<GridFightLevelComponent>();
+        var prevData = basicComp.Data.Clone();
+
+        var expNum = 5u;
+        var baseCoin = 3u;
+        var interestCoin = basicComp.Data.CurGold / 10;
+
+        if (battle.BattleEndStatus == BattleEndStatus.BattleEndWin)
+        {
+            basicComp.Data.ComboNum++;
+        }
+        else
+        {
+            basicComp.Data.ComboNum = 0;
+
+            // cost hp
+            await basicComp.UpdateLineupHp(-5, false);
+        }
+
+        var comboCoin = basicComp.Data.ComboNum switch
+        {
+            >= 5 => 3u,
+            2 or 3 or 4 => 2u,
+            0 => 0u,
+            _ => 1u
+        };
+
+        await basicComp.UpdateGoldNum((int)(baseCoin + interestCoin + comboCoin), false, GridFightSrc.KGridFightSrcNone);
+        await basicComp.AddLevelExp(expNum, false);
+
+        List<GridFightRoleDamageSttInfo> sttList = [];
+        foreach (var roleBattleStt in req.Stt.GridFightBattleStt.RoleBattleStt)
+        {
+            var res = await levelComp.AddRoleDamageStt(roleBattleStt.RoleBasicId, roleBattleStt.Damage, false);
+            if (res.Item2 != null)
+                sttList.Add(res.Item2);
+        }
+
+        var curData = basicComp.Data.Clone();
+        await Player.SendPacket(new PacketGridFightEndBattleStageNotify(this, expNum, prevData, curData,
+            sttList, battle.BattleEndStatus == BattleEndStatus.BattleEndWin, baseCoin, interestCoin,
+            comboCoin));
+
 
         syncs.Add(new GridFightGoldSyncData(GridFightSrc.KGridFightSrcBattleEnd, basicComp.Data));
-        syncs.AddRange(await GetComponent<GridFightLevelComponent>().EnterNextSection(false));
+        syncs.Add(new GridFightPlayerLevelSyncData(GridFightSrc.KGridFightSrcBattleEnd, basicComp.Data));
+        syncs.Add(new GridFightLineupHpSyncData(GridFightSrc.KGridFightSrcBattleEnd, basicComp.Data));
+        syncs.Add(new GridFightComboNumSyncData(GridFightSrc.KGridFightSrcBattleEnd, basicComp.Data));
+        syncs.Add(new GridFightRoleDamageSttSyncData(GridFightSrc.KGridFightSrcBattleEnd, levelComp));
+        syncs.AddRange(await levelComp.EnterNextSection(false));
 
         await Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
     }
@@ -43,9 +87,9 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         Components.Add(new GridFightBasicComponent(this));
         Components.Add(new GridFightShopComponent(this));
         Components.Add(new GridFightLevelComponent(this));
-        Components.Add(new GridFightAvatarComponent(this));
+        Components.Add(new GridFightRoleComponent(this));
 
-        _ = GetComponent<GridFightAvatarComponent>().AddAvatar(1414, 3, false);  // TODO test
+        _ = GetComponent<GridFightRoleComponent>().AddAvatar(1414, 3, false);  // TODO test
         _ = GetComponent<GridFightShopComponent>().RefreshShop(true, false);
     }
 

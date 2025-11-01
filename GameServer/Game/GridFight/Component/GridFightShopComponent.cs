@@ -52,7 +52,7 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
 
         // GIVE ITEMS
         List<BaseGridFightSyncData> syncs = [];
-        var avatarComp = Inst.GetComponent<GridFightAvatarComponent>();
+        var avatarComp = Inst.GetComponent<GridFightRoleComponent>();
         foreach (var item in targetGoods)
         {
             if (item.ItemTypeCase == GridFightShopItemPb.ItemTypeOneofCase.RoleItem)
@@ -69,6 +69,9 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
         foreach (var index in indexes)
         {
             Data.ShopItems.RemoveAt((int)index);
+
+            // add new item
+            AddGoods(1, curLevel);
         }
 
         if (sendPacket)
@@ -80,6 +83,47 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
         }
 
         return Retcode.RetSucc;
+    }
+
+    public void AddGoods(uint num, uint curLevel)
+    {
+        var rules = GameData.GridFightPlayerLevelData.GetValueOrDefault(curLevel)?.RarityWeights ??
+                    [100, 0, 0, 0, 0];
+        List<uint> usedIds = Data.ShopItems.Select(x => x.RoleItem.RoleId).ToList();
+        // generate items
+        for (var i = 0; i < num; i++)
+        {
+            // select rarity
+            var rand = (uint)Random.Shared.Next(1, 101);
+            var targetRarity = 0;
+            for (var j = 0; j < 5; j++)
+            {
+                if (rand <= rules[j])
+                {
+                    targetRarity = j + 1;
+                    break;
+                }
+                rand -= rules[j];
+            }
+
+            // get item pool
+            var pool = GameData.GridFightRoleBasicInfoData.Values
+                .Where(x => !usedIds.Contains(x.ID) && x.IsInPool && x.Rarity == targetRarity).ToList();
+
+            var target = pool.RandomElement();
+            usedIds.Add(target.ID);
+
+            var tier = 1u;
+            Data.ShopItems.Add(new GridFightShopItemPb
+            {
+                Rarity = target.Rarity,
+                RoleItem = new GridFightShopRoleItemPb
+                {
+                    RoleId = target.ID,
+                    Tier = tier
+                }
+            });
+        }
     }
 
     public async ValueTask<Retcode> RefreshShop(bool isEnterSection, bool sendPacket = true)
@@ -113,46 +157,9 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
 
         // refresh
         var curLevel = Inst.GetComponent<GridFightBasicComponent>().Data.CurLevel;
-        var rules = GameData.GridFightPlayerLevelData.GetValueOrDefault(curLevel)?.RarityWeights ??
-                    [100, 0, 0, 0, 0];
-
         Data.ShopItems.Clear();
 
-        List<uint> usedIds = [];
-        // generate items
-        for (var i = 0; i < 5; i++)
-        {
-            // select rarity
-            var rand = (uint)Random.Shared.Next(1, 101);
-            var targetRarity = 0;
-            for (var j = 0; j < 5; j++)
-            {
-                if (rand <= rules[j])
-                {
-                    targetRarity = j + 1;
-                    break;
-                }
-                rand -= rules[j];
-            }
-
-            // get item pool
-            var pool = GameData.GridFightRoleBasicInfoData.Values
-                .Where(x => !usedIds.Contains(x.ID) && x.IsInPool && x.Rarity == targetRarity).ToList();
-
-            var target = pool.RandomElement();
-            usedIds.Add(target.ID);
-
-            var tier = 1u;
-            Data.ShopItems.Add(new GridFightShopItemPb
-            {
-                Rarity = target.Rarity,
-                RoleItem = new GridFightShopRoleItemPb
-                {
-                    RoleId = target.ID,
-                    Tier = tier
-                }
-            });
-        }
+        AddGoods(5, curLevel);
 
         if (sendPacket)
         {

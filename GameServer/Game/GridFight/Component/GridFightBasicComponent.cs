@@ -8,6 +8,8 @@ namespace EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 
 public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComponent(inst)
 {
+    public const uint MaxHp = 100;
+
     public GridFightBasicInfoPb Data { get; set; } = new()
     {
         CurHp = 100,
@@ -34,6 +36,18 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         return Retcode.RetSucc;
     }
 
+    public async ValueTask<Retcode> UpdateLineupHp(int changeNum, bool sendPacket = true, GridFightSrc src = GridFightSrc.KGridFightSrcBattleEnd)
+    {
+        Data.CurHp = (uint)Math.Min(Math.Max(Data.CurHp + changeNum, 0), MaxHp);
+
+        if (sendPacket)
+        {
+            await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(new GridFightLineupHpSyncData(src, Data)));
+        }
+
+        return Retcode.RetSucc;
+    }
+
     public async ValueTask<Retcode> BuyLevelExp(bool sendPacket = true)
     {
         if (!GameData.GridFightPlayerLevelData.TryGetValue(Data.CurLevel, out var levelConf) || levelConf.LevelUpExp == 0)
@@ -43,12 +57,35 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         if (await UpdateGoldNum((int)-Data.BuyLevelCost, false) != Retcode.RetSucc)
             return Retcode.RetGridFightCoinNotEnough;
 
-        Data.LevelExp += 1;
+        return await AddLevelExp(1, sendPacket);
+    }
+
+    public async ValueTask<Retcode> AddLevelExp(uint exp, bool sendPacket = true)
+    {
+        var upperLevels = GameData.GridFightPlayerLevelData.Values.Where(x => x.PlayerLevel >= Data.CurLevel)
+            .OrderBy(x => x.PlayerLevel).ToList();
+
+        if (upperLevels.Count == 1)  // 1 contain cur level
+            return Retcode.RetGridFightGameplayLevelMax;  // already max level
+
+        Data.LevelExp += exp;
 
         // LEVEL UP
-        if (Data.LevelExp >= levelConf.LevelUpExp)
+        var costExp = 0;
+        var targetLevel = Data.CurLevel;
+
+        foreach (var level in upperLevels)
         {
-            await UpgradeLevel(1, false);
+            if (level.LevelUpExp + costExp > Data.LevelExp)
+                break;
+
+            costExp += (int)level.LevelUpExp;
+            targetLevel = level.PlayerLevel + 1;
+        }
+
+        if (targetLevel > Data.CurLevel)
+        {
+            await UpgradeLevel(targetLevel - Data.CurLevel, false);
         }
 
         if (sendPacket)
@@ -68,8 +105,17 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         if (!GameData.GridFightPlayerLevelData.TryGetValue(level + Data.CurLevel, out var levelConf))
             return Retcode.RetGridFightGameplayLevelMax;
 
+        // adjust exp and other stats
+        for (var i = Data.CurLevel; i < level + Data.CurLevel; i++)
+        {
+            if (!GameData.GridFightPlayerLevelData.TryGetValue(i, out var curLevelConf))
+                break;
+
+            Data.LevelExp -= curLevelConf.LevelUpExp;
+        }
+
         Data.CurLevel += level;
-        Data.LevelExp = 0;
+
         Data.BuyLevelCost = (uint)Math.Ceiling(Data.CurLevel / 2f);
         Data.CurOnGroundAvatarCount = levelConf.AvatarMaxNumber;
 
@@ -105,6 +151,7 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
                 GridFightLineupHp = Data.CurHp,
                 GridFightCurGold = Data.CurGold,
                 GridFightMaxGold = 2000,
+                GridFightComboWinNum = Data.ComboNum,
                 OCMGMEHECBB = new OPIBBPCHFII
                 {
                     IJDIAOMINLB = new BHJALAPDBLH()

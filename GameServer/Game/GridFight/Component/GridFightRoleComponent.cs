@@ -7,7 +7,7 @@ using EggLink.DanhengServer.Proto.ServerSide;
 
 namespace EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 
-public class GridFightAvatarComponent(GridFightInstance inst) : BaseGridFightComponent(inst)
+public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightComponent(inst)
 {
     public GridFightAvatarInfoPb Data { get; set; } = new();
 
@@ -75,9 +75,9 @@ public class GridFightAvatarComponent(GridFightInstance inst) : BaseGridFightCom
         return syncs;
     }
 
-    public List<BaseAvatarInfo> GetForegroundAvatarInfos()
+    public List<BaseAvatarInfo> GetForegroundAvatarInfos(uint maxAvatarNum)
     {
-        var foreground = Data.Roles.Where(x => x.Pos <= 4).ToList();
+        var foreground = Data.Roles.Where(x => x.Pos <= maxAvatarNum).OrderBy(x => x.Pos).ToList();
         List<BaseAvatarInfo> res = [];
 
         foreach (var role in foreground)

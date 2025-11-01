@@ -18,7 +18,7 @@ public class HandlerGridFightRecycleRoleCsReq : Handler
             return;
         }
 
-        var roleComp = gridFight.GetComponent<GridFightAvatarComponent>();
+        var roleComp = gridFight.GetComponent<GridFightRoleComponent>();
         await roleComp.SellAvatar(req.UniqueId);
 
         await connection.SendPacket(CmdIds.GridFightRecycleRoleScRsp);

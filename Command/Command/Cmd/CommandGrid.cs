@@ -39,7 +39,7 @@ public class CommandGrid : ICommand
             return;
         }
 
-        await inst.GetComponent<GridFightAvatarComponent>().AddAvatar(roleId, tier);
+        await inst.GetComponent<GridFightRoleComponent>().AddAvatar(roleId, tier);
         await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.AddedRole"));
     }
 
