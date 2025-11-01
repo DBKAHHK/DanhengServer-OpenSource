@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightFinishAreaInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HcmlkRmlnaHRGaW5pc2hBcmVhSW5mby5wcm90byKnAQoXR3JpZEZpZ2h0",
+            "Ch1HcmlkRmlnaHRGaW5pc2hBcmVhSW5mby5wcm90byLBAQoXR3JpZEZpZ2h0",
             "RmluaXNoQXJlYUluZm8SEAoIcm91dGVfaWQYCCABKA0SEwoLUEVISU5HSktH",
-            "Q0IYCyABKA0SEwoLTUxJR01CT0RPRUcYByABKA0SEgoKY2hhcHRlcl9pZBgD",
-            "IAEoDRITCgtFTElGTkpCTkFHQxgBIAEoDRISCgpzZWN0aW9uX2lkGAIgASgN",
-            "EhMKC0hMQ0VQRVBIREhCGAQgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
-            "ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Q0IYCyABKA0SIAoYZ3JpZF9maWdodF9jdXJfbGluZXVwX2hwGAcgASgNEhIK",
+            "CmNoYXB0ZXJfaWQYAyABKA0SEwoLRUxJRk5KQk5BR0MYASABKA0SEgoKc2Vj",
+            "dGlvbl9pZBgCIAEoDRIgChhncmlkX2ZpZ2h0X21heF9saW5ldXBfaHAYBCAB",
+            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightFinishAreaInfo), global::EggLink.DanhengServer.Proto.GridFightFinishAreaInfo.Parser, new[]{ "RouteId", "PEHINGJKGCB", "MLIGMBODOEG", "ChapterId", "ELIFNJBNAGC", "SectionId", "HLCEPEPHDHB" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightFinishAreaInfo), global::EggLink.DanhengServer.Proto.GridFightFinishAreaInfo.Parser, new[]{ "RouteId", "PEHINGJKGCB", "GridFightCurLineupHp", "ChapterId", "ELIFNJBNAGC", "SectionId", "GridFightMaxLineupHp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,11 +77,11 @@ namespace EggLink.DanhengServer.Proto {
     public GridFightFinishAreaInfo(GridFightFinishAreaInfo other) : this() {
       routeId_ = other.routeId_;
       pEHINGJKGCB_ = other.pEHINGJKGCB_;
-      mLIGMBODOEG_ = other.mLIGMBODOEG_;
+      gridFightCurLineupHp_ = other.gridFightCurLineupHp_;
       chapterId_ = other.chapterId_;
       eLIFNJBNAGC_ = other.eLIFNJBNAGC_;
       sectionId_ = other.sectionId_;
-      hLCEPEPHDHB_ = other.hLCEPEPHDHB_;
+      gridFightMaxLineupHp_ = other.gridFightMaxLineupHp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -115,15 +115,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MLIGMBODOEG" field.</summary>
-    public const int MLIGMBODOEGFieldNumber = 7;
-    private uint mLIGMBODOEG_;
+    /// <summary>Field number for the "grid_fight_cur_lineup_hp" field.</summary>
+    public const int GridFightCurLineupHpFieldNumber = 7;
+    private uint gridFightCurLineupHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MLIGMBODOEG {
-      get { return mLIGMBODOEG_; }
+    public uint GridFightCurLineupHp {
+      get { return gridFightCurLineupHp_; }
       set {
-        mLIGMBODOEG_ = value;
+        gridFightCurLineupHp_ = value;
       }
     }
 
@@ -163,15 +163,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HLCEPEPHDHB" field.</summary>
-    public const int HLCEPEPHDHBFieldNumber = 4;
-    private uint hLCEPEPHDHB_;
+    /// <summary>Field number for the "grid_fight_max_lineup_hp" field.</summary>
+    public const int GridFightMaxLineupHpFieldNumber = 4;
+    private uint gridFightMaxLineupHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HLCEPEPHDHB {
-      get { return hLCEPEPHDHB_; }
+    public uint GridFightMaxLineupHp {
+      get { return gridFightMaxLineupHp_; }
       set {
-        hLCEPEPHDHB_ = value;
+        gridFightMaxLineupHp_ = value;
       }
     }
 
@@ -192,11 +192,11 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (RouteId != other.RouteId) return false;
       if (PEHINGJKGCB != other.PEHINGJKGCB) return false;
-      if (MLIGMBODOEG != other.MLIGMBODOEG) return false;
+      if (GridFightCurLineupHp != other.GridFightCurLineupHp) return false;
       if (ChapterId != other.ChapterId) return false;
       if (ELIFNJBNAGC != other.ELIFNJBNAGC) return false;
       if (SectionId != other.SectionId) return false;
-      if (HLCEPEPHDHB != other.HLCEPEPHDHB) return false;
+      if (GridFightMaxLineupHp != other.GridFightMaxLineupHp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -206,11 +206,11 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (RouteId != 0) hash ^= RouteId.GetHashCode();
       if (PEHINGJKGCB != 0) hash ^= PEHINGJKGCB.GetHashCode();
-      if (MLIGMBODOEG != 0) hash ^= MLIGMBODOEG.GetHashCode();
+      if (GridFightCurLineupHp != 0) hash ^= GridFightCurLineupHp.GetHashCode();
       if (ChapterId != 0) hash ^= ChapterId.GetHashCode();
       if (ELIFNJBNAGC != 0) hash ^= ELIFNJBNAGC.GetHashCode();
       if (SectionId != 0) hash ^= SectionId.GetHashCode();
-      if (HLCEPEPHDHB != 0) hash ^= HLCEPEPHDHB.GetHashCode();
+      if (GridFightMaxLineupHp != 0) hash ^= GridFightMaxLineupHp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -241,13 +241,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(ChapterId);
       }
-      if (HLCEPEPHDHB != 0) {
+      if (GridFightMaxLineupHp != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(HLCEPEPHDHB);
+        output.WriteUInt32(GridFightMaxLineupHp);
       }
-      if (MLIGMBODOEG != 0) {
+      if (GridFightCurLineupHp != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(MLIGMBODOEG);
+        output.WriteUInt32(GridFightCurLineupHp);
       }
       if (RouteId != 0) {
         output.WriteRawTag(64);
@@ -279,13 +279,13 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(ChapterId);
       }
-      if (HLCEPEPHDHB != 0) {
+      if (GridFightMaxLineupHp != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(HLCEPEPHDHB);
+        output.WriteUInt32(GridFightMaxLineupHp);
       }
-      if (MLIGMBODOEG != 0) {
+      if (GridFightCurLineupHp != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(MLIGMBODOEG);
+        output.WriteUInt32(GridFightCurLineupHp);
       }
       if (RouteId != 0) {
         output.WriteRawTag(64);
@@ -311,8 +311,8 @@ namespace EggLink.DanhengServer.Proto {
       if (PEHINGJKGCB != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PEHINGJKGCB);
       }
-      if (MLIGMBODOEG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MLIGMBODOEG);
+      if (GridFightCurLineupHp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightCurLineupHp);
       }
       if (ChapterId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChapterId);
@@ -323,8 +323,8 @@ namespace EggLink.DanhengServer.Proto {
       if (SectionId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SectionId);
       }
-      if (HLCEPEPHDHB != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HLCEPEPHDHB);
+      if (GridFightMaxLineupHp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightMaxLineupHp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -344,8 +344,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.PEHINGJKGCB != 0) {
         PEHINGJKGCB = other.PEHINGJKGCB;
       }
-      if (other.MLIGMBODOEG != 0) {
-        MLIGMBODOEG = other.MLIGMBODOEG;
+      if (other.GridFightCurLineupHp != 0) {
+        GridFightCurLineupHp = other.GridFightCurLineupHp;
       }
       if (other.ChapterId != 0) {
         ChapterId = other.ChapterId;
@@ -356,8 +356,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.SectionId != 0) {
         SectionId = other.SectionId;
       }
-      if (other.HLCEPEPHDHB != 0) {
-        HLCEPEPHDHB = other.HLCEPEPHDHB;
+      if (other.GridFightMaxLineupHp != 0) {
+        GridFightMaxLineupHp = other.GridFightMaxLineupHp;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -387,11 +387,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 32: {
-            HLCEPEPHDHB = input.ReadUInt32();
+            GridFightMaxLineupHp = input.ReadUInt32();
             break;
           }
           case 56: {
-            MLIGMBODOEG = input.ReadUInt32();
+            GridFightCurLineupHp = input.ReadUInt32();
             break;
           }
           case 64: {
@@ -430,11 +430,11 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 32: {
-            HLCEPEPHDHB = input.ReadUInt32();
+            GridFightMaxLineupHp = input.ReadUInt32();
             break;
           }
           case 56: {
-            MLIGMBODOEG = input.ReadUInt32();
+            GridFightCurLineupHp = input.ReadUInt32();
             break;
           }
           case 64: {

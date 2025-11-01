@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static TakeBenefitActivityRewardScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRUYWtlQmVuZWZpdEFjdGl2aXR5UmV3YXJkU2NSc3AucHJvdG8aDkl0ZW1M",
-            "aXN0LnByb3RvGhZSZXdhcmRTd2l0Y2hJdGVtLnByb3RvInkKHlRha2VCZW5l",
+            "CiRUYWtlQmVuZWZpdEFjdGl2aXR5UmV3YXJkU2NSc3AucHJvdG8aFlJld2Fy",
+            "ZFN3aXRjaEl0ZW0ucHJvdG8aDkl0ZW1MaXN0LnByb3RvInkKHlRha2VCZW5l",
             "Zml0QWN0aXZpdHlSZXdhcmRTY1JzcBImCgtzd2l0Y2hfbGlzdBgFIAMoCzIR",
             "LlJld2FyZFN3aXRjaEl0ZW0SHgoLQ0tFS0NDT05KR0IYBiABKAsyCS5JdGVt",
             "TGlzdBIPCgdyZXRjb2RlGA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RewardSwitchItemReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RewardSwitchItemReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeBenefitActivityRewardScRsp), global::EggLink.DanhengServer.Proto.TakeBenefitActivityRewardScRsp.Parser, new[]{ "SwitchList", "CKEKCCONJGB", "Retcode" }, null, null, null, null)
           }));

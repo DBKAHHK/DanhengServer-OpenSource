@@ -24,26 +24,26 @@ namespace EggLink.DanhengServer.Proto {
     static GetAvatarDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhHZXRBdmF0YXJEYXRhU2NSc3AucHJvdG8aDEF2YXRhci5wcm90bxoWUGxh",
-            "eWVyT3V0Zml0SW5mby5wcm90bxoRS0hPQ0NIQUJOTU4ucHJvdG8aGU11bHRp",
-            "UGF0aEF2YXRhckluZm8ucHJvdG8aGU11bHRpUGF0aEF2YXRhclR5cGUucHJv",
-            "dG8aG0dyb3d0aFRhcnRnZXRGdW5jVHlwZS5wcm90byLbAwoSR2V0QXZhdGFy",
+            "ChhHZXRBdmF0YXJEYXRhU2NSc3AucHJvdG8aG0dyb3d0aFRhcnRnZXRGdW5j",
+            "VHlwZS5wcm90bxoZTXVsdGlQYXRoQXZhdGFyVHlwZS5wcm90bxoWUGxheWVy",
+            "T3V0Zml0SW5mby5wcm90bxoMQXZhdGFyLnByb3RvGhlNdWx0aVBhdGhBdmF0",
+            "YXJJbmZvLnByb3RvGhFLSE9DQ0hBQk5NTi5wcm90byLbAwoSR2V0QXZhdGFy",
             "RGF0YVNjUnNwEg8KB3JldGNvZGUYAiABKA0SKwoLUE5LQ0ZFQUxBTUkYDSAD",
             "KA4yFi5Hcm93dGhUYXJ0Z2V0RnVuY1R5cGUSIQoLRkVGUElKSkxORkcYCiAD",
             "KAsyDC5LSE9DQ0hBQk5NThI5ChttdWx0aV9wYXRoX2F2YXRhcl9pbmZvX2xp",
             "c3QYBiADKAsyFC5NdWx0aVBhdGhBdmF0YXJJbmZvEhIKCmlzX2dldF9hbGwY",
             "DiABKAgSEwoLSlBOTFBPUE1LRUoYBCABKA0SEQoJc2tpbl9saXN0GAcgAygN",
             "Ej8KD2N1cl9hdmF0YXJfcGF0aBgIIAMoCzImLkdldEF2YXRhckRhdGFTY1Jz",
-            "cC5DdXJBdmF0YXJQYXRoRW50cnkSJgoLRU5GS0VJQkRMTEYYBSABKAsyES5Q",
+            "cC5DdXJBdmF0YXJQYXRoRW50cnkSJgoLb3V0Zml0X2luZm8YBSABKAsyES5Q",
             "bGF5ZXJPdXRmaXRJbmZvEhwKC2F2YXRhcl9saXN0GAwgAygLMgcuQXZhdGFy",
             "EhoKEmJhc2ljX3R5cGVfaWRfbGlzdBgBIAMoDRpKChJDdXJBdmF0YXJQYXRo",
             "RW50cnkSCwoDa2V5GAEgASgNEiMKBXZhbHVlGAIgASgOMhQuTXVsdGlQYXRo",
             "QXZhdGFyVHlwZToCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerOutfitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KHOCCHABNMNReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GrowthTartgetFuncTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GrowthTartgetFuncTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlayerOutfitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.MultiPathAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KHOCCHABNMNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp), global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp.Parser, new[]{ "Retcode", "PNKCFEALAMI", "FEFPIJJLNFG", "MultiPathAvatarInfoList", "IsGetAll", "JPNLPOPMKEJ", "SkinList", "CurAvatarPath", "ENFKEIBDLLF", "AvatarList", "BasicTypeIdList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp), global::EggLink.DanhengServer.Proto.GetAvatarDataScRsp.Parser, new[]{ "Retcode", "PNKCFEALAMI", "FEFPIJJLNFG", "MultiPathAvatarInfoList", "IsGetAll", "JPNLPOPMKEJ", "SkinList", "CurAvatarPath", "OutfitInfo", "AvatarList", "BasicTypeIdList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -93,7 +93,7 @@ namespace EggLink.DanhengServer.Proto {
       jPNLPOPMKEJ_ = other.jPNLPOPMKEJ_;
       skinList_ = other.skinList_.Clone();
       curAvatarPath_ = other.curAvatarPath_.Clone();
-      eNFKEIBDLLF_ = other.eNFKEIBDLLF_ != null ? other.eNFKEIBDLLF_.Clone() : null;
+      outfitInfo_ = other.outfitInfo_ != null ? other.outfitInfo_.Clone() : null;
       avatarList_ = other.avatarList_.Clone();
       basicTypeIdList_ = other.basicTypeIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -196,15 +196,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return curAvatarPath_; }
     }
 
-    /// <summary>Field number for the "ENFKEIBDLLF" field.</summary>
-    public const int ENFKEIBDLLFFieldNumber = 5;
-    private global::EggLink.DanhengServer.Proto.PlayerOutfitInfo eNFKEIBDLLF_;
+    /// <summary>Field number for the "outfit_info" field.</summary>
+    public const int OutfitInfoFieldNumber = 5;
+    private global::EggLink.DanhengServer.Proto.PlayerOutfitInfo outfitInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PlayerOutfitInfo ENFKEIBDLLF {
-      get { return eNFKEIBDLLF_; }
+    public global::EggLink.DanhengServer.Proto.PlayerOutfitInfo OutfitInfo {
+      get { return outfitInfo_; }
       set {
-        eNFKEIBDLLF_ = value;
+        outfitInfo_ = value;
       }
     }
 
@@ -253,7 +253,7 @@ namespace EggLink.DanhengServer.Proto {
       if (JPNLPOPMKEJ != other.JPNLPOPMKEJ) return false;
       if(!skinList_.Equals(other.skinList_)) return false;
       if (!CurAvatarPath.Equals(other.CurAvatarPath)) return false;
-      if (!object.Equals(ENFKEIBDLLF, other.ENFKEIBDLLF)) return false;
+      if (!object.Equals(OutfitInfo, other.OutfitInfo)) return false;
       if(!avatarList_.Equals(other.avatarList_)) return false;
       if(!basicTypeIdList_.Equals(other.basicTypeIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -271,7 +271,7 @@ namespace EggLink.DanhengServer.Proto {
       if (JPNLPOPMKEJ != 0) hash ^= JPNLPOPMKEJ.GetHashCode();
       hash ^= skinList_.GetHashCode();
       hash ^= CurAvatarPath.GetHashCode();
-      if (eNFKEIBDLLF_ != null) hash ^= ENFKEIBDLLF.GetHashCode();
+      if (outfitInfo_ != null) hash ^= OutfitInfo.GetHashCode();
       hash ^= avatarList_.GetHashCode();
       hash ^= basicTypeIdList_.GetHashCode();
       if (_unknownFields != null) {
@@ -301,9 +301,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(JPNLPOPMKEJ);
       }
-      if (eNFKEIBDLLF_ != null) {
+      if (outfitInfo_ != null) {
         output.WriteRawTag(42);
-        output.WriteMessage(ENFKEIBDLLF);
+        output.WriteMessage(OutfitInfo);
       }
       multiPathAvatarInfoList_.WriteTo(output, _repeated_multiPathAvatarInfoList_codec);
       skinList_.WriteTo(output, _repeated_skinList_codec);
@@ -334,9 +334,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(JPNLPOPMKEJ);
       }
-      if (eNFKEIBDLLF_ != null) {
+      if (outfitInfo_ != null) {
         output.WriteRawTag(42);
-        output.WriteMessage(ENFKEIBDLLF);
+        output.WriteMessage(OutfitInfo);
       }
       multiPathAvatarInfoList_.WriteTo(ref output, _repeated_multiPathAvatarInfoList_codec);
       skinList_.WriteTo(ref output, _repeated_skinList_codec);
@@ -372,8 +372,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       size += skinList_.CalculateSize(_repeated_skinList_codec);
       size += curAvatarPath_.CalculateSize(_map_curAvatarPath_codec);
-      if (eNFKEIBDLLF_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ENFKEIBDLLF);
+      if (outfitInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutfitInfo);
       }
       size += avatarList_.CalculateSize(_repeated_avatarList_codec);
       size += basicTypeIdList_.CalculateSize(_repeated_basicTypeIdList_codec);
@@ -403,11 +403,11 @@ namespace EggLink.DanhengServer.Proto {
       }
       skinList_.Add(other.skinList_);
       curAvatarPath_.MergeFrom(other.curAvatarPath_);
-      if (other.eNFKEIBDLLF_ != null) {
-        if (eNFKEIBDLLF_ == null) {
-          ENFKEIBDLLF = new global::EggLink.DanhengServer.Proto.PlayerOutfitInfo();
+      if (other.outfitInfo_ != null) {
+        if (outfitInfo_ == null) {
+          OutfitInfo = new global::EggLink.DanhengServer.Proto.PlayerOutfitInfo();
         }
-        ENFKEIBDLLF.MergeFrom(other.ENFKEIBDLLF);
+        OutfitInfo.MergeFrom(other.OutfitInfo);
       }
       avatarList_.Add(other.avatarList_);
       basicTypeIdList_.Add(other.basicTypeIdList_);
@@ -440,10 +440,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 42: {
-            if (eNFKEIBDLLF_ == null) {
-              ENFKEIBDLLF = new global::EggLink.DanhengServer.Proto.PlayerOutfitInfo();
+            if (outfitInfo_ == null) {
+              OutfitInfo = new global::EggLink.DanhengServer.Proto.PlayerOutfitInfo();
             }
-            input.ReadMessage(ENFKEIBDLLF);
+            input.ReadMessage(OutfitInfo);
             break;
           }
           case 50: {
@@ -505,10 +505,10 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 42: {
-            if (eNFKEIBDLLF_ == null) {
-              ENFKEIBDLLF = new global::EggLink.DanhengServer.Proto.PlayerOutfitInfo();
+            if (outfitInfo_ == null) {
+              OutfitInfo = new global::EggLink.DanhengServer.Proto.PlayerOutfitInfo();
             }
-            input.ReadMessage(ENFKEIBDLLF);
+            input.ReadMessage(OutfitInfo);
             break;
           }
           case 50: {

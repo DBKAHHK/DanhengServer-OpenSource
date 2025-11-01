@@ -24,19 +24,19 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightSyncDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHcmlkRmlnaHRTeW5jRGF0YS5wcm90bxoRT0tOQUVMTVBLREYucHJvdG8a",
-            "EUtCT0xNS0JGQkpKLnByb3RvGhFOTUJBUE5GSURFSS5wcm90bxofR3JpZEZp",
-            "Z2h0TGluZXVwSHBTeW5jSW5mby5wcm90bxoRRENCTEdFQUhPRUcucHJvdG8a",
-            "HEdyaWRGaWdodFBlbmRpbmdBY3Rpb24ucHJvdG8aEU5NS0hDQ0hITEpBLnBy",
-            "b3RvGhFPTEVJREJMQklMRC5wcm90bxoXR3JpZEZpZ2h0TG9ja1R5cGUucHJv",
-            "dG8aEUFBQkhCREpOQ0dHLnByb3RvGiJHcmlkRmlnaHRQbGF5ZXJMZXZlbFN5",
-            "bmNJbmZvLnByb3RvGhFKT0FBT1BIUE1ISy5wcm90bxoRQ0dISkVGT05FQUsu",
-            "cHJvdG8aEU5JQkVESUJOUElLLnByb3RvGhtHcmlkRmlnaHRHYW1lSXRlbUlu",
-            "Zm8ucHJvdG8aHEdyaWRGaWdodExldmVsU3luY0luZm8ucHJvdG8aGEdyaWRH",
-            "YW1lQXZhdGFySW5mby5wcm90bxoRQ0dMRUlQQVBOS0QucHJvdG8aEUdFSEtL",
-            "RklJT0JFLnByb3RvGhFLTlBLUE5FTEFHRi5wcm90bxoRTUFOQUFOQklOQ0Iu",
-            "cHJvdG8aHEdyaWRGaWdodERhbWFnZVN0dEluZm8ucHJvdG8aG0dyaWRGaWdo",
-            "dFNob3BTeW5jSW5mby5wcm90byKQDQoRR3JpZEZpZ2h0U3luY0RhdGESLQoN",
+            "ChdHcmlkRmlnaHRTeW5jRGF0YS5wcm90bxoRTk1CQVBORklERUkucHJvdG8a",
+            "EUNHSEpFRk9ORUFLLnByb3RvGhFOSUJFRElCTlBJSy5wcm90bxoRTUFOQUFO",
+            "QklOQ0IucHJvdG8aEUdFSEtLRklJT0JFLnByb3RvGiJHcmlkRmlnaHRQbGF5",
+            "ZXJMZXZlbFN5bmNJbmZvLnByb3RvGhFOTUtIQ0NISExKQS5wcm90bxoRS05Q",
+            "S1BORUxBR0YucHJvdG8aEUNHTEVJUEFQTktELnByb3RvGhFLQk9MTUtCRkJK",
+            "Si5wcm90bxofR3JpZEZpZ2h0TGluZXVwSHBTeW5jSW5mby5wcm90bxocR3Jp",
+            "ZEZpZ2h0TGV2ZWxTeW5jSW5mby5wcm90bxobR3JpZEZpZ2h0R2FtZUl0ZW1J",
+            "bmZvLnByb3RvGhFEQ0JMR0VBSE9FRy5wcm90bxoRQUFCSEJESk5DR0cucHJv",
+            "dG8aGEdyaWRHYW1lQXZhdGFySW5mby5wcm90bxoRSk9BQU9QSFBNSEsucHJv",
+            "dG8aHEdyaWRGaWdodERhbWFnZVN0dEluZm8ucHJvdG8aG0dyaWRGaWdodFNo",
+            "b3BTeW5jSW5mby5wcm90bxoRT0xFSURCTEJJTEQucHJvdG8aF0dyaWRGaWdo",
+            "dExvY2tUeXBlLnByb3RvGhxHcmlkRmlnaHRQZW5kaW5nQWN0aW9uLnByb3Rv",
+            "GhFPS05BRUxNUEtERi5wcm90byKdDQoRR3JpZEZpZ2h0U3luY0RhdGESLQoN",
             "YWRkX3JvbGVfaW5mbxiODCABKAsyEy5HcmlkR2FtZUF2YXRhckluZm9IABIw",
             "ChB1cGRhdGVfcm9sZV9pbmZvGP0JIAEoCzITLkdyaWRHYW1lQXZhdGFySW5m",
             "b0gAEiAKFXJlbW92ZV9yb2xlX3VuaXF1ZV9pZBifBiABKA1IABIkCgtQTUxP",
@@ -58,27 +58,27 @@ namespace EggLink.DanhengServer.Proto {
             "dmVsX2Nvc3QYrAkgASgNSAASJAoLTEVBSEZNUEdBQkoYmgYgASgLMgwuTk1C",
             "QVBORklERUlIABIoCglsb2NrX3R5cGUY9g0gASgOMhIuR3JpZEZpZ2h0TG9j",
             "a1R5cGVIABIkCgtHQU5GSUJETUlMSBjqDiABKAsyDC5PS05BRUxNUEtERkgA",
-            "EhYKC0dOSEtEQU1PR0JOGIYDIAEoDUgAEiYKG2dyaWRfZmlnaHRfbWF4X2F2",
-            "YXRhcl9jb3VudBj0BSABKA1IABIpCh5ncmlkX2ZpZ2h0X29mZl9maWVsZF9t",
-            "YXhfY291bnQYrgogASgNSAASPgoaZ3JpZF9maWdodF9kYW1hZ2Vfc3R0X2lu",
-            "Zm8YwwQgASgLMhcuR3JpZEZpZ2h0RGFtYWdlU3R0SW5mb0gAEiQKC0dBQURN",
-            "S0xMTE1HGOkPIAEoCzIMLktCT0xNS0JGQkpKSAASJAoLSU9PQ01JRUlQR0QY",
-            "kw0gASgLMgwuQ0dISkVGT05FQUtIABIkCgtORUxMSkFKSkdIUBi+DSABKAsy",
-            "DC5DR0hKRUZPTkVBS0gAEhYKC09MT0tMTkZOSExNGLUBIAEoDUgAEiQKC0dO",
-            "TkhDRE1KSEZOGK4MIAEoCzIMLk5NS0hDQ0hITEpBSAASJAoLRklQSkVFTUNM",
-            "QkIYhQIgASgLMgwuTk1LSENDSEhMSkFIABIWCgtLTFBFRUVQRUtFTRikBiAB",
-            "KA1IABIkCgtISkJBQ0pLTU1BTRiLASABKAsyDC5OSUJFRElCTlBJS0gAEiQK",
-            "C0FIUEhLQ0hISUNPGKwEIAEoCzIMLkNHTEVJUEFQTktESAASQQoeZ3JpZF9m",
-            "aWdodF9zeW5jX2dhbWVfaXRlbV9pbmZvGLUPIAEoCzIWLkdyaWRGaWdodEdh",
-            "bWVJdGVtSW5mb0gAEhYKC0NHRkFNSEdBSUNBGPMFIAEoDUgAEhUKC0tQTkJG",
-            "SEVERE9GGFsgASgNSAASJAoLUE9NRUxFTU9QQUsYxAUgASgLMgwuS05QS1BO",
-            "RUxBR0ZIABIkCgtGTU5LTUNHQU1KRhj4DCABKAsyDC5PTEVJREJMQklMREgA",
-            "EhYKC0lLRUdOREVJUEZHGL0CIAEoDUgAQgsKCXN5bmNfaXRlbUIeqgIbRWdn",
-            "TGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "EiMKGGdyaWRfZmlnaHRfY29tYm9fd2luX251bRiGAyABKA1IABImChtncmlk",
+            "X2ZpZ2h0X21heF9hdmF0YXJfY291bnQY9AUgASgNSAASKQoeZ3JpZF9maWdo",
+            "dF9vZmZfZmllbGRfbWF4X2NvdW50GK4KIAEoDUgAEj4KGmdyaWRfZmlnaHRf",
+            "ZGFtYWdlX3N0dF9pbmZvGMMEIAEoCzIXLkdyaWRGaWdodERhbWFnZVN0dElu",
+            "Zm9IABIkCgtHQUFETUtMTExNRxjpDyABKAsyDC5LQk9MTUtCRkJKSkgAEiQK",
+            "C0lPT0NNSUVJUEdEGJMNIAEoCzIMLkNHSEpFRk9ORUFLSAASJAoLTkVMTEpB",
+            "SkpHSFAYvg0gASgLMgwuQ0dISkVGT05FQUtIABIWCgtPTE9LTE5GTkhMTRi1",
+            "ASABKA1IABIkCgtHTk5IQ0RNSkhGThiuDCABKAsyDC5OTUtIQ0NISExKQUgA",
+            "EiQKC0ZJUEpFRU1DTEJCGIUCIAEoCzIMLk5NS0hDQ0hITEpBSAASFgoLS0xQ",
+            "RUVFUEVLRU0YpAYgASgNSAASJAoLSEpCQUNKS01NQU0YiwEgASgLMgwuTklC",
+            "RURJQk5QSUtIABIkCgtBSFBIS0NISElDTxisBCABKAsyDC5DR0xFSVBBUE5L",
+            "REgAEkEKHmdyaWRfZmlnaHRfc3luY19nYW1lX2l0ZW1faW5mbxi1DyABKAsy",
+            "Fi5HcmlkRmlnaHRHYW1lSXRlbUluZm9IABIWCgtDR0ZBTUhHQUlDQRjzBSAB",
+            "KA1IABIVCgtLUE5CRkhFRERPRhhbIAEoDUgAEiQKC1BPTUVMRU1PUEFLGMQF",
+            "IAEoCzIMLktOUEtQTkVMQUdGSAASJAoLRk1OS01DR0FNSkYY+AwgASgLMgwu",
+            "T0xFSURCTEJJTERIABIWCgtJS0VHTkRFSVBGRxi9AiABKA1IAEILCglzeW5j",
+            "X2l0ZW1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OKNAELMPKDFReflection.Descriptor, global::EggLink.DanhengServer.Proto.KBOLMKBFBJJReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMBAPNFIDEIReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLineupHpSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCBLGEAHOEGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMKHCCHHLJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.OLEIDBLBILDReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.AABHBDJNCGGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPlayerLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.JOAAOPHPMHKReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGHJEFONEAKReflection.Descriptor, global::EggLink.DanhengServer.Proto.NIBEDIBNPIKReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGLEIPAPNKDReflection.Descriptor, global::EggLink.DanhengServer.Proto.GEHKKFIIOBEReflection.Descriptor, global::EggLink.DanhengServer.Proto.KNPKPNELAGFReflection.Descriptor, global::EggLink.DanhengServer.Proto.MANAANBINCBReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDamageSttInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightShopSyncInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NMBAPNFIDEIReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGHJEFONEAKReflection.Descriptor, global::EggLink.DanhengServer.Proto.NIBEDIBNPIKReflection.Descriptor, global::EggLink.DanhengServer.Proto.MANAANBINCBReflection.Descriptor, global::EggLink.DanhengServer.Proto.GEHKKFIIOBEReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPlayerLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMKHCCHHLJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.KNPKPNELAGFReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGLEIPAPNKDReflection.Descriptor, global::EggLink.DanhengServer.Proto.KBOLMKBFBJJReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLineupHpSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCBLGEAHOEGReflection.Descriptor, global::EggLink.DanhengServer.Proto.AABHBDJNCGGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.JOAAOPHPMHKReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDamageSttInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightShopSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OLEIDBLBILDReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.OKNAELMPKDFReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSyncData), global::EggLink.DanhengServer.Proto.GridFightSyncData.Parser, new[]{ "AddRoleInfo", "UpdateRoleInfo", "RemoveRoleUniqueId", "PMLOCBHIDDL", "GKNADIIOJND", "PPLHDFIFOGB", "ItemValue", "PlayerLevel", "GridFightLineupHp", "GJELGHKIEBB", "ShopSyncInfo", "PendingAction", "HFGIINDBCOE", "LevelSyncInfo", "FKJIOLIFLKC", "ALAFJILCOMO", "MPCCPGJFBDH", "CADADFNCNMO", "EEPCJKMBPJO", "GridFightMaxGold", "GridFightLevelCost", "LEAHFMPGABJ", "LockType", "GANFIBDMILH", "GNHKDAMOGBN", "GridFightMaxAvatarCount", "GridFightOffFieldMaxCount", "GridFightDamageSttInfo", "GAADMKLLLMG", "IOOCMIEIPGD", "NELLJAJJGHP", "OLOKLNFNHLM", "GNNHCDMJHFN", "FIPJEEMCLBB", "KLPEEEPEKEM", "HJBACJKMMAM", "AHPHKCHHICO", "GridFightSyncGameItemInfo", "CGFAMHGAICA", "KPNBFHEDDOF", "POMELEMOPAK", "FMNKMCGAMJF", "IKEGNDEIPFG" }, new[]{ "SyncItem" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSyncData), global::EggLink.DanhengServer.Proto.GridFightSyncData.Parser, new[]{ "AddRoleInfo", "UpdateRoleInfo", "RemoveRoleUniqueId", "PMLOCBHIDDL", "GKNADIIOJND", "PPLHDFIFOGB", "ItemValue", "PlayerLevel", "GridFightLineupHp", "GJELGHKIEBB", "ShopSyncInfo", "PendingAction", "HFGIINDBCOE", "LevelSyncInfo", "FKJIOLIFLKC", "ALAFJILCOMO", "MPCCPGJFBDH", "CADADFNCNMO", "EEPCJKMBPJO", "GridFightMaxGold", "GridFightLevelCost", "LEAHFMPGABJ", "LockType", "GANFIBDMILH", "GridFightComboWinNum", "GridFightMaxAvatarCount", "GridFightOffFieldMaxCount", "GridFightDamageSttInfo", "GAADMKLLLMG", "IOOCMIEIPGD", "NELLJAJJGHP", "OLOKLNFNHLM", "GNNHCDMJHFN", "FIPJEEMCLBB", "KLPEEEPEKEM", "HJBACJKMMAM", "AHPHKCHHICO", "GridFightSyncGameItemInfo", "CGFAMHGAICA", "KPNBFHEDDOF", "POMELEMOPAK", "FMNKMCGAMJF", "IKEGNDEIPFG" }, new[]{ "SyncItem" }, null, null, null)
           }));
     }
     #endregion
@@ -193,8 +193,8 @@ namespace EggLink.DanhengServer.Proto {
         case SyncItemOneofCase.GANFIBDMILH:
           GANFIBDMILH = other.GANFIBDMILH.Clone();
           break;
-        case SyncItemOneofCase.GNHKDAMOGBN:
-          GNHKDAMOGBN = other.GNHKDAMOGBN;
+        case SyncItemOneofCase.GridFightComboWinNum:
+          GridFightComboWinNum = other.GridFightComboWinNum;
           break;
         case SyncItemOneofCase.GridFightMaxAvatarCount:
           GridFightMaxAvatarCount = other.GridFightMaxAvatarCount;
@@ -661,28 +661,28 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GNHKDAMOGBN" field.</summary>
-    public const int GNHKDAMOGBNFieldNumber = 390;
+    /// <summary>Field number for the "grid_fight_combo_win_num" field.</summary>
+    public const int GridFightComboWinNumFieldNumber = 390;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GNHKDAMOGBN {
-      get { return HasGNHKDAMOGBN ? (uint) syncItem_ : 0; }
+    public uint GridFightComboWinNum {
+      get { return HasGridFightComboWinNum ? (uint) syncItem_ : 0; }
       set {
         syncItem_ = value;
-        syncItemCase_ = SyncItemOneofCase.GNHKDAMOGBN;
+        syncItemCase_ = SyncItemOneofCase.GridFightComboWinNum;
       }
     }
-    /// <summary>Gets whether the "GNHKDAMOGBN" field is set</summary>
+    /// <summary>Gets whether the "grid_fight_combo_win_num" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasGNHKDAMOGBN {
-      get { return syncItemCase_ == SyncItemOneofCase.GNHKDAMOGBN; }
+    public bool HasGridFightComboWinNum {
+      get { return syncItemCase_ == SyncItemOneofCase.GridFightComboWinNum; }
     }
-    /// <summary> Clears the value of the oneof if it's currently set to "GNHKDAMOGBN" </summary>
+    /// <summary> Clears the value of the oneof if it's currently set to "grid_fight_combo_win_num" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearGNHKDAMOGBN() {
-      if (HasGNHKDAMOGBN) {
+    public void ClearGridFightComboWinNum() {
+      if (HasGridFightComboWinNum) {
         ClearSyncItem();
       }
     }
@@ -1029,7 +1029,7 @@ namespace EggLink.DanhengServer.Proto {
       LEAHFMPGABJ = 794,
       LockType = 1782,
       GANFIBDMILH = 1898,
-      GNHKDAMOGBN = 390,
+      GridFightComboWinNum = 390,
       GridFightMaxAvatarCount = 756,
       GridFightOffFieldMaxCount = 1326,
       GridFightDamageSttInfo = 579,
@@ -1102,7 +1102,7 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(LEAHFMPGABJ, other.LEAHFMPGABJ)) return false;
       if (LockType != other.LockType) return false;
       if (!object.Equals(GANFIBDMILH, other.GANFIBDMILH)) return false;
-      if (GNHKDAMOGBN != other.GNHKDAMOGBN) return false;
+      if (GridFightComboWinNum != other.GridFightComboWinNum) return false;
       if (GridFightMaxAvatarCount != other.GridFightMaxAvatarCount) return false;
       if (GridFightOffFieldMaxCount != other.GridFightOffFieldMaxCount) return false;
       if (!object.Equals(GridFightDamageSttInfo, other.GridFightDamageSttInfo)) return false;
@@ -1153,7 +1153,7 @@ namespace EggLink.DanhengServer.Proto {
       if (syncItemCase_ == SyncItemOneofCase.LEAHFMPGABJ) hash ^= LEAHFMPGABJ.GetHashCode();
       if (HasLockType) hash ^= LockType.GetHashCode();
       if (syncItemCase_ == SyncItemOneofCase.GANFIBDMILH) hash ^= GANFIBDMILH.GetHashCode();
-      if (HasGNHKDAMOGBN) hash ^= GNHKDAMOGBN.GetHashCode();
+      if (HasGridFightComboWinNum) hash ^= GridFightComboWinNum.GetHashCode();
       if (HasGridFightMaxAvatarCount) hash ^= GridFightMaxAvatarCount.GetHashCode();
       if (HasGridFightOffFieldMaxCount) hash ^= GridFightOffFieldMaxCount.GetHashCode();
       if (syncItemCase_ == SyncItemOneofCase.GridFightDamageSttInfo) hash ^= GridFightDamageSttInfo.GetHashCode();
@@ -1223,9 +1223,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(232, 19);
         output.WriteUInt32(IKEGNDEIPFG);
       }
-      if (HasGNHKDAMOGBN) {
+      if (HasGridFightComboWinNum) {
         output.WriteRawTag(176, 24);
-        output.WriteUInt32(GNHKDAMOGBN);
+        output.WriteUInt32(GridFightComboWinNum);
       }
       if (syncItemCase_ == SyncItemOneofCase.ALAFJILCOMO) {
         output.WriteRawTag(218, 28);
@@ -1405,9 +1405,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(232, 19);
         output.WriteUInt32(IKEGNDEIPFG);
       }
-      if (HasGNHKDAMOGBN) {
+      if (HasGridFightComboWinNum) {
         output.WriteRawTag(176, 24);
-        output.WriteUInt32(GNHKDAMOGBN);
+        output.WriteUInt32(GridFightComboWinNum);
       }
       if (syncItemCase_ == SyncItemOneofCase.ALAFJILCOMO) {
         output.WriteRawTag(218, 28);
@@ -1627,8 +1627,8 @@ namespace EggLink.DanhengServer.Proto {
       if (syncItemCase_ == SyncItemOneofCase.GANFIBDMILH) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(GANFIBDMILH);
       }
-      if (HasGNHKDAMOGBN) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(GNHKDAMOGBN);
+      if (HasGridFightComboWinNum) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(GridFightComboWinNum);
       }
       if (HasGridFightMaxAvatarCount) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(GridFightMaxAvatarCount);
@@ -1817,8 +1817,8 @@ namespace EggLink.DanhengServer.Proto {
           }
           GANFIBDMILH.MergeFrom(other.GANFIBDMILH);
           break;
-        case SyncItemOneofCase.GNHKDAMOGBN:
-          GNHKDAMOGBN = other.GNHKDAMOGBN;
+        case SyncItemOneofCase.GridFightComboWinNum:
+          GridFightComboWinNum = other.GridFightComboWinNum;
           break;
         case SyncItemOneofCase.GridFightMaxAvatarCount:
           GridFightMaxAvatarCount = other.GridFightMaxAvatarCount;
@@ -1977,7 +1977,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 3120: {
-            GNHKDAMOGBN = input.ReadUInt32();
+            GridFightComboWinNum = input.ReadUInt32();
             break;
           }
           case 3674: {
@@ -2300,7 +2300,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 3120: {
-            GNHKDAMOGBN = input.ReadUInt32();
+            GridFightComboWinNum = input.ReadUInt32();
             break;
           }
           case 3674: {

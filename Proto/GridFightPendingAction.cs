@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightPendingActionReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHcmlkRmlnaHRQZW5kaW5nQWN0aW9uLnByb3RvGhFMRkpCTkhFTU5BTS5w",
-            "cm90bxoRRENPRU5FQk1GR0IucHJvdG8aEUdHRUdIUFBCQk5KLnByb3RvGh5H",
-            "cmlkRmlnaHRFbGl0ZUFjdGlvbkluZm8ucHJvdG8aIEdyaWRGaWdodEF1Z21l",
-            "bnRBY3Rpb25JbmZvLnByb3RvGhFPSUxJTkRQSUdNTy5wcm90bxojR3JpZEZp",
-            "Z2h0UG9ydGFsQnVmZkFjdGlvbkluZm8ucHJvdG8aEUxQREVIS0ZBT0hMLnBy",
-            "b3RvGh9HcmlkRmlnaHRTdXBwbHlBY3Rpb25JbmZvLnByb3RvGhFORk5NTklE",
-            "SUJGSC5wcm90bxoRQ0lGS0lKS0pCTlAucHJvdG8aEUtLS0ZMUERPRVBPLnBy",
+            "ChxHcmlkRmlnaHRQZW5kaW5nQWN0aW9uLnByb3RvGhFLS0tGTFBET0VQTy5w",
+            "cm90bxoeR3JpZEZpZ2h0RWxpdGVBY3Rpb25JbmZvLnByb3RvGhFORk5NTklE",
+            "SUJGSC5wcm90bxoRTFBERUhLRkFPSEwucHJvdG8aEUxGSkJOSEVNTkFNLnBy",
+            "b3RvGhFEQ09FTkVCTUZHQi5wcm90bxoRQ0lGS0lKS0pCTlAucHJvdG8aH0dy",
+            "aWRGaWdodFN1cHBseUFjdGlvbkluZm8ucHJvdG8aEUdHRUdIUFBCQk5KLnBy",
+            "b3RvGiNHcmlkRmlnaHRQb3J0YWxCdWZmQWN0aW9uSW5mby5wcm90bxoRT0lM",
+            "SU5EUElHTU8ucHJvdG8aIEdyaWRGaWdodEF1Z21lbnRBY3Rpb25JbmZvLnBy",
             "b3RvItAEChZHcmlkRmlnaHRQZW5kaW5nQWN0aW9uEj0KEnBvcnRhbF9idWZm",
             "X2FjdGlvbhijBiABKAsyHi5HcmlkRmlnaHRQb3J0YWxCdWZmQWN0aW9uSW5m",
             "b0gAEjYKDmF1Z21lbnRfYWN0aW9uGMMOIAEoCzIbLkdyaWRGaWdodEF1Z21l",
@@ -47,7 +47,7 @@ namespace EggLink.DanhengServer.Proto {
             "CgtLSVBHUFBMS0FNRUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LFJBNHEMNAMReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCOENEBMFGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.GGEGHPPBBNJReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OILINDPIGMOReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LPDEHKFAOHLReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NFNMNIDIBFHReflection.Descriptor, global::EggLink.DanhengServer.Proto.CIFKIJKJBNPReflection.Descriptor, global::EggLink.DanhengServer.Proto.KKKFLPDOEPOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KKKFLPDOEPOReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NFNMNIDIBFHReflection.Descriptor, global::EggLink.DanhengServer.Proto.LPDEHKFAOHLReflection.Descriptor, global::EggLink.DanhengServer.Proto.LFJBNHEMNAMReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCOENEBMFGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.CIFKIJKJBNPReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GGEGHPPBBNJReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OILINDPIGMOReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentActionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightPendingAction), global::EggLink.DanhengServer.Proto.GridFightPendingAction.Parser, new[]{ "PortalBuffAction", "AugmentAction", "CNPCEHHNBML", "CFFNDGFNFLG", "OADKOEMMGGJ", "LCDGKIMAOHB", "EliteAction", "GJIAAIAKFMC", "SupplyAction", "PCOMDKEPBGH", "HNJHKLLIMPJ", "GHPHEPCNAAJ", "QueuePosition" }, new[]{ "KIPGPPLKAME" }, null, null, null)
           }));

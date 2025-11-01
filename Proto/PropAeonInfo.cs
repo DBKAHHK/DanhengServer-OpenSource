@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static PropAeonInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJQcm9wQWVvbkluZm8ucHJvdG8iSQoMUHJvcEFlb25JbmZvEhMKC1BPSUpL",
-            "QkxDSkxBGAkgASgNEg8KB2Flb25faWQYDyABKA0SEwoLS0FQTUtKR0hJRUkY",
+            "ChJQcm9wQWVvbkluZm8ucHJvdG8iSQoMUHJvcEFlb25JbmZvEhMKC2FkZF9l",
+            "eHBfbnVtGAkgASgNEg8KB2Flb25faWQYDyABKA0SEwoLS0FQTUtKR0hJRUkY",
             "AiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropAeonInfo), global::EggLink.DanhengServer.Proto.PropAeonInfo.Parser, new[]{ "POIJKBLCJLA", "AeonId", "KAPMKJGHIEI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PropAeonInfo), global::EggLink.DanhengServer.Proto.PropAeonInfo.Parser, new[]{ "AddExpNum", "AeonId", "KAPMKJGHIEI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PropAeonInfo(PropAeonInfo other) : this() {
-      pOIJKBLCJLA_ = other.pOIJKBLCJLA_;
+      addExpNum_ = other.addExpNum_;
       aeonId_ = other.aeonId_;
       kAPMKJGHIEI_ = other.kAPMKJGHIEI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -84,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new PropAeonInfo(this);
     }
 
-    /// <summary>Field number for the "POIJKBLCJLA" field.</summary>
-    public const int POIJKBLCJLAFieldNumber = 9;
-    private uint pOIJKBLCJLA_;
+    /// <summary>Field number for the "add_exp_num" field.</summary>
+    public const int AddExpNumFieldNumber = 9;
+    private uint addExpNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint POIJKBLCJLA {
-      get { return pOIJKBLCJLA_; }
+    public uint AddExpNum {
+      get { return addExpNum_; }
       set {
-        pOIJKBLCJLA_ = value;
+        addExpNum_ = value;
       }
     }
 
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (POIJKBLCJLA != other.POIJKBLCJLA) return false;
+      if (AddExpNum != other.AddExpNum) return false;
       if (AeonId != other.AeonId) return false;
       if (KAPMKJGHIEI != other.KAPMKJGHIEI) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -145,7 +145,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (POIJKBLCJLA != 0) hash ^= POIJKBLCJLA.GetHashCode();
+      if (AddExpNum != 0) hash ^= AddExpNum.GetHashCode();
       if (AeonId != 0) hash ^= AeonId.GetHashCode();
       if (KAPMKJGHIEI != 0) hash ^= KAPMKJGHIEI.GetHashCode();
       if (_unknownFields != null) {
@@ -170,9 +170,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(KAPMKJGHIEI);
       }
-      if (POIJKBLCJLA != 0) {
+      if (AddExpNum != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(POIJKBLCJLA);
+        output.WriteUInt32(AddExpNum);
       }
       if (AeonId != 0) {
         output.WriteRawTag(120);
@@ -192,9 +192,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(KAPMKJGHIEI);
       }
-      if (POIJKBLCJLA != 0) {
+      if (AddExpNum != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(POIJKBLCJLA);
+        output.WriteUInt32(AddExpNum);
       }
       if (AeonId != 0) {
         output.WriteRawTag(120);
@@ -210,8 +210,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (POIJKBLCJLA != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(POIJKBLCJLA);
+      if (AddExpNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AddExpNum);
       }
       if (AeonId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AeonId);
@@ -231,8 +231,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.POIJKBLCJLA != 0) {
-        POIJKBLCJLA = other.POIJKBLCJLA;
+      if (other.AddExpNum != 0) {
+        AddExpNum = other.AddExpNum;
       }
       if (other.AeonId != 0) {
         AeonId = other.AeonId;
@@ -260,7 +260,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            POIJKBLCJLA = input.ReadUInt32();
+            AddExpNum = input.ReadUInt32();
             break;
           }
           case 120: {
@@ -287,7 +287,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            POIJKBLCJLA = input.ReadUInt32();
+            AddExpNum = input.ReadUInt32();
             break;
           }
           case 120: {
