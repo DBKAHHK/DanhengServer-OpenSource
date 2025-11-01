@@ -84,6 +84,8 @@ public class ChallengeMemoryInstance(PlayerInstance player, ChallengeDataPb data
 
     public override void OnBattleStart(BattleInstance battle)
     {
+        base.OnBattleStart(battle);
+
         battle.RoundLimit = (int)Data.Memory.RoundsLeft;
 
         battle.Buffs.Add(new MazeBuff(Config.MazeBuffID, 1, -1)

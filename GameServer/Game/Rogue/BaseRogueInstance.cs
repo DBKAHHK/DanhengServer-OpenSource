@@ -495,6 +495,8 @@ public abstract class BaseRogueInstance(PlayerInstance player, RogueSubModeEnum 
         foreach (var miracle in RogueMiracles.Values) miracle.OnStartBattle(battle);
 
         foreach (var buff in RogueBuffs) buff.OnStartBattle(battle);
+
+        battle.OnBattleEnd += OnBattleEnd;
     }
 
     public abstract ValueTask OnBattleEnd(BattleInstance battle, PVEBattleResultCsReq req);

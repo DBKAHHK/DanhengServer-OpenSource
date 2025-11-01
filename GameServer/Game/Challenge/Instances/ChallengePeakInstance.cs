@@ -68,6 +68,8 @@ public class ChallengePeakInstance(PlayerInstance player, ChallengeDataPb data) 
 
     public override void OnBattleStart(BattleInstance battle)
     {
+        base.OnBattleStart(battle);
+
         foreach (var peakBuff in Data.Peak.Buffs)
             battle.Buffs.Add(new MazeBuff((int)peakBuff, 1, -1)
             {

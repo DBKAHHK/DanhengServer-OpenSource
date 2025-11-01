@@ -13,6 +13,7 @@ public abstract class BaseChallengeInstance(PlayerInstance player, ChallengeData
 
     public virtual void OnBattleStart(BattleInstance battle)
     {
+        battle.OnBattleEnd += OnBattleEnd;
     }
 
     public virtual async ValueTask OnBattleEnd(BattleInstance battle, PVEBattleResultCsReq req)

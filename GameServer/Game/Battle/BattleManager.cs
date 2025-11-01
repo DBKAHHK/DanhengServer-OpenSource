@@ -314,6 +314,7 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
             GridFightOptions = new BattleGridFightOptions(curSection, inst, Player)
         };
 
+        battleInstance.OnBattleEnd += inst.EndBattle;
         Player.BattleInstance = battleInstance;
 
         Player.QuestManager!.OnBattleStart(battleInstance);
@@ -404,21 +405,11 @@ public class BattleManager(PlayerInstance player) : BasePlayerManager(player)
 
         Player.BattleInstance = null;
 
-        await Player.MissionManager!.OnBattleFinish(req, battle);
-        if (Player.RogueManager?.GetRogueInstance() != null)
-            await Player.RogueManager!.GetRogueInstance()!.OnBattleEnd(battle, req);
-
-        if (Player.ChallengeManager?.ChallengeInstance != null)
-            await Player.ChallengeManager!.ChallengeInstance.OnBattleEnd(battle, req);
+        battle.OnBattleEnd += Player.MissionManager!.OnBattleFinish;
+        await battle.TriggerOnBattleEnd();
 
         if (Player.ActivityManager!.TrialActivityInstance != null && req.EndStatus == BattleEndStatus.BattleEndWin)
             await Player.ActivityManager.TrialActivityInstance.EndActivity(TrialActivityStatus.Finish);
-
-        if (Player.GridFightManager?.GridFightInstance != null &&
-            battle.GridFightOptions != null)
-        {
-            await Player.GridFightManager!.GridFightInstance!.EndBattle(battle);
-        }
 
         await Player.SendPacket(new PacketPVEBattleResultScRsp(req, Player, battle));
     }

@@ -596,7 +596,7 @@ public class MissionManager(PlayerInstance player) : BasePlayerManager(player)
 
     #region Handlers
 
-    public async ValueTask OnBattleFinish(PVEBattleResultCsReq req, BattleInstance instance)
+    public async ValueTask OnBattleFinish(BattleInstance instance, PVEBattleResultCsReq req)
     {
         foreach (var mission in GetRunningSubMissionIdList())
         {

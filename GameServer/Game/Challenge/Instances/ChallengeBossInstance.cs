@@ -178,6 +178,8 @@ public class ChallengeBossInstance(PlayerInstance player, ChallengeDataPb data)
 
     public override void OnBattleStart(BattleInstance battle)
     {
+        base.OnBattleStart(battle);
+
         battle.RoundLimit = Config.ChallengeCountDown;
 
         battle.Buffs.Add(new MazeBuff(Config.MazeBuffID, 1, -1)
