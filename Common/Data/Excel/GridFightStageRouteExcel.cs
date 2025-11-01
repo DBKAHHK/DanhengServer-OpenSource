@@ -11,6 +11,7 @@ public class GridFightStageRouteExcel : ExcelResource
     public uint ChapterID { get; set; }
     public uint ID { get; set; }
     public uint StageID { get; set; }
+    public uint IsAugment { get; set; }
     public uint NodeTemplateID { get; set; }
     public uint BasicGoldRewardNum { get; set; }
 

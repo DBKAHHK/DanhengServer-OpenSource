@@ -95,7 +95,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         _ = GetComponent<GridFightRoleComponent>().AddAvatar(1414, 3, false);
         _ = GetComponent<GridFightShopComponent>().RefreshShop(true, false);
 
-        // _ = CreatePendingAction<GridFightAugmentPendingAction>();  // TODO wait for release official server
+        _ = CreatePendingAction<GridFightPortalBuffPendingAction>();  // TODO wait for release official server
     }
 
     public T GetComponent<T>() where T : BaseGridFightComponent
@@ -152,24 +152,31 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         return pos;
     }
 
-    public async ValueTask CreatePendingAction<T>(GridFightSrc src = GridFightSrc.KGridFightSrcEnterNode, bool sendPacket = true) where T: BaseGridFightPendingAction
+    public async ValueTask<BaseGridFightSyncData> CreatePendingAction<T>(GridFightSrc src = GridFightSrc.KGridFightSrcEnterNode, bool sendPacket = true) where T: BaseGridFightPendingAction
     {
         var action = (T)Activator.CreateInstance(typeof(T), this)!;
 
         AddPendingAction(action);
 
+        var res = new GridFightPendingActionSyncData(src, action);
         if (sendPacket)
-           await Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(
-                new GridFightPendingActionSyncData(src, action)));
+           await Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(res));
+
+        return res;
     }
 
     public async ValueTask HandleResultRequest(GridFightHandlePendingActionCsReq req)
     {
         var curAction = GetCurAction();
 
+        // end
+        PendingActions.Remove(curAction.QueuePosition);
+        var src = GridFightSrc.KGridFightSrcNone;
+
         switch (req.GridFightActionTypeCase)
         {
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.PortalBuffAction:
+                src = GridFightSrc.KGridFightSrcSelectPortalBuff;
                 break;
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.PortalBuffRerollAction:
                 if (curAction is GridFightPortalBuffPendingAction portalBuffAction)
@@ -179,6 +186,8 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
 
                 break;
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.AugmentAction:
+                src = GridFightSrc.KGridFightSrcSelectAugment;
+                await CheckCurNodeFinish(src);
                 break;
 
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.RerollAugmentAction:
@@ -191,14 +200,27 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.EliteAction:
                 break;
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.SupplyAction:
+                src = GridFightSrc.KGridFightSrcSelectSupply;
+                await CheckCurNodeFinish(src);
                 break;
         }
 
-        // end
-        PendingActions.Remove(curAction.QueuePosition);
 
         await Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(
-            new GridFightPendingActionSyncData(GridFightSrc.KGridFightSrcNone, GetCurAction())));
+            new GridFightPendingActionSyncData(src, GetCurAction())));
+    }
+
+    public async ValueTask CheckCurNodeFinish(GridFightSrc src)
+    {
+        var levelComp = GetComponent<GridFightLevelComponent>();
+        var curSection = levelComp.CurrentSection;
+
+        if (curSection.Encounters.Count != 0) return;
+
+        if (PendingActions.Count != 0) return;
+
+        // next
+        await levelComp.EnterNextSection(src:src);
     }
 
     #endregion

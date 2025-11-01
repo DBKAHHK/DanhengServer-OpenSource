@@ -74,13 +74,6 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
             WaveFlag = -1
         });
 
-        var even = battle.Stages.First().StageConfigData.FirstOrDefault(x => x.Key == "_CreateBattleEvent");
-        if (even?.Value != null)
-        {
-            var id = int.Parse(even.Value);
-            battle.BattleEvents.TryAdd(id, new BattleEventInstance(id, 5000));
-        }
-
         proto.BattleGridFightInfo = new BattleGridFightInfo
         {
             GridGameAvatarList =

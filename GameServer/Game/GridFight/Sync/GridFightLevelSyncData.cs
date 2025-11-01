@@ -15,7 +15,8 @@ public class GridFightLevelSyncData(GridFightSrc src, GridFightLevelComponent le
                 ChapterId = level.CurrentSection.ChapterId,
                 GridFightLayerInfo = new GridFightLayerInfo
                 {
-                    RouteInfo = level.CurrentSection.ToRouteInfo()
+                    RouteInfo = level.CurrentSection.ToRouteInfo(),
+                    RouteIsPending = level.CurrentSection.Excel.IsAugment == 1
                 }
             }
         };

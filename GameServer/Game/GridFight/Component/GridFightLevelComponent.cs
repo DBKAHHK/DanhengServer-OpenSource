@@ -1,6 +1,7 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.GridFight;
+using EggLink.DanhengServer.GameServer.Game.GridFight.PendingAction;
 using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 using EggLink.DanhengServer.Proto;
@@ -99,7 +100,7 @@ public class GridFightLevelComponent : BaseGridFightComponent
 
     #region Actions
 
-    public async ValueTask<List<BaseGridFightSyncData>> EnterNextSection(bool sendPacket = true)
+    public async ValueTask<List<BaseGridFightSyncData>> EnterNextSection(bool sendPacket = true, GridFightSrc src = GridFightSrc.KGridFightSrcBattleEnd)
     {
         // if last section of chapter
         if (_curSectionId >= Sections[_curChapterId].Count)
@@ -118,8 +119,20 @@ public class GridFightLevelComponent : BaseGridFightComponent
             _curSectionId++;
         }
 
-        List<BaseGridFightSyncData> syncs = [new GridFightLevelSyncData(GridFightSrc.KGridFightSrcBattleEnd, this)];
+        List<BaseGridFightSyncData> syncs = [new GridFightLevelSyncData(src, this)];
+
         //await Inst.RollPortalBuff();
+        if (CurrentSection.Excel.IsAugment == 1)
+        {
+            // create augment action
+            syncs.Add(await Inst.CreatePendingAction<GridFightAugmentPendingAction>(sendPacket: false));
+        }
+
+        if (CurrentSection.Excel.NodeType == GridFightNodeTypeEnum.Supply)
+        {
+            // create supply action
+            syncs.Add(await Inst.CreatePendingAction<GridFightSupplyPendingAction>(sendPacket: false));
+        }
 
         if (sendPacket)
         {
@@ -171,7 +184,8 @@ public class GridFightLevelComponent : BaseGridFightComponent
                 RouteId = CurrentSection.Excel.ID,
                 GridFightLayerInfo = new GridFightLayerInfo
                 {
-                    RouteInfo = CurrentSection.ToRouteInfo()
+                    RouteInfo = CurrentSection.ToRouteInfo(),
+                    RouteIsPending = CurrentSection.Excel.IsAugment == 1
                 },
                 BossInfo = new GridFightBossInfo
                 {
@@ -248,6 +262,9 @@ public class GridFightGameSectionInfo
 
         MonsterCamp = camp;
 
+        if (Excel.NodeType is not GridFightNodeTypeEnum.Monster and not GridFightNodeTypeEnum.CampMonster
+                and not GridFightNodeTypeEnum.Boss and not GridFightNodeTypeEnum.EliteBranch || Excel.IsAugment == 1) return;
+
         Encounters.Add(new GridFightGameEncounterInfo(1, 1, this));
     }
 
@@ -279,20 +296,17 @@ public class GridFightGameEncounterInfo
         EncounterDifficulty = difficulty;
         ParentSection = section;
 
-        if (ParentSection.Excel.NodeType is not GridFightNodeTypeEnum.Monster and not GridFightNodeTypeEnum.CampMonster
-            and not GridFightNodeTypeEnum.Boss and not GridFightNodeTypeEnum.EliteBranch) return;
-
         var waveNum = ParentSection.Excel.NodeType switch
         {
-            GridFightNodeTypeEnum.Boss => 2,
-            GridFightNodeTypeEnum.EliteBranch => 2,
+            //GridFightNodeTypeEnum.Boss => 2,
+            //GridFightNodeTypeEnum.EliteBranch => 2,
             _ => 1
         };
 
         List<int> monsterNum = ParentSection.Excel.NodeType switch
         {
-            GridFightNodeTypeEnum.Boss => [Random.Shared.Next(3, 5), 1],
-            GridFightNodeTypeEnum.EliteBranch => [Random.Shared.Next(3, 5), 3],
+            GridFightNodeTypeEnum.Boss => [1],
+            GridFightNodeTypeEnum.EliteBranch => [3],
             GridFightNodeTypeEnum.CampMonster => [3],
             _ => [Random.Shared.Next(3, 5)]
         };
