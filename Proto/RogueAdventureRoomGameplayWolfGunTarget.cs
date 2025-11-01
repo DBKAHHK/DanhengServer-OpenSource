@@ -25,9 +25,9 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1Sb2d1ZUFkdmVudHVyZVJvb21HYW1lcGxheVdvbGZHdW5UYXJnZXQucHJv",
-            "dG8aJVJvZ3VlQWR2ZW50dXJlUm9vbVRhcmdldE1pcmFjbGUucHJvdG8aIlJv",
-            "Z3VlQWR2ZW50dXJlUm9vbVRhcmdldENvaW4ucHJvdG8aJVJvZ3VlQWR2ZW50",
-            "dXJlUm9vbVRhcmdldFJ1YW5tZWkucHJvdG8aIlJvZ3VlQWR2ZW50dXJlUm9v",
+            "dG8aJVJvZ3VlQWR2ZW50dXJlUm9vbVRhcmdldFJ1YW5tZWkucHJvdG8aJVJv",
+            "Z3VlQWR2ZW50dXJlUm9vbVRhcmdldE1pcmFjbGUucHJvdG8aIlJvZ3VlQWR2",
+            "ZW50dXJlUm9vbVRhcmdldENvaW4ucHJvdG8aIlJvZ3VlQWR2ZW50dXJlUm9v",
             "bVRhcmdldE5vbmUucHJvdG8ioAIKJ1JvZ3VlQWR2ZW50dXJlUm9vbUdhbWVw",
             "bGF5V29sZkd1blRhcmdldBIzCgpUYXJnZXROb25lGA8gASgLMh0uUm9ndWVB",
             "ZHZlbnR1cmVSb29tVGFyZ2V0Tm9uZUgAEjMKClRhcmdldENvaW4YBiABKAsy",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "VGFyZ2V0UnVhbm1laUgAQhUKE1RhcmdldEltcGxPbmVvZkNhc2VCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracleReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoinReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmeiReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNoneReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetRuanmeiReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetMiracleReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetCoinReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueAdventureRoomTargetNoneReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget), global::EggLink.DanhengServer.Proto.RogueAdventureRoomGameplayWolfGunTarget.Parser, new[]{ "TargetNone", "TargetCoin", "TargetMiracle", "TargetRuanmei" }, new[]{ "TargetImplOneofCase" }, null, null, null)
           }));

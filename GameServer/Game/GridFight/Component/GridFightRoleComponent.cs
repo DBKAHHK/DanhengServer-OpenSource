@@ -11,7 +11,8 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
 {
     public GridFightAvatarInfoPb Data { get; set; } = new();
 
-    public async ValueTask<List<BaseGridFightSyncData>> AddAvatar(uint roleId, uint tier = 1, bool sendPacket = true)
+    public async ValueTask<List<BaseGridFightSyncData>> AddAvatar(uint roleId, uint tier = 1, bool sendPacket = true,
+        bool checkMerge = true, GridFightSrc src = GridFightSrc.KGridFightSrcBuyGoods)
     {
         var pos = 1u;
         // get first empty pos
@@ -25,7 +26,7 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
 
         var info = new GridFightRoleInfoPb
         {
-            RoleId = roleId, 
+            RoleId = roleId,
             UniqueId = ++Data.CurUniqueId,
             Tier = tier,
             Pos = pos
@@ -33,8 +34,67 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
 
         Data.Roles.Add(info);
 
-        List<BaseGridFightSyncData> syncs = [new GridFightRoleAddSyncData(GridFightSrc.KGridFightSrcBuyGoods, info)];
+        List<BaseGridFightSyncData> syncs = [new GridFightRoleAddSyncData(src, info)];
+
+        if (checkMerge)
+        {
+            var mergeSyncs = await CheckIfMergeRole();
+            syncs.AddRange(mergeSyncs);
+        }
+
         if (sendPacket)
+        {
+            await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
+        }
+
+        return syncs;
+    }
+
+    public async ValueTask<List<BaseGridFightSyncData>> CheckIfMergeRole(bool sendPacket = false)
+    {
+        List<BaseGridFightSyncData> syncs = [];
+        bool hasMerged;
+
+        do
+        {
+            hasMerged = false;
+
+            // group roles by RoleId and Tier, then filter groups with 3 or more roles
+            var mergeCandidates = Data.Roles
+                .GroupBy(r => new { r.RoleId, r.Tier })
+                .Where(g => g.Count() >= 3)
+                .Where(g =>
+                {
+                    // check if next tier exists
+                    var nextTierKey = g.Key.RoleId << 4 | (g.Key.Tier + 1);
+                    return GameData.GridFightRoleStarData.ContainsKey(nextTierKey);
+                })
+                .OrderBy(g => g.Key.RoleId)
+                .ThenBy(g => g.Key.Tier)
+                .FirstOrDefault(); // process one group at a time to handle continuous merging
+
+            if (mergeCandidates != null)
+            {
+                var roleId = mergeCandidates.Key.RoleId;
+                var currentTier = mergeCandidates.Key.Tier;
+                var toMerge = mergeCandidates.Take(3).ToList();
+
+                // remove merged roles
+                foreach (var role in toMerge)
+                {
+                    Data.Roles.Remove(role);
+                    syncs.Add(new GridFightRoleRemoveSyncData(GridFightSrc.KGridFightSrcMergeRole, role));
+                }
+
+                // add new merged role with tier + 1
+                var addSyncs = await AddAvatar(roleId, currentTier + 1, false, false, GridFightSrc.KGridFightSrcMergeRole);
+                syncs.AddRange(addSyncs);
+
+                hasMerged = true;
+            }
+        } while (hasMerged); // continue until no more merges are possible
+
+        if (sendPacket && syncs.Count > 0)
         {
             await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
         }
@@ -77,7 +137,34 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
 
     public List<BaseAvatarInfo> GetForegroundAvatarInfos(uint maxAvatarNum)
     {
-        var foreground = Data.Roles.Where(x => x.Pos <= maxAvatarNum).OrderBy(x => x.Pos).ToList();
+        var foreground = Data.Roles.Where(x => x.Pos <= 4).OrderBy(x => x.Pos).ToList();
+        List<BaseAvatarInfo> res = [];
+
+        foreach (var role in foreground)
+        {
+            var excel = GameData.GridFightRoleBasicInfoData[role.RoleId];
+            // get formal or special
+            var formal = Inst.Player.AvatarManager!.GetFormalAvatar((int)excel.AvatarID);
+            if (formal != null)
+            {
+                res.Add(formal);
+            }
+            else
+            {
+                var special = Inst.Player.AvatarManager.GetTrialAvatar((int)excel.SpecialAvatarID);
+                if (special != null)
+                {
+                    res.Add(special);
+                }
+            }
+        }
+
+        return res;
+    }
+
+    public List<BaseAvatarInfo> GetBackgroundAvatarInfos(uint maxAvatarNum)
+    {
+        var foreground = Data.Roles.Where(x => x.Pos <= maxAvatarNum && x.Pos > 4).OrderBy(x => x.Pos).ToList();
         List<BaseAvatarInfo> res = [];
 
         foreach (var role in foreground)

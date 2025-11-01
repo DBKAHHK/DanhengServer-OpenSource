@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9HcmlkRmlnaHRTdXBwbHlBY3Rpb25JbmZvLnByb3RvGh1HcmlkRmlnaHRT",
-            "dXBwbHlSb2xlSW5mby5wcm90byKtAQoZR3JpZEZpZ2h0U3VwcGx5QWN0aW9u",
-            "SW5mbxITCgtCQUFPSU5ORUFBSRgFIAEoDRI3ChVzdXBwbHlfcm9sZV9pbmZv",
-            "X2xpc3QYAyADKAsyGC5HcmlkRmlnaHRTdXBwbHlSb2xlSW5mbxIYChBtYXhf",
-            "cmVyb2xsX2NvdW50GAYgASgNEhMKC01FS0VGUE5NTkxFGA4gASgNEhMKC0pM",
-            "SElLQ0hJRURKGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
-            "dG9iBnByb3RvMw=="));
+            "dXBwbHlSb2xlSW5mby5wcm90byKwAQoZR3JpZEZpZ2h0U3VwcGx5QWN0aW9u",
+            "SW5mbxIWCg5jdXJfcm9sbF9jb3VudBgFIAEoDRI3ChVzdXBwbHlfcm9sZV9p",
+            "bmZvX2xpc3QYAyADKAsyGC5HcmlkRmlnaHRTdXBwbHlSb2xlSW5mbxIYChBt",
+            "YXhfcmVyb2xsX2NvdW50GAYgASgNEhMKC01FS0VGUE5NTkxFGA4gASgNEhMK",
+            "C0pMSElLQ0hJRURKGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightSupplyRoleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfo), global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfo.Parser, new[]{ "BAAOINNEAAI", "SupplyRoleInfoList", "MaxRerollCount", "MEKEFPNMNLE", "JLHIKCHIEDJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfo), global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfo.Parser, new[]{ "CurRollCount", "SupplyRoleInfoList", "MaxRerollCount", "MEKEFPNMNLE", "JLHIKCHIEDJ" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightSupplyActionInfo(GridFightSupplyActionInfo other) : this() {
-      bAAOINNEAAI_ = other.bAAOINNEAAI_;
+      curRollCount_ = other.curRollCount_;
       supplyRoleInfoList_ = other.supplyRoleInfoList_.Clone();
       maxRerollCount_ = other.maxRerollCount_;
       mEKEFPNMNLE_ = other.mEKEFPNMNLE_;
@@ -90,15 +90,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightSupplyActionInfo(this);
     }
 
-    /// <summary>Field number for the "BAAOINNEAAI" field.</summary>
-    public const int BAAOINNEAAIFieldNumber = 5;
-    private uint bAAOINNEAAI_;
+    /// <summary>Field number for the "cur_roll_count" field.</summary>
+    public const int CurRollCountFieldNumber = 5;
+    private uint curRollCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BAAOINNEAAI {
-      get { return bAAOINNEAAI_; }
+    public uint CurRollCount {
+      get { return curRollCount_; }
       set {
-        bAAOINNEAAI_ = value;
+        curRollCount_ = value;
       }
     }
 
@@ -164,7 +164,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (BAAOINNEAAI != other.BAAOINNEAAI) return false;
+      if (CurRollCount != other.CurRollCount) return false;
       if(!supplyRoleInfoList_.Equals(other.supplyRoleInfoList_)) return false;
       if (MaxRerollCount != other.MaxRerollCount) return false;
       if (MEKEFPNMNLE != other.MEKEFPNMNLE) return false;
@@ -176,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BAAOINNEAAI != 0) hash ^= BAAOINNEAAI.GetHashCode();
+      if (CurRollCount != 0) hash ^= CurRollCount.GetHashCode();
       hash ^= supplyRoleInfoList_.GetHashCode();
       if (MaxRerollCount != 0) hash ^= MaxRerollCount.GetHashCode();
       if (MEKEFPNMNLE != 0) hash ^= MEKEFPNMNLE.GetHashCode();
@@ -200,9 +200,9 @@ namespace EggLink.DanhengServer.Proto {
       output.WriteRawMessage(this);
     #else
       supplyRoleInfoList_.WriteTo(output, _repeated_supplyRoleInfoList_codec);
-      if (BAAOINNEAAI != 0) {
+      if (CurRollCount != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(BAAOINNEAAI);
+        output.WriteUInt32(CurRollCount);
       }
       if (MaxRerollCount != 0) {
         output.WriteRawTag(48);
@@ -227,9 +227,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       supplyRoleInfoList_.WriteTo(ref output, _repeated_supplyRoleInfoList_codec);
-      if (BAAOINNEAAI != 0) {
+      if (CurRollCount != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(BAAOINNEAAI);
+        output.WriteUInt32(CurRollCount);
       }
       if (MaxRerollCount != 0) {
         output.WriteRawTag(48);
@@ -253,8 +253,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BAAOINNEAAI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BAAOINNEAAI);
+      if (CurRollCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurRollCount);
       }
       size += supplyRoleInfoList_.CalculateSize(_repeated_supplyRoleInfoList_codec);
       if (MaxRerollCount != 0) {
@@ -278,8 +278,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.BAAOINNEAAI != 0) {
-        BAAOINNEAAI = other.BAAOINNEAAI;
+      if (other.CurRollCount != 0) {
+        CurRollCount = other.CurRollCount;
       }
       supplyRoleInfoList_.Add(other.supplyRoleInfoList_);
       if (other.MaxRerollCount != 0) {
@@ -311,7 +311,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            BAAOINNEAAI = input.ReadUInt32();
+            CurRollCount = input.ReadUInt32();
             break;
           }
           case 48: {
@@ -346,7 +346,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            BAAOINNEAAI = input.ReadUInt32();
+            CurRollCount = input.ReadUInt32();
             break;
           }
           case 48: {

@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightPortalBuffActionInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNHcmlkRmlnaHRQb3J0YWxCdWZmQWN0aW9uSW5mby5wcm90byKIAQodR3Jp",
+            "CiNHcmlkRmlnaHRQb3J0YWxCdWZmQWN0aW9uSW5mby5wcm90byKLAQodR3Jp",
             "ZEZpZ2h0UG9ydGFsQnVmZkFjdGlvbkluZm8SIwobZ3JpZF9maWdodF9wb3J0",
             "YWxfYnVmZl9saXN0GAYgAygNEhgKEG1heF9yZXJvbGxfY291bnQYDSABKA0S",
-            "EwoLRUxGTkNHS0dLQU4YBCABKA0SEwoLQkFBT0lOTkVBQUkYBSABKA1CHqoC",
-            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "EwoLRUxGTkNHS0dLQU4YBCABKA0SFgoOY3VyX3JvbGxfY291bnQYBSABKA1C",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionInfo), global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionInfo.Parser, new[]{ "GridFightPortalBuffList", "MaxRerollCount", "ELFNCGKGKAN", "BAAOINNEAAI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionInfo), global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionInfo.Parser, new[]{ "GridFightPortalBuffList", "MaxRerollCount", "ELFNCGKGKAN", "CurRollCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
       gridFightPortalBuffList_ = other.gridFightPortalBuffList_.Clone();
       maxRerollCount_ = other.maxRerollCount_;
       eLFNCGKGKAN_ = other.eLFNCGKGKAN_;
-      bAAOINNEAAI_ = other.bAAOINNEAAI_;
+      curRollCount_ = other.curRollCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -122,15 +122,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BAAOINNEAAI" field.</summary>
-    public const int BAAOINNEAAIFieldNumber = 5;
-    private uint bAAOINNEAAI_;
+    /// <summary>Field number for the "cur_roll_count" field.</summary>
+    public const int CurRollCountFieldNumber = 5;
+    private uint curRollCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BAAOINNEAAI {
-      get { return bAAOINNEAAI_; }
+    public uint CurRollCount {
+      get { return curRollCount_; }
       set {
-        bAAOINNEAAI_ = value;
+        curRollCount_ = value;
       }
     }
 
@@ -152,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       if(!gridFightPortalBuffList_.Equals(other.gridFightPortalBuffList_)) return false;
       if (MaxRerollCount != other.MaxRerollCount) return false;
       if (ELFNCGKGKAN != other.ELFNCGKGKAN) return false;
-      if (BAAOINNEAAI != other.BAAOINNEAAI) return false;
+      if (CurRollCount != other.CurRollCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -163,7 +163,7 @@ namespace EggLink.DanhengServer.Proto {
       hash ^= gridFightPortalBuffList_.GetHashCode();
       if (MaxRerollCount != 0) hash ^= MaxRerollCount.GetHashCode();
       if (ELFNCGKGKAN != 0) hash ^= ELFNCGKGKAN.GetHashCode();
-      if (BAAOINNEAAI != 0) hash ^= BAAOINNEAAI.GetHashCode();
+      if (CurRollCount != 0) hash ^= CurRollCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -186,9 +186,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(ELFNCGKGKAN);
       }
-      if (BAAOINNEAAI != 0) {
+      if (CurRollCount != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(BAAOINNEAAI);
+        output.WriteUInt32(CurRollCount);
       }
       gridFightPortalBuffList_.WriteTo(output, _repeated_gridFightPortalBuffList_codec);
       if (MaxRerollCount != 0) {
@@ -209,9 +209,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(ELFNCGKGKAN);
       }
-      if (BAAOINNEAAI != 0) {
+      if (CurRollCount != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(BAAOINNEAAI);
+        output.WriteUInt32(CurRollCount);
       }
       gridFightPortalBuffList_.WriteTo(ref output, _repeated_gridFightPortalBuffList_codec);
       if (MaxRerollCount != 0) {
@@ -235,8 +235,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ELFNCGKGKAN != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ELFNCGKGKAN);
       }
-      if (BAAOINNEAAI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BAAOINNEAAI);
+      if (CurRollCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurRollCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -257,8 +257,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ELFNCGKGKAN != 0) {
         ELFNCGKGKAN = other.ELFNCGKGKAN;
       }
-      if (other.BAAOINNEAAI != 0) {
-        BAAOINNEAAI = other.BAAOINNEAAI;
+      if (other.CurRollCount != 0) {
+        CurRollCount = other.CurRollCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -280,7 +280,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            BAAOINNEAAI = input.ReadUInt32();
+            CurRollCount = input.ReadUInt32();
             break;
           }
           case 50:
@@ -312,7 +312,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            BAAOINNEAAI = input.ReadUInt32();
+            CurRollCount = input.ReadUInt32();
             break;
           }
           case 50:

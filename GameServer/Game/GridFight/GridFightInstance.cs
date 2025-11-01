@@ -1,5 +1,6 @@
 using EggLink.DanhengServer.GameServer.Game.Battle;
 using EggLink.DanhengServer.GameServer.Game.GridFight.Component;
+using EggLink.DanhengServer.GameServer.Game.GridFight.PendingAction;
 using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
@@ -18,7 +19,9 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
 
     public BattleInstance? StartBattle()
     {
-        return Player.BattleManager!.StartGridFightBattle(this);
+        var battle = Player.BattleManager!.StartGridFightBattle(this);
+
+        return battle;
     }
 
     public async ValueTask EndBattle(BattleInstance battle, PVEBattleResultCsReq req)
@@ -32,7 +35,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         var prevData = basicComp.Data.Clone();
 
         var expNum = 5u;
-        var baseCoin = 3u;
+        var baseCoin = levelComp.CurrentSection.Excel.BasicGoldRewardNum;
         var interestCoin = basicComp.Data.CurGold / 10;
 
         if (battle.BattleEndStatus == BattleEndStatus.BattleEndWin)
@@ -89,8 +92,10 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         Components.Add(new GridFightLevelComponent(this));
         Components.Add(new GridFightRoleComponent(this));
 
-        _ = GetComponent<GridFightRoleComponent>().AddAvatar(1414, 3, false);  // TODO test
+        _ = GetComponent<GridFightRoleComponent>().AddAvatar(1414, 3, false);
         _ = GetComponent<GridFightShopComponent>().RefreshShop(true, false);
+
+        // _ = CreatePendingAction<GridFightAugmentPendingAction>();  // TODO wait for release official server
     }
 
     public T GetComponent<T>() where T : BaseGridFightComponent
@@ -106,7 +111,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
             Season = Season,
             IsOverlock = IsOverLock,
             UniqueId = UniqueId,
-            PendingAction = new GridFightPendingAction(),
+            PendingAction = GetCurAction().ToProto(),
             GridFightGameData = ToGameDataInfo(),
             RogueCurrentGameInfo = { ToGameInfos() }
         };
@@ -121,4 +126,89 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
     {
         return new GridFightGameData();
     }
+
+    #region Pending Action
+
+    public SortedDictionary<uint, BaseGridFightPendingAction> PendingActions { get; set; } = new();
+    private uint _curQueuePos = 1;
+
+    public BaseGridFightPendingAction GetCurAction()
+    {
+        if (PendingActions.Count > 0)
+        {
+            return PendingActions.First().Value;
+        }
+
+        return new GridFightEmptyPendingAction(this);
+    }
+
+    public uint AddPendingAction(BaseGridFightPendingAction action)
+    {
+        var pos = _curQueuePos++;
+
+        action.QueuePosition = pos;
+        PendingActions[pos] = action;
+
+        return pos;
+    }
+
+    public async ValueTask CreatePendingAction<T>(GridFightSrc src = GridFightSrc.KGridFightSrcEnterNode, bool sendPacket = true) where T: BaseGridFightPendingAction
+    {
+        var action = (T)Activator.CreateInstance(typeof(T), this)!;
+
+        AddPendingAction(action);
+
+        if (sendPacket)
+           await Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(
+                new GridFightPendingActionSyncData(src, action)));
+    }
+
+    public async ValueTask HandleResultRequest(GridFightHandlePendingActionCsReq req)
+    {
+        var curAction = GetCurAction();
+
+        switch (req.GridFightActionTypeCase)
+        {
+            case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.PortalBuffAction:
+                break;
+            case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.PortalBuffRerollAction:
+                if (curAction is GridFightPortalBuffPendingAction portalBuffAction)
+                {
+                    await portalBuffAction.RerollBuff();
+                }
+
+                break;
+            case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.AugmentAction:
+                break;
+
+            case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.RerollAugmentAction:
+                if (curAction is GridFightAugmentPendingAction augmentAction)
+                {
+                    await augmentAction.RerollAugment(req.RerollAugmentAction.AugmentId);
+                }
+
+                break;
+            case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.EliteAction:
+                break;
+            case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.SupplyAction:
+                break;
+        }
+
+        // end
+        PendingActions.Remove(curAction.QueuePosition);
+
+        await Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(
+            new GridFightPendingActionSyncData(GridFightSrc.KGridFightSrcNone, GetCurAction())));
+    }
+
+    #endregion
+
+    #region Portal Buff
+
+    public async ValueTask AddPortalBuff(uint portalBuffId)
+    {
+
+    }
+
+    #endregion
 }

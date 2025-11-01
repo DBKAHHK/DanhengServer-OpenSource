@@ -10,17 +10,23 @@ namespace EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 
 public class GridFightLevelComponent : BaseGridFightComponent
 {
+    #region Properties & Fields  // TODO : to proto field
+
     private uint _curChapterId = 1;
     private uint _curSectionId = 1;
     public Dictionary<uint, List<GridFightGameSectionInfo>> Sections { get; } = [];
     public GridFightGameSectionInfo CurrentSection => Sections[_curChapterId][(int)(_curSectionId - 1)];
     public List<GridFightRoleDamageSttInfo> RoleDamageSttInfos { get; } = [];
 
+    #endregion
+
+    #region Constructors
+
     public GridFightLevelComponent(GridFightInstance inst) : base(inst)
     {
         // TODO: randomly select a base route id
         List<uint> chapterIds = [1100];
-        List<GridFightCampExcel> campPool = GameData.GridFightCampData.Values.ToList();
+        List<GridFightCampExcel> campPool = GameData.GridFightCampData.Values.Where(x => x.BossBattleArea != 0).ToList();
         foreach (var chapterId in Enumerable.Range(1, 3))
         {
             var chapters = chapterIds.Count >= chapterId
@@ -34,10 +40,15 @@ public class GridFightLevelComponent : BaseGridFightComponent
 
             var camp = campPool.RandomElement();  // cannot the same
             campPool.Remove(camp);
+
             // create section infos
-            Sections[(uint)chapterId] = [..select.Values.Select(x => new GridFightGameSectionInfo(x, camp))];
+            Sections[(uint)chapterId] = [.. select.Values.Select(x => new GridFightGameSectionInfo(x, camp))];
         }
     }
+
+    #endregion
+
+    #region Stt
 
     public async ValueTask<(Retcode, GridFightRoleDamageSttInfo?)> AddRoleDamageStt(uint roleId, double damage, bool sendPacket = true)
     {
@@ -84,6 +95,10 @@ public class GridFightLevelComponent : BaseGridFightComponent
         return (Retcode.RetSucc, res);
     }
 
+    #endregion
+
+    #region Actions
+
     public async ValueTask<List<BaseGridFightSyncData>> EnterNextSection(bool sendPacket = true)
     {
         // if last section of chapter
@@ -104,6 +119,8 @@ public class GridFightLevelComponent : BaseGridFightComponent
         }
 
         List<BaseGridFightSyncData> syncs = [new GridFightLevelSyncData(GridFightSrc.KGridFightSrcBattleEnd, this)];
+        //await Inst.RollPortalBuff();
+
         if (sendPacket)
         {
             await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
@@ -111,6 +128,10 @@ public class GridFightLevelComponent : BaseGridFightComponent
 
         return syncs;
     }
+
+    #endregion
+
+    #region Information
 
     public List<GridFightMonsterInfo> GetBossMonsters()
     {
@@ -134,6 +155,10 @@ public class GridFightLevelComponent : BaseGridFightComponent
 
         return bosses;
     }
+
+    #endregion
+
+    #region Serialization
 
     public override GridFightGameInfo ToProto()
     {
@@ -182,6 +207,8 @@ public class GridFightLevelComponent : BaseGridFightComponent
             RoleDamageSttList = { RoleDamageSttInfos.Select(x => x.ToProto()) }
         };
     }
+
+    #endregion
 }
 
 public class GridFightRoleDamageSttInfo
@@ -252,18 +279,54 @@ public class GridFightGameEncounterInfo
         EncounterDifficulty = difficulty;
         ParentSection = section;
 
-        if (ParentSection.Excel.NodeType != GridFightNodeTypeEnum.Monster) return;
+        if (ParentSection.Excel.NodeType is not GridFightNodeTypeEnum.Monster and not GridFightNodeTypeEnum.CampMonster
+            and not GridFightNodeTypeEnum.Boss and not GridFightNodeTypeEnum.EliteBranch) return;
 
-        var monsterPool = ParentSection.MonsterCamp.Monsters.Where(x => x.MonsterTier <= 3).OrderBy(_ => Guid.NewGuid()).ToList();
-
-        List<GridFightMonsterExcel> monsters = [];
-
-        foreach (var _ in Enumerable.Range(0, Random.Shared.Next(1, 5)))
+        var waveNum = ParentSection.Excel.NodeType switch
         {
-            monsters.Add(monsterPool.RandomElement());
-        }
+            GridFightNodeTypeEnum.Boss => 2,
+            GridFightNodeTypeEnum.EliteBranch => 2,
+            _ => 1
+        };
 
-        MonsterWaves.Add(new GridFightGameMonsterWaveInfo(1, monsters, ParentSection.MonsterCamp.ID));
+        List<int> monsterNum = ParentSection.Excel.NodeType switch
+        {
+            GridFightNodeTypeEnum.Boss => [Random.Shared.Next(3, 5), 1],
+            GridFightNodeTypeEnum.EliteBranch => [Random.Shared.Next(3, 5), 3],
+            GridFightNodeTypeEnum.CampMonster => [3],
+            _ => [Random.Shared.Next(3, 5)]
+        };
+
+        var monsterPool = ParentSection.MonsterCamp.Monsters.Where(x => x.MonsterTier <= 2).OrderBy(_ => Guid.NewGuid()).ToList();
+        var monster4Pool = ParentSection.MonsterCamp.Monsters.Where(x => x.MonsterTier is 4 or 3).OrderBy(_ => Guid.NewGuid()).ToList();
+        var monster5Pool = ParentSection.MonsterCamp.Monsters.Where(x => x.MonsterTier == 5).OrderBy(_ => Guid.NewGuid()).ToList();
+        for (var i = 0; i < waveNum; i++)
+        {
+            if (i < waveNum - 1 || ParentSection.Excel.NodeType is GridFightNodeTypeEnum.Monster)
+            {
+                // no elite
+                var res = monsterPool.OrderBy(_ => Guid.NewGuid()).Take(monsterNum[i]).ToList();
+                MonsterWaves.Add(new GridFightGameMonsterWaveInfo((uint)(i + 1), res, ParentSection.MonsterCamp.ID));
+            }
+            else
+            {
+                var elite = ParentSection.Excel.NodeType switch
+                {
+                    GridFightNodeTypeEnum.Boss => monster5Pool.RandomElement(),
+                    _ => monster4Pool.RandomElement(),
+                };
+
+                List<GridFightMonsterExcel> monsters = [elite];
+                var remain = monsterNum[i] - 1;
+
+                if (remain > 0)
+                {
+                    monsters.AddRange(monsterPool.OrderBy(_ => Guid.NewGuid()).Take(remain).ToList());
+                }
+
+                MonsterWaves.Add(new GridFightGameMonsterWaveInfo((uint)(i + 1), monsters, ParentSection.MonsterCamp.ID));
+            }
+        }
     }
 
     public uint EncounterIndex { get; set; }

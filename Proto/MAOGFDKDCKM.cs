@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static MAOGFDKDCKMReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFNQU9HRkRLRENLTS5wcm90bxoUTWFyYmxlR2FtZUluZm8ucHJvdG8aEVBQ",
-            "SUZGS0pFSkpBLnByb3RvGhFFT0pMTkdERExOTi5wcm90bxoRSEJHSEFPUEJL",
-            "SlAucHJvdG8i7wIKC01BT0dGREtEQ0tNEhMKC0lFSEZIS01EQUdDGAogASgN",
+            "ChFNQU9HRkRLRENLTS5wcm90bxoRUFBJRkZLSkVKSkEucHJvdG8aEUhCR0hB",
+            "T1BCS0pQLnByb3RvGhFFT0pMTkdERExOTi5wcm90bxoUTWFyYmxlR2FtZUlu",
+            "Zm8ucHJvdG8i7wIKC01BT0dGREtEQ0tNEhMKC0lFSEZIS01EQUdDGAogASgN",
             "Eh4KFmFsbG93ZWRfbW92ZV9zZWFsX2xpc3QYDSADKA0SIQoLRElCUEdHT09H",
             "UEsYASADKAsyDC5IQkdIQU9QQktKUBIhCgtPTEtNQ0JKRkxFShgLIAMoCzIM",
             "LkhCR0hBT1BCS0pQEiMKDXRlYW1fYl9wbGF5ZXIYCCABKAsyDC5FT0pMTkdE",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "IAEoCzIMLkVPSkxOR0RETE5OQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MarbleGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PPIFFKJEJJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOJLNGDDLNNReflection.Descriptor, global::EggLink.DanhengServer.Proto.HBGHAOPBKJPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PPIFFKJEJJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.HBGHAOPBKJPReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOJLNGDDLNNReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.MAOGFDKDCKM), global::EggLink.DanhengServer.Proto.MAOGFDKDCKM.Parser, new[]{ "IEHFHKMDAGC", "AllowedMoveSealList", "DIBPGGOOGPK", "OLKMCBJFLEJ", "TeamBPlayer", "DPLGCEKJACK", "SealOwnerUid", "CurRound", "OMKKPGFJHFE", "MarbleGameInfo", "Phase", "TeamAPlayer" }, null, null, null, null)
           }));

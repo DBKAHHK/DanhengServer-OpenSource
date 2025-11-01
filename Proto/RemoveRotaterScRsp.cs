@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RemoveRotaterScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhSZW1vdmVSb3RhdGVyU2NSc3AucHJvdG8aEVJvdGF0ZXJEYXRhLnByb3Rv",
-            "GhdSb3RhdGVyRW5lcmd5SW5mby5wcm90byJyChJSZW1vdmVSb3RhdGVyU2NS",
+            "ChhSZW1vdmVSb3RhdGVyU2NSc3AucHJvdG8aF1JvdGF0ZXJFbmVyZ3lJbmZv",
+            "LnByb3RvGhFSb3RhdGVyRGF0YS5wcm90byJyChJSZW1vdmVSb3RhdGVyU2NS",
             "c3ASIgoMcm90YXRlcl9kYXRhGAggASgLMgwuUm90YXRlckRhdGESJwoLZW5l",
             "cmd5X2luZm8YBiABKAsyEi5Sb3RhdGVyRW5lcmd5SW5mbxIPCgdyZXRjb2Rl",
             "GA8gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RotaterEnergyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RotaterDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RemoveRotaterScRsp), global::EggLink.DanhengServer.Proto.RemoveRotaterScRsp.Parser, new[]{ "RotaterData", "EnergyInfo", "Retcode" }, null, null, null, null)
           }));

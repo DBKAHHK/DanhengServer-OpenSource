@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GetAetherDivideInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5HZXRBZXRoZXJEaXZpZGVJbmZvU2NSc3AucHJvdG8aFUFldGhlclNraWxs",
-            "SW5mby5wcm90bxocQWV0aGVyRGl2aWRlU3Bpcml0SW5mby5wcm90bxocQWV0",
-            "aGVyRGl2aWRlTGluZXVwSW5mby5wcm90byKWAgoYR2V0QWV0aGVyRGl2aWRl",
+            "Ch5HZXRBZXRoZXJEaXZpZGVJbmZvU2NSc3AucHJvdG8aHEFldGhlckRpdmlk",
+            "ZUxpbmV1cEluZm8ucHJvdG8aHEFldGhlckRpdmlkZVNwaXJpdEluZm8ucHJv",
+            "dG8aFUFldGhlclNraWxsSW5mby5wcm90byKWAgoYR2V0QWV0aGVyRGl2aWRl",
             "SW5mb1NjUnNwEhMKC1BITEtETkdIT09BGAIgASgNEg8KB3JldGNvZGUYCCAB",
             "KA0SEwoLSUJDSVBJSURDT0wYByABKA0SLAoLbGluZXVwX2xpc3QYBiADKAsy",
             "Fy5BZXRoZXJEaXZpZGVMaW5ldXBJbmZvEhMKC1BGTEpHR0RBT0ZNGA8gASgN",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "QWV0aGVyU2tpbGxJbmZvEhMKC0VHRU1ORE5FRElQGA0gASgNQh6qAhtFZ2dM",
             "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AetherSkillInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AetherDivideLineupInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AetherDivideLineupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AetherDivideSpiritInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.AetherSkillInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAetherDivideInfoScRsp), global::EggLink.DanhengServer.Proto.GetAetherDivideInfoScRsp.Parser, new[]{ "PHLKDNGHOOA", "Retcode", "IBCIPIIDCOL", "LineupList", "PFLJGGDAOFM", "NLFIHKICDDO", "JDHLMHJBOJM", "SkillList", "EGEMNDNEDIP" }, null, null, null, null)
           }));

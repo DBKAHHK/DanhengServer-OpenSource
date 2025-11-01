@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChhHcmlkRmlnaHRMYXllckluZm8ucHJvdG8aGEdyaWRGaWdodFJvdXRlSW5m",
-            "by5wcm90byJkChJHcmlkRmlnaHRMYXllckluZm8SKgoKcm91dGVfaW5mbxj6",
-            "DiABKAsyEy5HcmlkRmlnaHRSb3V0ZUluZm9IABITCgtBSkNHUEZQSk9NRxgH",
-            "IAEoCEINCgtFT09NTEdBQU5IS0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "by5wcm90byJpChJHcmlkRmlnaHRMYXllckluZm8SKgoKcm91dGVfaW5mbxj6",
+            "DiABKAsyEy5HcmlkRmlnaHRSb3V0ZUluZm9IABIYChByb3V0ZV9pc19wZW5k",
+            "aW5nGAcgASgIQg0KC0VPT01MR0FBTkhLQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightRouteInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightLayerInfo), global::EggLink.DanhengServer.Proto.GridFightLayerInfo.Parser, new[]{ "RouteInfo", "AJCGPFPJOMG" }, new[]{ "EOOMLGAANHK" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightLayerInfo), global::EggLink.DanhengServer.Proto.GridFightLayerInfo.Parser, new[]{ "RouteInfo", "RouteIsPending" }, new[]{ "EOOMLGAANHK" }, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightLayerInfo(GridFightLayerInfo other) : this() {
-      aJCGPFPJOMG_ = other.aJCGPFPJOMG_;
+      routeIsPending_ = other.routeIsPending_;
       switch (other.EOOMLGAANHKCase) {
         case EOOMLGAANHKOneofCase.RouteInfo:
           RouteInfo = other.RouteInfo.Clone();
@@ -102,15 +102,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AJCGPFPJOMG" field.</summary>
-    public const int AJCGPFPJOMGFieldNumber = 7;
-    private bool aJCGPFPJOMG_;
+    /// <summary>Field number for the "route_is_pending" field.</summary>
+    public const int RouteIsPendingFieldNumber = 7;
+    private bool routeIsPending_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool AJCGPFPJOMG {
-      get { return aJCGPFPJOMG_; }
+    public bool RouteIsPending {
+      get { return routeIsPending_; }
       set {
-        aJCGPFPJOMG_ = value;
+        routeIsPending_ = value;
       }
     }
 
@@ -150,7 +150,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(RouteInfo, other.RouteInfo)) return false;
-      if (AJCGPFPJOMG != other.AJCGPFPJOMG) return false;
+      if (RouteIsPending != other.RouteIsPending) return false;
       if (EOOMLGAANHKCase != other.EOOMLGAANHKCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -160,7 +160,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (eOOMLGAANHKCase_ == EOOMLGAANHKOneofCase.RouteInfo) hash ^= RouteInfo.GetHashCode();
-      if (AJCGPFPJOMG != false) hash ^= AJCGPFPJOMG.GetHashCode();
+      if (RouteIsPending != false) hash ^= RouteIsPending.GetHashCode();
       hash ^= (int) eOOMLGAANHKCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -180,9 +180,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AJCGPFPJOMG != false) {
+      if (RouteIsPending != false) {
         output.WriteRawTag(56);
-        output.WriteBool(AJCGPFPJOMG);
+        output.WriteBool(RouteIsPending);
       }
       if (eOOMLGAANHKCase_ == EOOMLGAANHKOneofCase.RouteInfo) {
         output.WriteRawTag(210, 119);
@@ -198,9 +198,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AJCGPFPJOMG != false) {
+      if (RouteIsPending != false) {
         output.WriteRawTag(56);
-        output.WriteBool(AJCGPFPJOMG);
+        output.WriteBool(RouteIsPending);
       }
       if (eOOMLGAANHKCase_ == EOOMLGAANHKOneofCase.RouteInfo) {
         output.WriteRawTag(210, 119);
@@ -219,7 +219,7 @@ namespace EggLink.DanhengServer.Proto {
       if (eOOMLGAANHKCase_ == EOOMLGAANHKOneofCase.RouteInfo) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(RouteInfo);
       }
-      if (AJCGPFPJOMG != false) {
+      if (RouteIsPending != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -234,8 +234,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.AJCGPFPJOMG != false) {
-        AJCGPFPJOMG = other.AJCGPFPJOMG;
+      if (other.RouteIsPending != false) {
+        RouteIsPending = other.RouteIsPending;
       }
       switch (other.EOOMLGAANHKCase) {
         case EOOMLGAANHKOneofCase.RouteInfo:
@@ -262,7 +262,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 56: {
-            AJCGPFPJOMG = input.ReadBool();
+            RouteIsPending = input.ReadBool();
             break;
           }
           case 15314: {
@@ -290,7 +290,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 56: {
-            AJCGPFPJOMG = input.ReadBool();
+            RouteIsPending = input.ReadBool();
             break;
           }
           case 15314: {

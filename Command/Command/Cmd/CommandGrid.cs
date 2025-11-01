@@ -33,7 +33,7 @@ public class CommandGrid : ICommand
         var roleId = (uint)arg.GetInt(0);
         var tier = (uint)arg.GetInt(1);
 
-        if (!GameData.GridFightRoleStarData.ContainsKey(roleId << 2 | tier))
+        if (!GameData.GridFightRoleStarData.ContainsKey(roleId << 4 | tier))
         {
             await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.InvalidRole"));
             return;

@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightPendingAugmentInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFHcmlkRmlnaHRQZW5kaW5nQXVnbWVudEluZm8ucHJvdG8iWwobR3JpZEZp",
-            "Z2h0UGVuZGluZ0F1Z21lbnRJbmZvEhMKC0pOQkpDRk1EQU1MGAQgASgNEhIK",
-            "CmF1Z21lbnRfaWQYBSABKA0SEwoLTEVJUERJQktFUE8YDCABKA1CHqoCG0Vn",
-            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiFHcmlkRmlnaHRQZW5kaW5nQXVnbWVudEluZm8ucHJvdG8idQobR3JpZEZp",
+            "Z2h0UGVuZGluZ0F1Z21lbnRJbmZvEiAKGGF1Z21lbnRfY3VyX3Jlcm9sbF9j",
+            "b3VudBgEIAEoDRISCgphdWdtZW50X2lkGAUgASgNEiAKGGF1Z21lbnRfbWF4",
+            "X3Jlcm9sbF9jb3VudBgMIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightPendingAugmentInfo), global::EggLink.DanhengServer.Proto.GridFightPendingAugmentInfo.Parser, new[]{ "JNBJCFMDAML", "AugmentId", "LEIPDIBKEPO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightPendingAugmentInfo), global::EggLink.DanhengServer.Proto.GridFightPendingAugmentInfo.Parser, new[]{ "AugmentCurRerollCount", "AugmentId", "AugmentMaxRerollCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,9 +74,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightPendingAugmentInfo(GridFightPendingAugmentInfo other) : this() {
-      jNBJCFMDAML_ = other.jNBJCFMDAML_;
+      augmentCurRerollCount_ = other.augmentCurRerollCount_;
       augmentId_ = other.augmentId_;
-      lEIPDIBKEPO_ = other.lEIPDIBKEPO_;
+      augmentMaxRerollCount_ = other.augmentMaxRerollCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -85,15 +86,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightPendingAugmentInfo(this);
     }
 
-    /// <summary>Field number for the "JNBJCFMDAML" field.</summary>
-    public const int JNBJCFMDAMLFieldNumber = 4;
-    private uint jNBJCFMDAML_;
+    /// <summary>Field number for the "augment_cur_reroll_count" field.</summary>
+    public const int AugmentCurRerollCountFieldNumber = 4;
+    private uint augmentCurRerollCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint JNBJCFMDAML {
-      get { return jNBJCFMDAML_; }
+    public uint AugmentCurRerollCount {
+      get { return augmentCurRerollCount_; }
       set {
-        jNBJCFMDAML_ = value;
+        augmentCurRerollCount_ = value;
       }
     }
 
@@ -109,15 +110,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LEIPDIBKEPO" field.</summary>
-    public const int LEIPDIBKEPOFieldNumber = 12;
-    private uint lEIPDIBKEPO_;
+    /// <summary>Field number for the "augment_max_reroll_count" field.</summary>
+    public const int AugmentMaxRerollCountFieldNumber = 12;
+    private uint augmentMaxRerollCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LEIPDIBKEPO {
-      get { return lEIPDIBKEPO_; }
+    public uint AugmentMaxRerollCount {
+      get { return augmentMaxRerollCount_; }
       set {
-        lEIPDIBKEPO_ = value;
+        augmentMaxRerollCount_ = value;
       }
     }
 
@@ -136,9 +137,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (JNBJCFMDAML != other.JNBJCFMDAML) return false;
+      if (AugmentCurRerollCount != other.AugmentCurRerollCount) return false;
       if (AugmentId != other.AugmentId) return false;
-      if (LEIPDIBKEPO != other.LEIPDIBKEPO) return false;
+      if (AugmentMaxRerollCount != other.AugmentMaxRerollCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -146,9 +147,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (JNBJCFMDAML != 0) hash ^= JNBJCFMDAML.GetHashCode();
+      if (AugmentCurRerollCount != 0) hash ^= AugmentCurRerollCount.GetHashCode();
       if (AugmentId != 0) hash ^= AugmentId.GetHashCode();
-      if (LEIPDIBKEPO != 0) hash ^= LEIPDIBKEPO.GetHashCode();
+      if (AugmentMaxRerollCount != 0) hash ^= AugmentMaxRerollCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -167,17 +168,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (JNBJCFMDAML != 0) {
+      if (AugmentCurRerollCount != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(JNBJCFMDAML);
+        output.WriteUInt32(AugmentCurRerollCount);
       }
       if (AugmentId != 0) {
         output.WriteRawTag(40);
         output.WriteUInt32(AugmentId);
       }
-      if (LEIPDIBKEPO != 0) {
+      if (AugmentMaxRerollCount != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(LEIPDIBKEPO);
+        output.WriteUInt32(AugmentMaxRerollCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -189,17 +190,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (JNBJCFMDAML != 0) {
+      if (AugmentCurRerollCount != 0) {
         output.WriteRawTag(32);
-        output.WriteUInt32(JNBJCFMDAML);
+        output.WriteUInt32(AugmentCurRerollCount);
       }
       if (AugmentId != 0) {
         output.WriteRawTag(40);
         output.WriteUInt32(AugmentId);
       }
-      if (LEIPDIBKEPO != 0) {
+      if (AugmentMaxRerollCount != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(LEIPDIBKEPO);
+        output.WriteUInt32(AugmentMaxRerollCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,14 +212,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (JNBJCFMDAML != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JNBJCFMDAML);
+      if (AugmentCurRerollCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AugmentCurRerollCount);
       }
       if (AugmentId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AugmentId);
       }
-      if (LEIPDIBKEPO != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LEIPDIBKEPO);
+      if (AugmentMaxRerollCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AugmentMaxRerollCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -232,14 +233,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.JNBJCFMDAML != 0) {
-        JNBJCFMDAML = other.JNBJCFMDAML;
+      if (other.AugmentCurRerollCount != 0) {
+        AugmentCurRerollCount = other.AugmentCurRerollCount;
       }
       if (other.AugmentId != 0) {
         AugmentId = other.AugmentId;
       }
-      if (other.LEIPDIBKEPO != 0) {
-        LEIPDIBKEPO = other.LEIPDIBKEPO;
+      if (other.AugmentMaxRerollCount != 0) {
+        AugmentMaxRerollCount = other.AugmentMaxRerollCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -257,7 +258,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 32: {
-            JNBJCFMDAML = input.ReadUInt32();
+            AugmentCurRerollCount = input.ReadUInt32();
             break;
           }
           case 40: {
@@ -265,7 +266,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 96: {
-            LEIPDIBKEPO = input.ReadUInt32();
+            AugmentMaxRerollCount = input.ReadUInt32();
             break;
           }
         }
@@ -284,7 +285,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 32: {
-            JNBJCFMDAML = input.ReadUInt32();
+            AugmentCurRerollCount = input.ReadUInt32();
             break;
           }
           case 40: {
@@ -292,7 +293,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 96: {
-            LEIPDIBKEPO = input.ReadUInt32();
+            AugmentMaxRerollCount = input.ReadUInt32();
             break;
           }
         }

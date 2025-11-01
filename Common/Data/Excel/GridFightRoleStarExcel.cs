@@ -14,6 +14,6 @@ public class GridFightRoleStarExcel : ExcelResource
 
     public override void Loaded()
     {
-        GameData.GridFightRoleStarData.TryAdd(ID << 2 | Star, this);
+        GameData.GridFightRoleStarData.TryAdd(ID << 4 | Star, this);
     }
 }

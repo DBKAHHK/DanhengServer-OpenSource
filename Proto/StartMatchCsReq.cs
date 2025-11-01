@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static StartMatchCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVTdGFydE1hdGNoQ3NSZXEucHJvdG8aE0ZpZ2h0R2FtZU1vZGUucHJvdG8a",
-            "E0xvYmJ5R2FtZUluZm8ucHJvdG8iYwoPU3RhcnRNYXRjaENzUmVxEicKD2xv",
+            "ChVTdGFydE1hdGNoQ3NSZXEucHJvdG8aE0xvYmJ5R2FtZUluZm8ucHJvdG8a",
+            "E0ZpZ2h0R2FtZU1vZGUucHJvdG8iYwoPU3RhcnRNYXRjaENzUmVxEicKD2xv",
             "YmJ5X2dhbWVfaW5mbxgLIAEoCzIOLkxvYmJ5R2FtZUluZm8SJwoPZmlnaHRf",
             "Z2FtZV9tb2RlGAggASgOMg4uRmlnaHRHYW1lTW9kZUIeqgIbRWdnTGluay5E",
             "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightGameModeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LobbyGameInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LobbyGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FightGameModeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.StartMatchCsReq), global::EggLink.DanhengServer.Proto.StartMatchCsReq.Parser, new[]{ "LobbyGameInfo", "FightGameMode" }, null, null, null, null)
           }));

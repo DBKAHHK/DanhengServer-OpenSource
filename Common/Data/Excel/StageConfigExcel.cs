@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 using EggLink.DanhengServer.Proto;
+using Newtonsoft.Json;
 
 namespace EggLink.DanhengServer.Data.Excel;
 
@@ -9,6 +10,7 @@ public class StageConfigExcel : ExcelResource
     public int StageID { get; set; } = 0;
     public HashName StageName { get; set; } = new();
     public List<StageMonsterList> MonsterList { get; set; } = [];
+    public List<StageConfigInfo> StageConfigData { get; set; } = [];
     public List<int> TrialAvatarList { get; set; } = [];
 
 
@@ -71,6 +73,12 @@ public class StageConfigExcel : ExcelResource
 
         return result;
     }
+}
+
+public class StageConfigInfo
+{
+    [JsonProperty("HEIKKHLKMOA")] public string Key { get; set; } = "";
+    [JsonProperty("MBMDOCJIMEJ")] public string Value { get; set; } = "";
 }
 
 public class StageMonsterList

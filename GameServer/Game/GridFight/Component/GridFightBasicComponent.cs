@@ -1,4 +1,5 @@
 using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.GameServer.Game.GridFight.PendingAction;
 using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 using EggLink.DanhengServer.Proto;
@@ -8,6 +9,8 @@ namespace EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 
 public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComponent(inst)
 {
+    #region Fields & Properties
+
     public const uint MaxHp = 100;
 
     public GridFightBasicInfoPb Data { get; set; } = new()
@@ -18,6 +21,10 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         BuyLevelCost = 1,
         CurGold = 5
     };
+
+    #endregion
+
+    #region Data Management
 
     public async ValueTask<Retcode> UpdateGoldNum(int changeNum, bool sendPacket = true, GridFightSrc src = GridFightSrc.KGridFightSrcManualRefreshGoods)
     {
@@ -131,10 +138,18 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         return Retcode.RetSucc;
     }
 
+    #endregion
+
+    #region Information
+
     public uint GetFieldCount()
     {
         return 4 + 6;
     }
+
+    #endregion
+
+    #region Serialization
 
     public override GridFightGameInfo ToProto()
     {
@@ -162,4 +177,6 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
             }
         };
     }
+
+    #endregion
 }

@@ -22,10 +22,11 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
     public void HandleProto(SceneBattleInfo proto, BattleInstance battle)
     {
         var avatars = AvatarComponent.GetForegroundAvatarInfos(4 + BasicComponent.GetFieldCount());
+        var backAvatars = AvatarComponent.GetBackgroundAvatarInfos(4 + BasicComponent.GetFieldCount());
 
         var tempLineup = new LineupInfo
         {
-            BaseAvatars = avatars.Select(y => new LineupAvatarInfo
+            BaseAvatars = avatars.Concat(backAvatars).Select(y => new LineupAvatarInfo
             {
                 BaseAvatarId = y.BaseAvatarId
             }).ToList()
@@ -34,6 +35,11 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
         var formatted = avatars.Select(x =>
             x.ToBattleProto(
                 new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, tempLineup), AvatarType.AvatarGridFightType)).ToList();
+
+        var backFormatted = backAvatars.Select(x =>
+            x.ToBattleProto(
+                new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, tempLineup),
+                AvatarType.AvatarGridFightType)).ToList();
 
         proto.BattleAvatarList.Add(formatted.Take(4));
 
@@ -59,8 +65,20 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
 
         foreach (var role in AvatarComponent.Data.Roles)
         {
-            if (!GameData.GridFightRoleStarData.TryGetValue(role.RoleId << 2 | role.Tier, out var roleConf)) continue;
+            if (!GameData.GridFightRoleStarData.TryGetValue(role.RoleId << 4 | role.Tier, out var roleConf)) continue;
             battle.BattleEvents.TryAdd((int)roleConf.BEID, new BattleEventInstance((int)roleConf.BEID, 5000));
+        }
+
+        battle.Buffs.Add(new MazeBuff(35100001, 1, -1)
+        {
+            WaveFlag = -1
+        });
+
+        var even = battle.Stages.First().StageConfigData.FirstOrDefault(x => x.Key == "_CreateBattleEvent");
+        if (even?.Value != null)
+        {
+            var id = int.Parse(even.Value);
+            battle.BattleEvents.TryAdd(id, new BattleEventInstance(id, 5000));
         }
 
         proto.BattleGridFightInfo = new BattleGridFightInfo
@@ -72,7 +90,7 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
             BattleWaveId = 1,
             GridFightCurLevel = BasicComponent.Data.CurLevel,
             GridFightLineupHp = BasicComponent.Data.CurHp,
-            GridFightAvatarList = { formatted },
+            GridFightAvatarList = { formatted, backFormatted },
             GridFightStageInfo = new BattleGridFightStageInfo
             {
                 ChapterId = CurSection.ChapterId,
@@ -80,7 +98,8 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
                 SectionId = CurSection.SectionId
             },
             IsOverlock = Inst.IsOverLock,
-            Season = Inst.Season
+            Season = Inst.Season,
+            DFNBKALPGPH = 1,
         };
     }
 }
