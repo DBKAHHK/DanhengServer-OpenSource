@@ -14,6 +14,7 @@ public class GridFightStageRouteExcel : ExcelResource
     public uint IsAugment { get; set; }
     public uint NodeTemplateID { get; set; }
     public uint BasicGoldRewardNum { get; set; }
+    public List<uint> PenaltyBonusRuleIDList { get; set; } = [];
 
     [JsonConverter(typeof(StringEnumConverter))]
     public GridFightNodeTypeEnum NodeType { get; set; }

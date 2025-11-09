@@ -3,6 +3,7 @@ using EggLink.DanhengServer.Enums.Mission;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.Player;
 using EggLink.DanhengServer.Internationalization;
 using EggLink.DanhengServer.Proto;
+using Google.Protobuf.WellKnownTypes;
 
 namespace EggLink.DanhengServer.Command.Command.Cmd;
 
@@ -143,5 +144,33 @@ public class CommandUnlockAll : ICommand
 
         await arg.SendMsg(I18NManager.Translate("Game.Command.UnlockAll.UnlockedAll",
             I18NManager.Translate("Word.TypesOfChallenge")));
+    }
+
+    [CommandMethod("0 grid")]
+    public async ValueTask UnlockAllGrid(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        var player = arg.Target!.Player!;
+
+        List<int> gridList = [2100162, 2100163, 7300022, 7300038, 6071325];
+
+        List<int> allList = [.. gridList];
+
+        foreach (var id in allList)
+        {
+            // finish mission
+            await player.QuestManager!.AcceptQuest(id);
+            await player.QuestManager!.FinishQuest(id);
+        }
+
+        if (player.SceneInstance!.FloorId == 20322001)
+            await player.SceneInstance.UpdateFloorSavedValue("FSV_370GridFight", 1);
+        await arg.SendMsg(I18NManager.Translate("Game.Command.UnlockAll.UnlockedAll",
+            I18NManager.Translate("Word.TypesOfGridFight")));
     }
 }

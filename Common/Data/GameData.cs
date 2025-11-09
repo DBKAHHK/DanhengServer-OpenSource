@@ -1,14 +1,15 @@
-﻿using System.Collections.Concurrent;
-using EggLink.DanhengServer.Data.Config;
+﻿using EggLink.DanhengServer.Data.Config;
 using EggLink.DanhengServer.Data.Config.AdventureAbility;
 using EggLink.DanhengServer.Data.Config.Character;
 using EggLink.DanhengServer.Data.Config.Scene;
 using EggLink.DanhengServer.Data.Custom;
 using EggLink.DanhengServer.Data.Excel;
+using EggLink.DanhengServer.Enums.GridFight;
 using EggLink.DanhengServer.Enums.Rogue;
 using EggLink.DanhengServer.Enums.TournRogue;
 using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
+using System.Collections.Concurrent;
 
 namespace EggLink.DanhengServer.Data;
 
@@ -107,6 +108,7 @@ public static class GameData
     public static Dictionary<uint, GridFightRoleBasicInfoExcel> GridFightRoleBasicInfoData { get; private set; } = [];
     public static Dictionary<uint, GridFightRoleStarExcel> GridFightRoleStarData { get; private set; } = [];
     public static Dictionary<uint, GridFightDivisionInfoExcel> GridFightDivisionInfoData { get; private set; } = [];
+    public static Dictionary<uint, GridFightDivisionStageExcel> GridFightDivisionStageData { get; private set; } = [];
     public static Dictionary<uint, GridFightEquipmentExcel> GridFightEquipmentData { get; private set; } = [];
     public static Dictionary<uint, GridFightConsumablesExcel> GridFightConsumablesData { get; private set; } = [];
     public static Dictionary<uint, GridFightCampExcel> GridFightCampData { get; private set; } = [];
@@ -114,11 +116,13 @@ public static class GameData
     public static Dictionary<uint, GridFightPlayerLevelExcel> GridFightPlayerLevelData { get; private set; } = [];
     public static Dictionary<uint, GridFightMonsterExcel> GridFightMonsterData { get; private set; } = [];
     public static Dictionary<uint, GridFightAugmentExcel> GridFightAugmentData { get; private set; } = [];
+    public static Dictionary<uint, Dictionary<GridFightAugmentQualityEnum, GridFightAugmentMonsterExcel>> GridFightAugmentMonsterData { get; private set; } = [];
     public static Dictionary<uint, GridFightPortalBuffExcel> GridFightPortalBuffData { get; private set; } = [];
     public static Dictionary<uint, GridFightItemsExcel> GridFightItemsData { get; private set; } = [];
     public static Dictionary<uint, GridFightTalentExcel> GridFightTalentData { get; private set; } = [];
     public static Dictionary<uint, GridFightSeasonTalentExcel> GridFightSeasonTalentData { get; private set; } = [];
     public static Dictionary<uint, Dictionary<uint, GridFightStageRouteExcel>> GridFightStageRouteData { get; private set; } = [];
+    public static Dictionary<uint, GridFightNodeTemplateExcel> GridFightNodeTemplateData { get; private set; } = [];
 
     #endregion
 

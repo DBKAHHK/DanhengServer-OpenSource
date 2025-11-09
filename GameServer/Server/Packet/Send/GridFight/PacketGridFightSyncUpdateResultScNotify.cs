@@ -1,7 +1,6 @@
 using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 using EggLink.DanhengServer.Kcp;
 using EggLink.DanhengServer.Proto;
-using System.Linq;
 
 namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 
@@ -9,23 +8,17 @@ public class PacketGridFightSyncUpdateResultScNotify : BasePacket
 {
     public PacketGridFightSyncUpdateResultScNotify(List<BaseGridFightSyncData> data) : base(CmdIds.GridFightSyncUpdateResultScNotify)
     {
-        Dictionary<GridFightSrc, List<BaseGridFightSyncData>> srcDict = [];
-
-        foreach (var syncData in data)
-        {
-            srcDict.TryAdd(syncData.Src, []);
-            srcDict[syncData.Src].Add(syncData);
-        }
+        var group = data.GroupBy(x => new { x.GroupId, x.Src });
 
         var proto = new GridFightSyncUpdateResultScNotify
         {
             SyncResultDataList =
             {
-                srcDict.Select(x => new GridFightSyncResultData
+                group.Select(x => new GridFightSyncResultData
                 {
-                    GridUpdateSrc = x.Key,
-                    UpdateDynamicList = { x.Value.Select(j => j.ToProto()) },
-                    ONMDGNHMABO = { (uint)x.Value.Count }
+                    GridUpdateSrc = x.Key.Src,
+                    UpdateDynamicList = { x.Select(j => j.ToProto()) },
+                    ONMDGNHMABO = { 0 }
                 })
             }
         };

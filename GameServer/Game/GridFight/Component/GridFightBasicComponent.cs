@@ -1,5 +1,4 @@
 using EggLink.DanhengServer.Data;
-using EggLink.DanhengServer.GameServer.Game.GridFight.PendingAction;
 using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 using EggLink.DanhengServer.Proto;
@@ -17,9 +16,9 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
     {
         CurHp = 100,
         CurLevel = 1,
-        CurOnGroundAvatarCount = 1,
+        MaxAvatarNum = 1,
         BuyLevelCost = 1,
-        CurGold = 5
+        CurGold = 0
     };
 
     #endregion
@@ -64,7 +63,7 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         if (await UpdateGoldNum((int)-Data.BuyLevelCost, false) != Retcode.RetSucc)
             return Retcode.RetGridFightCoinNotEnough;
 
-        return await AddLevelExp(1, sendPacket);
+        return await AddLevelExp(4, sendPacket);
     }
 
     public async ValueTask<Retcode> AddLevelExp(uint exp, bool sendPacket = true)
@@ -85,6 +84,8 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         {
             if (level.LevelUpExp + costExp > Data.LevelExp)
                 break;
+
+            if (level.LevelUpExp == 0) continue;  // max level
 
             costExp += (int)level.LevelUpExp;
             targetLevel = level.PlayerLevel + 1;
@@ -124,7 +125,7 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         Data.CurLevel += level;
 
         Data.BuyLevelCost = (uint)Math.Ceiling(Data.CurLevel / 2f);
-        Data.CurOnGroundAvatarCount = levelConf.AvatarMaxNumber;
+        Data.MaxAvatarNum = levelConf.AvatarMaxNumber;
 
         if (sendPacket)
         {
@@ -160,9 +161,9 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
                 GridFightCurLevel = Data.CurLevel,
                 GridFightCurLevelExp = Data.LevelExp,
                 GridFightLevelCost = Data.BuyLevelCost,
-                GridFightMaxAvatarCount = Data.CurOnGroundAvatarCount,
+                GridFightMaxAvatarCount = 9,
                 GridFightOffFieldMaxCount = 6,
-                GridFightMaxFieldCount = 8,
+                GridFightMaxFieldCount = Data.MaxAvatarNum,
                 GridFightLineupHp = Data.CurHp,
                 GridFightCurGold = Data.CurGold,
                 GridFightMaxGold = 2000,
@@ -171,8 +172,10 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
                 {
                     IJDIAOMINLB = new BHJALAPDBLH()
                 },
-                CALCJMHAKPF = new OLEIDBLBILD
+                GameLockInfo = new GridFightLockInfo
                 {
+                    LockReason = (GridFightLockReason)Data.LockReason,
+                    LockType = (GridFightLockType)Data.LockType
                 }
             }
         };

@@ -47,7 +47,7 @@ public class GridFightSupplyPendingAction : BaseGridFightPendingAction
             {
                 MaxRerollCount = MaxRerollNum,
                 CurRollCount = CurRerollNum,
-                MEKEFPNMNLE = 3,
+                MaxSelectCount = 1,
                 JLHIKCHIEDJ = 2,
                 SupplyRoleInfoList = { RoleList.Select(x => x.ToProto()) }
             }

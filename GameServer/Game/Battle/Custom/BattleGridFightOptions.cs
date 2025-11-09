@@ -15,14 +15,16 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
     public GridFightGameEncounterInfo Encounter { get; set; } = curSection.Encounters.RandomElement();
     public GridFightInstance Inst { get; set; } = inst;
     public GridFightRoleComponent AvatarComponent { get; set; } = inst.GetComponent<GridFightRoleComponent>();
+    public GridFightLevelComponent LevelComponent { get; set; } = inst.GetComponent<GridFightLevelComponent>();
     public GridFightBasicComponent BasicComponent { get; set; } = inst.GetComponent<GridFightBasicComponent>();
+    public GridFightAugmentComponent AugmentComponent { get; set; } = inst.GetComponent<GridFightAugmentComponent>();
     public GridFightGameSectionInfo CurSection { get; set; } = curSection;
     public PlayerInstance Player { get; set; } = player;
 
     public void HandleProto(SceneBattleInfo proto, BattleInstance battle)
     {
-        var avatars = AvatarComponent.GetForegroundAvatarInfos(4 + BasicComponent.GetFieldCount());
-        var backAvatars = AvatarComponent.GetBackgroundAvatarInfos(4 + BasicComponent.GetFieldCount());
+        var avatars = AvatarComponent.GetForegroundAvatarInfos(0);
+        var backAvatars = AvatarComponent.GetBackgroundAvatarInfos(BasicComponent.GetFieldCount());
 
         var tempLineup = new LineupInfo
         {
@@ -34,12 +36,13 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
 
         var formatted = avatars.Select(x =>
             x.ToBattleProto(
-                new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, tempLineup), AvatarType.AvatarGridFightType)).ToList();
+                new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, tempLineup),
+                x is SpecialAvatarInfo ? AvatarType.AvatarTrialType : AvatarType.AvatarGridFightType)).ToList();
 
         var backFormatted = backAvatars.Select(x =>
             x.ToBattleProto(
                 new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, tempLineup),
-                AvatarType.AvatarGridFightType)).ToList();
+                x is SpecialAvatarInfo ? AvatarType.AvatarTrialType : AvatarType.AvatarGridFightType)).ToList();
 
         proto.BattleAvatarList.Add(formatted.Take(4));
 
@@ -51,13 +54,20 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
                 BattleWaveId = wave.Wave,
                 MonsterParam = new SceneMonsterWaveParam
                 {
-                    Level = 89
+                    Level = 90
                 },
                 MonsterList =
                 {
                     wave.Monsters.Select(x => new SceneMonster
                     {
-                        MonsterId = x.MonsterID
+                        MonsterId = x.MonsterID,
+                        ExtraInfo = new SceneMonsterExtraInfo
+                        {
+                            BattleGridFightInfo = new SceneMonsterGridFightInfo
+                            {
+                                Tier = Math.Max(1, x.MonsterTier)
+                            }
+                        }
                     })
                 }
             });
@@ -69,21 +79,21 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
             battle.BattleEvents.TryAdd((int)roleConf.BEID, new BattleEventInstance((int)roleConf.BEID, 5000));
         }
 
-        battle.Buffs.Add(new MazeBuff(35100001, 1, -1)
+        var ruleId = CurSection.Excel.PenaltyBonusRuleIDList.FirstOrDefault(0u);
+        if (ruleId == 0)
         {
-            WaveFlag = -1
-        });
+            if (GameData.GridFightNodeTemplateData.TryGetValue(CurSection.Excel.NodeTemplateID, out var node)) ruleId = node.PenaltyBonusRuleID;
+        }
 
         proto.BattleGridFightInfo = new BattleGridFightInfo
         {
             GridGameAvatarList =
             {
-                AvatarComponent.Data.Roles.Where(x => x.Pos <= 4 + BasicComponent.GetFieldCount()).Select(x => x.ToBattleInfo())
+                AvatarComponent.Data.Roles.Where(x => x.Pos <= BasicComponent.GetFieldCount()).OrderBy(x => x.Pos).Select(x => x.ToBattleInfo())
             },
-            BattleWaveId = 1,
             GridFightCurLevel = BasicComponent.Data.CurLevel,
             GridFightLineupHp = BasicComponent.Data.CurHp,
-            GridFightAvatarList = { formatted, backFormatted },
+            GridFightAvatarList = { backFormatted },
             GridFightStageInfo = new BattleGridFightStageInfo
             {
                 ChapterId = CurSection.ChapterId,
@@ -92,7 +102,11 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
             },
             IsOverlock = Inst.IsOverLock,
             Season = Inst.Season,
-            DFNBKALPGPH = 1,
+            BattleDifficulty = AugmentComponent.GetAugmentDifficulty() + Inst.GetDivisionDifficulty() + Encounter.EncounterDifficulty - 1,
+            GameDivisionId = Inst.DivisionId,
+            PenaltyBonusRuleId = ruleId,
+            GridFightAugmentInfo = { AugmentComponent.Data.Augments.Select(x => x.ToBattleInfo()) },
+            GridFightPortalBuffList = { LevelComponent.PortalBuffs.Select(x => x.ToBattleInfo()) },
         };
     }
 }

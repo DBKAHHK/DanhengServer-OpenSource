@@ -12,6 +12,7 @@ message GridFightShopItemPb {
         GridFightShopRoleItemPb RoleItem = 1;
     }
     uint32 Rarity = 2;
+    bool SoldOut = 3;
 }
 
 message GridFightShopInfoPb {
@@ -35,8 +36,10 @@ message GridFightBasicInfoPb {
     uint32 LevelExp = 3;
     uint32 BuyLevelCost = 4;
     uint32 CurHp = 5;
-    uint32 CurOnGroundAvatarCount = 6;
+    uint32 MaxAvatarNum = 6;
     uint32 ComboNum = 7;
+    uint32 LockType = 8;
+    uint32 LockReason = 9;
 }
 
 message GridFightRoleInfoPb {
@@ -44,6 +47,8 @@ message GridFightRoleInfoPb {
     uint32 Tier = 2;
     uint32 Pos = 3;
     uint32 UniqueId = 4;
+    map<string, uint32> SavedValues = 5;
+    repeated uint32 EquipmentIds = 6;
 }
 
 message GridFightAvatarInfoPb {
@@ -51,10 +56,47 @@ message GridFightAvatarInfoPb {
     uint32 CurUniqueId = 2;
 }
 
+message GridFightGameOrbPb {
+    uint32 OrbItemId = 1;
+    uint32 UniqueId = 2;
+}
+
+message GridFightOrbInfoPb {
+    repeated GridFightGameOrbPb Orbs = 1;
+}
+
+message GridFightGameAugmentPb {
+    uint32 AugmentId = 1;
+    map<string, uint32> SavedValues = 2;
+}
+
+message GridFightAugmentInfoPb {
+    repeated GridFightGameAugmentPb Augments = 1;
+}
+
+message GridFightGameTraitEffectPb {
+    uint32 TraitId = 1;
+    uint32 EffectId = 2;
+    uint32 Param = 3;
+}
+
+message GridFightGameTraitPb {
+    uint32 TraitId = 1;
+    repeated GridFightGameTraitEffectPb Effects = 2;
+    uint32 ExtraRoleNum = 3;
+}
+
+message GridFightTraitInfoPb {
+    repeated GridFightGameTraitPb Traits = 1;
+}
+
 message GridFightComponentPb {
     oneof ComponentType {
         GridFightShopInfoPb ShopInfo = 1;
         GridFightBasicInfoPb BasicInfo = 2;
         GridFightAvatarInfoPb AvatarInfo = 3;
+        GridFightOrbInfoPb OrbInfo = 4;
+        GridFightAugmentInfoPb AugmentInfo = 5;
+        GridFightTraitInfoPb TraitInfo = 6;
     }
 }

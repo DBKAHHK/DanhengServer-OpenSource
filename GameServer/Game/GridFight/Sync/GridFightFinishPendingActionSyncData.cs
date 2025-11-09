@@ -8,6 +8,7 @@ public class GridFightFinishPendingActionSyncData(GridFightSrc src, uint queuePo
     {
         return new GridFightSyncData
         {
+            FinishPendingActionPos = queuePosition
         };
     }
 }

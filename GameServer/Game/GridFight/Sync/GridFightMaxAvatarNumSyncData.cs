@@ -9,7 +9,7 @@ public class GridFightMaxAvatarNumSyncData(GridFightSrc src, GridFightBasicInfoP
     {
         return new GridFightSyncData
         {
-            GridFightMaxAvatarCount = info.CurOnGroundAvatarCount
+            MaxBattleRoleNum = info.MaxAvatarNum
         };
     }
 }

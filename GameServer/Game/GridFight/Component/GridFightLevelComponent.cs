@@ -18,6 +18,7 @@ public class GridFightLevelComponent : BaseGridFightComponent
     public Dictionary<uint, List<GridFightGameSectionInfo>> Sections { get; } = [];
     public GridFightGameSectionInfo CurrentSection => Sections[_curChapterId][(int)(_curSectionId - 1)];
     public List<GridFightRoleDamageSttInfo> RoleDamageSttInfos { get; } = [];
+    public List<GridFightPortalBuffInfo> PortalBuffs { get; } = [];
 
     #endregion
 
@@ -125,13 +126,23 @@ public class GridFightLevelComponent : BaseGridFightComponent
         if (CurrentSection.Excel.IsAugment == 1)
         {
             // create augment action
-            syncs.Add(await Inst.CreatePendingAction<GridFightAugmentPendingAction>(sendPacket: false));
+            syncs.AddRange(await Inst.CreatePendingAction<GridFightAugmentPendingAction>(sendPacket: false));
         }
 
         if (CurrentSection.Excel.NodeType == GridFightNodeTypeEnum.Supply)
         {
             // create supply action
-            syncs.Add(await Inst.CreatePendingAction<GridFightSupplyPendingAction>(sendPacket: false));
+            syncs.AddRange(await Inst.CreatePendingAction<GridFightSupplyPendingAction>(sendPacket: false));
+        }
+        else
+        {
+            syncs.AddRange(await Inst.CreatePendingAction<GridFightElitePendingAction>(sendPacket: false));
+
+            if (CurrentSection.Excel.NodeType is not GridFightNodeTypeEnum.Boss
+                and not GridFightNodeTypeEnum.EliteBranch)
+            {
+                syncs.AddRange(await Inst.CreatePendingAction<GridFightPreparePendingAction>(sendPacket: false));
+            }
         }
 
         if (sendPacket)
@@ -140,6 +151,24 @@ public class GridFightLevelComponent : BaseGridFightComponent
         }
 
         return syncs;
+    }
+
+    public async ValueTask<List<BaseGridFightSyncData>> AddPortalBuff(uint portalBuffId, bool sendPacket = true, GridFightSrc src = GridFightSrc.KGridFightSrcSelectPortalBuff)
+    {
+        var info = new GridFightPortalBuffInfo
+        {
+            PortalBuffId = portalBuffId
+        };
+
+        PortalBuffs.Add(info);
+
+        var syncData = new GridFightAddPortalBuffSyncData(src, info);
+        if (sendPacket)
+        {
+            await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncData));
+        }
+
+        return [syncData];
     }
 
     #endregion
@@ -209,7 +238,8 @@ public class GridFightLevelComponent : BaseGridFightComponent
                 LevelSttInfo = new GridFightLevelSttInfo
                 {
                     GridFightDamageSttInfo = ToDamageSttInfo()
-                }
+                },
+                GridFightPortalBuffList = { PortalBuffs.Select(x => x.ToProto()) }
             }
         };
     }
@@ -246,6 +276,39 @@ public class GridFightRoleDamageSttInfo
     }
 }
 
+public class GridFightPortalBuffInfo
+{
+    public uint PortalBuffId { get; set; }
+    public Dictionary<string, uint> SavedValue { get; set; } = [];
+
+    public GridFightGamePortalBuffInfo ToProto()
+    {
+        return new GridFightGamePortalBuffInfo
+        {
+            PortalBuffId = PortalBuffId,
+            GameSavedValueMap = { SavedValue }
+        };
+    }
+
+    public BattleGridFightPortalBuffInfo ToBattleInfo()
+    {
+        return new BattleGridFightPortalBuffInfo
+        {
+            PortalBuffId = PortalBuffId,
+            GameSavedValueMap = { SavedValue }
+        };
+    }
+
+    public GridFightPortalBuffSyncInfo ToSyncInfo()
+    {
+        return new GridFightPortalBuffSyncInfo
+        {
+            PortalBuffId = PortalBuffId,
+            GameSavedValueMap = { SavedValue }
+        };
+    }
+}
+
 public class GridFightGameSectionInfo
 {
     public GridFightStageRouteExcel Excel { get; }
@@ -263,7 +326,7 @@ public class GridFightGameSectionInfo
         MonsterCamp = camp;
 
         if (Excel.NodeType is not GridFightNodeTypeEnum.Monster and not GridFightNodeTypeEnum.CampMonster
-                and not GridFightNodeTypeEnum.Boss and not GridFightNodeTypeEnum.EliteBranch || Excel.IsAugment == 1) return;
+                and not GridFightNodeTypeEnum.Boss and not GridFightNodeTypeEnum.EliteBranch) return;
 
         Encounters.Add(new GridFightGameEncounterInfo(1, 1, this));
     }
@@ -324,13 +387,13 @@ public class GridFightGameEncounterInfo
             }
             else
             {
-                var elite = ParentSection.Excel.NodeType switch
+                List<GridFightMonsterExcel> elites = ParentSection.Excel.NodeType switch
                 {
-                    GridFightNodeTypeEnum.Boss => monster5Pool.RandomElement(),
-                    _ => monster4Pool.RandomElement(),
+                    GridFightNodeTypeEnum.Boss => [..monster5Pool],
+                    _ => [monster4Pool.RandomElement()],
                 };
 
-                List<GridFightMonsterExcel> monsters = [elite];
+                List<GridFightMonsterExcel> monsters = [..elites];
                 var remain = monsterNum[i] - 1;
 
                 if (remain > 0)

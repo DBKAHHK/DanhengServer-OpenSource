@@ -4,13 +4,16 @@ using EggLink.DanhengServer.Proto.ServerSide;
 
 namespace EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 
-public class GridFightRoleAddSyncData(GridFightSrc src, GridFightRoleInfoPb role, uint groupId = 0) : BaseGridFightSyncData(src, groupId)
+public class GridFightAddAugmentSyncData(GridFightSrc src, GridFightGameAugmentPb augment, uint groupId = 0) : BaseGridFightSyncData(src, groupId)
 {
     public override GridFightSyncData ToProto()
     {
         return new GridFightSyncData
         {
-            AddRoleInfo = role.ToProto()
+            AugmentSyncInfo = new GridFightAugmentSyncInfo
+            {
+                SyncAugmentInfo = augment.ToProto()
+            }
         };
     }
 }

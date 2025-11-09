@@ -11,7 +11,7 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
 {
     public GridFightShopInfoPb Data { get; set; } = new()
     {
-        RefreshCost = 3,
+        RefreshCost = 2,
         FreeRefreshCount = 1
     };
 
@@ -34,6 +34,11 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
 
     public async ValueTask<Retcode> BuyGoods(List<uint> indexes, bool sendPacket = true)
     {
+        var avatarComp = Inst.GetComponent<GridFightRoleComponent>();
+
+        // check pos
+        if (!avatarComp.HasAnyEmptyPos()) return Retcode.RetGridFightNoEmptyPos;
+
         var curLevel = Inst.GetComponent<GridFightBasicComponent>().Data.CurLevel;
 
         var targetGoods = indexes
@@ -52,7 +57,6 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
 
         // GIVE ITEMS
         List<BaseGridFightSyncData> syncs = [];
-        var avatarComp = Inst.GetComponent<GridFightRoleComponent>();
         foreach (var item in targetGoods)
         {
             if (item.ItemTypeCase == GridFightShopItemPb.ItemTypeOneofCase.RoleItem)
@@ -68,10 +72,7 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
         // REMOVE ITEMS FROM SHOP
         foreach (var index in indexes)
         {
-            Data.ShopItems.RemoveAt((int)index);
-
-            // add new item
-            AddGoods(1, curLevel);
+            Data.ShopItems[(int)index].SoldOut = true;
         }
 
         if (sendPacket)
@@ -141,12 +142,12 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
                     return code;
                 }
 
-                Data.RefreshCost += 2;
+                Data.RefreshCost = 2;
             }
         }
         else
         {
-            Data.RefreshCost = 3;
+            Data.RefreshCost = 2;
             Data.FreeRefreshCount++;
             if (Data.ShopLocked)
             {
@@ -201,7 +202,10 @@ public static class GridFightShopInfoPbExtensions
 {
     public static GridFightShopGoodsInfo ToProto(this GridFightShopItemPb info)
     {
-        var proto = new GridFightShopGoodsInfo();
+        var proto = new GridFightShopGoodsInfo
+        {
+            IsSoldOut = info.SoldOut
+        };
 
         if (info.ItemTypeCase == GridFightShopItemPb.ItemTypeOneofCase.RoleItem)
         {

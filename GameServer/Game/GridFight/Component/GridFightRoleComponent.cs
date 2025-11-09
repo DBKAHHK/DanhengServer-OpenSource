@@ -9,19 +9,35 @@ namespace EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 
 public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightComponent(inst)
 {
+    public const uint PrepareAreaPos = 13;
     public GridFightAvatarInfoPb Data { get; set; } = new();
 
-    public async ValueTask<List<BaseGridFightSyncData>> AddAvatar(uint roleId, uint tier = 1, bool sendPacket = true,
-        bool checkMerge = true, GridFightSrc src = GridFightSrc.KGridFightSrcBuyGoods)
+    public bool HasAnyEmptyPos()
     {
-        var pos = 1u;
+        return Data.Roles.Where(x => x.Pos > PrepareAreaPos).ToList().Count < 9;
+    }
+
+    public async ValueTask<List<BaseGridFightSyncData>> AddAvatar(uint roleId, uint tier = 1, bool sendPacket = true,
+        bool checkMerge = true, GridFightSrc src = GridFightSrc.KGridFightSrcBuyGoods, uint syncGroup = 0, uint targetPos = 0)
+    {
+        if (!GameData.GridFightRoleBasicInfoData.TryGetValue(roleId, out var excel)) return [];
+
+        var pos = 0u;
+        var initialPos = targetPos > 0 ? targetPos : PrepareAreaPos + 1;
+
         // get first empty pos
         var usedPos = Data.Roles.Select(x => x.Pos).ToHashSet();
-        for (var i = 1u; i <= 20u; i++)
+        for (var i = initialPos; i <= PrepareAreaPos + 9; i++)
         {
             if (usedPos.Contains(i)) continue;
             pos = i;
             break;
+        }
+
+        // check if any empty
+        if (pos == 0)
+        {
+            return [];
         }
 
         var info = new GridFightRoleInfoPb
@@ -32,9 +48,14 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
             Pos = pos
         };
 
+        foreach (var saved in excel.RoleSavedValueList)
+        {
+            info.SavedValues.Add(saved, 0);
+        }
+
         Data.Roles.Add(info);
 
-        List<BaseGridFightSyncData> syncs = [new GridFightRoleAddSyncData(src, info)];
+        List<BaseGridFightSyncData> syncs = [new GridFightRoleAddSyncData(src, info, syncGroup)];
 
         if (checkMerge)
         {
@@ -54,6 +75,7 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
     {
         List<BaseGridFightSyncData> syncs = [];
         bool hasMerged;
+        uint groupId = 0;
 
         do
         {
@@ -83,13 +105,14 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
                 foreach (var role in toMerge)
                 {
                     Data.Roles.Remove(role);
-                    syncs.Add(new GridFightRoleRemoveSyncData(GridFightSrc.KGridFightSrcMergeRole, role));
+                    syncs.Add(new GridFightRoleRemoveSyncData(GridFightSrc.KGridFightSrcMergeRole, role, groupId));
                 }
 
                 // add new merged role with tier + 1
-                var addSyncs = await AddAvatar(roleId, currentTier + 1, false, false, GridFightSrc.KGridFightSrcMergeRole);
+                var addSyncs = await AddAvatar(roleId, currentTier + 1, false, false, GridFightSrc.KGridFightSrcMergeRole, groupId, toMerge.First().Pos);
                 syncs.AddRange(addSyncs);
 
+                groupId++;
                 hasMerged = true;
             }
         } while (hasMerged); // continue until no more merges are possible
@@ -189,8 +212,17 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
         return res;
     }
 
-    public async ValueTask UpdatePos(List<GridFightPosInfo> posList)
+    public async ValueTask<Retcode> UpdatePos(List<GridFightPosInfo> posList)
     {
+        foreach (var pos in posList.Where(x => x.Pos <= PrepareAreaPos))
+        {
+            var role = Data.Roles.FirstOrDefault(x => x.UniqueId == pos.UniqueId);
+            if (role == null) continue;
+
+            if (Data.Roles.Where(x => x.UniqueId != pos.UniqueId && x.Pos <= PrepareAreaPos).Any(x => x.RoleId == role.RoleId))
+                return Retcode.RetGridFightSameRoleInBattle;
+        }
+
         List<BaseGridFightSyncData> syncs = [];
         foreach (var pos in posList)
         {
@@ -206,6 +238,8 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
         {
             await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
         }
+
+        return Retcode.RetSucc;
     }
 
     public override GridFightGameInfo ToProto()
@@ -229,7 +263,9 @@ public static class GridFightRoleInfoPbExtensions
             Id = info.RoleId,
             UniqueId = info.UniqueId,
             Tier = info.Tier,
-            Pos = info.Pos
+            Pos = info.Pos,
+            GameSavedValueMap = { info.SavedValues },
+            EquipUniqueIdList = { info.EquipmentIds }
         };
     }
 
@@ -241,7 +277,9 @@ public static class GridFightRoleInfoPbExtensions
             UniqueId = info.UniqueId,
             Tier = info.Tier,
             Pos = info.Pos,
-            AvatarId = GameData.GridFightRoleBasicInfoData[info.RoleId].AvatarID
+            AvatarId = GameData.GridFightRoleBasicInfoData[info.RoleId].AvatarID,
+            RoleEquipmentList = {  },
+            GameSavedValueMap = { info.SavedValues }
         };
     }
 }

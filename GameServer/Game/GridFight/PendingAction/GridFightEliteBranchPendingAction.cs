@@ -8,7 +8,8 @@ public class GridFightEliteBranchPendingAction(GridFightInstance inst) : BaseGri
     {
         return new GridFightPendingAction
         {
-            EliteBranchAction = new GridFightEliteBranchActionInfo()
+            EliteBranchAction = new GridFightEliteBranchActionInfo(),
+            QueuePosition = QueuePosition
         };
     }
 }

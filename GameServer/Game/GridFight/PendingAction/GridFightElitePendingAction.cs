@@ -8,7 +8,8 @@ public class GridFightElitePendingAction(GridFightInstance inst) : BaseGridFight
     {
         return new GridFightPendingAction
         {
-            EliteAction = new GridFightEliteActionInfo()
+            EliteAction = new GridFightEliteActionInfo(),
+            QueuePosition = QueuePosition
         };
     }
 }
