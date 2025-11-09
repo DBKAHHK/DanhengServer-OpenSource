@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFFQ0dGQ0lDQkNLTC5wcm90bxoXR3JpZEZpZ2h0RHJvcEluZm8ucHJvdG8i",
-            "swEKC0VDR0ZDSUNCQ0tMEhMKC0dDUEZJQkdQQU5HGAEgASgNEhMKC3N3aXRj",
-            "aF9saXN0GAIgAygNEjIKC05ORUxGQUxDRE9MGAUgAygLMh0uRUNHRkNJQ0JD",
-            "S0wuTk5FTEZBTENET0xFbnRyeRpGChBOTkVMRkFMQ0RPTEVudHJ5EgsKA2tl",
-            "eRgBIAEoDRIhCgV2YWx1ZRgCIAEoCzISLkdyaWRGaWdodERyb3BJbmZvOgI4",
-            "AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "sQEKC0VDR0ZDSUNCQ0tMEhEKCWVmZmVjdF9pZBgBIAEoDRITCgtzd2l0Y2hf",
+            "bGlzdBgCIAMoDRIyCgtOTkVMRkFMQ0RPTBgFIAMoCzIdLkVDR0ZDSUNCQ0tM",
+            "Lk5ORUxGQUxDRE9MRW50cnkaRgoQTk5FTEZBTENET0xFbnRyeRILCgNrZXkY",
+            "ASABKA0SIQoFdmFsdWUYAiABKAsyEi5HcmlkRmlnaHREcm9wSW5mbzoCOAFC",
+            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightDropInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ECGFCICBCKL), global::EggLink.DanhengServer.Proto.ECGFCICBCKL.Parser, new[]{ "GCPFIBGPANG", "SwitchList", "NNELFALCDOL" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ECGFCICBCKL), global::EggLink.DanhengServer.Proto.ECGFCICBCKL.Parser, new[]{ "EffectId", "SwitchList", "NNELFALCDOL" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ECGFCICBCKL(ECGFCICBCKL other) : this() {
-      gCPFIBGPANG_ = other.gCPFIBGPANG_;
+      effectId_ = other.effectId_;
       switchList_ = other.switchList_.Clone();
       nNELFALCDOL_ = other.nNELFALCDOL_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -87,15 +87,15 @@ namespace EggLink.DanhengServer.Proto {
       return new ECGFCICBCKL(this);
     }
 
-    /// <summary>Field number for the "GCPFIBGPANG" field.</summary>
-    public const int GCPFIBGPANGFieldNumber = 1;
-    private uint gCPFIBGPANG_;
+    /// <summary>Field number for the "effect_id" field.</summary>
+    public const int EffectIdFieldNumber = 1;
+    private uint effectId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GCPFIBGPANG {
-      get { return gCPFIBGPANG_; }
+    public uint EffectId {
+      get { return effectId_; }
       set {
-        gCPFIBGPANG_ = value;
+        effectId_ = value;
       }
     }
 
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (GCPFIBGPANG != other.GCPFIBGPANG) return false;
+      if (EffectId != other.EffectId) return false;
       if(!switchList_.Equals(other.switchList_)) return false;
       if (!NNELFALCDOL.Equals(other.NNELFALCDOL)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GCPFIBGPANG != 0) hash ^= GCPFIBGPANG.GetHashCode();
+      if (EffectId != 0) hash ^= EffectId.GetHashCode();
       hash ^= switchList_.GetHashCode();
       hash ^= NNELFALCDOL.GetHashCode();
       if (_unknownFields != null) {
@@ -167,9 +167,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GCPFIBGPANG != 0) {
+      if (EffectId != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(GCPFIBGPANG);
+        output.WriteUInt32(EffectId);
       }
       switchList_.WriteTo(output, _repeated_switchList_codec);
       nNELFALCDOL_.WriteTo(output, _map_nNELFALCDOL_codec);
@@ -183,9 +183,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GCPFIBGPANG != 0) {
+      if (EffectId != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(GCPFIBGPANG);
+        output.WriteUInt32(EffectId);
       }
       switchList_.WriteTo(ref output, _repeated_switchList_codec);
       nNELFALCDOL_.WriteTo(ref output, _map_nNELFALCDOL_codec);
@@ -199,8 +199,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GCPFIBGPANG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GCPFIBGPANG);
+      if (EffectId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EffectId);
       }
       size += switchList_.CalculateSize(_repeated_switchList_codec);
       size += nNELFALCDOL_.CalculateSize(_map_nNELFALCDOL_codec);
@@ -216,8 +216,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.GCPFIBGPANG != 0) {
-        GCPFIBGPANG = other.GCPFIBGPANG;
+      if (other.EffectId != 0) {
+        EffectId = other.EffectId;
       }
       switchList_.Add(other.switchList_);
       nNELFALCDOL_.MergeFrom(other.nNELFALCDOL_);
@@ -237,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            GCPFIBGPANG = input.ReadUInt32();
+            EffectId = input.ReadUInt32();
             break;
           }
           case 18:
@@ -265,7 +265,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            GCPFIBGPANG = input.ReadUInt32();
+            EffectId = input.ReadUInt32();
             break;
           }
           case 18:

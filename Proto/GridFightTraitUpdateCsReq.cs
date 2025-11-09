@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9HcmlkRmlnaHRUcmFpdFVwZGF0ZUNzUmVxLnByb3RvGhFPQUFNRUtNQ09I",
-            "SC5wcm90byJ3ChlHcmlkRmlnaHRUcmFpdFVwZGF0ZUNzUmVxEiQKC0RMTEdP",
+            "SC5wcm90byJ1ChlHcmlkRmlnaHRUcmFpdFVwZGF0ZUNzUmVxEiQKC0RMTEdP",
             "SkxJSE1MGJADIAEoCzIMLk9BQU1FS01DT0hISAASEAoIdHJhaXRfaWQYBiAB",
-            "KA0SEwoLR0NQRklCR1BBTkcYCiABKA1CDQoLRVBJSklKQ0VLSE9CHqoCG0Vn",
-            "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "KA0SEQoJZWZmZWN0X2lkGAogASgNQg0KC0VQSUpJSkNFS0hPQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OAAMEKMCOHHReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitUpdateCsReq), global::EggLink.DanhengServer.Proto.GridFightTraitUpdateCsReq.Parser, new[]{ "DLLGOJLIHML", "TraitId", "GCPFIBGPANG" }, new[]{ "EPIJIJCEKHO" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitUpdateCsReq), global::EggLink.DanhengServer.Proto.GridFightTraitUpdateCsReq.Parser, new[]{ "DLLGOJLIHML", "TraitId", "EffectId" }, new[]{ "EPIJIJCEKHO" }, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightTraitUpdateCsReq(GridFightTraitUpdateCsReq other) : this() {
       traitId_ = other.traitId_;
-      gCPFIBGPANG_ = other.gCPFIBGPANG_;
+      effectId_ = other.effectId_;
       switch (other.EPIJIJCEKHOCase) {
         case EPIJIJCEKHOOneofCase.DLLGOJLIHML:
           DLLGOJLIHML = other.DLLGOJLIHML.Clone();
@@ -115,15 +115,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GCPFIBGPANG" field.</summary>
-    public const int GCPFIBGPANGFieldNumber = 10;
-    private uint gCPFIBGPANG_;
+    /// <summary>Field number for the "effect_id" field.</summary>
+    public const int EffectIdFieldNumber = 10;
+    private uint effectId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GCPFIBGPANG {
-      get { return gCPFIBGPANG_; }
+    public uint EffectId {
+      get { return effectId_; }
       set {
-        gCPFIBGPANG_ = value;
+        effectId_ = value;
       }
     }
 
@@ -164,7 +164,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (!object.Equals(DLLGOJLIHML, other.DLLGOJLIHML)) return false;
       if (TraitId != other.TraitId) return false;
-      if (GCPFIBGPANG != other.GCPFIBGPANG) return false;
+      if (EffectId != other.EffectId) return false;
       if (EPIJIJCEKHOCase != other.EPIJIJCEKHOCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -175,7 +175,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.DLLGOJLIHML) hash ^= DLLGOJLIHML.GetHashCode();
       if (TraitId != 0) hash ^= TraitId.GetHashCode();
-      if (GCPFIBGPANG != 0) hash ^= GCPFIBGPANG.GetHashCode();
+      if (EffectId != 0) hash ^= EffectId.GetHashCode();
       hash ^= (int) ePIJIJCEKHOCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -199,9 +199,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(TraitId);
       }
-      if (GCPFIBGPANG != 0) {
+      if (EffectId != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(GCPFIBGPANG);
+        output.WriteUInt32(EffectId);
       }
       if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.DLLGOJLIHML) {
         output.WriteRawTag(130, 25);
@@ -221,9 +221,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteUInt32(TraitId);
       }
-      if (GCPFIBGPANG != 0) {
+      if (EffectId != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(GCPFIBGPANG);
+        output.WriteUInt32(EffectId);
       }
       if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.DLLGOJLIHML) {
         output.WriteRawTag(130, 25);
@@ -245,8 +245,8 @@ namespace EggLink.DanhengServer.Proto {
       if (TraitId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitId);
       }
-      if (GCPFIBGPANG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GCPFIBGPANG);
+      if (EffectId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EffectId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -263,8 +263,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.TraitId != 0) {
         TraitId = other.TraitId;
       }
-      if (other.GCPFIBGPANG != 0) {
-        GCPFIBGPANG = other.GCPFIBGPANG;
+      if (other.EffectId != 0) {
+        EffectId = other.EffectId;
       }
       switch (other.EPIJIJCEKHOCase) {
         case EPIJIJCEKHOOneofCase.DLLGOJLIHML:
@@ -295,7 +295,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            GCPFIBGPANG = input.ReadUInt32();
+            EffectId = input.ReadUInt32();
             break;
           }
           case 3202: {
@@ -327,7 +327,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            GCPFIBGPANG = input.ReadUInt32();
+            EffectId = input.ReadUInt32();
             break;
           }
           case 3202: {

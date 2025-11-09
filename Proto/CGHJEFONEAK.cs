@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static CGHJEFONEAKReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFDR0hKRUZPTkVBSy5wcm90byJOCgtDR0hKRUZPTkVBSxIRCgl1bmlxdWVf",
-            "aWQYDCABKA0SCgoCaWQYDiABKA0SEwoLTEJJQkxHR0dGSUcYDSADKA0SCwoD",
-            "cG9zGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
-            "b3RvMw=="));
+            "ChFDR0hKRUZPTkVBSy5wcm90byJXCgtDR0hKRUZPTkVBSxIRCgl1bmlxdWVf",
+            "aWQYDCABKA0SCgoCaWQYDiABKA0SHAoUZXF1aXBfdW5pcXVlX2lkX2xpc3QY",
+            "DSADKA0SCwoDcG9zGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
+            "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CGHJEFONEAK), global::EggLink.DanhengServer.Proto.CGHJEFONEAK.Parser, new[]{ "UniqueId", "Id", "LBIBLGGGFIG", "Pos" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CGHJEFONEAK), global::EggLink.DanhengServer.Proto.CGHJEFONEAK.Parser, new[]{ "UniqueId", "Id", "EquipUniqueIdList", "Pos" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     public CGHJEFONEAK(CGHJEFONEAK other) : this() {
       uniqueId_ = other.uniqueId_;
       id_ = other.id_;
-      lBIBLGGGFIG_ = other.lBIBLGGGFIG_.Clone();
+      equipUniqueIdList_ = other.equipUniqueIdList_.Clone();
       pos_ = other.pos_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -110,15 +110,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "LBIBLGGGFIG" field.</summary>
-    public const int LBIBLGGGFIGFieldNumber = 13;
-    private static readonly pb::FieldCodec<uint> _repeated_lBIBLGGGFIG_codec
+    /// <summary>Field number for the "equip_unique_id_list" field.</summary>
+    public const int EquipUniqueIdListFieldNumber = 13;
+    private static readonly pb::FieldCodec<uint> _repeated_equipUniqueIdList_codec
         = pb::FieldCodec.ForUInt32(106);
-    private readonly pbc::RepeatedField<uint> lBIBLGGGFIG_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> equipUniqueIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> LBIBLGGGFIG {
-      get { return lBIBLGGGFIG_; }
+    public pbc::RepeatedField<uint> EquipUniqueIdList {
+      get { return equipUniqueIdList_; }
     }
 
     /// <summary>Field number for the "pos" field.</summary>
@@ -150,7 +150,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (UniqueId != other.UniqueId) return false;
       if (Id != other.Id) return false;
-      if(!lBIBLGGGFIG_.Equals(other.lBIBLGGGFIG_)) return false;
+      if(!equipUniqueIdList_.Equals(other.equipUniqueIdList_)) return false;
       if (Pos != other.Pos) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -161,7 +161,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
       if (Id != 0) hash ^= Id.GetHashCode();
-      hash ^= lBIBLGGGFIG_.GetHashCode();
+      hash ^= equipUniqueIdList_.GetHashCode();
       if (Pos != 0) hash ^= Pos.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -189,7 +189,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteUInt32(UniqueId);
       }
-      lBIBLGGGFIG_.WriteTo(output, _repeated_lBIBLGGGFIG_codec);
+      equipUniqueIdList_.WriteTo(output, _repeated_equipUniqueIdList_codec);
       if (Id != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(Id);
@@ -212,7 +212,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(96);
         output.WriteUInt32(UniqueId);
       }
-      lBIBLGGGFIG_.WriteTo(ref output, _repeated_lBIBLGGGFIG_codec);
+      equipUniqueIdList_.WriteTo(ref output, _repeated_equipUniqueIdList_codec);
       if (Id != 0) {
         output.WriteRawTag(112);
         output.WriteUInt32(Id);
@@ -233,7 +233,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Id != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
       }
-      size += lBIBLGGGFIG_.CalculateSize(_repeated_lBIBLGGGFIG_codec);
+      size += equipUniqueIdList_.CalculateSize(_repeated_equipUniqueIdList_codec);
       if (Pos != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pos);
       }
@@ -255,7 +255,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Id != 0) {
         Id = other.Id;
       }
-      lBIBLGGGFIG_.Add(other.lBIBLGGGFIG_);
+      equipUniqueIdList_.Add(other.equipUniqueIdList_);
       if (other.Pos != 0) {
         Pos = other.Pos;
       }
@@ -284,7 +284,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 106:
           case 104: {
-            lBIBLGGGFIG_.AddEntriesFrom(input, _repeated_lBIBLGGGFIG_codec);
+            equipUniqueIdList_.AddEntriesFrom(input, _repeated_equipUniqueIdList_codec);
             break;
           }
           case 112: {
@@ -316,7 +316,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 106:
           case 104: {
-            lBIBLGGGFIG_.AddEntriesFrom(ref input, _repeated_lBIBLGGGFIG_codec);
+            equipUniqueIdList_.AddEntriesFrom(ref input, _repeated_equipUniqueIdList_codec);
             break;
           }
           case 112: {

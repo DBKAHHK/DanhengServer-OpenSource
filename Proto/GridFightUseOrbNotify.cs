@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHcmlkRmlnaHRVc2VPcmJOb3RpZnkucHJvdG8aF0dyaWRGaWdodERyb3BJ",
-            "bmZvLnByb3RvIlgKFUdyaWRGaWdodFVzZU9yYk5vdGlmeRITCgtJT0FNQk5B",
-            "SEZITRgDIAEoDRIqCg5kcm9wX2l0ZW1fbGlzdBgBIAEoCzISLkdyaWRGaWdo",
-            "dERyb3BJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
-            "b3RvMw=="));
+            "bmZvLnByb3RvIloKFUdyaWRGaWdodFVzZU9yYk5vdGlmeRIVCg1vcmJfdW5p",
+            "cXVlX2lkGAMgASgNEioKDmRyb3BfaXRlbV9saXN0GAEgASgLMhIuR3JpZEZp",
+            "Z2h0RHJvcEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightDropInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUseOrbNotify), global::EggLink.DanhengServer.Proto.GridFightUseOrbNotify.Parser, new[]{ "IOAMBNAHFHM", "DropItemList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUseOrbNotify), global::EggLink.DanhengServer.Proto.GridFightUseOrbNotify.Parser, new[]{ "OrbUniqueId", "DropItemList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightUseOrbNotify(GridFightUseOrbNotify other) : this() {
-      iOAMBNAHFHM_ = other.iOAMBNAHFHM_;
+      orbUniqueId_ = other.orbUniqueId_;
       dropItemList_ = other.dropItemList_ != null ? other.dropItemList_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightUseOrbNotify(this);
     }
 
-    /// <summary>Field number for the "IOAMBNAHFHM" field.</summary>
-    public const int IOAMBNAHFHMFieldNumber = 3;
-    private uint iOAMBNAHFHM_;
+    /// <summary>Field number for the "orb_unique_id" field.</summary>
+    public const int OrbUniqueIdFieldNumber = 3;
+    private uint orbUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IOAMBNAHFHM {
-      get { return iOAMBNAHFHM_; }
+    public uint OrbUniqueId {
+      get { return orbUniqueId_; }
       set {
-        iOAMBNAHFHM_ = value;
+        orbUniqueId_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IOAMBNAHFHM != other.IOAMBNAHFHM) return false;
+      if (OrbUniqueId != other.OrbUniqueId) return false;
       if (!object.Equals(DropItemList, other.DropItemList)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (IOAMBNAHFHM != 0) hash ^= IOAMBNAHFHM.GetHashCode();
+      if (OrbUniqueId != 0) hash ^= OrbUniqueId.GetHashCode();
       if (dropItemList_ != null) hash ^= DropItemList.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -157,9 +157,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(10);
         output.WriteMessage(DropItemList);
       }
-      if (IOAMBNAHFHM != 0) {
+      if (OrbUniqueId != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(IOAMBNAHFHM);
+        output.WriteUInt32(OrbUniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -175,9 +175,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(10);
         output.WriteMessage(DropItemList);
       }
-      if (IOAMBNAHFHM != 0) {
+      if (OrbUniqueId != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(IOAMBNAHFHM);
+        output.WriteUInt32(OrbUniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -189,8 +189,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (IOAMBNAHFHM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(IOAMBNAHFHM);
+      if (OrbUniqueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OrbUniqueId);
       }
       if (dropItemList_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DropItemList);
@@ -207,8 +207,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.IOAMBNAHFHM != 0) {
-        IOAMBNAHFHM = other.IOAMBNAHFHM;
+      if (other.OrbUniqueId != 0) {
+        OrbUniqueId = other.OrbUniqueId;
       }
       if (other.dropItemList_ != null) {
         if (dropItemList_ == null) {
@@ -239,7 +239,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
-            IOAMBNAHFHM = input.ReadUInt32();
+            OrbUniqueId = input.ReadUInt32();
             break;
           }
         }
@@ -265,7 +265,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
-            IOAMBNAHFHM = input.ReadUInt32();
+            OrbUniqueId = input.ReadUInt32();
             break;
           }
         }

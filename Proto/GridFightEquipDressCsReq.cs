@@ -25,14 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5HcmlkRmlnaHRFcXVpcERyZXNzQ3NSZXEucHJvdG8aH0dyaWRGaWdodEVx",
-            "dWlwRHJlc3NTb3VyY2UucHJvdG8idQoYR3JpZEZpZ2h0RXF1aXBEcmVzc0Nz",
-            "UmVxEhMKC0xKTUNEQUxHSUlOGAggASgNEhMKC0RES0pKQ0JPR0NIGAMgASgN",
-            "Ei8KC05IS0dPR0NOQkJKGA4gASgOMhouR3JpZEZpZ2h0RXF1aXBEcmVzc1Nv",
-            "dXJjZUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "dWlwRHJlc3NTb3VyY2UucHJvdG8ijQEKGEdyaWRGaWdodEVxdWlwRHJlc3ND",
+            "c1JlcRIcChRkcmVzc19yb2xlX3VuaXF1ZV9pZBgIIAEoDRIhChlkcmVzc19l",
+            "cXVpcG1lbnRfdW5pcXVlX2lkGAMgASgNEjAKDGRyZXNzX3NvdXJjZRgOIAEo",
+            "DjIaLkdyaWRGaWdodEVxdWlwRHJlc3NTb3VyY2VCHqoCG0VnZ0xpbmsuRGFu",
+            "aGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightEquipDressSourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightEquipDressCsReq), global::EggLink.DanhengServer.Proto.GridFightEquipDressCsReq.Parser, new[]{ "LJMCDALGIIN", "DDKJJCBOGCH", "NHKGOGCNBBJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightEquipDressCsReq), global::EggLink.DanhengServer.Proto.GridFightEquipDressCsReq.Parser, new[]{ "DressRoleUniqueId", "DressEquipmentUniqueId", "DressSource" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,9 +75,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightEquipDressCsReq(GridFightEquipDressCsReq other) : this() {
-      lJMCDALGIIN_ = other.lJMCDALGIIN_;
-      dDKJJCBOGCH_ = other.dDKJJCBOGCH_;
-      nHKGOGCNBBJ_ = other.nHKGOGCNBBJ_;
+      dressRoleUniqueId_ = other.dressRoleUniqueId_;
+      dressEquipmentUniqueId_ = other.dressEquipmentUniqueId_;
+      dressSource_ = other.dressSource_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -86,39 +87,39 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightEquipDressCsReq(this);
     }
 
-    /// <summary>Field number for the "LJMCDALGIIN" field.</summary>
-    public const int LJMCDALGIINFieldNumber = 8;
-    private uint lJMCDALGIIN_;
+    /// <summary>Field number for the "dress_role_unique_id" field.</summary>
+    public const int DressRoleUniqueIdFieldNumber = 8;
+    private uint dressRoleUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LJMCDALGIIN {
-      get { return lJMCDALGIIN_; }
+    public uint DressRoleUniqueId {
+      get { return dressRoleUniqueId_; }
       set {
-        lJMCDALGIIN_ = value;
+        dressRoleUniqueId_ = value;
       }
     }
 
-    /// <summary>Field number for the "DDKJJCBOGCH" field.</summary>
-    public const int DDKJJCBOGCHFieldNumber = 3;
-    private uint dDKJJCBOGCH_;
+    /// <summary>Field number for the "dress_equipment_unique_id" field.</summary>
+    public const int DressEquipmentUniqueIdFieldNumber = 3;
+    private uint dressEquipmentUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint DDKJJCBOGCH {
-      get { return dDKJJCBOGCH_; }
+    public uint DressEquipmentUniqueId {
+      get { return dressEquipmentUniqueId_; }
       set {
-        dDKJJCBOGCH_ = value;
+        dressEquipmentUniqueId_ = value;
       }
     }
 
-    /// <summary>Field number for the "NHKGOGCNBBJ" field.</summary>
-    public const int NHKGOGCNBBJFieldNumber = 14;
-    private global::EggLink.DanhengServer.Proto.GridFightEquipDressSource nHKGOGCNBBJ_ = global::EggLink.DanhengServer.Proto.GridFightEquipDressSource.KGridFightEquipDressSourceNone;
+    /// <summary>Field number for the "dress_source" field.</summary>
+    public const int DressSourceFieldNumber = 14;
+    private global::EggLink.DanhengServer.Proto.GridFightEquipDressSource dressSource_ = global::EggLink.DanhengServer.Proto.GridFightEquipDressSource.KGridFightEquipDressSourceNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GridFightEquipDressSource NHKGOGCNBBJ {
-      get { return nHKGOGCNBBJ_; }
+    public global::EggLink.DanhengServer.Proto.GridFightEquipDressSource DressSource {
+      get { return dressSource_; }
       set {
-        nHKGOGCNBBJ_ = value;
+        dressSource_ = value;
       }
     }
 
@@ -137,9 +138,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LJMCDALGIIN != other.LJMCDALGIIN) return false;
-      if (DDKJJCBOGCH != other.DDKJJCBOGCH) return false;
-      if (NHKGOGCNBBJ != other.NHKGOGCNBBJ) return false;
+      if (DressRoleUniqueId != other.DressRoleUniqueId) return false;
+      if (DressEquipmentUniqueId != other.DressEquipmentUniqueId) return false;
+      if (DressSource != other.DressSource) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -147,9 +148,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LJMCDALGIIN != 0) hash ^= LJMCDALGIIN.GetHashCode();
-      if (DDKJJCBOGCH != 0) hash ^= DDKJJCBOGCH.GetHashCode();
-      if (NHKGOGCNBBJ != global::EggLink.DanhengServer.Proto.GridFightEquipDressSource.KGridFightEquipDressSourceNone) hash ^= NHKGOGCNBBJ.GetHashCode();
+      if (DressRoleUniqueId != 0) hash ^= DressRoleUniqueId.GetHashCode();
+      if (DressEquipmentUniqueId != 0) hash ^= DressEquipmentUniqueId.GetHashCode();
+      if (DressSource != global::EggLink.DanhengServer.Proto.GridFightEquipDressSource.KGridFightEquipDressSourceNone) hash ^= DressSource.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -168,17 +169,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (DDKJJCBOGCH != 0) {
+      if (DressEquipmentUniqueId != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(DDKJJCBOGCH);
+        output.WriteUInt32(DressEquipmentUniqueId);
       }
-      if (LJMCDALGIIN != 0) {
+      if (DressRoleUniqueId != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(LJMCDALGIIN);
+        output.WriteUInt32(DressRoleUniqueId);
       }
-      if (NHKGOGCNBBJ != global::EggLink.DanhengServer.Proto.GridFightEquipDressSource.KGridFightEquipDressSourceNone) {
+      if (DressSource != global::EggLink.DanhengServer.Proto.GridFightEquipDressSource.KGridFightEquipDressSourceNone) {
         output.WriteRawTag(112);
-        output.WriteEnum((int) NHKGOGCNBBJ);
+        output.WriteEnum((int) DressSource);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -190,17 +191,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (DDKJJCBOGCH != 0) {
+      if (DressEquipmentUniqueId != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(DDKJJCBOGCH);
+        output.WriteUInt32(DressEquipmentUniqueId);
       }
-      if (LJMCDALGIIN != 0) {
+      if (DressRoleUniqueId != 0) {
         output.WriteRawTag(64);
-        output.WriteUInt32(LJMCDALGIIN);
+        output.WriteUInt32(DressRoleUniqueId);
       }
-      if (NHKGOGCNBBJ != global::EggLink.DanhengServer.Proto.GridFightEquipDressSource.KGridFightEquipDressSourceNone) {
+      if (DressSource != global::EggLink.DanhengServer.Proto.GridFightEquipDressSource.KGridFightEquipDressSourceNone) {
         output.WriteRawTag(112);
-        output.WriteEnum((int) NHKGOGCNBBJ);
+        output.WriteEnum((int) DressSource);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -212,14 +213,14 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LJMCDALGIIN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LJMCDALGIIN);
+      if (DressRoleUniqueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressRoleUniqueId);
       }
-      if (DDKJJCBOGCH != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DDKJJCBOGCH);
+      if (DressEquipmentUniqueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressEquipmentUniqueId);
       }
-      if (NHKGOGCNBBJ != global::EggLink.DanhengServer.Proto.GridFightEquipDressSource.KGridFightEquipDressSourceNone) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NHKGOGCNBBJ);
+      if (DressSource != global::EggLink.DanhengServer.Proto.GridFightEquipDressSource.KGridFightEquipDressSourceNone) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DressSource);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -233,14 +234,14 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LJMCDALGIIN != 0) {
-        LJMCDALGIIN = other.LJMCDALGIIN;
+      if (other.DressRoleUniqueId != 0) {
+        DressRoleUniqueId = other.DressRoleUniqueId;
       }
-      if (other.DDKJJCBOGCH != 0) {
-        DDKJJCBOGCH = other.DDKJJCBOGCH;
+      if (other.DressEquipmentUniqueId != 0) {
+        DressEquipmentUniqueId = other.DressEquipmentUniqueId;
       }
-      if (other.NHKGOGCNBBJ != global::EggLink.DanhengServer.Proto.GridFightEquipDressSource.KGridFightEquipDressSourceNone) {
-        NHKGOGCNBBJ = other.NHKGOGCNBBJ;
+      if (other.DressSource != global::EggLink.DanhengServer.Proto.GridFightEquipDressSource.KGridFightEquipDressSourceNone) {
+        DressSource = other.DressSource;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -258,15 +259,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 24: {
-            DDKJJCBOGCH = input.ReadUInt32();
+            DressEquipmentUniqueId = input.ReadUInt32();
             break;
           }
           case 64: {
-            LJMCDALGIIN = input.ReadUInt32();
+            DressRoleUniqueId = input.ReadUInt32();
             break;
           }
           case 112: {
-            NHKGOGCNBBJ = (global::EggLink.DanhengServer.Proto.GridFightEquipDressSource) input.ReadEnum();
+            DressSource = (global::EggLink.DanhengServer.Proto.GridFightEquipDressSource) input.ReadEnum();
             break;
           }
         }
@@ -285,15 +286,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 24: {
-            DDKJJCBOGCH = input.ReadUInt32();
+            DressEquipmentUniqueId = input.ReadUInt32();
             break;
           }
           case 64: {
-            LJMCDALGIIN = input.ReadUInt32();
+            DressRoleUniqueId = input.ReadUInt32();
             break;
           }
           case 112: {
-            NHKGOGCNBBJ = (global::EggLink.DanhengServer.Proto.GridFightEquipDressSource) input.ReadEnum();
+            DressSource = (global::EggLink.DanhengServer.Proto.GridFightEquipDressSource) input.ReadEnum();
             break;
           }
         }

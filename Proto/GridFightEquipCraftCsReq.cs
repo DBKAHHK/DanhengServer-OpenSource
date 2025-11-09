@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5HcmlkRmlnaHRFcXVpcENyYWZ0Q3NSZXEucHJvdG8aH0dyaWRGaWdodEVx",
-            "dWlwQ3JhZnRTb3VyY2UucHJvdG8ihQEKGEdyaWRGaWdodEVxdWlwQ3JhZnRD",
-            "c1JlcRITCgtDQktPQUlHR09GRhgOIAEoDRITCgtCREVJSE5BSklIRxgMIAEo",
-            "DRITCgtKRkNDUEtER09QSRgPIAMoDRIqCgZzb3VyY2UYByABKA4yGi5Hcmlk",
-            "RmlnaHRFcXVpcENyYWZ0U291cmNlQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
-            "ZXIuUHJvdG9iBnByb3RvMw=="));
+            "dWlwQ3JhZnRTb3VyY2UucHJvdG8iiQEKGEdyaWRGaWdodEVxdWlwQ3JhZnRD",
+            "c1JlcRIWCg5jcmFmdF9lcXVpcF9pZBgOIAEoDRIQCghjcmFmdF9pZBgMIAEo",
+            "DRIXCg9jcmFmdF9tYXRlcmlhbHMYDyADKA0SKgoGc291cmNlGAcgASgOMhou",
+            "R3JpZEZpZ2h0RXF1aXBDcmFmdFNvdXJjZUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightEquipCraftSourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightEquipCraftCsReq), global::EggLink.DanhengServer.Proto.GridFightEquipCraftCsReq.Parser, new[]{ "CBKOAIGGOFF", "BDEIHNAJIHG", "JFCCPKDGOPI", "Source" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightEquipCraftCsReq), global::EggLink.DanhengServer.Proto.GridFightEquipCraftCsReq.Parser, new[]{ "CraftEquipId", "CraftId", "CraftMaterials", "Source" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,9 +75,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightEquipCraftCsReq(GridFightEquipCraftCsReq other) : this() {
-      cBKOAIGGOFF_ = other.cBKOAIGGOFF_;
-      bDEIHNAJIHG_ = other.bDEIHNAJIHG_;
-      jFCCPKDGOPI_ = other.jFCCPKDGOPI_.Clone();
+      craftEquipId_ = other.craftEquipId_;
+      craftId_ = other.craftId_;
+      craftMaterials_ = other.craftMaterials_.Clone();
       source_ = other.source_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -88,39 +88,39 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightEquipCraftCsReq(this);
     }
 
-    /// <summary>Field number for the "CBKOAIGGOFF" field.</summary>
-    public const int CBKOAIGGOFFFieldNumber = 14;
-    private uint cBKOAIGGOFF_;
+    /// <summary>Field number for the "craft_equip_id" field.</summary>
+    public const int CraftEquipIdFieldNumber = 14;
+    private uint craftEquipId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CBKOAIGGOFF {
-      get { return cBKOAIGGOFF_; }
+    public uint CraftEquipId {
+      get { return craftEquipId_; }
       set {
-        cBKOAIGGOFF_ = value;
+        craftEquipId_ = value;
       }
     }
 
-    /// <summary>Field number for the "BDEIHNAJIHG" field.</summary>
-    public const int BDEIHNAJIHGFieldNumber = 12;
-    private uint bDEIHNAJIHG_;
+    /// <summary>Field number for the "craft_id" field.</summary>
+    public const int CraftIdFieldNumber = 12;
+    private uint craftId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BDEIHNAJIHG {
-      get { return bDEIHNAJIHG_; }
+    public uint CraftId {
+      get { return craftId_; }
       set {
-        bDEIHNAJIHG_ = value;
+        craftId_ = value;
       }
     }
 
-    /// <summary>Field number for the "JFCCPKDGOPI" field.</summary>
-    public const int JFCCPKDGOPIFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_jFCCPKDGOPI_codec
+    /// <summary>Field number for the "craft_materials" field.</summary>
+    public const int CraftMaterialsFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_craftMaterials_codec
         = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> jFCCPKDGOPI_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> craftMaterials_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JFCCPKDGOPI {
-      get { return jFCCPKDGOPI_; }
+    public pbc::RepeatedField<uint> CraftMaterials {
+      get { return craftMaterials_; }
     }
 
     /// <summary>Field number for the "source" field.</summary>
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (CBKOAIGGOFF != other.CBKOAIGGOFF) return false;
-      if (BDEIHNAJIHG != other.BDEIHNAJIHG) return false;
-      if(!jFCCPKDGOPI_.Equals(other.jFCCPKDGOPI_)) return false;
+      if (CraftEquipId != other.CraftEquipId) return false;
+      if (CraftId != other.CraftId) return false;
+      if(!craftMaterials_.Equals(other.craftMaterials_)) return false;
       if (Source != other.Source) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -161,9 +161,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CBKOAIGGOFF != 0) hash ^= CBKOAIGGOFF.GetHashCode();
-      if (BDEIHNAJIHG != 0) hash ^= BDEIHNAJIHG.GetHashCode();
-      hash ^= jFCCPKDGOPI_.GetHashCode();
+      if (CraftEquipId != 0) hash ^= CraftEquipId.GetHashCode();
+      if (CraftId != 0) hash ^= CraftId.GetHashCode();
+      hash ^= craftMaterials_.GetHashCode();
       if (Source != global::EggLink.DanhengServer.Proto.GridFightEquipCraftSource.KGridFightEquipCraftSourceNone) hash ^= Source.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -187,15 +187,15 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteEnum((int) Source);
       }
-      if (BDEIHNAJIHG != 0) {
+      if (CraftId != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(BDEIHNAJIHG);
+        output.WriteUInt32(CraftId);
       }
-      if (CBKOAIGGOFF != 0) {
+      if (CraftEquipId != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(CBKOAIGGOFF);
+        output.WriteUInt32(CraftEquipId);
       }
-      jFCCPKDGOPI_.WriteTo(output, _repeated_jFCCPKDGOPI_codec);
+      craftMaterials_.WriteTo(output, _repeated_craftMaterials_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -210,15 +210,15 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteEnum((int) Source);
       }
-      if (BDEIHNAJIHG != 0) {
+      if (CraftId != 0) {
         output.WriteRawTag(96);
-        output.WriteUInt32(BDEIHNAJIHG);
+        output.WriteUInt32(CraftId);
       }
-      if (CBKOAIGGOFF != 0) {
+      if (CraftEquipId != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(CBKOAIGGOFF);
+        output.WriteUInt32(CraftEquipId);
       }
-      jFCCPKDGOPI_.WriteTo(ref output, _repeated_jFCCPKDGOPI_codec);
+      craftMaterials_.WriteTo(ref output, _repeated_craftMaterials_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -229,13 +229,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CBKOAIGGOFF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CBKOAIGGOFF);
+      if (CraftEquipId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CraftEquipId);
       }
-      if (BDEIHNAJIHG != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BDEIHNAJIHG);
+      if (CraftId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CraftId);
       }
-      size += jFCCPKDGOPI_.CalculateSize(_repeated_jFCCPKDGOPI_codec);
+      size += craftMaterials_.CalculateSize(_repeated_craftMaterials_codec);
       if (Source != global::EggLink.DanhengServer.Proto.GridFightEquipCraftSource.KGridFightEquipCraftSourceNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
       }
@@ -251,13 +251,13 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.CBKOAIGGOFF != 0) {
-        CBKOAIGGOFF = other.CBKOAIGGOFF;
+      if (other.CraftEquipId != 0) {
+        CraftEquipId = other.CraftEquipId;
       }
-      if (other.BDEIHNAJIHG != 0) {
-        BDEIHNAJIHG = other.BDEIHNAJIHG;
+      if (other.CraftId != 0) {
+        CraftId = other.CraftId;
       }
-      jFCCPKDGOPI_.Add(other.jFCCPKDGOPI_);
+      craftMaterials_.Add(other.craftMaterials_);
       if (other.Source != global::EggLink.DanhengServer.Proto.GridFightEquipCraftSource.KGridFightEquipCraftSourceNone) {
         Source = other.Source;
       }
@@ -281,16 +281,16 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 96: {
-            BDEIHNAJIHG = input.ReadUInt32();
+            CraftId = input.ReadUInt32();
             break;
           }
           case 112: {
-            CBKOAIGGOFF = input.ReadUInt32();
+            CraftEquipId = input.ReadUInt32();
             break;
           }
           case 122:
           case 120: {
-            jFCCPKDGOPI_.AddEntriesFrom(input, _repeated_jFCCPKDGOPI_codec);
+            craftMaterials_.AddEntriesFrom(input, _repeated_craftMaterials_codec);
             break;
           }
         }
@@ -313,16 +313,16 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 96: {
-            BDEIHNAJIHG = input.ReadUInt32();
+            CraftId = input.ReadUInt32();
             break;
           }
           case 112: {
-            CBKOAIGGOFF = input.ReadUInt32();
+            CraftEquipId = input.ReadUInt32();
             break;
           }
           case 122:
           case 120: {
-            jFCCPKDGOPI_.AddEntriesFrom(ref input, _repeated_jFCCPKDGOPI_codec);
+            craftMaterials_.AddEntriesFrom(ref input, _repeated_craftMaterials_codec);
             break;
           }
         }

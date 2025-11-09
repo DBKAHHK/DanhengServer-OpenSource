@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static NLCALKLPGOGReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFOTENBTEtMUEdPRy5wcm90bxoRSERJSkpNRFBJTEUucHJvdG8iWgoLTkxD",
+            "ChFOTENBTEtMUEdPRy5wcm90bxoRSERJSkpNRFBJTEUucHJvdG8iXwoLTkxD",
             "QUxLTFBHT0cSIQoLUEpHQkZLTkpQTk8YDiABKA4yDC5IRElKSk1EUElMRRIT",
-            "CgtPR0pPRk1DTUZQRxgFIAEoDRITCgtCTUFMUEtFS0JFTBgKIAEoDUIeqgIb",
-            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CgtPR0pPRk1DTUZQRxgFIAEoDRIYChBpdGVtX3N0YWNrX2NvdW50GAogASgN",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HDIJJMDPILEReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NLCALKLPGOG), global::EggLink.DanhengServer.Proto.NLCALKLPGOG.Parser, new[]{ "PJGBFKNJPNO", "OGJOFMCMFPG", "BMALPKEKBEL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NLCALKLPGOG), global::EggLink.DanhengServer.Proto.NLCALKLPGOG.Parser, new[]{ "PJGBFKNJPNO", "OGJOFMCMFPG", "ItemStackCount" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     public NLCALKLPGOG(NLCALKLPGOG other) : this() {
       pJGBFKNJPNO_ = other.pJGBFKNJPNO_;
       oGJOFMCMFPG_ = other.oGJOFMCMFPG_;
-      bMALPKEKBEL_ = other.bMALPKEKBEL_;
+      itemStackCount_ = other.itemStackCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -109,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BMALPKEKBEL" field.</summary>
-    public const int BMALPKEKBELFieldNumber = 10;
-    private uint bMALPKEKBEL_;
+    /// <summary>Field number for the "item_stack_count" field.</summary>
+    public const int ItemStackCountFieldNumber = 10;
+    private uint itemStackCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BMALPKEKBEL {
-      get { return bMALPKEKBEL_; }
+    public uint ItemStackCount {
+      get { return itemStackCount_; }
       set {
-        bMALPKEKBEL_ = value;
+        itemStackCount_ = value;
       }
     }
 
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (PJGBFKNJPNO != other.PJGBFKNJPNO) return false;
       if (OGJOFMCMFPG != other.OGJOFMCMFPG) return false;
-      if (BMALPKEKBEL != other.BMALPKEKBEL) return false;
+      if (ItemStackCount != other.ItemStackCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.HDIJJMDPILE.SwordTrainingStatusTypeNone) hash ^= PJGBFKNJPNO.GetHashCode();
       if (OGJOFMCMFPG != 0) hash ^= OGJOFMCMFPG.GetHashCode();
-      if (BMALPKEKBEL != 0) hash ^= BMALPKEKBEL.GetHashCode();
+      if (ItemStackCount != 0) hash ^= ItemStackCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -171,9 +171,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(OGJOFMCMFPG);
       }
-      if (BMALPKEKBEL != 0) {
+      if (ItemStackCount != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(BMALPKEKBEL);
+        output.WriteUInt32(ItemStackCount);
       }
       if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.HDIJJMDPILE.SwordTrainingStatusTypeNone) {
         output.WriteRawTag(112);
@@ -193,9 +193,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(OGJOFMCMFPG);
       }
-      if (BMALPKEKBEL != 0) {
+      if (ItemStackCount != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(BMALPKEKBEL);
+        output.WriteUInt32(ItemStackCount);
       }
       if (PJGBFKNJPNO != global::EggLink.DanhengServer.Proto.HDIJJMDPILE.SwordTrainingStatusTypeNone) {
         output.WriteRawTag(112);
@@ -217,8 +217,8 @@ namespace EggLink.DanhengServer.Proto {
       if (OGJOFMCMFPG != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OGJOFMCMFPG);
       }
-      if (BMALPKEKBEL != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BMALPKEKBEL);
+      if (ItemStackCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemStackCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -238,8 +238,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.OGJOFMCMFPG != 0) {
         OGJOFMCMFPG = other.OGJOFMCMFPG;
       }
-      if (other.BMALPKEKBEL != 0) {
-        BMALPKEKBEL = other.BMALPKEKBEL;
+      if (other.ItemStackCount != 0) {
+        ItemStackCount = other.ItemStackCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -261,7 +261,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            BMALPKEKBEL = input.ReadUInt32();
+            ItemStackCount = input.ReadUInt32();
             break;
           }
           case 112: {
@@ -288,7 +288,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            BMALPKEKBEL = input.ReadUInt32();
+            ItemStackCount = input.ReadUInt32();
             break;
           }
           case 112: {

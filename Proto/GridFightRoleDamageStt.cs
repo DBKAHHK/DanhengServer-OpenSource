@@ -24,15 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightRoleDamageSttReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHcmlkRmlnaHRSb2xlRGFtYWdlU3R0LnByb3RvIpUBChZHcmlkRmlnaHRS",
-            "b2xlRGFtYWdlU3R0EhMKC0FPRUZJSEJCQUdFGAEgAygNEhIKCmlzX3VwZ3Jh",
-            "ZGUYDCABKAgSFQoNcm9sZV9iYXNpY19pZBgNIAEoDRIUCgx0b3RhbF9kYW1h",
-            "Z2UYCSABKAESFwoPaXNfdHJpYWxfYXZhdGFyGAogASgIEgwKBHRpZXIYAyAB",
-            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChxHcmlkRmlnaHRSb2xlRGFtYWdlU3R0LnByb3RvIqMBChZHcmlkRmlnaHRS",
+            "b2xlRGFtYWdlU3R0EiEKGWdyaWRfZmlnaHRfZXF1aXBtZW50X2xpc3QYASAD",
+            "KA0SEgoKaXNfdXBncmFkZRgMIAEoCBIVCg1yb2xlX2Jhc2ljX2lkGA0gASgN",
+            "EhQKDHRvdGFsX2RhbWFnZRgJIAEoARIXCg9pc190cmlhbF9hdmF0YXIYCiAB",
+            "KAgSDAoEdGllchgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightRoleDamageStt), global::EggLink.DanhengServer.Proto.GridFightRoleDamageStt.Parser, new[]{ "AOEFIHBBAGE", "IsUpgrade", "RoleBasicId", "TotalDamage", "IsTrialAvatar", "Tier" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightRoleDamageStt), global::EggLink.DanhengServer.Proto.GridFightRoleDamageStt.Parser, new[]{ "GridFightEquipmentList", "IsUpgrade", "RoleBasicId", "TotalDamage", "IsTrialAvatar", "Tier" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightRoleDamageStt(GridFightRoleDamageStt other) : this() {
-      aOEFIHBBAGE_ = other.aOEFIHBBAGE_.Clone();
+      gridFightEquipmentList_ = other.gridFightEquipmentList_.Clone();
       isUpgrade_ = other.isUpgrade_;
       roleBasicId_ = other.roleBasicId_;
       totalDamage_ = other.totalDamage_;
@@ -89,15 +90,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightRoleDamageStt(this);
     }
 
-    /// <summary>Field number for the "AOEFIHBBAGE" field.</summary>
-    public const int AOEFIHBBAGEFieldNumber = 1;
-    private static readonly pb::FieldCodec<uint> _repeated_aOEFIHBBAGE_codec
+    /// <summary>Field number for the "grid_fight_equipment_list" field.</summary>
+    public const int GridFightEquipmentListFieldNumber = 1;
+    private static readonly pb::FieldCodec<uint> _repeated_gridFightEquipmentList_codec
         = pb::FieldCodec.ForUInt32(10);
-    private readonly pbc::RepeatedField<uint> aOEFIHBBAGE_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> gridFightEquipmentList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AOEFIHBBAGE {
-      get { return aOEFIHBBAGE_; }
+    public pbc::RepeatedField<uint> GridFightEquipmentList {
+      get { return gridFightEquipmentList_; }
     }
 
     /// <summary>Field number for the "is_upgrade" field.</summary>
@@ -175,7 +176,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!aOEFIHBBAGE_.Equals(other.aOEFIHBBAGE_)) return false;
+      if(!gridFightEquipmentList_.Equals(other.gridFightEquipmentList_)) return false;
       if (IsUpgrade != other.IsUpgrade) return false;
       if (RoleBasicId != other.RoleBasicId) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TotalDamage, other.TotalDamage)) return false;
@@ -188,7 +189,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= aOEFIHBBAGE_.GetHashCode();
+      hash ^= gridFightEquipmentList_.GetHashCode();
       if (IsUpgrade != false) hash ^= IsUpgrade.GetHashCode();
       if (RoleBasicId != 0) hash ^= RoleBasicId.GetHashCode();
       if (TotalDamage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TotalDamage);
@@ -212,7 +213,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      aOEFIHBBAGE_.WriteTo(output, _repeated_aOEFIHBBAGE_codec);
+      gridFightEquipmentList_.WriteTo(output, _repeated_gridFightEquipmentList_codec);
       if (Tier != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(Tier);
@@ -243,7 +244,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      aOEFIHBBAGE_.WriteTo(ref output, _repeated_aOEFIHBBAGE_codec);
+      gridFightEquipmentList_.WriteTo(ref output, _repeated_gridFightEquipmentList_codec);
       if (Tier != 0) {
         output.WriteRawTag(24);
         output.WriteUInt32(Tier);
@@ -274,7 +275,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += aOEFIHBBAGE_.CalculateSize(_repeated_aOEFIHBBAGE_codec);
+      size += gridFightEquipmentList_.CalculateSize(_repeated_gridFightEquipmentList_codec);
       if (IsUpgrade != false) {
         size += 1 + 1;
       }
@@ -302,7 +303,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      aOEFIHBBAGE_.Add(other.aOEFIHBBAGE_);
+      gridFightEquipmentList_.Add(other.gridFightEquipmentList_);
       if (other.IsUpgrade != false) {
         IsUpgrade = other.IsUpgrade;
       }
@@ -335,7 +336,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10:
           case 8: {
-            aOEFIHBBAGE_.AddEntriesFrom(input, _repeated_aOEFIHBBAGE_codec);
+            gridFightEquipmentList_.AddEntriesFrom(input, _repeated_gridFightEquipmentList_codec);
             break;
           }
           case 24: {
@@ -375,7 +376,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 10:
           case 8: {
-            aOEFIHBBAGE_.AddEntriesFrom(ref input, _repeated_aOEFIHBBAGE_codec);
+            gridFightEquipmentList_.AddEntriesFrom(ref input, _repeated_gridFightEquipmentList_codec);
             break;
           }
           case 24: {

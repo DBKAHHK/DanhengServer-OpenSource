@@ -24,21 +24,22 @@ namespace EggLink.DanhengServer.Proto {
     static BattleGridFightRoleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1CYXR0bGVHcmlkRmlnaHRSb2xlSW5mby5wcm90bxoRSEtFSUNNS01JQksu",
-            "cHJvdG8ikQMKF0JhdHRsZUdyaWRGaWdodFJvbGVJbmZvEhUKDXJvbGVfYmFz",
-            "aWNfaWQYASABKA0SDAoEdGllchgCIAEoDRILCgNwb3MYAyABKA0SIQoLQkxM",
-            "UEtIR01JSEgYByADKAsyDC5IS0VJQ01LTUlCSxIRCglhdmF0YXJfaWQYCCAB",
-            "KA0STQoUZ2FtZV9zYXZlZF92YWx1ZV9tYXAYCSADKAsyLy5CYXR0bGVHcmlk",
-            "RmlnaHRSb2xlSW5mby5HYW1lU2F2ZWRWYWx1ZU1hcEVudHJ5Ej4KC0lNTU5O",
-            "R01NREFJGAogAygLMikuQmF0dGxlR3JpZEZpZ2h0Um9sZUluZm8uSU1NTk5H",
-            "TU1EQUlFbnRyeRIRCgl1bmlxdWVfaWQYCyABKA0aOAoWR2FtZVNhdmVkVmFs",
-            "dWVNYXBFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKA06AjgBGjIK",
-            "EElNTU5OR01NREFJRW50cnkSCwoDa2V5GAEgASgNEg0KBXZhbHVlGAIgASgN",
-            "OgI4AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch1CYXR0bGVHcmlkRmlnaHRSb2xlSW5mby5wcm90bxoiQmF0dGxlR3JpZEZp",
+            "Z2h0RXF1aXBtZW50SW5mby5wcm90byKqAwoXQmF0dGxlR3JpZEZpZ2h0Um9s",
+            "ZUluZm8SFQoNcm9sZV9iYXNpY19pZBgBIAEoDRIMCgR0aWVyGAIgASgNEgsK",
+            "A3BvcxgDIAEoDRI6ChNyb2xlX2VxdWlwbWVudF9saXN0GAcgAygLMh0uQmF0",
+            "dGxlR3JpZEZpZ2h0RXF1aXBtZW50SW5mbxIRCglhdmF0YXJfaWQYCCABKA0S",
+            "TQoUZ2FtZV9zYXZlZF92YWx1ZV9tYXAYCSADKAsyLy5CYXR0bGVHcmlkRmln",
+            "aHRSb2xlSW5mby5HYW1lU2F2ZWRWYWx1ZU1hcEVudHJ5Ej4KC0lNTU5OR01N",
+            "REFJGAogAygLMikuQmF0dGxlR3JpZEZpZ2h0Um9sZUluZm8uSU1NTk5HTU1E",
+            "QUlFbnRyeRIRCgl1bmlxdWVfaWQYCyABKA0aOAoWR2FtZVNhdmVkVmFsdWVN",
+            "YXBFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKA06AjgBGjIKEElN",
+            "TU5OR01NREFJRW50cnkSCwoDa2V5GAEgASgNEg0KBXZhbHVlGAIgASgNOgI4",
+            "AUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HKEICMKMIBKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleGridFightEquipmentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleGridFightRoleInfo), global::EggLink.DanhengServer.Proto.BattleGridFightRoleInfo.Parser, new[]{ "RoleBasicId", "Tier", "Pos", "BLLPKHGMIHH", "AvatarId", "GameSavedValueMap", "IMMNNGMMDAI", "UniqueId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleGridFightRoleInfo), global::EggLink.DanhengServer.Proto.BattleGridFightRoleInfo.Parser, new[]{ "RoleBasicId", "Tier", "Pos", "RoleEquipmentList", "AvatarId", "GameSavedValueMap", "IMMNNGMMDAI", "UniqueId" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -83,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
       roleBasicId_ = other.roleBasicId_;
       tier_ = other.tier_;
       pos_ = other.pos_;
-      bLLPKHGMIHH_ = other.bLLPKHGMIHH_.Clone();
+      roleEquipmentList_ = other.roleEquipmentList_.Clone();
       avatarId_ = other.avatarId_;
       gameSavedValueMap_ = other.gameSavedValueMap_.Clone();
       iMMNNGMMDAI_ = other.iMMNNGMMDAI_.Clone();
@@ -133,15 +134,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BLLPKHGMIHH" field.</summary>
-    public const int BLLPKHGMIHHFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HKEICMKMIBK> _repeated_bLLPKHGMIHH_codec
-        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.HKEICMKMIBK.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HKEICMKMIBK> bLLPKHGMIHH_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HKEICMKMIBK>();
+    /// <summary>Field number for the "role_equipment_list" field.</summary>
+    public const int RoleEquipmentListFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BattleGridFightEquipmentInfo> _repeated_roleEquipmentList_codec
+        = pb::FieldCodec.ForMessage(58, global::EggLink.DanhengServer.Proto.BattleGridFightEquipmentInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BattleGridFightEquipmentInfo> roleEquipmentList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BattleGridFightEquipmentInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HKEICMKMIBK> BLLPKHGMIHH {
-      get { return bLLPKHGMIHH_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BattleGridFightEquipmentInfo> RoleEquipmentList {
+      get { return roleEquipmentList_; }
     }
 
     /// <summary>Field number for the "avatar_id" field.</summary>
@@ -208,7 +209,7 @@ namespace EggLink.DanhengServer.Proto {
       if (RoleBasicId != other.RoleBasicId) return false;
       if (Tier != other.Tier) return false;
       if (Pos != other.Pos) return false;
-      if(!bLLPKHGMIHH_.Equals(other.bLLPKHGMIHH_)) return false;
+      if(!roleEquipmentList_.Equals(other.roleEquipmentList_)) return false;
       if (AvatarId != other.AvatarId) return false;
       if (!GameSavedValueMap.Equals(other.GameSavedValueMap)) return false;
       if (!IMMNNGMMDAI.Equals(other.IMMNNGMMDAI)) return false;
@@ -223,7 +224,7 @@ namespace EggLink.DanhengServer.Proto {
       if (RoleBasicId != 0) hash ^= RoleBasicId.GetHashCode();
       if (Tier != 0) hash ^= Tier.GetHashCode();
       if (Pos != 0) hash ^= Pos.GetHashCode();
-      hash ^= bLLPKHGMIHH_.GetHashCode();
+      hash ^= roleEquipmentList_.GetHashCode();
       if (AvatarId != 0) hash ^= AvatarId.GetHashCode();
       hash ^= GameSavedValueMap.GetHashCode();
       hash ^= IMMNNGMMDAI.GetHashCode();
@@ -258,7 +259,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(Pos);
       }
-      bLLPKHGMIHH_.WriteTo(output, _repeated_bLLPKHGMIHH_codec);
+      roleEquipmentList_.WriteTo(output, _repeated_roleEquipmentList_codec);
       if (AvatarId != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(AvatarId);
@@ -291,7 +292,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(Pos);
       }
-      bLLPKHGMIHH_.WriteTo(ref output, _repeated_bLLPKHGMIHH_codec);
+      roleEquipmentList_.WriteTo(ref output, _repeated_roleEquipmentList_codec);
       if (AvatarId != 0) {
         output.WriteRawTag(64);
         output.WriteUInt32(AvatarId);
@@ -321,7 +322,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Pos != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pos);
       }
-      size += bLLPKHGMIHH_.CalculateSize(_repeated_bLLPKHGMIHH_codec);
+      size += roleEquipmentList_.CalculateSize(_repeated_roleEquipmentList_codec);
       if (AvatarId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(AvatarId);
       }
@@ -351,7 +352,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Pos != 0) {
         Pos = other.Pos;
       }
-      bLLPKHGMIHH_.Add(other.bLLPKHGMIHH_);
+      roleEquipmentList_.Add(other.roleEquipmentList_);
       if (other.AvatarId != 0) {
         AvatarId = other.AvatarId;
       }
@@ -388,7 +389,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            bLLPKHGMIHH_.AddEntriesFrom(input, _repeated_bLLPKHGMIHH_codec);
+            roleEquipmentList_.AddEntriesFrom(input, _repeated_roleEquipmentList_codec);
             break;
           }
           case 64: {
@@ -435,7 +436,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 58: {
-            bLLPKHGMIHH_.AddEntriesFrom(ref input, _repeated_bLLPKHGMIHH_codec);
+            roleEquipmentList_.AddEntriesFrom(ref input, _repeated_roleEquipmentList_codec);
             break;
           }
           case 64: {

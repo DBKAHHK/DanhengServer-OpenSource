@@ -25,16 +25,16 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9HcmlkRmlnaHRTdXBwbHlBY3Rpb25JbmZvLnByb3RvGh1HcmlkRmlnaHRT",
-            "dXBwbHlSb2xlSW5mby5wcm90byKwAQoZR3JpZEZpZ2h0U3VwcGx5QWN0aW9u",
+            "dXBwbHlSb2xlSW5mby5wcm90byK1AQoZR3JpZEZpZ2h0U3VwcGx5QWN0aW9u",
             "SW5mbxIWCg5jdXJfcm9sbF9jb3VudBgFIAEoDRI3ChVzdXBwbHlfcm9sZV9p",
             "bmZvX2xpc3QYAyADKAsyGC5HcmlkRmlnaHRTdXBwbHlSb2xlSW5mbxIYChBt",
-            "YXhfcmVyb2xsX2NvdW50GAYgASgNEhMKC01FS0VGUE5NTkxFGA4gASgNEhMK",
-            "C0pMSElLQ0hJRURKGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
-            "UHJvdG9iBnByb3RvMw=="));
+            "YXhfcmVyb2xsX2NvdW50GAYgASgNEhgKEG1heF9zZWxlY3RfY291bnQYDiAB",
+            "KA0SEwoLSkxISUtDSElFREoYDSABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightSupplyRoleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfo), global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfo.Parser, new[]{ "CurRollCount", "SupplyRoleInfoList", "MaxRerollCount", "MEKEFPNMNLE", "JLHIKCHIEDJ" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfo), global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfo.Parser, new[]{ "CurRollCount", "SupplyRoleInfoList", "MaxRerollCount", "MaxSelectCount", "JLHIKCHIEDJ" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,7 +79,7 @@ namespace EggLink.DanhengServer.Proto {
       curRollCount_ = other.curRollCount_;
       supplyRoleInfoList_ = other.supplyRoleInfoList_.Clone();
       maxRerollCount_ = other.maxRerollCount_;
-      mEKEFPNMNLE_ = other.mEKEFPNMNLE_;
+      maxSelectCount_ = other.maxSelectCount_;
       jLHIKCHIEDJ_ = other.jLHIKCHIEDJ_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -125,15 +125,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MEKEFPNMNLE" field.</summary>
-    public const int MEKEFPNMNLEFieldNumber = 14;
-    private uint mEKEFPNMNLE_;
+    /// <summary>Field number for the "max_select_count" field.</summary>
+    public const int MaxSelectCountFieldNumber = 14;
+    private uint maxSelectCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint MEKEFPNMNLE {
-      get { return mEKEFPNMNLE_; }
+    public uint MaxSelectCount {
+      get { return maxSelectCount_; }
       set {
-        mEKEFPNMNLE_ = value;
+        maxSelectCount_ = value;
       }
     }
 
@@ -167,7 +167,7 @@ namespace EggLink.DanhengServer.Proto {
       if (CurRollCount != other.CurRollCount) return false;
       if(!supplyRoleInfoList_.Equals(other.supplyRoleInfoList_)) return false;
       if (MaxRerollCount != other.MaxRerollCount) return false;
-      if (MEKEFPNMNLE != other.MEKEFPNMNLE) return false;
+      if (MaxSelectCount != other.MaxSelectCount) return false;
       if (JLHIKCHIEDJ != other.JLHIKCHIEDJ) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -179,7 +179,7 @@ namespace EggLink.DanhengServer.Proto {
       if (CurRollCount != 0) hash ^= CurRollCount.GetHashCode();
       hash ^= supplyRoleInfoList_.GetHashCode();
       if (MaxRerollCount != 0) hash ^= MaxRerollCount.GetHashCode();
-      if (MEKEFPNMNLE != 0) hash ^= MEKEFPNMNLE.GetHashCode();
+      if (MaxSelectCount != 0) hash ^= MaxSelectCount.GetHashCode();
       if (JLHIKCHIEDJ != 0) hash ^= JLHIKCHIEDJ.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -212,9 +212,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(104);
         output.WriteUInt32(JLHIKCHIEDJ);
       }
-      if (MEKEFPNMNLE != 0) {
+      if (MaxSelectCount != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(MEKEFPNMNLE);
+        output.WriteUInt32(MaxSelectCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -239,9 +239,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(104);
         output.WriteUInt32(JLHIKCHIEDJ);
       }
-      if (MEKEFPNMNLE != 0) {
+      if (MaxSelectCount != 0) {
         output.WriteRawTag(112);
-        output.WriteUInt32(MEKEFPNMNLE);
+        output.WriteUInt32(MaxSelectCount);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -260,8 +260,8 @@ namespace EggLink.DanhengServer.Proto {
       if (MaxRerollCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxRerollCount);
       }
-      if (MEKEFPNMNLE != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MEKEFPNMNLE);
+      if (MaxSelectCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxSelectCount);
       }
       if (JLHIKCHIEDJ != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(JLHIKCHIEDJ);
@@ -285,8 +285,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.MaxRerollCount != 0) {
         MaxRerollCount = other.MaxRerollCount;
       }
-      if (other.MEKEFPNMNLE != 0) {
-        MEKEFPNMNLE = other.MEKEFPNMNLE;
+      if (other.MaxSelectCount != 0) {
+        MaxSelectCount = other.MaxSelectCount;
       }
       if (other.JLHIKCHIEDJ != 0) {
         JLHIKCHIEDJ = other.JLHIKCHIEDJ;
@@ -323,7 +323,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            MEKEFPNMNLE = input.ReadUInt32();
+            MaxSelectCount = input.ReadUInt32();
             break;
           }
         }
@@ -358,7 +358,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 112: {
-            MEKEFPNMNLE = input.ReadUInt32();
+            MaxSelectCount = input.ReadUInt32();
             break;
           }
         }

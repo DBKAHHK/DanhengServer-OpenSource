@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightTakeWeeklyRewardScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRHcmlkRmlnaHRUYWtlV2Vla2x5UmV3YXJkU2NSc3AucHJvdG8aDkl0ZW1M",
-            "aXN0LnByb3RvGiNHcmlkRmlnaHRUYWtlV2Vla2x5UmV3YXJkSW5mby5wcm90",
+            "CiRHcmlkRmlnaHRUYWtlV2Vla2x5UmV3YXJkU2NSc3AucHJvdG8aI0dyaWRG",
+            "aWdodFRha2VXZWVrbHlSZXdhcmRJbmZvLnByb3RvGg5JdGVtTGlzdC5wcm90",
             "byKOAQoeR3JpZEZpZ2h0VGFrZVdlZWtseVJld2FyZFNjUnNwEg8KB3JldGNv",
             "ZGUYDyABKA0SGQoGcmV3YXJkGAEgASgLMgkuSXRlbUxpc3QSQAoYZ3JpZF9m",
             "aWdodF93ZWVrbHlfcmV3YXJkGAYgASgLMh4uR3JpZEZpZ2h0VGFrZVdlZWts",
             "eVJld2FyZEluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTakeWeeklyRewardInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightTakeWeeklyRewardInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTakeWeeklyRewardScRsp), global::EggLink.DanhengServer.Proto.GridFightTakeWeeklyRewardScRsp.Parser, new[]{ "Retcode", "Reward", "GridFightWeeklyReward" }, null, null, null, null)
           }));

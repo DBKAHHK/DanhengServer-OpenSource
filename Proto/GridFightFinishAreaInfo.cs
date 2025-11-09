@@ -24,16 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightFinishAreaInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HcmlkRmlnaHRGaW5pc2hBcmVhSW5mby5wcm90byLBAQoXR3JpZEZpZ2h0",
+            "Ch1HcmlkRmlnaHRGaW5pc2hBcmVhSW5mby5wcm90byLGAQoXR3JpZEZpZ2h0",
             "RmluaXNoQXJlYUluZm8SEAoIcm91dGVfaWQYCCABKA0SEwoLUEVISU5HSktH",
             "Q0IYCyABKA0SIAoYZ3JpZF9maWdodF9jdXJfbGluZXVwX2hwGAcgASgNEhIK",
-            "CmNoYXB0ZXJfaWQYAyABKA0SEwoLRUxJRk5KQk5BR0MYASABKA0SEgoKc2Vj",
-            "dGlvbl9pZBgCIAEoDRIgChhncmlkX2ZpZ2h0X21heF9saW5ldXBfaHAYBCAB",
-            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "CmNoYXB0ZXJfaWQYAyABKA0SGAoQZ2FtZV9kaXZpc2lvbl9pZBgBIAEoDRIS",
+            "CgpzZWN0aW9uX2lkGAIgASgNEiAKGGdyaWRfZmlnaHRfbWF4X2xpbmV1cF9o",
+            "cBgEIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightFinishAreaInfo), global::EggLink.DanhengServer.Proto.GridFightFinishAreaInfo.Parser, new[]{ "RouteId", "PEHINGJKGCB", "GridFightCurLineupHp", "ChapterId", "ELIFNJBNAGC", "SectionId", "GridFightMaxLineupHp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightFinishAreaInfo), global::EggLink.DanhengServer.Proto.GridFightFinishAreaInfo.Parser, new[]{ "RouteId", "PEHINGJKGCB", "GridFightCurLineupHp", "ChapterId", "GameDivisionId", "SectionId", "GridFightMaxLineupHp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,7 +80,7 @@ namespace EggLink.DanhengServer.Proto {
       pEHINGJKGCB_ = other.pEHINGJKGCB_;
       gridFightCurLineupHp_ = other.gridFightCurLineupHp_;
       chapterId_ = other.chapterId_;
-      eLIFNJBNAGC_ = other.eLIFNJBNAGC_;
+      gameDivisionId_ = other.gameDivisionId_;
       sectionId_ = other.sectionId_;
       gridFightMaxLineupHp_ = other.gridFightMaxLineupHp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -139,15 +140,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ELIFNJBNAGC" field.</summary>
-    public const int ELIFNJBNAGCFieldNumber = 1;
-    private uint eLIFNJBNAGC_;
+    /// <summary>Field number for the "game_division_id" field.</summary>
+    public const int GameDivisionIdFieldNumber = 1;
+    private uint gameDivisionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ELIFNJBNAGC {
-      get { return eLIFNJBNAGC_; }
+    public uint GameDivisionId {
+      get { return gameDivisionId_; }
       set {
-        eLIFNJBNAGC_ = value;
+        gameDivisionId_ = value;
       }
     }
 
@@ -194,7 +195,7 @@ namespace EggLink.DanhengServer.Proto {
       if (PEHINGJKGCB != other.PEHINGJKGCB) return false;
       if (GridFightCurLineupHp != other.GridFightCurLineupHp) return false;
       if (ChapterId != other.ChapterId) return false;
-      if (ELIFNJBNAGC != other.ELIFNJBNAGC) return false;
+      if (GameDivisionId != other.GameDivisionId) return false;
       if (SectionId != other.SectionId) return false;
       if (GridFightMaxLineupHp != other.GridFightMaxLineupHp) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -208,7 +209,7 @@ namespace EggLink.DanhengServer.Proto {
       if (PEHINGJKGCB != 0) hash ^= PEHINGJKGCB.GetHashCode();
       if (GridFightCurLineupHp != 0) hash ^= GridFightCurLineupHp.GetHashCode();
       if (ChapterId != 0) hash ^= ChapterId.GetHashCode();
-      if (ELIFNJBNAGC != 0) hash ^= ELIFNJBNAGC.GetHashCode();
+      if (GameDivisionId != 0) hash ^= GameDivisionId.GetHashCode();
       if (SectionId != 0) hash ^= SectionId.GetHashCode();
       if (GridFightMaxLineupHp != 0) hash ^= GridFightMaxLineupHp.GetHashCode();
       if (_unknownFields != null) {
@@ -229,9 +230,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ELIFNJBNAGC != 0) {
+      if (GameDivisionId != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ELIFNJBNAGC);
+        output.WriteUInt32(GameDivisionId);
       }
       if (SectionId != 0) {
         output.WriteRawTag(16);
@@ -267,9 +268,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ELIFNJBNAGC != 0) {
+      if (GameDivisionId != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ELIFNJBNAGC);
+        output.WriteUInt32(GameDivisionId);
       }
       if (SectionId != 0) {
         output.WriteRawTag(16);
@@ -317,8 +318,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ChapterId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChapterId);
       }
-      if (ELIFNJBNAGC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ELIFNJBNAGC);
+      if (GameDivisionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameDivisionId);
       }
       if (SectionId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SectionId);
@@ -350,8 +351,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.ChapterId != 0) {
         ChapterId = other.ChapterId;
       }
-      if (other.ELIFNJBNAGC != 0) {
-        ELIFNJBNAGC = other.ELIFNJBNAGC;
+      if (other.GameDivisionId != 0) {
+        GameDivisionId = other.GameDivisionId;
       }
       if (other.SectionId != 0) {
         SectionId = other.SectionId;
@@ -375,7 +376,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            ELIFNJBNAGC = input.ReadUInt32();
+            GameDivisionId = input.ReadUInt32();
             break;
           }
           case 16: {
@@ -418,7 +419,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            ELIFNJBNAGC = input.ReadUInt32();
+            GameDivisionId = input.ReadUInt32();
             break;
           }
           case 16: {

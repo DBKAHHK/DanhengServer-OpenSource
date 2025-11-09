@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static SceneMonsterReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJTY2VuZU1vbnN0ZXIucHJvdG8aEU9KQURLQ0xPS05MLnByb3RvImQKDFNj",
-            "ZW5lTW9uc3RlchISCgptb25zdGVyX2lkGAkgASgNEiAKCmV4dHJhX2luZm8Y",
-            "DSABKAsyDC5PSkFES0NMT0tOTBIOCgZjdXJfaHAYCiABKA0SDgoGbWF4X2hw",
-            "GAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
-            "Mw=="));
+            "ChJTY2VuZU1vbnN0ZXIucHJvdG8aG1NjZW5lTW9uc3RlckV4dHJhSW5mby5w",
+            "cm90byJuCgxTY2VuZU1vbnN0ZXISEgoKbW9uc3Rlcl9pZBgJIAEoDRIqCgpl",
+            "eHRyYV9pbmZvGA0gASgLMhYuU2NlbmVNb25zdGVyRXh0cmFJbmZvEg4KBmN1",
+            "cl9ocBgKIAEoDRIOCgZtYXhfaHAYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OJADKCLOKNLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneMonsterExtraInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneMonster), global::EggLink.DanhengServer.Proto.SceneMonster.Parser, new[]{ "MonsterId", "ExtraInfo", "CurHp", "MaxHp" }, null, null, null, null)
           }));
@@ -101,10 +101,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "extra_info" field.</summary>
     public const int ExtraInfoFieldNumber = 13;
-    private global::EggLink.DanhengServer.Proto.OJADKCLOKNL extraInfo_;
+    private global::EggLink.DanhengServer.Proto.SceneMonsterExtraInfo extraInfo_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.OJADKCLOKNL ExtraInfo {
+    public global::EggLink.DanhengServer.Proto.SceneMonsterExtraInfo ExtraInfo {
       get { return extraInfo_; }
       set {
         extraInfo_ = value;
@@ -264,7 +264,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.extraInfo_ != null) {
         if (extraInfo_ == null) {
-          ExtraInfo = new global::EggLink.DanhengServer.Proto.OJADKCLOKNL();
+          ExtraInfo = new global::EggLink.DanhengServer.Proto.SceneMonsterExtraInfo();
         }
         ExtraInfo.MergeFrom(other.ExtraInfo);
       }
@@ -303,7 +303,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 106: {
             if (extraInfo_ == null) {
-              ExtraInfo = new global::EggLink.DanhengServer.Proto.OJADKCLOKNL();
+              ExtraInfo = new global::EggLink.DanhengServer.Proto.SceneMonsterExtraInfo();
             }
             input.ReadMessage(ExtraInfo);
             break;
@@ -337,7 +337,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 106: {
             if (extraInfo_ == null) {
-              ExtraInfo = new global::EggLink.DanhengServer.Proto.OJADKCLOKNL();
+              ExtraInfo = new global::EggLink.DanhengServer.Proto.SceneMonsterExtraInfo();
             }
             input.ReadMessage(ExtraInfo);
             break;

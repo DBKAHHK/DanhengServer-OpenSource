@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static JPJOLJFIBCBReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFKUEpPTEpGSUJDQi5wcm90byI3CgtKUEpPTEpGSUJDQhITCgtFTElGTkpC",
-            "TkFHQxgHIAEoDRITCgtGTkxGSUhMSEJKSRgKIAEoCEIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFKUEpPTEpGSUJDQi5wcm90byI8CgtKUEpPTEpGSUJDQhIYChBnYW1lX2Rp",
+            "dmlzaW9uX2lkGAcgASgNEhMKC0ZOTEZJSExIQkpJGAogASgIQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JPJOLJFIBCB), global::EggLink.DanhengServer.Proto.JPJOLJFIBCB.Parser, new[]{ "ELIFNJBNAGC", "FNLFIHLHBJI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JPJOLJFIBCB), global::EggLink.DanhengServer.Proto.JPJOLJFIBCB.Parser, new[]{ "GameDivisionId", "FNLFIHLHBJI" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JPJOLJFIBCB(JPJOLJFIBCB other) : this() {
-      eLIFNJBNAGC_ = other.eLIFNJBNAGC_;
+      gameDivisionId_ = other.gameDivisionId_;
       fNLFIHLHBJI_ = other.fNLFIHLHBJI_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -83,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new JPJOLJFIBCB(this);
     }
 
-    /// <summary>Field number for the "ELIFNJBNAGC" field.</summary>
-    public const int ELIFNJBNAGCFieldNumber = 7;
-    private uint eLIFNJBNAGC_;
+    /// <summary>Field number for the "game_division_id" field.</summary>
+    public const int GameDivisionIdFieldNumber = 7;
+    private uint gameDivisionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ELIFNJBNAGC {
-      get { return eLIFNJBNAGC_; }
+    public uint GameDivisionId {
+      get { return gameDivisionId_; }
       set {
-        eLIFNJBNAGC_ = value;
+        gameDivisionId_ = value;
       }
     }
 
@@ -122,7 +122,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ELIFNJBNAGC != other.ELIFNJBNAGC) return false;
+      if (GameDivisionId != other.GameDivisionId) return false;
       if (FNLFIHLHBJI != other.FNLFIHLHBJI) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -131,7 +131,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ELIFNJBNAGC != 0) hash ^= ELIFNJBNAGC.GetHashCode();
+      if (GameDivisionId != 0) hash ^= GameDivisionId.GetHashCode();
       if (FNLFIHLHBJI != false) hash ^= FNLFIHLHBJI.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -151,9 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ELIFNJBNAGC != 0) {
+      if (GameDivisionId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(ELIFNJBNAGC);
+        output.WriteUInt32(GameDivisionId);
       }
       if (FNLFIHLHBJI != false) {
         output.WriteRawTag(80);
@@ -169,9 +169,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ELIFNJBNAGC != 0) {
+      if (GameDivisionId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(ELIFNJBNAGC);
+        output.WriteUInt32(GameDivisionId);
       }
       if (FNLFIHLHBJI != false) {
         output.WriteRawTag(80);
@@ -187,8 +187,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ELIFNJBNAGC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ELIFNJBNAGC);
+      if (GameDivisionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GameDivisionId);
       }
       if (FNLFIHLHBJI != false) {
         size += 1 + 1;
@@ -205,8 +205,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ELIFNJBNAGC != 0) {
-        ELIFNJBNAGC = other.ELIFNJBNAGC;
+      if (other.GameDivisionId != 0) {
+        GameDivisionId = other.GameDivisionId;
       }
       if (other.FNLFIHLHBJI != false) {
         FNLFIHLHBJI = other.FNLFIHLHBJI;
@@ -227,7 +227,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 56: {
-            ELIFNJBNAGC = input.ReadUInt32();
+            GameDivisionId = input.ReadUInt32();
             break;
           }
           case 80: {
@@ -250,7 +250,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 56: {
-            ELIFNJBNAGC = input.ReadUInt32();
+            GameDivisionId = input.ReadUInt32();
             break;
           }
           case 80: {

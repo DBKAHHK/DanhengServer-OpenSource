@@ -24,16 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightLevelSttInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHcmlkRmlnaHRMZXZlbFN0dEluZm8ucHJvdG8aEUFBQkhCREpOQ0dHLnBy",
-            "b3RvGhxHcmlkRmlnaHREYW1hZ2VTdHRJbmZvLnByb3RvIncKFUdyaWRGaWdo",
-            "dExldmVsU3R0SW5mbxI7ChpncmlkX2ZpZ2h0X2RhbWFnZV9zdHRfaW5mbxgB",
-            "IAEoCzIXLkdyaWRGaWdodERhbWFnZVN0dEluZm8SIQoLSU5FS0VGTlBKQ0wY",
-            "BCADKAsyDC5BQUJIQkRKTkNHR0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "ChtHcmlkRmlnaHRMZXZlbFN0dEluZm8ucHJvdG8aIEdyaWRGaWdodFNlY3Rp",
+            "b25SZWNvcmRJbmZvLnByb3RvGhxHcmlkRmlnaHREYW1hZ2VTdHRJbmZvLnBy",
+            "b3RvIpkBChVHcmlkRmlnaHRMZXZlbFN0dEluZm8SOwoaZ3JpZF9maWdodF9k",
+            "YW1hZ2Vfc3R0X2luZm8YASABKAsyFy5HcmlkRmlnaHREYW1hZ2VTdHRJbmZv",
+            "EkMKHmdyaWRfZmlnaHRfc2VjdGlvbl9yZWNvcmRfbGlzdBgEIAMoCzIbLkdy",
+            "aWRGaWdodFNlY3Rpb25SZWNvcmRJbmZvQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AABHBDJNCGGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDamageSttInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightSectionRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDamageSttInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightLevelSttInfo), global::EggLink.DanhengServer.Proto.GridFightLevelSttInfo.Parser, new[]{ "GridFightDamageSttInfo", "INEKEFNPJCL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightLevelSttInfo), global::EggLink.DanhengServer.Proto.GridFightLevelSttInfo.Parser, new[]{ "GridFightDamageSttInfo", "GridFightSectionRecordList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightLevelSttInfo(GridFightLevelSttInfo other) : this() {
       gridFightDamageSttInfo_ = other.gridFightDamageSttInfo_ != null ? other.gridFightDamageSttInfo_.Clone() : null;
-      iNEKEFNPJCL_ = other.iNEKEFNPJCL_.Clone();
+      gridFightSectionRecordList_ = other.gridFightSectionRecordList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -98,15 +99,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "INEKEFNPJCL" field.</summary>
-    public const int INEKEFNPJCLFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.AABHBDJNCGG> _repeated_iNEKEFNPJCL_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.AABHBDJNCGG.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AABHBDJNCGG> iNEKEFNPJCL_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AABHBDJNCGG>();
+    /// <summary>Field number for the "grid_fight_section_record_list" field.</summary>
+    public const int GridFightSectionRecordListFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GridFightSectionRecordInfo> _repeated_gridFightSectionRecordList_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.GridFightSectionRecordInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightSectionRecordInfo> gridFightSectionRecordList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightSectionRecordInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.AABHBDJNCGG> INEKEFNPJCL {
-      get { return iNEKEFNPJCL_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightSectionRecordInfo> GridFightSectionRecordList {
+      get { return gridFightSectionRecordList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -125,7 +126,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(GridFightDamageSttInfo, other.GridFightDamageSttInfo)) return false;
-      if(!iNEKEFNPJCL_.Equals(other.iNEKEFNPJCL_)) return false;
+      if(!gridFightSectionRecordList_.Equals(other.gridFightSectionRecordList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -134,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (gridFightDamageSttInfo_ != null) hash ^= GridFightDamageSttInfo.GetHashCode();
-      hash ^= iNEKEFNPJCL_.GetHashCode();
+      hash ^= gridFightSectionRecordList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -157,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(10);
         output.WriteMessage(GridFightDamageSttInfo);
       }
-      iNEKEFNPJCL_.WriteTo(output, _repeated_iNEKEFNPJCL_codec);
+      gridFightSectionRecordList_.WriteTo(output, _repeated_gridFightSectionRecordList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -172,7 +173,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(10);
         output.WriteMessage(GridFightDamageSttInfo);
       }
-      iNEKEFNPJCL_.WriteTo(ref output, _repeated_iNEKEFNPJCL_codec);
+      gridFightSectionRecordList_.WriteTo(ref output, _repeated_gridFightSectionRecordList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -186,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
       if (gridFightDamageSttInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GridFightDamageSttInfo);
       }
-      size += iNEKEFNPJCL_.CalculateSize(_repeated_iNEKEFNPJCL_codec);
+      size += gridFightSectionRecordList_.CalculateSize(_repeated_gridFightSectionRecordList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -205,7 +206,7 @@ namespace EggLink.DanhengServer.Proto {
         }
         GridFightDamageSttInfo.MergeFrom(other.GridFightDamageSttInfo);
       }
-      iNEKEFNPJCL_.Add(other.iNEKEFNPJCL_);
+      gridFightSectionRecordList_.Add(other.gridFightSectionRecordList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -229,7 +230,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 34: {
-            iNEKEFNPJCL_.AddEntriesFrom(input, _repeated_iNEKEFNPJCL_codec);
+            gridFightSectionRecordList_.AddEntriesFrom(input, _repeated_gridFightSectionRecordList_codec);
             break;
           }
         }
@@ -255,7 +256,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 34: {
-            iNEKEFNPJCL_.AddEntriesFrom(ref input, _repeated_iNEKEFNPJCL_codec);
+            gridFightSectionRecordList_.AddEntriesFrom(ref input, _repeated_gridFightSectionRecordList_codec);
             break;
           }
         }

@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightUseOrbCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpHcmlkRmlnaHRVc2VPcmJDc1JlcS5wcm90byI/ChRHcmlkRmlnaHRVc2VP",
-            "cmJDc1JlcRISCgppc19nZXRfYWxsGAwgASgIEhMKC0NHSEVCTkdQTUpEGAMg",
-            "AygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChpHcmlkRmlnaHRVc2VPcmJDc1JlcS5wcm90byJNChRHcmlkRmlnaHRVc2VP",
+            "cmJDc1JlcRISCgppc19nZXRfYWxsGAwgASgIEiEKGXRhcmdldF9vcmJfdW5p",
+            "cXVlX2lkX2xpc3QYAyADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUseOrbCsReq), global::EggLink.DanhengServer.Proto.GridFightUseOrbCsReq.Parser, new[]{ "IsGetAll", "CGHEBNGPMJD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUseOrbCsReq), global::EggLink.DanhengServer.Proto.GridFightUseOrbCsReq.Parser, new[]{ "IsGetAll", "TargetOrbUniqueIdList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightUseOrbCsReq(GridFightUseOrbCsReq other) : this() {
       isGetAll_ = other.isGetAll_;
-      cGHEBNGPMJD_ = other.cGHEBNGPMJD_.Clone();
+      targetOrbUniqueIdList_ = other.targetOrbUniqueIdList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -95,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CGHEBNGPMJD" field.</summary>
-    public const int CGHEBNGPMJDFieldNumber = 3;
-    private static readonly pb::FieldCodec<uint> _repeated_cGHEBNGPMJD_codec
+    /// <summary>Field number for the "target_orb_unique_id_list" field.</summary>
+    public const int TargetOrbUniqueIdListFieldNumber = 3;
+    private static readonly pb::FieldCodec<uint> _repeated_targetOrbUniqueIdList_codec
         = pb::FieldCodec.ForUInt32(26);
-    private readonly pbc::RepeatedField<uint> cGHEBNGPMJD_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> targetOrbUniqueIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> CGHEBNGPMJD {
-      get { return cGHEBNGPMJD_; }
+    public pbc::RepeatedField<uint> TargetOrbUniqueIdList {
+      get { return targetOrbUniqueIdList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (IsGetAll != other.IsGetAll) return false;
-      if(!cGHEBNGPMJD_.Equals(other.cGHEBNGPMJD_)) return false;
+      if(!targetOrbUniqueIdList_.Equals(other.targetOrbUniqueIdList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (IsGetAll != false) hash ^= IsGetAll.GetHashCode();
-      hash ^= cGHEBNGPMJD_.GetHashCode();
+      hash ^= targetOrbUniqueIdList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -150,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      cGHEBNGPMJD_.WriteTo(output, _repeated_cGHEBNGPMJD_codec);
+      targetOrbUniqueIdList_.WriteTo(output, _repeated_targetOrbUniqueIdList_codec);
       if (IsGetAll != false) {
         output.WriteRawTag(96);
         output.WriteBool(IsGetAll);
@@ -165,7 +166,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      cGHEBNGPMJD_.WriteTo(ref output, _repeated_cGHEBNGPMJD_codec);
+      targetOrbUniqueIdList_.WriteTo(ref output, _repeated_targetOrbUniqueIdList_codec);
       if (IsGetAll != false) {
         output.WriteRawTag(96);
         output.WriteBool(IsGetAll);
@@ -183,7 +184,7 @@ namespace EggLink.DanhengServer.Proto {
       if (IsGetAll != false) {
         size += 1 + 1;
       }
-      size += cGHEBNGPMJD_.CalculateSize(_repeated_cGHEBNGPMJD_codec);
+      size += targetOrbUniqueIdList_.CalculateSize(_repeated_targetOrbUniqueIdList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -199,7 +200,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.IsGetAll != false) {
         IsGetAll = other.IsGetAll;
       }
-      cGHEBNGPMJD_.Add(other.cGHEBNGPMJD_);
+      targetOrbUniqueIdList_.Add(other.targetOrbUniqueIdList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -217,7 +218,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 26:
           case 24: {
-            cGHEBNGPMJD_.AddEntriesFrom(input, _repeated_cGHEBNGPMJD_codec);
+            targetOrbUniqueIdList_.AddEntriesFrom(input, _repeated_targetOrbUniqueIdList_codec);
             break;
           }
           case 96: {
@@ -241,7 +242,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 26:
           case 24: {
-            cGHEBNGPMJD_.AddEntriesFrom(ref input, _repeated_cGHEBNGPMJD_codec);
+            targetOrbUniqueIdList_.AddEntriesFrom(ref input, _repeated_targetOrbUniqueIdList_codec);
             break;
           }
           case 96: {

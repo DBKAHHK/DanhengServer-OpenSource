@@ -24,33 +24,33 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightPendingActionReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHcmlkRmlnaHRQZW5kaW5nQWN0aW9uLnByb3RvGiBHcmlkRmlnaHRBdWdt",
-            "ZW50QWN0aW9uSW5mby5wcm90bxoRS0tLRkxQRE9FUE8ucHJvdG8aI0dyaWRG",
-            "aWdodFBvcnRhbEJ1ZmZBY3Rpb25JbmZvLnByb3RvGhFPSUxJTkRQSUdNTy5w",
-            "cm90bxoRTkZOTU5JRElCRkgucHJvdG8aEUxGSkJOSEVNTkFNLnByb3RvGiRH",
-            "cmlkRmlnaHRFbGl0ZUJyYW5jaEFjdGlvbkluZm8ucHJvdG8aHkdyaWRGaWdo",
-            "dEVsaXRlQWN0aW9uSW5mby5wcm90bxoRQ0lGS0lKS0pCTlAucHJvdG8aEUxQ",
-            "REVIS0ZBT0hMLnByb3RvGh9HcmlkRmlnaHRTdXBwbHlBY3Rpb25JbmZvLnBy",
-            "b3RvGhFEQ09FTkVCTUZHQi5wcm90byLrBAoWR3JpZEZpZ2h0UGVuZGluZ0Fj",
-            "dGlvbhI9ChJwb3J0YWxfYnVmZl9hY3Rpb24YowYgASgLMh4uR3JpZEZpZ2h0",
-            "UG9ydGFsQnVmZkFjdGlvbkluZm9IABI2Cg5hdWdtZW50X2FjdGlvbhjDDiAB",
-            "KAsyGy5HcmlkRmlnaHRBdWdtZW50QWN0aW9uSW5mb0gAEiQKC0NOUENFSEhO",
-            "Qk1MGO0GIAEoCzIMLkxQREVIS0ZBT0hMSAASPwoTZWxpdGVfYnJhbmNoX2Fj",
-            "dGlvbhicByABKAsyHy5HcmlkRmlnaHRFbGl0ZUJyYW5jaEFjdGlvbkluZm9I",
-            "ABIkCgtPQURLT0VNTUdHShjzCyABKAsyDC5LS0tGTFBET0VQT0gAEiQKC0xD",
-            "REdLSU1BT0hCGNMNIAEoCzIMLkRDT0VORUJNRkdCSAASMgoMZWxpdGVfYWN0",
-            "aW9uGIECIAEoCzIZLkdyaWRGaWdodEVsaXRlQWN0aW9uSW5mb0gAEiQKC0dK",
-            "SUFBSUFLRk1DGI4IIAEoCzIMLk9JTElORFBJR01PSAASNAoNc3VwcGx5X2Fj",
-            "dGlvbhi+DCABKAsyGi5HcmlkRmlnaHRTdXBwbHlBY3Rpb25JbmZvSAASJAoL",
-            "UENPTURLRVBCR0gYpA4gASgLMgwuQ0lGS0lKS0pCTlBIABIkCgtITkpIS0xM",
-            "SU1QShjfByABKAsyDC5MRkpCTkhFTU5BTUgAEiQKC0dIUEhFUENOQUFKGMQJ",
-            "IAEoCzIMLk5GTk1OSURJQkZISAASFgoOcXVldWVfcG9zaXRpb24YAiABKA1C",
-            "DQoLS0lQR1BQTEtBTUVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "ChxHcmlkRmlnaHRQZW5kaW5nQWN0aW9uLnByb3RvGhFMUERFSEtGQU9ITC5w",
+            "cm90bxogR3JpZEZpZ2h0QXVnbWVudEFjdGlvbkluZm8ucHJvdG8aIEdyaWRG",
+            "aWdodFByZXBhcmVBY3Rpb25JbmZvLnByb3RvGhFDSUZLSUpLSkJOUC5wcm90",
+            "bxoeR3JpZEZpZ2h0RWxpdGVBY3Rpb25JbmZvLnByb3RvGhFLS0tGTFBET0VQ",
+            "Ty5wcm90bxokR3JpZEZpZ2h0RWxpdGVCcmFuY2hBY3Rpb25JbmZvLnByb3Rv",
+            "GhFMRkpCTkhFTU5BTS5wcm90bxofR3JpZEZpZ2h0U3VwcGx5QWN0aW9uSW5m",
+            "by5wcm90bxojR3JpZEZpZ2h0UG9ydGFsQnVmZkFjdGlvbkluZm8ucHJvdG8a",
+            "EU5GTk1OSURJQkZILnByb3RvGhFEQ09FTkVCTUZHQi5wcm90byL9BAoWR3Jp",
+            "ZEZpZ2h0UGVuZGluZ0FjdGlvbhI9ChJwb3J0YWxfYnVmZl9hY3Rpb24YowYg",
+            "ASgLMh4uR3JpZEZpZ2h0UG9ydGFsQnVmZkFjdGlvbkluZm9IABI2Cg5hdWdt",
+            "ZW50X2FjdGlvbhjDDiABKAsyGy5HcmlkRmlnaHRBdWdtZW50QWN0aW9uSW5m",
+            "b0gAEiQKC0NOUENFSEhOQk1MGO0GIAEoCzIMLkxQREVIS0ZBT0hMSAASPwoT",
+            "ZWxpdGVfYnJhbmNoX2FjdGlvbhicByABKAsyHy5HcmlkRmlnaHRFbGl0ZUJy",
+            "YW5jaEFjdGlvbkluZm9IABIkCgtPQURLT0VNTUdHShjzCyABKAsyDC5LS0tG",
+            "TFBET0VQT0gAEiQKC0xDREdLSU1BT0hCGNMNIAEoCzIMLkRDT0VORUJNRkdC",
+            "SAASMgoMZWxpdGVfYWN0aW9uGIECIAEoCzIZLkdyaWRGaWdodEVsaXRlQWN0",
+            "aW9uSW5mb0gAEjYKDnByZXBhcmVfYWN0aW9uGI4IIAEoCzIbLkdyaWRGaWdo",
+            "dFByZXBhcmVBY3Rpb25JbmZvSAASNAoNc3VwcGx5X2FjdGlvbhi+DCABKAsy",
+            "Gi5HcmlkRmlnaHRTdXBwbHlBY3Rpb25JbmZvSAASJAoLUENPTURLRVBCR0gY",
+            "pA4gASgLMgwuQ0lGS0lKS0pCTlBIABIkCgtITkpIS0xMSU1QShjfByABKAsy",
+            "DC5MRkpCTkhFTU5BTUgAEiQKC0dIUEhFUENOQUFKGMQJIAEoCzIMLk5GTk1O",
+            "SURJQkZISAASFgoOcXVldWVfcG9zaXRpb24YAiABKA1CDQoLS0lQR1BQTEtB",
+            "TUVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightAugmentActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KKKFLPDOEPOReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OILINDPIGMOReflection.Descriptor, global::EggLink.DanhengServer.Proto.NFNMNIDIBFHReflection.Descriptor, global::EggLink.DanhengServer.Proto.LFJBNHEMNAMReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteBranchActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CIFKIJKJBNPReflection.Descriptor, global::EggLink.DanhengServer.Proto.LPDEHKFAOHLReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCOENEBMFGBReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LPDEHKFAOHLReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPrepareActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CIFKIJKJBNPReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KKKFLPDOEPOReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteBranchActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LFJBNHEMNAMReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NFNMNIDIBFHReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCOENEBMFGBReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightPendingAction), global::EggLink.DanhengServer.Proto.GridFightPendingAction.Parser, new[]{ "PortalBuffAction", "AugmentAction", "CNPCEHHNBML", "EliteBranchAction", "OADKOEMMGGJ", "LCDGKIMAOHB", "EliteAction", "GJIAAIAKFMC", "SupplyAction", "PCOMDKEPBGH", "HNJHKLLIMPJ", "GHPHEPCNAAJ", "QueuePosition" }, new[]{ "KIPGPPLKAME" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightPendingAction), global::EggLink.DanhengServer.Proto.GridFightPendingAction.Parser, new[]{ "PortalBuffAction", "AugmentAction", "CNPCEHHNBML", "EliteBranchAction", "OADKOEMMGGJ", "LCDGKIMAOHB", "EliteAction", "PrepareAction", "SupplyAction", "PCOMDKEPBGH", "HNJHKLLIMPJ", "GHPHEPCNAAJ", "QueuePosition" }, new[]{ "KIPGPPLKAME" }, null, null, null)
           }));
     }
     #endregion
@@ -115,8 +115,8 @@ namespace EggLink.DanhengServer.Proto {
         case KIPGPPLKAMEOneofCase.EliteAction:
           EliteAction = other.EliteAction.Clone();
           break;
-        case KIPGPPLKAMEOneofCase.GJIAAIAKFMC:
-          GJIAAIAKFMC = other.GJIAAIAKFMC.Clone();
+        case KIPGPPLKAMEOneofCase.PrepareAction:
+          PrepareAction = other.PrepareAction.Clone();
           break;
         case KIPGPPLKAMEOneofCase.SupplyAction:
           SupplyAction = other.SupplyAction.Clone();
@@ -225,15 +225,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "GJIAAIAKFMC" field.</summary>
-    public const int GJIAAIAKFMCFieldNumber = 1038;
+    /// <summary>Field number for the "prepare_action" field.</summary>
+    public const int PrepareActionFieldNumber = 1038;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.OILINDPIGMO GJIAAIAKFMC {
-      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GJIAAIAKFMC ? (global::EggLink.DanhengServer.Proto.OILINDPIGMO) kIPGPPLKAME_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightPrepareActionInfo PrepareAction {
+      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PrepareAction ? (global::EggLink.DanhengServer.Proto.GridFightPrepareActionInfo) kIPGPPLKAME_ : null; }
       set {
         kIPGPPLKAME_ = value;
-        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.GJIAAIAKFMC;
+        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.PrepareAction;
       }
     }
 
@@ -308,7 +308,7 @@ namespace EggLink.DanhengServer.Proto {
       OADKOEMMGGJ = 1523,
       LCDGKIMAOHB = 1747,
       EliteAction = 257,
-      GJIAAIAKFMC = 1038,
+      PrepareAction = 1038,
       SupplyAction = 1598,
       PCOMDKEPBGH = 1828,
       HNJHKLLIMPJ = 991,
@@ -350,7 +350,7 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(OADKOEMMGGJ, other.OADKOEMMGGJ)) return false;
       if (!object.Equals(LCDGKIMAOHB, other.LCDGKIMAOHB)) return false;
       if (!object.Equals(EliteAction, other.EliteAction)) return false;
-      if (!object.Equals(GJIAAIAKFMC, other.GJIAAIAKFMC)) return false;
+      if (!object.Equals(PrepareAction, other.PrepareAction)) return false;
       if (!object.Equals(SupplyAction, other.SupplyAction)) return false;
       if (!object.Equals(PCOMDKEPBGH, other.PCOMDKEPBGH)) return false;
       if (!object.Equals(HNJHKLLIMPJ, other.HNJHKLLIMPJ)) return false;
@@ -371,7 +371,7 @@ namespace EggLink.DanhengServer.Proto {
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.OADKOEMMGGJ) hash ^= OADKOEMMGGJ.GetHashCode();
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.LCDGKIMAOHB) hash ^= LCDGKIMAOHB.GetHashCode();
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EliteAction) hash ^= EliteAction.GetHashCode();
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GJIAAIAKFMC) hash ^= GJIAAIAKFMC.GetHashCode();
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PrepareAction) hash ^= PrepareAction.GetHashCode();
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.SupplyAction) hash ^= SupplyAction.GetHashCode();
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PCOMDKEPBGH) hash ^= PCOMDKEPBGH.GetHashCode();
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.HNJHKLLIMPJ) hash ^= HNJHKLLIMPJ.GetHashCode();
@@ -420,9 +420,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(250, 61);
         output.WriteMessage(HNJHKLLIMPJ);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GJIAAIAKFMC) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PrepareAction) {
         output.WriteRawTag(242, 64);
-        output.WriteMessage(GJIAAIAKFMC);
+        output.WriteMessage(PrepareAction);
       }
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GHPHEPCNAAJ) {
         output.WriteRawTag(162, 76);
@@ -482,9 +482,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(250, 61);
         output.WriteMessage(HNJHKLLIMPJ);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GJIAAIAKFMC) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PrepareAction) {
         output.WriteRawTag(242, 64);
-        output.WriteMessage(GJIAAIAKFMC);
+        output.WriteMessage(PrepareAction);
       }
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GHPHEPCNAAJ) {
         output.WriteRawTag(162, 76);
@@ -541,8 +541,8 @@ namespace EggLink.DanhengServer.Proto {
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EliteAction) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(EliteAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GJIAAIAKFMC) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GJIAAIAKFMC);
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PrepareAction) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PrepareAction);
       }
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.SupplyAction) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SupplyAction);
@@ -617,11 +617,11 @@ namespace EggLink.DanhengServer.Proto {
           }
           EliteAction.MergeFrom(other.EliteAction);
           break;
-        case KIPGPPLKAMEOneofCase.GJIAAIAKFMC:
-          if (GJIAAIAKFMC == null) {
-            GJIAAIAKFMC = new global::EggLink.DanhengServer.Proto.OILINDPIGMO();
+        case KIPGPPLKAMEOneofCase.PrepareAction:
+          if (PrepareAction == null) {
+            PrepareAction = new global::EggLink.DanhengServer.Proto.GridFightPrepareActionInfo();
           }
-          GJIAAIAKFMC.MergeFrom(other.GJIAAIAKFMC);
+          PrepareAction.MergeFrom(other.PrepareAction);
           break;
         case KIPGPPLKAMEOneofCase.SupplyAction:
           if (SupplyAction == null) {
@@ -714,12 +714,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 8306: {
-            global::EggLink.DanhengServer.Proto.OILINDPIGMO subBuilder = new global::EggLink.DanhengServer.Proto.OILINDPIGMO();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GJIAAIAKFMC) {
-              subBuilder.MergeFrom(GJIAAIAKFMC);
+            global::EggLink.DanhengServer.Proto.GridFightPrepareActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightPrepareActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PrepareAction) {
+              subBuilder.MergeFrom(PrepareAction);
             }
             input.ReadMessage(subBuilder);
-            GJIAAIAKFMC = subBuilder;
+            PrepareAction = subBuilder;
             break;
           }
           case 9762: {
@@ -841,12 +841,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 8306: {
-            global::EggLink.DanhengServer.Proto.OILINDPIGMO subBuilder = new global::EggLink.DanhengServer.Proto.OILINDPIGMO();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GJIAAIAKFMC) {
-              subBuilder.MergeFrom(GJIAAIAKFMC);
+            global::EggLink.DanhengServer.Proto.GridFightPrepareActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightPrepareActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PrepareAction) {
+              subBuilder.MergeFrom(PrepareAction);
             }
             input.ReadMessage(subBuilder);
-            GJIAAIAKFMC = subBuilder;
+            PrepareAction = subBuilder;
             break;
           }
           case 9762: {

@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static EGBOKNNBKGNReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFFR0JPS05OQktHTi5wcm90byIiCgtFR0JPS05OQktHThITCgtMSk1DREFM",
-            "R0lJThgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "ChFFR0JPS05OQktHTi5wcm90byIrCgtFR0JPS05OQktHThIcChRkcmVzc19y",
+            "b2xlX3VuaXF1ZV9pZBgCIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EGBOKNNBKGN), global::EggLink.DanhengServer.Proto.EGBOKNNBKGN.Parser, new[]{ "LJMCDALGIIN" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.EGBOKNNBKGN), global::EggLink.DanhengServer.Proto.EGBOKNNBKGN.Parser, new[]{ "DressRoleUniqueId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EGBOKNNBKGN(EGBOKNNBKGN other) : this() {
-      lJMCDALGIIN_ = other.lJMCDALGIIN_;
+      dressRoleUniqueId_ = other.dressRoleUniqueId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new EGBOKNNBKGN(this);
     }
 
-    /// <summary>Field number for the "LJMCDALGIIN" field.</summary>
-    public const int LJMCDALGIINFieldNumber = 2;
-    private uint lJMCDALGIIN_;
+    /// <summary>Field number for the "dress_role_unique_id" field.</summary>
+    public const int DressRoleUniqueIdFieldNumber = 2;
+    private uint dressRoleUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint LJMCDALGIIN {
-      get { return lJMCDALGIIN_; }
+    public uint DressRoleUniqueId {
+      get { return dressRoleUniqueId_; }
       set {
-        lJMCDALGIIN_ = value;
+        dressRoleUniqueId_ = value;
       }
     }
 
@@ -109,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (LJMCDALGIIN != other.LJMCDALGIIN) return false;
+      if (DressRoleUniqueId != other.DressRoleUniqueId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (LJMCDALGIIN != 0) hash ^= LJMCDALGIIN.GetHashCode();
+      if (DressRoleUniqueId != 0) hash ^= DressRoleUniqueId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -136,9 +136,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (LJMCDALGIIN != 0) {
+      if (DressRoleUniqueId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(LJMCDALGIIN);
+        output.WriteUInt32(DressRoleUniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -150,9 +150,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (LJMCDALGIIN != 0) {
+      if (DressRoleUniqueId != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(LJMCDALGIIN);
+        output.WriteUInt32(DressRoleUniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -164,8 +164,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (LJMCDALGIIN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LJMCDALGIIN);
+      if (DressRoleUniqueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(DressRoleUniqueId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -179,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.LJMCDALGIIN != 0) {
-        LJMCDALGIIN = other.LJMCDALGIIN;
+      if (other.DressRoleUniqueId != 0) {
+        DressRoleUniqueId = other.DressRoleUniqueId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -198,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 16: {
-            LJMCDALGIIN = input.ReadUInt32();
+            DressRoleUniqueId = input.ReadUInt32();
             break;
           }
         }
@@ -217,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 16: {
-            LJMCDALGIIN = input.ReadUInt32();
+            DressRoleUniqueId = input.ReadUInt32();
             break;
           }
         }

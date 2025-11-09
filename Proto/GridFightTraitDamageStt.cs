@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightTraitDamageSttReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HcmlkRmlnaHRUcmFpdERhbWFnZVN0dC5wcm90byJSChdHcmlkRmlnaHRU",
-            "cmFpdERhbWFnZVN0dBIVCg1lcXVpcF9yb2xlX2lkGAMgASgNEg4KBmRhbWFn",
-            "ZRgCIAEoARIQCgh0cmFpdF9pZBgKIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch1HcmlkRmlnaHRUcmFpdERhbWFnZVN0dC5wcm90byJZChdHcmlkRmlnaHRU",
+            "cmFpdERhbWFnZVN0dBIcChR0cmFpdF9leHRyYV9yb2xlX251bRgDIAEoDRIO",
+            "CgZkYW1hZ2UYAiABKAESEAoIdHJhaXRfaWQYCiABKA1CHqoCG0VnZ0xpbmsu",
+            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitDamageStt), global::EggLink.DanhengServer.Proto.GridFightTraitDamageStt.Parser, new[]{ "EquipRoleId", "Damage", "TraitId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitDamageStt), global::EggLink.DanhengServer.Proto.GridFightTraitDamageStt.Parser, new[]{ "TraitExtraRoleNum", "Damage", "TraitId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightTraitDamageStt(GridFightTraitDamageStt other) : this() {
-      equipRoleId_ = other.equipRoleId_;
+      traitExtraRoleNum_ = other.traitExtraRoleNum_;
       damage_ = other.damage_;
       traitId_ = other.traitId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightTraitDamageStt(this);
     }
 
-    /// <summary>Field number for the "equip_role_id" field.</summary>
-    public const int EquipRoleIdFieldNumber = 3;
-    private uint equipRoleId_;
+    /// <summary>Field number for the "trait_extra_role_num" field.</summary>
+    public const int TraitExtraRoleNumFieldNumber = 3;
+    private uint traitExtraRoleNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EquipRoleId {
-      get { return equipRoleId_; }
+    public uint TraitExtraRoleNum {
+      get { return traitExtraRoleNum_; }
       set {
-        equipRoleId_ = value;
+        traitExtraRoleNum_ = value;
       }
     }
 
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (EquipRoleId != other.EquipRoleId) return false;
+      if (TraitExtraRoleNum != other.TraitExtraRoleNum) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Damage, other.Damage)) return false;
       if (TraitId != other.TraitId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (EquipRoleId != 0) hash ^= EquipRoleId.GetHashCode();
+      if (TraitExtraRoleNum != 0) hash ^= TraitExtraRoleNum.GetHashCode();
       if (Damage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Damage);
       if (TraitId != 0) hash ^= TraitId.GetHashCode();
       if (_unknownFields != null) {
@@ -171,9 +171,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(17);
         output.WriteDouble(Damage);
       }
-      if (EquipRoleId != 0) {
+      if (TraitExtraRoleNum != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(EquipRoleId);
+        output.WriteUInt32(TraitExtraRoleNum);
       }
       if (TraitId != 0) {
         output.WriteRawTag(80);
@@ -193,9 +193,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(17);
         output.WriteDouble(Damage);
       }
-      if (EquipRoleId != 0) {
+      if (TraitExtraRoleNum != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(EquipRoleId);
+        output.WriteUInt32(TraitExtraRoleNum);
       }
       if (TraitId != 0) {
         output.WriteRawTag(80);
@@ -211,8 +211,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (EquipRoleId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EquipRoleId);
+      if (TraitExtraRoleNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitExtraRoleNum);
       }
       if (Damage != 0D) {
         size += 1 + 8;
@@ -232,8 +232,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.EquipRoleId != 0) {
-        EquipRoleId = other.EquipRoleId;
+      if (other.TraitExtraRoleNum != 0) {
+        TraitExtraRoleNum = other.TraitExtraRoleNum;
       }
       if (other.Damage != 0D) {
         Damage = other.Damage;
@@ -261,7 +261,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
-            EquipRoleId = input.ReadUInt32();
+            TraitExtraRoleNum = input.ReadUInt32();
             break;
           }
           case 80: {
@@ -288,7 +288,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 24: {
-            EquipRoleId = input.ReadUInt32();
+            TraitExtraRoleNum = input.ReadUInt32();
             break;
           }
           case 80: {

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static ChimeraGetDataScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlDaGltZXJhR2V0RGF0YVNjUnNwLnByb3RvGhFESUZQRFBMQ0lHRC5wcm90",
-            "bxoRT0FQRE1LS0tFT0wucHJvdG8aEUpDTkpERkZDTERHLnByb3RvGhFNUEpE",
-            "SUJDQ09IRi5wcm90byLCAwoTQ2hpbWVyYUdldERhdGFTY1JzcBIhCgtCQk1H",
+            "ChlDaGltZXJhR2V0RGF0YVNjUnNwLnByb3RvGhFKQ05KREZGQ0xERy5wcm90",
+            "bxoRT0FQRE1LS0tFT0wucHJvdG8aEU1QSkRJQkNDT0hGLnByb3RvGhFESUZQ",
+            "RFBMQ0lHRC5wcm90byLCAwoTQ2hpbWVyYUdldERhdGFTY1JzcBIhCgtCQk1H",
             "SUlNRUNFTBgLIAEoDjIMLk9BUERNS0tLRU9MEhMKC0lKRUlPTU1GUEtBGA8g",
             "ASgNEhMKC0NKRUtKSFBJQkpMGAcgASgNEhMKC0pGUE5NT09OTE5KGAkgASgN",
             "EiEKC05DREFPQkxNSEhQGAEgAygLMgwuRElGUERQTENJR0QSFAoLQ0FHQVBM",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "RkFGTk5DSkpORxgOIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
             "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.DIFPDPLCIGDReflection.Descriptor, global::EggLink.DanhengServer.Proto.OAPDMKKKEOLReflection.Descriptor, global::EggLink.DanhengServer.Proto.JCNJDFFCLDGReflection.Descriptor, global::EggLink.DanhengServer.Proto.MPJDIBCCOHFReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JCNJDFFCLDGReflection.Descriptor, global::EggLink.DanhengServer.Proto.OAPDMKKKEOLReflection.Descriptor, global::EggLink.DanhengServer.Proto.MPJDIBCCOHFReflection.Descriptor, global::EggLink.DanhengServer.Proto.DIFPDPLCIGDReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChimeraGetDataScRsp), global::EggLink.DanhengServer.Proto.ChimeraGetDataScRsp.Parser, new[]{ "BBMGIIMECEL", "IJEIOMMFPKA", "CJEKJHPIBJL", "JFPNMOONLNJ", "NCDAOBLMHHP", "CAGAPLNHABB", "LFKFOCJFNCJ", "KIIMKAEAJAL", "Lineup", "EAIOJCNLMNG", "KILPNHJBPDB", "OLLDKAJOAJD", "Retcode", "CJKCNHCLMGD", "CPBDBAIDAEH", "BBBGKCHNOCK", "GBEMDNCKKBA", "MFAFNNCJJNG" }, null, null, null, null)
           }));

@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightSupplyActionResultReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFHcmlkRmlnaHRTdXBwbHlBY3Rpb25SZXN1bHQucHJvdG8iMgobR3JpZEZp",
-            "Z2h0U3VwcGx5QWN0aW9uUmVzdWx0EhMKC0FPRUFQSURESk5DGAIgAygNQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiFHcmlkRmlnaHRTdXBwbHlBY3Rpb25SZXN1bHQucHJvdG8iPAobR3JpZEZp",
+            "Z2h0U3VwcGx5QWN0aW9uUmVzdWx0Eh0KFXNlbGVjdF9zdXBwbHlfaW5kZXhl",
+            "cxgCIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSupplyActionResult), global::EggLink.DanhengServer.Proto.GridFightSupplyActionResult.Parser, new[]{ "AOEAPIDDJNC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSupplyActionResult), global::EggLink.DanhengServer.Proto.GridFightSupplyActionResult.Parser, new[]{ "SelectSupplyIndexes" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightSupplyActionResult(GridFightSupplyActionResult other) : this() {
-      aOEAPIDDJNC_ = other.aOEAPIDDJNC_.Clone();
+      selectSupplyIndexes_ = other.selectSupplyIndexes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +83,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightSupplyActionResult(this);
     }
 
-    /// <summary>Field number for the "AOEAPIDDJNC" field.</summary>
-    public const int AOEAPIDDJNCFieldNumber = 2;
-    private static readonly pb::FieldCodec<uint> _repeated_aOEAPIDDJNC_codec
+    /// <summary>Field number for the "select_supply_indexes" field.</summary>
+    public const int SelectSupplyIndexesFieldNumber = 2;
+    private static readonly pb::FieldCodec<uint> _repeated_selectSupplyIndexes_codec
         = pb::FieldCodec.ForUInt32(18);
-    private readonly pbc::RepeatedField<uint> aOEAPIDDJNC_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> selectSupplyIndexes_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> AOEAPIDDJNC {
-      get { return aOEAPIDDJNC_; }
+    public pbc::RepeatedField<uint> SelectSupplyIndexes {
+      get { return selectSupplyIndexes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +109,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!aOEAPIDDJNC_.Equals(other.aOEAPIDDJNC_)) return false;
+      if(!selectSupplyIndexes_.Equals(other.selectSupplyIndexes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +117,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= aOEAPIDDJNC_.GetHashCode();
+      hash ^= selectSupplyIndexes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      aOEAPIDDJNC_.WriteTo(output, _repeated_aOEAPIDDJNC_codec);
+      selectSupplyIndexes_.WriteTo(output, _repeated_selectSupplyIndexes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +147,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      aOEAPIDDJNC_.WriteTo(ref output, _repeated_aOEAPIDDJNC_codec);
+      selectSupplyIndexes_.WriteTo(ref output, _repeated_selectSupplyIndexes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +158,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += aOEAPIDDJNC_.CalculateSize(_repeated_aOEAPIDDJNC_codec);
+      size += selectSupplyIndexes_.CalculateSize(_repeated_selectSupplyIndexes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      aOEAPIDDJNC_.Add(other.aOEAPIDDJNC_);
+      selectSupplyIndexes_.Add(other.selectSupplyIndexes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -188,7 +189,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 18:
           case 16: {
-            aOEAPIDDJNC_.AddEntriesFrom(input, _repeated_aOEAPIDDJNC_codec);
+            selectSupplyIndexes_.AddEntriesFrom(input, _repeated_selectSupplyIndexes_codec);
             break;
           }
         }
@@ -208,7 +209,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 18:
           case 16: {
-            aOEAPIDDJNC_.AddEntriesFrom(ref input, _repeated_aOEAPIDDJNC_codec);
+            selectSupplyIndexes_.AddEntriesFrom(ref input, _repeated_selectSupplyIndexes_codec);
             break;
           }
         }

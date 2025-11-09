@@ -24,14 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static JNEAPLKKPEJReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFKTkVBUExLS1BFSi5wcm90bxoRSEtFSUNNS01JQksucHJvdG8iYAoLSk5F",
-            "QVBMS0tQRUoSEQoJdW5pcXVlX2lkGAEgASgNEg4KBm5wY19pZBgCIAEoDRIL",
-            "CgNwb3MYAyABKA0SIQoLQU9FRklIQkJBR0UYBCADKAsyDC5IS0VJQ01LTUlC",
-            "S0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFKTkVBUExLS1BFSi5wcm90bxoiQmF0dGxlR3JpZEZpZ2h0RXF1aXBtZW50",
+            "SW5mby5wcm90byJ/CgtKTkVBUExLS1BFShIRCgl1bmlxdWVfaWQYASABKA0S",
+            "DgoGbnBjX2lkGAIgASgNEgsKA3BvcxgDIAEoDRJAChlncmlkX2ZpZ2h0X2Vx",
+            "dWlwbWVudF9saXN0GAQgAygLMh0uQmF0dGxlR3JpZEZpZ2h0RXF1aXBtZW50",
+            "SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HKEICMKMIBKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleGridFightEquipmentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JNEAPLKKPEJ), global::EggLink.DanhengServer.Proto.JNEAPLKKPEJ.Parser, new[]{ "UniqueId", "NpcId", "Pos", "AOEFIHBBAGE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.JNEAPLKKPEJ), global::EggLink.DanhengServer.Proto.JNEAPLKKPEJ.Parser, new[]{ "UniqueId", "NpcId", "Pos", "GridFightEquipmentList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
       uniqueId_ = other.uniqueId_;
       npcId_ = other.npcId_;
       pos_ = other.pos_;
-      aOEFIHBBAGE_ = other.aOEFIHBBAGE_.Clone();
+      gridFightEquipmentList_ = other.gridFightEquipmentList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -122,15 +123,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "AOEFIHBBAGE" field.</summary>
-    public const int AOEFIHBBAGEFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.HKEICMKMIBK> _repeated_aOEFIHBBAGE_codec
-        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.HKEICMKMIBK.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HKEICMKMIBK> aOEFIHBBAGE_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HKEICMKMIBK>();
+    /// <summary>Field number for the "grid_fight_equipment_list" field.</summary>
+    public const int GridFightEquipmentListFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BattleGridFightEquipmentInfo> _repeated_gridFightEquipmentList_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.BattleGridFightEquipmentInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BattleGridFightEquipmentInfo> gridFightEquipmentList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BattleGridFightEquipmentInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.HKEICMKMIBK> AOEFIHBBAGE {
-      get { return aOEFIHBBAGE_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BattleGridFightEquipmentInfo> GridFightEquipmentList {
+      get { return gridFightEquipmentList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -151,7 +152,7 @@ namespace EggLink.DanhengServer.Proto {
       if (UniqueId != other.UniqueId) return false;
       if (NpcId != other.NpcId) return false;
       if (Pos != other.Pos) return false;
-      if(!aOEFIHBBAGE_.Equals(other.aOEFIHBBAGE_)) return false;
+      if(!gridFightEquipmentList_.Equals(other.gridFightEquipmentList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,7 +163,7 @@ namespace EggLink.DanhengServer.Proto {
       if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
       if (NpcId != 0) hash ^= NpcId.GetHashCode();
       if (Pos != 0) hash ^= Pos.GetHashCode();
-      hash ^= aOEFIHBBAGE_.GetHashCode();
+      hash ^= gridFightEquipmentList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -193,7 +194,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(Pos);
       }
-      aOEFIHBBAGE_.WriteTo(output, _repeated_aOEFIHBBAGE_codec);
+      gridFightEquipmentList_.WriteTo(output, _repeated_gridFightEquipmentList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -216,7 +217,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(Pos);
       }
-      aOEFIHBBAGE_.WriteTo(ref output, _repeated_aOEFIHBBAGE_codec);
+      gridFightEquipmentList_.WriteTo(ref output, _repeated_gridFightEquipmentList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -236,7 +237,7 @@ namespace EggLink.DanhengServer.Proto {
       if (Pos != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pos);
       }
-      size += aOEFIHBBAGE_.CalculateSize(_repeated_aOEFIHBBAGE_codec);
+      size += gridFightEquipmentList_.CalculateSize(_repeated_gridFightEquipmentList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -258,7 +259,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Pos != 0) {
         Pos = other.Pos;
       }
-      aOEFIHBBAGE_.Add(other.aOEFIHBBAGE_);
+      gridFightEquipmentList_.Add(other.gridFightEquipmentList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -287,7 +288,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 34: {
-            aOEFIHBBAGE_.AddEntriesFrom(input, _repeated_aOEFIHBBAGE_codec);
+            gridFightEquipmentList_.AddEntriesFrom(input, _repeated_gridFightEquipmentList_codec);
             break;
           }
         }
@@ -318,7 +319,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 34: {
-            aOEFIHBBAGE_.AddEntriesFrom(ref input, _repeated_aOEFIHBBAGE_codec);
+            gridFightEquipmentList_.AddEntriesFrom(ref input, _repeated_gridFightEquipmentList_codec);
             break;
           }
         }

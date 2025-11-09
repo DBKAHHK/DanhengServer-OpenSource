@@ -24,12 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightUseConsumableCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFHcmlkRmlnaHRVc2VDb25zdW1hYmxlQ3NSZXEucHJvdG8aEUZKREdLQ1BB",
-            "SE1MLnByb3RvIlMKG0dyaWRGaWdodFVzZUNvbnN1bWFibGVDc1JlcRIjCg1k",
-            "aXNwbGF5X3ZhbHVlGAkgASgLMgwuRkpER0tDUEFITUwSDwoHaXRlbV9pZBgN",
-            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "CiFHcmlkRmlnaHRVc2VDb25zdW1hYmxlQ3NSZXEucHJvdG8aI0dyaWRGaWdo",
+            "dENvbnN1bWFibGVUYXJnZXRJbmZvLnByb3RvImUKG0dyaWRGaWdodFVzZUNv",
+            "bnN1bWFibGVDc1JlcRI1Cg1kaXNwbGF5X3ZhbHVlGAkgASgLMh4uR3JpZEZp",
+            "Z2h0Q29uc3VtYWJsZVRhcmdldEluZm8SDwoHaXRlbV9pZBgNIAEoDUIeqgIb",
+            "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FJDGKCPAHMLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUseConsumableCsReq), global::EggLink.DanhengServer.Proto.GridFightUseConsumableCsReq.Parser, new[]{ "DisplayValue", "ItemId" }, null, null, null, null)
           }));
@@ -86,10 +87,10 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "display_value" field.</summary>
     public const int DisplayValueFieldNumber = 9;
-    private global::EggLink.DanhengServer.Proto.FJDGKCPAHML displayValue_;
+    private global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfo displayValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.FJDGKCPAHML DisplayValue {
+    public global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfo DisplayValue {
       get { return displayValue_; }
       set {
         displayValue_ = value;
@@ -208,7 +209,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (other.displayValue_ != null) {
         if (displayValue_ == null) {
-          DisplayValue = new global::EggLink.DanhengServer.Proto.FJDGKCPAHML();
+          DisplayValue = new global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfo();
         }
         DisplayValue.MergeFrom(other.DisplayValue);
       }
@@ -232,7 +233,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 74: {
             if (displayValue_ == null) {
-              DisplayValue = new global::EggLink.DanhengServer.Proto.FJDGKCPAHML();
+              DisplayValue = new global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfo();
             }
             input.ReadMessage(DisplayValue);
             break;
@@ -258,7 +259,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 74: {
             if (displayValue_ == null) {
-              DisplayValue = new global::EggLink.DanhengServer.Proto.FJDGKCPAHML();
+              DisplayValue = new global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfo();
             }
             input.ReadMessage(DisplayValue);
             break;

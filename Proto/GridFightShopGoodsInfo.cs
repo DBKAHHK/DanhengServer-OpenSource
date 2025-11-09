@@ -28,13 +28,13 @@ namespace EggLink.DanhengServer.Proto {
             "R29vZHNJbmZvLnByb3RvGhFMSEJJSkRQQk9HTC5wcm90byKxAQoWR3JpZEZp",
             "Z2h0U2hvcEdvb2RzSW5mbxIzCg9yb2xlX2dvb2RzX2luZm8YpwMgASgLMhcu",
             "R3JpZEZpZ2h0Um9sZUdvb2RzSW5mb0gAEiQKC0JPREZPR0dOQUZGGOUMIAEo",
-            "CzIMLkxIQklKRFBCT0dMSAASEwoLTk9OT01CQUFGR00YDyABKAgSGAoQc2hv",
+            "CzIMLkxIQklKRFBCT0dMSAASEwoLaXNfc29sZF9vdXQYDyABKAgSGAoQc2hv",
             "cF9nb29kc19wcmljZRgNIAEoDUINCgtORE5ORkJLQ0RITUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightRoleGoodsInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LHBIJDPBOGLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightShopGoodsInfo), global::EggLink.DanhengServer.Proto.GridFightShopGoodsInfo.Parser, new[]{ "RoleGoodsInfo", "BODFOGGNAFF", "NONOMBAAFGM", "ShopGoodsPrice" }, new[]{ "NDNNFBKCDHM" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightShopGoodsInfo), global::EggLink.DanhengServer.Proto.GridFightShopGoodsInfo.Parser, new[]{ "RoleGoodsInfo", "BODFOGGNAFF", "IsSoldOut", "ShopGoodsPrice" }, new[]{ "NDNNFBKCDHM" }, null, null, null)
           }));
     }
     #endregion
@@ -76,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightShopGoodsInfo(GridFightShopGoodsInfo other) : this() {
-      nONOMBAAFGM_ = other.nONOMBAAFGM_;
+      isSoldOut_ = other.isSoldOut_;
       shopGoodsPrice_ = other.shopGoodsPrice_;
       switch (other.NDNNFBKCDHMCase) {
         case NDNNFBKCDHMOneofCase.RoleGoodsInfo:
@@ -120,15 +120,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NONOMBAAFGM" field.</summary>
-    public const int NONOMBAAFGMFieldNumber = 15;
-    private bool nONOMBAAFGM_;
+    /// <summary>Field number for the "is_sold_out" field.</summary>
+    public const int IsSoldOutFieldNumber = 15;
+    private bool isSoldOut_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool NONOMBAAFGM {
-      get { return nONOMBAAFGM_; }
+    public bool IsSoldOut {
+      get { return isSoldOut_; }
       set {
-        nONOMBAAFGM_ = value;
+        isSoldOut_ = value;
       }
     }
 
@@ -182,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (!object.Equals(RoleGoodsInfo, other.RoleGoodsInfo)) return false;
       if (!object.Equals(BODFOGGNAFF, other.BODFOGGNAFF)) return false;
-      if (NONOMBAAFGM != other.NONOMBAAFGM) return false;
+      if (IsSoldOut != other.IsSoldOut) return false;
       if (ShopGoodsPrice != other.ShopGoodsPrice) return false;
       if (NDNNFBKCDHMCase != other.NDNNFBKCDHMCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -194,7 +194,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.RoleGoodsInfo) hash ^= RoleGoodsInfo.GetHashCode();
       if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.BODFOGGNAFF) hash ^= BODFOGGNAFF.GetHashCode();
-      if (NONOMBAAFGM != false) hash ^= NONOMBAAFGM.GetHashCode();
+      if (IsSoldOut != false) hash ^= IsSoldOut.GetHashCode();
       if (ShopGoodsPrice != 0) hash ^= ShopGoodsPrice.GetHashCode();
       hash ^= (int) nDNNFBKCDHMCase_;
       if (_unknownFields != null) {
@@ -219,9 +219,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(104);
         output.WriteUInt32(ShopGoodsPrice);
       }
-      if (NONOMBAAFGM != false) {
+      if (IsSoldOut != false) {
         output.WriteRawTag(120);
-        output.WriteBool(NONOMBAAFGM);
+        output.WriteBool(IsSoldOut);
       }
       if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.RoleGoodsInfo) {
         output.WriteRawTag(186, 26);
@@ -245,9 +245,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(104);
         output.WriteUInt32(ShopGoodsPrice);
       }
-      if (NONOMBAAFGM != false) {
+      if (IsSoldOut != false) {
         output.WriteRawTag(120);
-        output.WriteBool(NONOMBAAFGM);
+        output.WriteBool(IsSoldOut);
       }
       if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.RoleGoodsInfo) {
         output.WriteRawTag(186, 26);
@@ -273,7 +273,7 @@ namespace EggLink.DanhengServer.Proto {
       if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.BODFOGGNAFF) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(BODFOGGNAFF);
       }
-      if (NONOMBAAFGM != false) {
+      if (IsSoldOut != false) {
         size += 1 + 1;
       }
       if (ShopGoodsPrice != 0) {
@@ -291,8 +291,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NONOMBAAFGM != false) {
-        NONOMBAAFGM = other.NONOMBAAFGM;
+      if (other.IsSoldOut != false) {
+        IsSoldOut = other.IsSoldOut;
       }
       if (other.ShopGoodsPrice != 0) {
         ShopGoodsPrice = other.ShopGoodsPrice;
@@ -332,7 +332,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 120: {
-            NONOMBAAFGM = input.ReadBool();
+            IsSoldOut = input.ReadBool();
             break;
           }
           case 3386: {
@@ -373,7 +373,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 120: {
-            NONOMBAAFGM = input.ReadBool();
+            IsSoldOut = input.ReadBool();
             break;
           }
           case 3386: {
