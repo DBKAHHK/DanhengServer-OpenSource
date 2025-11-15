@@ -54,19 +54,19 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             "ASgJEg0KBXZhbHVlGAIgASgNOgI4ASJDChZHcmlkRmlnaHRBdWdtZW50SW5m",
             "b1BiEikKCEF1Z21lbnRzGAEgAygLMhcuR3JpZEZpZ2h0R2FtZUF1Z21lbnRQ",
             "YiJOChpHcmlkRmlnaHRHYW1lVHJhaXRFZmZlY3RQYhIPCgdUcmFpdElkGAEg",
-            "ASgNEhAKCEVmZmVjdElkGAIgASgNEg0KBVBhcmFtGAMgASgNImsKFEdyaWRG",
+            "ASgNEhAKCEVmZmVjdElkGAIgASgNEg0KBVBhcmFtGAMgASgNImkKFEdyaWRG",
             "aWdodEdhbWVUcmFpdFBiEg8KB1RyYWl0SWQYASABKA0SLAoHRWZmZWN0cxgC",
-            "IAMoCzIbLkdyaWRGaWdodEdhbWVUcmFpdEVmZmVjdFBiEhQKDEV4dHJhUm9s",
-            "ZU51bRgDIAEoDSI9ChRHcmlkRmlnaHRUcmFpdEluZm9QYhIlCgZUcmFpdHMY",
-            "ASADKAsyFS5HcmlkRmlnaHRHYW1lVHJhaXRQYiKvAgoUR3JpZEZpZ2h0Q29t",
-            "cG9uZW50UGISKAoIU2hvcEluZm8YASABKAsyFC5HcmlkRmlnaHRTaG9wSW5m",
-            "b1BiSAASKgoJQmFzaWNJbmZvGAIgASgLMhUuR3JpZEZpZ2h0QmFzaWNJbmZv",
-            "UGJIABIsCgpBdmF0YXJJbmZvGAMgASgLMhYuR3JpZEZpZ2h0QXZhdGFySW5m",
-            "b1BiSAASJgoHT3JiSW5mbxgEIAEoCzITLkdyaWRGaWdodE9yYkluZm9QYkgA",
-            "Ei4KC0F1Z21lbnRJbmZvGAUgASgLMhcuR3JpZEZpZ2h0QXVnbWVudEluZm9Q",
-            "YkgAEioKCVRyYWl0SW5mbxgGIAEoCzIVLkdyaWRGaWdodFRyYWl0SW5mb1Bi",
-            "SABCDwoNQ29tcG9uZW50VHlwZUIpqgImRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvLlNlcnZlclNpZGViBnByb3RvMw=="));
+            "IAMoCzIbLkdyaWRGaWdodEdhbWVUcmFpdEVmZmVjdFBiEhIKClRyYWl0TGF5",
+            "ZXIYAyABKA0iPQoUR3JpZEZpZ2h0VHJhaXRJbmZvUGISJQoGVHJhaXRzGAEg",
+            "AygLMhUuR3JpZEZpZ2h0R2FtZVRyYWl0UGIirwIKFEdyaWRGaWdodENvbXBv",
+            "bmVudFBiEigKCFNob3BJbmZvGAEgASgLMhQuR3JpZEZpZ2h0U2hvcEluZm9Q",
+            "YkgAEioKCUJhc2ljSW5mbxgCIAEoCzIVLkdyaWRGaWdodEJhc2ljSW5mb1Bi",
+            "SAASLAoKQXZhdGFySW5mbxgDIAEoCzIWLkdyaWRGaWdodEF2YXRhckluZm9Q",
+            "YkgAEiYKB09yYkluZm8YBCABKAsyEy5HcmlkRmlnaHRPcmJJbmZvUGJIABIu",
+            "CgtBdWdtZW50SW5mbxgFIAEoCzIXLkdyaWRGaWdodEF1Z21lbnRJbmZvUGJI",
+            "ABIqCglUcmFpdEluZm8YBiABKAsyFS5HcmlkRmlnaHRUcmFpdEluZm9QYkgA",
+            "Qg8KDUNvbXBvbmVudFR5cGVCKaoCJkVnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
+            "cm90by5TZXJ2ZXJTaWRlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -82,7 +82,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameAugmentPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameAugmentPb.Parser, new[]{ "AugmentId", "SavedValues" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightAugmentInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightAugmentInfoPb.Parser, new[]{ "Augments" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameTraitEffectPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameTraitEffectPb.Parser, new[]{ "TraitId", "EffectId", "Param" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameTraitPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameTraitPb.Parser, new[]{ "TraitId", "Effects", "ExtraRoleNum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameTraitPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameTraitPb.Parser, new[]{ "TraitId", "Effects", "TraitLayer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightTraitInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightTraitInfoPb.Parser, new[]{ "Traits" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightComponentPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightComponentPb.Parser, new[]{ "ShopInfo", "BasicInfo", "AvatarInfo", "OrbInfo", "AugmentInfo", "TraitInfo" }, new[]{ "ComponentType" }, null, null, null)
           }));
@@ -3401,7 +3401,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     public GridFightGameTraitPb(GridFightGameTraitPb other) : this() {
       traitId_ = other.traitId_;
       effects_ = other.effects_.Clone();
-      extraRoleNum_ = other.extraRoleNum_;
+      traitLayer_ = other.traitLayer_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3434,15 +3434,15 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       get { return effects_; }
     }
 
-    /// <summary>Field number for the "ExtraRoleNum" field.</summary>
-    public const int ExtraRoleNumFieldNumber = 3;
-    private uint extraRoleNum_;
+    /// <summary>Field number for the "TraitLayer" field.</summary>
+    public const int TraitLayerFieldNumber = 3;
+    private uint traitLayer_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ExtraRoleNum {
-      get { return extraRoleNum_; }
+    public uint TraitLayer {
+      get { return traitLayer_; }
       set {
-        extraRoleNum_ = value;
+        traitLayer_ = value;
       }
     }
 
@@ -3463,7 +3463,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
       if (TraitId != other.TraitId) return false;
       if(!effects_.Equals(other.effects_)) return false;
-      if (ExtraRoleNum != other.ExtraRoleNum) return false;
+      if (TraitLayer != other.TraitLayer) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3473,7 +3473,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       int hash = 1;
       if (TraitId != 0) hash ^= TraitId.GetHashCode();
       hash ^= effects_.GetHashCode();
-      if (ExtraRoleNum != 0) hash ^= ExtraRoleNum.GetHashCode();
+      if (TraitLayer != 0) hash ^= TraitLayer.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3497,9 +3497,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteUInt32(TraitId);
       }
       effects_.WriteTo(output, _repeated_effects_codec);
-      if (ExtraRoleNum != 0) {
+      if (TraitLayer != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(ExtraRoleNum);
+        output.WriteUInt32(TraitLayer);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3516,9 +3516,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteUInt32(TraitId);
       }
       effects_.WriteTo(ref output, _repeated_effects_codec);
-      if (ExtraRoleNum != 0) {
+      if (TraitLayer != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(ExtraRoleNum);
+        output.WriteUInt32(TraitLayer);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3534,8 +3534,8 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitId);
       }
       size += effects_.CalculateSize(_repeated_effects_codec);
-      if (ExtraRoleNum != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ExtraRoleNum);
+      if (TraitLayer != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitLayer);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3553,8 +3553,8 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         TraitId = other.TraitId;
       }
       effects_.Add(other.effects_);
-      if (other.ExtraRoleNum != 0) {
-        ExtraRoleNum = other.ExtraRoleNum;
+      if (other.TraitLayer != 0) {
+        TraitLayer = other.TraitLayer;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3580,7 +3580,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             break;
           }
           case 24: {
-            ExtraRoleNum = input.ReadUInt32();
+            TraitLayer = input.ReadUInt32();
             break;
           }
         }
@@ -3607,7 +3607,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             break;
           }
           case 24: {
-            ExtraRoleNum = input.ReadUInt32();
+            TraitLayer = input.ReadUInt32();
             break;
           }
         }

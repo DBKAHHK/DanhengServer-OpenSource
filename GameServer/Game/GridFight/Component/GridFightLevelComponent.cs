@@ -122,28 +122,25 @@ public class GridFightLevelComponent : BaseGridFightComponent
 
         List<BaseGridFightSyncData> syncs = [new GridFightLevelSyncData(src, this)];
 
-        //await Inst.RollPortalBuff();
+        syncs.AddRange(await Inst.CreatePendingAction<GridFightElitePendingAction>(sendPacket: false));
         if (CurrentSection.Excel.IsAugment == 1)
         {
             // create augment action
-            syncs.AddRange(await Inst.CreatePendingAction<GridFightAugmentPendingAction>(sendPacket: false));
+            await Inst.CreatePendingAction<GridFightAugmentPendingAction>(sendPacket: false);
         }
 
         if (CurrentSection.Excel.NodeType == GridFightNodeTypeEnum.Supply)
         {
             // create supply action
-            syncs.AddRange(await Inst.CreatePendingAction<GridFightSupplyPendingAction>(sendPacket: false));
+            await Inst.CreatePendingAction<GridFightSupplyPendingAction>(sendPacket: false);
+            await Inst.CreatePendingAction<GridFightElitePendingAction>(sendPacket: false);
         }
-        else
+        else if (CurrentSection.Excel.NodeType == GridFightNodeTypeEnum.EliteBranch)
         {
-            syncs.AddRange(await Inst.CreatePendingAction<GridFightElitePendingAction>(sendPacket: false));
-
-            if (CurrentSection.Excel.NodeType is not GridFightNodeTypeEnum.Boss
-                and not GridFightNodeTypeEnum.EliteBranch)
-            {
-                syncs.AddRange(await Inst.CreatePendingAction<GridFightPreparePendingAction>(sendPacket: false));
-            }
+            await Inst.CreatePendingAction<GridFightEliteBranchPendingAction>(sendPacket: false);
         }
+
+        await Inst.CreatePendingAction<GridFightEnterNodePendingAction>(sendPacket: false);
 
         if (sendPacket)
         {
@@ -314,6 +311,7 @@ public class GridFightGameSectionInfo
     public GridFightStageRouteExcel Excel { get; }
     public uint ChapterId { get; }
     public uint SectionId { get; }
+    public uint BranchId { get; set; } = 1;
     public GridFightCampExcel MonsterCamp { get; set; }
     public List<GridFightGameEncounterInfo> Encounters { get; } = [];
 
@@ -328,7 +326,20 @@ public class GridFightGameSectionInfo
         if (Excel.NodeType is not GridFightNodeTypeEnum.Monster and not GridFightNodeTypeEnum.CampMonster
                 and not GridFightNodeTypeEnum.Boss and not GridFightNodeTypeEnum.EliteBranch) return;
 
-        Encounters.Add(new GridFightGameEncounterInfo(1, 1, this));
+        if (Excel.NodeType is GridFightNodeTypeEnum.EliteBranch)
+        {
+            List<uint> difficulties = [1, 2, 3];
+            BranchId = 0;
+
+            foreach (var diff in difficulties.OrderBy(_ => Guid.NewGuid()).Take(2))
+            {
+                Encounters.Add(new GridFightGameEncounterInfo(diff, diff, this));
+            }
+        }
+        else
+        {
+            Encounters.Add(new GridFightGameEncounterInfo(1, 1, this));
+        }
     }
 
     public GridFightRouteInfo ToRouteInfo()
@@ -336,7 +347,7 @@ public class GridFightGameSectionInfo
         return new GridFightRouteInfo
         {
             FightCampId = MonsterCamp.ID,
-            EliteBranchId = 0,
+            EliteBranchId = BranchId,
             RouteEncounterList = { Encounters.Select(x => x.ToProto()) }
         };
     }
@@ -359,51 +370,8 @@ public class GridFightGameEncounterInfo
         EncounterDifficulty = difficulty;
         ParentSection = section;
 
-        var waveNum = ParentSection.Excel.NodeType switch
-        {
-            //GridFightNodeTypeEnum.Boss => 2,
-            //GridFightNodeTypeEnum.EliteBranch => 2,
-            _ => 1
-        };
-
-        List<int> monsterNum = ParentSection.Excel.NodeType switch
-        {
-            GridFightNodeTypeEnum.Boss => [1],
-            GridFightNodeTypeEnum.EliteBranch => [3],
-            GridFightNodeTypeEnum.CampMonster => [3],
-            _ => [Random.Shared.Next(3, 5)]
-        };
-
-        var monsterPool = ParentSection.MonsterCamp.Monsters.Where(x => x.MonsterTier <= 2).OrderBy(_ => Guid.NewGuid()).ToList();
-        var monster4Pool = ParentSection.MonsterCamp.Monsters.Where(x => x.MonsterTier is 4 or 3).OrderBy(_ => Guid.NewGuid()).ToList();
-        var monster5Pool = ParentSection.MonsterCamp.Monsters.Where(x => x.MonsterTier == 5).OrderBy(_ => Guid.NewGuid()).ToList();
-        for (var i = 0; i < waveNum; i++)
-        {
-            if (i < waveNum - 1 || ParentSection.Excel.NodeType is GridFightNodeTypeEnum.Monster)
-            {
-                // no elite
-                var res = monsterPool.OrderBy(_ => Guid.NewGuid()).Take(monsterNum[i]).ToList();
-                MonsterWaves.Add(new GridFightGameMonsterWaveInfo((uint)(i + 1), res, ParentSection.MonsterCamp.ID));
-            }
-            else
-            {
-                List<GridFightMonsterExcel> elites = ParentSection.Excel.NodeType switch
-                {
-                    GridFightNodeTypeEnum.Boss => [..monster5Pool],
-                    _ => [monster4Pool.RandomElement()],
-                };
-
-                List<GridFightMonsterExcel> monsters = [..elites];
-                var remain = monsterNum[i] - 1;
-
-                if (remain > 0)
-                {
-                    monsters.AddRange(monsterPool.OrderBy(_ => Guid.NewGuid()).Take(remain).ToList());
-                }
-
-                MonsterWaves.Add(new GridFightGameMonsterWaveInfo((uint)(i + 1), monsters, ParentSection.MonsterCamp.ID));
-            }
-        }
+        var waves = GridFightEncounterGenerateHelper.GenerateMonsterWaves(section);
+        MonsterWaves.AddRange(waves);
     }
 
     public uint EncounterIndex { get; set; }
@@ -426,8 +394,9 @@ public class GridFightGameEncounterInfo
 public class GridFightGameMonsterWaveInfo(uint wave, List<GridFightMonsterExcel> monsters, uint campId)
 {
     public uint Wave { get; set; } = wave;
-    public uint CampId { get; set; } = campId;
-    public List<GridFightMonsterExcel> Monsters { get; } = monsters;
+
+    public List<GridFightGameMonsterInfo> Monsters { get; } = monsters
+        .Select(x => new GridFightGameMonsterInfo(x, campId, (uint)Random.Shared.Next(1, (int)(x.MonsterTier + 1)))).ToList();
 
     public GridEncounterMonsterWave ToProto()
     {
@@ -436,13 +405,143 @@ public class GridFightGameMonsterWaveInfo(uint wave, List<GridFightMonsterExcel>
             EncounterWave = Wave,
             FightMonsterList =
             {
-                Monsters.Select(x => new GridFightMonsterInfo
-                {
-                    MonsterId = x.MonsterID,
-                    MonsterCampId = CampId,
-                    Tier = x.MonsterTier
-                })
+                Monsters.Select(x => x.ToProto())
             }
         };
+    }
+}
+
+public class GridFightGameMonsterInfo(GridFightMonsterExcel monsters, uint campId, uint tier)
+{
+    public uint CampId { get; set; } = campId;
+    public GridFightMonsterExcel Monster { get; } = monsters;
+    public uint Tier { get; } = tier;
+
+    public GridFightMonsterInfo ToProto()
+    {
+        return new GridFightMonsterInfo
+        {
+            MonsterId = Monster.MonsterID,
+            MonsterCampId = CampId,
+            Tier = Tier
+        };
+    }
+}
+
+public static class GridFightEncounterGenerateHelper
+{
+    private static readonly List<List<List<uint>>> RandomWaveRule =
+    [
+        [[3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]],
+        [[3, 2, 2, 2, 2], [3, 3, 2, 2, 2]],
+        [[3, 3, 3, 2, 2, 2, 2, 2]],
+        [[2, 2, 2, 2, 3, 3]]
+    ];
+
+    public static List<GridFightGameMonsterWaveInfo> GenerateMonsterWaves(GridFightGameSectionInfo section)
+    {
+        switch (section.Excel.NodeType)
+        {
+            case GridFightNodeTypeEnum.Monster:
+                return GenerateMonsterType(section);
+
+            case GridFightNodeTypeEnum.CampMonster:
+            case GridFightNodeTypeEnum.EliteBranch:
+                return GenerateCampMonsterType(section);
+
+            case GridFightNodeTypeEnum.Boss:
+                return GenerateBossType(section);
+            default:
+                break;
+        }
+
+        return [];
+    }
+
+    public static List<GridFightGameMonsterWaveInfo> GenerateMonsterType(GridFightGameSectionInfo section)
+    {
+        List<GridFightGameMonsterWaveInfo> waves = [];
+
+        var monsters = section.MonsterCamp.Monsters
+            .Where(x => x.MonsterTier <= 2).ToList();
+
+        List<GridFightMonsterExcel> targets = [];
+
+        for (var i = 0; i < 5; i++)
+        {
+            targets.Add(monsters.RandomElement());
+        }
+
+        waves.Add(new GridFightGameMonsterWaveInfo(1, targets, section.MonsterCamp.ID));
+
+        return waves;
+    }
+
+    public static List<GridFightGameMonsterWaveInfo> GenerateCampMonsterType(GridFightGameSectionInfo section)
+    {
+        List<GridFightGameMonsterWaveInfo> waves = [];
+
+        var rules = RandomWaveRule.RandomElement();
+
+        foreach (var rule in rules)
+        {
+            List<GridFightMonsterExcel> excels = [];
+
+            foreach (var tier in rule)
+            {
+                var targets = section.MonsterCamp.Monsters.Where(x => x.MonsterTier == tier).ToList();
+                if (targets.Count == 0)
+                    continue;
+
+                var selected = targets.RandomElement();
+                excels.Add(selected);
+            }
+
+            // random order
+            excels = excels.OrderBy(_ => Guid.NewGuid()).ToList();
+            waves.Add(new GridFightGameMonsterWaveInfo((uint)(waves.Count + 1), excels, section.MonsterCamp.ID));
+        }
+
+        return waves;
+    }
+
+    public static List<GridFightGameMonsterWaveInfo> GenerateBossType(GridFightGameSectionInfo section)
+    {
+        List<GridFightGameMonsterWaveInfo> waves = [];
+
+        var waveNum = section.ChapterId == 3 ? 2 : 1;
+
+        for (var i = 0; i < waveNum; i++)
+        {
+            if (i == waveNum - 1)
+            {
+                // boss wave
+                var bossMonsters = section.MonsterCamp.Monsters
+                    .Where(x => x.MonsterTier == (section.ChapterId == 3 ? 6 : 5))
+                    .ToList();
+
+                if (bossMonsters.Count == 0)
+                    continue;
+
+                waves.Add(new GridFightGameMonsterWaveInfo((uint)(waves.Count + 1), bossMonsters, section.MonsterCamp.ID));
+            }
+            else
+            {
+                // normal wave
+                var monsters = section.MonsterCamp.Monsters
+                    .Where(x => x.MonsterTier <= 2).ToList();
+
+                List<GridFightMonsterExcel> targets = [];
+
+                for (var j = 0; j < 5; j++)
+                {
+                    targets.Add(monsters.RandomElement());
+                }
+
+                waves.Add(new GridFightGameMonsterWaveInfo((uint)(waves.Count + 1), targets, section.MonsterCamp.ID));
+            }
+        }
+
+        return waves;
     }
 }

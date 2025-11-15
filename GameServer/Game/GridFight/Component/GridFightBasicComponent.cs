@@ -15,8 +15,8 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
     public GridFightBasicInfoPb Data { get; set; } = new()
     {
         CurHp = 100,
-        CurLevel = 1,
-        MaxAvatarNum = 1,
+        CurLevel = 3,
+        MaxAvatarNum = 3,
         BuyLevelCost = 1,
         CurGold = 0
     };
@@ -25,7 +25,7 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
 
     #region Data Management
 
-    public async ValueTask<Retcode> UpdateGoldNum(int changeNum, bool sendPacket = true, GridFightSrc src = GridFightSrc.KGridFightSrcManualRefreshGoods)
+    public async ValueTask<Retcode> UpdateGoldNum(int changeNum, bool sendPacket = true, GridFightSrc src = GridFightSrc.KGridFightSrcNone)
     {
         if (changeNum < 0 && -changeNum > Data.CurGold)
         {
@@ -99,10 +99,10 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         if (sendPacket)
         {
             await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(
-                new GridFightGoldSyncData(GridFightSrc.KGridFightSrcBuyGoods, Data),
-                new GridFightPlayerLevelSyncData(GridFightSrc.KGridFightSrcBuyGoods, Data),
-                new GridFightMaxAvatarNumSyncData(GridFightSrc.KGridFightSrcBuyGoods, Data),
-                new GridFightBuyExpCostSyncData(GridFightSrc.KGridFightSrcBuyGoods, Data)));
+                new GridFightGoldSyncData(GridFightSrc.KGridFightSrcNone, Data),
+                new GridFightPlayerLevelSyncData(GridFightSrc.KGridFightSrcNone, Data),
+                new GridFightMaxAvatarNumSyncData(GridFightSrc.KGridFightSrcNone, Data),
+                new GridFightBuyExpCostSyncData(GridFightSrc.KGridFightSrcNone, Data)));
         }
 
         return Retcode.RetSucc;
@@ -130,10 +130,10 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         if (sendPacket)
         {
             await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(
-                new GridFightGoldSyncData(GridFightSrc.KGridFightSrcBuyGoods, Data),
-                new GridFightPlayerLevelSyncData(GridFightSrc.KGridFightSrcBuyGoods, Data),
-                new GridFightMaxAvatarNumSyncData(GridFightSrc.KGridFightSrcBuyGoods, Data),
-                new GridFightBuyExpCostSyncData(GridFightSrc.KGridFightSrcBuyGoods, Data)));
+                new GridFightGoldSyncData(GridFightSrc.KGridFightSrcNone, Data),
+                new GridFightPlayerLevelSyncData(GridFightSrc.KGridFightSrcNone, Data),
+                new GridFightMaxAvatarNumSyncData(GridFightSrc.KGridFightSrcNone, Data),
+                new GridFightBuyExpCostSyncData(GridFightSrc.KGridFightSrcNone, Data)));
         }
 
         return Retcode.RetSucc;

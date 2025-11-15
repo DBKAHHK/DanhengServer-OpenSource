@@ -14,17 +14,18 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
 {
     public GridFightGameEncounterInfo Encounter { get; set; } = curSection.Encounters.RandomElement();
     public GridFightInstance Inst { get; set; } = inst;
-    public GridFightRoleComponent AvatarComponent { get; set; } = inst.GetComponent<GridFightRoleComponent>();
+    public GridFightRoleComponent RoleComponent { get; set; } = inst.GetComponent<GridFightRoleComponent>();
     public GridFightLevelComponent LevelComponent { get; set; } = inst.GetComponent<GridFightLevelComponent>();
     public GridFightBasicComponent BasicComponent { get; set; } = inst.GetComponent<GridFightBasicComponent>();
     public GridFightAugmentComponent AugmentComponent { get; set; } = inst.GetComponent<GridFightAugmentComponent>();
+    public GridFightTraitComponent TraitComponent { get; set; } = inst.GetComponent<GridFightTraitComponent>();
     public GridFightGameSectionInfo CurSection { get; set; } = curSection;
     public PlayerInstance Player { get; set; } = player;
 
     public void HandleProto(SceneBattleInfo proto, BattleInstance battle)
     {
-        var avatars = AvatarComponent.GetForegroundAvatarInfos(0);
-        var backAvatars = AvatarComponent.GetBackgroundAvatarInfos(BasicComponent.GetFieldCount());
+        var avatars = RoleComponent.GetForegroundAvatarInfos();
+        var backAvatars = RoleComponent.GetBackgroundAvatarInfos(BasicComponent.GetFieldCount());
 
         var tempLineup = new LineupInfo
         {
@@ -60,12 +61,12 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
                 {
                     wave.Monsters.Select(x => new SceneMonster
                     {
-                        MonsterId = x.MonsterID,
+                        MonsterId = x.Monster.MonsterID,
                         ExtraInfo = new SceneMonsterExtraInfo
                         {
                             BattleGridFightInfo = new SceneMonsterGridFightInfo
                             {
-                                Tier = Math.Max(1, x.MonsterTier)
+                                Tier = Math.Max(1, x.Tier)
                             }
                         }
                     })
@@ -73,7 +74,7 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
             });
         }
 
-        foreach (var role in AvatarComponent.Data.Roles)
+        foreach (var role in RoleComponent.Data.Roles)
         {
             if (!GameData.GridFightRoleStarData.TryGetValue(role.RoleId << 4 | role.Tier, out var roleConf)) continue;
             battle.BattleEvents.TryAdd((int)roleConf.BEID, new BattleEventInstance((int)roleConf.BEID, 5000));
@@ -89,7 +90,7 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
         {
             GridGameAvatarList =
             {
-                AvatarComponent.Data.Roles.Where(x => x.Pos <= BasicComponent.GetFieldCount()).OrderBy(x => x.Pos).Select(x => x.ToBattleInfo())
+                RoleComponent.Data.Roles.Where(x => x.Pos <= BasicComponent.GetFieldCount()).OrderBy(x => x.Pos).Select(x => x.ToBattleInfo())
             },
             GridFightCurLevel = BasicComponent.Data.CurLevel,
             GridFightLineupHp = BasicComponent.Data.CurHp,
@@ -107,6 +108,7 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
             PenaltyBonusRuleId = ruleId,
             GridFightAugmentInfo = { AugmentComponent.Data.Augments.Select(x => x.ToBattleInfo()) },
             GridFightPortalBuffList = { LevelComponent.PortalBuffs.Select(x => x.ToBattleInfo()) },
+            GridFightTraitInfo = { TraitComponent.Data.Traits.Select(x => x.ToBattleInfo(RoleComponent)) }
         };
     }
 }

@@ -18,7 +18,7 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
     }
 
     public async ValueTask<List<BaseGridFightSyncData>> AddAvatar(uint roleId, uint tier = 1, bool sendPacket = true,
-        bool checkMerge = true, GridFightSrc src = GridFightSrc.KGridFightSrcBuyGoods, uint syncGroup = 0, uint targetPos = 0)
+        bool checkMerge = true, GridFightSrc src = GridFightSrc.KGridFightSrcBuyGoods, uint syncGroup = 0, uint targetPos = 0, params uint[] param)
     {
         if (!GameData.GridFightRoleBasicInfoData.TryGetValue(roleId, out var excel)) return [];
 
@@ -55,7 +55,7 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
 
         Data.Roles.Add(info);
 
-        List<BaseGridFightSyncData> syncs = [new GridFightRoleAddSyncData(src, info, syncGroup)];
+        List<BaseGridFightSyncData> syncs = [new GridFightRoleAddSyncData(src, info, syncGroup, param)];
 
         if (checkMerge)
         {
@@ -67,6 +67,8 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
         {
             await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
         }
+
+        Inst.GetComponent<GridFightTraitComponent>().CheckTrait();
 
         return syncs;
     }
@@ -155,10 +157,12 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
             await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
         }
 
+        Inst.GetComponent<GridFightTraitComponent>().CheckTrait();
+
         return syncs;
     }
 
-    public List<BaseAvatarInfo> GetForegroundAvatarInfos(uint maxAvatarNum)
+    public List<BaseAvatarInfo> GetForegroundAvatarInfos()
     {
         var foreground = Data.Roles.Where(x => x.Pos <= 4).OrderBy(x => x.Pos).ToList();
         List<BaseAvatarInfo> res = [];
@@ -230,7 +234,7 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
             if (role != null)
             {
                 role.Pos = pos.Pos;
-                syncs.Add(new GridFightRoleUpdateSyncData(GridFightSrc.KGridFightSrcCopyRole, role));
+                syncs.Add(new GridFightRoleUpdateSyncData(GridFightSrc.KGridFightSrcNone, role));
             }
         }
 
@@ -238,6 +242,8 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
         {
             await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
         }
+
+        Inst.GetComponent<GridFightTraitComponent>().CheckTrait();
 
         return Retcode.RetSucc;
     }

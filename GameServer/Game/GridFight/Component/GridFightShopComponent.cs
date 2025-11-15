@@ -49,7 +49,7 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
         var totalCost = (uint)targetGoods.Select(x => GetGoodsPrice(x.Rarity, x.RoleItem.Tier)).Sum(x => x);
 
         // COST
-        var code = await Inst.GetComponent<GridFightBasicComponent>().UpdateGoldNum((int)-totalCost, false);
+        var code = await Inst.GetComponent<GridFightBasicComponent>().UpdateGoldNum((int)-totalCost, false, GridFightSrc.KGridFightSrcBuyGoods);
         if (code != Retcode.RetSucc)
         {
             return code;
@@ -61,7 +61,8 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
         {
             if (item.ItemTypeCase == GridFightShopItemPb.ItemTypeOneofCase.RoleItem)
             {
-                syncs.AddRange(await avatarComp.AddAvatar(item.RoleItem.RoleId, item.RoleItem.Tier, false));
+                syncs.AddRange(await avatarComp.AddAvatar(item.RoleItem.RoleId, item.RoleItem.Tier, false,
+                    param: (uint)Data.ShopItems.IndexOf(item)));
             }
             else
             {
@@ -136,7 +137,7 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
             else
             {
                 // cost
-                var code = await Inst.GetComponent<GridFightBasicComponent>().UpdateGoldNum((int)-Data.RefreshCost);
+                var code = await Inst.GetComponent<GridFightBasicComponent>().UpdateGoldNum((int)-Data.RefreshCost, src:GridFightSrc.KGridFightSrcManualRefreshGoods);
                 if (code != Retcode.RetSucc)
                 {
                     return code;

@@ -59,7 +59,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
             _ => 1u
         };
 
-        await basicComp.UpdateGoldNum((int)(baseCoin + interestCoin + comboCoin), false, GridFightSrc.KGridFightSrcNone);
+        await basicComp.UpdateGoldNum((int)(baseCoin + interestCoin + comboCoin), false);
         await basicComp.AddLevelExp(expNum, false);
 
         List<GridFightRoleDamageSttInfo> sttList = [];
@@ -76,7 +76,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
             comboCoin));
 
 
-        syncs.Add(new GridFightGoldSyncData(GridFightSrc.KGridFightSrcBattleEnd, basicComp.Data));
+        syncs.Add(new GridFightGoldSyncData(GridFightSrc.KGridFightSrcBattleEnd, basicComp.Data, 0, levelComp.CurrentSection.ChapterId, levelComp.CurrentSection.SectionId));
         syncs.Add(new GridFightPlayerLevelSyncData(GridFightSrc.KGridFightSrcBattleEnd, basicComp.Data));
         syncs.Add(new GridFightLineupHpSyncData(GridFightSrc.KGridFightSrcBattleEnd, basicComp.Data));
         syncs.Add(new GridFightComboNumSyncData(GridFightSrc.KGridFightSrcBattleEnd, basicComp.Data));
@@ -93,12 +93,14 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         Components.Add(new GridFightLevelComponent(this));
         Components.Add(new GridFightRoleComponent(this));
         Components.Add(new GridFightAugmentComponent(this));
+        Components.Add(new GridFightTraitComponent(this));
 
         _ = GetComponent<GridFightRoleComponent>().AddAvatar(1414, 3, false);
         _ = GetComponent<GridFightShopComponent>().RefreshShop(true, false);
 
         _ = CreatePendingAction<GridFightPortalBuffPendingAction>(sendPacket:false);
         _ = CreatePendingAction<GridFightElitePendingAction>(sendPacket: false);
+        _ = CreatePendingAction<GridFightEnterNodePendingAction>(sendPacket: false);
     }
 
     public T GetComponent<T>() where T : BaseGridFightComponent
@@ -189,6 +191,8 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
     public async ValueTask HandleResultRequest(GridFightHandlePendingActionCsReq req)
     {
         var basicComp = GetComponent<GridFightBasicComponent>();
+        var levelComp = GetComponent<GridFightLevelComponent>();
+
         var curAction = GetCurAction();
 
         // end
@@ -232,9 +236,31 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
                 break;
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.EliteAction:
                 break;
+            case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.EliteBranchAction:
+                var target = req.EliteBranchAction.EliteBranchId;
+                levelComp.CurrentSection.BranchId = target;
+                // sync
+                syncs.Add(new GridFightLevelSyncData(GridFightSrc.KGridFightSrcNone, levelComp));
+
+                break;
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.SupplyAction:
                 src = GridFightSrc.KGridFightSrcSelectSupply;
-                await CheckCurNodeFinish(src);
+
+                PendingActions.Remove(curAction.QueuePosition);
+
+                if (curAction is GridFightSupplyPendingAction supplyAction)
+                {
+                    foreach (var supply in req.SupplyAction.SelectSupplyIndexes)
+                    {
+                        var role = supplyAction.RoleList[(int)supply];
+
+                        syncs.AddRange(await GetComponent<GridFightRoleComponent>().AddAvatar(role.RoleId, 1, false, true,
+                            GridFightSrc.KGridFightSrcSelectSupply, 0, 0, req.SupplyAction.SelectSupplyIndexes.ToArray()));
+                    }
+                }
+
+                syncs.AddRange(await CheckCurNodeFinish(src));
+
                 break;
         }
 
@@ -248,9 +274,6 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
             basicComp.Data.LockType = (uint)GridFightLockType.KGridFightLockTypeNone;
 
             syncs.Add(new GridFightLockInfoSyncData(GridFightSrc.KGridFightSrcNone, basicComp.Data.Clone()));
-
-            // sync level
-            syncs.Add(new GridFightLevelSyncData(GridFightSrc.KGridFightSrcNone, GetComponent<GridFightLevelComponent>()));
         }
 
         if (PendingActions.Count > 0)
@@ -265,17 +288,17 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         await Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
     }
 
-    public async ValueTask CheckCurNodeFinish(GridFightSrc src)
+    public async ValueTask<List<BaseGridFightSyncData>> CheckCurNodeFinish(GridFightSrc src)
     {
         var levelComp = GetComponent<GridFightLevelComponent>();
         var curSection = levelComp.CurrentSection;
 
-        if (curSection.Encounters.Count != 0) return;
+        if (curSection.Encounters.Count != 0) return [];
 
-        if (PendingActions.Count != 0) return;
+        if (PendingActions.Count != 0) return [];
 
         // next
-        await levelComp.EnterNextSection(src:GridFightSrc.KGridFightSrcNone);
+        return await levelComp.EnterNextSection(src:GridFightSrc.KGridFightSrcNone);
     }
 
     #endregion

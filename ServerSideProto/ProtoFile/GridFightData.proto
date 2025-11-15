@@ -83,7 +83,7 @@ message GridFightGameTraitEffectPb {
 message GridFightGameTraitPb {
     uint32 TraitId = 1;
     repeated GridFightGameTraitEffectPb Effects = 2;
-    uint32 ExtraRoleNum = 3;
+    uint32 TraitLayer = 3;
 }
 
 message GridFightTraitInfoPb {

@@ -4,7 +4,7 @@ using EggLink.DanhengServer.Proto.ServerSide;
 
 namespace EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 
-public class GridFightShopSyncData(GridFightSrc src, GridFightShopInfoPb data, uint level) : BaseGridFightSyncData(src)
+public class GridFightShopSyncData(GridFightSrc src, GridFightShopInfoPb data, uint level, uint groupId = 0, params uint[] param) : BaseGridFightSyncData(src, groupId, param)
 {
     public override GridFightSyncData ToProto()
     {

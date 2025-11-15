@@ -3,7 +3,11 @@ using EggLink.DanhengServer.Proto;
 
 namespace EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 
-public class GridFightLevelSyncData(GridFightSrc src, GridFightLevelComponent level) : BaseGridFightSyncData(src)
+public class GridFightLevelSyncData(
+    GridFightSrc src,
+    GridFightLevelComponent level,
+    uint groupId = 0,
+    params uint[] param) : BaseGridFightSyncData(src, groupId, param)
 {
     public override GridFightSyncData ToProto()
     {

@@ -1,10 +1,20 @@
+using EggLink.DanhengServer.Enums.GridFight;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
 namespace EggLink.DanhengServer.Data.Excel;
 
 [ResourceEntity("GridFightEquipment.json")]
 public class GridFightEquipmentExcel : ExcelResource
 {
     public uint ID { get; set; }
-    public string EquipCategory { get; set; } = ""; // TODO use enum
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public GridFightEquipCategoryEnum EquipCategory { get; set; }
+
+
+    [JsonConverter(typeof(StringEnumConverter))]
+    public GridFightEquipDressTypeEnum DressRule { get; set; }
 
     public override int GetId()
     {

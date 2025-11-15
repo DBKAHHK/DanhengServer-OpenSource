@@ -18,7 +18,7 @@ public class PacketGridFightSyncUpdateResultScNotify : BasePacket
                 {
                     GridUpdateSrc = x.Key.Src,
                     UpdateDynamicList = { x.Select(j => j.ToProto()) },
-                    ONMDGNHMABO = { 0 }
+                    SyncEffectParamList = { x.SelectMany(j => j.SyncParams).ToHashSet() }
                 })
             }
         };

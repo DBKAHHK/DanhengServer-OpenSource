@@ -107,6 +107,8 @@ public static class GameData
 
     public static Dictionary<uint, GridFightRoleBasicInfoExcel> GridFightRoleBasicInfoData { get; private set; } = [];
     public static Dictionary<uint, GridFightRoleStarExcel> GridFightRoleStarData { get; private set; } = [];
+    public static Dictionary<uint, GridFightCombinationBonusExcel> GridFightCombinationBonusData { get; private set; } =
+        [];
     public static Dictionary<uint, GridFightDivisionInfoExcel> GridFightDivisionInfoData { get; private set; } = [];
     public static Dictionary<uint, GridFightDivisionStageExcel> GridFightDivisionStageData { get; private set; } = [];
     public static Dictionary<uint, GridFightEquipmentExcel> GridFightEquipmentData { get; private set; } = [];
@@ -120,6 +122,8 @@ public static class GameData
     public static Dictionary<uint, GridFightPortalBuffExcel> GridFightPortalBuffData { get; private set; } = [];
     public static Dictionary<uint, GridFightItemsExcel> GridFightItemsData { get; private set; } = [];
     public static Dictionary<uint, GridFightTalentExcel> GridFightTalentData { get; private set; } = [];
+    public static Dictionary<uint, GridFightTraitBasicInfoExcel> GridFightTraitBasicInfoData { get; private set; } = [];
+    public static Dictionary<uint, Dictionary<uint, GridFightTraitLayerExcel>> GridFightTraitLayerData { get; private set; } = [];
     public static Dictionary<uint, GridFightSeasonTalentExcel> GridFightSeasonTalentData { get; private set; } = [];
     public static Dictionary<uint, Dictionary<uint, GridFightStageRouteExcel>> GridFightStageRouteData { get; private set; } = [];
     public static Dictionary<uint, GridFightNodeTemplateExcel> GridFightNodeTemplateData { get; private set; } = [];

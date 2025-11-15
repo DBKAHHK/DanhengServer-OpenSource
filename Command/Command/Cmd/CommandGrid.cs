@@ -39,7 +39,7 @@ public class CommandGrid : ICommand
             return;
         }
 
-        await inst.GetComponent<GridFightRoleComponent>().AddAvatar(roleId, tier);
+        await inst.GetComponent<GridFightRoleComponent>().AddAvatar(roleId, tier, src:GridFightSrc.KGridFightSrcNone);
         await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.AddedRole"));
     }
 
@@ -67,7 +67,7 @@ public class CommandGrid : ICommand
 
         var gold = arg.GetInt(0);
 
-        await inst.GetComponent<GridFightBasicComponent>().UpdateGoldNum(gold, true, GridFightSrc.KGridFightSrcNone);
+        await inst.GetComponent<GridFightBasicComponent>().UpdateGoldNum(gold);
         await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.UpdateGold", gold.ToString()));
     }
 }
