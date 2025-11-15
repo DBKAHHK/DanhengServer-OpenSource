@@ -24,18 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static BattleGridFightTraitInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5CYXR0bGVHcmlkRmlnaHRUcmFpdEluZm8ucHJvdG8aGkdyaWRGaWdodFRy",
-            "YWl0TWVtYmVyLnByb3RvGiRCYXR0bGVHcmlkRmlnaHRUcmFpdEVmZmVjdElu",
-            "Zm8ucHJvdG8ixwEKGEJhdHRsZUdyaWRGaWdodFRyYWl0SW5mbxIQCgh0cmFp",
-            "dF9pZBgBIAEoDRIcChR0cmFpdF9leHRyYV9yb2xlX251bRgCIAEoDRI6ChF0",
-            "cmFpdF9lZmZlY3RfbGlzdBgDIAMoCzIfLkJhdHRsZUdyaWRGaWdodFRyYWl0",
-            "RWZmZWN0SW5mbxIqCgttZW1iZXJfbGlzdBgFIAMoCzIVLkdyaWRGaWdodFRy",
-            "YWl0TWVtYmVyEhMKC0tBRlBJSFBBRkVFGAYgASgNQh6qAhtFZ2dMaW5rLkRh",
-            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Ch5CYXR0bGVHcmlkRmlnaHRUcmFpdEluZm8ucHJvdG8aJEJhdHRsZUdyaWRG",
+            "aWdodFRyYWl0RWZmZWN0SW5mby5wcm90bxoaR3JpZEZpZ2h0VHJhaXRNZW1i",
+            "ZXIucHJvdG8ixQEKGEJhdHRsZUdyaWRGaWdodFRyYWl0SW5mbxIQCgh0cmFp",
+            "dF9pZBgBIAEoDRIaChJ0cmFpdF9lZmZlY3RfbGF5ZXIYAiABKA0SOgoRdHJh",
+            "aXRfZWZmZWN0X2xpc3QYAyADKAsyHy5CYXR0bGVHcmlkRmlnaHRUcmFpdEVm",
+            "ZmVjdEluZm8SKgoLbWVtYmVyX2xpc3QYBSADKAsyFS5HcmlkRmlnaHRUcmFp",
+            "dE1lbWJlchITCgtLQUZQSUhQQUZFRRgGIAEoDUIeqgIbRWdnTGluay5EYW5o",
+            "ZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightTraitMemberReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitMemberReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleGridFightTraitInfo), global::EggLink.DanhengServer.Proto.BattleGridFightTraitInfo.Parser, new[]{ "TraitId", "TraitExtraRoleNum", "TraitEffectList", "MemberList", "KAFPIHPAFEE" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleGridFightTraitInfo), global::EggLink.DanhengServer.Proto.BattleGridFightTraitInfo.Parser, new[]{ "TraitId", "TraitEffectLayer", "TraitEffectList", "MemberList", "KAFPIHPAFEE" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,7 +78,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BattleGridFightTraitInfo(BattleGridFightTraitInfo other) : this() {
       traitId_ = other.traitId_;
-      traitExtraRoleNum_ = other.traitExtraRoleNum_;
+      traitEffectLayer_ = other.traitEffectLayer_;
       traitEffectList_ = other.traitEffectList_.Clone();
       memberList_ = other.memberList_.Clone();
       kAFPIHPAFEE_ = other.kAFPIHPAFEE_;
@@ -103,15 +103,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "trait_extra_role_num" field.</summary>
-    public const int TraitExtraRoleNumFieldNumber = 2;
-    private uint traitExtraRoleNum_;
+    /// <summary>Field number for the "trait_effect_layer" field.</summary>
+    public const int TraitEffectLayerFieldNumber = 2;
+    private uint traitEffectLayer_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TraitExtraRoleNum {
-      get { return traitExtraRoleNum_; }
+    public uint TraitEffectLayer {
+      get { return traitEffectLayer_; }
       set {
-        traitExtraRoleNum_ = value;
+        traitEffectLayer_ = value;
       }
     }
 
@@ -165,7 +165,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (TraitId != other.TraitId) return false;
-      if (TraitExtraRoleNum != other.TraitExtraRoleNum) return false;
+      if (TraitEffectLayer != other.TraitEffectLayer) return false;
       if(!traitEffectList_.Equals(other.traitEffectList_)) return false;
       if(!memberList_.Equals(other.memberList_)) return false;
       if (KAFPIHPAFEE != other.KAFPIHPAFEE) return false;
@@ -177,7 +177,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (TraitId != 0) hash ^= TraitId.GetHashCode();
-      if (TraitExtraRoleNum != 0) hash ^= TraitExtraRoleNum.GetHashCode();
+      if (TraitEffectLayer != 0) hash ^= TraitEffectLayer.GetHashCode();
       hash ^= traitEffectList_.GetHashCode();
       hash ^= memberList_.GetHashCode();
       if (KAFPIHPAFEE != 0) hash ^= KAFPIHPAFEE.GetHashCode();
@@ -203,9 +203,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(TraitId);
       }
-      if (TraitExtraRoleNum != 0) {
+      if (TraitEffectLayer != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(TraitExtraRoleNum);
+        output.WriteUInt32(TraitEffectLayer);
       }
       traitEffectList_.WriteTo(output, _repeated_traitEffectList_codec);
       memberList_.WriteTo(output, _repeated_memberList_codec);
@@ -227,9 +227,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(TraitId);
       }
-      if (TraitExtraRoleNum != 0) {
+      if (TraitEffectLayer != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(TraitExtraRoleNum);
+        output.WriteUInt32(TraitEffectLayer);
       }
       traitEffectList_.WriteTo(ref output, _repeated_traitEffectList_codec);
       memberList_.WriteTo(ref output, _repeated_memberList_codec);
@@ -250,8 +250,8 @@ namespace EggLink.DanhengServer.Proto {
       if (TraitId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitId);
       }
-      if (TraitExtraRoleNum != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitExtraRoleNum);
+      if (TraitEffectLayer != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitEffectLayer);
       }
       size += traitEffectList_.CalculateSize(_repeated_traitEffectList_codec);
       size += memberList_.CalculateSize(_repeated_memberList_codec);
@@ -273,8 +273,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.TraitId != 0) {
         TraitId = other.TraitId;
       }
-      if (other.TraitExtraRoleNum != 0) {
-        TraitExtraRoleNum = other.TraitExtraRoleNum;
+      if (other.TraitEffectLayer != 0) {
+        TraitEffectLayer = other.TraitEffectLayer;
       }
       traitEffectList_.Add(other.traitEffectList_);
       memberList_.Add(other.memberList_);
@@ -301,7 +301,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 16: {
-            TraitExtraRoleNum = input.ReadUInt32();
+            TraitEffectLayer = input.ReadUInt32();
             break;
           }
           case 26: {
@@ -336,7 +336,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 16: {
-            TraitExtraRoleNum = input.ReadUInt32();
+            TraitEffectLayer = input.ReadUInt32();
             break;
           }
           case 26: {

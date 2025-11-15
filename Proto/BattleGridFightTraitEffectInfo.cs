@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static BattleGridFightTraitEffectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRCYXR0bGVHcmlkRmlnaHRUcmFpdEVmZmVjdEluZm8ucHJvdG8aEUxNQkRB",
-            "RE9QQ1BHLnByb3RvGhFIT0NHTUNPT0pCQS5wcm90bxoRSUhHRUtMUElBTkwu",
+            "CiRCYXR0bGVHcmlkRmlnaHRUcmFpdEVmZmVjdEluZm8ucHJvdG8aEUlIR0VL",
+            "TFBJQU5MLnByb3RvGhFIT0NHTUNPT0pCQS5wcm90bxoRTE1CREFET1BDUEcu",
             "cHJvdG8isQEKHkJhdHRsZUdyaWRGaWdodFRyYWl0RWZmZWN0SW5mbxIjCgtJ",
             "REhGTUJHUEFMThhlIAEoCzIMLklIR0VLTFBJQU5MSAASIwoLSUlCQkdKRkNI",
             "RE8YZiABKAsyDC5MTUJEQURPUENQR0gAEiMKC01MSkpMQkhOQURLGGcgASgL",
             "MgwuSE9DR01DT09KQkFIABIRCgllZmZlY3RfaWQYASABKA1CDQoLR01OR0VL",
             "TkNHQUZCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LMBDADOPCPGReflection.Descriptor, global::EggLink.DanhengServer.Proto.HOCGMCOOJBAReflection.Descriptor, global::EggLink.DanhengServer.Proto.IHGEKLPIANLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IHGEKLPIANLReflection.Descriptor, global::EggLink.DanhengServer.Proto.HOCGMCOOJBAReflection.Descriptor, global::EggLink.DanhengServer.Proto.LMBDADOPCPGReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo), global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo.Parser, new[]{ "IDHFMBGPALN", "IIBBGJFCHDO", "MLJJLBHNADK", "EffectId" }, new[]{ "GMNGEKNCGAF" }, null, null, null)
           }));

@@ -24,13 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static IPFDCKEEOGLReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFJUEZEQ0tFRU9HTC5wcm90byJCCgtJUEZEQ0tFRU9HTBITCgtPSUxFTkhP",
-            "TlBJRRgKIAMoDRIeChZncmlkX2ZpZ2h0X2F2YXRhcl9saXN0GA8gAygNQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChFJUEZEQ0tFRU9HTC5wcm90byJdCgtJUEZEQ0tFRU9HTBIuCiZncmlkX2Zp",
+            "Z2h0X3RyYWl0X21lbWJlcl91bmlxdWVfaWRfbGlzdBgKIAMoDRIeChZncmlk",
+            "X2ZpZ2h0X2F2YXRhcl9saXN0GA8gAygNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IPFDCKEEOGL), global::EggLink.DanhengServer.Proto.IPFDCKEEOGL.Parser, new[]{ "OILENHONPIE", "GridFightAvatarList" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IPFDCKEEOGL), global::EggLink.DanhengServer.Proto.IPFDCKEEOGL.Parser, new[]{ "GridFightTraitMemberUniqueIdList", "GridFightAvatarList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IPFDCKEEOGL(IPFDCKEEOGL other) : this() {
-      oILENHONPIE_ = other.oILENHONPIE_.Clone();
+      gridFightTraitMemberUniqueIdList_ = other.gridFightTraitMemberUniqueIdList_.Clone();
       gridFightAvatarList_ = other.gridFightAvatarList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -83,15 +84,15 @@ namespace EggLink.DanhengServer.Proto {
       return new IPFDCKEEOGL(this);
     }
 
-    /// <summary>Field number for the "OILENHONPIE" field.</summary>
-    public const int OILENHONPIEFieldNumber = 10;
-    private static readonly pb::FieldCodec<uint> _repeated_oILENHONPIE_codec
+    /// <summary>Field number for the "grid_fight_trait_member_unique_id_list" field.</summary>
+    public const int GridFightTraitMemberUniqueIdListFieldNumber = 10;
+    private static readonly pb::FieldCodec<uint> _repeated_gridFightTraitMemberUniqueIdList_codec
         = pb::FieldCodec.ForUInt32(82);
-    private readonly pbc::RepeatedField<uint> oILENHONPIE_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> gridFightTraitMemberUniqueIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> OILENHONPIE {
-      get { return oILENHONPIE_; }
+    public pbc::RepeatedField<uint> GridFightTraitMemberUniqueIdList {
+      get { return gridFightTraitMemberUniqueIdList_; }
     }
 
     /// <summary>Field number for the "grid_fight_avatar_list" field.</summary>
@@ -120,7 +121,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!oILENHONPIE_.Equals(other.oILENHONPIE_)) return false;
+      if(!gridFightTraitMemberUniqueIdList_.Equals(other.gridFightTraitMemberUniqueIdList_)) return false;
       if(!gridFightAvatarList_.Equals(other.gridFightAvatarList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -129,7 +130,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= oILENHONPIE_.GetHashCode();
+      hash ^= gridFightTraitMemberUniqueIdList_.GetHashCode();
       hash ^= gridFightAvatarList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -149,7 +150,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      oILENHONPIE_.WriteTo(output, _repeated_oILENHONPIE_codec);
+      gridFightTraitMemberUniqueIdList_.WriteTo(output, _repeated_gridFightTraitMemberUniqueIdList_codec);
       gridFightAvatarList_.WriteTo(output, _repeated_gridFightAvatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -161,7 +162,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      oILENHONPIE_.WriteTo(ref output, _repeated_oILENHONPIE_codec);
+      gridFightTraitMemberUniqueIdList_.WriteTo(ref output, _repeated_gridFightTraitMemberUniqueIdList_codec);
       gridFightAvatarList_.WriteTo(ref output, _repeated_gridFightAvatarList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -173,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += oILENHONPIE_.CalculateSize(_repeated_oILENHONPIE_codec);
+      size += gridFightTraitMemberUniqueIdList_.CalculateSize(_repeated_gridFightTraitMemberUniqueIdList_codec);
       size += gridFightAvatarList_.CalculateSize(_repeated_gridFightAvatarList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -187,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      oILENHONPIE_.Add(other.oILENHONPIE_);
+      gridFightTraitMemberUniqueIdList_.Add(other.gridFightTraitMemberUniqueIdList_);
       gridFightAvatarList_.Add(other.gridFightAvatarList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -206,7 +207,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 82:
           case 80: {
-            oILENHONPIE_.AddEntriesFrom(input, _repeated_oILENHONPIE_codec);
+            gridFightTraitMemberUniqueIdList_.AddEntriesFrom(input, _repeated_gridFightTraitMemberUniqueIdList_codec);
             break;
           }
           case 122:
@@ -231,7 +232,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 82:
           case 80: {
-            oILENHONPIE_.AddEntriesFrom(ref input, _repeated_oILENHONPIE_codec);
+            gridFightTraitMemberUniqueIdList_.AddEntriesFrom(ref input, _repeated_gridFightTraitMemberUniqueIdList_codec);
             break;
           }
           case 122:

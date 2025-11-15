@@ -24,22 +24,22 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightSyncDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHcmlkRmlnaHRTeW5jRGF0YS5wcm90bxoiR3JpZEZpZ2h0RWxpdGVCcmFu",
-            "Y2hTeW5jSW5mby5wcm90bxoRRENCTEdFQUhPRUcucHJvdG8aG0dyaWRGaWdo",
-            "dEdhbWVJdGVtSW5mby5wcm90bxoRQ0dMRUlQQVBOS0QucHJvdG8aHEdyaWRG",
-            "aWdodERhbWFnZVN0dEluZm8ucHJvdG8aG0dyaWRGaWdodFNob3BTeW5jSW5m",
-            "by5wcm90bxoiR3JpZEZpZ2h0UGxheWVyTGV2ZWxTeW5jSW5mby5wcm90bxoa",
-            "R3JpZEZpZ2h0T3JiU3luY0luZm8ucHJvdG8aHEdyaWRGaWdodExldmVsU3lu",
-            "Y0luZm8ucHJvdG8aF0dyaWRGaWdodExvY2tUeXBlLnByb3RvGh9HcmlkRmln",
-            "aHRHYW1lSXRlbVN5bmNJbmZvLnByb3RvGhhHcmlkR2FtZUF2YXRhckluZm8u",
-            "cHJvdG8aIUdyaWRGaWdodFBvcnRhbEJ1ZmZTeW5jSW5mby5wcm90bxocR3Jp",
-            "ZEZpZ2h0UGVuZGluZ0FjdGlvbi5wcm90bxoRQ0dISkVGT05FQUsucHJvdG8a",
-            "HkdyaWRGaWdodEF1Z21lbnRTeW5jSW5mby5wcm90bxofR3JpZEZpZ2h0VHV0",
-            "b3JpYWxTeW5jSW5mby5wcm90bxofR3JpZEZpZ2h0TGluZXVwSHBTeW5jSW5m",
-            "by5wcm90bxocR3JpZEZpZ2h0VHJhaXRTeW5jSW5mby5wcm90bxoRT0tOQUVM",
-            "TVBLREYucHJvdG8aEU5NS0hDQ0hITEpBLnByb3RvGhdHcmlkRmlnaHRMb2Nr",
-            "SW5mby5wcm90bxogR3JpZEZpZ2h0U2VjdGlvblJlY29yZEluZm8ucHJvdG8i",
-            "ng8KEUdyaWRGaWdodFN5bmNEYXRhEi0KDWFkZF9yb2xlX2luZm8YjgwgASgL",
+            "ChdHcmlkRmlnaHRTeW5jRGF0YS5wcm90bxoRT0tOQUVMTVBLREYucHJvdG8a",
+            "EURDQkxHRUFIT0VHLnByb3RvGhFDR0xFSVBBUE5LRC5wcm90bxocR3JpZEZp",
+            "Z2h0VHJhaXRTeW5jSW5mby5wcm90bxoaR3JpZEZpZ2h0T3JiU3luY0luZm8u",
+            "cHJvdG8aG0dyaWRGaWdodEdhbWVJdGVtSW5mby5wcm90bxofR3JpZEZpZ2h0",
+            "TGluZXVwSHBTeW5jSW5mby5wcm90bxobR3JpZEZpZ2h0U2hvcFN5bmNJbmZv",
+            "LnByb3RvGiJHcmlkRmlnaHRQbGF5ZXJMZXZlbFN5bmNJbmZvLnByb3RvGhhH",
+            "cmlkR2FtZUF2YXRhckluZm8ucHJvdG8aH0dyaWRGaWdodFR1dG9yaWFsU3lu",
+            "Y0luZm8ucHJvdG8aF0dyaWRGaWdodExvY2tUeXBlLnByb3RvGhdHcmlkRmln",
+            "aHRMb2NrSW5mby5wcm90bxohR3JpZEZpZ2h0UG9ydGFsQnVmZlN5bmNJbmZv",
+            "LnByb3RvGh9HcmlkRmlnaHRHYW1lSXRlbVN5bmNJbmZvLnByb3RvGhFOTUtI",
+            "Q0NISExKQS5wcm90bxoiR3JpZEZpZ2h0RWxpdGVCcmFuY2hTeW5jSW5mby5w",
+            "cm90bxogR3JpZEZpZ2h0U2VjdGlvblJlY29yZEluZm8ucHJvdG8aHkdyaWRG",
+            "aWdodEF1Z21lbnRTeW5jSW5mby5wcm90bxocR3JpZEZpZ2h0TGV2ZWxTeW5j",
+            "SW5mby5wcm90bxocR3JpZEZpZ2h0UGVuZGluZ0FjdGlvbi5wcm90bxocR3Jp",
+            "ZEZpZ2h0RGFtYWdlU3R0SW5mby5wcm90bxoRQ0dISkVGT05FQUsucHJvdG8i",
+            "pw8KEUdyaWRGaWdodFN5bmNEYXRhEi0KDWFkZF9yb2xlX2luZm8YjgwgASgL",
             "MhMuR3JpZEdhbWVBdmF0YXJJbmZvSAASMAoQdXBkYXRlX3JvbGVfaW5mbxj9",
             "CSABKAsyEy5HcmlkR2FtZUF2YXRhckluZm9IABIgChVyZW1vdmVfcm9sZV91",
             "bmlxdWVfaWQYnwYgASgNSAASOQoSYWRkX2dhbWVfaXRlbV9pbmZvGIkHIAEo",
@@ -78,16 +78,16 @@ namespace EggLink.DanhengServer.Proto {
             "KAsyGS5HcmlkRmlnaHRBdWdtZW50U3luY0luZm9IABIkCgtBSFBIS0NISElD",
             "TxisBCABKAsyDC5DR0xFSVBBUE5LREgAEkEKHmdyaWRfZmlnaHRfc3luY19n",
             "YW1lX2l0ZW1faW5mbxi1DyABKAsyFi5HcmlkRmlnaHRHYW1lSXRlbUluZm9I",
-            "ABIWCgtDR0ZBTUhHQUlDQRjzBSABKA1IABIVCgtLUE5CRkhFRERPRhhbIAEo",
-            "DUgAEj8KGGdyaWRfZmlnaHRfdHV0b3JpYWxfc3luYxjEBSABKAsyGi5Hcmlk",
-            "RmlnaHRUdXRvcmlhbFN5bmNJbmZvSAASLQoOc3luY19sb2NrX2luZm8Y+Awg",
-            "ASgLMhIuR3JpZEZpZ2h0TG9ja0luZm9IABIWCgtJS0VHTkRFSVBGRxi9AiAB",
-            "KA1IAEILCglzeW5jX2l0ZW1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
-            "cm90b2IGcHJvdG8z"));
+            "ABIfChRyZW1vdmVfb3JiX3VuaXF1ZV9pZBjzBSABKA1IABIVCgtLUE5CRkhF",
+            "RERPRhhbIAEoDUgAEj8KGGdyaWRfZmlnaHRfdHV0b3JpYWxfc3luYxjEBSAB",
+            "KAsyGi5HcmlkRmlnaHRUdXRvcmlhbFN5bmNJbmZvSAASLQoOc3luY19sb2Nr",
+            "X2luZm8Y+AwgASgLMhIuR3JpZEZpZ2h0TG9ja0luZm9IABIWCgtJS0VHTkRF",
+            "SVBGRxi9AiABKA1IAEILCglzeW5jX2l0ZW1CHqoCG0VnZ0xpbmsuRGFuaGVu",
+            "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightEliteBranchSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCBLGEAHOEGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGLEIPAPNKDReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDamageSttInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightShopSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPlayerLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightOrbSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGHJEFONEAKReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTutorialSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLineupHpSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OKNAELMPKDFReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMKHCCHHLJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSectionRecordInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OKNAELMPKDFReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCBLGEAHOEGReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGLEIPAPNKDReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightOrbSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLineupHpSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightShopSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPlayerLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTutorialSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMKHCCHHLJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteBranchSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSectionRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDamageSttInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CGHJEFONEAKReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSyncData), global::EggLink.DanhengServer.Proto.GridFightSyncData.Parser, new[]{ "AddRoleInfo", "UpdateRoleInfo", "RemoveRoleUniqueId", "AddGameItemInfo", "GKNADIIOJND", "RemoveGameItemInfo", "ItemValue", "PlayerLevel", "GridFightLineupHp", "MaxBattleRoleNum", "ShopSyncInfo", "PendingAction", "PortalBuffSyncInfo", "LevelSyncInfo", "OrbSyncInfo", "SectionRecordSyncInfo", "MPCCPGJFBDH", "RemoveAugmentUniqueId", "FinishPendingActionPos", "GridFightMaxGold", "GridFightLevelCost", "TraitSyncInfo", "LockType", "GANFIBDMILH", "GridFightComboWinNum", "GridFightMaxAvatarCount", "GridFightOffFieldMaxCount", "GridFightDamageSttInfo", "EliteBranchSyncInfo", "IOOCMIEIPGD", "NELLJAJJGHP", "OLOKLNFNHLM", "GNNHCDMJHFN", "FIPJEEMCLBB", "KLPEEEPEKEM", "AugmentSyncInfo", "AHPHKCHHICO", "GridFightSyncGameItemInfo", "CGFAMHGAICA", "KPNBFHEDDOF", "GridFightTutorialSync", "SyncLockInfo", "IKEGNDEIPFG" }, new[]{ "SyncItem" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSyncData), global::EggLink.DanhengServer.Proto.GridFightSyncData.Parser, new[]{ "AddRoleInfo", "UpdateRoleInfo", "RemoveRoleUniqueId", "AddGameItemInfo", "GKNADIIOJND", "RemoveGameItemInfo", "ItemValue", "PlayerLevel", "GridFightLineupHp", "MaxBattleRoleNum", "ShopSyncInfo", "PendingAction", "PortalBuffSyncInfo", "LevelSyncInfo", "OrbSyncInfo", "SectionRecordSyncInfo", "MPCCPGJFBDH", "RemoveAugmentUniqueId", "FinishPendingActionPos", "GridFightMaxGold", "GridFightLevelCost", "TraitSyncInfo", "LockType", "GANFIBDMILH", "GridFightComboWinNum", "GridFightMaxAvatarCount", "GridFightOffFieldMaxCount", "GridFightDamageSttInfo", "EliteBranchSyncInfo", "IOOCMIEIPGD", "NELLJAJJGHP", "OLOKLNFNHLM", "GNNHCDMJHFN", "FIPJEEMCLBB", "KLPEEEPEKEM", "AugmentSyncInfo", "AHPHKCHHICO", "GridFightSyncGameItemInfo", "RemoveOrbUniqueId", "KPNBFHEDDOF", "GridFightTutorialSync", "SyncLockInfo", "IKEGNDEIPFG" }, new[]{ "SyncItem" }, null, null, null)
           }));
     }
     #endregion
@@ -244,8 +244,8 @@ namespace EggLink.DanhengServer.Proto {
         case SyncItemOneofCase.GridFightSyncGameItemInfo:
           GridFightSyncGameItemInfo = other.GridFightSyncGameItemInfo.Clone();
           break;
-        case SyncItemOneofCase.CGFAMHGAICA:
-          CGFAMHGAICA = other.CGFAMHGAICA;
+        case SyncItemOneofCase.RemoveOrbUniqueId:
+          RemoveOrbUniqueId = other.RemoveOrbUniqueId;
           break;
         case SyncItemOneofCase.KPNBFHEDDOF:
           KPNBFHEDDOF = other.KPNBFHEDDOF;
@@ -908,28 +908,28 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CGFAMHGAICA" field.</summary>
-    public const int CGFAMHGAICAFieldNumber = 755;
+    /// <summary>Field number for the "remove_orb_unique_id" field.</summary>
+    public const int RemoveOrbUniqueIdFieldNumber = 755;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint CGFAMHGAICA {
-      get { return HasCGFAMHGAICA ? (uint) syncItem_ : 0; }
+    public uint RemoveOrbUniqueId {
+      get { return HasRemoveOrbUniqueId ? (uint) syncItem_ : 0; }
       set {
         syncItem_ = value;
-        syncItemCase_ = SyncItemOneofCase.CGFAMHGAICA;
+        syncItemCase_ = SyncItemOneofCase.RemoveOrbUniqueId;
       }
     }
-    /// <summary>Gets whether the "CGFAMHGAICA" field is set</summary>
+    /// <summary>Gets whether the "remove_orb_unique_id" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasCGFAMHGAICA {
-      get { return syncItemCase_ == SyncItemOneofCase.CGFAMHGAICA; }
+    public bool HasRemoveOrbUniqueId {
+      get { return syncItemCase_ == SyncItemOneofCase.RemoveOrbUniqueId; }
     }
-    /// <summary> Clears the value of the oneof if it's currently set to "CGFAMHGAICA" </summary>
+    /// <summary> Clears the value of the oneof if it's currently set to "remove_orb_unique_id" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearCGFAMHGAICA() {
-      if (HasCGFAMHGAICA) {
+    public void ClearRemoveOrbUniqueId() {
+      if (HasRemoveOrbUniqueId) {
         ClearSyncItem();
       }
     }
@@ -1052,7 +1052,7 @@ namespace EggLink.DanhengServer.Proto {
       AugmentSyncInfo = 139,
       AHPHKCHHICO = 556,
       GridFightSyncGameItemInfo = 1973,
-      CGFAMHGAICA = 755,
+      RemoveOrbUniqueId = 755,
       KPNBFHEDDOF = 91,
       GridFightTutorialSync = 708,
       SyncLockInfo = 1656,
@@ -1125,7 +1125,7 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(AugmentSyncInfo, other.AugmentSyncInfo)) return false;
       if (!object.Equals(AHPHKCHHICO, other.AHPHKCHHICO)) return false;
       if (!object.Equals(GridFightSyncGameItemInfo, other.GridFightSyncGameItemInfo)) return false;
-      if (CGFAMHGAICA != other.CGFAMHGAICA) return false;
+      if (RemoveOrbUniqueId != other.RemoveOrbUniqueId) return false;
       if (KPNBFHEDDOF != other.KPNBFHEDDOF) return false;
       if (!object.Equals(GridFightTutorialSync, other.GridFightTutorialSync)) return false;
       if (!object.Equals(SyncLockInfo, other.SyncLockInfo)) return false;
@@ -1176,7 +1176,7 @@ namespace EggLink.DanhengServer.Proto {
       if (syncItemCase_ == SyncItemOneofCase.AugmentSyncInfo) hash ^= AugmentSyncInfo.GetHashCode();
       if (syncItemCase_ == SyncItemOneofCase.AHPHKCHHICO) hash ^= AHPHKCHHICO.GetHashCode();
       if (syncItemCase_ == SyncItemOneofCase.GridFightSyncGameItemInfo) hash ^= GridFightSyncGameItemInfo.GetHashCode();
-      if (HasCGFAMHGAICA) hash ^= CGFAMHGAICA.GetHashCode();
+      if (HasRemoveOrbUniqueId) hash ^= RemoveOrbUniqueId.GetHashCode();
       if (HasKPNBFHEDDOF) hash ^= KPNBFHEDDOF.GetHashCode();
       if (syncItemCase_ == SyncItemOneofCase.GridFightTutorialSync) hash ^= GridFightTutorialSync.GetHashCode();
       if (syncItemCase_ == SyncItemOneofCase.SyncLockInfo) hash ^= SyncLockInfo.GetHashCode();
@@ -1256,9 +1256,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(162, 44);
         output.WriteMessage(GridFightTutorialSync);
       }
-      if (HasCGFAMHGAICA) {
+      if (HasRemoveOrbUniqueId) {
         output.WriteRawTag(152, 47);
-        output.WriteUInt32(CGFAMHGAICA);
+        output.WriteUInt32(RemoveOrbUniqueId);
       }
       if (HasGridFightMaxAvatarCount) {
         output.WriteRawTag(160, 47);
@@ -1438,9 +1438,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(162, 44);
         output.WriteMessage(GridFightTutorialSync);
       }
-      if (HasCGFAMHGAICA) {
+      if (HasRemoveOrbUniqueId) {
         output.WriteRawTag(152, 47);
-        output.WriteUInt32(CGFAMHGAICA);
+        output.WriteUInt32(RemoveOrbUniqueId);
       }
       if (HasGridFightMaxAvatarCount) {
         output.WriteRawTag(160, 47);
@@ -1678,8 +1678,8 @@ namespace EggLink.DanhengServer.Proto {
       if (syncItemCase_ == SyncItemOneofCase.GridFightSyncGameItemInfo) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(GridFightSyncGameItemInfo);
       }
-      if (HasCGFAMHGAICA) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(CGFAMHGAICA);
+      if (HasRemoveOrbUniqueId) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(RemoveOrbUniqueId);
       }
       if (HasKPNBFHEDDOF) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(KPNBFHEDDOF);
@@ -1895,8 +1895,8 @@ namespace EggLink.DanhengServer.Proto {
           }
           GridFightSyncGameItemInfo.MergeFrom(other.GridFightSyncGameItemInfo);
           break;
-        case SyncItemOneofCase.CGFAMHGAICA:
-          CGFAMHGAICA = other.CGFAMHGAICA;
+        case SyncItemOneofCase.RemoveOrbUniqueId:
+          RemoveOrbUniqueId = other.RemoveOrbUniqueId;
           break;
         case SyncItemOneofCase.KPNBFHEDDOF:
           KPNBFHEDDOF = other.KPNBFHEDDOF;
@@ -2035,7 +2035,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 6040: {
-            CGFAMHGAICA = input.ReadUInt32();
+            RemoveOrbUniqueId = input.ReadUInt32();
             break;
           }
           case 6048: {
@@ -2358,7 +2358,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 6040: {
-            CGFAMHGAICA = input.ReadUInt32();
+            RemoveOrbUniqueId = input.ReadUInt32();
             break;
           }
           case 6048: {

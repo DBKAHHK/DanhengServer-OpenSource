@@ -25,17 +25,18 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHcmlkRmlnaHRTZXR0bGVOb3RpZnkucHJvdG8aGUdyaWRGaWdodEZpbmlz",
-            "aEluZm8ucHJvdG8i/wEKFUdyaWRGaWdodFNldHRsZU5vdGlmeRIUCgtJQUJK",
+            "aEluZm8ucHJvdG8iiAIKFUdyaWRGaWdodFNldHRsZU5vdGlmeRIUCgtJQUJK",
             "Qk9DREFCQhjXDCABKA0SEwoLTEZFTU9IREtNQ0kYDiABKA0SGAoQZ3JpZF9m",
-            "aWdodF9sZXZlbBgCIAEoDRITCgtGREVMQUNCTkFHSRgFIAEoDRITCgtQQUdG",
-            "QURHSU1DRhgHIAEoDRIZChFncmlkX3dlZWtseV9zY29yZRgDIAEoDRIwChF0",
-            "b3Vybl9maW5pc2hfaW5mbxinByABKAsyFC5HcmlkRmlnaHRGaW5pc2hJbmZv",
-            "EhQKC01CRUlESEJNR0pFGOgFIAEoDRIUCgx0YWxlbnRfcG9pbnQYBiABKA1C",
-            "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "aWdodF9sZXZlbBgCIAEoDRIXCg9jdXJfZGl2aXNpb25faWQYBSABKA0SGAoQ",
+            "cHJldl9kaXZpc2lvbl9pZBgHIAEoDRIZChFncmlkX3dlZWtseV9zY29yZRgD",
+            "IAEoDRIwChF0b3Vybl9maW5pc2hfaW5mbxinByABKAsyFC5HcmlkRmlnaHRG",
+            "aW5pc2hJbmZvEhQKC01CRUlESEJNR0pFGOgFIAEoDRIUCgx0YWxlbnRfcG9p",
+            "bnQYBiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightFinishInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSettleNotify), global::EggLink.DanhengServer.Proto.GridFightSettleNotify.Parser, new[]{ "IABJBOCDABB", "LFEMOHDKMCI", "GridFightLevel", "FDELACBNAGI", "PAGFADGIMCF", "GridWeeklyScore", "TournFinishInfo", "MBEIDHBMGJE", "TalentPoint" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSettleNotify), global::EggLink.DanhengServer.Proto.GridFightSettleNotify.Parser, new[]{ "IABJBOCDABB", "LFEMOHDKMCI", "GridFightLevel", "CurDivisionId", "PrevDivisionId", "GridWeeklyScore", "TournFinishInfo", "MBEIDHBMGJE", "TalentPoint" }, null, null, null, null)
           }));
     }
     #endregion
@@ -80,8 +81,8 @@ namespace EggLink.DanhengServer.Proto {
       iABJBOCDABB_ = other.iABJBOCDABB_;
       lFEMOHDKMCI_ = other.lFEMOHDKMCI_;
       gridFightLevel_ = other.gridFightLevel_;
-      fDELACBNAGI_ = other.fDELACBNAGI_;
-      pAGFADGIMCF_ = other.pAGFADGIMCF_;
+      curDivisionId_ = other.curDivisionId_;
+      prevDivisionId_ = other.prevDivisionId_;
       gridWeeklyScore_ = other.gridWeeklyScore_;
       tournFinishInfo_ = other.tournFinishInfo_ != null ? other.tournFinishInfo_.Clone() : null;
       mBEIDHBMGJE_ = other.mBEIDHBMGJE_;
@@ -131,27 +132,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "FDELACBNAGI" field.</summary>
-    public const int FDELACBNAGIFieldNumber = 5;
-    private uint fDELACBNAGI_;
+    /// <summary>Field number for the "cur_division_id" field.</summary>
+    public const int CurDivisionIdFieldNumber = 5;
+    private uint curDivisionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint FDELACBNAGI {
-      get { return fDELACBNAGI_; }
+    public uint CurDivisionId {
+      get { return curDivisionId_; }
       set {
-        fDELACBNAGI_ = value;
+        curDivisionId_ = value;
       }
     }
 
-    /// <summary>Field number for the "PAGFADGIMCF" field.</summary>
-    public const int PAGFADGIMCFFieldNumber = 7;
-    private uint pAGFADGIMCF_;
+    /// <summary>Field number for the "prev_division_id" field.</summary>
+    public const int PrevDivisionIdFieldNumber = 7;
+    private uint prevDivisionId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PAGFADGIMCF {
-      get { return pAGFADGIMCF_; }
+    public uint PrevDivisionId {
+      get { return prevDivisionId_; }
       set {
-        pAGFADGIMCF_ = value;
+        prevDivisionId_ = value;
       }
     }
 
@@ -221,8 +222,8 @@ namespace EggLink.DanhengServer.Proto {
       if (IABJBOCDABB != other.IABJBOCDABB) return false;
       if (LFEMOHDKMCI != other.LFEMOHDKMCI) return false;
       if (GridFightLevel != other.GridFightLevel) return false;
-      if (FDELACBNAGI != other.FDELACBNAGI) return false;
-      if (PAGFADGIMCF != other.PAGFADGIMCF) return false;
+      if (CurDivisionId != other.CurDivisionId) return false;
+      if (PrevDivisionId != other.PrevDivisionId) return false;
       if (GridWeeklyScore != other.GridWeeklyScore) return false;
       if (!object.Equals(TournFinishInfo, other.TournFinishInfo)) return false;
       if (MBEIDHBMGJE != other.MBEIDHBMGJE) return false;
@@ -237,8 +238,8 @@ namespace EggLink.DanhengServer.Proto {
       if (IABJBOCDABB != 0) hash ^= IABJBOCDABB.GetHashCode();
       if (LFEMOHDKMCI != 0) hash ^= LFEMOHDKMCI.GetHashCode();
       if (GridFightLevel != 0) hash ^= GridFightLevel.GetHashCode();
-      if (FDELACBNAGI != 0) hash ^= FDELACBNAGI.GetHashCode();
-      if (PAGFADGIMCF != 0) hash ^= PAGFADGIMCF.GetHashCode();
+      if (CurDivisionId != 0) hash ^= CurDivisionId.GetHashCode();
+      if (PrevDivisionId != 0) hash ^= PrevDivisionId.GetHashCode();
       if (GridWeeklyScore != 0) hash ^= GridWeeklyScore.GetHashCode();
       if (tournFinishInfo_ != null) hash ^= TournFinishInfo.GetHashCode();
       if (MBEIDHBMGJE != 0) hash ^= MBEIDHBMGJE.GetHashCode();
@@ -269,17 +270,17 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(GridWeeklyScore);
       }
-      if (FDELACBNAGI != 0) {
+      if (CurDivisionId != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(FDELACBNAGI);
+        output.WriteUInt32(CurDivisionId);
       }
       if (TalentPoint != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(TalentPoint);
       }
-      if (PAGFADGIMCF != 0) {
+      if (PrevDivisionId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(PAGFADGIMCF);
+        output.WriteUInt32(PrevDivisionId);
       }
       if (LFEMOHDKMCI != 0) {
         output.WriteRawTag(112);
@@ -315,17 +316,17 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(24);
         output.WriteUInt32(GridWeeklyScore);
       }
-      if (FDELACBNAGI != 0) {
+      if (CurDivisionId != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(FDELACBNAGI);
+        output.WriteUInt32(CurDivisionId);
       }
       if (TalentPoint != 0) {
         output.WriteRawTag(48);
         output.WriteUInt32(TalentPoint);
       }
-      if (PAGFADGIMCF != 0) {
+      if (PrevDivisionId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(PAGFADGIMCF);
+        output.WriteUInt32(PrevDivisionId);
       }
       if (LFEMOHDKMCI != 0) {
         output.WriteRawTag(112);
@@ -362,11 +363,11 @@ namespace EggLink.DanhengServer.Proto {
       if (GridFightLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightLevel);
       }
-      if (FDELACBNAGI != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FDELACBNAGI);
+      if (CurDivisionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurDivisionId);
       }
-      if (PAGFADGIMCF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PAGFADGIMCF);
+      if (PrevDivisionId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PrevDivisionId);
       }
       if (GridWeeklyScore != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridWeeklyScore);
@@ -401,11 +402,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GridFightLevel != 0) {
         GridFightLevel = other.GridFightLevel;
       }
-      if (other.FDELACBNAGI != 0) {
-        FDELACBNAGI = other.FDELACBNAGI;
+      if (other.CurDivisionId != 0) {
+        CurDivisionId = other.CurDivisionId;
       }
-      if (other.PAGFADGIMCF != 0) {
-        PAGFADGIMCF = other.PAGFADGIMCF;
+      if (other.PrevDivisionId != 0) {
+        PrevDivisionId = other.PrevDivisionId;
       }
       if (other.GridWeeklyScore != 0) {
         GridWeeklyScore = other.GridWeeklyScore;
@@ -446,7 +447,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            FDELACBNAGI = input.ReadUInt32();
+            CurDivisionId = input.ReadUInt32();
             break;
           }
           case 48: {
@@ -454,7 +455,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            PAGFADGIMCF = input.ReadUInt32();
+            PrevDivisionId = input.ReadUInt32();
             break;
           }
           case 112: {
@@ -500,7 +501,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            FDELACBNAGI = input.ReadUInt32();
+            CurDivisionId = input.ReadUInt32();
             break;
           }
           case 48: {
@@ -508,7 +509,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 56: {
-            PAGFADGIMCF = input.ReadUInt32();
+            PrevDivisionId = input.ReadUInt32();
             break;
           }
           case 112: {

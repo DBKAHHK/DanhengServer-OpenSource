@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightConsumableTargetInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNHcmlkRmlnaHRDb25zdW1hYmxlVGFyZ2V0SW5mby5wcm90bxomR3JpZEZp",
-            "Z2h0Um9sZUVxdWlwbWVudFRhcmdldEluZm8ucHJvdG8aEUVHQk9LTk5CS0dO",
-            "LnByb3RvGhFQRkJKSUdORU9QSy5wcm90bxoRQkZLS0xNQ0dFR0sucHJvdG8a",
-            "HUdyaWRGaWdodFJvbGVUYXJnZXRJbmZvLnByb3RvIqECCh1HcmlkRmlnaHRD",
+            "CiNHcmlkRmlnaHRDb25zdW1hYmxlVGFyZ2V0SW5mby5wcm90bxoRQkZLS0xN",
+            "Q0dFR0sucHJvdG8aHUdyaWRGaWdodFJvbGVUYXJnZXRJbmZvLnByb3RvGiZH",
+            "cmlkRmlnaHRSb2xlRXF1aXBtZW50VGFyZ2V0SW5mby5wcm90bxoRUEZCSklH",
+            "TkVPUEsucHJvdG8aEUVHQk9LTk5CS0dOLnByb3RvIqECCh1HcmlkRmlnaHRD",
             "b25zdW1hYmxlVGFyZ2V0SW5mbxI1ChByb2xlX3RhcmdldF9pbmZvGOMMIAEo",
             "CzIYLkdyaWRGaWdodFJvbGVUYXJnZXRJbmZvSAASSAoacm9sZV9lcXVpcG1l",
             "bnRfdGFyZ2V0X2luZm8Ygg4gASgLMiEuR3JpZEZpZ2h0Um9sZUVxdWlwbWVu",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "QlBKSExBQkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightRoleEquipmentTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EGBOKNNBKGNReflection.Descriptor, global::EggLink.DanhengServer.Proto.PFBJIGNEOPKReflection.Descriptor, global::EggLink.DanhengServer.Proto.BFKKLMCGEGKReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRoleTargetInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BFKKLMCGEGKReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRoleTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRoleEquipmentTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.PFBJIGNEOPKReflection.Descriptor, global::EggLink.DanhengServer.Proto.EGBOKNNBKGNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfo), global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfo.Parser, new[]{ "RoleTargetInfo", "RoleEquipmentTargetInfo", "ELNHFHDGJJC", "CINJJPBEOHK", "JOCNIFAAFDP" }, new[]{ "NLIIBPJHLAB" }, null, null, null)
           }));

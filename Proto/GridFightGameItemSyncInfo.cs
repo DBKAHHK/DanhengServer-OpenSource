@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9HcmlkRmlnaHRHYW1lSXRlbVN5bmNJbmZvLnByb3RvGhxHcmlkRmlnaHRF",
-            "cXVpcG1lbnRJbmZvLnByb3RvGhFDRk5DSUxFQU1LSS5wcm90bxoRTk1LSEND",
-            "SEhMSkEucHJvdG8aHUdyaWRGaWdodENvbnN1bWFibGVJbmZvLnByb3RvItsB",
+            "cXVpcG1lbnRJbmZvLnByb3RvGhFOTUtIQ0NISExKQS5wcm90bxoRQ0ZOQ0lM",
+            "RUFNS0kucHJvdG8aHUdyaWRGaWdodENvbnN1bWFibGVJbmZvLnByb3RvItsB",
             "ChlHcmlkRmlnaHRHYW1lSXRlbVN5bmNJbmZvEiEKC0NBR05DSkJLS0RFGAUg",
             "AygLMgwuQ0ZOQ0lMRUFNS0kSOgoZZ3JpZF9maWdodF9lcXVpcG1lbnRfbGlz",
             "dBgPIAMoCzIXLkdyaWRGaWdodEVxdWlwbWVudEluZm8SPAoaZ3JpZF9maWdo",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "SW5mbxIhCgtQREdDTElOTkVCTRgIIAMoCzIMLk5NS0hDQ0hITEpBQh6qAhtF",
             "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CFNCILEAMKIReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMKHCCHHLJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightConsumableInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMKHCCHHLJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.CFNCILEAMKIReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightConsumableInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfo), global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfo.Parser, new[]{ "CAGNCJBKKDE", "GridFightEquipmentList", "GridFightConsumableList", "PDGCLINNEBM" }, null, null, null, null)
           }));

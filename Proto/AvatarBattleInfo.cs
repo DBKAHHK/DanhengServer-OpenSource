@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static AvatarBattleInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZBdmF0YXJCYXR0bGVJbmZvLnByb3RvGhZTa2lsbFVzZVByb3BlcnR5LnBy",
-            "b3RvGhdFcXVpcG1lbnRQcm9wZXJ0eS5wcm90bxoTQWJpbGl0eVVzZVN0dC5w",
-            "cm90bxoUQXZhdGFyUHJvcGVydHkucHJvdG8aEUJhdHRsZVJlbGljLnByb3Rv",
-            "GhVBdmF0YXJTa2lsbFRyZWUucHJvdG8aEEF2YXRhclR5cGUucHJvdG8aGkF0",
-            "dGFja0RhbWFnZVByb3BlcnR5LnByb3RvGhFTcEFkZFNvdXJjZS5wcm90bxoR",
-            "UEpOQkxOSVBGSUcucHJvdG8ijAwKEEF2YXRhckJhdHRsZUluZm8SIAoLYXZh",
+            "ChZBdmF0YXJCYXR0bGVJbmZvLnByb3RvGhpBdHRhY2tEYW1hZ2VQcm9wZXJ0",
+            "eS5wcm90bxoWU2tpbGxVc2VQcm9wZXJ0eS5wcm90bxoRQmF0dGxlUmVsaWMu",
+            "cHJvdG8aFEF2YXRhclByb3BlcnR5LnByb3RvGhdFcXVpcG1lbnRQcm9wZXJ0",
+            "eS5wcm90bxoRUEpOQkxOSVBGSUcucHJvdG8aE0FiaWxpdHlVc2VTdHQucHJv",
+            "dG8aEVNwQWRkU291cmNlLnByb3RvGhVBdmF0YXJTa2lsbFRyZWUucHJvdG8a",
+            "EEF2YXRhclR5cGUucHJvdG8ijAwKEEF2YXRhckJhdHRsZUluZm8SIAoLYXZh",
             "dGFyX3R5cGUYASABKA4yCy5BdmF0YXJUeXBlEgoKAmlkGAIgASgNEhQKDGF2",
             "YXRhcl9sZXZlbBgDIAEoDRITCgthdmF0YXJfcmFuaxgEIAEoDRIYChBhdmF0",
             "YXJfcHJvbW90aW9uGAUgASgNEiYKDWF2YXRhcl9zdGF0dXMYBiABKAsyDy5B",
@@ -66,7 +66,7 @@ namespace EggLink.DanhengServer.Proto {
             "ASgNEiEKC0pLSERMRUxKRklDGDkgASgLMgwuUEpOQkxOSVBGSUdCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SkillUsePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.AbilityUseSttReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleRelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.AttackDamagePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.SpAddSourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.PJNBLNIPFIGReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AttackDamagePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.SkillUsePropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleRelicReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentPropertyReflection.Descriptor, global::EggLink.DanhengServer.Proto.PJNBLNIPFIGReflection.Descriptor, global::EggLink.DanhengServer.Proto.AbilityUseSttReflection.Descriptor, global::EggLink.DanhengServer.Proto.SpAddSourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarSkillTreeReflection.Descriptor, global::EggLink.DanhengServer.Proto.AvatarTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.AvatarBattleInfo), global::EggLink.DanhengServer.Proto.AvatarBattleInfo.Parser, new[]{ "AvatarType", "Id", "AvatarLevel", "AvatarRank", "AvatarPromotion", "AvatarStatus", "AvatarSkill", "AvatarEquipment", "TotalTurns", "TotalDamage", "TotalHeal", "TotalDamageTaken", "TotalHpRecover", "TotalSpCost", "StageId", "StageType", "TotalBreakDamage", "AttackTypeDamage", "AttackTypeBreakDamage", "AttackTypeMaxDamage", "SkillTimes", "DelayCumulate", "TotalSpAdd", "SpAddSource", "TotalBpCost", "DieTimes", "ReviveTimes", "BreakTimes", "ExtraTurns", "TotalShield", "TotalShieldTaken", "TotalShieldDamage", "InitialStatus", "Relics", "AssistUid", "AADGFLPBPDF", "FPFBMIMBBHJ", "GGPJOHNOCPC", "LACKCJHHIMK", "FMODLGOBNPE", "LHKABNICKJN", "NCJHDJJDJNL", "LKMGDIADOPB", "IBLGMCIPCKM", "HACJDJIGMGP", "IMDJAHAJGCF", "JDOLKDBICLJ", "CACCODDCJHI", "LLDMLOHBFLO", "CHNIKKCIBEG", "LBNJHHHLPMO", "PDLILFICHIL", "PMKLPHJIOHC", "MPFAENEKFDC", "AvatarEnhanceId", "LDMJDILBDFO", "JKHDLELJFIC" }, null, null, null, null)
           }));

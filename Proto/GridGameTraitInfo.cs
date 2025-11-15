@@ -25,15 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChdHcmlkR2FtZVRyYWl0SW5mby5wcm90bxoeR3JpZEZpZ2h0VHJhaXRFZmZl",
-            "Y3RJbmZvLnByb3RvIo4BChFHcmlkR2FtZVRyYWl0SW5mbxIQCgh0cmFpdF9p",
+            "Y3RJbmZvLnByb3RvIqcBChFHcmlkR2FtZVRyYWl0SW5mbxIQCgh0cmFpdF9p",
             "ZBgPIAEoDRI0ChF0cmFpdF9lZmZlY3RfbGlzdBgFIAMoCzIZLkdyaWRGaWdo",
-            "dFRyYWl0RWZmZWN0SW5mbxITCgtPSUxFTkhPTlBJRRgMIAMoDRIcChR0cmFp",
-            "dF9leHRyYV9yb2xlX251bRgBIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2Vy",
-            "dmVyLlByb3RvYgZwcm90bzM="));
+            "dFRyYWl0RWZmZWN0SW5mbxIuCiZncmlkX2ZpZ2h0X3RyYWl0X21lbWJlcl91",
+            "bmlxdWVfaWRfbGlzdBgMIAMoDRIaChJ0cmFpdF9lZmZlY3RfbGF5ZXIYASAB",
+            "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightTraitEffectInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridGameTraitInfo), global::EggLink.DanhengServer.Proto.GridGameTraitInfo.Parser, new[]{ "TraitId", "TraitEffectList", "OILENHONPIE", "TraitExtraRoleNum" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridGameTraitInfo), global::EggLink.DanhengServer.Proto.GridGameTraitInfo.Parser, new[]{ "TraitId", "TraitEffectList", "GridFightTraitMemberUniqueIdList", "TraitEffectLayer" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,8 +77,8 @@ namespace EggLink.DanhengServer.Proto {
     public GridGameTraitInfo(GridGameTraitInfo other) : this() {
       traitId_ = other.traitId_;
       traitEffectList_ = other.traitEffectList_.Clone();
-      oILENHONPIE_ = other.oILENHONPIE_.Clone();
-      traitExtraRoleNum_ = other.traitExtraRoleNum_;
+      gridFightTraitMemberUniqueIdList_ = other.gridFightTraitMemberUniqueIdList_.Clone();
+      traitEffectLayer_ = other.traitEffectLayer_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -111,26 +111,26 @@ namespace EggLink.DanhengServer.Proto {
       get { return traitEffectList_; }
     }
 
-    /// <summary>Field number for the "OILENHONPIE" field.</summary>
-    public const int OILENHONPIEFieldNumber = 12;
-    private static readonly pb::FieldCodec<uint> _repeated_oILENHONPIE_codec
+    /// <summary>Field number for the "grid_fight_trait_member_unique_id_list" field.</summary>
+    public const int GridFightTraitMemberUniqueIdListFieldNumber = 12;
+    private static readonly pb::FieldCodec<uint> _repeated_gridFightTraitMemberUniqueIdList_codec
         = pb::FieldCodec.ForUInt32(98);
-    private readonly pbc::RepeatedField<uint> oILENHONPIE_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> gridFightTraitMemberUniqueIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> OILENHONPIE {
-      get { return oILENHONPIE_; }
+    public pbc::RepeatedField<uint> GridFightTraitMemberUniqueIdList {
+      get { return gridFightTraitMemberUniqueIdList_; }
     }
 
-    /// <summary>Field number for the "trait_extra_role_num" field.</summary>
-    public const int TraitExtraRoleNumFieldNumber = 1;
-    private uint traitExtraRoleNum_;
+    /// <summary>Field number for the "trait_effect_layer" field.</summary>
+    public const int TraitEffectLayerFieldNumber = 1;
+    private uint traitEffectLayer_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint TraitExtraRoleNum {
-      get { return traitExtraRoleNum_; }
+    public uint TraitEffectLayer {
+      get { return traitEffectLayer_; }
       set {
-        traitExtraRoleNum_ = value;
+        traitEffectLayer_ = value;
       }
     }
 
@@ -151,8 +151,8 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (TraitId != other.TraitId) return false;
       if(!traitEffectList_.Equals(other.traitEffectList_)) return false;
-      if(!oILENHONPIE_.Equals(other.oILENHONPIE_)) return false;
-      if (TraitExtraRoleNum != other.TraitExtraRoleNum) return false;
+      if(!gridFightTraitMemberUniqueIdList_.Equals(other.gridFightTraitMemberUniqueIdList_)) return false;
+      if (TraitEffectLayer != other.TraitEffectLayer) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -162,8 +162,8 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (TraitId != 0) hash ^= TraitId.GetHashCode();
       hash ^= traitEffectList_.GetHashCode();
-      hash ^= oILENHONPIE_.GetHashCode();
-      if (TraitExtraRoleNum != 0) hash ^= TraitExtraRoleNum.GetHashCode();
+      hash ^= gridFightTraitMemberUniqueIdList_.GetHashCode();
+      if (TraitEffectLayer != 0) hash ^= TraitEffectLayer.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,12 +182,12 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TraitExtraRoleNum != 0) {
+      if (TraitEffectLayer != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(TraitExtraRoleNum);
+        output.WriteUInt32(TraitEffectLayer);
       }
       traitEffectList_.WriteTo(output, _repeated_traitEffectList_codec);
-      oILENHONPIE_.WriteTo(output, _repeated_oILENHONPIE_codec);
+      gridFightTraitMemberUniqueIdList_.WriteTo(output, _repeated_gridFightTraitMemberUniqueIdList_codec);
       if (TraitId != 0) {
         output.WriteRawTag(120);
         output.WriteUInt32(TraitId);
@@ -202,12 +202,12 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TraitExtraRoleNum != 0) {
+      if (TraitEffectLayer != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(TraitExtraRoleNum);
+        output.WriteUInt32(TraitEffectLayer);
       }
       traitEffectList_.WriteTo(ref output, _repeated_traitEffectList_codec);
-      oILENHONPIE_.WriteTo(ref output, _repeated_oILENHONPIE_codec);
+      gridFightTraitMemberUniqueIdList_.WriteTo(ref output, _repeated_gridFightTraitMemberUniqueIdList_codec);
       if (TraitId != 0) {
         output.WriteRawTag(120);
         output.WriteUInt32(TraitId);
@@ -226,9 +226,9 @@ namespace EggLink.DanhengServer.Proto {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitId);
       }
       size += traitEffectList_.CalculateSize(_repeated_traitEffectList_codec);
-      size += oILENHONPIE_.CalculateSize(_repeated_oILENHONPIE_codec);
-      if (TraitExtraRoleNum != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitExtraRoleNum);
+      size += gridFightTraitMemberUniqueIdList_.CalculateSize(_repeated_gridFightTraitMemberUniqueIdList_codec);
+      if (TraitEffectLayer != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitEffectLayer);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -246,9 +246,9 @@ namespace EggLink.DanhengServer.Proto {
         TraitId = other.TraitId;
       }
       traitEffectList_.Add(other.traitEffectList_);
-      oILENHONPIE_.Add(other.oILENHONPIE_);
-      if (other.TraitExtraRoleNum != 0) {
-        TraitExtraRoleNum = other.TraitExtraRoleNum;
+      gridFightTraitMemberUniqueIdList_.Add(other.gridFightTraitMemberUniqueIdList_);
+      if (other.TraitEffectLayer != 0) {
+        TraitEffectLayer = other.TraitEffectLayer;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -266,7 +266,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            TraitExtraRoleNum = input.ReadUInt32();
+            TraitEffectLayer = input.ReadUInt32();
             break;
           }
           case 42: {
@@ -275,7 +275,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 98:
           case 96: {
-            oILENHONPIE_.AddEntriesFrom(input, _repeated_oILENHONPIE_codec);
+            gridFightTraitMemberUniqueIdList_.AddEntriesFrom(input, _repeated_gridFightTraitMemberUniqueIdList_codec);
             break;
           }
           case 120: {
@@ -298,7 +298,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            TraitExtraRoleNum = input.ReadUInt32();
+            TraitEffectLayer = input.ReadUInt32();
             break;
           }
           case 42: {
@@ -307,7 +307,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 98:
           case 96: {
-            oILENHONPIE_.AddEntriesFrom(ref input, _repeated_oILENHONPIE_codec);
+            gridFightTraitMemberUniqueIdList_.AddEntriesFrom(ref input, _repeated_gridFightTraitMemberUniqueIdList_codec);
             break;
           }
           case 120: {

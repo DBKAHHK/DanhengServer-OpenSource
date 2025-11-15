@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightSyncResultDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HcmlkRmlnaHRTeW5jUmVzdWx0RGF0YS5wcm90bxoXR3JpZEZpZ2h0U3lu",
-            "Y0RhdGEucHJvdG8aEkdyaWRGaWdodFNyYy5wcm90byKHAQoXR3JpZEZpZ2h0",
+            "Ch1HcmlkRmlnaHRTeW5jUmVzdWx0RGF0YS5wcm90bxoSR3JpZEZpZ2h0U3Jj",
+            "LnByb3RvGhdHcmlkRmlnaHRTeW5jRGF0YS5wcm90byKSAQoXR3JpZEZpZ2h0",
             "U3luY1Jlc3VsdERhdGESLwoTdXBkYXRlX2R5bmFtaWNfbGlzdBgPIAMoCzIS",
             "LkdyaWRGaWdodFN5bmNEYXRhEiYKD2dyaWRfdXBkYXRlX3NyYxgBIAEoDjIN",
-            "LkdyaWRGaWdodFNyYxITCgtPTk1ER05ITUFCTxgLIAMoDUIeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "LkdyaWRGaWdodFNyYxIeChZzeW5jX2VmZmVjdF9wYXJhbV9saXN0GAsgAygN",
+            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightSyncDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSrcReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightSrcReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSyncDataReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSyncResultData), global::EggLink.DanhengServer.Proto.GridFightSyncResultData.Parser, new[]{ "UpdateDynamicList", "GridUpdateSrc", "ONMDGNHMABO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSyncResultData), global::EggLink.DanhengServer.Proto.GridFightSyncResultData.Parser, new[]{ "UpdateDynamicList", "GridUpdateSrc", "SyncEffectParamList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,7 +77,7 @@ namespace EggLink.DanhengServer.Proto {
     public GridFightSyncResultData(GridFightSyncResultData other) : this() {
       updateDynamicList_ = other.updateDynamicList_.Clone();
       gridUpdateSrc_ = other.gridUpdateSrc_;
-      oNMDGNHMABO_ = other.oNMDGNHMABO_.Clone();
+      syncEffectParamList_ = other.syncEffectParamList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -110,15 +110,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ONMDGNHMABO" field.</summary>
-    public const int ONMDGNHMABOFieldNumber = 11;
-    private static readonly pb::FieldCodec<uint> _repeated_oNMDGNHMABO_codec
+    /// <summary>Field number for the "sync_effect_param_list" field.</summary>
+    public const int SyncEffectParamListFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_syncEffectParamList_codec
         = pb::FieldCodec.ForUInt32(90);
-    private readonly pbc::RepeatedField<uint> oNMDGNHMABO_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> syncEffectParamList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> ONMDGNHMABO {
-      get { return oNMDGNHMABO_; }
+    public pbc::RepeatedField<uint> SyncEffectParamList {
+      get { return syncEffectParamList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -138,7 +138,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if(!updateDynamicList_.Equals(other.updateDynamicList_)) return false;
       if (GridUpdateSrc != other.GridUpdateSrc) return false;
-      if(!oNMDGNHMABO_.Equals(other.oNMDGNHMABO_)) return false;
+      if(!syncEffectParamList_.Equals(other.syncEffectParamList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -148,7 +148,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       hash ^= updateDynamicList_.GetHashCode();
       if (GridUpdateSrc != global::EggLink.DanhengServer.Proto.GridFightSrc.KGridFightSrcNone) hash ^= GridUpdateSrc.GetHashCode();
-      hash ^= oNMDGNHMABO_.GetHashCode();
+      hash ^= syncEffectParamList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -171,7 +171,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteEnum((int) GridUpdateSrc);
       }
-      oNMDGNHMABO_.WriteTo(output, _repeated_oNMDGNHMABO_codec);
+      syncEffectParamList_.WriteTo(output, _repeated_syncEffectParamList_codec);
       updateDynamicList_.WriteTo(output, _repeated_updateDynamicList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -187,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteEnum((int) GridUpdateSrc);
       }
-      oNMDGNHMABO_.WriteTo(ref output, _repeated_oNMDGNHMABO_codec);
+      syncEffectParamList_.WriteTo(ref output, _repeated_syncEffectParamList_codec);
       updateDynamicList_.WriteTo(ref output, _repeated_updateDynamicList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -203,7 +203,7 @@ namespace EggLink.DanhengServer.Proto {
       if (GridUpdateSrc != global::EggLink.DanhengServer.Proto.GridFightSrc.KGridFightSrcNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GridUpdateSrc);
       }
-      size += oNMDGNHMABO_.CalculateSize(_repeated_oNMDGNHMABO_codec);
+      size += syncEffectParamList_.CalculateSize(_repeated_syncEffectParamList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -220,7 +220,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GridUpdateSrc != global::EggLink.DanhengServer.Proto.GridFightSrc.KGridFightSrcNone) {
         GridUpdateSrc = other.GridUpdateSrc;
       }
-      oNMDGNHMABO_.Add(other.oNMDGNHMABO_);
+      syncEffectParamList_.Add(other.syncEffectParamList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -242,7 +242,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 90:
           case 88: {
-            oNMDGNHMABO_.AddEntriesFrom(input, _repeated_oNMDGNHMABO_codec);
+            syncEffectParamList_.AddEntriesFrom(input, _repeated_syncEffectParamList_codec);
             break;
           }
           case 122: {
@@ -270,7 +270,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 90:
           case 88: {
-            oNMDGNHMABO_.AddEntriesFrom(ref input, _repeated_oNMDGNHMABO_codec);
+            syncEffectParamList_.AddEntriesFrom(ref input, _repeated_syncEffectParamList_codec);
             break;
           }
           case 122: {

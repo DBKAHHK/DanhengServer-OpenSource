@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static SceneEntityInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVTY2VuZUVudGl0eUluZm8ucHJvdG8aEE1vdGlvbkluZm8ucHJvdG8aElNj",
-            "ZW5lTnBjSW5mby5wcm90bxoZU2NlbmVOcGNNb25zdGVySW5mby5wcm90bxoT",
-            "U2NlbmVQcm9wSW5mby5wcm90bxoUU2NlbmVBY3RvckluZm8ucHJvdG8aGVNj",
+            "ChVTY2VuZUVudGl0eUluZm8ucHJvdG8aGVNjZW5lTnBjTW9uc3RlckluZm8u",
+            "cHJvdG8aFFNjZW5lQWN0b3JJbmZvLnByb3RvGhBNb3Rpb25JbmZvLnByb3Rv",
+            "GhJTY2VuZU5wY0luZm8ucHJvdG8aE1NjZW5lUHJvcEluZm8ucHJvdG8aGVNj",
             "ZW5lU3VtbW9uVW5pdEluZm8ucHJvdG8irAIKD1NjZW5lRW50aXR5SW5mbxIg",
             "CgVBY3RvchgIIAEoCzIPLlNjZW5lQWN0b3JJbmZvSAASKgoKTnBjTW9uc3Rl",
             "chgDIAEoCzIULlNjZW5lTnBjTW9uc3RlckluZm9IABIcCgNOcGMYDiABKAsy",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "dHlPbmVvZkNhc2VCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneNpcInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ScenePropInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneActorInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneSummonUnitInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneNpcMonsterInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneActorInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MotionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneNpcInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ScenePropInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneSummonUnitInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneEntityInfo), global::EggLink.DanhengServer.Proto.SceneEntityInfo.Parser, new[]{ "Actor", "NpcMonster", "Npc", "Prop", "SummonUnit", "InstId", "EntityId", "Motion", "GroupId" }, new[]{ "EntityOneofCase" }, null, null, null)
           }));
