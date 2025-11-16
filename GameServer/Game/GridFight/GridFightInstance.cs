@@ -6,6 +6,8 @@ using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 using EggLink.DanhengServer.Proto;
+using System.Collections.Generic;
+using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.GridFight;
 
@@ -33,9 +35,11 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
 
         var basicComp = GetComponent<GridFightBasicComponent>();
         var levelComp = GetComponent<GridFightLevelComponent>();
+        var itemsComponent = GetComponent<GridFightItemsComponent>();
         var prevData = basicComp.Data.Clone();
+        var curEncounter = levelComp.CurrentSection.Encounters[(int)(levelComp.CurrentSection.BranchId - 1)];
 
-        var expNum = 5u;
+        var expNum = 2u;
         var baseCoin = levelComp.CurrentSection.Excel.BasicGoldRewardNum;
         var interestCoin = basicComp.Data.CurGold / 10;
 
@@ -70,11 +74,24 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
                 sttList.Add(res.Item2);
         }
 
-        var curData = basicComp.Data.Clone();
-        await Player.SendPacket(new PacketGridFightEndBattleStageNotify(this, expNum, prevData, curData,
-            sttList, battle.BattleEndStatus == BattleEndStatus.BattleEndWin, baseCoin, interestCoin,
-            comboCoin));
+        List<GridFightTraitDamageSttInfo> traitSttList = [];
+        foreach (var traitBattleStt in req.Stt.GridFightBattleStt.TraitBattleStt)
+        {
+            var res = await levelComp.AddTraitDamageStt(traitBattleStt.TraitId, traitBattleStt.Damage, false);
+            if (res.Item2 != null)
+                traitSttList.Add(res.Item2);
+        }
 
+        var curData = basicComp.Data.Clone();
+
+        // if any drop
+        var drops = await curEncounter.TakeMonsterDrop(itemsComponent);
+
+        await Player.SendPacket(new PacketGridFightEndBattleStageNotify(this, expNum, prevData, curData,
+            sttList, traitSttList, battle.BattleEndStatus == BattleEndStatus.BattleEndWin, baseCoin, interestCoin,
+            comboCoin, drops.Item2));
+
+        syncs.AddRange(drops.Item1);
 
         syncs.Add(new GridFightGoldSyncData(GridFightSrc.KGridFightSrcBattleEnd, basicComp.Data, 0, levelComp.CurrentSection.ChapterId, levelComp.CurrentSection.SectionId));
         syncs.Add(new GridFightPlayerLevelSyncData(GridFightSrc.KGridFightSrcBattleEnd, basicComp.Data));
@@ -82,6 +99,9 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         syncs.Add(new GridFightComboNumSyncData(GridFightSrc.KGridFightSrcBattleEnd, basicComp.Data));
         syncs.Add(new GridFightRoleDamageSttSyncData(GridFightSrc.KGridFightSrcBattleEnd, levelComp));
         syncs.AddRange(await levelComp.EnterNextSection(false));
+
+        // encounter drop
+        syncs.AddRange(await curEncounter.TakeEncounterDrop(itemsComponent));
 
         await Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
     }
@@ -94,8 +114,9 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         Components.Add(new GridFightRoleComponent(this));
         Components.Add(new GridFightAugmentComponent(this));
         Components.Add(new GridFightTraitComponent(this));
+        Components.Add(new GridFightItemsComponent(this));
+        Components.Add(new GridFightOrbComponent(this));
 
-        _ = GetComponent<GridFightRoleComponent>().AddAvatar(1414, 3, false);
         _ = GetComponent<GridFightShopComponent>().RefreshShop(true, false);
 
         _ = CreatePendingAction<GridFightPortalBuffPendingAction>(sendPacket:false);
@@ -192,6 +213,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
     {
         var basicComp = GetComponent<GridFightBasicComponent>();
         var levelComp = GetComponent<GridFightLevelComponent>();
+        var roleComp = GetComponent<GridFightRoleComponent>();
 
         var curAction = GetCurAction();
 
@@ -206,11 +228,19 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.PortalBuffAction:
                 src = GridFightSrc.KGridFightSrcSelectPortalBuff;
 
-                syncs.AddRange(await GetComponent<GridFightLevelComponent>().AddPortalBuff(req.PortalBuffAction.SelectPortalBuffId, false, src));
+                syncs.AddRange(await levelComp.AddPortalBuff(req.PortalBuffAction.SelectPortalBuffId, false, src));
 
                 // initial supply
                 await basicComp.UpdateGoldNum(5, false, GridFightSrc.KGridFightSrcInitialSupplySelect);
                 syncs.Add(new GridFightGoldSyncData(GridFightSrc.KGridFightSrcInitialSupplySelect, basicComp.Data));
+
+                var rolePool = GameData.GridFightRoleBasicInfoData.Values.Where(x => x.Rarity == 1).ToList();
+                for (var i = 0; i < 2; i++)
+                {
+                    syncs.AddRange(await roleComp.AddAvatar(rolePool.RandomElement().ID, 1, false, true,
+                        GridFightSrc.KGridFightSrcInitialSupplySelect));
+                }
+
                 break;
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.PortalBuffRerollAction:
                 if (curAction is GridFightPortalBuffPendingAction portalBuffAction)

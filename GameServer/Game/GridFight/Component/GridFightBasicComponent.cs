@@ -17,7 +17,7 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         CurHp = 100,
         CurLevel = 3,
         MaxAvatarNum = 3,
-        BuyLevelCost = 1,
+        BuyLevelCost = 4,
         CurGold = 0
     };
 
@@ -124,7 +124,6 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
 
         Data.CurLevel += level;
 
-        Data.BuyLevelCost = (uint)Math.Ceiling(Data.CurLevel / 2f);
         Data.MaxAvatarNum = levelConf.AvatarMaxNumber;
 
         if (sendPacket)

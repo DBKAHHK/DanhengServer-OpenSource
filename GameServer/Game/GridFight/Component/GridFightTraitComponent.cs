@@ -138,7 +138,7 @@ public static class GridFightTraitInfoPbExtensions
         return new GridFightTraitEffectInfo
         {
             EffectId = info.EffectId,
-            EffectDnaNum = info.Param
+            TraitEffectLevelExp = info.Param
         };
     }
 

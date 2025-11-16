@@ -70,4 +70,60 @@ public class CommandGrid : ICommand
         await inst.GetComponent<GridFightBasicComponent>().UpdateGoldNum(gold);
         await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.UpdateGold", gold.ToString()));
     }
+
+    [CommandMethod("equip")]
+    public async ValueTask AddEquipment(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        var inst = arg.Target.Player!.GridFightManager?.GridFightInstance;
+        if (inst == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.NotInGame"));
+            return;
+        }
+
+        if (arg.BasicArgs.Count < 1)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
+            return;
+        }
+
+        var equipmentId = (uint)arg.GetInt(0);
+
+        await inst.GetComponent<GridFightItemsComponent>().AddEquipment(equipmentId);
+        await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.AddEquipment", equipmentId.ToString()));
+    }
+
+    [CommandMethod("orb")]
+    public async ValueTask AddOrb(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        var inst = arg.Target.Player!.GridFightManager?.GridFightInstance;
+        if (inst == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.NotInGame"));
+            return;
+        }
+
+        if (arg.BasicArgs.Count < 1)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
+            return;
+        }
+
+        var orbId = (uint)arg.GetInt(0);
+
+        await inst.GetComponent<GridFightOrbComponent>().AddOrb(orbId);
+        await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.AddOrb", orbId.ToString()));
+    }
 }

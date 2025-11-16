@@ -19,6 +19,7 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
     public GridFightBasicComponent BasicComponent { get; set; } = inst.GetComponent<GridFightBasicComponent>();
     public GridFightAugmentComponent AugmentComponent { get; set; } = inst.GetComponent<GridFightAugmentComponent>();
     public GridFightTraitComponent TraitComponent { get; set; } = inst.GetComponent<GridFightTraitComponent>();
+    public GridFightItemsComponent ItemsComponent { get; set; } = inst.GetComponent<GridFightItemsComponent>();
     public GridFightGameSectionInfo CurSection { get; set; } = curSection;
     public PlayerInstance Player { get; set; } = player;
 
@@ -66,7 +67,8 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
                         {
                             BattleGridFightInfo = new SceneMonsterGridFightInfo
                             {
-                                Tier = Math.Max(1, x.Tier)
+                                Tier = Math.Max(1, x.Tier),
+                                GridFightDropItemList = { x.DropItems }
                             }
                         }
                     })
@@ -90,7 +92,7 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
         {
             GridGameAvatarList =
             {
-                RoleComponent.Data.Roles.Where(x => x.Pos <= BasicComponent.GetFieldCount()).OrderBy(x => x.Pos).Select(x => x.ToBattleInfo())
+                RoleComponent.Data.Roles.Where(x => x.Pos <= BasicComponent.GetFieldCount()).OrderBy(x => x.Pos).Select(x => x.ToBattleInfo(ItemsComponent.Data))
             },
             GridFightCurLevel = BasicComponent.Data.CurLevel,
             GridFightLineupHp = BasicComponent.Data.CurHp,

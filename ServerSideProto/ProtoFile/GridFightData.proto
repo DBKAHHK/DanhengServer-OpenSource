@@ -90,6 +90,21 @@ message GridFightTraitInfoPb {
     repeated GridFightGameTraitPb Traits = 1;
 }
 
+message GridFightEquipmentItemPb {
+    uint32 ItemId = 1;
+    uint32 UniqueId = 2;
+}
+
+message GridFightConsumableItemPb {
+    uint32 ItemId = 1;
+    uint32 Count = 2;
+}
+
+message GridFightItemsInfoPb {
+    repeated GridFightEquipmentItemPb EquipmentItems = 1;
+    repeated GridFightConsumableItemPb ConsumableItems = 2;
+}
+
 message GridFightComponentPb {
     oneof ComponentType {
         GridFightShopInfoPb ShopInfo = 1;
@@ -98,5 +113,6 @@ message GridFightComponentPb {
         GridFightOrbInfoPb OrbInfo = 4;
         GridFightAugmentInfoPb AugmentInfo = 5;
         GridFightTraitInfoPb TraitInfo = 6;
+        GridFightItemsInfoPb ItemsInfo = 7;
     }
 }

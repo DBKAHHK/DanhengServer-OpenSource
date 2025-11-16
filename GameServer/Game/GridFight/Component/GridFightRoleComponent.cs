@@ -162,6 +162,36 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
         return syncs;
     }
 
+    public async ValueTask<List<BaseGridFightSyncData>> DressRole(uint uniqueId, uint equipmentUniqueId,
+        GridFightSrc src = GridFightSrc.KGridFightSrcDressEquip,
+        bool sendPacket = true, params uint[] param)
+    {
+        var role = Data.Roles.FirstOrDefault(x => x.UniqueId == uniqueId);
+        if (role == null)
+        {
+            return [];
+        }
+
+        // check if equipment exists & not already dressed
+        var itemComp = Inst.GetComponent<GridFightItemsComponent>();
+        var equipment = itemComp.Data.EquipmentItems.FirstOrDefault(x => x.UniqueId == equipmentUniqueId);
+        if (equipment == null ||
+            Data.Roles.Any(x => x.EquipmentIds.Contains(equipmentUniqueId))) // already dressed or not exist
+        {
+            return [];
+        }
+
+        role.EquipmentIds.Add(equipmentUniqueId); // ensure no duplicates
+
+        var syncData = new GridFightRoleUpdateSyncData(src, role, 0, param);
+        if (sendPacket)
+        {
+            await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncData));
+        }
+
+        return [syncData];
+    }
+
     public List<BaseAvatarInfo> GetForegroundAvatarInfos()
     {
         var foreground = Data.Roles.Where(x => x.Pos <= 4).OrderBy(x => x.Pos).ToList();
@@ -275,7 +305,7 @@ public static class GridFightRoleInfoPbExtensions
         };
     }
 
-    public static BattleGridFightRoleInfo ToBattleInfo(this GridFightRoleInfoPb info)
+    public static BattleGridFightRoleInfo ToBattleInfo(this GridFightRoleInfoPb info, GridFightItemsInfoPb item)
     {
         return new BattleGridFightRoleInfo
         {
@@ -284,7 +314,10 @@ public static class GridFightRoleInfoPbExtensions
             Tier = info.Tier,
             Pos = info.Pos,
             AvatarId = GameData.GridFightRoleBasicInfoData[info.RoleId].AvatarID,
-            RoleEquipmentList = {  },
+            RoleEquipmentList =
+            {
+                item.EquipmentItems.Where(x => info.EquipmentIds.Contains(x.UniqueId)).Select(x => x.ToBattleInfo())
+            },
             GameSavedValueMap = { info.SavedValues }
         };
     }

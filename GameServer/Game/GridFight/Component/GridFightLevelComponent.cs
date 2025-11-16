@@ -6,6 +6,7 @@ using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Util;
+using System.Collections.Generic;
 
 namespace EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 
@@ -18,6 +19,7 @@ public class GridFightLevelComponent : BaseGridFightComponent
     public Dictionary<uint, List<GridFightGameSectionInfo>> Sections { get; } = [];
     public GridFightGameSectionInfo CurrentSection => Sections[_curChapterId][(int)(_curSectionId - 1)];
     public List<GridFightRoleDamageSttInfo> RoleDamageSttInfos { get; } = [];
+    public List<GridFightTraitDamageSttInfo> TraitDamageSttInfos { get; } = [];
     public List<GridFightPortalBuffInfo> PortalBuffs { get; } = [];
 
     #endregion
@@ -83,6 +85,39 @@ public class GridFightLevelComponent : BaseGridFightComponent
                 IsTrialAvatar = info.IsTrialAvatar,
                 IsUpgrade = info.IsUpgrade,
                 Tier = info.Tier,
+                TotalDamage = damage
+            };
+
+            info.TotalDamage += damage;
+        }
+
+        if (sendPacket)
+        {
+            await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(new GridFightRoleDamageSttSyncData(GridFightSrc.KGridFightSrcBattleEnd, this)));
+        }
+
+        return (Retcode.RetSucc, res);
+    }
+
+    public async ValueTask<(Retcode, GridFightTraitDamageSttInfo?)> AddTraitDamageStt(uint traitId, double damage, bool sendPacket = true)
+    {
+        var info = TraitDamageSttInfos.FirstOrDefault(x => x.TraitId == traitId);
+        GridFightTraitDamageSttInfo res;
+        if (info == null)
+        {
+            res = info = new GridFightTraitDamageSttInfo
+            {
+                TraitId = traitId,
+                TotalDamage = damage
+            };
+
+            TraitDamageSttInfos.Add(info);
+        }
+        else
+        {
+            res = new GridFightTraitDamageSttInfo
+            {
+                TraitId = info.TraitId,
                 TotalDamage = damage
             };
 
@@ -243,9 +278,12 @@ public class GridFightLevelComponent : BaseGridFightComponent
 
     public GridFightDamageSttInfo ToDamageSttInfo()
     {
+        var traitComp = Inst.GetComponent<GridFightTraitComponent>();
+
         return new GridFightDamageSttInfo
         {
-            RoleDamageSttList = { RoleDamageSttInfos.Select(x => x.ToProto()) }
+            RoleDamageSttList = { RoleDamageSttInfos.Select(x => x.ToProto()) },
+            TraitDamageSttList = { TraitDamageSttInfos.Select(x => x.ToProto(traitComp)) }
         };
     }
 
@@ -269,6 +307,22 @@ public class GridFightRoleDamageSttInfo
             IsTrialAvatar = IsTrialAvatar,
             IsUpgrade = IsUpgrade,
             TotalDamage = TotalDamage
+        };
+    }
+}
+
+public class GridFightTraitDamageSttInfo
+{
+    public uint TraitId { get; set; }
+    public double TotalDamage { get; set; }
+
+    public GridFightTraitDamageStt ToProto(GridFightTraitComponent trait)
+    {
+        return new GridFightTraitDamageStt
+        {
+            TraitId = TraitId,
+            Damage = TotalDamage,
+            TraitEffectLayer = trait.Data.Traits.FirstOrDefault(x => x.TraitId == TraitId)?.TraitLayer ?? 0
         };
     }
 }
@@ -333,7 +387,7 @@ public class GridFightGameSectionInfo
 
             foreach (var diff in difficulties.OrderBy(_ => Guid.NewGuid()).Take(2))
             {
-                Encounters.Add(new GridFightGameEncounterInfo(diff, diff, this));
+                Encounters.Add(new GridFightGameEncounterInfo(diff, diff, this, diff));
             }
         }
         else
@@ -364,7 +418,7 @@ public class GridFightGameSectionInfo
 
 public class GridFightGameEncounterInfo
 {
-    public GridFightGameEncounterInfo(uint index, uint difficulty, GridFightGameSectionInfo section)
+    public GridFightGameEncounterInfo(uint index, uint difficulty, GridFightGameSectionInfo section, uint rewardLevel = 0)
     {
         EncounterIndex = index;
         EncounterDifficulty = difficulty;
@@ -372,12 +426,126 @@ public class GridFightGameEncounterInfo
 
         var waves = GridFightEncounterGenerateHelper.GenerateMonsterWaves(section);
         MonsterWaves.AddRange(waves);
+
+        switch (rewardLevel)
+        {
+            case 0:
+                return;
+            // random 5 exp or 5 gold
+            case 1 when Random.Shared.Next(2) == 0:
+                DropItems.Add(new GridFightDropItemInfo
+                {
+                    DropType = GridFightDropType.Exp,
+                    Num = 5
+                });
+                break;
+            case 1:
+                DropItems.Add(new GridFightDropItemInfo
+                {
+                    DropType = GridFightDropType.Coin,
+                    Num = 5
+                });
+                break;
+            case 2:
+            {
+                // random 10 exp or 10 gold or 2 golden orb
+                var rand = Random.Shared.Next(3);
+                if (rand == 0)
+                {
+                    DropItems.Add(new GridFightDropItemInfo
+                    {
+                        DropType = GridFightDropType.Exp,
+                        Num = 10
+                    });
+                }
+                else if (rand == 1)
+                {
+                    DropItems.Add(new GridFightDropItemInfo
+                    {
+                        DropType = GridFightDropType.Coin,
+                        Num = 10
+                    });
+                }
+                else
+                {
+                    for (var i = 0; i < 2; i++)
+                    {
+                        DropItems.Add(new GridFightDropItemInfo
+                        {
+                            DropType = GridFightDropType.Orb,
+                            Num = 1,
+                            DropItemId = GameData.GridFightOrbData.Values.Where(x => x.Type == GridFightOrbTypeEnum.Glod).ToList().RandomElement().OrbID
+                        });
+                    }
+                }
+
+                break;
+            }
+            case 3:
+            {
+                // random 15 exp or 15 gold or 2 colourful orb
+                var rand = Random.Shared.Next(3);
+                if (rand == 0)
+                {
+                    DropItems.Add(new GridFightDropItemInfo
+                    {
+                        DropType = GridFightDropType.Exp,
+                        Num = 15
+                    });
+                }
+                else if (rand == 1)
+                {
+                    DropItems.Add(new GridFightDropItemInfo
+                    {
+                        DropType = GridFightDropType.Coin,
+                        Num = 15
+                    });
+                }
+                else
+                {
+                    for (var i = 0; i < 2; i++)
+                    {
+                        DropItems.Add(new GridFightDropItemInfo
+                        {
+                            DropType = GridFightDropType.Orb,
+                            Num = 1,
+                            DropItemId = GameData.GridFightOrbData.Values.Where(x => x.Type == GridFightOrbTypeEnum.Colorful).ToList().RandomElement().OrbID
+                        });
+                    }
+                }
+
+                break;
+            }
+        }
     }
 
     public uint EncounterIndex { get; set; }
     public uint EncounterDifficulty { get; set; }
     public GridFightGameSectionInfo ParentSection { get; }
     public List<GridFightGameMonsterWaveInfo> MonsterWaves { get; } = [];
+    public List<GridFightDropItemInfo> DropItems { get; } = [];
+
+    public async ValueTask<(List<BaseGridFightSyncData>, List<GridFightDropItemInfo>)> TakeMonsterDrop(GridFightItemsComponent itemsComp)
+    {
+        List<BaseGridFightSyncData> syncs = [];
+        List<GridFightDropItemInfo> items = [];
+
+        foreach (var monster in MonsterWaves.SelectMany(x => x.Monsters))
+        {
+            syncs.AddRange(await itemsComp.TakeDrop(monster.DropItems, false, GridFightSrc.KGridFightSrcBattleEnd, 0,
+                ParentSection.ChapterId, ParentSection.SectionId));
+
+            items.AddRange(monster.DropItems);
+        }
+
+        return (syncs, items);
+    }
+
+    public async ValueTask<List<BaseGridFightSyncData>> TakeEncounterDrop(GridFightItemsComponent itemsComp)
+    {
+        return await itemsComp.TakeDrop(DropItems, false, GridFightSrc.KGridFightSrcEliteBranchBattleBonus, 0,
+            ParentSection.ChapterId, ParentSection.SectionId);
+    }
 
     public GridFightEncounterInfo ToProto()
     {
@@ -385,18 +553,46 @@ public class GridFightGameEncounterInfo
         {
             EncounterIndex = EncounterIndex,
             EncounterExtraDifficultyLevel = EncounterDifficulty,
-            EncounterDropInfo = new GridFightDropInfo(),
+            EncounterDropInfo = new GridFightDropInfo
+            {
+                DropItemList = { DropItems }
+            },
             MonsterWaveList = { MonsterWaves.Select(x => x.ToProto()) }
         };
     }
 }
 
-public class GridFightGameMonsterWaveInfo(uint wave, List<GridFightMonsterExcel> monsters, uint campId)
+public class GridFightGameMonsterWaveInfo
 {
-    public uint Wave { get; set; } = wave;
+    public GridFightGameMonsterWaveInfo(uint wave, List<GridFightMonsterExcel> monsters, uint campId,
+        uint addOrbNum = 0)
+    {
+        Wave = wave;
 
-    public List<GridFightGameMonsterInfo> Monsters { get; } = monsters
-        .Select(x => new GridFightGameMonsterInfo(x, campId, (uint)Random.Shared.Next(1, (int)(x.MonsterTier + 1)))).ToList();
+        foreach (var monsterInfo in monsters.Select(monster => new GridFightGameMonsterInfo(monster, campId,
+                     (uint)Random.Shared.Next(1, (int)(monster.MonsterTier + 1)))))
+        {
+            if (addOrbNum > 0)
+            {
+                monsterInfo.DropItems.Add(new GridFightDropItemInfo
+                {
+                    DropType = GridFightDropType.Orb,
+                    Num = 1,
+                    DropItemId = GameData.GridFightOrbData.Values
+                        .Where(x => x.Type is GridFightOrbTypeEnum.White or GridFightOrbTypeEnum.Blue).ToList()
+                        .RandomElement().OrbID
+                });
+
+                addOrbNum--;
+            }
+
+            Monsters.Add(monsterInfo);
+        }
+    }
+
+    public uint Wave { get; set; }
+
+    public List<GridFightGameMonsterInfo> Monsters { get; } = [];
 
     public GridEncounterMonsterWave ToProto()
     {
@@ -416,6 +612,7 @@ public class GridFightGameMonsterInfo(GridFightMonsterExcel monsters, uint campI
     public uint CampId { get; set; } = campId;
     public GridFightMonsterExcel Monster { get; } = monsters;
     public uint Tier { get; } = tier;
+    public List<GridFightDropItemInfo> DropItems { get; } = [];
 
     public GridFightMonsterInfo ToProto()
     {
@@ -472,7 +669,7 @@ public static class GridFightEncounterGenerateHelper
             targets.Add(monsters.RandomElement());
         }
 
-        waves.Add(new GridFightGameMonsterWaveInfo(1, targets, section.MonsterCamp.ID));
+        waves.Add(new GridFightGameMonsterWaveInfo(1, targets, section.MonsterCamp.ID, 3));
 
         return waves;
     }

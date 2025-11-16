@@ -10,10 +10,11 @@ namespace EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 public class PacketGridFightEndBattleStageNotify : BasePacket
 {
     public PacketGridFightEndBattleStageNotify(GridFightInstance inst, uint expAddNum, GridFightBasicInfoPb prev,
-        GridFightBasicInfoPb cur, List<GridFightRoleDamageSttInfo> stt, bool win, uint baseCoin, uint interestCoin,
-        uint comboCoin) : base(CmdIds.GridFightEndBattleStageNotify)
+        GridFightBasicInfoPb cur, List<GridFightRoleDamageSttInfo> stt, List<GridFightTraitDamageSttInfo> traitStt, bool win, uint baseCoin, uint interestCoin,
+        uint comboCoin, List<GridFightDropItemInfo> drops) : base(CmdIds.GridFightEndBattleStageNotify)
     {
         var levelComp = inst.GetComponent<GridFightLevelComponent>();
+        var traitComp = inst.GetComponent<GridFightTraitComponent>();
         var curSec = levelComp.CurrentSection;
 
         var proto = new GridFightEndBattleStageNotify
@@ -23,7 +24,8 @@ public class PacketGridFightEndBattleStageNotify : BasePacket
             ChapterId = curSec.ChapterId,
             GridFightDamageSttInfo = new GridFightDamageSttInfo
             {
-                RoleDamageSttList = { stt.Select(x => x.ToProto()) }
+                RoleDamageSttList = { stt.Select(x => x.ToProto()) },
+                TraitDamageSttList = { traitStt.Select(x => x.ToProto(traitComp)) }
             },
             GridFightLevelUpdateInfo = new GridFightLevelUpdateInfo
             {
@@ -48,7 +50,16 @@ public class PacketGridFightEndBattleStageNotify : BasePacket
             GridFightCoinInterestNum = interestCoin,
             GridFightCoinComboNum = comboCoin,
             GridFightCurLineupHp = cur.CurHp,
-            GridFightMaxLineupHp = GridFightBasicComponent.MaxHp
+            GridFightMaxLineupHp = GridFightBasicComponent.MaxHp,
+            GridFightDropItemMap =
+            {
+                {
+                    2, new GridFightDropInfo
+                    {
+                        DropItemList = { drops }
+                    }
+                }
+            }
         };
 
         SetData(proto);

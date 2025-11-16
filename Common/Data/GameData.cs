@@ -118,6 +118,7 @@ public static class GameData
     public static Dictionary<uint, GridFightPlayerLevelExcel> GridFightPlayerLevelData { get; private set; } = [];
     public static Dictionary<uint, GridFightMonsterExcel> GridFightMonsterData { get; private set; } = [];
     public static Dictionary<uint, GridFightAugmentExcel> GridFightAugmentData { get; private set; } = [];
+    public static Dictionary<uint, GridFightOrbExcel> GridFightOrbData { get; private set; } = [];
     public static Dictionary<uint, Dictionary<GridFightAugmentQualityEnum, GridFightAugmentMonsterExcel>> GridFightAugmentMonsterData { get; private set; } = [];
     public static Dictionary<uint, GridFightPortalBuffExcel> GridFightPortalBuffData { get; private set; } = [];
     public static Dictionary<uint, GridFightItemsExcel> GridFightItemsData { get; private set; } = [];
