@@ -25,27 +25,28 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxHcmlkRmlnaHRHYW1lQmFzaWNJbmZvLnByb3RvGhdHcmlkRmlnaHRMb2Nr",
-            "VHlwZS5wcm90bxoXR3JpZEZpZ2h0TG9ja0luZm8ucHJvdG8aEUNGQkNKSElB",
-            "TU5OLnByb3RvGhFPUElCQlBDSEZJSS5wcm90byLoBAoWR3JpZEZpZ2h0R2Ft",
-            "ZUJhc2ljSW5mbxIcChRncmlkX2ZpZ2h0X2xpbmV1cF9ocBgDIAEoDRIlCgls",
-            "b2NrX3R5cGUYBiABKA4yEi5HcmlkRmlnaHRMb2NrVHlwZRIiCgtPQ01HTUVI",
-            "RUNCQhj0DCABKAsyDC5PUElCQlBDSEZJSRIjChtncmlkX2ZpZ2h0X21heF9h",
-            "dmF0YXJfY291bnQYDCABKA0SGwoTZ3JpZF9maWdodF9jdXJfZ29sZBgEIAEo",
-            "DRITCgtQRklIR0hESU9BRBgLIAEoDRIUCgtMUEVNUEtGTk5PTBiADyADKA0S",
-            "HAoUZ3JpZF9maWdodF9jdXJfbGV2ZWwYAiABKA0SEwoLSkFISkhBREFPR04Y",
-            "DyADKA0SFAoLRUpBT0xBSE5LUEMYzgEgASgJEh0KFWdyaWRfZmlnaHRfbGV2",
-            "ZWxfY29zdBgNIAEoDRIgChhncmlkX2ZpZ2h0X2NvbWJvX3dpbl9udW0YASAB",
-            "KA0SIQoLQUNFRklQUE5OUE4YBSADKAsyDC5DRkJDSkhJQU1OThIrCg5nYW1l",
-            "X2xvY2tfaW5mbxjMCCABKAsyEi5HcmlkRmlnaHRMb2NrSW5mbxIbChNncmlk",
-            "X2ZpZ2h0X21heF9nb2xkGAkgASgNEhMKC0hMTElKSUNHT05OGAogASgNEiYK",
-            "HmdyaWRfZmlnaHRfb2ZmX2ZpZWxkX21heF9jb3VudBgOIAEoDRIiChpncmlk",
-            "X2ZpZ2h0X21heF9maWVsZF9jb3VudBgHIAEoDRIgChhncmlkX2ZpZ2h0X2N1",
-            "cl9sZXZlbF9leHAYCCABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
-            "cm90b2IGcHJvdG8z"));
+            "VHlwZS5wcm90bxoXR3JpZEZpZ2h0TG9ja0luZm8ucHJvdG8aHFJvbGVUcmFj",
+            "a0VxdWlwbWVudEluZm8ucHJvdG8aEU9QSUJCUENIRklJLnByb3RvIokFChZH",
+            "cmlkRmlnaHRHYW1lQmFzaWNJbmZvEhwKFGdyaWRfZmlnaHRfbGluZXVwX2hw",
+            "GAMgASgNEiUKCWxvY2tfdHlwZRgGIAEoDjISLkdyaWRGaWdodExvY2tUeXBl",
+            "EiIKC09DTUdNRUhFQ0JCGPQMIAEoCzIMLk9QSUJCUENIRklJEiMKG2dyaWRf",
+            "ZmlnaHRfbWF4X2F2YXRhcl9jb3VudBgMIAEoDRIbChNncmlkX2ZpZ2h0X2N1",
+            "cl9nb2xkGAQgASgNEhMKC1BGSUhHSERJT0FEGAsgASgNEhQKC0xQRU1QS0ZO",
+            "Tk9MGIAPIAMoDRIcChRncmlkX2ZpZ2h0X2N1cl9sZXZlbBgCIAEoDRIbChN0",
+            "cmFja190cmFpdF9pZF9saXN0GA8gAygNEhQKC0VKQU9MQUhOS1BDGM4BIAEo",
+            "CRIdChVncmlkX2ZpZ2h0X2xldmVsX2Nvc3QYDSABKA0SIAoYZ3JpZF9maWdo",
+            "dF9jb21ib193aW5fbnVtGAEgASgNEjoKGXJvbGVfdHJhY2tfZXF1aXBtZW50",
+            "X2xpc3QYBSADKAsyFy5Sb2xlVHJhY2tFcXVpcG1lbnRJbmZvEisKDmdhbWVf",
+            "bG9ja19pbmZvGMwIIAEoCzISLkdyaWRGaWdodExvY2tJbmZvEhsKE2dyaWRf",
+            "ZmlnaHRfbWF4X2dvbGQYCSABKA0SEwoLSExMSUpJQ0dPTk4YCiABKA0SJgoe",
+            "Z3JpZF9maWdodF9vZmZfZmllbGRfbWF4X2NvdW50GA4gASgNEiIKGmdyaWRf",
+            "ZmlnaHRfbWF4X2ZpZWxkX2NvdW50GAcgASgNEiAKGGdyaWRfZmlnaHRfY3Vy",
+            "X2xldmVsX2V4cBgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
+            "b3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CFBCJHIAMNNReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPIBBPCHFIIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RoleTrackEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPIBBPCHFIIReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo), global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo.Parser, new[]{ "GridFightLineupHp", "LockType", "OCMGMEHECBB", "GridFightMaxAvatarCount", "GridFightCurGold", "PFIHGHDIOAD", "LPEMPKFNNOL", "GridFightCurLevel", "JAHJHADAOGN", "EJAOLAHNKPC", "GridFightLevelCost", "GridFightComboWinNum", "ACEFIPPNNPN", "GameLockInfo", "GridFightMaxGold", "HLLIJICGONN", "GridFightOffFieldMaxCount", "GridFightMaxFieldCount", "GridFightCurLevelExp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo), global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo.Parser, new[]{ "GridFightLineupHp", "LockType", "OCMGMEHECBB", "GridFightMaxAvatarCount", "GridFightCurGold", "PFIHGHDIOAD", "LPEMPKFNNOL", "GridFightCurLevel", "TrackTraitIdList", "EJAOLAHNKPC", "GridFightLevelCost", "GridFightComboWinNum", "RoleTrackEquipmentList", "GameLockInfo", "GridFightMaxGold", "HLLIJICGONN", "GridFightOffFieldMaxCount", "GridFightMaxFieldCount", "GridFightCurLevelExp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -95,11 +96,11 @@ namespace EggLink.DanhengServer.Proto {
       pFIHGHDIOAD_ = other.pFIHGHDIOAD_;
       lPEMPKFNNOL_ = other.lPEMPKFNNOL_.Clone();
       gridFightCurLevel_ = other.gridFightCurLevel_;
-      jAHJHADAOGN_ = other.jAHJHADAOGN_.Clone();
+      trackTraitIdList_ = other.trackTraitIdList_.Clone();
       eJAOLAHNKPC_ = other.eJAOLAHNKPC_;
       gridFightLevelCost_ = other.gridFightLevelCost_;
       gridFightComboWinNum_ = other.gridFightComboWinNum_;
-      aCEFIPPNNPN_ = other.aCEFIPPNNPN_.Clone();
+      roleTrackEquipmentList_ = other.roleTrackEquipmentList_.Clone();
       gameLockInfo_ = other.gameLockInfo_ != null ? other.gameLockInfo_.Clone() : null;
       gridFightMaxGold_ = other.gridFightMaxGold_;
       hLLIJICGONN_ = other.hLLIJICGONN_;
@@ -210,15 +211,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "JAHJHADAOGN" field.</summary>
-    public const int JAHJHADAOGNFieldNumber = 15;
-    private static readonly pb::FieldCodec<uint> _repeated_jAHJHADAOGN_codec
+    /// <summary>Field number for the "track_trait_id_list" field.</summary>
+    public const int TrackTraitIdListFieldNumber = 15;
+    private static readonly pb::FieldCodec<uint> _repeated_trackTraitIdList_codec
         = pb::FieldCodec.ForUInt32(122);
-    private readonly pbc::RepeatedField<uint> jAHJHADAOGN_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> trackTraitIdList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> JAHJHADAOGN {
-      get { return jAHJHADAOGN_; }
+    public pbc::RepeatedField<uint> TrackTraitIdList {
+      get { return trackTraitIdList_; }
     }
 
     /// <summary>Field number for the "EJAOLAHNKPC" field.</summary>
@@ -257,15 +258,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ACEFIPPNNPN" field.</summary>
-    public const int ACEFIPPNNPNFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.CFBCJHIAMNN> _repeated_aCEFIPPNNPN_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.CFBCJHIAMNN.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CFBCJHIAMNN> aCEFIPPNNPN_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CFBCJHIAMNN>();
+    /// <summary>Field number for the "role_track_equipment_list" field.</summary>
+    public const int RoleTrackEquipmentListFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.RoleTrackEquipmentInfo> _repeated_roleTrackEquipmentList_codec
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.RoleTrackEquipmentInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RoleTrackEquipmentInfo> roleTrackEquipmentList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RoleTrackEquipmentInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CFBCJHIAMNN> ACEFIPPNNPN {
-      get { return aCEFIPPNNPN_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.RoleTrackEquipmentInfo> RoleTrackEquipmentList {
+      get { return roleTrackEquipmentList_; }
     }
 
     /// <summary>Field number for the "game_lock_info" field.</summary>
@@ -363,11 +364,11 @@ namespace EggLink.DanhengServer.Proto {
       if (PFIHGHDIOAD != other.PFIHGHDIOAD) return false;
       if(!lPEMPKFNNOL_.Equals(other.lPEMPKFNNOL_)) return false;
       if (GridFightCurLevel != other.GridFightCurLevel) return false;
-      if(!jAHJHADAOGN_.Equals(other.jAHJHADAOGN_)) return false;
+      if(!trackTraitIdList_.Equals(other.trackTraitIdList_)) return false;
       if (EJAOLAHNKPC != other.EJAOLAHNKPC) return false;
       if (GridFightLevelCost != other.GridFightLevelCost) return false;
       if (GridFightComboWinNum != other.GridFightComboWinNum) return false;
-      if(!aCEFIPPNNPN_.Equals(other.aCEFIPPNNPN_)) return false;
+      if(!roleTrackEquipmentList_.Equals(other.roleTrackEquipmentList_)) return false;
       if (!object.Equals(GameLockInfo, other.GameLockInfo)) return false;
       if (GridFightMaxGold != other.GridFightMaxGold) return false;
       if (HLLIJICGONN != other.HLLIJICGONN) return false;
@@ -389,11 +390,11 @@ namespace EggLink.DanhengServer.Proto {
       if (PFIHGHDIOAD != 0) hash ^= PFIHGHDIOAD.GetHashCode();
       hash ^= lPEMPKFNNOL_.GetHashCode();
       if (GridFightCurLevel != 0) hash ^= GridFightCurLevel.GetHashCode();
-      hash ^= jAHJHADAOGN_.GetHashCode();
+      hash ^= trackTraitIdList_.GetHashCode();
       if (EJAOLAHNKPC.Length != 0) hash ^= EJAOLAHNKPC.GetHashCode();
       if (GridFightLevelCost != 0) hash ^= GridFightLevelCost.GetHashCode();
       if (GridFightComboWinNum != 0) hash ^= GridFightComboWinNum.GetHashCode();
-      hash ^= aCEFIPPNNPN_.GetHashCode();
+      hash ^= roleTrackEquipmentList_.GetHashCode();
       if (gameLockInfo_ != null) hash ^= GameLockInfo.GetHashCode();
       if (GridFightMaxGold != 0) hash ^= GridFightMaxGold.GetHashCode();
       if (HLLIJICGONN != 0) hash ^= HLLIJICGONN.GetHashCode();
@@ -434,7 +435,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(GridFightCurGold);
       }
-      aCEFIPPNNPN_.WriteTo(output, _repeated_aCEFIPPNNPN_codec);
+      roleTrackEquipmentList_.WriteTo(output, _repeated_roleTrackEquipmentList_codec);
       if (LockType != global::EggLink.DanhengServer.Proto.GridFightLockType.KGridFightLockTypeNone) {
         output.WriteRawTag(48);
         output.WriteEnum((int) LockType);
@@ -471,7 +472,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(112);
         output.WriteUInt32(GridFightOffFieldMaxCount);
       }
-      jAHJHADAOGN_.WriteTo(output, _repeated_jAHJHADAOGN_codec);
+      trackTraitIdList_.WriteTo(output, _repeated_trackTraitIdList_codec);
       if (EJAOLAHNKPC.Length != 0) {
         output.WriteRawTag(242, 12);
         output.WriteString(EJAOLAHNKPC);
@@ -511,7 +512,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(GridFightCurGold);
       }
-      aCEFIPPNNPN_.WriteTo(ref output, _repeated_aCEFIPPNNPN_codec);
+      roleTrackEquipmentList_.WriteTo(ref output, _repeated_roleTrackEquipmentList_codec);
       if (LockType != global::EggLink.DanhengServer.Proto.GridFightLockType.KGridFightLockTypeNone) {
         output.WriteRawTag(48);
         output.WriteEnum((int) LockType);
@@ -548,7 +549,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(112);
         output.WriteUInt32(GridFightOffFieldMaxCount);
       }
-      jAHJHADAOGN_.WriteTo(ref output, _repeated_jAHJHADAOGN_codec);
+      trackTraitIdList_.WriteTo(ref output, _repeated_trackTraitIdList_codec);
       if (EJAOLAHNKPC.Length != 0) {
         output.WriteRawTag(242, 12);
         output.WriteString(EJAOLAHNKPC);
@@ -594,7 +595,7 @@ namespace EggLink.DanhengServer.Proto {
       if (GridFightCurLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightCurLevel);
       }
-      size += jAHJHADAOGN_.CalculateSize(_repeated_jAHJHADAOGN_codec);
+      size += trackTraitIdList_.CalculateSize(_repeated_trackTraitIdList_codec);
       if (EJAOLAHNKPC.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(EJAOLAHNKPC);
       }
@@ -604,7 +605,7 @@ namespace EggLink.DanhengServer.Proto {
       if (GridFightComboWinNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightComboWinNum);
       }
-      size += aCEFIPPNNPN_.CalculateSize(_repeated_aCEFIPPNNPN_codec);
+      size += roleTrackEquipmentList_.CalculateSize(_repeated_roleTrackEquipmentList_codec);
       if (gameLockInfo_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(GameLockInfo);
       }
@@ -660,7 +661,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GridFightCurLevel != 0) {
         GridFightCurLevel = other.GridFightCurLevel;
       }
-      jAHJHADAOGN_.Add(other.jAHJHADAOGN_);
+      trackTraitIdList_.Add(other.trackTraitIdList_);
       if (other.EJAOLAHNKPC.Length != 0) {
         EJAOLAHNKPC = other.EJAOLAHNKPC;
       }
@@ -670,7 +671,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GridFightComboWinNum != 0) {
         GridFightComboWinNum = other.GridFightComboWinNum;
       }
-      aCEFIPPNNPN_.Add(other.aCEFIPPNNPN_);
+      roleTrackEquipmentList_.Add(other.roleTrackEquipmentList_);
       if (other.gameLockInfo_ != null) {
         if (gameLockInfo_ == null) {
           GameLockInfo = new global::EggLink.DanhengServer.Proto.GridFightLockInfo();
@@ -724,7 +725,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 42: {
-            aCEFIPPNNPN_.AddEntriesFrom(input, _repeated_aCEFIPPNNPN_codec);
+            roleTrackEquipmentList_.AddEntriesFrom(input, _repeated_roleTrackEquipmentList_codec);
             break;
           }
           case 48: {
@@ -765,7 +766,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 122:
           case 120: {
-            jAHJHADAOGN_.AddEntriesFrom(input, _repeated_jAHJHADAOGN_codec);
+            trackTraitIdList_.AddEntriesFrom(input, _repeated_trackTraitIdList_codec);
             break;
           }
           case 1650: {
@@ -823,7 +824,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 42: {
-            aCEFIPPNNPN_.AddEntriesFrom(ref input, _repeated_aCEFIPPNNPN_codec);
+            roleTrackEquipmentList_.AddEntriesFrom(ref input, _repeated_roleTrackEquipmentList_codec);
             break;
           }
           case 48: {
@@ -864,7 +865,7 @@ namespace EggLink.DanhengServer.Proto {
           }
           case 122:
           case 120: {
-            jAHJHADAOGN_.AddEntriesFrom(ref input, _repeated_jAHJHADAOGN_codec);
+            trackTraitIdList_.AddEntriesFrom(ref input, _repeated_trackTraitIdList_codec);
             break;
           }
           case 1650: {

@@ -24,19 +24,21 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightGameItemSyncInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9HcmlkRmlnaHRHYW1lSXRlbVN5bmNJbmZvLnByb3RvGhxHcmlkRmlnaHRF",
-            "cXVpcG1lbnRJbmZvLnByb3RvGhFOTUtIQ0NISExKQS5wcm90bxoRQ0ZOQ0lM",
-            "RUFNS0kucHJvdG8aHUdyaWRGaWdodENvbnN1bWFibGVJbmZvLnByb3RvItsB",
-            "ChlHcmlkRmlnaHRHYW1lSXRlbVN5bmNJbmZvEiEKC0NBR05DSkJLS0RFGAUg",
-            "AygLMgwuQ0ZOQ0lMRUFNS0kSOgoZZ3JpZF9maWdodF9lcXVpcG1lbnRfbGlz",
-            "dBgPIAMoCzIXLkdyaWRGaWdodEVxdWlwbWVudEluZm8SPAoaZ3JpZF9maWdo",
-            "dF9jb25zdW1hYmxlX2xpc3QYCyADKAsyGC5HcmlkRmlnaHRDb25zdW1hYmxl",
-            "SW5mbxIhCgtQREdDTElOTkVCTRgIIAMoCzIMLk5NS0hDQ0hITEpBQh6qAhtF",
-            "Z2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Ch9HcmlkRmlnaHRHYW1lSXRlbVN5bmNJbmZvLnByb3RvGh1HcmlkRmlnaHRD",
+            "b25zdW1hYmxlSW5mby5wcm90bxoRTk1LSENDSEhMSkEucHJvdG8aI0dyaWRG",
+            "aWdodENvbnN1bWFibGVVcGRhdGVJbmZvLnByb3RvGhxHcmlkRmlnaHRFcXVp",
+            "cG1lbnRJbmZvLnByb3RvIoMCChlHcmlkRmlnaHRHYW1lSXRlbVN5bmNJbmZv",
+            "EjwKGmdyaWRfZmlnaHRfY29uc3VtYWJsZV9saXN0GAUgAygLMhguR3JpZEZp",
+            "Z2h0Q29uc3VtYWJsZUluZm8SOgoZZ3JpZF9maWdodF9lcXVpcG1lbnRfbGlz",
+            "dBgPIAMoCzIXLkdyaWRGaWdodEVxdWlwbWVudEluZm8SSQohdXBkYXRlX2dy",
+            "aWRfZmlnaHRfY29uc3VtYWJsZV9saXN0GAsgAygLMh4uR3JpZEZpZ2h0Q29u",
+            "c3VtYWJsZVVwZGF0ZUluZm8SIQoLUERHQ0xJTk5FQk0YCCADKAsyDC5OTUtI",
+            "Q0NISExKQUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMKHCCHHLJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.CFNCILEAMKIReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightConsumableInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightConsumableInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMKHCCHHLJAReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightConsumableUpdateInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEquipmentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfo), global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfo.Parser, new[]{ "CAGNCJBKKDE", "GridFightEquipmentList", "GridFightConsumableList", "PDGCLINNEBM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfo), global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfo.Parser, new[]{ "GridFightConsumableList", "GridFightEquipmentList", "UpdateGridFightConsumableList", "PDGCLINNEBM" }, null, null, null, null)
           }));
     }
     #endregion
@@ -78,9 +80,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightGameItemSyncInfo(GridFightGameItemSyncInfo other) : this() {
-      cAGNCJBKKDE_ = other.cAGNCJBKKDE_.Clone();
-      gridFightEquipmentList_ = other.gridFightEquipmentList_.Clone();
       gridFightConsumableList_ = other.gridFightConsumableList_.Clone();
+      gridFightEquipmentList_ = other.gridFightEquipmentList_.Clone();
+      updateGridFightConsumableList_ = other.updateGridFightConsumableList_.Clone();
       pDGCLINNEBM_ = other.pDGCLINNEBM_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -91,15 +93,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightGameItemSyncInfo(this);
     }
 
-    /// <summary>Field number for the "CAGNCJBKKDE" field.</summary>
-    public const int CAGNCJBKKDEFieldNumber = 5;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.CFNCILEAMKI> _repeated_cAGNCJBKKDE_codec
-        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.CFNCILEAMKI.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CFNCILEAMKI> cAGNCJBKKDE_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CFNCILEAMKI>();
+    /// <summary>Field number for the "grid_fight_consumable_list" field.</summary>
+    public const int GridFightConsumableListFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GridFightConsumableInfo> _repeated_gridFightConsumableList_codec
+        = pb::FieldCodec.ForMessage(42, global::EggLink.DanhengServer.Proto.GridFightConsumableInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightConsumableInfo> gridFightConsumableList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightConsumableInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.CFNCILEAMKI> CAGNCJBKKDE {
-      get { return cAGNCJBKKDE_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightConsumableInfo> GridFightConsumableList {
+      get { return gridFightConsumableList_; }
     }
 
     /// <summary>Field number for the "grid_fight_equipment_list" field.</summary>
@@ -113,15 +115,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return gridFightEquipmentList_; }
     }
 
-    /// <summary>Field number for the "grid_fight_consumable_list" field.</summary>
-    public const int GridFightConsumableListFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GridFightConsumableInfo> _repeated_gridFightConsumableList_codec
-        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.GridFightConsumableInfo.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightConsumableInfo> gridFightConsumableList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightConsumableInfo>();
+    /// <summary>Field number for the "update_grid_fight_consumable_list" field.</summary>
+    public const int UpdateGridFightConsumableListFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GridFightConsumableUpdateInfo> _repeated_updateGridFightConsumableList_codec
+        = pb::FieldCodec.ForMessage(90, global::EggLink.DanhengServer.Proto.GridFightConsumableUpdateInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightConsumableUpdateInfo> updateGridFightConsumableList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightConsumableUpdateInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightConsumableInfo> GridFightConsumableList {
-      get { return gridFightConsumableList_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightConsumableUpdateInfo> UpdateGridFightConsumableList {
+      get { return updateGridFightConsumableList_; }
     }
 
     /// <summary>Field number for the "PDGCLINNEBM" field.</summary>
@@ -150,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!cAGNCJBKKDE_.Equals(other.cAGNCJBKKDE_)) return false;
-      if(!gridFightEquipmentList_.Equals(other.gridFightEquipmentList_)) return false;
       if(!gridFightConsumableList_.Equals(other.gridFightConsumableList_)) return false;
+      if(!gridFightEquipmentList_.Equals(other.gridFightEquipmentList_)) return false;
+      if(!updateGridFightConsumableList_.Equals(other.updateGridFightConsumableList_)) return false;
       if(!pDGCLINNEBM_.Equals(other.pDGCLINNEBM_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -161,9 +163,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= cAGNCJBKKDE_.GetHashCode();
-      hash ^= gridFightEquipmentList_.GetHashCode();
       hash ^= gridFightConsumableList_.GetHashCode();
+      hash ^= gridFightEquipmentList_.GetHashCode();
+      hash ^= updateGridFightConsumableList_.GetHashCode();
       hash ^= pDGCLINNEBM_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -183,9 +185,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      cAGNCJBKKDE_.WriteTo(output, _repeated_cAGNCJBKKDE_codec);
-      pDGCLINNEBM_.WriteTo(output, _repeated_pDGCLINNEBM_codec);
       gridFightConsumableList_.WriteTo(output, _repeated_gridFightConsumableList_codec);
+      pDGCLINNEBM_.WriteTo(output, _repeated_pDGCLINNEBM_codec);
+      updateGridFightConsumableList_.WriteTo(output, _repeated_updateGridFightConsumableList_codec);
       gridFightEquipmentList_.WriteTo(output, _repeated_gridFightEquipmentList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -197,9 +199,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      cAGNCJBKKDE_.WriteTo(ref output, _repeated_cAGNCJBKKDE_codec);
-      pDGCLINNEBM_.WriteTo(ref output, _repeated_pDGCLINNEBM_codec);
       gridFightConsumableList_.WriteTo(ref output, _repeated_gridFightConsumableList_codec);
+      pDGCLINNEBM_.WriteTo(ref output, _repeated_pDGCLINNEBM_codec);
+      updateGridFightConsumableList_.WriteTo(ref output, _repeated_updateGridFightConsumableList_codec);
       gridFightEquipmentList_.WriteTo(ref output, _repeated_gridFightEquipmentList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -211,9 +213,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += cAGNCJBKKDE_.CalculateSize(_repeated_cAGNCJBKKDE_codec);
-      size += gridFightEquipmentList_.CalculateSize(_repeated_gridFightEquipmentList_codec);
       size += gridFightConsumableList_.CalculateSize(_repeated_gridFightConsumableList_codec);
+      size += gridFightEquipmentList_.CalculateSize(_repeated_gridFightEquipmentList_codec);
+      size += updateGridFightConsumableList_.CalculateSize(_repeated_updateGridFightConsumableList_codec);
       size += pDGCLINNEBM_.CalculateSize(_repeated_pDGCLINNEBM_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -227,9 +229,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      cAGNCJBKKDE_.Add(other.cAGNCJBKKDE_);
-      gridFightEquipmentList_.Add(other.gridFightEquipmentList_);
       gridFightConsumableList_.Add(other.gridFightConsumableList_);
+      gridFightEquipmentList_.Add(other.gridFightEquipmentList_);
+      updateGridFightConsumableList_.Add(other.updateGridFightConsumableList_);
       pDGCLINNEBM_.Add(other.pDGCLINNEBM_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -247,7 +249,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 42: {
-            cAGNCJBKKDE_.AddEntriesFrom(input, _repeated_cAGNCJBKKDE_codec);
+            gridFightConsumableList_.AddEntriesFrom(input, _repeated_gridFightConsumableList_codec);
             break;
           }
           case 66: {
@@ -255,7 +257,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 90: {
-            gridFightConsumableList_.AddEntriesFrom(input, _repeated_gridFightConsumableList_codec);
+            updateGridFightConsumableList_.AddEntriesFrom(input, _repeated_updateGridFightConsumableList_codec);
             break;
           }
           case 122: {
@@ -278,7 +280,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 42: {
-            cAGNCJBKKDE_.AddEntriesFrom(ref input, _repeated_cAGNCJBKKDE_codec);
+            gridFightConsumableList_.AddEntriesFrom(ref input, _repeated_gridFightConsumableList_codec);
             break;
           }
           case 66: {
@@ -286,7 +288,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 90: {
-            gridFightConsumableList_.AddEntriesFrom(ref input, _repeated_gridFightConsumableList_codec);
+            updateGridFightConsumableList_.AddEntriesFrom(ref input, _repeated_updateGridFightConsumableList_codec);
             break;
           }
           case 122: {

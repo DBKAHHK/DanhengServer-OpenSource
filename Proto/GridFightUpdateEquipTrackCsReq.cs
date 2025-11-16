@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightUpdateEquipTrackCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRHcmlkRmlnaHRVcGRhdGVFcXVpcFRyYWNrQ3NSZXEucHJvdG8aH0dyaWRG",
-            "aWdodEVxdWlwVHJhY2tTb3VyY2UucHJvdG8aEUxMS0VLRk5PRkFPLnByb3Rv",
-            "Im8KHkdyaWRGaWdodFVwZGF0ZUVxdWlwVHJhY2tDc1JlcRIhCgtQTURLS0ZL",
-            "REZPRhgJIAMoCzIMLkxMS0VLRk5PRkFPEioKBnNvdXJjZRgGIAEoDjIaLkdy",
-            "aWRGaWdodEVxdWlwVHJhY2tTb3VyY2VCHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
-            "cnZlci5Qcm90b2IGcHJvdG8z"));
+            "CiRHcmlkRmlnaHRVcGRhdGVFcXVpcFRyYWNrQ3NSZXEucHJvdG8aGEVxdWlw",
+            "bWVudFRyYWNrSW5mby5wcm90bxofR3JpZEZpZ2h0RXF1aXBUcmFja1NvdXJj",
+            "ZS5wcm90byJ6Ch5HcmlkRmlnaHRVcGRhdGVFcXVpcFRyYWNrQ3NSZXESLAoP",
+            "dHJhY2tfaW5mb19saXN0GAkgAygLMhMuRXF1aXBtZW50VHJhY2tJbmZvEioK",
+            "BnNvdXJjZRgGIAEoDjIaLkdyaWRGaWdodEVxdWlwVHJhY2tTb3VyY2VCHqoC",
+            "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightEquipTrackSourceReflection.Descriptor, global::EggLink.DanhengServer.Proto.LLKEKFNOFAOReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.EquipmentTrackInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEquipTrackSourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUpdateEquipTrackCsReq), global::EggLink.DanhengServer.Proto.GridFightUpdateEquipTrackCsReq.Parser, new[]{ "PMDKKFKDFOF", "Source" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUpdateEquipTrackCsReq), global::EggLink.DanhengServer.Proto.GridFightUpdateEquipTrackCsReq.Parser, new[]{ "TrackInfoList", "Source" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +75,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightUpdateEquipTrackCsReq(GridFightUpdateEquipTrackCsReq other) : this() {
-      pMDKKFKDFOF_ = other.pMDKKFKDFOF_.Clone();
+      trackInfoList_ = other.trackInfoList_.Clone();
       source_ = other.source_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -86,15 +86,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightUpdateEquipTrackCsReq(this);
     }
 
-    /// <summary>Field number for the "PMDKKFKDFOF" field.</summary>
-    public const int PMDKKFKDFOFFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.LLKEKFNOFAO> _repeated_pMDKKFKDFOF_codec
-        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.LLKEKFNOFAO.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LLKEKFNOFAO> pMDKKFKDFOF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LLKEKFNOFAO>();
+    /// <summary>Field number for the "track_info_list" field.</summary>
+    public const int TrackInfoListFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.EquipmentTrackInfo> _repeated_trackInfoList_codec
+        = pb::FieldCodec.ForMessage(74, global::EggLink.DanhengServer.Proto.EquipmentTrackInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EquipmentTrackInfo> trackInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EquipmentTrackInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.LLKEKFNOFAO> PMDKKFKDFOF {
-      get { return pMDKKFKDFOF_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.EquipmentTrackInfo> TrackInfoList {
+      get { return trackInfoList_; }
     }
 
     /// <summary>Field number for the "source" field.</summary>
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!pMDKKFKDFOF_.Equals(other.pMDKKFKDFOF_)) return false;
+      if(!trackInfoList_.Equals(other.trackInfoList_)) return false;
       if (Source != other.Source) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= pMDKKFKDFOF_.GetHashCode();
+      hash ^= trackInfoList_.GetHashCode();
       if (Source != global::EggLink.DanhengServer.Proto.GridFightEquipTrackSource.KGridFightEquipTrackSourceNone) hash ^= Source.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteEnum((int) Source);
       }
-      pMDKKFKDFOF_.WriteTo(output, _repeated_pMDKKFKDFOF_codec);
+      trackInfoList_.WriteTo(output, _repeated_trackInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -172,7 +172,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(48);
         output.WriteEnum((int) Source);
       }
-      pMDKKFKDFOF_.WriteTo(ref output, _repeated_pMDKKFKDFOF_codec);
+      trackInfoList_.WriteTo(ref output, _repeated_trackInfoList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -183,7 +183,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += pMDKKFKDFOF_.CalculateSize(_repeated_pMDKKFKDFOF_codec);
+      size += trackInfoList_.CalculateSize(_repeated_trackInfoList_codec);
       if (Source != global::EggLink.DanhengServer.Proto.GridFightEquipTrackSource.KGridFightEquipTrackSourceNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Source);
       }
@@ -199,7 +199,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      pMDKKFKDFOF_.Add(other.pMDKKFKDFOF_);
+      trackInfoList_.Add(other.trackInfoList_);
       if (other.Source != global::EggLink.DanhengServer.Proto.GridFightEquipTrackSource.KGridFightEquipTrackSourceNone) {
         Source = other.Source;
       }
@@ -223,7 +223,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            pMDKKFKDFOF_.AddEntriesFrom(input, _repeated_pMDKKFKDFOF_codec);
+            trackInfoList_.AddEntriesFrom(input, _repeated_trackInfoList_codec);
             break;
           }
         }
@@ -246,7 +246,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 74: {
-            pMDKKFKDFOF_.AddEntriesFrom(ref input, _repeated_pMDKKFKDFOF_codec);
+            trackInfoList_.AddEntriesFrom(ref input, _repeated_trackInfoList_codec);
             break;
           }
         }

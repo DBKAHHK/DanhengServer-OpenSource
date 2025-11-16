@@ -25,15 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHcmlkRmlnaHRIcE1vZGlmeUluZm8ucHJvdG8aFFVwZGF0ZUdsb2JhbEhw",
-            "LnByb3RvIowBChVHcmlkRmlnaHRIcE1vZGlmeUluZm8SEwoLRE9JUElLTkJM",
-            "TEoYCSABKAUSEwoLQkZBTUxHQkxOTkwYAiABKAUSHwoGcmVhc29uGA0gASgO",
-            "Mg8uVXBkYXRlR2xvYmFsSHASEwoLQUxPR0ZLTUNOQUYYASABKA0SEwoLR0xE",
-            "QU5DSUNQQk8YCyABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
-            "b2IGcHJvdG8z"));
+            "LnByb3RvIoIBChVHcmlkRmlnaHRIcE1vZGlmeUluZm8SDwoHcHJldl9ocBgJ",
+            "IAEoBRIPCgduZXh0X2hwGAIgASgFEh8KBnJlYXNvbhgNIAEoDjIPLlVwZGF0",
+            "ZUdsb2JhbEhwEhEKCXJlbW92ZV9ocBgBIAEoDRITCgtHTERBTkNJQ1BCTxgL",
+            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.UpdateGlobalHpReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightHpModifyInfo), global::EggLink.DanhengServer.Proto.GridFightHpModifyInfo.Parser, new[]{ "DOIPIKNBLLJ", "BFAMLGBLNNL", "Reason", "ALOGFKMCNAF", "GLDANCICPBO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightHpModifyInfo), global::EggLink.DanhengServer.Proto.GridFightHpModifyInfo.Parser, new[]{ "PrevHp", "NextHp", "Reason", "RemoveHp", "GLDANCICPBO" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,10 +74,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightHpModifyInfo(GridFightHpModifyInfo other) : this() {
-      dOIPIKNBLLJ_ = other.dOIPIKNBLLJ_;
-      bFAMLGBLNNL_ = other.bFAMLGBLNNL_;
+      prevHp_ = other.prevHp_;
+      nextHp_ = other.nextHp_;
       reason_ = other.reason_;
-      aLOGFKMCNAF_ = other.aLOGFKMCNAF_;
+      removeHp_ = other.removeHp_;
       gLDANCICPBO_ = other.gLDANCICPBO_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -89,27 +88,27 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightHpModifyInfo(this);
     }
 
-    /// <summary>Field number for the "DOIPIKNBLLJ" field.</summary>
-    public const int DOIPIKNBLLJFieldNumber = 9;
-    private int dOIPIKNBLLJ_;
+    /// <summary>Field number for the "prev_hp" field.</summary>
+    public const int PrevHpFieldNumber = 9;
+    private int prevHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int DOIPIKNBLLJ {
-      get { return dOIPIKNBLLJ_; }
+    public int PrevHp {
+      get { return prevHp_; }
       set {
-        dOIPIKNBLLJ_ = value;
+        prevHp_ = value;
       }
     }
 
-    /// <summary>Field number for the "BFAMLGBLNNL" field.</summary>
-    public const int BFAMLGBLNNLFieldNumber = 2;
-    private int bFAMLGBLNNL_;
+    /// <summary>Field number for the "next_hp" field.</summary>
+    public const int NextHpFieldNumber = 2;
+    private int nextHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int BFAMLGBLNNL {
-      get { return bFAMLGBLNNL_; }
+    public int NextHp {
+      get { return nextHp_; }
       set {
-        bFAMLGBLNNL_ = value;
+        nextHp_ = value;
       }
     }
 
@@ -125,15 +124,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ALOGFKMCNAF" field.</summary>
-    public const int ALOGFKMCNAFFieldNumber = 1;
-    private uint aLOGFKMCNAF_;
+    /// <summary>Field number for the "remove_hp" field.</summary>
+    public const int RemoveHpFieldNumber = 1;
+    private uint removeHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ALOGFKMCNAF {
-      get { return aLOGFKMCNAF_; }
+    public uint RemoveHp {
+      get { return removeHp_; }
       set {
-        aLOGFKMCNAF_ = value;
+        removeHp_ = value;
       }
     }
 
@@ -164,10 +163,10 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DOIPIKNBLLJ != other.DOIPIKNBLLJ) return false;
-      if (BFAMLGBLNNL != other.BFAMLGBLNNL) return false;
+      if (PrevHp != other.PrevHp) return false;
+      if (NextHp != other.NextHp) return false;
       if (Reason != other.Reason) return false;
-      if (ALOGFKMCNAF != other.ALOGFKMCNAF) return false;
+      if (RemoveHp != other.RemoveHp) return false;
       if (GLDANCICPBO != other.GLDANCICPBO) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -176,10 +175,10 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (DOIPIKNBLLJ != 0) hash ^= DOIPIKNBLLJ.GetHashCode();
-      if (BFAMLGBLNNL != 0) hash ^= BFAMLGBLNNL.GetHashCode();
+      if (PrevHp != 0) hash ^= PrevHp.GetHashCode();
+      if (NextHp != 0) hash ^= NextHp.GetHashCode();
       if (Reason != global::EggLink.DanhengServer.Proto.UpdateGlobalHp.KUpdateGlobalHpNone) hash ^= Reason.GetHashCode();
-      if (ALOGFKMCNAF != 0) hash ^= ALOGFKMCNAF.GetHashCode();
+      if (RemoveHp != 0) hash ^= RemoveHp.GetHashCode();
       if (GLDANCICPBO != 0) hash ^= GLDANCICPBO.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -199,17 +198,17 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ALOGFKMCNAF != 0) {
+      if (RemoveHp != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ALOGFKMCNAF);
+        output.WriteUInt32(RemoveHp);
       }
-      if (BFAMLGBLNNL != 0) {
+      if (NextHp != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(BFAMLGBLNNL);
+        output.WriteInt32(NextHp);
       }
-      if (DOIPIKNBLLJ != 0) {
+      if (PrevHp != 0) {
         output.WriteRawTag(72);
-        output.WriteInt32(DOIPIKNBLLJ);
+        output.WriteInt32(PrevHp);
       }
       if (GLDANCICPBO != 0) {
         output.WriteRawTag(88);
@@ -229,17 +228,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ALOGFKMCNAF != 0) {
+      if (RemoveHp != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ALOGFKMCNAF);
+        output.WriteUInt32(RemoveHp);
       }
-      if (BFAMLGBLNNL != 0) {
+      if (NextHp != 0) {
         output.WriteRawTag(16);
-        output.WriteInt32(BFAMLGBLNNL);
+        output.WriteInt32(NextHp);
       }
-      if (DOIPIKNBLLJ != 0) {
+      if (PrevHp != 0) {
         output.WriteRawTag(72);
-        output.WriteInt32(DOIPIKNBLLJ);
+        output.WriteInt32(PrevHp);
       }
       if (GLDANCICPBO != 0) {
         output.WriteRawTag(88);
@@ -259,17 +258,17 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (DOIPIKNBLLJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DOIPIKNBLLJ);
+      if (PrevHp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PrevHp);
       }
-      if (BFAMLGBLNNL != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BFAMLGBLNNL);
+      if (NextHp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NextHp);
       }
       if (Reason != global::EggLink.DanhengServer.Proto.UpdateGlobalHp.KUpdateGlobalHpNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
       }
-      if (ALOGFKMCNAF != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ALOGFKMCNAF);
+      if (RemoveHp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RemoveHp);
       }
       if (GLDANCICPBO != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GLDANCICPBO);
@@ -286,17 +285,17 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.DOIPIKNBLLJ != 0) {
-        DOIPIKNBLLJ = other.DOIPIKNBLLJ;
+      if (other.PrevHp != 0) {
+        PrevHp = other.PrevHp;
       }
-      if (other.BFAMLGBLNNL != 0) {
-        BFAMLGBLNNL = other.BFAMLGBLNNL;
+      if (other.NextHp != 0) {
+        NextHp = other.NextHp;
       }
       if (other.Reason != global::EggLink.DanhengServer.Proto.UpdateGlobalHp.KUpdateGlobalHpNone) {
         Reason = other.Reason;
       }
-      if (other.ALOGFKMCNAF != 0) {
-        ALOGFKMCNAF = other.ALOGFKMCNAF;
+      if (other.RemoveHp != 0) {
+        RemoveHp = other.RemoveHp;
       }
       if (other.GLDANCICPBO != 0) {
         GLDANCICPBO = other.GLDANCICPBO;
@@ -317,15 +316,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            ALOGFKMCNAF = input.ReadUInt32();
+            RemoveHp = input.ReadUInt32();
             break;
           }
           case 16: {
-            BFAMLGBLNNL = input.ReadInt32();
+            NextHp = input.ReadInt32();
             break;
           }
           case 72: {
-            DOIPIKNBLLJ = input.ReadInt32();
+            PrevHp = input.ReadInt32();
             break;
           }
           case 88: {
@@ -352,15 +351,15 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            ALOGFKMCNAF = input.ReadUInt32();
+            RemoveHp = input.ReadUInt32();
             break;
           }
           case 16: {
-            BFAMLGBLNNL = input.ReadInt32();
+            NextHp = input.ReadInt32();
             break;
           }
           case 72: {
-            DOIPIKNBLLJ = input.ReadInt32();
+            PrevHp = input.ReadInt32();
             break;
           }
           case 88: {

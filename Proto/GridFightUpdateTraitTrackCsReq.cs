@@ -26,12 +26,12 @@ namespace EggLink.DanhengServer.Proto {
           string.Concat(
             "CiRHcmlkRmlnaHRVcGRhdGVUcmFpdFRyYWNrQ3NSZXEucHJvdG8iRwoeR3Jp",
             "ZEZpZ2h0VXBkYXRlVHJhaXRUcmFja0NzUmVxEhAKCHRyYWl0X2lkGAsgASgN",
-            "EhMKC05LUEJFQ01QTUhJGAQgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
+            "EhMKC2lzX3RyYWNraW5nGAQgASgIQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2",
             "ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUpdateTraitTrackCsReq), global::EggLink.DanhengServer.Proto.GridFightUpdateTraitTrackCsReq.Parser, new[]{ "TraitId", "NKPBECMPMHI" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUpdateTraitTrackCsReq), global::EggLink.DanhengServer.Proto.GridFightUpdateTraitTrackCsReq.Parser, new[]{ "TraitId", "IsTracking" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightUpdateTraitTrackCsReq(GridFightUpdateTraitTrackCsReq other) : this() {
       traitId_ = other.traitId_;
-      nKPBECMPMHI_ = other.nKPBECMPMHI_;
+      isTracking_ = other.isTracking_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NKPBECMPMHI" field.</summary>
-    public const int NKPBECMPMHIFieldNumber = 4;
-    private bool nKPBECMPMHI_;
+    /// <summary>Field number for the "is_tracking" field.</summary>
+    public const int IsTrackingFieldNumber = 4;
+    private bool isTracking_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool NKPBECMPMHI {
-      get { return nKPBECMPMHI_; }
+    public bool IsTracking {
+      get { return isTracking_; }
       set {
-        nKPBECMPMHI_ = value;
+        isTracking_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (TraitId != other.TraitId) return false;
-      if (NKPBECMPMHI != other.NKPBECMPMHI) return false;
+      if (IsTracking != other.IsTracking) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (TraitId != 0) hash ^= TraitId.GetHashCode();
-      if (NKPBECMPMHI != false) hash ^= NKPBECMPMHI.GetHashCode();
+      if (IsTracking != false) hash ^= IsTracking.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NKPBECMPMHI != false) {
+      if (IsTracking != false) {
         output.WriteRawTag(32);
-        output.WriteBool(NKPBECMPMHI);
+        output.WriteBool(IsTracking);
       }
       if (TraitId != 0) {
         output.WriteRawTag(88);
@@ -170,9 +170,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NKPBECMPMHI != false) {
+      if (IsTracking != false) {
         output.WriteRawTag(32);
-        output.WriteBool(NKPBECMPMHI);
+        output.WriteBool(IsTracking);
       }
       if (TraitId != 0) {
         output.WriteRawTag(88);
@@ -191,7 +191,7 @@ namespace EggLink.DanhengServer.Proto {
       if (TraitId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitId);
       }
-      if (NKPBECMPMHI != false) {
+      if (IsTracking != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.TraitId != 0) {
         TraitId = other.TraitId;
       }
-      if (other.NKPBECMPMHI != false) {
-        NKPBECMPMHI = other.NKPBECMPMHI;
+      if (other.IsTracking != false) {
+        IsTracking = other.IsTracking;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -228,7 +228,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 32: {
-            NKPBECMPMHI = input.ReadBool();
+            IsTracking = input.ReadBool();
             break;
           }
           case 88: {
@@ -251,7 +251,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 32: {
-            NKPBECMPMHI = input.ReadBool();
+            IsTracking = input.ReadBool();
             break;
           }
           case 88: {

@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static IPJAIINEGELReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFJUEpBSUlORUdFTC5wcm90byI3CgtJUEpBSUlORUdFTBITCgtCRUpFRURB",
-            "RUJCRRgEIAEoDRITCgtFQ0JBTE1BRUJKQxgFIAEoDUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFJUEpBSUlORUdFTC5wcm90byI7CgtJUEpBSUlORUdFTBITCgtCRUpFRURB",
+            "RUJCRRgEIAEoDRIXCg9maW5pc2hfcHJvZ3Jlc3MYBSABKA1CHqoCG0VnZ0xp",
+            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IPJAIINEGEL), global::EggLink.DanhengServer.Proto.IPJAIINEGEL.Parser, new[]{ "BEJEEDAEBBE", "ECBALMAEBJC" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.IPJAIINEGEL), global::EggLink.DanhengServer.Proto.IPJAIINEGEL.Parser, new[]{ "BEJEEDAEBBE", "FinishProgress" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IPJAIINEGEL(IPJAIINEGEL other) : this() {
       bEJEEDAEBBE_ = other.bEJEEDAEBBE_;
-      eCBALMAEBJC_ = other.eCBALMAEBJC_;
+      finishProgress_ = other.finishProgress_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -95,15 +95,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "ECBALMAEBJC" field.</summary>
-    public const int ECBALMAEBJCFieldNumber = 5;
-    private uint eCBALMAEBJC_;
+    /// <summary>Field number for the "finish_progress" field.</summary>
+    public const int FinishProgressFieldNumber = 5;
+    private uint finishProgress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ECBALMAEBJC {
-      get { return eCBALMAEBJC_; }
+    public uint FinishProgress {
+      get { return finishProgress_; }
       set {
-        eCBALMAEBJC_ = value;
+        finishProgress_ = value;
       }
     }
 
@@ -123,7 +123,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (BEJEEDAEBBE != other.BEJEEDAEBBE) return false;
-      if (ECBALMAEBJC != other.ECBALMAEBJC) return false;
+      if (FinishProgress != other.FinishProgress) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -132,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (BEJEEDAEBBE != 0) hash ^= BEJEEDAEBBE.GetHashCode();
-      if (ECBALMAEBJC != 0) hash ^= ECBALMAEBJC.GetHashCode();
+      if (FinishProgress != 0) hash ^= FinishProgress.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -155,9 +155,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(BEJEEDAEBBE);
       }
-      if (ECBALMAEBJC != 0) {
+      if (FinishProgress != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(ECBALMAEBJC);
+        output.WriteUInt32(FinishProgress);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -173,9 +173,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(32);
         output.WriteUInt32(BEJEEDAEBBE);
       }
-      if (ECBALMAEBJC != 0) {
+      if (FinishProgress != 0) {
         output.WriteRawTag(40);
-        output.WriteUInt32(ECBALMAEBJC);
+        output.WriteUInt32(FinishProgress);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -190,8 +190,8 @@ namespace EggLink.DanhengServer.Proto {
       if (BEJEEDAEBBE != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BEJEEDAEBBE);
       }
-      if (ECBALMAEBJC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ECBALMAEBJC);
+      if (FinishProgress != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishProgress);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -208,8 +208,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.BEJEEDAEBBE != 0) {
         BEJEEDAEBBE = other.BEJEEDAEBBE;
       }
-      if (other.ECBALMAEBJC != 0) {
-        ECBALMAEBJC = other.ECBALMAEBJC;
+      if (other.FinishProgress != 0) {
+        FinishProgress = other.FinishProgress;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -231,7 +231,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            ECBALMAEBJC = input.ReadUInt32();
+            FinishProgress = input.ReadUInt32();
             break;
           }
         }
@@ -254,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 40: {
-            ECBALMAEBJC = input.ReadUInt32();
+            FinishProgress = input.ReadUInt32();
             break;
           }
         }

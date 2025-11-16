@@ -25,14 +25,14 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CitDaGVzc1JvZ3VlVXBkYXRlTGV2ZWxCYXNlSW5mb1NjTm90aWZ5LnByb3Rv",
-            "GhtDaGVzc1JvZ3VlTGV2ZWxTdGF0dXMucHJvdG8aIUNoZXNzUm9ndWVVcGRh",
-            "dGVMZXZlbFN0YXR1cy5wcm90byKDAQolQ2hlc3NSb2d1ZVVwZGF0ZUxldmVs",
+            "GiFDaGVzc1JvZ3VlVXBkYXRlTGV2ZWxTdGF0dXMucHJvdG8aG0NoZXNzUm9n",
+            "dWVMZXZlbFN0YXR1cy5wcm90byKDAQolQ2hlc3NSb2d1ZVVwZGF0ZUxldmVs",
             "QmFzZUluZm9TY05vdGlmeRIsCgxsZXZlbF9zdGF0dXMYBCABKA4yFi5DaGVz",
             "c1JvZ3VlTGV2ZWxTdGF0dXMSLAoGcmVhc29uGAEgASgOMhwuQ2hlc3NSb2d1",
             "ZVVwZGF0ZUxldmVsU3RhdHVzQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIu",
             "UHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueLevelStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueUpdateLevelStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ChessRogueUpdateLevelStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.ChessRogueLevelStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ChessRogueUpdateLevelBaseInfoScNotify), global::EggLink.DanhengServer.Proto.ChessRogueUpdateLevelBaseInfoScNotify.Parser, new[]{ "LevelStatus", "Reason" }, null, null, null, null)
           }));

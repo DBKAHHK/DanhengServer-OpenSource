@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static HeartDialScriptChangeScNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNIZWFydERpYWxTY3JpcHRDaGFuZ2VTY05vdGlmeS5wcm90bxoRTU1FSU5G",
-            "TURKRkcucHJvdG8aG0hlYXJ0RGlhbFVubG9ja1N0YXR1cy5wcm90bxobSGVh",
-            "cnREaWFsRGlhbG9ndWVJbmZvLnByb3RvGhlIZWFydERpYWxTY3JpcHRJbmZv",
+            "CiNIZWFydERpYWxTY3JpcHRDaGFuZ2VTY05vdGlmeS5wcm90bxobSGVhcnRE",
+            "aWFsRGlhbG9ndWVJbmZvLnByb3RvGhFNTUVJTkZNREpGRy5wcm90bxoZSGVh",
+            "cnREaWFsU2NyaXB0SW5mby5wcm90bxobSGVhcnREaWFsVW5sb2NrU3RhdHVz",
             "LnByb3RvIuUBCh1IZWFydERpYWxTY3JpcHRDaGFuZ2VTY05vdGlmeRIhCgtP",
             "Q01PRUpJRExBTRgCIAMoCzIMLk1NRUlORk1ESkZHEi0KDXVubG9ja19zdGF0",
             "dXMYCSABKA4yFi5IZWFydERpYWxVbmxvY2tTdGF0dXMSOgoaY2hhbmdlZF9k",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "aWFsU2NyaXB0SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MMEINFMDJFGReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.HeartDialDialogueInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MMEINFMDJFGReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialScriptInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.HeartDialUnlockStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.HeartDialScriptChangeScNotify), global::EggLink.DanhengServer.Proto.HeartDialScriptChangeScNotify.Parser, new[]{ "OCMOEJIDLAM", "UnlockStatus", "ChangedDialogueInfoList", "ChangedScriptInfoList" }, null, null, null, null)
           }));

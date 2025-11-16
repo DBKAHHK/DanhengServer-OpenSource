@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightTraitEffectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5HcmlkRmlnaHRUcmFpdEVmZmVjdEluZm8ucHJvdG8aEUlQRkRDS0VFT0dM",
-            "LnByb3RvGhFBTUVQSUNNRERGSy5wcm90byK7AQoYR3JpZEZpZ2h0VHJhaXRF",
+            "Ch5HcmlkRmlnaHRUcmFpdEVmZmVjdEluZm8ucHJvdG8aEUFNRVBJQ01EREZL",
+            "LnByb3RvGhFJUEZEQ0tFRU9HTC5wcm90byLDAQoYR3JpZEZpZ2h0VHJhaXRF",
             "ZmZlY3RJbmZvEhYKC0lESEZNQkdQQUxOGMkOIAEoDUgAEiQKC0lJQkJHSkZD",
-            "SERPGPYFIAEoCzIMLklQRkRDS0VFT0dMSAASGQoOZWZmZWN0X2RuYV9udW0Y",
-            "kw4gASgNSAASJAoLT0FES09FTU1HR0oYqwwgASgLMgwuQU1FUElDTURERktI",
-            "ABIRCgllZmZlY3RfaWQYCyABKA1CDQoLR0ROQUlIUE1NSERCHqoCG0VnZ0xp",
-            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "SERPGPYFIAEoCzIMLklQRkRDS0VFT0dMSAASIQoWdHJhaXRfZWZmZWN0X2xl",
+            "dmVsX2V4cBiTDiABKA1IABIkCgtPQURLT0VNTUdHShirDCABKAsyDC5BTUVQ",
+            "SUNNRERGS0gAEhEKCWVmZmVjdF9pZBgLIAEoDUINCgtHRE5BSUhQTU1IREIe",
+            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IPFDCKEEOGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.AMEPICMDDFKReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AMEPICMDDFKReflection.Descriptor, global::EggLink.DanhengServer.Proto.IPFDCKEEOGLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitEffectInfo), global::EggLink.DanhengServer.Proto.GridFightTraitEffectInfo.Parser, new[]{ "IDHFMBGPALN", "IIBBGJFCHDO", "EffectDnaNum", "OADKOEMMGGJ", "EffectId" }, new[]{ "GDNAIHPMMHD" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitEffectInfo), global::EggLink.DanhengServer.Proto.GridFightTraitEffectInfo.Parser, new[]{ "IDHFMBGPALN", "IIBBGJFCHDO", "TraitEffectLevelExp", "OADKOEMMGGJ", "EffectId" }, new[]{ "GDNAIHPMMHD" }, null, null, null)
           }));
     }
     #endregion
@@ -84,8 +84,8 @@ namespace EggLink.DanhengServer.Proto {
         case GDNAIHPMMHDOneofCase.IIBBGJFCHDO:
           IIBBGJFCHDO = other.IIBBGJFCHDO.Clone();
           break;
-        case GDNAIHPMMHDOneofCase.EffectDnaNum:
-          EffectDnaNum = other.EffectDnaNum;
+        case GDNAIHPMMHDOneofCase.TraitEffectLevelExp:
+          TraitEffectLevelExp = other.TraitEffectLevelExp;
           break;
         case GDNAIHPMMHDOneofCase.OADKOEMMGGJ:
           OADKOEMMGGJ = other.OADKOEMMGGJ.Clone();
@@ -139,28 +139,28 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "effect_dna_num" field.</summary>
-    public const int EffectDnaNumFieldNumber = 1811;
+    /// <summary>Field number for the "trait_effect_level_exp" field.</summary>
+    public const int TraitEffectLevelExpFieldNumber = 1811;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint EffectDnaNum {
-      get { return HasEffectDnaNum ? (uint) gDNAIHPMMHD_ : 0; }
+    public uint TraitEffectLevelExp {
+      get { return HasTraitEffectLevelExp ? (uint) gDNAIHPMMHD_ : 0; }
       set {
         gDNAIHPMMHD_ = value;
-        gDNAIHPMMHDCase_ = GDNAIHPMMHDOneofCase.EffectDnaNum;
+        gDNAIHPMMHDCase_ = GDNAIHPMMHDOneofCase.TraitEffectLevelExp;
       }
     }
-    /// <summary>Gets whether the "effect_dna_num" field is set</summary>
+    /// <summary>Gets whether the "trait_effect_level_exp" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasEffectDnaNum {
-      get { return gDNAIHPMMHDCase_ == GDNAIHPMMHDOneofCase.EffectDnaNum; }
+    public bool HasTraitEffectLevelExp {
+      get { return gDNAIHPMMHDCase_ == GDNAIHPMMHDOneofCase.TraitEffectLevelExp; }
     }
-    /// <summary> Clears the value of the oneof if it's currently set to "effect_dna_num" </summary>
+    /// <summary> Clears the value of the oneof if it's currently set to "trait_effect_level_exp" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearEffectDnaNum() {
-      if (HasEffectDnaNum) {
+    public void ClearTraitEffectLevelExp() {
+      if (HasTraitEffectLevelExp) {
         ClearGDNAIHPMMHD();
       }
     }
@@ -195,7 +195,7 @@ namespace EggLink.DanhengServer.Proto {
       None = 0,
       IDHFMBGPALN = 1865,
       IIBBGJFCHDO = 758,
-      EffectDnaNum = 1811,
+      TraitEffectLevelExp = 1811,
       OADKOEMMGGJ = 1579,
     }
     private GDNAIHPMMHDOneofCase gDNAIHPMMHDCase_ = GDNAIHPMMHDOneofCase.None;
@@ -229,7 +229,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (IDHFMBGPALN != other.IDHFMBGPALN) return false;
       if (!object.Equals(IIBBGJFCHDO, other.IIBBGJFCHDO)) return false;
-      if (EffectDnaNum != other.EffectDnaNum) return false;
+      if (TraitEffectLevelExp != other.TraitEffectLevelExp) return false;
       if (!object.Equals(OADKOEMMGGJ, other.OADKOEMMGGJ)) return false;
       if (EffectId != other.EffectId) return false;
       if (GDNAIHPMMHDCase != other.GDNAIHPMMHDCase) return false;
@@ -242,7 +242,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (HasIDHFMBGPALN) hash ^= IDHFMBGPALN.GetHashCode();
       if (gDNAIHPMMHDCase_ == GDNAIHPMMHDOneofCase.IIBBGJFCHDO) hash ^= IIBBGJFCHDO.GetHashCode();
-      if (HasEffectDnaNum) hash ^= EffectDnaNum.GetHashCode();
+      if (HasTraitEffectLevelExp) hash ^= TraitEffectLevelExp.GetHashCode();
       if (gDNAIHPMMHDCase_ == GDNAIHPMMHDOneofCase.OADKOEMMGGJ) hash ^= OADKOEMMGGJ.GetHashCode();
       if (EffectId != 0) hash ^= EffectId.GetHashCode();
       hash ^= (int) gDNAIHPMMHDCase_;
@@ -276,9 +276,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(218, 98);
         output.WriteMessage(OADKOEMMGGJ);
       }
-      if (HasEffectDnaNum) {
+      if (HasTraitEffectLevelExp) {
         output.WriteRawTag(152, 113);
-        output.WriteUInt32(EffectDnaNum);
+        output.WriteUInt32(TraitEffectLevelExp);
       }
       if (HasIDHFMBGPALN) {
         output.WriteRawTag(200, 116);
@@ -306,9 +306,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(218, 98);
         output.WriteMessage(OADKOEMMGGJ);
       }
-      if (HasEffectDnaNum) {
+      if (HasTraitEffectLevelExp) {
         output.WriteRawTag(152, 113);
-        output.WriteUInt32(EffectDnaNum);
+        output.WriteUInt32(TraitEffectLevelExp);
       }
       if (HasIDHFMBGPALN) {
         output.WriteRawTag(200, 116);
@@ -330,8 +330,8 @@ namespace EggLink.DanhengServer.Proto {
       if (gDNAIHPMMHDCase_ == GDNAIHPMMHDOneofCase.IIBBGJFCHDO) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(IIBBGJFCHDO);
       }
-      if (HasEffectDnaNum) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(EffectDnaNum);
+      if (HasTraitEffectLevelExp) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(TraitEffectLevelExp);
       }
       if (gDNAIHPMMHDCase_ == GDNAIHPMMHDOneofCase.OADKOEMMGGJ) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(OADKOEMMGGJ);
@@ -364,8 +364,8 @@ namespace EggLink.DanhengServer.Proto {
           }
           IIBBGJFCHDO.MergeFrom(other.IIBBGJFCHDO);
           break;
-        case GDNAIHPMMHDOneofCase.EffectDnaNum:
-          EffectDnaNum = other.EffectDnaNum;
+        case GDNAIHPMMHDOneofCase.TraitEffectLevelExp:
+          TraitEffectLevelExp = other.TraitEffectLevelExp;
           break;
         case GDNAIHPMMHDOneofCase.OADKOEMMGGJ:
           if (OADKOEMMGGJ == null) {
@@ -413,7 +413,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 14488: {
-            EffectDnaNum = input.ReadUInt32();
+            TraitEffectLevelExp = input.ReadUInt32();
             break;
           }
           case 14920: {
@@ -458,7 +458,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 14488: {
-            EffectDnaNum = input.ReadUInt32();
+            TraitEffectLevelExp = input.ReadUInt32();
             break;
           }
           case 14920: {

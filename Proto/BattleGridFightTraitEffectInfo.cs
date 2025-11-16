@@ -25,16 +25,18 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRCYXR0bGVHcmlkRmlnaHRUcmFpdEVmZmVjdEluZm8ucHJvdG8aEUlIR0VL",
-            "TFBJQU5MLnByb3RvGhFIT0NHTUNPT0pCQS5wcm90bxoRTE1CREFET1BDUEcu",
-            "cHJvdG8isQEKHkJhdHRsZUdyaWRGaWdodFRyYWl0RWZmZWN0SW5mbxIjCgtJ",
-            "REhGTUJHUEFMThhlIAEoCzIMLklIR0VLTFBJQU5MSAASIwoLSUlCQkdKRkNI",
-            "RE8YZiABKAsyDC5MTUJEQURPUENQR0gAEiMKC01MSkpMQkhOQURLGGcgASgL",
-            "MgwuSE9DR01DT09KQkFIABIRCgllZmZlY3RfaWQYASABKA1CDQoLR01OR0VL",
-            "TkNHQUZCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "TFBJQU5MLnByb3RvGhFMTUJEQURPUENQRy5wcm90bxojR3JpZEZpZ2h0VHJh",
+            "aXRFZmZlY3RMZXZlbEluZm8ucHJvdG8izwEKHkJhdHRsZUdyaWRGaWdodFRy",
+            "YWl0RWZmZWN0SW5mbxIjCgtJREhGTUJHUEFMThhlIAEoCzIMLklIR0VLTFBJ",
+            "QU5MSAASIwoLSUlCQkdKRkNIRE8YZiABKAsyDC5MTUJEQURPUENQR0gAEkEK",
+            "F3RyYWl0X2VmZmVjdF9sZXZlbF9pbmZvGGcgASgLMh4uR3JpZEZpZ2h0VHJh",
+            "aXRFZmZlY3RMZXZlbEluZm9IABIRCgllZmZlY3RfaWQYASABKA1CDQoLR01O",
+            "R0VLTkNHQUZCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IHGEKLPIANLReflection.Descriptor, global::EggLink.DanhengServer.Proto.HOCGMCOOJBAReflection.Descriptor, global::EggLink.DanhengServer.Proto.LMBDADOPCPGReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IHGEKLPIANLReflection.Descriptor, global::EggLink.DanhengServer.Proto.LMBDADOPCPGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo), global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo.Parser, new[]{ "IDHFMBGPALN", "IIBBGJFCHDO", "MLJJLBHNADK", "EffectId" }, new[]{ "GMNGEKNCGAF" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo), global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo.Parser, new[]{ "IDHFMBGPALN", "IIBBGJFCHDO", "TraitEffectLevelInfo", "EffectId" }, new[]{ "GMNGEKNCGAF" }, null, null, null)
           }));
     }
     #endregion
@@ -84,8 +86,8 @@ namespace EggLink.DanhengServer.Proto {
         case GMNGEKNCGAFOneofCase.IIBBGJFCHDO:
           IIBBGJFCHDO = other.IIBBGJFCHDO.Clone();
           break;
-        case GMNGEKNCGAFOneofCase.MLJJLBHNADK:
-          MLJJLBHNADK = other.MLJJLBHNADK.Clone();
+        case GMNGEKNCGAFOneofCase.TraitEffectLevelInfo:
+          TraitEffectLevelInfo = other.TraitEffectLevelInfo.Clone();
           break;
       }
 
@@ -122,15 +124,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "MLJJLBHNADK" field.</summary>
-    public const int MLJJLBHNADKFieldNumber = 103;
+    /// <summary>Field number for the "trait_effect_level_info" field.</summary>
+    public const int TraitEffectLevelInfoFieldNumber = 103;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.HOCGMCOOJBA MLJJLBHNADK {
-      get { return gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.MLJJLBHNADK ? (global::EggLink.DanhengServer.Proto.HOCGMCOOJBA) gMNGEKNCGAF_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfo TraitEffectLevelInfo {
+      get { return gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitEffectLevelInfo ? (global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfo) gMNGEKNCGAF_ : null; }
       set {
         gMNGEKNCGAF_ = value;
-        gMNGEKNCGAFCase_ = value == null ? GMNGEKNCGAFOneofCase.None : GMNGEKNCGAFOneofCase.MLJJLBHNADK;
+        gMNGEKNCGAFCase_ = value == null ? GMNGEKNCGAFOneofCase.None : GMNGEKNCGAFOneofCase.TraitEffectLevelInfo;
       }
     }
 
@@ -152,7 +154,7 @@ namespace EggLink.DanhengServer.Proto {
       None = 0,
       IDHFMBGPALN = 101,
       IIBBGJFCHDO = 102,
-      MLJJLBHNADK = 103,
+      TraitEffectLevelInfo = 103,
     }
     private GMNGEKNCGAFOneofCase gMNGEKNCGAFCase_ = GMNGEKNCGAFOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -185,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (!object.Equals(IDHFMBGPALN, other.IDHFMBGPALN)) return false;
       if (!object.Equals(IIBBGJFCHDO, other.IIBBGJFCHDO)) return false;
-      if (!object.Equals(MLJJLBHNADK, other.MLJJLBHNADK)) return false;
+      if (!object.Equals(TraitEffectLevelInfo, other.TraitEffectLevelInfo)) return false;
       if (EffectId != other.EffectId) return false;
       if (GMNGEKNCGAFCase != other.GMNGEKNCGAFCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -197,7 +199,7 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IDHFMBGPALN) hash ^= IDHFMBGPALN.GetHashCode();
       if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IIBBGJFCHDO) hash ^= IIBBGJFCHDO.GetHashCode();
-      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.MLJJLBHNADK) hash ^= MLJJLBHNADK.GetHashCode();
+      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitEffectLevelInfo) hash ^= TraitEffectLevelInfo.GetHashCode();
       if (EffectId != 0) hash ^= EffectId.GetHashCode();
       hash ^= (int) gMNGEKNCGAFCase_;
       if (_unknownFields != null) {
@@ -230,9 +232,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(178, 6);
         output.WriteMessage(IIBBGJFCHDO);
       }
-      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.MLJJLBHNADK) {
+      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitEffectLevelInfo) {
         output.WriteRawTag(186, 6);
-        output.WriteMessage(MLJJLBHNADK);
+        output.WriteMessage(TraitEffectLevelInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -256,9 +258,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(178, 6);
         output.WriteMessage(IIBBGJFCHDO);
       }
-      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.MLJJLBHNADK) {
+      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitEffectLevelInfo) {
         output.WriteRawTag(186, 6);
-        output.WriteMessage(MLJJLBHNADK);
+        output.WriteMessage(TraitEffectLevelInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -276,8 +278,8 @@ namespace EggLink.DanhengServer.Proto {
       if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IIBBGJFCHDO) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(IIBBGJFCHDO);
       }
-      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.MLJJLBHNADK) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MLJJLBHNADK);
+      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitEffectLevelInfo) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TraitEffectLevelInfo);
       }
       if (EffectId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EffectId);
@@ -310,11 +312,11 @@ namespace EggLink.DanhengServer.Proto {
           }
           IIBBGJFCHDO.MergeFrom(other.IIBBGJFCHDO);
           break;
-        case GMNGEKNCGAFOneofCase.MLJJLBHNADK:
-          if (MLJJLBHNADK == null) {
-            MLJJLBHNADK = new global::EggLink.DanhengServer.Proto.HOCGMCOOJBA();
+        case GMNGEKNCGAFOneofCase.TraitEffectLevelInfo:
+          if (TraitEffectLevelInfo == null) {
+            TraitEffectLevelInfo = new global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfo();
           }
-          MLJJLBHNADK.MergeFrom(other.MLJJLBHNADK);
+          TraitEffectLevelInfo.MergeFrom(other.TraitEffectLevelInfo);
           break;
       }
 
@@ -356,12 +358,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 826: {
-            global::EggLink.DanhengServer.Proto.HOCGMCOOJBA subBuilder = new global::EggLink.DanhengServer.Proto.HOCGMCOOJBA();
-            if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.MLJJLBHNADK) {
-              subBuilder.MergeFrom(MLJJLBHNADK);
+            global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfo();
+            if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitEffectLevelInfo) {
+              subBuilder.MergeFrom(TraitEffectLevelInfo);
             }
             input.ReadMessage(subBuilder);
-            MLJJLBHNADK = subBuilder;
+            TraitEffectLevelInfo = subBuilder;
             break;
           }
         }
@@ -402,12 +404,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 826: {
-            global::EggLink.DanhengServer.Proto.HOCGMCOOJBA subBuilder = new global::EggLink.DanhengServer.Proto.HOCGMCOOJBA();
-            if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.MLJJLBHNADK) {
-              subBuilder.MergeFrom(MLJJLBHNADK);
+            global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfo();
+            if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitEffectLevelInfo) {
+              subBuilder.MergeFrom(TraitEffectLevelInfo);
             }
             input.ReadMessage(subBuilder);
-            MLJJLBHNADK = subBuilder;
+            TraitEffectLevelInfo = subBuilder;
             break;
           }
         }

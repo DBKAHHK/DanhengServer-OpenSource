@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static RogueWorkbenchContentInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9Sb2d1ZVdvcmtiZW5jaENvbnRlbnRJbmZvLnByb3RvGhFKRE9PSURCS0NJ",
-            "TS5wcm90bxonV29ya2JlbmNoQ29tcG9zZU1pcmFjbGVUYXJnZXRJbmZvLnBy",
-            "b3RvGiRXb3JrYmVuY2hSZWZvcmdlQnVmZlRhcmdldEluZm8ucHJvdG8aEUpC",
-            "TkNERkZQRE9QLnByb3RvGhFMRUhHTENFTEpNRi5wcm90bxonV29ya2JlbmNo",
-            "UmVmb3JnZUZvcm11bGFUYXJnZXRJbmZvLnByb3RvGiRXb3JrYmVuY2hFbmhh",
-            "bmNlQnVmZlRhcmdldEluZm8ucHJvdG8aEUdKQkJMQ0lQQkhELnByb3RvGilX",
-            "b3JrYmVuY2hSZWZvcmdlSGV4QXZhdGFyVGFyZ2V0SW5mby5wcm90bxoRRkhK",
-            "R0xPUE1GTkMucHJvdG8iswQKGVJvZ3VlV29ya2JlbmNoQ29udGVudEluZm8S",
+            "Ch9Sb2d1ZVdvcmtiZW5jaENvbnRlbnRJbmZvLnByb3RvGhFGSEpHTE9QTUZO",
+            "Qy5wcm90bxoRSkJOQ0RGRlBET1AucHJvdG8aEUpET09JREJLQ0lNLnByb3Rv",
+            "GhFHSkJCTENJUEJIRC5wcm90bxoRTEVIR0xDRUxKTUYucHJvdG8aJ1dvcmti",
+            "ZW5jaFJlZm9yZ2VGb3JtdWxhVGFyZ2V0SW5mby5wcm90bxokV29ya2JlbmNo",
+            "RW5oYW5jZUJ1ZmZUYXJnZXRJbmZvLnByb3RvGiRXb3JrYmVuY2hSZWZvcmdl",
+            "QnVmZlRhcmdldEluZm8ucHJvdG8aKVdvcmtiZW5jaFJlZm9yZ2VIZXhBdmF0",
+            "YXJUYXJnZXRJbmZvLnByb3RvGidXb3JrYmVuY2hDb21wb3NlTWlyYWNsZVRh",
+            "cmdldEluZm8ucHJvdG8iswQKGVJvZ3VlV29ya2JlbmNoQ29udGVudEluZm8S",
             "PAoRcmVmb3JnZV9idWZmX2Z1bmMYDCABKAsyHy5Xb3JrYmVuY2hSZWZvcmdl",
             "QnVmZlRhcmdldEluZm9IABJCChRyZWZvcmdlX2Zvcm11bGFfZnVuYxgEIAEo",
             "CzIiLldvcmtiZW5jaFJlZm9yZ2VGb3JtdWxhVGFyZ2V0SW5mb0gAEjwKEWVu",
@@ -46,7 +46,7 @@ namespace EggLink.DanhengServer.Proto {
             "Q05HGA4gASgLMgwuSkJOQ0RGRlBET1BIAEINCgtGTExGQkxBTEdMTEIeqgIb",
             "RWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JDOOIDBKCIMReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.JBNCDFFPDOPReflection.Descriptor, global::EggLink.DanhengServer.Proto.LEHGLCELJMFReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GJBBLCIPBHDReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FHJGLOPMFNCReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FHJGLOPMFNCReflection.Descriptor, global::EggLink.DanhengServer.Proto.JBNCDFFPDOPReflection.Descriptor, global::EggLink.DanhengServer.Proto.JDOOIDBKCIMReflection.Descriptor, global::EggLink.DanhengServer.Proto.GJBBLCIPBHDReflection.Descriptor, global::EggLink.DanhengServer.Proto.LEHGLCELJMFReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeFormulaTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchEnhanceBuffTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeBuffTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchReforgeHexAvatarTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.WorkbenchComposeMiracleTargetInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueWorkbenchContentInfo), global::EggLink.DanhengServer.Proto.RogueWorkbenchContentInfo.Parser, new[]{ "ReforgeBuffFunc", "ReforgeFormulaFunc", "EnhanceBuffFunc", "ComposeMiracleFunc", "ReforgeHexAvatarFunc", "MagicItem", "GameMagicUnit", "CEAJNLIOFHF", "PGPAAPOPDOC", "PMKEHGBPCNG" }, new[]{ "FLLFBLALGLL" }, null, null, null)
           }));

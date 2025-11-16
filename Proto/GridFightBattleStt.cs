@@ -24,25 +24,25 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightBattleSttReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhHcmlkRmlnaHRCYXR0bGVTdHQucHJvdG8aG0dyaWRGaWdodERyb3BJdGVt",
-            "SW5mby5wcm90bxoRSUpBUEdETUhNS0gucHJvdG8aEUVPQUJQTkVFSk1GLnBy",
-            "b3RvGhxHcmlkRmlnaHRSb2xlQmF0dGxlU3R0LnByb3RvGhFNTkVETE5NTUVP",
-            "Sy5wcm90bxodR3JpZEZpZ2h0VHJhaXRCYXR0bGVTdHQucHJvdG8iowMKEkdy",
-            "aWRGaWdodEJhdHRsZVN0dBITCgtFQ0JBTE1BRUJKQxgBIAEoDRITCgtOSUhI",
-            "RUpMSUNFRBgCIAEoDRIyChB0cmFpdF9iYXR0bGVfc3R0GAMgAygLMhguR3Jp",
-            "ZEZpZ2h0VHJhaXRCYXR0bGVTdHQSIQoLQ0hCSUpDQ01FQUMYBCADKAsyDC5N",
-            "TkVETE5NTUVPSxIrCgtQTEVGRk9JS0FOSBgFIAMoCzIWLkdyaWRGaWdodERy",
-            "b3BJdGVtSW5mbxIhCgtFSEZCS0pQRk5ESBgGIAMoCzIMLkVPQUJQTkVFSk1G",
-            "EjAKD3JvbGVfYmF0dGxlX3N0dBgIIAMoCzIXLkdyaWRGaWdodFJvbGVCYXR0",
-            "bGVTdHQSEwoLQURCTUxFT09IQ0oYCSABKA0SIQoLUEVERkxQTUpFRUYYCiAD",
-            "KAsyDC5JSkFQR0RNSE1LSBITCgtISUxHS0dNQUxIQhgLIAEoARITCgtPR0hP",
-            "REhNTkVHSxgMIAEoARITCgtETEFQS0ZCTEdJTRgNIAEoARITCgtJRkdKSUVO",
-            "TU5MTBgOIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "ChhHcmlkRmlnaHRCYXR0bGVTdHQucHJvdG8aEU1ORURMTk1NRU9LLnByb3Rv",
+            "GhFJSkFQR0RNSE1LSC5wcm90bxocR3JpZEZpZ2h0Um9sZUJhdHRsZVN0dC5w",
+            "cm90bxoRRU9BQlBORUVKTUYucHJvdG8aG0dyaWRGaWdodERyb3BJdGVtSW5m",
+            "by5wcm90bxodR3JpZEZpZ2h0VHJhaXRCYXR0bGVTdHQucHJvdG8ipwMKEkdy",
+            "aWRGaWdodEJhdHRsZVN0dBIXCg9maW5pc2hfcHJvZ3Jlc3MYASABKA0SEwoL",
+            "TklISEVKTElDRUQYAiABKA0SMgoQdHJhaXRfYmF0dGxlX3N0dBgDIAMoCzIY",
+            "LkdyaWRGaWdodFRyYWl0QmF0dGxlU3R0EiEKC0NIQklKQ0NNRUFDGAQgAygL",
+            "MgwuTU5FRExOTU1FT0sSKwoLUExFRkZPSUtBTkgYBSADKAsyFi5HcmlkRmln",
+            "aHREcm9wSXRlbUluZm8SIQoLRUhGQktKUEZOREgYBiADKAsyDC5FT0FCUE5F",
+            "RUpNRhIwCg9yb2xlX2JhdHRsZV9zdHQYCCADKAsyFy5HcmlkRmlnaHRSb2xl",
+            "QmF0dGxlU3R0EhMKC0FEQk1MRU9PSENKGAkgASgNEiEKC1BFREZMUE1KRUVG",
+            "GAogAygLMgwuSUpBUEdETUhNS0gSEwoLSElMR0tHTUFMSEIYCyABKAESEwoL",
+            "T0dIT0RITU5FR0sYDCABKAESEwoLRExBUEtGQkxHSU0YDSABKAESEwoLSUZH",
+            "SklFTk1OTEwYDiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
+            "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightDropItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.IJAPGDMHMKHReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOABPNEEJMFReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRoleBattleSttReflection.Descriptor, global::EggLink.DanhengServer.Proto.MNEDLNMMEOKReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitBattleSttReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MNEDLNMMEOKReflection.Descriptor, global::EggLink.DanhengServer.Proto.IJAPGDMHMKHReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRoleBattleSttReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOABPNEEJMFReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDropItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitBattleSttReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightBattleStt), global::EggLink.DanhengServer.Proto.GridFightBattleStt.Parser, new[]{ "ECBALMAEBJC", "NIHHEJLICED", "TraitBattleStt", "CHBIJCCMEAC", "PLEFFOIKANH", "EHFBKJPFNDH", "RoleBattleStt", "ADBMLEOOHCJ", "PEDFLPMJEEF", "HILGKGMALHB", "OGHODHMNEGK", "DLAPKFBLGIM", "IFGJIENMNLL" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightBattleStt), global::EggLink.DanhengServer.Proto.GridFightBattleStt.Parser, new[]{ "FinishProgress", "NIHHEJLICED", "TraitBattleStt", "CHBIJCCMEAC", "PLEFFOIKANH", "EHFBKJPFNDH", "RoleBattleStt", "ADBMLEOOHCJ", "PEDFLPMJEEF", "HILGKGMALHB", "OGHODHMNEGK", "DLAPKFBLGIM", "IFGJIENMNLL" }, null, null, null, null)
           }));
     }
     #endregion
@@ -84,7 +84,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightBattleStt(GridFightBattleStt other) : this() {
-      eCBALMAEBJC_ = other.eCBALMAEBJC_;
+      finishProgress_ = other.finishProgress_;
       nIHHEJLICED_ = other.nIHHEJLICED_;
       traitBattleStt_ = other.traitBattleStt_.Clone();
       cHBIJCCMEAC_ = other.cHBIJCCMEAC_.Clone();
@@ -106,15 +106,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightBattleStt(this);
     }
 
-    /// <summary>Field number for the "ECBALMAEBJC" field.</summary>
-    public const int ECBALMAEBJCFieldNumber = 1;
-    private uint eCBALMAEBJC_;
+    /// <summary>Field number for the "finish_progress" field.</summary>
+    public const int FinishProgressFieldNumber = 1;
+    private uint finishProgress_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint ECBALMAEBJC {
-      get { return eCBALMAEBJC_; }
+    public uint FinishProgress {
+      get { return finishProgress_; }
       set {
-        eCBALMAEBJC_ = value;
+        finishProgress_ = value;
       }
     }
 
@@ -271,7 +271,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ECBALMAEBJC != other.ECBALMAEBJC) return false;
+      if (FinishProgress != other.FinishProgress) return false;
       if (NIHHEJLICED != other.NIHHEJLICED) return false;
       if(!traitBattleStt_.Equals(other.traitBattleStt_)) return false;
       if(!cHBIJCCMEAC_.Equals(other.cHBIJCCMEAC_)) return false;
@@ -291,7 +291,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ECBALMAEBJC != 0) hash ^= ECBALMAEBJC.GetHashCode();
+      if (FinishProgress != 0) hash ^= FinishProgress.GetHashCode();
       if (NIHHEJLICED != 0) hash ^= NIHHEJLICED.GetHashCode();
       hash ^= traitBattleStt_.GetHashCode();
       hash ^= cHBIJCCMEAC_.GetHashCode();
@@ -322,9 +322,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ECBALMAEBJC != 0) {
+      if (FinishProgress != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ECBALMAEBJC);
+        output.WriteUInt32(FinishProgress);
       }
       if (NIHHEJLICED != 0) {
         output.WriteRawTag(16);
@@ -366,9 +366,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ECBALMAEBJC != 0) {
+      if (FinishProgress != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(ECBALMAEBJC);
+        output.WriteUInt32(FinishProgress);
       }
       if (NIHHEJLICED != 0) {
         output.WriteRawTag(16);
@@ -410,8 +410,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ECBALMAEBJC != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ECBALMAEBJC);
+      if (FinishProgress != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(FinishProgress);
       }
       if (NIHHEJLICED != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NIHHEJLICED);
@@ -449,8 +449,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.ECBALMAEBJC != 0) {
-        ECBALMAEBJC = other.ECBALMAEBJC;
+      if (other.FinishProgress != 0) {
+        FinishProgress = other.FinishProgress;
       }
       if (other.NIHHEJLICED != 0) {
         NIHHEJLICED = other.NIHHEJLICED;
@@ -492,7 +492,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            ECBALMAEBJC = input.ReadUInt32();
+            FinishProgress = input.ReadUInt32();
             break;
           }
           case 16: {
@@ -559,7 +559,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            ECBALMAEBJC = input.ReadUInt32();
+            FinishProgress = input.ReadUInt32();
             break;
           }
           case 16: {

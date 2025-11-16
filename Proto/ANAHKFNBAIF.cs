@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static ANAHKFNBAIFReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFBTkFIS0ZOQkFJRi5wcm90byI3CgtBTkFIS0ZOQkFJRhITCgtPS0hGQUVK",
-            "RkdEShgNIAEoDRITCgtOTUpFTUhBTUlIRBgBIAEoDUIeqgIbRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChFBTkFIS0ZOQkFJRi5wcm90byI8CgtBTkFIS0ZOQkFJRhIVCg10cmFja19y",
+            "b2xlX2lkGA0gASgNEhYKDnRyYWNrX3ByaW9yaXR5GAEgASgNQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ANAHKFNBAIF), global::EggLink.DanhengServer.Proto.ANAHKFNBAIF.Parser, new[]{ "OKHFAEJFGDJ", "NMJEMHAMIHD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ANAHKFNBAIF), global::EggLink.DanhengServer.Proto.ANAHKFNBAIF.Parser, new[]{ "TrackRoleId", "TrackPriority" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,8 +72,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ANAHKFNBAIF(ANAHKFNBAIF other) : this() {
-      oKHFAEJFGDJ_ = other.oKHFAEJFGDJ_;
-      nMJEMHAMIHD_ = other.nMJEMHAMIHD_;
+      trackRoleId_ = other.trackRoleId_;
+      trackPriority_ = other.trackPriority_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -83,27 +83,27 @@ namespace EggLink.DanhengServer.Proto {
       return new ANAHKFNBAIF(this);
     }
 
-    /// <summary>Field number for the "OKHFAEJFGDJ" field.</summary>
-    public const int OKHFAEJFGDJFieldNumber = 13;
-    private uint oKHFAEJFGDJ_;
+    /// <summary>Field number for the "track_role_id" field.</summary>
+    public const int TrackRoleIdFieldNumber = 13;
+    private uint trackRoleId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OKHFAEJFGDJ {
-      get { return oKHFAEJFGDJ_; }
+    public uint TrackRoleId {
+      get { return trackRoleId_; }
       set {
-        oKHFAEJFGDJ_ = value;
+        trackRoleId_ = value;
       }
     }
 
-    /// <summary>Field number for the "NMJEMHAMIHD" field.</summary>
-    public const int NMJEMHAMIHDFieldNumber = 1;
-    private uint nMJEMHAMIHD_;
+    /// <summary>Field number for the "track_priority" field.</summary>
+    public const int TrackPriorityFieldNumber = 1;
+    private uint trackPriority_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NMJEMHAMIHD {
-      get { return nMJEMHAMIHD_; }
+    public uint TrackPriority {
+      get { return trackPriority_; }
       set {
-        nMJEMHAMIHD_ = value;
+        trackPriority_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (OKHFAEJFGDJ != other.OKHFAEJFGDJ) return false;
-      if (NMJEMHAMIHD != other.NMJEMHAMIHD) return false;
+      if (TrackRoleId != other.TrackRoleId) return false;
+      if (TrackPriority != other.TrackPriority) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (OKHFAEJFGDJ != 0) hash ^= OKHFAEJFGDJ.GetHashCode();
-      if (NMJEMHAMIHD != 0) hash ^= NMJEMHAMIHD.GetHashCode();
+      if (TrackRoleId != 0) hash ^= TrackRoleId.GetHashCode();
+      if (TrackPriority != 0) hash ^= TrackPriority.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,13 +151,13 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NMJEMHAMIHD != 0) {
+      if (TrackPriority != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(NMJEMHAMIHD);
+        output.WriteUInt32(TrackPriority);
       }
-      if (OKHFAEJFGDJ != 0) {
+      if (TrackRoleId != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(OKHFAEJFGDJ);
+        output.WriteUInt32(TrackRoleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -169,13 +169,13 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NMJEMHAMIHD != 0) {
+      if (TrackPriority != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(NMJEMHAMIHD);
+        output.WriteUInt32(TrackPriority);
       }
-      if (OKHFAEJFGDJ != 0) {
+      if (TrackRoleId != 0) {
         output.WriteRawTag(104);
-        output.WriteUInt32(OKHFAEJFGDJ);
+        output.WriteUInt32(TrackRoleId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -187,11 +187,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (OKHFAEJFGDJ != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OKHFAEJFGDJ);
+      if (TrackRoleId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TrackRoleId);
       }
-      if (NMJEMHAMIHD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NMJEMHAMIHD);
+      if (TrackPriority != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TrackPriority);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -205,11 +205,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.OKHFAEJFGDJ != 0) {
-        OKHFAEJFGDJ = other.OKHFAEJFGDJ;
+      if (other.TrackRoleId != 0) {
+        TrackRoleId = other.TrackRoleId;
       }
-      if (other.NMJEMHAMIHD != 0) {
-        NMJEMHAMIHD = other.NMJEMHAMIHD;
+      if (other.TrackPriority != 0) {
+        TrackPriority = other.TrackPriority;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -227,11 +227,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            NMJEMHAMIHD = input.ReadUInt32();
+            TrackPriority = input.ReadUInt32();
             break;
           }
           case 104: {
-            OKHFAEJFGDJ = input.ReadUInt32();
+            TrackRoleId = input.ReadUInt32();
             break;
           }
         }
@@ -250,11 +250,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            NMJEMHAMIHD = input.ReadUInt32();
+            TrackPriority = input.ReadUInt32();
             break;
           }
           case 104: {
-            OKHFAEJFGDJ = input.ReadUInt32();
+            TrackRoleId = input.ReadUInt32();
             break;
           }
         }

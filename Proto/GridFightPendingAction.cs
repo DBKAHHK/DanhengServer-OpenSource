@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightPendingActionReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHcmlkRmlnaHRQZW5kaW5nQWN0aW9uLnByb3RvGhFLS0tGTFBET0VQTy5w",
-            "cm90bxoeR3JpZEZpZ2h0RWxpdGVBY3Rpb25JbmZvLnByb3RvGhFORk5NTklE",
-            "SUJGSC5wcm90bxoRQ0lGS0lKS0pCTlAucHJvdG8aI0dyaWRGaWdodFBvcnRh",
-            "bEJ1ZmZBY3Rpb25JbmZvLnByb3RvGhFMRkpCTkhFTU5BTS5wcm90bxofR3Jp",
-            "ZEZpZ2h0U3VwcGx5QWN0aW9uSW5mby5wcm90bxoRTFBERUhLRkFPSEwucHJv",
-            "dG8aIEdyaWRGaWdodEF1Z21lbnRBY3Rpb25JbmZvLnByb3RvGiJHcmlkRmln",
-            "aHRFbnRlck5vZGVBY3Rpb25JbmZvLnByb3RvGiRHcmlkRmlnaHRFbGl0ZUJy",
-            "YW5jaEFjdGlvbkluZm8ucHJvdG8aEURDT0VORUJNRkdCLnByb3RvIoIFChZH",
+            "ChxHcmlkRmlnaHRQZW5kaW5nQWN0aW9uLnByb3RvGh9HcmlkRmlnaHRTdXBw",
+            "bHlBY3Rpb25JbmZvLnByb3RvGiNHcmlkRmlnaHRQb3J0YWxCdWZmQWN0aW9u",
+            "SW5mby5wcm90bxoeR3JpZEZpZ2h0RWxpdGVBY3Rpb25JbmZvLnByb3RvGhFM",
+            "UERFSEtGQU9ITC5wcm90bxogR3JpZEZpZ2h0QXVnbWVudEFjdGlvbkluZm8u",
+            "cHJvdG8aIkdyaWRGaWdodEVudGVyTm9kZUFjdGlvbkluZm8ucHJvdG8aEUxG",
+            "SkJOSEVNTkFNLnByb3RvGhFLS0tGTFBET0VQTy5wcm90bxoRQ0lGS0lKS0pC",
+            "TlAucHJvdG8aJEdyaWRGaWdodEVsaXRlQnJhbmNoQWN0aW9uSW5mby5wcm90",
+            "bxoRTkZOTU5JRElCRkgucHJvdG8aEURDT0VORUJNRkdCLnByb3RvIoIFChZH",
             "cmlkRmlnaHRQZW5kaW5nQWN0aW9uEj0KEnBvcnRhbF9idWZmX2FjdGlvbhij",
             "BiABKAsyHi5HcmlkRmlnaHRQb3J0YWxCdWZmQWN0aW9uSW5mb0gAEjYKDmF1",
             "Z21lbnRfYWN0aW9uGMMOIAEoCzIbLkdyaWRGaWdodEF1Z21lbnRBY3Rpb25J",
@@ -49,7 +49,7 @@ namespace EggLink.DanhengServer.Proto {
             "UEdQUExLQU1FQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KKKFLPDOEPOReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NFNMNIDIBFHReflection.Descriptor, global::EggLink.DanhengServer.Proto.CIFKIJKJBNPReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LFJBNHEMNAMReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LPDEHKFAOHLReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEnterNodeActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteBranchActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCOENEBMFGBReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LPDEHKFAOHLReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEnterNodeActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LFJBNHEMNAMReflection.Descriptor, global::EggLink.DanhengServer.Proto.KKKFLPDOEPOReflection.Descriptor, global::EggLink.DanhengServer.Proto.CIFKIJKJBNPReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteBranchActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.NFNMNIDIBFHReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCOENEBMFGBReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightPendingAction), global::EggLink.DanhengServer.Proto.GridFightPendingAction.Parser, new[]{ "PortalBuffAction", "AugmentAction", "CNPCEHHNBML", "EliteBranchAction", "OADKOEMMGGJ", "LCDGKIMAOHB", "EliteAction", "EnterNodeAction", "SupplyAction", "PCOMDKEPBGH", "HNJHKLLIMPJ", "GHPHEPCNAAJ", "QueuePosition" }, new[]{ "KIPGPPLKAME" }, null, null, null)
           }));
