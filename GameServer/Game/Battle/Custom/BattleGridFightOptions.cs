@@ -1,6 +1,7 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Lineup;
+using EggLink.DanhengServer.Enums.GridFight;
 using EggLink.DanhengServer.GameServer.Game.GridFight;
 using EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 using EggLink.DanhengServer.GameServer.Game.Player;
@@ -105,7 +106,8 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
             },
             IsOverlock = Inst.IsOverLock,
             Season = Inst.Season,
-            BattleDifficulty = AugmentComponent.GetAugmentDifficulty() + Inst.GetDivisionDifficulty() + Encounter.EncounterDifficulty - 1,
+            BattleDifficulty = AugmentComponent.GetAugmentDifficulty() + Inst.GetDivisionDifficulty() +
+                               (Encounter.EncounterDifficulty - 1) * 5,
             GameDivisionId = Inst.DivisionId,
             PenaltyBonusRuleId = ruleId,
             GridFightAugmentInfo = { AugmentComponent.Data.Augments.Select(x => x.ToBattleInfo()) },

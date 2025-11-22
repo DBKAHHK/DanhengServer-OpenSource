@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightExpInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZHcmlkRmlnaHRFeHBJbmZvLnByb3RvIksKEEdyaWRGaWdodEV4cEluZm8S",
-            "HQoVZ3JpZF93ZWVrbHlfZXh0cmFfZXhwGA4gASgNEhgKEGdyaWRfZmlnaHRf",
-            "bGV2ZWwYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
-            "cHJvdG8z"));
+            "ChZHcmlkRmlnaHRFeHBJbmZvLnByb3RvIk8KEEdyaWRGaWdodEV4cEluZm8S",
+            "HQoVZ3JpZF93ZWVrbHlfZXh0cmFfZXhwGA4gASgNEhwKFGdyaWRfZmlnaHRf",
+            "bGV2ZWxfZXhwGAogASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJv",
+            "dG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightExpInfo), global::EggLink.DanhengServer.Proto.GridFightExpInfo.Parser, new[]{ "GridWeeklyExtraExp", "GridFightLevel" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightExpInfo), global::EggLink.DanhengServer.Proto.GridFightExpInfo.Parser, new[]{ "GridWeeklyExtraExp", "GridFightLevelExp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightExpInfo(GridFightExpInfo other) : this() {
       gridWeeklyExtraExp_ = other.gridWeeklyExtraExp_;
-      gridFightLevel_ = other.gridFightLevel_;
+      gridFightLevelExp_ = other.gridFightLevelExp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "grid_fight_level" field.</summary>
-    public const int GridFightLevelFieldNumber = 10;
-    private uint gridFightLevel_;
+    /// <summary>Field number for the "grid_fight_level_exp" field.</summary>
+    public const int GridFightLevelExpFieldNumber = 10;
+    private uint gridFightLevelExp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GridFightLevel {
-      get { return gridFightLevel_; }
+    public uint GridFightLevelExp {
+      get { return gridFightLevelExp_; }
       set {
-        gridFightLevel_ = value;
+        gridFightLevelExp_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (GridWeeklyExtraExp != other.GridWeeklyExtraExp) return false;
-      if (GridFightLevel != other.GridFightLevel) return false;
+      if (GridFightLevelExp != other.GridFightLevelExp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (GridWeeklyExtraExp != 0) hash ^= GridWeeklyExtraExp.GetHashCode();
-      if (GridFightLevel != 0) hash ^= GridFightLevel.GetHashCode();
+      if (GridFightLevelExp != 0) hash ^= GridFightLevelExp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,9 +152,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GridFightLevel != 0) {
+      if (GridFightLevelExp != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(GridFightLevel);
+        output.WriteUInt32(GridFightLevelExp);
       }
       if (GridWeeklyExtraExp != 0) {
         output.WriteRawTag(112);
@@ -170,9 +170,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GridFightLevel != 0) {
+      if (GridFightLevelExp != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(GridFightLevel);
+        output.WriteUInt32(GridFightLevelExp);
       }
       if (GridWeeklyExtraExp != 0) {
         output.WriteRawTag(112);
@@ -191,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (GridWeeklyExtraExp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridWeeklyExtraExp);
       }
-      if (GridFightLevel != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightLevel);
+      if (GridFightLevelExp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightLevelExp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GridWeeklyExtraExp != 0) {
         GridWeeklyExtraExp = other.GridWeeklyExtraExp;
       }
-      if (other.GridFightLevel != 0) {
-        GridFightLevel = other.GridFightLevel;
+      if (other.GridFightLevelExp != 0) {
+        GridFightLevelExp = other.GridFightLevelExp;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -228,7 +228,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 80: {
-            GridFightLevel = input.ReadUInt32();
+            GridFightLevelExp = input.ReadUInt32();
             break;
           }
           case 112: {
@@ -251,7 +251,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 80: {
-            GridFightLevel = input.ReadUInt32();
+            GridFightLevelExp = input.ReadUInt32();
             break;
           }
           case 112: {

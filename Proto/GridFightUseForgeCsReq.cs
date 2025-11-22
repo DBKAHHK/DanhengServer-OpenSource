@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightUseForgeCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHcmlkRmlnaHRVc2VGb3JnZUNzUmVxLnByb3RvIkAKFkdyaWRGaWdodFVz",
-            "ZUZvcmdlQ3NSZXESEQoJdW5pcXVlX2lkGAUgASgNEhMKC09JTUJHR0NCTVBN",
-            "GAkgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3Rv",
-            "Mw=="));
+            "ChxHcmlkRmlnaHRVc2VGb3JnZUNzUmVxLnByb3RvIkcKFkdyaWRGaWdodFVz",
+            "ZUZvcmdlQ3NSZXESEQoJdW5pcXVlX2lkGAUgASgNEhoKEmZvcmdlX3Rhcmdl",
+            "dF9pbmRleBgJIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUseForgeCsReq), global::EggLink.DanhengServer.Proto.GridFightUseForgeCsReq.Parser, new[]{ "UniqueId", "OIMBGGCBMPM" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightUseForgeCsReq), global::EggLink.DanhengServer.Proto.GridFightUseForgeCsReq.Parser, new[]{ "UniqueId", "ForgeTargetIndex" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightUseForgeCsReq(GridFightUseForgeCsReq other) : this() {
       uniqueId_ = other.uniqueId_;
-      oIMBGGCBMPM_ = other.oIMBGGCBMPM_;
+      forgeTargetIndex_ = other.forgeTargetIndex_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "OIMBGGCBMPM" field.</summary>
-    public const int OIMBGGCBMPMFieldNumber = 9;
-    private uint oIMBGGCBMPM_;
+    /// <summary>Field number for the "forge_target_index" field.</summary>
+    public const int ForgeTargetIndexFieldNumber = 9;
+    private uint forgeTargetIndex_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint OIMBGGCBMPM {
-      get { return oIMBGGCBMPM_; }
+    public uint ForgeTargetIndex {
+      get { return forgeTargetIndex_; }
       set {
-        oIMBGGCBMPM_ = value;
+        forgeTargetIndex_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (UniqueId != other.UniqueId) return false;
-      if (OIMBGGCBMPM != other.OIMBGGCBMPM) return false;
+      if (ForgeTargetIndex != other.ForgeTargetIndex) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
-      if (OIMBGGCBMPM != 0) hash ^= OIMBGGCBMPM.GetHashCode();
+      if (ForgeTargetIndex != 0) hash ^= ForgeTargetIndex.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -156,9 +156,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(UniqueId);
       }
-      if (OIMBGGCBMPM != 0) {
+      if (ForgeTargetIndex != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(OIMBGGCBMPM);
+        output.WriteUInt32(ForgeTargetIndex);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -174,9 +174,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(40);
         output.WriteUInt32(UniqueId);
       }
-      if (OIMBGGCBMPM != 0) {
+      if (ForgeTargetIndex != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(OIMBGGCBMPM);
+        output.WriteUInt32(ForgeTargetIndex);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (UniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
       }
-      if (OIMBGGCBMPM != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OIMBGGCBMPM);
+      if (ForgeTargetIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ForgeTargetIndex);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.UniqueId != 0) {
         UniqueId = other.UniqueId;
       }
-      if (other.OIMBGGCBMPM != 0) {
-        OIMBGGCBMPM = other.OIMBGGCBMPM;
+      if (other.ForgeTargetIndex != 0) {
+        ForgeTargetIndex = other.ForgeTargetIndex;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -232,7 +232,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            OIMBGGCBMPM = input.ReadUInt32();
+            ForgeTargetIndex = input.ReadUInt32();
             break;
           }
         }
@@ -255,7 +255,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            OIMBGGCBMPM = input.ReadUInt32();
+            ForgeTargetIndex = input.ReadUInt32();
             break;
           }
         }

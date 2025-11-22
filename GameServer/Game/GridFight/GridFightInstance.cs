@@ -42,8 +42,9 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         var expNum = 2u;
         var baseCoin = levelComp.CurrentSection.Excel.BasicGoldRewardNum;
         var interestCoin = basicComp.Data.CurGold / 10;
+        var progress = req.Stt.GridFightBattleStt.FinishProgress;
 
-        if (battle.BattleEndStatus == BattleEndStatus.BattleEndWin)
+        if (progress == 100)
         {
             basicComp.Data.ComboNum++;
         }
@@ -89,7 +90,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
 
         await Player.SendPacket(new PacketGridFightEndBattleStageNotify(this, expNum, prevData, curData,
             sttList, traitSttList, battle.BattleEndStatus == BattleEndStatus.BattleEndWin, baseCoin, interestCoin,
-            comboCoin, drops.Item2));
+            comboCoin, drops.Item2, progress));
 
         syncs.AddRange(drops.Item1);
 
@@ -159,11 +160,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
     {
         return new GridFightGameData
         {
-            GameItemInfoList = { new GridFightGameItemInfo
-            {
-                UniqueId = 18,
-                JCDHFKOCDOL = new()
-            } }
+            GameItemInfoList = { }
         };
     }
 
@@ -214,6 +211,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         var basicComp = GetComponent<GridFightBasicComponent>();
         var levelComp = GetComponent<GridFightLevelComponent>();
         var roleComp = GetComponent<GridFightRoleComponent>();
+        var itemsComp = GetComponent<GridFightItemsComponent>();
 
         var curAction = GetCurAction();
 
@@ -240,6 +238,8 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
                     syncs.AddRange(await roleComp.AddAvatar(rolePool.RandomElement().ID, 1, false, true,
                         GridFightSrc.KGridFightSrcInitialSupplySelect));
                 }
+
+                syncs.AddRange(await itemsComp.UpdateConsumable(350102, 1, GridFightSrc.KGridFightSrcInitialSupplySelect, false));
 
                 break;
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.PortalBuffRerollAction:

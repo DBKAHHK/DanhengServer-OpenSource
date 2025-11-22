@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch5HZXRCaWdEYXRhUmVjb21tZW5kU2NSc3AucHJvdG8aFFJlbGljUmVjb21t",
-            "ZW5kLnByb3RvGhFBQUdGSUpNTU9LTC5wcm90bxoaQmlnRGF0YVJlY29tbWVu",
-            "ZFR5cGUucHJvdG8aGEVxdWlwbWVudFJlY29tbWVuZC5wcm90byKkAgoYR2V0",
+            "ZW5kLnByb3RvGhpCaWdEYXRhUmVjb21tZW5kVHlwZS5wcm90bxoYRXF1aXBt",
+            "ZW50UmVjb21tZW5kLnByb3RvGhFBQUdGSUpNTU9LTC5wcm90byKkAgoYR2V0",
             "QmlnRGF0YVJlY29tbWVuZFNjUnNwEjIKE2VxdWlwbWVudF9yZWNvbW1lbmQY",
             "CyABKAsyEy5FcXVpcG1lbnRSZWNvbW1lbmRIABIqCg9yZWxpY19yZWNvbW1l",
             "bmQYCCABKAsyDy5SZWxpY1JlY29tbWVuZEgAEiMKC0ZPT0xLRkFGTkJEGAkg",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "KAhCDQoLRFBDTkpJTExFSEpCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
             "cm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicRecommendReflection.Descriptor, global::EggLink.DanhengServer.Proto.AAGFIJMMOKLReflection.Descriptor, global::EggLink.DanhengServer.Proto.BigDataRecommendTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentRecommendReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RelicRecommendReflection.Descriptor, global::EggLink.DanhengServer.Proto.BigDataRecommendTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.EquipmentRecommendReflection.Descriptor, global::EggLink.DanhengServer.Proto.AAGFIJMMOKLReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetBigDataRecommendScRsp), global::EggLink.DanhengServer.Proto.GetBigDataRecommendScRsp.Parser, new[]{ "EquipmentRecommend", "RelicRecommend", "FOOLKFAFNBD", "EquipAvatar", "BigDataRecommendType", "Retcode", "HasRecommand" }, new[]{ "DPCNJILLEHJ" }, null, null, null)
           }));

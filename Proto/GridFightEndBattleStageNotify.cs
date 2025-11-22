@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightEndBattleStageNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNHcmlkRmlnaHRFbmRCYXR0bGVTdGFnZU5vdGlmeS5wcm90bxoXR3JpZEZp",
-            "Z2h0RHJvcEluZm8ucHJvdG8aG0dyaWRGaWdodEhwTW9kaWZ5SW5mby5wcm90",
-            "bxoRRU9GSkdGQ0xJRUYucHJvdG8aHkdyaWRGaWdodExldmVsVXBkYXRlSW5m",
-            "by5wcm90bxocR3JpZEZpZ2h0RGFtYWdlU3R0SW5mby5wcm90byKGBwodR3Jp",
+            "CiNHcmlkRmlnaHRFbmRCYXR0bGVTdGFnZU5vdGlmeS5wcm90bxoeR3JpZEZp",
+            "Z2h0TGV2ZWxVcGRhdGVJbmZvLnByb3RvGhxHcmlkRmlnaHREYW1hZ2VTdHRJ",
+            "bmZvLnByb3RvGhFFT0ZKR0ZDTElFRi5wcm90bxobR3JpZEZpZ2h0SHBNb2Rp",
+            "ZnlJbmZvLnByb3RvGhdHcmlkRmlnaHREcm9wSW5mby5wcm90byKUBwodR3Jp",
             "ZEZpZ2h0RW5kQmF0dGxlU3RhZ2VOb3RpZnkSQAocZ3JpZF9maWdodF9sZXZl",
             "bF91cGRhdGVfaW5mbxjCCyABKAsyGS5HcmlkRmlnaHRMZXZlbFVwZGF0ZUlu",
             "Zm8SJAocZ3JpZF9maWdodF9jb2luX2ludGVyZXN0X251bRgMIAEoDRI6Chln",
@@ -41,18 +41,19 @@ namespace EggLink.DanhengServer.Proto {
             "dW0Y/gMgASgNEhMKC2FkZF9leHBfbnVtGAsgASgNEhQKC0FEQk1MRU9PSENK",
             "GKcNIAEoDRJaChhncmlkX2ZpZ2h0X2Ryb3BfaXRlbV9tYXAYCSADKAsyOC5H",
             "cmlkRmlnaHRFbmRCYXR0bGVTdGFnZU5vdGlmeS5HcmlkRmlnaHREcm9wSXRl",
-            "bU1hcEVudHJ5EiAKGGdyaWRfZmlnaHRfY3VyX2NvbWJvX251bRgGIAEoDRIU",
-            "CgtIQU5PTUlFREtCShjTCiABKA0SIQoYZ3JpZF9maWdodF9jdXJfbGluZXVw",
-            "X2hwGL4CIAEoDRIQCgdwcmV2X2hwGPkJIAEoDRITCgtMUEFQQUFCTkxBShgF",
-            "IAEoDRITCgtFS0VMTkxJRk1ISBgDIAEoDRIiCgtHREFPQkNQSE5DRxiPBSAD",
-            "KAsyDC5FT0ZKR0ZDTElFRhIhChhncmlkX2ZpZ2h0X21heF9saW5ldXBfaHAY",
-            "rQsgASgNGk8KGUdyaWRGaWdodERyb3BJdGVtTWFwRW50cnkSCwoDa2V5GAEg",
-            "ASgNEiEKBXZhbHVlGAIgASgLMhIuR3JpZEZpZ2h0RHJvcEluZm86AjgBQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "bU1hcEVudHJ5EiAKGGdyaWRfZmlnaHRfY3VyX2NvbWJvX251bRgGIAEoDRIi",
+            "ChlncmlkX2ZpZ2h0X3ByZXZfY29tYm9fbnVtGNMKIAEoDRIhChhncmlkX2Zp",
+            "Z2h0X2N1cl9saW5ldXBfaHAYvgIgASgNEhAKB3ByZXZfaHAY+QkgASgNEhMK",
+            "C0xQQVBBQUJOTEFKGAUgASgNEhMKC0VLRUxOTElGTUhIGAMgASgNEiIKC0dE",
+            "QU9CQ1BITkNHGI8FIAMoCzIMLkVPRkpHRkNMSUVGEiEKGGdyaWRfZmlnaHRf",
+            "bWF4X2xpbmV1cF9ocBitCyABKA0aTwoZR3JpZEZpZ2h0RHJvcEl0ZW1NYXBF",
+            "bnRyeRILCgNrZXkYASABKA0SIQoFdmFsdWUYAiABKAsyEi5HcmlkRmlnaHRE",
+            "cm9wSW5mbzoCOAFCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightDropInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightHpModifyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOFJGFCLIEFReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLevelUpdateInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDamageSttInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightLevelUpdateInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDamageSttInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EOFJGFCLIEFReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightHpModifyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDropInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightEndBattleStageNotify), global::EggLink.DanhengServer.Proto.GridFightEndBattleStageNotify.Parser, new[]{ "GridFightLevelUpdateInfo", "GridFightCoinInterestNum", "GridFightHpModifyList", "NIHHEJLICED", "GridFightDamageSttInfo", "RouteId", "SectionId", "GridFightChallengeWin", "GridFightCoinComboNum", "ChapterId", "FinishProgress", "GridFightCoinBaseNum", "AddExpNum", "ADBMLEOOHCJ", "GridFightDropItemMap", "GridFightCurComboNum", "HANOMIEDKBJ", "GridFightCurLineupHp", "PrevHp", "LPAPAABNLAJ", "EKELNLIFMHH", "GDAOBCPHNCG", "GridFightMaxLineupHp" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightEndBattleStageNotify), global::EggLink.DanhengServer.Proto.GridFightEndBattleStageNotify.Parser, new[]{ "GridFightLevelUpdateInfo", "GridFightCoinInterestNum", "GridFightHpModifyList", "NIHHEJLICED", "GridFightDamageSttInfo", "RouteId", "SectionId", "GridFightChallengeWin", "GridFightCoinComboNum", "ChapterId", "FinishProgress", "GridFightCoinBaseNum", "AddExpNum", "ADBMLEOOHCJ", "GridFightDropItemMap", "GridFightCurComboNum", "GridFightPrevComboNum", "GridFightCurLineupHp", "PrevHp", "LPAPAABNLAJ", "EKELNLIFMHH", "GDAOBCPHNCG", "GridFightMaxLineupHp" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -110,7 +111,7 @@ namespace EggLink.DanhengServer.Proto {
       aDBMLEOOHCJ_ = other.aDBMLEOOHCJ_;
       gridFightDropItemMap_ = other.gridFightDropItemMap_.Clone();
       gridFightCurComboNum_ = other.gridFightCurComboNum_;
-      hANOMIEDKBJ_ = other.hANOMIEDKBJ_;
+      gridFightPrevComboNum_ = other.gridFightPrevComboNum_;
       gridFightCurLineupHp_ = other.gridFightCurLineupHp_;
       prevHp_ = other.prevHp_;
       lPAPAABNLAJ_ = other.lPAPAABNLAJ_;
@@ -316,15 +317,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HANOMIEDKBJ" field.</summary>
-    public const int HANOMIEDKBJFieldNumber = 1363;
-    private uint hANOMIEDKBJ_;
+    /// <summary>Field number for the "grid_fight_prev_combo_num" field.</summary>
+    public const int GridFightPrevComboNumFieldNumber = 1363;
+    private uint gridFightPrevComboNum_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HANOMIEDKBJ {
-      get { return hANOMIEDKBJ_; }
+    public uint GridFightPrevComboNum {
+      get { return gridFightPrevComboNum_; }
       set {
-        hANOMIEDKBJ_ = value;
+        gridFightPrevComboNum_ = value;
       }
     }
 
@@ -430,7 +431,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ADBMLEOOHCJ != other.ADBMLEOOHCJ) return false;
       if (!GridFightDropItemMap.Equals(other.GridFightDropItemMap)) return false;
       if (GridFightCurComboNum != other.GridFightCurComboNum) return false;
-      if (HANOMIEDKBJ != other.HANOMIEDKBJ) return false;
+      if (GridFightPrevComboNum != other.GridFightPrevComboNum) return false;
       if (GridFightCurLineupHp != other.GridFightCurLineupHp) return false;
       if (PrevHp != other.PrevHp) return false;
       if (LPAPAABNLAJ != other.LPAPAABNLAJ) return false;
@@ -460,7 +461,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ADBMLEOOHCJ != 0) hash ^= ADBMLEOOHCJ.GetHashCode();
       hash ^= GridFightDropItemMap.GetHashCode();
       if (GridFightCurComboNum != 0) hash ^= GridFightCurComboNum.GetHashCode();
-      if (HANOMIEDKBJ != 0) hash ^= HANOMIEDKBJ.GetHashCode();
+      if (GridFightPrevComboNum != 0) hash ^= GridFightPrevComboNum.GetHashCode();
       if (GridFightCurLineupHp != 0) hash ^= GridFightCurLineupHp.GetHashCode();
       if (PrevHp != 0) hash ^= PrevHp.GetHashCode();
       if (LPAPAABNLAJ != 0) hash ^= LPAPAABNLAJ.GetHashCode();
@@ -552,9 +553,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(200, 79);
         output.WriteUInt32(PrevHp);
       }
-      if (HANOMIEDKBJ != 0) {
+      if (GridFightPrevComboNum != 0) {
         output.WriteRawTag(152, 85);
-        output.WriteUInt32(HANOMIEDKBJ);
+        output.WriteUInt32(GridFightPrevComboNum);
       }
       if (GridFightMaxLineupHp != 0) {
         output.WriteRawTag(232, 90);
@@ -645,9 +646,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(200, 79);
         output.WriteUInt32(PrevHp);
       }
-      if (HANOMIEDKBJ != 0) {
+      if (GridFightPrevComboNum != 0) {
         output.WriteRawTag(152, 85);
-        output.WriteUInt32(HANOMIEDKBJ);
+        output.WriteUInt32(GridFightPrevComboNum);
       }
       if (GridFightMaxLineupHp != 0) {
         output.WriteRawTag(232, 90);
@@ -715,8 +716,8 @@ namespace EggLink.DanhengServer.Proto {
       if (GridFightCurComboNum != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightCurComboNum);
       }
-      if (HANOMIEDKBJ != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(HANOMIEDKBJ);
+      if (GridFightPrevComboNum != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(GridFightPrevComboNum);
       }
       if (GridFightCurLineupHp != 0) {
         size += 2 + pb::CodedOutputStream.ComputeUInt32Size(GridFightCurLineupHp);
@@ -796,8 +797,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GridFightCurComboNum != 0) {
         GridFightCurComboNum = other.GridFightCurComboNum;
       }
-      if (other.HANOMIEDKBJ != 0) {
-        HANOMIEDKBJ = other.HANOMIEDKBJ;
+      if (other.GridFightPrevComboNum != 0) {
+        GridFightPrevComboNum = other.GridFightPrevComboNum;
       }
       if (other.GridFightCurLineupHp != 0) {
         GridFightCurLineupHp = other.GridFightCurLineupHp;
@@ -910,7 +911,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 10904: {
-            HANOMIEDKBJ = input.ReadUInt32();
+            GridFightPrevComboNum = input.ReadUInt32();
             break;
           }
           case 11624: {
@@ -1023,7 +1024,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 10904: {
-            HANOMIEDKBJ = input.ReadUInt32();
+            GridFightPrevComboNum = input.ReadUInt32();
             break;
           }
           case 11624: {

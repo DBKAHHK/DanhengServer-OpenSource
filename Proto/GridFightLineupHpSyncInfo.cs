@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightLineupHpSyncInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9HcmlkRmlnaHRMaW5ldXBIcFN5bmNJbmZvLnByb3RvIk4KGUdyaWRGaWdo",
+            "Ch9HcmlkRmlnaHRMaW5ldXBIcFN5bmNJbmZvLnByb3RvIlsKGUdyaWRGaWdo",
             "dExpbmV1cEhwU3luY0luZm8SHAoUZ3JpZF9maWdodF9saW5ldXBfaHAYByAB",
-            "KA0SEwoLUEZJSEdIRElPQUQYCiABKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
-            "cnZlci5Qcm90b2IGcHJvdG8z"));
+            "KA0SIAoYZ3JpZF9maWdodF9saW5ldXBfbWF4X2hwGAogASgNQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightLineupHpSyncInfo), global::EggLink.DanhengServer.Proto.GridFightLineupHpSyncInfo.Parser, new[]{ "GridFightLineupHp", "PFIHGHDIOAD" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightLineupHpSyncInfo), global::EggLink.DanhengServer.Proto.GridFightLineupHpSyncInfo.Parser, new[]{ "GridFightLineupHp", "GridFightLineupMaxHp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,7 +74,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightLineupHpSyncInfo(GridFightLineupHpSyncInfo other) : this() {
       gridFightLineupHp_ = other.gridFightLineupHp_;
-      pFIHGHDIOAD_ = other.pFIHGHDIOAD_;
+      gridFightLineupMaxHp_ = other.gridFightLineupMaxHp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,15 +96,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PFIHGHDIOAD" field.</summary>
-    public const int PFIHGHDIOADFieldNumber = 10;
-    private uint pFIHGHDIOAD_;
+    /// <summary>Field number for the "grid_fight_lineup_max_hp" field.</summary>
+    public const int GridFightLineupMaxHpFieldNumber = 10;
+    private uint gridFightLineupMaxHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PFIHGHDIOAD {
-      get { return pFIHGHDIOAD_; }
+    public uint GridFightLineupMaxHp {
+      get { return gridFightLineupMaxHp_; }
       set {
-        pFIHGHDIOAD_ = value;
+        gridFightLineupMaxHp_ = value;
       }
     }
 
@@ -124,7 +124,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (GridFightLineupHp != other.GridFightLineupHp) return false;
-      if (PFIHGHDIOAD != other.PFIHGHDIOAD) return false;
+      if (GridFightLineupMaxHp != other.GridFightLineupMaxHp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,7 +133,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (GridFightLineupHp != 0) hash ^= GridFightLineupHp.GetHashCode();
-      if (PFIHGHDIOAD != 0) hash ^= PFIHGHDIOAD.GetHashCode();
+      if (GridFightLineupMaxHp != 0) hash ^= GridFightLineupMaxHp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -156,9 +156,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteUInt32(GridFightLineupHp);
       }
-      if (PFIHGHDIOAD != 0) {
+      if (GridFightLineupMaxHp != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(PFIHGHDIOAD);
+        output.WriteUInt32(GridFightLineupMaxHp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -174,9 +174,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(56);
         output.WriteUInt32(GridFightLineupHp);
       }
-      if (PFIHGHDIOAD != 0) {
+      if (GridFightLineupMaxHp != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(PFIHGHDIOAD);
+        output.WriteUInt32(GridFightLineupMaxHp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -191,8 +191,8 @@ namespace EggLink.DanhengServer.Proto {
       if (GridFightLineupHp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightLineupHp);
       }
-      if (PFIHGHDIOAD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PFIHGHDIOAD);
+      if (GridFightLineupMaxHp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightLineupMaxHp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -209,8 +209,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GridFightLineupHp != 0) {
         GridFightLineupHp = other.GridFightLineupHp;
       }
-      if (other.PFIHGHDIOAD != 0) {
-        PFIHGHDIOAD = other.PFIHGHDIOAD;
+      if (other.GridFightLineupMaxHp != 0) {
+        GridFightLineupMaxHp = other.GridFightLineupMaxHp;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -232,7 +232,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            PFIHGHDIOAD = input.ReadUInt32();
+            GridFightLineupMaxHp = input.ReadUInt32();
             break;
           }
         }
@@ -255,7 +255,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            PFIHGHDIOAD = input.ReadUInt32();
+            GridFightLineupMaxHp = input.ReadUInt32();
             break;
           }
         }

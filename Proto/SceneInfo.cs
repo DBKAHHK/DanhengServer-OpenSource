@@ -24,11 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static SceneInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg9TY2VuZUluZm8ucHJvdG8aFVNjZW5lRW50aXR5SW5mby5wcm90bxoRS0VH",
-            "TUlIREZQTU0ucHJvdG8aGlNjZW5lRW50aXR5R3JvdXBJbmZvLnByb3RvGg5C",
-            "dWZmSW5mby5wcm90bxoVU2NlbmVHcm91cFN0YXRlLnByb3RvGhRDdXN0b21T",
-            "YXZlRGF0YS5wcm90bxoeTWlzc2lvblN0YXR1c0J5U2NlbmVJbmZvLnByb3Rv",
-            "GhRFbnRpdHlCdWZmSW5mby5wcm90byLHBgoJU2NlbmVJbmZvEhAKCHdvcmxk",
+            "Cg9TY2VuZUluZm8ucHJvdG8aFVNjZW5lR3JvdXBTdGF0ZS5wcm90bxoVU2Nl",
+            "bmVFbnRpdHlJbmZvLnByb3RvGhRFbnRpdHlCdWZmSW5mby5wcm90bxoUQ3Vz",
+            "dG9tU2F2ZURhdGEucHJvdG8aGlNjZW5lRW50aXR5R3JvdXBJbmZvLnByb3Rv",
+            "Gh5NaXNzaW9uU3RhdHVzQnlTY2VuZUluZm8ucHJvdG8aDkJ1ZmZJbmZvLnBy",
+            "b3RvGhFLRUdNSUhERlBNTS5wcm90byLHBgoJU2NlbmVJbmZvEhAKCHdvcmxk",
             "X2lkGA8gASgNEhwKFGxpZ2h0ZW5fc2VjdGlvbl9saXN0GAggAygNEjkKEGZs",
             "b29yX3NhdmVkX2RhdGEY5QcgAygLMh4uU2NlbmVJbmZvLkZsb29yU2F2ZWRE",
             "YXRhRW50cnkSFgoOZ2FtZV9tb2RlX3R5cGUYDCABKA0SEAoIcGxhbmVfaWQY",
@@ -50,7 +50,7 @@ namespace EggLink.DanhengServer.Proto {
             "REZQTU06AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KEGMIHDFPMMReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneEntityGroupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneGroupStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.CustomSaveDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.MissionStatusBySceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EntityBuffInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.SceneGroupStateReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneEntityInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.EntityBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CustomSaveDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.SceneEntityGroupInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MissionStatusBySceneInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KEGMIHDFPMMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.SceneInfo), global::EggLink.DanhengServer.Proto.SceneInfo.Parser, new[]{ "WorldId", "LightenSectionList", "FloorSavedData", "GameModeType", "PlaneId", "EntryId", "CustomDataList", "MPEHIBKEOBE", "EntityBuffInfoList", "FloorId", "ContentId", "SceneMissionInfo", "ClientPosVersion", "DJBIBIJMEBH", "LeaderEntityId", "GameStoryLineId", "EntityGroupList", "DimensionId", "SceneBuffInfoList", "EntityList", "GroupStateList" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));

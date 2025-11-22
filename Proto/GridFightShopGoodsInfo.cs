@@ -24,15 +24,15 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightShopGoodsInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHcmlkRmlnaHRTaG9wR29vZHNJbmZvLnByb3RvGhxHcmlkRmlnaHRSb2xl",
-            "R29vZHNJbmZvLnByb3RvGhFMSEJJSkRQQk9HTC5wcm90byKxAQoWR3JpZEZp",
+            "ChxHcmlkRmlnaHRTaG9wR29vZHNJbmZvLnByb3RvGhFMSEJJSkRQQk9HTC5w",
+            "cm90bxocR3JpZEZpZ2h0Um9sZUdvb2RzSW5mby5wcm90byKxAQoWR3JpZEZp",
             "Z2h0U2hvcEdvb2RzSW5mbxIzCg9yb2xlX2dvb2RzX2luZm8YpwMgASgLMhcu",
             "R3JpZEZpZ2h0Um9sZUdvb2RzSW5mb0gAEiQKC0JPREZPR0dOQUZGGOUMIAEo",
             "CzIMLkxIQklKRFBCT0dMSAASEwoLaXNfc29sZF9vdXQYDyABKAgSGAoQc2hv",
             "cF9nb29kc19wcmljZRgNIAEoDUINCgtORE5ORkJLQ0RITUIeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightRoleGoodsInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LHBIJDPBOGLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LHBIJDPBOGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRoleGoodsInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightShopGoodsInfo), global::EggLink.DanhengServer.Proto.GridFightShopGoodsInfo.Parser, new[]{ "RoleGoodsInfo", "BODFOGGNAFF", "IsSoldOut", "ShopGoodsPrice" }, new[]{ "NDNNFBKCDHM" }, null, null, null)
           }));

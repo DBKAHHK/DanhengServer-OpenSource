@@ -25,28 +25,29 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxHcmlkRmlnaHRHYW1lQmFzaWNJbmZvLnByb3RvGhdHcmlkRmlnaHRMb2Nr",
-            "VHlwZS5wcm90bxoXR3JpZEZpZ2h0TG9ja0luZm8ucHJvdG8aHFJvbGVUcmFj",
-            "a0VxdWlwbWVudEluZm8ucHJvdG8aEU9QSUJCUENIRklJLnByb3RvIokFChZH",
+            "VHlwZS5wcm90bxoRT1BJQkJQQ0hGSUkucHJvdG8aF0dyaWRGaWdodExvY2tJ",
+            "bmZvLnByb3RvGhxSb2xlVHJhY2tFcXVpcG1lbnRJbmZvLnByb3RvIrAFChZH",
             "cmlkRmlnaHRHYW1lQmFzaWNJbmZvEhwKFGdyaWRfZmlnaHRfbGluZXVwX2hw",
             "GAMgASgNEiUKCWxvY2tfdHlwZRgGIAEoDjISLkdyaWRGaWdodExvY2tUeXBl",
             "EiIKC09DTUdNRUhFQ0JCGPQMIAEoCzIMLk9QSUJCUENIRklJEiMKG2dyaWRf",
             "ZmlnaHRfbWF4X2F2YXRhcl9jb3VudBgMIAEoDRIbChNncmlkX2ZpZ2h0X2N1",
-            "cl9nb2xkGAQgASgNEhMKC1BGSUhHSERJT0FEGAsgASgNEhQKC0xQRU1QS0ZO",
-            "Tk9MGIAPIAMoDRIcChRncmlkX2ZpZ2h0X2N1cl9sZXZlbBgCIAEoDRIbChN0",
-            "cmFja190cmFpdF9pZF9saXN0GA8gAygNEhQKC0VKQU9MQUhOS1BDGM4BIAEo",
-            "CRIdChVncmlkX2ZpZ2h0X2xldmVsX2Nvc3QYDSABKA0SIAoYZ3JpZF9maWdo",
-            "dF9jb21ib193aW5fbnVtGAEgASgNEjoKGXJvbGVfdHJhY2tfZXF1aXBtZW50",
-            "X2xpc3QYBSADKAsyFy5Sb2xlVHJhY2tFcXVpcG1lbnRJbmZvEisKDmdhbWVf",
-            "bG9ja19pbmZvGMwIIAEoCzISLkdyaWRGaWdodExvY2tJbmZvEhsKE2dyaWRf",
-            "ZmlnaHRfbWF4X2dvbGQYCSABKA0SEwoLSExMSUpJQ0dPTk4YCiABKA0SJgoe",
-            "Z3JpZF9maWdodF9vZmZfZmllbGRfbWF4X2NvdW50GA4gASgNEiIKGmdyaWRf",
-            "ZmlnaHRfbWF4X2ZpZWxkX2NvdW50GAcgASgNEiAKGGdyaWRfZmlnaHRfY3Vy",
-            "X2xldmVsX2V4cBgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlBy",
-            "b3RvYgZwcm90bzM="));
+            "cl9nb2xkGAQgASgNEiAKGGdyaWRfZmlnaHRfbGluZXVwX21heF9ocBgLIAEo",
+            "DRIUCgtMUEVNUEtGTk5PTBiADyADKA0SHAoUZ3JpZF9maWdodF9jdXJfbGV2",
+            "ZWwYAiABKA0SGwoTdHJhY2tfdHJhaXRfaWRfbGlzdBgPIAMoDRIlChxncmlk",
+            "X2ZpZ2h0X3RhcmdldF9ndWlkZV9jb2RlGM4BIAEoCRIdChVncmlkX2ZpZ2h0",
+            "X2xldmVsX2Nvc3QYDSABKA0SIAoYZ3JpZF9maWdodF9jb21ib193aW5fbnVt",
+            "GAEgASgNEjoKGXJvbGVfdHJhY2tfZXF1aXBtZW50X2xpc3QYBSADKAsyFy5S",
+            "b2xlVHJhY2tFcXVpcG1lbnRJbmZvEisKDmdhbWVfbG9ja19pbmZvGMwIIAEo",
+            "CzISLkdyaWRGaWdodExvY2tJbmZvEiQKHGdyaWRfZmlnaHRfbWF4X2ludGVy",
+            "ZXN0X2dvbGQYCSABKA0SEwoLSExMSUpJQ0dPTk4YCiABKA0SJgoeZ3JpZF9m",
+            "aWdodF9vZmZfZmllbGRfbWF4X2NvdW50GA4gASgNEiIKGmdyaWRfZmlnaHRf",
+            "bWF4X2ZpZWxkX2NvdW50GAcgASgNEiAKGGdyaWRfZmlnaHRfY3VyX2xldmVs",
+            "X2V4cBgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RoleTrackEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPIBBPCHFIIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPIBBPCHFIIReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RoleTrackEquipmentInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo), global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo.Parser, new[]{ "GridFightLineupHp", "LockType", "OCMGMEHECBB", "GridFightMaxAvatarCount", "GridFightCurGold", "PFIHGHDIOAD", "LPEMPKFNNOL", "GridFightCurLevel", "TrackTraitIdList", "EJAOLAHNKPC", "GridFightLevelCost", "GridFightComboWinNum", "RoleTrackEquipmentList", "GameLockInfo", "GridFightMaxGold", "HLLIJICGONN", "GridFightOffFieldMaxCount", "GridFightMaxFieldCount", "GridFightCurLevelExp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo), global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo.Parser, new[]{ "GridFightLineupHp", "LockType", "OCMGMEHECBB", "GridFightMaxAvatarCount", "GridFightCurGold", "GridFightLineupMaxHp", "LPEMPKFNNOL", "GridFightCurLevel", "TrackTraitIdList", "GridFightTargetGuideCode", "GridFightLevelCost", "GridFightComboWinNum", "RoleTrackEquipmentList", "GameLockInfo", "GridFightMaxInterestGold", "HLLIJICGONN", "GridFightOffFieldMaxCount", "GridFightMaxFieldCount", "GridFightCurLevelExp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -93,16 +94,16 @@ namespace EggLink.DanhengServer.Proto {
       oCMGMEHECBB_ = other.oCMGMEHECBB_ != null ? other.oCMGMEHECBB_.Clone() : null;
       gridFightMaxAvatarCount_ = other.gridFightMaxAvatarCount_;
       gridFightCurGold_ = other.gridFightCurGold_;
-      pFIHGHDIOAD_ = other.pFIHGHDIOAD_;
+      gridFightLineupMaxHp_ = other.gridFightLineupMaxHp_;
       lPEMPKFNNOL_ = other.lPEMPKFNNOL_.Clone();
       gridFightCurLevel_ = other.gridFightCurLevel_;
       trackTraitIdList_ = other.trackTraitIdList_.Clone();
-      eJAOLAHNKPC_ = other.eJAOLAHNKPC_;
+      gridFightTargetGuideCode_ = other.gridFightTargetGuideCode_;
       gridFightLevelCost_ = other.gridFightLevelCost_;
       gridFightComboWinNum_ = other.gridFightComboWinNum_;
       roleTrackEquipmentList_ = other.roleTrackEquipmentList_.Clone();
       gameLockInfo_ = other.gameLockInfo_ != null ? other.gameLockInfo_.Clone() : null;
-      gridFightMaxGold_ = other.gridFightMaxGold_;
+      gridFightMaxInterestGold_ = other.gridFightMaxInterestGold_;
       hLLIJICGONN_ = other.hLLIJICGONN_;
       gridFightOffFieldMaxCount_ = other.gridFightOffFieldMaxCount_;
       gridFightMaxFieldCount_ = other.gridFightMaxFieldCount_;
@@ -176,15 +177,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PFIHGHDIOAD" field.</summary>
-    public const int PFIHGHDIOADFieldNumber = 11;
-    private uint pFIHGHDIOAD_;
+    /// <summary>Field number for the "grid_fight_lineup_max_hp" field.</summary>
+    public const int GridFightLineupMaxHpFieldNumber = 11;
+    private uint gridFightLineupMaxHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint PFIHGHDIOAD {
-      get { return pFIHGHDIOAD_; }
+    public uint GridFightLineupMaxHp {
+      get { return gridFightLineupMaxHp_; }
       set {
-        pFIHGHDIOAD_ = value;
+        gridFightLineupMaxHp_ = value;
       }
     }
 
@@ -222,15 +223,15 @@ namespace EggLink.DanhengServer.Proto {
       get { return trackTraitIdList_; }
     }
 
-    /// <summary>Field number for the "EJAOLAHNKPC" field.</summary>
-    public const int EJAOLAHNKPCFieldNumber = 206;
-    private string eJAOLAHNKPC_ = "";
+    /// <summary>Field number for the "grid_fight_target_guide_code" field.</summary>
+    public const int GridFightTargetGuideCodeFieldNumber = 206;
+    private string gridFightTargetGuideCode_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string EJAOLAHNKPC {
-      get { return eJAOLAHNKPC_; }
+    public string GridFightTargetGuideCode {
+      get { return gridFightTargetGuideCode_; }
       set {
-        eJAOLAHNKPC_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        gridFightTargetGuideCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -281,15 +282,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "grid_fight_max_gold" field.</summary>
-    public const int GridFightMaxGoldFieldNumber = 9;
-    private uint gridFightMaxGold_;
+    /// <summary>Field number for the "grid_fight_max_interest_gold" field.</summary>
+    public const int GridFightMaxInterestGoldFieldNumber = 9;
+    private uint gridFightMaxInterestGold_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GridFightMaxGold {
-      get { return gridFightMaxGold_; }
+    public uint GridFightMaxInterestGold {
+      get { return gridFightMaxInterestGold_; }
       set {
-        gridFightMaxGold_ = value;
+        gridFightMaxInterestGold_ = value;
       }
     }
 
@@ -361,16 +362,16 @@ namespace EggLink.DanhengServer.Proto {
       if (!object.Equals(OCMGMEHECBB, other.OCMGMEHECBB)) return false;
       if (GridFightMaxAvatarCount != other.GridFightMaxAvatarCount) return false;
       if (GridFightCurGold != other.GridFightCurGold) return false;
-      if (PFIHGHDIOAD != other.PFIHGHDIOAD) return false;
+      if (GridFightLineupMaxHp != other.GridFightLineupMaxHp) return false;
       if(!lPEMPKFNNOL_.Equals(other.lPEMPKFNNOL_)) return false;
       if (GridFightCurLevel != other.GridFightCurLevel) return false;
       if(!trackTraitIdList_.Equals(other.trackTraitIdList_)) return false;
-      if (EJAOLAHNKPC != other.EJAOLAHNKPC) return false;
+      if (GridFightTargetGuideCode != other.GridFightTargetGuideCode) return false;
       if (GridFightLevelCost != other.GridFightLevelCost) return false;
       if (GridFightComboWinNum != other.GridFightComboWinNum) return false;
       if(!roleTrackEquipmentList_.Equals(other.roleTrackEquipmentList_)) return false;
       if (!object.Equals(GameLockInfo, other.GameLockInfo)) return false;
-      if (GridFightMaxGold != other.GridFightMaxGold) return false;
+      if (GridFightMaxInterestGold != other.GridFightMaxInterestGold) return false;
       if (HLLIJICGONN != other.HLLIJICGONN) return false;
       if (GridFightOffFieldMaxCount != other.GridFightOffFieldMaxCount) return false;
       if (GridFightMaxFieldCount != other.GridFightMaxFieldCount) return false;
@@ -387,16 +388,16 @@ namespace EggLink.DanhengServer.Proto {
       if (oCMGMEHECBB_ != null) hash ^= OCMGMEHECBB.GetHashCode();
       if (GridFightMaxAvatarCount != 0) hash ^= GridFightMaxAvatarCount.GetHashCode();
       if (GridFightCurGold != 0) hash ^= GridFightCurGold.GetHashCode();
-      if (PFIHGHDIOAD != 0) hash ^= PFIHGHDIOAD.GetHashCode();
+      if (GridFightLineupMaxHp != 0) hash ^= GridFightLineupMaxHp.GetHashCode();
       hash ^= lPEMPKFNNOL_.GetHashCode();
       if (GridFightCurLevel != 0) hash ^= GridFightCurLevel.GetHashCode();
       hash ^= trackTraitIdList_.GetHashCode();
-      if (EJAOLAHNKPC.Length != 0) hash ^= EJAOLAHNKPC.GetHashCode();
+      if (GridFightTargetGuideCode.Length != 0) hash ^= GridFightTargetGuideCode.GetHashCode();
       if (GridFightLevelCost != 0) hash ^= GridFightLevelCost.GetHashCode();
       if (GridFightComboWinNum != 0) hash ^= GridFightComboWinNum.GetHashCode();
       hash ^= roleTrackEquipmentList_.GetHashCode();
       if (gameLockInfo_ != null) hash ^= GameLockInfo.GetHashCode();
-      if (GridFightMaxGold != 0) hash ^= GridFightMaxGold.GetHashCode();
+      if (GridFightMaxInterestGold != 0) hash ^= GridFightMaxInterestGold.GetHashCode();
       if (HLLIJICGONN != 0) hash ^= HLLIJICGONN.GetHashCode();
       if (GridFightOffFieldMaxCount != 0) hash ^= GridFightOffFieldMaxCount.GetHashCode();
       if (GridFightMaxFieldCount != 0) hash ^= GridFightMaxFieldCount.GetHashCode();
@@ -448,17 +449,17 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteUInt32(GridFightCurLevelExp);
       }
-      if (GridFightMaxGold != 0) {
+      if (GridFightMaxInterestGold != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(GridFightMaxGold);
+        output.WriteUInt32(GridFightMaxInterestGold);
       }
       if (HLLIJICGONN != 0) {
         output.WriteRawTag(80);
         output.WriteUInt32(HLLIJICGONN);
       }
-      if (PFIHGHDIOAD != 0) {
+      if (GridFightLineupMaxHp != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(PFIHGHDIOAD);
+        output.WriteUInt32(GridFightLineupMaxHp);
       }
       if (GridFightMaxAvatarCount != 0) {
         output.WriteRawTag(96);
@@ -473,9 +474,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(GridFightOffFieldMaxCount);
       }
       trackTraitIdList_.WriteTo(output, _repeated_trackTraitIdList_codec);
-      if (EJAOLAHNKPC.Length != 0) {
+      if (GridFightTargetGuideCode.Length != 0) {
         output.WriteRawTag(242, 12);
-        output.WriteString(EJAOLAHNKPC);
+        output.WriteString(GridFightTargetGuideCode);
       }
       if (gameLockInfo_ != null) {
         output.WriteRawTag(226, 68);
@@ -525,17 +526,17 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(64);
         output.WriteUInt32(GridFightCurLevelExp);
       }
-      if (GridFightMaxGold != 0) {
+      if (GridFightMaxInterestGold != 0) {
         output.WriteRawTag(72);
-        output.WriteUInt32(GridFightMaxGold);
+        output.WriteUInt32(GridFightMaxInterestGold);
       }
       if (HLLIJICGONN != 0) {
         output.WriteRawTag(80);
         output.WriteUInt32(HLLIJICGONN);
       }
-      if (PFIHGHDIOAD != 0) {
+      if (GridFightLineupMaxHp != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(PFIHGHDIOAD);
+        output.WriteUInt32(GridFightLineupMaxHp);
       }
       if (GridFightMaxAvatarCount != 0) {
         output.WriteRawTag(96);
@@ -550,9 +551,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteUInt32(GridFightOffFieldMaxCount);
       }
       trackTraitIdList_.WriteTo(ref output, _repeated_trackTraitIdList_codec);
-      if (EJAOLAHNKPC.Length != 0) {
+      if (GridFightTargetGuideCode.Length != 0) {
         output.WriteRawTag(242, 12);
-        output.WriteString(EJAOLAHNKPC);
+        output.WriteString(GridFightTargetGuideCode);
       }
       if (gameLockInfo_ != null) {
         output.WriteRawTag(226, 68);
@@ -588,16 +589,16 @@ namespace EggLink.DanhengServer.Proto {
       if (GridFightCurGold != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightCurGold);
       }
-      if (PFIHGHDIOAD != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PFIHGHDIOAD);
+      if (GridFightLineupMaxHp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightLineupMaxHp);
       }
       size += lPEMPKFNNOL_.CalculateSize(_repeated_lPEMPKFNNOL_codec);
       if (GridFightCurLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightCurLevel);
       }
       size += trackTraitIdList_.CalculateSize(_repeated_trackTraitIdList_codec);
-      if (EJAOLAHNKPC.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(EJAOLAHNKPC);
+      if (GridFightTargetGuideCode.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(GridFightTargetGuideCode);
       }
       if (GridFightLevelCost != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightLevelCost);
@@ -609,8 +610,8 @@ namespace EggLink.DanhengServer.Proto {
       if (gameLockInfo_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(GameLockInfo);
       }
-      if (GridFightMaxGold != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightMaxGold);
+      if (GridFightMaxInterestGold != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightMaxInterestGold);
       }
       if (HLLIJICGONN != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HLLIJICGONN);
@@ -654,16 +655,16 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GridFightCurGold != 0) {
         GridFightCurGold = other.GridFightCurGold;
       }
-      if (other.PFIHGHDIOAD != 0) {
-        PFIHGHDIOAD = other.PFIHGHDIOAD;
+      if (other.GridFightLineupMaxHp != 0) {
+        GridFightLineupMaxHp = other.GridFightLineupMaxHp;
       }
       lPEMPKFNNOL_.Add(other.lPEMPKFNNOL_);
       if (other.GridFightCurLevel != 0) {
         GridFightCurLevel = other.GridFightCurLevel;
       }
       trackTraitIdList_.Add(other.trackTraitIdList_);
-      if (other.EJAOLAHNKPC.Length != 0) {
-        EJAOLAHNKPC = other.EJAOLAHNKPC;
+      if (other.GridFightTargetGuideCode.Length != 0) {
+        GridFightTargetGuideCode = other.GridFightTargetGuideCode;
       }
       if (other.GridFightLevelCost != 0) {
         GridFightLevelCost = other.GridFightLevelCost;
@@ -678,8 +679,8 @@ namespace EggLink.DanhengServer.Proto {
         }
         GameLockInfo.MergeFrom(other.GameLockInfo);
       }
-      if (other.GridFightMaxGold != 0) {
-        GridFightMaxGold = other.GridFightMaxGold;
+      if (other.GridFightMaxInterestGold != 0) {
+        GridFightMaxInterestGold = other.GridFightMaxInterestGold;
       }
       if (other.HLLIJICGONN != 0) {
         HLLIJICGONN = other.HLLIJICGONN;
@@ -741,7 +742,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            GridFightMaxGold = input.ReadUInt32();
+            GridFightMaxInterestGold = input.ReadUInt32();
             break;
           }
           case 80: {
@@ -749,7 +750,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 88: {
-            PFIHGHDIOAD = input.ReadUInt32();
+            GridFightLineupMaxHp = input.ReadUInt32();
             break;
           }
           case 96: {
@@ -770,7 +771,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 1650: {
-            EJAOLAHNKPC = input.ReadString();
+            GridFightTargetGuideCode = input.ReadString();
             break;
           }
           case 8802: {
@@ -840,7 +841,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 72: {
-            GridFightMaxGold = input.ReadUInt32();
+            GridFightMaxInterestGold = input.ReadUInt32();
             break;
           }
           case 80: {
@@ -848,7 +849,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 88: {
-            PFIHGHDIOAD = input.ReadUInt32();
+            GridFightLineupMaxHp = input.ReadUInt32();
             break;
           }
           case 96: {
@@ -869,7 +870,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 1650: {
-            EJAOLAHNKPC = input.ReadString();
+            GridFightTargetGuideCode = input.ReadString();
             break;
           }
           case 8802: {

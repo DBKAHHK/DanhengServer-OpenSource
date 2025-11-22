@@ -11,7 +11,7 @@ message GridFightShopItemPb {
     oneof ItemType {
         GridFightShopRoleItemPb RoleItem = 1;
     }
-    uint32 Rarity = 2;
+    uint32 Cost = 2;
     bool SoldOut = 3;
 }
 
@@ -40,6 +40,16 @@ message GridFightBasicInfoPb {
     uint32 ComboNum = 7;
     uint32 LockType = 8;
     uint32 LockReason = 9;
+    uint32 MaxInterest = 10;
+    repeated uint32 TrackingTraits = 11;
+    repeated GridFightEquipmentTrackInfoPb TrackingEquipments = 12;
+    string GuideCode = 13;
+}
+
+message GridFightEquipmentTrackInfoPb {
+    uint32 Priority = 1;
+    uint32 RoleId = 2;
+    repeated uint32 EquipmentIds = 3;
 }
 
 message GridFightRoleInfoPb {

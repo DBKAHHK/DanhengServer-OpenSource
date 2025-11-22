@@ -11,7 +11,7 @@ public class PacketGridFightEndBattleStageNotify : BasePacket
 {
     public PacketGridFightEndBattleStageNotify(GridFightInstance inst, uint expAddNum, GridFightBasicInfoPb prev,
         GridFightBasicInfoPb cur, List<GridFightRoleDamageSttInfo> stt, List<GridFightTraitDamageSttInfo> traitStt, bool win, uint baseCoin, uint interestCoin,
-        uint comboCoin, List<GridFightDropItemInfo> drops) : base(CmdIds.GridFightEndBattleStageNotify)
+        uint comboCoin, List<GridFightDropItemInfo> drops, uint progress) : base(CmdIds.GridFightEndBattleStageNotify)
     {
         var levelComp = inst.GetComponent<GridFightLevelComponent>();
         var traitComp = inst.GetComponent<GridFightTraitComponent>();
@@ -21,6 +21,7 @@ public class PacketGridFightEndBattleStageNotify : BasePacket
         {
             SectionId = curSec.SectionId,
             RouteId = curSec.Excel.ID,
+            FinishProgress = progress,
             ChapterId = curSec.ChapterId,
             GridFightDamageSttInfo = new GridFightDamageSttInfo
             {

@@ -46,7 +46,7 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
             .Select(x => Data.ShopItems[(int)x])
             .ToList();
 
-        var totalCost = (uint)targetGoods.Select(x => GetGoodsPrice(x.Rarity, x.RoleItem.Tier)).Sum(x => x);
+        var totalCost = (uint)targetGoods.Select(x => x.Cost).Sum(x => x);
 
         // COST
         var code = await Inst.GetComponent<GridFightBasicComponent>().UpdateGoldNum((int)-totalCost, false, GridFightSrc.KGridFightSrcBuyGoods);
@@ -91,7 +91,6 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
     {
         var rules = GameData.GridFightPlayerLevelData.GetValueOrDefault(curLevel)?.RarityWeights ??
                     [100, 0, 0, 0, 0];
-        List<uint> usedIds = Data.ShopItems.Select(x => x.RoleItem.RoleId).ToList();
         // generate items
         for (var i = 0; i < num; i++)
         {
@@ -110,15 +109,17 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
 
             // get item pool
             var pool = GameData.GridFightRoleBasicInfoData.Values
-                .Where(x => !usedIds.Contains(x.ID) && x.IsInPool && x.Rarity == targetRarity).ToList();
+                .Where(x => x.IsInPool && x.Rarity == targetRarity).ToList();
 
             var target = pool.RandomElement();
-            usedIds.Add(target.ID);
 
             var tier = 1u;
+
+            var cost = GetGoodsPrice(target.Rarity, tier);
+
             Data.ShopItems.Add(new GridFightShopItemPb
             {
-                Rarity = target.Rarity,
+                Cost = cost,
                 RoleItem = new GridFightShopRoleItemPb
                 {
                     RoleId = target.ID,
@@ -205,14 +206,12 @@ public static class GridFightShopInfoPbExtensions
     {
         var proto = new GridFightShopGoodsInfo
         {
-            IsSoldOut = info.SoldOut
+            IsSoldOut = info.SoldOut,
+            ShopGoodsPrice = info.Cost
         };
 
         if (info.ItemTypeCase == GridFightShopItemPb.ItemTypeOneofCase.RoleItem)
         {
-            proto.ShopGoodsPrice = GameData.GridFightShopPriceData.GetValueOrDefault(info.Rarity)
-                ?.BuyGoldList[(int)(info.RoleItem.Tier - 1)] ?? 1;
-
             proto.RoleGoodsInfo = new GridFightRoleGoodsInfo
             {
                 RoleBasicId = info.RoleItem.RoleId,

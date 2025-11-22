@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static NFNMNIDIBFHReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFORk5NTklESUJGSC5wcm90bxoRS0RHREhQUElNUE0ucHJvdG8iRQoLTkZO",
-            "TU5JRElCRkgSIQoLUEpMTUpGTEZIQUYYDyADKAsyDC5LREdESFBQSU1QTRIT",
-            "CgtCTUlGQUdEQ0xDTxgHIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
-            "LlByb3RvYgZwcm90bzM="));
+            "ChFORk5NTklESUJGSC5wcm90bxoRS0RHREhQUElNUE0ucHJvdG8iUAoLTkZO",
+            "TU5JRElCRkgSKgoUZm9yZ2VfZXF1aXBtZW50X2xpc3QYDyADKAsyDC5LREdE",
+            "SFBQSU1QTRIVCg1mb3JnZV9pdGVtX2lkGAcgASgNQh6qAhtFZ2dMaW5rLkRh",
+            "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KDGDHPPIMPMReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NFNMNIDIBFH), global::EggLink.DanhengServer.Proto.NFNMNIDIBFH.Parser, new[]{ "PJLMJFLFHAF", "BMIFAGDCLCO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NFNMNIDIBFH), global::EggLink.DanhengServer.Proto.NFNMNIDIBFH.Parser, new[]{ "ForgeEquipmentList", "ForgeItemId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,8 +73,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NFNMNIDIBFH(NFNMNIDIBFH other) : this() {
-      pJLMJFLFHAF_ = other.pJLMJFLFHAF_.Clone();
-      bMIFAGDCLCO_ = other.bMIFAGDCLCO_;
+      forgeEquipmentList_ = other.forgeEquipmentList_.Clone();
+      forgeItemId_ = other.forgeItemId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -84,26 +84,26 @@ namespace EggLink.DanhengServer.Proto {
       return new NFNMNIDIBFH(this);
     }
 
-    /// <summary>Field number for the "PJLMJFLFHAF" field.</summary>
-    public const int PJLMJFLFHAFFieldNumber = 15;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KDGDHPPIMPM> _repeated_pJLMJFLFHAF_codec
+    /// <summary>Field number for the "forge_equipment_list" field.</summary>
+    public const int ForgeEquipmentListFieldNumber = 15;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.KDGDHPPIMPM> _repeated_forgeEquipmentList_codec
         = pb::FieldCodec.ForMessage(122, global::EggLink.DanhengServer.Proto.KDGDHPPIMPM.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KDGDHPPIMPM> pJLMJFLFHAF_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KDGDHPPIMPM>();
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KDGDHPPIMPM> forgeEquipmentList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KDGDHPPIMPM>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KDGDHPPIMPM> PJLMJFLFHAF {
-      get { return pJLMJFLFHAF_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.KDGDHPPIMPM> ForgeEquipmentList {
+      get { return forgeEquipmentList_; }
     }
 
-    /// <summary>Field number for the "BMIFAGDCLCO" field.</summary>
-    public const int BMIFAGDCLCOFieldNumber = 7;
-    private uint bMIFAGDCLCO_;
+    /// <summary>Field number for the "forge_item_id" field.</summary>
+    public const int ForgeItemIdFieldNumber = 7;
+    private uint forgeItemId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint BMIFAGDCLCO {
-      get { return bMIFAGDCLCO_; }
+    public uint ForgeItemId {
+      get { return forgeItemId_; }
       set {
-        bMIFAGDCLCO_ = value;
+        forgeItemId_ = value;
       }
     }
 
@@ -122,8 +122,8 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!pJLMJFLFHAF_.Equals(other.pJLMJFLFHAF_)) return false;
-      if (BMIFAGDCLCO != other.BMIFAGDCLCO) return false;
+      if(!forgeEquipmentList_.Equals(other.forgeEquipmentList_)) return false;
+      if (ForgeItemId != other.ForgeItemId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,8 +131,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= pJLMJFLFHAF_.GetHashCode();
-      if (BMIFAGDCLCO != 0) hash ^= BMIFAGDCLCO.GetHashCode();
+      hash ^= forgeEquipmentList_.GetHashCode();
+      if (ForgeItemId != 0) hash ^= ForgeItemId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,11 +151,11 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BMIFAGDCLCO != 0) {
+      if (ForgeItemId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(BMIFAGDCLCO);
+        output.WriteUInt32(ForgeItemId);
       }
-      pJLMJFLFHAF_.WriteTo(output, _repeated_pJLMJFLFHAF_codec);
+      forgeEquipmentList_.WriteTo(output, _repeated_forgeEquipmentList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -166,11 +166,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BMIFAGDCLCO != 0) {
+      if (ForgeItemId != 0) {
         output.WriteRawTag(56);
-        output.WriteUInt32(BMIFAGDCLCO);
+        output.WriteUInt32(ForgeItemId);
       }
-      pJLMJFLFHAF_.WriteTo(ref output, _repeated_pJLMJFLFHAF_codec);
+      forgeEquipmentList_.WriteTo(ref output, _repeated_forgeEquipmentList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -181,9 +181,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += pJLMJFLFHAF_.CalculateSize(_repeated_pJLMJFLFHAF_codec);
-      if (BMIFAGDCLCO != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(BMIFAGDCLCO);
+      size += forgeEquipmentList_.CalculateSize(_repeated_forgeEquipmentList_codec);
+      if (ForgeItemId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ForgeItemId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -197,9 +197,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      pJLMJFLFHAF_.Add(other.pJLMJFLFHAF_);
-      if (other.BMIFAGDCLCO != 0) {
-        BMIFAGDCLCO = other.BMIFAGDCLCO;
+      forgeEquipmentList_.Add(other.forgeEquipmentList_);
+      if (other.ForgeItemId != 0) {
+        ForgeItemId = other.ForgeItemId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -217,11 +217,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 56: {
-            BMIFAGDCLCO = input.ReadUInt32();
+            ForgeItemId = input.ReadUInt32();
             break;
           }
           case 122: {
-            pJLMJFLFHAF_.AddEntriesFrom(input, _repeated_pJLMJFLFHAF_codec);
+            forgeEquipmentList_.AddEntriesFrom(input, _repeated_forgeEquipmentList_codec);
             break;
           }
         }
@@ -240,11 +240,11 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 56: {
-            BMIFAGDCLCO = input.ReadUInt32();
+            ForgeItemId = input.ReadUInt32();
             break;
           }
           case 122: {
-            pJLMJFLFHAF_.AddEntriesFrom(ref input, _repeated_pJLMJFLFHAF_codec);
+            forgeEquipmentList_.AddEntriesFrom(ref input, _repeated_forgeEquipmentList_codec);
             break;
           }
         }

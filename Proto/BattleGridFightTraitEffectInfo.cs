@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static BattleGridFightTraitEffectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRCYXR0bGVHcmlkRmlnaHRUcmFpdEVmZmVjdEluZm8ucHJvdG8aEUlIR0VL",
-            "TFBJQU5MLnByb3RvGhFMTUJEQURPUENQRy5wcm90bxojR3JpZEZpZ2h0VHJh",
-            "aXRFZmZlY3RMZXZlbEluZm8ucHJvdG8izwEKHkJhdHRsZUdyaWRGaWdodFRy",
+            "CiRCYXR0bGVHcmlkRmlnaHRUcmFpdEVmZmVjdEluZm8ucHJvdG8aI0dyaWRG",
+            "aWdodFRyYWl0RWZmZWN0TGV2ZWxJbmZvLnByb3RvGhFJSEdFS0xQSUFOTC5w",
+            "cm90bxoRTE1CREFET1BDUEcucHJvdG8izwEKHkJhdHRsZUdyaWRGaWdodFRy",
             "YWl0RWZmZWN0SW5mbxIjCgtJREhGTUJHUEFMThhlIAEoCzIMLklIR0VLTFBJ",
             "QU5MSAASIwoLSUlCQkdKRkNIRE8YZiABKAsyDC5MTUJEQURPUENQR0gAEkEK",
             "F3RyYWl0X2VmZmVjdF9sZXZlbF9pbmZvGGcgASgLMh4uR3JpZEZpZ2h0VHJh",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "R0VLTkNHQUZCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IHGEKLPIANLReflection.Descriptor, global::EggLink.DanhengServer.Proto.LMBDADOPCPGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.IHGEKLPIANLReflection.Descriptor, global::EggLink.DanhengServer.Proto.LMBDADOPCPGReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo), global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo.Parser, new[]{ "IDHFMBGPALN", "IIBBGJFCHDO", "TraitEffectLevelInfo", "EffectId" }, new[]{ "GMNGEKNCGAF" }, null, null, null)
           }));

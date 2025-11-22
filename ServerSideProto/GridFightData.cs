@@ -25,63 +25,68 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNHcmlkRmlnaHREYXRhLnByb3RvIjcKF0dyaWRGaWdodFNob3BSb2xlSXRl",
-            "bVBiEg4KBlJvbGVJZBgBIAEoDRIMCgRUaWVyGAIgASgNInAKE0dyaWRGaWdo",
+            "bVBiEg4KBlJvbGVJZBgBIAEoDRIMCgRUaWVyGAIgASgNIm4KE0dyaWRGaWdo",
             "dFNob3BJdGVtUGISLAoIUm9sZUl0ZW0YASABKAsyGC5HcmlkRmlnaHRTaG9w",
-            "Um9sZUl0ZW1QYkgAEg4KBlJhcml0eRgCIAEoDRIPCgdTb2xkT3V0GAMgASgI",
-            "QgoKCEl0ZW1UeXBlIoEBChNHcmlkRmlnaHRTaG9wSW5mb1BiEhIKClNob3BM",
-            "b2NrZWQYASABKAgSGAoQRnJlZVJlZnJlc2hDb3VudBgCIAEoDRITCgtSZWZy",
-            "ZXNoQ29zdBgDIAEoDRInCglTaG9wSXRlbXMYBCADKAsyFC5HcmlkRmlnaHRT",
-            "aG9wSXRlbVBiIooBChNHcmlkRmlnaHRHYW1lSW5mb1BiEhAKCFVuaXF1ZUlk",
-            "GAEgASgNEhIKCkRpdmlzaW9uSWQYAiABKA0SEgoKSXNPdmVyTG9jaxgDIAEo",
-            "CBIOCgZTZWFzb24YBCABKA0SKQoKQ29tcG9uZW50cxgFIAMoCzIVLkdyaWRG",
-            "aWdodENvbXBvbmVudFBiIr4BChRHcmlkRmlnaHRCYXNpY0luZm9QYhIPCgdD",
-            "dXJHb2xkGAEgASgNEhAKCEN1ckxldmVsGAIgASgNEhAKCExldmVsRXhwGAMg",
-            "ASgNEhQKDEJ1eUxldmVsQ29zdBgEIAEoDRINCgVDdXJIcBgFIAEoDRIUCgxN",
-            "YXhBdmF0YXJOdW0YBiABKA0SEAoIQ29tYm9OdW0YByABKA0SEAoITG9ja1R5",
-            "cGUYCCABKA0SEgoKTG9ja1JlYXNvbhgJIAEoDSLYAQoTR3JpZEZpZ2h0Um9s",
-            "ZUluZm9QYhIOCgZSb2xlSWQYASABKA0SDAoEVGllchgCIAEoDRILCgNQb3MY",
-            "AyABKA0SEAoIVW5pcXVlSWQYBCABKA0SOgoLU2F2ZWRWYWx1ZXMYBSADKAsy",
-            "JS5HcmlkRmlnaHRSb2xlSW5mb1BiLlNhdmVkVmFsdWVzRW50cnkSFAoMRXF1",
-            "aXBtZW50SWRzGAYgAygNGjIKEFNhdmVkVmFsdWVzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgNOgI4ASJRChVHcmlkRmlnaHRBdmF0YXJJbmZv",
-            "UGISIwoFUm9sZXMYASADKAsyFC5HcmlkRmlnaHRSb2xlSW5mb1BiEhMKC0N1",
-            "clVuaXF1ZUlkGAIgASgNIjkKEkdyaWRGaWdodEdhbWVPcmJQYhIRCglPcmJJ",
-            "dGVtSWQYASABKA0SEAoIVW5pcXVlSWQYAiABKA0iNwoSR3JpZEZpZ2h0T3Ji",
-            "SW5mb1BiEiEKBE9yYnMYASADKAsyEy5HcmlkRmlnaHRHYW1lT3JiUGIingEK",
-            "FkdyaWRGaWdodEdhbWVBdWdtZW50UGISEQoJQXVnbWVudElkGAEgASgNEj0K",
-            "C1NhdmVkVmFsdWVzGAIgAygLMiguR3JpZEZpZ2h0R2FtZUF1Z21lbnRQYi5T",
-            "YXZlZFZhbHVlc0VudHJ5GjIKEFNhdmVkVmFsdWVzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgNOgI4ASJDChZHcmlkRmlnaHRBdWdtZW50SW5m",
-            "b1BiEikKCEF1Z21lbnRzGAEgAygLMhcuR3JpZEZpZ2h0R2FtZUF1Z21lbnRQ",
-            "YiJOChpHcmlkRmlnaHRHYW1lVHJhaXRFZmZlY3RQYhIPCgdUcmFpdElkGAEg",
-            "ASgNEhAKCEVmZmVjdElkGAIgASgNEg0KBVBhcmFtGAMgASgNImkKFEdyaWRG",
-            "aWdodEdhbWVUcmFpdFBiEg8KB1RyYWl0SWQYASABKA0SLAoHRWZmZWN0cxgC",
-            "IAMoCzIbLkdyaWRGaWdodEdhbWVUcmFpdEVmZmVjdFBiEhIKClRyYWl0TGF5",
-            "ZXIYAyABKA0iPQoUR3JpZEZpZ2h0VHJhaXRJbmZvUGISJQoGVHJhaXRzGAEg",
-            "AygLMhUuR3JpZEZpZ2h0R2FtZVRyYWl0UGIiPAoYR3JpZEZpZ2h0RXF1aXBt",
-            "ZW50SXRlbVBiEg4KBkl0ZW1JZBgBIAEoDRIQCghVbmlxdWVJZBgCIAEoDSI6",
-            "ChlHcmlkRmlnaHRDb25zdW1hYmxlSXRlbVBiEg4KBkl0ZW1JZBgBIAEoDRIN",
-            "CgVDb3VudBgCIAEoDSJ+ChRHcmlkRmlnaHRJdGVtc0luZm9QYhIxCg5FcXVp",
-            "cG1lbnRJdGVtcxgBIAMoCzIZLkdyaWRGaWdodEVxdWlwbWVudEl0ZW1QYhIz",
-            "Cg9Db25zdW1hYmxlSXRlbXMYAiADKAsyGi5HcmlkRmlnaHRDb25zdW1hYmxl",
-            "SXRlbVBiItsCChRHcmlkRmlnaHRDb21wb25lbnRQYhIoCghTaG9wSW5mbxgB",
-            "IAEoCzIULkdyaWRGaWdodFNob3BJbmZvUGJIABIqCglCYXNpY0luZm8YAiAB",
-            "KAsyFS5HcmlkRmlnaHRCYXNpY0luZm9QYkgAEiwKCkF2YXRhckluZm8YAyAB",
-            "KAsyFi5HcmlkRmlnaHRBdmF0YXJJbmZvUGJIABImCgdPcmJJbmZvGAQgASgL",
-            "MhMuR3JpZEZpZ2h0T3JiSW5mb1BiSAASLgoLQXVnbWVudEluZm8YBSABKAsy",
-            "Fy5HcmlkRmlnaHRBdWdtZW50SW5mb1BiSAASKgoJVHJhaXRJbmZvGAYgASgL",
-            "MhUuR3JpZEZpZ2h0VHJhaXRJbmZvUGJIABIqCglJdGVtc0luZm8YByABKAsy",
-            "FS5HcmlkRmlnaHRJdGVtc0luZm9QYkgAQg8KDUNvbXBvbmVudFR5cGVCKaoC",
-            "JkVnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90by5TZXJ2ZXJTaWRlYgZwcm90",
-            "bzM="));
+            "Um9sZUl0ZW1QYkgAEgwKBENvc3QYAiABKA0SDwoHU29sZE91dBgDIAEoCEIK",
+            "CghJdGVtVHlwZSKBAQoTR3JpZEZpZ2h0U2hvcEluZm9QYhISCgpTaG9wTG9j",
+            "a2VkGAEgASgIEhgKEEZyZWVSZWZyZXNoQ291bnQYAiABKA0SEwoLUmVmcmVz",
+            "aENvc3QYAyABKA0SJwoJU2hvcEl0ZW1zGAQgAygLMhQuR3JpZEZpZ2h0U2hv",
+            "cEl0ZW1QYiKKAQoTR3JpZEZpZ2h0R2FtZUluZm9QYhIQCghVbmlxdWVJZBgB",
+            "IAEoDRISCgpEaXZpc2lvbklkGAIgASgNEhIKCklzT3ZlckxvY2sYAyABKAgS",
+            "DgoGU2Vhc29uGAQgASgNEikKCkNvbXBvbmVudHMYBSADKAsyFS5HcmlkRmln",
+            "aHRDb21wb25lbnRQYiK6AgoUR3JpZEZpZ2h0QmFzaWNJbmZvUGISDwoHQ3Vy",
+            "R29sZBgBIAEoDRIQCghDdXJMZXZlbBgCIAEoDRIQCghMZXZlbEV4cBgDIAEo",
+            "DRIUCgxCdXlMZXZlbENvc3QYBCABKA0SDQoFQ3VySHAYBSABKA0SFAoMTWF4",
+            "QXZhdGFyTnVtGAYgASgNEhAKCENvbWJvTnVtGAcgASgNEhAKCExvY2tUeXBl",
+            "GAggASgNEhIKCkxvY2tSZWFzb24YCSABKA0SEwoLTWF4SW50ZXJlc3QYCiAB",
+            "KA0SFgoOVHJhY2tpbmdUcmFpdHMYCyADKA0SOgoSVHJhY2tpbmdFcXVpcG1l",
+            "bnRzGAwgAygLMh4uR3JpZEZpZ2h0RXF1aXBtZW50VHJhY2tJbmZvUGISEQoJ",
+            "R3VpZGVDb2RlGA0gASgJIlcKHUdyaWRGaWdodEVxdWlwbWVudFRyYWNrSW5m",
+            "b1BiEhAKCFByaW9yaXR5GAEgASgNEg4KBlJvbGVJZBgCIAEoDRIUCgxFcXVp",
+            "cG1lbnRJZHMYAyADKA0i2AEKE0dyaWRGaWdodFJvbGVJbmZvUGISDgoGUm9s",
+            "ZUlkGAEgASgNEgwKBFRpZXIYAiABKA0SCwoDUG9zGAMgASgNEhAKCFVuaXF1",
+            "ZUlkGAQgASgNEjoKC1NhdmVkVmFsdWVzGAUgAygLMiUuR3JpZEZpZ2h0Um9s",
+            "ZUluZm9QYi5TYXZlZFZhbHVlc0VudHJ5EhQKDEVxdWlwbWVudElkcxgGIAMo",
+            "DRoyChBTYXZlZFZhbHVlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoDToCOAEiUQoVR3JpZEZpZ2h0QXZhdGFySW5mb1BiEiMKBVJvbGVzGAEg",
+            "AygLMhQuR3JpZEZpZ2h0Um9sZUluZm9QYhITCgtDdXJVbmlxdWVJZBgCIAEo",
+            "DSI5ChJHcmlkRmlnaHRHYW1lT3JiUGISEQoJT3JiSXRlbUlkGAEgASgNEhAK",
+            "CFVuaXF1ZUlkGAIgASgNIjcKEkdyaWRGaWdodE9yYkluZm9QYhIhCgRPcmJz",
+            "GAEgAygLMhMuR3JpZEZpZ2h0R2FtZU9yYlBiIp4BChZHcmlkRmlnaHRHYW1l",
+            "QXVnbWVudFBiEhEKCUF1Z21lbnRJZBgBIAEoDRI9CgtTYXZlZFZhbHVlcxgC",
+            "IAMoCzIoLkdyaWRGaWdodEdhbWVBdWdtZW50UGIuU2F2ZWRWYWx1ZXNFbnRy",
+            "eRoyChBTYXZlZFZhbHVlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoDToCOAEiQwoWR3JpZEZpZ2h0QXVnbWVudEluZm9QYhIpCghBdWdtZW50",
+            "cxgBIAMoCzIXLkdyaWRGaWdodEdhbWVBdWdtZW50UGIiTgoaR3JpZEZpZ2h0",
+            "R2FtZVRyYWl0RWZmZWN0UGISDwoHVHJhaXRJZBgBIAEoDRIQCghFZmZlY3RJ",
+            "ZBgCIAEoDRINCgVQYXJhbRgDIAEoDSJpChRHcmlkRmlnaHRHYW1lVHJhaXRQ",
+            "YhIPCgdUcmFpdElkGAEgASgNEiwKB0VmZmVjdHMYAiADKAsyGy5HcmlkRmln",
+            "aHRHYW1lVHJhaXRFZmZlY3RQYhISCgpUcmFpdExheWVyGAMgASgNIj0KFEdy",
+            "aWRGaWdodFRyYWl0SW5mb1BiEiUKBlRyYWl0cxgBIAMoCzIVLkdyaWRGaWdo",
+            "dEdhbWVUcmFpdFBiIjwKGEdyaWRGaWdodEVxdWlwbWVudEl0ZW1QYhIOCgZJ",
+            "dGVtSWQYASABKA0SEAoIVW5pcXVlSWQYAiABKA0iOgoZR3JpZEZpZ2h0Q29u",
+            "c3VtYWJsZUl0ZW1QYhIOCgZJdGVtSWQYASABKA0SDQoFQ291bnQYAiABKA0i",
+            "fgoUR3JpZEZpZ2h0SXRlbXNJbmZvUGISMQoORXF1aXBtZW50SXRlbXMYASAD",
+            "KAsyGS5HcmlkRmlnaHRFcXVpcG1lbnRJdGVtUGISMwoPQ29uc3VtYWJsZUl0",
+            "ZW1zGAIgAygLMhouR3JpZEZpZ2h0Q29uc3VtYWJsZUl0ZW1QYiLbAgoUR3Jp",
+            "ZEZpZ2h0Q29tcG9uZW50UGISKAoIU2hvcEluZm8YASABKAsyFC5HcmlkRmln",
+            "aHRTaG9wSW5mb1BiSAASKgoJQmFzaWNJbmZvGAIgASgLMhUuR3JpZEZpZ2h0",
+            "QmFzaWNJbmZvUGJIABIsCgpBdmF0YXJJbmZvGAMgASgLMhYuR3JpZEZpZ2h0",
+            "QXZhdGFySW5mb1BiSAASJgoHT3JiSW5mbxgEIAEoCzITLkdyaWRGaWdodE9y",
+            "YkluZm9QYkgAEi4KC0F1Z21lbnRJbmZvGAUgASgLMhcuR3JpZEZpZ2h0QXVn",
+            "bWVudEluZm9QYkgAEioKCVRyYWl0SW5mbxgGIAEoCzIVLkdyaWRGaWdodFRy",
+            "YWl0SW5mb1BiSAASKgoJSXRlbXNJbmZvGAcgASgLMhUuR3JpZEZpZ2h0SXRl",
+            "bXNJbmZvUGJIAEIPCg1Db21wb25lbnRUeXBlQimqAiZFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG8uU2VydmVyU2lkZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopRoleItemPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopRoleItemPb.Parser, new[]{ "RoleId", "Tier" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopItemPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopItemPb.Parser, new[]{ "RoleItem", "Rarity", "SoldOut" }, new[]{ "ItemType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopItemPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopItemPb.Parser, new[]{ "RoleItem", "Cost", "SoldOut" }, new[]{ "ItemType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopInfoPb.Parser, new[]{ "ShopLocked", "FreeRefreshCount", "RefreshCost", "ShopItems" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameInfoPb.Parser, new[]{ "UniqueId", "DivisionId", "IsOverLock", "Season", "Components" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb.Parser, new[]{ "CurGold", "CurLevel", "LevelExp", "BuyLevelCost", "CurHp", "MaxAvatarNum", "ComboNum", "LockType", "LockReason" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb.Parser, new[]{ "CurGold", "CurLevel", "LevelExp", "BuyLevelCost", "CurHp", "MaxAvatarNum", "ComboNum", "LockType", "LockReason", "MaxInterest", "TrackingTraits", "TrackingEquipments", "GuideCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentTrackInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentTrackInfoPb.Parser, new[]{ "Priority", "RoleId", "EquipmentIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightRoleInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightRoleInfoPb.Parser, new[]{ "RoleId", "Tier", "Pos", "UniqueId", "SavedValues", "EquipmentIds" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightAvatarInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightAvatarInfoPb.Parser, new[]{ "Roles", "CurUniqueId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameOrbPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameOrbPb.Parser, new[]{ "OrbItemId", "UniqueId" }, null, null, null, null),
@@ -363,7 +368,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightShopItemPb(GridFightShopItemPb other) : this() {
-      rarity_ = other.rarity_;
+      cost_ = other.cost_;
       soldOut_ = other.soldOut_;
       switch (other.ItemTypeCase) {
         case ItemTypeOneofCase.RoleItem:
@@ -392,15 +397,15 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
     }
 
-    /// <summary>Field number for the "Rarity" field.</summary>
-    public const int RarityFieldNumber = 2;
-    private uint rarity_;
+    /// <summary>Field number for the "Cost" field.</summary>
+    public const int CostFieldNumber = 2;
+    private uint cost_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Rarity {
-      get { return rarity_; }
+    public uint Cost {
+      get { return cost_; }
       set {
-        rarity_ = value;
+        cost_ = value;
       }
     }
 
@@ -452,7 +457,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         return true;
       }
       if (!object.Equals(RoleItem, other.RoleItem)) return false;
-      if (Rarity != other.Rarity) return false;
+      if (Cost != other.Cost) return false;
       if (SoldOut != other.SoldOut) return false;
       if (ItemTypeCase != other.ItemTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -463,7 +468,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     public override int GetHashCode() {
       int hash = 1;
       if (itemTypeCase_ == ItemTypeOneofCase.RoleItem) hash ^= RoleItem.GetHashCode();
-      if (Rarity != 0) hash ^= Rarity.GetHashCode();
+      if (Cost != 0) hash ^= Cost.GetHashCode();
       if (SoldOut != false) hash ^= SoldOut.GetHashCode();
       hash ^= (int) itemTypeCase_;
       if (_unknownFields != null) {
@@ -488,9 +493,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(10);
         output.WriteMessage(RoleItem);
       }
-      if (Rarity != 0) {
+      if (Cost != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(Rarity);
+        output.WriteUInt32(Cost);
       }
       if (SoldOut != false) {
         output.WriteRawTag(24);
@@ -510,9 +515,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(10);
         output.WriteMessage(RoleItem);
       }
-      if (Rarity != 0) {
+      if (Cost != 0) {
         output.WriteRawTag(16);
-        output.WriteUInt32(Rarity);
+        output.WriteUInt32(Cost);
       }
       if (SoldOut != false) {
         output.WriteRawTag(24);
@@ -531,8 +536,8 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (itemTypeCase_ == ItemTypeOneofCase.RoleItem) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RoleItem);
       }
-      if (Rarity != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Rarity);
+      if (Cost != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Cost);
       }
       if (SoldOut != false) {
         size += 1 + 1;
@@ -549,8 +554,8 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (other == null) {
         return;
       }
-      if (other.Rarity != 0) {
-        Rarity = other.Rarity;
+      if (other.Cost != 0) {
+        Cost = other.Cost;
       }
       if (other.SoldOut != false) {
         SoldOut = other.SoldOut;
@@ -589,7 +594,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             break;
           }
           case 16: {
-            Rarity = input.ReadUInt32();
+            Cost = input.ReadUInt32();
             break;
           }
           case 24: {
@@ -621,7 +626,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             break;
           }
           case 16: {
-            Rarity = input.ReadUInt32();
+            Cost = input.ReadUInt32();
             break;
           }
           case 24: {
@@ -1296,6 +1301,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       comboNum_ = other.comboNum_;
       lockType_ = other.lockType_;
       lockReason_ = other.lockReason_;
+      maxInterest_ = other.maxInterest_;
+      trackingTraits_ = other.trackingTraits_.Clone();
+      trackingEquipments_ = other.trackingEquipments_.Clone();
+      guideCode_ = other.guideCode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1413,6 +1422,52 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
     }
 
+    /// <summary>Field number for the "MaxInterest" field.</summary>
+    public const int MaxInterestFieldNumber = 10;
+    private uint maxInterest_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MaxInterest {
+      get { return maxInterest_; }
+      set {
+        maxInterest_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "TrackingTraits" field.</summary>
+    public const int TrackingTraitsFieldNumber = 11;
+    private static readonly pb::FieldCodec<uint> _repeated_trackingTraits_codec
+        = pb::FieldCodec.ForUInt32(90);
+    private readonly pbc::RepeatedField<uint> trackingTraits_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> TrackingTraits {
+      get { return trackingTraits_; }
+    }
+
+    /// <summary>Field number for the "TrackingEquipments" field.</summary>
+    public const int TrackingEquipmentsFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentTrackInfoPb> _repeated_trackingEquipments_codec
+        = pb::FieldCodec.ForMessage(98, global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentTrackInfoPb.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentTrackInfoPb> trackingEquipments_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentTrackInfoPb>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentTrackInfoPb> TrackingEquipments {
+      get { return trackingEquipments_; }
+    }
+
+    /// <summary>Field number for the "GuideCode" field.</summary>
+    public const int GuideCodeFieldNumber = 13;
+    private string guideCode_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GuideCode {
+      get { return guideCode_; }
+      set {
+        guideCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1437,6 +1492,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (ComboNum != other.ComboNum) return false;
       if (LockType != other.LockType) return false;
       if (LockReason != other.LockReason) return false;
+      if (MaxInterest != other.MaxInterest) return false;
+      if(!trackingTraits_.Equals(other.trackingTraits_)) return false;
+      if(!trackingEquipments_.Equals(other.trackingEquipments_)) return false;
+      if (GuideCode != other.GuideCode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1453,6 +1512,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (ComboNum != 0) hash ^= ComboNum.GetHashCode();
       if (LockType != 0) hash ^= LockType.GetHashCode();
       if (LockReason != 0) hash ^= LockReason.GetHashCode();
+      if (MaxInterest != 0) hash ^= MaxInterest.GetHashCode();
+      hash ^= trackingTraits_.GetHashCode();
+      hash ^= trackingEquipments_.GetHashCode();
+      if (GuideCode.Length != 0) hash ^= GuideCode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1507,6 +1570,16 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(72);
         output.WriteUInt32(LockReason);
       }
+      if (MaxInterest != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(MaxInterest);
+      }
+      trackingTraits_.WriteTo(output, _repeated_trackingTraits_codec);
+      trackingEquipments_.WriteTo(output, _repeated_trackingEquipments_codec);
+      if (GuideCode.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(GuideCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1553,6 +1626,16 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(72);
         output.WriteUInt32(LockReason);
       }
+      if (MaxInterest != 0) {
+        output.WriteRawTag(80);
+        output.WriteUInt32(MaxInterest);
+      }
+      trackingTraits_.WriteTo(ref output, _repeated_trackingTraits_codec);
+      trackingEquipments_.WriteTo(ref output, _repeated_trackingEquipments_codec);
+      if (GuideCode.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(GuideCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1589,6 +1672,14 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
       if (LockReason != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(LockReason);
+      }
+      if (MaxInterest != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxInterest);
+      }
+      size += trackingTraits_.CalculateSize(_repeated_trackingTraits_codec);
+      size += trackingEquipments_.CalculateSize(_repeated_trackingEquipments_codec);
+      if (GuideCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GuideCode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1628,6 +1719,14 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
       if (other.LockReason != 0) {
         LockReason = other.LockReason;
+      }
+      if (other.MaxInterest != 0) {
+        MaxInterest = other.MaxInterest;
+      }
+      trackingTraits_.Add(other.trackingTraits_);
+      trackingEquipments_.Add(other.trackingEquipments_);
+      if (other.GuideCode.Length != 0) {
+        GuideCode = other.GuideCode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1678,6 +1777,23 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
           }
           case 72: {
             LockReason = input.ReadUInt32();
+            break;
+          }
+          case 80: {
+            MaxInterest = input.ReadUInt32();
+            break;
+          }
+          case 90:
+          case 88: {
+            trackingTraits_.AddEntriesFrom(input, _repeated_trackingTraits_codec);
+            break;
+          }
+          case 98: {
+            trackingEquipments_.AddEntriesFrom(input, _repeated_trackingEquipments_codec);
+            break;
+          }
+          case 106: {
+            GuideCode = input.ReadString();
             break;
           }
         }
@@ -1731,6 +1847,278 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             LockReason = input.ReadUInt32();
             break;
           }
+          case 80: {
+            MaxInterest = input.ReadUInt32();
+            break;
+          }
+          case 90:
+          case 88: {
+            trackingTraits_.AddEntriesFrom(ref input, _repeated_trackingTraits_codec);
+            break;
+          }
+          case 98: {
+            trackingEquipments_.AddEntriesFrom(ref input, _repeated_trackingEquipments_codec);
+            break;
+          }
+          case 106: {
+            GuideCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GridFightEquipmentTrackInfoPb : pb::IMessage<GridFightEquipmentTrackInfoPb>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GridFightEquipmentTrackInfoPb> _parser = new pb::MessageParser<GridFightEquipmentTrackInfoPb>(() => new GridFightEquipmentTrackInfoPb());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GridFightEquipmentTrackInfoPb> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightEquipmentTrackInfoPb() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightEquipmentTrackInfoPb(GridFightEquipmentTrackInfoPb other) : this() {
+      priority_ = other.priority_;
+      roleId_ = other.roleId_;
+      equipmentIds_ = other.equipmentIds_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightEquipmentTrackInfoPb Clone() {
+      return new GridFightEquipmentTrackInfoPb(this);
+    }
+
+    /// <summary>Field number for the "Priority" field.</summary>
+    public const int PriorityFieldNumber = 1;
+    private uint priority_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Priority {
+      get { return priority_; }
+      set {
+        priority_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "RoleId" field.</summary>
+    public const int RoleIdFieldNumber = 2;
+    private uint roleId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RoleId {
+      get { return roleId_; }
+      set {
+        roleId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "EquipmentIds" field.</summary>
+    public const int EquipmentIdsFieldNumber = 3;
+    private static readonly pb::FieldCodec<uint> _repeated_equipmentIds_codec
+        = pb::FieldCodec.ForUInt32(26);
+    private readonly pbc::RepeatedField<uint> equipmentIds_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> EquipmentIds {
+      get { return equipmentIds_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GridFightEquipmentTrackInfoPb);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GridFightEquipmentTrackInfoPb other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Priority != other.Priority) return false;
+      if (RoleId != other.RoleId) return false;
+      if(!equipmentIds_.Equals(other.equipmentIds_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Priority != 0) hash ^= Priority.GetHashCode();
+      if (RoleId != 0) hash ^= RoleId.GetHashCode();
+      hash ^= equipmentIds_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Priority != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Priority);
+      }
+      if (RoleId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(RoleId);
+      }
+      equipmentIds_.WriteTo(output, _repeated_equipmentIds_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Priority != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(Priority);
+      }
+      if (RoleId != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(RoleId);
+      }
+      equipmentIds_.WriteTo(ref output, _repeated_equipmentIds_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Priority != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Priority);
+      }
+      if (RoleId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RoleId);
+      }
+      size += equipmentIds_.CalculateSize(_repeated_equipmentIds_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GridFightEquipmentTrackInfoPb other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Priority != 0) {
+        Priority = other.Priority;
+      }
+      if (other.RoleId != 0) {
+        RoleId = other.RoleId;
+      }
+      equipmentIds_.Add(other.equipmentIds_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Priority = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            RoleId = input.ReadUInt32();
+            break;
+          }
+          case 26:
+          case 24: {
+            equipmentIds_.AddEntriesFrom(input, _repeated_equipmentIds_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Priority = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            RoleId = input.ReadUInt32();
+            break;
+          }
+          case 26:
+          case 24: {
+            equipmentIds_.AddEntriesFrom(ref input, _repeated_equipmentIds_codec);
+            break;
+          }
         }
       }
     }
@@ -1753,7 +2141,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[5]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2108,7 +2496,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[6]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2324,7 +2712,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[7]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2551,7 +2939,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[8]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2730,7 +3118,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[9]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2946,7 +3334,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[10]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3125,7 +3513,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[11]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3389,7 +3777,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[12]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3642,7 +4030,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[13]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3821,7 +4209,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[14]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4048,7 +4436,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[15]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4275,7 +4663,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[16]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4480,7 +4868,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[17]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

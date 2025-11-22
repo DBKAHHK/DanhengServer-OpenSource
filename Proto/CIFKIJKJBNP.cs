@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static CIFKIJKJBNPReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFDSUZLSUpLSkJOUC5wcm90byIiCgtDSUZLSUpLSkJOUBITCgtIQ09LT0RI",
-            "UE5JQhgGIAMoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "ChFDSUZLSUpLSkJOUC5wcm90byIvCgtDSUZLSUpLSkJOUBIgChhhdmFpbGFi",
+            "bGVfZXF1aXBtZW50X2xpc3QYBiADKA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1Nl",
+            "cnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CIFKIJKJBNP), global::EggLink.DanhengServer.Proto.CIFKIJKJBNP.Parser, new[]{ "HCOKODHPNIB" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.CIFKIJKJBNP), global::EggLink.DanhengServer.Proto.CIFKIJKJBNP.Parser, new[]{ "AvailableEquipmentList" }, null, null, null, null)
           }));
     }
     #endregion
@@ -72,7 +72,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CIFKIJKJBNP(CIFKIJKJBNP other) : this() {
-      hCOKODHPNIB_ = other.hCOKODHPNIB_.Clone();
+      availableEquipmentList_ = other.availableEquipmentList_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -82,15 +82,15 @@ namespace EggLink.DanhengServer.Proto {
       return new CIFKIJKJBNP(this);
     }
 
-    /// <summary>Field number for the "HCOKODHPNIB" field.</summary>
-    public const int HCOKODHPNIBFieldNumber = 6;
-    private static readonly pb::FieldCodec<uint> _repeated_hCOKODHPNIB_codec
+    /// <summary>Field number for the "available_equipment_list" field.</summary>
+    public const int AvailableEquipmentListFieldNumber = 6;
+    private static readonly pb::FieldCodec<uint> _repeated_availableEquipmentList_codec
         = pb::FieldCodec.ForUInt32(50);
-    private readonly pbc::RepeatedField<uint> hCOKODHPNIB_ = new pbc::RepeatedField<uint>();
+    private readonly pbc::RepeatedField<uint> availableEquipmentList_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<uint> HCOKODHPNIB {
-      get { return hCOKODHPNIB_; }
+    public pbc::RepeatedField<uint> AvailableEquipmentList {
+      get { return availableEquipmentList_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -108,7 +108,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!hCOKODHPNIB_.Equals(other.hCOKODHPNIB_)) return false;
+      if(!availableEquipmentList_.Equals(other.availableEquipmentList_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -116,7 +116,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= hCOKODHPNIB_.GetHashCode();
+      hash ^= availableEquipmentList_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -135,7 +135,7 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      hCOKODHPNIB_.WriteTo(output, _repeated_hCOKODHPNIB_codec);
+      availableEquipmentList_.WriteTo(output, _repeated_availableEquipmentList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      hCOKODHPNIB_.WriteTo(ref output, _repeated_hCOKODHPNIB_codec);
+      availableEquipmentList_.WriteTo(ref output, _repeated_availableEquipmentList_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -157,7 +157,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += hCOKODHPNIB_.CalculateSize(_repeated_hCOKODHPNIB_codec);
+      size += availableEquipmentList_.CalculateSize(_repeated_availableEquipmentList_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -170,7 +170,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      hCOKODHPNIB_.Add(other.hCOKODHPNIB_);
+      availableEquipmentList_.Add(other.availableEquipmentList_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -188,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 50:
           case 48: {
-            hCOKODHPNIB_.AddEntriesFrom(input, _repeated_hCOKODHPNIB_codec);
+            availableEquipmentList_.AddEntriesFrom(input, _repeated_availableEquipmentList_codec);
             break;
           }
         }
@@ -208,7 +208,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           case 50:
           case 48: {
-            hCOKODHPNIB_.AddEntriesFrom(ref input, _repeated_hCOKODHPNIB_codec);
+            availableEquipmentList_.AddEntriesFrom(ref input, _repeated_availableEquipmentList_codec);
             break;
           }
         }

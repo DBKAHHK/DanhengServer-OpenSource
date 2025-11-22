@@ -21,6 +21,7 @@ public class GridFightLevelComponent : BaseGridFightComponent
     public List<GridFightRoleDamageSttInfo> RoleDamageSttInfos { get; } = [];
     public List<GridFightTraitDamageSttInfo> TraitDamageSttInfos { get; } = [];
     public List<GridFightPortalBuffInfo> PortalBuffs { get; } = [];
+    public List<uint> Affixes { get; } = [];
 
     #endregion
 
@@ -47,6 +48,18 @@ public class GridFightLevelComponent : BaseGridFightComponent
 
             // create section infos
             Sections[(uint)chapterId] = [.. select.Values.Select(x => new GridFightGameSectionInfo(x, camp))];
+        }
+
+        if (!GameData.GridFightDivisionStageData.TryGetValue(Inst.DivisionId, out var divisionExcel)) return;
+
+        var affixIds = GameData.GridFightAffixConfigData.Keys.ToList();
+        foreach (var _ in divisionExcel.AffixChooseNumList)
+        {
+            var affixId = affixIds.RandomElement();
+            if (Affixes.Contains(affixId)) continue;
+
+            Affixes.Add(affixId);
+            affixIds.Remove(affixId);  // avoid duplicate
         }
     }
 
@@ -243,6 +256,7 @@ public class GridFightLevelComponent : BaseGridFightComponent
                 ChapterId = CurrentSection.ChapterId,
                 SectionId = CurrentSection.SectionId,
                 RouteId = CurrentSection.Excel.ID,
+                GridFightAffixList = { Affixes },
                 GridFightLayerInfo = new GridFightLayerInfo
                 {
                     RouteInfo = CurrentSection.ToRouteInfo(),

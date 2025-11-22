@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static PVEBattleResultScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpQVkVCYXR0bGVSZXN1bHRTY1JzcC5wcm90bxoOSXRlbUxpc3QucHJvdG8a",
-            "EU1CS09DTU1JQ1BHLnByb3RvGhJCYXR0bGVBdmF0YXIucHJvdG8aFUJhdHRs",
+            "ChpQVkVCYXR0bGVSZXN1bHRTY1JzcC5wcm90bxoSQmF0dGxlQXZhdGFyLnBy",
+            "b3RvGhFNQktPQ01NSUNQRy5wcm90bxoOSXRlbUxpc3QucHJvdG8aFUJhdHRs",
             "ZUVuZFN0YXR1cy5wcm90byLpAwoUUFZFQmF0dGxlUmVzdWx0U2NSc3ASIgoO",
             "aXRlbV9saXN0X3VuazIYoQMgASgLMgkuSXRlbUxpc3QSIQoOaXRlbV9saXN0",
             "X3VuazEYCCABKAsyCS5JdGVtTGlzdBITCgtBUEpLQ0FPSEFGUBgPIAEoCRIT",
@@ -40,7 +40,7 @@ namespace EggLink.DanhengServer.Proto {
             "dHRsZV9pZBgDIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.MBKOCMMICPGReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleEndStatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.MBKOCMMICPGReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleEndStatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PVEBattleResultScRsp), global::EggLink.DanhengServer.Proto.PVEBattleResultScRsp.Parser, new[]{ "ItemListUnk2", "ItemListUnk1", "APJKCAOHAFP", "KLODELECMCI", "HKPGCAPIMAO", "CheckIdentical", "Retcode", "BattleAvatarList", "MismatchTurnCount", "DropData", "StageId", "EventId", "GGMPFNKOFKD", "KJCHGEHDLNO", "EndStatus", "MultipleDropData", "BattleId" }, null, null, null, null)
           }));

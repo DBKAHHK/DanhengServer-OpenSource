@@ -73,7 +73,6 @@ public class GridFightManager(PlayerInstance player) : BasePlayerManager(player)
             GridFightGameValueInfo = ToFightGameValueInfo(),
             Exp = new GridFightExpInfo
             {
-                GridFightLevel = 1,
                 GridWeeklyExtraExp = 1
             },
             MGGGAJJBAMN = 1,

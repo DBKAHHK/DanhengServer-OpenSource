@@ -153,6 +153,9 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
 
     public override GridFightGameInfo ToProto()
     {
+        var roleComp = Inst.GetComponent<GridFightRoleComponent>();
+        var itemsComp = Inst.GetComponent<GridFightItemsComponent>();
+
         return new GridFightGameInfo
         {
             GridBasicInfo = new GridFightGameBasicInfo
@@ -165,7 +168,7 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
                 GridFightMaxFieldCount = Data.MaxAvatarNum,
                 GridFightLineupHp = Data.CurHp,
                 GridFightCurGold = Data.CurGold,
-                GridFightMaxGold = 2000,
+                GridFightMaxInterestGold = 5,
                 GridFightComboWinNum = Data.ComboNum,
                 OCMGMEHECBB = new OPIBBPCHFII
                 {
@@ -175,10 +178,42 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
                 {
                     LockReason = (GridFightLockReason)Data.LockReason,
                     LockType = (GridFightLockType)Data.LockType
-                }
+                },
+                GridFightTargetGuideCode = Data.GuideCode,
+                TrackTraitIdList = { Data.TrackingTraits },
+                RoleTrackEquipmentList = { Data.TrackingEquipments.Select(x => x.ToProto(roleComp, itemsComp)) }
             }
         };
     }
 
     #endregion
+}
+
+public static class GridFightBasicComponentExtensions
+{
+    public static RoleTrackEquipmentInfo ToProto(this GridFightEquipmentTrackInfoPb equip, GridFightRoleComponent role, GridFightItemsComponent items)
+    {
+        var info = new RoleTrackEquipmentInfo
+        {
+            TrackRoleId = equip.RoleId,
+            TrackPriority = equip.Priority,
+            GridFightItemList = { equip.EquipmentIds },
+        };
+
+        var targetRole = role.Data.Roles
+            .FirstOrDefault(x => x.RoleId == equip.RoleId && x.Pos <= GridFightRoleComponent.PrepareAreaPos);
+
+        if (targetRole == null) return info;
+        
+        foreach (var uniqueId in targetRole.EquipmentIds)
+        {
+            var item = items.Data.EquipmentItems.FirstOrDefault(x => x.UniqueId == uniqueId);
+            if (item != null && equip.EquipmentIds.Contains(item.ItemId))
+            {
+                info.TrackEquippedIdList.Add(item.ItemId);
+            }
+        }
+
+        return info;
+    }
 }

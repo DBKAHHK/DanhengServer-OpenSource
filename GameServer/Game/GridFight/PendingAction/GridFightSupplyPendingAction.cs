@@ -28,7 +28,7 @@ public class GridFightSupplyPendingAction : BaseGridFightPendingAction
         CurRerollNum++;
 
         RoleList.Clear();
-        for (var i = 0; i < 3; i++)
+        for (var i = 0; i < 5; i++)
         {
             RoleList.Add(new GridFightGameSupplyRoleInfo(GameData.GridFightRoleBasicInfoData.Keys.ToList().RandomElement()));
         }
