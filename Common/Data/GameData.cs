@@ -10,6 +10,8 @@ using EggLink.DanhengServer.Enums.TournRogue;
 using EggLink.DanhengServer.Util;
 using Newtonsoft.Json;
 using System.Collections.Concurrent;
+using EggLink.DanhengServer.Enums.Avatar;
+using EggLink.DanhengServer.Enums.Item;
 
 namespace EggLink.DanhengServer.Data;
 
@@ -49,6 +51,7 @@ public static class GameData
     #region Avatar
 
     public static Dictionary<int, AvatarConfigExcel> AvatarConfigData { get; private set; } = [];
+    public static Dictionary<uint, AvatarRelicRecommendExcel> AvatarRelicRecommendData { get; private set; } = [];
     public static Dictionary<int, AvatarGlobalBuffConfigExcel> AvatarGlobalBuffConfigData { get; private set; } = [];
 
     public static Dictionary<int, AdventureAbilityConfigListInfo> AdventureAbilityConfigListData { get; private set; } =
@@ -69,6 +72,17 @@ public static class GameData
     public static Dictionary<int, SummonUnitDataExcel> SummonUnitDataData { get; private set; } = [];
     public static Dictionary<int, DecideAvatarOrderExcel> DecideAvatarOrderData { get; private set; } = [];
     public static ConcurrentDictionary<int, CharacterConfigInfo> CharacterConfigInfoData { get; private set; } = [];
+    public static Dictionary<AvatarBaseTypeEnum, UpgradeAvatarEquipmentExcel> UpgradeAvatarEquipmentData { get; private set; } =
+        [];
+    public static Dictionary<uint, UpgradeAvatarSubTypeExcel> UpgradeAvatarSubTypeData { get; private set; } = [];
+
+    public static
+        Dictionary<UpgradeAvatarSubRelicTypeEnum, Dictionary<RarityEnum,
+            Dictionary<uint, Dictionary<RelicTypeEnum, UpgradeAvatarSubRelicExcel>>>> UpgradeAvatarSubRelicData
+    {
+        get;
+        private set;
+    } = [];
 
     #endregion
 

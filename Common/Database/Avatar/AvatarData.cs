@@ -1,8 +1,11 @@
 ﻿using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Database.Inventory;
 using EggLink.DanhengServer.Database.Player;
 using EggLink.DanhengServer.Enums.Avatar;
+using EggLink.DanhengServer.Enums.Item;
 using EggLink.DanhengServer.Proto;
+using EggLink.DanhengServer.Util;
 using SqlSugar;
 using LineupInfo = EggLink.DanhengServer.Database.Lineup.LineupInfo;
 
@@ -192,10 +195,31 @@ public class FormalAvatarInfo : BaseAvatarInfo
         };
     }
 
-    public override BattleAvatar ToBattleProto(PlayerDataCollection collection,
-        AvatarType avatarType = AvatarType.AvatarFormalType)
+    #region Battle Proto
+
+    public override BattleAvatar ToBattleProto(PlayerDataCollection collection, AvatarType avatarType = AvatarType.AvatarFormalType)
     {
-        var proto = new BattleAvatar
+        var proto = CreateBaseProto(collection, avatarType);
+        var isUpgradable = IsUpgradableType(avatarType);
+
+        if (!GameData.AvatarConfigData.TryGetValue(AvatarId, out var avatarConf))
+            return proto;
+
+        if (isUpgradable)
+            ApplyMaxLevel(proto);
+
+        ProcessSkills(proto, isUpgradable);
+        ProcessRelics(proto, collection, isUpgradable);
+        ProcessEquipment(proto, collection, isUpgradable, avatarConf);
+
+        return proto;
+    }
+
+    private BattleAvatar CreateBaseProto(PlayerDataCollection collection, AvatarType avatarType)
+    {
+        var isBattle = collection.LineupInfo.LineupType != 0;
+
+        return new BattleAvatar
         {
             Id = (uint)AvatarId,
             AvatarType = avatarType,
@@ -203,69 +227,245 @@ public class FormalAvatarInfo : BaseAvatarInfo
             Promotion = (uint)Promotion,
             Rank = (uint)GetCurPathInfo().Rank,
             Index = (uint)collection.LineupInfo.GetSlot(BaseAvatarId),
-            Hp = (uint)GetCurHp(collection.LineupInfo.LineupType != 0),
-            SpBar = new SpBarInfo
-            {
-                CurSp = (uint)GetCurSp(collection.LineupInfo.LineupType != 0),
-                MaxSp = 10000
-            },
+            Hp = (uint)GetCurHp(isBattle),
+            SpBar = new SpBarInfo { CurSp = (uint)GetCurSp(isBattle), MaxSp = 10000 },
             WorldLevel = (uint)collection.PlayerData.WorldLevel,
             AvatarEnhanceId = (uint)GetCurPathInfo().EnhanceId
         };
+    }
 
-        foreach (var skill in GetCurPathInfo().GetSkillTree())
+    private static bool IsUpgradableType(AvatarType avatarType) =>
+        avatarType is AvatarType.AvatarGridFightType or AvatarType.AvatarUpgradeAvailableType;
+
+    private static void ApplyMaxLevel(BattleAvatar proto)
+    {
+        proto.Level = 80;
+        proto.Promotion = 6;
+    }
+
+    private void ProcessSkills(BattleAvatar proto, bool isUpgradable)
+    {
+        foreach (var (skillId, level) in GetCurPathInfo().GetSkillTree())
+        {
+            var finalLevel = isUpgradable ? GetUpgradedSkillLevel(skillId, level) : level;
+
             proto.SkilltreeList.Add(new AvatarSkillTree
             {
-                PointId = (uint)skill.Key,
-                Level = (uint)skill.Value
-            });
-
-        foreach (var relic in GetCurPathInfo().Relic)
-        {
-            var item = collection.InventoryData.RelicItems?.Find(item => item.UniqueId == relic.Value);
-            if (item != null)
-            {
-                var protoRelic = new BattleRelic
-                {
-                    Id = (uint)item.ItemId,
-                    UniqueId = (uint)item.UniqueId,
-                    Level = (uint)item.Level,
-                    MainAffixId = (uint)item.MainAffix
-                };
-
-                if (item.SubAffixes.Count >= 1)
-                    foreach (var subAffix in item.SubAffixes)
-                        protoRelic.SubAffixList.Add(subAffix.ToProto());
-
-                proto.RelicList.Add(protoRelic);
-            }
-        }
-
-        if (GetCurPathInfo().EquipId != 0)
-        {
-            var item = collection.InventoryData.EquipmentItems.Find(item => item.UniqueId == GetCurPathInfo().EquipId);
-            if (item != null)
-                proto.EquipmentList.Add(new BattleEquipment
-                {
-                    Id = (uint)item.ItemId,
-                    Level = (uint)item.Level,
-                    Promotion = (uint)item.Promotion,
-                    Rank = (uint)item.Rank
-                });
-        }
-        else if (GetCurPathInfo().EquipData != null)
-        {
-            proto.EquipmentList.Add(new BattleEquipment
-            {
-                Id = (uint)GetCurPathInfo().EquipData!.ItemId,
-                Level = (uint)GetCurPathInfo().EquipData!.Level,
-                Promotion = (uint)GetCurPathInfo().EquipData!.Promotion,
-                Rank = (uint)GetCurPathInfo().EquipData!.Rank
+                PointId = (uint)skillId,
+                Level = (uint)finalLevel
             });
         }
-
-        return proto;
     }
+
+    private static int GetUpgradedSkillLevel(int skillId, int currentLevel)
+    {
+        var maxLevel = GameData.AvatarSkillTreeConfigData.GetValueOrDefault(skillId * 100 + currentLevel)?.MaxLevel ?? 1;
+        return Math.Max(Math.Max(1, maxLevel - 2), currentLevel);
+    }
+
+    private void ProcessRelics(BattleAvatar proto, PlayerDataCollection collection, bool isUpgradable)
+    {
+        var relicUpgradeType = GameData.UpgradeAvatarSubTypeData.GetValueOrDefault((uint)AvatarId)?.SubType
+                             ?? UpgradeAvatarSubRelicTypeEnum.Base;
+        var relicRecommend = GameData.AvatarRelicRecommendData.GetValueOrDefault((uint)AvatarId);
+
+        // Ensure all relic slots exist
+        var equippedRelics = GetCurPathInfo().Relic;
+        for (var slot = 1; slot <= 6; slot++)
+            equippedRelics.TryAdd(slot, 0);
+
+        foreach (var (slot, relicId) in equippedRelics)
+        {
+            var relic = CreateRelicForSlot(slot, relicId, collection, isUpgradable, relicUpgradeType, relicRecommend);
+            if (relic != null)
+                proto.RelicList.Add(relic);
+        }
+    }
+
+    private BattleRelic? CreateRelicForSlot(int slot, int relicId, PlayerDataCollection collection,
+        bool isUpgradable, UpgradeAvatarSubRelicTypeEnum upgradeType, AvatarRelicRecommendExcel? recommend)
+    {
+        var item = collection.InventoryData.RelicItems.Find(x => x.UniqueId == relicId);
+
+        // Use existing relic if not upgradable or already maxed
+        if (item != null && (!isUpgradable || item.Level >= 15 || recommend == null))
+            return CreateRelicFromItem(item);
+
+        // Create internal relic for upgrade scenario
+        return isUpgradable ? CreateInternalRelic(slot, upgradeType, recommend) : null;
+    }
+
+    private static BattleRelic CreateRelicFromItem(ItemData item)
+    {
+        var relic = new BattleRelic
+        {
+            Id = (uint)item.ItemId,
+            UniqueId = (uint)item.UniqueId,
+            Level = (uint)item.Level,
+            MainAffixId = (uint)item.MainAffix
+        };
+
+        item.SubAffixes.ForEach(sub => relic.SubAffixList.Add(sub.ToProto()));
+        return relic;
+    }
+
+    private BattleRelic? CreateInternalRelic(int slot, UpgradeAvatarSubRelicTypeEnum upgradeType, AvatarRelicRecommendExcel? recommend)
+    {
+        if (recommend == null) return null;
+
+        var slotType = (RelicTypeEnum)slot;
+        var relicSet = GetRecommendedRelicSet(slot, recommend);
+        var relicInfo = GetRelicUpgradeInfo(upgradeType, slotType);
+        var relicItem = FindRelicConfig(relicSet, slotType);
+
+        if (relicInfo == null || relicItem == null) return null;
+
+        var mainAffixId = GetMainAffixId(slot, recommend, relicItem);
+        if (mainAffixId == 0) return null;
+
+        return BuildBattleRelic(relicItem, mainAffixId, relicInfo);
+    }
+
+    private static uint GetRecommendedRelicSet(int slot, AvatarRelicRecommendExcel recommend) =>
+        slot <= 4 ? recommend.Set4IDList.First() : recommend.Set2IDList.First();
+
+    private UpgradeAvatarSubRelicExcel? GetRelicUpgradeInfo(UpgradeAvatarSubRelicTypeEnum upgradeType, RelicTypeEnum slotType) =>
+        GameData.UpgradeAvatarSubRelicData.GetValueOrDefault(upgradeType, [])
+            .GetValueOrDefault(RarityEnum.CombatPowerRelicRarity5, [])
+            .GetValueOrDefault(15u, [])
+            .GetValueOrDefault(slotType);
+
+    private static RelicConfigExcel? FindRelicConfig(uint relicSet, RelicTypeEnum slotType) =>
+        GameData.RelicConfigData.Values.FirstOrDefault(x =>
+            x.SetID == relicSet && x.Rarity == RarityEnum.CombatPowerRelicRarity5 && x.Type == slotType);
+
+    private uint GetMainAffixId(int slot, AvatarRelicRecommendExcel recommend, RelicConfigExcel relicItem)
+    {
+        var mainAffix = recommend.PropertyList.FirstOrDefault(x => x.RelicType == (RelicTypeEnum)slot)?.PropertyType;
+
+        if (mainAffix == null)
+            return GetRandomRelicMainAffix(relicItem.ID);
+
+        return (uint)(GameData.RelicMainAffixData[relicItem.MainAffixGroup].Values
+            .FirstOrDefault(x => x.Property == mainAffix)?.AffixID ?? 0);
+    }
+
+    private static BattleRelic BuildBattleRelic(RelicConfigExcel relicItem, uint mainAffixId, UpgradeAvatarSubRelicExcel relicInfo)
+    {
+        var battleRelic = new BattleRelic
+        {
+            Id = (uint)relicItem.ID,
+            Level = 15,
+            MainAffixId = mainAffixId
+        };
+
+        foreach (var relic in relicInfo.SubAffixes)
+        {
+            var subAffixConf = GameData.RelicSubAffixData[relicItem.SubAffixGroup].Values
+                .FirstOrDefault(x => x.Property == relic.AffixProperty);
+            if (subAffixConf == null) continue;
+
+            battleRelic.SubAffixList.Add(new RelicAffix
+            {
+                AffixId = (uint)subAffixConf.AffixID,
+                Cnt = relic.AffixCount,
+                Step = (uint)(relic.AffixCount * subAffixConf.StepNum)
+            });
+        }
+
+        return battleRelic;
+    }
+
+    private void ProcessEquipment(BattleAvatar proto, PlayerDataCollection collection, bool isUpgradable, AvatarConfigExcel avatarConf)
+    {
+        var equipId = GetCurPathInfo().EquipId;
+        var equipData = GetCurPathInfo().EquipData;
+
+        if (equipId != 0)
+        {
+            var item = collection.InventoryData.EquipmentItems.Find(x => x.UniqueId == equipId);
+            if (item != null)
+                proto.EquipmentList.Add(CreateEquipmentFromItem(item, isUpgradable, avatarConf));
+        }
+        else if (equipData != null)
+        {
+            proto.EquipmentList.Add(CreateEquipmentFromData(equipData));
+        }
+        else if (isUpgradable)
+        {
+            var internalEquip = CreateInternalEquipment(avatarConf);
+            if (internalEquip != null)
+                proto.EquipmentList.Add(internalEquip);
+        }
+    }
+
+    private BattleEquipment CreateEquipmentFromItem(ItemData item, bool isUpgradable, AvatarConfigExcel avatarConf)
+    {
+        var (itemId, level, promotion, rank) = (item.ItemId, item.Level, item.Promotion, item.Rank);
+
+        if (isUpgradable)
+            (itemId, level, promotion, rank) = UpgradeEquipment(itemId, rank, avatarConf);
+
+        return new BattleEquipment
+        {
+            Id = (uint)itemId,
+            Level = (uint)level,
+            Promotion = (uint)promotion,
+            Rank = (uint)rank
+        };
+    }
+
+    private (int itemId, int level, int promotion, int rank) UpgradeEquipment(int itemId, int rank, AvatarConfigExcel avatarConf)
+    {
+        if (GameData.EquipmentConfigData.TryGetValue(itemId, out var equipConf) &&
+            equipConf.Rarity is RarityEnum.CombatPowerLightconeRarity3)
+        {
+            if (GameData.UpgradeAvatarEquipmentData.TryGetValue(avatarConf.AvatarBaseType, out var equipInfo))
+            {
+                itemId = (int)equipInfo.EquipmentId;
+                equipConf = GameData.EquipmentConfigData.GetValueOrDefault(itemId);
+            }
+
+            return (itemId, 80, equipConf?.MaxPromotion ?? 6, 1);
+        }
+
+        return (itemId, 80, 6, rank);
+    }
+
+    private static BattleEquipment CreateEquipmentFromData(ItemData data) => new()
+    {
+        Id = (uint)data.ItemId,
+        Level = (uint)data.Level,
+        Promotion = (uint)data.Promotion,
+        Rank = (uint)data.Rank
+    };
+
+    private static BattleEquipment? CreateInternalEquipment(AvatarConfigExcel avatarConf)
+    {
+        if (!GameData.UpgradeAvatarEquipmentData.TryGetValue(avatarConf.AvatarBaseType, out var equipInfo))
+            return null;
+
+        return new BattleEquipment
+        {
+            Id = equipInfo.EquipmentId,
+            Level = 80,
+            Promotion = 6,
+            Rank = 1
+        };
+    }
+
+    public uint GetRandomRelicMainAffix(int itemId)
+    {
+        GameData.RelicConfigData.TryGetValue(itemId, out var config);
+        if (config == null) return 0;
+        GameData.RelicMainAffixData.TryGetValue(config.MainAffixGroup, out var affixes);
+        if (affixes == null) return 0;
+        List<uint> affixList = [];
+        affixList.AddRange(from affix in affixes.Values select (uint)affix.AffixID);
+        return affixList.RandomElement();
+    }
+
+    #endregion
 
     public ChallengePeakAvatar ToPeakAvatarProto()
     {

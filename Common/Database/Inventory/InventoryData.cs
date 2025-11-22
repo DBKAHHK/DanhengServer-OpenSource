@@ -98,8 +98,7 @@ public class ItemData
         {
             var subId = subAffixKeys.RandomElement();
             if (SubAffixes.Any(x => x.Id == subId)) continue;
-            if (subAffixConfig[subId] != null &&
-                subAffixConfig[subId].Property == mainProperty) continue;
+            if (subAffixConfig[subId].Property == mainProperty) continue;
 
             SubAffixes.Add(new ItemSubAffix(subAffixConfig[subId], 1));
             count--;

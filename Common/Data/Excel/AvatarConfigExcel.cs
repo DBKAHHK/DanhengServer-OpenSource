@@ -27,6 +27,9 @@ public class AvatarConfigExcel : ExcelResource
     [JsonConverter(typeof(StringEnumConverter))]
     public DamageTypeEnum DamageType { get; set; } = 0;
 
+    [JsonConverter(typeof(StringEnumConverter))]
+    public AvatarBaseTypeEnum AvatarBaseType { get; set; }
+
     public override int GetId()
     {
         return AvatarID;

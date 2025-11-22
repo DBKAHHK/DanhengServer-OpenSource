@@ -1,4 +1,8 @@
-﻿namespace EggLink.DanhengServer.Data.Excel;
+﻿using EggLink.DanhengServer.Enums.Avatar;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace EggLink.DanhengServer.Data.Excel;
 
 [ResourceEntity("RelicMainAffixConfig.json")]
 public class RelicMainAffixConfigExcel : ExcelResource
@@ -6,7 +10,8 @@ public class RelicMainAffixConfigExcel : ExcelResource
     public int GroupID { get; set; }
     public int AffixID { get; set; }
 
-    public string? Property { get; set; }
+    [JsonConverter(typeof(StringEnumConverter))]
+    public AvatarPropertyTypeEnum Property { get; set; }
 
     public override int GetId()
     {
