@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using System.IO.Compression;
+﻿using EggLink.DanhengServer.Command;
 using EggLink.DanhengServer.Command.Command;
 using EggLink.DanhengServer.Configuration;
 using EggLink.DanhengServer.Data;
@@ -19,6 +18,8 @@ using EggLink.DanhengServer.Program.Handbook;
 using EggLink.DanhengServer.Util;
 using EggLink.DanhengServer.WebServer;
 using EggLink.DanhengServer.WebServer.Server;
+using System.Globalization;
+using System.IO.Compression;
 
 namespace EggLink.DanhengServer.Program.Program;
 
@@ -31,6 +32,8 @@ public class EntryPoint
 
     public static async Task Main(string[] args)
     {
+        IConsole.InitConsole();
+        IConsole.RedrawInput(IConsole.Input);
         AppDomain.CurrentDomain.ProcessExit += (_, _) =>
         {
             Logger.Info(I18NManager.Translate("Server.ServerInfo.Shutdown"));
@@ -417,7 +420,13 @@ public class EntryPoint
 
         ResourceManager.IsLoaded = true;
 
-        CommandManager.Start();
+        IConsole.OnConsoleExcuteCommand += command =>
+        {
+            CommandManager.HandleCommand(command, new ConsoleCommandSender(Logger));
+            IConsole.RedrawInput(IConsole.Input);
+        };
+
+        IConsole.ListenConsole();
     }
 
     public static ConfigContainer GetConfig()

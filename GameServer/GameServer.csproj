@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>EggLink.DanhengServer.GameServer</RootNamespace>
@@ -21,11 +21,11 @@
     <ProjectReference Include="..\DanhengKcpSharp\DanhengKcpSharp.csproj" />
     <ProjectReference Include="..\Proto\Proto.csproj" />
     <ProjectReference Include="..\ServerSideProto\ServerSideProto.csproj" />
-    <PackageReference Include="Google.Protobuf" Version="3.29.1" />
-    <PackageReference Include="Google.Protobuf.Tools" Version="3.29.1" />
-    <PackageReference Include="McMaster.NETCore.Plugins" Version="1.4.0" />
-    <PackageReference Include="McMaster.NETCore.Plugins.Mvc" Version="1.4.0" />
-    <PackageReference Include="System.IO.Pipelines" Version="9.0.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.33.1" />
+    <PackageReference Include="Google.Protobuf.Tools" Version="3.33.1" />
+    <PackageReference Include="McMaster.NETCore.Plugins" Version="2.0.0" />
+    <PackageReference Include="McMaster.NETCore.Plugins.Mvc" Version="2.0.0" />
+    <PackageReference Include="System.IO.Pipelines" Version="10.0.0" />
   </ItemGroup>
 
   <ItemGroup>

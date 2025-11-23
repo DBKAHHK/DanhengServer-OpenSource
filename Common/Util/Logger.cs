@@ -13,8 +13,12 @@ public class Logger(string moduleName)
     {
         lock (Lock)
         {
+            var savedInput = IConsole.Input.ToList(); // Copy
+            IConsole.RedrawInput("", false);
             AnsiConsole.Write(new Markup($"[[[bold deepskyblue3_1]{DateTime.Now:HH:mm:ss}[/]]] " +
                                          $"[[[gray]{moduleName}[/]]] [[[{(ConsoleColor)level}]{level}[/]]] {message.Replace("[", "[[").Replace("]", "]]")}\n"));
+
+            IConsole.RedrawInput(savedInput);
 
             var logMessage = $"[{DateTime.Now:HH:mm:ss}] [{moduleName}] [{level}] {message}";
             PluginEventCommon.InvokeOnConsoleLog(logMessage);
