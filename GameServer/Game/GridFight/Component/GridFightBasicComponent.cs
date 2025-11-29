@@ -18,7 +18,8 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         CurLevel = 3,
         MaxAvatarNum = 3,
         BuyLevelCost = 4,
-        CurGold = 0
+        CurGold = 0,
+        MaxInterest = 5
     };
 
     #endregion
@@ -168,11 +169,10 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
                 GridFightMaxFieldCount = Data.MaxAvatarNum,
                 GridFightLineupHp = Data.CurHp,
                 GridFightCurGold = Data.CurGold,
-                GridFightMaxInterestGold = 5,
+                GridFightMaxInterestGold = Data.MaxInterest,
                 GridFightComboWinNum = Data.ComboNum,
                 OCMGMEHECBB = new OPIBBPCHFII
                 {
-                    IJDIAOMINLB = new BHJALAPDBLH()
                 },
                 GameLockInfo = new GridFightLockInfo
                 {
@@ -181,7 +181,8 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
                 },
                 GridFightTargetGuideCode = Data.GuideCode,
                 TrackTraitIdList = { Data.TrackingTraits },
-                RoleTrackEquipmentList = { Data.TrackingEquipments.Select(x => x.ToProto(roleComp, itemsComp)) }
+                RoleTrackEquipmentList = { Data.TrackingEquipments.Select(x => x.ToProto(roleComp, itemsComp)) },
+                GridFightMaxLevel = 10
             }
         };
     }

@@ -151,6 +151,8 @@ public class GridFightLevelComponent : BaseGridFightComponent
 
     public async ValueTask<List<BaseGridFightSyncData>> EnterNextSection(bool sendPacket = true, GridFightSrc src = GridFightSrc.KGridFightSrcBattleEnd)
     {
+        var shopComp = Inst.GetComponent<GridFightShopComponent>();
+        var basicComp = Inst.GetComponent<GridFightBasicComponent>();
         // if last section of chapter
         if (_curSectionId >= Sections[_curChapterId].Count)
         {
@@ -170,7 +172,7 @@ public class GridFightLevelComponent : BaseGridFightComponent
 
         List<BaseGridFightSyncData> syncs = [new GridFightLevelSyncData(src, this)];
 
-        syncs.AddRange(await Inst.CreatePendingAction<GridFightElitePendingAction>(sendPacket: false));
+        syncs.AddRange(await Inst.CreatePendingAction<GridFightRoundBeginPendingAction>(sendPacket: false));
         if (CurrentSection.Excel.IsAugment == 1)
         {
             // create augment action
@@ -181,14 +183,18 @@ public class GridFightLevelComponent : BaseGridFightComponent
         {
             // create supply action
             await Inst.CreatePendingAction<GridFightSupplyPendingAction>(sendPacket: false);
-            await Inst.CreatePendingAction<GridFightElitePendingAction>(sendPacket: false);
         }
         else if (CurrentSection.Excel.NodeType == GridFightNodeTypeEnum.EliteBranch)
         {
             await Inst.CreatePendingAction<GridFightEliteBranchPendingAction>(sendPacket: false);
         }
 
-        await Inst.CreatePendingAction<GridFightEnterNodePendingAction>(sendPacket: false);
+        if (CurrentSection.Excel.NodeType != GridFightNodeTypeEnum.Supply)
+            await Inst.CreatePendingAction<GridFightReturnPreparationPendingAction>(sendPacket: false);
+
+        // refresh shop
+        await shopComp.RefreshShop(true, false);
+        syncs.AddRange(new GridFightShopSyncData(src, shopComp.Data, basicComp.Data.CurLevel));
 
         if (sendPacket)
         {
@@ -683,7 +689,7 @@ public static class GridFightEncounterGenerateHelper
             targets.Add(monsters.RandomElement());
         }
 
-        waves.Add(new GridFightGameMonsterWaveInfo(1, targets, section.MonsterCamp.ID, 3));
+        waves.Add(new GridFightGameMonsterWaveInfo(1, targets, section.MonsterCamp.ID, 5));
 
         return waves;
     }
@@ -720,7 +726,7 @@ public static class GridFightEncounterGenerateHelper
     {
         List<GridFightGameMonsterWaveInfo> waves = [];
 
-        var waveNum = section.ChapterId == 3 ? 2 : 1;
+        var waveNum = section.MonsterCamp.ID == 10 ? 2 : 1;
 
         for (var i = 0; i < waveNum; i++)
         {
@@ -733,6 +739,14 @@ public static class GridFightEncounterGenerateHelper
 
                 if (bossMonsters.Count == 0)
                     continue;
+
+                if (section.MonsterCamp.ID == 10)
+                {
+                    // extra monster
+                    bossMonsters.Add(GameData.GridFightMonsterData[300303301]);
+                    bossMonsters.Add(GameData.GridFightMonsterData[300304301]);
+                    bossMonsters.Add(GameData.GridFightMonsterData[300305301]);
+                }
 
                 waves.Add(new GridFightGameMonsterWaveInfo((uint)(waves.Count + 1), bossMonsters, section.MonsterCamp.ID));
             }

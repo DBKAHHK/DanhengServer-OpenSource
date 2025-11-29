@@ -126,4 +126,34 @@ public class CommandGrid : ICommand
         await inst.GetComponent<GridFightOrbComponent>().AddOrb(orbId);
         await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.AddOrb", orbId.ToString()));
     }
+
+    [CommandMethod("consumable")]
+    public async ValueTask AddConsumable(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
+
+        var inst = arg.Target.Player!.GridFightManager?.GridFightInstance;
+        if (inst == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.NotInGame"));
+            return;
+        }
+
+        if (arg.BasicArgs.Count < 1)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
+            return;
+        }
+
+        var consumableId = (uint)arg.GetInt(0);
+
+        await inst.GetComponent<GridFightItemsComponent>().UpdateConsumable(consumableId, 1);
+        await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.AddConsumable", consumableId.ToString()));
+    }
+
+
 }

@@ -25,14 +25,15 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChtHcmlkRmlnaHRIcE1vZGlmeUluZm8ucHJvdG8aFFVwZGF0ZUdsb2JhbEhw",
-            "LnByb3RvIoIBChVHcmlkRmlnaHRIcE1vZGlmeUluZm8SDwoHcHJldl9ocBgJ",
+            "LnByb3RvIocBChVHcmlkRmlnaHRIcE1vZGlmeUluZm8SDwoHcHJldl9ocBgJ",
             "IAEoBRIPCgduZXh0X2hwGAIgASgFEh8KBnJlYXNvbhgNIAEoDjIPLlVwZGF0",
-            "ZUdsb2JhbEhwEhEKCXJlbW92ZV9ocBgBIAEoDRITCgtHTERBTkNJQ1BCTxgL",
-            "IAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ZUdsb2JhbEhwEhEKCWNoYW5nZV9ocBgBIAEoDRIYChBocF9tb2RpZnlfc291",
+            "cmNlGAsgASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.UpdateGlobalHpReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightHpModifyInfo), global::EggLink.DanhengServer.Proto.GridFightHpModifyInfo.Parser, new[]{ "PrevHp", "NextHp", "Reason", "RemoveHp", "GLDANCICPBO" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightHpModifyInfo), global::EggLink.DanhengServer.Proto.GridFightHpModifyInfo.Parser, new[]{ "PrevHp", "NextHp", "Reason", "ChangeHp", "HpModifySource" }, null, null, null, null)
           }));
     }
     #endregion
@@ -77,8 +78,8 @@ namespace EggLink.DanhengServer.Proto {
       prevHp_ = other.prevHp_;
       nextHp_ = other.nextHp_;
       reason_ = other.reason_;
-      removeHp_ = other.removeHp_;
-      gLDANCICPBO_ = other.gLDANCICPBO_;
+      changeHp_ = other.changeHp_;
+      hpModifySource_ = other.hpModifySource_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -124,27 +125,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "remove_hp" field.</summary>
-    public const int RemoveHpFieldNumber = 1;
-    private uint removeHp_;
+    /// <summary>Field number for the "change_hp" field.</summary>
+    public const int ChangeHpFieldNumber = 1;
+    private uint changeHp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint RemoveHp {
-      get { return removeHp_; }
+    public uint ChangeHp {
+      get { return changeHp_; }
       set {
-        removeHp_ = value;
+        changeHp_ = value;
       }
     }
 
-    /// <summary>Field number for the "GLDANCICPBO" field.</summary>
-    public const int GLDANCICPBOFieldNumber = 11;
-    private uint gLDANCICPBO_;
+    /// <summary>Field number for the "hp_modify_source" field.</summary>
+    public const int HpModifySourceFieldNumber = 11;
+    private uint hpModifySource_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint GLDANCICPBO {
-      get { return gLDANCICPBO_; }
+    public uint HpModifySource {
+      get { return hpModifySource_; }
       set {
-        gLDANCICPBO_ = value;
+        hpModifySource_ = value;
       }
     }
 
@@ -166,8 +167,8 @@ namespace EggLink.DanhengServer.Proto {
       if (PrevHp != other.PrevHp) return false;
       if (NextHp != other.NextHp) return false;
       if (Reason != other.Reason) return false;
-      if (RemoveHp != other.RemoveHp) return false;
-      if (GLDANCICPBO != other.GLDANCICPBO) return false;
+      if (ChangeHp != other.ChangeHp) return false;
+      if (HpModifySource != other.HpModifySource) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -178,8 +179,8 @@ namespace EggLink.DanhengServer.Proto {
       if (PrevHp != 0) hash ^= PrevHp.GetHashCode();
       if (NextHp != 0) hash ^= NextHp.GetHashCode();
       if (Reason != global::EggLink.DanhengServer.Proto.UpdateGlobalHp.KUpdateGlobalHpNone) hash ^= Reason.GetHashCode();
-      if (RemoveHp != 0) hash ^= RemoveHp.GetHashCode();
-      if (GLDANCICPBO != 0) hash ^= GLDANCICPBO.GetHashCode();
+      if (ChangeHp != 0) hash ^= ChangeHp.GetHashCode();
+      if (HpModifySource != 0) hash ^= HpModifySource.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -198,9 +199,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RemoveHp != 0) {
+      if (ChangeHp != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(RemoveHp);
+        output.WriteUInt32(ChangeHp);
       }
       if (NextHp != 0) {
         output.WriteRawTag(16);
@@ -210,9 +211,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteInt32(PrevHp);
       }
-      if (GLDANCICPBO != 0) {
+      if (HpModifySource != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(GLDANCICPBO);
+        output.WriteUInt32(HpModifySource);
       }
       if (Reason != global::EggLink.DanhengServer.Proto.UpdateGlobalHp.KUpdateGlobalHpNone) {
         output.WriteRawTag(104);
@@ -228,9 +229,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RemoveHp != 0) {
+      if (ChangeHp != 0) {
         output.WriteRawTag(8);
-        output.WriteUInt32(RemoveHp);
+        output.WriteUInt32(ChangeHp);
       }
       if (NextHp != 0) {
         output.WriteRawTag(16);
@@ -240,9 +241,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteInt32(PrevHp);
       }
-      if (GLDANCICPBO != 0) {
+      if (HpModifySource != 0) {
         output.WriteRawTag(88);
-        output.WriteUInt32(GLDANCICPBO);
+        output.WriteUInt32(HpModifySource);
       }
       if (Reason != global::EggLink.DanhengServer.Proto.UpdateGlobalHp.KUpdateGlobalHpNone) {
         output.WriteRawTag(104);
@@ -267,11 +268,11 @@ namespace EggLink.DanhengServer.Proto {
       if (Reason != global::EggLink.DanhengServer.Proto.UpdateGlobalHp.KUpdateGlobalHpNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
       }
-      if (RemoveHp != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RemoveHp);
+      if (ChangeHp != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ChangeHp);
       }
-      if (GLDANCICPBO != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GLDANCICPBO);
+      if (HpModifySource != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HpModifySource);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -294,11 +295,11 @@ namespace EggLink.DanhengServer.Proto {
       if (other.Reason != global::EggLink.DanhengServer.Proto.UpdateGlobalHp.KUpdateGlobalHpNone) {
         Reason = other.Reason;
       }
-      if (other.RemoveHp != 0) {
-        RemoveHp = other.RemoveHp;
+      if (other.ChangeHp != 0) {
+        ChangeHp = other.ChangeHp;
       }
-      if (other.GLDANCICPBO != 0) {
-        GLDANCICPBO = other.GLDANCICPBO;
+      if (other.HpModifySource != 0) {
+        HpModifySource = other.HpModifySource;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -316,7 +317,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            RemoveHp = input.ReadUInt32();
+            ChangeHp = input.ReadUInt32();
             break;
           }
           case 16: {
@@ -328,7 +329,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 88: {
-            GLDANCICPBO = input.ReadUInt32();
+            HpModifySource = input.ReadUInt32();
             break;
           }
           case 104: {
@@ -351,7 +352,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            RemoveHp = input.ReadUInt32();
+            ChangeHp = input.ReadUInt32();
             break;
           }
           case 16: {
@@ -363,7 +364,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 88: {
-            GLDANCICPBO = input.ReadUInt32();
+            HpModifySource = input.ReadUInt32();
             break;
           }
           case 104: {

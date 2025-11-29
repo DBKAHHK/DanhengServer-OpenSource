@@ -17,6 +17,11 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
         return Data.Roles.Where(x => x.Pos > PrepareAreaPos).ToList().Count < 9;
     }
 
+    public uint GetEmptyPosCount()
+    {
+        return (uint)(9 - Data.Roles.Where(x => x.Pos > PrepareAreaPos).ToList().Count);
+    }
+
     public async ValueTask<List<BaseGridFightSyncData>> AddAvatar(uint roleId, uint tier = 1, bool sendPacket = true,
         bool checkMerge = true, GridFightSrc src = GridFightSrc.KGridFightSrcBuyGoods, uint syncGroup = 0, uint targetPos = 0, params uint[] param)
     {
@@ -282,9 +287,9 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
     {
         return new GridFightGameInfo
         {
-            GridAvatarGameInfo = new GridFightGameAvatarInfo
+            GridTeamGameInfo = new GridFightGameTeamInfo
             {
-                GridGameAvatarList = { Data.Roles.Select(x => x.ToProto()) }
+                GridGameRoleList = { Data.Roles.Select(x => x.ToProto()) }
             }
         };
     }
@@ -292,9 +297,9 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
 
 public static class GridFightRoleInfoPbExtensions
 {
-    public static GridGameAvatarInfo ToProto(this GridFightRoleInfoPb info)
+    public static GridGameRoleInfo ToProto(this GridFightRoleInfoPb info)
     {
-        return new GridGameAvatarInfo
+        return new GridGameRoleInfo
         {
             Id = info.RoleId,
             UniqueId = info.UniqueId,

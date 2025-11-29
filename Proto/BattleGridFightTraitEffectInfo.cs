@@ -25,18 +25,19 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRCYXR0bGVHcmlkRmlnaHRUcmFpdEVmZmVjdEluZm8ucHJvdG8aI0dyaWRG",
-            "aWdodFRyYWl0RWZmZWN0TGV2ZWxJbmZvLnByb3RvGhFJSEdFS0xQSUFOTC5w",
-            "cm90bxoRTE1CREFET1BDUEcucHJvdG8izwEKHkJhdHRsZUdyaWRGaWdodFRy",
-            "YWl0RWZmZWN0SW5mbxIjCgtJREhGTUJHUEFMThhlIAEoCzIMLklIR0VLTFBJ",
-            "QU5MSAASIwoLSUlCQkdKRkNIRE8YZiABKAsyDC5MTUJEQURPUENQR0gAEkEK",
-            "F3RyYWl0X2VmZmVjdF9sZXZlbF9pbmZvGGcgASgLMh4uR3JpZEZpZ2h0VHJh",
-            "aXRFZmZlY3RMZXZlbEluZm9IABIRCgllZmZlY3RfaWQYASABKA1CDQoLR01O",
-            "R0VLTkNHQUZCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJv",
-            "dG8z"));
+            "aWdodFRyYWl0RWZmZWN0TGV2ZWxJbmZvLnByb3RvGhFMTUJEQURPUENQRy5w",
+            "cm90bxomQmF0dGxlR3JpZEZpZ2h0VHJhaXRDb3JlUm9sZUluZm8ucHJvdG8i",
+            "6AEKHkJhdHRsZUdyaWRGaWdodFRyYWl0RWZmZWN0SW5mbxI8Cg90cmFpdF9j",
+            "b3JlX3JvbGUYZSABKAsyIS5CYXR0bGVHcmlkRmlnaHRUcmFpdENvcmVSb2xl",
+            "SW5mb0gAEiMKC0lJQkJHSkZDSERPGGYgASgLMgwuTE1CREFET1BDUEdIABJB",
+            "Chd0cmFpdF9lZmZlY3RfbGV2ZWxfaW5mbxhnIAEoCzIeLkdyaWRGaWdodFRy",
+            "YWl0RWZmZWN0TGV2ZWxJbmZvSAASEQoJZWZmZWN0X2lkGAEgASgNQg0KC0dN",
+            "TkdFS05DR0FGQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.IHGEKLPIANLReflection.Descriptor, global::EggLink.DanhengServer.Proto.LMBDADOPCPGReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LMBDADOPCPGReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightTraitCoreRoleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo), global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo.Parser, new[]{ "IDHFMBGPALN", "IIBBGJFCHDO", "TraitEffectLevelInfo", "EffectId" }, new[]{ "GMNGEKNCGAF" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo), global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo.Parser, new[]{ "TraitCoreRole", "IIBBGJFCHDO", "TraitEffectLevelInfo", "EffectId" }, new[]{ "GMNGEKNCGAF" }, null, null, null)
           }));
     }
     #endregion
@@ -80,8 +81,8 @@ namespace EggLink.DanhengServer.Proto {
     public BattleGridFightTraitEffectInfo(BattleGridFightTraitEffectInfo other) : this() {
       effectId_ = other.effectId_;
       switch (other.GMNGEKNCGAFCase) {
-        case GMNGEKNCGAFOneofCase.IDHFMBGPALN:
-          IDHFMBGPALN = other.IDHFMBGPALN.Clone();
+        case GMNGEKNCGAFOneofCase.TraitCoreRole:
+          TraitCoreRole = other.TraitCoreRole.Clone();
           break;
         case GMNGEKNCGAFOneofCase.IIBBGJFCHDO:
           IIBBGJFCHDO = other.IIBBGJFCHDO.Clone();
@@ -100,15 +101,15 @@ namespace EggLink.DanhengServer.Proto {
       return new BattleGridFightTraitEffectInfo(this);
     }
 
-    /// <summary>Field number for the "IDHFMBGPALN" field.</summary>
-    public const int IDHFMBGPALNFieldNumber = 101;
+    /// <summary>Field number for the "trait_core_role" field.</summary>
+    public const int TraitCoreRoleFieldNumber = 101;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.IHGEKLPIANL IDHFMBGPALN {
-      get { return gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IDHFMBGPALN ? (global::EggLink.DanhengServer.Proto.IHGEKLPIANL) gMNGEKNCGAF_ : null; }
+    public global::EggLink.DanhengServer.Proto.BattleGridFightTraitCoreRoleInfo TraitCoreRole {
+      get { return gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitCoreRole ? (global::EggLink.DanhengServer.Proto.BattleGridFightTraitCoreRoleInfo) gMNGEKNCGAF_ : null; }
       set {
         gMNGEKNCGAF_ = value;
-        gMNGEKNCGAFCase_ = value == null ? GMNGEKNCGAFOneofCase.None : GMNGEKNCGAFOneofCase.IDHFMBGPALN;
+        gMNGEKNCGAFCase_ = value == null ? GMNGEKNCGAFOneofCase.None : GMNGEKNCGAFOneofCase.TraitCoreRole;
       }
     }
 
@@ -152,7 +153,7 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "GMNGEKNCGAF" oneof.</summary>
     public enum GMNGEKNCGAFOneofCase {
       None = 0,
-      IDHFMBGPALN = 101,
+      TraitCoreRole = 101,
       IIBBGJFCHDO = 102,
       TraitEffectLevelInfo = 103,
     }
@@ -185,7 +186,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(IDHFMBGPALN, other.IDHFMBGPALN)) return false;
+      if (!object.Equals(TraitCoreRole, other.TraitCoreRole)) return false;
       if (!object.Equals(IIBBGJFCHDO, other.IIBBGJFCHDO)) return false;
       if (!object.Equals(TraitEffectLevelInfo, other.TraitEffectLevelInfo)) return false;
       if (EffectId != other.EffectId) return false;
@@ -197,7 +198,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IDHFMBGPALN) hash ^= IDHFMBGPALN.GetHashCode();
+      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitCoreRole) hash ^= TraitCoreRole.GetHashCode();
       if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IIBBGJFCHDO) hash ^= IIBBGJFCHDO.GetHashCode();
       if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitEffectLevelInfo) hash ^= TraitEffectLevelInfo.GetHashCode();
       if (EffectId != 0) hash ^= EffectId.GetHashCode();
@@ -224,9 +225,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(EffectId);
       }
-      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IDHFMBGPALN) {
+      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitCoreRole) {
         output.WriteRawTag(170, 6);
-        output.WriteMessage(IDHFMBGPALN);
+        output.WriteMessage(TraitCoreRole);
       }
       if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IIBBGJFCHDO) {
         output.WriteRawTag(178, 6);
@@ -250,9 +251,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(EffectId);
       }
-      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IDHFMBGPALN) {
+      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitCoreRole) {
         output.WriteRawTag(170, 6);
-        output.WriteMessage(IDHFMBGPALN);
+        output.WriteMessage(TraitCoreRole);
       }
       if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IIBBGJFCHDO) {
         output.WriteRawTag(178, 6);
@@ -272,8 +273,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IDHFMBGPALN) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(IDHFMBGPALN);
+      if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitCoreRole) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TraitCoreRole);
       }
       if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IIBBGJFCHDO) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(IIBBGJFCHDO);
@@ -300,11 +301,11 @@ namespace EggLink.DanhengServer.Proto {
         EffectId = other.EffectId;
       }
       switch (other.GMNGEKNCGAFCase) {
-        case GMNGEKNCGAFOneofCase.IDHFMBGPALN:
-          if (IDHFMBGPALN == null) {
-            IDHFMBGPALN = new global::EggLink.DanhengServer.Proto.IHGEKLPIANL();
+        case GMNGEKNCGAFOneofCase.TraitCoreRole:
+          if (TraitCoreRole == null) {
+            TraitCoreRole = new global::EggLink.DanhengServer.Proto.BattleGridFightTraitCoreRoleInfo();
           }
-          IDHFMBGPALN.MergeFrom(other.IDHFMBGPALN);
+          TraitCoreRole.MergeFrom(other.TraitCoreRole);
           break;
         case GMNGEKNCGAFOneofCase.IIBBGJFCHDO:
           if (IIBBGJFCHDO == null) {
@@ -340,12 +341,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 810: {
-            global::EggLink.DanhengServer.Proto.IHGEKLPIANL subBuilder = new global::EggLink.DanhengServer.Proto.IHGEKLPIANL();
-            if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IDHFMBGPALN) {
-              subBuilder.MergeFrom(IDHFMBGPALN);
+            global::EggLink.DanhengServer.Proto.BattleGridFightTraitCoreRoleInfo subBuilder = new global::EggLink.DanhengServer.Proto.BattleGridFightTraitCoreRoleInfo();
+            if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitCoreRole) {
+              subBuilder.MergeFrom(TraitCoreRole);
             }
             input.ReadMessage(subBuilder);
-            IDHFMBGPALN = subBuilder;
+            TraitCoreRole = subBuilder;
             break;
           }
           case 818: {
@@ -386,12 +387,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 810: {
-            global::EggLink.DanhengServer.Proto.IHGEKLPIANL subBuilder = new global::EggLink.DanhengServer.Proto.IHGEKLPIANL();
-            if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.IDHFMBGPALN) {
-              subBuilder.MergeFrom(IDHFMBGPALN);
+            global::EggLink.DanhengServer.Proto.BattleGridFightTraitCoreRoleInfo subBuilder = new global::EggLink.DanhengServer.Proto.BattleGridFightTraitCoreRoleInfo();
+            if (gMNGEKNCGAFCase_ == GMNGEKNCGAFOneofCase.TraitCoreRole) {
+              subBuilder.MergeFrom(TraitCoreRole);
             }
             input.ReadMessage(subBuilder);
-            IDHFMBGPALN = subBuilder;
+            TraitCoreRole = subBuilder;
             break;
           }
           case 818: {

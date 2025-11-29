@@ -41,7 +41,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
 
         var expNum = 2u;
         var baseCoin = levelComp.CurrentSection.Excel.BasicGoldRewardNum;
-        var interestCoin = basicComp.Data.CurGold / 10;
+        var interestCoin = Math.Min(basicComp.Data.CurGold / 10, basicComp.Data.MaxInterest);
         var progress = req.Stt.GridFightBattleStt.FinishProgress;
 
         if (progress == 100)
@@ -121,8 +121,8 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         _ = GetComponent<GridFightShopComponent>().RefreshShop(true, false);
 
         _ = CreatePendingAction<GridFightPortalBuffPendingAction>(sendPacket:false);
-        _ = CreatePendingAction<GridFightElitePendingAction>(sendPacket: false);
-        _ = CreatePendingAction<GridFightEnterNodePendingAction>(sendPacket: false);
+        _ = CreatePendingAction<GridFightRoundBeginPendingAction>(sendPacket: false);
+        _ = CreatePendingAction<GridFightReturnPreparationPendingAction>(sendPacket: false);
     }
 
     public T GetComponent<T>() where T : BaseGridFightComponent
@@ -189,9 +189,10 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         return pos;
     }
 
-    public async ValueTask<List<BaseGridFightSyncData>> CreatePendingAction<T>(GridFightSrc src = GridFightSrc.KGridFightSrcEnterNode, bool sendPacket = true) where T: BaseGridFightPendingAction
+    public async ValueTask<List<BaseGridFightSyncData>> CreatePendingAction<T>(GridFightSrc src = GridFightSrc.KGridFightSrcEnterNode, bool sendPacket = true, params object[] initializeParam) where T: BaseGridFightPendingAction
     {
-        var action = (T)Activator.CreateInstance(typeof(T), this)!;
+        object[] paramList = [this, ..initializeParam];
+        var action = (T)Activator.CreateInstance(typeof(T), paramList)!;
         var basicComp = GetComponent<GridFightBasicComponent>();
 
         AddPendingAction(action);
@@ -224,6 +225,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         switch (req.GridFightActionTypeCase)
         {
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.PortalBuffAction:
+            {
                 src = GridFightSrc.KGridFightSrcSelectPortalBuff;
 
                 syncs.AddRange(await levelComp.AddPortalBuff(req.PortalBuffAction.SelectPortalBuffId, false, src));
@@ -239,10 +241,13 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
                         GridFightSrc.KGridFightSrcInitialSupplySelect));
                 }
 
-                syncs.AddRange(await itemsComp.UpdateConsumable(350102, 1, GridFightSrc.KGridFightSrcInitialSupplySelect, false));
+                syncs.AddRange(await itemsComp.UpdateConsumable(350102, 1,
+                    GridFightSrc.KGridFightSrcInitialSupplySelect, false));
 
                 break;
+            }
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.PortalBuffRerollAction:
+            {
                 if (curAction is GridFightPortalBuffPendingAction portalBuffAction)
                 {
                     isFinish = false;
@@ -250,13 +255,17 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
                 }
 
                 break;
+            }
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.AugmentAction:
+            {
                 src = GridFightSrc.KGridFightSrcSelectAugment;
 
-                syncs.AddRange(await GetComponent<GridFightAugmentComponent>().AddAugment(req.AugmentAction.AugmentId, false, src));
+                syncs.AddRange(await GetComponent<GridFightAugmentComponent>()
+                    .AddAugment(req.AugmentAction.AugmentId, false, src));
                 break;
-
+            }
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.RerollAugmentAction:
+            {
                 if (curAction is GridFightAugmentPendingAction augmentAction)
                 {
                     isFinish = false;
@@ -264,16 +273,18 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
                 }
 
                 break;
-            case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.EliteAction:
-                break;
+            }
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.EliteBranchAction:
+            {
                 var target = req.EliteBranchAction.EliteBranchId;
                 levelComp.CurrentSection.BranchId = target;
                 // sync
                 syncs.Add(new GridFightLevelSyncData(GridFightSrc.KGridFightSrcNone, levelComp));
 
                 break;
+            }
             case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.SupplyAction:
+            {
                 src = GridFightSrc.KGridFightSrcSelectSupply;
 
                 PendingActions.Remove(curAction.QueuePosition);
@@ -282,16 +293,34 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
                 {
                     foreach (var supply in req.SupplyAction.SelectSupplyIndexes)
                     {
-                        var role = supplyAction.RoleList[(int)supply];
+                        var role = supplyAction.RoleList[(int)supply - 1];
 
-                        syncs.AddRange(await GetComponent<GridFightRoleComponent>().AddAvatar(role.RoleId, 1, false, true,
-                            GridFightSrc.KGridFightSrcSelectSupply, 0, 0, req.SupplyAction.SelectSupplyIndexes.ToArray()));
+                        syncs.AddRange(await roleComp.AddAvatar(role.RoleId, 1, false,
+                            true,
+                            GridFightSrc.KGridFightSrcSelectSupply, 0, 0,
+                            req.SupplyAction.SelectSupplyIndexes.ToArray()));
+
+                            // add equipment
+                            var res = await itemsComp.AddEquipment(role.EquipmentId,
+                                GridFightSrc.KGridFightSrcSelectSupply, false,
+                                0, req.SupplyAction.SelectSupplyIndexes.ToArray());
+                            syncs.AddRange(res.Item2);
                     }
                 }
 
                 syncs.AddRange(await CheckCurNodeFinish(src));
 
                 break;
+            }
+            case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.RecommendEquipmentAction:
+            {
+                var target = req.RecommendEquipmentAction.SelectEquipmentId;
+
+                var res = await itemsComp.AddEquipment(target, GridFightSrc.KGridFightSrcNone, false, 0);
+                syncs.AddRange(res.Item2);
+
+                break;
+            }
         }
 
         if (isFinish)

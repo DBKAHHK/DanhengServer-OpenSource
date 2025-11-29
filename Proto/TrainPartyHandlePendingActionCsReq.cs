@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CihUcmFpblBhcnR5SGFuZGxlUGVuZGluZ0FjdGlvbkNzUmVxLnByb3RvGhFQ",
-            "RUNHTEtDSUNHTy5wcm90bxoRRU5DSktQR09JQUwucHJvdG8aEUdMQkZCTkhG",
-            "Q05PLnByb3RvGhFIUEZLR0RESUZIRy5wcm90byLjAQoiVHJhaW5QYXJ0eUhh",
+            "RUNHTEtDSUNHTy5wcm90bxoRR0xCRkJOSEZDTk8ucHJvdG8aEUhQRktHRERJ",
+            "RkhHLnByb3RvGhFFTkNKS1BHT0lBTC5wcm90byLjAQoiVHJhaW5QYXJ0eUhh",
             "bmRsZVBlbmRpbmdBY3Rpb25Dc1JlcRIkCgtJQU1LREpDRk1JQhizDSABKAsy",
             "DC5IUEZLR0RESUZIR0gAEiQKC1BNTUdPQ0pGRUVKGMUJIAEoCzIMLkdMQkZC",
             "TkhGQ05PSAASJAoLTEdCSkFFTERQTkIY3A0gASgLMgwuUEVDR0xLQ0lDR09I",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "ZXVlX3Bvc2l0aW9uGAMgASgNQg0KC0VLSUVETkNLSEhBQh6qAhtFZ2dMaW5r",
             "LkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PECGLKCICGOReflection.Descriptor, global::EggLink.DanhengServer.Proto.ENCJKPGOIALReflection.Descriptor, global::EggLink.DanhengServer.Proto.GLBFBNHFCNOReflection.Descriptor, global::EggLink.DanhengServer.Proto.HPFKGDDIFHGReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PECGLKCICGOReflection.Descriptor, global::EggLink.DanhengServer.Proto.GLBFBNHFCNOReflection.Descriptor, global::EggLink.DanhengServer.Proto.HPFKGDDIFHGReflection.Descriptor, global::EggLink.DanhengServer.Proto.ENCJKPGOIALReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TrainPartyHandlePendingActionCsReq), global::EggLink.DanhengServer.Proto.TrainPartyHandlePendingActionCsReq.Parser, new[]{ "IAMKDJCFMIB", "PMMGOCJFEEJ", "LGBJAELDPNB", "BGJMFBHCMKL", "QueuePosition" }, new[]{ "EKIEDNCKHHA" }, null, null, null)
           }));

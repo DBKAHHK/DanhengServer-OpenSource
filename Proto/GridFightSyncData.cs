@@ -24,72 +24,72 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightSyncDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHcmlkRmlnaHRTeW5jRGF0YS5wcm90bxocR3JpZEZpZ2h0RGFtYWdlU3R0",
-            "SW5mby5wcm90bxoXR3JpZEZpZ2h0TG9ja1R5cGUucHJvdG8aH0dyaWRGaWdo",
-            "dFR1dG9yaWFsU3luY0luZm8ucHJvdG8aG0dyaWRGaWdodEdhbWVJdGVtSW5m",
-            "by5wcm90bxogR3JpZEZpZ2h0U2VjdGlvblJlY29yZEluZm8ucHJvdG8aIFJv",
-            "bGVUcmFja0VxdWlwbWVudFN5bmNJbmZvLnByb3RvGhpHcmlkRmlnaHRPcmJT",
-            "eW5jSW5mby5wcm90bxoYR3JpZEdhbWVBdmF0YXJJbmZvLnByb3RvGhxHcmlk",
-            "RmlnaHRMZXZlbFN5bmNJbmZvLnByb3RvGhdHcmlkR2FtZUZvcmdlSW5mby5w",
-            "cm90bxofR3JpZEZpZ2h0TGluZXVwSHBTeW5jSW5mby5wcm90bxohR3JpZEZp",
-            "Z2h0UG9ydGFsQnVmZlN5bmNJbmZvLnByb3RvGiJHcmlkRmlnaHRFbGl0ZUJy",
-            "YW5jaFN5bmNJbmZvLnByb3RvGh5HcmlkRmlnaHRBdWdtZW50U3luY0luZm8u",
-            "cHJvdG8aIUdyaWRGaWdodFRyYWl0VHJhY2tTeW5jSW5mby5wcm90bxoRRENC",
-            "TEdFQUhPRUcucHJvdG8aFUdyaWRHYW1lTnBjSW5mby5wcm90bxoXR3JpZEZp",
-            "Z2h0TG9ja0luZm8ucHJvdG8aHEdyaWRGaWdodFBlbmRpbmdBY3Rpb24ucHJv",
-            "dG8aG0dyaWRGaWdodFNob3BTeW5jSW5mby5wcm90bxoiR3JpZEZpZ2h0UGxh",
-            "eWVyTGV2ZWxTeW5jSW5mby5wcm90bxocR3JpZEZpZ2h0VHJhaXRTeW5jSW5m",
-            "by5wcm90bxofR3JpZEZpZ2h0R2FtZUl0ZW1TeW5jSW5mby5wcm90byKyEAoR",
-            "R3JpZEZpZ2h0U3luY0RhdGESLQoNYWRkX3JvbGVfaW5mbxiODCABKAsyEy5H",
-            "cmlkR2FtZUF2YXRhckluZm9IABIwChB1cGRhdGVfcm9sZV9pbmZvGP0JIAEo",
-            "CzITLkdyaWRHYW1lQXZhdGFySW5mb0gAEiAKFXJlbW92ZV9yb2xlX3VuaXF1",
-            "ZV9pZBifBiABKA1IABI5ChJhZGRfZ2FtZV9pdGVtX2luZm8YiQcgASgLMhou",
-            "R3JpZEZpZ2h0R2FtZUl0ZW1TeW5jSW5mb0gAEjwKFXVwZGF0ZV9nYW1lX2l0",
-            "ZW1faW5mbxi5ASABKAsyGi5HcmlkRmlnaHRHYW1lSXRlbVN5bmNJbmZvSAAS",
-            "PAoVcmVtb3ZlX2dhbWVfaXRlbV9pbmZvGP8DIAEoCzIaLkdyaWRGaWdodEdh",
-            "bWVJdGVtU3luY0luZm9IABIVCgppdGVtX3ZhbHVlGPQLIAEoDUgAEjYKDHBs",
-            "YXllcl9sZXZlbBi6CCABKAsyHS5HcmlkRmlnaHRQbGF5ZXJMZXZlbFN5bmNJ",
-            "bmZvSAASOwoUZ3JpZF9maWdodF9saW5ldXBfaHAYugogASgLMhouR3JpZEZp",
-            "Z2h0TGluZXVwSHBTeW5jSW5mb0gAEh4KE21heF9iYXR0bGVfcm9sZV9udW0Y",
-            "+gEgASgNSAASMQoOc2hvcF9zeW5jX2luZm8Y6wkgASgLMhYuR3JpZEZpZ2h0",
-            "U2hvcFN5bmNJbmZvSAASMgoOcGVuZGluZ19hY3Rpb24YzwcgASgLMhcuR3Jp",
-            "ZEZpZ2h0UGVuZGluZ0FjdGlvbkgAEj4KFXBvcnRhbF9idWZmX3N5bmNfaW5m",
-            "bxiRDiABKAsyHC5HcmlkRmlnaHRQb3J0YWxCdWZmU3luY0luZm9IABIzCg9s",
-            "ZXZlbF9zeW5jX2luZm8Y7gogASgLMhcuR3JpZEZpZ2h0TGV2ZWxTeW5jSW5m",
-            "b0gAEi8KDW9yYl9zeW5jX2luZm8Yxg4gASgLMhUuR3JpZEZpZ2h0T3JiU3lu",
-            "Y0luZm9IABJAChhzZWN0aW9uX3JlY29yZF9zeW5jX2luZm8YywMgASgLMhsu",
-            "R3JpZEZpZ2h0U2VjdGlvblJlY29yZEluZm9IABIkCgtNUENDUEdKRkJESBjx",
-            "ASABKAsyDC5EQ0JMR0VBSE9FR0gAEiMKGHJlbW92ZV9hdWdtZW50X3VuaXF1",
-            "ZV9pZBi6DSABKA1IABIkChlmaW5pc2hfcGVuZGluZ19hY3Rpb25fcG9zGKEN",
-            "IAEoDUgAEicKHGdyaWRfZmlnaHRfbWF4X2ludGVyZXN0X2dvbGQY3QwgASgN",
-            "SAASIAoVZ3JpZF9maWdodF9sZXZlbF9jb3N0GKwJIAEoDUgAEjMKD3RyYWl0",
-            "X3N5bmNfaW5mbxiaBiABKAsyFy5HcmlkRmlnaHRUcmFpdFN5bmNJbmZvSAAS",
-            "KAoJbG9ja190eXBlGPYNIAEoDjISLkdyaWRGaWdodExvY2tUeXBlSAASPgoV",
-            "dHJhaXRfdHJhY2tfc3luY19pbmZvGOoOIAEoCzIcLkdyaWRGaWdodFRyYWl0",
-            "VHJhY2tTeW5jSW5mb0gAEiMKGGdyaWRfZmlnaHRfY29tYm9fd2luX251bRiG",
-            "AyABKA1IABImChtncmlkX2ZpZ2h0X21heF9hdmF0YXJfY291bnQY9AUgASgN",
-            "SAASKQoeZ3JpZF9maWdodF9vZmZfZmllbGRfbWF4X2NvdW50GK4KIAEoDUgA",
-            "Ej4KGmdyaWRfZmlnaHRfZGFtYWdlX3N0dF9pbmZvGMMEIAEoCzIXLkdyaWRG",
-            "aWdodERhbWFnZVN0dEluZm9IABJAChZlbGl0ZV9icmFuY2hfc3luY19pbmZv",
-            "GOkPIAEoCzIdLkdyaWRGaWdodEVsaXRlQnJhbmNoU3luY0luZm9IABIpCgxh",
-            "ZGRfbnBjX2luZm8Ykw0gASgLMhAuR3JpZEdhbWVOcGNJbmZvSAASLAoPdXBk",
-            "YXRlX25wY19pbmZvGL4NIAEoCzIQLkdyaWRHYW1lTnBjSW5mb0gAEh8KFHJl",
-            "bW92ZV9ucGNfdW5pcXVlX2lkGLUBIAEoDUgAEi0KDmFkZF9mb3JnZV9pbmZv",
-            "GK4MIAEoCzISLkdyaWRHYW1lRm9yZ2VJbmZvSAASMAoRdXBkYXRlX2Zvcmdl",
-            "X2luZm8YhQIgASgLMhIuR3JpZEdhbWVGb3JnZUluZm9IABIhChZyZW1vdmVf",
-            "Zm9yZ2VfdW5pcXVlX2lkGKQGIAEoDUgAEjcKEWF1Z21lbnRfc3luY19pbmZv",
-            "GIsBIAEoCzIZLkdyaWRGaWdodEF1Z21lbnRTeW5jSW5mb0gAEkEKGWVxdWlw",
-            "bWVudF90cmFja19zeW5jX2luZm8YrAQgASgLMhsuUm9sZVRyYWNrRXF1aXBt",
-            "ZW50U3luY0luZm9IABJBCh5ncmlkX2ZpZ2h0X3N5bmNfZ2FtZV9pdGVtX2lu",
-            "Zm8YtQ8gASgLMhYuR3JpZEZpZ2h0R2FtZUl0ZW1JbmZvSAASHwoUcmVtb3Zl",
-            "X29yYl91bmlxdWVfaWQY8wUgASgNSAASFQoLS1BOQkZIRURET0YYWyABKA1I",
-            "ABI/ChhncmlkX2ZpZ2h0X3R1dG9yaWFsX3N5bmMYxAUgASgLMhouR3JpZEZp",
-            "Z2h0VHV0b3JpYWxTeW5jSW5mb0gAEi0KDnN5bmNfbG9ja19pbmZvGPgMIAEo",
-            "CzISLkdyaWRGaWdodExvY2tJbmZvSAASIQoWcmVtb3ZlX3RyYWl0X2VmZmVj",
-            "dF9pZBi9AiABKA1IAEILCglzeW5jX2l0ZW1CHqoCG0VnZ0xpbmsuRGFuaGVu",
-            "Z1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "ChdHcmlkRmlnaHRTeW5jRGF0YS5wcm90bxogR3JpZEZpZ2h0U2VjdGlvblJl",
+            "Y29yZEluZm8ucHJvdG8aF0dyaWRGaWdodExvY2tUeXBlLnByb3RvGhtHcmlk",
+            "RmlnaHRHYW1lSXRlbUluZm8ucHJvdG8aHEdyaWRGaWdodERhbWFnZVN0dElu",
+            "Zm8ucHJvdG8aEURDQkxHRUFIT0VHLnByb3RvGhtHcmlkRmlnaHRTaG9wU3lu",
+            "Y0luZm8ucHJvdG8aIUdyaWRGaWdodFRyYWl0VHJhY2tTeW5jSW5mby5wcm90",
+            "bxoiR3JpZEZpZ2h0RWxpdGVCcmFuY2hTeW5jSW5mby5wcm90bxobR3JpZEdh",
+            "bWVGb3JnZUl0ZW1JbmZvLnByb3RvGh5HcmlkRmlnaHRBdWdtZW50U3luY0lu",
+            "Zm8ucHJvdG8aFUdyaWRHYW1lTnBjSW5mby5wcm90bxofR3JpZEZpZ2h0VHV0",
+            "b3JpYWxTeW5jSW5mby5wcm90bxoXR3JpZEZpZ2h0TG9ja0luZm8ucHJvdG8a",
+            "HEdyaWRGaWdodExldmVsU3luY0luZm8ucHJvdG8aHEdyaWRGaWdodFBlbmRp",
+            "bmdBY3Rpb24ucHJvdG8aH0dyaWRGaWdodExpbmV1cEhwU3luY0luZm8ucHJv",
+            "dG8aH0dyaWRGaWdodEdhbWVJdGVtU3luY0luZm8ucHJvdG8aIUdyaWRGaWdo",
+            "dFBvcnRhbEJ1ZmZTeW5jSW5mby5wcm90bxocR3JpZEZpZ2h0VHJhaXRTeW5j",
+            "SW5mby5wcm90bxogUm9sZVRyYWNrRXF1aXBtZW50U3luY0luZm8ucHJvdG8a",
+            "FkdyaWRHYW1lUm9sZUluZm8ucHJvdG8aGkdyaWRGaWdodE9yYlN5bmNJbmZv",
+            "LnByb3RvGiJHcmlkRmlnaHRQbGF5ZXJMZXZlbFN5bmNJbmZvLnByb3RvIrYQ",
+            "ChFHcmlkRmlnaHRTeW5jRGF0YRIrCg1hZGRfcm9sZV9pbmZvGI4MIAEoCzIR",
+            "LkdyaWRHYW1lUm9sZUluZm9IABIuChB1cGRhdGVfcm9sZV9pbmZvGP0JIAEo",
+            "CzIRLkdyaWRHYW1lUm9sZUluZm9IABIgChVyZW1vdmVfcm9sZV91bmlxdWVf",
+            "aWQYnwYgASgNSAASOQoSYWRkX2dhbWVfaXRlbV9pbmZvGIkHIAEoCzIaLkdy",
+            "aWRGaWdodEdhbWVJdGVtU3luY0luZm9IABI8ChV1cGRhdGVfZ2FtZV9pdGVt",
+            "X2luZm8YuQEgASgLMhouR3JpZEZpZ2h0R2FtZUl0ZW1TeW5jSW5mb0gAEjwK",
+            "FXJlbW92ZV9nYW1lX2l0ZW1faW5mbxj/AyABKAsyGi5HcmlkRmlnaHRHYW1l",
+            "SXRlbVN5bmNJbmZvSAASFQoKaXRlbV92YWx1ZRj0CyABKA1IABI2CgxwbGF5",
+            "ZXJfbGV2ZWwYugggASgLMh0uR3JpZEZpZ2h0UGxheWVyTGV2ZWxTeW5jSW5m",
+            "b0gAEjsKFGdyaWRfZmlnaHRfbGluZXVwX2hwGLoKIAEoCzIaLkdyaWRGaWdo",
+            "dExpbmV1cEhwU3luY0luZm9IABIeChNtYXhfYmF0dGxlX3JvbGVfbnVtGPoB",
+            "IAEoDUgAEjEKDnNob3Bfc3luY19pbmZvGOsJIAEoCzIWLkdyaWRGaWdodFNo",
+            "b3BTeW5jSW5mb0gAEjIKDnBlbmRpbmdfYWN0aW9uGM8HIAEoCzIXLkdyaWRG",
+            "aWdodFBlbmRpbmdBY3Rpb25IABI+ChVwb3J0YWxfYnVmZl9zeW5jX2luZm8Y",
+            "kQ4gASgLMhwuR3JpZEZpZ2h0UG9ydGFsQnVmZlN5bmNJbmZvSAASMwoPbGV2",
+            "ZWxfc3luY19pbmZvGO4KIAEoCzIXLkdyaWRGaWdodExldmVsU3luY0luZm9I",
+            "ABIvCg1vcmJfc3luY19pbmZvGMYOIAEoCzIVLkdyaWRGaWdodE9yYlN5bmNJ",
+            "bmZvSAASQAoYc2VjdGlvbl9yZWNvcmRfc3luY19pbmZvGMsDIAEoCzIbLkdy",
+            "aWRGaWdodFNlY3Rpb25SZWNvcmRJbmZvSAASJAoLTVBDQ1BHSkZCREgY8QEg",
+            "ASgLMgwuRENCTEdFQUhPRUdIABIjChhyZW1vdmVfYXVnbWVudF91bmlxdWVf",
+            "aWQYug0gASgNSAASJAoZZmluaXNoX3BlbmRpbmdfYWN0aW9uX3BvcxihDSAB",
+            "KA1IABInChxncmlkX2ZpZ2h0X21heF9pbnRlcmVzdF9nb2xkGN0MIAEoDUgA",
+            "EiAKFWdyaWRfZmlnaHRfbGV2ZWxfY29zdBisCSABKA1IABIzCg90cmFpdF9z",
+            "eW5jX2luZm8YmgYgASgLMhcuR3JpZEZpZ2h0VHJhaXRTeW5jSW5mb0gAEigK",
+            "CWxvY2tfdHlwZRj2DSABKA4yEi5HcmlkRmlnaHRMb2NrVHlwZUgAEj4KFXRy",
+            "YWl0X3RyYWNrX3N5bmNfaW5mbxjqDiABKAsyHC5HcmlkRmlnaHRUcmFpdFRy",
+            "YWNrU3luY0luZm9IABIjChhncmlkX2ZpZ2h0X2NvbWJvX3dpbl9udW0YhgMg",
+            "ASgNSAASJgobZ3JpZF9maWdodF9tYXhfYXZhdGFyX2NvdW50GPQFIAEoDUgA",
+            "EikKHmdyaWRfZmlnaHRfb2ZmX2ZpZWxkX21heF9jb3VudBiuCiABKA1IABI+",
+            "ChpncmlkX2ZpZ2h0X2RhbWFnZV9zdHRfaW5mbxjDBCABKAsyFy5HcmlkRmln",
+            "aHREYW1hZ2VTdHRJbmZvSAASQAoWZWxpdGVfYnJhbmNoX3N5bmNfaW5mbxjp",
+            "DyABKAsyHS5HcmlkRmlnaHRFbGl0ZUJyYW5jaFN5bmNJbmZvSAASKQoMYWRk",
+            "X25wY19pbmZvGJMNIAEoCzIQLkdyaWRHYW1lTnBjSW5mb0gAEiwKD3VwZGF0",
+            "ZV9ucGNfaW5mbxi+DSABKAsyEC5HcmlkR2FtZU5wY0luZm9IABIfChRyZW1v",
+            "dmVfbnBjX3VuaXF1ZV9pZBi1ASABKA1IABIxCg5hZGRfZm9yZ2VfaW5mbxiu",
+            "DCABKAsyFi5HcmlkR2FtZUZvcmdlSXRlbUluZm9IABI0ChF1cGRhdGVfZm9y",
+            "Z2VfaW5mbxiFAiABKAsyFi5HcmlkR2FtZUZvcmdlSXRlbUluZm9IABIhChZy",
+            "ZW1vdmVfZm9yZ2VfdW5pcXVlX2lkGKQGIAEoDUgAEjcKEWF1Z21lbnRfc3lu",
+            "Y19pbmZvGIsBIAEoCzIZLkdyaWRGaWdodEF1Z21lbnRTeW5jSW5mb0gAEkEK",
+            "GWVxdWlwbWVudF90cmFja19zeW5jX2luZm8YrAQgASgLMhsuUm9sZVRyYWNr",
+            "RXF1aXBtZW50U3luY0luZm9IABJBCh5ncmlkX2ZpZ2h0X3N5bmNfZ2FtZV9p",
+            "dGVtX2luZm8YtQ8gASgLMhYuR3JpZEZpZ2h0R2FtZUl0ZW1JbmZvSAASHwoU",
+            "cmVtb3ZlX29yYl91bmlxdWVfaWQY8wUgASgNSAASFQoLS1BOQkZIRURET0YY",
+            "WyABKA1IABI/ChhncmlkX2ZpZ2h0X3R1dG9yaWFsX3N5bmMYxAUgASgLMhou",
+            "R3JpZEZpZ2h0VHV0b3JpYWxTeW5jSW5mb0gAEi0KDnN5bmNfbG9ja19pbmZv",
+            "GPgMIAEoCzISLkdyaWRGaWdodExvY2tJbmZvSAASIQoWcmVtb3ZlX3RyYWl0",
+            "X2VmZmVjdF9pZBi9AiABKA1IAEILCglzeW5jX2l0ZW1CHqoCG0VnZ0xpbmsu",
+            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightDamageSttInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTutorialSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSectionRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RoleTrackEquipmentSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightOrbSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameForgeInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLineupHpSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteBranchSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitTrackSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCBLGEAHOEGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameNpcInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightShopSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPlayerLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightSectionRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDamageSttInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCBLGEAHOEGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightShopSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitTrackSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteBranchSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameForgeItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameNpcInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTutorialSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLineupHpSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RoleTrackEquipmentSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameRoleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightOrbSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPlayerLevelSyncInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSyncData), global::EggLink.DanhengServer.Proto.GridFightSyncData.Parser, new[]{ "AddRoleInfo", "UpdateRoleInfo", "RemoveRoleUniqueId", "AddGameItemInfo", "UpdateGameItemInfo", "RemoveGameItemInfo", "ItemValue", "PlayerLevel", "GridFightLineupHp", "MaxBattleRoleNum", "ShopSyncInfo", "PendingAction", "PortalBuffSyncInfo", "LevelSyncInfo", "OrbSyncInfo", "SectionRecordSyncInfo", "MPCCPGJFBDH", "RemoveAugmentUniqueId", "FinishPendingActionPos", "GridFightMaxInterestGold", "GridFightLevelCost", "TraitSyncInfo", "LockType", "TraitTrackSyncInfo", "GridFightComboWinNum", "GridFightMaxAvatarCount", "GridFightOffFieldMaxCount", "GridFightDamageSttInfo", "EliteBranchSyncInfo", "AddNpcInfo", "UpdateNpcInfo", "RemoveNpcUniqueId", "AddForgeInfo", "UpdateForgeInfo", "RemoveForgeUniqueId", "AugmentSyncInfo", "EquipmentTrackSyncInfo", "GridFightSyncGameItemInfo", "RemoveOrbUniqueId", "KPNBFHEDDOF", "GridFightTutorialSync", "SyncLockInfo", "RemoveTraitEffectId" }, new[]{ "SyncItem" }, null, null, null)
           }));
@@ -278,8 +278,8 @@ namespace EggLink.DanhengServer.Proto {
     public const int AddRoleInfoFieldNumber = 1550;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GridGameAvatarInfo AddRoleInfo {
-      get { return syncItemCase_ == SyncItemOneofCase.AddRoleInfo ? (global::EggLink.DanhengServer.Proto.GridGameAvatarInfo) syncItem_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridGameRoleInfo AddRoleInfo {
+      get { return syncItemCase_ == SyncItemOneofCase.AddRoleInfo ? (global::EggLink.DanhengServer.Proto.GridGameRoleInfo) syncItem_ : null; }
       set {
         syncItem_ = value;
         syncItemCase_ = value == null ? SyncItemOneofCase.None : SyncItemOneofCase.AddRoleInfo;
@@ -290,8 +290,8 @@ namespace EggLink.DanhengServer.Proto {
     public const int UpdateRoleInfoFieldNumber = 1277;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GridGameAvatarInfo UpdateRoleInfo {
-      get { return syncItemCase_ == SyncItemOneofCase.UpdateRoleInfo ? (global::EggLink.DanhengServer.Proto.GridGameAvatarInfo) syncItem_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridGameRoleInfo UpdateRoleInfo {
+      get { return syncItemCase_ == SyncItemOneofCase.UpdateRoleInfo ? (global::EggLink.DanhengServer.Proto.GridGameRoleInfo) syncItem_ : null; }
       set {
         syncItem_ = value;
         syncItemCase_ = value == null ? SyncItemOneofCase.None : SyncItemOneofCase.UpdateRoleInfo;
@@ -830,8 +830,8 @@ namespace EggLink.DanhengServer.Proto {
     public const int AddForgeInfoFieldNumber = 1582;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GridGameForgeInfo AddForgeInfo {
-      get { return syncItemCase_ == SyncItemOneofCase.AddForgeInfo ? (global::EggLink.DanhengServer.Proto.GridGameForgeInfo) syncItem_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo AddForgeInfo {
+      get { return syncItemCase_ == SyncItemOneofCase.AddForgeInfo ? (global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo) syncItem_ : null; }
       set {
         syncItem_ = value;
         syncItemCase_ = value == null ? SyncItemOneofCase.None : SyncItemOneofCase.AddForgeInfo;
@@ -842,8 +842,8 @@ namespace EggLink.DanhengServer.Proto {
     public const int UpdateForgeInfoFieldNumber = 261;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GridGameForgeInfo UpdateForgeInfo {
-      get { return syncItemCase_ == SyncItemOneofCase.UpdateForgeInfo ? (global::EggLink.DanhengServer.Proto.GridGameForgeInfo) syncItem_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo UpdateForgeInfo {
+      get { return syncItemCase_ == SyncItemOneofCase.UpdateForgeInfo ? (global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo) syncItem_ : null; }
       set {
         syncItem_ = value;
         syncItemCase_ = value == null ? SyncItemOneofCase.None : SyncItemOneofCase.UpdateForgeInfo;
@@ -1712,13 +1712,13 @@ namespace EggLink.DanhengServer.Proto {
       switch (other.SyncItemCase) {
         case SyncItemOneofCase.AddRoleInfo:
           if (AddRoleInfo == null) {
-            AddRoleInfo = new global::EggLink.DanhengServer.Proto.GridGameAvatarInfo();
+            AddRoleInfo = new global::EggLink.DanhengServer.Proto.GridGameRoleInfo();
           }
           AddRoleInfo.MergeFrom(other.AddRoleInfo);
           break;
         case SyncItemOneofCase.UpdateRoleInfo:
           if (UpdateRoleInfo == null) {
-            UpdateRoleInfo = new global::EggLink.DanhengServer.Proto.GridGameAvatarInfo();
+            UpdateRoleInfo = new global::EggLink.DanhengServer.Proto.GridGameRoleInfo();
           }
           UpdateRoleInfo.MergeFrom(other.UpdateRoleInfo);
           break;
@@ -1868,13 +1868,13 @@ namespace EggLink.DanhengServer.Proto {
           break;
         case SyncItemOneofCase.AddForgeInfo:
           if (AddForgeInfo == null) {
-            AddForgeInfo = new global::EggLink.DanhengServer.Proto.GridGameForgeInfo();
+            AddForgeInfo = new global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo();
           }
           AddForgeInfo.MergeFrom(other.AddForgeInfo);
           break;
         case SyncItemOneofCase.UpdateForgeInfo:
           if (UpdateForgeInfo == null) {
-            UpdateForgeInfo = new global::EggLink.DanhengServer.Proto.GridGameForgeInfo();
+            UpdateForgeInfo = new global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo();
           }
           UpdateForgeInfo.MergeFrom(other.UpdateForgeInfo);
           break;
@@ -1977,7 +1977,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 2090: {
-            global::EggLink.DanhengServer.Proto.GridGameForgeInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameForgeInfo();
+            global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo();
             if (syncItemCase_ == SyncItemOneofCase.UpdateForgeInfo) {
               subBuilder.MergeFrom(UpdateForgeInfo);
             }
@@ -2104,7 +2104,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 10218: {
-            global::EggLink.DanhengServer.Proto.GridGameAvatarInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameAvatarInfo();
+            global::EggLink.DanhengServer.Proto.GridGameRoleInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameRoleInfo();
             if (syncItemCase_ == SyncItemOneofCase.UpdateRoleInfo) {
               subBuilder.MergeFrom(UpdateRoleInfo);
             }
@@ -2139,7 +2139,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 12402: {
-            global::EggLink.DanhengServer.Proto.GridGameAvatarInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameAvatarInfo();
+            global::EggLink.DanhengServer.Proto.GridGameRoleInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameRoleInfo();
             if (syncItemCase_ == SyncItemOneofCase.AddRoleInfo) {
               subBuilder.MergeFrom(AddRoleInfo);
             }
@@ -2148,7 +2148,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 12658: {
-            global::EggLink.DanhengServer.Proto.GridGameForgeInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameForgeInfo();
+            global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo();
             if (syncItemCase_ == SyncItemOneofCase.AddForgeInfo) {
               subBuilder.MergeFrom(AddForgeInfo);
             }
@@ -2300,7 +2300,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 2090: {
-            global::EggLink.DanhengServer.Proto.GridGameForgeInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameForgeInfo();
+            global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo();
             if (syncItemCase_ == SyncItemOneofCase.UpdateForgeInfo) {
               subBuilder.MergeFrom(UpdateForgeInfo);
             }
@@ -2427,7 +2427,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 10218: {
-            global::EggLink.DanhengServer.Proto.GridGameAvatarInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameAvatarInfo();
+            global::EggLink.DanhengServer.Proto.GridGameRoleInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameRoleInfo();
             if (syncItemCase_ == SyncItemOneofCase.UpdateRoleInfo) {
               subBuilder.MergeFrom(UpdateRoleInfo);
             }
@@ -2462,7 +2462,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 12402: {
-            global::EggLink.DanhengServer.Proto.GridGameAvatarInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameAvatarInfo();
+            global::EggLink.DanhengServer.Proto.GridGameRoleInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameRoleInfo();
             if (syncItemCase_ == SyncItemOneofCase.AddRoleInfo) {
               subBuilder.MergeFrom(AddRoleInfo);
             }
@@ -2471,7 +2471,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 12658: {
-            global::EggLink.DanhengServer.Proto.GridGameForgeInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameForgeInfo();
+            global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridGameForgeItemInfo();
             if (syncItemCase_ == SyncItemOneofCase.AddForgeInfo) {
               subBuilder.MergeFrom(AddForgeInfo);
             }

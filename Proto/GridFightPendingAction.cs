@@ -24,35 +24,39 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightPendingActionReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHcmlkRmlnaHRQZW5kaW5nQWN0aW9uLnByb3RvGhFORk5NTklESUJGSC5w",
-            "cm90bxolR3JpZEZpZ2h0QWRkRXF1aXBtZW50QWN0aW9uSW5mby5wcm90bxog",
-            "R3JpZEZpZ2h0QXVnbWVudEFjdGlvbkluZm8ucHJvdG8aEUxQREVIS0ZBT0hM",
-            "LnByb3RvGhFLS0tGTFBET0VQTy5wcm90bxojR3JpZEZpZ2h0UG9ydGFsQnVm",
-            "ZkFjdGlvbkluZm8ucHJvdG8aHkdyaWRGaWdodEVsaXRlQWN0aW9uSW5mby5w",
-            "cm90bxoRQ0lGS0lKS0pCTlAucHJvdG8aJEdyaWRGaWdodEVsaXRlQnJhbmNo",
-            "QWN0aW9uSW5mby5wcm90bxoiR3JpZEZpZ2h0RW50ZXJOb2RlQWN0aW9uSW5m",
-            "by5wcm90bxofR3JpZEZpZ2h0U3VwcGx5QWN0aW9uSW5mby5wcm90bxoRRENP",
-            "RU5FQk1GR0IucHJvdG8inwUKFkdyaWRGaWdodFBlbmRpbmdBY3Rpb24SPQoS",
-            "cG9ydGFsX2J1ZmZfYWN0aW9uGKMGIAEoCzIeLkdyaWRGaWdodFBvcnRhbEJ1",
-            "ZmZBY3Rpb25JbmZvSAASNgoOYXVnbWVudF9hY3Rpb24Yww4gASgLMhsuR3Jp",
-            "ZEZpZ2h0QXVnbWVudEFjdGlvbkluZm9IABIkCgtDTlBDRUhITkJNTBjtBiAB",
-            "KAsyDC5MUERFSEtGQU9ITEgAEj8KE2VsaXRlX2JyYW5jaF9hY3Rpb24YnAcg",
-            "ASgLMh8uR3JpZEZpZ2h0RWxpdGVCcmFuY2hBY3Rpb25JbmZvSAASJAoLT0FE",
-            "S09FTU1HR0oY8wsgASgLMgwuS0tLRkxQRE9FUE9IABIkCgtMQ0RHS0lNQU9I",
-            "QhjTDSABKAsyDC5EQ09FTkVCTUZHQkgAEjIKDGVsaXRlX2FjdGlvbhiBAiAB",
-            "KAsyGS5HcmlkRmlnaHRFbGl0ZUFjdGlvbkluZm9IABI7ChFlbnRlcl9ub2Rl",
-            "X2FjdGlvbhiOCCABKAsyHS5HcmlkRmlnaHRFbnRlck5vZGVBY3Rpb25JbmZv",
-            "SAASNAoNc3VwcGx5X2FjdGlvbhi+DCABKAsyGi5HcmlkRmlnaHRTdXBwbHlB",
-            "Y3Rpb25JbmZvSAASJAoLUENPTURLRVBCR0gYpA4gASgLMgwuQ0lGS0lKS0pC",
-            "TlBIABJBChRhZGRfZXF1aXBtZW50X2FjdGlvbhjfByABKAsyIC5HcmlkRmln",
-            "aHRBZGRFcXVpcG1lbnRBY3Rpb25JbmZvSAASJAoLR0hQSEVQQ05BQUoYxAkg",
-            "ASgLMgwuTkZOTU5JRElCRkhIABIWCg5xdWV1ZV9wb3NpdGlvbhgCIAEoDUIN",
-            "CgtLSVBHUFBMS0FNRUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
-            "YgZwcm90bzM="));
+            "ChxHcmlkRmlnaHRQZW5kaW5nQWN0aW9uLnByb3RvGiRHcmlkRmlnaHRFbGl0",
+            "ZUJyYW5jaEFjdGlvbkluZm8ucHJvdG8aI0dyaWRGaWdodFBvcnRhbEJ1ZmZB",
+            "Y3Rpb25JbmZvLnByb3RvGipHcmlkRmlnaHRSZXR1cm5QcmVwYXJhdGlvbkFj",
+            "dGlvbkluZm8ucHJvdG8aHkdyaWRGaWdodFRyYWl0QWN0aW9uSW5mby5wcm90",
+            "bxorR3JpZEZpZ2h0UmVjb21tZW5kRXF1aXBtZW50QWN0aW9uSW5mby5wcm90",
+            "bxoRS0tLRkxQRE9FUE8ucHJvdG8aIEdyaWRGaWdodEF1Z21lbnRBY3Rpb25J",
+            "bmZvLnByb3RvGiNHcmlkRmlnaHRSb3VuZEJlZ2luQWN0aW9uSW5mby5wcm90",
+            "bxoRRENPRU5FQk1GR0IucHJvdG8aIkdyaWRGaWdodEZvcmdlUm9sZUFjdGlv",
+            "bkluZm8ucHJvdG8aJUdyaWRGaWdodFVwZ3JhZGVFcXVpcEFjdGlvbkluZm8u",
+            "cHJvdG8aH0dyaWRGaWdodFN1cHBseUFjdGlvbkluZm8ucHJvdG8ijQYKFkdy",
+            "aWRGaWdodFBlbmRpbmdBY3Rpb24SPQoScG9ydGFsX2J1ZmZfYWN0aW9uGKMG",
+            "IAEoCzIeLkdyaWRGaWdodFBvcnRhbEJ1ZmZBY3Rpb25JbmZvSAASNgoOYXVn",
+            "bWVudF9hY3Rpb24Yww4gASgLMhsuR3JpZEZpZ2h0QXVnbWVudEFjdGlvbklu",
+            "Zm9IABIyCgx0cmFpdF9hY3Rpb24Y7QYgASgLMhkuR3JpZEZpZ2h0VHJhaXRB",
+            "Y3Rpb25JbmZvSAASPwoTZWxpdGVfYnJhbmNoX2FjdGlvbhicByABKAsyHy5H",
+            "cmlkRmlnaHRFbGl0ZUJyYW5jaEFjdGlvbkluZm9IABIkCgtPQURLT0VNTUdH",
+            "ShjzCyABKAsyDC5LS0tGTFBET0VQT0gAEiQKC0xDREdLSU1BT0hCGNMNIAEo",
+            "CzIMLkRDT0VORUJNRkdCSAASPQoScm91bmRfYmVnaW5fYWN0aW9uGIECIAEo",
+            "CzIeLkdyaWRGaWdodFJvdW5kQmVnaW5BY3Rpb25JbmZvSAASSwoZcmV0dXJu",
+            "X3ByZXBhcmF0aW9uX2FjdGlvbhiOCCABKAsyJS5HcmlkRmlnaHRSZXR1cm5Q",
+            "cmVwYXJhdGlvbkFjdGlvbkluZm9IABI0Cg1zdXBwbHlfYWN0aW9uGL4MIAEo",
+            "CzIaLkdyaWRGaWdodFN1cHBseUFjdGlvbkluZm9IABJBChR1cGdyYWRlX2Vx",
+            "dWlwX2FjdGlvbhikDiABKAsyIC5HcmlkRmlnaHRVcGdyYWRlRXF1aXBBY3Rp",
+            "b25JbmZvSAASTQoacmVjb21tZW5kX2VxdWlwbWVudF9hY3Rpb24Y3wcgASgL",
+            "MiYuR3JpZEZpZ2h0UmVjb21tZW5kRXF1aXBtZW50QWN0aW9uSW5mb0gAEkAK",
+            "FmZvcmdlX3JvbGVfYWN0aW9uX2luZm8YxAkgASgLMh0uR3JpZEZpZ2h0Rm9y",
+            "Z2VSb2xlQWN0aW9uSW5mb0gAEhYKDnF1ZXVlX3Bvc2l0aW9uGAIgASgNQg0K",
+            "C0tJUEdQUExLQU1FQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.NFNMNIDIBFHReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAddEquipmentActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LPDEHKFAOHLReflection.Descriptor, global::EggLink.DanhengServer.Proto.KKKFLPDOEPOReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.CIFKIJKJBNPReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteBranchActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEnterNodeActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCOENEBMFGBReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightEliteBranchActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightReturnPreparationActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRecommendEquipmentActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.KKKFLPDOEPOReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRoundBeginActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCOENEBMFGBReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightForgeRoleActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightUpgradeEquipActionInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSupplyActionInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightPendingAction), global::EggLink.DanhengServer.Proto.GridFightPendingAction.Parser, new[]{ "PortalBuffAction", "AugmentAction", "CNPCEHHNBML", "EliteBranchAction", "OADKOEMMGGJ", "LCDGKIMAOHB", "EliteAction", "EnterNodeAction", "SupplyAction", "PCOMDKEPBGH", "AddEquipmentAction", "GHPHEPCNAAJ", "QueuePosition" }, new[]{ "KIPGPPLKAME" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightPendingAction), global::EggLink.DanhengServer.Proto.GridFightPendingAction.Parser, new[]{ "PortalBuffAction", "AugmentAction", "TraitAction", "EliteBranchAction", "OADKOEMMGGJ", "LCDGKIMAOHB", "RoundBeginAction", "ReturnPreparationAction", "SupplyAction", "UpgradeEquipAction", "RecommendEquipmentAction", "ForgeRoleActionInfo", "QueuePosition" }, new[]{ "KIPGPPLKAME" }, null, null, null)
           }));
     }
     #endregion
@@ -102,8 +106,8 @@ namespace EggLink.DanhengServer.Proto {
         case KIPGPPLKAMEOneofCase.AugmentAction:
           AugmentAction = other.AugmentAction.Clone();
           break;
-        case KIPGPPLKAMEOneofCase.CNPCEHHNBML:
-          CNPCEHHNBML = other.CNPCEHHNBML.Clone();
+        case KIPGPPLKAMEOneofCase.TraitAction:
+          TraitAction = other.TraitAction.Clone();
           break;
         case KIPGPPLKAMEOneofCase.EliteBranchAction:
           EliteBranchAction = other.EliteBranchAction.Clone();
@@ -114,23 +118,23 @@ namespace EggLink.DanhengServer.Proto {
         case KIPGPPLKAMEOneofCase.LCDGKIMAOHB:
           LCDGKIMAOHB = other.LCDGKIMAOHB.Clone();
           break;
-        case KIPGPPLKAMEOneofCase.EliteAction:
-          EliteAction = other.EliteAction.Clone();
+        case KIPGPPLKAMEOneofCase.RoundBeginAction:
+          RoundBeginAction = other.RoundBeginAction.Clone();
           break;
-        case KIPGPPLKAMEOneofCase.EnterNodeAction:
-          EnterNodeAction = other.EnterNodeAction.Clone();
+        case KIPGPPLKAMEOneofCase.ReturnPreparationAction:
+          ReturnPreparationAction = other.ReturnPreparationAction.Clone();
           break;
         case KIPGPPLKAMEOneofCase.SupplyAction:
           SupplyAction = other.SupplyAction.Clone();
           break;
-        case KIPGPPLKAMEOneofCase.PCOMDKEPBGH:
-          PCOMDKEPBGH = other.PCOMDKEPBGH.Clone();
+        case KIPGPPLKAMEOneofCase.UpgradeEquipAction:
+          UpgradeEquipAction = other.UpgradeEquipAction.Clone();
           break;
-        case KIPGPPLKAMEOneofCase.AddEquipmentAction:
-          AddEquipmentAction = other.AddEquipmentAction.Clone();
+        case KIPGPPLKAMEOneofCase.RecommendEquipmentAction:
+          RecommendEquipmentAction = other.RecommendEquipmentAction.Clone();
           break;
-        case KIPGPPLKAMEOneofCase.GHPHEPCNAAJ:
-          GHPHEPCNAAJ = other.GHPHEPCNAAJ.Clone();
+        case KIPGPPLKAMEOneofCase.ForgeRoleActionInfo:
+          ForgeRoleActionInfo = other.ForgeRoleActionInfo.Clone();
           break;
       }
 
@@ -167,15 +171,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "CNPCEHHNBML" field.</summary>
-    public const int CNPCEHHNBMLFieldNumber = 877;
+    /// <summary>Field number for the "trait_action" field.</summary>
+    public const int TraitActionFieldNumber = 877;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LPDEHKFAOHL CNPCEHHNBML {
-      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.CNPCEHHNBML ? (global::EggLink.DanhengServer.Proto.LPDEHKFAOHL) kIPGPPLKAME_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightTraitActionInfo TraitAction {
+      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.TraitAction ? (global::EggLink.DanhengServer.Proto.GridFightTraitActionInfo) kIPGPPLKAME_ : null; }
       set {
         kIPGPPLKAME_ = value;
-        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.CNPCEHHNBML;
+        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.TraitAction;
       }
     }
 
@@ -215,27 +219,27 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "elite_action" field.</summary>
-    public const int EliteActionFieldNumber = 257;
+    /// <summary>Field number for the "round_begin_action" field.</summary>
+    public const int RoundBeginActionFieldNumber = 257;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GridFightEliteActionInfo EliteAction {
-      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EliteAction ? (global::EggLink.DanhengServer.Proto.GridFightEliteActionInfo) kIPGPPLKAME_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightRoundBeginActionInfo RoundBeginAction {
+      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RoundBeginAction ? (global::EggLink.DanhengServer.Proto.GridFightRoundBeginActionInfo) kIPGPPLKAME_ : null; }
       set {
         kIPGPPLKAME_ = value;
-        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.EliteAction;
+        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.RoundBeginAction;
       }
     }
 
-    /// <summary>Field number for the "enter_node_action" field.</summary>
-    public const int EnterNodeActionFieldNumber = 1038;
+    /// <summary>Field number for the "return_preparation_action" field.</summary>
+    public const int ReturnPreparationActionFieldNumber = 1038;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GridFightEnterNodeActionInfo EnterNodeAction {
-      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EnterNodeAction ? (global::EggLink.DanhengServer.Proto.GridFightEnterNodeActionInfo) kIPGPPLKAME_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightReturnPreparationActionInfo ReturnPreparationAction {
+      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ReturnPreparationAction ? (global::EggLink.DanhengServer.Proto.GridFightReturnPreparationActionInfo) kIPGPPLKAME_ : null; }
       set {
         kIPGPPLKAME_ = value;
-        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.EnterNodeAction;
+        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.ReturnPreparationAction;
       }
     }
 
@@ -251,39 +255,39 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "PCOMDKEPBGH" field.</summary>
-    public const int PCOMDKEPBGHFieldNumber = 1828;
+    /// <summary>Field number for the "upgrade_equip_action" field.</summary>
+    public const int UpgradeEquipActionFieldNumber = 1828;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.CIFKIJKJBNP PCOMDKEPBGH {
-      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PCOMDKEPBGH ? (global::EggLink.DanhengServer.Proto.CIFKIJKJBNP) kIPGPPLKAME_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightUpgradeEquipActionInfo UpgradeEquipAction {
+      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.UpgradeEquipAction ? (global::EggLink.DanhengServer.Proto.GridFightUpgradeEquipActionInfo) kIPGPPLKAME_ : null; }
       set {
         kIPGPPLKAME_ = value;
-        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.PCOMDKEPBGH;
+        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.UpgradeEquipAction;
       }
     }
 
-    /// <summary>Field number for the "add_equipment_action" field.</summary>
-    public const int AddEquipmentActionFieldNumber = 991;
+    /// <summary>Field number for the "recommend_equipment_action" field.</summary>
+    public const int RecommendEquipmentActionFieldNumber = 991;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GridFightAddEquipmentActionInfo AddEquipmentAction {
-      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.AddEquipmentAction ? (global::EggLink.DanhengServer.Proto.GridFightAddEquipmentActionInfo) kIPGPPLKAME_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightRecommendEquipmentActionInfo RecommendEquipmentAction {
+      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RecommendEquipmentAction ? (global::EggLink.DanhengServer.Proto.GridFightRecommendEquipmentActionInfo) kIPGPPLKAME_ : null; }
       set {
         kIPGPPLKAME_ = value;
-        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.AddEquipmentAction;
+        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.RecommendEquipmentAction;
       }
     }
 
-    /// <summary>Field number for the "GHPHEPCNAAJ" field.</summary>
-    public const int GHPHEPCNAAJFieldNumber = 1220;
+    /// <summary>Field number for the "forge_role_action_info" field.</summary>
+    public const int ForgeRoleActionInfoFieldNumber = 1220;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.NFNMNIDIBFH GHPHEPCNAAJ {
-      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GHPHEPCNAAJ ? (global::EggLink.DanhengServer.Proto.NFNMNIDIBFH) kIPGPPLKAME_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightForgeRoleActionInfo ForgeRoleActionInfo {
+      get { return kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ForgeRoleActionInfo ? (global::EggLink.DanhengServer.Proto.GridFightForgeRoleActionInfo) kIPGPPLKAME_ : null; }
       set {
         kIPGPPLKAME_ = value;
-        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.GHPHEPCNAAJ;
+        kIPGPPLKAMECase_ = value == null ? KIPGPPLKAMEOneofCase.None : KIPGPPLKAMEOneofCase.ForgeRoleActionInfo;
       }
     }
 
@@ -305,16 +309,16 @@ namespace EggLink.DanhengServer.Proto {
       None = 0,
       PortalBuffAction = 803,
       AugmentAction = 1859,
-      CNPCEHHNBML = 877,
+      TraitAction = 877,
       EliteBranchAction = 924,
       OADKOEMMGGJ = 1523,
       LCDGKIMAOHB = 1747,
-      EliteAction = 257,
-      EnterNodeAction = 1038,
+      RoundBeginAction = 257,
+      ReturnPreparationAction = 1038,
       SupplyAction = 1598,
-      PCOMDKEPBGH = 1828,
-      AddEquipmentAction = 991,
-      GHPHEPCNAAJ = 1220,
+      UpgradeEquipAction = 1828,
+      RecommendEquipmentAction = 991,
+      ForgeRoleActionInfo = 1220,
     }
     private KIPGPPLKAMEOneofCase kIPGPPLKAMECase_ = KIPGPPLKAMEOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -347,16 +351,16 @@ namespace EggLink.DanhengServer.Proto {
       }
       if (!object.Equals(PortalBuffAction, other.PortalBuffAction)) return false;
       if (!object.Equals(AugmentAction, other.AugmentAction)) return false;
-      if (!object.Equals(CNPCEHHNBML, other.CNPCEHHNBML)) return false;
+      if (!object.Equals(TraitAction, other.TraitAction)) return false;
       if (!object.Equals(EliteBranchAction, other.EliteBranchAction)) return false;
       if (!object.Equals(OADKOEMMGGJ, other.OADKOEMMGGJ)) return false;
       if (!object.Equals(LCDGKIMAOHB, other.LCDGKIMAOHB)) return false;
-      if (!object.Equals(EliteAction, other.EliteAction)) return false;
-      if (!object.Equals(EnterNodeAction, other.EnterNodeAction)) return false;
+      if (!object.Equals(RoundBeginAction, other.RoundBeginAction)) return false;
+      if (!object.Equals(ReturnPreparationAction, other.ReturnPreparationAction)) return false;
       if (!object.Equals(SupplyAction, other.SupplyAction)) return false;
-      if (!object.Equals(PCOMDKEPBGH, other.PCOMDKEPBGH)) return false;
-      if (!object.Equals(AddEquipmentAction, other.AddEquipmentAction)) return false;
-      if (!object.Equals(GHPHEPCNAAJ, other.GHPHEPCNAAJ)) return false;
+      if (!object.Equals(UpgradeEquipAction, other.UpgradeEquipAction)) return false;
+      if (!object.Equals(RecommendEquipmentAction, other.RecommendEquipmentAction)) return false;
+      if (!object.Equals(ForgeRoleActionInfo, other.ForgeRoleActionInfo)) return false;
       if (QueuePosition != other.QueuePosition) return false;
       if (KIPGPPLKAMECase != other.KIPGPPLKAMECase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -368,16 +372,16 @@ namespace EggLink.DanhengServer.Proto {
       int hash = 1;
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PortalBuffAction) hash ^= PortalBuffAction.GetHashCode();
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.AugmentAction) hash ^= AugmentAction.GetHashCode();
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.CNPCEHHNBML) hash ^= CNPCEHHNBML.GetHashCode();
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.TraitAction) hash ^= TraitAction.GetHashCode();
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EliteBranchAction) hash ^= EliteBranchAction.GetHashCode();
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.OADKOEMMGGJ) hash ^= OADKOEMMGGJ.GetHashCode();
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.LCDGKIMAOHB) hash ^= LCDGKIMAOHB.GetHashCode();
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EliteAction) hash ^= EliteAction.GetHashCode();
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EnterNodeAction) hash ^= EnterNodeAction.GetHashCode();
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RoundBeginAction) hash ^= RoundBeginAction.GetHashCode();
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ReturnPreparationAction) hash ^= ReturnPreparationAction.GetHashCode();
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.SupplyAction) hash ^= SupplyAction.GetHashCode();
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PCOMDKEPBGH) hash ^= PCOMDKEPBGH.GetHashCode();
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.AddEquipmentAction) hash ^= AddEquipmentAction.GetHashCode();
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GHPHEPCNAAJ) hash ^= GHPHEPCNAAJ.GetHashCode();
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.UpgradeEquipAction) hash ^= UpgradeEquipAction.GetHashCode();
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RecommendEquipmentAction) hash ^= RecommendEquipmentAction.GetHashCode();
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ForgeRoleActionInfo) hash ^= ForgeRoleActionInfo.GetHashCode();
       if (QueuePosition != 0) hash ^= QueuePosition.GetHashCode();
       hash ^= (int) kIPGPPLKAMECase_;
       if (_unknownFields != null) {
@@ -402,33 +406,33 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(QueuePosition);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EliteAction) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RoundBeginAction) {
         output.WriteRawTag(138, 16);
-        output.WriteMessage(EliteAction);
+        output.WriteMessage(RoundBeginAction);
       }
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PortalBuffAction) {
         output.WriteRawTag(154, 50);
         output.WriteMessage(PortalBuffAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.CNPCEHHNBML) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.TraitAction) {
         output.WriteRawTag(234, 54);
-        output.WriteMessage(CNPCEHHNBML);
+        output.WriteMessage(TraitAction);
       }
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EliteBranchAction) {
         output.WriteRawTag(226, 57);
         output.WriteMessage(EliteBranchAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.AddEquipmentAction) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RecommendEquipmentAction) {
         output.WriteRawTag(250, 61);
-        output.WriteMessage(AddEquipmentAction);
+        output.WriteMessage(RecommendEquipmentAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EnterNodeAction) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ReturnPreparationAction) {
         output.WriteRawTag(242, 64);
-        output.WriteMessage(EnterNodeAction);
+        output.WriteMessage(ReturnPreparationAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GHPHEPCNAAJ) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ForgeRoleActionInfo) {
         output.WriteRawTag(162, 76);
-        output.WriteMessage(GHPHEPCNAAJ);
+        output.WriteMessage(ForgeRoleActionInfo);
       }
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.OADKOEMMGGJ) {
         output.WriteRawTag(154, 95);
@@ -442,9 +446,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(154, 109);
         output.WriteMessage(LCDGKIMAOHB);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PCOMDKEPBGH) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.UpgradeEquipAction) {
         output.WriteRawTag(162, 114);
-        output.WriteMessage(PCOMDKEPBGH);
+        output.WriteMessage(UpgradeEquipAction);
       }
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.AugmentAction) {
         output.WriteRawTag(154, 116);
@@ -464,33 +468,33 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(16);
         output.WriteUInt32(QueuePosition);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EliteAction) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RoundBeginAction) {
         output.WriteRawTag(138, 16);
-        output.WriteMessage(EliteAction);
+        output.WriteMessage(RoundBeginAction);
       }
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PortalBuffAction) {
         output.WriteRawTag(154, 50);
         output.WriteMessage(PortalBuffAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.CNPCEHHNBML) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.TraitAction) {
         output.WriteRawTag(234, 54);
-        output.WriteMessage(CNPCEHHNBML);
+        output.WriteMessage(TraitAction);
       }
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EliteBranchAction) {
         output.WriteRawTag(226, 57);
         output.WriteMessage(EliteBranchAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.AddEquipmentAction) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RecommendEquipmentAction) {
         output.WriteRawTag(250, 61);
-        output.WriteMessage(AddEquipmentAction);
+        output.WriteMessage(RecommendEquipmentAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EnterNodeAction) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ReturnPreparationAction) {
         output.WriteRawTag(242, 64);
-        output.WriteMessage(EnterNodeAction);
+        output.WriteMessage(ReturnPreparationAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GHPHEPCNAAJ) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ForgeRoleActionInfo) {
         output.WriteRawTag(162, 76);
-        output.WriteMessage(GHPHEPCNAAJ);
+        output.WriteMessage(ForgeRoleActionInfo);
       }
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.OADKOEMMGGJ) {
         output.WriteRawTag(154, 95);
@@ -504,9 +508,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(154, 109);
         output.WriteMessage(LCDGKIMAOHB);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PCOMDKEPBGH) {
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.UpgradeEquipAction) {
         output.WriteRawTag(162, 114);
-        output.WriteMessage(PCOMDKEPBGH);
+        output.WriteMessage(UpgradeEquipAction);
       }
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.AugmentAction) {
         output.WriteRawTag(154, 116);
@@ -528,8 +532,8 @@ namespace EggLink.DanhengServer.Proto {
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.AugmentAction) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(AugmentAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.CNPCEHHNBML) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CNPCEHHNBML);
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.TraitAction) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TraitAction);
       }
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EliteBranchAction) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(EliteBranchAction);
@@ -540,23 +544,23 @@ namespace EggLink.DanhengServer.Proto {
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.LCDGKIMAOHB) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(LCDGKIMAOHB);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EliteAction) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EliteAction);
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RoundBeginAction) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RoundBeginAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EnterNodeAction) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EnterNodeAction);
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ReturnPreparationAction) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReturnPreparationAction);
       }
       if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.SupplyAction) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SupplyAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PCOMDKEPBGH) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PCOMDKEPBGH);
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.UpgradeEquipAction) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(UpgradeEquipAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.AddEquipmentAction) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AddEquipmentAction);
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RecommendEquipmentAction) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RecommendEquipmentAction);
       }
-      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GHPHEPCNAAJ) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GHPHEPCNAAJ);
+      if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ForgeRoleActionInfo) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ForgeRoleActionInfo);
       }
       if (QueuePosition != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(QueuePosition);
@@ -589,11 +593,11 @@ namespace EggLink.DanhengServer.Proto {
           }
           AugmentAction.MergeFrom(other.AugmentAction);
           break;
-        case KIPGPPLKAMEOneofCase.CNPCEHHNBML:
-          if (CNPCEHHNBML == null) {
-            CNPCEHHNBML = new global::EggLink.DanhengServer.Proto.LPDEHKFAOHL();
+        case KIPGPPLKAMEOneofCase.TraitAction:
+          if (TraitAction == null) {
+            TraitAction = new global::EggLink.DanhengServer.Proto.GridFightTraitActionInfo();
           }
-          CNPCEHHNBML.MergeFrom(other.CNPCEHHNBML);
+          TraitAction.MergeFrom(other.TraitAction);
           break;
         case KIPGPPLKAMEOneofCase.EliteBranchAction:
           if (EliteBranchAction == null) {
@@ -613,17 +617,17 @@ namespace EggLink.DanhengServer.Proto {
           }
           LCDGKIMAOHB.MergeFrom(other.LCDGKIMAOHB);
           break;
-        case KIPGPPLKAMEOneofCase.EliteAction:
-          if (EliteAction == null) {
-            EliteAction = new global::EggLink.DanhengServer.Proto.GridFightEliteActionInfo();
+        case KIPGPPLKAMEOneofCase.RoundBeginAction:
+          if (RoundBeginAction == null) {
+            RoundBeginAction = new global::EggLink.DanhengServer.Proto.GridFightRoundBeginActionInfo();
           }
-          EliteAction.MergeFrom(other.EliteAction);
+          RoundBeginAction.MergeFrom(other.RoundBeginAction);
           break;
-        case KIPGPPLKAMEOneofCase.EnterNodeAction:
-          if (EnterNodeAction == null) {
-            EnterNodeAction = new global::EggLink.DanhengServer.Proto.GridFightEnterNodeActionInfo();
+        case KIPGPPLKAMEOneofCase.ReturnPreparationAction:
+          if (ReturnPreparationAction == null) {
+            ReturnPreparationAction = new global::EggLink.DanhengServer.Proto.GridFightReturnPreparationActionInfo();
           }
-          EnterNodeAction.MergeFrom(other.EnterNodeAction);
+          ReturnPreparationAction.MergeFrom(other.ReturnPreparationAction);
           break;
         case KIPGPPLKAMEOneofCase.SupplyAction:
           if (SupplyAction == null) {
@@ -631,23 +635,23 @@ namespace EggLink.DanhengServer.Proto {
           }
           SupplyAction.MergeFrom(other.SupplyAction);
           break;
-        case KIPGPPLKAMEOneofCase.PCOMDKEPBGH:
-          if (PCOMDKEPBGH == null) {
-            PCOMDKEPBGH = new global::EggLink.DanhengServer.Proto.CIFKIJKJBNP();
+        case KIPGPPLKAMEOneofCase.UpgradeEquipAction:
+          if (UpgradeEquipAction == null) {
+            UpgradeEquipAction = new global::EggLink.DanhengServer.Proto.GridFightUpgradeEquipActionInfo();
           }
-          PCOMDKEPBGH.MergeFrom(other.PCOMDKEPBGH);
+          UpgradeEquipAction.MergeFrom(other.UpgradeEquipAction);
           break;
-        case KIPGPPLKAMEOneofCase.AddEquipmentAction:
-          if (AddEquipmentAction == null) {
-            AddEquipmentAction = new global::EggLink.DanhengServer.Proto.GridFightAddEquipmentActionInfo();
+        case KIPGPPLKAMEOneofCase.RecommendEquipmentAction:
+          if (RecommendEquipmentAction == null) {
+            RecommendEquipmentAction = new global::EggLink.DanhengServer.Proto.GridFightRecommendEquipmentActionInfo();
           }
-          AddEquipmentAction.MergeFrom(other.AddEquipmentAction);
+          RecommendEquipmentAction.MergeFrom(other.RecommendEquipmentAction);
           break;
-        case KIPGPPLKAMEOneofCase.GHPHEPCNAAJ:
-          if (GHPHEPCNAAJ == null) {
-            GHPHEPCNAAJ = new global::EggLink.DanhengServer.Proto.NFNMNIDIBFH();
+        case KIPGPPLKAMEOneofCase.ForgeRoleActionInfo:
+          if (ForgeRoleActionInfo == null) {
+            ForgeRoleActionInfo = new global::EggLink.DanhengServer.Proto.GridFightForgeRoleActionInfo();
           }
-          GHPHEPCNAAJ.MergeFrom(other.GHPHEPCNAAJ);
+          ForgeRoleActionInfo.MergeFrom(other.ForgeRoleActionInfo);
           break;
       }
 
@@ -671,12 +675,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 2058: {
-            global::EggLink.DanhengServer.Proto.GridFightEliteActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightEliteActionInfo();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EliteAction) {
-              subBuilder.MergeFrom(EliteAction);
+            global::EggLink.DanhengServer.Proto.GridFightRoundBeginActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightRoundBeginActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RoundBeginAction) {
+              subBuilder.MergeFrom(RoundBeginAction);
             }
             input.ReadMessage(subBuilder);
-            EliteAction = subBuilder;
+            RoundBeginAction = subBuilder;
             break;
           }
           case 6426: {
@@ -689,12 +693,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 7018: {
-            global::EggLink.DanhengServer.Proto.LPDEHKFAOHL subBuilder = new global::EggLink.DanhengServer.Proto.LPDEHKFAOHL();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.CNPCEHHNBML) {
-              subBuilder.MergeFrom(CNPCEHHNBML);
+            global::EggLink.DanhengServer.Proto.GridFightTraitActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightTraitActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.TraitAction) {
+              subBuilder.MergeFrom(TraitAction);
             }
             input.ReadMessage(subBuilder);
-            CNPCEHHNBML = subBuilder;
+            TraitAction = subBuilder;
             break;
           }
           case 7394: {
@@ -707,30 +711,30 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 7930: {
-            global::EggLink.DanhengServer.Proto.GridFightAddEquipmentActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightAddEquipmentActionInfo();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.AddEquipmentAction) {
-              subBuilder.MergeFrom(AddEquipmentAction);
+            global::EggLink.DanhengServer.Proto.GridFightRecommendEquipmentActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightRecommendEquipmentActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RecommendEquipmentAction) {
+              subBuilder.MergeFrom(RecommendEquipmentAction);
             }
             input.ReadMessage(subBuilder);
-            AddEquipmentAction = subBuilder;
+            RecommendEquipmentAction = subBuilder;
             break;
           }
           case 8306: {
-            global::EggLink.DanhengServer.Proto.GridFightEnterNodeActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightEnterNodeActionInfo();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EnterNodeAction) {
-              subBuilder.MergeFrom(EnterNodeAction);
+            global::EggLink.DanhengServer.Proto.GridFightReturnPreparationActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightReturnPreparationActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ReturnPreparationAction) {
+              subBuilder.MergeFrom(ReturnPreparationAction);
             }
             input.ReadMessage(subBuilder);
-            EnterNodeAction = subBuilder;
+            ReturnPreparationAction = subBuilder;
             break;
           }
           case 9762: {
-            global::EggLink.DanhengServer.Proto.NFNMNIDIBFH subBuilder = new global::EggLink.DanhengServer.Proto.NFNMNIDIBFH();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GHPHEPCNAAJ) {
-              subBuilder.MergeFrom(GHPHEPCNAAJ);
+            global::EggLink.DanhengServer.Proto.GridFightForgeRoleActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightForgeRoleActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ForgeRoleActionInfo) {
+              subBuilder.MergeFrom(ForgeRoleActionInfo);
             }
             input.ReadMessage(subBuilder);
-            GHPHEPCNAAJ = subBuilder;
+            ForgeRoleActionInfo = subBuilder;
             break;
           }
           case 12186: {
@@ -761,12 +765,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 14626: {
-            global::EggLink.DanhengServer.Proto.CIFKIJKJBNP subBuilder = new global::EggLink.DanhengServer.Proto.CIFKIJKJBNP();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PCOMDKEPBGH) {
-              subBuilder.MergeFrom(PCOMDKEPBGH);
+            global::EggLink.DanhengServer.Proto.GridFightUpgradeEquipActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightUpgradeEquipActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.UpgradeEquipAction) {
+              subBuilder.MergeFrom(UpgradeEquipAction);
             }
             input.ReadMessage(subBuilder);
-            PCOMDKEPBGH = subBuilder;
+            UpgradeEquipAction = subBuilder;
             break;
           }
           case 14874: {
@@ -798,12 +802,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 2058: {
-            global::EggLink.DanhengServer.Proto.GridFightEliteActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightEliteActionInfo();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EliteAction) {
-              subBuilder.MergeFrom(EliteAction);
+            global::EggLink.DanhengServer.Proto.GridFightRoundBeginActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightRoundBeginActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RoundBeginAction) {
+              subBuilder.MergeFrom(RoundBeginAction);
             }
             input.ReadMessage(subBuilder);
-            EliteAction = subBuilder;
+            RoundBeginAction = subBuilder;
             break;
           }
           case 6426: {
@@ -816,12 +820,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 7018: {
-            global::EggLink.DanhengServer.Proto.LPDEHKFAOHL subBuilder = new global::EggLink.DanhengServer.Proto.LPDEHKFAOHL();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.CNPCEHHNBML) {
-              subBuilder.MergeFrom(CNPCEHHNBML);
+            global::EggLink.DanhengServer.Proto.GridFightTraitActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightTraitActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.TraitAction) {
+              subBuilder.MergeFrom(TraitAction);
             }
             input.ReadMessage(subBuilder);
-            CNPCEHHNBML = subBuilder;
+            TraitAction = subBuilder;
             break;
           }
           case 7394: {
@@ -834,30 +838,30 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 7930: {
-            global::EggLink.DanhengServer.Proto.GridFightAddEquipmentActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightAddEquipmentActionInfo();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.AddEquipmentAction) {
-              subBuilder.MergeFrom(AddEquipmentAction);
+            global::EggLink.DanhengServer.Proto.GridFightRecommendEquipmentActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightRecommendEquipmentActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.RecommendEquipmentAction) {
+              subBuilder.MergeFrom(RecommendEquipmentAction);
             }
             input.ReadMessage(subBuilder);
-            AddEquipmentAction = subBuilder;
+            RecommendEquipmentAction = subBuilder;
             break;
           }
           case 8306: {
-            global::EggLink.DanhengServer.Proto.GridFightEnterNodeActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightEnterNodeActionInfo();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.EnterNodeAction) {
-              subBuilder.MergeFrom(EnterNodeAction);
+            global::EggLink.DanhengServer.Proto.GridFightReturnPreparationActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightReturnPreparationActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ReturnPreparationAction) {
+              subBuilder.MergeFrom(ReturnPreparationAction);
             }
             input.ReadMessage(subBuilder);
-            EnterNodeAction = subBuilder;
+            ReturnPreparationAction = subBuilder;
             break;
           }
           case 9762: {
-            global::EggLink.DanhengServer.Proto.NFNMNIDIBFH subBuilder = new global::EggLink.DanhengServer.Proto.NFNMNIDIBFH();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.GHPHEPCNAAJ) {
-              subBuilder.MergeFrom(GHPHEPCNAAJ);
+            global::EggLink.DanhengServer.Proto.GridFightForgeRoleActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightForgeRoleActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.ForgeRoleActionInfo) {
+              subBuilder.MergeFrom(ForgeRoleActionInfo);
             }
             input.ReadMessage(subBuilder);
-            GHPHEPCNAAJ = subBuilder;
+            ForgeRoleActionInfo = subBuilder;
             break;
           }
           case 12186: {
@@ -888,12 +892,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 14626: {
-            global::EggLink.DanhengServer.Proto.CIFKIJKJBNP subBuilder = new global::EggLink.DanhengServer.Proto.CIFKIJKJBNP();
-            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.PCOMDKEPBGH) {
-              subBuilder.MergeFrom(PCOMDKEPBGH);
+            global::EggLink.DanhengServer.Proto.GridFightUpgradeEquipActionInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightUpgradeEquipActionInfo();
+            if (kIPGPPLKAMECase_ == KIPGPPLKAMEOneofCase.UpgradeEquipAction) {
+              subBuilder.MergeFrom(UpgradeEquipAction);
             }
             input.ReadMessage(subBuilder);
-            PCOMDKEPBGH = subBuilder;
+            UpgradeEquipAction = subBuilder;
             break;
           }
           case 14874: {

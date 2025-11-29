@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxHcmlkRmlnaHRHYW1lQmFzaWNJbmZvLnByb3RvGhdHcmlkRmlnaHRMb2Nr",
-            "VHlwZS5wcm90bxoRT1BJQkJQQ0hGSUkucHJvdG8aF0dyaWRGaWdodExvY2tJ",
-            "bmZvLnByb3RvGhxSb2xlVHJhY2tFcXVpcG1lbnRJbmZvLnByb3RvIrAFChZH",
+            "VHlwZS5wcm90bxocUm9sZVRyYWNrRXF1aXBtZW50SW5mby5wcm90bxoXR3Jp",
+            "ZEZpZ2h0TG9ja0luZm8ucHJvdG8aEU9QSUJCUENIRklJLnByb3RvIrkFChZH",
             "cmlkRmlnaHRHYW1lQmFzaWNJbmZvEhwKFGdyaWRfZmlnaHRfbGluZXVwX2hw",
             "GAMgASgNEiUKCWxvY2tfdHlwZRgGIAEoDjISLkdyaWRGaWdodExvY2tUeXBl",
             "EiIKC09DTUdNRUhFQ0JCGPQMIAEoCzIMLk9QSUJCUENIRklJEiMKG2dyaWRf",
@@ -39,15 +39,15 @@ namespace EggLink.DanhengServer.Proto {
             "GAEgASgNEjoKGXJvbGVfdHJhY2tfZXF1aXBtZW50X2xpc3QYBSADKAsyFy5S",
             "b2xlVHJhY2tFcXVpcG1lbnRJbmZvEisKDmdhbWVfbG9ja19pbmZvGMwIIAEo",
             "CzISLkdyaWRGaWdodExvY2tJbmZvEiQKHGdyaWRfZmlnaHRfbWF4X2ludGVy",
-            "ZXN0X2dvbGQYCSABKA0SEwoLSExMSUpJQ0dPTk4YCiABKA0SJgoeZ3JpZF9m",
-            "aWdodF9vZmZfZmllbGRfbWF4X2NvdW50GA4gASgNEiIKGmdyaWRfZmlnaHRf",
-            "bWF4X2ZpZWxkX2NvdW50GAcgASgNEiAKGGdyaWRfZmlnaHRfY3VyX2xldmVs",
-            "X2V4cBgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
-            "cm90bzM="));
+            "ZXN0X2dvbGQYCSABKA0SHAoUZ3JpZF9maWdodF9tYXhfbGV2ZWwYCiABKA0S",
+            "JgoeZ3JpZF9maWdodF9vZmZfZmllbGRfbWF4X2NvdW50GA4gASgNEiIKGmdy",
+            "aWRfZmlnaHRfbWF4X2ZpZWxkX2NvdW50GAcgASgNEiAKGGdyaWRfZmlnaHRf",
+            "Y3VyX2xldmVsX2V4cBgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPIBBPCHFIIReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RoleTrackEquipmentInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.RoleTrackEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPIBBPCHFIIReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo), global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo.Parser, new[]{ "GridFightLineupHp", "LockType", "OCMGMEHECBB", "GridFightMaxAvatarCount", "GridFightCurGold", "GridFightLineupMaxHp", "LPEMPKFNNOL", "GridFightCurLevel", "TrackTraitIdList", "GridFightTargetGuideCode", "GridFightLevelCost", "GridFightComboWinNum", "RoleTrackEquipmentList", "GameLockInfo", "GridFightMaxInterestGold", "HLLIJICGONN", "GridFightOffFieldMaxCount", "GridFightMaxFieldCount", "GridFightCurLevelExp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo), global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo.Parser, new[]{ "GridFightLineupHp", "LockType", "OCMGMEHECBB", "GridFightMaxAvatarCount", "GridFightCurGold", "GridFightLineupMaxHp", "LPEMPKFNNOL", "GridFightCurLevel", "TrackTraitIdList", "GridFightTargetGuideCode", "GridFightLevelCost", "GridFightComboWinNum", "RoleTrackEquipmentList", "GameLockInfo", "GridFightMaxInterestGold", "GridFightMaxLevel", "GridFightOffFieldMaxCount", "GridFightMaxFieldCount", "GridFightCurLevelExp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -104,7 +104,7 @@ namespace EggLink.DanhengServer.Proto {
       roleTrackEquipmentList_ = other.roleTrackEquipmentList_.Clone();
       gameLockInfo_ = other.gameLockInfo_ != null ? other.gameLockInfo_.Clone() : null;
       gridFightMaxInterestGold_ = other.gridFightMaxInterestGold_;
-      hLLIJICGONN_ = other.hLLIJICGONN_;
+      gridFightMaxLevel_ = other.gridFightMaxLevel_;
       gridFightOffFieldMaxCount_ = other.gridFightOffFieldMaxCount_;
       gridFightMaxFieldCount_ = other.gridFightMaxFieldCount_;
       gridFightCurLevelExp_ = other.gridFightCurLevelExp_;
@@ -294,15 +294,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "HLLIJICGONN" field.</summary>
-    public const int HLLIJICGONNFieldNumber = 10;
-    private uint hLLIJICGONN_;
+    /// <summary>Field number for the "grid_fight_max_level" field.</summary>
+    public const int GridFightMaxLevelFieldNumber = 10;
+    private uint gridFightMaxLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint HLLIJICGONN {
-      get { return hLLIJICGONN_; }
+    public uint GridFightMaxLevel {
+      get { return gridFightMaxLevel_; }
       set {
-        hLLIJICGONN_ = value;
+        gridFightMaxLevel_ = value;
       }
     }
 
@@ -372,7 +372,7 @@ namespace EggLink.DanhengServer.Proto {
       if(!roleTrackEquipmentList_.Equals(other.roleTrackEquipmentList_)) return false;
       if (!object.Equals(GameLockInfo, other.GameLockInfo)) return false;
       if (GridFightMaxInterestGold != other.GridFightMaxInterestGold) return false;
-      if (HLLIJICGONN != other.HLLIJICGONN) return false;
+      if (GridFightMaxLevel != other.GridFightMaxLevel) return false;
       if (GridFightOffFieldMaxCount != other.GridFightOffFieldMaxCount) return false;
       if (GridFightMaxFieldCount != other.GridFightMaxFieldCount) return false;
       if (GridFightCurLevelExp != other.GridFightCurLevelExp) return false;
@@ -398,7 +398,7 @@ namespace EggLink.DanhengServer.Proto {
       hash ^= roleTrackEquipmentList_.GetHashCode();
       if (gameLockInfo_ != null) hash ^= GameLockInfo.GetHashCode();
       if (GridFightMaxInterestGold != 0) hash ^= GridFightMaxInterestGold.GetHashCode();
-      if (HLLIJICGONN != 0) hash ^= HLLIJICGONN.GetHashCode();
+      if (GridFightMaxLevel != 0) hash ^= GridFightMaxLevel.GetHashCode();
       if (GridFightOffFieldMaxCount != 0) hash ^= GridFightOffFieldMaxCount.GetHashCode();
       if (GridFightMaxFieldCount != 0) hash ^= GridFightMaxFieldCount.GetHashCode();
       if (GridFightCurLevelExp != 0) hash ^= GridFightCurLevelExp.GetHashCode();
@@ -453,9 +453,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(GridFightMaxInterestGold);
       }
-      if (HLLIJICGONN != 0) {
+      if (GridFightMaxLevel != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(HLLIJICGONN);
+        output.WriteUInt32(GridFightMaxLevel);
       }
       if (GridFightLineupMaxHp != 0) {
         output.WriteRawTag(88);
@@ -530,9 +530,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(72);
         output.WriteUInt32(GridFightMaxInterestGold);
       }
-      if (HLLIJICGONN != 0) {
+      if (GridFightMaxLevel != 0) {
         output.WriteRawTag(80);
-        output.WriteUInt32(HLLIJICGONN);
+        output.WriteUInt32(GridFightMaxLevel);
       }
       if (GridFightLineupMaxHp != 0) {
         output.WriteRawTag(88);
@@ -613,8 +613,8 @@ namespace EggLink.DanhengServer.Proto {
       if (GridFightMaxInterestGold != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightMaxInterestGold);
       }
-      if (HLLIJICGONN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(HLLIJICGONN);
+      if (GridFightMaxLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightMaxLevel);
       }
       if (GridFightOffFieldMaxCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightOffFieldMaxCount);
@@ -682,8 +682,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other.GridFightMaxInterestGold != 0) {
         GridFightMaxInterestGold = other.GridFightMaxInterestGold;
       }
-      if (other.HLLIJICGONN != 0) {
-        HLLIJICGONN = other.HLLIJICGONN;
+      if (other.GridFightMaxLevel != 0) {
+        GridFightMaxLevel = other.GridFightMaxLevel;
       }
       if (other.GridFightOffFieldMaxCount != 0) {
         GridFightOffFieldMaxCount = other.GridFightOffFieldMaxCount;
@@ -746,7 +746,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            HLLIJICGONN = input.ReadUInt32();
+            GridFightMaxLevel = input.ReadUInt32();
             break;
           }
           case 88: {
@@ -845,7 +845,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 80: {
-            HLLIJICGONN = input.ReadUInt32();
+            GridFightMaxLevel = input.ReadUInt32();
             break;
           }
           case 88: {

@@ -24,17 +24,17 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightTraitEffectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5HcmlkRmlnaHRUcmFpdEVmZmVjdEluZm8ucHJvdG8aEUFNRVBJQ01EREZL",
-            "LnByb3RvGhFJUEZEQ0tFRU9HTC5wcm90byLDAQoYR3JpZEZpZ2h0VHJhaXRF",
-            "ZmZlY3RJbmZvEhYKC0lESEZNQkdQQUxOGMkOIAEoDUgAEiQKC0lJQkJHSkZD",
-            "SERPGPYFIAEoCzIMLklQRkRDS0VFT0dMSAASIQoWdHJhaXRfZWZmZWN0X2xl",
-            "dmVsX2V4cBiTDiABKA1IABIkCgtPQURLT0VNTUdHShirDCABKAsyDC5BTUVQ",
-            "SUNNRERGS0gAEhEKCWVmZmVjdF9pZBgLIAEoDUINCgtHRE5BSUhQTU1IREIe",
-            "qgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Ch5HcmlkRmlnaHRUcmFpdEVmZmVjdEluZm8ucHJvdG8aEUlQRkRDS0VFT0dM",
+            "LnByb3RvGhFBTUVQSUNNRERGSy5wcm90byLHAQoYR3JpZEZpZ2h0VHJhaXRF",
+            "ZmZlY3RJbmZvEhoKD3RyYWl0X2NvcmVfcm9sZRjJDiABKA1IABIkCgtJSUJC",
+            "R0pGQ0hETxj2BSABKAsyDC5JUEZEQ0tFRU9HTEgAEiEKFnRyYWl0X2VmZmVj",
+            "dF9sZXZlbF9leHAYkw4gASgNSAASJAoLT0FES09FTU1HR0oYqwwgASgLMgwu",
+            "QU1FUElDTURERktIABIRCgllZmZlY3RfaWQYCyABKA1CDQoLR0ROQUlIUE1N",
+            "SERCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AMEPICMDDFKReflection.Descriptor, global::EggLink.DanhengServer.Proto.IPFDCKEEOGLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.IPFDCKEEOGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.AMEPICMDDFKReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitEffectInfo), global::EggLink.DanhengServer.Proto.GridFightTraitEffectInfo.Parser, new[]{ "IDHFMBGPALN", "IIBBGJFCHDO", "TraitEffectLevelExp", "OADKOEMMGGJ", "EffectId" }, new[]{ "GDNAIHPMMHD" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitEffectInfo), global::EggLink.DanhengServer.Proto.GridFightTraitEffectInfo.Parser, new[]{ "TraitCoreRole", "IIBBGJFCHDO", "TraitEffectLevelExp", "OADKOEMMGGJ", "EffectId" }, new[]{ "GDNAIHPMMHD" }, null, null, null)
           }));
     }
     #endregion
@@ -78,8 +78,8 @@ namespace EggLink.DanhengServer.Proto {
     public GridFightTraitEffectInfo(GridFightTraitEffectInfo other) : this() {
       effectId_ = other.effectId_;
       switch (other.GDNAIHPMMHDCase) {
-        case GDNAIHPMMHDOneofCase.IDHFMBGPALN:
-          IDHFMBGPALN = other.IDHFMBGPALN;
+        case GDNAIHPMMHDOneofCase.TraitCoreRole:
+          TraitCoreRole = other.TraitCoreRole;
           break;
         case GDNAIHPMMHDOneofCase.IIBBGJFCHDO:
           IIBBGJFCHDO = other.IIBBGJFCHDO.Clone();
@@ -101,28 +101,28 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightTraitEffectInfo(this);
     }
 
-    /// <summary>Field number for the "IDHFMBGPALN" field.</summary>
-    public const int IDHFMBGPALNFieldNumber = 1865;
+    /// <summary>Field number for the "trait_core_role" field.</summary>
+    public const int TraitCoreRoleFieldNumber = 1865;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint IDHFMBGPALN {
-      get { return HasIDHFMBGPALN ? (uint) gDNAIHPMMHD_ : 0; }
+    public uint TraitCoreRole {
+      get { return HasTraitCoreRole ? (uint) gDNAIHPMMHD_ : 0; }
       set {
         gDNAIHPMMHD_ = value;
-        gDNAIHPMMHDCase_ = GDNAIHPMMHDOneofCase.IDHFMBGPALN;
+        gDNAIHPMMHDCase_ = GDNAIHPMMHDOneofCase.TraitCoreRole;
       }
     }
-    /// <summary>Gets whether the "IDHFMBGPALN" field is set</summary>
+    /// <summary>Gets whether the "trait_core_role" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasIDHFMBGPALN {
-      get { return gDNAIHPMMHDCase_ == GDNAIHPMMHDOneofCase.IDHFMBGPALN; }
+    public bool HasTraitCoreRole {
+      get { return gDNAIHPMMHDCase_ == GDNAIHPMMHDOneofCase.TraitCoreRole; }
     }
-    /// <summary> Clears the value of the oneof if it's currently set to "IDHFMBGPALN" </summary>
+    /// <summary> Clears the value of the oneof if it's currently set to "trait_core_role" </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearIDHFMBGPALN() {
-      if (HasIDHFMBGPALN) {
+    public void ClearTraitCoreRole() {
+      if (HasTraitCoreRole) {
         ClearGDNAIHPMMHD();
       }
     }
@@ -193,7 +193,7 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "GDNAIHPMMHD" oneof.</summary>
     public enum GDNAIHPMMHDOneofCase {
       None = 0,
-      IDHFMBGPALN = 1865,
+      TraitCoreRole = 1865,
       IIBBGJFCHDO = 758,
       TraitEffectLevelExp = 1811,
       OADKOEMMGGJ = 1579,
@@ -227,7 +227,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (IDHFMBGPALN != other.IDHFMBGPALN) return false;
+      if (TraitCoreRole != other.TraitCoreRole) return false;
       if (!object.Equals(IIBBGJFCHDO, other.IIBBGJFCHDO)) return false;
       if (TraitEffectLevelExp != other.TraitEffectLevelExp) return false;
       if (!object.Equals(OADKOEMMGGJ, other.OADKOEMMGGJ)) return false;
@@ -240,7 +240,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (HasIDHFMBGPALN) hash ^= IDHFMBGPALN.GetHashCode();
+      if (HasTraitCoreRole) hash ^= TraitCoreRole.GetHashCode();
       if (gDNAIHPMMHDCase_ == GDNAIHPMMHDOneofCase.IIBBGJFCHDO) hash ^= IIBBGJFCHDO.GetHashCode();
       if (HasTraitEffectLevelExp) hash ^= TraitEffectLevelExp.GetHashCode();
       if (gDNAIHPMMHDCase_ == GDNAIHPMMHDOneofCase.OADKOEMMGGJ) hash ^= OADKOEMMGGJ.GetHashCode();
@@ -280,9 +280,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(152, 113);
         output.WriteUInt32(TraitEffectLevelExp);
       }
-      if (HasIDHFMBGPALN) {
+      if (HasTraitCoreRole) {
         output.WriteRawTag(200, 116);
-        output.WriteUInt32(IDHFMBGPALN);
+        output.WriteUInt32(TraitCoreRole);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -310,9 +310,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(152, 113);
         output.WriteUInt32(TraitEffectLevelExp);
       }
-      if (HasIDHFMBGPALN) {
+      if (HasTraitCoreRole) {
         output.WriteRawTag(200, 116);
-        output.WriteUInt32(IDHFMBGPALN);
+        output.WriteUInt32(TraitCoreRole);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -324,8 +324,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (HasIDHFMBGPALN) {
-        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(IDHFMBGPALN);
+      if (HasTraitCoreRole) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(TraitCoreRole);
       }
       if (gDNAIHPMMHDCase_ == GDNAIHPMMHDOneofCase.IIBBGJFCHDO) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(IIBBGJFCHDO);
@@ -355,8 +355,8 @@ namespace EggLink.DanhengServer.Proto {
         EffectId = other.EffectId;
       }
       switch (other.GDNAIHPMMHDCase) {
-        case GDNAIHPMMHDOneofCase.IDHFMBGPALN:
-          IDHFMBGPALN = other.IDHFMBGPALN;
+        case GDNAIHPMMHDOneofCase.TraitCoreRole:
+          TraitCoreRole = other.TraitCoreRole;
           break;
         case GDNAIHPMMHDOneofCase.IIBBGJFCHDO:
           if (IIBBGJFCHDO == null) {
@@ -417,7 +417,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 14920: {
-            IDHFMBGPALN = input.ReadUInt32();
+            TraitCoreRole = input.ReadUInt32();
             break;
           }
         }
@@ -462,7 +462,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 14920: {
-            IDHFMBGPALN = input.ReadUInt32();
+            TraitCoreRole = input.ReadUInt32();
             break;
           }
         }

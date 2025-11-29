@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightSeasonHandBookNotifyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNHcmlkRmlnaHRTZWFzb25IYW5kQm9va05vdGlmeS5wcm90bxodR3JpZEZp",
-            "Z2h0UG9ydGFsQnVmZkluZm8ucHJvdG8aGUdyaWRGaWdodEF2YXRhckluZm8u",
-            "cHJvdG8aGkdyaWRGaWdodEF1Z21lbnRJbmZvLnByb3RvGhdHcmlkRmlnaHRD",
-            "YW1wSW5mby5wcm90bxoXR3JpZEZpZ2h0SXRlbUluZm8ucHJvdG8iuwIKHUdy",
+            "CiNHcmlkRmlnaHRTZWFzb25IYW5kQm9va05vdGlmeS5wcm90bxoaR3JpZEZp",
+            "Z2h0QXVnbWVudEluZm8ucHJvdG8aF0dyaWRGaWdodENhbXBJbmZvLnByb3Rv",
+            "Gh1HcmlkRmlnaHRQb3J0YWxCdWZmSW5mby5wcm90bxoZR3JpZEZpZ2h0QXZh",
+            "dGFySW5mby5wcm90bxoXR3JpZEZpZ2h0SXRlbUluZm8ucHJvdG8iuwIKHUdy",
             "aWRGaWdodFNlYXNvbkhhbmRCb29rTm90aWZ5EkAKH2hhbmRib29rX2dyaWRf",
             "ZmlnaHRfYXZhdGFyX2luZm8YzwEgASgLMhQuR3JpZEZpZ2h0QXZhdGFySW5m",
             "b0gAEjwKHWhhbmRib29rX2dyaWRfZmlnaHRfaXRlbV9pbmZvGI0JIAEoCzIS",
@@ -37,7 +37,7 @@ namespace EggLink.DanhengServer.Proto {
             "IAEoCzISLkdyaWRGaWdodENhbXBJbmZvSABCDQoLUFBPSUFKRUNIQUVCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightPortalBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightCampInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightItemInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightAugmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightCampInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAvatarInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightItemInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSeasonHandBookNotify), global::EggLink.DanhengServer.Proto.GridFightSeasonHandBookNotify.Parser, new[]{ "HandbookGridFightAvatarInfo", "HandbookGridFightItemInfo", "LGKAILBBGJH", "EFGPENAIDPF", "FHBONOFKLGH" }, new[]{ "PPOIAJECHAE" }, null, null, null)
           }));

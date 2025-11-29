@@ -1,7 +1,6 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Lineup;
-using EggLink.DanhengServer.Enums.GridFight;
 using EggLink.DanhengServer.GameServer.Game.GridFight;
 using EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 using EggLink.DanhengServer.GameServer.Game.Player;
@@ -91,7 +90,7 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
 
         proto.BattleGridFightInfo = new BattleGridFightInfo
         {
-            GridGameAvatarList =
+            GridGameRoleList =
             {
                 RoleComponent.Data.Roles.Where(x => x.Pos <= BasicComponent.GetFieldCount()).OrderBy(x => x.Pos).Select(x => x.ToBattleInfo(ItemsComponent.Data))
             },

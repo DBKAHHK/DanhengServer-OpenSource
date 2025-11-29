@@ -24,17 +24,18 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightShopGoodsInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHcmlkRmlnaHRTaG9wR29vZHNJbmZvLnByb3RvGhFMSEJJSkRQQk9HTC5w",
-            "cm90bxocR3JpZEZpZ2h0Um9sZUdvb2RzSW5mby5wcm90byKxAQoWR3JpZEZp",
-            "Z2h0U2hvcEdvb2RzSW5mbxIzCg9yb2xlX2dvb2RzX2luZm8YpwMgASgLMhcu",
-            "R3JpZEZpZ2h0Um9sZUdvb2RzSW5mb0gAEiQKC0JPREZPR0dOQUZGGOUMIAEo",
-            "CzIMLkxIQklKRFBCT0dMSAASEwoLaXNfc29sZF9vdXQYDyABKAgSGAoQc2hv",
-            "cF9nb29kc19wcmljZRgNIAEoDUINCgtORE5ORkJLQ0RITUIeqgIbRWdnTGlu",
-            "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
+            "ChxHcmlkRmlnaHRTaG9wR29vZHNJbmZvLnByb3RvGhxHcmlkRmlnaHRSb2xl",
+            "R29vZHNJbmZvLnByb3RvGh9HcmlkRmlnaHRTcGVjaWFsR29vZHNJbmZvLnBy",
+            "b3RvIsYBChZHcmlkRmlnaHRTaG9wR29vZHNJbmZvEjMKD3JvbGVfZ29vZHNf",
+            "aW5mbxinAyABKAsyFy5HcmlkRmlnaHRSb2xlR29vZHNJbmZvSAASOQoSc3Bl",
+            "Y2lhbF9nb29kc19pbmZvGOUMIAEoCzIaLkdyaWRGaWdodFNwZWNpYWxHb29k",
+            "c0luZm9IABITCgtpc19zb2xkX291dBgPIAEoCBIYChBzaG9wX2dvb2RzX3By",
+            "aWNlGA0gASgNQg0KC05ETk5GQktDREhNQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
+            "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LHBIJDPBOGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRoleGoodsInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightRoleGoodsInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSpecialGoodsInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightShopGoodsInfo), global::EggLink.DanhengServer.Proto.GridFightShopGoodsInfo.Parser, new[]{ "RoleGoodsInfo", "BODFOGGNAFF", "IsSoldOut", "ShopGoodsPrice" }, new[]{ "NDNNFBKCDHM" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightShopGoodsInfo), global::EggLink.DanhengServer.Proto.GridFightShopGoodsInfo.Parser, new[]{ "RoleGoodsInfo", "SpecialGoodsInfo", "IsSoldOut", "ShopGoodsPrice" }, new[]{ "NDNNFBKCDHM" }, null, null, null)
           }));
     }
     #endregion
@@ -82,8 +83,8 @@ namespace EggLink.DanhengServer.Proto {
         case NDNNFBKCDHMOneofCase.RoleGoodsInfo:
           RoleGoodsInfo = other.RoleGoodsInfo.Clone();
           break;
-        case NDNNFBKCDHMOneofCase.BODFOGGNAFF:
-          BODFOGGNAFF = other.BODFOGGNAFF.Clone();
+        case NDNNFBKCDHMOneofCase.SpecialGoodsInfo:
+          SpecialGoodsInfo = other.SpecialGoodsInfo.Clone();
           break;
       }
 
@@ -108,15 +109,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BODFOGGNAFF" field.</summary>
-    public const int BODFOGGNAFFFieldNumber = 1637;
+    /// <summary>Field number for the "special_goods_info" field.</summary>
+    public const int SpecialGoodsInfoFieldNumber = 1637;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.LHBIJDPBOGL BODFOGGNAFF {
-      get { return nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.BODFOGGNAFF ? (global::EggLink.DanhengServer.Proto.LHBIJDPBOGL) nDNNFBKCDHM_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightSpecialGoodsInfo SpecialGoodsInfo {
+      get { return nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.SpecialGoodsInfo ? (global::EggLink.DanhengServer.Proto.GridFightSpecialGoodsInfo) nDNNFBKCDHM_ : null; }
       set {
         nDNNFBKCDHM_ = value;
-        nDNNFBKCDHMCase_ = value == null ? NDNNFBKCDHMOneofCase.None : NDNNFBKCDHMOneofCase.BODFOGGNAFF;
+        nDNNFBKCDHMCase_ = value == null ? NDNNFBKCDHMOneofCase.None : NDNNFBKCDHMOneofCase.SpecialGoodsInfo;
       }
     }
 
@@ -149,7 +150,7 @@ namespace EggLink.DanhengServer.Proto {
     public enum NDNNFBKCDHMOneofCase {
       None = 0,
       RoleGoodsInfo = 423,
-      BODFOGGNAFF = 1637,
+      SpecialGoodsInfo = 1637,
     }
     private NDNNFBKCDHMOneofCase nDNNFBKCDHMCase_ = NDNNFBKCDHMOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -181,7 +182,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (!object.Equals(RoleGoodsInfo, other.RoleGoodsInfo)) return false;
-      if (!object.Equals(BODFOGGNAFF, other.BODFOGGNAFF)) return false;
+      if (!object.Equals(SpecialGoodsInfo, other.SpecialGoodsInfo)) return false;
       if (IsSoldOut != other.IsSoldOut) return false;
       if (ShopGoodsPrice != other.ShopGoodsPrice) return false;
       if (NDNNFBKCDHMCase != other.NDNNFBKCDHMCase) return false;
@@ -193,7 +194,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.RoleGoodsInfo) hash ^= RoleGoodsInfo.GetHashCode();
-      if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.BODFOGGNAFF) hash ^= BODFOGGNAFF.GetHashCode();
+      if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.SpecialGoodsInfo) hash ^= SpecialGoodsInfo.GetHashCode();
       if (IsSoldOut != false) hash ^= IsSoldOut.GetHashCode();
       if (ShopGoodsPrice != 0) hash ^= ShopGoodsPrice.GetHashCode();
       hash ^= (int) nDNNFBKCDHMCase_;
@@ -227,9 +228,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(186, 26);
         output.WriteMessage(RoleGoodsInfo);
       }
-      if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.BODFOGGNAFF) {
+      if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.SpecialGoodsInfo) {
         output.WriteRawTag(170, 102);
-        output.WriteMessage(BODFOGGNAFF);
+        output.WriteMessage(SpecialGoodsInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -253,9 +254,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(186, 26);
         output.WriteMessage(RoleGoodsInfo);
       }
-      if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.BODFOGGNAFF) {
+      if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.SpecialGoodsInfo) {
         output.WriteRawTag(170, 102);
-        output.WriteMessage(BODFOGGNAFF);
+        output.WriteMessage(SpecialGoodsInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -270,8 +271,8 @@ namespace EggLink.DanhengServer.Proto {
       if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.RoleGoodsInfo) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(RoleGoodsInfo);
       }
-      if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.BODFOGGNAFF) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BODFOGGNAFF);
+      if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.SpecialGoodsInfo) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SpecialGoodsInfo);
       }
       if (IsSoldOut != false) {
         size += 1 + 1;
@@ -304,11 +305,11 @@ namespace EggLink.DanhengServer.Proto {
           }
           RoleGoodsInfo.MergeFrom(other.RoleGoodsInfo);
           break;
-        case NDNNFBKCDHMOneofCase.BODFOGGNAFF:
-          if (BODFOGGNAFF == null) {
-            BODFOGGNAFF = new global::EggLink.DanhengServer.Proto.LHBIJDPBOGL();
+        case NDNNFBKCDHMOneofCase.SpecialGoodsInfo:
+          if (SpecialGoodsInfo == null) {
+            SpecialGoodsInfo = new global::EggLink.DanhengServer.Proto.GridFightSpecialGoodsInfo();
           }
-          BODFOGGNAFF.MergeFrom(other.BODFOGGNAFF);
+          SpecialGoodsInfo.MergeFrom(other.SpecialGoodsInfo);
           break;
       }
 
@@ -345,12 +346,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 13098: {
-            global::EggLink.DanhengServer.Proto.LHBIJDPBOGL subBuilder = new global::EggLink.DanhengServer.Proto.LHBIJDPBOGL();
-            if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.BODFOGGNAFF) {
-              subBuilder.MergeFrom(BODFOGGNAFF);
+            global::EggLink.DanhengServer.Proto.GridFightSpecialGoodsInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightSpecialGoodsInfo();
+            if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.SpecialGoodsInfo) {
+              subBuilder.MergeFrom(SpecialGoodsInfo);
             }
             input.ReadMessage(subBuilder);
-            BODFOGGNAFF = subBuilder;
+            SpecialGoodsInfo = subBuilder;
             break;
           }
         }
@@ -386,12 +387,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 13098: {
-            global::EggLink.DanhengServer.Proto.LHBIJDPBOGL subBuilder = new global::EggLink.DanhengServer.Proto.LHBIJDPBOGL();
-            if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.BODFOGGNAFF) {
-              subBuilder.MergeFrom(BODFOGGNAFF);
+            global::EggLink.DanhengServer.Proto.GridFightSpecialGoodsInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightSpecialGoodsInfo();
+            if (nDNNFBKCDHMCase_ == NDNNFBKCDHMOneofCase.SpecialGoodsInfo) {
+              subBuilder.MergeFrom(SpecialGoodsInfo);
             }
             input.ReadMessage(subBuilder);
-            BODFOGGNAFF = subBuilder;
+            SpecialGoodsInfo = subBuilder;
             break;
           }
         }

@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static RogueMagicGetInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdSb2d1ZU1hZ2ljR2V0SW5mby5wcm90bxoeUm9ndWVNYWdpY0RpZmZpY3Vs",
-            "dHlJbmZvLnByb3RvGhhSb2d1ZU1hZ2ljVW5pdEluZm8ucHJvdG8aGFJvZ3Vl",
-            "TWFnaWNBcmVhSW5mby5wcm90bxoZUm9ndWVNYWdpY1N0b3J5SW5mby5wcm90",
-            "bxoaUm9ndWVNYWdpY1RhbGVudEluZm8ucHJvdG8aG1JvZ3VlTWFnaWNTY2Vw",
+            "ChdSb2d1ZU1hZ2ljR2V0SW5mby5wcm90bxoaUm9ndWVNYWdpY1RhbGVudElu",
+            "Zm8ucHJvdG8aGFJvZ3VlTWFnaWNVbml0SW5mby5wcm90bxoeUm9ndWVNYWdp",
+            "Y0RpZmZpY3VsdHlJbmZvLnByb3RvGhhSb2d1ZU1hZ2ljQXJlYUluZm8ucHJv",
+            "dG8aGVJvZ3VlTWFnaWNTdG9yeUluZm8ucHJvdG8aG1JvZ3VlTWFnaWNTY2Vw",
             "dGVySW5mby5wcm90byL2AgoRUm9ndWVNYWdpY0dldEluZm8SEwoLS0dMQk5E",
             "RUFQSEYYASADKA0SPgobcm9ndWVfdG91cm5fZGlmZmljdWx0eV9pbmZvGAMg",
             "AygLMhkuUm9ndWVNYWdpY0RpZmZpY3VsdHlJbmZvEjIKFXJvZ3VlX3RvdXJu",
@@ -39,7 +39,7 @@ namespace EggLink.DanhengServer.Proto {
             "bxgLIAEoCzIVLlJvZ3VlTWFnaWNUYWxlbnRJbmZvQh6qAhtFZ2dMaW5rLkRh",
             "bmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicDifficultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicUnitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicAreaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicStoryInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicTalentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicScepterInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueMagicTalentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicUnitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicDifficultyInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicAreaInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicStoryInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueMagicScepterInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.RogueMagicGetInfo), global::EggLink.DanhengServer.Proto.RogueMagicGetInfo.Parser, new[]{ "KGLBNDEAPHF", "RogueTournDifficultyInfo", "RogueTournAreaInfo", "RogueMagicUnitInfoList", "RogueMagicScepterInfoList", "StoryInfo", "RogueMagicTalentInfo" }, null, null, null, null)
           }));

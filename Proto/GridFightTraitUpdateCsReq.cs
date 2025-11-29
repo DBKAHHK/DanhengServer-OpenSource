@@ -24,15 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightTraitUpdateCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9HcmlkRmlnaHRUcmFpdFVwZGF0ZUNzUmVxLnByb3RvGhFPQUFNRUtNQ09I",
-            "SC5wcm90byJ1ChlHcmlkRmlnaHRUcmFpdFVwZGF0ZUNzUmVxEiQKC0RMTEdP",
-            "SkxJSE1MGJADIAEoCzIMLk9BQU1FS01DT0hISAASEAoIdHJhaXRfaWQYBiAB",
-            "KA0SEQoJZWZmZWN0X2lkGAogASgNQg0KC0VQSUpJSkNFS0hPQh6qAhtFZ2dM",
-            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Ch9HcmlkRmlnaHRUcmFpdFVwZGF0ZUNzUmVxLnByb3RvGiBHcmlkRmlnaHRU",
+            "cmFpdENvcmVSb2xlSW5mby5wcm90byKNAQoZR3JpZEZpZ2h0VHJhaXRVcGRh",
+            "dGVDc1JlcRI8ChR0cmFpdF9jb3JlX3JvbGVfaW5mbxiQAyABKAsyGy5Hcmlk",
+            "RmlnaHRUcmFpdENvcmVSb2xlSW5mb0gAEhAKCHRyYWl0X2lkGAYgASgNEhEK",
+            "CWVmZmVjdF9pZBgKIAEoDUINCgtFUElKSUpDRUtIT0IeqgIbRWdnTGluay5E",
+            "YW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OAAMEKMCOHHReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightTraitCoreRoleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitUpdateCsReq), global::EggLink.DanhengServer.Proto.GridFightTraitUpdateCsReq.Parser, new[]{ "DLLGOJLIHML", "TraitId", "EffectId" }, new[]{ "EPIJIJCEKHO" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitUpdateCsReq), global::EggLink.DanhengServer.Proto.GridFightTraitUpdateCsReq.Parser, new[]{ "TraitCoreRoleInfo", "TraitId", "EffectId" }, new[]{ "EPIJIJCEKHO" }, null, null, null)
           }));
     }
     #endregion
@@ -77,8 +78,8 @@ namespace EggLink.DanhengServer.Proto {
       traitId_ = other.traitId_;
       effectId_ = other.effectId_;
       switch (other.EPIJIJCEKHOCase) {
-        case EPIJIJCEKHOOneofCase.DLLGOJLIHML:
-          DLLGOJLIHML = other.DLLGOJLIHML.Clone();
+        case EPIJIJCEKHOOneofCase.TraitCoreRoleInfo:
+          TraitCoreRoleInfo = other.TraitCoreRoleInfo.Clone();
           break;
       }
 
@@ -91,15 +92,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightTraitUpdateCsReq(this);
     }
 
-    /// <summary>Field number for the "DLLGOJLIHML" field.</summary>
-    public const int DLLGOJLIHMLFieldNumber = 400;
+    /// <summary>Field number for the "trait_core_role_info" field.</summary>
+    public const int TraitCoreRoleInfoFieldNumber = 400;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.OAAMEKMCOHH DLLGOJLIHML {
-      get { return ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.DLLGOJLIHML ? (global::EggLink.DanhengServer.Proto.OAAMEKMCOHH) ePIJIJCEKHO_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightTraitCoreRoleInfo TraitCoreRoleInfo {
+      get { return ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.TraitCoreRoleInfo ? (global::EggLink.DanhengServer.Proto.GridFightTraitCoreRoleInfo) ePIJIJCEKHO_ : null; }
       set {
         ePIJIJCEKHO_ = value;
-        ePIJIJCEKHOCase_ = value == null ? EPIJIJCEKHOOneofCase.None : EPIJIJCEKHOOneofCase.DLLGOJLIHML;
+        ePIJIJCEKHOCase_ = value == null ? EPIJIJCEKHOOneofCase.None : EPIJIJCEKHOOneofCase.TraitCoreRoleInfo;
       }
     }
 
@@ -131,7 +132,7 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "EPIJIJCEKHO" oneof.</summary>
     public enum EPIJIJCEKHOOneofCase {
       None = 0,
-      DLLGOJLIHML = 400,
+      TraitCoreRoleInfo = 400,
     }
     private EPIJIJCEKHOOneofCase ePIJIJCEKHOCase_ = EPIJIJCEKHOOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -162,7 +163,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(DLLGOJLIHML, other.DLLGOJLIHML)) return false;
+      if (!object.Equals(TraitCoreRoleInfo, other.TraitCoreRoleInfo)) return false;
       if (TraitId != other.TraitId) return false;
       if (EffectId != other.EffectId) return false;
       if (EPIJIJCEKHOCase != other.EPIJIJCEKHOCase) return false;
@@ -173,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.DLLGOJLIHML) hash ^= DLLGOJLIHML.GetHashCode();
+      if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.TraitCoreRoleInfo) hash ^= TraitCoreRoleInfo.GetHashCode();
       if (TraitId != 0) hash ^= TraitId.GetHashCode();
       if (EffectId != 0) hash ^= EffectId.GetHashCode();
       hash ^= (int) ePIJIJCEKHOCase_;
@@ -203,9 +204,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(80);
         output.WriteUInt32(EffectId);
       }
-      if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.DLLGOJLIHML) {
+      if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.TraitCoreRoleInfo) {
         output.WriteRawTag(130, 25);
-        output.WriteMessage(DLLGOJLIHML);
+        output.WriteMessage(TraitCoreRoleInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -225,9 +226,9 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(80);
         output.WriteUInt32(EffectId);
       }
-      if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.DLLGOJLIHML) {
+      if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.TraitCoreRoleInfo) {
         output.WriteRawTag(130, 25);
-        output.WriteMessage(DLLGOJLIHML);
+        output.WriteMessage(TraitCoreRoleInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -239,8 +240,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.DLLGOJLIHML) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DLLGOJLIHML);
+      if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.TraitCoreRoleInfo) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TraitCoreRoleInfo);
       }
       if (TraitId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitId);
@@ -267,11 +268,11 @@ namespace EggLink.DanhengServer.Proto {
         EffectId = other.EffectId;
       }
       switch (other.EPIJIJCEKHOCase) {
-        case EPIJIJCEKHOOneofCase.DLLGOJLIHML:
-          if (DLLGOJLIHML == null) {
-            DLLGOJLIHML = new global::EggLink.DanhengServer.Proto.OAAMEKMCOHH();
+        case EPIJIJCEKHOOneofCase.TraitCoreRoleInfo:
+          if (TraitCoreRoleInfo == null) {
+            TraitCoreRoleInfo = new global::EggLink.DanhengServer.Proto.GridFightTraitCoreRoleInfo();
           }
-          DLLGOJLIHML.MergeFrom(other.DLLGOJLIHML);
+          TraitCoreRoleInfo.MergeFrom(other.TraitCoreRoleInfo);
           break;
       }
 
@@ -299,12 +300,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 3202: {
-            global::EggLink.DanhengServer.Proto.OAAMEKMCOHH subBuilder = new global::EggLink.DanhengServer.Proto.OAAMEKMCOHH();
-            if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.DLLGOJLIHML) {
-              subBuilder.MergeFrom(DLLGOJLIHML);
+            global::EggLink.DanhengServer.Proto.GridFightTraitCoreRoleInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightTraitCoreRoleInfo();
+            if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.TraitCoreRoleInfo) {
+              subBuilder.MergeFrom(TraitCoreRoleInfo);
             }
             input.ReadMessage(subBuilder);
-            DLLGOJLIHML = subBuilder;
+            TraitCoreRoleInfo = subBuilder;
             break;
           }
         }
@@ -331,12 +332,12 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 3202: {
-            global::EggLink.DanhengServer.Proto.OAAMEKMCOHH subBuilder = new global::EggLink.DanhengServer.Proto.OAAMEKMCOHH();
-            if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.DLLGOJLIHML) {
-              subBuilder.MergeFrom(DLLGOJLIHML);
+            global::EggLink.DanhengServer.Proto.GridFightTraitCoreRoleInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightTraitCoreRoleInfo();
+            if (ePIJIJCEKHOCase_ == EPIJIJCEKHOOneofCase.TraitCoreRoleInfo) {
+              subBuilder.MergeFrom(TraitCoreRoleInfo);
             }
             input.ReadMessage(subBuilder);
-            DLLGOJLIHML = subBuilder;
+            TraitCoreRoleInfo = subBuilder;
             break;
           }
         }

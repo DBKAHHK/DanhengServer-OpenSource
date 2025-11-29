@@ -24,22 +24,26 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightConsumableTargetInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNHcmlkRmlnaHRDb25zdW1hYmxlVGFyZ2V0SW5mby5wcm90bxoRUEZCSklH",
-            "TkVPUEsucHJvdG8aEUVHQk9LTk5CS0dOLnByb3RvGhFCRktLTE1DR0VHSy5w",
-            "cm90bxomR3JpZEZpZ2h0Um9sZUVxdWlwbWVudFRhcmdldEluZm8ucHJvdG8a",
-            "HUdyaWRGaWdodFJvbGVUYXJnZXRJbmZvLnByb3RvIqECCh1HcmlkRmlnaHRD",
-            "b25zdW1hYmxlVGFyZ2V0SW5mbxI1ChByb2xlX3RhcmdldF9pbmZvGOMMIAEo",
-            "CzIYLkdyaWRGaWdodFJvbGVUYXJnZXRJbmZvSAASSAoacm9sZV9lcXVpcG1l",
-            "bnRfdGFyZ2V0X2luZm8Ygg4gASgLMiEuR3JpZEZpZ2h0Um9sZUVxdWlwbWVu",
-            "dFRhcmdldEluZm9IABIkCgtFTE5IRkhER0pKQxjLBiABKAsyDC5QRkJKSUdO",
-            "RU9QS0gAEiQKC0NJTkpKUEJFT0hLGMYDIAEoCzIMLkVHQk9LTk5CS0dOSAAS",
-            "JAoLSk9DTklGQUFGRFAYsw0gASgLMgwuQkZLS0xNQ0dFR0tIAEINCgtOTElJ",
-            "QlBKSExBQkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90",
-            "bzM="));
+            "CiNHcmlkRmlnaHRDb25zdW1hYmxlVGFyZ2V0SW5mby5wcm90bxovR3JpZEZp",
+            "Z2h0R2FpblJlY29tbWVuZEVxdWlwVHlwZVRhcmdldEluZm8ucHJvdG8aIUdy",
+            "aWRGaWdodENvcHlUeXBlVGFyZ2V0SW5mby5wcm90bxokR3JpZEZpZ2h0VXBn",
+            "cmFkZVR5cGVUYXJnZXRJbmZvLnByb3RvGiFHcmlkRmlnaHRSb2xsVHlwZVRh",
+            "cmdldEluZm8ucHJvdG8aI0dyaWRGaWdodFJlbW92ZVR5cGVUYXJnZXRJbmZv",
+            "LnByb3RvIpYDCh1HcmlkRmlnaHRDb25zdW1hYmxlVGFyZ2V0SW5mbxJCChdy",
+            "ZW1vdmVfdHlwZV90YXJnZXRfaW5mbxjjDCABKAsyHi5HcmlkRmlnaHRSZW1v",
+            "dmVUeXBlVGFyZ2V0SW5mb0gAEj4KFXJvbGxfdHlwZV90YXJnZXRfaW5mbxiC",
+            "DiABKAsyHC5HcmlkRmlnaHRSb2xsVHlwZVRhcmdldEluZm9IABJEChh1cGdy",
+            "YWRlX3R5cGVfdGFyZ2V0X2luZm8YywYgASgLMh8uR3JpZEZpZ2h0VXBncmFk",
+            "ZVR5cGVUYXJnZXRJbmZvSAASPgoVY29weV90eXBlX3RhcmdldF9pbmZvGMYD",
+            "IAEoCzIcLkdyaWRGaWdodENvcHlUeXBlVGFyZ2V0SW5mb0gAElwKJWdhaW5f",
+            "cmVjb21tZW5kX2VxdWlwX3R5cGVfdGFyZ2V0X2luZm8Ysw0gASgLMiouR3Jp",
+            "ZEZpZ2h0R2FpblJlY29tbWVuZEVxdWlwVHlwZVRhcmdldEluZm9IAEINCgtO",
+            "TElJQlBKSExBQkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.PFBJIGNEOPKReflection.Descriptor, global::EggLink.DanhengServer.Proto.EGBOKNNBKGNReflection.Descriptor, global::EggLink.DanhengServer.Proto.BFKKLMCGEGKReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRoleEquipmentTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRoleTargetInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightGainRecommendEquipTypeTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightCopyTypeTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightUpgradeTypeTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRollTypeTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRemoveTypeTargetInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfo), global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfo.Parser, new[]{ "RoleTargetInfo", "RoleEquipmentTargetInfo", "ELNHFHDGJJC", "CINJJPBEOHK", "JOCNIFAAFDP" }, new[]{ "NLIIBPJHLAB" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfo), global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfo.Parser, new[]{ "RemoveTypeTargetInfo", "RollTypeTargetInfo", "UpgradeTypeTargetInfo", "CopyTypeTargetInfo", "GainRecommendEquipTypeTargetInfo" }, new[]{ "NLIIBPJHLAB" }, null, null, null)
           }));
     }
     #endregion
@@ -82,20 +86,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightConsumableTargetInfo(GridFightConsumableTargetInfo other) : this() {
       switch (other.NLIIBPJHLABCase) {
-        case NLIIBPJHLABOneofCase.RoleTargetInfo:
-          RoleTargetInfo = other.RoleTargetInfo.Clone();
+        case NLIIBPJHLABOneofCase.RemoveTypeTargetInfo:
+          RemoveTypeTargetInfo = other.RemoveTypeTargetInfo.Clone();
           break;
-        case NLIIBPJHLABOneofCase.RoleEquipmentTargetInfo:
-          RoleEquipmentTargetInfo = other.RoleEquipmentTargetInfo.Clone();
+        case NLIIBPJHLABOneofCase.RollTypeTargetInfo:
+          RollTypeTargetInfo = other.RollTypeTargetInfo.Clone();
           break;
-        case NLIIBPJHLABOneofCase.ELNHFHDGJJC:
-          ELNHFHDGJJC = other.ELNHFHDGJJC.Clone();
+        case NLIIBPJHLABOneofCase.UpgradeTypeTargetInfo:
+          UpgradeTypeTargetInfo = other.UpgradeTypeTargetInfo.Clone();
           break;
-        case NLIIBPJHLABOneofCase.CINJJPBEOHK:
-          CINJJPBEOHK = other.CINJJPBEOHK.Clone();
+        case NLIIBPJHLABOneofCase.CopyTypeTargetInfo:
+          CopyTypeTargetInfo = other.CopyTypeTargetInfo.Clone();
           break;
-        case NLIIBPJHLABOneofCase.JOCNIFAAFDP:
-          JOCNIFAAFDP = other.JOCNIFAAFDP.Clone();
+        case NLIIBPJHLABOneofCase.GainRecommendEquipTypeTargetInfo:
+          GainRecommendEquipTypeTargetInfo = other.GainRecommendEquipTypeTargetInfo.Clone();
           break;
       }
 
@@ -108,63 +112,63 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightConsumableTargetInfo(this);
     }
 
-    /// <summary>Field number for the "role_target_info" field.</summary>
-    public const int RoleTargetInfoFieldNumber = 1635;
+    /// <summary>Field number for the "remove_type_target_info" field.</summary>
+    public const int RemoveTypeTargetInfoFieldNumber = 1635;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GridFightRoleTargetInfo RoleTargetInfo {
-      get { return nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleTargetInfo ? (global::EggLink.DanhengServer.Proto.GridFightRoleTargetInfo) nLIIBPJHLAB_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightRemoveTypeTargetInfo RemoveTypeTargetInfo {
+      get { return nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RemoveTypeTargetInfo ? (global::EggLink.DanhengServer.Proto.GridFightRemoveTypeTargetInfo) nLIIBPJHLAB_ : null; }
       set {
         nLIIBPJHLAB_ = value;
-        nLIIBPJHLABCase_ = value == null ? NLIIBPJHLABOneofCase.None : NLIIBPJHLABOneofCase.RoleTargetInfo;
+        nLIIBPJHLABCase_ = value == null ? NLIIBPJHLABOneofCase.None : NLIIBPJHLABOneofCase.RemoveTypeTargetInfo;
       }
     }
 
-    /// <summary>Field number for the "role_equipment_target_info" field.</summary>
-    public const int RoleEquipmentTargetInfoFieldNumber = 1794;
+    /// <summary>Field number for the "roll_type_target_info" field.</summary>
+    public const int RollTypeTargetInfoFieldNumber = 1794;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.GridFightRoleEquipmentTargetInfo RoleEquipmentTargetInfo {
-      get { return nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleEquipmentTargetInfo ? (global::EggLink.DanhengServer.Proto.GridFightRoleEquipmentTargetInfo) nLIIBPJHLAB_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightRollTypeTargetInfo RollTypeTargetInfo {
+      get { return nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RollTypeTargetInfo ? (global::EggLink.DanhengServer.Proto.GridFightRollTypeTargetInfo) nLIIBPJHLAB_ : null; }
       set {
         nLIIBPJHLAB_ = value;
-        nLIIBPJHLABCase_ = value == null ? NLIIBPJHLABOneofCase.None : NLIIBPJHLABOneofCase.RoleEquipmentTargetInfo;
+        nLIIBPJHLABCase_ = value == null ? NLIIBPJHLABOneofCase.None : NLIIBPJHLABOneofCase.RollTypeTargetInfo;
       }
     }
 
-    /// <summary>Field number for the "ELNHFHDGJJC" field.</summary>
-    public const int ELNHFHDGJJCFieldNumber = 843;
+    /// <summary>Field number for the "upgrade_type_target_info" field.</summary>
+    public const int UpgradeTypeTargetInfoFieldNumber = 843;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.PFBJIGNEOPK ELNHFHDGJJC {
-      get { return nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.ELNHFHDGJJC ? (global::EggLink.DanhengServer.Proto.PFBJIGNEOPK) nLIIBPJHLAB_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightUpgradeTypeTargetInfo UpgradeTypeTargetInfo {
+      get { return nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.UpgradeTypeTargetInfo ? (global::EggLink.DanhengServer.Proto.GridFightUpgradeTypeTargetInfo) nLIIBPJHLAB_ : null; }
       set {
         nLIIBPJHLAB_ = value;
-        nLIIBPJHLABCase_ = value == null ? NLIIBPJHLABOneofCase.None : NLIIBPJHLABOneofCase.ELNHFHDGJJC;
+        nLIIBPJHLABCase_ = value == null ? NLIIBPJHLABOneofCase.None : NLIIBPJHLABOneofCase.UpgradeTypeTargetInfo;
       }
     }
 
-    /// <summary>Field number for the "CINJJPBEOHK" field.</summary>
-    public const int CINJJPBEOHKFieldNumber = 454;
+    /// <summary>Field number for the "copy_type_target_info" field.</summary>
+    public const int CopyTypeTargetInfoFieldNumber = 454;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.EGBOKNNBKGN CINJJPBEOHK {
-      get { return nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CINJJPBEOHK ? (global::EggLink.DanhengServer.Proto.EGBOKNNBKGN) nLIIBPJHLAB_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightCopyTypeTargetInfo CopyTypeTargetInfo {
+      get { return nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CopyTypeTargetInfo ? (global::EggLink.DanhengServer.Proto.GridFightCopyTypeTargetInfo) nLIIBPJHLAB_ : null; }
       set {
         nLIIBPJHLAB_ = value;
-        nLIIBPJHLABCase_ = value == null ? NLIIBPJHLABOneofCase.None : NLIIBPJHLABOneofCase.CINJJPBEOHK;
+        nLIIBPJHLABCase_ = value == null ? NLIIBPJHLABOneofCase.None : NLIIBPJHLABOneofCase.CopyTypeTargetInfo;
       }
     }
 
-    /// <summary>Field number for the "JOCNIFAAFDP" field.</summary>
-    public const int JOCNIFAAFDPFieldNumber = 1715;
+    /// <summary>Field number for the "gain_recommend_equip_type_target_info" field.</summary>
+    public const int GainRecommendEquipTypeTargetInfoFieldNumber = 1715;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.BFKKLMCGEGK JOCNIFAAFDP {
-      get { return nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.JOCNIFAAFDP ? (global::EggLink.DanhengServer.Proto.BFKKLMCGEGK) nLIIBPJHLAB_ : null; }
+    public global::EggLink.DanhengServer.Proto.GridFightGainRecommendEquipTypeTargetInfo GainRecommendEquipTypeTargetInfo {
+      get { return nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.GainRecommendEquipTypeTargetInfo ? (global::EggLink.DanhengServer.Proto.GridFightGainRecommendEquipTypeTargetInfo) nLIIBPJHLAB_ : null; }
       set {
         nLIIBPJHLAB_ = value;
-        nLIIBPJHLABCase_ = value == null ? NLIIBPJHLABOneofCase.None : NLIIBPJHLABOneofCase.JOCNIFAAFDP;
+        nLIIBPJHLABCase_ = value == null ? NLIIBPJHLABOneofCase.None : NLIIBPJHLABOneofCase.GainRecommendEquipTypeTargetInfo;
       }
     }
 
@@ -172,11 +176,11 @@ namespace EggLink.DanhengServer.Proto {
     /// <summary>Enum of possible cases for the "NLIIBPJHLAB" oneof.</summary>
     public enum NLIIBPJHLABOneofCase {
       None = 0,
-      RoleTargetInfo = 1635,
-      RoleEquipmentTargetInfo = 1794,
-      ELNHFHDGJJC = 843,
-      CINJJPBEOHK = 454,
-      JOCNIFAAFDP = 1715,
+      RemoveTypeTargetInfo = 1635,
+      RollTypeTargetInfo = 1794,
+      UpgradeTypeTargetInfo = 843,
+      CopyTypeTargetInfo = 454,
+      GainRecommendEquipTypeTargetInfo = 1715,
     }
     private NLIIBPJHLABOneofCase nLIIBPJHLABCase_ = NLIIBPJHLABOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -207,11 +211,11 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(RoleTargetInfo, other.RoleTargetInfo)) return false;
-      if (!object.Equals(RoleEquipmentTargetInfo, other.RoleEquipmentTargetInfo)) return false;
-      if (!object.Equals(ELNHFHDGJJC, other.ELNHFHDGJJC)) return false;
-      if (!object.Equals(CINJJPBEOHK, other.CINJJPBEOHK)) return false;
-      if (!object.Equals(JOCNIFAAFDP, other.JOCNIFAAFDP)) return false;
+      if (!object.Equals(RemoveTypeTargetInfo, other.RemoveTypeTargetInfo)) return false;
+      if (!object.Equals(RollTypeTargetInfo, other.RollTypeTargetInfo)) return false;
+      if (!object.Equals(UpgradeTypeTargetInfo, other.UpgradeTypeTargetInfo)) return false;
+      if (!object.Equals(CopyTypeTargetInfo, other.CopyTypeTargetInfo)) return false;
+      if (!object.Equals(GainRecommendEquipTypeTargetInfo, other.GainRecommendEquipTypeTargetInfo)) return false;
       if (NLIIBPJHLABCase != other.NLIIBPJHLABCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -220,11 +224,11 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleTargetInfo) hash ^= RoleTargetInfo.GetHashCode();
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleEquipmentTargetInfo) hash ^= RoleEquipmentTargetInfo.GetHashCode();
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.ELNHFHDGJJC) hash ^= ELNHFHDGJJC.GetHashCode();
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CINJJPBEOHK) hash ^= CINJJPBEOHK.GetHashCode();
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.JOCNIFAAFDP) hash ^= JOCNIFAAFDP.GetHashCode();
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RemoveTypeTargetInfo) hash ^= RemoveTypeTargetInfo.GetHashCode();
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RollTypeTargetInfo) hash ^= RollTypeTargetInfo.GetHashCode();
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.UpgradeTypeTargetInfo) hash ^= UpgradeTypeTargetInfo.GetHashCode();
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CopyTypeTargetInfo) hash ^= CopyTypeTargetInfo.GetHashCode();
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.GainRecommendEquipTypeTargetInfo) hash ^= GainRecommendEquipTypeTargetInfo.GetHashCode();
       hash ^= (int) nLIIBPJHLABCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -244,25 +248,25 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CINJJPBEOHK) {
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CopyTypeTargetInfo) {
         output.WriteRawTag(178, 28);
-        output.WriteMessage(CINJJPBEOHK);
+        output.WriteMessage(CopyTypeTargetInfo);
       }
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.ELNHFHDGJJC) {
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.UpgradeTypeTargetInfo) {
         output.WriteRawTag(218, 52);
-        output.WriteMessage(ELNHFHDGJJC);
+        output.WriteMessage(UpgradeTypeTargetInfo);
       }
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleTargetInfo) {
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RemoveTypeTargetInfo) {
         output.WriteRawTag(154, 102);
-        output.WriteMessage(RoleTargetInfo);
+        output.WriteMessage(RemoveTypeTargetInfo);
       }
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.JOCNIFAAFDP) {
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.GainRecommendEquipTypeTargetInfo) {
         output.WriteRawTag(154, 107);
-        output.WriteMessage(JOCNIFAAFDP);
+        output.WriteMessage(GainRecommendEquipTypeTargetInfo);
       }
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleEquipmentTargetInfo) {
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RollTypeTargetInfo) {
         output.WriteRawTag(146, 112);
-        output.WriteMessage(RoleEquipmentTargetInfo);
+        output.WriteMessage(RollTypeTargetInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -274,25 +278,25 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CINJJPBEOHK) {
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CopyTypeTargetInfo) {
         output.WriteRawTag(178, 28);
-        output.WriteMessage(CINJJPBEOHK);
+        output.WriteMessage(CopyTypeTargetInfo);
       }
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.ELNHFHDGJJC) {
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.UpgradeTypeTargetInfo) {
         output.WriteRawTag(218, 52);
-        output.WriteMessage(ELNHFHDGJJC);
+        output.WriteMessage(UpgradeTypeTargetInfo);
       }
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleTargetInfo) {
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RemoveTypeTargetInfo) {
         output.WriteRawTag(154, 102);
-        output.WriteMessage(RoleTargetInfo);
+        output.WriteMessage(RemoveTypeTargetInfo);
       }
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.JOCNIFAAFDP) {
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.GainRecommendEquipTypeTargetInfo) {
         output.WriteRawTag(154, 107);
-        output.WriteMessage(JOCNIFAAFDP);
+        output.WriteMessage(GainRecommendEquipTypeTargetInfo);
       }
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleEquipmentTargetInfo) {
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RollTypeTargetInfo) {
         output.WriteRawTag(146, 112);
-        output.WriteMessage(RoleEquipmentTargetInfo);
+        output.WriteMessage(RollTypeTargetInfo);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -304,20 +308,20 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleTargetInfo) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RoleTargetInfo);
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RemoveTypeTargetInfo) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RemoveTypeTargetInfo);
       }
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleEquipmentTargetInfo) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RoleEquipmentTargetInfo);
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RollTypeTargetInfo) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RollTypeTargetInfo);
       }
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.ELNHFHDGJJC) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ELNHFHDGJJC);
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.UpgradeTypeTargetInfo) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(UpgradeTypeTargetInfo);
       }
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CINJJPBEOHK) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CINJJPBEOHK);
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CopyTypeTargetInfo) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CopyTypeTargetInfo);
       }
-      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.JOCNIFAAFDP) {
-        size += 2 + pb::CodedOutputStream.ComputeMessageSize(JOCNIFAAFDP);
+      if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.GainRecommendEquipTypeTargetInfo) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(GainRecommendEquipTypeTargetInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -332,35 +336,35 @@ namespace EggLink.DanhengServer.Proto {
         return;
       }
       switch (other.NLIIBPJHLABCase) {
-        case NLIIBPJHLABOneofCase.RoleTargetInfo:
-          if (RoleTargetInfo == null) {
-            RoleTargetInfo = new global::EggLink.DanhengServer.Proto.GridFightRoleTargetInfo();
+        case NLIIBPJHLABOneofCase.RemoveTypeTargetInfo:
+          if (RemoveTypeTargetInfo == null) {
+            RemoveTypeTargetInfo = new global::EggLink.DanhengServer.Proto.GridFightRemoveTypeTargetInfo();
           }
-          RoleTargetInfo.MergeFrom(other.RoleTargetInfo);
+          RemoveTypeTargetInfo.MergeFrom(other.RemoveTypeTargetInfo);
           break;
-        case NLIIBPJHLABOneofCase.RoleEquipmentTargetInfo:
-          if (RoleEquipmentTargetInfo == null) {
-            RoleEquipmentTargetInfo = new global::EggLink.DanhengServer.Proto.GridFightRoleEquipmentTargetInfo();
+        case NLIIBPJHLABOneofCase.RollTypeTargetInfo:
+          if (RollTypeTargetInfo == null) {
+            RollTypeTargetInfo = new global::EggLink.DanhengServer.Proto.GridFightRollTypeTargetInfo();
           }
-          RoleEquipmentTargetInfo.MergeFrom(other.RoleEquipmentTargetInfo);
+          RollTypeTargetInfo.MergeFrom(other.RollTypeTargetInfo);
           break;
-        case NLIIBPJHLABOneofCase.ELNHFHDGJJC:
-          if (ELNHFHDGJJC == null) {
-            ELNHFHDGJJC = new global::EggLink.DanhengServer.Proto.PFBJIGNEOPK();
+        case NLIIBPJHLABOneofCase.UpgradeTypeTargetInfo:
+          if (UpgradeTypeTargetInfo == null) {
+            UpgradeTypeTargetInfo = new global::EggLink.DanhengServer.Proto.GridFightUpgradeTypeTargetInfo();
           }
-          ELNHFHDGJJC.MergeFrom(other.ELNHFHDGJJC);
+          UpgradeTypeTargetInfo.MergeFrom(other.UpgradeTypeTargetInfo);
           break;
-        case NLIIBPJHLABOneofCase.CINJJPBEOHK:
-          if (CINJJPBEOHK == null) {
-            CINJJPBEOHK = new global::EggLink.DanhengServer.Proto.EGBOKNNBKGN();
+        case NLIIBPJHLABOneofCase.CopyTypeTargetInfo:
+          if (CopyTypeTargetInfo == null) {
+            CopyTypeTargetInfo = new global::EggLink.DanhengServer.Proto.GridFightCopyTypeTargetInfo();
           }
-          CINJJPBEOHK.MergeFrom(other.CINJJPBEOHK);
+          CopyTypeTargetInfo.MergeFrom(other.CopyTypeTargetInfo);
           break;
-        case NLIIBPJHLABOneofCase.JOCNIFAAFDP:
-          if (JOCNIFAAFDP == null) {
-            JOCNIFAAFDP = new global::EggLink.DanhengServer.Proto.BFKKLMCGEGK();
+        case NLIIBPJHLABOneofCase.GainRecommendEquipTypeTargetInfo:
+          if (GainRecommendEquipTypeTargetInfo == null) {
+            GainRecommendEquipTypeTargetInfo = new global::EggLink.DanhengServer.Proto.GridFightGainRecommendEquipTypeTargetInfo();
           }
-          JOCNIFAAFDP.MergeFrom(other.JOCNIFAAFDP);
+          GainRecommendEquipTypeTargetInfo.MergeFrom(other.GainRecommendEquipTypeTargetInfo);
           break;
       }
 
@@ -380,48 +384,48 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 3634: {
-            global::EggLink.DanhengServer.Proto.EGBOKNNBKGN subBuilder = new global::EggLink.DanhengServer.Proto.EGBOKNNBKGN();
-            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CINJJPBEOHK) {
-              subBuilder.MergeFrom(CINJJPBEOHK);
+            global::EggLink.DanhengServer.Proto.GridFightCopyTypeTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightCopyTypeTargetInfo();
+            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CopyTypeTargetInfo) {
+              subBuilder.MergeFrom(CopyTypeTargetInfo);
             }
             input.ReadMessage(subBuilder);
-            CINJJPBEOHK = subBuilder;
+            CopyTypeTargetInfo = subBuilder;
             break;
           }
           case 6746: {
-            global::EggLink.DanhengServer.Proto.PFBJIGNEOPK subBuilder = new global::EggLink.DanhengServer.Proto.PFBJIGNEOPK();
-            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.ELNHFHDGJJC) {
-              subBuilder.MergeFrom(ELNHFHDGJJC);
+            global::EggLink.DanhengServer.Proto.GridFightUpgradeTypeTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightUpgradeTypeTargetInfo();
+            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.UpgradeTypeTargetInfo) {
+              subBuilder.MergeFrom(UpgradeTypeTargetInfo);
             }
             input.ReadMessage(subBuilder);
-            ELNHFHDGJJC = subBuilder;
+            UpgradeTypeTargetInfo = subBuilder;
             break;
           }
           case 13082: {
-            global::EggLink.DanhengServer.Proto.GridFightRoleTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightRoleTargetInfo();
-            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleTargetInfo) {
-              subBuilder.MergeFrom(RoleTargetInfo);
+            global::EggLink.DanhengServer.Proto.GridFightRemoveTypeTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightRemoveTypeTargetInfo();
+            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RemoveTypeTargetInfo) {
+              subBuilder.MergeFrom(RemoveTypeTargetInfo);
             }
             input.ReadMessage(subBuilder);
-            RoleTargetInfo = subBuilder;
+            RemoveTypeTargetInfo = subBuilder;
             break;
           }
           case 13722: {
-            global::EggLink.DanhengServer.Proto.BFKKLMCGEGK subBuilder = new global::EggLink.DanhengServer.Proto.BFKKLMCGEGK();
-            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.JOCNIFAAFDP) {
-              subBuilder.MergeFrom(JOCNIFAAFDP);
+            global::EggLink.DanhengServer.Proto.GridFightGainRecommendEquipTypeTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightGainRecommendEquipTypeTargetInfo();
+            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.GainRecommendEquipTypeTargetInfo) {
+              subBuilder.MergeFrom(GainRecommendEquipTypeTargetInfo);
             }
             input.ReadMessage(subBuilder);
-            JOCNIFAAFDP = subBuilder;
+            GainRecommendEquipTypeTargetInfo = subBuilder;
             break;
           }
           case 14354: {
-            global::EggLink.DanhengServer.Proto.GridFightRoleEquipmentTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightRoleEquipmentTargetInfo();
-            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleEquipmentTargetInfo) {
-              subBuilder.MergeFrom(RoleEquipmentTargetInfo);
+            global::EggLink.DanhengServer.Proto.GridFightRollTypeTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightRollTypeTargetInfo();
+            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RollTypeTargetInfo) {
+              subBuilder.MergeFrom(RollTypeTargetInfo);
             }
             input.ReadMessage(subBuilder);
-            RoleEquipmentTargetInfo = subBuilder;
+            RollTypeTargetInfo = subBuilder;
             break;
           }
         }
@@ -440,48 +444,48 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 3634: {
-            global::EggLink.DanhengServer.Proto.EGBOKNNBKGN subBuilder = new global::EggLink.DanhengServer.Proto.EGBOKNNBKGN();
-            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CINJJPBEOHK) {
-              subBuilder.MergeFrom(CINJJPBEOHK);
+            global::EggLink.DanhengServer.Proto.GridFightCopyTypeTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightCopyTypeTargetInfo();
+            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.CopyTypeTargetInfo) {
+              subBuilder.MergeFrom(CopyTypeTargetInfo);
             }
             input.ReadMessage(subBuilder);
-            CINJJPBEOHK = subBuilder;
+            CopyTypeTargetInfo = subBuilder;
             break;
           }
           case 6746: {
-            global::EggLink.DanhengServer.Proto.PFBJIGNEOPK subBuilder = new global::EggLink.DanhengServer.Proto.PFBJIGNEOPK();
-            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.ELNHFHDGJJC) {
-              subBuilder.MergeFrom(ELNHFHDGJJC);
+            global::EggLink.DanhengServer.Proto.GridFightUpgradeTypeTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightUpgradeTypeTargetInfo();
+            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.UpgradeTypeTargetInfo) {
+              subBuilder.MergeFrom(UpgradeTypeTargetInfo);
             }
             input.ReadMessage(subBuilder);
-            ELNHFHDGJJC = subBuilder;
+            UpgradeTypeTargetInfo = subBuilder;
             break;
           }
           case 13082: {
-            global::EggLink.DanhengServer.Proto.GridFightRoleTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightRoleTargetInfo();
-            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleTargetInfo) {
-              subBuilder.MergeFrom(RoleTargetInfo);
+            global::EggLink.DanhengServer.Proto.GridFightRemoveTypeTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightRemoveTypeTargetInfo();
+            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RemoveTypeTargetInfo) {
+              subBuilder.MergeFrom(RemoveTypeTargetInfo);
             }
             input.ReadMessage(subBuilder);
-            RoleTargetInfo = subBuilder;
+            RemoveTypeTargetInfo = subBuilder;
             break;
           }
           case 13722: {
-            global::EggLink.DanhengServer.Proto.BFKKLMCGEGK subBuilder = new global::EggLink.DanhengServer.Proto.BFKKLMCGEGK();
-            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.JOCNIFAAFDP) {
-              subBuilder.MergeFrom(JOCNIFAAFDP);
+            global::EggLink.DanhengServer.Proto.GridFightGainRecommendEquipTypeTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightGainRecommendEquipTypeTargetInfo();
+            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.GainRecommendEquipTypeTargetInfo) {
+              subBuilder.MergeFrom(GainRecommendEquipTypeTargetInfo);
             }
             input.ReadMessage(subBuilder);
-            JOCNIFAAFDP = subBuilder;
+            GainRecommendEquipTypeTargetInfo = subBuilder;
             break;
           }
           case 14354: {
-            global::EggLink.DanhengServer.Proto.GridFightRoleEquipmentTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightRoleEquipmentTargetInfo();
-            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RoleEquipmentTargetInfo) {
-              subBuilder.MergeFrom(RoleEquipmentTargetInfo);
+            global::EggLink.DanhengServer.Proto.GridFightRollTypeTargetInfo subBuilder = new global::EggLink.DanhengServer.Proto.GridFightRollTypeTargetInfo();
+            if (nLIIBPJHLABCase_ == NLIIBPJHLABOneofCase.RollTypeTargetInfo) {
+              subBuilder.MergeFrom(RollTypeTargetInfo);
             }
             input.ReadMessage(subBuilder);
-            RoleEquipmentTargetInfo = subBuilder;
+            RollTypeTargetInfo = subBuilder;
             break;
           }
         }

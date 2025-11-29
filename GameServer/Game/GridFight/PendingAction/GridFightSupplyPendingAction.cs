@@ -1,4 +1,5 @@
 using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Enums.GridFight;
 using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 using EggLink.DanhengServer.Proto;
@@ -14,7 +15,7 @@ public class GridFightSupplyPendingAction : BaseGridFightPendingAction
 
     public GridFightSupplyPendingAction(GridFightInstance inst) : base(inst)
     {
-        for (var i = 0; i < 3; i++)
+        for (var i = 0; i < 5; i++)
         {
             RoleList.Add(new GridFightGameSupplyRoleInfo(GameData.GridFightRoleBasicInfoData.Keys.ToList().RandomElement()));
         }
@@ -59,11 +60,15 @@ public class GridFightGameSupplyRoleInfo(uint roleId)
 {
     public uint RoleId { get; set; } = roleId;
 
+    public uint EquipmentId { get; set; } = GameData.GridFightEquipmentData.Values
+        .Where(x => x.EquipCategory == GridFightEquipCategoryEnum.Craftable).ToList().RandomElement().ID;
+
     public GridFightSupplyRoleInfo ToProto()
     {
         return new GridFightSupplyRoleInfo
         {
-            RoleBasicId = RoleId
+            RoleBasicId = RoleId,
+            GridFightItemList = { EquipmentId }
         };
     }
 }

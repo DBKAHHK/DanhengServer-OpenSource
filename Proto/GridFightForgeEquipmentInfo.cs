@@ -24,16 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightForgeEquipmentInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiFHcmlkRmlnaHRGb3JnZUVxdWlwbWVudEluZm8ucHJvdG8aEUtER0RIUFBJ",
-            "TVBNLnByb3RvGhFDS0pISk1FTUhCTS5wcm90byJ6ChtHcmlkRmlnaHRGb3Jn",
-            "ZUVxdWlwbWVudEluZm8SIwoLTkJER0REQUZES0cYByABKAsyDC5DS0pISk1F",
-            "TUhCTUgAEicKD3JvbGVfZ29vZHNfaW5mbxgIIAEoCzIMLktER0RIUFBJTVBN",
-            "SABCDQoLQUVQSkNETkhMQUVCHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Q",
-            "cm90b2IGcHJvdG8z"));
+            "CiFHcmlkRmlnaHRGb3JnZUVxdWlwbWVudEluZm8ucHJvdG8iPgobR3JpZEZp",
+            "Z2h0Rm9yZ2VFcXVpcG1lbnRJbmZvEh8KF2dyaWRfZmlnaHRfZXF1aXBtZW50",
+            "X2lkGA0gASgNQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.KDGDHPPIMPMReflection.Descriptor, global::EggLink.DanhengServer.Proto.CKJHJMEMHBMReflection.Descriptor, },
+          new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightForgeEquipmentInfo), global::EggLink.DanhengServer.Proto.GridFightForgeEquipmentInfo.Parser, new[]{ "NBDGDDAFDKG", "RoleGoodsInfo" }, new[]{ "AEPJCDNHLAE" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightForgeEquipmentInfo), global::EggLink.DanhengServer.Proto.GridFightForgeEquipmentInfo.Parser, new[]{ "GridFightEquipmentId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,15 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightForgeEquipmentInfo(GridFightForgeEquipmentInfo other) : this() {
-      switch (other.AEPJCDNHLAECase) {
-        case AEPJCDNHLAEOneofCase.NBDGDDAFDKG:
-          NBDGDDAFDKG = other.NBDGDDAFDKG.Clone();
-          break;
-        case AEPJCDNHLAEOneofCase.RoleGoodsInfo:
-          RoleGoodsInfo = other.RoleGoodsInfo.Clone();
-          break;
-      }
-
+      gridFightEquipmentId_ = other.gridFightEquipmentId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -93,49 +83,16 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightForgeEquipmentInfo(this);
     }
 
-    /// <summary>Field number for the "NBDGDDAFDKG" field.</summary>
-    public const int NBDGDDAFDKGFieldNumber = 7;
+    /// <summary>Field number for the "grid_fight_equipment_id" field.</summary>
+    public const int GridFightEquipmentIdFieldNumber = 13;
+    private uint gridFightEquipmentId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.CKJHJMEMHBM NBDGDDAFDKG {
-      get { return aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.NBDGDDAFDKG ? (global::EggLink.DanhengServer.Proto.CKJHJMEMHBM) aEPJCDNHLAE_ : null; }
+    public uint GridFightEquipmentId {
+      get { return gridFightEquipmentId_; }
       set {
-        aEPJCDNHLAE_ = value;
-        aEPJCDNHLAECase_ = value == null ? AEPJCDNHLAEOneofCase.None : AEPJCDNHLAEOneofCase.NBDGDDAFDKG;
+        gridFightEquipmentId_ = value;
       }
-    }
-
-    /// <summary>Field number for the "role_goods_info" field.</summary>
-    public const int RoleGoodsInfoFieldNumber = 8;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.KDGDHPPIMPM RoleGoodsInfo {
-      get { return aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.RoleGoodsInfo ? (global::EggLink.DanhengServer.Proto.KDGDHPPIMPM) aEPJCDNHLAE_ : null; }
-      set {
-        aEPJCDNHLAE_ = value;
-        aEPJCDNHLAECase_ = value == null ? AEPJCDNHLAEOneofCase.None : AEPJCDNHLAEOneofCase.RoleGoodsInfo;
-      }
-    }
-
-    private object aEPJCDNHLAE_;
-    /// <summary>Enum of possible cases for the "AEPJCDNHLAE" oneof.</summary>
-    public enum AEPJCDNHLAEOneofCase {
-      None = 0,
-      NBDGDDAFDKG = 7,
-      RoleGoodsInfo = 8,
-    }
-    private AEPJCDNHLAEOneofCase aEPJCDNHLAECase_ = AEPJCDNHLAEOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AEPJCDNHLAEOneofCase AEPJCDNHLAECase {
-      get { return aEPJCDNHLAECase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearAEPJCDNHLAE() {
-      aEPJCDNHLAECase_ = AEPJCDNHLAEOneofCase.None;
-      aEPJCDNHLAE_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -153,9 +110,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(NBDGDDAFDKG, other.NBDGDDAFDKG)) return false;
-      if (!object.Equals(RoleGoodsInfo, other.RoleGoodsInfo)) return false;
-      if (AEPJCDNHLAECase != other.AEPJCDNHLAECase) return false;
+      if (GridFightEquipmentId != other.GridFightEquipmentId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -163,9 +118,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.NBDGDDAFDKG) hash ^= NBDGDDAFDKG.GetHashCode();
-      if (aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.RoleGoodsInfo) hash ^= RoleGoodsInfo.GetHashCode();
-      hash ^= (int) aEPJCDNHLAECase_;
+      if (GridFightEquipmentId != 0) hash ^= GridFightEquipmentId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,13 +137,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.NBDGDDAFDKG) {
-        output.WriteRawTag(58);
-        output.WriteMessage(NBDGDDAFDKG);
-      }
-      if (aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.RoleGoodsInfo) {
-        output.WriteRawTag(66);
-        output.WriteMessage(RoleGoodsInfo);
+      if (GridFightEquipmentId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(GridFightEquipmentId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -202,13 +151,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.NBDGDDAFDKG) {
-        output.WriteRawTag(58);
-        output.WriteMessage(NBDGDDAFDKG);
-      }
-      if (aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.RoleGoodsInfo) {
-        output.WriteRawTag(66);
-        output.WriteMessage(RoleGoodsInfo);
+      if (GridFightEquipmentId != 0) {
+        output.WriteRawTag(104);
+        output.WriteUInt32(GridFightEquipmentId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -220,11 +165,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.NBDGDDAFDKG) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NBDGDDAFDKG);
-      }
-      if (aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.RoleGoodsInfo) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RoleGoodsInfo);
+      if (GridFightEquipmentId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(GridFightEquipmentId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -238,21 +180,9 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      switch (other.AEPJCDNHLAECase) {
-        case AEPJCDNHLAEOneofCase.NBDGDDAFDKG:
-          if (NBDGDDAFDKG == null) {
-            NBDGDDAFDKG = new global::EggLink.DanhengServer.Proto.CKJHJMEMHBM();
-          }
-          NBDGDDAFDKG.MergeFrom(other.NBDGDDAFDKG);
-          break;
-        case AEPJCDNHLAEOneofCase.RoleGoodsInfo:
-          if (RoleGoodsInfo == null) {
-            RoleGoodsInfo = new global::EggLink.DanhengServer.Proto.KDGDHPPIMPM();
-          }
-          RoleGoodsInfo.MergeFrom(other.RoleGoodsInfo);
-          break;
+      if (other.GridFightEquipmentId != 0) {
+        GridFightEquipmentId = other.GridFightEquipmentId;
       }
-
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -268,22 +198,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 58: {
-            global::EggLink.DanhengServer.Proto.CKJHJMEMHBM subBuilder = new global::EggLink.DanhengServer.Proto.CKJHJMEMHBM();
-            if (aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.NBDGDDAFDKG) {
-              subBuilder.MergeFrom(NBDGDDAFDKG);
-            }
-            input.ReadMessage(subBuilder);
-            NBDGDDAFDKG = subBuilder;
-            break;
-          }
-          case 66: {
-            global::EggLink.DanhengServer.Proto.KDGDHPPIMPM subBuilder = new global::EggLink.DanhengServer.Proto.KDGDHPPIMPM();
-            if (aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.RoleGoodsInfo) {
-              subBuilder.MergeFrom(RoleGoodsInfo);
-            }
-            input.ReadMessage(subBuilder);
-            RoleGoodsInfo = subBuilder;
+          case 104: {
+            GridFightEquipmentId = input.ReadUInt32();
             break;
           }
         }
@@ -301,22 +217,8 @@ namespace EggLink.DanhengServer.Proto {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 58: {
-            global::EggLink.DanhengServer.Proto.CKJHJMEMHBM subBuilder = new global::EggLink.DanhengServer.Proto.CKJHJMEMHBM();
-            if (aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.NBDGDDAFDKG) {
-              subBuilder.MergeFrom(NBDGDDAFDKG);
-            }
-            input.ReadMessage(subBuilder);
-            NBDGDDAFDKG = subBuilder;
-            break;
-          }
-          case 66: {
-            global::EggLink.DanhengServer.Proto.KDGDHPPIMPM subBuilder = new global::EggLink.DanhengServer.Proto.KDGDHPPIMPM();
-            if (aEPJCDNHLAECase_ == AEPJCDNHLAEOneofCase.RoleGoodsInfo) {
-              subBuilder.MergeFrom(RoleGoodsInfo);
-            }
-            input.ReadMessage(subBuilder);
-            RoleGoodsInfo = subBuilder;
+          case 104: {
+            GridFightEquipmentId = input.ReadUInt32();
             break;
           }
         }
