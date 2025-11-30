@@ -57,27 +57,28 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             "IAMoCzIoLkdyaWRGaWdodEdhbWVBdWdtZW50UGIuU2F2ZWRWYWx1ZXNFbnRy",
             "eRoyChBTYXZlZFZhbHVlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
             "IAEoDToCOAEiQwoWR3JpZEZpZ2h0QXVnbWVudEluZm9QYhIpCghBdWdtZW50",
-            "cxgBIAMoCzIXLkdyaWRGaWdodEdhbWVBdWdtZW50UGIiTgoaR3JpZEZpZ2h0",
+            "cxgBIAMoCzIXLkdyaWRGaWdodEdhbWVBdWdtZW50UGIifwoaR3JpZEZpZ2h0",
             "R2FtZVRyYWl0RWZmZWN0UGISDwoHVHJhaXRJZBgBIAEoDRIQCghFZmZlY3RJ",
-            "ZBgCIAEoDRINCgVQYXJhbRgDIAEoDSJpChRHcmlkRmlnaHRHYW1lVHJhaXRQ",
-            "YhIPCgdUcmFpdElkGAEgASgNEiwKB0VmZmVjdHMYAiADKAsyGy5HcmlkRmln",
-            "aHRHYW1lVHJhaXRFZmZlY3RQYhISCgpUcmFpdExheWVyGAMgASgNIj0KFEdy",
-            "aWRGaWdodFRyYWl0SW5mb1BiEiUKBlRyYWl0cxgBIAMoCzIVLkdyaWRGaWdo",
-            "dEdhbWVUcmFpdFBiIjwKGEdyaWRGaWdodEVxdWlwbWVudEl0ZW1QYhIOCgZJ",
-            "dGVtSWQYASABKA0SEAoIVW5pcXVlSWQYAiABKA0iOgoZR3JpZEZpZ2h0Q29u",
-            "c3VtYWJsZUl0ZW1QYhIOCgZJdGVtSWQYASABKA0SDQoFQ291bnQYAiABKA0i",
-            "fgoUR3JpZEZpZ2h0SXRlbXNJbmZvUGISMQoORXF1aXBtZW50SXRlbXMYASAD",
-            "KAsyGS5HcmlkRmlnaHRFcXVpcG1lbnRJdGVtUGISMwoPQ29uc3VtYWJsZUl0",
-            "ZW1zGAIgAygLMhouR3JpZEZpZ2h0Q29uc3VtYWJsZUl0ZW1QYiLbAgoUR3Jp",
-            "ZEZpZ2h0Q29tcG9uZW50UGISKAoIU2hvcEluZm8YASABKAsyFC5HcmlkRmln",
-            "aHRTaG9wSW5mb1BiSAASKgoJQmFzaWNJbmZvGAIgASgLMhUuR3JpZEZpZ2h0",
-            "QmFzaWNJbmZvUGJIABIsCgpBdmF0YXJJbmZvGAMgASgLMhYuR3JpZEZpZ2h0",
-            "QXZhdGFySW5mb1BiSAASJgoHT3JiSW5mbxgEIAEoCzITLkdyaWRGaWdodE9y",
-            "YkluZm9QYkgAEi4KC0F1Z21lbnRJbmZvGAUgASgLMhcuR3JpZEZpZ2h0QXVn",
-            "bWVudEluZm9QYkgAEioKCVRyYWl0SW5mbxgGIAEoCzIVLkdyaWRGaWdodFRy",
-            "YWl0SW5mb1BiSAASKgoJSXRlbXNJbmZvGAcgASgLMhUuR3JpZEZpZ2h0SXRl",
-            "bXNJbmZvUGJIAEIPCg1Db21wb25lbnRUeXBlQimqAiZFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG8uU2VydmVyU2lkZWIGcHJvdG8z"));
+            "ZBgCIAEoDRITCglUaHJlc2hvbGQYAyABKA1IABIaChBDb3JlUm9sZVVuaXF1",
+            "ZUlkGAQgASgNSABCDQoLRWZmZWN0UGFyYW0iaQoUR3JpZEZpZ2h0R2FtZVRy",
+            "YWl0UGISDwoHVHJhaXRJZBgBIAEoDRIsCgdFZmZlY3RzGAIgAygLMhsuR3Jp",
+            "ZEZpZ2h0R2FtZVRyYWl0RWZmZWN0UGISEgoKVHJhaXRMYXllchgDIAEoDSI9",
+            "ChRHcmlkRmlnaHRUcmFpdEluZm9QYhIlCgZUcmFpdHMYASADKAsyFS5Hcmlk",
+            "RmlnaHRHYW1lVHJhaXRQYiI8ChhHcmlkRmlnaHRFcXVpcG1lbnRJdGVtUGIS",
+            "DgoGSXRlbUlkGAEgASgNEhAKCFVuaXF1ZUlkGAIgASgNIjoKGUdyaWRGaWdo",
+            "dENvbnN1bWFibGVJdGVtUGISDgoGSXRlbUlkGAEgASgNEg0KBUNvdW50GAIg",
+            "ASgNIn4KFEdyaWRGaWdodEl0ZW1zSW5mb1BiEjEKDkVxdWlwbWVudEl0ZW1z",
+            "GAEgAygLMhkuR3JpZEZpZ2h0RXF1aXBtZW50SXRlbVBiEjMKD0NvbnN1bWFi",
+            "bGVJdGVtcxgCIAMoCzIaLkdyaWRGaWdodENvbnN1bWFibGVJdGVtUGIi2wIK",
+            "FEdyaWRGaWdodENvbXBvbmVudFBiEigKCFNob3BJbmZvGAEgASgLMhQuR3Jp",
+            "ZEZpZ2h0U2hvcEluZm9QYkgAEioKCUJhc2ljSW5mbxgCIAEoCzIVLkdyaWRG",
+            "aWdodEJhc2ljSW5mb1BiSAASLAoKQXZhdGFySW5mbxgDIAEoCzIWLkdyaWRG",
+            "aWdodEF2YXRhckluZm9QYkgAEiYKB09yYkluZm8YBCABKAsyEy5HcmlkRmln",
+            "aHRPcmJJbmZvUGJIABIuCgtBdWdtZW50SW5mbxgFIAEoCzIXLkdyaWRGaWdo",
+            "dEF1Z21lbnRJbmZvUGJIABIqCglUcmFpdEluZm8YBiABKAsyFS5HcmlkRmln",
+            "aHRUcmFpdEluZm9QYkgAEioKCUl0ZW1zSW5mbxgHIAEoCzIVLkdyaWRGaWdo",
+            "dEl0ZW1zSW5mb1BiSABCDwoNQ29tcG9uZW50VHlwZUIpqgImRWdnTGluay5E",
+            "YW5oZW5nU2VydmVyLlByb3RvLlNlcnZlclNpZGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -93,7 +94,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightOrbInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightOrbInfoPb.Parser, new[]{ "Orbs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameAugmentPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameAugmentPb.Parser, new[]{ "AugmentId", "SavedValues" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightAugmentInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightAugmentInfoPb.Parser, new[]{ "Augments" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameTraitEffectPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameTraitEffectPb.Parser, new[]{ "TraitId", "EffectId", "Param" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameTraitEffectPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameTraitEffectPb.Parser, new[]{ "TraitId", "EffectId", "Threshold", "CoreRoleUniqueId" }, new[]{ "EffectParam" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameTraitPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameTraitPb.Parser, new[]{ "TraitId", "Effects", "TraitLayer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightTraitInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightTraitInfoPb.Parser, new[]{ "Traits" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentItemPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentItemPb.Parser, new[]{ "ItemId", "UniqueId" }, null, null, null, null),
@@ -3535,7 +3536,15 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     public GridFightGameTraitEffectPb(GridFightGameTraitEffectPb other) : this() {
       traitId_ = other.traitId_;
       effectId_ = other.effectId_;
-      param_ = other.param_;
+      switch (other.EffectParamCase) {
+        case EffectParamOneofCase.Threshold:
+          Threshold = other.Threshold;
+          break;
+        case EffectParamOneofCase.CoreRoleUniqueId:
+          CoreRoleUniqueId = other.CoreRoleUniqueId;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3569,16 +3578,77 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
     }
 
-    /// <summary>Field number for the "Param" field.</summary>
-    public const int ParamFieldNumber = 3;
-    private uint param_;
+    /// <summary>Field number for the "Threshold" field.</summary>
+    public const int ThresholdFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint Param {
-      get { return param_; }
+    public uint Threshold {
+      get { return HasThreshold ? (uint) effectParam_ : 0; }
       set {
-        param_ = value;
+        effectParam_ = value;
+        effectParamCase_ = EffectParamOneofCase.Threshold;
       }
+    }
+    /// <summary>Gets whether the "Threshold" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasThreshold {
+      get { return effectParamCase_ == EffectParamOneofCase.Threshold; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "Threshold" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearThreshold() {
+      if (HasThreshold) {
+        ClearEffectParam();
+      }
+    }
+
+    /// <summary>Field number for the "CoreRoleUniqueId" field.</summary>
+    public const int CoreRoleUniqueIdFieldNumber = 4;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CoreRoleUniqueId {
+      get { return HasCoreRoleUniqueId ? (uint) effectParam_ : 0; }
+      set {
+        effectParam_ = value;
+        effectParamCase_ = EffectParamOneofCase.CoreRoleUniqueId;
+      }
+    }
+    /// <summary>Gets whether the "CoreRoleUniqueId" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCoreRoleUniqueId {
+      get { return effectParamCase_ == EffectParamOneofCase.CoreRoleUniqueId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "CoreRoleUniqueId" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCoreRoleUniqueId() {
+      if (HasCoreRoleUniqueId) {
+        ClearEffectParam();
+      }
+    }
+
+    private object effectParam_;
+    /// <summary>Enum of possible cases for the "EffectParam" oneof.</summary>
+    public enum EffectParamOneofCase {
+      None = 0,
+      Threshold = 3,
+      CoreRoleUniqueId = 4,
+    }
+    private EffectParamOneofCase effectParamCase_ = EffectParamOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EffectParamOneofCase EffectParamCase {
+      get { return effectParamCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEffectParam() {
+      effectParamCase_ = EffectParamOneofCase.None;
+      effectParam_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3598,7 +3668,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
       if (TraitId != other.TraitId) return false;
       if (EffectId != other.EffectId) return false;
-      if (Param != other.Param) return false;
+      if (Threshold != other.Threshold) return false;
+      if (CoreRoleUniqueId != other.CoreRoleUniqueId) return false;
+      if (EffectParamCase != other.EffectParamCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3608,7 +3680,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       int hash = 1;
       if (TraitId != 0) hash ^= TraitId.GetHashCode();
       if (EffectId != 0) hash ^= EffectId.GetHashCode();
-      if (Param != 0) hash ^= Param.GetHashCode();
+      if (HasThreshold) hash ^= Threshold.GetHashCode();
+      if (HasCoreRoleUniqueId) hash ^= CoreRoleUniqueId.GetHashCode();
+      hash ^= (int) effectParamCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3635,9 +3709,13 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(16);
         output.WriteUInt32(EffectId);
       }
-      if (Param != 0) {
+      if (HasThreshold) {
         output.WriteRawTag(24);
-        output.WriteUInt32(Param);
+        output.WriteUInt32(Threshold);
+      }
+      if (HasCoreRoleUniqueId) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(CoreRoleUniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3657,9 +3735,13 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(16);
         output.WriteUInt32(EffectId);
       }
-      if (Param != 0) {
+      if (HasThreshold) {
         output.WriteRawTag(24);
-        output.WriteUInt32(Param);
+        output.WriteUInt32(Threshold);
+      }
+      if (HasCoreRoleUniqueId) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(CoreRoleUniqueId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3677,8 +3759,11 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (EffectId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(EffectId);
       }
-      if (Param != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Param);
+      if (HasThreshold) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Threshold);
+      }
+      if (HasCoreRoleUniqueId) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CoreRoleUniqueId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3698,9 +3783,15 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (other.EffectId != 0) {
         EffectId = other.EffectId;
       }
-      if (other.Param != 0) {
-        Param = other.Param;
+      switch (other.EffectParamCase) {
+        case EffectParamOneofCase.Threshold:
+          Threshold = other.Threshold;
+          break;
+        case EffectParamOneofCase.CoreRoleUniqueId:
+          CoreRoleUniqueId = other.CoreRoleUniqueId;
+          break;
       }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3725,7 +3816,11 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             break;
           }
           case 24: {
-            Param = input.ReadUInt32();
+            Threshold = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            CoreRoleUniqueId = input.ReadUInt32();
             break;
           }
         }
@@ -3752,7 +3847,11 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             break;
           }
           case 24: {
-            Param = input.ReadUInt32();
+            Threshold = input.ReadUInt32();
+            break;
+          }
+          case 32: {
+            CoreRoleUniqueId = input.ReadUInt32();
             break;
           }
         }

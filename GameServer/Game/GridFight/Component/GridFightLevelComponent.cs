@@ -32,22 +32,19 @@ public class GridFightLevelComponent : BaseGridFightComponent
         // TODO: randomly select a base route id
         List<uint> chapterIds = [1100];
         List<GridFightCampExcel> campPool = GameData.GridFightCampData.Values.Where(x => x.BossBattleArea != 0).ToList();
+        var route = GameData.GridFightStageRouteData[chapterIds.RandomElement()].Values;
+
         foreach (var chapterId in Enumerable.Range(1, 3))
         {
-            var chapters = chapterIds.Count >= chapterId
-                ? [GameData.GridFightStageRouteData[chapterIds[chapterId - 1]]]
-                : GameData.GridFightStageRouteData.Values.Where(x => x.Any(j => j.Value.ChapterID == chapterId))
-                    .ToList();
+            var chapters = route.Where(x => x.ChapterID == chapterId).ToList();
             if (chapters.Count == 0)
                 continue;
-
-            var select = chapters.RandomElement();
 
             var camp = campPool.RandomElement();  // cannot the same
             campPool.Remove(camp);
 
             // create section infos
-            Sections[(uint)chapterId] = [.. select.Values.Select(x => new GridFightGameSectionInfo(x, camp))];
+            Sections[(uint)chapterId] = [.. chapters.Select(x => new GridFightGameSectionInfo(x, camp))];
         }
 
         if (!GameData.GridFightDivisionStageData.TryGetValue(Inst.DivisionId, out var divisionExcel)) return;
@@ -149,26 +146,20 @@ public class GridFightLevelComponent : BaseGridFightComponent
 
     #region Actions
 
-    public async ValueTask<List<BaseGridFightSyncData>> EnterNextSection(bool sendPacket = true, GridFightSrc src = GridFightSrc.KGridFightSrcBattleEnd)
+    public bool IsLastSection()
+    {
+        if (_curSectionId < Sections[_curChapterId].Count) return false;
+        return _curChapterId >= Sections.Count; // end of game
+    }
+
+    public async ValueTask<List<BaseGridFightSyncData>> EnterSection(uint chapterId, uint sectionId,
+        bool sendPacket = true, GridFightSrc src = GridFightSrc.KGridFightSrcBattleEnd)
     {
         var shopComp = Inst.GetComponent<GridFightShopComponent>();
         var basicComp = Inst.GetComponent<GridFightBasicComponent>();
-        // if last section of chapter
-        if (_curSectionId >= Sections[_curChapterId].Count)
-        {
-            if (_curChapterId >= Sections.Count)
-            {
-                // end of game
-                return [];
-            }
 
-            _curChapterId++;
-            _curSectionId = 1;
-        }
-        else
-        {
-            _curSectionId++;
-        }
+        _curChapterId = (uint)Math.Min(Sections.Count, chapterId);
+        _curSectionId = (uint)Math.Min(Sections[_curChapterId].Count, sectionId);
 
         List<BaseGridFightSyncData> syncs = [new GridFightLevelSyncData(src, this)];
 
@@ -202,6 +193,28 @@ public class GridFightLevelComponent : BaseGridFightComponent
         }
 
         return syncs;
+    }
+
+    public async ValueTask<List<BaseGridFightSyncData>> EnterNextSection(bool sendPacket = true, GridFightSrc src = GridFightSrc.KGridFightSrcBattleEnd)
+    {
+        // if last section of chapter
+        if (_curSectionId >= Sections[_curChapterId].Count)
+        {
+            if (_curChapterId >= Sections.Count)
+            {
+                // end of game
+                return [];
+            }
+
+            _curChapterId++;
+            _curSectionId = 1;
+        }
+        else
+        {
+            _curSectionId++;
+        }
+
+        return await EnterSection(_curChapterId, _curSectionId, sendPacket, src);
     }
 
     public async ValueTask<List<BaseGridFightSyncData>> AddPortalBuff(uint portalBuffId, bool sendPacket = true, GridFightSrc src = GridFightSrc.KGridFightSrcSelectPortalBuff)

@@ -30,7 +30,6 @@ public class GridFightManager(PlayerInstance player) : BasePlayerManager(player)
 
     #endregion
 
-
     #region Serialization
 
     public GridFightQueryInfo ToProto()

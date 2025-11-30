@@ -36,7 +36,7 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
         return (info, [syncData]);
     }
 
-    public async ValueTask<List<BaseGridFightSyncData>> UpdateConsumable(uint consumableId, int count, GridFightSrc src = GridFightSrc.KGridFightSrcNone, bool sendPacket = true, params uint[] param)
+    public async ValueTask<List<BaseGridFightSyncData>> UpdateConsumable(uint consumableId, int count, GridFightSrc src = GridFightSrc.KGridFightSrcNone, bool sendPacket = true, uint groupId = 0, params uint[] param)
     {
         if (!GameData.GridFightConsumablesData.ContainsKey(consumableId) || count == 0)
             return [];
@@ -198,7 +198,7 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
                         // consumable or equipment
                         if (GameData.GridFightConsumablesData.ContainsKey(item.DropItemId))
                         {
-                            syncs.AddRange(await UpdateConsumable(item.DropItemId, (int)item.Num, src, false, param));
+                            syncs.AddRange(await UpdateConsumable(item.DropItemId, (int)item.Num, src, false, 0, param));
                         }
                         else if (GameData.GridFightEquipmentData.ContainsKey(item.DropItemId))
                         {
@@ -242,7 +242,7 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
         List<BaseGridFightSyncData> syncs = [];
         if (consumablesExcel.IfConsume)
         {
-            syncs.AddRange(await UpdateConsumable(itemId, -1, GridFightSrc.KGridFightSrcUseConsumable, false, item.ItemId));
+            syncs.AddRange(await UpdateConsumable(itemId, -1, GridFightSrc.KGridFightSrcUseConsumable, false, 0, item.ItemId));
         }
 
         (Retcode, List<BaseGridFightSyncData>) res = consumablesExcel.ConsumableRule switch

@@ -82,6 +82,13 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
             battle.BattleEvents.TryAdd((int)roleConf.BEID, new BattleEventInstance((int)roleConf.BEID, 5000));
         }
 
+        foreach (var traitBeId in TraitComponent.Data.Traits
+                     .Select(x => GameData.GridFightTraitBasicInfoData.GetValueOrDefault(x.TraitId, new()))
+                     .SelectMany(x => x.BEIDList))
+        {
+            battle.BattleEvents.TryAdd((int)traitBeId, new BattleEventInstance((int)traitBeId, 5000));
+        }
+
         var ruleId = CurSection.Excel.PenaltyBonusRuleIDList.FirstOrDefault(0u);
         if (ruleId == 0)
         {

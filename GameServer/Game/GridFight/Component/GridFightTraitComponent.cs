@@ -1,4 +1,8 @@
 using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Enums.GridFight;
+using EggLink.DanhengServer.GameServer.Game.GridFight.PendingAction;
+using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
+using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Proto.ServerSide;
 
@@ -8,11 +12,12 @@ public class GridFightTraitComponent(GridFightInstance inst) : BaseGridFightComp
 {
     public GridFightTraitInfoPb Data { get; set; } = new();
 
-    public void CheckTrait()
+    public async ValueTask CheckTrait()
     {
         var roleComp = Inst.GetComponent<GridFightRoleComponent>();
 
         Dictionary<uint, uint> traitCount = [];
+        List<BaseGridFightSyncData> syncList = [];
 
         foreach (var traitId in GameData.GridFightTraitBasicInfoData.Keys)
         {
@@ -44,26 +49,142 @@ public class GridFightTraitComponent(GridFightInstance inst) : BaseGridFightComp
 
             if (existingTrait != null)
             {
+                var prevLayer = existingTrait.TraitLayer;
                 existingTrait.TraitLayer = layer;
+
+                if (prevLayer != layer)
+                {
+                    // Sync effects
+                    foreach (var effect in existingTrait.Effects)
+                    {
+                        if (effect.HasCoreRoleUniqueId)
+                            effect.CoreRoleUniqueId = 0;
+
+                        syncList.Add(new GridFightTraitSyncData(GridFightSrc.KGridFightSrcTraitEffectUpdate, effect, 0,
+                            traitId, effect.EffectId));
+
+                        var effectSyncs = await HandleTraitEffect(effect, prevLayer, layer);
+                        syncList.AddRange(effectSyncs);
+                    }
+                }
             }
             else
             {
                 if (layer == 0) continue;  // do not add if no layer
 
-                Data.Traits.Add(new GridFightGameTraitPb
+                var traitInfo = new GridFightGameTraitPb
                 {
                     TraitId = traitId,
-                    TraitLayer = layer,
-                    Effects =
+                    TraitLayer = layer
+                };
+
+                foreach (var effectId in traitExcel.TraitEffectList)
+                {
+                    var effect = new GridFightGameTraitEffectPb
                     {
-                        traitExcel.TraitEffectList.Select(x => new GridFightGameTraitEffectPb
-                        {
-                            EffectId = x
-                        })
-                    }
-                });
+                        EffectId = effectId,
+                        TraitId = traitId
+                    };
+
+                    traitInfo.Effects.Add(effect);
+
+                    var effectSyncs = await HandleTraitEffect(effect, 0, layer);
+                    syncList.AddRange(effectSyncs);
+
+                    // sync
+                    syncList.Add(new GridFightTraitSyncData(GridFightSrc.KGridFightSrcTraitEffectUpdate, effect, 0, traitId, effectId));
+                }
+
+                Data.Traits.Add(traitInfo);
             }
         }
+
+        // Send sync data
+        if (syncList.Count > 0)
+        {
+            await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncList));
+        }
+    }
+
+    public async ValueTask<List<BaseGridFightSyncData>> HandleTraitEffect(GridFightGameTraitEffectPb effect, uint prevLayer, uint nextLayer)
+    {
+        var itemsComp = Inst.GetComponent<GridFightItemsComponent>();
+        var roleComp = Inst.GetComponent<GridFightRoleComponent>();
+
+        List<BaseGridFightSyncData> syncList = [];
+
+        if (!GameData.GridFightTraitEffectData.TryGetValue(effect.EffectId, out var traitConf) ||
+            !GameData.GridFightTraitEffectLayerPaData.TryGetValue(effect.EffectId, out var effectLayerPas)) return syncList;
+
+        effectLayerPas.TryGetValue(prevLayer, out var prevEffectParam);
+        effectLayerPas.TryGetValue(nextLayer, out var nextEffectParam);
+
+
+        // Handle different effect types
+        switch (traitConf.TraitEffectType)
+        {
+            case GridFightTraitEffectTypeEnum.TempEquip:
+            {
+                // add equip
+                var prev = prevEffectParam?.EffectParamList.Select(x => (uint)x.Value).ToList() ?? [];
+                var cur = nextEffectParam?.EffectParamList.Select(x => (uint)x.Value).ToList() ?? [];
+
+                // remove prev - cur
+                var toRemove = prev.Except(cur).ToList();
+                var toAdd = cur.Except(prev).ToList();
+
+                // remove equips
+                foreach (var equipId in toRemove)
+                {
+                    var item = itemsComp.Data.EquipmentItems.FirstOrDefault(x => x.ItemId == equipId);
+                    if (item == null) continue;
+                    syncList.AddRange(await itemsComp.RemoveEquipment(item.UniqueId,
+                        GridFightSrc.KGridFightSrcTraitEffectUpdate, false));
+                }
+
+                // add equips
+                foreach (var equipId in toAdd)
+                {
+                    var res = await itemsComp.AddEquipment(equipId, GridFightSrc.KGridFightSrcTraitEffectUpdate,
+                        false);
+                    syncList.AddRange(res.Item2);
+                }
+
+                break;
+            }
+            case GridFightTraitEffectTypeEnum.TraitBonus:
+            {
+                effect.Threshold = 0;  // initialize
+                break;
+            }
+            case GridFightTraitEffectTypeEnum.CoreRoleChoose:
+            {
+                // create pending action
+                syncList.AddRange(await Inst.CreatePendingAction<GridFightTraitPendingAction>(
+                    GridFightSrc.KGridFightSrcTraitEffectUpdate,
+                    false, effect));
+                break;
+            }
+            case GridFightTraitEffectTypeEnum.CoreRoleByEquipNum:
+            {
+                // check
+                var traitRoles = roleComp.Data.Roles.Where(x =>
+                    GameData.GridFightRoleBasicInfoData.GetValueOrDefault(x.RoleId)?.TraitList
+                        .Contains(effect.TraitId) == true).ToList();
+
+                var coreRole = traitRoles.MaxBy(x => x.EquipmentIds.Count);
+                effect.CoreRoleUniqueId = coreRole?.UniqueId ?? 0;
+
+                break;
+            }
+            case GridFightTraitEffectTypeEnum.SelectEnhance:
+            {
+                // TODO
+                break;
+            }
+        }
+
+        return syncList;
     }
 
     public override GridFightGameInfo ToProto()
@@ -96,6 +217,15 @@ public static class GridFightTraitInfoPbExtensions
         };
     }
 
+    public static GridFightTraitSyncInfo ToSyncInfo(this GridFightGameTraitEffectPb info)
+    {
+        return new GridFightTraitSyncInfo
+        {
+            TraitId = info.TraitId,
+            TraitEffectInfo = info.ToProto()
+        };
+    }
+
     public static BattleGridFightTraitInfo ToBattleInfo(this GridFightGameTraitPb info, GridFightRoleComponent roleComp)
     {
         var traitRoles = roleComp.Data.Roles.Where(x =>
@@ -116,7 +246,7 @@ public static class GridFightTraitInfoPbExtensions
                 MemberRoleUniqueId = x.UniqueId,
                 MemberType = GridFightTraitMemberType.KGridFightTraitMemberRole
             }) },
-            TraitEffectList = { info.Effects.Select(x => x.ToBattleInfo())}
+            TraitEffectList = { info.Effects.Select(x => x.ToBattleInfo(roleComp))}
         };
 
         if (phainonRole != null && traitRoles.All(x => x.UniqueId != phainonRole.UniqueId))
@@ -138,15 +268,37 @@ public static class GridFightTraitInfoPbExtensions
         return new GridFightTraitEffectInfo
         {
             EffectId = info.EffectId,
-            TraitEffectLevelExp = info.Param
+            TraitEffectLevelExp = info.Threshold,
+            TraitCoreRole = info.CoreRoleUniqueId
         };
     }
 
-    public static BattleGridFightTraitEffectInfo ToBattleInfo(this GridFightGameTraitEffectPb info)
+    public static BattleGridFightTraitEffectInfo ToBattleInfo(this GridFightGameTraitEffectPb info, GridFightRoleComponent roleComp)
     {
-        return new BattleGridFightTraitEffectInfo
+        var proto = new BattleGridFightTraitEffectInfo
         {
             EffectId = info.EffectId
         };
+
+        if (info.HasCoreRoleUniqueId)
+        {
+            var role = roleComp.Data.Roles.FirstOrDefault(x => x.UniqueId == info.CoreRoleUniqueId);
+            if (role != null)
+                proto.TraitCoreRole = new BattleGridFightTraitCoreRoleInfo
+                {
+                    UniqueId = role.UniqueId,
+                    RoleBasicId = role.RoleId
+                };
+        }
+
+        if (info.HasThreshold)
+        {
+            proto.TraitEffectLevelInfo = new GridFightTraitEffectLevelInfo
+            {
+                TraitEffectLevelExp = info.Threshold
+            };
+        }
+
+        return proto;
     }
 }

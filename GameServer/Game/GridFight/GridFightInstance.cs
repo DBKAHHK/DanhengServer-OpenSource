@@ -6,7 +6,6 @@ using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 using EggLink.DanhengServer.GameServer.Game.Player;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 using EggLink.DanhengServer.Proto;
-using System.Collections.Generic;
 using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.GridFight;
@@ -55,6 +54,8 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
             // cost hp
             await basicComp.UpdateLineupHp(-5, false);
         }
+
+        var end = levelComp.IsLastSection();
 
         var comboCoin = basicComp.Data.ComboNum switch
         {
@@ -105,6 +106,13 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         syncs.AddRange(await curEncounter.TakeEncounterDrop(itemsComponent));
 
         await Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
+
+        if (end)
+        {
+            // settle
+            await Player.SendPacket(new PacketGridFightSettleNotify(this));
+            Player.GridFightManager!.GridFightInstance = null;
+        }
     }
 
     public void InitializeComponents()
@@ -151,6 +159,38 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         };
     }
 
+    public GridFightFinishInfo ToFinishInfo()
+    {
+        var roleComp = GetComponent<GridFightRoleComponent>();
+        var levelComp = GetComponent<GridFightLevelComponent>();
+        var augmentComp = GetComponent<GridFightAugmentComponent>();
+        var itemsComp = GetComponent<GridFightItemsComponent>();
+        var traitComp = GetComponent<GridFightTraitComponent>();
+        var basicComp = GetComponent<GridFightBasicComponent>();
+
+        return new GridFightFinishInfo
+        {
+            Reason = GridFightSettleReason.KGridFightSettleReasonFinish,
+            SettleRoleUniqueIdList = { roleComp.Data.Roles.Where(x => x.Pos <= GridFightRoleComponent.PrepareAreaPos).Select(x => x.UniqueId) },
+            GridFightEquipmentList = { itemsComp.Data.EquipmentItems.Select(x => x.ToProto()) },
+            GridFightAugmentInfo = { augmentComp.Data.Augments.Select(x => x.ToProto()) },
+            SettlePortalBuffList = { levelComp.PortalBuffs.Select(x => x.ToProto()) },
+            TraitDamageSttList = { levelComp.TraitDamageSttInfos.Select(x => x.ToProto(traitComp)) },
+            RoleDamageSttList = { levelComp.RoleDamageSttInfos.Select(x => x.ToProto()) },
+            GridFightTraitInfo = { traitComp.Data.Traits.Select(x => x.ToProto(roleComp)) },
+            GridGameRoleList = { roleComp.Data.Roles.Select(x => x.ToProto()) },
+            RogueTournCurAreaInfo = new GridFightFinishAreaInfo
+            {
+                ChapterId = levelComp.CurrentSection.ChapterId,
+                GameDivisionId = DivisionId,
+                GridFightCurLineupHp = basicComp.Data.CurHp,
+                GridFightMaxLineupHp = 100,
+                RouteId = levelComp.CurrentSection.Excel.ID,
+                SectionId = levelComp.CurrentSection.SectionId
+            }
+        };
+    }
+
     public List<GridFightGameInfo> ToGameInfos()
     {
         return (from c in Components select c.ToProto()).ToList();
@@ -158,10 +198,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
 
     public GridFightGameData ToGameDataInfo()
     {
-        return new GridFightGameData
-        {
-            GameItemInfoList = { }
-        };
+        return new GridFightGameData();
     }
 
     #region Pending Action
@@ -300,11 +337,11 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
                             GridFightSrc.KGridFightSrcSelectSupply, 0, 0,
                             req.SupplyAction.SelectSupplyIndexes.ToArray()));
 
-                            // add equipment
-                            var res = await itemsComp.AddEquipment(role.EquipmentId,
-                                GridFightSrc.KGridFightSrcSelectSupply, false,
-                                0, req.SupplyAction.SelectSupplyIndexes.ToArray());
-                            syncs.AddRange(res.Item2);
+                        // add equipment
+                        var res = await itemsComp.AddEquipment(role.EquipmentId,
+                            GridFightSrc.KGridFightSrcSelectSupply, false,
+                            0, req.SupplyAction.SelectSupplyIndexes.ToArray());
+                        syncs.AddRange(res.Item2);
                     }
                 }
 
@@ -316,8 +353,21 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
             {
                 var target = req.RecommendEquipmentAction.SelectEquipmentId;
 
-                var res = await itemsComp.AddEquipment(target, GridFightSrc.KGridFightSrcNone, false, 0);
+                var res = await itemsComp.AddEquipment(target, GridFightSrc.KGridFightSrcNone, false);
                 syncs.AddRange(res.Item2);
+
+                break;
+            }
+            case GridFightHandlePendingActionCsReq.GridFightActionTypeOneofCase.TraitAction:
+            {
+                if (curAction is GridFightTraitPendingAction traitAction)
+                {
+                    traitAction.Effect.CoreRoleUniqueId = req.TraitAction.UniqueId;
+
+                    // sync
+                    syncs.Add(new GridFightTraitSyncData(GridFightSrc.KGridFightSrcTraitEffectUpdate,
+                        traitAction.Effect, 0, traitAction.Effect.TraitId, traitAction.Effect.EffectId));
+                }
 
                 break;
             }
@@ -326,7 +376,8 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         if (isFinish)
         {
             PendingActions.Remove(curAction.QueuePosition);
-            syncs.Add(new GridFightFinishPendingActionSyncData(GridFightSrc.KGridFightSrcNone, curAction.QueuePosition));
+            syncs.Add(new GridFightFinishPendingActionSyncData(GridFightSrc.KGridFightSrcNone,
+                curAction.QueuePosition));
 
             // unlock
             basicComp.Data.LockReason = (uint)GridFightLockReason.KGridFightLockReasonUnknown;

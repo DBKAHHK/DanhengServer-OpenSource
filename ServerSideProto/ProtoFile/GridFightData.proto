@@ -87,7 +87,10 @@ message GridFightAugmentInfoPb {
 message GridFightGameTraitEffectPb {
     uint32 TraitId = 1;
     uint32 EffectId = 2;
-    uint32 Param = 3;
+    oneof EffectParam {
+        uint32 Threshold = 3;
+        uint32 CoreRoleUniqueId = 4;
+    }
 }
 
 message GridFightGameTraitPb {

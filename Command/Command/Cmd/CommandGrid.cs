@@ -155,5 +155,32 @@ public class CommandGrid : ICommand
         await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.AddConsumable", consumableId.ToString()));
     }
 
+    [CommandMethod("section")]
+    public async ValueTask SetSection(CommandArg arg)
+    {
+        if (arg.Target == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.PlayerNotFound"));
+            return;
+        }
 
+        var inst = arg.Target.Player!.GridFightManager?.GridFightInstance;
+        if (inst == null)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.NotInGame"));
+            return;
+        }
+
+        if (arg.BasicArgs.Count < 2)
+        {
+            await arg.SendMsg(I18NManager.Translate("Game.Command.Notice.InvalidArguments"));
+            return;
+        }
+
+        var chapterId = (uint)arg.GetInt(0);
+        var sectionId = (uint)arg.GetInt(1);
+
+        await inst.GetComponent<GridFightLevelComponent>().EnterSection(chapterId, sectionId, true, GridFightSrc.KGridFightSrcNone);
+        await arg.SendMsg(I18NManager.Translate("Game.Command.Grid.EnterSection", chapterId.ToString(), sectionId.ToString()));
+    }
 }

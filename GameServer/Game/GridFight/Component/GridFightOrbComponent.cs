@@ -73,8 +73,9 @@ public class GridFightOrbComponent(GridFightInstance inst) : BaseGridFightCompon
         {
             case GridFightOrbTypeEnum.White:
             {
-                // 2 coin or 3 exp
-                if (Random.Shared.Next(2) == 0)
+                // 2 coin or 3 exp or 1 consumable
+                var ran = Random.Shared.Next(3);
+                if (ran == 0)
                 {
                     await basicComp.UpdateGoldNum(2, false, GridFightSrc.KGridFightSrcUseOrb);
                     syncDatas.Add(new GridFightGoldSyncData(GridFightSrc.KGridFightSrcUseOrb, basicComp.Data.Clone(),
@@ -86,7 +87,7 @@ public class GridFightOrbComponent(GridFightInstance inst) : BaseGridFightCompon
                         Num = 2
                     });
                 }
-                else
+                else if (ran == 1)
                 {
                     await basicComp.AddLevelExp(3, false);
                     syncDatas.Add(new GridFightPlayerLevelSyncData(GridFightSrc.KGridFightSrcUseOrb,
@@ -96,6 +97,23 @@ public class GridFightOrbComponent(GridFightInstance inst) : BaseGridFightCompon
                     {
                         DropType = GridFightDropType.Exp,
                         Num = 3
+                    });
+                }
+                else
+                {
+                    // random consumable
+                    var consumable =
+                        GameData.GridFightConsumablesData.Values.Where(x =>
+                            x.ConsumableRule != GridFightConsumeTypeEnum.Remove).ToList().RandomElement();
+
+                    var res = await itemsComp.UpdateConsumable(consumable.ID, 1, GridFightSrc.KGridFightSrcUseOrb, false, groupId);
+                    syncDatas.AddRange(res);
+
+                    dropItems.Add(new GridFightDropItemInfo
+                    {
+                        DropItemId = consumable.ID,
+                        DropType = GridFightDropType.Item,
+                        Num = 1
                     });
                 }
 

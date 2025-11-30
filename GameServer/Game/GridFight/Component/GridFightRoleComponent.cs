@@ -73,7 +73,7 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
             await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
         }
 
-        Inst.GetComponent<GridFightTraitComponent>().CheckTrait();
+        await Inst.GetComponent<GridFightTraitComponent>().CheckTrait();
 
         return syncs;
     }
@@ -162,7 +162,7 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
             await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
         }
 
-        Inst.GetComponent<GridFightTraitComponent>().CheckTrait();
+        await Inst.GetComponent<GridFightTraitComponent>().CheckTrait();
 
         return syncs;
     }
@@ -278,7 +278,7 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
             await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
         }
 
-        Inst.GetComponent<GridFightTraitComponent>().CheckTrait();
+        await Inst.GetComponent<GridFightTraitComponent>().CheckTrait();
 
         return Retcode.RetSucc;
     }
