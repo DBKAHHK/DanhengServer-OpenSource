@@ -17,6 +17,7 @@ public class HttpServerConfig
     public string PublicAddress { get; set; } = "127.0.0.1";
     public int Port { get; set; } = 443;
     public bool UseSSL { get; set; } = false;
+    public bool UseFetchRemoteHotfix { get; set; } = false;
 
     public string GetDisplayAddress()
     {
