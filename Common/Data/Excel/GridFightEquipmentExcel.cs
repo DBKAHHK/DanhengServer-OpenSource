@@ -16,6 +16,12 @@ public class GridFightEquipmentExcel : ExcelResource
     [JsonConverter(typeof(StringEnumConverter))]
     public GridFightEquipDressTypeEnum DressRule { get; set; }
 
+    [JsonConverter(typeof(StringEnumConverter))]
+    public GridFightEquipFuncTypeEnum EquipFunc { get; set; }
+
+    public List<uint> EquipFuncParamList { get; set; } = [];
+    public List<uint> DressRuleParamList { get; set; } = [];
+
     public override int GetId()
     {
         return (int)ID;

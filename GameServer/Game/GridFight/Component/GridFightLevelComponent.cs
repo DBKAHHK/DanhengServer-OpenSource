@@ -597,6 +597,7 @@ public class GridFightGameEncounterInfo
 
 public class GridFightGameMonsterWaveInfo
 {
+    public static readonly List<List<uint>> OrbList = [[102, 199], [203, 204, 205, 206, 207, 208], [120031]];
     public GridFightGameMonsterWaveInfo(uint wave, List<GridFightMonsterExcel> monsters, uint campId,
         uint addOrbNum = 0)
     {
@@ -611,9 +612,12 @@ public class GridFightGameMonsterWaveInfo
                 {
                     DropType = GridFightDropType.Orb,
                     Num = 1,
-                    DropItemId = GameData.GridFightOrbData.Values
-                        .Where(x => x.Type is GridFightOrbTypeEnum.White or GridFightOrbTypeEnum.Blue).ToList()
-                        .RandomElement().OrbID
+                    DropItemId = Random.Shared.Next(10) switch
+                    {
+                        > 5 and < 9 => OrbList[1].RandomElement(),
+                        9 => OrbList[2].RandomElement(),
+                        _ => OrbList[0].RandomElement()
+                    }
                 });
 
                 addOrbNum--;
@@ -681,8 +685,6 @@ public static class GridFightEncounterGenerateHelper
 
             case GridFightNodeTypeEnum.Boss:
                 return GenerateBossType(section);
-            default:
-                break;
         }
 
         return [];

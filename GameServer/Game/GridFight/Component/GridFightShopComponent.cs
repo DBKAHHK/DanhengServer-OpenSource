@@ -37,7 +37,7 @@ public class GridFightShopComponent(GridFightInstance inst) : BaseGridFightCompo
         var avatarComp = Inst.GetComponent<GridFightRoleComponent>();
 
         // check pos
-        if (!avatarComp.HasAnyEmptyPos()) return Retcode.RetGridFightNoEmptyPos;
+        //if (!avatarComp.HasAnyEmptyPos()) return Retcode.RetGridFightNoEmptyPos;
 
         var curLevel = Inst.GetComponent<GridFightBasicComponent>().Data.CurLevel;
 

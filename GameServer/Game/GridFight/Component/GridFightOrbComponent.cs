@@ -1,4 +1,5 @@
 using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.GridFight;
 using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
@@ -50,7 +51,7 @@ public class GridFightOrbComponent(GridFightInstance inst) : BaseGridFightCompon
             syncDatas.Add(new GridFightRemoveOrbSyncData(GridFightSrc.KGridFightSrcUseOrb, orb, uniqueId, uniqueId, orb.OrbItemId));
 
             // open orb effect
-            var res = await TakeOrbEffect(excel.Type, uniqueId);
+            var res = await TakeOrbEffect(excel, uniqueId);
             syncDatas.AddRange(res.Item1);
 
             await Inst.Player.SendPacket(new PacketGridFightUseOrbNotify(uniqueId, res.Item2));
@@ -60,7 +61,57 @@ public class GridFightOrbComponent(GridFightInstance inst) : BaseGridFightCompon
             await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncDatas));
     }
 
-    private async ValueTask<(List<BaseGridFightSyncData>, List<GridFightDropItemInfo>)> TakeOrbEffect(GridFightOrbTypeEnum type, uint groupId)
+    private async ValueTask<(List<BaseGridFightSyncData>, List<GridFightDropItemInfo>)> TakeOrbEffect(
+        GridFightOrbExcel excel, uint groupId)
+    {
+        List<GridFightBasicBonusPoolV2Excel> bonusPools = [];
+
+        // check file bonus
+        if (GameData.GridFightBasicOrbRewardsConfig.OrbRewards.TryGetValue(excel.OrbID, out var fileBonusInfo)) 
+        {
+            bonusPools.AddRange(fileBonusInfo.Rewards.Values.ToList().RandomElement());
+        }
+
+        // check combination bonus
+        if (bonusPools.Count == 0 && GameData.GridFightCombinationBonusData.TryGetValue(excel.BonusID, out var comboBonusInfo))
+        {
+            for (var i = 0; i < comboBonusInfo.CombinationBonusList.Count; i++)
+            {
+                var bonusId = comboBonusInfo.CombinationBonusList[i];
+                var bonusNum = comboBonusInfo.BonusNumberList[i];
+
+                if (bonusId == 1)
+                    bonusPools.Add(new GridFightBasicBonusPoolV2Excel
+                    {
+                        BonusType = GridFightBonusTypeEnum.Gold,
+                        Value = bonusNum / 10000
+                    });
+                else if (GameData.GridFightBasicBonusPoolV2Data.TryGetValue(bonusId, out var bonusPool))
+                {
+                    bonusPools.AddRange(Enumerable.Repeat(bonusPool, (int)(bonusNum / 10000)));
+                }
+            }
+        }
+
+        // check basic bonus
+        if (bonusPools.Count == 0 && GameData.GridFightBasicBonusPoolV2Data.TryGetValue(excel.BonusID, out var basicBonusInfo))
+        {
+            bonusPools.Add(basicBonusInfo);
+        }
+
+        // execute
+        if (bonusPools.Count > 0)
+        {
+            var itemsComp = Inst.GetComponent<GridFightItemsComponent>();
+
+            return await itemsComp.TakeBasicBonusItems(bonusPools, GridFightSrc.KGridFightSrcUseOrb, groupId, false);
+        }
+
+        // default
+        return await TakeOrbDefaultEffect(excel.Type, groupId);
+    }
+
+    private async ValueTask<(List<BaseGridFightSyncData>, List<GridFightDropItemInfo>)> TakeOrbDefaultEffect(GridFightOrbTypeEnum type, uint groupId)
     {
         List<BaseGridFightSyncData> syncDatas = [];
         List<GridFightDropItemInfo> dropItems = [];

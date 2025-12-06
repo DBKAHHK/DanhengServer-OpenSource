@@ -52,11 +52,13 @@ public class ResourceManager
         GameData.RogueMiracleEffectData =
             LoadCustomFile<RogueMiracleEffectConfig>("Rogue Miracle Effect", "RogueMiracleEffectGen") ??
             new RogueMiracleEffectConfig();
+
         LoadChessRogueRoomData();
         LoadRogueTournRoomData();
         LoadChessRogueDiceSurfaceEffectData();
         LoadRogueMagicRoomData();
         LoadRogueDialogueEventData();
+        LoadGridFightBasicRewardsData();
 
         Task.WaitAll(t1, t2, t3, t4, t5, t6, t7, t8, t9);
 
@@ -1103,6 +1105,49 @@ public class ResourceManager
 
         Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
             I18NManager.Translate("Word.DialogueInfo")));
+    }
+
+    public static void LoadGridFightBasicRewardsData()
+    {
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadingItem",
+            I18NManager.Translate("Word.GridFightRewardsInfo")));
+        var count = 0;
+
+        FileInfo file = new(ConfigManager.Config.Path.ConfigPath + "/GridFight/GridFightBasicOrbRewards.json");
+        if (!file.Exists)
+        {
+            Logger.Warn(I18NManager.Translate("Server.ServerInfo.ConfigMissing",
+                I18NManager.Translate("Word.GridFightRewardsInfo"),
+                $"{ConfigManager.Config.Path.ConfigPath}/GridFight/GridFightBasicOrbRewards.json",
+                I18NManager.Translate("Word.GridFightRewards")));
+            return;
+        }
+
+        try
+        {
+            using var reader = file.OpenRead();
+            using StreamReader reader2 = new(reader);
+            var text = reader2.ReadToEnd();
+            var json = JsonConvert.DeserializeObject<Dictionary<uint, Dictionary<uint, List<GridFightBasicBonusPoolV2Excel>>>>(text);
+            if (json == null) throw new Exception("Failed to deserialize GridFightBasicOrbRewards.json");
+            foreach (var reward in json)
+            {
+                GameData.GridFightBasicOrbRewardsConfig.OrbRewards.Add(reward.Key, new GridFightBasicOrbRewardsInfo
+                {
+                    OrbId = reward.Key,
+                    Rewards = reward.Value
+                });
+                count++;
+            }
+        }
+        catch (Exception ex)
+        {
+            ResourceCache.IsComplete = false;
+            Logger.Error("Error in reading " + file.Name, ex);
+        }
+
+        Logger.Info(I18NManager.Translate("Server.ServerInfo.LoadedItems", count.ToString(),
+            I18NManager.Translate("Word.GridFightRewardsInfo")));
     }
 
     public static void AddRoomToGameData(RogueDLCBlockTypeEnum type, ChessRogueRoomConfig room)

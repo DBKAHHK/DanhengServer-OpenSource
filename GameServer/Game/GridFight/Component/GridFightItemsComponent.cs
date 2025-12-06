@@ -1,4 +1,5 @@
 using EggLink.DanhengServer.Data;
+using EggLink.DanhengServer.Data.Excel;
 using EggLink.DanhengServer.Enums.GridFight;
 using EggLink.DanhengServer.GameServer.Game.GridFight.PendingAction;
 using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
@@ -79,10 +80,10 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
         }
 
         BaseGridFightSyncData syncData = isRemove
-            ? new GridFightRemoveGameItemSyncData(src, [], [existingItem.ToUpdateInfo(count)], 0, param)
+            ? new GridFightRemoveGameItemSyncData(src, [], [existingItem.ToUpdateInfo(count)], groupId, param)
             : isUpdate
-                ? new GridFightUpdateGameItemSyncData(src, [], [existingItem.ToUpdateInfo(count)], 0, param)
-                : new GridFightAddGameItemSyncData(src, [], [existingItem.ToUpdateInfo(count)], 0, param);
+                ? new GridFightUpdateGameItemSyncData(src, [], [existingItem.ToUpdateInfo(count)], groupId, param)
+                : new GridFightAddGameItemSyncData(src, [], [existingItem.ToUpdateInfo(count)], groupId, param);
 
         if (sendPacket)
             await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncData));
@@ -156,7 +157,9 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
 
     #region Rewards
 
-    public async ValueTask<List<BaseGridFightSyncData>> TakeDrop(List<GridFightDropItemInfo> drops, bool sendPacket = false, GridFightSrc src = GridFightSrc.KGridFightSrcNone, uint groupId = 0, params uint[] param)
+    public async ValueTask<List<BaseGridFightSyncData>> TakeDrop(List<GridFightDropItemInfo> drops,
+        bool sendPacket = false, GridFightSrc src = GridFightSrc.KGridFightSrcNone, uint groupId = 0,
+        params uint[] param)
     {
         var syncs = new List<BaseGridFightSyncData>();
         var basicComp = Inst.GetComponent<GridFightBasicComponent>();
@@ -170,52 +173,52 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
             switch (item.DropType)
             {
                 case GridFightDropType.Coin:
-                    {
-                        await basicComp.UpdateGoldNum((int)item.Num, false);
-                        syncs.Add(new GridFightGoldSyncData(src, basicComp.Data, groupId, param));
-                        break;
-                    }
+                {
+                    await basicComp.UpdateGoldNum((int)item.Num, false);
+                    syncs.Add(new GridFightGoldSyncData(src, basicComp.Data, groupId, param));
+                    break;
+                }
                 case GridFightDropType.Exp:
-                    {
-                        await basicComp.AddLevelExp(item.Num, false);
-                        syncs.Add(new GridFightPlayerLevelSyncData(src, basicComp.Data, groupId, param));
-                        break;
-                    }
+                {
+                    await basicComp.AddLevelExp(item.Num, false);
+                    syncs.Add(new GridFightPlayerLevelSyncData(src, basicComp.Data, groupId, param));
+                    break;
+                }
                 case GridFightDropType.Refresh:
-                    {
-                        shopComp.Data.FreeRefreshCount += item.Num;
-                        syncs.Add(new GridFightShopSyncData(src, shopComp.Data, basicComp.Data.CurLevel, groupId, param));
-                        break;
-                    }
+                {
+                    shopComp.Data.FreeRefreshCount += item.Num;
+                    syncs.Add(new GridFightShopSyncData(src, shopComp.Data, basicComp.Data.CurLevel, groupId, param));
+                    break;
+                }
                 case GridFightDropType.Role:
-                    {
-                        syncs.AddRange(await roleComp.AddAvatar(item.DropItemId, item.DisplayValue.Tier, false, true,
-                            src, groupId, 0, param));
-                        break;
-                    }
+                {
+                    syncs.AddRange(await roleComp.AddAvatar(item.DropItemId, item.DisplayValue.Tier, false, true,
+                        src, groupId, 0, param));
+                    break;
+                }
                 case GridFightDropType.Item:
+                {
+                    // consumable or equipment
+                    if (GameData.GridFightConsumablesData.ContainsKey(item.DropItemId))
                     {
-                        // consumable or equipment
-                        if (GameData.GridFightConsumablesData.ContainsKey(item.DropItemId))
+                        syncs.AddRange(await UpdateConsumable(item.DropItemId, (int)item.Num, src, false, 0, param));
+                    }
+                    else if (GameData.GridFightEquipmentData.ContainsKey(item.DropItemId))
+                    {
+                        for (uint i = 0; i < item.Num; i++)
                         {
-                            syncs.AddRange(await UpdateConsumable(item.DropItemId, (int)item.Num, src, false, 0, param));
+                            syncs.AddRange((await AddEquipment(item.DropItemId, src, false, groupId, param)).Item2);
                         }
-                        else if (GameData.GridFightEquipmentData.ContainsKey(item.DropItemId))
-                        {
-                            for (uint i = 0; i < item.Num; i++)
-                            {
-                                syncs.AddRange((await AddEquipment(item.DropItemId, src, false, groupId, param)).Item2);
-                            }
-                        }
+                    }
 
-                        break;
-                    }
+                    break;
+                }
                 case GridFightDropType.Orb:
-                    {
-                        // add orbs
-                        syncs.AddRange(await orbComp.AddOrb(item.DropItemId, src, false, groupId, param));
-                        break;
-                    }
+                {
+                    // add orbs
+                    syncs.AddRange(await orbComp.AddOrb(item.DropItemId, src, false, groupId, param));
+                    break;
+                }
             }
         }
 
@@ -225,6 +228,194 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
         }
 
         return syncs;
+    }
+
+    public async ValueTask<(List<BaseGridFightSyncData>, List<GridFightDropItemInfo>)> TakeBasicBonusItems(
+        List<GridFightBasicBonusPoolV2Excel> bonuses, GridFightSrc src = GridFightSrc.KGridFightSrcNone, uint groupId = 0, bool sendPacket = true)
+    {
+        var basicComp = Inst.GetComponent<GridFightBasicComponent>();
+        var shopComp = Inst.GetComponent<GridFightShopComponent>();
+        var roleComp = Inst.GetComponent<GridFightRoleComponent>();
+        var orbComp = Inst.GetComponent<GridFightOrbComponent>();
+
+        List<BaseGridFightSyncData> syncs = [];
+        List<GridFightDropItemInfo> drops = [];
+
+        foreach (var bonus in bonuses)
+        {
+            // get drop
+            switch (bonus.BonusType)
+            {
+                case GridFightBonusTypeEnum.Gold:
+                {
+                    // add gold
+                    await basicComp.UpdateGoldNum((int)bonus.Value, false);
+                    syncs.Add(new GridFightGoldSyncData(src, basicComp.Data, groupId));
+
+                    drops.Add(new GridFightDropItemInfo
+                    {
+                        DropType = GridFightDropType.Coin,
+                        Num = bonus.Value
+                    });
+                    break;
+                }
+                case GridFightBonusTypeEnum.Refresh:
+                {
+                    // add refresh count
+                    shopComp.Data.FreeRefreshCount += bonus.Value;
+                    syncs.Add(new GridFightShopSyncData(src, shopComp.Data.Clone(), basicComp.Data.CurLevel, groupId));
+
+                    drops.Add(new GridFightDropItemInfo
+                    {
+                        DropType = GridFightDropType.Refresh,
+                        Num = bonus.Value
+                    });
+                    break;
+                }
+                case GridFightBonusTypeEnum.SpecificAvatar:
+                {
+                    // add role
+                    var roleId = bonus.BonusTypeParamList[0];
+                    var tier = bonus.BonusTypeParamList[1];
+
+                    syncs.AddRange(await roleComp.AddAvatar(roleId, tier, false, true, src, groupId));
+
+                    drops.Add(new GridFightDropItemInfo
+                    {
+                        DisplayValue = new GridDropItemDisplayInfo
+                        {
+                            Tier = tier
+                        },
+                        DropItemId = roleId,
+                        DropType = GridFightDropType.Role,
+                        Num = 1
+                    });
+                    break;
+                }
+                case GridFightBonusTypeEnum.RandomAvatar:
+                {
+                    // add random role
+                    var rarity = bonus.BonusTypeParamList[0];
+                    var tier = bonus.BonusTypeParamList[1];
+
+                    var role = GameData.GridFightRoleBasicInfoData.Values.Where(x => x.Rarity == rarity && x.IsInPool)
+                        .ToList()
+                        .RandomElement();
+
+                    syncs.AddRange(await roleComp.AddAvatar(role.ID, tier, false, true, src, groupId));
+
+                    drops.Add(new GridFightDropItemInfo
+                    {
+                        DisplayValue = new GridDropItemDisplayInfo
+                        {
+                            Tier = tier
+                        },
+                        DropItemId = role.ID,
+                        DropType = GridFightDropType.Role,
+                        Num = 1
+                    });
+                    break;
+                }
+                case GridFightBonusTypeEnum.Item:
+                {
+                    // consumable or equipment
+                    var itemId = bonus.BonusTypeParamList[0];
+
+                    drops.Add(new GridFightDropItemInfo
+                    {
+                        DropItemId = itemId,
+                        Num = 1,
+                        DropType = GridFightDropType.Item
+                    });
+
+                    // check if consumable or equipment
+                    if (GameData.GridFightEquipmentData.ContainsKey(itemId))
+                    {
+                        syncs.AddRange((await AddEquipment(itemId, src, false, groupId)).Item2);
+
+                    }
+                    else if (GameData.GridFightConsumablesData.ContainsKey(itemId))
+                    {
+                        syncs.AddRange(await UpdateConsumable(itemId, 1, src, false, groupId));
+                    }
+
+                    break;
+                }
+                case GridFightBonusTypeEnum.Exp:
+                {
+                    // add exp
+                    await basicComp.AddLevelExp(bonus.Value, false);
+                    syncs.Add(new GridFightPlayerLevelSyncData(src, basicComp.Data, groupId));
+
+                    drops.Add(new GridFightDropItemInfo
+                    {
+                        DropType = GridFightDropType.Exp,
+                        Num = bonus.Value
+                    });
+                    break;
+                }
+                case GridFightBonusTypeEnum.Orb:
+                {
+                    // add orbs
+                    var orbId = bonus.BonusTypeParamList[0];
+                    syncs.AddRange(await orbComp.AddOrb(orbId, src, false, groupId));
+
+                    drops.Add(new GridFightDropItemInfo
+                    {
+                        DropItemId = orbId,
+                        DropType = GridFightDropType.Orb,
+                        Num = bonus.Value
+                    });
+                    break;
+                }
+                case GridFightBonusTypeEnum.RandomEquipByCategory:
+                {
+                    var category = bonus.BonusTypeParamList[0];
+
+                    var equip = GameData.GridFightEquipmentData.Values.Where(x => (int)x.EquipCategory == category)
+                        .ToList().RandomElement();
+
+                    syncs.AddRange((await AddEquipment(equip.ID, src, false, groupId)).Item2);
+
+                    drops.Add(new GridFightDropItemInfo
+                    {
+                        DropItemId = equip.ID,
+                        DropType = GridFightDropType.Item,
+                        Num = 1
+                    });
+                    break;
+                }
+                case GridFightBonusTypeEnum.RandomEquipByFunc:
+                {
+                    var func = bonus.BonusTypeParamList[0];
+
+                    var equip = GameData.GridFightEquipmentData.Values.Where(x => (int)x.EquipFunc == func)
+                        .ToList().RandomElement();
+
+                    syncs.AddRange((await AddEquipment(equip.ID, src, false, groupId)).Item2);
+
+                    drops.Add(new GridFightDropItemInfo
+                    {
+                        DropItemId = equip.ID,
+                        DropType = GridFightDropType.Item,
+                        Num = 1
+                    });
+                    break;
+                }
+                case GridFightBonusTypeEnum.RandomSameAvatar:
+                {
+                    // TODO (not used in official server)
+                    break;
+                }
+            }
+        }
+
+        if (syncs.Count > 0 && sendPacket)
+        {
+            await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
+        }
+
+        return (syncs, drops);
     }
 
     #endregion

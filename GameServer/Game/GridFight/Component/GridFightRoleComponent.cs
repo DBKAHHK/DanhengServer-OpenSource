@@ -32,7 +32,7 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
 
         // get first empty pos
         var usedPos = Data.Roles.Select(x => x.Pos).ToHashSet();
-        for (var i = initialPos; i <= PrepareAreaPos + 9; i++)
+        for (var i = initialPos; i <= PrepareAreaPos + 999; i++)  // temp store area
         {
             if (usedPos.Contains(i)) continue;
             pos = i;

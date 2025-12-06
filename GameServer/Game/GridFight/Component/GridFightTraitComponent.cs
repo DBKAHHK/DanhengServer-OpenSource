@@ -14,6 +14,7 @@ public class GridFightTraitComponent(GridFightInstance inst) : BaseGridFightComp
 
     public async ValueTask CheckTrait()
     {
+        var itemsComp = Inst.GetComponent<GridFightItemsComponent>();
         var roleComp = Inst.GetComponent<GridFightRoleComponent>();
 
         Dictionary<uint, uint> traitCount = [];
@@ -31,6 +32,25 @@ public class GridFightTraitComponent(GridFightInstance inst) : BaseGridFightComp
             foreach (var traitId in excel.TraitList)
             {
                 traitCount[traitId]++;  // increase count
+            }
+
+            // get extra traits from equipments
+            foreach (var equipmentUid in role.EquipmentIds)
+            {
+                var equipmentItem = itemsComp.Data.EquipmentItems.FirstOrDefault(x => x.UniqueId == equipmentUid);
+                if (equipmentItem == null) continue;
+
+                // get conf
+                var equipmentExcel = GameData.GridFightEquipmentData.GetValueOrDefault(equipmentItem.ItemId);
+                if (equipmentExcel == null) continue;
+
+                // check category
+                if (equipmentExcel.EquipCategory != GridFightEquipCategoryEnum.Emblem) continue;
+
+                foreach (var traitId in equipmentExcel.EquipFuncParamList)
+                {
+                    traitCount[traitId]++;  // increase count
+                }
             }
         }
 
@@ -228,10 +248,39 @@ public static class GridFightTraitInfoPbExtensions
 
     public static BattleGridFightTraitInfo ToBattleInfo(this GridFightGameTraitPb info, GridFightRoleComponent roleComp)
     {
-        var traitRoles = roleComp.Data.Roles.Where(x =>
-            x.Pos <= GridFightRoleComponent.PrepareAreaPos && GameData.GridFightRoleBasicInfoData
-                .GetValueOrDefault(x.RoleId)?.TraitList.Contains(info.TraitId) == true).ToList();
+        var onGroundRoles = roleComp.Data.Roles.Where(x => x.Pos <= GridFightRoleComponent.PrepareAreaPos).ToList();
+        var traitRoles = onGroundRoles.Where(x => GameData.GridFightRoleBasicInfoData
+            .GetValueOrDefault(x.RoleId)?.TraitList.Contains(info.TraitId) == true).ToList();
 
+        // check equipment traits
+        foreach (var role in onGroundRoles.Except(traitRoles))
+        {
+            var roleExcel = GameData.GridFightRoleBasicInfoData.GetValueOrDefault(role.RoleId);
+            if (roleExcel == null) continue;
+
+            foreach (var equipmentUid in role.EquipmentIds)
+            {
+                // get item
+                var equipmentItem = roleComp.Inst.GetComponent<GridFightItemsComponent>().Data.EquipmentItems
+                    .FirstOrDefault(x => x.UniqueId == equipmentUid);
+                if (equipmentItem == null) continue;
+
+                // get conf
+                var equipmentExcel = GameData.GridFightEquipmentData.GetValueOrDefault(equipmentItem.ItemId);
+                if (equipmentExcel == null) continue;
+
+                // category (emblem)
+                if (equipmentExcel.EquipCategory != GridFightEquipCategoryEnum.Emblem) continue;
+
+                if (equipmentExcel.EquipFuncParamList.Contains(info.TraitId))
+                {
+                    // we can add this role directly becuz foreach has Except option
+                    traitRoles.Add(role);
+                }
+            }
+        }
+
+        // check for phainon
         var phainonRole = roleComp.Data.Roles.FirstOrDefault(x =>
             x.Pos <= GridFightRoleComponent.PrepareAreaPos && x.RoleId == 1408);  // hardcode
 
