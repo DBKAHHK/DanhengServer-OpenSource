@@ -40,6 +40,8 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
 
     public async ValueTask AcceptQuestByCondition()
     {
+        if (!ConfigManager.Config.ServerOption.EnableQuest) return;
+
         var syncList = new List<QuestInfo>();
         foreach (var quest in GameData.QuestDataData.Values)
         {
@@ -92,6 +94,8 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
 
     public async ValueTask<QuestInfo?> AcceptQuest(int questId, bool sync = true)
     {
+        if (!ConfigManager.Config.ServerOption.EnableQuest) return;
+
         GameData.QuestDataData.TryGetValue(questId, out var questExcel);
         if (questExcel == null) return null;
 
@@ -113,6 +117,8 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
 
     public async ValueTask FinishQuest(int questId, bool push = true)
     {
+        if (!ConfigManager.Config.ServerOption.EnableQuest) return;
+
         GameData.QuestDataData.TryGetValue(questId, out var questExcel);
         if (questExcel == null) return;
         GameData.FinishWayData.TryGetValue(questExcel.FinishWayID, out var finishWayExcel);
@@ -135,6 +141,8 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
 
     public async ValueTask<Retcode> FinishQuestByClient(int questId)
     {
+        if (!ConfigManager.Config.ServerOption.EnableQuest) return Retcode.RetSucc;
+
         GameData.QuestDataData.TryGetValue(questId, out var questExcel);
         if (questExcel == null) return Retcode.RetFail;
         GameData.FinishWayData.TryGetValue(questExcel.FinishWayID, out var finishWayExcel);
@@ -226,12 +234,16 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
 
     public QuestStatus GetQuestStatus(int questId)
     {
+        if (!ConfigManager.Config.ServerOption.EnableQuest) return QuestStatus.QuestFinish;
+
         if (!QuestData.Quests.TryGetValue(questId, out var questInfo)) return QuestStatus.QuestNone;
         return questInfo.QuestStatus;
     }
 
     public List<QuestInfo> GetRunningQuest()
     {
+        if (!ConfigManager.Config.ServerOption.EnableQuest) return [];
+
         return QuestData.Quests.Values.Where(x => x.QuestStatus == QuestStatus.QuestDoing).ToList();
     }
 
