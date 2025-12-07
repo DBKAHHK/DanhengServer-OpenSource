@@ -24,15 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightTraitBattleSttReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1HcmlkRmlnaHRUcmFpdEJhdHRsZVN0dC5wcm90bxoRRUNHRkNJQ0JDS0wu",
-            "cHJvdG8icwoXR3JpZEZpZ2h0VHJhaXRCYXR0bGVTdHQSEAoIdHJhaXRfaWQY",
-            "ASABKA0SIQoLQkpJRkVBQUlNRU8YAiADKAsyDC5FQ0dGQ0lDQkNLTBIOCgZk",
-            "YW1hZ2UYAyABKAESEwoLQkNERkZMT0ZFTkcYBCABKAFCHqoCG0VnZ0xpbmsu",
-            "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
+            "Ch1HcmlkRmlnaHRUcmFpdEJhdHRsZVN0dC5wcm90bxojR3JpZEZpZ2h0VHJh",
+            "aXRFZmZlY3RCYXR0bGVTdHQucHJvdG8ikAEKF0dyaWRGaWdodFRyYWl0QmF0",
+            "dGxlU3R0EhAKCHRyYWl0X2lkGAEgASgNEj4KFnRyYWl0X2VmZmVjdF9pbmZv",
+            "X2xpc3QYAiADKAsyHi5HcmlkRmlnaHRUcmFpdEVmZmVjdEJhdHRsZVN0dBIO",
+            "CgZkYW1hZ2UYAyABKAESEwoLQkNERkZMT0ZFTkcYBCABKAFCHqoCG0VnZ0xp",
+            "bmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ECGFCICBCKLReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightTraitEffectBattleSttReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitBattleStt), global::EggLink.DanhengServer.Proto.GridFightTraitBattleStt.Parser, new[]{ "TraitId", "BJIFEAAIMEO", "Damage", "BCDFFLOFENG" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitBattleStt), global::EggLink.DanhengServer.Proto.GridFightTraitBattleStt.Parser, new[]{ "TraitId", "TraitEffectInfoList", "Damage", "BCDFFLOFENG" }, null, null, null, null)
           }));
     }
     #endregion
@@ -75,7 +76,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightTraitBattleStt(GridFightTraitBattleStt other) : this() {
       traitId_ = other.traitId_;
-      bJIFEAAIMEO_ = other.bJIFEAAIMEO_.Clone();
+      traitEffectInfoList_ = other.traitEffectInfoList_.Clone();
       damage_ = other.damage_;
       bCDFFLOFENG_ = other.bCDFFLOFENG_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -99,15 +100,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "BJIFEAAIMEO" field.</summary>
-    public const int BJIFEAAIMEOFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ECGFCICBCKL> _repeated_bJIFEAAIMEO_codec
-        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.ECGFCICBCKL.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ECGFCICBCKL> bJIFEAAIMEO_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ECGFCICBCKL>();
+    /// <summary>Field number for the "trait_effect_info_list" field.</summary>
+    public const int TraitEffectInfoListFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.GridFightTraitEffectBattleStt> _repeated_traitEffectInfoList_codec
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.GridFightTraitEffectBattleStt.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightTraitEffectBattleStt> traitEffectInfoList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightTraitEffectBattleStt>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ECGFCICBCKL> BJIFEAAIMEO {
-      get { return bJIFEAAIMEO_; }
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.GridFightTraitEffectBattleStt> TraitEffectInfoList {
+      get { return traitEffectInfoList_; }
     }
 
     /// <summary>Field number for the "damage" field.</summary>
@@ -150,7 +151,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (TraitId != other.TraitId) return false;
-      if(!bJIFEAAIMEO_.Equals(other.bJIFEAAIMEO_)) return false;
+      if(!traitEffectInfoList_.Equals(other.traitEffectInfoList_)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Damage, other.Damage)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(BCDFFLOFENG, other.BCDFFLOFENG)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -161,7 +162,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (TraitId != 0) hash ^= TraitId.GetHashCode();
-      hash ^= bJIFEAAIMEO_.GetHashCode();
+      hash ^= traitEffectInfoList_.GetHashCode();
       if (Damage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Damage);
       if (BCDFFLOFENG != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BCDFFLOFENG);
       if (_unknownFields != null) {
@@ -186,7 +187,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(TraitId);
       }
-      bJIFEAAIMEO_.WriteTo(output, _repeated_bJIFEAAIMEO_codec);
+      traitEffectInfoList_.WriteTo(output, _repeated_traitEffectInfoList_codec);
       if (Damage != 0D) {
         output.WriteRawTag(25);
         output.WriteDouble(Damage);
@@ -209,7 +210,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(TraitId);
       }
-      bJIFEAAIMEO_.WriteTo(ref output, _repeated_bJIFEAAIMEO_codec);
+      traitEffectInfoList_.WriteTo(ref output, _repeated_traitEffectInfoList_codec);
       if (Damage != 0D) {
         output.WriteRawTag(25);
         output.WriteDouble(Damage);
@@ -231,7 +232,7 @@ namespace EggLink.DanhengServer.Proto {
       if (TraitId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitId);
       }
-      size += bJIFEAAIMEO_.CalculateSize(_repeated_bJIFEAAIMEO_codec);
+      size += traitEffectInfoList_.CalculateSize(_repeated_traitEffectInfoList_codec);
       if (Damage != 0D) {
         size += 1 + 8;
       }
@@ -253,7 +254,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.TraitId != 0) {
         TraitId = other.TraitId;
       }
-      bJIFEAAIMEO_.Add(other.bJIFEAAIMEO_);
+      traitEffectInfoList_.Add(other.traitEffectInfoList_);
       if (other.Damage != 0D) {
         Damage = other.Damage;
       }
@@ -280,7 +281,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 18: {
-            bJIFEAAIMEO_.AddEntriesFrom(input, _repeated_bJIFEAAIMEO_codec);
+            traitEffectInfoList_.AddEntriesFrom(input, _repeated_traitEffectInfoList_codec);
             break;
           }
           case 25: {
@@ -311,7 +312,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 18: {
-            bJIFEAAIMEO_.AddEntriesFrom(ref input, _repeated_bJIFEAAIMEO_codec);
+            traitEffectInfoList_.AddEntriesFrom(ref input, _repeated_traitEffectInfoList_codec);
             break;
           }
           case 25: {

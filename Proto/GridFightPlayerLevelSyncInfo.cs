@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightPlayerLevelSyncInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiJHcmlkRmlnaHRQbGF5ZXJMZXZlbFN5bmNJbmZvLnByb3RvIk8KHEdyaWRG",
-            "aWdodFBsYXllckxldmVsU3luY0luZm8SEwoLTk9MSUNNRUJOR04YAyABKA0S",
-            "DQoFbGV2ZWwYCyABKA0SCwoDZXhwGAYgASgNQh6qAhtFZ2dMaW5rLkRhbmhl",
-            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "CiJHcmlkRmlnaHRQbGF5ZXJMZXZlbFN5bmNJbmZvLnByb3RvIk0KHEdyaWRG",
+            "aWdodFBsYXllckxldmVsU3luY0luZm8SEQoJbWF4X2xldmVsGAMgASgNEg0K",
+            "BWxldmVsGAsgASgNEgsKA2V4cBgGIAEoDUIeqgIbRWdnTGluay5EYW5oZW5n",
+            "U2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightPlayerLevelSyncInfo), global::EggLink.DanhengServer.Proto.GridFightPlayerLevelSyncInfo.Parser, new[]{ "NOLICMEBNGN", "Level", "Exp" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightPlayerLevelSyncInfo), global::EggLink.DanhengServer.Proto.GridFightPlayerLevelSyncInfo.Parser, new[]{ "MaxLevel", "Level", "Exp" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,7 +73,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightPlayerLevelSyncInfo(GridFightPlayerLevelSyncInfo other) : this() {
-      nOLICMEBNGN_ = other.nOLICMEBNGN_;
+      maxLevel_ = other.maxLevel_;
       level_ = other.level_;
       exp_ = other.exp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -85,15 +85,15 @@ namespace EggLink.DanhengServer.Proto {
       return new GridFightPlayerLevelSyncInfo(this);
     }
 
-    /// <summary>Field number for the "NOLICMEBNGN" field.</summary>
-    public const int NOLICMEBNGNFieldNumber = 3;
-    private uint nOLICMEBNGN_;
+    /// <summary>Field number for the "max_level" field.</summary>
+    public const int MaxLevelFieldNumber = 3;
+    private uint maxLevel_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public uint NOLICMEBNGN {
-      get { return nOLICMEBNGN_; }
+    public uint MaxLevel {
+      get { return maxLevel_; }
       set {
-        nOLICMEBNGN_ = value;
+        maxLevel_ = value;
       }
     }
 
@@ -136,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (NOLICMEBNGN != other.NOLICMEBNGN) return false;
+      if (MaxLevel != other.MaxLevel) return false;
       if (Level != other.Level) return false;
       if (Exp != other.Exp) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -146,7 +146,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (NOLICMEBNGN != 0) hash ^= NOLICMEBNGN.GetHashCode();
+      if (MaxLevel != 0) hash ^= MaxLevel.GetHashCode();
       if (Level != 0) hash ^= Level.GetHashCode();
       if (Exp != 0) hash ^= Exp.GetHashCode();
       if (_unknownFields != null) {
@@ -167,9 +167,9 @@ namespace EggLink.DanhengServer.Proto {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (NOLICMEBNGN != 0) {
+      if (MaxLevel != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(NOLICMEBNGN);
+        output.WriteUInt32(MaxLevel);
       }
       if (Exp != 0) {
         output.WriteRawTag(48);
@@ -189,9 +189,9 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (NOLICMEBNGN != 0) {
+      if (MaxLevel != 0) {
         output.WriteRawTag(24);
-        output.WriteUInt32(NOLICMEBNGN);
+        output.WriteUInt32(MaxLevel);
       }
       if (Exp != 0) {
         output.WriteRawTag(48);
@@ -211,8 +211,8 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (NOLICMEBNGN != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NOLICMEBNGN);
+      if (MaxLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxLevel);
       }
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Level);
@@ -232,8 +232,8 @@ namespace EggLink.DanhengServer.Proto {
       if (other == null) {
         return;
       }
-      if (other.NOLICMEBNGN != 0) {
-        NOLICMEBNGN = other.NOLICMEBNGN;
+      if (other.MaxLevel != 0) {
+        MaxLevel = other.MaxLevel;
       }
       if (other.Level != 0) {
         Level = other.Level;
@@ -257,7 +257,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 24: {
-            NOLICMEBNGN = input.ReadUInt32();
+            MaxLevel = input.ReadUInt32();
             break;
           }
           case 48: {
@@ -284,7 +284,7 @@ namespace EggLink.DanhengServer.Proto {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 24: {
-            NOLICMEBNGN = input.ReadUInt32();
+            MaxLevel = input.ReadUInt32();
             break;
           }
           case 48: {

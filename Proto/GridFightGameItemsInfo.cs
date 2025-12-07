@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightGameItemsInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChxHcmlkRmlnaHRHYW1lSXRlbXNJbmZvLnByb3RvGh1HcmlkRmlnaHRDb25z",
-            "dW1hYmxlSW5mby5wcm90bxobR3JpZEdhbWVGb3JnZUl0ZW1JbmZvLnByb3Rv",
-            "GhxHcmlkRmlnaHRFcXVpcG1lbnRJbmZvLnByb3RvIs0BChZHcmlkRmlnaHRH",
+            "ChxHcmlkRmlnaHRHYW1lSXRlbXNJbmZvLnByb3RvGhxHcmlkRmlnaHRFcXVp",
+            "cG1lbnRJbmZvLnByb3RvGhtHcmlkR2FtZUZvcmdlSXRlbUluZm8ucHJvdG8a",
+            "HUdyaWRGaWdodENvbnN1bWFibGVJbmZvLnByb3RvIs0BChZHcmlkRmlnaHRH",
             "YW1lSXRlbXNJbmZvEjwKGmdyaWRfZmlnaHRfY29uc3VtYWJsZV9saXN0GAwg",
             "AygLMhguR3JpZEZpZ2h0Q29uc3VtYWJsZUluZm8SOQoZZ3JpZF9nYW1lX2Zv",
             "cmdlX2l0ZW1fbGlzdBgBIAMoCzIWLkdyaWRHYW1lRm9yZ2VJdGVtSW5mbxI6",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "RXF1aXBtZW50SW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3Rv",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightConsumableInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameForgeItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEquipmentInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameForgeItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightConsumableInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameItemsInfo), global::EggLink.DanhengServer.Proto.GridFightGameItemsInfo.Parser, new[]{ "GridFightConsumableList", "GridGameForgeItemList", "GridFightEquipmentList" }, null, null, null, null)
           }));

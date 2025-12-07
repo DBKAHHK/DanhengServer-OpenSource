@@ -24,16 +24,16 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightGameTeamInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChtHcmlkRmlnaHRHYW1lVGVhbUluZm8ucHJvdG8aFUdyaWRHYW1lTnBjSW5m",
-            "by5wcm90bxobR3JpZEdhbWVGb3JnZUl0ZW1JbmZvLnByb3RvGhZHcmlkR2Ft",
-            "ZVJvbGVJbmZvLnByb3RvIrABChVHcmlkRmlnaHRHYW1lVGVhbUluZm8SLgoT",
+            "ChtHcmlkRmlnaHRHYW1lVGVhbUluZm8ucHJvdG8aFkdyaWRHYW1lUm9sZUlu",
+            "Zm8ucHJvdG8aFUdyaWRHYW1lTnBjSW5mby5wcm90bxobR3JpZEdhbWVGb3Jn",
+            "ZUl0ZW1JbmZvLnByb3RvIrABChVHcmlkRmlnaHRHYW1lVGVhbUluZm8SLgoT",
             "Z3JpZF9nYW1lX3JvbGVfbGlzdBgHIAMoCzIRLkdyaWRHYW1lUm9sZUluZm8S",
             "LAoSZ3JpZF9nYW1lX25wY19saXN0GAkgAygLMhAuR3JpZEdhbWVOcGNJbmZv",
             "EjkKGWdyaWRfZ2FtZV9mb3JnZV9pdGVtX2xpc3QYDSADKAsyFi5HcmlkR2Ft",
             "ZUZvcmdlSXRlbUluZm9CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90",
             "b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridGameNpcInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameForgeItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameRoleInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridGameRoleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameNpcInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameForgeItemInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameTeamInfo), global::EggLink.DanhengServer.Proto.GridFightGameTeamInfo.Parser, new[]{ "GridGameRoleList", "GridGameNpcList", "GridGameForgeItemList" }, null, null, null, null)
           }));

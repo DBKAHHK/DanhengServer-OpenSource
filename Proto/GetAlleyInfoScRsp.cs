@@ -24,8 +24,8 @@ namespace EggLink.DanhengServer.Proto {
     static GetAlleyInfoScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHZXRBbGxleUluZm9TY1JzcC5wcm90bxoRQUdBREVNQUpJTUQucHJvdG8a",
-            "EUxBSUVNQ0ZBQ0RLLnByb3RvGhFIRUhBT01JQU1HTC5wcm90bxoRRUNKTUpK",
+            "ChdHZXRBbGxleUluZm9TY1JzcC5wcm90bxoRTEFJRU1DRkFDREsucHJvdG8a",
+            "EUFHQURFTUFKSU1ELnByb3RvGhFIRUhBT01JQU1HTC5wcm90bxoRRUNKTUpK",
             "S0pHT1AucHJvdG8ikwMKEUdldEFsbGV5SW5mb1NjUnNwEg0KBWxldmVsGA4g",
             "ASgNEhAKCGN1cl9mdW5kGA8gASgNEhMKC0dMQk9FTUpKQUhEGAogAygNEhMK",
             "C0dFRk5ERUVJS0VGGAsgAygNEhMKC05PUE9ERUlNRkZCGAcgASgNEiEKC0tM",
@@ -38,7 +38,7 @@ namespace EggLink.DanhengServer.Proto {
             "dWUYAiABKA06AjgBQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9i",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.AGADEMAJIMDReflection.Descriptor, global::EggLink.DanhengServer.Proto.LAIEMCFACDKReflection.Descriptor, global::EggLink.DanhengServer.Proto.HEHAOMIAMGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.ECJMJJKJGOPReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LAIEMCFACDKReflection.Descriptor, global::EggLink.DanhengServer.Proto.AGADEMAJIMDReflection.Descriptor, global::EggLink.DanhengServer.Proto.HEHAOMIAMGLReflection.Descriptor, global::EggLink.DanhengServer.Proto.ECJMJJKJGOPReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GetAlleyInfoScRsp), global::EggLink.DanhengServer.Proto.GetAlleyInfoScRsp.Parser, new[]{ "Level", "CurFund", "GLBOEMJJAHD", "GEFNDEEIKEF", "NOPODEIMFFB", "KLPNGFNMIPI", "BOKOLCPKEJM", "NPLAKEOKEKB", "BJCMPHLPKNF", "OEDPOPCOHGB", "NJGAMCCGADC", "Retcode" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

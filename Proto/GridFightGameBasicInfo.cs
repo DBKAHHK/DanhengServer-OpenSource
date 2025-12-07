@@ -25,8 +25,8 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChxHcmlkRmlnaHRHYW1lQmFzaWNJbmZvLnByb3RvGhdHcmlkRmlnaHRMb2Nr",
-            "VHlwZS5wcm90bxocUm9sZVRyYWNrRXF1aXBtZW50SW5mby5wcm90bxoXR3Jp",
-            "ZEZpZ2h0TG9ja0luZm8ucHJvdG8aEU9QSUJCUENIRklJLnByb3RvIrkFChZH",
+            "SW5mby5wcm90bxocUm9sZVRyYWNrRXF1aXBtZW50SW5mby5wcm90bxoRT1BJ",
+            "QkJQQ0hGSUkucHJvdG8aF0dyaWRGaWdodExvY2tUeXBlLnByb3RvIrkFChZH",
             "cmlkRmlnaHRHYW1lQmFzaWNJbmZvEhwKFGdyaWRfZmlnaHRfbGluZXVwX2hw",
             "GAMgASgNEiUKCWxvY2tfdHlwZRgGIAEoDjISLkdyaWRGaWdodExvY2tUeXBl",
             "EiIKC09DTUdNRUhFQ0JCGPQMIAEoCzIMLk9QSUJCUENIRklJEiMKG2dyaWRf",
@@ -45,7 +45,7 @@ namespace EggLink.DanhengServer.Proto {
             "Y3VyX2xldmVsX2V4cBgIIAEoDUIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.RoleTrackEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPIBBPCHFIIReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RoleTrackEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.OPIBBPCHFIIReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo), global::EggLink.DanhengServer.Proto.GridFightGameBasicInfo.Parser, new[]{ "GridFightLineupHp", "LockType", "OCMGMEHECBB", "GridFightMaxAvatarCount", "GridFightCurGold", "GridFightLineupMaxHp", "LPEMPKFNNOL", "GridFightCurLevel", "TrackTraitIdList", "GridFightTargetGuideCode", "GridFightLevelCost", "GridFightComboWinNum", "RoleTrackEquipmentList", "GameLockInfo", "GridFightMaxInterestGold", "GridFightMaxLevel", "GridFightOffFieldMaxCount", "GridFightMaxFieldCount", "GridFightCurLevelExp" }, null, null, null, null)
           }));

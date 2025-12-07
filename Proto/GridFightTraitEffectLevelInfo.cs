@@ -25,16 +25,17 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNHcmlkRmlnaHRUcmFpdEVmZmVjdExldmVsSW5mby5wcm90bxoXR3JpZEZp",
-            "Z2h0RHJvcEluZm8ucHJvdG8izQEKHUdyaWRGaWdodFRyYWl0RWZmZWN0TGV2",
-            "ZWxJbmZvEh4KFnRyYWl0X2VmZmVjdF9sZXZlbF9leHAYASABKA0SRAoLTk5F",
-            "TEZBTENET0wYAiADKAsyLy5HcmlkRmlnaHRUcmFpdEVmZmVjdExldmVsSW5m",
-            "by5OTkVMRkFMQ0RPTEVudHJ5GkYKEE5ORUxGQUxDRE9MRW50cnkSCwoDa2V5",
-            "GAEgASgNEiEKBXZhbHVlGAIgASgLMhIuR3JpZEZpZ2h0RHJvcEluZm86AjgB",
-            "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "Z2h0RHJvcEluZm8ucHJvdG8i8QEKHUdyaWRGaWdodFRyYWl0RWZmZWN0TGV2",
+            "ZWxJbmZvEh4KFnRyYWl0X2VmZmVjdF9sZXZlbF9leHAYASABKA0SXQoZdHJh",
+            "aXRfZWZmZWN0X2xldmVsX3Jld2FyZBgCIAMoCzI6LkdyaWRGaWdodFRyYWl0",
+            "RWZmZWN0TGV2ZWxJbmZvLlRyYWl0RWZmZWN0TGV2ZWxSZXdhcmRFbnRyeRpR",
+            "ChtUcmFpdEVmZmVjdExldmVsUmV3YXJkRW50cnkSCwoDa2V5GAEgASgNEiEK",
+            "BXZhbHVlGAIgASgLMhIuR3JpZEZpZ2h0RHJvcEluZm86AjgBQh6qAhtFZ2dM",
+            "aW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightDropInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfo), global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfo.Parser, new[]{ "TraitEffectLevelExp", "NNELFALCDOL" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfo), global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfo.Parser, new[]{ "TraitEffectLevelExp", "TraitEffectLevelReward" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -77,7 +78,7 @@ namespace EggLink.DanhengServer.Proto {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GridFightTraitEffectLevelInfo(GridFightTraitEffectLevelInfo other) : this() {
       traitEffectLevelExp_ = other.traitEffectLevelExp_;
-      nNELFALCDOL_ = other.nNELFALCDOL_.Clone();
+      traitEffectLevelReward_ = other.traitEffectLevelReward_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -99,15 +100,15 @@ namespace EggLink.DanhengServer.Proto {
       }
     }
 
-    /// <summary>Field number for the "NNELFALCDOL" field.</summary>
-    public const int NNELFALCDOLFieldNumber = 2;
-    private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo>.Codec _map_nNELFALCDOL_codec
+    /// <summary>Field number for the "trait_effect_level_reward" field.</summary>
+    public const int TraitEffectLevelRewardFieldNumber = 2;
+    private static readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo>.Codec _map_traitEffectLevelReward_codec
         = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo>.Codec(pb::FieldCodec.ForUInt32(8, 0), pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.GridFightDropInfo.Parser), 18);
-    private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo> nNELFALCDOL_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo>();
+    private readonly pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo> traitEffectLevelReward_ = new pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo> NNELFALCDOL {
-      get { return nNELFALCDOL_; }
+    public pbc::MapField<uint, global::EggLink.DanhengServer.Proto.GridFightDropInfo> TraitEffectLevelReward {
+      get { return traitEffectLevelReward_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -126,7 +127,7 @@ namespace EggLink.DanhengServer.Proto {
         return true;
       }
       if (TraitEffectLevelExp != other.TraitEffectLevelExp) return false;
-      if (!NNELFALCDOL.Equals(other.NNELFALCDOL)) return false;
+      if (!TraitEffectLevelReward.Equals(other.TraitEffectLevelReward)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -135,7 +136,7 @@ namespace EggLink.DanhengServer.Proto {
     public override int GetHashCode() {
       int hash = 1;
       if (TraitEffectLevelExp != 0) hash ^= TraitEffectLevelExp.GetHashCode();
-      hash ^= NNELFALCDOL.GetHashCode();
+      hash ^= TraitEffectLevelReward.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -158,7 +159,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(TraitEffectLevelExp);
       }
-      nNELFALCDOL_.WriteTo(output, _map_nNELFALCDOL_codec);
+      traitEffectLevelReward_.WriteTo(output, _map_traitEffectLevelReward_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -173,7 +174,7 @@ namespace EggLink.DanhengServer.Proto {
         output.WriteRawTag(8);
         output.WriteUInt32(TraitEffectLevelExp);
       }
-      nNELFALCDOL_.WriteTo(ref output, _map_nNELFALCDOL_codec);
+      traitEffectLevelReward_.WriteTo(ref output, _map_traitEffectLevelReward_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -187,7 +188,7 @@ namespace EggLink.DanhengServer.Proto {
       if (TraitEffectLevelExp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(TraitEffectLevelExp);
       }
-      size += nNELFALCDOL_.CalculateSize(_map_nNELFALCDOL_codec);
+      size += traitEffectLevelReward_.CalculateSize(_map_traitEffectLevelReward_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -203,7 +204,7 @@ namespace EggLink.DanhengServer.Proto {
       if (other.TraitEffectLevelExp != 0) {
         TraitEffectLevelExp = other.TraitEffectLevelExp;
       }
-      nNELFALCDOL_.MergeFrom(other.nNELFALCDOL_);
+      traitEffectLevelReward_.MergeFrom(other.traitEffectLevelReward_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -224,7 +225,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 18: {
-            nNELFALCDOL_.AddEntriesFrom(input, _map_nNELFALCDOL_codec);
+            traitEffectLevelReward_.AddEntriesFrom(input, _map_traitEffectLevelReward_codec);
             break;
           }
         }
@@ -247,7 +248,7 @@ namespace EggLink.DanhengServer.Proto {
             break;
           }
           case 18: {
-            nNELFALCDOL_.AddEntriesFrom(ref input, _map_nNELFALCDOL_codec);
+            traitEffectLevelReward_.AddEntriesFrom(ref input, _map_traitEffectLevelReward_codec);
             break;
           }
         }

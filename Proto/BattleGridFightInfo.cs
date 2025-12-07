@@ -24,28 +24,29 @@ namespace EggLink.DanhengServer.Proto {
     static BattleGridFightInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlCYXR0bGVHcmlkRmlnaHRJbmZvLnByb3RvGhFKTkVBUExLS1BFSi5wcm90",
-            "bxogQmF0dGxlR3JpZEZpZ2h0QXVnbWVudEluZm8ucHJvdG8aHkJhdHRsZUdy",
-            "aWRGaWdodFN0YWdlSW5mby5wcm90bxojQmF0dGxlR3JpZEZpZ2h0UG9ydGFs",
-            "QnVmZkluZm8ucHJvdG8aHkJhdHRsZUdyaWRGaWdodFRyYWl0SW5mby5wcm90",
-            "bxoSQmF0dGxlQXZhdGFyLnByb3RvGh1CYXR0bGVHcmlkRmlnaHRSb2xlSW5m",
-            "by5wcm90byLpBAoTQmF0dGxlR3JpZEZpZ2h0SW5mbxItChZncmlkX2ZpZ2h0",
-            "X2F2YXRhcl9saXN0GAEgAygLMg0uQmF0dGxlQXZhdGFyEhYKDmJhdHRsZV93",
-            "YXZlX2lkGAIgASgNEhwKFGdyaWRfZmlnaHRfbGluZXVwX2hwGAMgASgNEhwK",
-            "FGdyaWRfZmlnaHRfY3VyX2xldmVsGAQgASgNEjgKFWdyaWRfZmlnaHRfdHJh",
-            "aXRfaW5mbxgHIAMoCzIZLkJhdHRsZUdyaWRGaWdodFRyYWl0SW5mbxI1ChNn",
-            "cmlkX2dhbWVfcm9sZV9saXN0GAggAygLMhguQmF0dGxlR3JpZEZpZ2h0Um9s",
-            "ZUluZm8SHQoVcGVuYWx0eV9ib251c19ydWxlX2lkGAkgASgNEjwKF2dyaWRf",
-            "ZmlnaHRfYXVnbWVudF9pbmZvGAogAygLMhsuQmF0dGxlR3JpZEZpZ2h0QXVn",
-            "bWVudEluZm8SOAoVZ3JpZF9maWdodF9zdGFnZV9pbmZvGAsgASgLMhkuQmF0",
-            "dGxlR3JpZEZpZ2h0U3RhZ2VJbmZvEhkKEWJhdHRsZV9kaWZmaWN1bHR5GAwg",
-            "ASgNEg4KBnNlYXNvbhgNIAEoDRJDChtncmlkX2ZpZ2h0X3BvcnRhbF9idWZm",
-            "X2xpc3QYDiADKAsyHi5CYXR0bGVHcmlkRmlnaHRQb3J0YWxCdWZmSW5mbxIT",
-            "Cgtpc19vdmVybG9jaxgPIAEoCBIYChBnYW1lX2RpdmlzaW9uX2lkGBAgASgN",
-            "EigKEmdyaWRfZ2FtZV9ucGNfbGlzdBgRIAMoCzIMLkpORUFQTEtLUEVKQh6q",
-            "AhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
+            "ChlCYXR0bGVHcmlkRmlnaHRJbmZvLnByb3RvGh5CYXR0bGVHcmlkRmlnaHRU",
+            "cmFpdEluZm8ucHJvdG8aHkJhdHRsZUdyaWRGaWdodFN0YWdlSW5mby5wcm90",
+            "bxoSQmF0dGxlQXZhdGFyLnByb3RvGiNCYXR0bGVHcmlkRmlnaHRQb3J0YWxC",
+            "dWZmSW5mby5wcm90bxocQmF0dGxlR3JpZEZpZ2h0TnBjSW5mby5wcm90bxog",
+            "QmF0dGxlR3JpZEZpZ2h0QXVnbWVudEluZm8ucHJvdG8aHUJhdHRsZUdyaWRG",
+            "aWdodFJvbGVJbmZvLnByb3RvIvQEChNCYXR0bGVHcmlkRmlnaHRJbmZvEi0K",
+            "FmdyaWRfZmlnaHRfYXZhdGFyX2xpc3QYASADKAsyDS5CYXR0bGVBdmF0YXIS",
+            "FgoOYmF0dGxlX3dhdmVfaWQYAiABKA0SHAoUZ3JpZF9maWdodF9saW5ldXBf",
+            "aHAYAyABKA0SHAoUZ3JpZF9maWdodF9jdXJfbGV2ZWwYBCABKA0SOAoVZ3Jp",
+            "ZF9maWdodF90cmFpdF9pbmZvGAcgAygLMhkuQmF0dGxlR3JpZEZpZ2h0VHJh",
+            "aXRJbmZvEjUKE2dyaWRfZ2FtZV9yb2xlX2xpc3QYCCADKAsyGC5CYXR0bGVH",
+            "cmlkRmlnaHRSb2xlSW5mbxIdChVwZW5hbHR5X2JvbnVzX3J1bGVfaWQYCSAB",
+            "KA0SPAoXZ3JpZF9maWdodF9hdWdtZW50X2luZm8YCiADKAsyGy5CYXR0bGVH",
+            "cmlkRmlnaHRBdWdtZW50SW5mbxI4ChVncmlkX2ZpZ2h0X3N0YWdlX2luZm8Y",
+            "CyABKAsyGS5CYXR0bGVHcmlkRmlnaHRTdGFnZUluZm8SGQoRYmF0dGxlX2Rp",
+            "ZmZpY3VsdHkYDCABKA0SDgoGc2Vhc29uGA0gASgNEkMKG2dyaWRfZmlnaHRf",
+            "cG9ydGFsX2J1ZmZfbGlzdBgOIAMoCzIeLkJhdHRsZUdyaWRGaWdodFBvcnRh",
+            "bEJ1ZmZJbmZvEhMKC2lzX292ZXJsb2NrGA8gASgIEhgKEGdhbWVfZGl2aXNp",
+            "b25faWQYECABKA0SMwoSZ3JpZF9nYW1lX25wY19saXN0GBEgAygLMhcuQmF0",
+            "dGxlR3JpZEZpZ2h0TnBjSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
+            "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.JNEAPLKKPEJReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightAugmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightStageInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightPortalBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightTraitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightRoleInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleGridFightTraitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightStageInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightPortalBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightNpcInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightAugmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightRoleInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleGridFightInfo), global::EggLink.DanhengServer.Proto.BattleGridFightInfo.Parser, new[]{ "GridFightAvatarList", "BattleWaveId", "GridFightLineupHp", "GridFightCurLevel", "GridFightTraitInfo", "GridGameRoleList", "PenaltyBonusRuleId", "GridFightAugmentInfo", "GridFightStageInfo", "BattleDifficulty", "Season", "GridFightPortalBuffList", "IsOverlock", "GameDivisionId", "GridGameNpcList" }, null, null, null, null)
           }));
@@ -278,12 +279,12 @@ namespace EggLink.DanhengServer.Proto {
 
     /// <summary>Field number for the "grid_game_npc_list" field.</summary>
     public const int GridGameNpcListFieldNumber = 17;
-    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.JNEAPLKKPEJ> _repeated_gridGameNpcList_codec
-        = pb::FieldCodec.ForMessage(138, global::EggLink.DanhengServer.Proto.JNEAPLKKPEJ.Parser);
-    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JNEAPLKKPEJ> gridGameNpcList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JNEAPLKKPEJ>();
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.BattleGridFightNpcInfo> _repeated_gridGameNpcList_codec
+        = pb::FieldCodec.ForMessage(138, global::EggLink.DanhengServer.Proto.BattleGridFightNpcInfo.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BattleGridFightNpcInfo> gridGameNpcList_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BattleGridFightNpcInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.JNEAPLKKPEJ> GridGameNpcList {
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.BattleGridFightNpcInfo> GridGameNpcList {
       get { return gridGameNpcList_; }
     }
 

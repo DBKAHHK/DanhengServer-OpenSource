@@ -24,22 +24,22 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightSyncDataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHcmlkRmlnaHRTeW5jRGF0YS5wcm90bxogR3JpZEZpZ2h0U2VjdGlvblJl",
-            "Y29yZEluZm8ucHJvdG8aF0dyaWRGaWdodExvY2tUeXBlLnByb3RvGhtHcmlk",
-            "RmlnaHRHYW1lSXRlbUluZm8ucHJvdG8aHEdyaWRGaWdodERhbWFnZVN0dElu",
-            "Zm8ucHJvdG8aEURDQkxHRUFIT0VHLnByb3RvGhtHcmlkRmlnaHRTaG9wU3lu",
-            "Y0luZm8ucHJvdG8aIUdyaWRGaWdodFRyYWl0VHJhY2tTeW5jSW5mby5wcm90",
-            "bxoiR3JpZEZpZ2h0RWxpdGVCcmFuY2hTeW5jSW5mby5wcm90bxobR3JpZEdh",
-            "bWVGb3JnZUl0ZW1JbmZvLnByb3RvGh5HcmlkRmlnaHRBdWdtZW50U3luY0lu",
-            "Zm8ucHJvdG8aFUdyaWRHYW1lTnBjSW5mby5wcm90bxofR3JpZEZpZ2h0VHV0",
-            "b3JpYWxTeW5jSW5mby5wcm90bxoXR3JpZEZpZ2h0TG9ja0luZm8ucHJvdG8a",
-            "HEdyaWRGaWdodExldmVsU3luY0luZm8ucHJvdG8aHEdyaWRGaWdodFBlbmRp",
-            "bmdBY3Rpb24ucHJvdG8aH0dyaWRGaWdodExpbmV1cEhwU3luY0luZm8ucHJv",
-            "dG8aH0dyaWRGaWdodEdhbWVJdGVtU3luY0luZm8ucHJvdG8aIUdyaWRGaWdo",
-            "dFBvcnRhbEJ1ZmZTeW5jSW5mby5wcm90bxocR3JpZEZpZ2h0VHJhaXRTeW5j",
-            "SW5mby5wcm90bxogUm9sZVRyYWNrRXF1aXBtZW50U3luY0luZm8ucHJvdG8a",
-            "FkdyaWRHYW1lUm9sZUluZm8ucHJvdG8aGkdyaWRGaWdodE9yYlN5bmNJbmZv",
-            "LnByb3RvGiJHcmlkRmlnaHRQbGF5ZXJMZXZlbFN5bmNJbmZvLnByb3RvIrYQ",
+            "ChdHcmlkRmlnaHRTeW5jRGF0YS5wcm90bxocR3JpZEZpZ2h0TGV2ZWxTeW5j",
+            "SW5mby5wcm90bxoiR3JpZEZpZ2h0RWxpdGVCcmFuY2hTeW5jSW5mby5wcm90",
+            "bxocR3JpZEZpZ2h0RGFtYWdlU3R0SW5mby5wcm90bxoXR3JpZEZpZ2h0TG9j",
+            "a1R5cGUucHJvdG8aIkdyaWRGaWdodFBsYXllckxldmVsU3luY0luZm8ucHJv",
+            "dG8aHEdyaWRGaWdodFBlbmRpbmdBY3Rpb24ucHJvdG8aG0dyaWRGaWdodFNo",
+            "b3BTeW5jSW5mby5wcm90bxohR3JpZEZpZ2h0UG9ydGFsQnVmZlN5bmNJbmZv",
+            "LnByb3RvGiFHcmlkRmlnaHRUcmFpdFRyYWNrU3luY0luZm8ucHJvdG8aHkdy",
+            "aWRGaWdodEF1Z21lbnRTeW5jSW5mby5wcm90bxofR3JpZEZpZ2h0TGluZXVw",
+            "SHBTeW5jSW5mby5wcm90bxogUm9sZVRyYWNrRXF1aXBtZW50U3luY0luZm8u",
+            "cHJvdG8aFUdyaWRHYW1lTnBjSW5mby5wcm90bxobR3JpZEdhbWVGb3JnZUl0",
+            "ZW1JbmZvLnByb3RvGh9HcmlkRmlnaHRUdXRvcmlhbFN5bmNJbmZvLnByb3Rv",
+            "GhFEQ0JMR0VBSE9FRy5wcm90bxoXR3JpZEZpZ2h0TG9ja0luZm8ucHJvdG8a",
+            "FkdyaWRHYW1lUm9sZUluZm8ucHJvdG8aH0dyaWRGaWdodEdhbWVJdGVtU3lu",
+            "Y0luZm8ucHJvdG8aHEdyaWRGaWdodFRyYWl0U3luY0luZm8ucHJvdG8aIEdy",
+            "aWRGaWdodFNlY3Rpb25SZWNvcmRJbmZvLnByb3RvGhpHcmlkRmlnaHRPcmJT",
+            "eW5jSW5mby5wcm90bxobR3JpZEZpZ2h0R2FtZUl0ZW1JbmZvLnByb3RvIrYQ",
             "ChFHcmlkRmlnaHRTeW5jRGF0YRIrCg1hZGRfcm9sZV9pbmZvGI4MIAEoCzIR",
             "LkdyaWRHYW1lUm9sZUluZm9IABIuChB1cGRhdGVfcm9sZV9pbmZvGP0JIAEo",
             "CzIRLkdyaWRHYW1lUm9sZUluZm9IABIgChVyZW1vdmVfcm9sZV91bmlxdWVf",
@@ -89,7 +89,7 @@ namespace EggLink.DanhengServer.Proto {
             "X2VmZmVjdF9pZBi9AiABKA1IAEILCglzeW5jX2l0ZW1CHqoCG0VnZ0xpbmsu",
             "RGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightSectionRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDamageSttInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCBLGEAHOEGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightShopSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitTrackSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteBranchSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameForgeItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameNpcInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTutorialSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLineupHpSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RoleTrackEquipmentSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameRoleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightOrbSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPlayerLevelSyncInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEliteBranchSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightDamageSttInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPlayerLevelSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightShopSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitTrackSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLineupHpSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.RoleTrackEquipmentSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameNpcInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameForgeItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTutorialSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.DCBLGEAHOEGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameRoleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSectionRecordInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightOrbSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightSyncData), global::EggLink.DanhengServer.Proto.GridFightSyncData.Parser, new[]{ "AddRoleInfo", "UpdateRoleInfo", "RemoveRoleUniqueId", "AddGameItemInfo", "UpdateGameItemInfo", "RemoveGameItemInfo", "ItemValue", "PlayerLevel", "GridFightLineupHp", "MaxBattleRoleNum", "ShopSyncInfo", "PendingAction", "PortalBuffSyncInfo", "LevelSyncInfo", "OrbSyncInfo", "SectionRecordSyncInfo", "MPCCPGJFBDH", "RemoveAugmentUniqueId", "FinishPendingActionPos", "GridFightMaxInterestGold", "GridFightLevelCost", "TraitSyncInfo", "LockType", "TraitTrackSyncInfo", "GridFightComboWinNum", "GridFightMaxAvatarCount", "GridFightOffFieldMaxCount", "GridFightDamageSttInfo", "EliteBranchSyncInfo", "AddNpcInfo", "UpdateNpcInfo", "RemoveNpcUniqueId", "AddForgeInfo", "UpdateForgeInfo", "RemoveForgeUniqueId", "AugmentSyncInfo", "EquipmentTrackSyncInfo", "GridFightSyncGameItemInfo", "RemoveOrbUniqueId", "KPNBFHEDDOF", "GridFightTutorialSync", "SyncLockInfo", "RemoveTraitEffectId" }, new[]{ "SyncItem" }, null, null, null)
           }));
