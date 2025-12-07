@@ -94,7 +94,7 @@ public class QuestManager(PlayerInstance player) : BasePlayerManager(player)
 
     public async ValueTask<QuestInfo?> AcceptQuest(int questId, bool sync = true)
     {
-        if (!ConfigManager.Config.ServerOption.EnableQuest) return;
+        if (!ConfigManager.Config.ServerOption.EnableQuest) return null;
 
         GameData.QuestDataData.TryGetValue(questId, out var questExcel);
         if (questExcel == null) return null;
