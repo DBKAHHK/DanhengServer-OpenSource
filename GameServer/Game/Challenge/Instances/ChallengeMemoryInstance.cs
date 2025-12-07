@@ -201,6 +201,8 @@ public class ChallengeMemoryInstance(PlayerInstance player, ChallengeDataPb data
             SetCurrentExtraLineup(ExtraLineupType.LineupChallenge2);
             await Player.LineupManager!.SetExtraLineup((ExtraLineupType)GetCurrentExtraLineupType());
             await Player.SendPacket(new PacketChallengeLineupNotify((ExtraLineupType)Data.Memory.CurrentExtraLineup));
+            await Player.SceneInstance!.SyncLineup();
+
             Data.Memory.SavedMp = (uint)Player.LineupManager.GetCurLineup()!.Mp;
 
             // Move player

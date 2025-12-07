@@ -317,6 +317,8 @@ public class ChallengeBossInstance(PlayerInstance player, ChallengeDataPb data)
         SetCurrentExtraLineup(ExtraLineupType.LineupChallenge2);
         await Player.LineupManager!.SetExtraLineup((ExtraLineupType)GetCurrentExtraLineupType());
         await Player.SendPacket(new PacketChallengeLineupNotify((ExtraLineupType)GetCurrentExtraLineupType()));
+        await Player.SceneInstance!.SyncLineup();
+
         Data.Boss.SavedMp = (uint)Player.LineupManager.GetCurLineup()!.Mp;
 
         // Move player

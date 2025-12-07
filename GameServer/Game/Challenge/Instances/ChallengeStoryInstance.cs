@@ -241,6 +241,8 @@ public class ChallengeStoryInstance(PlayerInstance player, ChallengeDataPb data)
             SetCurrentExtraLineup(ExtraLineupType.LineupChallenge2);
             await Player.LineupManager!.SetExtraLineup((ExtraLineupType)GetCurrentExtraLineupType());
             await Player.SendPacket(new PacketChallengeLineupNotify((ExtraLineupType)Data.Story.CurrentExtraLineup));
+            await Player.SceneInstance!.SyncLineup();
+
             Data.Story.SavedMp = (uint)Player.LineupManager.GetCurLineup()!.Mp;
 
             // Move player
