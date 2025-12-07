@@ -34,6 +34,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
 
         var basicComp = GetComponent<GridFightBasicComponent>();
         var levelComp = GetComponent<GridFightLevelComponent>();
+        var traitComp = GetComponent<GridFightTraitComponent>();
         var itemsComponent = GetComponent<GridFightItemsComponent>();
         var prevData = basicComp.Data.Clone();
         var curEncounter = levelComp.CurrentSection.Encounters[(int)(levelComp.CurrentSection.BranchId - 1)];
@@ -106,6 +107,9 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
         syncs.AddRange(await curEncounter.TakeEncounterDrop(itemsComponent));
 
         await Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
+
+        // trait
+        await traitComp.HandleBattleEnd(req, progress == 100);
 
         if (end)
         {

@@ -12,7 +12,8 @@ public class GridFightPlayerLevelSyncData(GridFightSrc src, GridFightBasicInfoPb
             PlayerLevel = new GridFightPlayerLevelSyncInfo
             {
                 Exp = info.LevelExp,
-                Level = info.CurLevel
+                Level = info.CurLevel,
+                MaxLevel = info.MaxLevel
             }
         };
     }

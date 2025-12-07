@@ -34,51 +34,62 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             "cEl0ZW1QYiKKAQoTR3JpZEZpZ2h0R2FtZUluZm9QYhIQCghVbmlxdWVJZBgB",
             "IAEoDRISCgpEaXZpc2lvbklkGAIgASgNEhIKCklzT3ZlckxvY2sYAyABKAgS",
             "DgoGU2Vhc29uGAQgASgNEikKCkNvbXBvbmVudHMYBSADKAsyFS5HcmlkRmln",
-            "aHRDb21wb25lbnRQYiK6AgoUR3JpZEZpZ2h0QmFzaWNJbmZvUGISDwoHQ3Vy",
+            "aHRDb21wb25lbnRQYiLMAgoUR3JpZEZpZ2h0QmFzaWNJbmZvUGISDwoHQ3Vy",
             "R29sZBgBIAEoDRIQCghDdXJMZXZlbBgCIAEoDRIQCghMZXZlbEV4cBgDIAEo",
             "DRIUCgxCdXlMZXZlbENvc3QYBCABKA0SDQoFQ3VySHAYBSABKA0SFAoMTWF4",
             "QXZhdGFyTnVtGAYgASgNEhAKCENvbWJvTnVtGAcgASgNEhAKCExvY2tUeXBl",
             "GAggASgNEhIKCkxvY2tSZWFzb24YCSABKA0SEwoLTWF4SW50ZXJlc3QYCiAB",
             "KA0SFgoOVHJhY2tpbmdUcmFpdHMYCyADKA0SOgoSVHJhY2tpbmdFcXVpcG1l",
             "bnRzGAwgAygLMh4uR3JpZEZpZ2h0RXF1aXBtZW50VHJhY2tJbmZvUGISEQoJ",
-            "R3VpZGVDb2RlGA0gASgJIlcKHUdyaWRGaWdodEVxdWlwbWVudFRyYWNrSW5m",
-            "b1BiEhAKCFByaW9yaXR5GAEgASgNEg4KBlJvbGVJZBgCIAEoDRIUCgxFcXVp",
-            "cG1lbnRJZHMYAyADKA0i2AEKE0dyaWRGaWdodFJvbGVJbmZvUGISDgoGUm9s",
-            "ZUlkGAEgASgNEgwKBFRpZXIYAiABKA0SCwoDUG9zGAMgASgNEhAKCFVuaXF1",
-            "ZUlkGAQgASgNEjoKC1NhdmVkVmFsdWVzGAUgAygLMiUuR3JpZEZpZ2h0Um9s",
-            "ZUluZm9QYi5TYXZlZFZhbHVlc0VudHJ5EhQKDEVxdWlwbWVudElkcxgGIAMo",
-            "DRoyChBTYXZlZFZhbHVlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoDToCOAEiUQoVR3JpZEZpZ2h0QXZhdGFySW5mb1BiEiMKBVJvbGVzGAEg",
-            "AygLMhQuR3JpZEZpZ2h0Um9sZUluZm9QYhITCgtDdXJVbmlxdWVJZBgCIAEo",
-            "DSI5ChJHcmlkRmlnaHRHYW1lT3JiUGISEQoJT3JiSXRlbUlkGAEgASgNEhAK",
-            "CFVuaXF1ZUlkGAIgASgNIjcKEkdyaWRGaWdodE9yYkluZm9QYhIhCgRPcmJz",
-            "GAEgAygLMhMuR3JpZEZpZ2h0R2FtZU9yYlBiIp4BChZHcmlkRmlnaHRHYW1l",
-            "QXVnbWVudFBiEhEKCUF1Z21lbnRJZBgBIAEoDRI9CgtTYXZlZFZhbHVlcxgC",
-            "IAMoCzIoLkdyaWRGaWdodEdhbWVBdWdtZW50UGIuU2F2ZWRWYWx1ZXNFbnRy",
-            "eRoyChBTYXZlZFZhbHVlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoDToCOAEiQwoWR3JpZEZpZ2h0QXVnbWVudEluZm9QYhIpCghBdWdtZW50",
-            "cxgBIAMoCzIXLkdyaWRGaWdodEdhbWVBdWdtZW50UGIifwoaR3JpZEZpZ2h0",
-            "R2FtZVRyYWl0RWZmZWN0UGISDwoHVHJhaXRJZBgBIAEoDRIQCghFZmZlY3RJ",
-            "ZBgCIAEoDRITCglUaHJlc2hvbGQYAyABKA1IABIaChBDb3JlUm9sZVVuaXF1",
-            "ZUlkGAQgASgNSABCDQoLRWZmZWN0UGFyYW0iaQoUR3JpZEZpZ2h0R2FtZVRy",
-            "YWl0UGISDwoHVHJhaXRJZBgBIAEoDRIsCgdFZmZlY3RzGAIgAygLMhsuR3Jp",
-            "ZEZpZ2h0R2FtZVRyYWl0RWZmZWN0UGISEgoKVHJhaXRMYXllchgDIAEoDSI9",
-            "ChRHcmlkRmlnaHRUcmFpdEluZm9QYhIlCgZUcmFpdHMYASADKAsyFS5Hcmlk",
-            "RmlnaHRHYW1lVHJhaXRQYiI8ChhHcmlkRmlnaHRFcXVpcG1lbnRJdGVtUGIS",
-            "DgoGSXRlbUlkGAEgASgNEhAKCFVuaXF1ZUlkGAIgASgNIjoKGUdyaWRGaWdo",
-            "dENvbnN1bWFibGVJdGVtUGISDgoGSXRlbUlkGAEgASgNEg0KBUNvdW50GAIg",
-            "ASgNIn4KFEdyaWRGaWdodEl0ZW1zSW5mb1BiEjEKDkVxdWlwbWVudEl0ZW1z",
-            "GAEgAygLMhkuR3JpZEZpZ2h0RXF1aXBtZW50SXRlbVBiEjMKD0NvbnN1bWFi",
-            "bGVJdGVtcxgCIAMoCzIaLkdyaWRGaWdodENvbnN1bWFibGVJdGVtUGIi2wIK",
-            "FEdyaWRGaWdodENvbXBvbmVudFBiEigKCFNob3BJbmZvGAEgASgLMhQuR3Jp",
-            "ZEZpZ2h0U2hvcEluZm9QYkgAEioKCUJhc2ljSW5mbxgCIAEoCzIVLkdyaWRG",
-            "aWdodEJhc2ljSW5mb1BiSAASLAoKQXZhdGFySW5mbxgDIAEoCzIWLkdyaWRG",
-            "aWdodEF2YXRhckluZm9QYkgAEiYKB09yYkluZm8YBCABKAsyEy5HcmlkRmln",
-            "aHRPcmJJbmZvUGJIABIuCgtBdWdtZW50SW5mbxgFIAEoCzIXLkdyaWRGaWdo",
-            "dEF1Z21lbnRJbmZvUGJIABIqCglUcmFpdEluZm8YBiABKAsyFS5HcmlkRmln",
-            "aHRUcmFpdEluZm9QYkgAEioKCUl0ZW1zSW5mbxgHIAEoCzIVLkdyaWRGaWdo",
-            "dEl0ZW1zSW5mb1BiSABCDwoNQ29tcG9uZW50VHlwZUIpqgImRWdnTGluay5E",
-            "YW5oZW5nU2VydmVyLlByb3RvLlNlcnZlclNpZGViBnByb3RvMw=="));
+            "R3VpZGVDb2RlGA0gASgJEhAKCE1heExldmVsGA4gASgNIlcKHUdyaWRGaWdo",
+            "dEVxdWlwbWVudFRyYWNrSW5mb1BiEhAKCFByaW9yaXR5GAEgASgNEg4KBlJv",
+            "bGVJZBgCIAEoDRIUCgxFcXVpcG1lbnRJZHMYAyADKA0i2AEKE0dyaWRGaWdo",
+            "dFJvbGVJbmZvUGISDgoGUm9sZUlkGAEgASgNEgwKBFRpZXIYAiABKA0SCwoD",
+            "UG9zGAMgASgNEhAKCFVuaXF1ZUlkGAQgASgNEjoKC1NhdmVkVmFsdWVzGAUg",
+            "AygLMiUuR3JpZEZpZ2h0Um9sZUluZm9QYi5TYXZlZFZhbHVlc0VudHJ5EhQK",
+            "DEVxdWlwbWVudElkcxgGIAMoDRoyChBTYXZlZFZhbHVlc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoDToCOAEiWAoSR3JpZEZpZ2h0TnBjSW5m",
+            "b1BiEg0KBU5wY0lkGAEgASgNEgsKA1BvcxgCIAEoDRIQCghVbmlxdWVJZBgD",
+            "IAEoDRIUCgxFcXVpcG1lbnRJZHMYBCADKA0idQoUR3JpZEZpZ2h0Rm9yZ2VJ",
+            "bmZvUGISEwoLRm9yZ2VJdGVtSWQYASABKA0SCwoDUG9zGAIgASgNEhAKCFVu",
+            "aXF1ZUlkGAMgASgNEikKBUdvb2RzGAQgAygLMhouR3JpZEZpZ2h0Rm9yZ2VH",
+            "b29kc0luZm9QYiJuChlHcmlkRmlnaHRGb3JnZUdvb2RzSW5mb1BiEhAKBkl0",
+            "ZW1JZBgBIAEoDUgAEjIKCFJvbGVJbmZvGAIgASgLMh4uR3JpZEZpZ2h0Rm9y",
+            "Z2VSb2xlR29vZHNJbmZvUGJIAEILCglHb29kc1R5cGUiPQodR3JpZEZpZ2h0",
+            "Rm9yZ2VSb2xlR29vZHNJbmZvUGISDgoGUm9sZUlkGAEgASgNEgwKBFRpZXIY",
+            "AiABKA0imQEKE0dyaWRGaWdodFRlYW1JbmZvUGISIwoFUm9sZXMYASADKAsy",
+            "FC5HcmlkRmlnaHRSb2xlSW5mb1BiEiEKBE5wY3MYAiADKAsyEy5HcmlkRmln",
+            "aHROcGNJbmZvUGISJQoGRm9yZ2VzGAMgAygLMhUuR3JpZEZpZ2h0Rm9yZ2VJ",
+            "bmZvUGISEwoLQ3VyVW5pcXVlSWQYBCABKA0iOQoSR3JpZEZpZ2h0R2FtZU9y",
+            "YlBiEhEKCU9yYkl0ZW1JZBgBIAEoDRIQCghVbmlxdWVJZBgCIAEoDSI3ChJH",
+            "cmlkRmlnaHRPcmJJbmZvUGISIQoET3JicxgBIAMoCzITLkdyaWRGaWdodEdh",
+            "bWVPcmJQYiKeAQoWR3JpZEZpZ2h0R2FtZUF1Z21lbnRQYhIRCglBdWdtZW50",
+            "SWQYASABKA0SPQoLU2F2ZWRWYWx1ZXMYAiADKAsyKC5HcmlkRmlnaHRHYW1l",
+            "QXVnbWVudFBiLlNhdmVkVmFsdWVzRW50cnkaMgoQU2F2ZWRWYWx1ZXNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKA06AjgBIkMKFkdyaWRGaWdo",
+            "dEF1Z21lbnRJbmZvUGISKQoIQXVnbWVudHMYASADKAsyFy5HcmlkRmlnaHRH",
+            "YW1lQXVnbWVudFBiIn8KGkdyaWRGaWdodEdhbWVUcmFpdEVmZmVjdFBiEg8K",
+            "B1RyYWl0SWQYASABKA0SEAoIRWZmZWN0SWQYAiABKA0SEwoJVGhyZXNob2xk",
+            "GAMgASgNSAASGgoQQ29yZVJvbGVVbmlxdWVJZBgEIAEoDUgAQg0KC0VmZmVj",
+            "dFBhcmFtImkKFEdyaWRGaWdodEdhbWVUcmFpdFBiEg8KB1RyYWl0SWQYASAB",
+            "KA0SLAoHRWZmZWN0cxgCIAMoCzIbLkdyaWRGaWdodEdhbWVUcmFpdEVmZmVj",
+            "dFBiEhIKClRyYWl0TGF5ZXIYAyABKA0iPQoUR3JpZEZpZ2h0VHJhaXRJbmZv",
+            "UGISJQoGVHJhaXRzGAEgAygLMhUuR3JpZEZpZ2h0R2FtZVRyYWl0UGIiPAoY",
+            "R3JpZEZpZ2h0RXF1aXBtZW50SXRlbVBiEg4KBkl0ZW1JZBgBIAEoDRIQCghV",
+            "bmlxdWVJZBgCIAEoDSI6ChlHcmlkRmlnaHRDb25zdW1hYmxlSXRlbVBiEg4K",
+            "Bkl0ZW1JZBgBIAEoDRINCgVDb3VudBgCIAEoDSJ+ChRHcmlkRmlnaHRJdGVt",
+            "c0luZm9QYhIxCg5FcXVpcG1lbnRJdGVtcxgBIAMoCzIZLkdyaWRGaWdodEVx",
+            "dWlwbWVudEl0ZW1QYhIzCg9Db25zdW1hYmxlSXRlbXMYAiADKAsyGi5Hcmlk",
+            "RmlnaHRDb25zdW1hYmxlSXRlbVBiItcCChRHcmlkRmlnaHRDb21wb25lbnRQ",
+            "YhIoCghTaG9wSW5mbxgBIAEoCzIULkdyaWRGaWdodFNob3BJbmZvUGJIABIq",
+            "CglCYXNpY0luZm8YAiABKAsyFS5HcmlkRmlnaHRCYXNpY0luZm9QYkgAEigK",
+            "CFRlYW1JbmZvGAMgASgLMhQuR3JpZEZpZ2h0VGVhbUluZm9QYkgAEiYKB09y",
+            "YkluZm8YBCABKAsyEy5HcmlkRmlnaHRPcmJJbmZvUGJIABIuCgtBdWdtZW50",
+            "SW5mbxgFIAEoCzIXLkdyaWRGaWdodEF1Z21lbnRJbmZvUGJIABIqCglUcmFp",
+            "dEluZm8YBiABKAsyFS5HcmlkRmlnaHRUcmFpdEluZm9QYkgAEioKCUl0ZW1z",
+            "SW5mbxgHIAEoCzIVLkdyaWRGaWdodEl0ZW1zSW5mb1BiSABCDwoNQ29tcG9u",
+            "ZW50VHlwZUIpqgImRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvLlNlcnZl",
+            "clNpZGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,10 +97,14 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopItemPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopItemPb.Parser, new[]{ "RoleItem", "Cost", "SoldOut" }, new[]{ "ItemType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopInfoPb.Parser, new[]{ "ShopLocked", "FreeRefreshCount", "RefreshCost", "ShopItems" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameInfoPb.Parser, new[]{ "UniqueId", "DivisionId", "IsOverLock", "Season", "Components" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb.Parser, new[]{ "CurGold", "CurLevel", "LevelExp", "BuyLevelCost", "CurHp", "MaxAvatarNum", "ComboNum", "LockType", "LockReason", "MaxInterest", "TrackingTraits", "TrackingEquipments", "GuideCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb.Parser, new[]{ "CurGold", "CurLevel", "LevelExp", "BuyLevelCost", "CurHp", "MaxAvatarNum", "ComboNum", "LockType", "LockReason", "MaxInterest", "TrackingTraits", "TrackingEquipments", "GuideCode", "MaxLevel" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentTrackInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentTrackInfoPb.Parser, new[]{ "Priority", "RoleId", "EquipmentIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightRoleInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightRoleInfoPb.Parser, new[]{ "RoleId", "Tier", "Pos", "UniqueId", "SavedValues", "EquipmentIds" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightAvatarInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightAvatarInfoPb.Parser, new[]{ "Roles", "CurUniqueId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightNpcInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightNpcInfoPb.Parser, new[]{ "NpcId", "Pos", "UniqueId", "EquipmentIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeInfoPb.Parser, new[]{ "ForgeItemId", "Pos", "UniqueId", "Goods" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeGoodsInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeGoodsInfoPb.Parser, new[]{ "ItemId", "RoleInfo" }, new[]{ "GoodsType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeRoleGoodsInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeRoleGoodsInfoPb.Parser, new[]{ "RoleId", "Tier" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightTeamInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightTeamInfoPb.Parser, new[]{ "Roles", "Npcs", "Forges", "CurUniqueId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameOrbPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameOrbPb.Parser, new[]{ "OrbItemId", "UniqueId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightOrbInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightOrbInfoPb.Parser, new[]{ "Orbs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameAugmentPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameAugmentPb.Parser, new[]{ "AugmentId", "SavedValues" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -100,7 +115,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentItemPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentItemPb.Parser, new[]{ "ItemId", "UniqueId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightConsumableItemPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightConsumableItemPb.Parser, new[]{ "ItemId", "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightItemsInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightItemsInfoPb.Parser, new[]{ "EquipmentItems", "ConsumableItems" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightComponentPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightComponentPb.Parser, new[]{ "ShopInfo", "BasicInfo", "AvatarInfo", "OrbInfo", "AugmentInfo", "TraitInfo", "ItemsInfo" }, new[]{ "ComponentType" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightComponentPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightComponentPb.Parser, new[]{ "ShopInfo", "BasicInfo", "TeamInfo", "OrbInfo", "AugmentInfo", "TraitInfo", "ItemsInfo" }, new[]{ "ComponentType" }, null, null, null)
           }));
     }
     #endregion
@@ -1306,6 +1321,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       trackingTraits_ = other.trackingTraits_.Clone();
       trackingEquipments_ = other.trackingEquipments_.Clone();
       guideCode_ = other.guideCode_;
+      maxLevel_ = other.maxLevel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1469,6 +1485,18 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
     }
 
+    /// <summary>Field number for the "MaxLevel" field.</summary>
+    public const int MaxLevelFieldNumber = 14;
+    private uint maxLevel_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MaxLevel {
+      get { return maxLevel_; }
+      set {
+        maxLevel_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1497,6 +1525,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if(!trackingTraits_.Equals(other.trackingTraits_)) return false;
       if(!trackingEquipments_.Equals(other.trackingEquipments_)) return false;
       if (GuideCode != other.GuideCode) return false;
+      if (MaxLevel != other.MaxLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1517,6 +1546,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       hash ^= trackingTraits_.GetHashCode();
       hash ^= trackingEquipments_.GetHashCode();
       if (GuideCode.Length != 0) hash ^= GuideCode.GetHashCode();
+      if (MaxLevel != 0) hash ^= MaxLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1581,6 +1611,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(106);
         output.WriteString(GuideCode);
       }
+      if (MaxLevel != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(MaxLevel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1637,6 +1671,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(106);
         output.WriteString(GuideCode);
       }
+      if (MaxLevel != 0) {
+        output.WriteRawTag(112);
+        output.WriteUInt32(MaxLevel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1681,6 +1719,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       size += trackingEquipments_.CalculateSize(_repeated_trackingEquipments_codec);
       if (GuideCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(GuideCode);
+      }
+      if (MaxLevel != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxLevel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1728,6 +1769,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       trackingEquipments_.Add(other.trackingEquipments_);
       if (other.GuideCode.Length != 0) {
         GuideCode = other.GuideCode;
+      }
+      if (other.MaxLevel != 0) {
+        MaxLevel = other.MaxLevel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1797,6 +1841,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             GuideCode = input.ReadString();
             break;
           }
+          case 112: {
+            MaxLevel = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1863,6 +1911,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
           }
           case 106: {
             GuideCode = input.ReadString();
+            break;
+          }
+          case 112: {
+            MaxLevel = input.ReadUInt32();
             break;
           }
         }
@@ -2483,16 +2535,16 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class GridFightAvatarInfoPb : pb::IMessage<GridFightAvatarInfoPb>
+  public sealed partial class GridFightNpcInfoPb : pb::IMessage<GridFightNpcInfoPb>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GridFightAvatarInfoPb> _parser = new pb::MessageParser<GridFightAvatarInfoPb>(() => new GridFightAvatarInfoPb());
+    private static readonly pb::MessageParser<GridFightNpcInfoPb> _parser = new pb::MessageParser<GridFightNpcInfoPb>(() => new GridFightNpcInfoPb());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GridFightAvatarInfoPb> Parser { get { return _parser; } }
+    public static pb::MessageParser<GridFightNpcInfoPb> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2508,7 +2560,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GridFightAvatarInfoPb() {
+    public GridFightNpcInfoPb() {
       OnConstruction();
     }
 
@@ -2516,16 +2568,1114 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GridFightAvatarInfoPb(GridFightAvatarInfoPb other) : this() {
+    public GridFightNpcInfoPb(GridFightNpcInfoPb other) : this() {
+      npcId_ = other.npcId_;
+      pos_ = other.pos_;
+      uniqueId_ = other.uniqueId_;
+      equipmentIds_ = other.equipmentIds_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightNpcInfoPb Clone() {
+      return new GridFightNpcInfoPb(this);
+    }
+
+    /// <summary>Field number for the "NpcId" field.</summary>
+    public const int NpcIdFieldNumber = 1;
+    private uint npcId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint NpcId {
+      get { return npcId_; }
+      set {
+        npcId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Pos" field.</summary>
+    public const int PosFieldNumber = 2;
+    private uint pos_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Pos {
+      get { return pos_; }
+      set {
+        pos_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "UniqueId" field.</summary>
+    public const int UniqueIdFieldNumber = 3;
+    private uint uniqueId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UniqueId {
+      get { return uniqueId_; }
+      set {
+        uniqueId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "EquipmentIds" field.</summary>
+    public const int EquipmentIdsFieldNumber = 4;
+    private static readonly pb::FieldCodec<uint> _repeated_equipmentIds_codec
+        = pb::FieldCodec.ForUInt32(34);
+    private readonly pbc::RepeatedField<uint> equipmentIds_ = new pbc::RepeatedField<uint>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<uint> EquipmentIds {
+      get { return equipmentIds_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GridFightNpcInfoPb);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GridFightNpcInfoPb other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NpcId != other.NpcId) return false;
+      if (Pos != other.Pos) return false;
+      if (UniqueId != other.UniqueId) return false;
+      if(!equipmentIds_.Equals(other.equipmentIds_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NpcId != 0) hash ^= NpcId.GetHashCode();
+      if (Pos != 0) hash ^= Pos.GetHashCode();
+      if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
+      hash ^= equipmentIds_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (NpcId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(NpcId);
+      }
+      if (Pos != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Pos);
+      }
+      if (UniqueId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(UniqueId);
+      }
+      equipmentIds_.WriteTo(output, _repeated_equipmentIds_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NpcId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(NpcId);
+      }
+      if (Pos != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Pos);
+      }
+      if (UniqueId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(UniqueId);
+      }
+      equipmentIds_.WriteTo(ref output, _repeated_equipmentIds_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (NpcId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(NpcId);
+      }
+      if (Pos != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pos);
+      }
+      if (UniqueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
+      }
+      size += equipmentIds_.CalculateSize(_repeated_equipmentIds_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GridFightNpcInfoPb other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NpcId != 0) {
+        NpcId = other.NpcId;
+      }
+      if (other.Pos != 0) {
+        Pos = other.Pos;
+      }
+      if (other.UniqueId != 0) {
+        UniqueId = other.UniqueId;
+      }
+      equipmentIds_.Add(other.equipmentIds_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            NpcId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            Pos = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            UniqueId = input.ReadUInt32();
+            break;
+          }
+          case 34:
+          case 32: {
+            equipmentIds_.AddEntriesFrom(input, _repeated_equipmentIds_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            NpcId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            Pos = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            UniqueId = input.ReadUInt32();
+            break;
+          }
+          case 34:
+          case 32: {
+            equipmentIds_.AddEntriesFrom(ref input, _repeated_equipmentIds_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GridFightForgeInfoPb : pb::IMessage<GridFightForgeInfoPb>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GridFightForgeInfoPb> _parser = new pb::MessageParser<GridFightForgeInfoPb>(() => new GridFightForgeInfoPb());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GridFightForgeInfoPb> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightForgeInfoPb() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightForgeInfoPb(GridFightForgeInfoPb other) : this() {
+      forgeItemId_ = other.forgeItemId_;
+      pos_ = other.pos_;
+      uniqueId_ = other.uniqueId_;
+      goods_ = other.goods_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightForgeInfoPb Clone() {
+      return new GridFightForgeInfoPb(this);
+    }
+
+    /// <summary>Field number for the "ForgeItemId" field.</summary>
+    public const int ForgeItemIdFieldNumber = 1;
+    private uint forgeItemId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ForgeItemId {
+      get { return forgeItemId_; }
+      set {
+        forgeItemId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Pos" field.</summary>
+    public const int PosFieldNumber = 2;
+    private uint pos_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Pos {
+      get { return pos_; }
+      set {
+        pos_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "UniqueId" field.</summary>
+    public const int UniqueIdFieldNumber = 3;
+    private uint uniqueId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UniqueId {
+      get { return uniqueId_; }
+      set {
+        uniqueId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Goods" field.</summary>
+    public const int GoodsFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeGoodsInfoPb> _repeated_goods_codec
+        = pb::FieldCodec.ForMessage(34, global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeGoodsInfoPb.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeGoodsInfoPb> goods_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeGoodsInfoPb>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeGoodsInfoPb> Goods {
+      get { return goods_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GridFightForgeInfoPb);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GridFightForgeInfoPb other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ForgeItemId != other.ForgeItemId) return false;
+      if (Pos != other.Pos) return false;
+      if (UniqueId != other.UniqueId) return false;
+      if(!goods_.Equals(other.goods_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ForgeItemId != 0) hash ^= ForgeItemId.GetHashCode();
+      if (Pos != 0) hash ^= Pos.GetHashCode();
+      if (UniqueId != 0) hash ^= UniqueId.GetHashCode();
+      hash ^= goods_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ForgeItemId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(ForgeItemId);
+      }
+      if (Pos != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Pos);
+      }
+      if (UniqueId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(UniqueId);
+      }
+      goods_.WriteTo(output, _repeated_goods_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ForgeItemId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(ForgeItemId);
+      }
+      if (Pos != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Pos);
+      }
+      if (UniqueId != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(UniqueId);
+      }
+      goods_.WriteTo(ref output, _repeated_goods_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ForgeItemId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ForgeItemId);
+      }
+      if (Pos != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Pos);
+      }
+      if (UniqueId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UniqueId);
+      }
+      size += goods_.CalculateSize(_repeated_goods_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GridFightForgeInfoPb other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ForgeItemId != 0) {
+        ForgeItemId = other.ForgeItemId;
+      }
+      if (other.Pos != 0) {
+        Pos = other.Pos;
+      }
+      if (other.UniqueId != 0) {
+        UniqueId = other.UniqueId;
+      }
+      goods_.Add(other.goods_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            ForgeItemId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            Pos = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            UniqueId = input.ReadUInt32();
+            break;
+          }
+          case 34: {
+            goods_.AddEntriesFrom(input, _repeated_goods_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ForgeItemId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            Pos = input.ReadUInt32();
+            break;
+          }
+          case 24: {
+            UniqueId = input.ReadUInt32();
+            break;
+          }
+          case 34: {
+            goods_.AddEntriesFrom(ref input, _repeated_goods_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GridFightForgeGoodsInfoPb : pb::IMessage<GridFightForgeGoodsInfoPb>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GridFightForgeGoodsInfoPb> _parser = new pb::MessageParser<GridFightForgeGoodsInfoPb>(() => new GridFightForgeGoodsInfoPb());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GridFightForgeGoodsInfoPb> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightForgeGoodsInfoPb() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightForgeGoodsInfoPb(GridFightForgeGoodsInfoPb other) : this() {
+      switch (other.GoodsTypeCase) {
+        case GoodsTypeOneofCase.ItemId:
+          ItemId = other.ItemId;
+          break;
+        case GoodsTypeOneofCase.RoleInfo:
+          RoleInfo = other.RoleInfo.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightForgeGoodsInfoPb Clone() {
+      return new GridFightForgeGoodsInfoPb(this);
+    }
+
+    /// <summary>Field number for the "ItemId" field.</summary>
+    public const int ItemIdFieldNumber = 1;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint ItemId {
+      get { return HasItemId ? (uint) goodsType_ : 0; }
+      set {
+        goodsType_ = value;
+        goodsTypeCase_ = GoodsTypeOneofCase.ItemId;
+      }
+    }
+    /// <summary>Gets whether the "ItemId" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasItemId {
+      get { return goodsTypeCase_ == GoodsTypeOneofCase.ItemId; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "ItemId" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearItemId() {
+      if (HasItemId) {
+        ClearGoodsType();
+      }
+    }
+
+    /// <summary>Field number for the "RoleInfo" field.</summary>
+    public const int RoleInfoFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeRoleGoodsInfoPb RoleInfo {
+      get { return goodsTypeCase_ == GoodsTypeOneofCase.RoleInfo ? (global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeRoleGoodsInfoPb) goodsType_ : null; }
+      set {
+        goodsType_ = value;
+        goodsTypeCase_ = value == null ? GoodsTypeOneofCase.None : GoodsTypeOneofCase.RoleInfo;
+      }
+    }
+
+    private object goodsType_;
+    /// <summary>Enum of possible cases for the "GoodsType" oneof.</summary>
+    public enum GoodsTypeOneofCase {
+      None = 0,
+      ItemId = 1,
+      RoleInfo = 2,
+    }
+    private GoodsTypeOneofCase goodsTypeCase_ = GoodsTypeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GoodsTypeOneofCase GoodsTypeCase {
+      get { return goodsTypeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGoodsType() {
+      goodsTypeCase_ = GoodsTypeOneofCase.None;
+      goodsType_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GridFightForgeGoodsInfoPb);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GridFightForgeGoodsInfoPb other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ItemId != other.ItemId) return false;
+      if (!object.Equals(RoleInfo, other.RoleInfo)) return false;
+      if (GoodsTypeCase != other.GoodsTypeCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasItemId) hash ^= ItemId.GetHashCode();
+      if (goodsTypeCase_ == GoodsTypeOneofCase.RoleInfo) hash ^= RoleInfo.GetHashCode();
+      hash ^= (int) goodsTypeCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasItemId) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(ItemId);
+      }
+      if (goodsTypeCase_ == GoodsTypeOneofCase.RoleInfo) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RoleInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasItemId) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(ItemId);
+      }
+      if (goodsTypeCase_ == GoodsTypeOneofCase.RoleInfo) {
+        output.WriteRawTag(18);
+        output.WriteMessage(RoleInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasItemId) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(ItemId);
+      }
+      if (goodsTypeCase_ == GoodsTypeOneofCase.RoleInfo) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RoleInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GridFightForgeGoodsInfoPb other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.GoodsTypeCase) {
+        case GoodsTypeOneofCase.ItemId:
+          ItemId = other.ItemId;
+          break;
+        case GoodsTypeOneofCase.RoleInfo:
+          if (RoleInfo == null) {
+            RoleInfo = new global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeRoleGoodsInfoPb();
+          }
+          RoleInfo.MergeFrom(other.RoleInfo);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            ItemId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeRoleGoodsInfoPb subBuilder = new global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeRoleGoodsInfoPb();
+            if (goodsTypeCase_ == GoodsTypeOneofCase.RoleInfo) {
+              subBuilder.MergeFrom(RoleInfo);
+            }
+            input.ReadMessage(subBuilder);
+            RoleInfo = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            ItemId = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeRoleGoodsInfoPb subBuilder = new global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeRoleGoodsInfoPb();
+            if (goodsTypeCase_ == GoodsTypeOneofCase.RoleInfo) {
+              subBuilder.MergeFrom(RoleInfo);
+            }
+            input.ReadMessage(subBuilder);
+            RoleInfo = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GridFightForgeRoleGoodsInfoPb : pb::IMessage<GridFightForgeRoleGoodsInfoPb>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GridFightForgeRoleGoodsInfoPb> _parser = new pb::MessageParser<GridFightForgeRoleGoodsInfoPb>(() => new GridFightForgeRoleGoodsInfoPb());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GridFightForgeRoleGoodsInfoPb> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightForgeRoleGoodsInfoPb() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightForgeRoleGoodsInfoPb(GridFightForgeRoleGoodsInfoPb other) : this() {
+      roleId_ = other.roleId_;
+      tier_ = other.tier_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightForgeRoleGoodsInfoPb Clone() {
+      return new GridFightForgeRoleGoodsInfoPb(this);
+    }
+
+    /// <summary>Field number for the "RoleId" field.</summary>
+    public const int RoleIdFieldNumber = 1;
+    private uint roleId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RoleId {
+      get { return roleId_; }
+      set {
+        roleId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Tier" field.</summary>
+    public const int TierFieldNumber = 2;
+    private uint tier_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint Tier {
+      get { return tier_; }
+      set {
+        tier_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GridFightForgeRoleGoodsInfoPb);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GridFightForgeRoleGoodsInfoPb other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoleId != other.RoleId) return false;
+      if (Tier != other.Tier) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoleId != 0) hash ^= RoleId.GetHashCode();
+      if (Tier != 0) hash ^= Tier.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RoleId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RoleId);
+      }
+      if (Tier != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Tier);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RoleId != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(RoleId);
+      }
+      if (Tier != 0) {
+        output.WriteRawTag(16);
+        output.WriteUInt32(Tier);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoleId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RoleId);
+      }
+      if (Tier != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Tier);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GridFightForgeRoleGoodsInfoPb other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoleId != 0) {
+        RoleId = other.RoleId;
+      }
+      if (other.Tier != 0) {
+        Tier = other.Tier;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoleId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            Tier = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RoleId = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            Tier = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GridFightTeamInfoPb : pb::IMessage<GridFightTeamInfoPb>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GridFightTeamInfoPb> _parser = new pb::MessageParser<GridFightTeamInfoPb>(() => new GridFightTeamInfoPb());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GridFightTeamInfoPb> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightTeamInfoPb() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GridFightTeamInfoPb(GridFightTeamInfoPb other) : this() {
       roles_ = other.roles_.Clone();
+      npcs_ = other.npcs_.Clone();
+      forges_ = other.forges_.Clone();
       curUniqueId_ = other.curUniqueId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GridFightAvatarInfoPb Clone() {
-      return new GridFightAvatarInfoPb(this);
+    public GridFightTeamInfoPb Clone() {
+      return new GridFightTeamInfoPb(this);
     }
 
     /// <summary>Field number for the "Roles" field.</summary>
@@ -2539,8 +3689,30 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       get { return roles_; }
     }
 
+    /// <summary>Field number for the "Npcs" field.</summary>
+    public const int NpcsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ServerSide.GridFightNpcInfoPb> _repeated_npcs_codec
+        = pb::FieldCodec.ForMessage(18, global::EggLink.DanhengServer.Proto.ServerSide.GridFightNpcInfoPb.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerSide.GridFightNpcInfoPb> npcs_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerSide.GridFightNpcInfoPb>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerSide.GridFightNpcInfoPb> Npcs {
+      get { return npcs_; }
+    }
+
+    /// <summary>Field number for the "Forges" field.</summary>
+    public const int ForgesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeInfoPb> _repeated_forges_codec
+        = pb::FieldCodec.ForMessage(26, global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeInfoPb.Parser);
+    private readonly pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeInfoPb> forges_ = new pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeInfoPb>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::EggLink.DanhengServer.Proto.ServerSide.GridFightForgeInfoPb> Forges {
+      get { return forges_; }
+    }
+
     /// <summary>Field number for the "CurUniqueId" field.</summary>
-    public const int CurUniqueIdFieldNumber = 2;
+    public const int CurUniqueIdFieldNumber = 4;
     private uint curUniqueId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2554,12 +3726,12 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as GridFightAvatarInfoPb);
+      return Equals(other as GridFightTeamInfoPb);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GridFightAvatarInfoPb other) {
+    public bool Equals(GridFightTeamInfoPb other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -2567,6 +3739,8 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         return true;
       }
       if(!roles_.Equals(other.roles_)) return false;
+      if(!npcs_.Equals(other.npcs_)) return false;
+      if(!forges_.Equals(other.forges_)) return false;
       if (CurUniqueId != other.CurUniqueId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2576,6 +3750,8 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= roles_.GetHashCode();
+      hash ^= npcs_.GetHashCode();
+      hash ^= forges_.GetHashCode();
       if (CurUniqueId != 0) hash ^= CurUniqueId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2596,8 +3772,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       output.WriteRawMessage(this);
     #else
       roles_.WriteTo(output, _repeated_roles_codec);
+      npcs_.WriteTo(output, _repeated_npcs_codec);
+      forges_.WriteTo(output, _repeated_forges_codec);
       if (CurUniqueId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(CurUniqueId);
       }
       if (_unknownFields != null) {
@@ -2611,8 +3789,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       roles_.WriteTo(ref output, _repeated_roles_codec);
+      npcs_.WriteTo(ref output, _repeated_npcs_codec);
+      forges_.WriteTo(ref output, _repeated_forges_codec);
       if (CurUniqueId != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(32);
         output.WriteUInt32(CurUniqueId);
       }
       if (_unknownFields != null) {
@@ -2626,6 +3806,8 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     public int CalculateSize() {
       int size = 0;
       size += roles_.CalculateSize(_repeated_roles_codec);
+      size += npcs_.CalculateSize(_repeated_npcs_codec);
+      size += forges_.CalculateSize(_repeated_forges_codec);
       if (CurUniqueId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CurUniqueId);
       }
@@ -2637,11 +3819,13 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GridFightAvatarInfoPb other) {
+    public void MergeFrom(GridFightTeamInfoPb other) {
       if (other == null) {
         return;
       }
       roles_.Add(other.roles_);
+      npcs_.Add(other.npcs_);
+      forges_.Add(other.forges_);
       if (other.CurUniqueId != 0) {
         CurUniqueId = other.CurUniqueId;
       }
@@ -2664,7 +3848,15 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             roles_.AddEntriesFrom(input, _repeated_roles_codec);
             break;
           }
-          case 16: {
+          case 18: {
+            npcs_.AddEntriesFrom(input, _repeated_npcs_codec);
+            break;
+          }
+          case 26: {
+            forges_.AddEntriesFrom(input, _repeated_forges_codec);
+            break;
+          }
+          case 32: {
             CurUniqueId = input.ReadUInt32();
             break;
           }
@@ -2687,7 +3879,15 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             roles_.AddEntriesFrom(ref input, _repeated_roles_codec);
             break;
           }
-          case 16: {
+          case 18: {
+            npcs_.AddEntriesFrom(ref input, _repeated_npcs_codec);
+            break;
+          }
+          case 26: {
+            forges_.AddEntriesFrom(ref input, _repeated_forges_codec);
+            break;
+          }
+          case 32: {
             CurUniqueId = input.ReadUInt32();
             break;
           }
@@ -2713,7 +3913,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[8]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2940,7 +4140,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[9]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3119,7 +4319,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[10]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3335,7 +4535,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[11]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3514,7 +4714,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[12]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3876,7 +5076,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[13]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4129,7 +5329,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[14]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4308,7 +5508,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[15]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4535,7 +5735,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[16]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4762,7 +5962,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[17]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4967,7 +6167,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[18]; }
+      get { return global::EggLink.DanhengServer.Proto.ServerSide.GridFightDataReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4994,8 +6194,8 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         case ComponentTypeOneofCase.BasicInfo:
           BasicInfo = other.BasicInfo.Clone();
           break;
-        case ComponentTypeOneofCase.AvatarInfo:
-          AvatarInfo = other.AvatarInfo.Clone();
+        case ComponentTypeOneofCase.TeamInfo:
+          TeamInfo = other.TeamInfo.Clone();
           break;
         case ComponentTypeOneofCase.OrbInfo:
           OrbInfo = other.OrbInfo.Clone();
@@ -5044,15 +6244,15 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
     }
 
-    /// <summary>Field number for the "AvatarInfo" field.</summary>
-    public const int AvatarInfoFieldNumber = 3;
+    /// <summary>Field number for the "TeamInfo" field.</summary>
+    public const int TeamInfoFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::EggLink.DanhengServer.Proto.ServerSide.GridFightAvatarInfoPb AvatarInfo {
-      get { return componentTypeCase_ == ComponentTypeOneofCase.AvatarInfo ? (global::EggLink.DanhengServer.Proto.ServerSide.GridFightAvatarInfoPb) componentType_ : null; }
+    public global::EggLink.DanhengServer.Proto.ServerSide.GridFightTeamInfoPb TeamInfo {
+      get { return componentTypeCase_ == ComponentTypeOneofCase.TeamInfo ? (global::EggLink.DanhengServer.Proto.ServerSide.GridFightTeamInfoPb) componentType_ : null; }
       set {
         componentType_ = value;
-        componentTypeCase_ = value == null ? ComponentTypeOneofCase.None : ComponentTypeOneofCase.AvatarInfo;
+        componentTypeCase_ = value == null ? ComponentTypeOneofCase.None : ComponentTypeOneofCase.TeamInfo;
       }
     }
 
@@ -5110,7 +6310,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       None = 0,
       ShopInfo = 1,
       BasicInfo = 2,
-      AvatarInfo = 3,
+      TeamInfo = 3,
       OrbInfo = 4,
       AugmentInfo = 5,
       TraitInfo = 6,
@@ -5147,7 +6347,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
       if (!object.Equals(ShopInfo, other.ShopInfo)) return false;
       if (!object.Equals(BasicInfo, other.BasicInfo)) return false;
-      if (!object.Equals(AvatarInfo, other.AvatarInfo)) return false;
+      if (!object.Equals(TeamInfo, other.TeamInfo)) return false;
       if (!object.Equals(OrbInfo, other.OrbInfo)) return false;
       if (!object.Equals(AugmentInfo, other.AugmentInfo)) return false;
       if (!object.Equals(TraitInfo, other.TraitInfo)) return false;
@@ -5162,7 +6362,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       int hash = 1;
       if (componentTypeCase_ == ComponentTypeOneofCase.ShopInfo) hash ^= ShopInfo.GetHashCode();
       if (componentTypeCase_ == ComponentTypeOneofCase.BasicInfo) hash ^= BasicInfo.GetHashCode();
-      if (componentTypeCase_ == ComponentTypeOneofCase.AvatarInfo) hash ^= AvatarInfo.GetHashCode();
+      if (componentTypeCase_ == ComponentTypeOneofCase.TeamInfo) hash ^= TeamInfo.GetHashCode();
       if (componentTypeCase_ == ComponentTypeOneofCase.OrbInfo) hash ^= OrbInfo.GetHashCode();
       if (componentTypeCase_ == ComponentTypeOneofCase.AugmentInfo) hash ^= AugmentInfo.GetHashCode();
       if (componentTypeCase_ == ComponentTypeOneofCase.TraitInfo) hash ^= TraitInfo.GetHashCode();
@@ -5194,9 +6394,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(18);
         output.WriteMessage(BasicInfo);
       }
-      if (componentTypeCase_ == ComponentTypeOneofCase.AvatarInfo) {
+      if (componentTypeCase_ == ComponentTypeOneofCase.TeamInfo) {
         output.WriteRawTag(26);
-        output.WriteMessage(AvatarInfo);
+        output.WriteMessage(TeamInfo);
       }
       if (componentTypeCase_ == ComponentTypeOneofCase.OrbInfo) {
         output.WriteRawTag(34);
@@ -5232,9 +6432,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(18);
         output.WriteMessage(BasicInfo);
       }
-      if (componentTypeCase_ == ComponentTypeOneofCase.AvatarInfo) {
+      if (componentTypeCase_ == ComponentTypeOneofCase.TeamInfo) {
         output.WriteRawTag(26);
-        output.WriteMessage(AvatarInfo);
+        output.WriteMessage(TeamInfo);
       }
       if (componentTypeCase_ == ComponentTypeOneofCase.OrbInfo) {
         output.WriteRawTag(34);
@@ -5268,8 +6468,8 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if (componentTypeCase_ == ComponentTypeOneofCase.BasicInfo) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BasicInfo);
       }
-      if (componentTypeCase_ == ComponentTypeOneofCase.AvatarInfo) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AvatarInfo);
+      if (componentTypeCase_ == ComponentTypeOneofCase.TeamInfo) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TeamInfo);
       }
       if (componentTypeCase_ == ComponentTypeOneofCase.OrbInfo) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(OrbInfo);
@@ -5308,11 +6508,11 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
           }
           BasicInfo.MergeFrom(other.BasicInfo);
           break;
-        case ComponentTypeOneofCase.AvatarInfo:
-          if (AvatarInfo == null) {
-            AvatarInfo = new global::EggLink.DanhengServer.Proto.ServerSide.GridFightAvatarInfoPb();
+        case ComponentTypeOneofCase.TeamInfo:
+          if (TeamInfo == null) {
+            TeamInfo = new global::EggLink.DanhengServer.Proto.ServerSide.GridFightTeamInfoPb();
           }
-          AvatarInfo.MergeFrom(other.AvatarInfo);
+          TeamInfo.MergeFrom(other.TeamInfo);
           break;
         case ComponentTypeOneofCase.OrbInfo:
           if (OrbInfo == null) {
@@ -5374,12 +6574,12 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             break;
           }
           case 26: {
-            global::EggLink.DanhengServer.Proto.ServerSide.GridFightAvatarInfoPb subBuilder = new global::EggLink.DanhengServer.Proto.ServerSide.GridFightAvatarInfoPb();
-            if (componentTypeCase_ == ComponentTypeOneofCase.AvatarInfo) {
-              subBuilder.MergeFrom(AvatarInfo);
+            global::EggLink.DanhengServer.Proto.ServerSide.GridFightTeamInfoPb subBuilder = new global::EggLink.DanhengServer.Proto.ServerSide.GridFightTeamInfoPb();
+            if (componentTypeCase_ == ComponentTypeOneofCase.TeamInfo) {
+              subBuilder.MergeFrom(TeamInfo);
             }
             input.ReadMessage(subBuilder);
-            AvatarInfo = subBuilder;
+            TeamInfo = subBuilder;
             break;
           }
           case 34: {
@@ -5452,12 +6652,12 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             break;
           }
           case 26: {
-            global::EggLink.DanhengServer.Proto.ServerSide.GridFightAvatarInfoPb subBuilder = new global::EggLink.DanhengServer.Proto.ServerSide.GridFightAvatarInfoPb();
-            if (componentTypeCase_ == ComponentTypeOneofCase.AvatarInfo) {
-              subBuilder.MergeFrom(AvatarInfo);
+            global::EggLink.DanhengServer.Proto.ServerSide.GridFightTeamInfoPb subBuilder = new global::EggLink.DanhengServer.Proto.ServerSide.GridFightTeamInfoPb();
+            if (componentTypeCase_ == ComponentTypeOneofCase.TeamInfo) {
+              subBuilder.MergeFrom(TeamInfo);
             }
             input.ReadMessage(subBuilder);
-            AvatarInfo = subBuilder;
+            TeamInfo = subBuilder;
             break;
           }
           case 34: {

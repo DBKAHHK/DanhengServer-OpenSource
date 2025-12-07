@@ -19,7 +19,8 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         MaxAvatarNum = 3,
         BuyLevelCost = 4,
         CurGold = 0,
-        MaxInterest = 5
+        MaxInterest = 5,
+        MaxLevel = 10
     };
 
     #endregion
@@ -182,7 +183,7 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
                 GridFightTargetGuideCode = Data.GuideCode,
                 TrackTraitIdList = { Data.TrackingTraits },
                 RoleTrackEquipmentList = { Data.TrackingEquipments.Select(x => x.ToProto(roleComp, itemsComp)) },
-                GridFightMaxLevel = 10
+                GridFightMaxLevel = Data.MaxLevel
             }
         };
     }

@@ -44,6 +44,7 @@ message GridFightBasicInfoPb {
     repeated uint32 TrackingTraits = 11;
     repeated GridFightEquipmentTrackInfoPb TrackingEquipments = 12;
     string GuideCode = 13;
+    uint32 MaxLevel = 14;
 }
 
 message GridFightEquipmentTrackInfoPb {
@@ -61,9 +62,37 @@ message GridFightRoleInfoPb {
     repeated uint32 EquipmentIds = 6;
 }
 
-message GridFightAvatarInfoPb {
+message GridFightNpcInfoPb {
+    uint32 NpcId = 1;
+    uint32 Pos = 2;
+    uint32 UniqueId = 3;
+    repeated uint32 EquipmentIds = 4;
+}
+
+message GridFightForgeInfoPb {
+    uint32 ForgeItemId = 1;
+    uint32 Pos = 2;
+    uint32 UniqueId = 3;
+    repeated GridFightForgeGoodsInfoPb Goods = 4;
+}
+
+message GridFightForgeGoodsInfoPb {
+    oneof GoodsType {
+        uint32 ItemId = 1;
+        GridFightForgeRoleGoodsInfoPb RoleInfo = 2;
+    }
+}
+
+message GridFightForgeRoleGoodsInfoPb {
+    uint32 RoleId = 1;
+    uint32 Tier = 2;
+}
+
+message GridFightTeamInfoPb {
     repeated GridFightRoleInfoPb Roles = 1;
-    uint32 CurUniqueId = 2;
+    repeated GridFightNpcInfoPb Npcs = 2;
+    repeated GridFightForgeInfoPb Forges = 3;
+    uint32 CurUniqueId = 4;
 }
 
 message GridFightGameOrbPb {
@@ -122,7 +151,7 @@ message GridFightComponentPb {
     oneof ComponentType {
         GridFightShopInfoPb ShopInfo = 1;
         GridFightBasicInfoPb BasicInfo = 2;
-        GridFightAvatarInfoPb AvatarInfo = 3;
+        GridFightTeamInfoPb TeamInfo = 3;
         GridFightOrbInfoPb OrbInfo = 4;
         GridFightAugmentInfoPb AugmentInfo = 5;
         GridFightTraitInfoPb TraitInfo = 6;

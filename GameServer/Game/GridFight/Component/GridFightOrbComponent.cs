@@ -6,11 +6,39 @@ using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Proto.ServerSide;
 using EggLink.DanhengServer.Util;
+using System.Collections.Generic;
 
 namespace EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 
 public class GridFightOrbComponent(GridFightInstance inst) : BaseGridFightComponent(inst)
 {
+    public static List<GridFightBasicBonusPoolV2Excel> ExtractCombinationBonus(uint combineBonusId)
+    {
+        List<GridFightBasicBonusPoolV2Excel> bonusPools = [];
+
+        if (!GameData.GridFightCombinationBonusData.TryGetValue(combineBonusId, out var comboBonusInfo))
+            return bonusPools;
+
+        for (var i = 0; i < comboBonusInfo.CombinationBonusList.Count; i++)
+        {
+            var bonusId = comboBonusInfo.CombinationBonusList[i];
+            var bonusNum = comboBonusInfo.BonusNumberList[i];
+
+            if (bonusId == 1)
+                bonusPools.Add(new GridFightBasicBonusPoolV2Excel
+                {
+                    BonusType = GridFightBonusTypeEnum.Gold,
+                    Value = bonusNum / 10000
+                });
+            else if (GameData.GridFightBasicBonusPoolV2Data.TryGetValue(bonusId, out var bonusPool))
+            {
+                bonusPools.AddRange(Enumerable.Repeat(bonusPool, (int)(bonusNum / 10000)));
+            }
+        }
+
+        return bonusPools;
+    }
+
     public GridFightOrbInfoPb Data { get; set; } = new();
 
     public async ValueTask<List<BaseGridFightSyncData>> AddOrb(uint orbItemId, GridFightSrc src = GridFightSrc.KGridFightSrcNone, bool sendPacket = true, uint groupId = 0, params uint[] param)
@@ -73,24 +101,9 @@ public class GridFightOrbComponent(GridFightInstance inst) : BaseGridFightCompon
         }
 
         // check combination bonus
-        if (bonusPools.Count == 0 && GameData.GridFightCombinationBonusData.TryGetValue(excel.BonusID, out var comboBonusInfo))
+        if (bonusPools.Count == 0)
         {
-            for (var i = 0; i < comboBonusInfo.CombinationBonusList.Count; i++)
-            {
-                var bonusId = comboBonusInfo.CombinationBonusList[i];
-                var bonusNum = comboBonusInfo.BonusNumberList[i];
-
-                if (bonusId == 1)
-                    bonusPools.Add(new GridFightBasicBonusPoolV2Excel
-                    {
-                        BonusType = GridFightBonusTypeEnum.Gold,
-                        Value = bonusNum / 10000
-                    });
-                else if (GameData.GridFightBasicBonusPoolV2Data.TryGetValue(bonusId, out var bonusPool))
-                {
-                    bonusPools.AddRange(Enumerable.Repeat(bonusPool, (int)(bonusNum / 10000)));
-                }
-            }
+            bonusPools.AddRange(ExtractCombinationBonus(excel.BonusID));
         }
 
         // check basic bonus

@@ -33,8 +33,14 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
             BaseAvatars = avatars.Concat(backAvatars).Select(y => new LineupAvatarInfo
             {
                 BaseAvatarId = y.BaseAvatarId
-            }).ToList()
+            }).ToList(),
+            LineupType = (int)ExtraLineupType.LineupGridFight
         };
+
+        foreach (var baseAvatarInfo in avatars.Concat(backAvatars))
+        {
+            baseAvatarInfo.SetCurHp(10000, true);
+        }
 
         var formatted = avatars.Select(x =>
             x.ToBattleProto(
@@ -118,7 +124,8 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
             PenaltyBonusRuleId = ruleId,
             GridFightAugmentInfo = { AugmentComponent.Data.Augments.Select(x => x.ToBattleInfo()) },
             GridFightPortalBuffList = { LevelComponent.PortalBuffs.Select(x => x.ToBattleInfo()) },
-            GridFightTraitInfo = { TraitComponent.Data.Traits.Select(x => x.ToBattleInfo(RoleComponent)) }
+            GridFightTraitInfo = { TraitComponent.Data.Traits.Select(x => x.ToBattleInfo(RoleComponent)) },
+            GridGameNpcList = { RoleComponent.Data.Npcs.Select(x => x.ToBattleInfo(ItemsComponent.Data)) }
         };
     }
 }

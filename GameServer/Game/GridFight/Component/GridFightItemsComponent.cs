@@ -198,16 +198,24 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
                 }
                 case GridFightDropType.Item:
                 {
-                    // consumable or equipment
+                    // consumable or equipment or forge
                     if (GameData.GridFightConsumablesData.ContainsKey(item.DropItemId))
                     {
-                        syncs.AddRange(await UpdateConsumable(item.DropItemId, (int)item.Num, src, false, 0, param));
+                        syncs.AddRange(await UpdateConsumable(item.DropItemId, (int)item.Num, src, false, groupId,
+                            param));
                     }
                     else if (GameData.GridFightEquipmentData.ContainsKey(item.DropItemId))
                     {
                         for (uint i = 0; i < item.Num; i++)
                         {
                             syncs.AddRange((await AddEquipment(item.DropItemId, src, false, groupId, param)).Item2);
+                        }
+                    }
+                    else if (GameData.GridFightForgeData.ContainsKey(item.DropItemId))
+                    {
+                        for (uint i = 0; i < item.Num; i++)
+                        {
+                            syncs.AddRange(await roleComp.AddForgeItem(item.DropItemId, false, src, groupId, 0, param));
                         }
                     }
 
@@ -328,7 +336,7 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
                         DropType = GridFightDropType.Item
                     });
 
-                    // check if consumable or equipment
+                    // check if consumable or equipment or forge
                     if (GameData.GridFightEquipmentData.ContainsKey(itemId))
                     {
                         syncs.AddRange((await AddEquipment(itemId, src, false, groupId)).Item2);
@@ -337,6 +345,10 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
                     else if (GameData.GridFightConsumablesData.ContainsKey(itemId))
                     {
                         syncs.AddRange(await UpdateConsumable(itemId, 1, src, false, groupId));
+                    }
+                    else if (GameData.GridFightForgeData.ContainsKey(itemId))
+                    {
+                        syncs.AddRange(await roleComp.AddForgeItem(itemId, false, src, groupId));
                     }
 
                     break;
@@ -490,7 +502,7 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
             // unequip old equipment
             foreach (var equipmentUid in role.EquipmentIds)
             {
-                syncs.AddRange(await RemoveEquipment(equipmentUid, GridFightSrc.KGridFightSrcUseConsumable, false));
+                syncs.AddRange(await RollEquipment(equipmentUid));
             }
 
             role.EquipmentIds.Clear();

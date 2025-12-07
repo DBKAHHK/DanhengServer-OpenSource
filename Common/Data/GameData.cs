@@ -130,7 +130,13 @@ public static class GameData
     public static Dictionary<uint, GridFightDivisionInfoExcel> GridFightDivisionInfoData { get; private set; } = [];
     public static Dictionary<uint, GridFightDivisionStageExcel> GridFightDivisionStageData { get; private set; } = [];
     public static Dictionary<uint, GridFightEquipmentExcel> GridFightEquipmentData { get; private set; } = [];
+    public static Dictionary<uint, GridFightForgeExcel> GridFightForgeData { get; private set; } = [];
     public static Dictionary<uint, GridFightTraitEffectExcel> GridFightTraitEffectData { get; private set; } = [];
+
+    public static Dictionary<uint, GridFightTraitBonusAddRuleExcel>
+        GridFightTraitBonusAddRuleData { get; private set; } = [];
+
+    public static Dictionary<uint, Dictionary<uint, GridFightTraitBonusExcel>> GridFightTraitBonusData{ get; private set; } = [];
     public static Dictionary<uint, GridFightEquipUpgradeExcel> GridFightEquipUpgradeData { get; private set; } = [];
     public static Dictionary<uint, GridFightConsumablesExcel> GridFightConsumablesData { get; private set; } = [];
     public static Dictionary<uint, GridFightCampExcel> GridFightCampData { get; private set; } = [];

@@ -5,12 +5,55 @@ using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Proto.ServerSide;
+using System.Data.OscarClient;
+using EggLink.DanhengServer.Data.Excel;
 
 namespace EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 
 public class GridFightTraitComponent(GridFightInstance inst) : BaseGridFightComponent(inst)
 {
     public GridFightTraitInfoPb Data { get; set; } = new();
+
+    public List<GridFightRoleInfoPb> GetTraitRoles(uint traitId)
+    {
+        var roleComp = Inst.GetComponent<GridFightRoleComponent>();
+
+        var onGroundRoles = roleComp.Data.Roles.Where(x => x.Pos <= GridFightRoleComponent.PrepareAreaPos).ToList();
+
+        var traitRoles = onGroundRoles.Where(x => GameData.GridFightRoleBasicInfoData
+            .GetValueOrDefault(x.RoleId)?.TraitList.Contains(traitId) == true).ToList();
+
+        // check equipment traits
+        foreach (var role in onGroundRoles.Except(traitRoles))
+        {
+            var roleExcel = GameData.GridFightRoleBasicInfoData.GetValueOrDefault(role.RoleId);
+            if (roleExcel == null) continue;
+
+            foreach (var equipmentUid in role.EquipmentIds)
+            {
+                // get item
+                var equipmentItem = roleComp.Inst.GetComponent<GridFightItemsComponent>().Data.EquipmentItems
+                    .FirstOrDefault(x => x.UniqueId == equipmentUid);
+                if (equipmentItem == null) continue;
+
+                // get conf
+                var equipmentExcel = GameData.GridFightEquipmentData.GetValueOrDefault(equipmentItem.ItemId);
+                if (equipmentExcel == null) continue;
+
+                // category (emblem)
+                if (equipmentExcel.EquipCategory != GridFightEquipCategoryEnum.Emblem) continue;
+
+                if (equipmentExcel.EquipFuncParamList.Contains(traitId))
+                {
+                    // we can add this role directly becuz foreach has Except option
+                    traitRoles.Add(role);
+                }
+            }
+        }
+
+
+        return traitRoles;
+    }
 
     public async ValueTask CheckTrait()
     {
@@ -139,7 +182,6 @@ public class GridFightTraitComponent(GridFightInstance inst) : BaseGridFightComp
         effectLayerPas.TryGetValue(prevLayer, out var prevEffectParam);
         effectLayerPas.TryGetValue(nextLayer, out var nextEffectParam);
 
-
         // Handle different effect types
         switch (traitConf.TraitEffectType)
         {
@@ -174,15 +216,17 @@ public class GridFightTraitComponent(GridFightInstance inst) : BaseGridFightComp
             }
             case GridFightTraitEffectTypeEnum.TraitBonus:
             {
-                effect.Threshold = 0;  // initialize
+                if (!effect.HasThreshold)
+                    effect.Threshold = 0;  // initialize
                 break;
             }
             case GridFightTraitEffectTypeEnum.CoreRoleChoose:
             {
                 // create pending action
-                syncList.AddRange(await Inst.CreatePendingAction<GridFightTraitPendingAction>(
-                    GridFightSrc.KGridFightSrcTraitEffectUpdate,
-                    false, effect));
+                if (nextLayer != 0)
+                    syncList.AddRange(await Inst.CreatePendingAction<GridFightTraitPendingAction>(
+                        GridFightSrc.KGridFightSrcTraitEffectUpdate,
+                        false, effect));
                 break;
             }
             case GridFightTraitEffectTypeEnum.CoreRoleByEquipNum:
@@ -205,6 +249,93 @@ public class GridFightTraitComponent(GridFightInstance inst) : BaseGridFightComp
         }
 
         return syncList;
+    }
+
+    public async ValueTask HandleBattleEnd(PVEBattleResultCsReq req, bool success)
+    {
+        var itemsComp = Inst.GetComponent<GridFightItemsComponent>();
+
+        List<BaseGridFightSyncData> syncDatas = [];
+
+        foreach (var traitInfo in Data.Traits.Where(x => x.TraitLayer > 0))
+        {
+            foreach (var effectInfo in traitInfo.Effects)
+            {
+                if (!GameData.GridFightTraitEffectData.TryGetValue(effectInfo.EffectId, out var effectConf) ||
+                    !GameData.GridFightTraitEffectLayerPaData.TryGetValue(effectInfo.EffectId,
+                        out var effectLayerPas) ||
+                    !effectLayerPas.TryGetValue(traitInfo.TraitLayer, out var layerEffectPa)) continue;
+
+                if (effectConf.TraitEffectType != GridFightTraitEffectTypeEnum.TraitBonus) continue;
+
+                if (!GameData.GridFightTraitBonusAddRuleData.TryGetValue(effectInfo.EffectId,
+                        out var bonusAddRuleExcel)) continue;
+
+                // add bonus
+                var baseBonusValue = req.Stt.GridFightBattleStt.TraitBattleStt
+                                         .FirstOrDefault(x => x.TraitId == traitInfo.TraitId)?.TraitEffectInfoList
+                                         .FirstOrDefault(x => x.EffectId == effectConf.ID)?.SwitchList
+                                         .FirstOrDefault() ??
+                                     effectInfo.Threshold;
+
+                // base value
+                var addValue = bonusAddRuleExcel.TraitBonusType switch
+                {
+                    GridFightTraitBonusAddTypeEnum.ByEquipNum => 10u +
+                                                                 (uint)GetTraitRoles(traitInfo.TraitId)
+                                                                     .Sum(x => x.EquipmentIds.Count),
+                    GridFightTraitBonusAddTypeEnum.ByConstWithPerfectPass => (uint)(layerEffectPa.EffectParamList
+                        .FirstOrDefault()?.Value ?? 0),
+                    _ => 0u
+                };
+
+                // rate
+                addValue *= bonusAddRuleExcel.TraitBonusType switch
+                {
+                    GridFightTraitBonusAddTypeEnum.ByEquipNum => (uint)(layerEffectPa.EffectParamList.FirstOrDefault()
+                        ?.Value ?? 0),
+                    GridFightTraitBonusAddTypeEnum.ByConstWithPerfectPass => success
+                        ? bonusAddRuleExcel.ParamList[1]
+                        : bonusAddRuleExcel.ParamList[0],
+                    _ => 1
+                };
+
+                baseBonusValue += addValue;
+
+                // set
+                var prev = effectInfo.Threshold;
+                effectInfo.Threshold = baseBonusValue;
+
+                // sync
+                syncDatas.Add(new GridFightTraitSyncData(GridFightSrc.KGridFightSrcTraitEffectUpdate, effectInfo,
+                    effectInfo.EffectId, traitInfo.TraitId, effectInfo.EffectId));
+
+                var addBonuses = GameData.GridFightTraitBonusData
+                    .GetValueOrDefault(effectInfo.EffectId)?.Values.Where(x =>
+                        x.BonusThreshold > prev && x.BonusThreshold <= baseBonusValue &&
+                        x.BonusType == GridFightTraitBonusTypeEnum.Bonus).ToList() ?? [];
+
+                // take bonus effect
+                var bonusIdList = addBonuses.SelectMany(x => x.BonusParamList).ToList();
+
+                List<GridFightBasicBonusPoolV2Excel> bonusPool = [];
+                foreach (var id in bonusIdList)
+                {
+                    bonusPool.AddRange(GridFightOrbComponent.ExtractCombinationBonus(id));
+                }
+
+                // take effect
+                var res = await itemsComp.TakeBasicBonusItems(bonusPool, GridFightSrc.KGridFightSrcTraitEffectUpdate,
+                    effectInfo.EffectId, false);
+
+                syncDatas.AddRange(res.Item1);
+            }
+        }
+
+        if (syncDatas.Count > 0)
+        {
+            await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncDatas));
+        }
     }
 
     public override GridFightGameInfo ToProto()
@@ -314,12 +445,20 @@ public static class GridFightTraitInfoPbExtensions
 
     public static GridFightTraitEffectInfo ToProto(this GridFightGameTraitEffectPb info)
     {
-        return new GridFightTraitEffectInfo
+        var proto = new GridFightTraitEffectInfo
         {
             EffectId = info.EffectId,
             TraitEffectLevelExp = info.Threshold,
             TraitCoreRole = info.CoreRoleUniqueId
         };
+
+        if (info.HasThreshold)
+            proto.TraitEffectLevelExp = info.Threshold;
+
+        if (info.HasCoreRoleUniqueId)
+            proto.TraitCoreRole = info.CoreRoleUniqueId;
+
+        return proto;
     }
 
     public static BattleGridFightTraitEffectInfo ToBattleInfo(this GridFightGameTraitEffectPb info, GridFightRoleComponent roleComp)

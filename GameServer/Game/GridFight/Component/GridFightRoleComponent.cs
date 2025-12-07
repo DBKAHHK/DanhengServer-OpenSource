@@ -1,26 +1,20 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Avatar;
+using EggLink.DanhengServer.Enums.GridFight;
 using EggLink.DanhengServer.GameServer.Game.GridFight.Sync;
 using EggLink.DanhengServer.GameServer.Server.Packet.Send.GridFight;
 using EggLink.DanhengServer.Proto;
 using EggLink.DanhengServer.Proto.ServerSide;
+using EggLink.DanhengServer.Util;
 
 namespace EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 
 public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightComponent(inst)
 {
     public const uint PrepareAreaPos = 13;
-    public GridFightAvatarInfoPb Data { get; set; } = new();
+    public GridFightTeamInfoPb Data { get; set; } = new();
 
-    public bool HasAnyEmptyPos()
-    {
-        return Data.Roles.Where(x => x.Pos > PrepareAreaPos).ToList().Count < 9;
-    }
-
-    public uint GetEmptyPosCount()
-    {
-        return (uint)(9 - Data.Roles.Where(x => x.Pos > PrepareAreaPos).ToList().Count);
-    }
+    #region Role
 
     public async ValueTask<List<BaseGridFightSyncData>> AddAvatar(uint roleId, uint tier = 1, bool sendPacket = true,
         bool checkMerge = true, GridFightSrc src = GridFightSrc.KGridFightSrcBuyGoods, uint syncGroup = 0, uint targetPos = 0, params uint[] param)
@@ -31,7 +25,9 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
         var initialPos = targetPos > 0 ? targetPos : PrepareAreaPos + 1;
 
         // get first empty pos
-        var usedPos = Data.Roles.Select(x => x.Pos).ToHashSet();
+        var usedPos = Data.Roles.Select(x => x.Pos).Concat(Data.Forges.Select(x => x.Pos))
+            .Concat(Data.Npcs.Select(x => x.Pos)).ToHashSet();
+
         for (var i = initialPos; i <= PrepareAreaPos + 999; i++)  // temp store area
         {
             if (usedPos.Contains(i)) continue;
@@ -251,6 +247,149 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
         return res;
     }
 
+    #endregion
+
+    #region Forge
+
+    public async ValueTask<List<BaseGridFightSyncData>> AddForgeItem(uint forgeItemId, bool sendPacket = true,
+        GridFightSrc src = GridFightSrc.KGridFightSrcNone, uint syncGroup = 0, uint targetPos = 0, params uint[] param)
+    {
+        if (!GameData.GridFightForgeData.TryGetValue(forgeItemId, out var forgeExcel)) return [];
+
+        var pos = 0u;
+        var initialPos = targetPos > 0 ? targetPos : PrepareAreaPos + 1;
+
+        // get first empty pos
+        var usedPos = Data.Roles.Select(x => x.Pos).Concat(Data.Forges.Select(x => x.Pos))
+            .Concat(Data.Npcs.Select(x => x.Pos)).ToHashSet();
+        for (var i = initialPos; i <= PrepareAreaPos + 999; i++) // temp store area
+        {
+            if (usedPos.Contains(i)) continue;
+            pos = i;
+            break;
+        }
+
+        // check if any empty
+        if (pos == 0)
+        {
+            return [];
+        }
+
+        var info = new GridFightForgeInfoPb
+        {
+            ForgeItemId = forgeItemId,
+            UniqueId = ++Data.CurUniqueId,
+            Pos = pos
+        };
+
+        // generate goods
+        if (forgeExcel.FuncType == GridFightForgeFuncTypeEnum.Role)
+        {
+            var roleRarity = forgeExcel.ParamList[0];
+            var tier = forgeExcel.ParamList[1];
+
+            var candidateRoles = GameData.GridFightRoleBasicInfoData.Values
+                .Where(x => x.Rarity == roleRarity)
+                .ToList(); // filter
+
+            if (candidateRoles.Count == 0) return []; // no candidate roles (should not happen)
+
+            for (var i = 0; i < forgeExcel.EquipNum; i++)
+            {
+                var role = candidateRoles.RandomElement();
+
+                info.Goods.Add(new GridFightForgeGoodsInfoPb
+                {
+                    RoleInfo = new GridFightForgeRoleGoodsInfoPb
+                    {
+                        RoleId = role.ID,
+                        Tier = tier
+                    }
+                });
+            }
+        }
+        else if (forgeExcel.FuncType == GridFightForgeFuncTypeEnum.Equip)
+        {
+            var equipCategory = forgeExcel.ParamList[0];
+            var candidateEquips = GameData.GridFightEquipmentData.Values
+                .Where(x => (uint)x.EquipCategory == equipCategory)
+                .ToList(); // filter
+
+            if (candidateEquips.Count == 0) return []; // no candidate equips (should not happen)
+
+            for (var i = 0; i < forgeExcel.EquipNum; i++)
+            {
+                var equip = candidateEquips.RandomElement();
+                info.Goods.Add(new GridFightForgeGoodsInfoPb
+                {
+                    ItemId = equip.ID
+                });
+            }
+        }
+
+        Data.Forges.Add(info);
+
+        List<BaseGridFightSyncData> syncs = [new GridFightAddForgeSyncData(src, info, syncGroup, param)];
+
+        if (sendPacket)
+        {
+            await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
+        }
+
+        return syncs;
+    }
+
+    public async ValueTask<List<BaseGridFightSyncData>> UseForgeItem(uint uniqueId, uint targetIndex)
+    {
+        var forge = Data.Forges.FirstOrDefault(x => x.UniqueId == uniqueId);
+        if (forge == null)
+        {
+            return [];
+        }
+
+        List<BaseGridFightSyncData> syncs = [];
+
+        var good = forge.Goods[(int)targetIndex];
+        if (good.HasItemId)
+        {
+            // equipment
+            var addEquipSyncs = await Inst.GetComponent<GridFightItemsComponent>()
+                .AddEquipment(good.ItemId, GridFightSrc.KGridFightSrcUseForge, false, uniqueId);
+
+            syncs.AddRange(addEquipSyncs.Item2);
+        }
+        else
+        {
+            // role
+            var addRoleSyncs = await AddAvatar(good.RoleInfo.RoleId, good.RoleInfo.Tier, true,
+                false, GridFightSrc.KGridFightSrcUseForge, uniqueId);
+
+            syncs.AddRange(addRoleSyncs);
+        }
+
+        // remove used forge item
+        Data.Forges.Remove(forge);
+        syncs.Add(new GridFightRemoveForgeSyncData(GridFightSrc.KGridFightSrcUseForge, forge, uniqueId, uniqueId,
+            forge.ForgeItemId));
+
+        await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncs));
+        return syncs;
+    }
+
+    #endregion
+
+    #region Metadata
+
+    public bool HasAnyEmptyPos()
+    {
+        return Data.Roles.Where(x => x.Pos > PrepareAreaPos).ToList().Count < 9;
+    }
+
+    public uint GetEmptyPosCount()
+    {
+        return (uint)(9 - Data.Roles.Where(x => x.Pos > PrepareAreaPos).ToList().Count);
+    }
+
     public async ValueTask<Retcode> UpdatePos(List<GridFightPosInfo> posList)
     {
         foreach (var pos in posList.Where(x => x.Pos <= PrepareAreaPos))
@@ -260,16 +399,31 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
 
             if (Data.Roles.Where(x => x.UniqueId != pos.UniqueId && x.Pos <= PrepareAreaPos).Any(x => x.RoleId == role.RoleId))
                 return Retcode.RetGridFightSameRoleInBattle;
-        }
+        }  // only check role
 
         List<BaseGridFightSyncData> syncs = [];
         foreach (var pos in posList)
         {
             var role = Data.Roles.FirstOrDefault(x => x.UniqueId == pos.UniqueId);
+            var forge = Data.Forges.FirstOrDefault(x => x.UniqueId == pos.UniqueId);
+            var npc = Data.Npcs.FirstOrDefault(x => x.UniqueId == pos.UniqueId);
+
             if (role != null)
             {
                 role.Pos = pos.Pos;
                 syncs.Add(new GridFightRoleUpdateSyncData(GridFightSrc.KGridFightSrcNone, role));
+            }
+
+            if (forge != null)
+            {
+                forge.Pos = pos.Pos;
+                syncs.Add(new GridFightForgeUpdateSyncData(GridFightSrc.KGridFightSrcNone, forge));
+            }
+
+            if (npc != null)
+            {
+                npc.Pos = pos.Pos;
+                syncs.Add(new GridFightNpcUpdateSyncData(GridFightSrc.KGridFightSrcNone, npc));
             }
         }
 
@@ -283,13 +437,17 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
         return Retcode.RetSucc;
     }
 
+    #endregion
+
     public override GridFightGameInfo ToProto()
     {
         return new GridFightGameInfo
         {
             GridTeamGameInfo = new GridFightGameTeamInfo
             {
-                GridGameRoleList = { Data.Roles.Select(x => x.ToProto()) }
+                GridGameRoleList = { Data.Roles.Select(x => x.ToProto()) },
+                GridGameForgeItemList = { Data.Forges.Select(x => x.ToProto()) },
+                GridGameNpcList = { Data.Npcs.Select(x => x.ToProto()) }
             }
         };
     }
@@ -310,6 +468,51 @@ public static class GridFightRoleInfoPbExtensions
         };
     }
 
+    public static GridGameNpcInfo ToProto(this GridFightNpcInfoPb info)
+    {
+        return new GridGameNpcInfo
+        {
+            Id = info.NpcId,
+            UniqueId = info.UniqueId,
+            Pos = info.Pos,
+            EquipUniqueIdList = { info.EquipmentIds }
+        };
+    }
+
+    public static GridGameForgeItemInfo ToProto(this GridFightForgeInfoPb info)
+    {
+        return new GridGameForgeItemInfo
+        {
+            ForgeItemId = info.ForgeItemId,
+            UniqueId = info.UniqueId,
+            Pos = info.Pos,
+            ForgeGoodsList = { info.Goods.Select(x => x.ToProto()) }
+        };
+    }
+
+    public static GridFightForgeGoodsInfo ToProto(this GridFightForgeGoodsInfoPb info)
+    {
+        var proto = new GridFightForgeGoodsInfo();
+
+        if (info.HasItemId)
+        {
+            proto.EquipmentGoodsInfo = new GridFightForgeEquipmentInfo
+            {
+                GridFightEquipmentId = info.ItemId
+            };
+        }
+        else
+        {
+            proto.RoleGoodsInfo = new GridFightForgeRoleInfo
+            {
+                RoleBasicId = info.RoleInfo.RoleId,
+                ForgeRoleTier = info.RoleInfo.Tier
+            };
+        }
+
+        return proto;
+    }
+
     public static BattleGridFightRoleInfo ToBattleInfo(this GridFightRoleInfoPb info, GridFightItemsInfoPb item)
     {
         return new BattleGridFightRoleInfo
@@ -324,6 +527,20 @@ public static class GridFightRoleInfoPbExtensions
                 item.EquipmentItems.Where(x => info.EquipmentIds.Contains(x.UniqueId)).Select(x => x.ToBattleInfo())
             },
             GameSavedValueMap = { info.SavedValues }
+        };
+    }
+
+    public static BattleGridFightNpcInfo ToBattleInfo(this GridFightNpcInfoPb info, GridFightItemsInfoPb item)
+    {
+        return new BattleGridFightNpcInfo
+        {
+            NpcId = info.NpcId,
+            UniqueId = info.UniqueId,
+            Pos = info.Pos,
+            GridFightEquipmentList =
+            {
+                item.EquipmentItems.Where(x => info.EquipmentIds.Contains(x.UniqueId)).Select(x => x.ToBattleInfo())
+            }
         };
     }
 }

@@ -612,10 +612,10 @@ public class GridFightGameMonsterWaveInfo
                 {
                     DropType = GridFightDropType.Orb,
                     Num = 1,
-                    DropItemId = Random.Shared.Next(10) switch
+                    DropItemId = Random.Shared.Next(30) switch
                     {
-                        > 5 and < 9 => OrbList[1].RandomElement(),
-                        9 => OrbList[2].RandomElement(),
+                        > 23 and < 29 => OrbList[1].RandomElement(),
+                        29 => OrbList[2].RandomElement(),
                         _ => OrbList[0].RandomElement()
                     }
                 });
