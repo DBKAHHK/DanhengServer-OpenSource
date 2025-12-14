@@ -338,7 +338,7 @@ public class GridFightInstance(PlayerInstance player, uint season, uint division
 
                         syncs.AddRange(await roleComp.AddAvatar(role.RoleId, 1, false,
                             true,
-                            GridFightSrc.KGridFightSrcSelectSupply, 0, 0,
+                            GridFightSrc.KGridFightSrcSelectSupply, 0, 0, null,
                             req.SupplyAction.SelectSupplyIndexes.ToArray()));
 
                         // add equipment

@@ -34,62 +34,62 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             "cEl0ZW1QYiKKAQoTR3JpZEZpZ2h0R2FtZUluZm9QYhIQCghVbmlxdWVJZBgB",
             "IAEoDRISCgpEaXZpc2lvbklkGAIgASgNEhIKCklzT3ZlckxvY2sYAyABKAgS",
             "DgoGU2Vhc29uGAQgASgNEikKCkNvbXBvbmVudHMYBSADKAsyFS5HcmlkRmln",
-            "aHRDb21wb25lbnRQYiLMAgoUR3JpZEZpZ2h0QmFzaWNJbmZvUGISDwoHQ3Vy",
+            "aHRDb21wb25lbnRQYiLnAgoUR3JpZEZpZ2h0QmFzaWNJbmZvUGISDwoHQ3Vy",
             "R29sZBgBIAEoDRIQCghDdXJMZXZlbBgCIAEoDRIQCghMZXZlbEV4cBgDIAEo",
             "DRIUCgxCdXlMZXZlbENvc3QYBCABKA0SDQoFQ3VySHAYBSABKA0SFAoMTWF4",
             "QXZhdGFyTnVtGAYgASgNEhAKCENvbWJvTnVtGAcgASgNEhAKCExvY2tUeXBl",
             "GAggASgNEhIKCkxvY2tSZWFzb24YCSABKA0SEwoLTWF4SW50ZXJlc3QYCiAB",
             "KA0SFgoOVHJhY2tpbmdUcmFpdHMYCyADKA0SOgoSVHJhY2tpbmdFcXVpcG1l",
             "bnRzGAwgAygLMh4uR3JpZEZpZ2h0RXF1aXBtZW50VHJhY2tJbmZvUGISEQoJ",
-            "R3VpZGVDb2RlGA0gASgJEhAKCE1heExldmVsGA4gASgNIlcKHUdyaWRGaWdo",
-            "dEVxdWlwbWVudFRyYWNrSW5mb1BiEhAKCFByaW9yaXR5GAEgASgNEg4KBlJv",
-            "bGVJZBgCIAEoDRIUCgxFcXVpcG1lbnRJZHMYAyADKA0i2AEKE0dyaWRGaWdo",
-            "dFJvbGVJbmZvUGISDgoGUm9sZUlkGAEgASgNEgwKBFRpZXIYAiABKA0SCwoD",
-            "UG9zGAMgASgNEhAKCFVuaXF1ZUlkGAQgASgNEjoKC1NhdmVkVmFsdWVzGAUg",
-            "AygLMiUuR3JpZEZpZ2h0Um9sZUluZm9QYi5TYXZlZFZhbHVlc0VudHJ5EhQK",
-            "DEVxdWlwbWVudElkcxgGIAMoDRoyChBTYXZlZFZhbHVlc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoDToCOAEiWAoSR3JpZEZpZ2h0TnBjSW5m",
-            "b1BiEg0KBU5wY0lkGAEgASgNEgsKA1BvcxgCIAEoDRIQCghVbmlxdWVJZBgD",
-            "IAEoDRIUCgxFcXVpcG1lbnRJZHMYBCADKA0idQoUR3JpZEZpZ2h0Rm9yZ2VJ",
-            "bmZvUGISEwoLRm9yZ2VJdGVtSWQYASABKA0SCwoDUG9zGAIgASgNEhAKCFVu",
-            "aXF1ZUlkGAMgASgNEikKBUdvb2RzGAQgAygLMhouR3JpZEZpZ2h0Rm9yZ2VH",
-            "b29kc0luZm9QYiJuChlHcmlkRmlnaHRGb3JnZUdvb2RzSW5mb1BiEhAKBkl0",
-            "ZW1JZBgBIAEoDUgAEjIKCFJvbGVJbmZvGAIgASgLMh4uR3JpZEZpZ2h0Rm9y",
-            "Z2VSb2xlR29vZHNJbmZvUGJIAEILCglHb29kc1R5cGUiPQodR3JpZEZpZ2h0",
-            "Rm9yZ2VSb2xlR29vZHNJbmZvUGISDgoGUm9sZUlkGAEgASgNEgwKBFRpZXIY",
-            "AiABKA0imQEKE0dyaWRGaWdodFRlYW1JbmZvUGISIwoFUm9sZXMYASADKAsy",
-            "FC5HcmlkRmlnaHRSb2xlSW5mb1BiEiEKBE5wY3MYAiADKAsyEy5HcmlkRmln",
-            "aHROcGNJbmZvUGISJQoGRm9yZ2VzGAMgAygLMhUuR3JpZEZpZ2h0Rm9yZ2VJ",
-            "bmZvUGISEwoLQ3VyVW5pcXVlSWQYBCABKA0iOQoSR3JpZEZpZ2h0R2FtZU9y",
-            "YlBiEhEKCU9yYkl0ZW1JZBgBIAEoDRIQCghVbmlxdWVJZBgCIAEoDSI3ChJH",
-            "cmlkRmlnaHRPcmJJbmZvUGISIQoET3JicxgBIAMoCzITLkdyaWRGaWdodEdh",
-            "bWVPcmJQYiKeAQoWR3JpZEZpZ2h0R2FtZUF1Z21lbnRQYhIRCglBdWdtZW50",
-            "SWQYASABKA0SPQoLU2F2ZWRWYWx1ZXMYAiADKAsyKC5HcmlkRmlnaHRHYW1l",
-            "QXVnbWVudFBiLlNhdmVkVmFsdWVzRW50cnkaMgoQU2F2ZWRWYWx1ZXNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKA06AjgBIkMKFkdyaWRGaWdo",
-            "dEF1Z21lbnRJbmZvUGISKQoIQXVnbWVudHMYASADKAsyFy5HcmlkRmlnaHRH",
-            "YW1lQXVnbWVudFBiIn8KGkdyaWRGaWdodEdhbWVUcmFpdEVmZmVjdFBiEg8K",
-            "B1RyYWl0SWQYASABKA0SEAoIRWZmZWN0SWQYAiABKA0SEwoJVGhyZXNob2xk",
-            "GAMgASgNSAASGgoQQ29yZVJvbGVVbmlxdWVJZBgEIAEoDUgAQg0KC0VmZmVj",
-            "dFBhcmFtImkKFEdyaWRGaWdodEdhbWVUcmFpdFBiEg8KB1RyYWl0SWQYASAB",
-            "KA0SLAoHRWZmZWN0cxgCIAMoCzIbLkdyaWRGaWdodEdhbWVUcmFpdEVmZmVj",
-            "dFBiEhIKClRyYWl0TGF5ZXIYAyABKA0iPQoUR3JpZEZpZ2h0VHJhaXRJbmZv",
-            "UGISJQoGVHJhaXRzGAEgAygLMhUuR3JpZEZpZ2h0R2FtZVRyYWl0UGIiPAoY",
-            "R3JpZEZpZ2h0RXF1aXBtZW50SXRlbVBiEg4KBkl0ZW1JZBgBIAEoDRIQCghV",
-            "bmlxdWVJZBgCIAEoDSI6ChlHcmlkRmlnaHRDb25zdW1hYmxlSXRlbVBiEg4K",
-            "Bkl0ZW1JZBgBIAEoDRINCgVDb3VudBgCIAEoDSJ+ChRHcmlkRmlnaHRJdGVt",
-            "c0luZm9QYhIxCg5FcXVpcG1lbnRJdGVtcxgBIAMoCzIZLkdyaWRGaWdodEVx",
-            "dWlwbWVudEl0ZW1QYhIzCg9Db25zdW1hYmxlSXRlbXMYAiADKAsyGi5Hcmlk",
-            "RmlnaHRDb25zdW1hYmxlSXRlbVBiItcCChRHcmlkRmlnaHRDb21wb25lbnRQ",
-            "YhIoCghTaG9wSW5mbxgBIAEoCzIULkdyaWRGaWdodFNob3BJbmZvUGJIABIq",
-            "CglCYXNpY0luZm8YAiABKAsyFS5HcmlkRmlnaHRCYXNpY0luZm9QYkgAEigK",
-            "CFRlYW1JbmZvGAMgASgLMhQuR3JpZEZpZ2h0VGVhbUluZm9QYkgAEiYKB09y",
-            "YkluZm8YBCABKAsyEy5HcmlkRmlnaHRPcmJJbmZvUGJIABIuCgtBdWdtZW50",
-            "SW5mbxgFIAEoCzIXLkdyaWRGaWdodEF1Z21lbnRJbmZvUGJIABIqCglUcmFp",
-            "dEluZm8YBiABKAsyFS5HcmlkRmlnaHRUcmFpdEluZm9QYkgAEioKCUl0ZW1z",
-            "SW5mbxgHIAEoCzIVLkdyaWRGaWdodEl0ZW1zSW5mb1BiSABCDwoNQ29tcG9u",
-            "ZW50VHlwZUIpqgImRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvLlNlcnZl",
-            "clNpZGViBnByb3RvMw=="));
+            "R3VpZGVDb2RlGA0gASgJEhAKCE1heExldmVsGA4gASgNEhkKEU9mZkZpZWxk",
+            "QXZhdGFyTnVtGA8gASgNIlcKHUdyaWRGaWdodEVxdWlwbWVudFRyYWNrSW5m",
+            "b1BiEhAKCFByaW9yaXR5GAEgASgNEg4KBlJvbGVJZBgCIAEoDRIUCgxFcXVp",
+            "cG1lbnRJZHMYAyADKA0i2AEKE0dyaWRGaWdodFJvbGVJbmZvUGISDgoGUm9s",
+            "ZUlkGAEgASgNEgwKBFRpZXIYAiABKA0SCwoDUG9zGAMgASgNEhAKCFVuaXF1",
+            "ZUlkGAQgASgNEjoKC1NhdmVkVmFsdWVzGAUgAygLMiUuR3JpZEZpZ2h0Um9s",
+            "ZUluZm9QYi5TYXZlZFZhbHVlc0VudHJ5EhQKDEVxdWlwbWVudElkcxgGIAMo",
+            "DRoyChBTYXZlZFZhbHVlc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoDToCOAEiWAoSR3JpZEZpZ2h0TnBjSW5mb1BiEg0KBU5wY0lkGAEgASgN",
+            "EgsKA1BvcxgCIAEoDRIQCghVbmlxdWVJZBgDIAEoDRIUCgxFcXVpcG1lbnRJ",
+            "ZHMYBCADKA0idQoUR3JpZEZpZ2h0Rm9yZ2VJbmZvUGISEwoLRm9yZ2VJdGVt",
+            "SWQYASABKA0SCwoDUG9zGAIgASgNEhAKCFVuaXF1ZUlkGAMgASgNEikKBUdv",
+            "b2RzGAQgAygLMhouR3JpZEZpZ2h0Rm9yZ2VHb29kc0luZm9QYiJuChlHcmlk",
+            "RmlnaHRGb3JnZUdvb2RzSW5mb1BiEhAKBkl0ZW1JZBgBIAEoDUgAEjIKCFJv",
+            "bGVJbmZvGAIgASgLMh4uR3JpZEZpZ2h0Rm9yZ2VSb2xlR29vZHNJbmZvUGJI",
+            "AEILCglHb29kc1R5cGUiPQodR3JpZEZpZ2h0Rm9yZ2VSb2xlR29vZHNJbmZv",
+            "UGISDgoGUm9sZUlkGAEgASgNEgwKBFRpZXIYAiABKA0imQEKE0dyaWRGaWdo",
+            "dFRlYW1JbmZvUGISIwoFUm9sZXMYASADKAsyFC5HcmlkRmlnaHRSb2xlSW5m",
+            "b1BiEiEKBE5wY3MYAiADKAsyEy5HcmlkRmlnaHROcGNJbmZvUGISJQoGRm9y",
+            "Z2VzGAMgAygLMhUuR3JpZEZpZ2h0Rm9yZ2VJbmZvUGISEwoLQ3VyVW5pcXVl",
+            "SWQYBCABKA0iOQoSR3JpZEZpZ2h0R2FtZU9yYlBiEhEKCU9yYkl0ZW1JZBgB",
+            "IAEoDRIQCghVbmlxdWVJZBgCIAEoDSI3ChJHcmlkRmlnaHRPcmJJbmZvUGIS",
+            "IQoET3JicxgBIAMoCzITLkdyaWRGaWdodEdhbWVPcmJQYiKeAQoWR3JpZEZp",
+            "Z2h0R2FtZUF1Z21lbnRQYhIRCglBdWdtZW50SWQYASABKA0SPQoLU2F2ZWRW",
+            "YWx1ZXMYAiADKAsyKC5HcmlkRmlnaHRHYW1lQXVnbWVudFBiLlNhdmVkVmFs",
+            "dWVzRW50cnkaMgoQU2F2ZWRWYWx1ZXNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKA06AjgBIkMKFkdyaWRGaWdodEF1Z21lbnRJbmZvUGISKQoI",
+            "QXVnbWVudHMYASADKAsyFy5HcmlkRmlnaHRHYW1lQXVnbWVudFBiIn8KGkdy",
+            "aWRGaWdodEdhbWVUcmFpdEVmZmVjdFBiEg8KB1RyYWl0SWQYASABKA0SEAoI",
+            "RWZmZWN0SWQYAiABKA0SEwoJVGhyZXNob2xkGAMgASgNSAASGgoQQ29yZVJv",
+            "bGVVbmlxdWVJZBgEIAEoDUgAQg0KC0VmZmVjdFBhcmFtImkKFEdyaWRGaWdo",
+            "dEdhbWVUcmFpdFBiEg8KB1RyYWl0SWQYASABKA0SLAoHRWZmZWN0cxgCIAMo",
+            "CzIbLkdyaWRGaWdodEdhbWVUcmFpdEVmZmVjdFBiEhIKClRyYWl0TGF5ZXIY",
+            "AyABKA0iPQoUR3JpZEZpZ2h0VHJhaXRJbmZvUGISJQoGVHJhaXRzGAEgAygL",
+            "MhUuR3JpZEZpZ2h0R2FtZVRyYWl0UGIiPAoYR3JpZEZpZ2h0RXF1aXBtZW50",
+            "SXRlbVBiEg4KBkl0ZW1JZBgBIAEoDRIQCghVbmlxdWVJZBgCIAEoDSI6ChlH",
+            "cmlkRmlnaHRDb25zdW1hYmxlSXRlbVBiEg4KBkl0ZW1JZBgBIAEoDRINCgVD",
+            "b3VudBgCIAEoDSJ+ChRHcmlkRmlnaHRJdGVtc0luZm9QYhIxCg5FcXVpcG1l",
+            "bnRJdGVtcxgBIAMoCzIZLkdyaWRGaWdodEVxdWlwbWVudEl0ZW1QYhIzCg9D",
+            "b25zdW1hYmxlSXRlbXMYAiADKAsyGi5HcmlkRmlnaHRDb25zdW1hYmxlSXRl",
+            "bVBiItcCChRHcmlkRmlnaHRDb21wb25lbnRQYhIoCghTaG9wSW5mbxgBIAEo",
+            "CzIULkdyaWRGaWdodFNob3BJbmZvUGJIABIqCglCYXNpY0luZm8YAiABKAsy",
+            "FS5HcmlkRmlnaHRCYXNpY0luZm9QYkgAEigKCFRlYW1JbmZvGAMgASgLMhQu",
+            "R3JpZEZpZ2h0VGVhbUluZm9QYkgAEiYKB09yYkluZm8YBCABKAsyEy5Hcmlk",
+            "RmlnaHRPcmJJbmZvUGJIABIuCgtBdWdtZW50SW5mbxgFIAEoCzIXLkdyaWRG",
+            "aWdodEF1Z21lbnRJbmZvUGJIABIqCglUcmFpdEluZm8YBiABKAsyFS5Hcmlk",
+            "RmlnaHRUcmFpdEluZm9QYkgAEioKCUl0ZW1zSW5mbxgHIAEoCzIVLkdyaWRG",
+            "aWdodEl0ZW1zSW5mb1BiSABCDwoNQ29tcG9uZW50VHlwZUIpqgImRWdnTGlu",
+            "ay5EYW5oZW5nU2VydmVyLlByb3RvLlNlcnZlclNpZGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -97,7 +97,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopItemPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopItemPb.Parser, new[]{ "RoleItem", "Cost", "SoldOut" }, new[]{ "ItemType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightShopInfoPb.Parser, new[]{ "ShopLocked", "FreeRefreshCount", "RefreshCost", "ShopItems" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightGameInfoPb.Parser, new[]{ "UniqueId", "DivisionId", "IsOverLock", "Season", "Components" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb.Parser, new[]{ "CurGold", "CurLevel", "LevelExp", "BuyLevelCost", "CurHp", "MaxAvatarNum", "ComboNum", "LockType", "LockReason", "MaxInterest", "TrackingTraits", "TrackingEquipments", "GuideCode", "MaxLevel" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightBasicInfoPb.Parser, new[]{ "CurGold", "CurLevel", "LevelExp", "BuyLevelCost", "CurHp", "MaxAvatarNum", "ComboNum", "LockType", "LockReason", "MaxInterest", "TrackingTraits", "TrackingEquipments", "GuideCode", "MaxLevel", "OffFieldAvatarNum" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentTrackInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightEquipmentTrackInfoPb.Parser, new[]{ "Priority", "RoleId", "EquipmentIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightRoleInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightRoleInfoPb.Parser, new[]{ "RoleId", "Tier", "Pos", "UniqueId", "SavedValues", "EquipmentIds" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ServerSide.GridFightNpcInfoPb), global::EggLink.DanhengServer.Proto.ServerSide.GridFightNpcInfoPb.Parser, new[]{ "NpcId", "Pos", "UniqueId", "EquipmentIds" }, null, null, null, null),
@@ -1322,6 +1322,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       trackingEquipments_ = other.trackingEquipments_.Clone();
       guideCode_ = other.guideCode_;
       maxLevel_ = other.maxLevel_;
+      offFieldAvatarNum_ = other.offFieldAvatarNum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1497,6 +1498,18 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
     }
 
+    /// <summary>Field number for the "OffFieldAvatarNum" field.</summary>
+    public const int OffFieldAvatarNumFieldNumber = 15;
+    private uint offFieldAvatarNum_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint OffFieldAvatarNum {
+      get { return offFieldAvatarNum_; }
+      set {
+        offFieldAvatarNum_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1526,6 +1539,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       if(!trackingEquipments_.Equals(other.trackingEquipments_)) return false;
       if (GuideCode != other.GuideCode) return false;
       if (MaxLevel != other.MaxLevel) return false;
+      if (OffFieldAvatarNum != other.OffFieldAvatarNum) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1547,6 +1561,7 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       hash ^= trackingEquipments_.GetHashCode();
       if (GuideCode.Length != 0) hash ^= GuideCode.GetHashCode();
       if (MaxLevel != 0) hash ^= MaxLevel.GetHashCode();
+      if (OffFieldAvatarNum != 0) hash ^= OffFieldAvatarNum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1615,6 +1630,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(112);
         output.WriteUInt32(MaxLevel);
       }
+      if (OffFieldAvatarNum != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(OffFieldAvatarNum);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1675,6 +1694,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
         output.WriteRawTag(112);
         output.WriteUInt32(MaxLevel);
       }
+      if (OffFieldAvatarNum != 0) {
+        output.WriteRawTag(120);
+        output.WriteUInt32(OffFieldAvatarNum);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1722,6 +1745,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
       if (MaxLevel != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxLevel);
+      }
+      if (OffFieldAvatarNum != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OffFieldAvatarNum);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1772,6 +1798,9 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
       }
       if (other.MaxLevel != 0) {
         MaxLevel = other.MaxLevel;
+      }
+      if (other.OffFieldAvatarNum != 0) {
+        OffFieldAvatarNum = other.OffFieldAvatarNum;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1845,6 +1874,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
             MaxLevel = input.ReadUInt32();
             break;
           }
+          case 120: {
+            OffFieldAvatarNum = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1915,6 +1948,10 @@ namespace EggLink.DanhengServer.Proto.ServerSide {
           }
           case 112: {
             MaxLevel = input.ReadUInt32();
+            break;
+          }
+          case 120: {
+            OffFieldAvatarNum = input.ReadUInt32();
             break;
           }
         }

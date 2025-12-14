@@ -16,8 +16,24 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
 
     #region Role
 
+    public uint GetEmptyPos()
+    {
+        var usedPos = Data.Roles.Select(x => x.Pos).Concat(Data.Forges.Select(x => x.Pos))
+            .Concat(Data.Npcs.Select(x => x.Pos)).ToHashSet();
+
+        var pos = 0u;
+        for (var i = PrepareAreaPos + 1; i <= PrepareAreaPos + 999; i++)  // temp store area
+        {
+            if (usedPos.Contains(i)) continue;
+            pos = i;
+            break;
+        }
+
+        return pos;
+    }
+
     public async ValueTask<List<BaseGridFightSyncData>> AddAvatar(uint roleId, uint tier = 1, bool sendPacket = true,
-        bool checkMerge = true, GridFightSrc src = GridFightSrc.KGridFightSrcBuyGoods, uint syncGroup = 0, uint targetPos = 0, params uint[] param)
+        bool checkMerge = true, GridFightSrc src = GridFightSrc.KGridFightSrcBuyGoods, uint syncGroup = 0, uint targetPos = 0, List<uint>? equipments = null, params uint[] param)
     {
         if (!GameData.GridFightRoleBasicInfoData.TryGetValue(roleId, out var excel)) return [];
 
@@ -46,7 +62,8 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
             RoleId = roleId,
             UniqueId = ++Data.CurUniqueId,
             Tier = tier,
-            Pos = pos
+            Pos = pos,
+            EquipmentIds = { equipments ?? [] }
         };
 
         foreach (var saved in excel.RoleSavedValueList)
@@ -76,6 +93,7 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
 
     public async ValueTask<List<BaseGridFightSyncData>> CheckIfMergeRole(bool sendPacket = false)
     {
+        var itemsComp = Inst.GetComponent<GridFightItemsComponent>();
         List<BaseGridFightSyncData> syncs = [];
         bool hasMerged;
         uint groupId = 0;
@@ -103,16 +121,33 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
                 var roleId = mergeCandidates.Key.RoleId;
                 var currentTier = mergeCandidates.Key.Tier;
                 var toMerge = mergeCandidates.Take(3).ToList();
-
+                List<uint> equipments = [];
+                
                 // remove merged roles
                 foreach (var role in toMerge)
                 {
                     Data.Roles.Remove(role);
                     syncs.Add(new GridFightRoleRemoveSyncData(GridFightSrc.KGridFightSrcMergeRole, role, groupId));
+
+                    // unequip
+                    foreach (var u in role.EquipmentIds.Clone())
+                    {
+                        if (equipments.Count < 3)
+                        {
+                            // add
+                            equipments.Add(u);
+                        }
+                        else
+                        {
+                            // unequip
+                            syncs.AddRange(await itemsComp.OnEquipmentUnEquipped(u, role));
+                        }
+                    }
                 }
 
                 // add new merged role with tier + 1
-                var addSyncs = await AddAvatar(roleId, currentTier + 1, false, false, GridFightSrc.KGridFightSrcMergeRole, groupId, toMerge.First().Pos);
+                var addSyncs = await AddAvatar(roleId, currentTier + 1, false, false,
+                    GridFightSrc.KGridFightSrcMergeRole, groupId, toMerge.First().Pos, equipments);
                 syncs.AddRange(addSyncs);
 
                 groupId++;
@@ -130,6 +165,7 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
 
     public async ValueTask<List<BaseGridFightSyncData>> SellAvatar(uint uniqueId, bool sendPacket = true)
     {
+        var itemsComp = Inst.GetComponent<GridFightItemsComponent>();
         var role = Data.Roles.FirstOrDefault(x => x.UniqueId == uniqueId);
         if (role == null)
         {
@@ -147,11 +183,17 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
         var basicComp = Inst.GetComponent<GridFightBasicComponent>();
         await basicComp.UpdateGoldNum((int)sellPrice, false, GridFightSrc.KGridFightSrcRecycleRole);
 
+
         List<BaseGridFightSyncData> syncs =
         [
             new GridFightRoleRemoveSyncData(GridFightSrc.KGridFightSrcRecycleRole, role),
-            new GridFightGoldSyncData(GridFightSrc.KGridFightSrcRecycleRole, basicComp.Data)
+            new GridFightGoldSyncData(GridFightSrc.KGridFightSrcNone, basicComp.Data)
         ];
+
+        foreach (var u in role.EquipmentIds.Clone())
+        {
+            syncs.AddRange(await itemsComp.OnEquipmentUnEquipped(u, role));
+        }
 
         if (sendPacket)
         {
@@ -184,13 +226,18 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
 
         role.EquipmentIds.Add(equipmentUniqueId); // ensure no duplicates
 
-        var syncData = new GridFightRoleUpdateSyncData(src, role, 0, param);
+        // handle action
+        var res = await itemComp.OnEquipmentEquipped(equipmentUniqueId, role);
+
+        res.Add(new GridFightRoleUpdateSyncData(src, role, 0, param));
         if (sendPacket)
         {
-            await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(syncData));
+            await Inst.Player.SendPacket(new PacketGridFightSyncUpdateResultScNotify(res));
         }
 
-        return [syncData];
+        await Inst.GetComponent<GridFightTraitComponent>().CheckTrait();
+
+        return res;
     }
 
     public List<BaseAvatarInfo> GetForegroundAvatarInfos()

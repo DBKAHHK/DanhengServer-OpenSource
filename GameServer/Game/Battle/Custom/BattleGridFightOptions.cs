@@ -1,6 +1,7 @@
 using EggLink.DanhengServer.Data;
 using EggLink.DanhengServer.Database.Avatar;
 using EggLink.DanhengServer.Database.Lineup;
+using EggLink.DanhengServer.Enums.GridFight;
 using EggLink.DanhengServer.GameServer.Game.GridFight;
 using EggLink.DanhengServer.GameServer.Game.GridFight.Component;
 using EggLink.DanhengServer.GameServer.Game.Player;
@@ -37,16 +38,19 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
             LineupType = (int)ExtraLineupType.LineupGridFight
         };
 
+        // set all avatars to full hp for battle
         foreach (var baseAvatarInfo in avatars.Concat(backAvatars))
         {
             baseAvatarInfo.SetCurHp(10000, true);
         }
 
+        // foreground avatars
         var formatted = avatars.Select(x =>
             x.ToBattleProto(
                 new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, tempLineup),
                 x is SpecialAvatarInfo ? AvatarType.AvatarTrialType : AvatarType.AvatarGridFightType)).ToList();
 
+        // background avatars
         var backFormatted = backAvatars.Select(x =>
             x.ToBattleProto(
                 new PlayerDataCollection(Player.Data, Player.InventoryManager!.Data, tempLineup),
@@ -54,6 +58,17 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
 
         proto.BattleAvatarList.Add(formatted.Take(4));
 
+        // affix buff
+        foreach (var affix in LevelComponent.Affixes)
+        {
+            if (!GameData.GridFightAffixConfigData.TryGetValue(affix, out var affixConf) || affixConf.AffixRule != GridFightAffixRuleEnum.Mazebuff) continue;
+            battle.Buffs.Add(new MazeBuff(35300000 + (int)affix, 1, -1)  // TODO I WANNA READ FROM GAMEDATA, BUT IT SEEMS GAMEDATA IS WRONG
+            {
+                WaveFlag = -1
+            });
+        }
+
+        // monsters
         foreach (var wave in Encounter.MonsterWaves)
         {
             proto.MonsterWaveList.Add(new SceneMonsterWave
@@ -62,7 +77,8 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
                 BattleWaveId = wave.Wave,
                 MonsterParam = new SceneMonsterWaveParam
                 {
-                    Level = 90
+                    EliteGroup = CurSection.EliteGroupId,
+                    DNEAMPLLFME = 5  // ?
                 },
                 MonsterList =
                 {
@@ -82,12 +98,14 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
             });
         }
 
+        // battle events
         foreach (var role in RoleComponent.Data.Roles)
         {
             if (!GameData.GridFightRoleStarData.TryGetValue(role.RoleId << 4 | role.Tier, out var roleConf)) continue;
             battle.BattleEvents.TryAdd((int)roleConf.BEID, new BattleEventInstance((int)roleConf.BEID, 5000));
         }
 
+        // traits battle events
         foreach (var traitBeId in TraitComponent.Data.Traits
                      .Select(x => GameData.GridFightTraitBasicInfoData.GetValueOrDefault(x.TraitId, new()))
                      .SelectMany(x => x.BEIDList))
@@ -95,6 +113,7 @@ public class BattleGridFightOptions(GridFightGameSectionInfo curSection, GridFig
             battle.BattleEvents.TryAdd((int)traitBeId, new BattleEventInstance((int)traitBeId, 5000));
         }
 
+        // penalty bonus rule id
         var ruleId = CurSection.Excel.PenaltyBonusRuleIDList.FirstOrDefault(0u);
         if (ruleId == 0)
         {

@@ -383,6 +383,7 @@ public static class GridFightTraitInfoPbExtensions
         var traitRoles = onGroundRoles.Where(x => GameData.GridFightRoleBasicInfoData
             .GetValueOrDefault(x.RoleId)?.TraitList.Contains(info.TraitId) == true).ToList();
 
+        List<GridFightRoleInfoPb> equipmentTraits = [];
         // check equipment traits
         foreach (var role in onGroundRoles.Except(traitRoles))
         {
@@ -406,7 +407,7 @@ public static class GridFightTraitInfoPbExtensions
                 if (equipmentExcel.EquipFuncParamList.Contains(info.TraitId))
                 {
                     // we can add this role directly becuz foreach has Except option
-                    traitRoles.Add(role);
+                    equipmentTraits.Add(role);
                 }
             }
         }
@@ -419,17 +420,27 @@ public static class GridFightTraitInfoPbExtensions
         {
             TraitId = info.TraitId,
             TraitEffectLayer = info.TraitLayer,
-            MemberList = { traitRoles.Select(x => new GridFightTraitMember
+            MemberList =
             {
-                GridUpdateSrc = GridFightTraitSrc.KGridFightTraitSrcRole,
-                MemberRoleId = x.RoleId,
-                MemberRoleUniqueId = x.UniqueId,
-                MemberType = GridFightTraitMemberType.KGridFightTraitMemberRole
-            }) },
-            TraitEffectList = { info.Effects.Select(x => x.ToBattleInfo(roleComp))}
+                traitRoles.Select(x => new GridFightTraitMember
+                {
+                    GridUpdateSrc = GridFightTraitSrc.KGridFightTraitSrcRole,
+                    MemberRoleId = x.RoleId,
+                    MemberRoleUniqueId = x.UniqueId,
+                    MemberType = GridFightTraitMemberType.KGridFightTraitMemberRole
+                }),
+                equipmentTraits.Select(x => new GridFightTraitMember
+                {
+                    GridUpdateSrc = GridFightTraitSrc.KGridFightTraitSrcEquip,
+                    MemberRoleId = x.RoleId,
+                    MemberRoleUniqueId = x.UniqueId,
+                    MemberType = GridFightTraitMemberType.KGridFightTraitMemberRole
+                })
+            },
+            TraitEffectList = { info.Effects.Select(x => x.ToBattleInfo(roleComp)) }
         };
 
-        if (phainonRole != null && traitRoles.All(x => x.UniqueId != phainonRole.UniqueId))
+        if (phainonRole != null && traitRoles.Concat(equipmentTraits).All(x => x.UniqueId != phainonRole.UniqueId))
         {
             res.MemberList.Add(new GridFightTraitMember
             {

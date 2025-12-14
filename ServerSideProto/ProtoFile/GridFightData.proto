@@ -45,6 +45,7 @@ message GridFightBasicInfoPb {
     repeated GridFightEquipmentTrackInfoPb TrackingEquipments = 12;
     string GuideCode = 13;
     uint32 MaxLevel = 14;
+    uint32 OffFieldAvatarNum = 15;
 }
 
 message GridFightEquipmentTrackInfoPb {

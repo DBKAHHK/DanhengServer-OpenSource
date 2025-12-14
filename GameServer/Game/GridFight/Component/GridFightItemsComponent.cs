@@ -193,7 +193,7 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
                 case GridFightDropType.Role:
                 {
                     syncs.AddRange(await roleComp.AddAvatar(item.DropItemId, item.DisplayValue.Tier, false, true,
-                        src, groupId, 0, param));
+                        src, groupId, 0, null, param));
                     break;
                 }
                 case GridFightDropType.Item:
@@ -450,7 +450,7 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
 
         (Retcode, List<BaseGridFightSyncData>) res = consumablesExcel.ConsumableRule switch
         {
-            GridFightConsumeTypeEnum.Remove => HandleRemoveConsumable(target),
+            GridFightConsumeTypeEnum.Remove => await HandleRemoveConsumable(target),
             GridFightConsumeTypeEnum.Roll => await HandleRollConsumable(target),
             GridFightConsumeTypeEnum.Upgrade => await HandleUpgradeConsumable(target),
             GridFightConsumeTypeEnum.Copy => await HandleCopyConsumable(target, consumablesExcel.ConsumableParamList),
@@ -467,21 +467,30 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
         return res.Item1;
     }
 
-    private (Retcode, List<BaseGridFightSyncData>) HandleRemoveConsumable(GridFightConsumableTargetInfo target)
+    private async ValueTask<(Retcode, List<BaseGridFightSyncData>)> HandleRemoveConsumable(GridFightConsumableTargetInfo target)
     {
         List<BaseGridFightSyncData> syncs = [];
 
         if (target.RemoveTypeTargetInfo == null) return (Retcode.RetReqParaInvalid, syncs);
 
         var roleComp = Inst.GetComponent<GridFightRoleComponent>();
+        var traitComp = Inst.GetComponent<GridFightTraitComponent>();
         var role = roleComp.Data.Roles.FirstOrDefault(x => x.UniqueId == target.RemoveTypeTargetInfo.DressRoleUniqueId);
         if (role == null) return (Retcode.RetGridFightRoleNotExist, syncs);
 
         // unequip
-        role.EquipmentIds.Clear();
+        foreach (var roleEquipmentId in role.EquipmentIds.Clone())
+        {
+            role.EquipmentIds.Remove(roleEquipmentId);  // safety
+
+            syncs.AddRange(await OnEquipmentUnEquipped(roleEquipmentId, role));  // check action
+        }
 
         // sync
         syncs.Add(new GridFightRoleUpdateSyncData(GridFightSrc.KGridFightSrcUseConsumable, role.Clone()));
+
+        // check trait
+        await traitComp.CheckTrait();
 
         return (Retcode.RetSucc, syncs);
     }
@@ -617,6 +626,222 @@ public class GridFightItemsComponent(GridFightInstance inst) : BaseGridFightComp
                 GridFightSrc.KGridFightSrcUseConsumable, false, recommends));
 
         return (Retcode.RetSucc, syncs);
+    }
+
+    #endregion
+
+    #region Equipment Func
+
+    public async ValueTask<List<BaseGridFightSyncData>> OnEquipmentEquipped(uint uniqueId, GridFightRoleInfoPb role)
+    {
+        List<BaseGridFightSyncData> syncData = [];
+        var basicComp = Inst.GetComponent<GridFightBasicComponent>();
+        var roleComp = Inst.GetComponent<GridFightRoleComponent>();
+
+        // get info
+        var equipment = Data.EquipmentItems.FirstOrDefault(x => x.UniqueId == uniqueId);
+        if (equipment == null || !GameData.GridFightEquipmentData.TryGetValue(equipment.ItemId, out var itemConf)) return syncData;
+
+        switch (itemConf.EquipFunc)
+        {
+            case GridFightEquipFuncTypeEnum.AvatarMaxNumberAdd:
+            {
+                // add max avatar num
+                basicComp.Data.MaxAvatarNum++;
+                basicComp.Data.OffFieldAvatarNum++;
+
+                // sync
+                syncData.Add(new GridFightMaxAvatarNumSyncData(GridFightSrc.KGridFightSrcEquipmentFunc, basicComp.Data, 0, uniqueId));
+                syncData.Add(new GridFightMaxOffFieldCountSyncData(GridFightSrc.KGridFightSrcEquipmentFunc, basicComp.Data, 0, uniqueId));
+                break;
+            }
+            case GridFightEquipFuncTypeEnum.CraftableThiefGlove:
+            {
+                // add random 2 craftable equipments to role
+                var equipPool = GameData.GridFightEquipmentData.Values.Where(x =>
+                    x.EquipCategory == GridFightEquipCategoryEnum.Craftable && x.ID != equipment.ItemId).ToList();
+
+                for (var i = 0; i < 2; i++)
+                {
+                    var equip = equipPool.RandomElement();
+                    // add equipment
+                    var res = await AddEquipment(equip.ID, GridFightSrc.KGridFightSrcEquipmentFunc, false, 0, uniqueId);
+                    if (res.Item1 == null) continue;
+
+                    // sync
+                    syncData.AddRange(res.Item2);
+                    syncData.AddRange(await roleComp.DressRole(role.UniqueId, res.Item1.UniqueId,
+                        GridFightSrc.KGridFightSrcEquipmentFunc, false, 0, uniqueId));
+                }
+
+                break;
+            }
+            case GridFightEquipFuncTypeEnum.RadiantThiefGlove:
+            {
+                // add random 2 radiant equipments to role
+                var equipPool = GameData.GridFightEquipmentData.Values.Where(x =>
+                    x.EquipCategory == GridFightEquipCategoryEnum.Radiant && x.ID != equipment.ItemId).ToList();
+
+                for (var i = 0; i < 2; i++)
+                {
+                    var equip = equipPool.RandomElement();
+                    // add equipment
+                    var res = await AddEquipment(equip.ID, GridFightSrc.KGridFightSrcEquipmentFunc, false, 0, uniqueId);
+                    if (res.Item1 == null) continue;
+
+                    // sync
+                    syncData.AddRange(res.Item2);
+                    syncData.AddRange(await roleComp.DressRole(role.UniqueId, res.Item1.UniqueId,
+                        GridFightSrc.KGridFightSrcEquipmentFunc, false, 0, uniqueId));
+                }
+
+                break;
+            }
+        }
+
+        return syncData;
+    }
+
+    public async ValueTask<List<BaseGridFightSyncData>> OnEnterSection()
+    {
+        List<BaseGridFightSyncData> syncData = [];
+        var roleComp = Inst.GetComponent<GridFightRoleComponent>();
+
+        // get info
+        foreach (var role in roleComp.Data.Roles)
+        {
+            foreach (var uniqueId in role.EquipmentIds)
+            {
+                var equipment = Data.EquipmentItems.FirstOrDefault(x => x.UniqueId == uniqueId);
+                if (equipment == null ||
+                    !GameData.GridFightEquipmentData.TryGetValue(equipment.ItemId, out var itemConf)) continue;
+
+                switch (itemConf.EquipFunc)
+                {
+                    case GridFightEquipFuncTypeEnum.CraftableThiefGlove:
+                    {
+                        // remove old
+                        foreach (var uid in role.EquipmentIds.Clone())
+                        {
+                            if (uid == uniqueId) continue; // skip self
+                            var res = await RemoveEquipment(uid, GridFightSrc.KGridFightSrcEquipmentFunc, false,
+                                uniqueId);
+                            syncData.AddRange(res);
+                        }
+
+                        // add random 2 craftable equipments to role
+                        var equipPool = GameData.GridFightEquipmentData.Values.Where(x =>
+                            x.EquipCategory == GridFightEquipCategoryEnum.Craftable && x.ID != equipment.ItemId).ToList();
+
+                        for (var i = 0; i < 2; i++)
+                        {
+                            var equip = equipPool.RandomElement();
+                            // add equipment
+                            var res = await AddEquipment(equip.ID, GridFightSrc.KGridFightSrcEquipmentFunc, false, 0,
+                                uniqueId);
+                            if (res.Item1 == null) continue;
+
+                            // sync
+                            syncData.AddRange(res.Item2);
+                            syncData.AddRange(await roleComp.DressRole(role.UniqueId, res.Item1.UniqueId,
+                                GridFightSrc.KGridFightSrcEquipmentFunc, false, 0, uniqueId));
+                        }
+
+                        break;
+                    }
+                    case GridFightEquipFuncTypeEnum.RadiantThiefGlove:
+                    {
+                        // remove old
+                        foreach (var uid in role.EquipmentIds.Clone())
+                        {
+                            if (uid == uniqueId) continue; // skip self
+                            var res = await RemoveEquipment(uid, GridFightSrc.KGridFightSrcEquipmentFunc, false,
+                                uniqueId);
+                            syncData.AddRange(res);
+                        }
+
+                        // add random 2 radiant equipments to role
+                        var equipPool = GameData.GridFightEquipmentData.Values.Where(x =>
+                            x.EquipCategory == GridFightEquipCategoryEnum.Radiant && x.ID != equipment.ItemId).ToList();
+
+                        for (var i = 0; i < 2; i++)
+                        {
+                            var equip = equipPool.RandomElement();
+                            // add equipment
+                            var res = await AddEquipment(equip.ID, GridFightSrc.KGridFightSrcEquipmentFunc, false, 0,
+                                uniqueId);
+                            if (res.Item1 == null) continue;
+
+                            // sync
+                            syncData.AddRange(res.Item2);
+                            syncData.AddRange(await roleComp.DressRole(role.UniqueId, res.Item1.UniqueId,
+                                GridFightSrc.KGridFightSrcEquipmentFunc, false, 0, uniqueId));
+                        }
+
+                        break;
+                    }
+                }
+            }
+        }
+
+        return syncData;
+    }
+
+    public async ValueTask<List<BaseGridFightSyncData>> OnEquipmentUnEquipped(uint uniqueId, GridFightRoleInfoPb role)
+    {
+        List<BaseGridFightSyncData> syncData = [];
+        var basicComp = Inst.GetComponent<GridFightBasicComponent>();
+        var roleComp = Inst.GetComponent<GridFightRoleComponent>();
+
+        // get info
+        var equipment = Data.EquipmentItems.FirstOrDefault(x => x.UniqueId == uniqueId);
+        if (equipment == null || !GameData.GridFightEquipmentData.TryGetValue(equipment.ItemId, out var itemConf))
+            return syncData;
+
+        switch (itemConf.EquipFunc)
+        {
+            case GridFightEquipFuncTypeEnum.AvatarMaxNumberAdd:
+            {
+                // decrease max avatar num
+                basicComp.Data.MaxAvatarNum--;
+                basicComp.Data.OffFieldAvatarNum--;
+
+                // if remove pos has avatar
+                if (basicComp.Data.MaxAvatarNum < 13)
+                {
+                    // check
+                    var targetRole = roleComp.Data.Roles.FirstOrDefault(x => x.Pos == basicComp.Data.MaxAvatarNum + 1);
+                    if (targetRole != null)
+                    {
+                        targetRole.Pos = roleComp.GetEmptyPos();
+                        syncData.Add(new GridFightRoleUpdateSyncData(GridFightSrc.KGridFightSrcNone, targetRole));
+                    }
+                }
+
+                // sync
+                syncData.Add(new GridFightMaxAvatarNumSyncData(GridFightSrc.KGridFightSrcEquipmentFunc, basicComp.Data,
+                    0, uniqueId));
+                syncData.Add(new GridFightMaxOffFieldCountSyncData(GridFightSrc.KGridFightSrcEquipmentFunc,
+                    basicComp.Data, 0, uniqueId));
+                break;
+            }
+            case GridFightEquipFuncTypeEnum.CraftableThiefGlove:
+            case GridFightEquipFuncTypeEnum.RadiantThiefGlove:
+            {
+                // remove other equipments
+                foreach (var uid in role.EquipmentIds.Clone())
+                {
+                    if (uid == uniqueId) continue;  // skip self
+
+                    var res = await RemoveEquipment(uid, GridFightSrc.KGridFightSrcEquipmentFunc, false, uniqueId);
+                    syncData.AddRange(res);
+                }
+
+                break;
+            }
+        }
+
+        return syncData;
     }
 
     #endregion

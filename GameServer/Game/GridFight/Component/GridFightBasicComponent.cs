@@ -20,7 +20,8 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
         BuyLevelCost = 4,
         CurGold = 0,
         MaxInterest = 5,
-        MaxLevel = 10
+        MaxLevel = 10,
+        OffFieldAvatarNum = 6
     };
 
     #endregion
@@ -146,7 +147,7 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
 
     public uint GetFieldCount()
     {
-        return 4 + 6;
+        return 4 + Data.OffFieldAvatarNum;
     }
 
     #endregion
@@ -166,8 +167,8 @@ public class GridFightBasicComponent(GridFightInstance inst) : BaseGridFightComp
                 GridFightCurLevelExp = Data.LevelExp,
                 GridFightLevelCost = Data.BuyLevelCost,
                 GridFightMaxAvatarCount = 9,
-                GridFightOffFieldMaxCount = 6,
-                GridFightMaxFieldCount = Data.MaxAvatarNum,
+                GridFightOffFieldMaxCount = Math.Min(9, Data.OffFieldAvatarNum),
+                GridFightMaxFieldCount = Math.Min(13, Data.MaxAvatarNum),
                 GridFightLineupHp = Data.CurHp,
                 GridFightCurGold = Data.CurGold,
                 GridFightMaxInterestGold = Data.MaxInterest,

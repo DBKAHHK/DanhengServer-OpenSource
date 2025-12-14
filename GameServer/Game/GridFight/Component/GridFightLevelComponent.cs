@@ -22,6 +22,8 @@ public class GridFightLevelComponent : BaseGridFightComponent
     public List<GridFightTraitDamageSttInfo> TraitDamageSttInfos { get; } = [];
     public List<GridFightPortalBuffInfo> PortalBuffs { get; } = [];
     public List<uint> Affixes { get; } = [];
+    private uint CampMonsterEliteGroup { get; set; } = 1801;
+    private uint MonsterEliteGroup { get; set; } = 1815;
 
     #endregion
 
@@ -30,7 +32,7 @@ public class GridFightLevelComponent : BaseGridFightComponent
     public GridFightLevelComponent(GridFightInstance inst) : base(inst)
     {
         // TODO: randomly select a base route id
-        List<uint> chapterIds = [1100];
+        List<uint> chapterIds = [1400];
         List<GridFightCampExcel> campPool = GameData.GridFightCampData.Values.Where(x => x.BossBattleArea != 0).ToList();
         var route = GameData.GridFightStageRouteData[chapterIds.RandomElement()].Values;
 
@@ -44,12 +46,27 @@ public class GridFightLevelComponent : BaseGridFightComponent
             campPool.Remove(camp);
 
             // create section infos
-            Sections[(uint)chapterId] = [.. chapters.Select(x => new GridFightGameSectionInfo(x, camp))];
+            Sections[(uint)chapterId] = [];
+
+            foreach (var sectionConf in chapters)
+            {
+                var eliteGroup =
+                    sectionConf.NodeType switch
+                    {
+                        GridFightNodeTypeEnum.Monster => Math.Max(1816, Math.Min(MonsterEliteGroup++, 1819)),
+                        GridFightNodeTypeEnum.Supply => 0u,
+                        _ => Math.Min(CampMonsterEliteGroup++, 1815)
+                    };
+
+                var section = new GridFightGameSectionInfo(sectionConf, camp, eliteGroup);
+
+                Sections[(uint)chapterId].Add(section);
+            }
         }
 
         if (!GameData.GridFightDivisionStageData.TryGetValue(Inst.DivisionId, out var divisionExcel)) return;
 
-        var affixIds = GameData.GridFightAffixConfigData.Keys.ToList();
+        var affixIds = GameData.GridFightAffixConfigData.Keys.Where(x => x < 4000).ToList();
         foreach (var _ in divisionExcel.AffixChooseNumList)
         {
             var affixId = affixIds.RandomElement();
@@ -156,6 +173,7 @@ public class GridFightLevelComponent : BaseGridFightComponent
         bool sendPacket = true, GridFightSrc src = GridFightSrc.KGridFightSrcBattleEnd)
     {
         var shopComp = Inst.GetComponent<GridFightShopComponent>();
+        var itemsComp = Inst.GetComponent<GridFightItemsComponent>();
         var basicComp = Inst.GetComponent<GridFightBasicComponent>();
 
         _curChapterId = (uint)Math.Min(Sections.Count, chapterId);
@@ -186,6 +204,9 @@ public class GridFightLevelComponent : BaseGridFightComponent
         // refresh shop
         await shopComp.RefreshShop(true, false);
         syncs.AddRange(new GridFightShopSyncData(src, shopComp.Data, basicComp.Data.CurLevel));
+
+        // equipment
+        syncs.AddRange(await itemsComp.OnEnterSection());
 
         if (sendPacket)
         {
@@ -399,10 +420,11 @@ public class GridFightGameSectionInfo
     public uint ChapterId { get; }
     public uint SectionId { get; }
     public uint BranchId { get; set; } = 1;
+    public uint EliteGroupId { get; set; }
     public GridFightCampExcel MonsterCamp { get; set; }
     public List<GridFightGameEncounterInfo> Encounters { get; } = [];
 
-    public GridFightGameSectionInfo(GridFightStageRouteExcel excel, GridFightCampExcel camp)
+    public GridFightGameSectionInfo(GridFightStageRouteExcel excel, GridFightCampExcel camp, uint eliteGroupId)
     {
         Excel = excel;
         ChapterId = excel.ChapterID;
@@ -427,6 +449,8 @@ public class GridFightGameSectionInfo
         {
             Encounters.Add(new GridFightGameEncounterInfo(1, 1, this));
         }
+
+        EliteGroupId = eliteGroupId;
     }
 
     public GridFightRouteInfo ToRouteInfo()
