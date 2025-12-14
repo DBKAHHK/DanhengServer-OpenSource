@@ -155,7 +155,7 @@ public static class HandbookGenerator
         foreach (var cmd in EntryPoint.CommandManager.CommandInfo)
         {
             builder.Append("\t" + cmd.Key);
-            var desc = I18NManager.TranslateAsCertainLang(lang, cmd.Value.Description).Replace("\n", "\n\t\t");
+            var desc = I18NManager.TranslateAsCertainLang(lang == "CN" ? "CHS" : lang, cmd.Value.Description).Replace("\n", "\n\t\t");
             builder.AppendLine(": " + desc);
         }
     }
