@@ -9,6 +9,7 @@ public class GridFightOrbExcel : ExcelResource
 {
     public uint BonusID { get; set; }
     public uint OrbID { get; set; }
+    public HashName OrbName { get; set; } = new();
 
     [JsonConverter(typeof(StringEnumConverter))]
     public GridFightOrbTypeEnum Type { get; set; }

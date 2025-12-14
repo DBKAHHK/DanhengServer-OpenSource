@@ -6,6 +6,7 @@ namespace EggLink.DanhengServer.Data.Excel;
 public class GridFightItemsExcel : ExcelResource
 {
     public uint ID { get; set; }
+    public HashName ItemName { get; set; } = new();
 
     public override int GetId()
     {

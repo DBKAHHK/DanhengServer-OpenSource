@@ -130,6 +130,7 @@ public class CommandTextCHT
     public AccountTextCHT Account { get; } = new();
     public UnstuckTextCHT Unstuck { get; } = new();
     public SetlevelTextCHT Setlevel { get; } = new();
+    public GridTextCHT Grid { get; } = new();
 }
 
 #endregion
@@ -152,7 +153,7 @@ public class ServerInfoTextCHT
     public string Shutdown => "關閉中…";
     public string CancelKeyPressed => "已按下取消鍵 (Ctrl + C)，服務器即將關閉…";
     public string StartingServer => "正在啟動 DanhengServer…";
-    public string CurrentVersion => "當前服務端支援的版本: {0}";
+    public string CurrentVersion => "當前服務端支持的版本: {0}";
     public string LoadingItem => "正在加載 {0}…";
     public string GeneratingItem => "正在生成 {0}…";
     public string WaitingItem => "正在等待進程 {0} 完成…";
@@ -165,8 +166,8 @@ public class ServerInfoTextCHT
     public string LoadedItem => "已加載 {0}。";
     public string LoadedItems => "已加載 {0} 個 {1}。";
     public string ServerRunning => "{0} 服務器正在監聽 {1}";
-    public string ServerStarted => "啟動完成！用時 {0}s，擊敗了99%的用戶，輸入 『help』 來獲取命令幫助"; // 玩梗，考慮英語版本將其本土化
-    public string MissionEnabled => "任務系統已啟用，此功能仍在開發中，且可能不會按預期工作，如果遇見任何bug，請匯報給開發者。";
+    public string ServerStarted => "啟動完成！用時 {0}s，擊敗了99%的用戶，輸入 ‘help’ 來獲取命令幫助"; // 玩梗，考慮英語版本將其本土化
+    public string MissionEnabled => "任務系統已啟用，此功能仍在開發中，且可能不會按預期工作，如果遇見任何bug，請彙報給開發者。";
     public string CacheLoadSkip => "已跳過緩存加載。";
 
     public string ConfigMissing => "{0} 缺失，請檢查你的資源文件夾：{1}，{2} 可能不能使用。";
@@ -192,7 +193,7 @@ public class NoticeTextCHT
 {
     public string PlayerNotFound => "未找到玩家!";
     public string InvalidArguments => "無效的參數!";
-    public string NoPermission => "你沒有權限這麽做!";
+    public string NoPermission => "你沒有權限這麼做!";
     public string CommandNotFound => "未找到命令! 輸入 '/help' 來獲取幫助";
     public string TargetOffline => "目標 {0}({1}) 離線了！清除當前目標";
     public string TargetFound => "找到目標 {0}({1})，下一次命令將默認對其執行";
@@ -206,7 +207,7 @@ public class NoticeTextCHT
 public class HeroTextCHT
 {
     public string Desc =>
-        "切換主角的性別/形態\n當切換性別時，genderId為1代表男性，2代表女性\n當切換形態時，8001代表毀滅命途，8003代表存護命途，8005代表同諧命途。\n註意，切換性別時會清空所有可選命途以及行跡，為不可逆操作！";
+        "切換主角的性別/形態\n當切換性別時，genderId為1代表男性，2代表女性\n當切換形態時，8001代表毀滅命途，8003代表存護命途，8005代表同諧命途。\n注意，切換性別時會清空所有可選命途以及行跡，為不可逆操作！";
 
     public string Usage => "用法：/hero gender [genderId]\n\n用法：/hero type [typeId]";
     public string GenderNotSpecified => "性別不存在!";
@@ -235,7 +236,7 @@ public class UnlockAllTextCHT
 /// </summary>
 public class AvatarTextCHT
 {
-    public string Desc => "設定玩家已有角色的屬性\n設置行跡等級時，設置X級即設置所有行跡節點至X級，若大於此節點允許的最高等級，設置為最高等級\n註意：-1意為所有已擁有角色";
+    public string Desc => "設定玩家已有角色的屬性\n設置行跡等級時，設置X級即設置所有行跡節點至X級，若大於此節點允許的最高等級，設置為最高等級\n注意：-1意為所有已擁有角色";
 
     public string Usage =>
         "用法：/avatar talent [角色ID/-1] [行跡等級]\n\n用法：/avatar get [角色ID]\n\n用法：/avatar rank [角色ID/-1] [星魂]\n\n用法：/avatar level [角色ID/-1] [角色等級]";
@@ -264,10 +265,17 @@ public class GiveTextCHT
 /// </summary>
 public class GiveAllTextCHT
 {
-    public string Desc => "給予玩家全部指定類型的物品\navatar意為角色，equipment意為光錐，relic意為遺器，unlock意為氣泡、手機壁紙、頭像";
+    public string Desc =>
+        "給予玩家全部指定類型的物品\navatar意為角色，equipment意為光錐，relic意為遺器，unlock意為氣泡、手機壁紙、頭像，train意為開拓者房間內容，pet意為寵物，path意為多命途角色命途";
 
     public string Usage =>
-        "用法：/giveall avatar r<星魂> l<等級>\n\n用法：/giveall equipment r<疊影> l<等級> x<數量>\n\n用法：/giveall relic l<等級> x<數量>\n\n用法：/giveall unlock";
+        "用法：/giveall avatar r<星魂> l<等級>\n\n" +
+        "用法：/giveall equipment r<疊影> l<等級> x<數量>\n\n" +
+        "用法：/giveall relic l<等級> x<數量>\n\n" +
+        "用法：/giveall unlock\n\n" +
+        "用法：/giveall train\n\n" +
+        "用法：/giveall pet\n\n" +
+        "用法：/giveall path";
 
     public string GiveAllItems => "已給予所有 {0}, 各 {1} 個";
 }
@@ -280,7 +288,7 @@ public class LineupTextCHT
     public string Desc => "管理玩家的隊伍\n秘技點一次性只能獲得兩個";
     public string Usage => "用法：/lineup mp [秘技點數量]\n\n用法：/lineup heal";
     public string PlayerGainedMp => "玩家已獲得 {0} 秘技點";
-    public string HealedAllAvatars => "成功治愈當前隊伍中的所有角色";
+    public string HealedAllAvatars => "成功治癒當前隊伍中的所有角色";
 }
 
 /// <summary>
@@ -312,12 +320,14 @@ public class MissionTextCHT
 {
     public string Desc =>
         "管理玩家的任務\n" +
-        "使用 pass 完成當前正在進行的所有任務，此命令易造成嚴重卡頓，請盡量使用 /mission finish 替代\n" +
-        "使用 running 獲取正在進行的任務以及可能卡住的任務，使用後可能會出現較長任務列表，請註意甄別\n" +
-        "使用 reaccept 可重新進行指定主任務，請瀏覽 handbook 來獲取主任務ID";
+        "使用 pass 完成當前正在進行的所有任務，此命令易造成嚴重卡頓，請儘量使用 /mission finish 替代\n" +
+        "使用 finish [子任務ID] 完成指定子任務，請瀏覽 handbook 來獲取子任務ID\n" +
+        "使用 finishmain [主任務ID] 完成指定主任務，請瀏覽 handbook 來獲取主任務ID\n" +
+        "使用 running <-all> 獲取正在追蹤的任務，增加'-all'則顯示所有正在進行的任務以及可能卡住的任務，使用後可能會出現較長任務列表，請注意甄別\n" +
+        "使用 reaccept [主任務ID] 可重新進行指定主任務，請瀏覽 handbook 來獲取主任務ID";
 
     public string Usage =>
-        "用法：/mission pass\n\n用法：/mission finish [子任務ID]\n\n用法：/mission running\n\n用法：/mission reaccept [主任務ID]";
+        "用法：/mission pass\n\n用法：/mission finish [子任務ID]\n\n用法：/mission running <-all>\n\n用法：/mission reaccept [主任務ID]\n\n用法：/mission finishmain [主任務ID]";
 
     public string AllMissionsFinished => "所有任務已完成!";
     public string AllRunningMissionsFinished => "共 {0} 個進行中的任務已完成!";
@@ -337,7 +347,7 @@ public class MissionTextCHT
 /// </summary>
 public class RelicTextCHT
 {
-    public string Desc => "管理玩家的遺器\n主詞條可選，副詞條可選，但至少存在其中之一\n等級限製：1≤等級≤9999";
+    public string Desc => "管理玩家的遺器\n主詞條可選，副詞條可選，但至少存在其中之一\n等級限制：1≤等級≤9999";
 
     public string Usage =>
         "用法：/relic <遺器ID> <主詞條ID> <小詞條ID1:小詞條等級> <小詞條ID2:小詞條等級> <小詞條ID3:小詞條等級> <小詞條ID4:小詞條等級> l<等級> x<數量>";
@@ -385,7 +395,7 @@ public class SceneTextCHT
 {
     public string Desc =>
         "管理玩家場景\n" +
-        "提示：此組大多為調試使用，使用命令前，請確保你清楚你在做什麽！\n" +
+        "提示：此組大多為調試使用，使用命令前，請確保你清楚你在做什麼！\n" +
         "使用 prop 來設置道具狀態，在Common/Enums/Scene/PropStateEnum.cs獲取狀態列表\n" +
         "使用 unlockall 來解鎖場景內所有道具（即將所有能設置為open狀態的道具設置為open狀態），此命令有較大可能會導致遊戲加載卡條約90%，使用 /scene reset <floorId> 來解決問題\n" +
         "使用 change 來進入指定場景，要獲取EntryId，請訪問 Resources/MapEntrance.json\n" +
@@ -433,8 +443,8 @@ public class RaidTextCHT
 /// </summary>
 public class AccountTextCHT
 {
-    public string Desc => "創建賬號\n註意：此命令未經測試，請謹慎使用！";
-    public string Usage => "用法：/account create <用戶名>";
+    public string Desc => "創建賬號\n注意：此命令未經測試，請謹慎使用！";
+    public string Usage => "用法：/account create [用戶名]";
     public string InvalidUid => "無效UID參數！";
     public string CreateError => "出現內部錯誤 {0} ";
     public string CreateSuccess => "新賬號 {0} 創建成功!";
@@ -449,7 +459,7 @@ public class AccountTextCHT
 public class UnstuckTextCHT
 {
     public string Desc => "將玩家傳送回默認場景";
-    public string Usage => "用法：/unstuck <UID>";
+    public string Usage => "用法：/unstuck [UID]";
     public string UnstuckSuccess => "已成功將該玩家傳送回默認場景";
     public string UidNotExist => "該UID不存在！";
     public string PlayerIsOnline => "該玩家目前在線上！";
@@ -461,8 +471,29 @@ public class UnstuckTextCHT
 public class SetlevelTextCHT
 {
     public string Desc => "設定玩家等級";
-    public string Usage => "用法：/setlevel <等級>";
+    public string Usage => "用法：/setlevel [等級]";
     public string SetlevelSuccess => "等級設定成功！";
+}
+
+/// <summary>
+///     path: Game.Command.Grid
+/// </summary>
+public class GridTextCHT
+{
+    public string Desc => "管理貨幣戰爭內容，注意，此部分內容尚未完善，若有問題請及時反饋。\n此命令不一定會檢查ID是否存在，若無效果，請檢查參數是否正確";
+    public string Usage => "用法：/grid gold [金幣數量]\n\n" +
+                           "用法：/grid role [角色ID] [角色星級]\n\n" +
+                           "用法：/grid equip [裝備ID]\n\n" +
+                           "用法：/grid consumable [消耗品ID]\n\n" +
+                           "用法：/grid orb [晶礦ID]";
+    public string NotInGame => "不在貨幣戰爭中！";
+    public string InvalidRole => "角色ID或星級不存在！";
+    public string AddedRole => "已添加角色。";
+    public string UpdateGold => "獲得 {0} 個金幣。";
+    public string AddEquipment => "已添加 {0} 裝備。";
+    public string AddOrb => "已添加 {0} 晶礦。";
+    public string AddConsumable => "已添加 {0} 消耗品。";
+    public string EnterSection => "進入 {0}-{1}。";
 }
 
 #endregion

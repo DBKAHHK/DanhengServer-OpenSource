@@ -35,19 +35,19 @@ public class ServerTextEN
 /// </summary>
 public class WordTextEN
 {
-    public string Rank => "Rank";
+    public string Rank => "Eidolon";
     public string Avatar => "Avatar";
     public string Material => "Material";
     public string Pet => "Pet";
     public string Relic => "Relic";
     public string Equipment => "Light Cone";
-    public string Talent => "Talent";
-    public string Banner => "Gacha";
-    public string VideoKeys => "CG Keys";
+    public string Talent => "Trace";
+    public string Banner => "Banner";
+    public string VideoKeys => "Video Keys";
     public string Activity => "Activity";
     public string Buff => "Blessing";
     public string Miracle => "Curio";
-    public string Unlock => "Luxury";
+    public string Unlock => "Luxury Item";
 
     // server info
     public string Config => "Config File";
@@ -67,8 +67,8 @@ public class WordTextEN
     public string Error => "Error";
     public string FloorInfo => "Floor File";
     public string FloorGroupInfo => "Floor Group File";
-    public string FloorMissingResult => "Teleportation and World Generation";
-    public string FloorGroupMissingResult => "Teleportation, Monster Battles, and World Generation";
+    public string FloorMissingResult => "Teleport & World Generation";
+    public string FloorGroupMissingResult => "Teleport, Monster Battle & World Generation";
     public string Mission => "Mission";
     public string MissionInfo => "Mission File";
     public string SubMission => "Sub Mission";
@@ -83,12 +83,12 @@ public class WordTextEN
     public string RogueChestMapInfo => "Simulated Universe Map File";
     public string ChessRogueRoom => "Simulated Universe DLC";
     public string ChessRogueRoomInfo => "Simulated Universe DLC File";
-    public string SummonUnit => "Summon Unit";
-    public string SummonUnitInfo => "Summon Unit File";
-    public string RogueTournRoom => "Divergent Rogue Room";
-    public string RogueTournRoomInfo => "Divergent Rogue Room File";
-    public string TypesOfRogue => "types of rogue";
-    public string RogueMagicRoom => "Unknowable Domain Room";
+    public string SummonUnit => "Skill Summon";
+    public string SummonUnitInfo => "Skill Summon File";
+    public string RogueTournRoom => "Divergent Universe";
+    public string RogueTournRoomInfo => "Divergent Universe Room File";
+    public string TypesOfRogue => "Types of Simulated Universe";
+    public string RogueMagicRoom => "Unknowable Domain";
     public string RogueMagicRoomInfo => "Unknowable Domain Room File";
     public string RogueDiceSurface => "Dice Surface Effect";
     public string RogueDiceSurfaceInfo => "Dice Surface Effect File";
@@ -130,18 +130,19 @@ public class CommandTextEN
     public AccountTextEN Account { get; } = new();
     public UnstuckTextEN Unstuck { get; } = new();
     public SetlevelTextEN Setlevel { get; } = new();
+    public GridTextEN Grid { get; } = new();
 }
 
 #endregion
 
-#region ServerTextEN
+#region ServerText
 
 /// <summary>
 ///     path: Server.Web
 /// </summary>
 public class WebTextEN
 {
-    public string Maintain => "The server is undergoing maintenance, please try again later.";
+    public string Maintain => "The server is under maintenance. Please try again later.";
 }
 
 /// <summary>
@@ -150,39 +151,29 @@ public class WebTextEN
 public class ServerInfoTextEN
 {
     public string Shutdown => "Shutting down...";
-    public string CancelKeyPressed => "Cancel key pressed (Ctrl + C), server shutting down...";
-    public string CurrentVersion => "Server supported versions: {0}";
+    public string CancelKeyPressed => "Cancel key (Ctrl + C) pressed. The server will shut down shortly...";
     public string StartingServer => "Starting DanhengServer...";
+    public string CurrentVersion => "Current server-supported version: {0}";
     public string LoadingItem => "Loading {0}...";
-    public string GeneratingItem => "Building {0}...";
+    public string GeneratingItem => "Generating {0}...";
     public string WaitingItem => "Waiting for process {0} to complete...";
-    public string RegisterItem => "Registered {0} {1}(s).";
+    public string RegisterItem => "Registered {0} {1}.";
     public string FailedToLoadItem => "Failed to load {0}.";
-
-    public string NewClientSecretKey =>
-        "Client Secret Key does not exist and a new Client Secret Key is being generated.";
-
+    public string NewClientSecretKey => "Client secret key does not exist. Generating a new client secret key.";
     public string FailedToInitializeItem => "Failed to initialize {0}.";
-    public string FailedToReadItem => "Failed to read {0}, file {1}";
+    public string FailedToReadItem => "Failed to read {0}. File {1}";
     public string GeneratedItem => "Generated {0}.";
     public string LoadedItem => "Loaded {0}.";
-    public string LoadedItems => "Loaded {0} {1}(s).";
-    public string ServerRunning => "{0} server listening on {1}";
+    public string LoadedItems => "Loaded {0} {1}.";
+    public string ServerRunning => "{0} server is listening on {1}";
+    public string ServerStarted => "Startup complete! Took {0}s, beating 99% of users. Type 'help' for command help."; // Localized the joke for English version
+    public string MissionEnabled => "Mission system enabled. This feature is still under development and may not work as expected. If you encounter any bugs, please report them to the developers.";
+    public string CacheLoadSkip => "Cache loading skipped.";
 
-    public string ServerStarted =>
-        "Startup complete! Took {0}s, better than 99% of users. Type 'help' for command help"; // This is a meme, consider localizing in English
-
-    public string MissionEnabled =>
-        "Mission system enabled. This feature is still in development and may not work as expected. Please report any bugs to the developers.";
-
-    public string CacheLoadSkip => "Skipped cache loading.";
-
-    public string ConfigMissing => "{0} is missing. Please check your resource folder: {1}, {2} may not be available.";
+    public string ConfigMissing => "{0} is missing. Please check your resource folder: {1}. {2} may not be available.";
     public string UnloadedItems => "Unloaded all {0}.";
-    public string SaveDatabase => "Database saved in {0}s";
-
-    public string WaitForAllDone =>
-        "You cannot enter the game yet. Please wait for all items to load before trying again";
+    public string SaveDatabase => "Saved database. Took {0}s";
+    public string WaitForAllDone => "Cannot enter the game yet. Please wait until all items are loaded before trying again.";
 
     public string UnhandledException => "An unhandled exception occurred: {0}";
 }
@@ -202,12 +193,12 @@ public class NoticeTextEN
 {
     public string PlayerNotFound => "Player not found!";
     public string InvalidArguments => "Invalid arguments!";
-    public string NoPermission => "You do not have permission to do this!";
-    public string CommandNotFound => "Command not found! Type '/help' to get help.";
+    public string NoPermission => "You do not have permission to do that!";
+    public string CommandNotFound => "Command not found! Type '/help' for help";
+    public string TargetOffline => "Target {0}({1}) is offline! Clearing current target";
+    public string TargetFound => "Target {0}({1}) found. Next command will target them by default.";
     public string TargetNotFound => "Target {0} not found!";
-    public string TargetOffline => "Target {0}({1}) is offline! Clear the target.";
-    public string TargetFound => "Online player {0}({1}) is found, the next command will target it by default.";
-    public string InternalError => "An error occurred while executing the command!";
+    public string InternalError => "An internal error occurred while processing the command!";
 }
 
 /// <summary>
@@ -216,14 +207,13 @@ public class NoticeTextEN
 public class HeroTextEN
 {
     public string Desc =>
-        "Switch the gender/type of the main character\nWhen switch the gender, 1 means male, 2 means female\nWhen switch the type(path), 8001 means Destruction, 8003 means Preservation, 8005 means Harmony.\nNotice: Switch gender will clear all the paths and talents of main character, this operation is irreversible!";
+        "Switch the main character's gender/form.\nWhen switching gender, genderId 1 represents male, 2 represents female.\nWhen switching form, 8001 represents Destruction Path, 8003 represents Preservation Path, 8005 represents Harmony Path.\nNote: Switching gender will clear all optional Paths and Traces, and this operation is irreversible!";
 
     public string Usage => "Usage: /hero gender [genderId]\n\nUsage: /hero type [typeId]";
-
     public string GenderNotSpecified => "Gender does not exist!";
-    public string HeroTypeNotSpecified => "Main character type does not exist!";
-    public string GenderChanged => "Gender has been changed!";
-    public string HeroTypeChanged => "Main character type has been changed!";
+    public string HeroTypeNotSpecified => "Hero type does not exist!";
+    public string GenderChanged => "Gender changed!";
+    public string HeroTypeChanged => "Hero type changed!";
 }
 
 /// <summary>
@@ -232,13 +222,13 @@ public class HeroTextEN
 public class UnlockAllTextEN
 {
     public string Desc =>
-        "Unlock the objects in given category\n" +
-        "Use '/unlockall mission' to finish all missions, and the target player will be kicked, after re-login, the player may be stuck in tutorial, please use with caution" +
-        "Use '/unlockall tutorial' to unlock all tutorials, and the target player will be kicked, used for being stuck in some pages\n" +
-        "Use '/unlockall rogue' to unlock all types of rogue, and the target player will be kicked, used with '/unlockall tutorial' to get better performance";
+        "Unlock all objects within the category.\n" +
+        "Use /unlockall mission to complete all missions. You will be kicked after use, and may get stuck in the tutorial upon re-login. Use with caution.\n" +
+        "Use /unlockall tutorial to unlock all tutorials. You will be kicked after use. Use for situations where the interface is stuck and you cannot act.\n" +
+        "Use /unlockall rogue to unlock all types of Simulated Universe. You will be kicked after use. Recommended to use with /unlockall tutorial for better results.";
 
-    public string Usage => "Usage：/unlockall [mission/tutorial/rogue]";
-    public string UnlockedAll => "Unlocked/Finished All {0}!";
+    public string Usage => "Usage: /unlockall [mission/tutorial/rogue]";
+    public string UnlockedAll => "Unlocked/completed all {0}!";
 }
 
 /// <summary>
@@ -246,18 +236,17 @@ public class UnlockAllTextEN
 /// </summary>
 public class AvatarTextEN
 {
-    public string Desc =>
-        "Set the properties of the avatars player owned\nWhen set talent level, set to X level means set all talent point to X level, if greater than the point max level, set to max level\nNotice: -1 means all owned avatars";
+    public string Desc => "Set properties for player's owned avatars.\nWhen setting trace level, setting to level X sets all trace nodes to level X. If greater than the node's max allowed level, sets to max level.\nNote: -1 means all owned avatars.";
 
     public string Usage =>
-        "Usage: /avatar talent [Avatar ID/-1] [Talent Level]\n\nUsage: /avatar get [Avatar ID]\n\nUsage: /avatar rank [Avatar ID/-1] [Rank]\n\nUsage: /avatar level [Avatar ID/-1] [Avatar Level]";
+        "Usage: /avatar talent [AvatarID/-1] [Trace Level]\n\nUsage: /avatar get [AvatarID]\n\nUsage: /avatar rank [AvatarID/-1] [Eidolon]\n\nUsage: /avatar level [AvatarID/-1] [Avatar Level]";
 
     public string InvalidLevel => "Invalid {0} level";
-    public string AllAvatarsLevelSet => "Set all characters' {0} level to {1}";
-    public string AvatarLevelSet => "Set character {0}'s {1} level to {2}";
-    public string AvatarNotFound => "Character does not exist!";
-    public string AvatarGet => "Obtained character {0}!";
-    public string AvatarFailedGet => "Failed to obtain character {0}!";
+    public string AllAvatarsLevelSet => "Set all avatars' {0} level to {1}";
+    public string AvatarLevelSet => "Set avatar {0}'s {1} level to {2}";
+    public string AvatarNotFound => "Avatar does not exist!";
+    public string AvatarGet => "Obtained avatar {0}!";
+    public string AvatarFailedGet => "Failed to obtain avatar {0}!";
 }
 
 /// <summary>
@@ -265,10 +254,10 @@ public class AvatarTextEN
 /// </summary>
 public class GiveTextEN
 {
-    public string Desc => "Give player items, item id can be avatar id, but cant set level, talent, rank";
-    public string Usage => "Usage: /give [item ID] l<level> x<amount> r<rank>";
+    public string Desc => "Give items to the player. Avatar IDs can be entered here, but traces, levels, and eidolons cannot be set.";
+    public string Usage => "Usage: /give <ItemID> l<Level> x<Count> r<Superimposition>";
     public string ItemNotFound => "Item not found!";
-    public string GiveItem => "Gave @{0} {1} item(s) {2}";
+    public string GiveItem => "Gave @{0} {1} of item {2}";
 }
 
 /// <summary>
@@ -277,12 +266,18 @@ public class GiveTextEN
 public class GiveAllTextEN
 {
     public string Desc =>
-        "Give the player all specified types of items\navatar means characters, equipment means light cones, relic means relic(artifact), unlock means chatBubbles, avatar(head icon), wallpaper";
+        "Give the player all items of the specified type.\navatar means characters, equipment means Light Cones, relic means relics, unlock means chat bubbles, phone wallpapers, avatars, train means Trailblazer's room contents, pet means pets, path means Paths for multi-Path characters.";
 
     public string Usage =>
-        "Usage: /giveall avatar r<rank> l<level>\n\nUsage: /giveall equipment r<rank> l<level> x<amount>\n\nUsage: /giveall relic l<level> x<amount>\n\nUsage: /giveall unlock";
+        "Usage: /giveall avatar r<Eidolon> l<Level>\n\n" +
+        "Usage: /giveall equipment r<Superimposition> l<Level> x<Count>\n\n" +
+        "Usage: /giveall relic l<Level> x<Count>\n\n" +
+        "Usage: /giveall unlock\n\n" +
+        "Usage: /giveall train\n\n" +
+        "Usage: /giveall pet\n\n" +
+        "Usage: /giveall path";
 
-    public string GiveAllItems => "Gave all {0}, each {1} items";
+    public string GiveAllItems => "Gave all {0}, {1} each";
 }
 
 /// <summary>
@@ -290,10 +285,10 @@ public class GiveAllTextEN
 /// </summary>
 public class LineupTextEN
 {
-    public string Desc => "Manage player's lineup\nTechnique Point can gain 2 each time";
-    public string Usage => "Usage: /lineup mp [amount]\n\nUsage: /lineup heal";
-    public string PlayerGainedMp => "Player gained {0} Technique Points";
-    public string HealedAllAvatars => "Successfully healed all characters in the current lineup";
+    public string Desc => "Manage the player's lineup.\nMaze points can only be obtained two at a time.";
+    public string Usage => "Usage: /lineup mp [Maze Point Amount]\n\nUsage: /lineup heal";
+    public string PlayerGainedMp => "Player gained {0} Maze Points";
+    public string HealedAllAvatars => "Successfully healed all avatars in the current lineup";
 }
 
 /// <summary>
@@ -302,11 +297,10 @@ public class LineupTextEN
 public class HelpTextEN
 {
     public string Desc => "Show help information";
-    public string Usage => "Usage: /help\n\nUsage: /help [cmd]";
+    public string Usage => "Usage: /help\n\nUsage: /help [command]";
     public string Commands => "Commands:";
-    public string CommandUsage => "Usage: ";
-    public string CommandPermission => "Need Permission: ";
-    public string CommandAlias => "Command Alias：";
+    public string CommandPermission => "Required Permission: ";
+    public string CommandAlias => "Command Aliases: ";
 }
 
 /// <summary>
@@ -314,9 +308,9 @@ public class HelpTextEN
 /// </summary>
 public class KickTextEN
 {
-    public string Desc => "Kick out player";
+    public string Desc => "Kick a player";
     public string Usage => "Usage: /kick";
-    public string PlayerKicked => "Player {0} has been kicked out!";
+    public string PlayerKicked => "Player {0} has been kicked!";
 }
 
 /// <summary>
@@ -325,27 +319,27 @@ public class KickTextEN
 public class MissionTextEN
 {
     public string Desc =>
-        "Manage player's missions\n" +
-        "Use 'pass' to finish all running mission, this command will cause severe lagging, please use '/mission finish' instead\n" +
-        "Use 'finish [SubMissionID]' to finish certain sub-mission，please find sub-mission id in handbook\n" +
-        "Use 'finishmain [MainMissionID]' to finish certain main mission，please find main mission id in handbook\n" +
-        "Use 'running <-all>' to get the tracking mission, adding '-all' shows all running mission and possible stuck missions, after use, a longer mission list may appear, please note that\n" +
-        "Use 'reaccept' to re-accept given main mission, please find main mission id in handbook";
+        "Manage player's missions.\n" +
+        "Use pass to complete all currently ongoing missions. This command can cause severe lag. Try to use /mission finish instead.\n" +
+        "Use finish [SubMissionID] to complete a specific sub mission. Please browse the handbook for SubMissionID.\n" +
+        "Use finishmain [MainMissionID] to complete a specific main mission. Please browse the handbook for MainMissionID.\n" +
+        "Use running <-all> to get tracked missions. Add '-all' to show all ongoing and potentially stuck missions. This may produce a long list, please review carefully.\n" +
+        "Use reaccept [MainMissionID] to restart a specific main mission. Please browse the handbook for MainMissionID.";
 
     public string Usage =>
-        "Usage: /mission pass\n\nUsage: /mission finish [Sub mission ID]\n\nUsage: /mission running\n\nUsage: /mission reaccept [main mission id]";
+        "Usage: /mission pass\n\nUsage: /mission finish [SubMissionID]\n\nUsage: /mission running <-all>\n\nUsage: /mission reaccept [MainMissionID]\n\nUsage: /mission finishmain [MainMissionID]";
 
-    public string AllMissionsFinished => "All tasks have been completed!";
-    public string AllRunningMissionsFinished => "A total of {0} ongoing tasks have been completed!";
-    public string MissionFinished => "Task {0} has been completed!";
-    public string InvalidMissionId => "Invalid task ID!";
-    public string NoRunningMissions => "No ongoing tasks!";
+    public string AllMissionsFinished => "All missions finished!";
+    public string AllRunningMissionsFinished => "Total {0} ongoing missions finished!";
+    public string MissionFinished => "Mission {0} finished!";
+    public string InvalidMissionId => "Invalid mission ID!";
+    public string NoRunningMissions => "No ongoing missions!";
 
-    public string RunningMissions => "Ongoing tasks:";
-    public string PossibleStuckMissions => "Possibly stuck tasks:";
-    public string MainMission => "Main task";
+    public string RunningMissions => "Ongoing Missions:";
+    public string PossibleStuckMissions => "Potentially Stuck Missions:";
+    public string MainMission => "Main Mission";
 
-    public string MissionReAccepted => "Reaccepted task {0}!";
+    public string MissionReAccepted => "Re-accepted mission {0}!";
 }
 
 /// <summary>
@@ -353,16 +347,15 @@ public class MissionTextEN
 /// </summary>
 public class RelicTextEN
 {
-    public string Desc =>
-        "Manage player's relics\nmain affix optional, sub affix optional, but at least one of them exists\nLevel limit: 1≤Level≤9999";
+    public string Desc => "Manage player's relics.\nMain stat is optional, sub stats are optional, but at least one must exist.\nLevel restriction: 1 ≤ Level ≤ 9999.";
 
     public string Usage =>
-        "Usage: /relic <relic ID> <main affix ID> <sub affix ID1:sub affix level> <sub affix ID2:sub affix level> <sub affix ID3:sub affix level> <sub affix ID4:sub affix level> l<level> x<amount>";
+        "Usage: /relic <RelicID> <MainAffixID> <SubAffixID1:SubAffixLevel> <SubAffixID2:SubAffixLevel> <SubAffixID3:SubAffixLevel> <SubAffixID4:SubAffixLevel> l<Level> x<Count>";
 
-    public string RelicNotFound => "Relic does not exist!";
+    public string RelicNotFound => "Relic not found!";
     public string InvalidMainAffixId => "Invalid main affix ID";
     public string InvalidSubAffixId => "Invalid sub affix ID";
-    public string RelicGiven => "Gave player @{0} {1} relic(s) {2}, main affix {3}";
+    public string RelicGiven => "Gave player @{0} {1} relic(s) {2}, main stat {3}";
 }
 
 /// <summary>
@@ -370,9 +363,9 @@ public class RelicTextEN
 /// </summary>
 public class ReloadTextEN
 {
-    public string Desc => "Reload specified configuration\nConfig Name: banner - Gacha Pool, activity";
+    public string Desc => "Reload specified configuration.\nConfiguration names: banner - banners, activity - activities";
     public string Usage => "Usage: /reload <config name>";
-    public string ConfigReloaded => "Configuration {0} has been reloaded!";
+    public string ConfigReloaded => "Configuration {0} reloaded!";
 }
 
 /// <summary>
@@ -380,20 +373,19 @@ public class ReloadTextEN
 /// </summary>
 public class RogueTextEN
 {
-    public string Desc =>
-        "Manage player's data in the simulated universe\n-1 means all blessings (all owned blessings)\nUse 'buff' to get blessings\nUse 'enhance' to enhance blessings";
+    public string Desc => "Manage player's Simulated Universe data.\n-1 means all blessings (owned blessings).\nUse buff to obtain blessings.\nUse enhance to enhance blessings.";
 
     public string Usage =>
-        "Usage: /rogue money [Universe Debris Amount]\n\nUsage: /rogue buff [Blessing Id/-1]\n\nUsage: /rogue miracle [Miracle ID]\n\nUsage: /rogue enhance [Blessing ID/-1]\n\nUsage: /rogue unstuck - Leave event";
+        "Usage: /rogue money [Cosmic Fragment amount]\n\nUsage: /rogue buff [BlessingID/-1]\n\nUsage: /rogue miracle [CurioID]\n\nUsage: /rogue enhance [BlessingID/-1]\n\nUsage: /rogue unstuck - Leave event";
 
-    public string PlayerGainedMoney => "Player gained {0} universe debris";
+    public string PlayerGainedMoney => "Player gained {0} Cosmic Fragments";
     public string PlayerGainedAllItems => "Player gained all {0}";
     public string PlayerGainedItem => "Player gained {0} {1}";
     public string PlayerEnhancedBuff => "Player enhanced blessing {0}";
     public string PlayerEnhancedAllBuffs => "Player enhanced all blessings";
-    public string PlayerUnstuck => "Player unstuck from event";
+    public string PlayerUnstuck => "Player left the event";
     public string NotFoundItem => "{0} not found!";
-    public string PlayerNotInRogue => "Player is not in the simulated universe!";
+    public string PlayerNotInRogue => "Player is not in Simulated Universe!";
 }
 
 /// <summary>
@@ -402,27 +394,27 @@ public class RogueTextEN
 public class SceneTextEN
 {
     public string Desc =>
-        "Manage player scenes\n" +
-        "Note: Most commands in this group are for debugging purposes. Please ensure you understand what you are doing before using any command.\n" +
-        "Use 'prop' to set the state of a prop. For a list of states, refer to Common/Enums/Scene/PropStateEnum.cs\n" +
-        "Use 'unlockall' to unlock all props in the scene (i.e., set all props that can be opened to the 'open' state). This command may cause the game to load to about 90%. Use '/scene reset <floorId>' to resolve this issue.\n" +
-        "Use 'change' to enter a specified scene. For EntryId, refer to Resources/MapEntrance.json\n" +
-        "Use 'reload' to reload the current scene and return to the initial position.\n" +
-        "Use 'reset' to reset the state of all props in the specified scene. For the current FloorId, use '/scene cur'.";
+        "Manage player's scene.\n" +
+        "Note: Most of these are for debugging. Before using commands, ensure you know what you are doing!\n" +
+        "Use prop to set prop state. Get state list from Common/Enums/Scene/PropStateEnum.cs.\n" +
+        "Use unlockall to unlock all props in the scene (set all props that can be set to open state to open). This command may cause the game to load stuck at about 90%. Use /scene reset <floorId> to solve.\n" +
+        "Use change to enter a specific scene. To get EntryId, visit Resources/MapEntrance.json.\n" +
+        "Use reload to reload the current scene and return to the starting position.\n" +
+        "Use reset to reset all prop states in a specified scene. To get current FloorId, use /scene cur.";
 
     public string Usage =>
-        "Usage: /scene prop [groupId] [propId] [state]\n\nUsage: /scene remove [entityId]\n\nUsage: /scene unlockall\n\nUsage: /scene change [entryId]\n\nUsage: /scene reload\n\nUsage: /scene reset <floorId>";
+        "Usage: /scene prop [GroupID] [PropID] [State]\n\nUsage: /scene remove [EntityID]\n\nUsage: /scene unlockall\n\nUsage: /scene change [entryId]\n\nUsage: /scene reload\n\nUsage: /scene reset <floorId>";
 
     public string LoadedGroups => "Loaded groups: {0}";
     public string PropStateChanged => "Prop: {0} state set to {1}";
     public string PropNotFound => "Prop not found!";
-    public string EntityRemoved => "Entity {0} has been removed";
+    public string EntityRemoved => "Entity {0} removed";
     public string EntityNotFound => "Entity not found!";
-    public string AllPropsUnlocked => "All props have been unlocked!";
+    public string AllPropsUnlocked => "All props unlocked!";
     public string SceneChanged => "Entered scene {0}";
-    public string SceneReloaded => "Scene has been reloaded!";
-    public string SceneReset => "The prop state in floor {0} has been reset!";
-    public string CurrentScene => "Current Scene Entry Id: {0}, Plane Id: {1}, Floor Id: {2}";
+    public string SceneReloaded => "Scene reloaded!";
+    public string SceneReset => "Reset all prop states in scene {0}!";
+    public string CurrentScene => "Current scene Entry Id: {0}, Plane Id: {1}, Floor Id: {2}";
 }
 
 /// <summary>
@@ -430,12 +422,10 @@ public class SceneTextEN
 /// </summary>
 public class MailTextEN
 {
-    public string Desc => "Manage player's mails";
-
-    public string Usage => "Usage: /mail [senderName] [templateId] [expiryDays] _TITLE [title] _CONTENT [content]";
-
-    public string MailSent => "Mail has been sent!";
-    public string MailSentWithAttachment => "Mail with attachments has been sent!";
+    public string Desc => "Manage player's mail";
+    public string Usage => "Usage: /mail [Sender Name] [TemplateID] [Expire Days] _TITLE [Title] _CONTENT [Content]";
+    public string MailSent => "Mail sent!";
+    public string MailSentWithAttachment => "Mail with attachment sent!";
 }
 
 /// <summary>
@@ -443,9 +433,9 @@ public class MailTextEN
 /// </summary>
 public class RaidTextEN
 {
-    public string Desc => "Manage player's temporary scene";
-    public string Usage => "Usage: /raid leave - leave temporary scene";
-    public string Leaved => "Leaved temporary scene!";
+    public string Desc => "Manage player's mission temporary scene";
+    public string Usage => "Usage: /raid leave - Leave temporary scene";
+    public string Leaved => "Left temporary scene!";
 }
 
 /// <summary>
@@ -453,14 +443,14 @@ public class RaidTextEN
 /// </summary>
 public class AccountTextEN
 {
-    public string Desc => "Create an account\nNote: This command is untested, use with caution!";
-    public string Usage => "Usage: /account create <username>";
-    public string InvalidUid => "Invalid UID argument!";
-    public string CreateError => "An internal error occurred {0}";
+    public string Desc => "Create an account.\nNote: This command is untested. Use with caution!";
+    public string Usage => "Usage: /account create [Username]";
+    public string InvalidUid => "Invalid UID parameter!";
+    public string CreateError => "Internal error occurred {0} ";
     public string CreateSuccess => "New account {0} created successfully!";
     public string DuplicateAccount => "Account {0} already exists!";
     public string DuplicateUID => "UID {0} already exists!";
-    public string DataError => "Failed to retrieve new account! {0}!";
+    public string DataError => "Failed to get new account data! {0}!";
 }
 
 /// <summary>
@@ -468,11 +458,11 @@ public class AccountTextEN
 /// </summary>
 public class UnstuckTextEN
 {
-    public string Desc => "Teleport player back to default location";
-    public string Usage => "Usage: /unstuck <UID>";
-    public string UnstuckSuccess => "Successfully teleported the player back to default location";
-    public string UidNotExist => "The UID does not exist!";
-    public string PlayerIsOnline => "The player is online!";
+    public string Desc => "Teleport the player back to the default scene";
+    public string Usage => "Usage: /unstuck [UID]";
+    public string UnstuckSuccess => "Successfully teleported the player back to the default scene";
+    public string UidNotExist => "This UID does not exist!";
+    public string PlayerIsOnline => "The player is currently online!";
 }
 
 /// <summary>
@@ -481,8 +471,29 @@ public class UnstuckTextEN
 public class SetlevelTextEN
 {
     public string Desc => "Set player level";
-    public string Usage => "Usage: /setlevel <Level>";
-    public string SetlevelSuccess => "Successfully set player level!";
+    public string Usage => "Usage: /setlevel [Level]";
+    public string SetlevelSuccess => "Level set successfully!";
+}
+
+/// <summary>
+///     path: Game.Command.Grid
+/// </summary>
+public class GridTextEN
+{
+    public string Desc => "Manage Aetherium War content. Note: This part is not yet fully developed. Please report any issues promptly.\nThis command may not check if IDs exist. If it has no effect, please check if parameters are correct.";
+    public string Usage => "Usage: /grid gold [Gold Amount]\n\n" +
+                           "Usage: /grid role [RoleID] [Role Star]\n\n" +
+                           "Usage: /grid equip [EquipmentID]\n\n" +
+                           "Usage: /grid consumable [ConsumableID]\n\n" +
+                           "Usage: /grid orb [OrbID]";
+    public string NotInGame => "Not in Aetherium War!";
+    public string InvalidRole => "Role ID or Star does not exist!";
+    public string AddedRole => "Role added.";
+    public string UpdateGold => "Gained {0} Gold.";
+    public string AddEquipment => "Added {0} equipment.";
+    public string AddOrb => "Added {0} orb.";
+    public string AddConsumable => "Added {0} consumable.";
+    public string EnterSection => "Entered {0}-{1}.";
 }
 
 #endregion

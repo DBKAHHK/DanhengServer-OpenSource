@@ -444,7 +444,9 @@ public class GridFightRoleComponent(GridFightInstance inst) : BaseGridFightCompo
             var role = Data.Roles.FirstOrDefault(x => x.UniqueId == pos.UniqueId);
             if (role == null) continue;
 
-            if (Data.Roles.Where(x => x.UniqueId != pos.UniqueId && x.Pos <= PrepareAreaPos).Any(x => x.RoleId == role.RoleId))
+            if (Data.Roles.Where(x => x.UniqueId != pos.UniqueId && x.Pos <= PrepareAreaPos).Any(x =>
+                    GameData.GridFightRoleBasicInfoData.GetValueOrDefault(x.RoleId)?.AvatarID ==
+                    GameData.GridFightRoleBasicInfoData.GetValueOrDefault(role.RoleId)?.AvatarID)) 
                 return Retcode.RetGridFightSameRoleInBattle;
         }  // only check role
 

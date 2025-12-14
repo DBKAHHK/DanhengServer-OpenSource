@@ -114,6 +114,26 @@ public static class HandbookGenerator
         builder.AppendLine();
         GenerateRogueMiracleDisplay(builder, textMap, fallbackTextMap, lang == config.ServerOption.Language);
 
+        builder.AppendLine();
+        builder.AppendLine("#CurrencyWarRole");
+        builder.AppendLine();
+        GenerateCurrencyWarRole(builder, textMap, fallbackTextMap);
+
+        builder.AppendLine();
+        builder.AppendLine("#CurrencyWarEquipment");
+        builder.AppendLine();
+        GenerateCurrencyWarEquipment(builder, textMap, fallbackTextMap);
+
+        builder.AppendLine();
+        builder.AppendLine("#CurrencyWarConsumable");
+        builder.AppendLine();
+        GenerateCurrencyWarConsumable(builder, textMap, fallbackTextMap);
+
+        builder.AppendLine();
+        builder.AppendLine("#CurrencyWarOrb");
+        builder.AppendLine();
+        GenerateCurrencyWarOrb(builder, textMap, fallbackTextMap);
+
 #if DEBUG
         builder.AppendLine();
         builder.AppendLine("#RogueDiceSurface");
@@ -228,6 +248,56 @@ public static class HandbookGenerator
             builder.AppendLine(display.MiracleID + ": " + name);
 
             if (setName && name != $"[{display.MiracleName.Hash}]") display.Name = name;
+        }
+    }
+
+    public static void GenerateCurrencyWarRole(StringBuilder builder, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback)
+    {
+        foreach (var display in GameData.GridFightRoleBasicInfoData.Values)
+        {
+            // get from avatar id
+            if (!GameData.AvatarConfigData.TryGetValue((int)display.AvatarID, out var avatar)) continue;
+            var name = GetNameFromTextMap(avatar.AvatarName.Hash, map, fallback);
+
+            builder.AppendLine(display.ID + ": " + name);
+        }
+    }
+
+    public static void GenerateCurrencyWarEquipment(StringBuilder builder, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback)
+    {
+        foreach (var display in GameData.GridFightEquipmentData.Values)
+        {
+            // get from items
+            if (!GameData.GridFightItemsData.TryGetValue(display.ID, out var item)) continue;
+            var name = GetNameFromTextMap(item.ItemName.Hash, map, fallback);
+
+            builder.AppendLine(display.ID + ": " + name);
+        }
+    }
+
+    public static void GenerateCurrencyWarConsumable(StringBuilder builder, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback)
+    {
+        foreach (var display in GameData.GridFightConsumablesData.Values)
+        {
+            // get from items
+            if (!GameData.GridFightItemsData.TryGetValue(display.ID, out var item)) continue;
+            var name = GetNameFromTextMap(item.ItemName.Hash, map, fallback);
+
+            builder.AppendLine(display.ID + ": " + name);
+        }
+    }
+
+    public static void GenerateCurrencyWarOrb(StringBuilder builder, Dictionary<BigInteger, string> map,
+        Dictionary<BigInteger, string> fallback)
+    {
+        foreach (var display in GameData.GridFightOrbData.Values)
+        {
+            var name = GetNameFromTextMap(display.OrbName.Hash, map, fallback);
+
+            builder.AppendLine(display.OrbID + ": " + name);
         }
     }
 
