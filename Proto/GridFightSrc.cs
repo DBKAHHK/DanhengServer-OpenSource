@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightSrcReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJHcmlkRmlnaHRTcmMucHJvdG8qswcKDEdyaWRGaWdodFNyYxIVChFrR3Jp",
+            "ChJHcmlkRmlnaHRTcmMucHJvdG8qtQcKDEdyaWRGaWdodFNyYxIVChFrR3Jp",
             "ZEZpZ2h0U3JjTm9uZRAAEhcKE2tHcmlkRmlnaHRTcmNVc2VPcmIQARIkCiBr",
             "R3JpZEZpZ2h0U3JjSW5pdGlhbFN1cHBseVNlbGVjdBACEiEKHWtHcmlkRmln",
             "aHRTcmNTZWxlY3RQb3J0YWxCdWZmEAMSHgoaa0dyaWRGaWdodFNyY1NlbGVj",
@@ -43,10 +43,10 @@ namespace EggLink.DanhengServer.Proto {
             "Eh4KGmtHcmlkRmlnaHRTcmNFcXVpcE1vZGlmaWVyEBcSJwoja0dyaWRGaWdo",
             "dFNyY1ByZUluaXRpYWxTdXBwbHlTZWxlY3QQGBIcChhrR3JpZEZpZ2h0U3Jj",
             "UmVjeWNsZVJvbGUQGRIeChprR3JpZEZpZ2h0U3JjVXNlQ29uc3VtYWJsZRAa",
-            "EhwKGGtHcmlkRmlnaHRTcmNETk5BQU1OQ0NORxAbEhcKE2tHcmlkRmlnaHRT",
-            "cmNCdXlFeHAQHBIcChhrR3JpZEZpZ2h0U3JjQkdCRkZIT01MT0sQHRIcChhr",
-            "R3JpZEZpZ2h0U3JjT1BDSklIUENGUEEQHkIeqgIbRWdnTGluay5EYW5oZW5n",
-            "U2VydmVyLlByb3RvYgZwcm90bzM="));
+            "Eh4KGmtHcmlkRmlnaHRTcmNFcXVpcG1lbnRGdW5jEBsSFwoTa0dyaWRGaWdo",
+            "dFNyY0J1eUV4cBAcEhwKGGtHcmlkRmlnaHRTcmNCR0JGRkhPTUxPSxAdEhwK",
+            "GGtHcmlkRmlnaHRTcmNPUENKSUhQQ0ZQQRAeQh6qAhtFZ2dMaW5rLkRhbmhl",
+            "bmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::EggLink.DanhengServer.Proto.GridFightSrc), }, null, null));
@@ -83,7 +83,7 @@ namespace EggLink.DanhengServer.Proto {
     [pbr::OriginalName("kGridFightSrcPreInitialSupplySelect")] KGridFightSrcPreInitialSupplySelect = 24,
     [pbr::OriginalName("kGridFightSrcRecycleRole")] KGridFightSrcRecycleRole = 25,
     [pbr::OriginalName("kGridFightSrcUseConsumable")] KGridFightSrcUseConsumable = 26,
-    [pbr::OriginalName("kGridFightSrcDNNAAMNCCNG")] KGridFightSrcDnnaamnccng = 27,
+    [pbr::OriginalName("kGridFightSrcEquipmentFunc")] KGridFightSrcEquipmentFunc = 27,
     [pbr::OriginalName("kGridFightSrcBuyExp")] KGridFightSrcBuyExp = 28,
     [pbr::OriginalName("kGridFightSrcBGBFFHOMLOK")] KGridFightSrcBgbffhomlok = 29,
     [pbr::OriginalName("kGridFightSrcOPCJIHPCFPA")] KGridFightSrcOpcjihpcfpa = 30,

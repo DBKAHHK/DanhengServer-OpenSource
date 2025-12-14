@@ -24,11 +24,11 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightConsumableTargetInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiNHcmlkRmlnaHRDb25zdW1hYmxlVGFyZ2V0SW5mby5wcm90bxohR3JpZEZp",
-            "Z2h0Q29weVR5cGVUYXJnZXRJbmZvLnByb3RvGiNHcmlkRmlnaHRSZW1vdmVU",
-            "eXBlVGFyZ2V0SW5mby5wcm90bxokR3JpZEZpZ2h0VXBncmFkZVR5cGVUYXJn",
-            "ZXRJbmZvLnByb3RvGi9HcmlkRmlnaHRHYWluUmVjb21tZW5kRXF1aXBUeXBl",
-            "VGFyZ2V0SW5mby5wcm90bxohR3JpZEZpZ2h0Um9sbFR5cGVUYXJnZXRJbmZv",
+            "CiNHcmlkRmlnaHRDb25zdW1hYmxlVGFyZ2V0SW5mby5wcm90bxojR3JpZEZp",
+            "Z2h0UmVtb3ZlVHlwZVRhcmdldEluZm8ucHJvdG8aIUdyaWRGaWdodFJvbGxU",
+            "eXBlVGFyZ2V0SW5mby5wcm90bxovR3JpZEZpZ2h0R2FpblJlY29tbWVuZEVx",
+            "dWlwVHlwZVRhcmdldEluZm8ucHJvdG8aIUdyaWRGaWdodENvcHlUeXBlVGFy",
+            "Z2V0SW5mby5wcm90bxokR3JpZEZpZ2h0VXBncmFkZVR5cGVUYXJnZXRJbmZv",
             "LnByb3RvIpYDCh1HcmlkRmlnaHRDb25zdW1hYmxlVGFyZ2V0SW5mbxJCChdy",
             "ZW1vdmVfdHlwZV90YXJnZXRfaW5mbxjjDCABKAsyHi5HcmlkRmlnaHRSZW1v",
             "dmVUeXBlVGFyZ2V0SW5mb0gAEj4KFXJvbGxfdHlwZV90YXJnZXRfaW5mbxiC",
@@ -41,7 +41,7 @@ namespace EggLink.DanhengServer.Proto {
             "TElJQlBKSExBQkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightCopyTypeTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRemoveTypeTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightUpgradeTypeTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGainRecommendEquipTypeTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRollTypeTargetInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightRemoveTypeTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRollTypeTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGainRecommendEquipTypeTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightCopyTypeTargetInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightUpgradeTypeTargetInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfo), global::EggLink.DanhengServer.Proto.GridFightConsumableTargetInfo.Parser, new[]{ "RemoveTypeTargetInfo", "RollTypeTargetInfo", "UpgradeTypeTargetInfo", "CopyTypeTargetInfo", "GainRecommendEquipTypeTargetInfo" }, new[]{ "NLIIBPJHLAB" }, null, null, null)
           }));

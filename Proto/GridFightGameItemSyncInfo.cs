@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightGameItemSyncInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9HcmlkRmlnaHRHYW1lSXRlbVN5bmNJbmZvLnByb3RvGiNHcmlkRmlnaHRD",
-            "b25zdW1hYmxlVXBkYXRlSW5mby5wcm90bxocR3JpZEZpZ2h0RXF1aXBtZW50",
-            "SW5mby5wcm90bxobR3JpZEdhbWVGb3JnZUl0ZW1JbmZvLnByb3RvGh1Hcmlk",
-            "RmlnaHRDb25zdW1hYmxlSW5mby5wcm90byKbAgoZR3JpZEZpZ2h0R2FtZUl0",
+            "Ch9HcmlkRmlnaHRHYW1lSXRlbVN5bmNJbmZvLnByb3RvGhxHcmlkRmlnaHRF",
+            "cXVpcG1lbnRJbmZvLnByb3RvGhtHcmlkR2FtZUZvcmdlSXRlbUluZm8ucHJv",
+            "dG8aHUdyaWRGaWdodENvbnN1bWFibGVJbmZvLnByb3RvGiNHcmlkRmlnaHRD",
+            "b25zdW1hYmxlVXBkYXRlSW5mby5wcm90byKbAgoZR3JpZEZpZ2h0R2FtZUl0",
             "ZW1TeW5jSW5mbxI8ChpncmlkX2ZpZ2h0X2NvbnN1bWFibGVfbGlzdBgFIAMo",
             "CzIYLkdyaWRGaWdodENvbnN1bWFibGVJbmZvEjoKGWdyaWRfZmlnaHRfZXF1",
             "aXBtZW50X2xpc3QYDyADKAsyFy5HcmlkRmlnaHRFcXVpcG1lbnRJbmZvEkkK",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "ZV9pdGVtX2xpc3QYCCADKAsyFi5HcmlkR2FtZUZvcmdlSXRlbUluZm9CHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightConsumableUpdateInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameForgeItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightConsumableInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightEquipmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridGameForgeItemInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightConsumableInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightConsumableUpdateInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfo), global::EggLink.DanhengServer.Proto.GridFightGameItemSyncInfo.Parser, new[]{ "GridFightConsumableList", "GridFightEquipmentList", "UpdateGridFightConsumableList", "GridGameForgeItemList" }, null, null, null, null)
           }));

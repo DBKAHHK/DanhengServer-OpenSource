@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static FightGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNGaWdodEdhbWVJbmZvLnByb3RvGhFNQU9HRkRLRENLTS5wcm90bxoYTWFy",
-            "YmxlR2FtZVN5bmNJbmZvLnByb3RvGhlGaWdodE1hcmJsZVNlYWxJbmZvLnBy",
-            "b3RvGhRNYXJibGVHYW1lSW5mby5wcm90bxoaTWFyYmxlR2FtZUZpbmlzaElu",
+            "ChNGaWdodEdhbWVJbmZvLnByb3RvGhlGaWdodE1hcmJsZVNlYWxJbmZvLnBy",
+            "b3RvGhRNYXJibGVHYW1lSW5mby5wcm90bxoYTWFyYmxlR2FtZVN5bmNJbmZv",
+            "LnByb3RvGhFNQU9HRkRLRENLTS5wcm90bxoaTWFyYmxlR2FtZUZpbmlzaElu",
             "Zm8ucHJvdG8isQIKDUZpZ2h0R2FtZUluZm8SLAoQbWFyYmxlX2dhbWVfaW5m",
             "bxiMByABKAsyDy5NYXJibGVHYW1lSW5mb0gAEjUKFW1hcmJsZV9nYW1lX3N5",
             "bmNfaW5mbxjqASABKAsyEy5NYXJibGVHYW1lU3luY0luZm9IABIzChFyb2d1",
@@ -36,7 +36,7 @@ namespace EggLink.DanhengServer.Proto {
             "Zm9IABIZChFnYW1lX21lc3NhZ2VfdHlwZRgGIAEoDUINCgtHRklQSEpCTEdC",
             "TkIeqgIbRWdnTGluay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MAOGFDKDCKMReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.FightMarbleSealInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameFinishInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.FightMarbleSealInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameSyncInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.MAOGFDKDCKMReflection.Descriptor, global::EggLink.DanhengServer.Proto.MarbleGameFinishInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.FightGameInfo), global::EggLink.DanhengServer.Proto.FightGameInfo.Parser, new[]{ "MarbleGameInfo", "MarbleGameSyncInfo", "RogueFinishInfo", "MEJDMJIKIMO", "FightMarbleSealInfo", "GameMessageType" }, new[]{ "GFIPHJBLGBN" }, null, null, null)
           }));

@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static BattleGridFightTraitEffectInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiRCYXR0bGVHcmlkRmlnaHRUcmFpdEVmZmVjdEluZm8ucHJvdG8aI0dyaWRG",
-            "aWdodFRyYWl0RWZmZWN0TGV2ZWxJbmZvLnByb3RvGhFMTUJEQURPUENQRy5w",
-            "cm90bxomQmF0dGxlR3JpZEZpZ2h0VHJhaXRDb3JlUm9sZUluZm8ucHJvdG8i",
+            "CiRCYXR0bGVHcmlkRmlnaHRUcmFpdEVmZmVjdEluZm8ucHJvdG8aJkJhdHRs",
+            "ZUdyaWRGaWdodFRyYWl0Q29yZVJvbGVJbmZvLnByb3RvGiNHcmlkRmlnaHRU",
+            "cmFpdEVmZmVjdExldmVsSW5mby5wcm90bxoRTE1CREFET1BDUEcucHJvdG8i",
             "6AEKHkJhdHRsZUdyaWRGaWdodFRyYWl0RWZmZWN0SW5mbxI8Cg90cmFpdF9j",
             "b3JlX3JvbGUYZSABKAsyIS5CYXR0bGVHcmlkRmlnaHRUcmFpdENvcmVSb2xl",
             "SW5mb0gAEiMKC0lJQkJHSkZDSERPGGYgASgLMgwuTE1CREFET1BDUEdIABJB",
@@ -35,7 +35,7 @@ namespace EggLink.DanhengServer.Proto {
             "TkdFS05DR0FGQh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LMBDADOPCPGReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightTraitCoreRoleInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleGridFightTraitCoreRoleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitEffectLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.LMBDADOPCPGReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo), global::EggLink.DanhengServer.Proto.BattleGridFightTraitEffectInfo.Parser, new[]{ "TraitCoreRole", "IIBBGJFCHDO", "TraitEffectLevelInfo", "EffectId" }, new[]{ "GMNGEKNCGAF" }, null, null, null)
           }));

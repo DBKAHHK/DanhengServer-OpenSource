@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightLockInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHcmlkRmlnaHRMb2NrSW5mby5wcm90bxoZR3JpZEZpZ2h0TG9ja1JlYXNv",
-            "bi5wcm90bxoXR3JpZEZpZ2h0TG9ja1R5cGUucHJvdG8iZQoRR3JpZEZpZ2h0",
+            "ChdHcmlkRmlnaHRMb2NrSW5mby5wcm90bxoXR3JpZEZpZ2h0TG9ja1R5cGUu",
+            "cHJvdG8aGUdyaWRGaWdodExvY2tSZWFzb24ucHJvdG8iZQoRR3JpZEZpZ2h0",
             "TG9ja0luZm8SKQoLbG9ja19yZWFzb24YBiABKA4yFC5HcmlkRmlnaHRMb2Nr",
             "UmVhc29uEiUKCWxvY2tfdHlwZRgLIAEoDjISLkdyaWRGaWdodExvY2tUeXBl",
             "Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightLockReasonReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightLockTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLockReasonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightLockInfo), global::EggLink.DanhengServer.Proto.GridFightLockInfo.Parser, new[]{ "LockReason", "LockType" }, null, null, null, null)
           }));

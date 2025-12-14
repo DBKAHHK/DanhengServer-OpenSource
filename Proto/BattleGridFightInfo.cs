@@ -24,12 +24,12 @@ namespace EggLink.DanhengServer.Proto {
     static BattleGridFightInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlCYXR0bGVHcmlkRmlnaHRJbmZvLnByb3RvGh5CYXR0bGVHcmlkRmlnaHRU",
-            "cmFpdEluZm8ucHJvdG8aHkJhdHRsZUdyaWRGaWdodFN0YWdlSW5mby5wcm90",
-            "bxoSQmF0dGxlQXZhdGFyLnByb3RvGiNCYXR0bGVHcmlkRmlnaHRQb3J0YWxC",
-            "dWZmSW5mby5wcm90bxocQmF0dGxlR3JpZEZpZ2h0TnBjSW5mby5wcm90bxog",
-            "QmF0dGxlR3JpZEZpZ2h0QXVnbWVudEluZm8ucHJvdG8aHUJhdHRsZUdyaWRG",
-            "aWdodFJvbGVJbmZvLnByb3RvIvQEChNCYXR0bGVHcmlkRmlnaHRJbmZvEi0K",
+            "ChlCYXR0bGVHcmlkRmlnaHRJbmZvLnByb3RvGh1CYXR0bGVHcmlkRmlnaHRS",
+            "b2xlSW5mby5wcm90bxogQmF0dGxlR3JpZEZpZ2h0QXVnbWVudEluZm8ucHJv",
+            "dG8aHEJhdHRsZUdyaWRGaWdodE5wY0luZm8ucHJvdG8aHkJhdHRsZUdyaWRG",
+            "aWdodFRyYWl0SW5mby5wcm90bxoSQmF0dGxlQXZhdGFyLnByb3RvGh5CYXR0",
+            "bGVHcmlkRmlnaHRTdGFnZUluZm8ucHJvdG8aI0JhdHRsZUdyaWRGaWdodFBv",
+            "cnRhbEJ1ZmZJbmZvLnByb3RvIvQEChNCYXR0bGVHcmlkRmlnaHRJbmZvEi0K",
             "FmdyaWRfZmlnaHRfYXZhdGFyX2xpc3QYASADKAsyDS5CYXR0bGVBdmF0YXIS",
             "FgoOYmF0dGxlX3dhdmVfaWQYAiABKA0SHAoUZ3JpZF9maWdodF9saW5ldXBf",
             "aHAYAyABKA0SHAoUZ3JpZF9maWdodF9jdXJfbGV2ZWwYBCABKA0SOAoVZ3Jp",
@@ -46,7 +46,7 @@ namespace EggLink.DanhengServer.Proto {
             "dGxlR3JpZEZpZ2h0TnBjSW5mb0IeqgIbRWdnTGluay5EYW5oZW5nU2VydmVy",
             "LlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleGridFightTraitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightStageInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightPortalBuffInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightNpcInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightAugmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightRoleInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.BattleGridFightRoleInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightAugmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightNpcInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightTraitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleAvatarReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightStageInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.BattleGridFightPortalBuffInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.BattleGridFightInfo), global::EggLink.DanhengServer.Proto.BattleGridFightInfo.Parser, new[]{ "GridFightAvatarList", "BattleWaveId", "GridFightLineupHp", "GridFightCurLevel", "GridFightTraitInfo", "GridGameRoleList", "PenaltyBonusRuleId", "GridFightAugmentInfo", "GridFightStageInfo", "BattleDifficulty", "Season", "GridFightPortalBuffList", "IsOverlock", "GameDivisionId", "GridGameNpcList" }, null, null, null, null)
           }));

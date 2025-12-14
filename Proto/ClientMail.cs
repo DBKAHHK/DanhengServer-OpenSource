@@ -24,7 +24,7 @@ namespace EggLink.DanhengServer.Proto {
     static ClientMailReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBDbGllbnRNYWlsLnByb3RvGg5JdGVtTGlzdC5wcm90bxoOTWFpbFR5cGUu",
+            "ChBDbGllbnRNYWlsLnByb3RvGg5NYWlsVHlwZS5wcm90bxoOSXRlbUxpc3Qu",
             "cHJvdG8i3AEKCkNsaWVudE1haWwSEgoKVGVtcGxhdGVJZBgBIAEoDRIPCgdD",
             "b250ZW50GAkgASgJEhsKCE1haWxUeXBlGAMgASgOMgkuTWFpbFR5cGUSEgoK",
             "RXhwaXJlVGltZRgFIAEoAxIOCgZTZW5kZXIYCyABKAkSDAoEVGltZRgPIAEo",
@@ -32,7 +32,7 @@ namespace EggLink.DanhengServer.Proto {
             "EAoIUGFyYUxpc3QYDCADKAkSHQoKQXR0YWNobWVudBgGIAEoCzIJLkl0ZW1M",
             "aXN0Qh6qAhtFZ2dMaW5rLkRhbmhlbmdTZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.MailTypeReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.MailTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.ClientMail), global::EggLink.DanhengServer.Proto.ClientMail.Parser, new[]{ "TemplateId", "Content", "MailType", "ExpireTime", "Sender", "Time", "Title", "IsRead", "Id", "ParaList", "Attachment" }, null, null, null, null)
           }));

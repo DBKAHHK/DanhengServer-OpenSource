@@ -24,10 +24,10 @@ namespace EggLink.DanhengServer.Proto {
     static NIBJAMFMEFDReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChFOSUJKQU1GTUVGRC5wcm90bxoRTFBCQU1PS0tKQ00ucHJvdG8aEUxOS01L",
-            "TkJQSUpILnByb3RvGhFMTUtBQUVGUEZGTy5wcm90bxoRQUlERkJCSUFQRVAu",
-            "cHJvdG8aEUJNUExGSktFT0xGLnByb3RvGhFMTU1FQk1CR0xETi5wcm90bxoR",
-            "Tk1HSEZPTEtGQUoucHJvdG8ihAQKC05JQkpBTUZNRUZEEiMKC01FQ0xMQ0RB",
+            "ChFOSUJKQU1GTUVGRC5wcm90bxoRTE1LQUFFRlBGRk8ucHJvdG8aEUxQQkFN",
+            "T0tLSkNNLnByb3RvGhFOTUdIRk9MS0ZBSi5wcm90bxoRQUlERkJCSUFQRVAu",
+            "cHJvdG8aEUJNUExGSktFT0xGLnByb3RvGhFMTktNS05CUElKSC5wcm90bxoR",
+            "TE1NRUJNQkdMRE4ucHJvdG8ihAQKC05JQkpBTUZNRUZEEiMKC01FQ0xMQ0RB",
             "Qk5PGAwgASgLMgwuTE1LQUFFRlBGRk9IABIjCgtGRklQS01IQ0tIShgEIAEo",
             "CzIMLkxNS0FBRUZQRkZPSAASIwoLTkZCQ0dLTk9QREEYAiABKAsyDC5BSURG",
             "QkJJQVBFUEgAEiMKC0RBQ0hBTkhQUEJHGAogASgLMgwuQUlERkJCSUFQRVBI",
@@ -41,7 +41,7 @@ namespace EggLink.DanhengServer.Proto {
             "SkxQSBgBIAEoCzIMLk5NR0hGT0xLRkFKSABCDQoLSEhHREdNQUxBRkxCHqoC",
             "G0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LPBAMOKKJCMReflection.Descriptor, global::EggLink.DanhengServer.Proto.LNKMKNBPIJHReflection.Descriptor, global::EggLink.DanhengServer.Proto.LMKAAEFPFFOReflection.Descriptor, global::EggLink.DanhengServer.Proto.AIDFBBIAPEPReflection.Descriptor, global::EggLink.DanhengServer.Proto.BMPLFJKEOLFReflection.Descriptor, global::EggLink.DanhengServer.Proto.LMMEBMBGLDNReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMGHFOLKFAJReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LMKAAEFPFFOReflection.Descriptor, global::EggLink.DanhengServer.Proto.LPBAMOKKJCMReflection.Descriptor, global::EggLink.DanhengServer.Proto.NMGHFOLKFAJReflection.Descriptor, global::EggLink.DanhengServer.Proto.AIDFBBIAPEPReflection.Descriptor, global::EggLink.DanhengServer.Proto.BMPLFJKEOLFReflection.Descriptor, global::EggLink.DanhengServer.Proto.LNKMKNBPIJHReflection.Descriptor, global::EggLink.DanhengServer.Proto.LMMEBMBGLDNReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.NIBJAMFMEFD), global::EggLink.DanhengServer.Proto.NIBJAMFMEFD.Parser, new[]{ "MECLLCDABNO", "FFIPKMHCKHJ", "NFBCGKNOPDA", "DACHANHPPBG", "GetBuffList", "RemoveBuffList", "DMDPCOOAFJK", "HHIBFNAGKFF", "NKCMGBCPJGG", "HANOGACJPKB", "OMFECIMLADC", "NGONCCBLAOL", "FJGHNLNJLPH" }, new[]{ "HHGDGMALAFL" }, null, null, null)
           }));

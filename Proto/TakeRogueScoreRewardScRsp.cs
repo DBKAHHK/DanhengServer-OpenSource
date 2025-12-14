@@ -24,14 +24,14 @@ namespace EggLink.DanhengServer.Proto {
     static TakeRogueScoreRewardScRspReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch9UYWtlUm9ndWVTY29yZVJld2FyZFNjUnNwLnByb3RvGg5JdGVtTGlzdC5w",
-            "cm90bxoaUm9ndWVTY29yZVJld2FyZEluZm8ucHJvdG8ikAEKGVRha2VSb2d1",
+            "Ch9UYWtlUm9ndWVTY29yZVJld2FyZFNjUnNwLnByb3RvGhpSb2d1ZVNjb3Jl",
+            "UmV3YXJkSW5mby5wcm90bxoOSXRlbUxpc3QucHJvdG8ikAEKGVRha2VSb2d1",
             "ZVNjb3JlUmV3YXJkU2NSc3ASDwoHcmV0Y29kZRgIIAEoDRI2Chdyb2d1ZV9z",
             "Y29yZV9yZXdhcmRfaW5mbxgMIAEoCzIVLlJvZ3VlU2NvcmVSZXdhcmRJbmZv",
             "Eg8KB3Bvb2xfaWQYByABKA0SGQoGcmV3YXJkGAYgASgLMgkuSXRlbUxpc3RC",
             "HqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, global::EggLink.DanhengServer.Proto.RogueScoreRewardInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.RogueScoreRewardInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.ItemListReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.TakeRogueScoreRewardScRsp), global::EggLink.DanhengServer.Proto.TakeRogueScoreRewardScRsp.Parser, new[]{ "Retcode", "RogueScoreRewardInfo", "PoolId", "Reward" }, null, null, null, null)
           }));

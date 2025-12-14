@@ -25,19 +25,19 @@ namespace EggLink.DanhengServer.Proto {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CidHcmlkRmlnaHRIYW5kbGVQZW5kaW5nQWN0aW9uQ3NSZXEucHJvdG8aJkdy",
-            "aWRGaWdodEVsaXRlQnJhbmNoQWN0aW9uUmVzdWx0LnByb3RvGidHcmlkRmln",
-            "aHRVcGdyYWRlRXF1aXBBY3Rpb25SZXN1bHQucHJvdG8aJ0dyaWRGaWdodFN1",
-            "cHBseVJlcm9sbEFjdGlvblJlc3VsdC5wcm90bxolR3JpZEZpZ2h0Um91bmRC",
-            "ZWdpbkFjdGlvblJlc3VsdC5wcm90bxolR3JpZEZpZ2h0UG9ydGFsQnVmZkFj",
-            "dGlvblJlc3VsdC5wcm90bxorR3JpZEZpZ2h0UG9ydGFsQnVmZlJlcm9sbEFj",
-            "dGlvblJlc3VsdC5wcm90bxoRQ0pOQUxCQ05IQ0sucHJvdG8aLEdyaWRGaWdo",
-            "dFJldHVyblByZXBhcmF0aW9uQWN0aW9uUmVzdWx0LnByb3RvGiBHcmlkRmln",
-            "aHRUcmFpdEFjdGlvblJlc3VsdC5wcm90bxoRSE9HTkZFQUpLTEoucHJvdG8a",
-            "LUdyaWRGaWdodFJlY29tbWVuZEVxdWlwbWVudEFjdGlvblJlc3VsdC5wcm90",
-            "bxohR3JpZEZpZ2h0U3VwcGx5QWN0aW9uUmVzdWx0LnByb3RvGihHcmlkRmln",
-            "aHRBdWdtZW50UmVyb2xsQWN0aW9uUmVzdWx0LnByb3RvGiJHcmlkRmlnaHRB",
-            "dWdtZW50QWN0aW9uUmVzdWx0LnByb3RvGiRHcmlkRmlnaHRGb3JnZVJvbGVB",
-            "Y3Rpb25SZXN1bHQucHJvdG8aEUZORklQRU1QR0FHLnByb3RvIrcICiFHcmlk",
+            "aWRGaWdodEVsaXRlQnJhbmNoQWN0aW9uUmVzdWx0LnByb3RvGixHcmlkRmln",
+            "aHRSZXR1cm5QcmVwYXJhdGlvbkFjdGlvblJlc3VsdC5wcm90bxolR3JpZEZp",
+            "Z2h0UG9ydGFsQnVmZkFjdGlvblJlc3VsdC5wcm90bxorR3JpZEZpZ2h0UG9y",
+            "dGFsQnVmZlJlcm9sbEFjdGlvblJlc3VsdC5wcm90bxonR3JpZEZpZ2h0U3Vw",
+            "cGx5UmVyb2xsQWN0aW9uUmVzdWx0LnByb3RvGiRHcmlkRmlnaHRGb3JnZVJv",
+            "bGVBY3Rpb25SZXN1bHQucHJvdG8aIEdyaWRGaWdodFRyYWl0QWN0aW9uUmVz",
+            "dWx0LnByb3RvGiJHcmlkRmlnaHRBdWdtZW50QWN0aW9uUmVzdWx0LnByb3Rv",
+            "Gi1HcmlkRmlnaHRSZWNvbW1lbmRFcXVpcG1lbnRBY3Rpb25SZXN1bHQucHJv",
+            "dG8aJUdyaWRGaWdodFJvdW5kQmVnaW5BY3Rpb25SZXN1bHQucHJvdG8aEUZO",
+            "RklQRU1QR0FHLnByb3RvGidHcmlkRmlnaHRVcGdyYWRlRXF1aXBBY3Rpb25S",
+            "ZXN1bHQucHJvdG8aEUNKTkFMQkNOSENLLnByb3RvGhFIT0dORkVBSktMSi5w",
+            "cm90bxohR3JpZEZpZ2h0U3VwcGx5QWN0aW9uUmVzdWx0LnByb3RvGihHcmlk",
+            "RmlnaHRBdWdtZW50UmVyb2xsQWN0aW9uUmVzdWx0LnByb3RvIrcICiFHcmlk",
             "RmlnaHRIYW5kbGVQZW5kaW5nQWN0aW9uQ3NSZXESPwoScG9ydGFsX2J1ZmZf",
             "YWN0aW9uGJELIAEoCzIgLkdyaWRGaWdodFBvcnRhbEJ1ZmZBY3Rpb25SZXN1",
             "bHRIABJMChlwb3J0YWxfYnVmZl9yZXJvbGxfYWN0aW9uGMsDIAEoCzImLkdy",
@@ -64,7 +64,7 @@ namespace EggLink.DanhengServer.Proto {
             "c2l0aW9uGAggASgNQhgKFmdyaWRfZmlnaHRfYWN0aW9uX3R5cGVCHqoCG0Vn",
             "Z0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightEliteBranchActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightUpgradeEquipActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSupplyRerollActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRoundBeginActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffRerollActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.CJNALBCNHCKReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightReturnPreparationActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.HOGNFEAJKLJReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRecommendEquipmentActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSupplyActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentRerollActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightForgeRoleActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.FNFIPEMPGAGReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightEliteBranchActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightReturnPreparationActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPortalBuffRerollActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSupplyRerollActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightForgeRoleActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightTraitActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRecommendEquipmentActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightRoundBeginActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.FNFIPEMPGAGReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightUpgradeEquipActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.CJNALBCNHCKReflection.Descriptor, global::EggLink.DanhengServer.Proto.HOGNFEAJKLJReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightSupplyActionResultReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightAugmentRerollActionResultReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightHandlePendingActionCsReq), global::EggLink.DanhengServer.Proto.GridFightHandlePendingActionCsReq.Parser, new[]{ "PortalBuffAction", "PortalBuffRerollAction", "AugmentAction", "RerollAugmentAction", "TraitAction", "EliteBranchAction", "OADKOEMMGGJ", "LCDGKIMAOHB", "RoundBeginAction", "ReturnPreparationAction", "SupplyAction", "RerollSupplyAction", "UpgradeEquipAction", "EPPNNFJBPOL", "RecommendEquipmentAction", "ForgeRoleActionInfo", "QueuePosition" }, new[]{ "GridFightActionType" }, null, null, null)
           }));

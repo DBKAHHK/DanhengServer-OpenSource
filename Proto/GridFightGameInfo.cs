@@ -24,13 +24,13 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightGameInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdHcmlkRmlnaHRHYW1lSW5mby5wcm90bxocR3JpZEZpZ2h0R2FtZUJhc2lj",
-            "SW5mby5wcm90bxoYR3JpZEZpZ2h0TGV2ZWxJbmZvLnByb3RvGhxHcmlkRmln",
-            "aHRHYW1lVHJhaXRJbmZvLnByb3RvGhxHcmlkRmlnaHRHYW1lSXRlbXNJbmZv",
-            "LnByb3RvGhtHcmlkRmlnaHRHYW1lU2hvcEluZm8ucHJvdG8aGkdyaWRGaWdo",
-            "dEdhbWVPcmJJbmZvLnByb3RvGh5HcmlkRmlnaHRHYW1lQXVnbWVudEluZm8u",
-            "cHJvdG8aHEdyaWRGaWdodEdhbWVEcmFmdEluZm8ucHJvdG8aG0dyaWRGaWdo",
-            "dEdhbWVUZWFtSW5mby5wcm90byL7AwoRR3JpZEZpZ2h0R2FtZUluZm8SMgoP",
+            "ChdHcmlkRmlnaHRHYW1lSW5mby5wcm90bxobR3JpZEZpZ2h0R2FtZVRlYW1J",
+            "bmZvLnByb3RvGhxHcmlkRmlnaHRHYW1lSXRlbXNJbmZvLnByb3RvGhtHcmlk",
+            "RmlnaHRHYW1lU2hvcEluZm8ucHJvdG8aHEdyaWRGaWdodEdhbWVUcmFpdElu",
+            "Zm8ucHJvdG8aGkdyaWRGaWdodEdhbWVPcmJJbmZvLnByb3RvGh5HcmlkRmln",
+            "aHRHYW1lQXVnbWVudEluZm8ucHJvdG8aHEdyaWRGaWdodEdhbWVCYXNpY0lu",
+            "Zm8ucHJvdG8aHEdyaWRGaWdodEdhbWVEcmFmdEluZm8ucHJvdG8aGEdyaWRG",
+            "aWdodExldmVsSW5mby5wcm90byL7AwoRR3JpZEZpZ2h0R2FtZUluZm8SMgoP",
             "Z3JpZF9iYXNpY19pbmZvGAcgASgLMhcuR3JpZEZpZ2h0R2FtZUJhc2ljSW5m",
             "b0gAEjIKD2dyaWRfZHJhZnRfaW5mbxgFIAEoCzIXLkdyaWRGaWdodEdhbWVE",
             "cmFmdEluZm9IABIyCg9ncmlkX2l0ZW1zX2luZm8YBCABKAsyFy5HcmlkRmln",
@@ -44,7 +44,7 @@ namespace EggLink.DanhengServer.Proto {
             "aHRHYW1lVGVhbUluZm9IAEIQCg5ncmlkX2dhbWVfaW5mb0IeqgIbRWdnTGlu",
             "ay5EYW5oZW5nU2VydmVyLlByb3RvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightGameBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLevelInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameTraitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemsInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameShopInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameOrbInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameAugmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameDraftInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameTeamInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightGameTeamInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameItemsInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameShopInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameTraitInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameOrbInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameAugmentInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameBasicInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameDraftInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightLevelInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightGameInfo), global::EggLink.DanhengServer.Proto.GridFightGameInfo.Parser, new[]{ "GridBasicInfo", "GridDraftInfo", "GridItemsInfo", "GridShopInfo", "GridLevelInfo", "GridOrbInfo", "GridAugmentInfo", "GridTraitGameInfo", "GridTeamGameInfo" }, new[]{ "GridGameInfo" }, null, null, null)
           }));

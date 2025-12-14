@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static GridFightCurrentInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpHcmlkRmlnaHRDdXJyZW50SW5mby5wcm90bxoXR3JpZEZpZ2h0R2FtZUlu",
-            "Zm8ucHJvdG8aHEdyaWRGaWdodFBlbmRpbmdBY3Rpb24ucHJvdG8aF0dyaWRG",
-            "aWdodEdhbWVEYXRhLnByb3RvIvsBChRHcmlkRmlnaHRDdXJyZW50SW5mbxIv",
+            "ChpHcmlkRmlnaHRDdXJyZW50SW5mby5wcm90bxocR3JpZEZpZ2h0UGVuZGlu",
+            "Z0FjdGlvbi5wcm90bxoXR3JpZEZpZ2h0R2FtZURhdGEucHJvdG8aF0dyaWRG",
+            "aWdodEdhbWVJbmZvLnByb3RvIvsBChRHcmlkRmlnaHRDdXJyZW50SW5mbxIv",
             "Cg5wZW5kaW5nX2FjdGlvbhgJIAEoCzIXLkdyaWRGaWdodFBlbmRpbmdBY3Rp",
             "b24SMAoUZ3JpZF9maWdodF9nYW1lX2RhdGEYByABKAsyEi5HcmlkRmlnaHRH",
             "YW1lRGF0YRIOCgZzZWFzb24YDyABKA0SMwoXcm9ndWVfY3VycmVudF9nYW1l",
@@ -34,7 +34,7 @@ namespace EggLink.DanhengServer.Proto {
             "DiABKA0SEwoLaXNfb3ZlcmxvY2sYCCABKAgSEwoLZGl2aXNpb25faWQYAyAB",
             "KA1CHqoCG0VnZ0xpbmsuRGFuaGVuZ1NlcnZlci5Qcm90b2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightGameInfoReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameDataReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.GridFightPendingActionReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameDataReflection.Descriptor, global::EggLink.DanhengServer.Proto.GridFightGameInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.GridFightCurrentInfo), global::EggLink.DanhengServer.Proto.GridFightCurrentInfo.Parser, new[]{ "PendingAction", "GridFightGameData", "Season", "RogueCurrentGameInfo", "UniqueId", "IsOverlock", "DivisionId" }, null, null, null, null)
           }));

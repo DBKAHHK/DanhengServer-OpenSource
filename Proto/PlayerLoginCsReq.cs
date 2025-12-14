@@ -24,9 +24,9 @@ namespace EggLink.DanhengServer.Proto {
     static PlayerLoginCsReqReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhJMYW5ndWFnZVR5cGUucHJvdG8a",
-            "EUpHRktJQ0RDRkxKLnByb3RvGhJQbGF0Zm9ybVR5cGUucHJvdG8aEU9DQ0hO",
-            "RUZIR05FLnByb3RvIqwFChBQbGF5ZXJMb2dpbkNzUmVxEhMKC0JOQk9BTElB",
+            "ChZQbGF5ZXJMb2dpbkNzUmVxLnByb3RvGhFPQ0NITkVGSEdORS5wcm90bxoR",
+            "SkdGS0lDRENGTEoucHJvdG8aElBsYXRmb3JtVHlwZS5wcm90bxoSTGFuZ3Vh",
+            "Z2VUeXBlLnByb3RvIqwFChBQbGF5ZXJMb2dpbkNzUmVxEhMKC0JOQk9BTElB",
             "UEFFGAwgASgJEhMKC0JOSUdQRE9PSUxJGA0gASgJEhoKEmNsaWVudF9yZXNf",
             "dmVyc2lvbhgDIAEoDRITCgtISkRNSlBFQlBQTRgGIAEoCRIUCgtHTUFMQ1BO",
             "T0hCRhj7DCABKAkSEwoLT0VISkxPREFIRk4YByABKAkSEwoLT0NEQUNKTk5K",
@@ -44,7 +44,7 @@ namespace EggLink.DanhengServer.Proto {
             "EhYKDnJvZ3VlX2dldF9pbmZvGAggASgJQh6qAhtFZ2dMaW5rLkRhbmhlbmdT",
             "ZXJ2ZXIuUHJvdG9iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.JGFKICDCFLJReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.OCCHNEFHGNEReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::EggLink.DanhengServer.Proto.OCCHNEFHGNEReflection.Descriptor, global::EggLink.DanhengServer.Proto.JGFKICDCFLJReflection.Descriptor, global::EggLink.DanhengServer.Proto.PlatformTypeReflection.Descriptor, global::EggLink.DanhengServer.Proto.LanguageTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::EggLink.DanhengServer.Proto.PlayerLoginCsReq), global::EggLink.DanhengServer.Proto.PlayerLoginCsReq.Parser, new[]{ "BNBOALIAPAE", "BNIGPDOOILI", "ClientResVersion", "HJDMJPEBPPM", "GMALCPNOHBF", "OEHJLODAHFN", "OCDACJNNJNJ", "DMPMHCCFBKG", "MLNABEPINDB", "FADPDIBKNBI", "AKCEJFCFBAN", "BPCKJKDENCB", "NHBHBALHJML", "GEHAPNIHCDO", "IGNFBLGJIOJ", "KFDJEIEOBBN", "LoginRandom", "Platform", "MIOHKAOIDNK", "PKLICGMEIMB", "OHPCKCNAEIK", "HAEHHCPOAPP", "Signature", "OEENCFMCAHD", "JMKHDHAIOIM", "ClientVersion", "KIBBNBNGIJD", "RogueGetInfo" }, null, null, null, null)
           }));
